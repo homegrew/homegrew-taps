@@ -3,17 +3,33 @@ version: 5.5
 description: Simple and easy-to-use library to learn videogames programming
 homepage: https://www.raylib.com/
 license: Zlib
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/raylib/blobs/sha256:f5df67caba9995df0a73dd5759e3fc3236c5ae2cadd6f2bba89e9447ca922a2c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/raylib/blobs/sha256:27792cb3dacfecbebac27d0f131352dd83a8cfef788dc0c22eb981805a65bfda
-  linux_amd64: https://ghcr.io/v2/homebrew/core/raylib/blobs/sha256:401315b8abc27b4351ec647fc8add4bdd8213012fe6d3200f1981afd357f7d7e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/raylib/blobs/sha256:a59c2b0c8f2860a6373111e355eccca9170fb2aba77f9acd2aa5589c5de5b62f
-sha256:
-  darwin_arm64: f5df67caba9995df0a73dd5759e3fc3236c5ae2cadd6f2bba89e9447ca922a2c
-  darwin_amd64: 27792cb3dacfecbebac27d0f131352dd83a8cfef788dc0c22eb981805a65bfda
-  linux_amd64: 401315b8abc27b4351ec647fc8add4bdd8213012fe6d3200f1981afd357f7d7e
-  linux_arm64: a59c2b0c8f2860a6373111e355eccca9170fb2aba77f9acd2aa5589c5de5b62f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/raylib/blobs/sha256:f5df67caba9995df0a73dd5759e3fc3236c5ae2cadd6f2bba89e9447ca922a2c
+    sha256: f5df67caba9995df0a73dd5759e3fc3236c5ae2cadd6f2bba89e9447ca922a2c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/raylib/blobs/sha256:27792cb3dacfecbebac27d0f131352dd83a8cfef788dc0c22eb981805a65bfda
+    sha256: 27792cb3dacfecbebac27d0f131352dd83a8cfef788dc0c22eb981805a65bfda
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/raylib/blobs/sha256:401315b8abc27b4351ec647fc8add4bdd8213012fe6d3200f1981afd357f7d7e
+    sha256: 401315b8abc27b4351ec647fc8add4bdd8213012fe6d3200f1981afd357f7d7e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/raylib/blobs/sha256:a59c2b0c8f2860a6373111e355eccca9170fb2aba77f9acd2aa5589c5de5b62f
+    sha256: a59c2b0c8f2860a6373111e355eccca9170fb2aba77f9acd2aa5589c5de5b62f
+source:
+  url: https://github.com/raysan5/raylib/archive/refs/tags/5.5.tar.gz
+  sha256: aea98ecf5bc5c5e0b789a76de0083a21a70457050ea4cc2aec7566935f5e258e
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - libx11
+  - libxcursor
+  - libxi
+  - libxinerama
+  - libxrandr
+  - mesa
+  - mesa-glu

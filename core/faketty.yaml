@@ -3,17 +3,25 @@ version: 1.0.20
 description: Wrapper to exec a command in a pty, even if redirecting the output
 homepage: https://github.com/dtolnay/faketty
 license: Apache-2.0 OR MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/faketty/blobs/sha256:a86caecd28c8fad74d1454ea7843974a03fc16341564bef4320aad1d865693c0
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/faketty/blobs/sha256:65f0f924b5db899f619d126b38ee38cd47aa1e04b425fdac44b5a3b41caf535a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/faketty/blobs/sha256:e7ad352b95eb94a89baf8441410dcecbad6c33fbe4b77e8d55253f3c662e0307
-  linux_arm64: https://ghcr.io/v2/homebrew/core/faketty/blobs/sha256:3c1416b7cdfb26821b8602c1a71cc5cd0e2ca31966d2cb4255832b578fb3d598
-sha256:
-  darwin_arm64: a86caecd28c8fad74d1454ea7843974a03fc16341564bef4320aad1d865693c0
-  darwin_amd64: 65f0f924b5db899f619d126b38ee38cd47aa1e04b425fdac44b5a3b41caf535a
-  linux_amd64: e7ad352b95eb94a89baf8441410dcecbad6c33fbe4b77e8d55253f3c662e0307
-  linux_arm64: 3c1416b7cdfb26821b8602c1a71cc5cd0e2ca31966d2cb4255832b578fb3d598
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/faketty/blobs/sha256:a86caecd28c8fad74d1454ea7843974a03fc16341564bef4320aad1d865693c0
+    sha256: a86caecd28c8fad74d1454ea7843974a03fc16341564bef4320aad1d865693c0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/faketty/blobs/sha256:65f0f924b5db899f619d126b38ee38cd47aa1e04b425fdac44b5a3b41caf535a
+    sha256: 65f0f924b5db899f619d126b38ee38cd47aa1e04b425fdac44b5a3b41caf535a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/faketty/blobs/sha256:e7ad352b95eb94a89baf8441410dcecbad6c33fbe4b77e8d55253f3c662e0307
+    sha256: e7ad352b95eb94a89baf8441410dcecbad6c33fbe4b77e8d55253f3c662e0307
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/faketty/blobs/sha256:3c1416b7cdfb26821b8602c1a71cc5cd0e2ca31966d2cb4255832b578fb3d598
+    sha256: 3c1416b7cdfb26821b8602c1a71cc5cd0e2ca31966d2cb4255832b578fb3d598
+source:
+  url: https://github.com/dtolnay/faketty/archive/refs/tags/1.0.20.tar.gz
+  sha256: 40a4d1cfa3f265f94895cb1430e9100df43ba0b04c551349cac2973e033a7775
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

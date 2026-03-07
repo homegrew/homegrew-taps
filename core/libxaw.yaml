@@ -3,16 +3,22 @@ version: 1.0.16
 description: "X.Org: X Athena Widget Set"
 homepage: https://www.x.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libxaw/blobs/sha256:4ecd7079a01f9f836d228420134c77a0c4948760ddc1dad19f816fe5ef6ae6f0
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libxaw/blobs/sha256:8500c636998ace11a0cf584ed9a45fc6c4ee5c505f04f2279c223a8214e4dfef
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libxaw/blobs/sha256:b848eb55c4b41ebc2923e5f0dd8a3fcd0fcf7ec6700347f6469ff88b958857da
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libxaw/blobs/sha256:6819d4477ad52c23eb7023c0679d339adf59b43852cc05ef74f4a40f91a4d423
-sha256:
-  darwin_arm64: 4ecd7079a01f9f836d228420134c77a0c4948760ddc1dad19f816fe5ef6ae6f0
-  darwin_amd64: 8500c636998ace11a0cf584ed9a45fc6c4ee5c505f04f2279c223a8214e4dfef
-  linux_amd64: b848eb55c4b41ebc2923e5f0dd8a3fcd0fcf7ec6700347f6469ff88b958857da
-  linux_arm64: 6819d4477ad52c23eb7023c0679d339adf59b43852cc05ef74f4a40f91a4d423
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libxaw/blobs/sha256:4ecd7079a01f9f836d228420134c77a0c4948760ddc1dad19f816fe5ef6ae6f0
+    sha256: 4ecd7079a01f9f836d228420134c77a0c4948760ddc1dad19f816fe5ef6ae6f0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libxaw/blobs/sha256:8500c636998ace11a0cf584ed9a45fc6c4ee5c505f04f2279c223a8214e4dfef
+    sha256: 8500c636998ace11a0cf584ed9a45fc6c4ee5c505f04f2279c223a8214e4dfef
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libxaw/blobs/sha256:b848eb55c4b41ebc2923e5f0dd8a3fcd0fcf7ec6700347f6469ff88b958857da
+    sha256: b848eb55c4b41ebc2923e5f0dd8a3fcd0fcf7ec6700347f6469ff88b958857da
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libxaw/blobs/sha256:6819d4477ad52c23eb7023c0679d339adf59b43852cc05ef74f4a40f91a4d423
+    sha256: 6819d4477ad52c23eb7023c0679d339adf59b43852cc05ef74f4a40f91a4d423
+source:
+  url: https://www.x.org/archive/individual/lib/libXaw-1.0.16.tar.xz
+  sha256: 731d572b54c708f81e197a6afa8016918e2e06dfd3025e066ca642a5b8c39c8f
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,5 @@ dependencies:
   - libxmu
   - libxpm
   - libxt
+build_dependencies:
+  - pkgconf

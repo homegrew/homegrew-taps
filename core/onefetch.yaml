@@ -3,19 +3,29 @@ version: 2.26.1
 description: Command-line Git information tool
 homepage: https://onefetch.dev/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/onefetch/blobs/sha256:6482c4a3bd1c2bf1202e23e62b055cb9b3266d5031a7a67931a1e8b3a6235eb7
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/onefetch/blobs/sha256:2fdbba646b655d06432d22b2fc52ad427e62fb5a7f160cc901f50fc39678919d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/onefetch/blobs/sha256:788376164e7dbab1edf623e7793e1c71aa662d6251e4489a630803ba3bb78813
-  linux_arm64: https://ghcr.io/v2/homebrew/core/onefetch/blobs/sha256:0ef1575b493a1fefa0a1b46c99362a6404c5821cc51772a8f0ce7e2c02f27b2b
-sha256:
-  darwin_arm64: 6482c4a3bd1c2bf1202e23e62b055cb9b3266d5031a7a67931a1e8b3a6235eb7
-  darwin_amd64: 2fdbba646b655d06432d22b2fc52ad427e62fb5a7f160cc901f50fc39678919d
-  linux_amd64: 788376164e7dbab1edf623e7793e1c71aa662d6251e4489a630803ba3bb78813
-  linux_arm64: 0ef1575b493a1fefa0a1b46c99362a6404c5821cc51772a8f0ce7e2c02f27b2b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/onefetch/blobs/sha256:6482c4a3bd1c2bf1202e23e62b055cb9b3266d5031a7a67931a1e8b3a6235eb7
+    sha256: 6482c4a3bd1c2bf1202e23e62b055cb9b3266d5031a7a67931a1e8b3a6235eb7
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/onefetch/blobs/sha256:2fdbba646b655d06432d22b2fc52ad427e62fb5a7f160cc901f50fc39678919d
+    sha256: 2fdbba646b655d06432d22b2fc52ad427e62fb5a7f160cc901f50fc39678919d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/onefetch/blobs/sha256:788376164e7dbab1edf623e7793e1c71aa662d6251e4489a630803ba3bb78813
+    sha256: 788376164e7dbab1edf623e7793e1c71aa662d6251e4489a630803ba3bb78813
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/onefetch/blobs/sha256:0ef1575b493a1fefa0a1b46c99362a6404c5821cc51772a8f0ce7e2c02f27b2b
+    sha256: 0ef1575b493a1fefa0a1b46c99362a6404c5821cc51772a8f0ce7e2c02f27b2b
+source:
+  url: https://github.com/o2sh/onefetch/archive/refs/tags/2.26.1.tar.gz
+  sha256: ff43255d7c138c448cfdd1abacb01c6abe0c3e3886024e98ff077b28d4dc0ddc
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - zstd
+build_dependencies:
+  - cmake
+  - pkgconf
+  - rust

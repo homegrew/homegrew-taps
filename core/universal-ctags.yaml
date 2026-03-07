@@ -3,16 +3,22 @@ version: 6.2.1
 description: Maintained ctags implementation
 homepage: https://ctags.io/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/universal-ctags/blobs/sha256:04462c7b1fad942219dd2eabd936b74d882663299c9463774cb0f903ddb1aaa0
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/universal-ctags/blobs/sha256:b0b3270037bd744571517a734136213474ba9aaa304977137d4f78cc35490d62
-  linux_amd64: https://ghcr.io/v2/homebrew/core/universal-ctags/blobs/sha256:2970ae4a8b7332e017abf1f4e0286864ef48ca5f6f7f0c93224347f26c05458a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/universal-ctags/blobs/sha256:b4529f5ea92739c6a603e9d8a301e7f2fdd5c0ee07aeeeb39f9852f50d805de9
-sha256:
-  darwin_arm64: 04462c7b1fad942219dd2eabd936b74d882663299c9463774cb0f903ddb1aaa0
-  darwin_amd64: b0b3270037bd744571517a734136213474ba9aaa304977137d4f78cc35490d62
-  linux_amd64: 2970ae4a8b7332e017abf1f4e0286864ef48ca5f6f7f0c93224347f26c05458a
-  linux_arm64: b4529f5ea92739c6a603e9d8a301e7f2fdd5c0ee07aeeeb39f9852f50d805de9
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/universal-ctags/blobs/sha256:04462c7b1fad942219dd2eabd936b74d882663299c9463774cb0f903ddb1aaa0
+    sha256: 04462c7b1fad942219dd2eabd936b74d882663299c9463774cb0f903ddb1aaa0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/universal-ctags/blobs/sha256:b0b3270037bd744571517a734136213474ba9aaa304977137d4f78cc35490d62
+    sha256: b0b3270037bd744571517a734136213474ba9aaa304977137d4f78cc35490d62
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/universal-ctags/blobs/sha256:2970ae4a8b7332e017abf1f4e0286864ef48ca5f6f7f0c93224347f26c05458a
+    sha256: 2970ae4a8b7332e017abf1f4e0286864ef48ca5f6f7f0c93224347f26c05458a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/universal-ctags/blobs/sha256:b4529f5ea92739c6a603e9d8a301e7f2fdd5c0ee07aeeeb39f9852f50d805de9
+    sha256: b4529f5ea92739c6a603e9d8a301e7f2fdd5c0ee07aeeeb39f9852f50d805de9
+source:
+  url: https://github.com/universal-ctags/ctags/releases/download/v6.2.1/universal-ctags-6.2.1.tar.gz
+  sha256: 2c63efe9e0e083dc50e6fdd8c5414781cc8873d8c8940cf553c01870ed962f8c
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,7 @@ dependencies:
   - jansson
   - libyaml
   - pcre2
+build_dependencies:
+  - docutils
+  - pkgconf
+  - python@3.14

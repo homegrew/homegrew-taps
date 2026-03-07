@@ -3,19 +3,31 @@ version: 5.13.0
 description: Advanced SAT solver
 homepage: https://www.msoos.org/cryptominisat5/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:d56074a77028dcfdb9d9d59b2fcd57aad7e2df80c9f99df8f5c4286ef16c3b7f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:50c0d3151e24e96ec77ce11263d701b9c2e911dd4a9eb1fbfb9173cc85777500
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:a14f3873914b9f6631948386fe1a9ef164d7a5812597e508117aab2ea83f382c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:1f973a7d348b3dc75f6bc4ef3c4d243617103a1e18e42be3c927ca075b8029de
-sha256:
-  darwin_arm64: d56074a77028dcfdb9d9d59b2fcd57aad7e2df80c9f99df8f5c4286ef16c3b7f
-  darwin_amd64: 50c0d3151e24e96ec77ce11263d701b9c2e911dd4a9eb1fbfb9173cc85777500
-  linux_amd64: a14f3873914b9f6631948386fe1a9ef164d7a5812597e508117aab2ea83f382c
-  linux_arm64: 1f973a7d348b3dc75f6bc4ef3c4d243617103a1e18e42be3c927ca075b8029de
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:d56074a77028dcfdb9d9d59b2fcd57aad7e2df80c9f99df8f5c4286ef16c3b7f
+    sha256: d56074a77028dcfdb9d9d59b2fcd57aad7e2df80c9f99df8f5c4286ef16c3b7f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:50c0d3151e24e96ec77ce11263d701b9c2e911dd4a9eb1fbfb9173cc85777500
+    sha256: 50c0d3151e24e96ec77ce11263d701b9c2e911dd4a9eb1fbfb9173cc85777500
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:a14f3873914b9f6631948386fe1a9ef164d7a5812597e508117aab2ea83f382c
+    sha256: a14f3873914b9f6631948386fe1a9ef164d7a5812597e508117aab2ea83f382c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:1f973a7d348b3dc75f6bc4ef3c4d243617103a1e18e42be3c927ca075b8029de
+    sha256: 1f973a7d348b3dc75f6bc4ef3c4d243617103a1e18e42be3c927ca075b8029de
+source:
+  url: https://github.com/msoos/cryptominisat/archive/refs/tags/release/5.13.0.tar.gz
+  sha256: 1bfcd8a314706b3ac7831f215bae50251d9b61f3bbe90cbdcbed190741f6ee54
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - gmp
+build_dependencies:
+  - cmake
+  - python@3.14
+linux_dependencies:
+  - gmp
+  - zlib-ng-compat

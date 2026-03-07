@@ -3,16 +3,22 @@ version: 2.5.1
 description: Easy, fast, and beautiful database client for the terminal
 homepage: https://harlequin.sh
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/harlequin/blobs/sha256:85cc96ad842f761bf540e9aaf524ffff7b5bc1459550932155f211f462a5951e
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/harlequin/blobs/sha256:ee8606be279605a5501840588136660ca467729f53f39c1392e4cc152f2bc983
-  linux_amd64: https://ghcr.io/v2/homebrew/core/harlequin/blobs/sha256:a77dc5f63acc868cc10d7a9ce47e11372973273fd2244f42d5dae5938e906ef4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/harlequin/blobs/sha256:ad1d4e57c51c7141529bd1b24cbcf50393c050802e6595c9b879911a0c18897e
-sha256:
-  darwin_arm64: 85cc96ad842f761bf540e9aaf524ffff7b5bc1459550932155f211f462a5951e
-  darwin_amd64: ee8606be279605a5501840588136660ca467729f53f39c1392e4cc152f2bc983
-  linux_amd64: a77dc5f63acc868cc10d7a9ce47e11372973273fd2244f42d5dae5938e906ef4
-  linux_arm64: ad1d4e57c51c7141529bd1b24cbcf50393c050802e6595c9b879911a0c18897e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/harlequin/blobs/sha256:85cc96ad842f761bf540e9aaf524ffff7b5bc1459550932155f211f462a5951e
+    sha256: 85cc96ad842f761bf540e9aaf524ffff7b5bc1459550932155f211f462a5951e
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/harlequin/blobs/sha256:ee8606be279605a5501840588136660ca467729f53f39c1392e4cc152f2bc983
+    sha256: ee8606be279605a5501840588136660ca467729f53f39c1392e4cc152f2bc983
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/harlequin/blobs/sha256:a77dc5f63acc868cc10d7a9ce47e11372973273fd2244f42d5dae5938e906ef4
+    sha256: a77dc5f63acc868cc10d7a9ce47e11372973273fd2244f42d5dae5938e906ef4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/harlequin/blobs/sha256:ad1d4e57c51c7141529bd1b24cbcf50393c050802e6595c9b879911a0c18897e
+    sha256: ad1d4e57c51c7141529bd1b24cbcf50393c050802e6595c9b879911a0c18897e
+source:
+  url: https://files.pythonhosted.org/packages/f6/33/3e7ce0ce003a940932219028706d950f2098e35018e10b00097aa90c3ae5/harlequin-2.5.1.tar.gz
+  sha256: 8e9dc29df55a7cb546fdbc9999b3df365f825cba537d98160644225a7b1d0d57
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,6 @@ dependencies:
   - numpy
   - python@3.14
   - unixodbc
+build_dependencies:
+  - cmake
+  - ninja

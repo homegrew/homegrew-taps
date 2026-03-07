@@ -3,17 +3,28 @@ version: 2.3.2
 description: Ultravideo HEVC encoder
 homepage: https://github.com/ultravideo/kvazaar
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/kvazaar/blobs/sha256:c5c12e32e6a313ca224723c9749e8f3be3e50af939f681bced612633dcf4ca53
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/kvazaar/blobs/sha256:9e53260ba87411d8148b346835daba4c6c5e0cf5dc75875074c5aa129f57f88b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/kvazaar/blobs/sha256:e018d21e4380d6d65485dd2873dc883e939372c668ad99b1cbf8d1b5ca8e6183
-  linux_arm64: https://ghcr.io/v2/homebrew/core/kvazaar/blobs/sha256:4c2a03b189d0cf04ba65181e7bf54f654443cc0289679f56a4f10dc675080597
-sha256:
-  darwin_arm64: c5c12e32e6a313ca224723c9749e8f3be3e50af939f681bced612633dcf4ca53
-  darwin_amd64: 9e53260ba87411d8148b346835daba4c6c5e0cf5dc75875074c5aa129f57f88b
-  linux_amd64: e018d21e4380d6d65485dd2873dc883e939372c668ad99b1cbf8d1b5ca8e6183
-  linux_arm64: 4c2a03b189d0cf04ba65181e7bf54f654443cc0289679f56a4f10dc675080597
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kvazaar/blobs/sha256:c5c12e32e6a313ca224723c9749e8f3be3e50af939f681bced612633dcf4ca53
+    sha256: c5c12e32e6a313ca224723c9749e8f3be3e50af939f681bced612633dcf4ca53
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kvazaar/blobs/sha256:9e53260ba87411d8148b346835daba4c6c5e0cf5dc75875074c5aa129f57f88b
+    sha256: 9e53260ba87411d8148b346835daba4c6c5e0cf5dc75875074c5aa129f57f88b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kvazaar/blobs/sha256:e018d21e4380d6d65485dd2873dc883e939372c668ad99b1cbf8d1b5ca8e6183
+    sha256: e018d21e4380d6d65485dd2873dc883e939372c668ad99b1cbf8d1b5ca8e6183
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kvazaar/blobs/sha256:4c2a03b189d0cf04ba65181e7bf54f654443cc0289679f56a4f10dc675080597
+    sha256: 4c2a03b189d0cf04ba65181e7bf54f654443cc0289679f56a4f10dc675080597
+source:
+  url: https://github.com/ultravideo/kvazaar/archive/refs/tags/v2.3.2.tar.gz
+  sha256: ddd0038696631ca5368d8e40efee36d2bbb805854b9b1dda8b12ea9b397ea951
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - yasm

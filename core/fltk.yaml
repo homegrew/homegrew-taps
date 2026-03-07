@@ -3,16 +3,22 @@ version: 1.4.4
 description: Cross-platform C++ GUI toolkit
 homepage: https://www.fltk.org/
 license: LGPL-2.0-only WITH FLTK-exception
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/fltk/blobs/sha256:a336acc1290d177f51ff0ebeb70d0eacd45bf5b473489d2bb5af6df720fde6f4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/fltk/blobs/sha256:870d5060045c0116ae47372a0229db2864d61ee1f765126c93650bc739963b39
-  linux_amd64: https://ghcr.io/v2/homebrew/core/fltk/blobs/sha256:a90426f91678df9321e01dc8dcaea265da0725dd05975aa7cf6be6da7bc7cf14
-  linux_arm64: https://ghcr.io/v2/homebrew/core/fltk/blobs/sha256:1f960238c43d81c044200cb4a00950b1f764c4d150c4754e43c312243540334d
-sha256:
-  darwin_arm64: a336acc1290d177f51ff0ebeb70d0eacd45bf5b473489d2bb5af6df720fde6f4
-  darwin_amd64: 870d5060045c0116ae47372a0229db2864d61ee1f765126c93650bc739963b39
-  linux_amd64: a90426f91678df9321e01dc8dcaea265da0725dd05975aa7cf6be6da7bc7cf14
-  linux_arm64: 1f960238c43d81c044200cb4a00950b1f764c4d150c4754e43c312243540334d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fltk/blobs/sha256:a336acc1290d177f51ff0ebeb70d0eacd45bf5b473489d2bb5af6df720fde6f4
+    sha256: a336acc1290d177f51ff0ebeb70d0eacd45bf5b473489d2bb5af6df720fde6f4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fltk/blobs/sha256:870d5060045c0116ae47372a0229db2864d61ee1f765126c93650bc739963b39
+    sha256: 870d5060045c0116ae47372a0229db2864d61ee1f765126c93650bc739963b39
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fltk/blobs/sha256:a90426f91678df9321e01dc8dcaea265da0725dd05975aa7cf6be6da7bc7cf14
+    sha256: a90426f91678df9321e01dc8dcaea265da0725dd05975aa7cf6be6da7bc7cf14
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fltk/blobs/sha256:1f960238c43d81c044200cb4a00950b1f764c4d150c4754e43c312243540334d
+    sha256: 1f960238c43d81c044200cb4a00950b1f764c4d150c4754e43c312243540334d
+source:
+  url: https://github.com/fltk/fltk/releases/download/release-1.4.4/fltk-1.4.4-source.tar.bz2
+  sha256: 2b302c80b7ea937a8bdc01ed6718fd995035bf63e9a2895491c1001821725f1f
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,18 @@ install:
 dependencies:
   - jpeg-turbo
   - libpng
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - fontconfig
+  - jpeg-turbo
+  - libpng
+  - libx11
+  - libxext
+  - libxfixes
+  - libxft
+  - libxrender
+  - libxt
+  - mesa
+  - mesa-glu
+  - zlib-ng-compat

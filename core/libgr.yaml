@@ -3,16 +3,22 @@ version: 0.73.24
 description: "GR framework: a graphics library for visualisation applications"
 homepage: https://gr-framework.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libgr/blobs/sha256:6b92d7f808bdc4f7391e3753a6be77b0e50eb962360379671abec40de1917c60
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libgr/blobs/sha256:1158e51122c0fd6784f580caf840455a3ee249ce5c3335fb5445c97eb1f3344c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libgr/blobs/sha256:059ed00ec068a771c925441c64dd1a266f11b4a57f9e9b18e87a4335454c217b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libgr/blobs/sha256:a1922f441a7f6c2097859b9ff876c8e8c2147d0be8ea0c86606090a5bb67a0aa
-sha256:
-  darwin_arm64: 6b92d7f808bdc4f7391e3753a6be77b0e50eb962360379671abec40de1917c60
-  darwin_amd64: 1158e51122c0fd6784f580caf840455a3ee249ce5c3335fb5445c97eb1f3344c
-  linux_amd64: 059ed00ec068a771c925441c64dd1a266f11b4a57f9e9b18e87a4335454c217b
-  linux_arm64: a1922f441a7f6c2097859b9ff876c8e8c2147d0be8ea0c86606090a5bb67a0aa
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libgr/blobs/sha256:6b92d7f808bdc4f7391e3753a6be77b0e50eb962360379671abec40de1917c60
+    sha256: 6b92d7f808bdc4f7391e3753a6be77b0e50eb962360379671abec40de1917c60
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libgr/blobs/sha256:1158e51122c0fd6784f580caf840455a3ee249ce5c3335fb5445c97eb1f3344c
+    sha256: 1158e51122c0fd6784f580caf840455a3ee249ce5c3335fb5445c97eb1f3344c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libgr/blobs/sha256:059ed00ec068a771c925441c64dd1a266f11b4a57f9e9b18e87a4335454c217b
+    sha256: 059ed00ec068a771c925441c64dd1a266f11b4a57f9e9b18e87a4335454c217b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libgr/blobs/sha256:a1922f441a7f6c2097859b9ff876c8e8c2147d0be8ea0c86606090a5bb67a0aa
+    sha256: a1922f441a7f6c2097859b9ff876c8e8c2147d0be8ea0c86606090a5bb67a0aa
+source:
+  url: https://github.com/sciapp/gr/archive/refs/tags/v0.73.24.tar.gz
+  sha256: 6cf573ca23cc08e7410355960a36ae9127a4c06241b05341bb974abd2ceb1b32
 install:
   type: archive
   format: tar.gz
@@ -29,3 +35,21 @@ dependencies:
   - qhull
   - qtbase
   - zeromq
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - cairo
+  - ffmpeg
+  - freetype
+  - glfw
+  - jpeg-turbo
+  - libpng
+  - libtiff
+  - libx11
+  - libxt
+  - mesa
+  - pixman
+  - qhull
+  - qtbase
+  - zeromq
+  - zlib-ng-compat

@@ -3,17 +3,25 @@ version: 4.4.1
 description: Hexagonal hierarchical geospatial indexing system
 homepage: https://uber.github.io/h3/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/h3/blobs/sha256:68636ef86a67e8737e4c2803218fd9d0148c2dae7c1827b3e9873f4ef2755851
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/h3/blobs/sha256:dc4b1ab1840bed0128839ae704c27909d11fe02a5bf31065ad7ca75793431098
-  linux_amd64: https://ghcr.io/v2/homebrew/core/h3/blobs/sha256:2471501e51c265e88b78973fc2234ebccfd7d4d4210bddddb8744c619060d0a1
-  linux_arm64: https://ghcr.io/v2/homebrew/core/h3/blobs/sha256:549cd280f37fe31ce96f36deb4d212000e17ece12a8f7b7dce395e1b90fce120
-sha256:
-  darwin_arm64: 68636ef86a67e8737e4c2803218fd9d0148c2dae7c1827b3e9873f4ef2755851
-  darwin_amd64: dc4b1ab1840bed0128839ae704c27909d11fe02a5bf31065ad7ca75793431098
-  linux_amd64: 2471501e51c265e88b78973fc2234ebccfd7d4d4210bddddb8744c619060d0a1
-  linux_arm64: 549cd280f37fe31ce96f36deb4d212000e17ece12a8f7b7dce395e1b90fce120
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/h3/blobs/sha256:68636ef86a67e8737e4c2803218fd9d0148c2dae7c1827b3e9873f4ef2755851
+    sha256: 68636ef86a67e8737e4c2803218fd9d0148c2dae7c1827b3e9873f4ef2755851
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/h3/blobs/sha256:dc4b1ab1840bed0128839ae704c27909d11fe02a5bf31065ad7ca75793431098
+    sha256: dc4b1ab1840bed0128839ae704c27909d11fe02a5bf31065ad7ca75793431098
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/h3/blobs/sha256:2471501e51c265e88b78973fc2234ebccfd7d4d4210bddddb8744c619060d0a1
+    sha256: 2471501e51c265e88b78973fc2234ebccfd7d4d4210bddddb8744c619060d0a1
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/h3/blobs/sha256:549cd280f37fe31ce96f36deb4d212000e17ece12a8f7b7dce395e1b90fce120
+    sha256: 549cd280f37fe31ce96f36deb4d212000e17ece12a8f7b7dce395e1b90fce120
+source:
+  url: https://github.com/uber/h3/archive/refs/tags/v4.4.1.tar.gz
+  sha256: 9df719eb878f218c203e424dc5ffca9b98eca4d78ba83928773987649ead404d
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - cmake

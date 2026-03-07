@@ -3,16 +3,22 @@ version: 1.28.1
 description: Development framework for multimedia applications
 homepage: https://gstreamer.freedesktop.org/
 license: LGPL-2.0-or-later AND LGPL-2.1-or-later AND MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:75331c0fab7d9d309a3ea234cc52c9c32e05d32e7ea8ba1254217eceb1394b2e
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:d7d8f73d695687a768bb01eee7a772199bed980dae59a9f7ec7ccb117be5753c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:65838c00ee5ef28889fd6aab631dfed1fe2efbd6dd588bc1a65d30a58c115d6e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:b4cf93110905bce375158be2d16b5f09ec89998f81a8a4e338f7f98f531dcc4f
-sha256:
-  darwin_arm64: 75331c0fab7d9d309a3ea234cc52c9c32e05d32e7ea8ba1254217eceb1394b2e
-  darwin_amd64: d7d8f73d695687a768bb01eee7a772199bed980dae59a9f7ec7ccb117be5753c
-  linux_amd64: 65838c00ee5ef28889fd6aab631dfed1fe2efbd6dd588bc1a65d30a58c115d6e
-  linux_arm64: b4cf93110905bce375158be2d16b5f09ec89998f81a8a4e338f7f98f531dcc4f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:75331c0fab7d9d309a3ea234cc52c9c32e05d32e7ea8ba1254217eceb1394b2e
+    sha256: 75331c0fab7d9d309a3ea234cc52c9c32e05d32e7ea8ba1254217eceb1394b2e
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:d7d8f73d695687a768bb01eee7a772199bed980dae59a9f7ec7ccb117be5753c
+    sha256: d7d8f73d695687a768bb01eee7a772199bed980dae59a9f7ec7ccb117be5753c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:65838c00ee5ef28889fd6aab631dfed1fe2efbd6dd588bc1a65d30a58c115d6e
+    sha256: 65838c00ee5ef28889fd6aab631dfed1fe2efbd6dd588bc1a65d30a58c115d6e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:b4cf93110905bce375158be2d16b5f09ec89998f81a8a4e338f7f98f531dcc4f
+    sha256: b4cf93110905bce375158be2d16b5f09ec89998f81a8a4e338f7f98f531dcc4f
+source:
+  url: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.1/gstreamer-1.28.1.tar.bz2
+  sha256: 86ec0179104664a1ca6de57d7c886d3a8aa0491d1a243d02514b306885272b91
 install:
   type: archive
   format: tar.gz
@@ -79,3 +85,84 @@ dependencies:
   - gettext
   - harfbuzz
   - musepack
+build_dependencies:
+  - bison
+  - cargo-c
+  - cmake
+  - gettext
+  - gobject-introspection
+  - meson
+  - nasm
+  - ninja
+  - pkgconf
+  - rust
+linux_dependencies:
+  - alsa-lib
+  - aom
+  - cairo
+  - dav1d
+  - faac
+  - faad2
+  - fdk-aac
+  - ffmpeg
+  - flac
+  - fontconfig
+  - freetype
+  - gdk-pixbuf
+  - glib
+  - graphene
+  - gtk+3
+  - gtk4
+  - imath
+  - jpeg-turbo
+  - json-glib
+  - lame
+  - libass
+  - libdrm
+  - libnice
+  - libogg
+  - libpng
+  - librsvg
+  - libshout
+  - libsndfile
+  - libsodium
+  - libsoup
+  - libusrsctp
+  - libva
+  - libvmaf
+  - libvorbis
+  - libvpx
+  - libx11
+  - libxcb
+  - libxdamage
+  - libxext
+  - libxfixes
+  - libxi
+  - libxtst
+  - libxv
+  - little-cms2
+  - mesa
+  - mpg123
+  - nettle
+  - opencore-amr
+  - openexr
+  - openjpeg
+  - openssl@3
+  - opus
+  - orc
+  - pango
+  - pulseaudio
+  - pygobject3
+  - python@3.14
+  - rtmpdump
+  - speex
+  - srt
+  - srtp
+  - svt-av1
+  - taglib
+  - theora
+  - wayland
+  - webp
+  - x264
+  - x265
+  - zlib-ng-compat

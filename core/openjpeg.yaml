@@ -3,16 +3,22 @@ version: 2.5.4
 description: Library for JPEG-2000 image manipulation
 homepage: https://www.openjpeg.org/
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/openjpeg/blobs/sha256:e9becf9b440b08fd771dbaa75d4f5b06a49119f9ce163e6ad08f272f4f3b9c9d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/openjpeg/blobs/sha256:29b22e2c699765b32b3511f65bd87f6860d6bbf5f5f75e3b3ed5e268f6a547bb
-  linux_amd64: https://ghcr.io/v2/homebrew/core/openjpeg/blobs/sha256:ea1906cdeecd5edc87703596cc084dc305834b030af3847a8520f9eb8566eb1e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/openjpeg/blobs/sha256:b570231cdd2898452318819d0dc97662145a463e0ba3162a113163e0f0066e2e
-sha256:
-  darwin_arm64: e9becf9b440b08fd771dbaa75d4f5b06a49119f9ce163e6ad08f272f4f3b9c9d
-  darwin_amd64: 29b22e2c699765b32b3511f65bd87f6860d6bbf5f5f75e3b3ed5e268f6a547bb
-  linux_amd64: ea1906cdeecd5edc87703596cc084dc305834b030af3847a8520f9eb8566eb1e
-  linux_arm64: b570231cdd2898452318819d0dc97662145a463e0ba3162a113163e0f0066e2e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openjpeg/blobs/sha256:e9becf9b440b08fd771dbaa75d4f5b06a49119f9ce163e6ad08f272f4f3b9c9d
+    sha256: e9becf9b440b08fd771dbaa75d4f5b06a49119f9ce163e6ad08f272f4f3b9c9d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openjpeg/blobs/sha256:29b22e2c699765b32b3511f65bd87f6860d6bbf5f5f75e3b3ed5e268f6a547bb
+    sha256: 29b22e2c699765b32b3511f65bd87f6860d6bbf5f5f75e3b3ed5e268f6a547bb
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openjpeg/blobs/sha256:ea1906cdeecd5edc87703596cc084dc305834b030af3847a8520f9eb8566eb1e
+    sha256: ea1906cdeecd5edc87703596cc084dc305834b030af3847a8520f9eb8566eb1e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openjpeg/blobs/sha256:b570231cdd2898452318819d0dc97662145a463e0ba3162a113163e0f0066e2e
+    sha256: b570231cdd2898452318819d0dc97662145a463e0ba3162a113163e0f0066e2e
+source:
+  url: https://github.com/uclouvain/openjpeg/archive/refs/tags/v2.5.4.tar.gz
+  sha256: a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,6 @@ dependencies:
   - libpng
   - libtiff
   - little-cms2
+build_dependencies:
+  - cmake
+  - doxygen

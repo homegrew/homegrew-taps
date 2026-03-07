@@ -3,16 +3,22 @@ version: 0.2
 description: Utilities to encode, inspect, and decode .opus files
 homepage: https://www.opus-codec.org/
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/opus-tools/blobs/sha256:ec7af6774ddcc95aca50060460f3fd6fd3dcc97b78ee2c64e9230b2d7e0e958f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/opus-tools/blobs/sha256:be32020f65c0ac4614a81c6aee8adb3d5a2918625c7e33bafa80c7162d561784
-  linux_amd64: https://ghcr.io/v2/homebrew/core/opus-tools/blobs/sha256:dde385e2c30d9478123ea358ab5b4786c7337cbb2728202eab4806926f02bf7d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/opus-tools/blobs/sha256:ceba1cc3046ad55c60b3883c3d9cd1272c9f308c2bb9edb011d7ec070a6feebf
-sha256:
-  darwin_arm64: ec7af6774ddcc95aca50060460f3fd6fd3dcc97b78ee2c64e9230b2d7e0e958f
-  darwin_amd64: be32020f65c0ac4614a81c6aee8adb3d5a2918625c7e33bafa80c7162d561784
-  linux_amd64: dde385e2c30d9478123ea358ab5b4786c7337cbb2728202eab4806926f02bf7d
-  linux_arm64: ceba1cc3046ad55c60b3883c3d9cd1272c9f308c2bb9edb011d7ec070a6feebf
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/opus-tools/blobs/sha256:ec7af6774ddcc95aca50060460f3fd6fd3dcc97b78ee2c64e9230b2d7e0e958f
+    sha256: ec7af6774ddcc95aca50060460f3fd6fd3dcc97b78ee2c64e9230b2d7e0e958f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/opus-tools/blobs/sha256:be32020f65c0ac4614a81c6aee8adb3d5a2918625c7e33bafa80c7162d561784
+    sha256: be32020f65c0ac4614a81c6aee8adb3d5a2918625c7e33bafa80c7162d561784
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/opus-tools/blobs/sha256:dde385e2c30d9478123ea358ab5b4786c7337cbb2728202eab4806926f02bf7d
+    sha256: dde385e2c30d9478123ea358ab5b4786c7337cbb2728202eab4806926f02bf7d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/opus-tools/blobs/sha256:ceba1cc3046ad55c60b3883c3d9cd1272c9f308c2bb9edb011d7ec070a6feebf
+    sha256: ceba1cc3046ad55c60b3883c3d9cd1272c9f308c2bb9edb011d7ec070a6feebf
+source:
+  url: https://ftp.osuosl.org/pub/xiph/releases/opus/opus-tools-0.2.tar.gz
+  sha256: b4e56cb00d3e509acfba9a9b627ffd8273b876b4e2408642259f6da28fa0ff86
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,5 @@ dependencies:
   - libopusenc
   - opus
   - opusfile
+build_dependencies:
+  - pkgconf

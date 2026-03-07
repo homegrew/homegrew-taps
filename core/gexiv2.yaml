@@ -3,16 +3,22 @@ version: 0.16.0
 description: GObject wrapper around the Exiv2 photo metadata library
 homepage: https://wiki.gnome.org/Projects/gexiv2
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gexiv2/blobs/sha256:24d603085d106cc7d08e199642d858d2b962ffa9e38c40ee4b23bf9953efeeee
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gexiv2/blobs/sha256:0a21ff17505b6557231bad21b09a6aaf47e249aa18c1983018a3620fa73cb923
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gexiv2/blobs/sha256:d1a0c6ea1f0c31654fa2aa67ec016dc93ae6b19cab16866c72452400111102f1
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gexiv2/blobs/sha256:6f720afb3387da506741f5c2bd998feefc0b208b4c280e5181b0c2f2f768690f
-sha256:
-  darwin_arm64: 24d603085d106cc7d08e199642d858d2b962ffa9e38c40ee4b23bf9953efeeee
-  darwin_amd64: 0a21ff17505b6557231bad21b09a6aaf47e249aa18c1983018a3620fa73cb923
-  linux_amd64: d1a0c6ea1f0c31654fa2aa67ec016dc93ae6b19cab16866c72452400111102f1
-  linux_arm64: 6f720afb3387da506741f5c2bd998feefc0b208b4c280e5181b0c2f2f768690f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gexiv2/blobs/sha256:24d603085d106cc7d08e199642d858d2b962ffa9e38c40ee4b23bf9953efeeee
+    sha256: 24d603085d106cc7d08e199642d858d2b962ffa9e38c40ee4b23bf9953efeeee
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gexiv2/blobs/sha256:0a21ff17505b6557231bad21b09a6aaf47e249aa18c1983018a3620fa73cb923
+    sha256: 0a21ff17505b6557231bad21b09a6aaf47e249aa18c1983018a3620fa73cb923
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gexiv2/blobs/sha256:d1a0c6ea1f0c31654fa2aa67ec016dc93ae6b19cab16866c72452400111102f1
+    sha256: d1a0c6ea1f0c31654fa2aa67ec016dc93ae6b19cab16866c72452400111102f1
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gexiv2/blobs/sha256:6f720afb3387da506741f5c2bd998feefc0b208b4c280e5181b0c2f2f768690f
+    sha256: 6f720afb3387da506741f5c2bd998feefc0b208b4c280e5181b0c2f2f768690f
+source:
+  url: https://download.gnome.org/sources/gexiv2/0.16/gexiv2-0.16.0.tar.xz
+  sha256: d96f895f24539f966f577b2bb2489ae84f8232970a8d0c064e4a007474a77bbb
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,11 @@ install:
 dependencies:
   - exiv2
   - glib
+build_dependencies:
+  - gobject-introspection
+  - meson
+  - ninja
+  - pkgconf
+  - pygobject3
+  - python@3.14
+  - vala

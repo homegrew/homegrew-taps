@@ -3,16 +3,22 @@ version: 12.1.0
 description: C virtualization API
 homepage: https://libvirt.org/
 license: LGPL-2.1-or-later AND GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:5c5609f8dc64a0d848fdbac4a2635d34174338f12640f9b69b341c90136e9848
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:a860275679f1af425e65df4df1b86c69ec36eba502a6da59d908d308bbd23fa1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:e0d76f3e68c3faa0e41ff3d1302646d2ea41896c9c0bd41838c1b981cd6bf7c7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:7ee99bde8d82100e8c73d999540e9094a308d8c29b7303afe2a0ea019a76d086
-sha256:
-  darwin_arm64: 5c5609f8dc64a0d848fdbac4a2635d34174338f12640f9b69b341c90136e9848
-  darwin_amd64: a860275679f1af425e65df4df1b86c69ec36eba502a6da59d908d308bbd23fa1
-  linux_amd64: e0d76f3e68c3faa0e41ff3d1302646d2ea41896c9c0bd41838c1b981cd6bf7c7
-  linux_arm64: 7ee99bde8d82100e8c73d999540e9094a308d8c29b7303afe2a0ea019a76d086
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:5c5609f8dc64a0d848fdbac4a2635d34174338f12640f9b69b341c90136e9848
+    sha256: 5c5609f8dc64a0d848fdbac4a2635d34174338f12640f9b69b341c90136e9848
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:a860275679f1af425e65df4df1b86c69ec36eba502a6da59d908d308bbd23fa1
+    sha256: a860275679f1af425e65df4df1b86c69ec36eba502a6da59d908d308bbd23fa1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:e0d76f3e68c3faa0e41ff3d1302646d2ea41896c9c0bd41838c1b981cd6bf7c7
+    sha256: e0d76f3e68c3faa0e41ff3d1302646d2ea41896c9c0bd41838c1b981cd6bf7c7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:7ee99bde8d82100e8c73d999540e9094a308d8c29b7303afe2a0ea019a76d086
+    sha256: 7ee99bde8d82100e8c73d999540e9094a308d8c29b7303afe2a0ea019a76d086
+source:
+  url: https://download.libvirt.org/libvirt-12.1.0.tar.xz
+  sha256: 3b60040a3670ec014d058ed021ae641e9fa6d3b5c4b56e63e8928f1804ef4b9b
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,21 @@ dependencies:
   - libssh2
   - readline
   - gettext
+build_dependencies:
+  - docutils
+  - gettext
+  - meson
+  - ninja
+  - pkgconf
+linux_dependencies:
+  - acl
+  - cyrus-sasl
+  - glib
+  - gnutls
+  - json-c
+  - libiscsi
+  - libnl
+  - libssh2
+  - libtirpc
+  - readline
+  - util-linux

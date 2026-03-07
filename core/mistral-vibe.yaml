@@ -3,16 +3,22 @@ version: 2.3.0
 description: Minimal CLI coding agent
 homepage: https://github.com/mistralai/mistral-vibe
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:097ab41468104b278f85cd220c37815d7653e4d0cf0fe4125d6f59d0a20615fb
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:8a1f09a70530306e026a5e40ec7339a571e7d51fe3e07de77775bbfa493ed477
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:0313dfc7c078bfc62a9e7c2013ff673f994b552075127ab0a6382dcc77bd1c43
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:6bc24c49c244cc24ebe4f47f7353f433003970e37e203eb76d88ac3342ed640c
-sha256:
-  darwin_arm64: 097ab41468104b278f85cd220c37815d7653e4d0cf0fe4125d6f59d0a20615fb
-  darwin_amd64: 8a1f09a70530306e026a5e40ec7339a571e7d51fe3e07de77775bbfa493ed477
-  linux_amd64: 0313dfc7c078bfc62a9e7c2013ff673f994b552075127ab0a6382dcc77bd1c43
-  linux_arm64: 6bc24c49c244cc24ebe4f47f7353f433003970e37e203eb76d88ac3342ed640c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:097ab41468104b278f85cd220c37815d7653e4d0cf0fe4125d6f59d0a20615fb
+    sha256: 097ab41468104b278f85cd220c37815d7653e4d0cf0fe4125d6f59d0a20615fb
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:8a1f09a70530306e026a5e40ec7339a571e7d51fe3e07de77775bbfa493ed477
+    sha256: 8a1f09a70530306e026a5e40ec7339a571e7d51fe3e07de77775bbfa493ed477
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:0313dfc7c078bfc62a9e7c2013ff673f994b552075127ab0a6382dcc77bd1c43
+    sha256: 0313dfc7c078bfc62a9e7c2013ff673f994b552075127ab0a6382dcc77bd1c43
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:6bc24c49c244cc24ebe4f47f7353f433003970e37e203eb76d88ac3342ed640c
+    sha256: 6bc24c49c244cc24ebe4f47f7353f433003970e37e203eb76d88ac3342ed640c
+source:
+  url: https://files.pythonhosted.org/packages/c5/85/51df99727639d090820a740c50a22e25a6e195cacff3864e30e2bc573aff/mistral_vibe-2.3.0.tar.gz
+  sha256: f8c03d0edb1378e3814dfbe08cf5b649d02ec2360fbe002da7ec5cefbff5e60d
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,5 @@ dependencies:
   - pydantic
   - python@3.14
   - rpds-py
+build_dependencies:
+  - rust

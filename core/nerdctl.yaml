@@ -3,13 +3,19 @@ version: 2.2.1
 description: ContaiNERD CTL - Docker-compatible CLI for containerd
 homepage: https://github.com/containerd/nerdctl
 license: Apache-2.0
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/nerdctl/blobs/sha256:482ba7a0f51fec5cb4ad63f904eeee97bfaf1ceb76e26504321d449478a4cc06
-  linux_arm64: https://ghcr.io/v2/homebrew/core/nerdctl/blobs/sha256:c81283953a5fc7c7241d99b615ddd6d5bc15ca9c38aa0b7c7f1aca3f9531a88f
-sha256:
-  linux_amd64: 482ba7a0f51fec5cb4ad63f904eeee97bfaf1ceb76e26504321d449478a4cc06
-  linux_arm64: c81283953a5fc7c7241d99b615ddd6d5bc15ca9c38aa0b7c7f1aca3f9531a88f
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nerdctl/blobs/sha256:482ba7a0f51fec5cb4ad63f904eeee97bfaf1ceb76e26504321d449478a4cc06
+    sha256: 482ba7a0f51fec5cb4ad63f904eeee97bfaf1ceb76e26504321d449478a4cc06
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nerdctl/blobs/sha256:c81283953a5fc7c7241d99b615ddd6d5bc15ca9c38aa0b7c7f1aca3f9531a88f
+    sha256: c81283953a5fc7c7241d99b615ddd6d5bc15ca9c38aa0b7c7f1aca3f9531a88f
+source:
+  url: https://github.com/containerd/nerdctl/archive/refs/tags/v2.2.1.tar.gz
+  sha256: f39c34d3a285e087f2b2869f06fea343d8285ad9bfb9417b9c5b6dd4e78d6fad
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

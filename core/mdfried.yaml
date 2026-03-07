@@ -3,16 +3,22 @@ version: 0.18.2
 description: Terminal markdown viewer
 homepage: https://github.com/benjajaja/mdfried
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:b6d09fb5125fa782f66c718951b90fcf2c94434890ce8224af43beb11d5681b8
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:5d83fbfe0fe34114c38ff81823da7992ed95f52320445ba284aaf9e962fb0a09
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:db4b30df5c99b4929f2877ba2bb3c08ace94b6d136f81b29152ecb012e6325f0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:a7e967b34689d2124a2c2018dff36515f409b00cfe221694d4a2d64789f48bb8
-sha256:
-  darwin_arm64: b6d09fb5125fa782f66c718951b90fcf2c94434890ce8224af43beb11d5681b8
-  darwin_amd64: 5d83fbfe0fe34114c38ff81823da7992ed95f52320445ba284aaf9e962fb0a09
-  linux_amd64: db4b30df5c99b4929f2877ba2bb3c08ace94b6d136f81b29152ecb012e6325f0
-  linux_arm64: a7e967b34689d2124a2c2018dff36515f409b00cfe221694d4a2d64789f48bb8
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:b6d09fb5125fa782f66c718951b90fcf2c94434890ce8224af43beb11d5681b8
+    sha256: b6d09fb5125fa782f66c718951b90fcf2c94434890ce8224af43beb11d5681b8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:5d83fbfe0fe34114c38ff81823da7992ed95f52320445ba284aaf9e962fb0a09
+    sha256: 5d83fbfe0fe34114c38ff81823da7992ed95f52320445ba284aaf9e962fb0a09
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:db4b30df5c99b4929f2877ba2bb3c08ace94b6d136f81b29152ecb012e6325f0
+    sha256: db4b30df5c99b4929f2877ba2bb3c08ace94b6d136f81b29152ecb012e6325f0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:a7e967b34689d2124a2c2018dff36515f409b00cfe221694d4a2d64789f48bb8
+    sha256: a7e967b34689d2124a2c2018dff36515f409b00cfe221694d4a2d64789f48bb8
+source:
+  url: https://github.com/benjajaja/mdfried/archive/refs/tags/v0.18.2.tar.gz
+  sha256: af31a4ca3215a54ea826246cba8b2fbbb957164fd8ee7f8f253f751e98ff4ee9
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,8 @@ dependencies:
   - chafa
   - gettext
   - glib
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - chafa

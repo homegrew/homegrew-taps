@@ -3,16 +3,22 @@ version: 1.8.1
 description: "Software \"soundcard\" AX.25 packet modem/TNC and APRS encoder/decoder"
 homepage: https://github.com/wb2osz/direwolf
 license: GPL-2.0-or-later AND ISC AND LicenseRef-Homebrew-cannot-represent
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/direwolf/blobs/sha256:63d881db26ffbc81c6e5cc7d3d6dfcf8c0ee22471315b629a87369e86a6a8ebc
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/direwolf/blobs/sha256:7098d87113aedd2175eae8784c592553d190b4d01fd5c9fb056abad24a706ce3
-  linux_amd64: https://ghcr.io/v2/homebrew/core/direwolf/blobs/sha256:de9468972aaafbd3f665c3ef710c1bb03a336bba0f6485ab652bf1154fbda2f8
-  linux_arm64: https://ghcr.io/v2/homebrew/core/direwolf/blobs/sha256:29d05c5606f17ab0aa22d6819b187a7dccbb9c017d2438116b5fc3670e855ecc
-sha256:
-  darwin_arm64: 63d881db26ffbc81c6e5cc7d3d6dfcf8c0ee22471315b629a87369e86a6a8ebc
-  darwin_amd64: 7098d87113aedd2175eae8784c592553d190b4d01fd5c9fb056abad24a706ce3
-  linux_amd64: de9468972aaafbd3f665c3ef710c1bb03a336bba0f6485ab652bf1154fbda2f8
-  linux_arm64: 29d05c5606f17ab0aa22d6819b187a7dccbb9c017d2438116b5fc3670e855ecc
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/direwolf/blobs/sha256:63d881db26ffbc81c6e5cc7d3d6dfcf8c0ee22471315b629a87369e86a6a8ebc
+    sha256: 63d881db26ffbc81c6e5cc7d3d6dfcf8c0ee22471315b629a87369e86a6a8ebc
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/direwolf/blobs/sha256:7098d87113aedd2175eae8784c592553d190b4d01fd5c9fb056abad24a706ce3
+    sha256: 7098d87113aedd2175eae8784c592553d190b4d01fd5c9fb056abad24a706ce3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/direwolf/blobs/sha256:de9468972aaafbd3f665c3ef710c1bb03a336bba0f6485ab652bf1154fbda2f8
+    sha256: de9468972aaafbd3f665c3ef710c1bb03a336bba0f6485ab652bf1154fbda2f8
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/direwolf/blobs/sha256:29d05c5606f17ab0aa22d6819b187a7dccbb9c017d2438116b5fc3670e855ecc
+    sha256: 29d05c5606f17ab0aa22d6819b187a7dccbb9c017d2438116b5fc3670e855ecc
+source:
+  url: https://github.com/wb2osz/direwolf/archive/refs/tags/1.8.1.tar.gz
+  sha256: 89d5f7992ae1e74d8cf26ec6479dde74d1f480bde950043756e875a689d065d7
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,10 @@ dependencies:
   - hamlib
   - hidapi
   - portaudio
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - alsa-lib
+  - gpsd
+  - hamlib
+  - systemd

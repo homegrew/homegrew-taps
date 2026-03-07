@@ -3,16 +3,22 @@ version: 1.4
 description: Report audiovisual metrics via libavfilter
 homepage: https://bavc.org/preserve-media/preservation-tools
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:e05bc0c79aae6f0fe1a9d888e36e9d046550df0885eb4f16a0f3e9d39b6db1fc
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:51ec32892dfaf29f0ba4870f9fb1871f7f9053d6226002b79d76bdc9d0276097
-  linux_amd64: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:470749fbaafaa552f2398c6937d878609142c5c701ba1b3fa37bde12f98b8432
-  linux_arm64: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:266ba78a5f9da200e9ce2a3f1d857f6267e3cecbca8c5dc34b72a26b89128484
-sha256:
-  darwin_arm64: e05bc0c79aae6f0fe1a9d888e36e9d046550df0885eb4f16a0f3e9d39b6db1fc
-  darwin_amd64: 51ec32892dfaf29f0ba4870f9fb1871f7f9053d6226002b79d76bdc9d0276097
-  linux_amd64: 470749fbaafaa552f2398c6937d878609142c5c701ba1b3fa37bde12f98b8432
-  linux_arm64: 266ba78a5f9da200e9ce2a3f1d857f6267e3cecbca8c5dc34b72a26b89128484
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:e05bc0c79aae6f0fe1a9d888e36e9d046550df0885eb4f16a0f3e9d39b6db1fc
+    sha256: e05bc0c79aae6f0fe1a9d888e36e9d046550df0885eb4f16a0f3e9d39b6db1fc
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:51ec32892dfaf29f0ba4870f9fb1871f7f9053d6226002b79d76bdc9d0276097
+    sha256: 51ec32892dfaf29f0ba4870f9fb1871f7f9053d6226002b79d76bdc9d0276097
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:470749fbaafaa552f2398c6937d878609142c5c701ba1b3fa37bde12f98b8432
+    sha256: 470749fbaafaa552f2398c6937d878609142c5c701ba1b3fa37bde12f98b8432
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:266ba78a5f9da200e9ce2a3f1d857f6267e3cecbca8c5dc34b72a26b89128484
+    sha256: 266ba78a5f9da200e9ce2a3f1d857f6267e3cecbca8c5dc34b72a26b89128484
+source:
+  url: https://github.com/bavc/qctools.git
+  sha256: 
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,11 @@ install:
 dependencies:
   - ffmpeg@6
   - qtbase
+build_dependencies:
+  - pkgconf
+  - qtmultimedia
+  - qwt
+linux_dependencies:
+  - ffmpeg@6
+  - qtbase
+  - zlib-ng-compat

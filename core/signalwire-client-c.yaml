@@ -3,16 +3,22 @@ version: 2.0.5
 description: SignalWire C Client SDK
 homepage: https://github.com/signalwire/signalwire-c
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/signalwire-client-c/blobs/sha256:7fa3e639978d147b3bdde2bd26a5d6cc166ba1079d3bb01abf9cd00040d63dd9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/signalwire-client-c/blobs/sha256:858aaffb29a67fcf11f2e0f11635c309ef0d3ccb834d4c876caca5f1445fce3e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/signalwire-client-c/blobs/sha256:2e3d5525d1058fc641f1f5a254ecb949798e098a5bbf7e470e70db5f7c17c80a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/signalwire-client-c/blobs/sha256:6f627c192ac1ca0d74004678e131290de2e1d6725f39656d96f0c38572b082a8
-sha256:
-  darwin_arm64: 7fa3e639978d147b3bdde2bd26a5d6cc166ba1079d3bb01abf9cd00040d63dd9
-  darwin_amd64: 858aaffb29a67fcf11f2e0f11635c309ef0d3ccb834d4c876caca5f1445fce3e
-  linux_amd64: 2e3d5525d1058fc641f1f5a254ecb949798e098a5bbf7e470e70db5f7c17c80a
-  linux_arm64: 6f627c192ac1ca0d74004678e131290de2e1d6725f39656d96f0c38572b082a8
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/signalwire-client-c/blobs/sha256:7fa3e639978d147b3bdde2bd26a5d6cc166ba1079d3bb01abf9cd00040d63dd9
+    sha256: 7fa3e639978d147b3bdde2bd26a5d6cc166ba1079d3bb01abf9cd00040d63dd9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/signalwire-client-c/blobs/sha256:858aaffb29a67fcf11f2e0f11635c309ef0d3ccb834d4c876caca5f1445fce3e
+    sha256: 858aaffb29a67fcf11f2e0f11635c309ef0d3ccb834d4c876caca5f1445fce3e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/signalwire-client-c/blobs/sha256:2e3d5525d1058fc641f1f5a254ecb949798e098a5bbf7e470e70db5f7c17c80a
+    sha256: 2e3d5525d1058fc641f1f5a254ecb949798e098a5bbf7e470e70db5f7c17c80a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/signalwire-client-c/blobs/sha256:6f627c192ac1ca0d74004678e131290de2e1d6725f39656d96f0c38572b082a8
+    sha256: 6f627c192ac1ca0d74004678e131290de2e1d6725f39656d96f0c38572b082a8
+source:
+  url: https://github.com/signalwire/signalwire-c/archive/refs/tags/v2.0.5.tar.gz
+  sha256: 336c88a28015cf666bdbb070e9e11ce53dfd05baec074171fe8866945b68e8f9
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,6 @@ install:
 dependencies:
   - libks
   - openssl@3
+build_dependencies:
+  - cmake
+  - pkgconf

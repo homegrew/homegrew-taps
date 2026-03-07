@@ -3,16 +3,22 @@ version: 1.7.3
 description: Modern asynchronous DNS API
 homepage: https://getdnsapi.net
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/getdns/blobs/sha256:a7c28530f90a7b7154bd2c84bcca93ab7615776eda9903282a5d2ac7889d8e72
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/getdns/blobs/sha256:7ff99fef869239665dfe345afdccdde0198977b5f50c1705d35c4c40f4b3bfcc
-  linux_amd64: https://ghcr.io/v2/homebrew/core/getdns/blobs/sha256:bd16047c9d5d64db4bc99b8390c6fc80bffe45ca2a1f8c1b7d244d8262babbb0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/getdns/blobs/sha256:8ce171170b02aee21a4b64f701eafaef27aede8cd2c9b73ded162231e826d29d
-sha256:
-  darwin_arm64: a7c28530f90a7b7154bd2c84bcca93ab7615776eda9903282a5d2ac7889d8e72
-  darwin_amd64: 7ff99fef869239665dfe345afdccdde0198977b5f50c1705d35c4c40f4b3bfcc
-  linux_amd64: bd16047c9d5d64db4bc99b8390c6fc80bffe45ca2a1f8c1b7d244d8262babbb0
-  linux_arm64: 8ce171170b02aee21a4b64f701eafaef27aede8cd2c9b73ded162231e826d29d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/getdns/blobs/sha256:a7c28530f90a7b7154bd2c84bcca93ab7615776eda9903282a5d2ac7889d8e72
+    sha256: a7c28530f90a7b7154bd2c84bcca93ab7615776eda9903282a5d2ac7889d8e72
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/getdns/blobs/sha256:7ff99fef869239665dfe345afdccdde0198977b5f50c1705d35c4c40f4b3bfcc
+    sha256: 7ff99fef869239665dfe345afdccdde0198977b5f50c1705d35c4c40f4b3bfcc
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/getdns/blobs/sha256:bd16047c9d5d64db4bc99b8390c6fc80bffe45ca2a1f8c1b7d244d8262babbb0
+    sha256: bd16047c9d5d64db4bc99b8390c6fc80bffe45ca2a1f8c1b7d244d8262babbb0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/getdns/blobs/sha256:8ce171170b02aee21a4b64f701eafaef27aede8cd2c9b73ded162231e826d29d
+    sha256: 8ce171170b02aee21a4b64f701eafaef27aede8cd2c9b73ded162231e826d29d
+source:
+  url: https://getdnsapi.net/releases/getdns-1-7-3/getdns-1.7.3.tar.gz
+  sha256: f1404ca250f02e37a118aa00cf0ec2cbe11896e060c6d369c6761baea7d55a2c
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,5 @@ dependencies:
   - libuv
   - openssl@3
   - unbound
+build_dependencies:
+  - cmake

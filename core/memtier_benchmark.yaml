@@ -3,16 +3,22 @@ version: 2.2.2
 description: Redis and Memcache traffic generation and benchmarking tool
 homepage: https://github.com/RedisLabs/memtier_benchmark
 license: GPL-2.0-only AND (CC0-1.0 OR BSD-2-Clause)
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:cd330b2ee5b361831eb3f7db5967ac7a56c83d32226820dbf48153a9ca15c214
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:23541ae391f3bc4d61fe99b0b2d18aca23be0df01c489ab6fd55d8fcc4299e6b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:44c04faf18845e81f48fe29fb5c1ced7cbf3889d542b88ac847f09c5302df9dd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:8e06c30cbd3b096ba8e7942fc41357636e4473daa9f971f552befea05ca91705
-sha256:
-  darwin_arm64: cd330b2ee5b361831eb3f7db5967ac7a56c83d32226820dbf48153a9ca15c214
-  darwin_amd64: 23541ae391f3bc4d61fe99b0b2d18aca23be0df01c489ab6fd55d8fcc4299e6b
-  linux_amd64: 44c04faf18845e81f48fe29fb5c1ced7cbf3889d542b88ac847f09c5302df9dd
-  linux_arm64: 8e06c30cbd3b096ba8e7942fc41357636e4473daa9f971f552befea05ca91705
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:cd330b2ee5b361831eb3f7db5967ac7a56c83d32226820dbf48153a9ca15c214
+    sha256: cd330b2ee5b361831eb3f7db5967ac7a56c83d32226820dbf48153a9ca15c214
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:23541ae391f3bc4d61fe99b0b2d18aca23be0df01c489ab6fd55d8fcc4299e6b
+    sha256: 23541ae391f3bc4d61fe99b0b2d18aca23be0df01c489ab6fd55d8fcc4299e6b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:44c04faf18845e81f48fe29fb5c1ced7cbf3889d542b88ac847f09c5302df9dd
+    sha256: 44c04faf18845e81f48fe29fb5c1ced7cbf3889d542b88ac847f09c5302df9dd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:8e06c30cbd3b096ba8e7942fc41357636e4473daa9f971f552befea05ca91705
+    sha256: 8e06c30cbd3b096ba8e7942fc41357636e4473daa9f971f552befea05ca91705
+source:
+  url: https://github.com/RedisLabs/memtier_benchmark/archive/refs/tags/2.2.2.tar.gz
+  sha256: 0a022f6d54b718b69c9d1342dbe7a2590d187575a22f5d13810bc8a0ac3ba215
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,12 @@ install:
 dependencies:
   - libevent
   - openssl@3
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf
+linux_dependencies:
+  - libevent
+  - openssl@3
+  - zlib-ng-compat

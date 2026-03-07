@@ -3,16 +3,22 @@ version: 20260204
 description: Advanced traceroute and network measurement utility
 homepage: https://www.caida.org/catalog/software/scamper/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:8aa94286816fcbe152e2032e5897f420f68385bb44a5863a7bce8c9c57a5d5e5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:df86bbe854d1945a8dc4f6eadf416463f8cf735f28963c4df0415a7711ece941
-  linux_amd64: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:d7c20a4d8bada5168b79826d13a9c4eb84e317807b5a7742c6e12088fb7e8635
-  linux_arm64: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:f125eaa55edf070d1c8513f29e7c806ebcc23f4bb6e2477bbf60801102aafc55
-sha256:
-  darwin_arm64: 8aa94286816fcbe152e2032e5897f420f68385bb44a5863a7bce8c9c57a5d5e5
-  darwin_amd64: df86bbe854d1945a8dc4f6eadf416463f8cf735f28963c4df0415a7711ece941
-  linux_amd64: d7c20a4d8bada5168b79826d13a9c4eb84e317807b5a7742c6e12088fb7e8635
-  linux_arm64: f125eaa55edf070d1c8513f29e7c806ebcc23f4bb6e2477bbf60801102aafc55
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:8aa94286816fcbe152e2032e5897f420f68385bb44a5863a7bce8c9c57a5d5e5
+    sha256: 8aa94286816fcbe152e2032e5897f420f68385bb44a5863a7bce8c9c57a5d5e5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:df86bbe854d1945a8dc4f6eadf416463f8cf735f28963c4df0415a7711ece941
+    sha256: df86bbe854d1945a8dc4f6eadf416463f8cf735f28963c4df0415a7711ece941
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:d7c20a4d8bada5168b79826d13a9c4eb84e317807b5a7742c6e12088fb7e8635
+    sha256: d7c20a4d8bada5168b79826d13a9c4eb84e317807b5a7742c6e12088fb7e8635
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:f125eaa55edf070d1c8513f29e7c806ebcc23f4bb6e2477bbf60801102aafc55
+    sha256: f125eaa55edf070d1c8513f29e7c806ebcc23f4bb6e2477bbf60801102aafc55
+source:
+  url: https://www.caida.org/catalog/software/scamper/code/scamper-cvs-20260204.tar.gz
+  sha256: a3652614b1a85a13523487679ba36242270184d2d5c9a2b415e0e0a2e4f6c8e1
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,9 @@ install:
 dependencies:
   - openssl@3
   - xz
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - openssl@3
+  - xz
+  - zlib-ng-compat

@@ -1,18 +1,24 @@
 name: mycli
-version: 1.60.0
+version: 1.61.0
 description: CLI for MySQL with auto-completion and syntax highlighting
 homepage: https://www.mycli.net/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mycli/blobs/sha256:4a13a5d564761b4276bed4d22d1f530b2187fb52a0ff0bb1a2b1067430c943a6
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mycli/blobs/sha256:b019b30bc263a8975487f6ffcec2d50cb2b2acddad20f115a42313cf2b4d76ff
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mycli/blobs/sha256:6f75d122b043977f9e94a394281ab924a501febdeb709469d5df4627121d47ee
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mycli/blobs/sha256:cf4fee81696d7eac298851728ab3441a83da36e428aadb2c700311821dae3a36
-sha256:
-  darwin_arm64: 4a13a5d564761b4276bed4d22d1f530b2187fb52a0ff0bb1a2b1067430c943a6
-  darwin_amd64: b019b30bc263a8975487f6ffcec2d50cb2b2acddad20f115a42313cf2b4d76ff
-  linux_amd64: 6f75d122b043977f9e94a394281ab924a501febdeb709469d5df4627121d47ee
-  linux_arm64: cf4fee81696d7eac298851728ab3441a83da36e428aadb2c700311821dae3a36
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mycli/blobs/sha256:854a66da6149618bb2111ab721b14bc26b53882b604582497d1f8a9440d0e6a8
+    sha256: 854a66da6149618bb2111ab721b14bc26b53882b604582497d1f8a9440d0e6a8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mycli/blobs/sha256:85535f87c717b188f5c2020958a4860deacf9b6ffc6d8a64a8b1b0a0b191e617
+    sha256: 85535f87c717b188f5c2020958a4860deacf9b6ffc6d8a64a8b1b0a0b191e617
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mycli/blobs/sha256:d0a96b63f0f86a246ca6c1c39de73a3baed4baea02ec3a050d99ab0fac2bc2fd
+    sha256: d0a96b63f0f86a246ca6c1c39de73a3baed4baea02ec3a050d99ab0fac2bc2fd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mycli/blobs/sha256:15404da06612146541ce904a7c3b57ee31c7a97102bbd48f1715278ed1327075
+    sha256: 15404da06612146541ce904a7c3b57ee31c7a97102bbd48f1715278ed1327075
+source:
+  url: https://files.pythonhosted.org/packages/d5/a4/c8d85b523a8685361ff263d5e5430cf7b6518e5f65454b73d0bdc6a89f3d/mycli-1.61.0.tar.gz
+  sha256: 1ba92f0bd4c283297cc9a3a652a889f257d8249b0bbb548519e0bc979bfa42f0
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,5 @@ dependencies:
   - libyaml
   - pydantic
   - python@3.14
+build_dependencies:
+  - rust

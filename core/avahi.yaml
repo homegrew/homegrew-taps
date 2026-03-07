@@ -3,12 +3,16 @@ version: 0.8
 description: Service Discovery for Linux using mDNS/DNS-SD
 homepage: https://avahi.org
 license: LGPL-2.1-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/avahi/blobs/sha256:c2a968c40c0683c2a1cb9e45bbe693434581f0b209e0215f9c610b17069001e8
-  linux_arm64: https://ghcr.io/v2/homebrew/core/avahi/blobs/sha256:4167489c0fe787b170d0646faab665700577fcc05ab10e3a0a556112df77d6fc
-sha256:
-  linux_amd64: c2a968c40c0683c2a1cb9e45bbe693434581f0b209e0215f9c610b17069001e8
-  linux_arm64: 4167489c0fe787b170d0646faab665700577fcc05ab10e3a0a556112df77d6fc
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/avahi/blobs/sha256:c2a968c40c0683c2a1cb9e45bbe693434581f0b209e0215f9c610b17069001e8
+    sha256: c2a968c40c0683c2a1cb9e45bbe693434581f0b209e0215f9c610b17069001e8
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/avahi/blobs/sha256:4167489c0fe787b170d0646faab665700577fcc05ab10e3a0a556112df77d6fc
+    sha256: 4167489c0fe787b170d0646faab665700577fcc05ab10e3a0a556112df77d6fc
+source:
+  url: https://github.com/avahi/avahi/archive/refs/tags/v0.8.tar.gz
+  sha256: c15e750ef7c6df595fb5f2ce10cac0fee2353649600e6919ad08ae8871e4945f
 install:
   type: archive
   format: tar.gz
@@ -19,3 +23,13 @@ dependencies:
   - gdbm
   - glib
   - libdaemon
+build_dependencies:
+  - autoconf
+  - automake
+  - gettext
+  - intltool
+  - libtool
+  - m4
+  - perl
+  - pkgconf
+  - xmltoman

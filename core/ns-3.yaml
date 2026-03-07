@@ -3,16 +3,22 @@ version: 3.47
 description: Discrete-event network simulator
 homepage: https://www.nsnam.org/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ns-3/blobs/sha256:78d73bf412c0a8d13a3b40ef963537c435cefd92963a187afc303f25a6462956
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ns-3/blobs/sha256:d53671ffe89ae8a854ca123aac06f9c74835f85ec30d29ec1d912025c96cdfef
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ns-3/blobs/sha256:3305e0770bc93d496281f9df99984a867ad67f8acfdc58838e07296ee9f007da
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ns-3/blobs/sha256:c79288402f2b79215f9fcb1110615735925fb5f5f3cf5a4adecd42de7d123581
-sha256:
-  darwin_arm64: 78d73bf412c0a8d13a3b40ef963537c435cefd92963a187afc303f25a6462956
-  darwin_amd64: d53671ffe89ae8a854ca123aac06f9c74835f85ec30d29ec1d912025c96cdfef
-  linux_amd64: 3305e0770bc93d496281f9df99984a867ad67f8acfdc58838e07296ee9f007da
-  linux_arm64: c79288402f2b79215f9fcb1110615735925fb5f5f3cf5a4adecd42de7d123581
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ns-3/blobs/sha256:78d73bf412c0a8d13a3b40ef963537c435cefd92963a187afc303f25a6462956
+    sha256: 78d73bf412c0a8d13a3b40ef963537c435cefd92963a187afc303f25a6462956
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ns-3/blobs/sha256:d53671ffe89ae8a854ca123aac06f9c74835f85ec30d29ec1d912025c96cdfef
+    sha256: d53671ffe89ae8a854ca123aac06f9c74835f85ec30d29ec1d912025c96cdfef
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ns-3/blobs/sha256:3305e0770bc93d496281f9df99984a867ad67f8acfdc58838e07296ee9f007da
+    sha256: 3305e0770bc93d496281f9df99984a867ad67f8acfdc58838e07296ee9f007da
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ns-3/blobs/sha256:c79288402f2b79215f9fcb1110615735925fb5f5f3cf5a4adecd42de7d123581
+    sha256: c79288402f2b79215f9fcb1110615735925fb5f5f3cf5a4adecd42de7d123581
+source:
+  url: https://gitlab.com/nsnam/ns-3-dev/-/archive/ns-3.47/ns-3-dev-ns-3.47.tar.gz
+  sha256: d74850986ee83ac50269711686d504487dfa5b57a65b90b87f91ae256846fd64
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,6 @@ install:
 dependencies:
   - gsl
   - open-mpi
+build_dependencies:
+  - boost
+  - cmake

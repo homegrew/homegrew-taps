@@ -3,16 +3,22 @@ version: 0.37.0
 description: JSON Schema CLI
 homepage: https://github.com/python-jsonschema/check-jsonschema
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:2f96eee140f90227e7734e23ce7c023af52e1dc93794419bbe632f9142e0cb88
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:a24e2bcec777887be93dc3b7f73f25268f2a5072e77bc1d743e3d305ce1bd818
-  linux_amd64: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:2aaa64e426c87f76d03a56ee561931b69fc135415e7d74252f75c80d8e5c8ecf
-  linux_arm64: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:21254bac21a383e2065f9a176298c5a64574f89e465586738c1fd0e24e748ad9
-sha256:
-  darwin_arm64: 2f96eee140f90227e7734e23ce7c023af52e1dc93794419bbe632f9142e0cb88
-  darwin_amd64: a24e2bcec777887be93dc3b7f73f25268f2a5072e77bc1d743e3d305ce1bd818
-  linux_amd64: 2aaa64e426c87f76d03a56ee561931b69fc135415e7d74252f75c80d8e5c8ecf
-  linux_arm64: 21254bac21a383e2065f9a176298c5a64574f89e465586738c1fd0e24e748ad9
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:2f96eee140f90227e7734e23ce7c023af52e1dc93794419bbe632f9142e0cb88
+    sha256: 2f96eee140f90227e7734e23ce7c023af52e1dc93794419bbe632f9142e0cb88
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:a24e2bcec777887be93dc3b7f73f25268f2a5072e77bc1d743e3d305ce1bd818
+    sha256: a24e2bcec777887be93dc3b7f73f25268f2a5072e77bc1d743e3d305ce1bd818
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:2aaa64e426c87f76d03a56ee561931b69fc135415e7d74252f75c80d8e5c8ecf
+    sha256: 2aaa64e426c87f76d03a56ee561931b69fc135415e7d74252f75c80d8e5c8ecf
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:21254bac21a383e2065f9a176298c5a64574f89e465586738c1fd0e24e748ad9
+    sha256: 21254bac21a383e2065f9a176298c5a64574f89e465586738c1fd0e24e748ad9
+source:
+  url: https://files.pythonhosted.org/packages/f3/9b/384b1a7df9b28b702cb940d96cea0cad77031f408a8859b9641abea5d671/check_jsonschema-0.37.0.tar.gz
+  sha256: f1fef56b041e8cd1ad42e340f8422c1f27e00877e29c4f34bce357955b262e9d
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,5 @@ dependencies:
   - certifi
   - python@3.14
   - rpds-py
+build_dependencies:
+  - rust

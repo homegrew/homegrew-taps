@@ -3,16 +3,22 @@ version: 0.13.1
 description: Real-time, nanosecond resolution frame profiler
 homepage: https://github.com/wolfpld/tracy
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tracy/blobs/sha256:b6ca03823befeec20af1c9f3ee4117560d64d94b371d59c1617a8e00ebfb8353
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tracy/blobs/sha256:350b91756e80530a10096160624ba921bd13426660e51839759b360509a891f3
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tracy/blobs/sha256:e7cdff0be4cca4002493400ca693c0638ea51957a556555a32f4df5bbb25b3bc
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tracy/blobs/sha256:d829d6d75d94b266bd79a25887ba6a2eb910d378bb836fc938e2324b32f5ac3a
-sha256:
-  darwin_arm64: b6ca03823befeec20af1c9f3ee4117560d64d94b371d59c1617a8e00ebfb8353
-  darwin_amd64: 350b91756e80530a10096160624ba921bd13426660e51839759b360509a891f3
-  linux_amd64: e7cdff0be4cca4002493400ca693c0638ea51957a556555a32f4df5bbb25b3bc
-  linux_arm64: d829d6d75d94b266bd79a25887ba6a2eb910d378bb836fc938e2324b32f5ac3a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tracy/blobs/sha256:b6ca03823befeec20af1c9f3ee4117560d64d94b371d59c1617a8e00ebfb8353
+    sha256: b6ca03823befeec20af1c9f3ee4117560d64d94b371d59c1617a8e00ebfb8353
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tracy/blobs/sha256:350b91756e80530a10096160624ba921bd13426660e51839759b360509a891f3
+    sha256: 350b91756e80530a10096160624ba921bd13426660e51839759b360509a891f3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tracy/blobs/sha256:e7cdff0be4cca4002493400ca693c0638ea51957a556555a32f4df5bbb25b3bc
+    sha256: e7cdff0be4cca4002493400ca693c0638ea51957a556555a32f4df5bbb25b3bc
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tracy/blobs/sha256:d829d6d75d94b266bd79a25887ba6a2eb910d378bb836fc938e2324b32f5ac3a
+    sha256: d829d6d75d94b266bd79a25887ba6a2eb910d378bb836fc938e2324b32f5ac3a
+source:
+  url: https://github.com/wolfpld/tracy/archive/refs/tags/v0.13.1.tar.gz
+  sha256: d4efc50ebcb0bfcfdbba148995aeb75044c0d80f5d91223aebfaa8fa9e563d2b
 install:
   type: archive
   format: tar.gz
@@ -26,3 +32,20 @@ dependencies:
   - tidy-html5
   - zstd
   - glfw
+build_dependencies:
+  - cmake
+  - nlohmann-json
+  - pkgconf
+linux_dependencies:
+  - aklomp-base64
+  - dbus
+  - freetype
+  - libxkbcommon
+  - md4c
+  - mesa
+  - nativefiledialog-extended
+  - pugixml
+  - tbb
+  - tidy-html5
+  - wayland
+  - zstd

@@ -3,16 +3,22 @@ version: 3.2.35
 description: Amiga emulator
 homepage: https://fs-uae.net/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/fs-uae/blobs/sha256:741ffe6927eb47d81ac9b456c89289250398f7d5b2baf6d353876620406f726c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/fs-uae/blobs/sha256:5cac6160964a608e299f905cd36bbba764f7dc6130d0dd908f472ae2d3667de2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/fs-uae/blobs/sha256:0685abd95a223cbf2af21a16b4f78dba2c73169c79a16d85063d7b8b3514078d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/fs-uae/blobs/sha256:322f417b0344b31e267e41f328d9ae6281be7310c286bf2e61c3e162891ad349
-sha256:
-  darwin_arm64: 741ffe6927eb47d81ac9b456c89289250398f7d5b2baf6d353876620406f726c
-  darwin_amd64: 5cac6160964a608e299f905cd36bbba764f7dc6130d0dd908f472ae2d3667de2
-  linux_amd64: 0685abd95a223cbf2af21a16b4f78dba2c73169c79a16d85063d7b8b3514078d
-  linux_arm64: 322f417b0344b31e267e41f328d9ae6281be7310c286bf2e61c3e162891ad349
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fs-uae/blobs/sha256:741ffe6927eb47d81ac9b456c89289250398f7d5b2baf6d353876620406f726c
+    sha256: 741ffe6927eb47d81ac9b456c89289250398f7d5b2baf6d353876620406f726c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fs-uae/blobs/sha256:5cac6160964a608e299f905cd36bbba764f7dc6130d0dd908f472ae2d3667de2
+    sha256: 5cac6160964a608e299f905cd36bbba764f7dc6130d0dd908f472ae2d3667de2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fs-uae/blobs/sha256:0685abd95a223cbf2af21a16b4f78dba2c73169c79a16d85063d7b8b3514078d
+    sha256: 0685abd95a223cbf2af21a16b4f78dba2c73169c79a16d85063d7b8b3514078d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fs-uae/blobs/sha256:322f417b0344b31e267e41f328d9ae6281be7310c286bf2e61c3e162891ad349
+    sha256: 322f417b0344b31e267e41f328d9ae6281be7310c286bf2e61c3e162891ad349
+source:
+  url: https://github.com/FrodeSolheim/fs-uae/releases/download/v3.2.35/fs-uae-3.2.35.tar.xz
+  sha256: f3d3cb8d3df34b0b0125c45a5a3e187ff71050be5dc8455cc4505c0380269117
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,16 @@ dependencies:
   - libpng
   - sdl2
   - gettext
+build_dependencies:
+  - gettext
+  - pkgconf
+linux_dependencies:
+  - freetype
+  - glew
+  - glib
+  - libmpeg2
+  - libpng
+  - libx11
+  - openal-soft
+  - sdl2
+  - zlib-ng-compat

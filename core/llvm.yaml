@@ -3,16 +3,22 @@ version: 22.1.0
 description: Next-gen compiler infrastructure
 homepage: https://llvm.org/
 license: Apache-2.0 WITH LLVM-exception
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:ef95eb5bd579675ed6ebb1097eafbafd869edea6382f36ddeb81b61b57d633ee
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:6c40a0ed8743ac0d912ae44f5d2b0acd704af0f8e8c2e8edf748cb9537d9a2bf
-  linux_amd64: https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:66c9cc821848081191a7bff9c9a1b7f8c862d91b95ff4c3b69d6d1ccfe0ccb6a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:bf85df7aaf0c24ec091b40fcbbf01bb076fa8b415c8f98ba7ca628347ec87199
-sha256:
-  darwin_arm64: ef95eb5bd579675ed6ebb1097eafbafd869edea6382f36ddeb81b61b57d633ee
-  darwin_amd64: 6c40a0ed8743ac0d912ae44f5d2b0acd704af0f8e8c2e8edf748cb9537d9a2bf
-  linux_amd64: 66c9cc821848081191a7bff9c9a1b7f8c862d91b95ff4c3b69d6d1ccfe0ccb6a
-  linux_arm64: bf85df7aaf0c24ec091b40fcbbf01bb076fa8b415c8f98ba7ca628347ec87199
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:ef95eb5bd579675ed6ebb1097eafbafd869edea6382f36ddeb81b61b57d633ee
+    sha256: ef95eb5bd579675ed6ebb1097eafbafd869edea6382f36ddeb81b61b57d633ee
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:6c40a0ed8743ac0d912ae44f5d2b0acd704af0f8e8c2e8edf748cb9537d9a2bf
+    sha256: 6c40a0ed8743ac0d912ae44f5d2b0acd704af0f8e8c2e8edf748cb9537d9a2bf
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:66c9cc821848081191a7bff9c9a1b7f8c862d91b95ff4c3b69d6d1ccfe0ccb6a
+    sha256: 66c9cc821848081191a7bff9c9a1b7f8c862d91b95ff4c3b69d6d1ccfe0ccb6a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:bf85df7aaf0c24ec091b40fcbbf01bb076fa8b415c8f98ba7ca628347ec87199
+    sha256: bf85df7aaf0c24ec091b40fcbbf01bb076fa8b415c8f98ba7ca628347ec87199
+source:
+  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/llvm-project-22.1.0.src.tar.xz
+  sha256: 25d2e2adc4356d758405dd885fcfd6447bce82a90eb78b6b87ce0934bd077173
 install:
   type: archive
   format: tar.gz
@@ -21,5 +27,15 @@ dependencies:
   - python@3.14
   - xz
   - z3
+  - zstd
+build_dependencies:
+  - cmake
+  - ninja
+  - swig
+linux_dependencies:
+  - python@3.14
+  - xz
+  - z3
+  - zlib-ng-compat
   - zstd
 keg_only: true

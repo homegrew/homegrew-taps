@@ -3,16 +3,22 @@ version: 0.41.4
 description: System-level exploration and troubleshooting tool
 homepage: https://sysdig.com/
 license: Apache-2.0 AND (GPL-2.0-only OR MIT) AND (GPL-2.0-only WITH Linux-syscall-note)
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:5fe1ce14148a8b284543bd91bc5f24d43ceab356dfc3c16c09bd6f859e0d5827
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:621d58241ed0c17c5cb0bfaa81be88515d79f8bd13c49e1d4f4ad46960105a08
-  linux_amd64: https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:7091b67446ccc09c8d533abbe98b7e64db38168c896aa53dd9a8594f2631fce1
-  linux_arm64: https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:b6b755a7075808d1ec446e11af7316d6aa1de2182a220e058cbe75ac6e4186e4
-sha256:
-  darwin_arm64: 5fe1ce14148a8b284543bd91bc5f24d43ceab356dfc3c16c09bd6f859e0d5827
-  darwin_amd64: 621d58241ed0c17c5cb0bfaa81be88515d79f8bd13c49e1d4f4ad46960105a08
-  linux_amd64: 7091b67446ccc09c8d533abbe98b7e64db38168c896aa53dd9a8594f2631fce1
-  linux_arm64: b6b755a7075808d1ec446e11af7316d6aa1de2182a220e058cbe75ac6e4186e4
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:5fe1ce14148a8b284543bd91bc5f24d43ceab356dfc3c16c09bd6f859e0d5827
+    sha256: 5fe1ce14148a8b284543bd91bc5f24d43ceab356dfc3c16c09bd6f859e0d5827
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:621d58241ed0c17c5cb0bfaa81be88515d79f8bd13c49e1d4f4ad46960105a08
+    sha256: 621d58241ed0c17c5cb0bfaa81be88515d79f8bd13c49e1d4f4ad46960105a08
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:7091b67446ccc09c8d533abbe98b7e64db38168c896aa53dd9a8594f2631fce1
+    sha256: 7091b67446ccc09c8d533abbe98b7e64db38168c896aa53dd9a8594f2631fce1
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:b6b755a7075808d1ec446e11af7316d6aa1de2182a220e058cbe75ac6e4186e4
+    sha256: b6b755a7075808d1ec446e11af7316d6aa1de2182a220e058cbe75ac6e4186e4
+source:
+  url: https://github.com/draios/sysdig/archive/refs/tags/0.41.4.tar.gz
+  sha256: 36daa6a06705569fcc9b0579992e2457494003aea0065eabf54b3e16d67511f7
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,22 @@ dependencies:
   - tbb
   - uthash
   - yaml-cpp
+build_dependencies:
+  - cmake
+  - nlohmann-json
+  - pkgconf
+  - valijson
+linux_dependencies:
+  - abseil
+  - curl
+  - elfutils
+  - grpc
+  - jsoncpp
+  - luajit
+  - ncurses
+  - protobuf@33
+  - re2
+  - tbb
+  - uthash
+  - yaml-cpp
+  - zlib-ng-compat

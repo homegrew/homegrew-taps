@@ -3,17 +3,25 @@ version: 0.51.0
 description: Tools for parsing and manipulating MP4/ISOBMFF files
 homepage: https://github.com/Eyevinn/mp4ff
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mp4ff/blobs/sha256:3c76ba8cea71d782d2bfd8375e2f20734651119a620e9eeade236cc8390af8b2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mp4ff/blobs/sha256:7f926ff500204c557c7b1b22c8d3e032cd92c8cd68727f5959099b5c778f1623
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mp4ff/blobs/sha256:25ed72e39527fda6b411ce43426b4955ece85ed4cefd8f8cbb4541e8d8b9c701
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mp4ff/blobs/sha256:c5f53ae01df2e2db4cc4a40cf5e57d15a42e11bf8921558a8079b3803a8c525a
-sha256:
-  darwin_arm64: 3c76ba8cea71d782d2bfd8375e2f20734651119a620e9eeade236cc8390af8b2
-  darwin_amd64: 7f926ff500204c557c7b1b22c8d3e032cd92c8cd68727f5959099b5c778f1623
-  linux_amd64: 25ed72e39527fda6b411ce43426b4955ece85ed4cefd8f8cbb4541e8d8b9c701
-  linux_arm64: c5f53ae01df2e2db4cc4a40cf5e57d15a42e11bf8921558a8079b3803a8c525a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mp4ff/blobs/sha256:3c76ba8cea71d782d2bfd8375e2f20734651119a620e9eeade236cc8390af8b2
+    sha256: 3c76ba8cea71d782d2bfd8375e2f20734651119a620e9eeade236cc8390af8b2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mp4ff/blobs/sha256:7f926ff500204c557c7b1b22c8d3e032cd92c8cd68727f5959099b5c778f1623
+    sha256: 7f926ff500204c557c7b1b22c8d3e032cd92c8cd68727f5959099b5c778f1623
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mp4ff/blobs/sha256:25ed72e39527fda6b411ce43426b4955ece85ed4cefd8f8cbb4541e8d8b9c701
+    sha256: 25ed72e39527fda6b411ce43426b4955ece85ed4cefd8f8cbb4541e8d8b9c701
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mp4ff/blobs/sha256:c5f53ae01df2e2db4cc4a40cf5e57d15a42e11bf8921558a8079b3803a8c525a
+    sha256: c5f53ae01df2e2db4cc4a40cf5e57d15a42e11bf8921558a8079b3803a8c525a
+source:
+  url: https://github.com/Eyevinn/mp4ff/archive/refs/tags/v0.51.0.tar.gz
+  sha256: 8318a6045e26bb9e901442773aac2a8827bfda3f9d77e72468ca0f1ea8ac1efe
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

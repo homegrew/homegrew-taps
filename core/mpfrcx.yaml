@@ -3,16 +3,22 @@ version: 0.6.3
 description: Arbitrary precision library for arithmetic of univariate polynomials
 homepage: https://www.multiprecision.org/mpfrcx/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mpfrcx/blobs/sha256:0040f42d09efca8b3d759eb4b6f52158d89edbd1019d4919152d56666eb9de81
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mpfrcx/blobs/sha256:66c8164a31ba3594d87f7cb29062b9562413cc71adc90ba96178cb630f4b332a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mpfrcx/blobs/sha256:cf4bc73f687ec7bb72c060eb35acc89a2eefd1aa46d706a177a13bee6245cde0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mpfrcx/blobs/sha256:3e9fb25f1f4406a9aa90110ef908ccfb58c4fa3c08bfc37bbdc8aeb59994c7ce
-sha256:
-  darwin_arm64: 0040f42d09efca8b3d759eb4b6f52158d89edbd1019d4919152d56666eb9de81
-  darwin_amd64: 66c8164a31ba3594d87f7cb29062b9562413cc71adc90ba96178cb630f4b332a
-  linux_amd64: cf4bc73f687ec7bb72c060eb35acc89a2eefd1aa46d706a177a13bee6245cde0
-  linux_arm64: 3e9fb25f1f4406a9aa90110ef908ccfb58c4fa3c08bfc37bbdc8aeb59994c7ce
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mpfrcx/blobs/sha256:0040f42d09efca8b3d759eb4b6f52158d89edbd1019d4919152d56666eb9de81
+    sha256: 0040f42d09efca8b3d759eb4b6f52158d89edbd1019d4919152d56666eb9de81
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mpfrcx/blobs/sha256:66c8164a31ba3594d87f7cb29062b9562413cc71adc90ba96178cb630f4b332a
+    sha256: 66c8164a31ba3594d87f7cb29062b9562413cc71adc90ba96178cb630f4b332a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mpfrcx/blobs/sha256:cf4bc73f687ec7bb72c060eb35acc89a2eefd1aa46d706a177a13bee6245cde0
+    sha256: cf4bc73f687ec7bb72c060eb35acc89a2eefd1aa46d706a177a13bee6245cde0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mpfrcx/blobs/sha256:3e9fb25f1f4406a9aa90110ef908ccfb58c4fa3c08bfc37bbdc8aeb59994c7ce
+    sha256: 3e9fb25f1f4406a9aa90110ef908ccfb58c4fa3c08bfc37bbdc8aeb59994c7ce
+source:
+  url: https://www.multiprecision.org/downloads/mpfrcx-0.6.3.tar.gz
+  sha256: 9da9b3614c0a3e00e6ed2b82fc935d1c838d97074dc59cb388f8fafbe3db8594
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,7 @@ dependencies:
   - gmp
   - libmpc
   - mpfr
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool

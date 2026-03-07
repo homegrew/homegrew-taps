@@ -3,17 +3,25 @@ version: 0.116.0
 description: CLI application for interacting with a Cloudflare account
 homepage: https://github.com/cloudflare/cloudflare-go/tree/v0/cmd/flarectl
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/flarectl/blobs/sha256:1ad5f090588698e86d1167e4229eebe2a108d4e2577139d567bb01e45977d80f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/flarectl/blobs/sha256:23fddbdb9310f7d645c7f2958819d39b8f91efeed247d2c4555852bce7a4245b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/flarectl/blobs/sha256:43110a60ec6ce3bbaf46360197b2dc7eb17e7cb321eb8e630760c22b3e79706a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/flarectl/blobs/sha256:396cd2459e80c6ed540d39bb72542acfdda3c603bdecf5b02df222224ec8a313
-sha256:
-  darwin_arm64: 1ad5f090588698e86d1167e4229eebe2a108d4e2577139d567bb01e45977d80f
-  darwin_amd64: 23fddbdb9310f7d645c7f2958819d39b8f91efeed247d2c4555852bce7a4245b
-  linux_amd64: 43110a60ec6ce3bbaf46360197b2dc7eb17e7cb321eb8e630760c22b3e79706a
-  linux_arm64: 396cd2459e80c6ed540d39bb72542acfdda3c603bdecf5b02df222224ec8a313
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/flarectl/blobs/sha256:1ad5f090588698e86d1167e4229eebe2a108d4e2577139d567bb01e45977d80f
+    sha256: 1ad5f090588698e86d1167e4229eebe2a108d4e2577139d567bb01e45977d80f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/flarectl/blobs/sha256:23fddbdb9310f7d645c7f2958819d39b8f91efeed247d2c4555852bce7a4245b
+    sha256: 23fddbdb9310f7d645c7f2958819d39b8f91efeed247d2c4555852bce7a4245b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/flarectl/blobs/sha256:43110a60ec6ce3bbaf46360197b2dc7eb17e7cb321eb8e630760c22b3e79706a
+    sha256: 43110a60ec6ce3bbaf46360197b2dc7eb17e7cb321eb8e630760c22b3e79706a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/flarectl/blobs/sha256:396cd2459e80c6ed540d39bb72542acfdda3c603bdecf5b02df222224ec8a313
+    sha256: 396cd2459e80c6ed540d39bb72542acfdda3c603bdecf5b02df222224ec8a313
+source:
+  url: https://github.com/cloudflare/cloudflare-go/archive/refs/tags/v0.116.0.tar.gz
+  sha256: d594cdf6730046eae27240324d32a8f43a2affa7f61706459ae912fa9f4d085b
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

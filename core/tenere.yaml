@@ -3,16 +3,22 @@ version: 0.11.3
 description: TUI interface for LLMs written in Rust
 homepage: https://github.com/pythops/tenere
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tenere/blobs/sha256:394e418c603576f516051602ce4dcde40e0970374f6870788c96ab2115dddcc5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tenere/blobs/sha256:0f4d5cdeaa01cf72db185cdbf9d376092cd7ebd08e1afc62b1059389b74766d0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tenere/blobs/sha256:d4d51f8d4287fddeee124a6620602dc13716c2835b39898a7864b6a9ceb7a899
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tenere/blobs/sha256:e1320139ad039b5060bd4085fc819b1eff3c32a9e8ecd47c5f3dead25b615e66
-sha256:
-  darwin_arm64: 394e418c603576f516051602ce4dcde40e0970374f6870788c96ab2115dddcc5
-  darwin_amd64: 0f4d5cdeaa01cf72db185cdbf9d376092cd7ebd08e1afc62b1059389b74766d0
-  linux_amd64: d4d51f8d4287fddeee124a6620602dc13716c2835b39898a7864b6a9ceb7a899
-  linux_arm64: e1320139ad039b5060bd4085fc819b1eff3c32a9e8ecd47c5f3dead25b615e66
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tenere/blobs/sha256:394e418c603576f516051602ce4dcde40e0970374f6870788c96ab2115dddcc5
+    sha256: 394e418c603576f516051602ce4dcde40e0970374f6870788c96ab2115dddcc5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tenere/blobs/sha256:0f4d5cdeaa01cf72db185cdbf9d376092cd7ebd08e1afc62b1059389b74766d0
+    sha256: 0f4d5cdeaa01cf72db185cdbf9d376092cd7ebd08e1afc62b1059389b74766d0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tenere/blobs/sha256:d4d51f8d4287fddeee124a6620602dc13716c2835b39898a7864b6a9ceb7a899
+    sha256: d4d51f8d4287fddeee124a6620602dc13716c2835b39898a7864b6a9ceb7a899
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tenere/blobs/sha256:e1320139ad039b5060bd4085fc819b1eff3c32a9e8ecd47c5f3dead25b615e66
+    sha256: e1320139ad039b5060bd4085fc819b1eff3c32a9e8ecd47c5f3dead25b615e66
+source:
+  url: https://github.com/pythops/tenere/archive/refs/tags/v0.11.3.tar.gz
+  sha256: 3605fcdff3dbd5d153ed6126e98274994bd00ed83a2a1f5587058d75797257a8
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,10 @@ install:
 dependencies:
   - libgit2@1.8
   - oniguruma
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - libgit2@1.8
+  - oniguruma
+  - zlib-ng-compat

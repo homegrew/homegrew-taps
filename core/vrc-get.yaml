@@ -3,17 +3,25 @@ version: 1.9.1
 description: Open Source alternative of Command-line client of VRChat Package Manager
 homepage: https://github.com/vrc-get/vrc-get
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vrc-get/blobs/sha256:de850d693542af7f6e08660d844b13e76331feed2e0ac47367bebbf9816bc4b7
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vrc-get/blobs/sha256:3c4202ebc728de42372a7db3a926572b7de9de197a1deeb35f207be9f5d131b7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vrc-get/blobs/sha256:fcf026916c83f75b0ede1071e1cd8c1eb87a74d131456a6bd417d8e31edc7580
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vrc-get/blobs/sha256:ecec52be3888898c5755c085e97cdb6aab7c36ea33ccf5a8adf81735de95bc93
-sha256:
-  darwin_arm64: de850d693542af7f6e08660d844b13e76331feed2e0ac47367bebbf9816bc4b7
-  darwin_amd64: 3c4202ebc728de42372a7db3a926572b7de9de197a1deeb35f207be9f5d131b7
-  linux_amd64: fcf026916c83f75b0ede1071e1cd8c1eb87a74d131456a6bd417d8e31edc7580
-  linux_arm64: ecec52be3888898c5755c085e97cdb6aab7c36ea33ccf5a8adf81735de95bc93
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vrc-get/blobs/sha256:de850d693542af7f6e08660d844b13e76331feed2e0ac47367bebbf9816bc4b7
+    sha256: de850d693542af7f6e08660d844b13e76331feed2e0ac47367bebbf9816bc4b7
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vrc-get/blobs/sha256:3c4202ebc728de42372a7db3a926572b7de9de197a1deeb35f207be9f5d131b7
+    sha256: 3c4202ebc728de42372a7db3a926572b7de9de197a1deeb35f207be9f5d131b7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vrc-get/blobs/sha256:fcf026916c83f75b0ede1071e1cd8c1eb87a74d131456a6bd417d8e31edc7580
+    sha256: fcf026916c83f75b0ede1071e1cd8c1eb87a74d131456a6bd417d8e31edc7580
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vrc-get/blobs/sha256:ecec52be3888898c5755c085e97cdb6aab7c36ea33ccf5a8adf81735de95bc93
+    sha256: ecec52be3888898c5755c085e97cdb6aab7c36ea33ccf5a8adf81735de95bc93
+source:
+  url: https://github.com/vrc-get/vrc-get/archive/refs/tags/v1.9.1.tar.gz
+  sha256: a8d35448a01b70df0753dd264c096a32b21dc2bd2ef9b5a54423c4309c7aa3db
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

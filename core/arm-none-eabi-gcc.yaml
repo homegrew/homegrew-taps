@@ -3,16 +3,22 @@ version: 15.2.0
 description: GNU compiler collection for arm-none-eabi
 homepage: https://gcc.gnu.org
 license: GPL-3.0-or-later WITH GCC-exception-3.1
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:4e862be029fd2e27e1d2614a54581846fdf3cf1f55e4d3e75eb1d097ffaafc39
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:4a64941cdc4bc7110a72969d07e89e17944392073a1dce1a90ab31fe052303ad
-  linux_amd64: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:ef7aec12914835857f8ade168373e744061017468638dab8275ab7a28a3764b8
-  linux_arm64: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:a52b2e1db4a395276e704677d2dd7f164ab9fd277ad2353b8f117d45ca917a6e
-sha256:
-  darwin_arm64: 4e862be029fd2e27e1d2614a54581846fdf3cf1f55e4d3e75eb1d097ffaafc39
-  darwin_amd64: 4a64941cdc4bc7110a72969d07e89e17944392073a1dce1a90ab31fe052303ad
-  linux_amd64: ef7aec12914835857f8ade168373e744061017468638dab8275ab7a28a3764b8
-  linux_arm64: a52b2e1db4a395276e704677d2dd7f164ab9fd277ad2353b8f117d45ca917a6e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:4e862be029fd2e27e1d2614a54581846fdf3cf1f55e4d3e75eb1d097ffaafc39
+    sha256: 4e862be029fd2e27e1d2614a54581846fdf3cf1f55e4d3e75eb1d097ffaafc39
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:4a64941cdc4bc7110a72969d07e89e17944392073a1dce1a90ab31fe052303ad
+    sha256: 4a64941cdc4bc7110a72969d07e89e17944392073a1dce1a90ab31fe052303ad
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:ef7aec12914835857f8ade168373e744061017468638dab8275ab7a28a3764b8
+    sha256: ef7aec12914835857f8ade168373e744061017468638dab8275ab7a28a3764b8
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:a52b2e1db4a395276e704677d2dd7f164ab9fd277ad2353b8f117d45ca917a6e
+    sha256: a52b2e1db4a395276e704677d2dd7f164ab9fd277ad2353b8f117d45ca917a6e
+source:
+  url: https://ftpmirror.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz
+  sha256: 438fd996826b0c82485a29da03a72d71d6e3541a83ec702df4271f6fe025d24e
 install:
   type: archive
   format: tar.gz
@@ -23,4 +29,12 @@ dependencies:
   - isl
   - libmpc
   - mpfr
+  - zstd
+linux_dependencies:
+  - arm-none-eabi-binutils
+  - gmp
+  - isl
+  - libmpc
+  - mpfr
+  - zlib-ng-compat
   - zstd

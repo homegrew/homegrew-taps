@@ -3,17 +3,30 @@ version: 1.24.2
 description: Cross-shell prompt for astronauts
 homepage: https://starship.rs/
 license: ISC
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:261c37914c6e39b9f05633501ae38c7c44d0784a4886941a23f15bd6c49f7faa
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:b2751c138704236385e82030494728e08b839fa5935a38aab40a8bcc5ae9ca31
-  linux_amd64: https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:493d58232e62a9ae7ef86d039d442b7463495a907ffe14cb795cc590fadee3cb
-  linux_arm64: https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:1ca52b67cf4b6f3004cbb3977d11923787ec17763cff6f448a339ac5643c1395
-sha256:
-  darwin_arm64: 261c37914c6e39b9f05633501ae38c7c44d0784a4886941a23f15bd6c49f7faa
-  darwin_amd64: b2751c138704236385e82030494728e08b839fa5935a38aab40a8bcc5ae9ca31
-  linux_amd64: 493d58232e62a9ae7ef86d039d442b7463495a907ffe14cb795cc590fadee3cb
-  linux_arm64: 1ca52b67cf4b6f3004cbb3977d11923787ec17763cff6f448a339ac5643c1395
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:261c37914c6e39b9f05633501ae38c7c44d0784a4886941a23f15bd6c49f7faa
+    sha256: 261c37914c6e39b9f05633501ae38c7c44d0784a4886941a23f15bd6c49f7faa
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:b2751c138704236385e82030494728e08b839fa5935a38aab40a8bcc5ae9ca31
+    sha256: b2751c138704236385e82030494728e08b839fa5935a38aab40a8bcc5ae9ca31
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:493d58232e62a9ae7ef86d039d442b7463495a907ffe14cb795cc590fadee3cb
+    sha256: 493d58232e62a9ae7ef86d039d442b7463495a907ffe14cb795cc590fadee3cb
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:1ca52b67cf4b6f3004cbb3977d11923787ec17763cff6f448a339ac5643c1395
+    sha256: 1ca52b67cf4b6f3004cbb3977d11923787ec17763cff6f448a339ac5643c1395
+source:
+  url: https://github.com/starship/starship/archive/refs/tags/v1.24.2.tar.gz
+  sha256: b7ab0ef364f527395b46d2fb7f59f9592766b999844325e35f62c8fa4d528795
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - cmake
+  - pkgconf
+  - rust
+linux_dependencies:
+  - dbus
+  - zlib-ng-compat

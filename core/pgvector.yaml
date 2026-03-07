@@ -3,17 +3,26 @@ version: 0.8.2
 description: Open-source vector similarity search for Postgres
 homepage: https://github.com/pgvector/pgvector
 license: PostgreSQL
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pgvector/blobs/sha256:8cf8043ead096eaa3f792e14a89702ec73d0383178afe9d9c778130774800e9c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pgvector/blobs/sha256:bd3324af174e284d6e2b2499061e744b9f259eebb3b03732abb96a38eaf1581f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pgvector/blobs/sha256:4654c76fc87533d553c91d2c5bc7f7452fbe28d54f7812f99ccb9b71833bafff
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pgvector/blobs/sha256:13085e8a50a501137a1e19ee44d2dfcf1a186fc69aa3969bacebd5a4a58c29e8
-sha256:
-  darwin_arm64: 8cf8043ead096eaa3f792e14a89702ec73d0383178afe9d9c778130774800e9c
-  darwin_amd64: bd3324af174e284d6e2b2499061e744b9f259eebb3b03732abb96a38eaf1581f
-  linux_amd64: 4654c76fc87533d553c91d2c5bc7f7452fbe28d54f7812f99ccb9b71833bafff
-  linux_arm64: 13085e8a50a501137a1e19ee44d2dfcf1a186fc69aa3969bacebd5a4a58c29e8
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pgvector/blobs/sha256:8cf8043ead096eaa3f792e14a89702ec73d0383178afe9d9c778130774800e9c
+    sha256: 8cf8043ead096eaa3f792e14a89702ec73d0383178afe9d9c778130774800e9c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pgvector/blobs/sha256:bd3324af174e284d6e2b2499061e744b9f259eebb3b03732abb96a38eaf1581f
+    sha256: bd3324af174e284d6e2b2499061e744b9f259eebb3b03732abb96a38eaf1581f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pgvector/blobs/sha256:4654c76fc87533d553c91d2c5bc7f7452fbe28d54f7812f99ccb9b71833bafff
+    sha256: 4654c76fc87533d553c91d2c5bc7f7452fbe28d54f7812f99ccb9b71833bafff
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pgvector/blobs/sha256:13085e8a50a501137a1e19ee44d2dfcf1a186fc69aa3969bacebd5a4a58c29e8
+    sha256: 13085e8a50a501137a1e19ee44d2dfcf1a186fc69aa3969bacebd5a4a58c29e8
+source:
+  url: https://github.com/pgvector/pgvector/archive/refs/tags/v0.8.2.tar.gz
+  sha256: 69f4019389af05dc1c9548deb8628e62878e6e207c03907f2b8af2016472cdaa
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - postgresql@17
+  - postgresql@18

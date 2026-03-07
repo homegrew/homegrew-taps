@@ -3,19 +3,27 @@ version: 0.107.3
 description: Transactional Catalog for Data Lakes with Git-like semantics
 homepage: https://projectnessie.org
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:df5baeada48d94f2180a3ffda215aeb63cfd88a5f3f612a39a288ea1aa0133e5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:98226c4584fb413fc8df080d69df94ec02d70860a2aaa9bb5d0b6311374da6f6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:6d9ed22e9e730cf79c9cbb57a238ad982cc0352b07f8cd662f7de4be53e28f65
-  linux_arm64: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:9a5c8e6ef32c2ac5e98103ebf19a7ab91a99528ecb949886b89c09c60c83cdf5
-sha256:
-  darwin_arm64: df5baeada48d94f2180a3ffda215aeb63cfd88a5f3f612a39a288ea1aa0133e5
-  darwin_amd64: 98226c4584fb413fc8df080d69df94ec02d70860a2aaa9bb5d0b6311374da6f6
-  linux_amd64: 6d9ed22e9e730cf79c9cbb57a238ad982cc0352b07f8cd662f7de4be53e28f65
-  linux_arm64: 9a5c8e6ef32c2ac5e98103ebf19a7ab91a99528ecb949886b89c09c60c83cdf5
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:df5baeada48d94f2180a3ffda215aeb63cfd88a5f3f612a39a288ea1aa0133e5
+    sha256: df5baeada48d94f2180a3ffda215aeb63cfd88a5f3f612a39a288ea1aa0133e5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:98226c4584fb413fc8df080d69df94ec02d70860a2aaa9bb5d0b6311374da6f6
+    sha256: 98226c4584fb413fc8df080d69df94ec02d70860a2aaa9bb5d0b6311374da6f6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:6d9ed22e9e730cf79c9cbb57a238ad982cc0352b07f8cd662f7de4be53e28f65
+    sha256: 6d9ed22e9e730cf79c9cbb57a238ad982cc0352b07f8cd662f7de4be53e28f65
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:9a5c8e6ef32c2ac5e98103ebf19a7ab91a99528ecb949886b89c09c60c83cdf5
+    sha256: 9a5c8e6ef32c2ac5e98103ebf19a7ab91a99528ecb949886b89c09c60c83cdf5
+source:
+  url: https://github.com/projectnessie/nessie/archive/refs/tags/nessie-0.107.3.tar.gz
+  sha256: f3cec51f89ab2bc9f10285bca759e2f817c574edaf8f176ca758cb73dffde95e
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - openjdk@21
+build_dependencies:
+  - gradle

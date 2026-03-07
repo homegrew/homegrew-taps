@@ -3,16 +3,22 @@ version: 2024.12.21
 description: "Command-line player for https://pandora.com"
 homepage: https://6xq.net/pianobar/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:384c9d511862df579e9edd7e91367408b01841ec5926c239c04680e4f3dad505
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:e9fce5e9ddfe9a904f139db4ebcd03b78700bbeafbc9abe4e7c40a6c7290039a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:6cba151913c6d32be73748df86c72b88eb28769c718d6d7c8f3378aa175145d9
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:3e44848c2f000bfe6e4974e4bfdd1384fe4acbe2e02e260897cc840980be51c5
-sha256:
-  darwin_arm64: 384c9d511862df579e9edd7e91367408b01841ec5926c239c04680e4f3dad505
-  darwin_amd64: e9fce5e9ddfe9a904f139db4ebcd03b78700bbeafbc9abe4e7c40a6c7290039a
-  linux_amd64: 6cba151913c6d32be73748df86c72b88eb28769c718d6d7c8f3378aa175145d9
-  linux_arm64: 3e44848c2f000bfe6e4974e4bfdd1384fe4acbe2e02e260897cc840980be51c5
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:384c9d511862df579e9edd7e91367408b01841ec5926c239c04680e4f3dad505
+    sha256: 384c9d511862df579e9edd7e91367408b01841ec5926c239c04680e4f3dad505
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:e9fce5e9ddfe9a904f139db4ebcd03b78700bbeafbc9abe4e7c40a6c7290039a
+    sha256: e9fce5e9ddfe9a904f139db4ebcd03b78700bbeafbc9abe4e7c40a6c7290039a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:6cba151913c6d32be73748df86c72b88eb28769c718d6d7c8f3378aa175145d9
+    sha256: 6cba151913c6d32be73748df86c72b88eb28769c718d6d7c8f3378aa175145d9
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:3e44848c2f000bfe6e4974e4bfdd1384fe4acbe2e02e260897cc840980be51c5
+    sha256: 3e44848c2f000bfe6e4974e4bfdd1384fe4acbe2e02e260897cc840980be51c5
+source:
+  url: https://6xq.net/pianobar/pianobar-2024.12.21.tar.bz2
+  sha256: 16f4dd2d64da38690946a9670e59bc72a789cf6a323f792e159bb3a39cf4a7f5
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,5 @@ dependencies:
   - json-c
   - libao
   - libgcrypt
+build_dependencies:
+  - pkgconf

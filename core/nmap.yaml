@@ -3,16 +3,22 @@ version: 7.98
 description: Port scanning utility for large networks
 homepage: https://nmap.org/
 license: LicenseRef-Homebrew-cannot-represent
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:64b89fa933591f6ca2b7fd1ce45c70859f549955a6941e3e1070a79f1be83a1b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:464ffaf24758602b9e53eef5f4cae49b97ad1ece9b339145c6044e4e5faf09d7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:9eac9fadda8834f10a1c8a407714522625818d912a1c99f31c57435ae14c6cc0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:56420284aa2c62c55f96cf332868ad12ce23e1583edf54a2543ee8c5a8c3edd3
-sha256:
-  darwin_arm64: 64b89fa933591f6ca2b7fd1ce45c70859f549955a6941e3e1070a79f1be83a1b
-  darwin_amd64: 464ffaf24758602b9e53eef5f4cae49b97ad1ece9b339145c6044e4e5faf09d7
-  linux_amd64: 9eac9fadda8834f10a1c8a407714522625818d912a1c99f31c57435ae14c6cc0
-  linux_arm64: 56420284aa2c62c55f96cf332868ad12ce23e1583edf54a2543ee8c5a8c3edd3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:64b89fa933591f6ca2b7fd1ce45c70859f549955a6941e3e1070a79f1be83a1b
+    sha256: 64b89fa933591f6ca2b7fd1ce45c70859f549955a6941e3e1070a79f1be83a1b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:464ffaf24758602b9e53eef5f4cae49b97ad1ece9b339145c6044e4e5faf09d7
+    sha256: 464ffaf24758602b9e53eef5f4cae49b97ad1ece9b339145c6044e4e5faf09d7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:9eac9fadda8834f10a1c8a407714522625818d912a1c99f31c57435ae14c6cc0
+    sha256: 9eac9fadda8834f10a1c8a407714522625818d912a1c99f31c57435ae14c6cc0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:56420284aa2c62c55f96cf332868ad12ce23e1583edf54a2543ee8c5a8c3edd3
+    sha256: 56420284aa2c62c55f96cf332868ad12ce23e1583edf54a2543ee8c5a8c3edd3
+source:
+  url: https://nmap.org/dist/nmap-7.98.tar.bz2
+  sha256: ce847313eaae9e5c9f21708e42d2ab7b56c7e0eb8803729a3092f58886d897e6
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,13 @@ dependencies:
   - openssl@3
   - pcre2
   - python@3.14
+build_dependencies:
+  - python-setuptools
+linux_dependencies:
+  - liblinear
+  - libssh2
+  - lua
+  - openssl@3
+  - pcre2
+  - python@3.14
+  - zlib-ng-compat

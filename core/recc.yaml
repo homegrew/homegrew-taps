@@ -3,16 +3,22 @@ version: 1.3.54
 description: Remote Execution Caching Compiler
 homepage: https://buildgrid.gitlab.io/recc
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:05fb392b57616e38462e67bc283659386cc3eee89df2b4bd64d2f12142b6de33
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:1b53eea423310058a864ea8620abbccc2415e59a749270da3c70d9c53c07e5fc
-  linux_amd64: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:432de0e934fa88acfd4dbf1c109dc9942fdcfe0a9608158ccf886a6a6e952cc3
-  linux_arm64: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:f5f3801071de31c55226f5abe17c9c63627649d21ea1c288421fcd9683cd9861
-sha256:
-  darwin_arm64: 05fb392b57616e38462e67bc283659386cc3eee89df2b4bd64d2f12142b6de33
-  darwin_amd64: 1b53eea423310058a864ea8620abbccc2415e59a749270da3c70d9c53c07e5fc
-  linux_amd64: 432de0e934fa88acfd4dbf1c109dc9942fdcfe0a9608158ccf886a6a6e952cc3
-  linux_arm64: f5f3801071de31c55226f5abe17c9c63627649d21ea1c288421fcd9683cd9861
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:05fb392b57616e38462e67bc283659386cc3eee89df2b4bd64d2f12142b6de33
+    sha256: 05fb392b57616e38462e67bc283659386cc3eee89df2b4bd64d2f12142b6de33
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:1b53eea423310058a864ea8620abbccc2415e59a749270da3c70d9c53c07e5fc
+    sha256: 1b53eea423310058a864ea8620abbccc2415e59a749270da3c70d9c53c07e5fc
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:432de0e934fa88acfd4dbf1c109dc9942fdcfe0a9608158ccf886a6a6e952cc3
+    sha256: 432de0e934fa88acfd4dbf1c109dc9942fdcfe0a9608158ccf886a6a6e952cc3
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:f5f3801071de31c55226f5abe17c9c63627649d21ea1c288421fcd9683cd9861
+    sha256: f5f3801071de31c55226f5abe17c9c63627649d21ea1c288421fcd9683cd9861
+source:
+  url: https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.3.54/buildbox-1.3.54.tar.gz
+  sha256: 467b83cff48bbde7efc0978edbca0201e572c9a4d95de59a6ce7c81234909710
 install:
   type: archive
   format: tar.gz
@@ -26,3 +32,19 @@ dependencies:
   - protobuf@33
   - re2
   - gflags
+build_dependencies:
+  - cmake
+  - gettext
+  - nlohmann-json
+  - pkgconf
+  - tomlplusplus
+linux_dependencies:
+  - abseil
+  - c-ares
+  - glog
+  - grpc
+  - openssl@3
+  - protobuf@33
+  - re2
+  - util-linux
+  - zlib-ng-compat

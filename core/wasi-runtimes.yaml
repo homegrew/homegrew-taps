@@ -3,19 +3,28 @@ version: 22.1.0
 description: Compiler-RT and libc++ runtimes for WASI
 homepage: https://wasi.dev
 license: Apache-2.0 WITH LLVM-exception
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/wasi-runtimes/blobs/sha256:090b923420a83af93b2b698c10dfc536f8b09649d04020d501e22080c5bf22f3
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/wasi-runtimes/blobs/sha256:bf7b9fb8d330606444001ad840e3a4ce12ad1c14467f430041224deed346b389
-  linux_amd64: https://ghcr.io/v2/homebrew/core/wasi-runtimes/blobs/sha256:a16e5269c1d258f4602aa3b8f6e817882f3a9aaea337388915783f30f5880b99
-  linux_arm64: https://ghcr.io/v2/homebrew/core/wasi-runtimes/blobs/sha256:a11f24f3344e65c7aa881bb8952eac0d087a5fb7938d74c74eeb45eafdb6f84a
-sha256:
-  darwin_arm64: 090b923420a83af93b2b698c10dfc536f8b09649d04020d501e22080c5bf22f3
-  darwin_amd64: bf7b9fb8d330606444001ad840e3a4ce12ad1c14467f430041224deed346b389
-  linux_amd64: a16e5269c1d258f4602aa3b8f6e817882f3a9aaea337388915783f30f5880b99
-  linux_arm64: a11f24f3344e65c7aa881bb8952eac0d087a5fb7938d74c74eeb45eafdb6f84a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wasi-runtimes/blobs/sha256:090b923420a83af93b2b698c10dfc536f8b09649d04020d501e22080c5bf22f3
+    sha256: 090b923420a83af93b2b698c10dfc536f8b09649d04020d501e22080c5bf22f3
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wasi-runtimes/blobs/sha256:bf7b9fb8d330606444001ad840e3a4ce12ad1c14467f430041224deed346b389
+    sha256: bf7b9fb8d330606444001ad840e3a4ce12ad1c14467f430041224deed346b389
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wasi-runtimes/blobs/sha256:a16e5269c1d258f4602aa3b8f6e817882f3a9aaea337388915783f30f5880b99
+    sha256: a16e5269c1d258f4602aa3b8f6e817882f3a9aaea337388915783f30f5880b99
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wasi-runtimes/blobs/sha256:a11f24f3344e65c7aa881bb8952eac0d087a5fb7938d74c74eeb45eafdb6f84a
+    sha256: a11f24f3344e65c7aa881bb8952eac0d087a5fb7938d74c74eeb45eafdb6f84a
+source:
+  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/llvm-project-22.1.0.src.tar.xz
+  sha256: 25d2e2adc4356d758405dd885fcfd6447bce82a90eb78b6b87ce0934bd077173
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - llvm
+build_dependencies:
+  - cmake
+  - wasi-libc

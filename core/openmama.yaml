@@ -3,16 +3,22 @@ version: 6.3.2
 description: Open source high performance messaging API for various Market Data sources
 homepage: https://openmama.finos.org
 license: LGPL-2.1-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/openmama/blobs/sha256:5702a64103b3c429d8d1499aedd50c032b572b3ba6c748f185cf2566a3fdf390
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/openmama/blobs/sha256:d42d95ddea2a041378fa8394830624d124c4703c371a6957da3f837676f27562
-  linux_amd64: https://ghcr.io/v2/homebrew/core/openmama/blobs/sha256:62da575388fea1bf4abd1799475004e328344c01351504d33c61aac0de464e46
-  linux_arm64: https://ghcr.io/v2/homebrew/core/openmama/blobs/sha256:a4ecfe08949d2b93113900c434389b2e662998c0dad4a23e76150dac15a53f97
-sha256:
-  darwin_arm64: 5702a64103b3c429d8d1499aedd50c032b572b3ba6c748f185cf2566a3fdf390
-  darwin_amd64: d42d95ddea2a041378fa8394830624d124c4703c371a6957da3f837676f27562
-  linux_amd64: 62da575388fea1bf4abd1799475004e328344c01351504d33c61aac0de464e46
-  linux_arm64: a4ecfe08949d2b93113900c434389b2e662998c0dad4a23e76150dac15a53f97
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openmama/blobs/sha256:5702a64103b3c429d8d1499aedd50c032b572b3ba6c748f185cf2566a3fdf390
+    sha256: 5702a64103b3c429d8d1499aedd50c032b572b3ba6c748f185cf2566a3fdf390
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openmama/blobs/sha256:d42d95ddea2a041378fa8394830624d124c4703c371a6957da3f837676f27562
+    sha256: d42d95ddea2a041378fa8394830624d124c4703c371a6957da3f837676f27562
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openmama/blobs/sha256:62da575388fea1bf4abd1799475004e328344c01351504d33c61aac0de464e46
+    sha256: 62da575388fea1bf4abd1799475004e328344c01351504d33c61aac0de464e46
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openmama/blobs/sha256:a4ecfe08949d2b93113900c434389b2e662998c0dad4a23e76150dac15a53f97
+    sha256: a4ecfe08949d2b93113900c434389b2e662998c0dad4a23e76150dac15a53f97
+source:
+  url: https://github.com/finos/OpenMAMA/archive/refs/tags/OpenMAMA-6.3.2-release.tar.gz
+  sha256: 5c09b5c73467c4122fe275c0f880c70e4b9f6f8d1ecbaa1aeeac7d8195d9ffef
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,11 @@ dependencies:
   - apr-util
   - libevent
   - qpid-proton
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - apr
+  - apr-util
+  - libevent
+  - qpid-proton
+  - util-linux

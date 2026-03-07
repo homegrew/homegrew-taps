@@ -3,14 +3,22 @@ version: 0.4.9.1
 description: C library for encoding and decoding Protocol Buffer messages
 homepage: https://jpa.kapsi.fi/nanopb/docs/index.html
 license: Zlib
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/nanopb/blobs/sha256:51fdb8214773b1431f5f54eb3bb94d583140a2af0aa5d13ba4a7d9a95a175ffe
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/nanopb/blobs/sha256:24be4b707a3495e707546c5fefb63394c666a8562241c77dcce69942937b2648
-  linux_arm64: https://ghcr.io/v2/homebrew/core/nanopb/blobs/sha256:9e9954ea9fa95369fd9f1685dff2f75e0a14b8c65a1d7f0519dcbd3651a08f19
-sha256:
-  darwin_arm64: 51fdb8214773b1431f5f54eb3bb94d583140a2af0aa5d13ba4a7d9a95a175ffe
-  darwin_amd64: 24be4b707a3495e707546c5fefb63394c666a8562241c77dcce69942937b2648
-  linux_arm64: 9e9954ea9fa95369fd9f1685dff2f75e0a14b8c65a1d7f0519dcbd3651a08f19
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nanopb/blobs/sha256:51fdb8214773b1431f5f54eb3bb94d583140a2af0aa5d13ba4a7d9a95a175ffe
+    sha256: 51fdb8214773b1431f5f54eb3bb94d583140a2af0aa5d13ba4a7d9a95a175ffe
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nanopb/blobs/sha256:24be4b707a3495e707546c5fefb63394c666a8562241c77dcce69942937b2648
+    sha256: 24be4b707a3495e707546c5fefb63394c666a8562241c77dcce69942937b2648
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nanopb/blobs/sha256:f3c0b0233455e0d27ab4a16291f6db79aa1f256b28e419cba62cfbf159361319
+    sha256: f3c0b0233455e0d27ab4a16291f6db79aa1f256b28e419cba62cfbf159361319
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nanopb/blobs/sha256:9e9954ea9fa95369fd9f1685dff2f75e0a14b8c65a1d7f0519dcbd3651a08f19
+    sha256: 9e9954ea9fa95369fd9f1685dff2f75e0a14b8c65a1d7f0519dcbd3651a08f19
+source:
+  url: https://jpa.kapsi.fi/nanopb/download/nanopb-0.4.9.1.tar.gz
+  sha256: 882cd8473ad932b24787e676a808e4fb29c12e086d20bcbfbacc66c183094b5c
 install:
   type: archive
   format: tar.gz
@@ -18,3 +26,5 @@ install:
 dependencies:
   - protobuf
   - python@3.14
+build_dependencies:
+  - cmake

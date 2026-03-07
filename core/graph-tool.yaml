@@ -3,16 +3,22 @@ version: 2.98
 description: Efficient network analysis for Python 3
 homepage: https://graph-tool.skewed.de/
 license: LGPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:4f29bcc01c4eff82e4bad1ff01b17f512c53fe032939130c501984ffb225eae5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:9586b5dd993162ca9f75d43bf9a4332767d7ff3f3913fb055b519eca96d8c06e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:9fec27dacb1c465b41f64a08336c45dc1e8320521068b4ac0990bf54b4ef806a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:18b2deaf9d659b762afcc9dd52742f0b6ee6ccde95ac3ccc491476b8b2683074
-sha256:
-  darwin_arm64: 4f29bcc01c4eff82e4bad1ff01b17f512c53fe032939130c501984ffb225eae5
-  darwin_amd64: 9586b5dd993162ca9f75d43bf9a4332767d7ff3f3913fb055b519eca96d8c06e
-  linux_amd64: 9fec27dacb1c465b41f64a08336c45dc1e8320521068b4ac0990bf54b4ef806a
-  linux_arm64: 18b2deaf9d659b762afcc9dd52742f0b6ee6ccde95ac3ccc491476b8b2683074
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:4f29bcc01c4eff82e4bad1ff01b17f512c53fe032939130c501984ffb225eae5
+    sha256: 4f29bcc01c4eff82e4bad1ff01b17f512c53fe032939130c501984ffb225eae5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:9586b5dd993162ca9f75d43bf9a4332767d7ff3f3913fb055b519eca96d8c06e
+    sha256: 9586b5dd993162ca9f75d43bf9a4332767d7ff3f3913fb055b519eca96d8c06e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:9fec27dacb1c465b41f64a08336c45dc1e8320521068b4ac0990bf54b4ef806a
+    sha256: 9fec27dacb1c465b41f64a08336c45dc1e8320521068b4ac0990bf54b4ef806a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:18b2deaf9d659b762afcc9dd52742f0b6ee6ccde95ac3ccc491476b8b2683074
+    sha256: 18b2deaf9d659b762afcc9dd52742f0b6ee6ccde95ac3ccc491476b8b2683074
+source:
+  url: https://downloads.skewed.de/graph-tool/graph-tool-2.98.tar.bz2
+  sha256: eef1948b937f5f043749eee75fe0c6d7e8f036551d945e9d55e37870b06cc527
 install:
   type: archive
   format: tar.gz
@@ -36,3 +42,23 @@ dependencies:
   - cairo
   - libomp
   - libsigc++@2
+build_dependencies:
+  - google-sparsehash
+  - ninja
+  - pkgconf
+linux_dependencies:
+  - boost
+  - boost-python3
+  - cairomm@1.14
+  - cgal
+  - freetype
+  - gmp
+  - gtk+3
+  - numpy
+  - pillow
+  - py3cairo
+  - pygobject3
+  - python@3.14
+  - qhull
+  - scipy
+  - zstd

@@ -3,16 +3,22 @@ version: 0.31.0
 description: AI assistant in your terminal
 homepage: https://gptme.org/docs/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gptme/blobs/sha256:98aefa5c5c52d4a44a0b8b041edffdb581ab57cb3ffadf71cb8cc7f23e61b8a9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gptme/blobs/sha256:daa842026ddd80bae7092903e314509972185537194d1cd5591fb097994d20ad
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gptme/blobs/sha256:59a512064fe46cf2ee7f050c1a64f64bdba3f305353d75caaf01b529c7ddfc32
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gptme/blobs/sha256:217f5241b28f15daf5f2a2395e13a5e446978389b3977adb05472bf3d7239a97
-sha256:
-  darwin_arm64: 98aefa5c5c52d4a44a0b8b041edffdb581ab57cb3ffadf71cb8cc7f23e61b8a9
-  darwin_amd64: daa842026ddd80bae7092903e314509972185537194d1cd5591fb097994d20ad
-  linux_amd64: 59a512064fe46cf2ee7f050c1a64f64bdba3f305353d75caaf01b529c7ddfc32
-  linux_arm64: 217f5241b28f15daf5f2a2395e13a5e446978389b3977adb05472bf3d7239a97
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gptme/blobs/sha256:98aefa5c5c52d4a44a0b8b041edffdb581ab57cb3ffadf71cb8cc7f23e61b8a9
+    sha256: 98aefa5c5c52d4a44a0b8b041edffdb581ab57cb3ffadf71cb8cc7f23e61b8a9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gptme/blobs/sha256:daa842026ddd80bae7092903e314509972185537194d1cd5591fb097994d20ad
+    sha256: daa842026ddd80bae7092903e314509972185537194d1cd5591fb097994d20ad
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gptme/blobs/sha256:59a512064fe46cf2ee7f050c1a64f64bdba3f305353d75caaf01b529c7ddfc32
+    sha256: 59a512064fe46cf2ee7f050c1a64f64bdba3f305353d75caaf01b529c7ddfc32
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gptme/blobs/sha256:217f5241b28f15daf5f2a2395e13a5e446978389b3977adb05472bf3d7239a97
+    sha256: 217f5241b28f15daf5f2a2395e13a5e446978389b3977adb05472bf3d7239a97
+source:
+  url: https://files.pythonhosted.org/packages/1a/20/57d7b444abc582b5aa09b98aa6821fefa728eb056a1c4371d475d19514dd/gptme-0.31.0.tar.gz
+  sha256: 96e17e9dd82c409743b1b81dad08c6c024ace108d829f80c557be8eb2c429ffb
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,5 @@ dependencies:
   - pydantic
   - python@3.14
   - rpds-py
+build_dependencies:
+  - rust

@@ -3,16 +3,22 @@ version: 5.2.0
 description: Atari 8-bit machine emulator
 homepage: https://atari800.github.io/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/atari800/blobs/sha256:8ee4d61f11fc57cc49859acab122eb2496d334f6e9907fb7dcfd4170c4765e50
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/atari800/blobs/sha256:78268655a61188a6720ce820e5eb52e6ad9fc0265d10b6d04d29a1e0305889fd
-  linux_amd64: https://ghcr.io/v2/homebrew/core/atari800/blobs/sha256:8a30c9a3ddb2ceaa47e20b75a14833b53aebdd8851d893f306c42ebd8a79fbee
-  linux_arm64: https://ghcr.io/v2/homebrew/core/atari800/blobs/sha256:ef23849a07d7554863256ffc128394a76a4e47eda8f93628a74e828dc66bec31
-sha256:
-  darwin_arm64: 8ee4d61f11fc57cc49859acab122eb2496d334f6e9907fb7dcfd4170c4765e50
-  darwin_amd64: 78268655a61188a6720ce820e5eb52e6ad9fc0265d10b6d04d29a1e0305889fd
-  linux_amd64: 8a30c9a3ddb2ceaa47e20b75a14833b53aebdd8851d893f306c42ebd8a79fbee
-  linux_arm64: ef23849a07d7554863256ffc128394a76a4e47eda8f93628a74e828dc66bec31
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/atari800/blobs/sha256:8ee4d61f11fc57cc49859acab122eb2496d334f6e9907fb7dcfd4170c4765e50
+    sha256: 8ee4d61f11fc57cc49859acab122eb2496d334f6e9907fb7dcfd4170c4765e50
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/atari800/blobs/sha256:78268655a61188a6720ce820e5eb52e6ad9fc0265d10b6d04d29a1e0305889fd
+    sha256: 78268655a61188a6720ce820e5eb52e6ad9fc0265d10b6d04d29a1e0305889fd
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/atari800/blobs/sha256:8a30c9a3ddb2ceaa47e20b75a14833b53aebdd8851d893f306c42ebd8a79fbee
+    sha256: 8a30c9a3ddb2ceaa47e20b75a14833b53aebdd8851d893f306c42ebd8a79fbee
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/atari800/blobs/sha256:ef23849a07d7554863256ffc128394a76a4e47eda8f93628a74e828dc66bec31
+    sha256: ef23849a07d7554863256ffc128394a76a4e47eda8f93628a74e828dc66bec31
+source:
+  url: https://github.com/atari800/atari800/releases/download/ATARI800_5_2_0/atari800-5.2.0-src.tgz
+  sha256: 3874d02b89d83c8089f75391a4c91ecb4e94001da2020c2617be088eba1f461f
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,8 @@ install:
 dependencies:
   - sdl12-compat
   - libpng
+linux_dependencies:
+  - libpng
+  - readline
+  - sdl12-compat
+  - zlib-ng-compat

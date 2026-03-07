@@ -3,17 +3,25 @@ version: 0.2.0
 description: CLI to audit posture and evaluate compromise blast radius
 homepage: https://boostsecurityio.github.io/bagel/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bagel/blobs/sha256:0a17f0bae9a8f11892b079f7228d5d88ce8295de88a43a837359d8b7dca7de0b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bagel/blobs/sha256:fda06f15cd570be2c5c99a1f024079e0b79cfcff85776583c2c5814cf4df05ad
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bagel/blobs/sha256:fa67a3f863484b1d32fcd713843a7f8710509b1485e5e754f6413d98fef1d372
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bagel/blobs/sha256:5e952743eb402d655bcff252726cb44eeef96512616d959cd75527f46317c325
-sha256:
-  darwin_arm64: 0a17f0bae9a8f11892b079f7228d5d88ce8295de88a43a837359d8b7dca7de0b
-  darwin_amd64: fda06f15cd570be2c5c99a1f024079e0b79cfcff85776583c2c5814cf4df05ad
-  linux_amd64: fa67a3f863484b1d32fcd713843a7f8710509b1485e5e754f6413d98fef1d372
-  linux_arm64: 5e952743eb402d655bcff252726cb44eeef96512616d959cd75527f46317c325
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bagel/blobs/sha256:0a17f0bae9a8f11892b079f7228d5d88ce8295de88a43a837359d8b7dca7de0b
+    sha256: 0a17f0bae9a8f11892b079f7228d5d88ce8295de88a43a837359d8b7dca7de0b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bagel/blobs/sha256:fda06f15cd570be2c5c99a1f024079e0b79cfcff85776583c2c5814cf4df05ad
+    sha256: fda06f15cd570be2c5c99a1f024079e0b79cfcff85776583c2c5814cf4df05ad
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bagel/blobs/sha256:fa67a3f863484b1d32fcd713843a7f8710509b1485e5e754f6413d98fef1d372
+    sha256: fa67a3f863484b1d32fcd713843a7f8710509b1485e5e754f6413d98fef1d372
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bagel/blobs/sha256:5e952743eb402d655bcff252726cb44eeef96512616d959cd75527f46317c325
+    sha256: 5e952743eb402d655bcff252726cb44eeef96512616d959cd75527f46317c325
+source:
+  url: https://github.com/boostsecurityio/bagel/archive/refs/tags/v0.2.0.tar.gz
+  sha256: b7317200cfc6d7556c6c1fbeb244c8397f68fc2998348bf07dbdc4f9bed46506
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

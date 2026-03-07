@@ -3,19 +3,28 @@ version: 1.1.0
 description: Utility to help resolve merge conflicts
 homepage: https://github.com/Peaker/git-mediate
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:42134552e6c948a352c7a2819178ca7fdd34254d5932ac9867635a31813dcebe
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:f9b46bfa29542509a7fa1b33dadf15a415dbd154066ea58ec7683861a9ab3544
-  linux_amd64: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:54dd625814a87c231bc8d8fc83ddb4b3366ca87f068a0a6f63e17ace1e842744
-  linux_arm64: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:58caff9b2789c99a435feb86be3fc3f7e6a9b05c4fffba13e8c87b23886eb11a
-sha256:
-  darwin_arm64: 42134552e6c948a352c7a2819178ca7fdd34254d5932ac9867635a31813dcebe
-  darwin_amd64: f9b46bfa29542509a7fa1b33dadf15a415dbd154066ea58ec7683861a9ab3544
-  linux_amd64: 54dd625814a87c231bc8d8fc83ddb4b3366ca87f068a0a6f63e17ace1e842744
-  linux_arm64: 58caff9b2789c99a435feb86be3fc3f7e6a9b05c4fffba13e8c87b23886eb11a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:42134552e6c948a352c7a2819178ca7fdd34254d5932ac9867635a31813dcebe
+    sha256: 42134552e6c948a352c7a2819178ca7fdd34254d5932ac9867635a31813dcebe
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:f9b46bfa29542509a7fa1b33dadf15a415dbd154066ea58ec7683861a9ab3544
+    sha256: f9b46bfa29542509a7fa1b33dadf15a415dbd154066ea58ec7683861a9ab3544
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:54dd625814a87c231bc8d8fc83ddb4b3366ca87f068a0a6f63e17ace1e842744
+    sha256: 54dd625814a87c231bc8d8fc83ddb4b3366ca87f068a0a6f63e17ace1e842744
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:58caff9b2789c99a435feb86be3fc3f7e6a9b05c4fffba13e8c87b23886eb11a
+    sha256: 58caff9b2789c99a435feb86be3fc3f7e6a9b05c4fffba13e8c87b23886eb11a
+source:
+  url: https://github.com/Peaker/git-mediate/archive/refs/tags/1.1.0.tar.gz
+  sha256: f8bacc2d041d1bef9288bebdb20ab2ee6fbd7d37d4e23c84f8dda27ff5b8ba59
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - gmp
+build_dependencies:
+  - cabal-install
+  - ghc

@@ -3,17 +3,26 @@ version: 0.6.3
 description: Console-based live network and disk I/O bandwidth monitor
 homepage: https://www.gropp.org/?id=projects&sub=bwm-ng
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bwm-ng/blobs/sha256:ec3ddaf321252ebe934527a12aa3e1addb76f797cf5a618f8a9565c3d248d5af
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bwm-ng/blobs/sha256:5dfca0d64c98e4d39184d8dc404148c42a9ffb2b52cde20163237293d72bff98
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bwm-ng/blobs/sha256:55c116063a31ada221daff5f86798ab5cb90806e00e02f2b4ffda7092bd5caab
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bwm-ng/blobs/sha256:3bfce1bb05275a58e441caf13c46aa439cc7bcef34efc5189720fd5490c56e52
-sha256:
-  darwin_arm64: ec3ddaf321252ebe934527a12aa3e1addb76f797cf5a618f8a9565c3d248d5af
-  darwin_amd64: 5dfca0d64c98e4d39184d8dc404148c42a9ffb2b52cde20163237293d72bff98
-  linux_amd64: 55c116063a31ada221daff5f86798ab5cb90806e00e02f2b4ffda7092bd5caab
-  linux_arm64: 3bfce1bb05275a58e441caf13c46aa439cc7bcef34efc5189720fd5490c56e52
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bwm-ng/blobs/sha256:ec3ddaf321252ebe934527a12aa3e1addb76f797cf5a618f8a9565c3d248d5af
+    sha256: ec3ddaf321252ebe934527a12aa3e1addb76f797cf5a618f8a9565c3d248d5af
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bwm-ng/blobs/sha256:5dfca0d64c98e4d39184d8dc404148c42a9ffb2b52cde20163237293d72bff98
+    sha256: 5dfca0d64c98e4d39184d8dc404148c42a9ffb2b52cde20163237293d72bff98
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bwm-ng/blobs/sha256:55c116063a31ada221daff5f86798ab5cb90806e00e02f2b4ffda7092bd5caab
+    sha256: 55c116063a31ada221daff5f86798ab5cb90806e00e02f2b4ffda7092bd5caab
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bwm-ng/blobs/sha256:3bfce1bb05275a58e441caf13c46aa439cc7bcef34efc5189720fd5490c56e52
+    sha256: 3bfce1bb05275a58e441caf13c46aa439cc7bcef34efc5189720fd5490c56e52
+source:
+  url: https://github.com/vgropp/bwm-ng/archive/refs/tags/v0.6.3.tar.gz
+  sha256: c1a552b6ff48ea3e4e10110a7c188861abc4750befc67c6caaba8eb3ecf67f46
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake

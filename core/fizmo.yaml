@@ -3,16 +3,22 @@ version: 0.8.5
 description: Z-Machine interpreter
 homepage: https://fizmo.spellbreaker.org
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/fizmo/blobs/sha256:84b3dabce41fa7fd0883ff4cc412d65b73d42da0b9f5968db0570df314ba20d7
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/fizmo/blobs/sha256:28a1e73cd22c90f530ff66da225fc5d2a0b83cd851cce66ff2a4e39397930ad9
-  linux_amd64: https://ghcr.io/v2/homebrew/core/fizmo/blobs/sha256:c21432000515a2c9e3d51d38f66d0bc3203baedc971da06ab80f4b650e4f8c08
-  linux_arm64: https://ghcr.io/v2/homebrew/core/fizmo/blobs/sha256:6a6002114ad34ebc2792bab4d6d230e1f7bb206a88dd4e86d2764fead910d111
-sha256:
-  darwin_arm64: 84b3dabce41fa7fd0883ff4cc412d65b73d42da0b9f5968db0570df314ba20d7
-  darwin_amd64: 28a1e73cd22c90f530ff66da225fc5d2a0b83cd851cce66ff2a4e39397930ad9
-  linux_amd64: c21432000515a2c9e3d51d38f66d0bc3203baedc971da06ab80f4b650e4f8c08
-  linux_arm64: 6a6002114ad34ebc2792bab4d6d230e1f7bb206a88dd4e86d2764fead910d111
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fizmo/blobs/sha256:84b3dabce41fa7fd0883ff4cc412d65b73d42da0b9f5968db0570df314ba20d7
+    sha256: 84b3dabce41fa7fd0883ff4cc412d65b73d42da0b9f5968db0570df314ba20d7
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fizmo/blobs/sha256:28a1e73cd22c90f530ff66da225fc5d2a0b83cd851cce66ff2a4e39397930ad9
+    sha256: 28a1e73cd22c90f530ff66da225fc5d2a0b83cd851cce66ff2a4e39397930ad9
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fizmo/blobs/sha256:c21432000515a2c9e3d51d38f66d0bc3203baedc971da06ab80f4b650e4f8c08
+    sha256: c21432000515a2c9e3d51d38f66d0bc3203baedc971da06ab80f4b650e4f8c08
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fizmo/blobs/sha256:6a6002114ad34ebc2792bab4d6d230e1f7bb206a88dd4e86d2764fead910d111
+    sha256: 6a6002114ad34ebc2792bab4d6d230e1f7bb206a88dd4e86d2764fead910d111
+source:
+  url: https://fizmo.spellbreaker.org/source/fizmo-0.8.5.tar.gz
+  sha256: 1c259a29b21c9f401c12fc24d555aca4f4ff171873be56fb44c0c9402c61beaa
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,5 @@ dependencies:
   - libsndfile
   - libx11
   - sdl2
+build_dependencies:
+  - pkgconf

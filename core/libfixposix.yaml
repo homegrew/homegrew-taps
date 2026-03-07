@@ -3,17 +3,28 @@ version: 0.5.1
 description: Thin wrapper over POSIX syscalls
 homepage: https://github.com/sionescu/libfixposix
 license: BSL-1.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libfixposix/blobs/sha256:b0253b42d4aabdfeac674a45f3e55f4e98e7fb89af64200122a0cb01c8d94bad
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libfixposix/blobs/sha256:86e9405e5c780a7011555ea50b980d32fbb1721f0ba53a6acb890a1e292a004d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libfixposix/blobs/sha256:af87e982e579778df2e7e49331b81489445e30753fe9397f340dc95f293f43ec
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libfixposix/blobs/sha256:c830b4e29003a72949cc73e2ff51ef21f8794799f0419dcde5aad13fccf311a0
-sha256:
-  darwin_arm64: b0253b42d4aabdfeac674a45f3e55f4e98e7fb89af64200122a0cb01c8d94bad
-  darwin_amd64: 86e9405e5c780a7011555ea50b980d32fbb1721f0ba53a6acb890a1e292a004d
-  linux_amd64: af87e982e579778df2e7e49331b81489445e30753fe9397f340dc95f293f43ec
-  linux_arm64: c830b4e29003a72949cc73e2ff51ef21f8794799f0419dcde5aad13fccf311a0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libfixposix/blobs/sha256:b0253b42d4aabdfeac674a45f3e55f4e98e7fb89af64200122a0cb01c8d94bad
+    sha256: b0253b42d4aabdfeac674a45f3e55f4e98e7fb89af64200122a0cb01c8d94bad
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libfixposix/blobs/sha256:86e9405e5c780a7011555ea50b980d32fbb1721f0ba53a6acb890a1e292a004d
+    sha256: 86e9405e5c780a7011555ea50b980d32fbb1721f0ba53a6acb890a1e292a004d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libfixposix/blobs/sha256:af87e982e579778df2e7e49331b81489445e30753fe9397f340dc95f293f43ec
+    sha256: af87e982e579778df2e7e49331b81489445e30753fe9397f340dc95f293f43ec
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libfixposix/blobs/sha256:c830b4e29003a72949cc73e2ff51ef21f8794799f0419dcde5aad13fccf311a0
+    sha256: c830b4e29003a72949cc73e2ff51ef21f8794799f0419dcde5aad13fccf311a0
+source:
+  url: https://github.com/sionescu/libfixposix/archive/refs/tags/v0.5.1.tar.gz
+  sha256: 5d9d3d321d4c7302040389c43f966a70d180abb58d1d7df370f39e0d402d50d4
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf

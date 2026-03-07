@@ -3,16 +3,22 @@ version: 1.15.1
 description: Library for 2D/3D image and point cloud processing
 homepage: https://pointclouds.org/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:e4c9cc4c139723b408091c01b18ef8249bbe08fe11e3d51f268d9cd908f7c750
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:83661d4af8d5ef9844d36db153b951253a27c2fed7d27c7694a2cf1f10436d09
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:37753c8c319f1738f80f5a055142384da4ed7835f89df80373f5101af6297e17
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:4fd468daa240828c4fee288994bd82dd9ddd426726d4e8caf18b8965ef71eb9b
-sha256:
-  darwin_arm64: e4c9cc4c139723b408091c01b18ef8249bbe08fe11e3d51f268d9cd908f7c750
-  darwin_amd64: 83661d4af8d5ef9844d36db153b951253a27c2fed7d27c7694a2cf1f10436d09
-  linux_amd64: 37753c8c319f1738f80f5a055142384da4ed7835f89df80373f5101af6297e17
-  linux_arm64: 4fd468daa240828c4fee288994bd82dd9ddd426726d4e8caf18b8965ef71eb9b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:e4c9cc4c139723b408091c01b18ef8249bbe08fe11e3d51f268d9cd908f7c750
+    sha256: e4c9cc4c139723b408091c01b18ef8249bbe08fe11e3d51f268d9cd908f7c750
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:83661d4af8d5ef9844d36db153b951253a27c2fed7d27c7694a2cf1f10436d09
+    sha256: 83661d4af8d5ef9844d36db153b951253a27c2fed7d27c7694a2cf1f10436d09
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:37753c8c319f1738f80f5a055142384da4ed7835f89df80373f5101af6297e17
+    sha256: 37753c8c319f1738f80f5a055142384da4ed7835f89df80373f5101af6297e17
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:4fd468daa240828c4fee288994bd82dd9ddd426726d4e8caf18b8965ef71eb9b
+    sha256: 4fd468daa240828c4fee288994bd82dd9ddd426726d4e8caf18b8965ef71eb9b
+source:
+  url: https://github.com/PointCloudLibrary/pcl/archive/refs/tags/pcl-1.15.1.tar.gz
+  sha256: e1d862c7b6bd27a45884a825a2e509bfcbd4561307d5bfe17ce5c8a3d94a6c29
 install:
   type: archive
   format: tar.gz
@@ -32,3 +38,23 @@ dependencies:
   - vtk
   - freetype
   - libomp
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - boost
+  - cjson
+  - eigen
+  - flann
+  - freeglut
+  - glew
+  - libpcap
+  - libpng
+  - libusb
+  - libx11
+  - lz4
+  - mesa
+  - mesa-glu
+  - qhull
+  - qtbase
+  - vtk

@@ -3,16 +3,22 @@ version: 0.6.3
 description: "Classic 2D jump'n run sidescroller game"
 homepage: https://www.supertux.org/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/supertux/blobs/sha256:f30e013af1d8f3bb1d2b99c0ac72b98fa0c9a46840814b97a0c8890eb999dc5b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/supertux/blobs/sha256:8b514eefd571f39fdca1ca0ea2b3b061b1a13570bb42475c6771855cbd649101
-  linux_amd64: https://ghcr.io/v2/homebrew/core/supertux/blobs/sha256:a0be5ada884d712e94104eb8c14cf314cfdfc0ac32d81adcda88ecd2104e029f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/supertux/blobs/sha256:2c0f614acac9dba3b3b455793df275e63775ea58af94c1fbc8c8e51fd2219fc9
-sha256:
-  darwin_arm64: f30e013af1d8f3bb1d2b99c0ac72b98fa0c9a46840814b97a0c8890eb999dc5b
-  darwin_amd64: 8b514eefd571f39fdca1ca0ea2b3b061b1a13570bb42475c6771855cbd649101
-  linux_amd64: a0be5ada884d712e94104eb8c14cf314cfdfc0ac32d81adcda88ecd2104e029f
-  linux_arm64: 2c0f614acac9dba3b3b455793df275e63775ea58af94c1fbc8c8e51fd2219fc9
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/supertux/blobs/sha256:f30e013af1d8f3bb1d2b99c0ac72b98fa0c9a46840814b97a0c8890eb999dc5b
+    sha256: f30e013af1d8f3bb1d2b99c0ac72b98fa0c9a46840814b97a0c8890eb999dc5b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/supertux/blobs/sha256:8b514eefd571f39fdca1ca0ea2b3b061b1a13570bb42475c6771855cbd649101
+    sha256: 8b514eefd571f39fdca1ca0ea2b3b061b1a13570bb42475c6771855cbd649101
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/supertux/blobs/sha256:a0be5ada884d712e94104eb8c14cf314cfdfc0ac32d81adcda88ecd2104e029f
+    sha256: a0be5ada884d712e94104eb8c14cf314cfdfc0ac32d81adcda88ecd2104e029f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/supertux/blobs/sha256:2c0f614acac9dba3b3b455793df275e63775ea58af94c1fbc8c8e51fd2219fc9
+    sha256: 2c0f614acac9dba3b3b455793df275e63775ea58af94c1fbc8c8e51fd2219fc9
+source:
+  url: https://github.com/SuperTux/supertux/releases/download/v0.6.3/SuperTux-v0.6.3-Source.tar.gz
+  sha256: f7940e6009c40226eb34ebab8ffb0e3a894892d891a07b35d0e5762dd41c79f6
 install:
   type: archive
   format: tar.gz
@@ -28,3 +34,20 @@ dependencies:
   - physfs
   - sdl2
   - sdl2_image
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - boost
+  - freetype
+  - glew
+  - glm
+  - libogg
+  - libpng
+  - libvorbis
+  - mesa
+  - openal-soft
+  - physfs
+  - sdl2
+  - sdl2_image
+  - zlib-ng-compat

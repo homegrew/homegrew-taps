@@ -3,12 +3,16 @@ version: 5.4.2
 description: POSIX-compliant FUSE filesystem using object store as block storage
 homepage: https://github.com/s3ql/s3ql
 license: GPL-3.0-only
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/s3ql/blobs/sha256:97a2c2e352bcdc4b105ff19edaa7c417c75c700881e4f32c6eb530eb23c40831
-  linux_arm64: https://ghcr.io/v2/homebrew/core/s3ql/blobs/sha256:4ff4a28eb98644bb95f7442973e9205ee81b8002d3b203a2a83d48edc9b48e85
-sha256:
-  linux_amd64: 97a2c2e352bcdc4b105ff19edaa7c417c75c700881e4f32c6eb530eb23c40831
-  linux_arm64: 4ff4a28eb98644bb95f7442973e9205ee81b8002d3b203a2a83d48edc9b48e85
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/s3ql/blobs/sha256:97a2c2e352bcdc4b105ff19edaa7c417c75c700881e4f32c6eb530eb23c40831
+    sha256: 97a2c2e352bcdc4b105ff19edaa7c417c75c700881e4f32c6eb530eb23c40831
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/s3ql/blobs/sha256:4ff4a28eb98644bb95f7442973e9205ee81b8002d3b203a2a83d48edc9b48e85
+    sha256: 4ff4a28eb98644bb95f7442973e9205ee81b8002d3b203a2a83d48edc9b48e85
+source:
+  url: https://github.com/s3ql/s3ql/releases/download/s3ql-5.4.2/s3ql-5.4.2.tar.gz
+  sha256: 3ec2e183d2c9a3eb46be9eb43a12866ad8e2640e3d7ad023431de5f406a605d0
 install:
   type: archive
   format: tar.gz
@@ -18,3 +22,5 @@ dependencies:
   - libffi
   - libfuse
   - python@3.14
+build_dependencies:
+  - pkgconf

@@ -3,17 +3,28 @@ version: 3.0.25
 description: Network intrusion prevention and detection system
 homepage: https://www.snort.org/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:2e11fd98c54211c9ac800ccc4930849458f835797789f8c4006f677f3ea2096b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:909b71e0609cf82c7e1f92ba638be8fc764af989d4478d707b884db72327ff24
-  linux_amd64: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:72b8898a3351bce7a6be9caa370b0cd3715466a1def695cef02e09d91e774acd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:83723eb2e51873cb9489a7906710eb99285b16060c88ad07e4e5883b6e6b23fa
-sha256:
-  darwin_arm64: 2e11fd98c54211c9ac800ccc4930849458f835797789f8c4006f677f3ea2096b
-  darwin_amd64: 909b71e0609cf82c7e1f92ba638be8fc764af989d4478d707b884db72327ff24
-  linux_amd64: 72b8898a3351bce7a6be9caa370b0cd3715466a1def695cef02e09d91e774acd
-  linux_arm64: 83723eb2e51873cb9489a7906710eb99285b16060c88ad07e4e5883b6e6b23fa
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:2e11fd98c54211c9ac800ccc4930849458f835797789f8c4006f677f3ea2096b
+    sha256: 2e11fd98c54211c9ac800ccc4930849458f835797789f8c4006f677f3ea2096b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:909b71e0609cf82c7e1f92ba638be8fc764af989d4478d707b884db72327ff24
+    sha256: 909b71e0609cf82c7e1f92ba638be8fc764af989d4478d707b884db72327ff24
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:72b8898a3351bce7a6be9caa370b0cd3715466a1def695cef02e09d91e774acd
+    sha256: 72b8898a3351bce7a6be9caa370b0cd3715466a1def695cef02e09d91e774acd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:83723eb2e51873cb9489a7906710eb99285b16060c88ad07e4e5883b6e6b23fa
+    sha256: 83723eb2e51873cb9489a7906710eb99285b16060c88ad07e4e5883b6e6b23fa
+source:
+  url: https://github.com/snort3/libdaq/archive/refs/tags/v3.0.25.tar.gz
+  sha256: 651e38a2737d179a224bcb01d8a06300667708ee614d19a8b411fdd212cc035d
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf

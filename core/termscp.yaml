@@ -3,16 +3,22 @@ version: 0.19.1
 description: Feature rich terminal file transfer and explorer
 homepage: https://termscp.veeso.dev/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/termscp/blobs/sha256:8bdec1e7b0df8b1245316318cd2a94add2b2a3bd6e87c6b1ec45498401c19b1f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/termscp/blobs/sha256:29b1da4bed40847c693bb52e32511d4dfc53e6ac04524a3217e5cf0282a47f13
-  linux_amd64: https://ghcr.io/v2/homebrew/core/termscp/blobs/sha256:c0bec0fcc27065085c36f6cf69efec45e3d7744ff5892c6cadc4293c8de73962
-  linux_arm64: https://ghcr.io/v2/homebrew/core/termscp/blobs/sha256:aa3958d217ee1d3a5d45de489b1cfb4df90587269211060643017c9ff45e5308
-sha256:
-  darwin_arm64: 8bdec1e7b0df8b1245316318cd2a94add2b2a3bd6e87c6b1ec45498401c19b1f
-  darwin_amd64: 29b1da4bed40847c693bb52e32511d4dfc53e6ac04524a3217e5cf0282a47f13
-  linux_amd64: c0bec0fcc27065085c36f6cf69efec45e3d7744ff5892c6cadc4293c8de73962
-  linux_arm64: aa3958d217ee1d3a5d45de489b1cfb4df90587269211060643017c9ff45e5308
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/termscp/blobs/sha256:8bdec1e7b0df8b1245316318cd2a94add2b2a3bd6e87c6b1ec45498401c19b1f
+    sha256: 8bdec1e7b0df8b1245316318cd2a94add2b2a3bd6e87c6b1ec45498401c19b1f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/termscp/blobs/sha256:29b1da4bed40847c693bb52e32511d4dfc53e6ac04524a3217e5cf0282a47f13
+    sha256: 29b1da4bed40847c693bb52e32511d4dfc53e6ac04524a3217e5cf0282a47f13
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/termscp/blobs/sha256:c0bec0fcc27065085c36f6cf69efec45e3d7744ff5892c6cadc4293c8de73962
+    sha256: c0bec0fcc27065085c36f6cf69efec45e3d7744ff5892c6cadc4293c8de73962
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/termscp/blobs/sha256:aa3958d217ee1d3a5d45de489b1cfb4df90587269211060643017c9ff45e5308
+    sha256: aa3958d217ee1d3a5d45de489b1cfb4df90587269211060643017c9ff45e5308
+source:
+  url: https://github.com/veeso/termscp/archive/refs/tags/v0.19.1.tar.gz
+  sha256: 04248fc89e71a050463ad1824eccab4c04d34bff3126a8f9e26a77c75fe55b0f
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,11 @@ install:
 dependencies:
   - openssl@3
   - samba
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - dbus
+  - openssl@3
+  - samba
+  - zlib-ng-compat

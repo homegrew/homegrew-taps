@@ -3,16 +3,22 @@ version: 2.1.0
 description: Open-sourced remote vulnerability testing framework
 homepage: https://pocsuite.org/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pocsuite3/blobs/sha256:99a1ccadcc528d3fd8484e9d401fb57893e7a8eb82aa8078415c27cad0592206
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pocsuite3/blobs/sha256:3ee4326327152d70b8e0c3c65aa6943f76417580dc7ab6592fcb35406aa1d964
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pocsuite3/blobs/sha256:33005097856baf0340168d75948ea00439e35530d21fabdbbc52fed977294657
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pocsuite3/blobs/sha256:e7df09cdce4ce3f77142449a37198e550b3612a9c80ace0d1631c5b3271e64ed
-sha256:
-  darwin_arm64: 99a1ccadcc528d3fd8484e9d401fb57893e7a8eb82aa8078415c27cad0592206
-  darwin_amd64: 3ee4326327152d70b8e0c3c65aa6943f76417580dc7ab6592fcb35406aa1d964
-  linux_amd64: 33005097856baf0340168d75948ea00439e35530d21fabdbbc52fed977294657
-  linux_arm64: e7df09cdce4ce3f77142449a37198e550b3612a9c80ace0d1631c5b3271e64ed
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pocsuite3/blobs/sha256:99a1ccadcc528d3fd8484e9d401fb57893e7a8eb82aa8078415c27cad0592206
+    sha256: 99a1ccadcc528d3fd8484e9d401fb57893e7a8eb82aa8078415c27cad0592206
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pocsuite3/blobs/sha256:3ee4326327152d70b8e0c3c65aa6943f76417580dc7ab6592fcb35406aa1d964
+    sha256: 3ee4326327152d70b8e0c3c65aa6943f76417580dc7ab6592fcb35406aa1d964
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pocsuite3/blobs/sha256:33005097856baf0340168d75948ea00439e35530d21fabdbbc52fed977294657
+    sha256: 33005097856baf0340168d75948ea00439e35530d21fabdbbc52fed977294657
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pocsuite3/blobs/sha256:e7df09cdce4ce3f77142449a37198e550b3612a9c80ace0d1631c5b3271e64ed
+    sha256: e7df09cdce4ce3f77142449a37198e550b3612a9c80ace0d1631c5b3271e64ed
+source:
+  url: https://files.pythonhosted.org/packages/12/33/a9f77b222075f034c04c615de19c9ef0f93457d9b627e95cc40d07949e70/pocsuite3-2.1.0.tar.gz
+  sha256: 4107396b5fbbeeb65b27b574c6fb5a40831d1983ad4fd2f9a83c87006bed98e6
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,5 @@ dependencies:
   - cryptography
   - libyaml
   - python@3.14
+build_dependencies:
+  - pkgconf

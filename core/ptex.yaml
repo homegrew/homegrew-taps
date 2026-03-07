@@ -3,19 +3,31 @@ version: 2.5.1
 description: Texture mapping system
 homepage: https://ptex.us/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ptex/blobs/sha256:180dc89f0792317b8800689587ccbcb1b36e0d2316f8811467323361cd7152c4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ptex/blobs/sha256:95017074b589ede0043a7974a045faeb7e6a7945400e44bce17a400ccf811949
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ptex/blobs/sha256:893722f8de667f5d9fdbf20d04b89868e5d9d05484272f68f16dfd20afc50aee
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ptex/blobs/sha256:1dbcf9a26c757d9404ae835e3e35903ca65adc10f76d23bc9fea920d3a608b5f
-sha256:
-  darwin_arm64: 180dc89f0792317b8800689587ccbcb1b36e0d2316f8811467323361cd7152c4
-  darwin_amd64: 95017074b589ede0043a7974a045faeb7e6a7945400e44bce17a400ccf811949
-  linux_amd64: 893722f8de667f5d9fdbf20d04b89868e5d9d05484272f68f16dfd20afc50aee
-  linux_arm64: 1dbcf9a26c757d9404ae835e3e35903ca65adc10f76d23bc9fea920d3a608b5f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ptex/blobs/sha256:180dc89f0792317b8800689587ccbcb1b36e0d2316f8811467323361cd7152c4
+    sha256: 180dc89f0792317b8800689587ccbcb1b36e0d2316f8811467323361cd7152c4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ptex/blobs/sha256:95017074b589ede0043a7974a045faeb7e6a7945400e44bce17a400ccf811949
+    sha256: 95017074b589ede0043a7974a045faeb7e6a7945400e44bce17a400ccf811949
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ptex/blobs/sha256:893722f8de667f5d9fdbf20d04b89868e5d9d05484272f68f16dfd20afc50aee
+    sha256: 893722f8de667f5d9fdbf20d04b89868e5d9d05484272f68f16dfd20afc50aee
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ptex/blobs/sha256:1dbcf9a26c757d9404ae835e3e35903ca65adc10f76d23bc9fea920d3a608b5f
+    sha256: 1dbcf9a26c757d9404ae835e3e35903ca65adc10f76d23bc9fea920d3a608b5f
+source:
+  url: https://github.com/wdas/ptex/archive/refs/tags/v2.5.1.tar.gz
+  sha256: 6b4b55f562a0f9492655fcb7686ecc335a2a4dacc1de9f9a057a32f3867a9d9e
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - libdeflate
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - libdeflate
+  - zlib-ng-compat

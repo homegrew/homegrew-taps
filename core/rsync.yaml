@@ -3,16 +3,22 @@ version: 3.4.1
 description: Utility that provides fast incremental file transfer
 homepage: https://rsync.samba.org/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/rsync/blobs/sha256:e2721ff74a3d354cccd1c98c3b97ca1dbb41aa4a48945caf72e0a6950183d698
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/rsync/blobs/sha256:e36f0a191187ceaef4c193bb59941fb512c42784288f967a9a00d456022a7c8f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/rsync/blobs/sha256:1ebcddcce2bc4e37fb1b5b2aaf956bdba9122b54d56c4b3e74005853a996d311
-  linux_arm64: https://ghcr.io/v2/homebrew/core/rsync/blobs/sha256:9f0e09610aa95a51f1b39225041dae8fef6431278285f44cf51b38178a446312
-sha256:
-  darwin_arm64: e2721ff74a3d354cccd1c98c3b97ca1dbb41aa4a48945caf72e0a6950183d698
-  darwin_amd64: e36f0a191187ceaef4c193bb59941fb512c42784288f967a9a00d456022a7c8f
-  linux_amd64: 1ebcddcce2bc4e37fb1b5b2aaf956bdba9122b54d56c4b3e74005853a996d311
-  linux_arm64: 9f0e09610aa95a51f1b39225041dae8fef6431278285f44cf51b38178a446312
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rsync/blobs/sha256:e2721ff74a3d354cccd1c98c3b97ca1dbb41aa4a48945caf72e0a6950183d698
+    sha256: e2721ff74a3d354cccd1c98c3b97ca1dbb41aa4a48945caf72e0a6950183d698
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rsync/blobs/sha256:e36f0a191187ceaef4c193bb59941fb512c42784288f967a9a00d456022a7c8f
+    sha256: e36f0a191187ceaef4c193bb59941fb512c42784288f967a9a00d456022a7c8f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rsync/blobs/sha256:1ebcddcce2bc4e37fb1b5b2aaf956bdba9122b54d56c4b3e74005853a996d311
+    sha256: 1ebcddcce2bc4e37fb1b5b2aaf956bdba9122b54d56c4b3e74005853a996d311
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rsync/blobs/sha256:9f0e09610aa95a51f1b39225041dae8fef6431278285f44cf51b38178a446312
+    sha256: 9f0e09610aa95a51f1b39225041dae8fef6431278285f44cf51b38178a446312
+source:
+  url: https://rsync.samba.org/ftp/rsync/rsync-3.4.1.tar.gz
+  sha256: 2924bcb3a1ed8b551fc101f740b9f0fe0a202b115027647cf69850d65fd88c52
 install:
   type: archive
   format: tar.gz
@@ -22,4 +28,14 @@ dependencies:
   - openssl@3
   - popt
   - xxhash
+  - zstd
+build_dependencies:
+  - autoconf
+  - automake
+linux_dependencies:
+  - lz4
+  - openssl@3
+  - popt
+  - xxhash
+  - zlib-ng-compat
   - zstd

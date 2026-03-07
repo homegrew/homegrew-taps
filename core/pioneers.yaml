@@ -3,16 +3,22 @@ version: 15.6
 description: Settlers of Catan clone
 homepage: https://pio.sourceforge.net/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pioneers/blobs/sha256:adf66c9f80045db5ecfe7557d06d1e6aa95dc4a8e07c6d144106b350f5826c7c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pioneers/blobs/sha256:18c79c7b8137ddbb485fa0a501ab0b163dd08670370a25b8d1abbcac7032ccb7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pioneers/blobs/sha256:3efeb1b6c8a348562ebb969cbd877612cefe83e65b54bd52533f9bed290f8bc9
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pioneers/blobs/sha256:dee6715b417bc783ebdce0da7c02b6bca21d1ffa02e6f84db1dad9d409abaee4
-sha256:
-  darwin_arm64: adf66c9f80045db5ecfe7557d06d1e6aa95dc4a8e07c6d144106b350f5826c7c
-  darwin_amd64: 18c79c7b8137ddbb485fa0a501ab0b163dd08670370a25b8d1abbcac7032ccb7
-  linux_amd64: 3efeb1b6c8a348562ebb969cbd877612cefe83e65b54bd52533f9bed290f8bc9
-  linux_arm64: dee6715b417bc783ebdce0da7c02b6bca21d1ffa02e6f84db1dad9d409abaee4
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pioneers/blobs/sha256:adf66c9f80045db5ecfe7557d06d1e6aa95dc4a8e07c6d144106b350f5826c7c
+    sha256: adf66c9f80045db5ecfe7557d06d1e6aa95dc4a8e07c6d144106b350f5826c7c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pioneers/blobs/sha256:18c79c7b8137ddbb485fa0a501ab0b163dd08670370a25b8d1abbcac7032ccb7
+    sha256: 18c79c7b8137ddbb485fa0a501ab0b163dd08670370a25b8d1abbcac7032ccb7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pioneers/blobs/sha256:3efeb1b6c8a348562ebb969cbd877612cefe83e65b54bd52533f9bed290f8bc9
+    sha256: 3efeb1b6c8a348562ebb969cbd877612cefe83e65b54bd52533f9bed290f8bc9
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pioneers/blobs/sha256:dee6715b417bc783ebdce0da7c02b6bca21d1ffa02e6f84db1dad9d409abaee4
+    sha256: dee6715b417bc783ebdce0da7c02b6bca21d1ffa02e6f84db1dad9d409abaee4
+source:
+  url: https://downloads.sourceforge.net/project/pio/Source/pioneers-15.6.tar.gz
+  sha256: 9a358d88548e3866e14c46c2707f66c98f8040a7857d47965e1ed9805aeb631d
 install:
   type: archive
   format: tar.gz
@@ -27,3 +33,15 @@ dependencies:
   - at-spi2-core
   - gettext
   - harfbuzz
+build_dependencies:
+  - gettext
+  - intltool
+  - itstool
+  - pkgconf
+linux_dependencies:
+  - cairo
+  - gdk-pixbuf
+  - glib
+  - gtk+3
+  - librsvg
+  - pango

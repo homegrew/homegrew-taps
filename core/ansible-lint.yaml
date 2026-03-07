@@ -3,16 +3,22 @@ version: 26.3.0
 description: Checks ansible playbooks for practices and behaviour
 homepage: https://ansible-lint.readthedocs.io/
 license: MIT AND GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ansible-lint/blobs/sha256:ce1b88947b3de64acf4d2db1ba3e854417bde74df4446cfd0e32ad0e13c5556b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ansible-lint/blobs/sha256:b6f45991e0ba933c98f6e9ec410e34e6f99a499aeea9c42fdf30998eff6ee412
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ansible-lint/blobs/sha256:1ffd18658033d1be5ef4176c444113581fe724d8ea10c4978588c0e2179f6b6d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ansible-lint/blobs/sha256:8abe3a4db3fddcc0cb06bc50fb5b4b6e3d3ae98e68563d3da96dfe37d8b52d19
-sha256:
-  darwin_arm64: ce1b88947b3de64acf4d2db1ba3e854417bde74df4446cfd0e32ad0e13c5556b
-  darwin_amd64: b6f45991e0ba933c98f6e9ec410e34e6f99a499aeea9c42fdf30998eff6ee412
-  linux_amd64: 1ffd18658033d1be5ef4176c444113581fe724d8ea10c4978588c0e2179f6b6d
-  linux_arm64: 8abe3a4db3fddcc0cb06bc50fb5b4b6e3d3ae98e68563d3da96dfe37d8b52d19
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ansible-lint/blobs/sha256:ce1b88947b3de64acf4d2db1ba3e854417bde74df4446cfd0e32ad0e13c5556b
+    sha256: ce1b88947b3de64acf4d2db1ba3e854417bde74df4446cfd0e32ad0e13c5556b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ansible-lint/blobs/sha256:b6f45991e0ba933c98f6e9ec410e34e6f99a499aeea9c42fdf30998eff6ee412
+    sha256: b6f45991e0ba933c98f6e9ec410e34e6f99a499aeea9c42fdf30998eff6ee412
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ansible-lint/blobs/sha256:1ffd18658033d1be5ef4176c444113581fe724d8ea10c4978588c0e2179f6b6d
+    sha256: 1ffd18658033d1be5ef4176c444113581fe724d8ea10c4978588c0e2179f6b6d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ansible-lint/blobs/sha256:8abe3a4db3fddcc0cb06bc50fb5b4b6e3d3ae98e68563d3da96dfe37d8b52d19
+    sha256: 8abe3a4db3fddcc0cb06bc50fb5b4b6e3d3ae98e68563d3da96dfe37d8b52d19
+source:
+  url: https://files.pythonhosted.org/packages/1f/b6/d0df64afdf68393e0c2e9a541ecb8124acf94c8511d824d45e75c8718a37/ansible_lint-26.3.0.tar.gz
+  sha256: dbcf3796d715ccef742a89dfcb21263649a2c2be8d3479ea98da104efa406717
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,5 @@ dependencies:
   - libyaml
   - python@3.14
   - rpds-py
+build_dependencies:
+  - pkgconf

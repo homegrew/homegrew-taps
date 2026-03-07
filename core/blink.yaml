@@ -3,17 +3,28 @@ version: 1.1.0
 description: Tiniest x86-64-linux emulator
 homepage: https://github.com/jart/blink
 license: ISC
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/blink/blobs/sha256:fe96f01e4cb3db83a0d8fe235ce54e5a00ff81d82da4872ac75772d93b49fe02
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/blink/blobs/sha256:fbbe63a33126b154702707e358e10da2d4adaf9d9fe53db3cad1ed78f9223dac
-  linux_amd64: https://ghcr.io/v2/homebrew/core/blink/blobs/sha256:fd87330b12e6d29f51065b58eeef882b7509537e145218f5d49b3102caf6e53e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/blink/blobs/sha256:53e2fc3a0987c15b8d8062fd564c33e2a2ed9718ae642480ccbad551b8076922
-sha256:
-  darwin_arm64: fe96f01e4cb3db83a0d8fe235ce54e5a00ff81d82da4872ac75772d93b49fe02
-  darwin_amd64: fbbe63a33126b154702707e358e10da2d4adaf9d9fe53db3cad1ed78f9223dac
-  linux_amd64: fd87330b12e6d29f51065b58eeef882b7509537e145218f5d49b3102caf6e53e
-  linux_arm64: 53e2fc3a0987c15b8d8062fd564c33e2a2ed9718ae642480ccbad551b8076922
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/blink/blobs/sha256:fe96f01e4cb3db83a0d8fe235ce54e5a00ff81d82da4872ac75772d93b49fe02
+    sha256: fe96f01e4cb3db83a0d8fe235ce54e5a00ff81d82da4872ac75772d93b49fe02
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/blink/blobs/sha256:fbbe63a33126b154702707e358e10da2d4adaf9d9fe53db3cad1ed78f9223dac
+    sha256: fbbe63a33126b154702707e358e10da2d4adaf9d9fe53db3cad1ed78f9223dac
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/blink/blobs/sha256:fd87330b12e6d29f51065b58eeef882b7509537e145218f5d49b3102caf6e53e
+    sha256: fd87330b12e6d29f51065b58eeef882b7509537e145218f5d49b3102caf6e53e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/blink/blobs/sha256:53e2fc3a0987c15b8d8062fd564c33e2a2ed9718ae642480ccbad551b8076922
+    sha256: 53e2fc3a0987c15b8d8062fd564c33e2a2ed9718ae642480ccbad551b8076922
+source:
+  url: https://github.com/jart/blink/archive/refs/tags/1.1.0.tar.gz
+  sha256: 2649793e1ebf12027f5e240a773f452434cefd9494744a858cd8bff8792dba68
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - pkgconf
+  - make
+linux_dependencies:
+  - zlib-ng-compat

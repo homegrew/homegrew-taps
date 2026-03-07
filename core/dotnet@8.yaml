@@ -3,14 +3,19 @@ version: 8.0.124
 description: .NET Core
 homepage: https://dotnet.microsoft.com/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dotnet/8/blobs/sha256:50e5d6ac16668d2e2370f7e6fddb5ee0feee7af9a05bb5bcdaaee66b593a785a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dotnet/8/blobs/sha256:3d649a95936a1f590112e3f3c6863e15cb61a36e0cc0ba20053180cf6123cca2
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dotnet/8/blobs/sha256:09c86f9e4b131b207c2530a071ff7e09db5dd538bda9353397a272fbd70ceb02
-sha256:
-  darwin_arm64: 50e5d6ac16668d2e2370f7e6fddb5ee0feee7af9a05bb5bcdaaee66b593a785a
-  linux_amd64: 3d649a95936a1f590112e3f3c6863e15cb61a36e0cc0ba20053180cf6123cca2
-  linux_arm64: 09c86f9e4b131b207c2530a071ff7e09db5dd538bda9353397a272fbd70ceb02
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dotnet/8/blobs/sha256:50e5d6ac16668d2e2370f7e6fddb5ee0feee7af9a05bb5bcdaaee66b593a785a
+    sha256: 50e5d6ac16668d2e2370f7e6fddb5ee0feee7af9a05bb5bcdaaee66b593a785a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dotnet/8/blobs/sha256:3d649a95936a1f590112e3f3c6863e15cb61a36e0cc0ba20053180cf6123cca2
+    sha256: 3d649a95936a1f590112e3f3c6863e15cb61a36e0cc0ba20053180cf6123cca2
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dotnet/8/blobs/sha256:09c86f9e4b131b207c2530a071ff7e09db5dd538bda9353397a272fbd70ceb02
+    sha256: 09c86f9e4b131b207c2530a071ff7e09db5dd538bda9353397a272fbd70ceb02
+source:
+  url: https://github.com/dotnet/dotnet/archive/refs/tags/v8.0.124.tar.gz
+  sha256: 6f9e4ce8ea964c022fec6be4881cf76b73117c88be623f4d4cfbdb992b8a9165
 install:
   type: archive
   format: tar.gz
@@ -18,4 +23,14 @@ install:
 dependencies:
   - icu4c@78
   - openssl@3
+build_dependencies:
+  - cmake
+  - pkgconf
+  - grep
+linux_dependencies:
+  - icu4c@78
+  - libunwind
+  - lttng-ust
+  - openssl@3
+  - zlib-ng-compat
 keg_only: true

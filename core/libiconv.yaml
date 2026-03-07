@@ -1,16 +1,23 @@
 name: libiconv
-version: 1.18
+version: 1.19
 description: Conversion library
 homepage: https://www.gnu.org/software/libiconv/
 license: GPL-3.0-or-later AND LGPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:8a61991512d58131934103c9ca06ece31c6219c0fe30efb9cba93dbc95edea18
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:9b5c0480b3c407b6b629e0f18f9e6888319c45fd6d9a87f1443b4baea9aa7577
-sha256:
-  darwin_arm64: 8a61991512d58131934103c9ca06ece31c6219c0fe30efb9cba93dbc95edea18
-  darwin_amd64: 9b5c0480b3c407b6b629e0f18f9e6888319c45fd6d9a87f1443b4baea9aa7577
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:39e4ffdefdebf658be077d84e1dca6840d4df7d364b990ababbc736037312990
+    sha256: 39e4ffdefdebf658be077d84e1dca6840d4df7d364b990ababbc736037312990
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:dc9389c9b302277e146eb4a22bb575df3bdf70d9bf82051904781192e9ef86d9
+    sha256: dc9389c9b302277e146eb4a22bb575df3bdf70d9bf82051904781192e9ef86d9
+source:
+  url: https://ftpmirror.gnu.org/gnu/libiconv/libiconv-1.19.tar.gz
+  sha256: 88dd96a8c0464eca144fc791ae60cd31cd8ee78321e67397e25fc095c4a19aa6
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake
 keg_only: true

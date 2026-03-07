@@ -3,13 +3,19 @@ version: 2.3.6
 description: "Linux-native \"fake root\" for implementing rootless containers"
 homepage: https://github.com/rootless-containers/rootlesskit
 license: Apache-2.0
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/rootlesskit/blobs/sha256:a72021b4a7cc7003b5f3f282c6d826ef85bb3920023d71a8432720b658ef9c53
-  linux_arm64: https://ghcr.io/v2/homebrew/core/rootlesskit/blobs/sha256:8f0ab7ce1faaaa56061faa92db5906afcdb4826ec098d7a2f112f56eabb664f0
-sha256:
-  linux_amd64: a72021b4a7cc7003b5f3f282c6d826ef85bb3920023d71a8432720b658ef9c53
-  linux_arm64: 8f0ab7ce1faaaa56061faa92db5906afcdb4826ec098d7a2f112f56eabb664f0
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rootlesskit/blobs/sha256:a72021b4a7cc7003b5f3f282c6d826ef85bb3920023d71a8432720b658ef9c53
+    sha256: a72021b4a7cc7003b5f3f282c6d826ef85bb3920023d71a8432720b658ef9c53
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rootlesskit/blobs/sha256:8f0ab7ce1faaaa56061faa92db5906afcdb4826ec098d7a2f112f56eabb664f0
+    sha256: 8f0ab7ce1faaaa56061faa92db5906afcdb4826ec098d7a2f112f56eabb664f0
+source:
+  url: https://github.com/rootless-containers/rootlesskit/archive/refs/tags/v2.3.6.tar.gz
+  sha256: b491ae9a444f5f4cb925913dfa12ad7a2bcd8aa149114df7afb2fa921359b6e1
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

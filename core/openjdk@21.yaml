@@ -3,16 +3,22 @@ version: 21.0.10
 description: Development kit for the Java programming language
 homepage: https://openjdk.org/
 license: GPL-2.0-only WITH Classpath-exception-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/openjdk/21/blobs/sha256:962a2da031ce13316faf2c39403d8ecd632ed17e0764f2afa4ba30dcefbc8c50
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/openjdk/21/blobs/sha256:218e75240a18972769316599b2fbe200011d0655a8b750df92af6748b759b00f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/openjdk/21/blobs/sha256:19c403df7f39c328f54a0a117be2cfc8a730d4c2a5c7d6eb4b4601598a0ca5f4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/openjdk/21/blobs/sha256:f9d83172974692b3b009917e3704b8d44ee75d28a3bfb67b2255aa0c13481d21
-sha256:
-  darwin_arm64: 962a2da031ce13316faf2c39403d8ecd632ed17e0764f2afa4ba30dcefbc8c50
-  darwin_amd64: 218e75240a18972769316599b2fbe200011d0655a8b750df92af6748b759b00f
-  linux_amd64: 19c403df7f39c328f54a0a117be2cfc8a730d4c2a5c7d6eb4b4601598a0ca5f4
-  linux_arm64: f9d83172974692b3b009917e3704b8d44ee75d28a3bfb67b2255aa0c13481d21
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openjdk/21/blobs/sha256:962a2da031ce13316faf2c39403d8ecd632ed17e0764f2afa4ba30dcefbc8c50
+    sha256: 962a2da031ce13316faf2c39403d8ecd632ed17e0764f2afa4ba30dcefbc8c50
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openjdk/21/blobs/sha256:218e75240a18972769316599b2fbe200011d0655a8b750df92af6748b759b00f
+    sha256: 218e75240a18972769316599b2fbe200011d0655a8b750df92af6748b759b00f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openjdk/21/blobs/sha256:19c403df7f39c328f54a0a117be2cfc8a730d4c2a5c7d6eb4b4601598a0ca5f4
+    sha256: 19c403df7f39c328f54a0a117be2cfc8a730d4c2a5c7d6eb4b4601598a0ca5f4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openjdk/21/blobs/sha256:f9d83172974692b3b009917e3704b8d44ee75d28a3bfb67b2255aa0c13481d21
+    sha256: f9d83172974692b3b009917e3704b8d44ee75d28a3bfb67b2255aa0c13481d21
+source:
+  url: https://github.com/openjdk/jdk21u/archive/refs/tags/jdk-21.0.10-ga.tar.gz
+  sha256: 133a864987b4732d46cca5084b7cde8ffef168bde4e4b0118ebd2b38c1fda2f1
 install:
   type: archive
   format: tar.gz
@@ -24,4 +30,24 @@ dependencies:
   - jpeg-turbo
   - libpng
   - little-cms2
+build_dependencies:
+  - autoconf
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - fontconfig
+  - freetype
+  - giflib
+  - harfbuzz
+  - jpeg-turbo
+  - libpng
+  - libx11
+  - libxext
+  - libxi
+  - libxrandr
+  - libxrender
+  - libxt
+  - libxtst
+  - little-cms2
+  - zlib-ng-compat
 keg_only: true

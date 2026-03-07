@@ -19,6 +19,10 @@ bottle:
 source:
   url: https://www.nano-editor.org/dist/v8/nano-8.7.1.tar.xz
   sha256: 76f0dcb248f2e2f1251d4ecd20fd30fb400a360a3a37c6c340e0a52c2d1cdedf
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
 dependencies:
   - ncurses
   - gettext
@@ -26,12 +30,4 @@ build_dependencies:
   - pkgconf
 linux_dependencies:
   - libmagic
-build:
-  configure:
-    - --enable-color
-    - --enable-extra
-    - --enable-multibuffer
-    - --enable-nanorc
-    - --enable-utf8
-  install:
-    - make install
+  - ncurses

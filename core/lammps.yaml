@@ -3,16 +3,22 @@ version: 20250722-update3
 description: Molecular Dynamics Simulator
 homepage: https://docs.lammps.org/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/lammps/blobs/sha256:3fed8c9b50b90a0929a6432d68c92d92ed73441ce57797db4f1c165519c6bf24
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/lammps/blobs/sha256:488d6bc075954db35f7592afdc075b3a5a91c7ec09178b162b0df9d3d67ca42d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/lammps/blobs/sha256:8285694265836fc1dec98ff60c722b2d2d046d3086d9e813ae7c2ce0df863a2a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/lammps/blobs/sha256:be4260b6460a187d7631e5f10b4b7b2cac49f7db13220393a2c9f67b167ded28
-sha256:
-  darwin_arm64: 3fed8c9b50b90a0929a6432d68c92d92ed73441ce57797db4f1c165519c6bf24
-  darwin_amd64: 488d6bc075954db35f7592afdc075b3a5a91c7ec09178b162b0df9d3d67ca42d
-  linux_amd64: 8285694265836fc1dec98ff60c722b2d2d046d3086d9e813ae7c2ce0df863a2a
-  linux_arm64: be4260b6460a187d7631e5f10b4b7b2cac49f7db13220393a2c9f67b167ded28
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/lammps/blobs/sha256:3fed8c9b50b90a0929a6432d68c92d92ed73441ce57797db4f1c165519c6bf24
+    sha256: 3fed8c9b50b90a0929a6432d68c92d92ed73441ce57797db4f1c165519c6bf24
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/lammps/blobs/sha256:488d6bc075954db35f7592afdc075b3a5a91c7ec09178b162b0df9d3d67ca42d
+    sha256: 488d6bc075954db35f7592afdc075b3a5a91c7ec09178b162b0df9d3d67ca42d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/lammps/blobs/sha256:8285694265836fc1dec98ff60c722b2d2d046d3086d9e813ae7c2ce0df863a2a
+    sha256: 8285694265836fc1dec98ff60c722b2d2d046d3086d9e813ae7c2ce0df863a2a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/lammps/blobs/sha256:be4260b6460a187d7631e5f10b4b7b2cac49f7db13220393a2c9f67b167ded28
+    sha256: be4260b6460a187d7631e5f10b4b7b2cac49f7db13220393a2c9f67b167ded28
+source:
+  url: https://github.com/lammps/lammps/archive/refs/tags/stable_22Jul2025_update3.tar.gz
+  sha256: 07f487cc33fc8f2ec4a449b7bce570e52b5a46608075e0276d26e0e232511bef
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,13 @@ dependencies:
   - libpng
   - open-mpi
   - libomp
+build_dependencies:
+  - cmake
+  - pkgconf
+  - voro++
+linux_dependencies:
+  - fftw
+  - jpeg-turbo
+  - kim-api
+  - libpng
+  - open-mpi

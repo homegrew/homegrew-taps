@@ -3,16 +3,22 @@ version: 2.42
 description: RSS/Atom feed reader for text terminals
 homepage: https://newsboat.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:b610948d104b7556fc62a95d0f9bf842e13ea0c6aeac3939af71a32e5a3dd22d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:b37943a296488d563127aea5a6d715f23b66164765cfbc0429c96cee6723109b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:ca54d697581473d3d2788b59cedda849e9c6f61f6d3f5d6a6cdf32706a2fdfdd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:fa2284f76d28afb1a331ad5b65e98ea5048ae22ccd448ad67e1e350093fe0ae5
-sha256:
-  darwin_arm64: b610948d104b7556fc62a95d0f9bf842e13ea0c6aeac3939af71a32e5a3dd22d
-  darwin_amd64: b37943a296488d563127aea5a6d715f23b66164765cfbc0429c96cee6723109b
-  linux_amd64: ca54d697581473d3d2788b59cedda849e9c6f61f6d3f5d6a6cdf32706a2fdfdd
-  linux_arm64: fa2284f76d28afb1a331ad5b65e98ea5048ae22ccd448ad67e1e350093fe0ae5
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:b610948d104b7556fc62a95d0f9bf842e13ea0c6aeac3939af71a32e5a3dd22d
+    sha256: b610948d104b7556fc62a95d0f9bf842e13ea0c6aeac3939af71a32e5a3dd22d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:b37943a296488d563127aea5a6d715f23b66164765cfbc0429c96cee6723109b
+    sha256: b37943a296488d563127aea5a6d715f23b66164765cfbc0429c96cee6723109b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:ca54d697581473d3d2788b59cedda849e9c6f61f6d3f5d6a6cdf32706a2fdfdd
+    sha256: ca54d697581473d3d2788b59cedda849e9c6f61f6d3f5d6a6cdf32706a2fdfdd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:fa2284f76d28afb1a331ad5b65e98ea5048ae22ccd448ad67e1e350093fe0ae5
+    sha256: fa2284f76d28afb1a331ad5b65e98ea5048ae22ccd448ad67e1e350093fe0ae5
+source:
+  url: https://newsboat.org/releases/2.42/newsboat-2.42.tar.xz
+  sha256: 7fe56497f5368d7d5f9ab76e755e768c0e26605cc32d56b94d3133ee81d88e9b
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,13 @@ install:
 dependencies:
   - json-c
   - gettext
+build_dependencies:
+  - asciidoctor
+  - gettext
+  - pkgconf
+  - rust
+  - xz
+  - make
+  - llvm
+linux_dependencies:
+  - json-c

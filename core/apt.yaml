@@ -3,12 +3,16 @@ version: 3.1.16
 description: Advanced Package Tool
 homepage: https://wiki.debian.org/Apt
 license: GPL-2.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/apt/blobs/sha256:46c8307adabc6cf22e4c3c7347101d61a5699e817f5df78449033d42f3887426
-  linux_arm64: https://ghcr.io/v2/homebrew/core/apt/blobs/sha256:1546f41f7c53e65dd6fc88c77abe102c234ee472bfa0373e6608a1b648689287
-sha256:
-  linux_amd64: 46c8307adabc6cf22e4c3c7347101d61a5699e817f5df78449033d42f3887426
-  linux_arm64: 1546f41f7c53e65dd6fc88c77abe102c234ee472bfa0373e6608a1b648689287
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/apt/blobs/sha256:46c8307adabc6cf22e4c3c7347101d61a5699e817f5df78449033d42f3887426
+    sha256: 46c8307adabc6cf22e4c3c7347101d61a5699e817f5df78449033d42f3887426
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/apt/blobs/sha256:1546f41f7c53e65dd6fc88c77abe102c234ee472bfa0373e6608a1b648689287
+    sha256: 1546f41f7c53e65dd6fc88c77abe102c234ee472bfa0373e6608a1b648689287
+source:
+  url: https://salsa.debian.org/apt-team/apt/-/archive/3.1.16/apt-3.1.16.tar.bz2
+  sha256: 4c264dd6b21bb7543294dc7c5ecca9dca1d2a7e42e708108f0a1a9cafa6d62f5
 install:
   type: archive
   format: tar.gz
@@ -27,4 +31,13 @@ dependencies:
   - xz
   - zlib-ng-compat
   - zstd
+build_dependencies:
+  - cmake
+  - docbook
+  - docbook-xsl
+  - doxygen
+  - gettext
+  - libxslt
+  - po4a
+  - w3m
 keg_only: true

@@ -3,16 +3,22 @@ version: 2026.02
 description: Rakudo compiler and commonly used packages
 homepage: https://rakudo.org/
 license: Artistic-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:2e46a1265473c05a7404b5ca549c46878420f1607d1e1f84582a69fceee29397
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:7131c5a98f04711a417c847a709642c3b347e0d6ca620c3aba298b1aa7dcc8ba
-  linux_amd64: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:1ab408457fc6d274a6034668df1f4377af2420958cca65659d52ed0c44c94d71
-  linux_arm64: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:122dee9e81735f79627c148cd85e4cdf12d734351908f198431508a38c6fe418
-sha256:
-  darwin_arm64: 2e46a1265473c05a7404b5ca549c46878420f1607d1e1f84582a69fceee29397
-  darwin_amd64: 7131c5a98f04711a417c847a709642c3b347e0d6ca620c3aba298b1aa7dcc8ba
-  linux_amd64: 1ab408457fc6d274a6034668df1f4377af2420958cca65659d52ed0c44c94d71
-  linux_arm64: 122dee9e81735f79627c148cd85e4cdf12d734351908f198431508a38c6fe418
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:2e46a1265473c05a7404b5ca549c46878420f1607d1e1f84582a69fceee29397
+    sha256: 2e46a1265473c05a7404b5ca549c46878420f1607d1e1f84582a69fceee29397
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:7131c5a98f04711a417c847a709642c3b347e0d6ca620c3aba298b1aa7dcc8ba
+    sha256: 7131c5a98f04711a417c847a709642c3b347e0d6ca620c3aba298b1aa7dcc8ba
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:1ab408457fc6d274a6034668df1f4377af2420958cca65659d52ed0c44c94d71
+    sha256: 1ab408457fc6d274a6034668df1f4377af2420958cca65659d52ed0c44c94d71
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:122dee9e81735f79627c148cd85e4cdf12d734351908f198431508a38c6fe418
+    sha256: 122dee9e81735f79627c148cd85e4cdf12d734351908f198431508a38c6fe418
+source:
+  url: https://github.com/rakudo/star/releases/download/2026.02/rakudo-star-2026.02.tar.gz
+  sha256: 07320246808b8f21a7625c35352ea2e357d201412ef75082fd38cbb9ed76963c
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,13 @@ dependencies:
   - readline
   - zstd
   - libuv
+build_dependencies:
+  - pkgconf
+  - sqlite
+  - bash
+linux_dependencies:
+  - libtommath
+  - mimalloc
+  - openssl@3
+  - readline
+  - zstd

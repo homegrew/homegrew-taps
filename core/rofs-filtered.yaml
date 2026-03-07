@@ -3,15 +3,21 @@ version: 1.7
 description: Filtered read-only filesystem for FUSE
 homepage: https://github.com/gburca/rofs-filtered/
 license: GPL-2.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/rofs-filtered/blobs/sha256:ae07e1e4a0daa79c067329aeafc4078dd7f74c793ccb1a2ade7c3dedf0f05ade
-  linux_arm64: https://ghcr.io/v2/homebrew/core/rofs-filtered/blobs/sha256:01d57c6c071aacd6dc92a36f807b1e718f6178b8078f1d871d59941a7228670c
-sha256:
-  linux_amd64: ae07e1e4a0daa79c067329aeafc4078dd7f74c793ccb1a2ade7c3dedf0f05ade
-  linux_arm64: 01d57c6c071aacd6dc92a36f807b1e718f6178b8078f1d871d59941a7228670c
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rofs-filtered/blobs/sha256:ae07e1e4a0daa79c067329aeafc4078dd7f74c793ccb1a2ade7c3dedf0f05ade
+    sha256: ae07e1e4a0daa79c067329aeafc4078dd7f74c793ccb1a2ade7c3dedf0f05ade
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rofs-filtered/blobs/sha256:01d57c6c071aacd6dc92a36f807b1e718f6178b8078f1d871d59941a7228670c
+    sha256: 01d57c6c071aacd6dc92a36f807b1e718f6178b8078f1d871d59941a7228670c
+source:
+  url: https://github.com/gburca/rofs-filtered/archive/refs/tags/rel-1.7.tar.gz
+  sha256: d66066dfd0274a2fb7b71dd929445377dd23100b9fa43e3888dbe3fc7e8228e8
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - libfuse@2
+build_dependencies:
+  - cmake

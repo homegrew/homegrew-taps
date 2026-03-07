@@ -3,12 +3,16 @@ version: 2.2.1
 description: OCI container runtime monitor
 homepage: https://github.com/containers/conmon
 license: Apache-2.0
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/conmon/blobs/sha256:08eafee8471ae1ac41c2a408fefdb5059b5d180f84ad17ece149976a661c034b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/conmon/blobs/sha256:ad2a36cee01c75c27125ece2507f51cd3b5e6ffec84ec76cbd23c16315896204
-sha256:
-  linux_amd64: 08eafee8471ae1ac41c2a408fefdb5059b5d180f84ad17ece149976a661c034b
-  linux_arm64: ad2a36cee01c75c27125ece2507f51cd3b5e6ffec84ec76cbd23c16315896204
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/conmon/blobs/sha256:08eafee8471ae1ac41c2a408fefdb5059b5d180f84ad17ece149976a661c034b
+    sha256: 08eafee8471ae1ac41c2a408fefdb5059b5d180f84ad17ece149976a661c034b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/conmon/blobs/sha256:ad2a36cee01c75c27125ece2507f51cd3b5e6ffec84ec76cbd23c16315896204
+    sha256: ad2a36cee01c75c27125ece2507f51cd3b5e6ffec84ec76cbd23c16315896204
+source:
+  url: https://github.com/containers/conmon/archive/refs/tags/v2.2.1.tar.gz
+  sha256: 814fb5979a3a4b8576b1f901e606b482bebb41cb7e57926e6d5765ee786b96d3
 install:
   type: archive
   format: tar.gz
@@ -17,3 +21,7 @@ dependencies:
   - glib
   - libseccomp
   - systemd
+build_dependencies:
+  - go
+  - go-md2man
+  - pkgconf

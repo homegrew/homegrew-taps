@@ -1,21 +1,34 @@
 name: oxen
-version: 0.44.2
+version: 0.45.0
 description: Data VCS for structured and unstructured machine learning datasets
 homepage: https://www.oxen.ai/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/oxen/blobs/sha256:489588e8a186ca1ac1c2a9708d1114fa8e0eebc0958c48322ef011c3e2f8b319
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/oxen/blobs/sha256:beaaa4cbbf549f4971e8d11ecaff71d2b0a3505ecb9bde579524b61a18b0dffa
-  linux_amd64: https://ghcr.io/v2/homebrew/core/oxen/blobs/sha256:f388007ddec92bcfe552983650f304a826cffeca6346f0506bb5398490ad8fdb
-  linux_arm64: https://ghcr.io/v2/homebrew/core/oxen/blobs/sha256:7ef31294e8fbd3a7cd37efbe9c138e44db4f935ac6c2eb79384ac246cc40c377
-sha256:
-  darwin_arm64: 489588e8a186ca1ac1c2a9708d1114fa8e0eebc0958c48322ef011c3e2f8b319
-  darwin_amd64: beaaa4cbbf549f4971e8d11ecaff71d2b0a3505ecb9bde579524b61a18b0dffa
-  linux_amd64: f388007ddec92bcfe552983650f304a826cffeca6346f0506bb5398490ad8fdb
-  linux_arm64: 7ef31294e8fbd3a7cd37efbe9c138e44db4f935ac6c2eb79384ac246cc40c377
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/oxen/blobs/sha256:48490af07c83390d315c107d1ebba3c9849befcfaff50ddfe7174f43e0e4a1c6
+    sha256: 48490af07c83390d315c107d1ebba3c9849befcfaff50ddfe7174f43e0e4a1c6
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/oxen/blobs/sha256:b52becc47f45a44ee7cdd5a9904af6f51f50519ca6e7cd18d67e5ba290cc2064
+    sha256: b52becc47f45a44ee7cdd5a9904af6f51f50519ca6e7cd18d67e5ba290cc2064
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/oxen/blobs/sha256:e0912c64eb21818729bee03b6a8dad09182349e89a0879234a41b01a411aac0a
+    sha256: e0912c64eb21818729bee03b6a8dad09182349e89a0879234a41b01a411aac0a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/oxen/blobs/sha256:57715352bb95593411a7cce981deab346a8038becbd1d2dd14b3a6e0ba73ac89
+    sha256: 57715352bb95593411a7cce981deab346a8038becbd1d2dd14b3a6e0ba73ac89
+source:
+  url: https://github.com/Oxen-AI/Oxen/archive/refs/tags/v0.45.0.tar.gz
+  sha256: d05f553b9473f01f71b75672c90cc9f6506b4b828d298d03ae2873104b8ff62b
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
+  - xz
+build_dependencies:
+  - cmake
+  - pkgconf
+  - rust
+linux_dependencies:
+  - openssl@3
   - xz

@@ -3,16 +3,22 @@ version: 1.4.1
 description: Blu-Ray disc playback library for media players like VLC
 homepage: https://www.videolan.org/developers/libbluray.html
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libbluray/blobs/sha256:3895fef0bbc04ee7271992f3908569416a67d97efba1c492a4ccc053de0a89c3
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libbluray/blobs/sha256:1aa87a3cf82c6b914c78856a9283e838e1d7426f4d1377537dae81e1041f64b0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libbluray/blobs/sha256:153b38bf91479d363e0dcaaef4ddebc96793a7db980baa3993a56f5a0082e477
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libbluray/blobs/sha256:0839ef787f9411f8056674b5f7e1dd7e68d5b5df330a11ed1e845f1635683ef1
-sha256:
-  darwin_arm64: 3895fef0bbc04ee7271992f3908569416a67d97efba1c492a4ccc053de0a89c3
-  darwin_amd64: 1aa87a3cf82c6b914c78856a9283e838e1d7426f4d1377537dae81e1041f64b0
-  linux_amd64: 153b38bf91479d363e0dcaaef4ddebc96793a7db980baa3993a56f5a0082e477
-  linux_arm64: 0839ef787f9411f8056674b5f7e1dd7e68d5b5df330a11ed1e845f1635683ef1
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libbluray/blobs/sha256:3895fef0bbc04ee7271992f3908569416a67d97efba1c492a4ccc053de0a89c3
+    sha256: 3895fef0bbc04ee7271992f3908569416a67d97efba1c492a4ccc053de0a89c3
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libbluray/blobs/sha256:1aa87a3cf82c6b914c78856a9283e838e1d7426f4d1377537dae81e1041f64b0
+    sha256: 1aa87a3cf82c6b914c78856a9283e838e1d7426f4d1377537dae81e1041f64b0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libbluray/blobs/sha256:153b38bf91479d363e0dcaaef4ddebc96793a7db980baa3993a56f5a0082e477
+    sha256: 153b38bf91479d363e0dcaaef4ddebc96793a7db980baa3993a56f5a0082e477
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libbluray/blobs/sha256:0839ef787f9411f8056674b5f7e1dd7e68d5b5df330a11ed1e845f1635683ef1
+    sha256: 0839ef787f9411f8056674b5f7e1dd7e68d5b5df330a11ed1e845f1635683ef1
+source:
+  url: https://download.videolan.org/videolan/libbluray/1.4.1/libbluray-1.4.1.tar.xz
+  sha256: 76b5dc40097f28dca4ebb009c98ed51321b2927453f75cc72cf74acd09b9f449
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,7 @@ dependencies:
   - fontconfig
   - freetype
   - libudfread
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf

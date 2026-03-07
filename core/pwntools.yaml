@@ -3,16 +3,22 @@ version: 4.15.0
 description: CTF framework used by Gallopsled in every CTF
 homepage: https://github.com/Gallopsled/pwntools
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:620dd787f93c98a5dc4506f69d7764f4af36444ada3fea4d5cdb4bad08a51476
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:2fbb55f6d41dc830d10a8e2b2f36a6736a1da3c89fa312017ef46aa70471b9b8
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:fe19848767ab22b74cadddf97eba47f2185f6ea8d3beef5b92615cd4277bbeb4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:97cf9ed3f6aeeecbf2c81c2186ec5904fde522b1f545de991eb4d521ffd7e3a9
-sha256:
-  darwin_arm64: 620dd787f93c98a5dc4506f69d7764f4af36444ada3fea4d5cdb4bad08a51476
-  darwin_amd64: 2fbb55f6d41dc830d10a8e2b2f36a6736a1da3c89fa312017ef46aa70471b9b8
-  linux_amd64: fe19848767ab22b74cadddf97eba47f2185f6ea8d3beef5b92615cd4277bbeb4
-  linux_arm64: 97cf9ed3f6aeeecbf2c81c2186ec5904fde522b1f545de991eb4d521ffd7e3a9
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:620dd787f93c98a5dc4506f69d7764f4af36444ada3fea4d5cdb4bad08a51476
+    sha256: 620dd787f93c98a5dc4506f69d7764f4af36444ada3fea4d5cdb4bad08a51476
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:2fbb55f6d41dc830d10a8e2b2f36a6736a1da3c89fa312017ef46aa70471b9b8
+    sha256: 2fbb55f6d41dc830d10a8e2b2f36a6736a1da3c89fa312017ef46aa70471b9b8
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:fe19848767ab22b74cadddf97eba47f2185f6ea8d3beef5b92615cd4277bbeb4
+    sha256: fe19848767ab22b74cadddf97eba47f2185f6ea8d3beef5b92615cd4277bbeb4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:97cf9ed3f6aeeecbf2c81c2186ec5904fde522b1f545de991eb4d521ffd7e3a9
+    sha256: 97cf9ed3f6aeeecbf2c81c2186ec5904fde522b1f545de991eb4d521ffd7e3a9
+source:
+  url: https://files.pythonhosted.org/packages/f2/5c/9ae3d94c98b0b038ffd7f09ebdac506d346fe1b964999f71c96c8a904efd/pwntools-4.15.0.tar.gz
+  sha256: d99a917298c1ca7241b51bba9ad2212f2af441ef66488059b2426508e9a2a776
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,5 @@ dependencies:
   - libsodium
   - python@3.14
   - unicorn
+build_dependencies:
+  - rust

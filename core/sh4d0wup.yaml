@@ -3,16 +3,22 @@ version: 0.11.0
 description: Signing-key abuse and update exploitation framework
 homepage: https://github.com/kpcyrd/sh4d0wup
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/sh4d0wup/blobs/sha256:099af7350fa6b8abe3e0cdede86d930f195e06484082345a511ca64eea219b40
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/sh4d0wup/blobs/sha256:5f916dd0b4809e160f6d44f5536d4eec43f75d4dade3b3023dc0667062b73254
-  linux_amd64: https://ghcr.io/v2/homebrew/core/sh4d0wup/blobs/sha256:12ed1c91190821ba799e038cb7723ce0af1ef207b45b74fcc732e8adb233d017
-  linux_arm64: https://ghcr.io/v2/homebrew/core/sh4d0wup/blobs/sha256:37e09448fc27e25b451c296e0849affe15ee491ebbbaf080756818da61bb6085
-sha256:
-  darwin_arm64: 099af7350fa6b8abe3e0cdede86d930f195e06484082345a511ca64eea219b40
-  darwin_amd64: 5f916dd0b4809e160f6d44f5536d4eec43f75d4dade3b3023dc0667062b73254
-  linux_amd64: 12ed1c91190821ba799e038cb7723ce0af1ef207b45b74fcc732e8adb233d017
-  linux_arm64: 37e09448fc27e25b451c296e0849affe15ee491ebbbaf080756818da61bb6085
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sh4d0wup/blobs/sha256:099af7350fa6b8abe3e0cdede86d930f195e06484082345a511ca64eea219b40
+    sha256: 099af7350fa6b8abe3e0cdede86d930f195e06484082345a511ca64eea219b40
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sh4d0wup/blobs/sha256:5f916dd0b4809e160f6d44f5536d4eec43f75d4dade3b3023dc0667062b73254
+    sha256: 5f916dd0b4809e160f6d44f5536d4eec43f75d4dade3b3023dc0667062b73254
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sh4d0wup/blobs/sha256:12ed1c91190821ba799e038cb7723ce0af1ef207b45b74fcc732e8adb233d017
+    sha256: 12ed1c91190821ba799e038cb7723ce0af1ef207b45b74fcc732e8adb233d017
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sh4d0wup/blobs/sha256:37e09448fc27e25b451c296e0849affe15ee491ebbbaf080756818da61bb6085
+    sha256: 37e09448fc27e25b451c296e0849affe15ee491ebbbaf080756818da61bb6085
+source:
+  url: https://github.com/kpcyrd/sh4d0wup/archive/refs/tags/v0.11.0.tar.gz
+  sha256: cfc1c38f89d35de6a1822469679a73e5bcb7d5b9f6f8519bee1c3f2948c227f3
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,7 @@ dependencies:
   - pcsc-lite
   - xz
   - zstd
+build_dependencies:
+  - llvm
+  - pkgconf
+  - rust

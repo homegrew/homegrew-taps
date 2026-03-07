@@ -3,20 +3,37 @@ version: 3.6.2
 description: In-memory database and Lua application server
 homepage: https://tarantool.org/
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:1c2347f82df86f84d570b975d2d5ad55160a1840583b70019f69211361a6d4bc
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:63b6a3b25c08ad62a323bf867183d10d5bc985ac1ce5dd58683139e4993ab3c0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:c244bc5235b092aab6a807de1fe7d32c9b0f81b86a95897314eafcf7a624118b
-sha256:
-  darwin_arm64: 1c2347f82df86f84d570b975d2d5ad55160a1840583b70019f69211361a6d4bc
-  linux_amd64: 63b6a3b25c08ad62a323bf867183d10d5bc985ac1ce5dd58683139e4993ab3c0
-  linux_arm64: c244bc5235b092aab6a807de1fe7d32c9b0f81b86a95897314eafcf7a624118b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:1c2347f82df86f84d570b975d2d5ad55160a1840583b70019f69211361a6d4bc
+    sha256: 1c2347f82df86f84d570b975d2d5ad55160a1840583b70019f69211361a6d4bc
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:805fc0af3f0df03cab242970d3933136f0514dc22dfe7156e09018178a7d66e5
+    sha256: 805fc0af3f0df03cab242970d3933136f0514dc22dfe7156e09018178a7d66e5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:63b6a3b25c08ad62a323bf867183d10d5bc985ac1ce5dd58683139e4993ab3c0
+    sha256: 63b6a3b25c08ad62a323bf867183d10d5bc985ac1ce5dd58683139e4993ab3c0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:c244bc5235b092aab6a807de1fe7d32c9b0f81b86a95897314eafcf7a624118b
+    sha256: c244bc5235b092aab6a807de1fe7d32c9b0f81b86a95897314eafcf7a624118b
+source:
+  url: https://download.tarantool.org/tarantool/src/tarantool-3.6.2.tar.gz
+  sha256: 20759ba83cb635532ace908313d418daaa9161fa8bf5836545dc9c9a41759a59
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - icu4c@78
+  - libyaml
+  - openssl@3
+  - readline
+  - zstd
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - icu4c@78
+  - libunwind
   - libyaml
   - openssl@3
   - readline

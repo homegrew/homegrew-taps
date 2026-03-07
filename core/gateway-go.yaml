@@ -3,17 +3,25 @@ version: 2.0.12
 description: GateWay Client for OpenIoTHub
 homepage: https://github.com/OpenIoTHub
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:c02836cc5373617ea8332bd360e9a727db388e29a981337eac7087cbd1eeb712
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:9ad72f55a82ffd324c334b6fcc428c0d1d650ebfe4078b76de451339c8b9d89d
-sha256:
-  darwin_arm64: f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
-  darwin_amd64: 99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
-  linux_amd64: c02836cc5373617ea8332bd360e9a727db388e29a981337eac7087cbd1eeb712
-  linux_arm64: 9ad72f55a82ffd324c334b6fcc428c0d1d650ebfe4078b76de451339c8b9d89d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
+    sha256: f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
+    sha256: 99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:c02836cc5373617ea8332bd360e9a727db388e29a981337eac7087cbd1eeb712
+    sha256: c02836cc5373617ea8332bd360e9a727db388e29a981337eac7087cbd1eeb712
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:9ad72f55a82ffd324c334b6fcc428c0d1d650ebfe4078b76de451339c8b9d89d
+    sha256: 9ad72f55a82ffd324c334b6fcc428c0d1d650ebfe4078b76de451339c8b9d89d
+source:
+  url: https://github.com/OpenIoTHub/gateway-go/archive/refs/tags/v2.0.12.tar.gz
+  sha256: b06175c5c5ee602ca1a2c4652033c865a12e226eee7adfefb0dde807a3c5ff63
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

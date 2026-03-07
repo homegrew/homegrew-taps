@@ -3,16 +3,22 @@ version: 1.3.0.1
 description: Lightweight text-to-speech engine based on CMU Flite
 homepage: https://github.com/MycroftAI/mimic1
 license: MIT-Festival AND BSD-2-Clause AND BSD-3-Clause AND Spencer-86 AND Apache-2.0 AND LicenseRef-Homebrew-cannot-represent
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mimic/blobs/sha256:c5308faf93176da28184e555f4e6978817d59676b85b5382e6fd7fffb7611bad
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mimic/blobs/sha256:1c990348da2905a15589f09b2bb76e4229604fa9c6c8585b2ef4906dbc5620ab
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mimic/blobs/sha256:027d95ecca63daf3f9c20419da6630b9a6a2d00e92dbdccbbc5d1747e0aca4d4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mimic/blobs/sha256:26e6f55397cb24207058e26f48ce78d837269e3063f295987eb12bf7a778159d
-sha256:
-  darwin_arm64: c5308faf93176da28184e555f4e6978817d59676b85b5382e6fd7fffb7611bad
-  darwin_amd64: 1c990348da2905a15589f09b2bb76e4229604fa9c6c8585b2ef4906dbc5620ab
-  linux_amd64: 027d95ecca63daf3f9c20419da6630b9a6a2d00e92dbdccbbc5d1747e0aca4d4
-  linux_arm64: 26e6f55397cb24207058e26f48ce78d837269e3063f295987eb12bf7a778159d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mimic/blobs/sha256:c5308faf93176da28184e555f4e6978817d59676b85b5382e6fd7fffb7611bad
+    sha256: c5308faf93176da28184e555f4e6978817d59676b85b5382e6fd7fffb7611bad
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mimic/blobs/sha256:1c990348da2905a15589f09b2bb76e4229604fa9c6c8585b2ef4906dbc5620ab
+    sha256: 1c990348da2905a15589f09b2bb76e4229604fa9c6c8585b2ef4906dbc5620ab
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mimic/blobs/sha256:027d95ecca63daf3f9c20419da6630b9a6a2d00e92dbdccbbc5d1747e0aca4d4
+    sha256: 027d95ecca63daf3f9c20419da6630b9a6a2d00e92dbdccbbc5d1747e0aca4d4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mimic/blobs/sha256:26e6f55397cb24207058e26f48ce78d837269e3063f295987eb12bf7a778159d
+    sha256: 26e6f55397cb24207058e26f48ce78d837269e3063f295987eb12bf7a778159d
+source:
+  url: https://github.com/MycroftAI/mimic1/archive/refs/tags/1.3.0.1.tar.gz
+  sha256: 9041f5c7d3720899c90c890ada179c92c3b542b90bb655c247e4a4835df79249
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,11 @@ install:
 dependencies:
   - pcre2
   - portaudio
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - pcre2

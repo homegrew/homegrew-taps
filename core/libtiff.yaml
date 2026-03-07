@@ -3,16 +3,22 @@ version: 4.7.1
 description: TIFF library and utilities
 homepage: https://libtiff.gitlab.io/libtiff/
 license: libtiff
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:e93670ed1f7f484d164a8755767cd55741559db7c402d7d55d1bdf6da87d5f67
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:9061b4453709aa2144d6c84bad4dbf0846d507eaa52a3016079822855078ba3c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:a2548f1c935d423641faded7ab2539f04756dd7765de31e179854d2dcf84093b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:0c1b199256ee763eaf5bbf47376900c08d37480472aa5456294bfb3b1e967bd0
-sha256:
-  darwin_arm64: e93670ed1f7f484d164a8755767cd55741559db7c402d7d55d1bdf6da87d5f67
-  darwin_amd64: 9061b4453709aa2144d6c84bad4dbf0846d507eaa52a3016079822855078ba3c
-  linux_amd64: a2548f1c935d423641faded7ab2539f04756dd7765de31e179854d2dcf84093b
-  linux_arm64: 0c1b199256ee763eaf5bbf47376900c08d37480472aa5456294bfb3b1e967bd0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:e93670ed1f7f484d164a8755767cd55741559db7c402d7d55d1bdf6da87d5f67
+    sha256: e93670ed1f7f484d164a8755767cd55741559db7c402d7d55d1bdf6da87d5f67
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:9061b4453709aa2144d6c84bad4dbf0846d507eaa52a3016079822855078ba3c
+    sha256: 9061b4453709aa2144d6c84bad4dbf0846d507eaa52a3016079822855078ba3c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:a2548f1c935d423641faded7ab2539f04756dd7765de31e179854d2dcf84093b
+    sha256: a2548f1c935d423641faded7ab2539f04756dd7765de31e179854d2dcf84093b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:0c1b199256ee763eaf5bbf47376900c08d37480472aa5456294bfb3b1e967bd0
+    sha256: 0c1b199256ee763eaf5bbf47376900c08d37480472aa5456294bfb3b1e967bd0
+source:
+  url: https://download.osgeo.org/libtiff/tiff-4.7.1.tar.gz
+  sha256: f698d94f3103da8ca7438d84e0344e453fe0ba3b7486e04c5bf7a9a3fabe9b69
 install:
   type: archive
   format: tar.gz
@@ -20,4 +26,9 @@ install:
 dependencies:
   - jpeg-turbo
   - xz
+  - zstd
+linux_dependencies:
+  - jpeg-turbo
+  - xz
+  - zlib-ng-compat
   - zstd

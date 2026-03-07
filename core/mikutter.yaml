@@ -3,16 +3,22 @@ version: 5.1.1
 description: Extensible Twitter client
 homepage: https://mikutter.hachune.net/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:e322500fe59264b6d359eb84689553329d2bd6eb256fe2a50299bf820a8a6e5b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:3e85adaf09e0ee1c33ebdf2865b96a0f1763ebfcdca90cc3138e5596c0c404d7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:2b74497a2473777e1c3ad642e346afe6117e41cb1a3695987b48051085968f17
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:2707a48772a913e137c39e9e4927b718685bcaec5e13033f26caad85901d7c83
-sha256:
-  darwin_arm64: e322500fe59264b6d359eb84689553329d2bd6eb256fe2a50299bf820a8a6e5b
-  darwin_amd64: 3e85adaf09e0ee1c33ebdf2865b96a0f1763ebfcdca90cc3138e5596c0c404d7
-  linux_amd64: 2b74497a2473777e1c3ad642e346afe6117e41cb1a3695987b48051085968f17
-  linux_arm64: 2707a48772a913e137c39e9e4927b718685bcaec5e13033f26caad85901d7c83
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:e322500fe59264b6d359eb84689553329d2bd6eb256fe2a50299bf820a8a6e5b
+    sha256: e322500fe59264b6d359eb84689553329d2bd6eb256fe2a50299bf820a8a6e5b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:3e85adaf09e0ee1c33ebdf2865b96a0f1763ebfcdca90cc3138e5596c0c404d7
+    sha256: 3e85adaf09e0ee1c33ebdf2865b96a0f1763ebfcdca90cc3138e5596c0c404d7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:2b74497a2473777e1c3ad642e346afe6117e41cb1a3695987b48051085968f17
+    sha256: 2b74497a2473777e1c3ad642e346afe6117e41cb1a3695987b48051085968f17
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:2707a48772a913e137c39e9e4927b718685bcaec5e13033f26caad85901d7c83
+    sha256: 2707a48772a913e137c39e9e4927b718685bcaec5e13033f26caad85901d7c83
+source:
+  url: https://mikutter.hachune.net/bin/mikutter-5.1.1.tar.gz
+  sha256: ddff538aae249bd636604128bac1ccb526a4ed5c32f00b45d3c3c1dbcdb655de
 install:
   type: archive
   format: tar.gz
@@ -31,3 +37,16 @@ dependencies:
   - ruby
   - gettext
   - terminal-notifier
+linux_dependencies:
+  - at-spi2-core
+  - cairo
+  - fontconfig
+  - freetype
+  - gdk-pixbuf
+  - glib
+  - gobject-introspection
+  - gtk+3
+  - harfbuzz
+  - pango
+  - ruby
+  - zlib-ng-compat

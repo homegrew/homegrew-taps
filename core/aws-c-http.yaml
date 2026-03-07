@@ -3,16 +3,22 @@ version: 0.10.11
 description: C99 implementation of the HTTP/1.1 and HTTP/2 specifications
 homepage: https://github.com/awslabs/aws-c-http
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/aws-c-http/blobs/sha256:64e5971a0754d25c08c7287032249bf1582adcb989f5a637622aef6d23fbadc2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/aws-c-http/blobs/sha256:db53c184d699037f93dc89346753d81069a4a4a8edbf81d71d52815e2cc05061
-  linux_amd64: https://ghcr.io/v2/homebrew/core/aws-c-http/blobs/sha256:11b559382e8ea301712450bbfb70a17d932a3658763305aa20726673ecbcca04
-  linux_arm64: https://ghcr.io/v2/homebrew/core/aws-c-http/blobs/sha256:cf76693e9647fb211b043ed62fe5bd5cf55b82f64421b4542aa0680b69b49959
-sha256:
-  darwin_arm64: 64e5971a0754d25c08c7287032249bf1582adcb989f5a637622aef6d23fbadc2
-  darwin_amd64: db53c184d699037f93dc89346753d81069a4a4a8edbf81d71d52815e2cc05061
-  linux_amd64: 11b559382e8ea301712450bbfb70a17d932a3658763305aa20726673ecbcca04
-  linux_arm64: cf76693e9647fb211b043ed62fe5bd5cf55b82f64421b4542aa0680b69b49959
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/aws-c-http/blobs/sha256:64e5971a0754d25c08c7287032249bf1582adcb989f5a637622aef6d23fbadc2
+    sha256: 64e5971a0754d25c08c7287032249bf1582adcb989f5a637622aef6d23fbadc2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/aws-c-http/blobs/sha256:db53c184d699037f93dc89346753d81069a4a4a8edbf81d71d52815e2cc05061
+    sha256: db53c184d699037f93dc89346753d81069a4a4a8edbf81d71d52815e2cc05061
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/aws-c-http/blobs/sha256:11b559382e8ea301712450bbfb70a17d932a3658763305aa20726673ecbcca04
+    sha256: 11b559382e8ea301712450bbfb70a17d932a3658763305aa20726673ecbcca04
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/aws-c-http/blobs/sha256:cf76693e9647fb211b043ed62fe5bd5cf55b82f64421b4542aa0680b69b49959
+    sha256: cf76693e9647fb211b043ed62fe5bd5cf55b82f64421b4542aa0680b69b49959
+source:
+  url: https://github.com/awslabs/aws-c-http/archive/refs/tags/v0.10.11.tar.gz
+  sha256: b375e9630aa93830f54b544298745fd30a6cb3d09e5ff8473c7455a1599bf2b7
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,5 @@ dependencies:
   - aws-c-common
   - aws-c-compression
   - aws-c-io
+build_dependencies:
+  - cmake

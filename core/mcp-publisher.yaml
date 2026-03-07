@@ -3,17 +3,25 @@ version: 1.5.0
 description: Publisher CLI tool for the Official Model Context Protocol (MCP) Registry
 homepage: https://github.com/modelcontextprotocol/registry
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mcp-publisher/blobs/sha256:8f6d99766ecf12631eb011991bed61a0165de5b651585c8af856abac1af6894c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mcp-publisher/blobs/sha256:ab330bd4eff38b17aa8dbd34e4c9afd21c3da8b153d958f7270ee573594554bd
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mcp-publisher/blobs/sha256:310969522eabe473aaedea39874b0a56d85f907fa4f947cdf933b59f0bf12fa8
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mcp-publisher/blobs/sha256:65972049b5b82e4fce0cff7e48c6d9c81469405a498a38fb8b7666b73e6234df
-sha256:
-  darwin_arm64: 8f6d99766ecf12631eb011991bed61a0165de5b651585c8af856abac1af6894c
-  darwin_amd64: ab330bd4eff38b17aa8dbd34e4c9afd21c3da8b153d958f7270ee573594554bd
-  linux_amd64: 310969522eabe473aaedea39874b0a56d85f907fa4f947cdf933b59f0bf12fa8
-  linux_arm64: 65972049b5b82e4fce0cff7e48c6d9c81469405a498a38fb8b7666b73e6234df
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mcp-publisher/blobs/sha256:8f6d99766ecf12631eb011991bed61a0165de5b651585c8af856abac1af6894c
+    sha256: 8f6d99766ecf12631eb011991bed61a0165de5b651585c8af856abac1af6894c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mcp-publisher/blobs/sha256:ab330bd4eff38b17aa8dbd34e4c9afd21c3da8b153d958f7270ee573594554bd
+    sha256: ab330bd4eff38b17aa8dbd34e4c9afd21c3da8b153d958f7270ee573594554bd
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mcp-publisher/blobs/sha256:310969522eabe473aaedea39874b0a56d85f907fa4f947cdf933b59f0bf12fa8
+    sha256: 310969522eabe473aaedea39874b0a56d85f907fa4f947cdf933b59f0bf12fa8
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mcp-publisher/blobs/sha256:65972049b5b82e4fce0cff7e48c6d9c81469405a498a38fb8b7666b73e6234df
+    sha256: 65972049b5b82e4fce0cff7e48c6d9c81469405a498a38fb8b7666b73e6234df
+source:
+  url: https://github.com/modelcontextprotocol/registry/archive/refs/tags/v1.5.0.tar.gz
+  sha256: cc7f90da70ecf5bcba06eafda0c5358c5fefa06f1caa79a2e9ee91b9073dfd50
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

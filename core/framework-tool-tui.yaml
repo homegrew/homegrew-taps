@@ -3,13 +3,19 @@ version: 0.8.0
 description: TUI for controlling and monitoring Framework Computers hardware
 homepage: https://github.com/grouzen/framework-tool-tui
 license: MIT
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/framework-tool-tui/blobs/sha256:a23f3db1468f286c2fef3de5375467f9264d2c47f023ed8d3c9502df4d48eb3f
-sha256:
-  linux_amd64: a23f3db1468f286c2fef3de5375467f9264d2c47f023ed8d3c9502df4d48eb3f
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/framework-tool-tui/blobs/sha256:a23f3db1468f286c2fef3de5375467f9264d2c47f023ed8d3c9502df4d48eb3f
+    sha256: a23f3db1468f286c2fef3de5375467f9264d2c47f023ed8d3c9502df4d48eb3f
+source:
+  url: https://github.com/grouzen/framework-tool-tui/archive/refs/tags/v0.8.0.tar.gz
+  sha256: ac0e322d8f1c338361a89c657299ccdeca8c7d7b7713adf7d48511ab60373255
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - systemd
+build_dependencies:
+  - pkgconf
+  - rust

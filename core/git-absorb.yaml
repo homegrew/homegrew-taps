@@ -3,19 +3,29 @@ version: 0.9.0
 description: Automatic git commit --fixup
 homepage: https://github.com/tummychow/git-absorb
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/git-absorb/blobs/sha256:15d25d50f77a146d40e0d2d71fa977f77687bb290e1e42f680edee5c332683b9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/git-absorb/blobs/sha256:ad387b6822e19ed2cc5d0947ab764639fcf7557660383d57e4e0fc17353731fe
-  linux_amd64: https://ghcr.io/v2/homebrew/core/git-absorb/blobs/sha256:4fcd6d7cfdce2f15b53389137242a03e7cef8c6bb8927640527db2375a006b20
-  linux_arm64: https://ghcr.io/v2/homebrew/core/git-absorb/blobs/sha256:0b0717a00ef65e265f27f90fbb989ce12df1449dc51854166d9be02f09f87adc
-sha256:
-  darwin_arm64: 15d25d50f77a146d40e0d2d71fa977f77687bb290e1e42f680edee5c332683b9
-  darwin_amd64: ad387b6822e19ed2cc5d0947ab764639fcf7557660383d57e4e0fc17353731fe
-  linux_amd64: 4fcd6d7cfdce2f15b53389137242a03e7cef8c6bb8927640527db2375a006b20
-  linux_arm64: 0b0717a00ef65e265f27f90fbb989ce12df1449dc51854166d9be02f09f87adc
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/git-absorb/blobs/sha256:15d25d50f77a146d40e0d2d71fa977f77687bb290e1e42f680edee5c332683b9
+    sha256: 15d25d50f77a146d40e0d2d71fa977f77687bb290e1e42f680edee5c332683b9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/git-absorb/blobs/sha256:ad387b6822e19ed2cc5d0947ab764639fcf7557660383d57e4e0fc17353731fe
+    sha256: ad387b6822e19ed2cc5d0947ab764639fcf7557660383d57e4e0fc17353731fe
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/git-absorb/blobs/sha256:4fcd6d7cfdce2f15b53389137242a03e7cef8c6bb8927640527db2375a006b20
+    sha256: 4fcd6d7cfdce2f15b53389137242a03e7cef8c6bb8927640527db2375a006b20
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/git-absorb/blobs/sha256:0b0717a00ef65e265f27f90fbb989ce12df1449dc51854166d9be02f09f87adc
+    sha256: 0b0717a00ef65e265f27f90fbb989ce12df1449dc51854166d9be02f09f87adc
+source:
+  url: https://github.com/tummychow/git-absorb/archive/refs/tags/0.9.0.tar.gz
+  sha256: a0f74e6306d7fbd746d2b4a6856621d46a7f82e3e88b6bb8b6fc0480cf811f53
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - libgit2
+build_dependencies:
+  - asciidoctor
+  - pkgconf
+  - rust

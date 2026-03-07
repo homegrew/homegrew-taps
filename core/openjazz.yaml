@@ -3,16 +3,22 @@ version: 20260301
 description: Open source Jazz Jackrabit engine
 homepage: https://www.alister.eu/jazz/oj/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/openjazz/blobs/sha256:6bfc89162e63bb17558bc08624c060105ff815e076fbb396d145b5e635ca2ea6
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/openjazz/blobs/sha256:12c74f58ca66e40d408c048acf972ce3ab9da5dabfc49ecfa3ea490e46e98ef3
-  linux_amd64: https://ghcr.io/v2/homebrew/core/openjazz/blobs/sha256:f616f9102db1c8e95a380643842bee98afda25af124666c3b4734437070d47c6
-  linux_arm64: https://ghcr.io/v2/homebrew/core/openjazz/blobs/sha256:07bf3d6746df890feac5085f6172c230e4f00b316730068de499795786ff2aeb
-sha256:
-  darwin_arm64: 6bfc89162e63bb17558bc08624c060105ff815e076fbb396d145b5e635ca2ea6
-  darwin_amd64: 12c74f58ca66e40d408c048acf972ce3ab9da5dabfc49ecfa3ea490e46e98ef3
-  linux_amd64: f616f9102db1c8e95a380643842bee98afda25af124666c3b4734437070d47c6
-  linux_arm64: 07bf3d6746df890feac5085f6172c230e4f00b316730068de499795786ff2aeb
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openjazz/blobs/sha256:6bfc89162e63bb17558bc08624c060105ff815e076fbb396d145b5e635ca2ea6
+    sha256: 6bfc89162e63bb17558bc08624c060105ff815e076fbb396d145b5e635ca2ea6
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openjazz/blobs/sha256:12c74f58ca66e40d408c048acf972ce3ab9da5dabfc49ecfa3ea490e46e98ef3
+    sha256: 12c74f58ca66e40d408c048acf972ce3ab9da5dabfc49ecfa3ea490e46e98ef3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openjazz/blobs/sha256:f616f9102db1c8e95a380643842bee98afda25af124666c3b4734437070d47c6
+    sha256: f616f9102db1c8e95a380643842bee98afda25af124666c3b4734437070d47c6
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openjazz/blobs/sha256:07bf3d6746df890feac5085f6172c230e4f00b316730068de499795786ff2aeb
+    sha256: 07bf3d6746df890feac5085f6172c230e4f00b316730068de499795786ff2aeb
+source:
+  url: https://github.com/AlisterT/openjazz/archive/refs/tags/20260301.tar.gz
+  sha256: 9c117a8d9aa539c4dcb3fb5788130563a83ca1d9819e538f233721d823f7a650
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,9 @@ install:
 dependencies:
   - sdl2
   - sdl2_net
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - sdl2
+  - sdl2_net
+  - zlib-ng-compat

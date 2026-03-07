@@ -3,16 +3,22 @@ version: 0.39.0
 description: Computational pipeline for finding mutations in short-read DNA resequencing data
 homepage: https://barricklab.org/breseq
 license: GPL-2.0-or-later AND MIT AND BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/breseq/blobs/sha256:def2a384df5495e166004a40f6a0ca64dc395aeb2cd733a86a8ec104ae313af4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/breseq/blobs/sha256:95b4eb870ce333f0c30b8af90acd189d2f4183ee062cedb7d099f366d3f3cbf5
-  linux_amd64: https://ghcr.io/v2/homebrew/core/breseq/blobs/sha256:c2ea055967954551fdf4b990211176d6f4ba5fb468d45eeb82a3e1265212f332
-  linux_arm64: https://ghcr.io/v2/homebrew/core/breseq/blobs/sha256:b67dff0c121eee03cd1538f700a4329e82d2b9e5c6295a8a5b7d209e8264dcf2
-sha256:
-  darwin_arm64: def2a384df5495e166004a40f6a0ca64dc395aeb2cd733a86a8ec104ae313af4
-  darwin_amd64: 95b4eb870ce333f0c30b8af90acd189d2f4183ee062cedb7d099f366d3f3cbf5
-  linux_amd64: c2ea055967954551fdf4b990211176d6f4ba5fb468d45eeb82a3e1265212f332
-  linux_arm64: b67dff0c121eee03cd1538f700a4329e82d2b9e5c6295a8a5b7d209e8264dcf2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/breseq/blobs/sha256:def2a384df5495e166004a40f6a0ca64dc395aeb2cd733a86a8ec104ae313af4
+    sha256: def2a384df5495e166004a40f6a0ca64dc395aeb2cd733a86a8ec104ae313af4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/breseq/blobs/sha256:95b4eb870ce333f0c30b8af90acd189d2f4183ee062cedb7d099f366d3f3cbf5
+    sha256: 95b4eb870ce333f0c30b8af90acd189d2f4183ee062cedb7d099f366d3f3cbf5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/breseq/blobs/sha256:c2ea055967954551fdf4b990211176d6f4ba5fb468d45eeb82a3e1265212f332
+    sha256: c2ea055967954551fdf4b990211176d6f4ba5fb468d45eeb82a3e1265212f332
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/breseq/blobs/sha256:b67dff0c121eee03cd1538f700a4329e82d2b9e5c6295a8a5b7d209e8264dcf2
+    sha256: b67dff0c121eee03cd1538f700a4329e82d2b9e5c6295a8a5b7d209e8264dcf2
+source:
+  url: https://github.com/barricklab/breseq/archive/refs/tags/v0.39.0.tar.gz
+  sha256: 5aa1bd9af71899e1358cfb9b8440c16cc908f185d9178a401a5a4d3f0c7ee861
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,11 @@ install:
 dependencies:
   - bowtie2
   - r
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+linux_dependencies:
+  - bowtie2
+  - r
+  - zlib-ng-compat

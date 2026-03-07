@@ -1,0 +1,30 @@
+name: flix
+version: 0.69.0
+description: Statically typed functional, imperative, and logic programming language
+homepage: https://flix.dev/
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:ac9c48e49655df3dbbbed59d202579ab406ba7899486eb369ead8d85e742e127
+    sha256: ac9c48e49655df3dbbbed59d202579ab406ba7899486eb369ead8d85e742e127
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:fb23dc2888c39aad98c096f87a8f70744a5c808f7e27a2b9994c6dfa19f36f99
+    sha256: fb23dc2888c39aad98c096f87a8f70744a5c808f7e27a2b9994c6dfa19f36f99
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:9cef18c8e9926b4b34213dbf1a3ae4bc147adef62a319cfd2f360a8cf985b109
+    sha256: 9cef18c8e9926b4b34213dbf1a3ae4bc147adef62a319cfd2f360a8cf985b109
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:9096322e98d3ea0fe95072dd67eadbc4e9723a8b2ac525f54538ccac40b975ec
+    sha256: 9096322e98d3ea0fe95072dd67eadbc4e9723a8b2ac525f54538ccac40b975ec
+source:
+  url: https://github.com/flix/flix/archive/refs/tags/v0.69.0.tar.gz
+  sha256: ea5a0489d82d7c25c5fc73e52d207b6a78ed5f8313dcbdc00291ed634232ad27
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - openjdk
+build_dependencies:
+  - mill
+  - scala

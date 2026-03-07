@@ -3,16 +3,22 @@ version: 5.9.0
 description: Multi-purpose desktop calculator
 homepage: https://qalculate.github.io/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/qalculate-gtk/blobs/sha256:0f1c553a5720ca93fa4e7965717f9399f24192740a9b6a3f31ad8c08d6321b58
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/qalculate-gtk/blobs/sha256:37609ce87250945892d1944b91d0d95d9ec4ef3fdc275531cfa30303c592aaa4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/qalculate-gtk/blobs/sha256:b2431e7fc908b3539d604537a12458fe210d073085db22458b60bf0dc75b2a96
-  linux_arm64: https://ghcr.io/v2/homebrew/core/qalculate-gtk/blobs/sha256:cc607df50c4c5a7708520ea49c4a3a0176ed5ff6a464bd2b6afedadf842bf623
-sha256:
-  darwin_arm64: 0f1c553a5720ca93fa4e7965717f9399f24192740a9b6a3f31ad8c08d6321b58
-  darwin_amd64: 37609ce87250945892d1944b91d0d95d9ec4ef3fdc275531cfa30303c592aaa4
-  linux_amd64: b2431e7fc908b3539d604537a12458fe210d073085db22458b60bf0dc75b2a96
-  linux_arm64: cc607df50c4c5a7708520ea49c4a3a0176ed5ff6a464bd2b6afedadf842bf623
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qalculate-gtk/blobs/sha256:0f1c553a5720ca93fa4e7965717f9399f24192740a9b6a3f31ad8c08d6321b58
+    sha256: 0f1c553a5720ca93fa4e7965717f9399f24192740a9b6a3f31ad8c08d6321b58
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qalculate-gtk/blobs/sha256:37609ce87250945892d1944b91d0d95d9ec4ef3fdc275531cfa30303c592aaa4
+    sha256: 37609ce87250945892d1944b91d0d95d9ec4ef3fdc275531cfa30303c592aaa4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qalculate-gtk/blobs/sha256:b2431e7fc908b3539d604537a12458fe210d073085db22458b60bf0dc75b2a96
+    sha256: b2431e7fc908b3539d604537a12458fe210d073085db22458b60bf0dc75b2a96
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qalculate-gtk/blobs/sha256:cc607df50c4c5a7708520ea49c4a3a0176ed5ff6a464bd2b6afedadf842bf623
+    sha256: cc607df50c4c5a7708520ea49c4a3a0176ed5ff6a464bd2b6afedadf842bf623
+source:
+  url: https://github.com/Qalculate/qalculate-gtk/releases/download/v5.9.0/qalculate-gtk-5.9.0.tar.gz
+  sha256: 39cd0bc5abe26edfc04a3064d4412d5af9f7197eafa0762a18a0cb6996f1021b
 install:
   type: archive
   format: tar.gz
@@ -28,3 +34,15 @@ dependencies:
   - at-spi2-core
   - gettext
   - harfbuzz
+build_dependencies:
+  - gettext
+  - intltool
+  - pkgconf
+linux_dependencies:
+  - adwaita-icon-theme
+  - cairo
+  - gdk-pixbuf
+  - glib
+  - gtk+3
+  - libqalculate
+  - pango

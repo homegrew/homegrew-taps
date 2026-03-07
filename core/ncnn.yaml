@@ -3,16 +3,22 @@ version: 20260113
 description: High-performance neural network inference framework
 homepage: https://github.com/Tencent/ncnn
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ncnn/blobs/sha256:0a30245d91ba241ced71357eef70d71088174379b75884b05ec50405acfa7d4c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ncnn/blobs/sha256:bc073df7e707231c4c1a0d13ca482fc77dcbc42deda8aff02d4f7afd7dea3088
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ncnn/blobs/sha256:cd30b97698afaf3267d49d3f9af6142e830ee5ad2911b5e0ef45a4bf98e1cd65
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ncnn/blobs/sha256:9e31cf41ae4f89877a0f285c4f5e85511b68e07a270299886dc6e98e2179e976
-sha256:
-  darwin_arm64: 0a30245d91ba241ced71357eef70d71088174379b75884b05ec50405acfa7d4c
-  darwin_amd64: bc073df7e707231c4c1a0d13ca482fc77dcbc42deda8aff02d4f7afd7dea3088
-  linux_amd64: cd30b97698afaf3267d49d3f9af6142e830ee5ad2911b5e0ef45a4bf98e1cd65
-  linux_arm64: 9e31cf41ae4f89877a0f285c4f5e85511b68e07a270299886dc6e98e2179e976
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ncnn/blobs/sha256:0a30245d91ba241ced71357eef70d71088174379b75884b05ec50405acfa7d4c
+    sha256: 0a30245d91ba241ced71357eef70d71088174379b75884b05ec50405acfa7d4c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ncnn/blobs/sha256:bc073df7e707231c4c1a0d13ca482fc77dcbc42deda8aff02d4f7afd7dea3088
+    sha256: bc073df7e707231c4c1a0d13ca482fc77dcbc42deda8aff02d4f7afd7dea3088
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ncnn/blobs/sha256:cd30b97698afaf3267d49d3f9af6142e830ee5ad2911b5e0ef45a4bf98e1cd65
+    sha256: cd30b97698afaf3267d49d3f9af6142e830ee5ad2911b5e0ef45a4bf98e1cd65
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ncnn/blobs/sha256:9e31cf41ae4f89877a0f285c4f5e85511b68e07a270299886dc6e98e2179e976
+    sha256: 9e31cf41ae4f89877a0f285c4f5e85511b68e07a270299886dc6e98e2179e976
+source:
+  url: https://github.com/Tencent/ncnn/archive/refs/tags/20260113.tar.gz
+  sha256: 2fdc5c6e37f8552921a9daad498a1be54a6fa6edd32c1a9e3030b27fab253b47
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,9 @@ dependencies:
   - libomp
   - molten-vk
   - spirv-tools
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - abseil
+  - glslang
+  - protobuf

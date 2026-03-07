@@ -3,16 +3,22 @@ version: 3
 description: VapourSynth filters - Tesseract OCR filter
 homepage: https://www.vapoursynth.com
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:7170ccabb3adf8e0a5bd54ca6c531b3d0d54b2c7f8455aa912096ed3458ca048
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:2106c78c52a64e3dee5fffaf924358216e2a4d962614d47dc1055721d0e535fe
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:3ba3f2ce6d29c86e69853b445c6b8a4a4f95c26f88dc7e3947ecea9845009882
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:4e8060e44aa0bb280d0338e204154016949a9d54e5c9216849c0ef3f276fba73
-sha256:
-  darwin_arm64: 7170ccabb3adf8e0a5bd54ca6c531b3d0d54b2c7f8455aa912096ed3458ca048
-  darwin_amd64: 2106c78c52a64e3dee5fffaf924358216e2a4d962614d47dc1055721d0e535fe
-  linux_amd64: 3ba3f2ce6d29c86e69853b445c6b8a4a4f95c26f88dc7e3947ecea9845009882
-  linux_arm64: 4e8060e44aa0bb280d0338e204154016949a9d54e5c9216849c0ef3f276fba73
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:7170ccabb3adf8e0a5bd54ca6c531b3d0d54b2c7f8455aa912096ed3458ca048
+    sha256: 7170ccabb3adf8e0a5bd54ca6c531b3d0d54b2c7f8455aa912096ed3458ca048
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:2106c78c52a64e3dee5fffaf924358216e2a4d962614d47dc1055721d0e535fe
+    sha256: 2106c78c52a64e3dee5fffaf924358216e2a4d962614d47dc1055721d0e535fe
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:3ba3f2ce6d29c86e69853b445c6b8a4a4f95c26f88dc7e3947ecea9845009882
+    sha256: 3ba3f2ce6d29c86e69853b445c6b8a4a4f95c26f88dc7e3947ecea9845009882
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:4e8060e44aa0bb280d0338e204154016949a9d54e5c9216849c0ef3f276fba73
+    sha256: 4e8060e44aa0bb280d0338e204154016949a9d54e5c9216849c0ef3f276fba73
+source:
+  url: https://github.com/vapoursynth/vs-ocr/archive/refs/tags/R3.tar.gz
+  sha256: e9da11b7f5f3e4acfee5890729769217aa5b385bb573cb303c2661d8d8a83712
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,7 @@ install:
 dependencies:
   - tesseract
   - vapoursynth
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf

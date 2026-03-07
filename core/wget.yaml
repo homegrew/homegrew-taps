@@ -3,16 +3,22 @@ version: 1.25.0
 description: Internet file retriever
 homepage: https://www.gnu.org/software/wget/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:03be72d23a113a3273245b3e071667b611ea5d81dab6f52e995a84420d0ed734
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:91995d4d44951e981c36879505e8e294d15e46bbd3ef3965caf94d55424e165b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:09603bb2a51e4bdc94a9f4f3e66442ef6e401a2a2d244213066c58cceb686f95
-  linux_arm64: https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:6c291dba1e71dcfada741192dbf78790c60488d927fa15c82f4bd0901edfa014
-sha256:
-  darwin_arm64: 03be72d23a113a3273245b3e071667b611ea5d81dab6f52e995a84420d0ed734
-  darwin_amd64: 91995d4d44951e981c36879505e8e294d15e46bbd3ef3965caf94d55424e165b
-  linux_amd64: 09603bb2a51e4bdc94a9f4f3e66442ef6e401a2a2d244213066c58cceb686f95
-  linux_arm64: 6c291dba1e71dcfada741192dbf78790c60488d927fa15c82f4bd0901edfa014
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:03be72d23a113a3273245b3e071667b611ea5d81dab6f52e995a84420d0ed734
+    sha256: 03be72d23a113a3273245b3e071667b611ea5d81dab6f52e995a84420d0ed734
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:91995d4d44951e981c36879505e8e294d15e46bbd3ef3965caf94d55424e165b
+    sha256: 91995d4d44951e981c36879505e8e294d15e46bbd3ef3965caf94d55424e165b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:09603bb2a51e4bdc94a9f4f3e66442ef6e401a2a2d244213066c58cceb686f95
+    sha256: 09603bb2a51e4bdc94a9f4f3e66442ef6e401a2a2d244213066c58cceb686f95
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:6c291dba1e71dcfada741192dbf78790c60488d927fa15c82f4bd0901edfa014
+    sha256: 6c291dba1e71dcfada741192dbf78790c60488d927fa15c82f4bd0901edfa014
+source:
+  url: https://ftpmirror.gnu.org/gnu/wget/wget-1.25.0.tar.gz
+  sha256: 766e48423e79359ea31e41db9e5c289675947a7fcf2efdcedb726ac9d0da3784
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,10 @@ dependencies:
   - openssl@3
   - gettext
   - libunistring
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - libidn2
+  - openssl@3
+  - util-linux
+  - zlib-ng-compat

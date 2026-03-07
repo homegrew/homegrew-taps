@@ -3,16 +3,22 @@ version: 25.0.2
 description: Client for Bareos (Backup Archiving REcovery Open Sourced)
 homepage: https://www.bareos.com/
 license: AGPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:4c38cca3791014540429ccd676920e0f74f7685e7849b9b3c7804c90c6211a3f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:b2b2f19e68cac163658b2c8eabd6eda2c2e5696420f4d101462033673f0b5121
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:8d99defa6d8fc3a03635e3ea4fb2fc16bc70f59653a4f8b9474b19b7435dc923
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:cd80b9ff94ccb46a892d4c294859beaba56a51acaac0af764c2aa895f4d96d22
-sha256:
-  darwin_arm64: 4c38cca3791014540429ccd676920e0f74f7685e7849b9b3c7804c90c6211a3f
-  darwin_amd64: b2b2f19e68cac163658b2c8eabd6eda2c2e5696420f4d101462033673f0b5121
-  linux_amd64: 8d99defa6d8fc3a03635e3ea4fb2fc16bc70f59653a4f8b9474b19b7435dc923
-  linux_arm64: cd80b9ff94ccb46a892d4c294859beaba56a51acaac0af764c2aa895f4d96d22
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:4c38cca3791014540429ccd676920e0f74f7685e7849b9b3c7804c90c6211a3f
+    sha256: 4c38cca3791014540429ccd676920e0f74f7685e7849b9b3c7804c90c6211a3f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:b2b2f19e68cac163658b2c8eabd6eda2c2e5696420f4d101462033673f0b5121
+    sha256: b2b2f19e68cac163658b2c8eabd6eda2c2e5696420f4d101462033673f0b5121
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:8d99defa6d8fc3a03635e3ea4fb2fc16bc70f59653a4f8b9474b19b7435dc923
+    sha256: 8d99defa6d8fc3a03635e3ea4fb2fc16bc70f59653a4f8b9474b19b7435dc923
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:cd80b9ff94ccb46a892d4c294859beaba56a51acaac0af764c2aa895f4d96d22
+    sha256: cd80b9ff94ccb46a892d4c294859beaba56a51acaac0af764c2aa895f4d96d22
+source:
+  url: https://github.com/bareos/bareos/archive/refs/tags/Release/25.0.2.tar.gz
+  sha256: 39c300ea4886c5c949d61034eff5990e046a130ac4d0e295a92745acd30516a9
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,17 @@ dependencies:
   - readline
   - xxhash
   - gettext
+build_dependencies:
+  - cli11
+  - cmake
+  - cpp-gsl
+  - fmt
+  - utf8cpp
+linux_dependencies:
+  - acl
+  - jansson
+  - lzo
+  - openssl@3
+  - readline
+  - xxhash
+  - zlib-ng-compat

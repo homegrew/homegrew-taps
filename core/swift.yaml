@@ -3,21 +3,35 @@ version: 6.2.4
 description: High-performance system programming language
 homepage: https://www.swift.org
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:abb0199ae7fcbf1956169990b9c68574ecc0e718eec2bcc1f3e1d96ef79d4c72
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:021321c0558cfc62da763bedce17de7c159e4ce92ce2934009d2ae989c97fbe5
-  linux_amd64: https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:d64df7c399b6f34107fd08b116555bbedd66e3f99074888fc4d87ef1feefb34e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:6e90d858015d26989c78f9648562b070fe5d7ed52448297678f03850190ee67f
-sha256:
-  darwin_arm64: abb0199ae7fcbf1956169990b9c68574ecc0e718eec2bcc1f3e1d96ef79d4c72
-  darwin_amd64: 021321c0558cfc62da763bedce17de7c159e4ce92ce2934009d2ae989c97fbe5
-  linux_amd64: d64df7c399b6f34107fd08b116555bbedd66e3f99074888fc4d87ef1feefb34e
-  linux_arm64: 6e90d858015d26989c78f9648562b070fe5d7ed52448297678f03850190ee67f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:abb0199ae7fcbf1956169990b9c68574ecc0e718eec2bcc1f3e1d96ef79d4c72
+    sha256: abb0199ae7fcbf1956169990b9c68574ecc0e718eec2bcc1f3e1d96ef79d4c72
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:021321c0558cfc62da763bedce17de7c159e4ce92ce2934009d2ae989c97fbe5
+    sha256: 021321c0558cfc62da763bedce17de7c159e4ce92ce2934009d2ae989c97fbe5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:d64df7c399b6f34107fd08b116555bbedd66e3f99074888fc4d87ef1feefb34e
+    sha256: d64df7c399b6f34107fd08b116555bbedd66e3f99074888fc4d87ef1feefb34e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:6e90d858015d26989c78f9648562b070fe5d7ed52448297678f03850190ee67f
+    sha256: 6e90d858015d26989c78f9648562b070fe5d7ed52448297678f03850190ee67f
+source:
+  url: https://github.com/swiftlang/swift/archive/refs/tags/swift-6.2.4-RELEASE.tar.gz
+  sha256: 3b29b8aecfd6f401a2f46b28947850a53ac1cda46e54380fbd6d391c4f718fad
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - python@3.14
+  - zstd
+build_dependencies:
+  - cmake
+  - ninja
+linux_dependencies:
+  - python@3.14
+  - util-linux
+  - zlib-ng-compat
   - zstd
 keg_only: true

@@ -3,16 +3,22 @@ version: 9.31
 description: Rxvt fork with Unicode support
 homepage: https://software.schmorp.de/pkg/rxvt-unicode.html
 license: GPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:56d89c32e8e8c8f37ef87d5dace2009efe51caf13d1d6abb0e61ddf0b68d19a6
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:fc19a29b28b86e958b45e230e2175aaf179f82ac474ee97faa231cfff8d9d462
-  linux_amd64: https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:d88dcb3ff493d615da34287043c772da7ccecb0bf3d2ee2b6f63d0230d83e987
-  linux_arm64: https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:3f6b580d76d9d4ba15350626b72a10d86f6d2a87a1c4cdfead5589db7a9a8f21
-sha256:
-  darwin_arm64: 56d89c32e8e8c8f37ef87d5dace2009efe51caf13d1d6abb0e61ddf0b68d19a6
-  darwin_amd64: fc19a29b28b86e958b45e230e2175aaf179f82ac474ee97faa231cfff8d9d462
-  linux_amd64: d88dcb3ff493d615da34287043c772da7ccecb0bf3d2ee2b6f63d0230d83e987
-  linux_arm64: 3f6b580d76d9d4ba15350626b72a10d86f6d2a87a1c4cdfead5589db7a9a8f21
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:56d89c32e8e8c8f37ef87d5dace2009efe51caf13d1d6abb0e61ddf0b68d19a6
+    sha256: 56d89c32e8e8c8f37ef87d5dace2009efe51caf13d1d6abb0e61ddf0b68d19a6
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:fc19a29b28b86e958b45e230e2175aaf179f82ac474ee97faa231cfff8d9d462
+    sha256: fc19a29b28b86e958b45e230e2175aaf179f82ac474ee97faa231cfff8d9d462
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:d88dcb3ff493d615da34287043c772da7ccecb0bf3d2ee2b6f63d0230d83e987
+    sha256: d88dcb3ff493d615da34287043c772da7ccecb0bf3d2ee2b6f63d0230d83e987
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:3f6b580d76d9d4ba15350626b72a10d86f6d2a87a1c4cdfead5589db7a9a8f21
+    sha256: 3f6b580d76d9d4ba15350626b72a10d86f6d2a87a1c4cdfead5589db7a9a8f21
+source:
+  url: https://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.31.tar.bz2
+  sha256: aaa13fcbc149fe0f3f391f933279580f74a96fd312d6ed06b8ff03c2d46672e8
 install:
   type: archive
   format: tar.gz
@@ -26,3 +32,14 @@ dependencies:
   - libxmu
   - libxrender
   - libxt
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - fontconfig
+  - freetype
+  - libx11
+  - libxext
+  - libxft
+  - libxmu
+  - libxrender

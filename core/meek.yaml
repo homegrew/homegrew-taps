@@ -3,17 +3,25 @@ version: 0.38.0
 description: Blocking-resistant pluggable transport for Tor
 homepage: https://www.torproject.org
 license: CC0-1.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/meek/blobs/sha256:6d41beffa2dbd3d1b66ba353e51e329fa491d6413dc526c0f9993d41f06adabb
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/meek/blobs/sha256:13b5aa862f9036861acddf2ffcc385d02924bcdb583522b57af834cd98a4af81
-  linux_amd64: https://ghcr.io/v2/homebrew/core/meek/blobs/sha256:5adc32589bfaf285e8cea09cd4730a21568aa2c76213cc7cbe15bbc96adf39e3
-  linux_arm64: https://ghcr.io/v2/homebrew/core/meek/blobs/sha256:99d61e15416a1a9784f37ef0fcf6d68895cbb6571f96998fe016d84b08bfe410
-sha256:
-  darwin_arm64: 6d41beffa2dbd3d1b66ba353e51e329fa491d6413dc526c0f9993d41f06adabb
-  darwin_amd64: 13b5aa862f9036861acddf2ffcc385d02924bcdb583522b57af834cd98a4af81
-  linux_amd64: 5adc32589bfaf285e8cea09cd4730a21568aa2c76213cc7cbe15bbc96adf39e3
-  linux_arm64: 99d61e15416a1a9784f37ef0fcf6d68895cbb6571f96998fe016d84b08bfe410
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/meek/blobs/sha256:6d41beffa2dbd3d1b66ba353e51e329fa491d6413dc526c0f9993d41f06adabb
+    sha256: 6d41beffa2dbd3d1b66ba353e51e329fa491d6413dc526c0f9993d41f06adabb
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/meek/blobs/sha256:13b5aa862f9036861acddf2ffcc385d02924bcdb583522b57af834cd98a4af81
+    sha256: 13b5aa862f9036861acddf2ffcc385d02924bcdb583522b57af834cd98a4af81
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/meek/blobs/sha256:5adc32589bfaf285e8cea09cd4730a21568aa2c76213cc7cbe15bbc96adf39e3
+    sha256: 5adc32589bfaf285e8cea09cd4730a21568aa2c76213cc7cbe15bbc96adf39e3
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/meek/blobs/sha256:99d61e15416a1a9784f37ef0fcf6d68895cbb6571f96998fe016d84b08bfe410
+    sha256: 99d61e15416a1a9784f37ef0fcf6d68895cbb6571f96998fe016d84b08bfe410
+source:
+  url: https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/meek/-/archive/v0.38.0/meek-v0.38.0.tar.gz
+  sha256: 63e8aef2828e7d0cc1dc5823fe82f9ae1e59cfc8c8dc118faab0a673c51ff257
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

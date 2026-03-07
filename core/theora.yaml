@@ -3,16 +3,22 @@ version: 1.2.0
 description: Open video compression format
 homepage: https://www.theora.org/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/theora/blobs/sha256:b611f6607b0d916bd49ec4b88113cd230d7c0199865b287e75b1ae769bae64b0
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/theora/blobs/sha256:094215d640402c7f3730447fa4dcc8335cfbc92f759bb426335fc2ba08feaf1f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/theora/blobs/sha256:f0ef196a720cc37055ba91062862548c6325398fefe3e94ea3b540f8db8eb4c7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/theora/blobs/sha256:54226528eb3fc0bad9b016d49bec5b58ce076253a256dddb19e5c18829948c11
-sha256:
-  darwin_arm64: b611f6607b0d916bd49ec4b88113cd230d7c0199865b287e75b1ae769bae64b0
-  darwin_amd64: 094215d640402c7f3730447fa4dcc8335cfbc92f759bb426335fc2ba08feaf1f
-  linux_amd64: f0ef196a720cc37055ba91062862548c6325398fefe3e94ea3b540f8db8eb4c7
-  linux_arm64: 54226528eb3fc0bad9b016d49bec5b58ce076253a256dddb19e5c18829948c11
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/theora/blobs/sha256:b611f6607b0d916bd49ec4b88113cd230d7c0199865b287e75b1ae769bae64b0
+    sha256: b611f6607b0d916bd49ec4b88113cd230d7c0199865b287e75b1ae769bae64b0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/theora/blobs/sha256:094215d640402c7f3730447fa4dcc8335cfbc92f759bb426335fc2ba08feaf1f
+    sha256: 094215d640402c7f3730447fa4dcc8335cfbc92f759bb426335fc2ba08feaf1f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/theora/blobs/sha256:f0ef196a720cc37055ba91062862548c6325398fefe3e94ea3b540f8db8eb4c7
+    sha256: f0ef196a720cc37055ba91062862548c6325398fefe3e94ea3b540f8db8eb4c7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/theora/blobs/sha256:54226528eb3fc0bad9b016d49bec5b58ce076253a256dddb19e5c18829948c11
+    sha256: 54226528eb3fc0bad9b016d49bec5b58ce076253a256dddb19e5c18829948c11
+source:
+  url: https://ftp.osuosl.org/pub/xiph/releases/theora/libtheora-1.2.0.tar.gz
+  sha256: 279327339903b544c28a92aeada7d0dcfd0397b59c2f368cc698ac56f515906e
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - libogg
   - libvorbis
+build_dependencies:
+  - pkgconf

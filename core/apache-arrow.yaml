@@ -3,16 +3,22 @@ version: 23.0.1
 description: Columnar in-memory analytics layer designed to accelerate big data
 homepage: https://arrow.apache.org/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:7a08ea377966167adcefcd56cd3212275a214c30c1da0aaf77233b1cc1b8d42c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:8610cc4a8a13de095de97d26afb15a14c5dad0cf02219c3a7fac674917e27702
-  linux_amd64: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:4b37a4f57ff1f847189a682ffdbe9497e7eefcb392f7bffe72691703b8657e38
-  linux_arm64: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:d0e3e803a97607791fd34cb53bb47c0c2866e4c64726a8e2b7f795e695b2ee93
-sha256:
-  darwin_arm64: 7a08ea377966167adcefcd56cd3212275a214c30c1da0aaf77233b1cc1b8d42c
-  darwin_amd64: 8610cc4a8a13de095de97d26afb15a14c5dad0cf02219c3a7fac674917e27702
-  linux_amd64: 4b37a4f57ff1f847189a682ffdbe9497e7eefcb392f7bffe72691703b8657e38
-  linux_arm64: d0e3e803a97607791fd34cb53bb47c0c2866e4c64726a8e2b7f795e695b2ee93
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:7a08ea377966167adcefcd56cd3212275a214c30c1da0aaf77233b1cc1b8d42c
+    sha256: 7a08ea377966167adcefcd56cd3212275a214c30c1da0aaf77233b1cc1b8d42c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:8610cc4a8a13de095de97d26afb15a14c5dad0cf02219c3a7fac674917e27702
+    sha256: 8610cc4a8a13de095de97d26afb15a14c5dad0cf02219c3a7fac674917e27702
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:4b37a4f57ff1f847189a682ffdbe9497e7eefcb392f7bffe72691703b8657e38
+    sha256: 4b37a4f57ff1f847189a682ffdbe9497e7eefcb392f7bffe72691703b8657e38
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:d0e3e803a97607791fd34cb53bb47c0c2866e4c64726a8e2b7f795e695b2ee93
+    sha256: d0e3e803a97607791fd34cb53bb47c0c2866e4c64726a8e2b7f795e695b2ee93
+source:
+  url: https://www.apache.org/dyn/closer.lua?path=arrow/arrow-23.0.1/apache-arrow-23.0.1.tar.gz
+  sha256: bd09adb4feac11fe49d1604f296618866702be610c86e2d513b561d877de6b18
 install:
   type: archive
   format: tar.gz
@@ -31,4 +37,26 @@ dependencies:
   - snappy
   - thrift
   - utf8proc
+  - zstd
+build_dependencies:
+  - boost
+  - cmake
+  - gflags
+  - rapidjson
+  - xsimd
+linux_dependencies:
+  - abseil
+  - aws-crt-cpp
+  - aws-sdk-cpp
+  - brotli
+  - grpc
+  - llvm@21
+  - lz4
+  - openssl@3
+  - protobuf@33
+  - re2
+  - snappy
+  - thrift
+  - utf8proc
+  - zlib-ng-compat
   - zstd

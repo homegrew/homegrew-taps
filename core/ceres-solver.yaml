@@ -3,16 +3,22 @@ version: 2.2.0
 description: C++ library for large-scale optimization
 homepage: http://ceres-solver.org/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ceres-solver/blobs/sha256:8bca5dac2f24d423391151bf8fb69c53b119eb94e5ba899f95fe961cac036ee7
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ceres-solver/blobs/sha256:0f8775984f506622a7760a114108ea0623708e4657f4b0763f5fa2fd85d73aed
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ceres-solver/blobs/sha256:9827d7d0b9acc123b2d2841d8755be3ff1e4761917740fcd35f4836006360101
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ceres-solver/blobs/sha256:7cff4740905f47653e817429811c68ed7d7f8615c988bac94778eefd49896c5a
-sha256:
-  darwin_arm64: 8bca5dac2f24d423391151bf8fb69c53b119eb94e5ba899f95fe961cac036ee7
-  darwin_amd64: 0f8775984f506622a7760a114108ea0623708e4657f4b0763f5fa2fd85d73aed
-  linux_amd64: 9827d7d0b9acc123b2d2841d8755be3ff1e4761917740fcd35f4836006360101
-  linux_arm64: 7cff4740905f47653e817429811c68ed7d7f8615c988bac94778eefd49896c5a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ceres-solver/blobs/sha256:8bca5dac2f24d423391151bf8fb69c53b119eb94e5ba899f95fe961cac036ee7
+    sha256: 8bca5dac2f24d423391151bf8fb69c53b119eb94e5ba899f95fe961cac036ee7
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ceres-solver/blobs/sha256:0f8775984f506622a7760a114108ea0623708e4657f4b0763f5fa2fd85d73aed
+    sha256: 0f8775984f506622a7760a114108ea0623708e4657f4b0763f5fa2fd85d73aed
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ceres-solver/blobs/sha256:9827d7d0b9acc123b2d2841d8755be3ff1e4761917740fcd35f4836006360101
+    sha256: 9827d7d0b9acc123b2d2841d8755be3ff1e4761917740fcd35f4836006360101
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ceres-solver/blobs/sha256:7cff4740905f47653e817429811c68ed7d7f8615c988bac94778eefd49896c5a
+    sha256: 7cff4740905f47653e817429811c68ed7d7f8615c988bac94778eefd49896c5a
+source:
+  url: https://distfiles.macports.org/ceres-solver/ceres-solver-2.2.0.tar.gz
+  sha256: 48b2302a7986ece172898477c3bcd6deb8fb5cf19b3327bc49969aad4cede82d
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,5 @@ dependencies:
   - openblas
   - suite-sparse
   - tbb
+build_dependencies:
+  - cmake

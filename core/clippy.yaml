@@ -3,13 +3,19 @@ version: 1.6.7
 description: Copy files from your terminal that actually paste into GUI apps
 homepage: https://github.com/neilberkman/clippy
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/clippy/blobs/sha256:3b1239f4dd96a2178d22cc207d304cf78f7fd8b1733e8b7a15fa72f0cfbcf408
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/clippy/blobs/sha256:1262eebdd66411ec6c168e7d07d3ae06746aa43453e6ed24b81aaed79038b92d
-sha256:
-  darwin_arm64: 3b1239f4dd96a2178d22cc207d304cf78f7fd8b1733e8b7a15fa72f0cfbcf408
-  darwin_amd64: 1262eebdd66411ec6c168e7d07d3ae06746aa43453e6ed24b81aaed79038b92d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/clippy/blobs/sha256:3b1239f4dd96a2178d22cc207d304cf78f7fd8b1733e8b7a15fa72f0cfbcf408
+    sha256: 3b1239f4dd96a2178d22cc207d304cf78f7fd8b1733e8b7a15fa72f0cfbcf408
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/clippy/blobs/sha256:1262eebdd66411ec6c168e7d07d3ae06746aa43453e6ed24b81aaed79038b92d
+    sha256: 1262eebdd66411ec6c168e7d07d3ae06746aa43453e6ed24b81aaed79038b92d
+source:
+  url: https://github.com/neilberkman/clippy/archive/refs/tags/v1.6.7.tar.gz
+  sha256: 36fdddb9bf7713442ac395db2d1eefb80df357c12e58aa2fa6756bb3cefe733a
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

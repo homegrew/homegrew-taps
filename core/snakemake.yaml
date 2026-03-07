@@ -3,16 +3,22 @@ version: 9.16.3
 description: Pythonic workflow system
 homepage: https://snakemake.readthedocs.io/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/snakemake/blobs/sha256:56eabdcca9ac2d615e8f22f87d7f3f69e2a44bfaed78a3fad6090a8958fcf5a3
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/snakemake/blobs/sha256:f348c17cdea572753569eb680c4e2690cae58bcbc4132228b321aff92eb8bfa6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/snakemake/blobs/sha256:90960b305c662bb4a54957940ef2e7c0cf1781f1e7d87188b41782e4dcfe4124
-  linux_arm64: https://ghcr.io/v2/homebrew/core/snakemake/blobs/sha256:65f1c61a9e393a5c361d4baffa854d6a205f8218427ecee443276d4845a64511
-sha256:
-  darwin_arm64: 56eabdcca9ac2d615e8f22f87d7f3f69e2a44bfaed78a3fad6090a8958fcf5a3
-  darwin_amd64: f348c17cdea572753569eb680c4e2690cae58bcbc4132228b321aff92eb8bfa6
-  linux_amd64: 90960b305c662bb4a54957940ef2e7c0cf1781f1e7d87188b41782e4dcfe4124
-  linux_arm64: 65f1c61a9e393a5c361d4baffa854d6a205f8218427ecee443276d4845a64511
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/snakemake/blobs/sha256:56eabdcca9ac2d615e8f22f87d7f3f69e2a44bfaed78a3fad6090a8958fcf5a3
+    sha256: 56eabdcca9ac2d615e8f22f87d7f3f69e2a44bfaed78a3fad6090a8958fcf5a3
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/snakemake/blobs/sha256:f348c17cdea572753569eb680c4e2690cae58bcbc4132228b321aff92eb8bfa6
+    sha256: f348c17cdea572753569eb680c4e2690cae58bcbc4132228b321aff92eb8bfa6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/snakemake/blobs/sha256:90960b305c662bb4a54957940ef2e7c0cf1781f1e7d87188b41782e4dcfe4124
+    sha256: 90960b305c662bb4a54957940ef2e7c0cf1781f1e7d87188b41782e4dcfe4124
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/snakemake/blobs/sha256:65f1c61a9e393a5c361d4baffa854d6a205f8218427ecee443276d4845a64511
+    sha256: 65f1c61a9e393a5c361d4baffa854d6a205f8218427ecee443276d4845a64511
+source:
+  url: https://files.pythonhosted.org/packages/20/5e/715560f7010fab1db390d738006bc4183f5dc48356583d6d5cc59d0fd25d/snakemake-9.16.3.tar.gz
+  sha256: a7b2b76d8f7dc61e7860e0f3351d7356cef65ce41f1a5e99dae537dae5afa659
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,5 @@ dependencies:
   - libyaml
   - python@3.14
   - rpds-py
+build_dependencies:
+  - rust

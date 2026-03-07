@@ -3,16 +3,22 @@ version: 9.6.0
 description: MySQL database connector for C++ applications
 homepage: https://github.com/mysql/mysql-connector-cpp
 license: GPL-2.0-only WITH Universal-FOSS-exception-1.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mysql-connector-cxx/blobs/sha256:25a5e5655a23a9b4ca1c8942e51f7d48b526666c14ba27911a7f568692f853a6
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mysql-connector-cxx/blobs/sha256:e4f93817027db4e59c1a48323f74f41c3d3624fdbf1ceb49b3549ad74531c503
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mysql-connector-cxx/blobs/sha256:414bfc26006113beacde84911a23ebf239871df6df0ca8050c36382cb2b3d46f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mysql-connector-cxx/blobs/sha256:95f03df5bf0630b4819866f36a6d1cd811f7a72f465bba1a8a361ccc5e5e7fa0
-sha256:
-  darwin_arm64: 25a5e5655a23a9b4ca1c8942e51f7d48b526666c14ba27911a7f568692f853a6
-  darwin_amd64: e4f93817027db4e59c1a48323f74f41c3d3624fdbf1ceb49b3549ad74531c503
-  linux_amd64: 414bfc26006113beacde84911a23ebf239871df6df0ca8050c36382cb2b3d46f
-  linux_arm64: 95f03df5bf0630b4819866f36a6d1cd811f7a72f465bba1a8a361ccc5e5e7fa0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mysql-connector-cxx/blobs/sha256:25a5e5655a23a9b4ca1c8942e51f7d48b526666c14ba27911a7f568692f853a6
+    sha256: 25a5e5655a23a9b4ca1c8942e51f7d48b526666c14ba27911a7f568692f853a6
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mysql-connector-cxx/blobs/sha256:e4f93817027db4e59c1a48323f74f41c3d3624fdbf1ceb49b3549ad74531c503
+    sha256: e4f93817027db4e59c1a48323f74f41c3d3624fdbf1ceb49b3549ad74531c503
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mysql-connector-cxx/blobs/sha256:414bfc26006113beacde84911a23ebf239871df6df0ca8050c36382cb2b3d46f
+    sha256: 414bfc26006113beacde84911a23ebf239871df6df0ca8050c36382cb2b3d46f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mysql-connector-cxx/blobs/sha256:95f03df5bf0630b4819866f36a6d1cd811f7a72f465bba1a8a361ccc5e5e7fa0
+    sha256: 95f03df5bf0630b4819866f36a6d1cd811f7a72f465bba1a8a361ccc5e5e7fa0
+source:
+  url: https://cdn.mysql.com/Downloads/Connector-C++/mysql-connector-c++-9.6.0-src.tar.gz
+  sha256: b25a9a139855da9713c863b5a64c7f10c52eded76b2c04a2fb2deb9aab456b3d
 install:
   type: archive
   format: tar.gz
@@ -20,4 +26,12 @@ install:
 dependencies:
   - lz4
   - openssl@3
+  - zstd
+build_dependencies:
+  - cmake
+  - rapidjson
+linux_dependencies:
+  - lz4
+  - openssl@3
+  - zlib-ng-compat
   - zstd

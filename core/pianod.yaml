@@ -3,16 +3,22 @@ version: 420
 description: Pandora client with multiple control interfaces
 homepage: https://deviousfish.com/pianod/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pianod/blobs/sha256:96b6f94cbac97ca8cc30bcd74c8a258f3462e233d36a0719212f0b9306d2a7ed
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pianod/blobs/sha256:d9624ad29a3278961d986127e7ea31f5c922245ffe94ac3bd8d830889d40a5d7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pianod/blobs/sha256:4a6695250063db235d71d0881b644a52a650e378ec3d26ae6c75bab60e664279
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pianod/blobs/sha256:c889fe50b5079a029381e2a9f988979319dae868b83cce4ecfa1ab970f8a344c
-sha256:
-  darwin_arm64: 96b6f94cbac97ca8cc30bcd74c8a258f3462e233d36a0719212f0b9306d2a7ed
-  darwin_amd64: d9624ad29a3278961d986127e7ea31f5c922245ffe94ac3bd8d830889d40a5d7
-  linux_amd64: 4a6695250063db235d71d0881b644a52a650e378ec3d26ae6c75bab60e664279
-  linux_arm64: c889fe50b5079a029381e2a9f988979319dae868b83cce4ecfa1ab970f8a344c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pianod/blobs/sha256:96b6f94cbac97ca8cc30bcd74c8a258f3462e233d36a0719212f0b9306d2a7ed
+    sha256: 96b6f94cbac97ca8cc30bcd74c8a258f3462e233d36a0719212f0b9306d2a7ed
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pianod/blobs/sha256:d9624ad29a3278961d986127e7ea31f5c922245ffe94ac3bd8d830889d40a5d7
+    sha256: d9624ad29a3278961d986127e7ea31f5c922245ffe94ac3bd8d830889d40a5d7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pianod/blobs/sha256:4a6695250063db235d71d0881b644a52a650e378ec3d26ae6c75bab60e664279
+    sha256: 4a6695250063db235d71d0881b644a52a650e378ec3d26ae6c75bab60e664279
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pianod/blobs/sha256:c889fe50b5079a029381e2a9f988979319dae868b83cce4ecfa1ab970f8a344c
+    sha256: c889fe50b5079a029381e2a9f988979319dae868b83cce4ecfa1ab970f8a344c
+source:
+  url: https://deviousfish.com/Downloads/pianod2/pianod2-420.tar.gz
+  sha256: 9fa739cf28d5f554d982acecb94857b9fe0d0fd839d238dfca90f143c9fab216
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,12 @@ dependencies:
   - gstreamer
   - taglib
   - gettext
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - glib
+  - gnutls
+  - gstreamer
+  - libbsd
+  - taglib
+  - zlib-ng-compat

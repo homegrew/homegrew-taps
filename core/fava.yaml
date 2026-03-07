@@ -3,16 +3,22 @@ version: 1.30.12
 description: Web interface for the double-entry bookkeeping software Beancount
 homepage: https://beancount.github.io/fava/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/fava/blobs/sha256:0de53d1e18d59dccb62c06714c6513dfe6d1a903f283720d4a9c9dd962036a20
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/fava/blobs/sha256:0e134fa9fb3c246c056759bebababcdc71875197f13f7b574720f5d2b0549596
-  linux_amd64: https://ghcr.io/v2/homebrew/core/fava/blobs/sha256:f1f74a748cf0be4362e642e68bd83dde63c3d3f2c697b1b0a504fe320cf510df
-  linux_arm64: https://ghcr.io/v2/homebrew/core/fava/blobs/sha256:2a5a0a634ccb8088100f7ae99b62d1e2eee4fbca642f54b65ce870d8ee0b2af0
-sha256:
-  darwin_arm64: 0de53d1e18d59dccb62c06714c6513dfe6d1a903f283720d4a9c9dd962036a20
-  darwin_amd64: 0e134fa9fb3c246c056759bebababcdc71875197f13f7b574720f5d2b0549596
-  linux_amd64: f1f74a748cf0be4362e642e68bd83dde63c3d3f2c697b1b0a504fe320cf510df
-  linux_arm64: 2a5a0a634ccb8088100f7ae99b62d1e2eee4fbca642f54b65ce870d8ee0b2af0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fava/blobs/sha256:0de53d1e18d59dccb62c06714c6513dfe6d1a903f283720d4a9c9dd962036a20
+    sha256: 0de53d1e18d59dccb62c06714c6513dfe6d1a903f283720d4a9c9dd962036a20
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fava/blobs/sha256:0e134fa9fb3c246c056759bebababcdc71875197f13f7b574720f5d2b0549596
+    sha256: 0e134fa9fb3c246c056759bebababcdc71875197f13f7b574720f5d2b0549596
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fava/blobs/sha256:f1f74a748cf0be4362e642e68bd83dde63c3d3f2c697b1b0a504fe320cf510df
+    sha256: f1f74a748cf0be4362e642e68bd83dde63c3d3f2c697b1b0a504fe320cf510df
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fava/blobs/sha256:2a5a0a634ccb8088100f7ae99b62d1e2eee4fbca642f54b65ce870d8ee0b2af0
+    sha256: 2a5a0a634ccb8088100f7ae99b62d1e2eee4fbca642f54b65ce870d8ee0b2af0
+source:
+  url: https://files.pythonhosted.org/packages/57/d4/9cb24ac4fd50f017fcf8c16d354ebc2d715efdfcba96f67c0b5f92dfad1c/fava-1.30.12.tar.gz
+  sha256: 7c87145635c36605dcadfea877198d683f9c565239af166d5557e39ee3de8145
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,8 @@ install:
 dependencies:
   - certifi
   - python@3.14
+build_dependencies:
+  - bison
+  - meson
+  - ninja
+  - rust

@@ -3,17 +3,25 @@ version: 0.7.0
 description: Little fast LoC counter
 homepage: https://github.com/hhatto/gocloc
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gocloc/blobs/sha256:0536e1c6850047551d8d75a41777e563613d357efa9d9c7ca487de21cbf5d6ad
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gocloc/blobs/sha256:b823c57b1e74b2f39fd119e41bd39582f023dd8d8afef45267c77f361a7c24c1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gocloc/blobs/sha256:1583c49ecfb4ccc1ae98e917f9c53021afbca5641bdcd70ed934064255034c71
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gocloc/blobs/sha256:04d88a1716d37d1d9c14cdcc9a3804e8e2f4959b8bb614482a2f9c71c2c2a372
-sha256:
-  darwin_arm64: 0536e1c6850047551d8d75a41777e563613d357efa9d9c7ca487de21cbf5d6ad
-  darwin_amd64: b823c57b1e74b2f39fd119e41bd39582f023dd8d8afef45267c77f361a7c24c1
-  linux_amd64: 1583c49ecfb4ccc1ae98e917f9c53021afbca5641bdcd70ed934064255034c71
-  linux_arm64: 04d88a1716d37d1d9c14cdcc9a3804e8e2f4959b8bb614482a2f9c71c2c2a372
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gocloc/blobs/sha256:0536e1c6850047551d8d75a41777e563613d357efa9d9c7ca487de21cbf5d6ad
+    sha256: 0536e1c6850047551d8d75a41777e563613d357efa9d9c7ca487de21cbf5d6ad
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gocloc/blobs/sha256:b823c57b1e74b2f39fd119e41bd39582f023dd8d8afef45267c77f361a7c24c1
+    sha256: b823c57b1e74b2f39fd119e41bd39582f023dd8d8afef45267c77f361a7c24c1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gocloc/blobs/sha256:1583c49ecfb4ccc1ae98e917f9c53021afbca5641bdcd70ed934064255034c71
+    sha256: 1583c49ecfb4ccc1ae98e917f9c53021afbca5641bdcd70ed934064255034c71
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gocloc/blobs/sha256:04d88a1716d37d1d9c14cdcc9a3804e8e2f4959b8bb614482a2f9c71c2c2a372
+    sha256: 04d88a1716d37d1d9c14cdcc9a3804e8e2f4959b8bb614482a2f9c71c2c2a372
+source:
+  url: https://github.com/hhatto/gocloc/archive/refs/tags/v0.7.0.tar.gz
+  sha256: 9375f6699a7bffad42da661b4ba7988af23dd01191da4a4b21eca8f9bb676d9a
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

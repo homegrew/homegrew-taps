@@ -3,16 +3,22 @@ version: 30.2
 description: Decentralized, peer to peer payment network
 homepage: https://www.groestlcoin.org/groestlcoin-core-wallet/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/groestlcoin/blobs/sha256:6aa0bd53c58c831218844d0fce81d6b60897016cfe45bf3429615ea28348e6a2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/groestlcoin/blobs/sha256:799c9dd04f84871cf1c2777706d2be2858879903e92cb2f63b2d305035717fce
-  linux_amd64: https://ghcr.io/v2/homebrew/core/groestlcoin/blobs/sha256:a5b69b073e54f7d505985f1a3d6946410d6db15496a4a6e4ebd7c2dd59cf3e28
-  linux_arm64: https://ghcr.io/v2/homebrew/core/groestlcoin/blobs/sha256:b1ec350575f6ad960a018cebb12b13dca0a2218dcf3ffe024e5ed5682ddb535b
-sha256:
-  darwin_arm64: 6aa0bd53c58c831218844d0fce81d6b60897016cfe45bf3429615ea28348e6a2
-  darwin_amd64: 799c9dd04f84871cf1c2777706d2be2858879903e92cb2f63b2d305035717fce
-  linux_amd64: a5b69b073e54f7d505985f1a3d6946410d6db15496a4a6e4ebd7c2dd59cf3e28
-  linux_arm64: b1ec350575f6ad960a018cebb12b13dca0a2218dcf3ffe024e5ed5682ddb535b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/groestlcoin/blobs/sha256:6aa0bd53c58c831218844d0fce81d6b60897016cfe45bf3429615ea28348e6a2
+    sha256: 6aa0bd53c58c831218844d0fce81d6b60897016cfe45bf3429615ea28348e6a2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/groestlcoin/blobs/sha256:799c9dd04f84871cf1c2777706d2be2858879903e92cb2f63b2d305035717fce
+    sha256: 799c9dd04f84871cf1c2777706d2be2858879903e92cb2f63b2d305035717fce
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/groestlcoin/blobs/sha256:a5b69b073e54f7d505985f1a3d6946410d6db15496a4a6e4ebd7c2dd59cf3e28
+    sha256: a5b69b073e54f7d505985f1a3d6946410d6db15496a4a6e4ebd7c2dd59cf3e28
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/groestlcoin/blobs/sha256:b1ec350575f6ad960a018cebb12b13dca0a2218dcf3ffe024e5ed5682ddb535b
+    sha256: b1ec350575f6ad960a018cebb12b13dca0a2218dcf3ffe024e5ed5682ddb535b
+source:
+  url: https://github.com/Groestlcoin/groestlcoin/releases/download/v30.2/groestlcoin-30.2.tar.gz
+  sha256: 0428a5c7b36185770248ffe5a41ca7bc7a6ce0d6f11216e624287827d8cd29bc
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,7 @@ dependencies:
   - capnp
   - libevent
   - zeromq
+build_dependencies:
+  - boost
+  - cmake
+  - pkgconf

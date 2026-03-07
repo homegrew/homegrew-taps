@@ -3,16 +3,22 @@ version: 2026.03.02.00
 description: "Facebook's branch of Apache Thrift, including a new C++ server"
 homepage: https://github.com/facebook/fbthrift
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:d437a24fa480e1e0e89bf172e9c434e93fcb77361a5a77d589729919e04b678b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:8ebf32162778438f4115c6602dfb2e4d641a479ae5be4834144ce78884d0d0d9
-  linux_amd64: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:6d805f28d18b4ce66a2c1617ed232a8b712ee3601c255b558d58f7fee9ce9015
-  linux_arm64: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:8bc97ee4462d8fe026f69b25cf86e5b85e6c9341d7c46952ada3ae7cf5097e61
-sha256:
-  darwin_arm64: d437a24fa480e1e0e89bf172e9c434e93fcb77361a5a77d589729919e04b678b
-  darwin_amd64: 8ebf32162778438f4115c6602dfb2e4d641a479ae5be4834144ce78884d0d0d9
-  linux_amd64: 6d805f28d18b4ce66a2c1617ed232a8b712ee3601c255b558d58f7fee9ce9015
-  linux_arm64: 8bc97ee4462d8fe026f69b25cf86e5b85e6c9341d7c46952ada3ae7cf5097e61
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:d437a24fa480e1e0e89bf172e9c434e93fcb77361a5a77d589729919e04b678b
+    sha256: d437a24fa480e1e0e89bf172e9c434e93fcb77361a5a77d589729919e04b678b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:8ebf32162778438f4115c6602dfb2e4d641a479ae5be4834144ce78884d0d0d9
+    sha256: 8ebf32162778438f4115c6602dfb2e4d641a479ae5be4834144ce78884d0d0d9
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:6d805f28d18b4ce66a2c1617ed232a8b712ee3601c255b558d58f7fee9ce9015
+    sha256: 6d805f28d18b4ce66a2c1617ed232a8b712ee3601c255b558d58f7fee9ce9015
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:8bc97ee4462d8fe026f69b25cf86e5b85e6c9341d7c46952ada3ae7cf5097e61
+    sha256: 8bc97ee4462d8fe026f69b25cf86e5b85e6c9341d7c46952ada3ae7cf5097e61
+source:
+  url: https://github.com/facebook/fbthrift/archive/refs/tags/v2026.03.02.00.tar.gz
+  sha256: 666184a82c151b373e313de5d9a673de40ff0dc02ed2018f48cd1d68762771b7
 install:
   type: archive
   format: tar.gz
@@ -27,3 +33,20 @@ dependencies:
   - openssl@3
   - wangle
   - xxhash
+build_dependencies:
+  - bison
+  - cmake
+  - mvfst
+  - zstd
+linux_dependencies:
+  - boost
+  - double-conversion
+  - fizz
+  - fmt
+  - folly
+  - gflags
+  - glog
+  - openssl@3
+  - wangle
+  - xxhash
+  - zlib-ng-compat

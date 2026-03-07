@@ -3,16 +3,22 @@ version: 0.3.31
 description: Optimized BLAS library
 homepage: https://www.openblas.net/
 license: BSD-3-Clause AND BSD-2-Clause-Views AND BSD-3-Clause-Open-MPI AND BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/openblas/blobs/sha256:86be8c9ee5070d3b4e940ab72cd89998dcf59ece4691d7b3bc2a9549f3999d31
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/openblas/blobs/sha256:b44311b4806a899fb976c6e7f9369ef1a8f913324f32b2b631dd7bcac2dd93fe
-  linux_amd64: https://ghcr.io/v2/homebrew/core/openblas/blobs/sha256:df4ff7c931ea08422354e0d8dcd1efb84144b91393ec58572434483a154f6bbf
-  linux_arm64: https://ghcr.io/v2/homebrew/core/openblas/blobs/sha256:dcaadf5e964f6c0de691cf40697b9a0981926396a8fd5a2253db7fe4dd006a3c
-sha256:
-  darwin_arm64: 86be8c9ee5070d3b4e940ab72cd89998dcf59ece4691d7b3bc2a9549f3999d31
-  darwin_amd64: b44311b4806a899fb976c6e7f9369ef1a8f913324f32b2b631dd7bcac2dd93fe
-  linux_amd64: df4ff7c931ea08422354e0d8dcd1efb84144b91393ec58572434483a154f6bbf
-  linux_arm64: dcaadf5e964f6c0de691cf40697b9a0981926396a8fd5a2253db7fe4dd006a3c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openblas/blobs/sha256:86be8c9ee5070d3b4e940ab72cd89998dcf59ece4691d7b3bc2a9549f3999d31
+    sha256: 86be8c9ee5070d3b4e940ab72cd89998dcf59ece4691d7b3bc2a9549f3999d31
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openblas/blobs/sha256:b44311b4806a899fb976c6e7f9369ef1a8f913324f32b2b631dd7bcac2dd93fe
+    sha256: b44311b4806a899fb976c6e7f9369ef1a8f913324f32b2b631dd7bcac2dd93fe
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openblas/blobs/sha256:df4ff7c931ea08422354e0d8dcd1efb84144b91393ec58572434483a154f6bbf
+    sha256: df4ff7c931ea08422354e0d8dcd1efb84144b91393ec58572434483a154f6bbf
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openblas/blobs/sha256:dcaadf5e964f6c0de691cf40697b9a0981926396a8fd5a2253db7fe4dd006a3c
+    sha256: dcaadf5e964f6c0de691cf40697b9a0981926396a8fd5a2253db7fe4dd006a3c
+source:
+  url: https://github.com/OpenMathLib/OpenBLAS/archive/refs/tags/v0.3.31.tar.gz
+  sha256: 6dd2a63ac9d32643b7cc636eab57bf4e57d0ed1fff926dfbc5d3d97f2d2be3a6
 install:
   type: archive
   format: tar.gz
@@ -20,4 +26,6 @@ install:
 dependencies:
   - gcc
   - libomp
+linux_dependencies:
+  - gcc
 keg_only: true

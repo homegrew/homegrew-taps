@@ -3,16 +3,22 @@ version: 14.4.2
 description: "SOund eXchange: universal sound sample translator"
 homepage: https://sox.sourceforge.net/
 license: LGPL-2.0-only AND GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/sox/blobs/sha256:7cadfa60a83a3b9f4474f7fad9ce3a98ae3ddf76025ac24a2aa4d4c3c3e6def9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/sox/blobs/sha256:80ff50c0e93e0d6230a3905005101338da05bb8775bbd22728e6b886c7766d94
-  linux_amd64: https://ghcr.io/v2/homebrew/core/sox/blobs/sha256:e5bc49e8db2bf0f43c4f3a9b47f4b6a5824da8ac31e8988aa244b931aa6531b7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/sox/blobs/sha256:4d32108a449ba98aed550004ad68815dbf223635e7725a349080060d987d04c3
-sha256:
-  darwin_arm64: 7cadfa60a83a3b9f4474f7fad9ce3a98ae3ddf76025ac24a2aa4d4c3c3e6def9
-  darwin_amd64: 80ff50c0e93e0d6230a3905005101338da05bb8775bbd22728e6b886c7766d94
-  linux_amd64: e5bc49e8db2bf0f43c4f3a9b47f4b6a5824da8ac31e8988aa244b931aa6531b7
-  linux_arm64: 4d32108a449ba98aed550004ad68815dbf223635e7725a349080060d987d04c3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sox/blobs/sha256:7cadfa60a83a3b9f4474f7fad9ce3a98ae3ddf76025ac24a2aa4d4c3c3e6def9
+    sha256: 7cadfa60a83a3b9f4474f7fad9ce3a98ae3ddf76025ac24a2aa4d4c3c3e6def9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sox/blobs/sha256:80ff50c0e93e0d6230a3905005101338da05bb8775bbd22728e6b886c7766d94
+    sha256: 80ff50c0e93e0d6230a3905005101338da05bb8775bbd22728e6b886c7766d94
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sox/blobs/sha256:e5bc49e8db2bf0f43c4f3a9b47f4b6a5824da8ac31e8988aa244b931aa6531b7
+    sha256: e5bc49e8db2bf0f43c4f3a9b47f4b6a5824da8ac31e8988aa244b931aa6531b7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sox/blobs/sha256:4d32108a449ba98aed550004ad68815dbf223635e7725a349080060d987d04c3
+    sha256: 4d32108a449ba98aed550004ad68815dbf223635e7725a349080060d987d04c3
+source:
+  url: https://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2.tar.gz
+  sha256: b45f598643ffbd8e363ff24d61166ccec4836fea6d3888881b8df53e3bb55f6c
 install:
   type: archive
   format: tar.gz
@@ -26,3 +32,16 @@ dependencies:
   - libvorbis
   - mad
   - opusfile
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - flac
+  - lame
+  - libogg
+  - libpng
+  - libsndfile
+  - libvorbis
+  - mad
+  - opusfile
+  - zlib-ng-compat

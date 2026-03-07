@@ -3,16 +3,22 @@ version: 2.7.15
 description: HTTP Framework for REST Applications in C
 homepage: https://babelouest.github.io/ulfius/
 license: LGPL-2.1-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ulfius/blobs/sha256:bb83f403a0e3afaaa29a55a287d41397502b098108788889be264e68fa406f93
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ulfius/blobs/sha256:4707acefa7e44fd8b0be6be3640a4a04653f408b47012eb1876d8406dac60a7e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ulfius/blobs/sha256:aa9e86ea46c664fe30c62b97cab094df477efab25d300e1c5e6cf9bfecc1afad
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ulfius/blobs/sha256:aa30b970d73f41cc23d168a1da27b10d119051f4c20723a14729f6abfb59c8d9
-sha256:
-  darwin_arm64: bb83f403a0e3afaaa29a55a287d41397502b098108788889be264e68fa406f93
-  darwin_amd64: 4707acefa7e44fd8b0be6be3640a4a04653f408b47012eb1876d8406dac60a7e
-  linux_amd64: aa9e86ea46c664fe30c62b97cab094df477efab25d300e1c5e6cf9bfecc1afad
-  linux_arm64: aa30b970d73f41cc23d168a1da27b10d119051f4c20723a14729f6abfb59c8d9
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ulfius/blobs/sha256:bb83f403a0e3afaaa29a55a287d41397502b098108788889be264e68fa406f93
+    sha256: bb83f403a0e3afaaa29a55a287d41397502b098108788889be264e68fa406f93
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ulfius/blobs/sha256:4707acefa7e44fd8b0be6be3640a4a04653f408b47012eb1876d8406dac60a7e
+    sha256: 4707acefa7e44fd8b0be6be3640a4a04653f408b47012eb1876d8406dac60a7e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ulfius/blobs/sha256:aa9e86ea46c664fe30c62b97cab094df477efab25d300e1c5e6cf9bfecc1afad
+    sha256: aa9e86ea46c664fe30c62b97cab094df477efab25d300e1c5e6cf9bfecc1afad
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ulfius/blobs/sha256:aa30b970d73f41cc23d168a1da27b10d119051f4c20723a14729f6abfb59c8d9
+    sha256: aa30b970d73f41cc23d168a1da27b10d119051f4c20723a14729f6abfb59c8d9
+source:
+  url: https://github.com/babelouest/ulfius/archive/refs/tags/v2.7.15.tar.gz
+  sha256: 19cf789b2af1919b69f77c7701237bfc318a9781ec657b68fd4b6ffa9d53f111
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,12 @@ dependencies:
   - libmicrohttpd
   - orcania
   - yder
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - gnutls
+  - jansson
+  - libmicrohttpd
+  - orcania
+  - yder
+  - zlib-ng-compat

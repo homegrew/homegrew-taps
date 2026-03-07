@@ -3,17 +3,25 @@ version: 0.22.3
 description: Manage Talos Linux configurations the GitOps way
 homepage: https://github.com/cozystack/talm
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/talm/blobs/sha256:86c6a62b6e8e716efac964c63e03c651025b0d5991c430d443e78250b5623d48
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/talm/blobs/sha256:7926fca6d11afd5ad45459278ebe727e24557a8f19014744659290259da479af
-  linux_amd64: https://ghcr.io/v2/homebrew/core/talm/blobs/sha256:303b6114f539e56f36eb5529c1c657076555915947424f1721f034405d0ae01f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/talm/blobs/sha256:cd762bd859c8565e4040737f0dca905790a39996571a02e5794e7a348c40e301
-sha256:
-  darwin_arm64: 86c6a62b6e8e716efac964c63e03c651025b0d5991c430d443e78250b5623d48
-  darwin_amd64: 7926fca6d11afd5ad45459278ebe727e24557a8f19014744659290259da479af
-  linux_amd64: 303b6114f539e56f36eb5529c1c657076555915947424f1721f034405d0ae01f
-  linux_arm64: cd762bd859c8565e4040737f0dca905790a39996571a02e5794e7a348c40e301
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/talm/blobs/sha256:86c6a62b6e8e716efac964c63e03c651025b0d5991c430d443e78250b5623d48
+    sha256: 86c6a62b6e8e716efac964c63e03c651025b0d5991c430d443e78250b5623d48
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/talm/blobs/sha256:7926fca6d11afd5ad45459278ebe727e24557a8f19014744659290259da479af
+    sha256: 7926fca6d11afd5ad45459278ebe727e24557a8f19014744659290259da479af
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/talm/blobs/sha256:303b6114f539e56f36eb5529c1c657076555915947424f1721f034405d0ae01f
+    sha256: 303b6114f539e56f36eb5529c1c657076555915947424f1721f034405d0ae01f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/talm/blobs/sha256:cd762bd859c8565e4040737f0dca905790a39996571a02e5794e7a348c40e301
+    sha256: cd762bd859c8565e4040737f0dca905790a39996571a02e5794e7a348c40e301
+source:
+  url: https://github.com/cozystack/talm/archive/refs/tags/v0.22.3.tar.gz
+  sha256: ba7c736207df621b3ca0590842bcf0ef48c63be34d69608e44bfc01eb4a2f848
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

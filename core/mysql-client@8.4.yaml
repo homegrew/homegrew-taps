@@ -3,16 +3,22 @@ version: 8.4.8
 description: Open source relational database management system
 homepage: https://github.com/mysql/mysql-server
 license: GPL-2.0-only WITH Universal-FOSS-exception-1.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mysql-client/8.4/blobs/sha256:ee47f0ba74c6ea94c43e214e89450bd07194d02acf4c19a3f578536958096d0c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mysql-client/8.4/blobs/sha256:fafe52fe67573ada47c5da126feab6b7a27feb72a6150baa9e117d643527a33a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mysql-client/8.4/blobs/sha256:c25a6b36d58e833cfb5494d7314ed31ddde18f6e4c1fcae7a3a65e9ddea95285
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mysql-client/8.4/blobs/sha256:52370365ea0b1b217342060ef66a1d5a65f9e83564c9abca94d92055b756b14e
-sha256:
-  darwin_arm64: ee47f0ba74c6ea94c43e214e89450bd07194d02acf4c19a3f578536958096d0c
-  darwin_amd64: fafe52fe67573ada47c5da126feab6b7a27feb72a6150baa9e117d643527a33a
-  linux_amd64: c25a6b36d58e833cfb5494d7314ed31ddde18f6e4c1fcae7a3a65e9ddea95285
-  linux_arm64: 52370365ea0b1b217342060ef66a1d5a65f9e83564c9abca94d92055b756b14e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mysql-client/8.4/blobs/sha256:ee47f0ba74c6ea94c43e214e89450bd07194d02acf4c19a3f578536958096d0c
+    sha256: ee47f0ba74c6ea94c43e214e89450bd07194d02acf4c19a3f578536958096d0c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mysql-client/8.4/blobs/sha256:fafe52fe67573ada47c5da126feab6b7a27feb72a6150baa9e117d643527a33a
+    sha256: fafe52fe67573ada47c5da126feab6b7a27feb72a6150baa9e117d643527a33a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mysql-client/8.4/blobs/sha256:c25a6b36d58e833cfb5494d7314ed31ddde18f6e4c1fcae7a3a65e9ddea95285
+    sha256: c25a6b36d58e833cfb5494d7314ed31ddde18f6e4c1fcae7a3a65e9ddea95285
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mysql-client/8.4/blobs/sha256:52370365ea0b1b217342060ef66a1d5a65f9e83564c9abca94d92055b756b14e
+    sha256: 52370365ea0b1b217342060ef66a1d5a65f9e83564c9abca94d92055b756b14e
+source:
+  url: https://cdn.mysql.com/Downloads/MySQL-8.4/mysql-8.4.8.tar.gz
+  sha256: be9d96cdf87f276952a2cdd960f106b960a8860e46c115ed39c1b5f2e0387a20
 install:
   type: archive
   format: tar.gz
@@ -23,4 +29,8 @@ dependencies:
   - openssl@3
   - zlib-ng-compat
   - zstd
+build_dependencies:
+  - bison
+  - cmake
+  - pkgconf
 keg_only: true

@@ -3,19 +3,31 @@ version: 1.15.1
 description: Fort Knox for your secrets - flexible secret management tool
 homepage: https://fnox.jdx.dev/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/fnox/blobs/sha256:0219ff8c09f4e167e67e0d17d3d3444dccf365234359d952e27707ccc196cbe2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/fnox/blobs/sha256:a2313df565c25e90fcf1d41bb275bcb2c7087ef2d2e9bd7a27356ad106d6ac84
-  linux_amd64: https://ghcr.io/v2/homebrew/core/fnox/blobs/sha256:4e6a9a10be8cc74a6d21f60c78b272982e0466a52c50cc2724b69cdf8fb09059
-  linux_arm64: https://ghcr.io/v2/homebrew/core/fnox/blobs/sha256:3005b2e423e8ddd35f80c71a307399d82e75e291b15915b7ee746a2853144220
-sha256:
-  darwin_arm64: 0219ff8c09f4e167e67e0d17d3d3444dccf365234359d952e27707ccc196cbe2
-  darwin_amd64: a2313df565c25e90fcf1d41bb275bcb2c7087ef2d2e9bd7a27356ad106d6ac84
-  linux_amd64: 4e6a9a10be8cc74a6d21f60c78b272982e0466a52c50cc2724b69cdf8fb09059
-  linux_arm64: 3005b2e423e8ddd35f80c71a307399d82e75e291b15915b7ee746a2853144220
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fnox/blobs/sha256:0219ff8c09f4e167e67e0d17d3d3444dccf365234359d952e27707ccc196cbe2
+    sha256: 0219ff8c09f4e167e67e0d17d3d3444dccf365234359d952e27707ccc196cbe2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fnox/blobs/sha256:a2313df565c25e90fcf1d41bb275bcb2c7087ef2d2e9bd7a27356ad106d6ac84
+    sha256: a2313df565c25e90fcf1d41bb275bcb2c7087ef2d2e9bd7a27356ad106d6ac84
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fnox/blobs/sha256:4e6a9a10be8cc74a6d21f60c78b272982e0466a52c50cc2724b69cdf8fb09059
+    sha256: 4e6a9a10be8cc74a6d21f60c78b272982e0466a52c50cc2724b69cdf8fb09059
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fnox/blobs/sha256:3005b2e423e8ddd35f80c71a307399d82e75e291b15915b7ee746a2853144220
+    sha256: 3005b2e423e8ddd35f80c71a307399d82e75e291b15915b7ee746a2853144220
+source:
+  url: https://github.com/jdx/fnox/archive/refs/tags/v1.15.1.tar.gz
+  sha256: c405f88d61ddfca0fbcc0a9a2e7d0c41cb9d45ebfd920da910810c4b64c89d19
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
+  - usage
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - openssl@3
   - usage

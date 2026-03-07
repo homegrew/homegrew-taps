@@ -3,17 +3,25 @@ version: 0.2.0
 description: Profiling for Wazero
 homepage: https://github.com/dispatchrun/wzprof
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/wzprof/blobs/sha256:1730b8de6730863c0725a3468613f2d9c5ad5165da36a44b134b1f30ccbe2012
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/wzprof/blobs/sha256:e81bdeda7ca477bd619d663d733abf9a551a50c684e9a3f41967617160067428
-  linux_amd64: https://ghcr.io/v2/homebrew/core/wzprof/blobs/sha256:a163de238c1aa3233c725104f4a523cc26d6fd30c5c132d4e408415bdce3ac1d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/wzprof/blobs/sha256:1387c049a3862b7cf8daee964ed611fb4a6c4a77756b91d1e9d538447c6f70ec
-sha256:
-  darwin_arm64: 1730b8de6730863c0725a3468613f2d9c5ad5165da36a44b134b1f30ccbe2012
-  darwin_amd64: e81bdeda7ca477bd619d663d733abf9a551a50c684e9a3f41967617160067428
-  linux_amd64: a163de238c1aa3233c725104f4a523cc26d6fd30c5c132d4e408415bdce3ac1d
-  linux_arm64: 1387c049a3862b7cf8daee964ed611fb4a6c4a77756b91d1e9d538447c6f70ec
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wzprof/blobs/sha256:1730b8de6730863c0725a3468613f2d9c5ad5165da36a44b134b1f30ccbe2012
+    sha256: 1730b8de6730863c0725a3468613f2d9c5ad5165da36a44b134b1f30ccbe2012
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wzprof/blobs/sha256:e81bdeda7ca477bd619d663d733abf9a551a50c684e9a3f41967617160067428
+    sha256: e81bdeda7ca477bd619d663d733abf9a551a50c684e9a3f41967617160067428
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wzprof/blobs/sha256:a163de238c1aa3233c725104f4a523cc26d6fd30c5c132d4e408415bdce3ac1d
+    sha256: a163de238c1aa3233c725104f4a523cc26d6fd30c5c132d4e408415bdce3ac1d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wzprof/blobs/sha256:1387c049a3862b7cf8daee964ed611fb4a6c4a77756b91d1e9d538447c6f70ec
+    sha256: 1387c049a3862b7cf8daee964ed611fb4a6c4a77756b91d1e9d538447c6f70ec
+source:
+  url: https://github.com/dispatchrun/wzprof/archive/refs/tags/v0.2.0.tar.gz
+  sha256: 20223095b6b0bcb7ee655e755d2979f743a1bd03bf4fb09928856356caa9d463
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

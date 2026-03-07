@@ -3,16 +3,22 @@ version: 26.02
 description: XMPP application server
 homepage: https://www.ejabberd.im
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:d36ff4816c0888a12396d6d190abfbc8cde13ffbe35ca5465deefd5d54a1d1b2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:c9d81c546e568d4f9cfc4bb4fa31dd6370de5bc6fdfc9b2139380f77b9cebf69
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:f7f145f5f49e92586079a8ecc7d6d8aef62d8942459a2f9d4925e1057f8493bd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:c59a6280e58d3113b8d251402ebfe8b2c981e72eb2c329385c4a8442f2b04482
-sha256:
-  darwin_arm64: d36ff4816c0888a12396d6d190abfbc8cde13ffbe35ca5465deefd5d54a1d1b2
-  darwin_amd64: c9d81c546e568d4f9cfc4bb4fa31dd6370de5bc6fdfc9b2139380f77b9cebf69
-  linux_amd64: f7f145f5f49e92586079a8ecc7d6d8aef62d8942459a2f9d4925e1057f8493bd
-  linux_arm64: c59a6280e58d3113b8d251402ebfe8b2c981e72eb2c329385c4a8442f2b04482
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:d36ff4816c0888a12396d6d190abfbc8cde13ffbe35ca5465deefd5d54a1d1b2
+    sha256: d36ff4816c0888a12396d6d190abfbc8cde13ffbe35ca5465deefd5d54a1d1b2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:c9d81c546e568d4f9cfc4bb4fa31dd6370de5bc6fdfc9b2139380f77b9cebf69
+    sha256: c9d81c546e568d4f9cfc4bb4fa31dd6370de5bc6fdfc9b2139380f77b9cebf69
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:f7f145f5f49e92586079a8ecc7d6d8aef62d8942459a2f9d4925e1057f8493bd
+    sha256: f7f145f5f49e92586079a8ecc7d6d8aef62d8942459a2f9d4925e1057f8493bd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:c59a6280e58d3113b8d251402ebfe8b2c981e72eb2c329385c4a8442f2b04482
+    sha256: c59a6280e58d3113b8d251402ebfe8b2c981e72eb2c329385c4a8442f2b04482
+source:
+  url: https://github.com/processone/ejabberd/archive/refs/tags/26.02.tar.gz
+  sha256: 676feea9ee8aeb3c1bc3c1844308a783941548d9befc3b252cd1ff0b7532842f
 install:
   type: archive
   format: tar.gz
@@ -21,4 +27,13 @@ dependencies:
   - erlang
   - gd
   - libyaml
+  - openssl@3
+build_dependencies:
+  - autoconf
+  - automake
+linux_dependencies:
+  - erlang
+  - gd
+  - libyaml
+  - linux-pam
   - openssl@3

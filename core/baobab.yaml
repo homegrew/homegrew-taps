@@ -3,16 +3,22 @@ version: 49.1
 description: Gnome disk usage analyzer
 homepage: https://apps.gnome.org/Baobab/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:5e0fb8ca33c5d696ff06d46ab07ed00f2663af78c74048472db73af6a67f6ea4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:7f0aaa55b302393935ecbcd74e598c935b66e9858ede29b607babd10cbfe8776
-  linux_amd64: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:0d503eafc3495343c4582450ba83ad9579d990162d6da4522c30ee29c56366f7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:481887eb26edcb3dba13eca6482f5e26bbffadb12c577e592f4131b602e44f07
-sha256:
-  darwin_arm64: 5e0fb8ca33c5d696ff06d46ab07ed00f2663af78c74048472db73af6a67f6ea4
-  darwin_amd64: 7f0aaa55b302393935ecbcd74e598c935b66e9858ede29b607babd10cbfe8776
-  linux_amd64: 0d503eafc3495343c4582450ba83ad9579d990162d6da4522c30ee29c56366f7
-  linux_arm64: 481887eb26edcb3dba13eca6482f5e26bbffadb12c577e592f4131b602e44f07
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:5e0fb8ca33c5d696ff06d46ab07ed00f2663af78c74048472db73af6a67f6ea4
+    sha256: 5e0fb8ca33c5d696ff06d46ab07ed00f2663af78c74048472db73af6a67f6ea4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:7f0aaa55b302393935ecbcd74e598c935b66e9858ede29b607babd10cbfe8776
+    sha256: 7f0aaa55b302393935ecbcd74e598c935b66e9858ede29b607babd10cbfe8776
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:0d503eafc3495343c4582450ba83ad9579d990162d6da4522c30ee29c56366f7
+    sha256: 0d503eafc3495343c4582450ba83ad9579d990162d6da4522c30ee29c56366f7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:481887eb26edcb3dba13eca6482f5e26bbffadb12c577e592f4131b602e44f07
+    sha256: 481887eb26edcb3dba13eca6482f5e26bbffadb12c577e592f4131b602e44f07
+source:
+  url: https://download.gnome.org/sources/baobab/49/baobab-49.1.tar.xz
+  sha256: 6243c92002be7e91f5decd249612face2a4a12d3742afd88b086a94b875dffe0
 install:
   type: archive
   format: tar.gz
@@ -27,3 +33,20 @@ dependencies:
   - libadwaita
   - pango
   - gettext
+build_dependencies:
+  - desktop-file-utils
+  - gettext
+  - itstool
+  - meson
+  - ninja
+  - pkgconf
+  - vala
+linux_dependencies:
+  - adwaita-icon-theme
+  - cairo
+  - glib
+  - graphene
+  - gtk4
+  - hicolor-icon-theme
+  - libadwaita
+  - pango

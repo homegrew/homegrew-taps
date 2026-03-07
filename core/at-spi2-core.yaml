@@ -3,16 +3,22 @@ version: 2.58.3
 description: Protocol definitions and daemon for D-Bus at-spi
 homepage: https://www.freedesktop.org/wiki/Accessibility/AT-SPI2/
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/at-spi2-core/blobs/sha256:09c80080a21bc80b354103d45a409125c46112aa8e918dd83ce79734013f8323
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/at-spi2-core/blobs/sha256:66f0f44ed5123d59b572c0c67e065702c8af288dcf95e17777b9a31e277769e1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/at-spi2-core/blobs/sha256:7a979c2a1cea42f1025c3ccf4c089d6ba50c0ab16d84cb7ed5f0fc2658196418
-  linux_arm64: https://ghcr.io/v2/homebrew/core/at-spi2-core/blobs/sha256:f8d64bc9ebf1a231b026d4a37b08e0ebf850389d13ffc635d0f683f59ba7bcef
-sha256:
-  darwin_arm64: 09c80080a21bc80b354103d45a409125c46112aa8e918dd83ce79734013f8323
-  darwin_amd64: 66f0f44ed5123d59b572c0c67e065702c8af288dcf95e17777b9a31e277769e1
-  linux_amd64: 7a979c2a1cea42f1025c3ccf4c089d6ba50c0ab16d84cb7ed5f0fc2658196418
-  linux_arm64: f8d64bc9ebf1a231b026d4a37b08e0ebf850389d13ffc635d0f683f59ba7bcef
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/at-spi2-core/blobs/sha256:09c80080a21bc80b354103d45a409125c46112aa8e918dd83ce79734013f8323
+    sha256: 09c80080a21bc80b354103d45a409125c46112aa8e918dd83ce79734013f8323
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/at-spi2-core/blobs/sha256:66f0f44ed5123d59b572c0c67e065702c8af288dcf95e17777b9a31e277769e1
+    sha256: 66f0f44ed5123d59b572c0c67e065702c8af288dcf95e17777b9a31e277769e1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/at-spi2-core/blobs/sha256:7a979c2a1cea42f1025c3ccf4c089d6ba50c0ab16d84cb7ed5f0fc2658196418
+    sha256: 7a979c2a1cea42f1025c3ccf4c089d6ba50c0ab16d84cb7ed5f0fc2658196418
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/at-spi2-core/blobs/sha256:f8d64bc9ebf1a231b026d4a37b08e0ebf850389d13ffc635d0f683f59ba7bcef
+    sha256: f8d64bc9ebf1a231b026d4a37b08e0ebf850389d13ffc635d0f683f59ba7bcef
+source:
+  url: https://download.gnome.org/sources/at-spi2-core/2.58/at-spi2-core-2.58.3.tar.xz
+  sha256: b0fabea6c9742eda8c9c675f9b8c1d1babba1da82da03ea1103710233717c1b0
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,16 @@ dependencies:
   - libxi
   - libxtst
   - gettext
+build_dependencies:
+  - gettext
+  - gobject-introspection
+  - meson
+  - ninja
+  - pkgconf
+  - xorgproto
+linux_dependencies:
+  - dbus
+  - glib
+  - libx11
+  - libxi
+  - libxtst

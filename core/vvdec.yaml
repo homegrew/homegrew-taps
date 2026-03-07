@@ -3,17 +3,25 @@ version: 3.1.0
 description: Fraunhofer Versatile Video Decoder
 homepage: https://github.com/fraunhoferhhi/vvdec
 license: BSD-3-Clause-Clear
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vvdec/blobs/sha256:c75e17e8c9fb124b6c6fb2f85a14e594db0fad6c28e3369f532435cb81972db9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vvdec/blobs/sha256:4efbd249e28c544c82677e60af0a71e40b58c06d6141532f8b90414383f62ec6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vvdec/blobs/sha256:293646906147b719adf026300bd74aa3904f8f69451f49571b175a71dddfba1e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vvdec/blobs/sha256:ca300e6bae34c24004cad069751444ea2b7b6747478700261a2ee9518e2ff277
-sha256:
-  darwin_arm64: c75e17e8c9fb124b6c6fb2f85a14e594db0fad6c28e3369f532435cb81972db9
-  darwin_amd64: 4efbd249e28c544c82677e60af0a71e40b58c06d6141532f8b90414383f62ec6
-  linux_amd64: 293646906147b719adf026300bd74aa3904f8f69451f49571b175a71dddfba1e
-  linux_arm64: ca300e6bae34c24004cad069751444ea2b7b6747478700261a2ee9518e2ff277
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vvdec/blobs/sha256:c75e17e8c9fb124b6c6fb2f85a14e594db0fad6c28e3369f532435cb81972db9
+    sha256: c75e17e8c9fb124b6c6fb2f85a14e594db0fad6c28e3369f532435cb81972db9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vvdec/blobs/sha256:4efbd249e28c544c82677e60af0a71e40b58c06d6141532f8b90414383f62ec6
+    sha256: 4efbd249e28c544c82677e60af0a71e40b58c06d6141532f8b90414383f62ec6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vvdec/blobs/sha256:293646906147b719adf026300bd74aa3904f8f69451f49571b175a71dddfba1e
+    sha256: 293646906147b719adf026300bd74aa3904f8f69451f49571b175a71dddfba1e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vvdec/blobs/sha256:ca300e6bae34c24004cad069751444ea2b7b6747478700261a2ee9518e2ff277
+    sha256: ca300e6bae34c24004cad069751444ea2b7b6747478700261a2ee9518e2ff277
+source:
+  url: https://github.com/fraunhoferhhi/vvdec/archive/refs/tags/v3.1.0.tar.gz
+  sha256: e3e5093acfdcbfd2159f3d0166d451d7ccabd293ed30f3762b481c9c6c0a7512
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - cmake

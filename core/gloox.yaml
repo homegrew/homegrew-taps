@@ -3,16 +3,22 @@ version: 1.0.28
 description: C++ Jabber/XMPP library that handles the low-level protocol
 homepage: https://camaya.net/gloox/
 license: GPL-3.0-only WITH openvpn-openssl-exception
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gloox/blobs/sha256:1818e6a640fd72abca657dee0f7dd846408f5f7854723c9a98d6c7c776f8a0f9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gloox/blobs/sha256:a91156a42c6e11a6e4ee53e5ae6afd651a986ebca33cbfcce0b8dc447d9e265e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gloox/blobs/sha256:cc2eb3e53975d18eaebb6bf9e34fb002a68420432d36e53f709e1d94446a7d2d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gloox/blobs/sha256:99fb4b6444c8f11419eed45d4d29df4919b9d1c35e75615b787fc1de9269feaa
-sha256:
-  darwin_arm64: 1818e6a640fd72abca657dee0f7dd846408f5f7854723c9a98d6c7c776f8a0f9
-  darwin_amd64: a91156a42c6e11a6e4ee53e5ae6afd651a986ebca33cbfcce0b8dc447d9e265e
-  linux_amd64: cc2eb3e53975d18eaebb6bf9e34fb002a68420432d36e53f709e1d94446a7d2d
-  linux_arm64: 99fb4b6444c8f11419eed45d4d29df4919b9d1c35e75615b787fc1de9269feaa
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gloox/blobs/sha256:1818e6a640fd72abca657dee0f7dd846408f5f7854723c9a98d6c7c776f8a0f9
+    sha256: 1818e6a640fd72abca657dee0f7dd846408f5f7854723c9a98d6c7c776f8a0f9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gloox/blobs/sha256:a91156a42c6e11a6e4ee53e5ae6afd651a986ebca33cbfcce0b8dc447d9e265e
+    sha256: a91156a42c6e11a6e4ee53e5ae6afd651a986ebca33cbfcce0b8dc447d9e265e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gloox/blobs/sha256:cc2eb3e53975d18eaebb6bf9e34fb002a68420432d36e53f709e1d94446a7d2d
+    sha256: cc2eb3e53975d18eaebb6bf9e34fb002a68420432d36e53f709e1d94446a7d2d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gloox/blobs/sha256:99fb4b6444c8f11419eed45d4d29df4919b9d1c35e75615b787fc1de9269feaa
+    sha256: 99fb4b6444c8f11419eed45d4d29df4919b9d1c35e75615b787fc1de9269feaa
+source:
+  url: https://camaya.net/download/gloox-1.0.28.tar.bz2
+  sha256: 591bd12c249ede0b50a1ef6b99ac0de8ef9c1ba4fd2e186f97a740215cc5966c
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,9 @@ install:
 dependencies:
   - libidn
   - openssl@3
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - libidn
+  - openssl@3
+  - zlib-ng-compat

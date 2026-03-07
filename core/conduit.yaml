@@ -3,17 +3,25 @@ version: 0.14.0
 description: Streams data between data stores. Kafka Connect replacement. No JVM required
 homepage: https://conduit.io/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/conduit/blobs/sha256:118277b357cfc6c3d7f2696c118bb887d70dfed444d7b582da092cdd2108b62b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/conduit/blobs/sha256:c3ca928abb6ada159254a94275ab9e9b7c67f2e310be6278ac24e590b340a724
-  linux_amd64: https://ghcr.io/v2/homebrew/core/conduit/blobs/sha256:5ce98054ac53225a6aa027d7b5929a116e13dce0bd82ea35887fb0b6c0913922
-  linux_arm64: https://ghcr.io/v2/homebrew/core/conduit/blobs/sha256:8f3a72e785383509d2ea012a2a9502c3de4cebb273300693e38464d4a9dd259d
-sha256:
-  darwin_arm64: 118277b357cfc6c3d7f2696c118bb887d70dfed444d7b582da092cdd2108b62b
-  darwin_amd64: c3ca928abb6ada159254a94275ab9e9b7c67f2e310be6278ac24e590b340a724
-  linux_amd64: 5ce98054ac53225a6aa027d7b5929a116e13dce0bd82ea35887fb0b6c0913922
-  linux_arm64: 8f3a72e785383509d2ea012a2a9502c3de4cebb273300693e38464d4a9dd259d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/conduit/blobs/sha256:118277b357cfc6c3d7f2696c118bb887d70dfed444d7b582da092cdd2108b62b
+    sha256: 118277b357cfc6c3d7f2696c118bb887d70dfed444d7b582da092cdd2108b62b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/conduit/blobs/sha256:c3ca928abb6ada159254a94275ab9e9b7c67f2e310be6278ac24e590b340a724
+    sha256: c3ca928abb6ada159254a94275ab9e9b7c67f2e310be6278ac24e590b340a724
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/conduit/blobs/sha256:5ce98054ac53225a6aa027d7b5929a116e13dce0bd82ea35887fb0b6c0913922
+    sha256: 5ce98054ac53225a6aa027d7b5929a116e13dce0bd82ea35887fb0b6c0913922
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/conduit/blobs/sha256:8f3a72e785383509d2ea012a2a9502c3de4cebb273300693e38464d4a9dd259d
+    sha256: 8f3a72e785383509d2ea012a2a9502c3de4cebb273300693e38464d4a9dd259d
+source:
+  url: https://github.com/ConduitIO/conduit/archive/refs/tags/v0.14.0.tar.gz
+  sha256: 4747b7a8b1cce5a32490ff3bb9c31e0d0cb4a97da75e2d4f9f97a33af9a8c4f1
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

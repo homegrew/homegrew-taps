@@ -3,17 +3,25 @@ version: 1.11.6
 description: High performance and flexible authorization/permission engine
 homepage: https://openfga.dev/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/openfga/blobs/sha256:f9d87b32bdfef307e22970cda0a077a662ea0f4d387bf8e1cd51ef63f3463dd9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/openfga/blobs/sha256:4ff0b4fce8a82e3328f0fdba0b626c4bb0faeea12a39eef63c51cf15bffce270
-  linux_amd64: https://ghcr.io/v2/homebrew/core/openfga/blobs/sha256:4c29974c4a1f6f9982e8664ced6cefb6216547ccc18e5f6345e159f4d0bb1128
-  linux_arm64: https://ghcr.io/v2/homebrew/core/openfga/blobs/sha256:a59b9747a962ad025147b6d7108c644d23982bba0d8cdd19f147d2addb2e288e
-sha256:
-  darwin_arm64: f9d87b32bdfef307e22970cda0a077a662ea0f4d387bf8e1cd51ef63f3463dd9
-  darwin_amd64: 4ff0b4fce8a82e3328f0fdba0b626c4bb0faeea12a39eef63c51cf15bffce270
-  linux_amd64: 4c29974c4a1f6f9982e8664ced6cefb6216547ccc18e5f6345e159f4d0bb1128
-  linux_arm64: a59b9747a962ad025147b6d7108c644d23982bba0d8cdd19f147d2addb2e288e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openfga/blobs/sha256:f9d87b32bdfef307e22970cda0a077a662ea0f4d387bf8e1cd51ef63f3463dd9
+    sha256: f9d87b32bdfef307e22970cda0a077a662ea0f4d387bf8e1cd51ef63f3463dd9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openfga/blobs/sha256:4ff0b4fce8a82e3328f0fdba0b626c4bb0faeea12a39eef63c51cf15bffce270
+    sha256: 4ff0b4fce8a82e3328f0fdba0b626c4bb0faeea12a39eef63c51cf15bffce270
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openfga/blobs/sha256:4c29974c4a1f6f9982e8664ced6cefb6216547ccc18e5f6345e159f4d0bb1128
+    sha256: 4c29974c4a1f6f9982e8664ced6cefb6216547ccc18e5f6345e159f4d0bb1128
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openfga/blobs/sha256:a59b9747a962ad025147b6d7108c644d23982bba0d8cdd19f147d2addb2e288e
+    sha256: a59b9747a962ad025147b6d7108c644d23982bba0d8cdd19f147d2addb2e288e
+source:
+  url: https://github.com/openfga/openfga/archive/refs/tags/v1.11.6.tar.gz
+  sha256: 02a6b227fef3c081fd052cece200399a1e18f4acb736719934d0e5831d4b4be0
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

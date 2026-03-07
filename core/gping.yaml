@@ -3,17 +3,28 @@ version: 1.20.1
 description: Ping, but with a graph
 homepage: https://github.com/orf/gping
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gping/blobs/sha256:2ea7c7e96a88df4ee9e8cf12a47849a778eabdd015c2c56e0ac1b46dba8b329f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gping/blobs/sha256:88b15ad904d11c0353fb62c62a0e8aef8cbe054275324d281fcb1c36d2ca4882
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gping/blobs/sha256:773e0bb37bb0a63656ad1ff05f8f135054b5bb935440b58936f22726392aef09
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gping/blobs/sha256:a071b10dbf714a17277fc3d007876025e8eeb7ccd8233871cec335845c2b15e8
-sha256:
-  darwin_arm64: 2ea7c7e96a88df4ee9e8cf12a47849a778eabdd015c2c56e0ac1b46dba8b329f
-  darwin_amd64: 88b15ad904d11c0353fb62c62a0e8aef8cbe054275324d281fcb1c36d2ca4882
-  linux_amd64: 773e0bb37bb0a63656ad1ff05f8f135054b5bb935440b58936f22726392aef09
-  linux_arm64: a071b10dbf714a17277fc3d007876025e8eeb7ccd8233871cec335845c2b15e8
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gping/blobs/sha256:2ea7c7e96a88df4ee9e8cf12a47849a778eabdd015c2c56e0ac1b46dba8b329f
+    sha256: 2ea7c7e96a88df4ee9e8cf12a47849a778eabdd015c2c56e0ac1b46dba8b329f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gping/blobs/sha256:88b15ad904d11c0353fb62c62a0e8aef8cbe054275324d281fcb1c36d2ca4882
+    sha256: 88b15ad904d11c0353fb62c62a0e8aef8cbe054275324d281fcb1c36d2ca4882
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gping/blobs/sha256:773e0bb37bb0a63656ad1ff05f8f135054b5bb935440b58936f22726392aef09
+    sha256: 773e0bb37bb0a63656ad1ff05f8f135054b5bb935440b58936f22726392aef09
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gping/blobs/sha256:a071b10dbf714a17277fc3d007876025e8eeb7ccd8233871cec335845c2b15e8
+    sha256: a071b10dbf714a17277fc3d007876025e8eeb7ccd8233871cec335845c2b15e8
+source:
+  url: https://github.com/orf/gping/archive/refs/tags/gping-v1.20.1.tar.gz
+  sha256: 0df965111429d5fcef832a4ff23b452a1ec8f683d51ed31ce9b10902c0a18a9c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - iputils

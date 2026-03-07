@@ -3,16 +3,22 @@ version: 2.15.7
 description: Real-time strategy game developed by Trevor Chan of Enlight Software
 homepage: https://7kfans.com
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/seven-kingdoms/blobs/sha256:ff7bdbd3a2e4e637a6f90dd9d95051baece154f4abb30ddbb88e4a4a8b84cb24
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/seven-kingdoms/blobs/sha256:cd1588f31d2e72b42fb11b76f1ed6b10dc0340fe0021c3e26359fbd22c66e3d2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/seven-kingdoms/blobs/sha256:0219b6986caccfd218784b94b28717301b9c3a1bb278093b12d8934f843c881a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/seven-kingdoms/blobs/sha256:5ec481c6ff98179854ef137c1593f24225766e8670b50af3a2922cb9af683be5
-sha256:
-  darwin_arm64: ff7bdbd3a2e4e637a6f90dd9d95051baece154f4abb30ddbb88e4a4a8b84cb24
-  darwin_amd64: cd1588f31d2e72b42fb11b76f1ed6b10dc0340fe0021c3e26359fbd22c66e3d2
-  linux_amd64: 0219b6986caccfd218784b94b28717301b9c3a1bb278093b12d8934f843c881a
-  linux_arm64: 5ec481c6ff98179854ef137c1593f24225766e8670b50af3a2922cb9af683be5
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/seven-kingdoms/blobs/sha256:ff7bdbd3a2e4e637a6f90dd9d95051baece154f4abb30ddbb88e4a4a8b84cb24
+    sha256: ff7bdbd3a2e4e637a6f90dd9d95051baece154f4abb30ddbb88e4a4a8b84cb24
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/seven-kingdoms/blobs/sha256:cd1588f31d2e72b42fb11b76f1ed6b10dc0340fe0021c3e26359fbd22c66e3d2
+    sha256: cd1588f31d2e72b42fb11b76f1ed6b10dc0340fe0021c3e26359fbd22c66e3d2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/seven-kingdoms/blobs/sha256:0219b6986caccfd218784b94b28717301b9c3a1bb278093b12d8934f843c881a
+    sha256: 0219b6986caccfd218784b94b28717301b9c3a1bb278093b12d8934f843c881a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/seven-kingdoms/blobs/sha256:5ec481c6ff98179854ef137c1593f24225766e8670b50af3a2922cb9af683be5
+    sha256: 5ec481c6ff98179854ef137c1593f24225766e8670b50af3a2922cb9af683be5
+source:
+  url: https://downloads.sourceforge.net/project/skfans/7KAA%202.15.7/7kaa-2.15.7.tar.gz
+  sha256: 2a9833ffe5fa7558857d4f8ba39cad1dccefadb01d298350ed8f954c75b6a6ae
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,10 @@ install:
 dependencies:
   - sdl2
   - gettext
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - curl
+  - enet
+  - openal-soft
+  - sdl2

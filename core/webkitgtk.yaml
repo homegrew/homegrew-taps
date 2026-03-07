@@ -3,12 +3,16 @@ version: 2.50.5
 description: GTK interface to WebKit
 homepage: https://webkitgtk.org
 license: GPL-3.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/webkitgtk/blobs/sha256:8b0aece1a6b3ed07503a954b5e1754508dd8a99dc557403d3d01d346d6f826df
-  linux_arm64: https://ghcr.io/v2/homebrew/core/webkitgtk/blobs/sha256:61994ca1ffef4691435c3dc3264c0ac33734eb7b4c2f4ace77768881fdfebbb6
-sha256:
-  linux_amd64: 8b0aece1a6b3ed07503a954b5e1754508dd8a99dc557403d3d01d346d6f826df
-  linux_arm64: 61994ca1ffef4691435c3dc3264c0ac33734eb7b4c2f4ace77768881fdfebbb6
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/webkitgtk/blobs/sha256:8b0aece1a6b3ed07503a954b5e1754508dd8a99dc557403d3d01d346d6f826df
+    sha256: 8b0aece1a6b3ed07503a954b5e1754508dd8a99dc557403d3d01d346d6f826df
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/webkitgtk/blobs/sha256:61994ca1ffef4691435c3dc3264c0ac33734eb7b4c2f4ace77768881fdfebbb6
+    sha256: 61994ca1ffef4691435c3dc3264c0ac33734eb7b4c2f4ace77768881fdfebbb6
+source:
+  url: https://webkitgtk.org/releases/webkitgtk-2.50.5.tar.xz
+  sha256: 8737631bac3e9c7ad3e5208f9370e076c09d9c45b39980021ce54edadcc6f94f
 install:
   type: archive
   format: tar.gz
@@ -55,3 +59,13 @@ dependencies:
   - woff2
   - wpebackend-fdo
   - zlib-ng-compat
+build_dependencies:
+  - cmake
+  - gettext
+  - gobject-introspection
+  - gperf
+  - perl
+  - pkgconf
+  - python@3.14
+  - ruby
+  - unifdef

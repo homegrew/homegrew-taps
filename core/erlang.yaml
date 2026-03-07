@@ -3,16 +3,22 @@ version: 28.4
 description: Programming language for highly scalable real-time systems
 homepage: https://www.erlang.org/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:f51107d974b58bc302b6688134f75ad88b3e73a580d4d5ac2e09552e5e988fe5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:2d14f20d7e70713768cdb4e33cb69922f94ced79ce14617cadeca18f5c78adc7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:4005db32c47d20fb5993b4ea37b6d99f6472ea2ca579b01063e2f6c15e340b2d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:c7807ee1a3e7658ddd8981390609da8711c3200835f0c14c581665b0033e6e0c
-sha256:
-  darwin_arm64: f51107d974b58bc302b6688134f75ad88b3e73a580d4d5ac2e09552e5e988fe5
-  darwin_amd64: 2d14f20d7e70713768cdb4e33cb69922f94ced79ce14617cadeca18f5c78adc7
-  linux_amd64: 4005db32c47d20fb5993b4ea37b6d99f6472ea2ca579b01063e2f6c15e340b2d
-  linux_arm64: c7807ee1a3e7658ddd8981390609da8711c3200835f0c14c581665b0033e6e0c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:f51107d974b58bc302b6688134f75ad88b3e73a580d4d5ac2e09552e5e988fe5
+    sha256: f51107d974b58bc302b6688134f75ad88b3e73a580d4d5ac2e09552e5e988fe5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:2d14f20d7e70713768cdb4e33cb69922f94ced79ce14617cadeca18f5c78adc7
+    sha256: 2d14f20d7e70713768cdb4e33cb69922f94ced79ce14617cadeca18f5c78adc7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:4005db32c47d20fb5993b4ea37b6d99f6472ea2ca579b01063e2f6c15e340b2d
+    sha256: 4005db32c47d20fb5993b4ea37b6d99f6472ea2ca579b01063e2f6c15e340b2d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:c7807ee1a3e7658ddd8981390609da8711c3200835f0c14c581665b0033e6e0c
+    sha256: c7807ee1a3e7658ddd8981390609da8711c3200835f0c14c581665b0033e6e0c
+source:
+  url: https://github.com/erlang/otp/releases/download/OTP-28.4/otp_src_28.4.tar.gz
+  sha256: 5b39ceb3e36de8901dde61e88869e47be1b81bd56928da3986c196d696e1311d
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,9 @@ dependencies:
   - openssl@3
   - unixodbc
   - wxwidgets@3.2
+linux_dependencies:
+  - mesa-glu
+  - openssl@3
+  - unixodbc
+  - wxwidgets@3.2
+  - zlib-ng-compat

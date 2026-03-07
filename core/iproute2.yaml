@@ -3,12 +3,16 @@ version: 6.19.0
 description: Linux routing utilities
 homepage: https://wiki.linuxfoundation.org/networking/iproute2
 license: GPL-2.0-only
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/iproute2/blobs/sha256:c97cddeb3e7edd2004f1a68be3efcc7074803b1f297d94f7bcc0d507c8d53490
-  linux_arm64: https://ghcr.io/v2/homebrew/core/iproute2/blobs/sha256:f05a40b62c863fddde80116e9ea6c094d79fb6e6812f2b2ca4c45edc555a0a2c
-sha256:
-  linux_amd64: c97cddeb3e7edd2004f1a68be3efcc7074803b1f297d94f7bcc0d507c8d53490
-  linux_arm64: f05a40b62c863fddde80116e9ea6c094d79fb6e6812f2b2ca4c45edc555a0a2c
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/iproute2/blobs/sha256:c97cddeb3e7edd2004f1a68be3efcc7074803b1f297d94f7bcc0d507c8d53490
+    sha256: c97cddeb3e7edd2004f1a68be3efcc7074803b1f297d94f7bcc0d507c8d53490
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/iproute2/blobs/sha256:f05a40b62c863fddde80116e9ea6c094d79fb6e6812f2b2ca4c45edc555a0a2c
+    sha256: f05a40b62c863fddde80116e9ea6c094d79fb6e6812f2b2ca4c45edc555a0a2c
+source:
+  url: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.19.0.tar.xz
+  sha256: 9332213d35480b647086a70c302de8568de83455a98774d35de216c4ce191006
 install:
   type: archive
   format: tar.gz
@@ -20,3 +24,7 @@ dependencies:
   - libcap
   - libmnl
   - libtirpc
+build_dependencies:
+  - bison
+  - flex
+  - pkgconf

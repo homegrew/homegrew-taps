@@ -3,16 +3,22 @@ version: 4.4.1
 description: File server for Macs, compliant with Apple Filing Protocol (AFP)
 homepage: https://netatalk.io
 license: GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.1-or-later AND BSD-2-Clause AND BSD-3-Clause AND MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:a035b13e47aa4e8c0b69b8c8d1349fdbd1770498742d4355c34fdfa8438ea6dd
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:c60acf3487cac5ef372d67eeab9f23083ff8c6812e8a039d8abfec4d72176606
-  linux_amd64: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:b0b70664aa88aaf213ba4d943c5f5fc0034fd5d67143ba638c4cbb7139c51046
-  linux_arm64: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:ebbf5e06fe8b5d04eafee507c8be83d68ea8fc18e8c2822e1dddd3826fc37f96
-sha256:
-  darwin_arm64: a035b13e47aa4e8c0b69b8c8d1349fdbd1770498742d4355c34fdfa8438ea6dd
-  darwin_amd64: c60acf3487cac5ef372d67eeab9f23083ff8c6812e8a039d8abfec4d72176606
-  linux_amd64: b0b70664aa88aaf213ba4d943c5f5fc0034fd5d67143ba638c4cbb7139c51046
-  linux_arm64: ebbf5e06fe8b5d04eafee507c8be83d68ea8fc18e8c2822e1dddd3826fc37f96
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:a035b13e47aa4e8c0b69b8c8d1349fdbd1770498742d4355c34fdfa8438ea6dd
+    sha256: a035b13e47aa4e8c0b69b8c8d1349fdbd1770498742d4355c34fdfa8438ea6dd
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:c60acf3487cac5ef372d67eeab9f23083ff8c6812e8a039d8abfec4d72176606
+    sha256: c60acf3487cac5ef372d67eeab9f23083ff8c6812e8a039d8abfec4d72176606
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:b0b70664aa88aaf213ba4d943c5f5fc0034fd5d67143ba638c4cbb7139c51046
+    sha256: b0b70664aa88aaf213ba4d943c5f5fc0034fd5d67143ba638c4cbb7139c51046
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:ebbf5e06fe8b5d04eafee507c8be83d68ea8fc18e8c2822e1dddd3826fc37f96
+    sha256: ebbf5e06fe8b5d04eafee507c8be83d68ea8fc18e8c2822e1dddd3826fc37f96
+source:
+  url: https://github.com/Netatalk/netatalk/releases/download/netatalk-4-4-1/netatalk-4.4.1.tar.xz
+  sha256: 8fcab0bf3b39cd8a94fe3ee7a8264c6000515a3af377da3416696609ab13316d
 install:
   type: archive
   format: tar.gz
@@ -24,5 +30,23 @@ dependencies:
   - iniparser
   - libevent
   - libgcrypt
+  - mariadb-connector-c
+  - openldap
+build_dependencies:
+  - cmark-gfm
+  - meson
+  - ninja
+  - pkgconf
+linux_dependencies:
+  - avahi
+  - berkeley-db@5
+  - bstring
+  - cracklib
+  - cups
+  - iniparser
+  - libevent
+  - libgcrypt
+  - libtirpc
+  - linux-pam
   - mariadb-connector-c
   - openldap

@@ -3,12 +3,16 @@ version: 1.16.1
 description: Freedesktop.org backend for WPE WebKit
 homepage: https://wpewebkit.org/
 license: BSD-2-Clause
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/wpebackend-fdo/blobs/sha256:c1c3f8381976eb45978e833e328d7842669846b98ebe7721f56ce2a7e46a29f7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/wpebackend-fdo/blobs/sha256:63c3c956e611654f413b1c23cabe4e64f8edbc474ae29349d35a387dd1a04b51
-sha256:
-  linux_amd64: c1c3f8381976eb45978e833e328d7842669846b98ebe7721f56ce2a7e46a29f7
-  linux_arm64: 63c3c956e611654f413b1c23cabe4e64f8edbc474ae29349d35a387dd1a04b51
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wpebackend-fdo/blobs/sha256:c1c3f8381976eb45978e833e328d7842669846b98ebe7721f56ce2a7e46a29f7
+    sha256: c1c3f8381976eb45978e833e328d7842669846b98ebe7721f56ce2a7e46a29f7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wpebackend-fdo/blobs/sha256:63c3c956e611654f413b1c23cabe4e64f8edbc474ae29349d35a387dd1a04b51
+    sha256: 63c3c956e611654f413b1c23cabe4e64f8edbc474ae29349d35a387dd1a04b51
+source:
+  url: https://github.com/Igalia/WPEBackend-fdo/releases/download/1.16.1/wpebackend-fdo-1.16.1.tar.xz
+  sha256: 544ae14012f8e7e426b8cb522eb0aaaac831ad7c35601d1cf31d37670e0ebb3b
 install:
   type: archive
   format: tar.gz
@@ -19,3 +23,7 @@ dependencies:
   - libwpe
   - mesa
   - wayland
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf

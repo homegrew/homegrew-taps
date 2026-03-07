@@ -3,16 +3,22 @@ version: 1.35.1
 description: GTK+ documentation tool
 homepage: https://gitlab.gnome.org/GNOME/gtk-doc
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gtk-doc/blobs/sha256:67a09406091e040819bc13b3058556a515aa928f4e4bc8b198a7bfa121dc3ecc
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gtk-doc/blobs/sha256:3490738954bfbe69c87b197747607ecba230cd5a418bee8264a1903a4f32e9e8
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gtk-doc/blobs/sha256:f4843c19d63f4d41befdc171adf726bcec1255b2781c328795b0e5d40456d405
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gtk-doc/blobs/sha256:649ef0b77f32d76501c7f8932e4dc82720c7f7b1a2f10ebc352a7225d0a688ad
-sha256:
-  darwin_arm64: 67a09406091e040819bc13b3058556a515aa928f4e4bc8b198a7bfa121dc3ecc
-  darwin_amd64: 3490738954bfbe69c87b197747607ecba230cd5a418bee8264a1903a4f32e9e8
-  linux_amd64: f4843c19d63f4d41befdc171adf726bcec1255b2781c328795b0e5d40456d405
-  linux_arm64: 649ef0b77f32d76501c7f8932e4dc82720c7f7b1a2f10ebc352a7225d0a688ad
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gtk-doc/blobs/sha256:67a09406091e040819bc13b3058556a515aa928f4e4bc8b198a7bfa121dc3ecc
+    sha256: 67a09406091e040819bc13b3058556a515aa928f4e4bc8b198a7bfa121dc3ecc
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gtk-doc/blobs/sha256:3490738954bfbe69c87b197747607ecba230cd5a418bee8264a1903a4f32e9e8
+    sha256: 3490738954bfbe69c87b197747607ecba230cd5a418bee8264a1903a4f32e9e8
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gtk-doc/blobs/sha256:f4843c19d63f4d41befdc171adf726bcec1255b2781c328795b0e5d40456d405
+    sha256: f4843c19d63f4d41befdc171adf726bcec1255b2781c328795b0e5d40456d405
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gtk-doc/blobs/sha256:649ef0b77f32d76501c7f8932e4dc82720c7f7b1a2f10ebc352a7225d0a688ad
+    sha256: 649ef0b77f32d76501c7f8932e4dc82720c7f7b1a2f10ebc352a7225d0a688ad
+source:
+  url: https://download.gnome.org/sources/gtk-doc/1.35/gtk-doc-1.35.1.tar.xz
+  sha256: 611c9f24edd6d88a8ae9a79d73ab0dc63c89b81e90ecc31d6b9005c5f05b25e2
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,7 @@ dependencies:
   - docbook
   - docbook-xsl
   - python@3.14
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf

@@ -3,17 +3,25 @@ version: 0.1.7
 description: Decoding library for BMP and ICO image file formats
 homepage: https://www.netsurf-browser.org/projects/libnsbmp/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libnsbmp/blobs/sha256:d75c82e5602bfb3c49ca8de06f9bb16002f10f1eb09b6c025d3a4e160f4b8aef
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libnsbmp/blobs/sha256:11b45814407dd3a3d4ba8976717cf1a64b425fe776e13d93caa96bb489ff8a6e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libnsbmp/blobs/sha256:86f827dd9ea13403f33582394b79f80f88117747da6bbbae89d70cde8cef8615
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libnsbmp/blobs/sha256:b5f8e356d95975d6cd0756b0a426cd43abfa1803755b224b6361bf7df5094230
-sha256:
-  darwin_arm64: d75c82e5602bfb3c49ca8de06f9bb16002f10f1eb09b6c025d3a4e160f4b8aef
-  darwin_amd64: 11b45814407dd3a3d4ba8976717cf1a64b425fe776e13d93caa96bb489ff8a6e
-  linux_amd64: 86f827dd9ea13403f33582394b79f80f88117747da6bbbae89d70cde8cef8615
-  linux_arm64: b5f8e356d95975d6cd0756b0a426cd43abfa1803755b224b6361bf7df5094230
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libnsbmp/blobs/sha256:d75c82e5602bfb3c49ca8de06f9bb16002f10f1eb09b6c025d3a4e160f4b8aef
+    sha256: d75c82e5602bfb3c49ca8de06f9bb16002f10f1eb09b6c025d3a4e160f4b8aef
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libnsbmp/blobs/sha256:11b45814407dd3a3d4ba8976717cf1a64b425fe776e13d93caa96bb489ff8a6e
+    sha256: 11b45814407dd3a3d4ba8976717cf1a64b425fe776e13d93caa96bb489ff8a6e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libnsbmp/blobs/sha256:86f827dd9ea13403f33582394b79f80f88117747da6bbbae89d70cde8cef8615
+    sha256: 86f827dd9ea13403f33582394b79f80f88117747da6bbbae89d70cde8cef8615
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libnsbmp/blobs/sha256:b5f8e356d95975d6cd0756b0a426cd43abfa1803755b224b6361bf7df5094230
+    sha256: b5f8e356d95975d6cd0756b0a426cd43abfa1803755b224b6361bf7df5094230
+source:
+  url: https://download.netsurf-browser.org/libs/releases/libnsbmp-0.1.7-src.tar.gz
+  sha256: 5407a7682a122baaaa5a15b505290e2d37df54c13c5edef4b09d12c862d82293
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - netsurf-buildsystem

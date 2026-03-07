@@ -3,19 +3,31 @@ version: 2.46.0
 description: GNU Binutils for mipsel-linux-gnu cross development
 homepage: https://www.gnu.org/software/binutils/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mipsel-linux-gnu-binutils/blobs/sha256:4f2876466d14051cf1cf6890da71148670f00c82610a5fe20592883ffa119444
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mipsel-linux-gnu-binutils/blobs/sha256:7f1439192d29370f05571db6e11567524b075949d267b3e6847006d6334bec51
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mipsel-linux-gnu-binutils/blobs/sha256:6cd7b50a76625e3dc2be82a336c8be32825d79266a589688e1f8268b59634a5e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mipsel-linux-gnu-binutils/blobs/sha256:6947cc92890d2080de3d2cab0c717848b23e0a15585520d07ea77dbaae5f4866
-sha256:
-  darwin_arm64: 4f2876466d14051cf1cf6890da71148670f00c82610a5fe20592883ffa119444
-  darwin_amd64: 7f1439192d29370f05571db6e11567524b075949d267b3e6847006d6334bec51
-  linux_amd64: 6cd7b50a76625e3dc2be82a336c8be32825d79266a589688e1f8268b59634a5e
-  linux_arm64: 6947cc92890d2080de3d2cab0c717848b23e0a15585520d07ea77dbaae5f4866
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mipsel-linux-gnu-binutils/blobs/sha256:4f2876466d14051cf1cf6890da71148670f00c82610a5fe20592883ffa119444
+    sha256: 4f2876466d14051cf1cf6890da71148670f00c82610a5fe20592883ffa119444
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mipsel-linux-gnu-binutils/blobs/sha256:7f1439192d29370f05571db6e11567524b075949d267b3e6847006d6334bec51
+    sha256: 7f1439192d29370f05571db6e11567524b075949d267b3e6847006d6334bec51
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mipsel-linux-gnu-binutils/blobs/sha256:6cd7b50a76625e3dc2be82a336c8be32825d79266a589688e1f8268b59634a5e
+    sha256: 6cd7b50a76625e3dc2be82a336c8be32825d79266a589688e1f8268b59634a5e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mipsel-linux-gnu-binutils/blobs/sha256:6947cc92890d2080de3d2cab0c717848b23e0a15585520d07ea77dbaae5f4866
+    sha256: 6947cc92890d2080de3d2cab0c717848b23e0a15585520d07ea77dbaae5f4866
+source:
+  url: https://ftpmirror.gnu.org/gnu/binutils/binutils-2.46.0.tar.bz2
+  sha256: 0f3152632a2a9ce066f20963e9bb40af7cf85b9b6c409ed892fd0676e84ecd12
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
+  - zstd
+build_dependencies:
+  - pkgconf
+  - texinfo
+linux_dependencies:
+  - zlib-ng-compat
   - zstd

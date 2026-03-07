@@ -3,16 +3,22 @@ version: 0.123
 description: Version control system
 homepage: https://gameoftrees.org/
 license: ISC
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/got/blobs/sha256:42153eec1c0cdd6a97f3fcfa9844379169310d69662f573e3bc3620391ac1f79
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/got/blobs/sha256:0e1653964d8b02c503ddda3faa78fa9a0751533497cab54528618526f01babb0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/got/blobs/sha256:8d5f523e7be43f222443c7e5ca66aa51434480c8329f1665db9bde32db061b78
-  linux_arm64: https://ghcr.io/v2/homebrew/core/got/blobs/sha256:b7be5020527e8afca69dfd0de84519588af0f3004dea3aa6d79fa9271ff61d61
-sha256:
-  darwin_arm64: 42153eec1c0cdd6a97f3fcfa9844379169310d69662f573e3bc3620391ac1f79
-  darwin_amd64: 0e1653964d8b02c503ddda3faa78fa9a0751533497cab54528618526f01babb0
-  linux_amd64: 8d5f523e7be43f222443c7e5ca66aa51434480c8329f1665db9bde32db061b78
-  linux_arm64: b7be5020527e8afca69dfd0de84519588af0f3004dea3aa6d79fa9271ff61d61
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/got/blobs/sha256:42153eec1c0cdd6a97f3fcfa9844379169310d69662f573e3bc3620391ac1f79
+    sha256: 42153eec1c0cdd6a97f3fcfa9844379169310d69662f573e3bc3620391ac1f79
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/got/blobs/sha256:0e1653964d8b02c503ddda3faa78fa9a0751533497cab54528618526f01babb0
+    sha256: 0e1653964d8b02c503ddda3faa78fa9a0751533497cab54528618526f01babb0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/got/blobs/sha256:8d5f523e7be43f222443c7e5ca66aa51434480c8329f1665db9bde32db061b78
+    sha256: 8d5f523e7be43f222443c7e5ca66aa51434480c8329f1665db9bde32db061b78
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/got/blobs/sha256:b7be5020527e8afca69dfd0de84519588af0f3004dea3aa6d79fa9271ff61d61
+    sha256: b7be5020527e8afca69dfd0de84519588af0f3004dea3aa6d79fa9271ff61d61
+source:
+  url: https://gameoftrees.org/releases/portable/got-portable-0.123.tar.gz
+  sha256: 53ae795f03e2ee4f4696bf85768a9a7d64a473f20622fcc8508fa246cc288526
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,15 @@ dependencies:
   - libretls
   - ncurses
   - openssl@3
+build_dependencies:
+  - bison
+  - pkgconf
+linux_dependencies:
+  - libbsd
+  - libevent
+  - libmd
+  - libretls
+  - ncurses
+  - openssl@3
+  - util-linux
+  - zlib-ng-compat

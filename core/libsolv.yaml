@@ -3,16 +3,22 @@ version: 0.7.35
 description: Library for solving packages and reading repositories
 homepage: https://github.com/openSUSE/libsolv
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libsolv/blobs/sha256:72baee113a3ee720b1ece1944fa2ed5eed559e86255287929dd2b53ffff028e2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libsolv/blobs/sha256:2d99b3f6594519bcace1fbba7f3f3bc5ba22a38e544861be43cf5e893bbdbce2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libsolv/blobs/sha256:c3c71e6ba50b6473113475af7a26884aa1b8314d6c6f5ddff2c1bed3e2fe5bb6
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libsolv/blobs/sha256:8628bcc2dece4bccbb2ebb973bd957655a08e4c309240f981818d35380cb0a2f
-sha256:
-  darwin_arm64: 72baee113a3ee720b1ece1944fa2ed5eed559e86255287929dd2b53ffff028e2
-  darwin_amd64: 2d99b3f6594519bcace1fbba7f3f3bc5ba22a38e544861be43cf5e893bbdbce2
-  linux_amd64: c3c71e6ba50b6473113475af7a26884aa1b8314d6c6f5ddff2c1bed3e2fe5bb6
-  linux_arm64: 8628bcc2dece4bccbb2ebb973bd957655a08e4c309240f981818d35380cb0a2f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libsolv/blobs/sha256:72baee113a3ee720b1ece1944fa2ed5eed559e86255287929dd2b53ffff028e2
+    sha256: 72baee113a3ee720b1ece1944fa2ed5eed559e86255287929dd2b53ffff028e2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libsolv/blobs/sha256:2d99b3f6594519bcace1fbba7f3f3bc5ba22a38e544861be43cf5e893bbdbce2
+    sha256: 2d99b3f6594519bcace1fbba7f3f3bc5ba22a38e544861be43cf5e893bbdbce2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libsolv/blobs/sha256:c3c71e6ba50b6473113475af7a26884aa1b8314d6c6f5ddff2c1bed3e2fe5bb6
+    sha256: c3c71e6ba50b6473113475af7a26884aa1b8314d6c6f5ddff2c1bed3e2fe5bb6
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libsolv/blobs/sha256:8628bcc2dece4bccbb2ebb973bd957655a08e4c309240f981818d35380cb0a2f
+    sha256: 8628bcc2dece4bccbb2ebb973bd957655a08e4c309240f981818d35380cb0a2f
+source:
+  url: https://github.com/openSUSE/libsolv/archive/refs/tags/0.7.35.tar.gz
+  sha256: e6ef552846f908beb3bbf6ca718b6dd431bd8a281086d82af9a6d2a3ba919be5
 install:
   type: archive
   format: tar.gz
@@ -20,4 +26,11 @@ install:
 dependencies:
   - rpm
   - xz
+  - zstd
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - rpm
+  - xz
+  - zlib-ng-compat
   - zstd

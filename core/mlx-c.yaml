@@ -3,13 +3,18 @@ version: 0.5.0
 description: C API for MLX
 homepage: https://ml-explore.github.io/mlx-c
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mlx-c/blobs/sha256:4308e8bf4632333803c8c2e2d91bdcdd540469a2d216f9be7e79c536beea0f31
-sha256:
-  darwin_arm64: 4308e8bf4632333803c8c2e2d91bdcdd540469a2d216f9be7e79c536beea0f31
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mlx-c/blobs/sha256:4308e8bf4632333803c8c2e2d91bdcdd540469a2d216f9be7e79c536beea0f31
+    sha256: 4308e8bf4632333803c8c2e2d91bdcdd540469a2d216f9be7e79c536beea0f31
+source:
+  url: https://github.com/ml-explore/mlx-c/archive/refs/tags/v0.5.0.tar.gz
+  sha256: dcfc404d7004e6da70170c669dbc920913cb25a59c9f7dac781caf92e524cc86
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - mlx
+build_dependencies:
+  - cmake

@@ -3,19 +3,27 @@ version: 4.08
 description: C++ JSON parser/generator
 homepage: https://www.codeproject.com/Articles/20027/JSON-Spirit-A-C-JSON-Parser-Generator-Implemented
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/json_spirit/blobs/sha256:c9211705e246541e5540eab0704d64a67124566cda09695e26b7ed3966b0c61f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/json_spirit/blobs/sha256:8d6aebd68c1f523e42e9eef02d3feb3116b5995ae781f02d5be5a31ce1beb51a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/json_spirit/blobs/sha256:968fe8f76818664ec719fa71cfee0f4c520f42b192ad61ad7b747f1f893ce557
-  linux_arm64: https://ghcr.io/v2/homebrew/core/json_spirit/blobs/sha256:c566f08e81cb1b691dc3d853865e14786593f4226a51ab830502812425df5b05
-sha256:
-  darwin_arm64: c9211705e246541e5540eab0704d64a67124566cda09695e26b7ed3966b0c61f
-  darwin_amd64: 8d6aebd68c1f523e42e9eef02d3feb3116b5995ae781f02d5be5a31ce1beb51a
-  linux_amd64: 968fe8f76818664ec719fa71cfee0f4c520f42b192ad61ad7b747f1f893ce557
-  linux_arm64: c566f08e81cb1b691dc3d853865e14786593f4226a51ab830502812425df5b05
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/json_spirit/blobs/sha256:c9211705e246541e5540eab0704d64a67124566cda09695e26b7ed3966b0c61f
+    sha256: c9211705e246541e5540eab0704d64a67124566cda09695e26b7ed3966b0c61f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/json_spirit/blobs/sha256:8d6aebd68c1f523e42e9eef02d3feb3116b5995ae781f02d5be5a31ce1beb51a
+    sha256: 8d6aebd68c1f523e42e9eef02d3feb3116b5995ae781f02d5be5a31ce1beb51a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/json_spirit/blobs/sha256:968fe8f76818664ec719fa71cfee0f4c520f42b192ad61ad7b747f1f893ce557
+    sha256: 968fe8f76818664ec719fa71cfee0f4c520f42b192ad61ad7b747f1f893ce557
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/json_spirit/blobs/sha256:c566f08e81cb1b691dc3d853865e14786593f4226a51ab830502812425df5b05
+    sha256: c566f08e81cb1b691dc3d853865e14786593f4226a51ab830502812425df5b05
+source:
+  url: https://github.com/png85/json_spirit/archive/refs/tags/json_spirit-4.0.8.tar.gz
+  sha256: 43829f55755f725c06dd75d626d9e57d0ce68c2f0d5112fe9a01562c0501e94c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - boost
+build_dependencies:
+  - cmake

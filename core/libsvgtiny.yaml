@@ -3,16 +3,22 @@ version: 0.1.8
 description: Implementation of SVG Tiny
 homepage: https://www.netsurf-browser.org/projects/libsvgtiny/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libsvgtiny/blobs/sha256:4961c5fbcd42eb1477536c3d18bbbbbe4aeb11e342a181b4838f850ec43fa809
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libsvgtiny/blobs/sha256:79f23d2be078a3142ae7222d1b6da7ed1f9e734e6703dfe86fbaa6c3916b6f72
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libsvgtiny/blobs/sha256:b5dda2d25e1756ffbbc6e8e28ee6d1259b4f1337b0cb1958dc29d6275bc70b22
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libsvgtiny/blobs/sha256:730eb12414b8d0d93e3c8d2e52084669d9870d15dc60a127e24ec5b6e9062b8e
-sha256:
-  darwin_arm64: 4961c5fbcd42eb1477536c3d18bbbbbe4aeb11e342a181b4838f850ec43fa809
-  darwin_amd64: 79f23d2be078a3142ae7222d1b6da7ed1f9e734e6703dfe86fbaa6c3916b6f72
-  linux_amd64: b5dda2d25e1756ffbbc6e8e28ee6d1259b4f1337b0cb1958dc29d6275bc70b22
-  linux_arm64: 730eb12414b8d0d93e3c8d2e52084669d9870d15dc60a127e24ec5b6e9062b8e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libsvgtiny/blobs/sha256:4961c5fbcd42eb1477536c3d18bbbbbe4aeb11e342a181b4838f850ec43fa809
+    sha256: 4961c5fbcd42eb1477536c3d18bbbbbe4aeb11e342a181b4838f850ec43fa809
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libsvgtiny/blobs/sha256:79f23d2be078a3142ae7222d1b6da7ed1f9e734e6703dfe86fbaa6c3916b6f72
+    sha256: 79f23d2be078a3142ae7222d1b6da7ed1f9e734e6703dfe86fbaa6c3916b6f72
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libsvgtiny/blobs/sha256:b5dda2d25e1756ffbbc6e8e28ee6d1259b4f1337b0cb1958dc29d6275bc70b22
+    sha256: b5dda2d25e1756ffbbc6e8e28ee6d1259b4f1337b0cb1958dc29d6275bc70b22
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libsvgtiny/blobs/sha256:730eb12414b8d0d93e3c8d2e52084669d9870d15dc60a127e24ec5b6e9062b8e
+    sha256: 730eb12414b8d0d93e3c8d2e52084669d9870d15dc60a127e24ec5b6e9062b8e
+source:
+  url: https://download.netsurf-browser.org/libs/releases/libsvgtiny-0.1.8-src.tar.gz
+  sha256: c357227f02e83fb2a76b12b901191a082229db1f007362e8f31c754510c2a01c
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,6 @@ dependencies:
   - libhubbub
   - libparserutils
   - libwapcaplet
+build_dependencies:
+  - netsurf-buildsystem
+  - pkgconf

@@ -3,16 +3,22 @@ version: 9.0.17
 description: Image processing spreadsheet
 homepage: https://github.com/jcupitt/nip4
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/nip4/blobs/sha256:4131b345acda2b46c787b53a13fb23193df905c3fe8b84ba4d21544f677be0cd
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/nip4/blobs/sha256:1e3c52d741422d3543a959ecaa5f3ee70003179ecd8f1c5d6ee1436edd81abe7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/nip4/blobs/sha256:00d87bbfae7ba12dcd5cc7e5f28b30bac88c69f888e014fea552c97d048022ac
-  linux_arm64: https://ghcr.io/v2/homebrew/core/nip4/blobs/sha256:fb20cb2ca0ead0b99e4756dcb766482fcbc9bbae4cfe1cb73223ddac4b26701d
-sha256:
-  darwin_arm64: 4131b345acda2b46c787b53a13fb23193df905c3fe8b84ba4d21544f677be0cd
-  darwin_amd64: 1e3c52d741422d3543a959ecaa5f3ee70003179ecd8f1c5d6ee1436edd81abe7
-  linux_amd64: 00d87bbfae7ba12dcd5cc7e5f28b30bac88c69f888e014fea552c97d048022ac
-  linux_arm64: fb20cb2ca0ead0b99e4756dcb766482fcbc9bbae4cfe1cb73223ddac4b26701d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nip4/blobs/sha256:4131b345acda2b46c787b53a13fb23193df905c3fe8b84ba4d21544f677be0cd
+    sha256: 4131b345acda2b46c787b53a13fb23193df905c3fe8b84ba4d21544f677be0cd
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nip4/blobs/sha256:1e3c52d741422d3543a959ecaa5f3ee70003179ecd8f1c5d6ee1436edd81abe7
+    sha256: 1e3c52d741422d3543a959ecaa5f3ee70003179ecd8f1c5d6ee1436edd81abe7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nip4/blobs/sha256:00d87bbfae7ba12dcd5cc7e5f28b30bac88c69f888e014fea552c97d048022ac
+    sha256: 00d87bbfae7ba12dcd5cc7e5f28b30bac88c69f888e014fea552c97d048022ac
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nip4/blobs/sha256:fb20cb2ca0ead0b99e4756dcb766482fcbc9bbae4cfe1cb73223ddac4b26701d
+    sha256: fb20cb2ca0ead0b99e4756dcb766482fcbc9bbae4cfe1cb73223ddac4b26701d
+source:
+  url: https://github.com/jcupitt/nip4/releases/download/v9.0.17/nip4-9.0.17.tar.xz
+  sha256: a34915962bc2c0253575afda1caa8df5c8795d06d63cf71ec2c747ec627594c4
 install:
   type: archive
   format: tar.gz
@@ -29,3 +35,9 @@ dependencies:
   - libxml2
   - pango
   - vips
+build_dependencies:
+  - bison
+  - flex
+  - meson
+  - ninja
+  - pkgconf

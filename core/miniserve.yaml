@@ -3,17 +3,25 @@ version: 0.33.0
 description: High performance static file server
 homepage: https://github.com/svenstaro/miniserve
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/miniserve/blobs/sha256:51a652974e5b6cbc0c900aa59db2d90ee9b09bdc4eee6d4ac53439508aac1778
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/miniserve/blobs/sha256:c234fcbed960c1ce0590db9111b6ced642f9b52ceb70ac09956f07775406da31
-  linux_amd64: https://ghcr.io/v2/homebrew/core/miniserve/blobs/sha256:24966360e41ff69713840bfbac5c95c02bc9b55856123230745108787a1536f2
-  linux_arm64: https://ghcr.io/v2/homebrew/core/miniserve/blobs/sha256:4054184cc0c0ae822c6e09b27b0b7134d96b0981b31631a328008a8689507c90
-sha256:
-  darwin_arm64: 51a652974e5b6cbc0c900aa59db2d90ee9b09bdc4eee6d4ac53439508aac1778
-  darwin_amd64: c234fcbed960c1ce0590db9111b6ced642f9b52ceb70ac09956f07775406da31
-  linux_amd64: 24966360e41ff69713840bfbac5c95c02bc9b55856123230745108787a1536f2
-  linux_arm64: 4054184cc0c0ae822c6e09b27b0b7134d96b0981b31631a328008a8689507c90
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/miniserve/blobs/sha256:51a652974e5b6cbc0c900aa59db2d90ee9b09bdc4eee6d4ac53439508aac1778
+    sha256: 51a652974e5b6cbc0c900aa59db2d90ee9b09bdc4eee6d4ac53439508aac1778
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/miniserve/blobs/sha256:c234fcbed960c1ce0590db9111b6ced642f9b52ceb70ac09956f07775406da31
+    sha256: c234fcbed960c1ce0590db9111b6ced642f9b52ceb70ac09956f07775406da31
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/miniserve/blobs/sha256:24966360e41ff69713840bfbac5c95c02bc9b55856123230745108787a1536f2
+    sha256: 24966360e41ff69713840bfbac5c95c02bc9b55856123230745108787a1536f2
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/miniserve/blobs/sha256:4054184cc0c0ae822c6e09b27b0b7134d96b0981b31631a328008a8689507c90
+    sha256: 4054184cc0c0ae822c6e09b27b0b7134d96b0981b31631a328008a8689507c90
+source:
+  url: https://github.com/svenstaro/miniserve/archive/refs/tags/v0.33.0.tar.gz
+  sha256: eacef6128688c02409b0aba34c550a80fa5a714979c6c8e21e20c6a0aa2bc33a
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

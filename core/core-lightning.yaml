@@ -3,16 +3,22 @@ version: 25.09.3
 description: Lightning Network implementation focusing on spec compliance and performance
 homepage: https://github.com/ElementsProject/lightning
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/core-lightning/blobs/sha256:413d64741f471efb89d9ebe501c850392dccbc957e1a4056d3d4b0a3dc164ec4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/core-lightning/blobs/sha256:0cb2e696030b3c28ae9322dcc626190beb150506533cded15e03e081b9aa2745
-  linux_amd64: https://ghcr.io/v2/homebrew/core/core-lightning/blobs/sha256:4468958e1d22bc0546b582961665ff5beb0ae84dc01ecee317566e0c88a4a2f9
-  linux_arm64: https://ghcr.io/v2/homebrew/core/core-lightning/blobs/sha256:94699dd32738861f7200ad7dae15a81064871016c12b4acbe7c9bdaeeab934b6
-sha256:
-  darwin_arm64: 413d64741f471efb89d9ebe501c850392dccbc957e1a4056d3d4b0a3dc164ec4
-  darwin_amd64: 0cb2e696030b3c28ae9322dcc626190beb150506533cded15e03e081b9aa2745
-  linux_amd64: 4468958e1d22bc0546b582961665ff5beb0ae84dc01ecee317566e0c88a4a2f9
-  linux_arm64: 94699dd32738861f7200ad7dae15a81064871016c12b4acbe7c9bdaeeab934b6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/core-lightning/blobs/sha256:413d64741f471efb89d9ebe501c850392dccbc957e1a4056d3d4b0a3dc164ec4
+    sha256: 413d64741f471efb89d9ebe501c850392dccbc957e1a4056d3d4b0a3dc164ec4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/core-lightning/blobs/sha256:0cb2e696030b3c28ae9322dcc626190beb150506533cded15e03e081b9aa2745
+    sha256: 0cb2e696030b3c28ae9322dcc626190beb150506533cded15e03e081b9aa2745
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/core-lightning/blobs/sha256:4468958e1d22bc0546b582961665ff5beb0ae84dc01ecee317566e0c88a4a2f9
+    sha256: 4468958e1d22bc0546b582961665ff5beb0ae84dc01ecee317566e0c88a4a2f9
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/core-lightning/blobs/sha256:94699dd32738861f7200ad7dae15a81064871016c12b4acbe7c9bdaeeab934b6
+    sha256: 94699dd32738861f7200ad7dae15a81064871016c12b4acbe7c9bdaeeab934b6
+source:
+  url: https://github.com/ElementsProject/lightning/releases/download/v25.09.3/clightning-v25.09.3.zip
+  sha256: d051a08f1432ddc7b26d1132ea9ad302de935f89a5a930eafcf92f68830649ab
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,18 @@ install:
 dependencies:
   - bitcoin
   - libsodium
+build_dependencies:
+  - autoconf
+  - automake
+  - gettext
+  - libtool
+  - lowdown
+  - pkgconf
+  - protobuf
+  - python@3.14
+  - rust
+  - gnu-sed
+linux_dependencies:
+  - bitcoin
+  - libsodium
+  - zlib-ng-compat

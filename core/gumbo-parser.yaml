@@ -3,17 +3,27 @@ version: 0.13.2
 description: C99 library for parsing HTML5
 homepage: https://codeberg.org/gumbo-parser/gumbo-parser
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gumbo-parser/blobs/sha256:c7ea823bbc414304986e981cfc0cb322c6b2ecf13b337645f6a8615284529122
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gumbo-parser/blobs/sha256:dab4d3f868ea634f979bba453ee14b6c3adeaaad533ea6142b6c7fa78417c553
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gumbo-parser/blobs/sha256:296ea8a9753f6d0e83ab6ac43a6f66309991e27bc65d136ece7e0368993dc066
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gumbo-parser/blobs/sha256:42003f370d87b990cea248ab82ceafc3a046a8489711ed9d2518bf974326e36b
-sha256:
-  darwin_arm64: c7ea823bbc414304986e981cfc0cb322c6b2ecf13b337645f6a8615284529122
-  darwin_amd64: dab4d3f868ea634f979bba453ee14b6c3adeaaad533ea6142b6c7fa78417c553
-  linux_amd64: 296ea8a9753f6d0e83ab6ac43a6f66309991e27bc65d136ece7e0368993dc066
-  linux_arm64: 42003f370d87b990cea248ab82ceafc3a046a8489711ed9d2518bf974326e36b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gumbo-parser/blobs/sha256:c7ea823bbc414304986e981cfc0cb322c6b2ecf13b337645f6a8615284529122
+    sha256: c7ea823bbc414304986e981cfc0cb322c6b2ecf13b337645f6a8615284529122
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gumbo-parser/blobs/sha256:dab4d3f868ea634f979bba453ee14b6c3adeaaad533ea6142b6c7fa78417c553
+    sha256: dab4d3f868ea634f979bba453ee14b6c3adeaaad533ea6142b6c7fa78417c553
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gumbo-parser/blobs/sha256:296ea8a9753f6d0e83ab6ac43a6f66309991e27bc65d136ece7e0368993dc066
+    sha256: 296ea8a9753f6d0e83ab6ac43a6f66309991e27bc65d136ece7e0368993dc066
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gumbo-parser/blobs/sha256:42003f370d87b990cea248ab82ceafc3a046a8489711ed9d2518bf974326e36b
+    sha256: 42003f370d87b990cea248ab82ceafc3a046a8489711ed9d2518bf974326e36b
+source:
+  url: https://codeberg.org/gumbo-parser/gumbo-parser/archive/0.13.2.tar.gz
+  sha256: dbdc159dc8e5c6f3f254e50bce689dd9e439064ff06c165d5653410a5714ab66
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool

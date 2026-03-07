@@ -3,16 +3,22 @@ version: 0.0.29
 description: Convert XML to another format (based on XSL or other tools)
 homepage: https://pagure.io/xmlto/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/xmlto/blobs/sha256:91da6f2fe6817daf5c455fe6c5c63b01188c71d017d16b37dbb49ee5bf4355d4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/xmlto/blobs/sha256:94b2d369c743d833b9e4fa2f6658c47f4a85fa8c94202ddcd6db88244f27e7d4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/xmlto/blobs/sha256:350a0d789e034e3717a5e03ce2110787ded5b6b9a4582b38152c670b10909e0e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/xmlto/blobs/sha256:f699cf8ced80aa5aa63079d7f44b35a12445b5df94923ba64843596832ca8757
-sha256:
-  darwin_arm64: 91da6f2fe6817daf5c455fe6c5c63b01188c71d017d16b37dbb49ee5bf4355d4
-  darwin_amd64: 94b2d369c743d833b9e4fa2f6658c47f4a85fa8c94202ddcd6db88244f27e7d4
-  linux_amd64: 350a0d789e034e3717a5e03ce2110787ded5b6b9a4582b38152c670b10909e0e
-  linux_arm64: f699cf8ced80aa5aa63079d7f44b35a12445b5df94923ba64843596832ca8757
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xmlto/blobs/sha256:91da6f2fe6817daf5c455fe6c5c63b01188c71d017d16b37dbb49ee5bf4355d4
+    sha256: 91da6f2fe6817daf5c455fe6c5c63b01188c71d017d16b37dbb49ee5bf4355d4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xmlto/blobs/sha256:94b2d369c743d833b9e4fa2f6658c47f4a85fa8c94202ddcd6db88244f27e7d4
+    sha256: 94b2d369c743d833b9e4fa2f6658c47f4a85fa8c94202ddcd6db88244f27e7d4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xmlto/blobs/sha256:350a0d789e034e3717a5e03ce2110787ded5b6b9a4582b38152c670b10909e0e
+    sha256: 350a0d789e034e3717a5e03ce2110787ded5b6b9a4582b38152c670b10909e0e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xmlto/blobs/sha256:f699cf8ced80aa5aa63079d7f44b35a12445b5df94923ba64843596832ca8757
+    sha256: f699cf8ced80aa5aa63079d7f44b35a12445b5df94923ba64843596832ca8757
+source:
+  url: https://pagure.io/xmlto/archive/0.0.29/xmlto-0.0.29.tar.gz
+  sha256: 40504db68718385a4eaa9154a28f59e51e59d006d1aa14f5bc9d6fded1d6017a
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,9 @@ dependencies:
   - docbook
   - docbook-xsl
   - gnu-getopt
+build_dependencies:
+  - autoconf
+  - automake
+linux_dependencies:
+  - docbook
+  - docbook-xsl

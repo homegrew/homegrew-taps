@@ -3,16 +3,22 @@ version: 4.5.5
 description: Malware identification and classification tool
 homepage: https://github.com/VirusTotal/yara/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/yara/blobs/sha256:f50c08d6d468502fb468d9401c8087a31ed6e2193b518d9f2497e5306dac3df5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/yara/blobs/sha256:df647efb738f895f459dce114d2f5cd2add6b0013ef1b754256fcd695064ed1d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/yara/blobs/sha256:b76a81e19bf1ca4a3f073e9c1811107b61b341e4d3bbd7ed2002cbb9c106c13c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/yara/blobs/sha256:dd2508d80b2e65d4e31548677fc7376e225498b09928b1ef3938bc08fc39f801
-sha256:
-  darwin_arm64: f50c08d6d468502fb468d9401c8087a31ed6e2193b518d9f2497e5306dac3df5
-  darwin_amd64: df647efb738f895f459dce114d2f5cd2add6b0013ef1b754256fcd695064ed1d
-  linux_amd64: b76a81e19bf1ca4a3f073e9c1811107b61b341e4d3bbd7ed2002cbb9c106c13c
-  linux_arm64: dd2508d80b2e65d4e31548677fc7376e225498b09928b1ef3938bc08fc39f801
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/yara/blobs/sha256:f50c08d6d468502fb468d9401c8087a31ed6e2193b518d9f2497e5306dac3df5
+    sha256: f50c08d6d468502fb468d9401c8087a31ed6e2193b518d9f2497e5306dac3df5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/yara/blobs/sha256:df647efb738f895f459dce114d2f5cd2add6b0013ef1b754256fcd695064ed1d
+    sha256: df647efb738f895f459dce114d2f5cd2add6b0013ef1b754256fcd695064ed1d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/yara/blobs/sha256:b76a81e19bf1ca4a3f073e9c1811107b61b341e4d3bbd7ed2002cbb9c106c13c
+    sha256: b76a81e19bf1ca4a3f073e9c1811107b61b341e4d3bbd7ed2002cbb9c106c13c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/yara/blobs/sha256:dd2508d80b2e65d4e31548677fc7376e225498b09928b1ef3938bc08fc39f801
+    sha256: dd2508d80b2e65d4e31548677fc7376e225498b09928b1ef3938bc08fc39f801
+source:
+  url: https://github.com/VirusTotal/yara/archive/refs/tags/v4.5.5.tar.gz
+  sha256: d38e30fd9c1e1c7921d1c4568262d94f5c2d6b5da139fe49572a43ffbc5c53f6
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,8 @@ dependencies:
   - libmagic
   - openssl@3
   - protobuf-c
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf

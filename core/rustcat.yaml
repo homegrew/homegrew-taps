@@ -3,17 +3,25 @@ version: 3.0.0
 description: Modern Port listener and Reverse shell
 homepage: https://github.com/robiot/rustcat
 license: GPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/rustcat/blobs/sha256:0f256a32dd3e5c5ad46cc6c79b7374846ecb650c452fd78fcdac210c73cff878
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/rustcat/blobs/sha256:dc1e37c738ec53c2dcaff6280fd34f7232e75223a04663b6ca6bca9517c1b86d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/rustcat/blobs/sha256:4acfb8c1ed49a339a21f694b8763f939d8e84968573bb3a397efd6d8975b4fb3
-  linux_arm64: https://ghcr.io/v2/homebrew/core/rustcat/blobs/sha256:0cc1463d3f149a41f142729ccb167e002fd31f95d07ed6df6a4bd9963a14cf7f
-sha256:
-  darwin_arm64: 0f256a32dd3e5c5ad46cc6c79b7374846ecb650c452fd78fcdac210c73cff878
-  darwin_amd64: dc1e37c738ec53c2dcaff6280fd34f7232e75223a04663b6ca6bca9517c1b86d
-  linux_amd64: 4acfb8c1ed49a339a21f694b8763f939d8e84968573bb3a397efd6d8975b4fb3
-  linux_arm64: 0cc1463d3f149a41f142729ccb167e002fd31f95d07ed6df6a4bd9963a14cf7f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rustcat/blobs/sha256:0f256a32dd3e5c5ad46cc6c79b7374846ecb650c452fd78fcdac210c73cff878
+    sha256: 0f256a32dd3e5c5ad46cc6c79b7374846ecb650c452fd78fcdac210c73cff878
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rustcat/blobs/sha256:dc1e37c738ec53c2dcaff6280fd34f7232e75223a04663b6ca6bca9517c1b86d
+    sha256: dc1e37c738ec53c2dcaff6280fd34f7232e75223a04663b6ca6bca9517c1b86d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rustcat/blobs/sha256:4acfb8c1ed49a339a21f694b8763f939d8e84968573bb3a397efd6d8975b4fb3
+    sha256: 4acfb8c1ed49a339a21f694b8763f939d8e84968573bb3a397efd6d8975b4fb3
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rustcat/blobs/sha256:0cc1463d3f149a41f142729ccb167e002fd31f95d07ed6df6a4bd9963a14cf7f
+    sha256: 0cc1463d3f149a41f142729ccb167e002fd31f95d07ed6df6a4bd9963a14cf7f
+source:
+  url: https://github.com/robiot/rustcat/archive/refs/tags/v3.0.0.tar.gz
+  sha256: 59648e51ab41e4aeb825174dfbb53710207257feb3757521be98ed28c4249922
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

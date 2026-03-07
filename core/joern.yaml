@@ -3,16 +3,22 @@ version: 4.0.490
 description: Open-source code analysis platform based on code property graphs
 homepage: https://joern.io/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/joern/blobs/sha256:013473c49168751e6618c0628046178b098f7b7969ad009a0705f236466e63c4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/joern/blobs/sha256:7e47f4c97a38aeed6e5248938bc2ddb5bcc76cb77e24a5553fa3719f9a0cc76c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/joern/blobs/sha256:14b05566cdd534138c2f290ba41cc70956bbd5773427c830b12e45f4ddd5555f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/joern/blobs/sha256:0356fe09d4884e75fbc9e6a5176566db578856b4212f0a81f2b21d60417b870f
-sha256:
-  darwin_arm64: 013473c49168751e6618c0628046178b098f7b7969ad009a0705f236466e63c4
-  darwin_amd64: 7e47f4c97a38aeed6e5248938bc2ddb5bcc76cb77e24a5553fa3719f9a0cc76c
-  linux_amd64: 14b05566cdd534138c2f290ba41cc70956bbd5773427c830b12e45f4ddd5555f
-  linux_arm64: 0356fe09d4884e75fbc9e6a5176566db578856b4212f0a81f2b21d60417b870f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/joern/blobs/sha256:013473c49168751e6618c0628046178b098f7b7969ad009a0705f236466e63c4
+    sha256: 013473c49168751e6618c0628046178b098f7b7969ad009a0705f236466e63c4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/joern/blobs/sha256:7e47f4c97a38aeed6e5248938bc2ddb5bcc76cb77e24a5553fa3719f9a0cc76c
+    sha256: 7e47f4c97a38aeed6e5248938bc2ddb5bcc76cb77e24a5553fa3719f9a0cc76c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/joern/blobs/sha256:14b05566cdd534138c2f290ba41cc70956bbd5773427c830b12e45f4ddd5555f
+    sha256: 14b05566cdd534138c2f290ba41cc70956bbd5773427c830b12e45f4ddd5555f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/joern/blobs/sha256:0356fe09d4884e75fbc9e6a5176566db578856b4212f0a81f2b21d60417b870f
+    sha256: 0356fe09d4884e75fbc9e6a5176566db578856b4212f0a81f2b21d60417b870f
+source:
+  url: https://github.com/joernio/joern/archive/refs/tags/v4.0.490.tar.gz
+  sha256: 43cc39f976c5f9712fc63742ea9b2367ac35f10da335ea365fca795840a049f2
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,11 @@ dependencies:
   - coreutils
   - openjdk
   - php
+build_dependencies:
+  - sbt
+linux_dependencies:
+  - astgen
+  - coreutils
+  - openjdk
+  - php
+  - zlib-ng-compat

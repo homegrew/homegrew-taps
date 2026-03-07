@@ -3,17 +3,25 @@ version: 0.5.2
 description: Idempotent command-line utility for managing your /etc/hosts file
 homepage: https://github.com/cbednarski/hostess
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/hostess/blobs/sha256:421dcd7d0df30a8b2d781558f9b8e5c5d6bd743351afe1e6798b5ce5632749c5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/hostess/blobs/sha256:d9161d0f8c9609bbbca83aaf95f6042c28f71e376d7af4b66d119d8a3d68b184
-  linux_amd64: https://ghcr.io/v2/homebrew/core/hostess/blobs/sha256:c0b57a734d8f4d98281726dfa821ff8b2dac02cfdfcd2349000257bdaf614cd6
-  linux_arm64: https://ghcr.io/v2/homebrew/core/hostess/blobs/sha256:12cd00ad6a0eee2e772ea60131eb700fff31d6c6484b6c565347c99f386fae10
-sha256:
-  darwin_arm64: 421dcd7d0df30a8b2d781558f9b8e5c5d6bd743351afe1e6798b5ce5632749c5
-  darwin_amd64: d9161d0f8c9609bbbca83aaf95f6042c28f71e376d7af4b66d119d8a3d68b184
-  linux_amd64: c0b57a734d8f4d98281726dfa821ff8b2dac02cfdfcd2349000257bdaf614cd6
-  linux_arm64: 12cd00ad6a0eee2e772ea60131eb700fff31d6c6484b6c565347c99f386fae10
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/hostess/blobs/sha256:421dcd7d0df30a8b2d781558f9b8e5c5d6bd743351afe1e6798b5ce5632749c5
+    sha256: 421dcd7d0df30a8b2d781558f9b8e5c5d6bd743351afe1e6798b5ce5632749c5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/hostess/blobs/sha256:d9161d0f8c9609bbbca83aaf95f6042c28f71e376d7af4b66d119d8a3d68b184
+    sha256: d9161d0f8c9609bbbca83aaf95f6042c28f71e376d7af4b66d119d8a3d68b184
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/hostess/blobs/sha256:c0b57a734d8f4d98281726dfa821ff8b2dac02cfdfcd2349000257bdaf614cd6
+    sha256: c0b57a734d8f4d98281726dfa821ff8b2dac02cfdfcd2349000257bdaf614cd6
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/hostess/blobs/sha256:12cd00ad6a0eee2e772ea60131eb700fff31d6c6484b6c565347c99f386fae10
+    sha256: 12cd00ad6a0eee2e772ea60131eb700fff31d6c6484b6c565347c99f386fae10
+source:
+  url: https://github.com/cbednarski/hostess/archive/refs/tags/v0.5.2.tar.gz
+  sha256: ece52d72e9e886e5cc877379b94c7d8fe6ba5e22ab823ef41b66015e5326da87
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

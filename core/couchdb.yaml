@@ -3,16 +3,22 @@ version: 3.5.1
 description: Apache CouchDB database server
 homepage: https://couchdb.apache.org/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/couchdb/blobs/sha256:b82b5b5a4b8eb3288a1a4fae6c95c275580ea9559f1caaebd287a06584208b21
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/couchdb/blobs/sha256:6829502be2b2ef5a4caabeb6f6471838e7125f3cc1b0d44625025faaac4d24cb
-  linux_amd64: https://ghcr.io/v2/homebrew/core/couchdb/blobs/sha256:ed51cd3f5e7a3362173412c76b84393a68855bfec5b01dc68a9bc3513b559236
-  linux_arm64: https://ghcr.io/v2/homebrew/core/couchdb/blobs/sha256:b5a37c144e35ca34649860426938a992fb8e84a97c254da671508b2d648bf4ca
-sha256:
-  darwin_arm64: b82b5b5a4b8eb3288a1a4fae6c95c275580ea9559f1caaebd287a06584208b21
-  darwin_amd64: 6829502be2b2ef5a4caabeb6f6471838e7125f3cc1b0d44625025faaac4d24cb
-  linux_amd64: ed51cd3f5e7a3362173412c76b84393a68855bfec5b01dc68a9bc3513b559236
-  linux_arm64: b5a37c144e35ca34649860426938a992fb8e84a97c254da671508b2d648bf4ca
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/couchdb/blobs/sha256:b82b5b5a4b8eb3288a1a4fae6c95c275580ea9559f1caaebd287a06584208b21
+    sha256: b82b5b5a4b8eb3288a1a4fae6c95c275580ea9559f1caaebd287a06584208b21
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/couchdb/blobs/sha256:6829502be2b2ef5a4caabeb6f6471838e7125f3cc1b0d44625025faaac4d24cb
+    sha256: 6829502be2b2ef5a4caabeb6f6471838e7125f3cc1b0d44625025faaac4d24cb
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/couchdb/blobs/sha256:ed51cd3f5e7a3362173412c76b84393a68855bfec5b01dc68a9bc3513b559236
+    sha256: ed51cd3f5e7a3362173412c76b84393a68855bfec5b01dc68a9bc3513b559236
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/couchdb/blobs/sha256:b5a37c144e35ca34649860426938a992fb8e84a97c254da671508b2d648bf4ca
+    sha256: b5a37c144e35ca34649860426938a992fb8e84a97c254da671508b2d648bf4ca
+source:
+  url: https://www.apache.org/dyn/closer.lua?path=couchdb/source/3.5.1/apache-couchdb-3.5.1.tar.gz
+  sha256: c22cf31d6d91a3f5aa04f0cad493babdc723213494cb5e6170a507d359c50136
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,14 @@ install:
 dependencies:
   - icu4c@78
   - openssl@3
+build_dependencies:
+  - autoconf
+  - autoconf-archive
+  - automake
+  - erlang
+  - libtool
+  - pkgconf
+linux_dependencies:
+  - icu4c@78
+  - openssl@3
+  - zlib-ng-compat

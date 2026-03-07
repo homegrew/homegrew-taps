@@ -3,12 +3,16 @@ version: 0.19
 description: Function graph tracer for C/C++/Rust
 homepage: https://uftrace.github.io/slide/
 license: GPL-2.0-only
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/uftrace/blobs/sha256:2b2940e30ccba1e5aa78ec4e0428abfa4e7ffabf6949a4e38c20fefb75fae78c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/uftrace/blobs/sha256:474888f226426228396ec21e4549c176b1132e17f71e6faf906211f34571e7dc
-sha256:
-  linux_amd64: 2b2940e30ccba1e5aa78ec4e0428abfa4e7ffabf6949a4e38c20fefb75fae78c
-  linux_arm64: 474888f226426228396ec21e4549c176b1132e17f71e6faf906211f34571e7dc
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/uftrace/blobs/sha256:2b2940e30ccba1e5aa78ec4e0428abfa4e7ffabf6949a4e38c20fefb75fae78c
+    sha256: 2b2940e30ccba1e5aa78ec4e0428abfa4e7ffabf6949a4e38c20fefb75fae78c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/uftrace/blobs/sha256:474888f226426228396ec21e4549c176b1132e17f71e6faf906211f34571e7dc
+    sha256: 474888f226426228396ec21e4549c176b1132e17f71e6faf906211f34571e7dc
+source:
+  url: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+  sha256: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
 install:
   type: archive
   format: tar.gz
@@ -20,3 +24,6 @@ dependencies:
   - luajit
   - ncurses
   - python@3.14
+build_dependencies:
+  - pandoc
+  - pkgconf

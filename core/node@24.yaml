@@ -3,16 +3,22 @@ version: 24.14.0
 description: Open-source, cross-platform JavaScript runtime environment
 homepage: https://nodejs.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:4ab56411492a2b11fc044f60beecace8e8e4f7d3b22f8797de643b8a916fec1a
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:e6bc37612f20fe6ebba94cefd75290dd491f8d83465714f53283c6f6cb342965
-  linux_amd64: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:ca2790b3946db40e8efc36be13cfbe72fd59b8e5bc81a2fc760f22d6c62c8eba
-  linux_arm64: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:6f8fdca75eaf9fa19a183ac527c8524559f9afa5367750516e44664b44dc585a
-sha256:
-  darwin_arm64: 4ab56411492a2b11fc044f60beecace8e8e4f7d3b22f8797de643b8a916fec1a
-  darwin_amd64: e6bc37612f20fe6ebba94cefd75290dd491f8d83465714f53283c6f6cb342965
-  linux_amd64: ca2790b3946db40e8efc36be13cfbe72fd59b8e5bc81a2fc760f22d6c62c8eba
-  linux_arm64: 6f8fdca75eaf9fa19a183ac527c8524559f9afa5367750516e44664b44dc585a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:4ab56411492a2b11fc044f60beecace8e8e4f7d3b22f8797de643b8a916fec1a
+    sha256: 4ab56411492a2b11fc044f60beecace8e8e4f7d3b22f8797de643b8a916fec1a
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:e6bc37612f20fe6ebba94cefd75290dd491f8d83465714f53283c6f6cb342965
+    sha256: e6bc37612f20fe6ebba94cefd75290dd491f8d83465714f53283c6f6cb342965
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:ca2790b3946db40e8efc36be13cfbe72fd59b8e5bc81a2fc760f22d6c62c8eba
+    sha256: ca2790b3946db40e8efc36be13cfbe72fd59b8e5bc81a2fc760f22d6c62c8eba
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:6f8fdca75eaf9fa19a183ac527c8524559f9afa5367750516e44664b44dc585a
+    sha256: 6f8fdca75eaf9fa19a183ac527c8524559f9afa5367750516e44664b44dc585a
+source:
+  url: https://nodejs.org/dist/v24.14.0/node-v24.14.0.tar.xz
+  sha256: 9fe025ef4028aba95d16e7810518bf4a5e8abfb0bdc07d8a3fdbb0afd538d77f
 install:
   type: archive
   format: tar.gz
@@ -30,5 +36,23 @@ dependencies:
   - simdjson
   - sqlite
   - uvwasi
+  - zstd
+build_dependencies:
+  - pkgconf
+  - python@3.13
+linux_dependencies:
+  - brotli
+  - c-ares
+  - hdrhistogram_c
+  - icu4c@78
+  - libnghttp2
+  - libnghttp3
+  - libngtcp2
+  - libuv
+  - openssl@3
+  - simdjson
+  - sqlite
+  - uvwasi
+  - zlib-ng-compat
   - zstd
 keg_only: true

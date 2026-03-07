@@ -3,16 +3,22 @@ version: 5.3.6
 description: Command-line operators for netCDF and HDF files
 homepage: https://nco.sourceforge.net/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/nco/blobs/sha256:d15e2ce209eb6281782c41ac706b63aafc4a3cc29cdbf22516b59799967a277b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/nco/blobs/sha256:2930c77c0a5e129368d949d13a9796f3a29e4136aa1c159ba3a2703b5b4a8cef
-  linux_amd64: https://ghcr.io/v2/homebrew/core/nco/blobs/sha256:8f12cd6d5663148d7083697471a466796329af3a63ed32d678d712aa27bcfe33
-  linux_arm64: https://ghcr.io/v2/homebrew/core/nco/blobs/sha256:7275ad31456ed3930361f0340f7e06e5962e22ff405ce6393864662bd0194431
-sha256:
-  darwin_arm64: d15e2ce209eb6281782c41ac706b63aafc4a3cc29cdbf22516b59799967a277b
-  darwin_amd64: 2930c77c0a5e129368d949d13a9796f3a29e4136aa1c159ba3a2703b5b4a8cef
-  linux_amd64: 8f12cd6d5663148d7083697471a466796329af3a63ed32d678d712aa27bcfe33
-  linux_arm64: 7275ad31456ed3930361f0340f7e06e5962e22ff405ce6393864662bd0194431
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nco/blobs/sha256:d15e2ce209eb6281782c41ac706b63aafc4a3cc29cdbf22516b59799967a277b
+    sha256: d15e2ce209eb6281782c41ac706b63aafc4a3cc29cdbf22516b59799967a277b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nco/blobs/sha256:2930c77c0a5e129368d949d13a9796f3a29e4136aa1c159ba3a2703b5b4a8cef
+    sha256: 2930c77c0a5e129368d949d13a9796f3a29e4136aa1c159ba3a2703b5b4a8cef
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nco/blobs/sha256:8f12cd6d5663148d7083697471a466796329af3a63ed32d678d712aa27bcfe33
+    sha256: 8f12cd6d5663148d7083697471a466796329af3a63ed32d678d712aa27bcfe33
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nco/blobs/sha256:7275ad31456ed3930361f0340f7e06e5962e22ff405ce6393864662bd0194431
+    sha256: 7275ad31456ed3930361f0340f7e06e5962e22ff405ce6393864662bd0194431
+source:
+  url: https://github.com/nco/nco/archive/refs/tags/5.3.6.tar.gz
+  sha256: 70d64f461a0d5262274495ee1a9d85735aa3115281fdf01df4f946a919f9f6ae
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,11 @@ dependencies:
   - texinfo
   - udunits
   - gettext
+build_dependencies:
+  - gettext
+  - openjdk
+linux_dependencies:
+  - gsl
+  - netcdf
+  - texinfo
+  - udunits

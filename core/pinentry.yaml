@@ -3,16 +3,22 @@ version: 1.3.2
 description: Passphrase entry dialog utilizing the Assuan protocol
 homepage: https://www.gnupg.org/related_software/pinentry/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pinentry/blobs/sha256:8db428e52232580a5acf1da5a370c39c425e5320a28e967ae091f1c82596b50a
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pinentry/blobs/sha256:d0efed8b2727ae08821905faaae114946dc6ca476acc9e64f05b9d54923ec965
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pinentry/blobs/sha256:92da639e8c37468025b9464abc36f6b15d13a2a096c25c0c860450745c7d696d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pinentry/blobs/sha256:f5b34aeb57f37731401747e632485c6e5d8d6b60f1e025323558d7b0b3dac96e
-sha256:
-  darwin_arm64: 8db428e52232580a5acf1da5a370c39c425e5320a28e967ae091f1c82596b50a
-  darwin_amd64: d0efed8b2727ae08821905faaae114946dc6ca476acc9e64f05b9d54923ec965
-  linux_amd64: 92da639e8c37468025b9464abc36f6b15d13a2a096c25c0c860450745c7d696d
-  linux_arm64: f5b34aeb57f37731401747e632485c6e5d8d6b60f1e025323558d7b0b3dac96e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pinentry/blobs/sha256:8db428e52232580a5acf1da5a370c39c425e5320a28e967ae091f1c82596b50a
+    sha256: 8db428e52232580a5acf1da5a370c39c425e5320a28e967ae091f1c82596b50a
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pinentry/blobs/sha256:d0efed8b2727ae08821905faaae114946dc6ca476acc9e64f05b9d54923ec965
+    sha256: d0efed8b2727ae08821905faaae114946dc6ca476acc9e64f05b9d54923ec965
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pinentry/blobs/sha256:92da639e8c37468025b9464abc36f6b15d13a2a096c25c0c860450745c7d696d
+    sha256: 92da639e8c37468025b9464abc36f6b15d13a2a096c25c0c860450745c7d696d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pinentry/blobs/sha256:f5b34aeb57f37731401747e632485c6e5d8d6b60f1e025323558d7b0b3dac96e
+    sha256: f5b34aeb57f37731401747e632485c6e5d8d6b60f1e025323558d7b0b3dac96e
+source:
+  url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.3.2.tar.bz2
+  sha256: 8e986ed88561b4da6e9efe0c54fa4ca8923035c99264df0b0464497c5fb94e9e
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,10 @@ install:
 dependencies:
   - libassuan
   - libgpg-error
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - glib
+  - libassuan
+  - libgpg-error
+  - libsecret

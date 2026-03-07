@@ -3,17 +3,25 @@ version: 0.61.0
 description: Linter for Terraform files
 homepage: https://github.com/terraform-linters/tflint
 license: MPL-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tflint/blobs/sha256:74880fb58c8251cc4cef72ddf8bfdb4eee0910c5d9f480f9c8bbf796c7bd2564
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tflint/blobs/sha256:19ef66af3e849610ac2664876527efe4783457d8ec64d61d373963aa51204da0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tflint/blobs/sha256:14a28d44e653de43ef61c1a5b9c041c612aa1833965a9767af85d49b5fcfb492
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tflint/blobs/sha256:d757d8cce83666f2715232cf720dff1036cd5861081995f9463e660b5c9bdcf2
-sha256:
-  darwin_arm64: 74880fb58c8251cc4cef72ddf8bfdb4eee0910c5d9f480f9c8bbf796c7bd2564
-  darwin_amd64: 19ef66af3e849610ac2664876527efe4783457d8ec64d61d373963aa51204da0
-  linux_amd64: 14a28d44e653de43ef61c1a5b9c041c612aa1833965a9767af85d49b5fcfb492
-  linux_arm64: d757d8cce83666f2715232cf720dff1036cd5861081995f9463e660b5c9bdcf2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tflint/blobs/sha256:74880fb58c8251cc4cef72ddf8bfdb4eee0910c5d9f480f9c8bbf796c7bd2564
+    sha256: 74880fb58c8251cc4cef72ddf8bfdb4eee0910c5d9f480f9c8bbf796c7bd2564
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tflint/blobs/sha256:19ef66af3e849610ac2664876527efe4783457d8ec64d61d373963aa51204da0
+    sha256: 19ef66af3e849610ac2664876527efe4783457d8ec64d61d373963aa51204da0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tflint/blobs/sha256:14a28d44e653de43ef61c1a5b9c041c612aa1833965a9767af85d49b5fcfb492
+    sha256: 14a28d44e653de43ef61c1a5b9c041c612aa1833965a9767af85d49b5fcfb492
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tflint/blobs/sha256:d757d8cce83666f2715232cf720dff1036cd5861081995f9463e660b5c9bdcf2
+    sha256: d757d8cce83666f2715232cf720dff1036cd5861081995f9463e660b5c9bdcf2
+source:
+  url: https://github.com/terraform-linters/tflint/archive/refs/tags/v0.61.0.tar.gz
+  sha256: d99c9eb3003375a4220607e1b479c9292450fd2c576549b1887f1c7259730e17
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

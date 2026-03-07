@@ -3,16 +3,22 @@ version: 2.3.0
 description: For live and historical BGP data analysis
 homepage: https://bgpstream.caida.org/
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bgpstream/blobs/sha256:c060368caac64c91df708d5b62f1e5ff276d94447b98c59cd168a0158890d1e2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bgpstream/blobs/sha256:a4aef360bb939d7ed5f7eef8e25248480b23af24914d8493af34fd9dc64478b4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bgpstream/blobs/sha256:bb6547761ec1c1a5b8bd0c71899bc0c7acf4316c2d9c109b7ac66754c26d6341
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bgpstream/blobs/sha256:87a539b41d619711093bbd3fb76e30d78feaa1d4ff134f26afe6e0ac15263b17
-sha256:
-  darwin_arm64: c060368caac64c91df708d5b62f1e5ff276d94447b98c59cd168a0158890d1e2
-  darwin_amd64: a4aef360bb939d7ed5f7eef8e25248480b23af24914d8493af34fd9dc64478b4
-  linux_amd64: bb6547761ec1c1a5b8bd0c71899bc0c7acf4316c2d9c109b7ac66754c26d6341
-  linux_arm64: 87a539b41d619711093bbd3fb76e30d78feaa1d4ff134f26afe6e0ac15263b17
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bgpstream/blobs/sha256:c060368caac64c91df708d5b62f1e5ff276d94447b98c59cd168a0158890d1e2
+    sha256: c060368caac64c91df708d5b62f1e5ff276d94447b98c59cd168a0158890d1e2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bgpstream/blobs/sha256:a4aef360bb939d7ed5f7eef8e25248480b23af24914d8493af34fd9dc64478b4
+    sha256: a4aef360bb939d7ed5f7eef8e25248480b23af24914d8493af34fd9dc64478b4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bgpstream/blobs/sha256:bb6547761ec1c1a5b8bd0c71899bc0c7acf4316c2d9c109b7ac66754c26d6341
+    sha256: bb6547761ec1c1a5b8bd0c71899bc0c7acf4316c2d9c109b7ac66754c26d6341
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bgpstream/blobs/sha256:87a539b41d619711093bbd3fb76e30d78feaa1d4ff134f26afe6e0ac15263b17
+    sha256: 87a539b41d619711093bbd3fb76e30d78feaa1d4ff134f26afe6e0ac15263b17
+source:
+  url: https://github.com/CAIDA/libbgpstream/releases/download/v2.3.0/libbgpstream-2.3.0.tar.gz
+  sha256: c6be2c761ed216edc23a85409a5de3639172bc42db115c8574c2108ace7481a4
 install:
   type: archive
   format: tar.gz

@@ -3,16 +3,22 @@ version: 0.44.2
 description: GObject based library that implements a reusable plugin system
 homepage: https://keep.imfreedom.org/gplugin/gplugin/
 license: LGPL-2.0-or-later AND GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gplugin/blobs/sha256:1467d4fde4bc7c78346be7deb8b19f52e9156a61e8ea10b1a4fa039655b91b5d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gplugin/blobs/sha256:953a1cb35fa6b589eb49ea1f4edb1215589dccf2300aaa1f2e03d8cd1a70106f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gplugin/blobs/sha256:73f8fcc1f1394eebe3ca2507eb7f23cdce65af4138c7007042ff4dcbd2257dfa
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gplugin/blobs/sha256:97dc4205707191b92658c1f032bd9ab0da11e22c2ca01595a21c09cac788f0b3
-sha256:
-  darwin_arm64: 1467d4fde4bc7c78346be7deb8b19f52e9156a61e8ea10b1a4fa039655b91b5d
-  darwin_amd64: 953a1cb35fa6b589eb49ea1f4edb1215589dccf2300aaa1f2e03d8cd1a70106f
-  linux_amd64: 73f8fcc1f1394eebe3ca2507eb7f23cdce65af4138c7007042ff4dcbd2257dfa
-  linux_arm64: 97dc4205707191b92658c1f032bd9ab0da11e22c2ca01595a21c09cac788f0b3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gplugin/blobs/sha256:1467d4fde4bc7c78346be7deb8b19f52e9156a61e8ea10b1a4fa039655b91b5d
+    sha256: 1467d4fde4bc7c78346be7deb8b19f52e9156a61e8ea10b1a4fa039655b91b5d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gplugin/blobs/sha256:953a1cb35fa6b589eb49ea1f4edb1215589dccf2300aaa1f2e03d8cd1a70106f
+    sha256: 953a1cb35fa6b589eb49ea1f4edb1215589dccf2300aaa1f2e03d8cd1a70106f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gplugin/blobs/sha256:73f8fcc1f1394eebe3ca2507eb7f23cdce65af4138c7007042ff4dcbd2257dfa
+    sha256: 73f8fcc1f1394eebe3ca2507eb7f23cdce65af4138c7007042ff4dcbd2257dfa
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gplugin/blobs/sha256:97dc4205707191b92658c1f032bd9ab0da11e22c2ca01595a21c09cac788f0b3
+    sha256: 97dc4205707191b92658c1f032bd9ab0da11e22c2ca01595a21c09cac788f0b3
+source:
+  url: https://downloads.sourceforge.net/project/pidgin/gplugin/0.44.2/gplugin-0.44.2.tar.xz
+  sha256: aea244e1add9628b50ec042c54cf93803f4577f8f142678f09b91fd4c0b20f72
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,15 @@ dependencies:
   - pygobject3
   - python@3.14
   - gettext
+build_dependencies:
+  - gobject-introspection
+  - help2man
+  - meson
+  - ninja
+  - pkgconf
+  - vala
+linux_dependencies:
+  - glib
+  - gtk4
+  - pygobject3
+  - python@3.14

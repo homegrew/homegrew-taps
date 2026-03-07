@@ -3,16 +3,22 @@ version: 1.2.2
 description: X resource database utility
 homepage: https://gitlab.freedesktop.org/xorg/app/xrdb
 license: MIT-open-group
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/xrdb/blobs/sha256:c4b0e238c08eae84fdc82bf3f4cfbb3ef02301126c875565a50ac269fe69b170
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/xrdb/blobs/sha256:65f65a99c1a3f04506cdf86fcfbbf3ab49da907cbd60b62351ba9a9ef200290e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/xrdb/blobs/sha256:b387dbe59b86aad4b9e297ed43cb2bfc07b7a5c893fa22cf36e8e8712cb722fa
-  linux_arm64: https://ghcr.io/v2/homebrew/core/xrdb/blobs/sha256:428c35b84b33e5a752e8804297b8d6be1db36ca40068018d9db68d8bb18aad8a
-sha256:
-  darwin_arm64: c4b0e238c08eae84fdc82bf3f4cfbb3ef02301126c875565a50ac269fe69b170
-  darwin_amd64: 65f65a99c1a3f04506cdf86fcfbbf3ab49da907cbd60b62351ba9a9ef200290e
-  linux_amd64: b387dbe59b86aad4b9e297ed43cb2bfc07b7a5c893fa22cf36e8e8712cb722fa
-  linux_arm64: 428c35b84b33e5a752e8804297b8d6be1db36ca40068018d9db68d8bb18aad8a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xrdb/blobs/sha256:c4b0e238c08eae84fdc82bf3f4cfbb3ef02301126c875565a50ac269fe69b170
+    sha256: c4b0e238c08eae84fdc82bf3f4cfbb3ef02301126c875565a50ac269fe69b170
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xrdb/blobs/sha256:65f65a99c1a3f04506cdf86fcfbbf3ab49da907cbd60b62351ba9a9ef200290e
+    sha256: 65f65a99c1a3f04506cdf86fcfbbf3ab49da907cbd60b62351ba9a9ef200290e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xrdb/blobs/sha256:b387dbe59b86aad4b9e297ed43cb2bfc07b7a5c893fa22cf36e8e8712cb722fa
+    sha256: b387dbe59b86aad4b9e297ed43cb2bfc07b7a5c893fa22cf36e8e8712cb722fa
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xrdb/blobs/sha256:428c35b84b33e5a752e8804297b8d6be1db36ca40068018d9db68d8bb18aad8a
+    sha256: 428c35b84b33e5a752e8804297b8d6be1db36ca40068018d9db68d8bb18aad8a
+source:
+  url: https://www.x.org/releases/individual/app/xrdb-1.2.2.tar.xz
+  sha256: 31f5fcab231b38f255b00b066cf7ea3b496df712c9eb2d0d50c670b63e5033f4
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - libx11
   - libxmu
+build_dependencies:
+  - pkgconf

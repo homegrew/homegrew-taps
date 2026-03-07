@@ -3,19 +3,27 @@ version: 1.15.0
 description: Unofficial Bitwarden CLI client
 homepage: https://github.com/doy/rbw
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/rbw/blobs/sha256:9a88f350032d2483d232eabbc3e46c8fbc60e085a5ed12247f89c035a2b72baf
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/rbw/blobs/sha256:4f584f865654725385535191270b91c45edf332168d1c92ca8be3675b46f8816
-  linux_amd64: https://ghcr.io/v2/homebrew/core/rbw/blobs/sha256:8a6d35509dc98788cf077746b87916d4e0640cb902a517bffc66196c80622989
-  linux_arm64: https://ghcr.io/v2/homebrew/core/rbw/blobs/sha256:51122b2935b55e07ecfcacac075b53b22f9959476d4b236f925608d83c9aa1c3
-sha256:
-  darwin_arm64: 9a88f350032d2483d232eabbc3e46c8fbc60e085a5ed12247f89c035a2b72baf
-  darwin_amd64: 4f584f865654725385535191270b91c45edf332168d1c92ca8be3675b46f8816
-  linux_amd64: 8a6d35509dc98788cf077746b87916d4e0640cb902a517bffc66196c80622989
-  linux_arm64: 51122b2935b55e07ecfcacac075b53b22f9959476d4b236f925608d83c9aa1c3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rbw/blobs/sha256:9a88f350032d2483d232eabbc3e46c8fbc60e085a5ed12247f89c035a2b72baf
+    sha256: 9a88f350032d2483d232eabbc3e46c8fbc60e085a5ed12247f89c035a2b72baf
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rbw/blobs/sha256:4f584f865654725385535191270b91c45edf332168d1c92ca8be3675b46f8816
+    sha256: 4f584f865654725385535191270b91c45edf332168d1c92ca8be3675b46f8816
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rbw/blobs/sha256:8a6d35509dc98788cf077746b87916d4e0640cb902a517bffc66196c80622989
+    sha256: 8a6d35509dc98788cf077746b87916d4e0640cb902a517bffc66196c80622989
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rbw/blobs/sha256:51122b2935b55e07ecfcacac075b53b22f9959476d4b236f925608d83c9aa1c3
+    sha256: 51122b2935b55e07ecfcacac075b53b22f9959476d4b236f925608d83c9aa1c3
+source:
+  url: https://github.com/doy/rbw/archive/refs/tags/1.15.0.tar.gz
+  sha256: 660cfa4c727711665bef060046c28dd3924ca1e490fdc058d90d35372b2d2cf6
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - pinentry
+build_dependencies:
+  - rust

@@ -3,17 +3,27 @@ version: 0.23
 description: Automated testing framework
 homepage: https://github.com/freebsd/atf
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/atf/blobs/sha256:acbf43372e23b1ec798d9220e6035f76a8d42d61af90ab40c43b32dc90b22745
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/atf/blobs/sha256:9cd739eb6f0f1ec5c7a7718c66fea9ea8a3435ffd3506da93d60393f0bda5f0d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/atf/blobs/sha256:9e2c5311676f2350c618ba8b2092a67df2fa2300c1212d1f25bd70f4650ea934
-  linux_arm64: https://ghcr.io/v2/homebrew/core/atf/blobs/sha256:5b259959f57b981567bc83a2889401ef8224bc504e46428a62569cb3eebb054a
-sha256:
-  darwin_arm64: acbf43372e23b1ec798d9220e6035f76a8d42d61af90ab40c43b32dc90b22745
-  darwin_amd64: 9cd739eb6f0f1ec5c7a7718c66fea9ea8a3435ffd3506da93d60393f0bda5f0d
-  linux_amd64: 9e2c5311676f2350c618ba8b2092a67df2fa2300c1212d1f25bd70f4650ea934
-  linux_arm64: 5b259959f57b981567bc83a2889401ef8224bc504e46428a62569cb3eebb054a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/atf/blobs/sha256:acbf43372e23b1ec798d9220e6035f76a8d42d61af90ab40c43b32dc90b22745
+    sha256: acbf43372e23b1ec798d9220e6035f76a8d42d61af90ab40c43b32dc90b22745
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/atf/blobs/sha256:9cd739eb6f0f1ec5c7a7718c66fea9ea8a3435ffd3506da93d60393f0bda5f0d
+    sha256: 9cd739eb6f0f1ec5c7a7718c66fea9ea8a3435ffd3506da93d60393f0bda5f0d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/atf/blobs/sha256:9e2c5311676f2350c618ba8b2092a67df2fa2300c1212d1f25bd70f4650ea934
+    sha256: 9e2c5311676f2350c618ba8b2092a67df2fa2300c1212d1f25bd70f4650ea934
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/atf/blobs/sha256:5b259959f57b981567bc83a2889401ef8224bc504e46428a62569cb3eebb054a
+    sha256: 5b259959f57b981567bc83a2889401ef8224bc504e46428a62569cb3eebb054a
+source:
+  url: https://github.com/freebsd/atf/releases/download/atf-0.23/atf-0.23.tar.gz
+  sha256: a64e2427d021297f25b3f2e1798f8ec4dc3061ffb01a1cd3f66cc4cee486b10f
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool

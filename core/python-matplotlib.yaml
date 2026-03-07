@@ -3,16 +3,22 @@ version: 3.10.8
 description: Python library for creating static, animated, and interactive visualizations
 homepage: https://matplotlib.org/
 license: PSF-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/python-matplotlib/blobs/sha256:3fcf17aae7bce1bc0f60593d06da0262bdbe8d47ab9e052fc89d9d8529272e4b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/python-matplotlib/blobs/sha256:6f2a62c931e3a70c3234a2dab29b6cb72fe834cfd1c72338a30cd7d8c5c0d4f3
-  linux_amd64: https://ghcr.io/v2/homebrew/core/python-matplotlib/blobs/sha256:26b228caf6e0ddc4f67b283a9598982c6bbae482c6026e7012c9b579ae0e3135
-  linux_arm64: https://ghcr.io/v2/homebrew/core/python-matplotlib/blobs/sha256:cc423cb522c0dc6746a2a4aab561d56893cbde080a78e28a6333b1957d090997
-sha256:
-  darwin_arm64: 3fcf17aae7bce1bc0f60593d06da0262bdbe8d47ab9e052fc89d9d8529272e4b
-  darwin_amd64: 6f2a62c931e3a70c3234a2dab29b6cb72fe834cfd1c72338a30cd7d8c5c0d4f3
-  linux_amd64: 26b228caf6e0ddc4f67b283a9598982c6bbae482c6026e7012c9b579ae0e3135
-  linux_arm64: cc423cb522c0dc6746a2a4aab561d56893cbde080a78e28a6333b1957d090997
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/python-matplotlib/blobs/sha256:3fcf17aae7bce1bc0f60593d06da0262bdbe8d47ab9e052fc89d9d8529272e4b
+    sha256: 3fcf17aae7bce1bc0f60593d06da0262bdbe8d47ab9e052fc89d9d8529272e4b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/python-matplotlib/blobs/sha256:6f2a62c931e3a70c3234a2dab29b6cb72fe834cfd1c72338a30cd7d8c5c0d4f3
+    sha256: 6f2a62c931e3a70c3234a2dab29b6cb72fe834cfd1c72338a30cd7d8c5c0d4f3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/python-matplotlib/blobs/sha256:26b228caf6e0ddc4f67b283a9598982c6bbae482c6026e7012c9b579ae0e3135
+    sha256: 26b228caf6e0ddc4f67b283a9598982c6bbae482c6026e7012c9b579ae0e3135
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/python-matplotlib/blobs/sha256:cc423cb522c0dc6746a2a4aab561d56893cbde080a78e28a6333b1957d090997
+    sha256: cc423cb522c0dc6746a2a4aab561d56893cbde080a78e28a6333b1957d090997
+source:
+  url: https://files.pythonhosted.org/packages/8a/76/d3c6e3a13fe484ebe7718d14e269c9569c4eb0020a968a327acb3b9a8fe6/matplotlib-3.10.8.tar.gz
+  sha256: 2299372c19d56bcd35cf05a2738308758d32b9eaed2371898d8f5bd33f084aa3
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,8 @@ dependencies:
   - pillow
   - python@3.14
   - qhull
+build_dependencies:
+  - cmake
+  - meson
+  - ninja
+  - pkgconf

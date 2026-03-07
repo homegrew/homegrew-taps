@@ -3,16 +3,22 @@ version: 2.5.3
 description: Real-time software synthesizer based on the SoundFont 2 specs
 homepage: https://www.fluidsynth.org
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:969995c79b2651580bac91d62795022084354c975a3ecd6ca17e20f0854061b5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:b784773a748dcc50b884c9c7e71b054900a0026cd028f7a10234d611d5a973e9
-  linux_amd64: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:d84d702848cf52f6be9fbfb74e5083815ab75c3132c262d24ece015586b559fd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:516b90be09a28312b40090a818ee74122374af18f33cab7c2fb2efb98562e67c
-sha256:
-  darwin_arm64: 969995c79b2651580bac91d62795022084354c975a3ecd6ca17e20f0854061b5
-  darwin_amd64: b784773a748dcc50b884c9c7e71b054900a0026cd028f7a10234d611d5a973e9
-  linux_amd64: d84d702848cf52f6be9fbfb74e5083815ab75c3132c262d24ece015586b559fd
-  linux_arm64: 516b90be09a28312b40090a818ee74122374af18f33cab7c2fb2efb98562e67c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:969995c79b2651580bac91d62795022084354c975a3ecd6ca17e20f0854061b5
+    sha256: 969995c79b2651580bac91d62795022084354c975a3ecd6ca17e20f0854061b5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:b784773a748dcc50b884c9c7e71b054900a0026cd028f7a10234d611d5a973e9
+    sha256: b784773a748dcc50b884c9c7e71b054900a0026cd028f7a10234d611d5a973e9
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:d84d702848cf52f6be9fbfb74e5083815ab75c3132c262d24ece015586b559fd
+    sha256: d84d702848cf52f6be9fbfb74e5083815ab75c3132c262d24ece015586b559fd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:516b90be09a28312b40090a818ee74122374af18f33cab7c2fb2efb98562e67c
+    sha256: 516b90be09a28312b40090a818ee74122374af18f33cab7c2fb2efb98562e67c
+source:
+  url: https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.5.3.tar.gz
+  sha256: 6f247edfb4b91b927efc68c8884cec2ec345c8007afe6b59558cc52a67ef2517
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,14 @@ dependencies:
   - portaudio
   - readline
   - gettext
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - glib
+  - jack
+  - libsndfile
+  - portaudio
+  - readline
+  - systemd

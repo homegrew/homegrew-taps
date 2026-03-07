@@ -3,12 +3,16 @@ version: 1.6.3
 description: Linux key management utilities
 homepage: https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git
 license: GPL-2.0-or-later AND LGPL-2.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/keyutils/blobs/sha256:d5b06c4e38d2c4b7decb5b7bc0431b3416993231e5fa688950e4df83686a298d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/keyutils/blobs/sha256:569fc190618bdad81896e66145fe832b1d858644d19c87a59ce417158e0cea7e
-sha256:
-  linux_amd64: d5b06c4e38d2c4b7decb5b7bc0431b3416993231e5fa688950e4df83686a298d
-  linux_arm64: 569fc190618bdad81896e66145fe832b1d858644d19c87a59ce417158e0cea7e
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/keyutils/blobs/sha256:d5b06c4e38d2c4b7decb5b7bc0431b3416993231e5fa688950e4df83686a298d
+    sha256: d5b06c4e38d2c4b7decb5b7bc0431b3416993231e5fa688950e4df83686a298d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/keyutils/blobs/sha256:569fc190618bdad81896e66145fe832b1d858644d19c87a59ce417158e0cea7e
+    sha256: 569fc190618bdad81896e66145fe832b1d858644d19c87a59ce417158e0cea7e
+source:
+  url: https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/snapshot/keyutils-1.6.3.tar.gz
+  sha256: a61d5706136ae4c05bd48f86186bcfdbd88dd8bd5107e3e195c924cfc1b39bb4
 install:
   type: archive
   format: tar.gz

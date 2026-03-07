@@ -3,16 +3,22 @@ version: 5.15.2
 description: User interface for client/server workflow package
 homepage: https://ecflow.readthedocs.io
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ecflow-ui/blobs/sha256:783124d237f7b07ea06fe5cd6828b69021ecce5185da4e69b48d6036474d9ea8
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ecflow-ui/blobs/sha256:8be431024d8129fa85dfe0ec28ece627fbf2ffc79f96f78de9ef666e52cfb605
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ecflow-ui/blobs/sha256:6893632beaf5b01f0959efea3f36c6d321b7cb250d0fc821623c80888d438cb7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ecflow-ui/blobs/sha256:5e38a93221cfdac076a961880a7727a8f75a06e549dfdd7a544b17c5e71ece3a
-sha256:
-  darwin_arm64: 783124d237f7b07ea06fe5cd6828b69021ecce5185da4e69b48d6036474d9ea8
-  darwin_amd64: 8be431024d8129fa85dfe0ec28ece627fbf2ffc79f96f78de9ef666e52cfb605
-  linux_amd64: 6893632beaf5b01f0959efea3f36c6d321b7cb250d0fc821623c80888d438cb7
-  linux_arm64: 5e38a93221cfdac076a961880a7727a8f75a06e549dfdd7a544b17c5e71ece3a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ecflow-ui/blobs/sha256:783124d237f7b07ea06fe5cd6828b69021ecce5185da4e69b48d6036474d9ea8
+    sha256: 783124d237f7b07ea06fe5cd6828b69021ecce5185da4e69b48d6036474d9ea8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ecflow-ui/blobs/sha256:8be431024d8129fa85dfe0ec28ece627fbf2ffc79f96f78de9ef666e52cfb605
+    sha256: 8be431024d8129fa85dfe0ec28ece627fbf2ffc79f96f78de9ef666e52cfb605
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ecflow-ui/blobs/sha256:6893632beaf5b01f0959efea3f36c6d321b7cb250d0fc821623c80888d438cb7
+    sha256: 6893632beaf5b01f0959efea3f36c6d321b7cb250d0fc821623c80888d438cb7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ecflow-ui/blobs/sha256:5e38a93221cfdac076a961880a7727a8f75a06e549dfdd7a544b17c5e71ece3a
+    sha256: 5e38a93221cfdac076a961880a7727a8f75a06e549dfdd7a544b17c5e71ece3a
+source:
+  url: https://confluence.ecmwf.int/download/attachments/8650755/ecFlow-5.15.2-Source.tar.gz
+  sha256: 6e4738167a17b7a8787e4084183b30bd7170a0d150e85eebedb0cfe46e87d856
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,13 @@ dependencies:
   - qtbase
   - qtcharts
   - qtsvg
+build_dependencies:
+  - boost
+  - cmake
+linux_dependencies:
+  - openssl@3
+  - qt5compat
+  - qtbase
+  - qtcharts
+  - qtsvg
+  - zlib-ng-compat

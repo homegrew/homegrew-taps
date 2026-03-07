@@ -3,16 +3,22 @@ version: 3.7.0
 description: Simple, lightweight email-client
 homepage: https://sylpheed.sraoss.jp/en/
 license: GPL-2.0-or-later AND LGPL-2.1-or-later AND MIT AND LicenseRef-Homebrew-public-domain
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/sylpheed/blobs/sha256:904952d738df66659a845da6b43e2489e4b8c65ac8c6680e999855c5f4460670
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/sylpheed/blobs/sha256:a6994106aad038ce6a2ab01a9618f7d273b0c934bc7951b41025dfc104f4fc7e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/sylpheed/blobs/sha256:822cdb64a23e28873bc5171be5527d324ac69ab52f3c58f423df3ff90b94bc4a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/sylpheed/blobs/sha256:75272179dc0352d0181a1617efa6cd7f00ee093145f43d15a327f1baab17e3c9
-sha256:
-  darwin_arm64: 904952d738df66659a845da6b43e2489e4b8c65ac8c6680e999855c5f4460670
-  darwin_amd64: a6994106aad038ce6a2ab01a9618f7d273b0c934bc7951b41025dfc104f4fc7e
-  linux_amd64: 822cdb64a23e28873bc5171be5527d324ac69ab52f3c58f423df3ff90b94bc4a
-  linux_arm64: 75272179dc0352d0181a1617efa6cd7f00ee093145f43d15a327f1baab17e3c9
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sylpheed/blobs/sha256:904952d738df66659a845da6b43e2489e4b8c65ac8c6680e999855c5f4460670
+    sha256: 904952d738df66659a845da6b43e2489e4b8c65ac8c6680e999855c5f4460670
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sylpheed/blobs/sha256:a6994106aad038ce6a2ab01a9618f7d273b0c934bc7951b41025dfc104f4fc7e
+    sha256: a6994106aad038ce6a2ab01a9618f7d273b0c934bc7951b41025dfc104f4fc7e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sylpheed/blobs/sha256:822cdb64a23e28873bc5171be5527d324ac69ab52f3c58f423df3ff90b94bc4a
+    sha256: 822cdb64a23e28873bc5171be5527d324ac69ab52f3c58f423df3ff90b94bc4a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sylpheed/blobs/sha256:75272179dc0352d0181a1617efa6cd7f00ee093145f43d15a327f1baab17e3c9
+    sha256: 75272179dc0352d0181a1617efa6cd7f00ee093145f43d15a327f1baab17e3c9
+source:
+  url: https://sylpheed.sraoss.jp/sylpheed/v3.7/sylpheed-3.7.0.tar.bz2
+  sha256: eb23e6bda2c02095dfb0130668cf7c75d1f256904e3a7337815b4da5cb72eb04
 install:
   type: archive
   format: tar.gz
@@ -30,3 +36,13 @@ dependencies:
   - harfbuzz
   - libassuan
   - libgpg-error
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - cairo
+  - gdk-pixbuf
+  - glib
+  - gpgme
+  - gtk+
+  - openssl@3
+  - pango

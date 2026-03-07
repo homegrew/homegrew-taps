@@ -3,16 +3,22 @@ version: 1.12.60
 description: GNOME Spreadsheet Application
 homepage: https://projects.gnome.org/gnumeric/
 license: GPL-3.0-only OR GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gnumeric/blobs/sha256:02e980a333f1147f76517adf6aef59f34d85d8e0ad5139e4d00bc726cc7bc27f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gnumeric/blobs/sha256:fbe5478953b752c3777bb6f782f69fe0d7905b7eae318aa6c97ec156ed3033b5
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gnumeric/blobs/sha256:758c3360118c9db83b015d1ff4713664ba68c50b48abcb122c906f5c80ad5fc5
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gnumeric/blobs/sha256:8bbb3ef361de7939d9e205eee5d13e361e529ee88cf0b1ce36eaa472fa420b6f
-sha256:
-  darwin_arm64: 02e980a333f1147f76517adf6aef59f34d85d8e0ad5139e4d00bc726cc7bc27f
-  darwin_amd64: fbe5478953b752c3777bb6f782f69fe0d7905b7eae318aa6c97ec156ed3033b5
-  linux_amd64: 758c3360118c9db83b015d1ff4713664ba68c50b48abcb122c906f5c80ad5fc5
-  linux_arm64: 8bbb3ef361de7939d9e205eee5d13e361e529ee88cf0b1ce36eaa472fa420b6f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gnumeric/blobs/sha256:02e980a333f1147f76517adf6aef59f34d85d8e0ad5139e4d00bc726cc7bc27f
+    sha256: 02e980a333f1147f76517adf6aef59f34d85d8e0ad5139e4d00bc726cc7bc27f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gnumeric/blobs/sha256:fbe5478953b752c3777bb6f782f69fe0d7905b7eae318aa6c97ec156ed3033b5
+    sha256: fbe5478953b752c3777bb6f782f69fe0d7905b7eae318aa6c97ec156ed3033b5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gnumeric/blobs/sha256:758c3360118c9db83b015d1ff4713664ba68c50b48abcb122c906f5c80ad5fc5
+    sha256: 758c3360118c9db83b015d1ff4713664ba68c50b48abcb122c906f5c80ad5fc5
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gnumeric/blobs/sha256:8bbb3ef361de7939d9e205eee5d13e361e529ee88cf0b1ce36eaa472fa420b6f
+    sha256: 8bbb3ef361de7939d9e205eee5d13e361e529ee88cf0b1ce36eaa472fa420b6f
+source:
+  url: https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.60.tar.xz
+  sha256: bb02feb286062805564438534e1fea459f97cebac8a090b1a7e47ca251e07467
 install:
   type: archive
   format: tar.gz
@@ -30,3 +36,20 @@ dependencies:
   - pango
   - gettext
   - harfbuzz
+build_dependencies:
+  - gettext
+  - intltool
+  - itstool
+  - pkgconf
+linux_dependencies:
+  - adwaita-icon-theme
+  - at-spi2-core
+  - cairo
+  - gdk-pixbuf
+  - glib
+  - goffice
+  - gtk+3
+  - libgsf
+  - libxml2
+  - pango
+  - zlib-ng-compat

@@ -3,16 +3,22 @@ version: 2.1.7
 description: Download/upload tool for popular file sharing websites
 homepage: https://github.com/mcrapet/plowshare
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/plowshare/blobs/sha256:66557c80ff43f15110e291740e2316392dc18ba4fb54dae5a15af57f5979e7db
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/plowshare/blobs/sha256:c209d74e947383bee551fb90c709fc46563ef924b69715b1dc5babdc5c033a51
-  linux_amd64: https://ghcr.io/v2/homebrew/core/plowshare/blobs/sha256:5fd6c57b4f4ca70158ec4b3b7849f0097fc57a83e70020f3dbf23dcd74ef9ab4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/plowshare/blobs/sha256:5fd6c57b4f4ca70158ec4b3b7849f0097fc57a83e70020f3dbf23dcd74ef9ab4
-sha256:
-  darwin_arm64: 66557c80ff43f15110e291740e2316392dc18ba4fb54dae5a15af57f5979e7db
-  darwin_amd64: c209d74e947383bee551fb90c709fc46563ef924b69715b1dc5babdc5c033a51
-  linux_amd64: 5fd6c57b4f4ca70158ec4b3b7849f0097fc57a83e70020f3dbf23dcd74ef9ab4
-  linux_arm64: 5fd6c57b4f4ca70158ec4b3b7849f0097fc57a83e70020f3dbf23dcd74ef9ab4
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/plowshare/blobs/sha256:66557c80ff43f15110e291740e2316392dc18ba4fb54dae5a15af57f5979e7db
+    sha256: 66557c80ff43f15110e291740e2316392dc18ba4fb54dae5a15af57f5979e7db
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/plowshare/blobs/sha256:c209d74e947383bee551fb90c709fc46563ef924b69715b1dc5babdc5c033a51
+    sha256: c209d74e947383bee551fb90c709fc46563ef924b69715b1dc5babdc5c033a51
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/plowshare/blobs/sha256:5fd6c57b4f4ca70158ec4b3b7849f0097fc57a83e70020f3dbf23dcd74ef9ab4
+    sha256: 5fd6c57b4f4ca70158ec4b3b7849f0097fc57a83e70020f3dbf23dcd74ef9ab4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/plowshare/blobs/sha256:5fd6c57b4f4ca70158ec4b3b7849f0097fc57a83e70020f3dbf23dcd74ef9ab4
+    sha256: 5fd6c57b4f4ca70158ec4b3b7849f0097fc57a83e70020f3dbf23dcd74ef9ab4
+source:
+  url: https://github.com/mcrapet/plowshare/archive/refs/tags/v2.1.7.tar.gz
+  sha256: c17d0cc1b3323f72b2c1a5b183a9fcef04e8bfc53c9679a4e1523642310d22ad
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,8 @@ dependencies:
   - bash
   - coreutils
   - gnu-sed
+linux_dependencies:
+  - feh
+  - libcaca
+  - recode
+  - spidermonkey

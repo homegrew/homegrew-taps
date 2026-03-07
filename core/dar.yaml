@@ -3,16 +3,22 @@ version: 2.8.3
 description: Backup directory tree and files
 homepage: http://dar.linux.free.fr/doc/index.html
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:a89b76d0eb86bed7773270b302be1078fb99ed4519c90ac1141c5d6e95d4a234
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:84e2a07f334e66aa5113cd80a65e790a44ed37a399c1896abf9eb1e05addd2c0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:b5ffd456fb6495fd271d8470c5ae099f9f00bfa6e0c81e0be69cb4428055fffe
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:ed9f4fa5b46976b874a30d54821f8074bccb8cdd89af87272eb99016a63778b2
-sha256:
-  darwin_arm64: a89b76d0eb86bed7773270b302be1078fb99ed4519c90ac1141c5d6e95d4a234
-  darwin_amd64: 84e2a07f334e66aa5113cd80a65e790a44ed37a399c1896abf9eb1e05addd2c0
-  linux_amd64: b5ffd456fb6495fd271d8470c5ae099f9f00bfa6e0c81e0be69cb4428055fffe
-  linux_arm64: ed9f4fa5b46976b874a30d54821f8074bccb8cdd89af87272eb99016a63778b2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:a89b76d0eb86bed7773270b302be1078fb99ed4519c90ac1141c5d6e95d4a234
+    sha256: a89b76d0eb86bed7773270b302be1078fb99ed4519c90ac1141c5d6e95d4a234
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:84e2a07f334e66aa5113cd80a65e790a44ed37a399c1896abf9eb1e05addd2c0
+    sha256: 84e2a07f334e66aa5113cd80a65e790a44ed37a399c1896abf9eb1e05addd2c0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:b5ffd456fb6495fd271d8470c5ae099f9f00bfa6e0c81e0be69cb4428055fffe
+    sha256: b5ffd456fb6495fd271d8470c5ae099f9f00bfa6e0c81e0be69cb4428055fffe
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:ed9f4fa5b46976b874a30d54821f8074bccb8cdd89af87272eb99016a63778b2
+    sha256: ed9f4fa5b46976b874a30d54821f8074bccb8cdd89af87272eb99016a63778b2
+source:
+  url: https://downloads.sourceforge.net/project/dar/dar/2.8.3/dar-2.8.3.tar.gz
+  sha256: 812648f4d85fa2fe63ddad811f1c392f02c8627b54f9a610a1b54f51fbd96512
 install:
   type: archive
   format: tar.gz
@@ -26,3 +32,12 @@ dependencies:
   - xz
   - zstd
   - gettext
+linux_dependencies:
+  - argon2
+  - libgcrypt
+  - libgpg-error
+  - lz4
+  - lzo
+  - xz
+  - zlib-ng-compat
+  - zstd

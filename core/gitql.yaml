@@ -3,17 +3,25 @@ version: 2.3.1
 description: Git query language
 homepage: https://github.com/filhodanuvem/gitql
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gitql/blobs/sha256:d618f75c432dbdc17d9bcfeeec547b258b34a1146de33c9f1da2d7c771992e59
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gitql/blobs/sha256:49095a2c9239aa2d8f4948e6b48c3cc2bf25e2cca551092517b6c09293d558b4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gitql/blobs/sha256:39d4bb77007f584d4ebfb5f3b6e1d40e1c6794fb728f7e32877b75d6ca3f17cd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gitql/blobs/sha256:d0357e2209734c9b1f78e67b4826b529eb010d787eea301987609e60eecbc729
-sha256:
-  darwin_arm64: d618f75c432dbdc17d9bcfeeec547b258b34a1146de33c9f1da2d7c771992e59
-  darwin_amd64: 49095a2c9239aa2d8f4948e6b48c3cc2bf25e2cca551092517b6c09293d558b4
-  linux_amd64: 39d4bb77007f584d4ebfb5f3b6e1d40e1c6794fb728f7e32877b75d6ca3f17cd
-  linux_arm64: d0357e2209734c9b1f78e67b4826b529eb010d787eea301987609e60eecbc729
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gitql/blobs/sha256:d618f75c432dbdc17d9bcfeeec547b258b34a1146de33c9f1da2d7c771992e59
+    sha256: d618f75c432dbdc17d9bcfeeec547b258b34a1146de33c9f1da2d7c771992e59
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gitql/blobs/sha256:49095a2c9239aa2d8f4948e6b48c3cc2bf25e2cca551092517b6c09293d558b4
+    sha256: 49095a2c9239aa2d8f4948e6b48c3cc2bf25e2cca551092517b6c09293d558b4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gitql/blobs/sha256:39d4bb77007f584d4ebfb5f3b6e1d40e1c6794fb728f7e32877b75d6ca3f17cd
+    sha256: 39d4bb77007f584d4ebfb5f3b6e1d40e1c6794fb728f7e32877b75d6ca3f17cd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gitql/blobs/sha256:d0357e2209734c9b1f78e67b4826b529eb010d787eea301987609e60eecbc729
+    sha256: d0357e2209734c9b1f78e67b4826b529eb010d787eea301987609e60eecbc729
+source:
+  url: https://github.com/filhodanuvem/gitql/archive/refs/tags/v2.3.1.tar.gz
+  sha256: e3d34649f3dc714cb3189638103918314cf63b1ddbfd99a067d802730d1119b2
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

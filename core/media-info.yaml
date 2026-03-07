@@ -3,16 +3,22 @@ version: 26.01
 description: Unified display of technical and tag data for audio/video
 homepage: https://mediaarea.net/
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/media-info/blobs/sha256:5b5d6d84888dccc491ecfda9b9087a1e6fa2ef28bdcec51f04299acf5f6e9784
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/media-info/blobs/sha256:8ab936fe98aa53c1024b18f3ecf04cd2fdeecb1adbcc8c15217a1295e5a15862
-  linux_amd64: https://ghcr.io/v2/homebrew/core/media-info/blobs/sha256:3621a21d2d98ecdff68cec1e0cd313c001083e3069c20cc63491ef4a4baf6d6f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/media-info/blobs/sha256:5fb621fe32dd159771322e19da045f1a59edf870d5d23b77b3f8ab3e059facdc
-sha256:
-  darwin_arm64: 5b5d6d84888dccc491ecfda9b9087a1e6fa2ef28bdcec51f04299acf5f6e9784
-  darwin_amd64: 8ab936fe98aa53c1024b18f3ecf04cd2fdeecb1adbcc8c15217a1295e5a15862
-  linux_amd64: 3621a21d2d98ecdff68cec1e0cd313c001083e3069c20cc63491ef4a4baf6d6f
-  linux_arm64: 5fb621fe32dd159771322e19da045f1a59edf870d5d23b77b3f8ab3e059facdc
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/media-info/blobs/sha256:5b5d6d84888dccc491ecfda9b9087a1e6fa2ef28bdcec51f04299acf5f6e9784
+    sha256: 5b5d6d84888dccc491ecfda9b9087a1e6fa2ef28bdcec51f04299acf5f6e9784
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/media-info/blobs/sha256:8ab936fe98aa53c1024b18f3ecf04cd2fdeecb1adbcc8c15217a1295e5a15862
+    sha256: 8ab936fe98aa53c1024b18f3ecf04cd2fdeecb1adbcc8c15217a1295e5a15862
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/media-info/blobs/sha256:3621a21d2d98ecdff68cec1e0cd313c001083e3069c20cc63491ef4a4baf6d6f
+    sha256: 3621a21d2d98ecdff68cec1e0cd313c001083e3069c20cc63491ef4a4baf6d6f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/media-info/blobs/sha256:5fb621fe32dd159771322e19da045f1a59edf870d5d23b77b3f8ab3e059facdc
+    sha256: 5fb621fe32dd159771322e19da045f1a59edf870d5d23b77b3f8ab3e059facdc
+source:
+  url: https://mediaarea.net/download/binary/mediainfo/26.01/MediaInfo_CLI_26.01_GNU_FromSource.tar.xz
+  sha256: 3e70f27783521c31d6e852bd1982cb8858b9633982b66967a56d5364fb856de3
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,9 @@ install:
 dependencies:
   - libmediainfo
   - libzen
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - libmediainfo
+  - libzen
+  - zlib-ng-compat

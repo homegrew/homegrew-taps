@@ -3,16 +3,22 @@ version: 2.0.0
 description: Python bindings for gpgme
 homepage: https://www.gnupg.org/related_software/gpgme/
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gpgmepy/blobs/sha256:f21cfcd0bfbe06c868c45a70af197e336567098acbdf5cfe3c63197565eaab2f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gpgmepy/blobs/sha256:7953997037c8aaa348df99bd4d38f8338f78ffb5bb884dd5b401cff56a59583e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gpgmepy/blobs/sha256:7df957ddc15a4b7d2c3b26868e8371b60363b2417e4b990eef4dcfd80b572f88
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gpgmepy/blobs/sha256:f15297aab49987be773de7612b691c49f214ab2b0db01a123e8aa15d06f97872
-sha256:
-  darwin_arm64: f21cfcd0bfbe06c868c45a70af197e336567098acbdf5cfe3c63197565eaab2f
-  darwin_amd64: 7953997037c8aaa348df99bd4d38f8338f78ffb5bb884dd5b401cff56a59583e
-  linux_amd64: 7df957ddc15a4b7d2c3b26868e8371b60363b2417e4b990eef4dcfd80b572f88
-  linux_arm64: f15297aab49987be773de7612b691c49f214ab2b0db01a123e8aa15d06f97872
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gpgmepy/blobs/sha256:f21cfcd0bfbe06c868c45a70af197e336567098acbdf5cfe3c63197565eaab2f
+    sha256: f21cfcd0bfbe06c868c45a70af197e336567098acbdf5cfe3c63197565eaab2f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gpgmepy/blobs/sha256:7953997037c8aaa348df99bd4d38f8338f78ffb5bb884dd5b401cff56a59583e
+    sha256: 7953997037c8aaa348df99bd4d38f8338f78ffb5bb884dd5b401cff56a59583e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gpgmepy/blobs/sha256:7df957ddc15a4b7d2c3b26868e8371b60363b2417e4b990eef4dcfd80b572f88
+    sha256: 7df957ddc15a4b7d2c3b26868e8371b60363b2417e4b990eef4dcfd80b572f88
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gpgmepy/blobs/sha256:f15297aab49987be773de7612b691c49f214ab2b0db01a123e8aa15d06f97872
+    sha256: f15297aab49987be773de7612b691c49f214ab2b0db01a123e8aa15d06f97872
+source:
+  url: https://gnupg.org/ftp/gcrypt/gpgmepy/gpgmepy-2.0.0.tar.bz2
+  sha256: 07e1265648ff51da238c9af7a18b3f1dc7b0c66b4f21a72f27c74b396cd3336d
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,9 @@ install:
 dependencies:
   - gpgme
   - libgpg-error
+build_dependencies:
+  - autoconf
+  - automake
+  - python-setuptools
+  - python@3.14
+  - swig

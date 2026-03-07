@@ -3,16 +3,22 @@ version: 5.0.2
 description: LLVM bytecode to JavaScript compiler
 homepage: https://emscripten.org/
 license: Apache-2.0 AND (Apache-2.0 WITH LLVM-exception) AND (MIT OR NCSA)
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:45be0e5f10714ef71061ad462d3669c061da96f706fad12840dd20fa863448a2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:c0f3b3e9a5c269bf64bc6384d040d7242381718cbe7331743c8741841d7457ea
-  linux_amd64: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:238d7f5dc1157df3cc3557a5fc27f00f36267a9accf5521b5e32b08ff7525491
-  linux_arm64: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:10950c827ef99d32178b768a8911d4c4bf633932e4119d2828267c61f637990d
-sha256:
-  darwin_arm64: 45be0e5f10714ef71061ad462d3669c061da96f706fad12840dd20fa863448a2
-  darwin_amd64: c0f3b3e9a5c269bf64bc6384d040d7242381718cbe7331743c8741841d7457ea
-  linux_amd64: 238d7f5dc1157df3cc3557a5fc27f00f36267a9accf5521b5e32b08ff7525491
-  linux_arm64: 10950c827ef99d32178b768a8911d4c4bf633932e4119d2828267c61f637990d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:45be0e5f10714ef71061ad462d3669c061da96f706fad12840dd20fa863448a2
+    sha256: 45be0e5f10714ef71061ad462d3669c061da96f706fad12840dd20fa863448a2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:c0f3b3e9a5c269bf64bc6384d040d7242381718cbe7331743c8741841d7457ea
+    sha256: c0f3b3e9a5c269bf64bc6384d040d7242381718cbe7331743c8741841d7457ea
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:238d7f5dc1157df3cc3557a5fc27f00f36267a9accf5521b5e32b08ff7525491
+    sha256: 238d7f5dc1157df3cc3557a5fc27f00f36267a9accf5521b5e32b08ff7525491
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:10950c827ef99d32178b768a8911d4c4bf633932e4119d2828267c61f637990d
+    sha256: 10950c827ef99d32178b768a8911d4c4bf633932e4119d2828267c61f637990d
+source:
+  url: https://github.com/emscripten-core/emscripten/archive/refs/tags/5.0.2.tar.gz
+  sha256: 59f3b1a8e25b514f0d6f6993b3860e53a2d4f5057b6a8bc8f508f209ee145548
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,11 @@ dependencies:
   - python@3.14
   - yuicompressor
   - openjdk
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - node
+  - openjdk
+  - python@3.14
+  - yuicompressor
+  - zlib-ng-compat

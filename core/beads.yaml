@@ -3,16 +3,22 @@ version: 0.59.0
 description: Memory upgrade for your coding agent
 homepage: https://github.com/steveyegge/beads
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/beads/blobs/sha256:35e7ad0f9b168d3f6b8aa923c7cd58edef121476d4185859041ad99ab6822a2f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/beads/blobs/sha256:703e2c5d7658f34302a73bcadbce119b5eea25be2468e2c0fe9a1946ada0cc87
-  linux_amd64: https://ghcr.io/v2/homebrew/core/beads/blobs/sha256:d3c7d86f9bef3b8efce86106286ebe676f2724fdf7a581a9279caa8688470a4c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/beads/blobs/sha256:ec8d7851dcc1a810eb539ffcb5801a4ba4a4ee951fcda0508f57e51a16d636ca
-sha256:
-  darwin_arm64: 35e7ad0f9b168d3f6b8aa923c7cd58edef121476d4185859041ad99ab6822a2f
-  darwin_amd64: 703e2c5d7658f34302a73bcadbce119b5eea25be2468e2c0fe9a1946ada0cc87
-  linux_amd64: d3c7d86f9bef3b8efce86106286ebe676f2724fdf7a581a9279caa8688470a4c
-  linux_arm64: ec8d7851dcc1a810eb539ffcb5801a4ba4a4ee951fcda0508f57e51a16d636ca
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/beads/blobs/sha256:35e7ad0f9b168d3f6b8aa923c7cd58edef121476d4185859041ad99ab6822a2f
+    sha256: 35e7ad0f9b168d3f6b8aa923c7cd58edef121476d4185859041ad99ab6822a2f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/beads/blobs/sha256:703e2c5d7658f34302a73bcadbce119b5eea25be2468e2c0fe9a1946ada0cc87
+    sha256: 703e2c5d7658f34302a73bcadbce119b5eea25be2468e2c0fe9a1946ada0cc87
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/beads/blobs/sha256:d3c7d86f9bef3b8efce86106286ebe676f2724fdf7a581a9279caa8688470a4c
+    sha256: d3c7d86f9bef3b8efce86106286ebe676f2724fdf7a581a9279caa8688470a4c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/beads/blobs/sha256:ec8d7851dcc1a810eb539ffcb5801a4ba4a4ee951fcda0508f57e51a16d636ca
+    sha256: ec8d7851dcc1a810eb539ffcb5801a4ba4a4ee951fcda0508f57e51a16d636ca
+source:
+  url: https://github.com/steveyegge/beads/archive/refs/tags/v0.59.0.tar.gz
+  sha256: ec45559b01c27b3bc9914ba56b4bd1ff45819794e039e8d5e321a754203775eb
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - dolt
   - icu4c@78
+build_dependencies:
+  - go

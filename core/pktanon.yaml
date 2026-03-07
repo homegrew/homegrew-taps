@@ -3,19 +3,27 @@ version: 1.4.0
 description: Packet trace anonymization
 homepage: https://www.tm.kit.edu/software/pktanon/index.html
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pktanon/blobs/sha256:d90ddd6a6904fe38ba56eb87fc3b31c29cf19e4f67f3251245cb8ca8aa072c8e
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pktanon/blobs/sha256:202a34eac518440e7d191d05e083a66a424ba49e1df4bca38f83175ca6eafab8
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pktanon/blobs/sha256:a169dd1f2a8226cb31c4039f5a34e62c2077d9667da21f4f6c9a23a7198ca852
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pktanon/blobs/sha256:4977778371998ed8200618874c1897db9733812e2a7aeeafcae134353fd8e88b
-sha256:
-  darwin_arm64: d90ddd6a6904fe38ba56eb87fc3b31c29cf19e4f67f3251245cb8ca8aa072c8e
-  darwin_amd64: 202a34eac518440e7d191d05e083a66a424ba49e1df4bca38f83175ca6eafab8
-  linux_amd64: a169dd1f2a8226cb31c4039f5a34e62c2077d9667da21f4f6c9a23a7198ca852
-  linux_arm64: 4977778371998ed8200618874c1897db9733812e2a7aeeafcae134353fd8e88b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pktanon/blobs/sha256:d90ddd6a6904fe38ba56eb87fc3b31c29cf19e4f67f3251245cb8ca8aa072c8e
+    sha256: d90ddd6a6904fe38ba56eb87fc3b31c29cf19e4f67f3251245cb8ca8aa072c8e
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pktanon/blobs/sha256:202a34eac518440e7d191d05e083a66a424ba49e1df4bca38f83175ca6eafab8
+    sha256: 202a34eac518440e7d191d05e083a66a424ba49e1df4bca38f83175ca6eafab8
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pktanon/blobs/sha256:a169dd1f2a8226cb31c4039f5a34e62c2077d9667da21f4f6c9a23a7198ca852
+    sha256: a169dd1f2a8226cb31c4039f5a34e62c2077d9667da21f4f6c9a23a7198ca852
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pktanon/blobs/sha256:4977778371998ed8200618874c1897db9733812e2a7aeeafcae134353fd8e88b
+    sha256: 4977778371998ed8200618874c1897db9733812e2a7aeeafcae134353fd8e88b
+source:
+  url: https://www.tm.kit.edu/software/pktanon/download/pktanon-1.4.0-dev.tar.gz
+  sha256: db3f437bcb8ddb40323ddef7a9de25a465c5f6b4cce078202060f661d4b97ba3
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - xerces-c
+build_dependencies:
+  - boost

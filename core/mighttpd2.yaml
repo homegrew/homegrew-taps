@@ -3,19 +3,31 @@ version: 4.0.9
 description: HTTP server
 homepage: https://kazu-yamamoto.github.io/mighttpd2/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:99f64d61207f727cffd821669446f5853cb5f6ef4fb73004415a3a98a245bd9e
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:cc5290c3e3992f951543a3520209838ab7b6062f9664258295358f86f557d1b9
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:c521f5c6d62571565f09f681499647ddda932207983409cc8d65fee2503e1b1b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:67fbc95ab3285dc2bb03f7ac53b094258dca7d9ace439485c9b65164cc8f16f8
-sha256:
-  darwin_arm64: 99f64d61207f727cffd821669446f5853cb5f6ef4fb73004415a3a98a245bd9e
-  darwin_amd64: cc5290c3e3992f951543a3520209838ab7b6062f9664258295358f86f557d1b9
-  linux_amd64: c521f5c6d62571565f09f681499647ddda932207983409cc8d65fee2503e1b1b
-  linux_arm64: 67fbc95ab3285dc2bb03f7ac53b094258dca7d9ace439485c9b65164cc8f16f8
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:99f64d61207f727cffd821669446f5853cb5f6ef4fb73004415a3a98a245bd9e
+    sha256: 99f64d61207f727cffd821669446f5853cb5f6ef4fb73004415a3a98a245bd9e
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:cc5290c3e3992f951543a3520209838ab7b6062f9664258295358f86f557d1b9
+    sha256: cc5290c3e3992f951543a3520209838ab7b6062f9664258295358f86f557d1b9
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:c521f5c6d62571565f09f681499647ddda932207983409cc8d65fee2503e1b1b
+    sha256: c521f5c6d62571565f09f681499647ddda932207983409cc8d65fee2503e1b1b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:67fbc95ab3285dc2bb03f7ac53b094258dca7d9ace439485c9b65164cc8f16f8
+    sha256: 67fbc95ab3285dc2bb03f7ac53b094258dca7d9ace439485c9b65164cc8f16f8
+source:
+  url: https://hackage.haskell.org/package/mighttpd2-4.0.9/mighttpd2-4.0.9.tar.gz
+  sha256: 6f85f533a232a9ab25f6758886beedcb1a8d8bcc0012bf73a7dac2ed291ca4e1
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - gmp
+build_dependencies:
+  - cabal-install
+  - ghc
+linux_dependencies:
+  - gmp
+  - zlib-ng-compat

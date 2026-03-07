@@ -3,16 +3,22 @@ version: 6.38.02
 description: Analyzing petabytes of data, scientifically
 homepage: https://root.cern
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:dc5804d3fb1aacc801416f265c41b4f23ff75ed70d3a37bc1d37ce6959aa38e0
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:cbb4d9b423eceae4278ac7ea45ef7a1c9308bd01e54063bfb6ed409005216aca
-  linux_amd64: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:9a7de2121374fd7dd930933ce480d88e40434fef7495d04a12e500c8514f831c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:80eb13ae4e941555aa690f73f0f1c6739a4aee5fe257df03d3624d1adaeac587
-sha256:
-  darwin_arm64: dc5804d3fb1aacc801416f265c41b4f23ff75ed70d3a37bc1d37ce6959aa38e0
-  darwin_amd64: cbb4d9b423eceae4278ac7ea45ef7a1c9308bd01e54063bfb6ed409005216aca
-  linux_amd64: 9a7de2121374fd7dd930933ce480d88e40434fef7495d04a12e500c8514f831c
-  linux_arm64: 80eb13ae4e941555aa690f73f0f1c6739a4aee5fe257df03d3624d1adaeac587
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:dc5804d3fb1aacc801416f265c41b4f23ff75ed70d3a37bc1d37ce6959aa38e0
+    sha256: dc5804d3fb1aacc801416f265c41b4f23ff75ed70d3a37bc1d37ce6959aa38e0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:cbb4d9b423eceae4278ac7ea45ef7a1c9308bd01e54063bfb6ed409005216aca
+    sha256: cbb4d9b423eceae4278ac7ea45ef7a1c9308bd01e54063bfb6ed409005216aca
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:9a7de2121374fd7dd930933ce480d88e40434fef7495d04a12e500c8514f831c
+    sha256: 9a7de2121374fd7dd930933ce480d88e40434fef7495d04a12e500c8514f831c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:80eb13ae4e941555aa690f73f0f1c6739a4aee5fe257df03d3624d1adaeac587
+    sha256: 80eb13ae4e941555aa690f73f0f1c6739a4aee5fe257df03d3624d1adaeac587
+source:
+  url: https://root.cern/download/root_v6.38.02.source.tar.gz
+  sha256: 77d34d2bca0ea720acfd43798bcb5d09a28584013b4d0a2910823c867d4bfa42
 install:
   type: archive
   format: tar.gz
@@ -44,4 +50,43 @@ dependencies:
   - xrootd
   - xxhash
   - xz
+  - zstd
+build_dependencies:
+  - cmake
+  - ninja
+  - pkgconf
+linux_dependencies:
+  - cfitsio
+  - davix
+  - fftw
+  - freetype
+  - ftgl
+  - gcc
+  - giflib
+  - gl2ps
+  - glew
+  - graphviz
+  - gsl
+  - jpeg-turbo
+  - libpng
+  - libtiff
+  - libx11
+  - libxext
+  - libxft
+  - libxpm
+  - lz4
+  - mesa
+  - mesa-glu
+  - nlohmann-json
+  - numpy
+  - openblas
+  - openssl@3
+  - pcre2
+  - python@3.14
+  - sqlite
+  - tbb
+  - xrootd
+  - xxhash
+  - xz
+  - zlib-ng-compat
   - zstd

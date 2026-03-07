@@ -3,16 +3,22 @@ version: 0.48.7
 description: "Code Intelligence for Vala & Genie"
 homepage: https://github.com/vala-lang/vala-language-server
 license: LGPL-2.1-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:6de961a16d8c01a87334d3e5f8952bccde9d82e321719c8b7606a173b6a4f79b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:2142ed177e269f7b29398f13dab2e234cd788becf8a4220c1a1c7f0b9b24925d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:063a6451f6da46ce3112e2de698c723b69867fb4890a97b5ae78b16dc85ef23d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:f7bde32833468a8a783f9992ed2aad1dda845285a650bb7f1c69e8ad2fc24b8e
-sha256:
-  darwin_arm64: 6de961a16d8c01a87334d3e5f8952bccde9d82e321719c8b7606a173b6a4f79b
-  darwin_amd64: 2142ed177e269f7b29398f13dab2e234cd788becf8a4220c1a1c7f0b9b24925d
-  linux_amd64: 063a6451f6da46ce3112e2de698c723b69867fb4890a97b5ae78b16dc85ef23d
-  linux_arm64: f7bde32833468a8a783f9992ed2aad1dda845285a650bb7f1c69e8ad2fc24b8e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:6de961a16d8c01a87334d3e5f8952bccde9d82e321719c8b7606a173b6a4f79b
+    sha256: 6de961a16d8c01a87334d3e5f8952bccde9d82e321719c8b7606a173b6a4f79b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:2142ed177e269f7b29398f13dab2e234cd788becf8a4220c1a1c7f0b9b24925d
+    sha256: 2142ed177e269f7b29398f13dab2e234cd788becf8a4220c1a1c7f0b9b24925d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:063a6451f6da46ce3112e2de698c723b69867fb4890a97b5ae78b16dc85ef23d
+    sha256: 063a6451f6da46ce3112e2de698c723b69867fb4890a97b5ae78b16dc85ef23d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:f7bde32833468a8a783f9992ed2aad1dda845285a650bb7f1c69e8ad2fc24b8e
+    sha256: f7bde32833468a8a783f9992ed2aad1dda845285a650bb7f1c69e8ad2fc24b8e
+source:
+  url: https://github.com/vala-lang/vala-language-server/releases/download/0.48.7/vala-language-server-0.48.7.tar.xz
+  sha256: a93e09497738144792466d0c5ccb1347583d84a9987b65b08f6aa5d5a1e3f431
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,13 @@ dependencies:
   - libgee
   - vala
   - gettext
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf
+linux_dependencies:
+  - glib
+  - json-glib
+  - jsonrpc-glib
+  - libgee
+  - vala

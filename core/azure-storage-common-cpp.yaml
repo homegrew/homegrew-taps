@@ -3,16 +3,22 @@ version: 12.12.0
 description: Provides common Azure Storage-related abstractions for Azure SDK
 homepage: https://github.com/Azure/azure-sdk-for-cpp/tree/main/sdk/storage/azure-storage-common
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/azure-storage-common-cpp/blobs/sha256:a91435621048f0d41b6eb35ec0ad61b9d30c7d4c711f6153d1ea6471972fbfc2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/azure-storage-common-cpp/blobs/sha256:b250e285389aa34812eff180741192077daff42a011c4cca0736bb6f788bcd42
-  linux_amd64: https://ghcr.io/v2/homebrew/core/azure-storage-common-cpp/blobs/sha256:256271c571871019d0da999c828438ef746982f2ccf20984b039e44775bd0d36
-  linux_arm64: https://ghcr.io/v2/homebrew/core/azure-storage-common-cpp/blobs/sha256:5321dc11d109737db1b6d2f3dfdd1ab8e3021ab4691f188f3f019023fce79d82
-sha256:
-  darwin_arm64: a91435621048f0d41b6eb35ec0ad61b9d30c7d4c711f6153d1ea6471972fbfc2
-  darwin_amd64: b250e285389aa34812eff180741192077daff42a011c4cca0736bb6f788bcd42
-  linux_amd64: 256271c571871019d0da999c828438ef746982f2ccf20984b039e44775bd0d36
-  linux_arm64: 5321dc11d109737db1b6d2f3dfdd1ab8e3021ab4691f188f3f019023fce79d82
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/azure-storage-common-cpp/blobs/sha256:a91435621048f0d41b6eb35ec0ad61b9d30c7d4c711f6153d1ea6471972fbfc2
+    sha256: a91435621048f0d41b6eb35ec0ad61b9d30c7d4c711f6153d1ea6471972fbfc2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/azure-storage-common-cpp/blobs/sha256:b250e285389aa34812eff180741192077daff42a011c4cca0736bb6f788bcd42
+    sha256: b250e285389aa34812eff180741192077daff42a011c4cca0736bb6f788bcd42
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/azure-storage-common-cpp/blobs/sha256:256271c571871019d0da999c828438ef746982f2ccf20984b039e44775bd0d36
+    sha256: 256271c571871019d0da999c828438ef746982f2ccf20984b039e44775bd0d36
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/azure-storage-common-cpp/blobs/sha256:5321dc11d109737db1b6d2f3dfdd1ab8e3021ab4691f188f3f019023fce79d82
+    sha256: 5321dc11d109737db1b6d2f3dfdd1ab8e3021ab4691f188f3f019023fce79d82
+source:
+  url: https://github.com/Azure/azure-sdk-for-cpp/archive/refs/tags/azure-storage-common_12.12.0.tar.gz
+  sha256: 0d835b22c03358f6e837044c70b3f9d93902cf710c27ac9ee22b2544ffdec27c
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - azure-core-cpp
   - openssl@3
+build_dependencies:
+  - cmake

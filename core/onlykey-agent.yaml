@@ -3,16 +3,22 @@ version: 1.1.15
 description: Middleware that lets you use OnlyKey as a hardware SSH/GPG device
 homepage: https://docs.crp.to/onlykey-agent.html
 license: LGPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:02d754797497e491be94a2ecec98bd2745e98c23350f84f29b5a201ebfb2cf89
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:84f5e77dc0e99d71751bccdc2237974ad6e4d5c9a010c543f0456b74f5207255
-  linux_amd64: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:2ccb753c42280e0f62fd3d932877f77a87df03c1c9881e3a23fff279d372ba12
-  linux_arm64: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:4f2378af747cecafb7ab65810ef50fbc349e3df6d928c6510de6d4c212362dd7
-sha256:
-  darwin_arm64: 02d754797497e491be94a2ecec98bd2745e98c23350f84f29b5a201ebfb2cf89
-  darwin_amd64: 84f5e77dc0e99d71751bccdc2237974ad6e4d5c9a010c543f0456b74f5207255
-  linux_amd64: 2ccb753c42280e0f62fd3d932877f77a87df03c1c9881e3a23fff279d372ba12
-  linux_arm64: 4f2378af747cecafb7ab65810ef50fbc349e3df6d928c6510de6d4c212362dd7
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:02d754797497e491be94a2ecec98bd2745e98c23350f84f29b5a201ebfb2cf89
+    sha256: 02d754797497e491be94a2ecec98bd2745e98c23350f84f29b5a201ebfb2cf89
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:84f5e77dc0e99d71751bccdc2237974ad6e4d5c9a010c543f0456b74f5207255
+    sha256: 84f5e77dc0e99d71751bccdc2237974ad6e4d5c9a010c543f0456b74f5207255
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:2ccb753c42280e0f62fd3d932877f77a87df03c1c9881e3a23fff279d372ba12
+    sha256: 2ccb753c42280e0f62fd3d932877f77a87df03c1c9881e3a23fff279d372ba12
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:4f2378af747cecafb7ab65810ef50fbc349e3df6d928c6510de6d4c212362dd7
+    sha256: 4f2378af747cecafb7ab65810ef50fbc349e3df6d928c6510de6d4c212362dd7
+source:
+  url: https://files.pythonhosted.org/packages/68/80/e89b6c3680bedb1e14e99f0539ac805bddc7d8dd87c58805c64484966b7c/onlykey-agent-1.1.15.tar.gz
+  sha256: 49b19bec28dc0fb7053ef01266d8a9e7a078bb146214a641bdbb1feac6fc7ddb
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,5 @@ dependencies:
   - libsodium
   - libusb
   - python@3.14
+build_dependencies:
+  - pkgconf

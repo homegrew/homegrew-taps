@@ -3,16 +3,22 @@ version: 4.2.0
 description: XML Data Binding for C++
 homepage: https://www.codesynthesis.com/products/xsd/
 license: GPL-2.0-only WITH Classpath-exception-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/xsd/blobs/sha256:9beb0bcaa0a49b5de1613b0ce1424a3f1ba33d0697860103c4a93ec4b7f4e748
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/xsd/blobs/sha256:dcd70b1bada26e56ead16eaceeced482d7e8c4b84a8894d34073d46ad0c2f57e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/xsd/blobs/sha256:d2ce6cba3e04b1e0239789b2c57ab98fbf8b465dc8477fb43c184da992002322
-  linux_arm64: https://ghcr.io/v2/homebrew/core/xsd/blobs/sha256:4b203c546a627a452e99687209c707b56a69334aa9dd509bcf80f2e9e2e0c055
-sha256:
-  darwin_arm64: 9beb0bcaa0a49b5de1613b0ce1424a3f1ba33d0697860103c4a93ec4b7f4e748
-  darwin_amd64: dcd70b1bada26e56ead16eaceeced482d7e8c4b84a8894d34073d46ad0c2f57e
-  linux_amd64: d2ce6cba3e04b1e0239789b2c57ab98fbf8b465dc8477fb43c184da992002322
-  linux_arm64: 4b203c546a627a452e99687209c707b56a69334aa9dd509bcf80f2e9e2e0c055
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xsd/blobs/sha256:9beb0bcaa0a49b5de1613b0ce1424a3f1ba33d0697860103c4a93ec4b7f4e748
+    sha256: 9beb0bcaa0a49b5de1613b0ce1424a3f1ba33d0697860103c4a93ec4b7f4e748
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xsd/blobs/sha256:dcd70b1bada26e56ead16eaceeced482d7e8c4b84a8894d34073d46ad0c2f57e
+    sha256: dcd70b1bada26e56ead16eaceeced482d7e8c4b84a8894d34073d46ad0c2f57e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xsd/blobs/sha256:d2ce6cba3e04b1e0239789b2c57ab98fbf8b465dc8477fb43c184da992002322
+    sha256: d2ce6cba3e04b1e0239789b2c57ab98fbf8b465dc8477fb43c184da992002322
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xsd/blobs/sha256:4b203c546a627a452e99687209c707b56a69334aa9dd509bcf80f2e9e2e0c055
+    sha256: 4b203c546a627a452e99687209c707b56a69334aa9dd509bcf80f2e9e2e0c055
+source:
+  url: https://www.codesynthesis.com/download/xsd/4.2/xsd-4.2.0.tar.gz
+  sha256: 2bed17c601cfb984f9a7501fd5c672f4f18eac678f5bdef6016971966add9145
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,5 @@ dependencies:
   - libcutl
   - libxsd-frontend
   - xerces-c
+build_dependencies:
+  - build2

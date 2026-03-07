@@ -3,16 +3,22 @@ version: 0.15.2
 description: Programming language designed for robustness, optimality, and clarity
 homepage: https://ziglang.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:dd70b8ff8c60139a550cf147c62385db650f0a78f6a0886d64e5d3a23300fedf
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:a6214bdefd13c3f08072d2104480c977925ecb4160b3528b097761d8a2f0fe10
-  linux_amd64: https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:87d7f340a2db08d1274e7d7915252db7880705426fc0b592147cde1f0009935e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:cd03697749a4dbeec55258d7fd5170b2dd73ca29b1510a001a021d5469287197
-sha256:
-  darwin_arm64: dd70b8ff8c60139a550cf147c62385db650f0a78f6a0886d64e5d3a23300fedf
-  darwin_amd64: a6214bdefd13c3f08072d2104480c977925ecb4160b3528b097761d8a2f0fe10
-  linux_amd64: 87d7f340a2db08d1274e7d7915252db7880705426fc0b592147cde1f0009935e
-  linux_arm64: cd03697749a4dbeec55258d7fd5170b2dd73ca29b1510a001a021d5469287197
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:dd70b8ff8c60139a550cf147c62385db650f0a78f6a0886d64e5d3a23300fedf
+    sha256: dd70b8ff8c60139a550cf147c62385db650f0a78f6a0886d64e5d3a23300fedf
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:a6214bdefd13c3f08072d2104480c977925ecb4160b3528b097761d8a2f0fe10
+    sha256: a6214bdefd13c3f08072d2104480c977925ecb4160b3528b097761d8a2f0fe10
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:87d7f340a2db08d1274e7d7915252db7880705426fc0b592147cde1f0009935e
+    sha256: 87d7f340a2db08d1274e7d7915252db7880705426fc0b592147cde1f0009935e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:cd03697749a4dbeec55258d7fd5170b2dd73ca29b1510a001a021d5469287197
+    sha256: cd03697749a4dbeec55258d7fd5170b2dd73ca29b1510a001a021d5469287197
+source:
+  url: https://ziglang.org/download/0.15.2/zig-0.15.2.tar.xz
+  sha256: d9b30c7aa983fcff5eed2084d54ae83eaafe7ff3a84d8fb754d854165a6e521c
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,8 @@ dependencies:
   - lld@20
   - llvm@20
   - zstd
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - lld@20
+  - llvm@20

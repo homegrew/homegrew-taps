@@ -3,16 +3,22 @@ version: 2025.12.16
 description: C++ Library Manager
 homepage: https://github.com/microsoft/vcpkg
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:6ba16bb8576fa1b09db8952d3c50203568eb62a851dd363c94ed333923d1ae91
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:76c7f9a208e72b86d4e5c1d25928345c603f1cd12f7ca9cfe8657bd5b1f923dc
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:7f42c8c01a28fd5f6d60c0594a9f9280f5195c2d6909835e04c498beab57af47
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:7ed0925f1935f0b29a2fb4d3e32b4ffeedcff9de6421642a7d7f75d4c364b8ec
-sha256:
-  darwin_arm64: 6ba16bb8576fa1b09db8952d3c50203568eb62a851dd363c94ed333923d1ae91
-  darwin_amd64: 76c7f9a208e72b86d4e5c1d25928345c603f1cd12f7ca9cfe8657bd5b1f923dc
-  linux_amd64: 7f42c8c01a28fd5f6d60c0594a9f9280f5195c2d6909835e04c498beab57af47
-  linux_arm64: 7ed0925f1935f0b29a2fb4d3e32b4ffeedcff9de6421642a7d7f75d4c364b8ec
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:6ba16bb8576fa1b09db8952d3c50203568eb62a851dd363c94ed333923d1ae91
+    sha256: 6ba16bb8576fa1b09db8952d3c50203568eb62a851dd363c94ed333923d1ae91
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:76c7f9a208e72b86d4e5c1d25928345c603f1cd12f7ca9cfe8657bd5b1f923dc
+    sha256: 76c7f9a208e72b86d4e5c1d25928345c603f1cd12f7ca9cfe8657bd5b1f923dc
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:7f42c8c01a28fd5f6d60c0594a9f9280f5195c2d6909835e04c498beab57af47
+    sha256: 7f42c8c01a28fd5f6d60c0594a9f9280f5195c2d6909835e04c498beab57af47
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:7ed0925f1935f0b29a2fb4d3e32b4ffeedcff9de6421642a7d7f75d4c364b8ec
+    sha256: 7ed0925f1935f0b29a2fb4d3e32b4ffeedcff9de6421642a7d7f75d4c364b8ec
+source:
+  url: https://github.com/microsoft/vcpkg-tool/archive/refs/tags/2025-12-16.tar.gz
+  sha256: 4f427f25f79d06d01a55498289066ed4fa78410f711a4505801d421171ff123c
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,6 @@ install:
 dependencies:
   - fmt
   - ninja
+build_dependencies:
+  - cmake
+  - cmrc

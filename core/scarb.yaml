@@ -3,17 +3,27 @@ version: 2.16.0
 description: Cairo package manager
 homepage: https://docs.swmansion.com/scarb/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/scarb/blobs/sha256:cd770a555c858af63e4dfa2c9ff0dbc7adb369312ab341b8e8909b9b9e818152
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/scarb/blobs/sha256:f26817c53ac5e05a2825e6234cecebd915f028970c77034504c33e79a60700e2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/scarb/blobs/sha256:f52994e88de648e61558a7d64c7a3517cbc51930c7a63c3ef5cd0cc3028e4f62
-  linux_arm64: https://ghcr.io/v2/homebrew/core/scarb/blobs/sha256:d432bff6034e4d5157eddeeb288fa8f863060342ad4c1dd2e8241ec7bb95d43a
-sha256:
-  darwin_arm64: cd770a555c858af63e4dfa2c9ff0dbc7adb369312ab341b8e8909b9b9e818152
-  darwin_amd64: f26817c53ac5e05a2825e6234cecebd915f028970c77034504c33e79a60700e2
-  linux_amd64: f52994e88de648e61558a7d64c7a3517cbc51930c7a63c3ef5cd0cc3028e4f62
-  linux_arm64: d432bff6034e4d5157eddeeb288fa8f863060342ad4c1dd2e8241ec7bb95d43a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/scarb/blobs/sha256:cd770a555c858af63e4dfa2c9ff0dbc7adb369312ab341b8e8909b9b9e818152
+    sha256: cd770a555c858af63e4dfa2c9ff0dbc7adb369312ab341b8e8909b9b9e818152
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/scarb/blobs/sha256:f26817c53ac5e05a2825e6234cecebd915f028970c77034504c33e79a60700e2
+    sha256: f26817c53ac5e05a2825e6234cecebd915f028970c77034504c33e79a60700e2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/scarb/blobs/sha256:f52994e88de648e61558a7d64c7a3517cbc51930c7a63c3ef5cd0cc3028e4f62
+    sha256: f52994e88de648e61558a7d64c7a3517cbc51930c7a63c3ef5cd0cc3028e4f62
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/scarb/blobs/sha256:d432bff6034e4d5157eddeeb288fa8f863060342ad4c1dd2e8241ec7bb95d43a
+    sha256: d432bff6034e4d5157eddeeb288fa8f863060342ad4c1dd2e8241ec7bb95d43a
+source:
+  url: https://github.com/software-mansion/scarb/archive/refs/tags/v2.16.0.tar.gz
+  sha256: c848e4d8cf0451595266d56f94c1ae06b3c650642d3978e85745b73645fac043
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust
+linux_dependencies:
+  - zlib-ng-compat

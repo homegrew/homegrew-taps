@@ -3,16 +3,22 @@ version: 7.0.11
 description: Package for graph partitioning, graph clustering, and sparse matrix ordering
 homepage: https://gitlab.inria.fr/scotch/scotch
 license: CECILL-C
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:d84363ab0cdc3b0a2b0d05347158a30361f2694e441db84e4fdd549ceb39ac31
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:70c317924634f70ef971e306832042b778c105ddf4708e9c2f51291c86a92d0c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:df940782b8de2e7b436fc7c64bca5210cec1a38a9e5bb6c679bcb0f3c5d43e8a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:1e676c45f8ddabb75072cf687e37ab3be3ec7bbccb3636488c1bc07f498fd593
-sha256:
-  darwin_arm64: d84363ab0cdc3b0a2b0d05347158a30361f2694e441db84e4fdd549ceb39ac31
-  darwin_amd64: 70c317924634f70ef971e306832042b778c105ddf4708e9c2f51291c86a92d0c
-  linux_amd64: df940782b8de2e7b436fc7c64bca5210cec1a38a9e5bb6c679bcb0f3c5d43e8a
-  linux_arm64: 1e676c45f8ddabb75072cf687e37ab3be3ec7bbccb3636488c1bc07f498fd593
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:d84363ab0cdc3b0a2b0d05347158a30361f2694e441db84e4fdd549ceb39ac31
+    sha256: d84363ab0cdc3b0a2b0d05347158a30361f2694e441db84e4fdd549ceb39ac31
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:70c317924634f70ef971e306832042b778c105ddf4708e9c2f51291c86a92d0c
+    sha256: 70c317924634f70ef971e306832042b778c105ddf4708e9c2f51291c86a92d0c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:df940782b8de2e7b436fc7c64bca5210cec1a38a9e5bb6c679bcb0f3c5d43e8a
+    sha256: df940782b8de2e7b436fc7c64bca5210cec1a38a9e5bb6c679bcb0f3c5d43e8a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:1e676c45f8ddabb75072cf687e37ab3be3ec7bbccb3636488c1bc07f498fd593
+    sha256: 1e676c45f8ddabb75072cf687e37ab3be3ec7bbccb3636488c1bc07f498fd593
+source:
+  url: https://gitlab.inria.fr/scotch/scotch/-/archive/v7.0.11/scotch-v7.0.11.tar.bz2
+  sha256: 82fb468485b153a41031e50a7ca668fccbd3b8561d31dc7535da4210dde01f48
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,10 @@ install:
 dependencies:
   - open-mpi
   - xz
+build_dependencies:
+  - bison
+  - cmake
+linux_dependencies:
+  - open-mpi
+  - xz
+  - zlib-ng-compat

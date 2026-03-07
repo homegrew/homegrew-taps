@@ -3,17 +3,25 @@ version: 2.3.15
 description: Expect for shells
 homepage: https://github.com/clarkwang/sexpect
 license: GPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/sexpect/blobs/sha256:445597fc095ce9f21e20e79f2d242e487649d56eed1b27f362250aa74111b227
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/sexpect/blobs/sha256:c9a3b88e131cb425f9e061af99304e882540035f88e595cf7d5791a03af6860f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/sexpect/blobs/sha256:d83044609dd02ec1d1ae82b2bf3af77038ed6868792d1e79adb3599c52ad4e31
-  linux_arm64: https://ghcr.io/v2/homebrew/core/sexpect/blobs/sha256:b0702807c75c5500cc19564fdc28623f5f5118d61462e22bf423e470e1691879
-sha256:
-  darwin_arm64: 445597fc095ce9f21e20e79f2d242e487649d56eed1b27f362250aa74111b227
-  darwin_amd64: c9a3b88e131cb425f9e061af99304e882540035f88e595cf7d5791a03af6860f
-  linux_amd64: d83044609dd02ec1d1ae82b2bf3af77038ed6868792d1e79adb3599c52ad4e31
-  linux_arm64: b0702807c75c5500cc19564fdc28623f5f5118d61462e22bf423e470e1691879
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sexpect/blobs/sha256:445597fc095ce9f21e20e79f2d242e487649d56eed1b27f362250aa74111b227
+    sha256: 445597fc095ce9f21e20e79f2d242e487649d56eed1b27f362250aa74111b227
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sexpect/blobs/sha256:c9a3b88e131cb425f9e061af99304e882540035f88e595cf7d5791a03af6860f
+    sha256: c9a3b88e131cb425f9e061af99304e882540035f88e595cf7d5791a03af6860f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sexpect/blobs/sha256:d83044609dd02ec1d1ae82b2bf3af77038ed6868792d1e79adb3599c52ad4e31
+    sha256: d83044609dd02ec1d1ae82b2bf3af77038ed6868792d1e79adb3599c52ad4e31
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sexpect/blobs/sha256:b0702807c75c5500cc19564fdc28623f5f5118d61462e22bf423e470e1691879
+    sha256: b0702807c75c5500cc19564fdc28623f5f5118d61462e22bf423e470e1691879
+source:
+  url: https://github.com/clarkwang/sexpect/archive/refs/tags/v2.3.15.tar.gz
+  sha256: 44f5711aa99f3ccf9c4b0edfcd9a7d25fa64b442574624ce451713d1532c1a7e
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - cmake

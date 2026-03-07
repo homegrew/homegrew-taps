@@ -3,13 +3,19 @@ version: 0.0.20240608
 description: Small epoll implementation using kqueue
 homepage: https://github.com/jiixyj/epoll-shim
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/epoll-shim/blobs/sha256:c7a688d329d70d090603693a115882bbaa044defdc738f4efc52b1b7b451484b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/epoll-shim/blobs/sha256:ea3647d10920d14080e1267606b40e7dacb2390818f84076e84eb817a1a78d1b
-sha256:
-  darwin_arm64: c7a688d329d70d090603693a115882bbaa044defdc738f4efc52b1b7b451484b
-  darwin_amd64: ea3647d10920d14080e1267606b40e7dacb2390818f84076e84eb817a1a78d1b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/epoll-shim/blobs/sha256:c7a688d329d70d090603693a115882bbaa044defdc738f4efc52b1b7b451484b
+    sha256: c7a688d329d70d090603693a115882bbaa044defdc738f4efc52b1b7b451484b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/epoll-shim/blobs/sha256:ea3647d10920d14080e1267606b40e7dacb2390818f84076e84eb817a1a78d1b
+    sha256: ea3647d10920d14080e1267606b40e7dacb2390818f84076e84eb817a1a78d1b
+source:
+  url: https://github.com/jiixyj/epoll-shim/archive/refs/tags/v0.0.20240608.tar.gz
+  sha256: 8f5125217e4a0eeb96ab01f9dfd56c38f85ac3e8f26ef2578e538e72e87862cb
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - cmake

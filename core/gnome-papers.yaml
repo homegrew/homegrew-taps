@@ -3,10 +3,22 @@ version: 49.5
 description: Document viewer for PDF and other document formats aimed at the GNOME desktop
 homepage: https://apps.gnome.org/Papers/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:2eb3284a4d2c13a97317c4d4ded92a9dc370dea65399b3b724be8bc3918ff495
-sha256:
-  darwin_arm64: 2eb3284a4d2c13a97317c4d4ded92a9dc370dea65399b3b724be8bc3918ff495
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:370a47022b8c21f98270b2b449a8c8c08045ed0780c201b372acf8dc287f7a1c
+    sha256: 370a47022b8c21f98270b2b449a8c8c08045ed0780c201b372acf8dc287f7a1c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:756689b9e62df2e95f1c4c07a6f7ca4a3d8af5cc3e94d1f02d9c2e6b8a0361a6
+    sha256: 756689b9e62df2e95f1c4c07a6f7ca4a3d8af5cc3e94d1f02d9c2e6b8a0361a6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:d643a29cb56291b1de17639b14c65b3045dc3b46f2aca66bbb20b57e67d2f2d1
+    sha256: d643a29cb56291b1de17639b14c65b3045dc3b46f2aca66bbb20b57e67d2f2d1
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:c43b4e7bcd47f203ba7e2f2c3f8392a2c7a24e7b09cd12577d2ead78d00da4b3
+    sha256: c43b4e7bcd47f203ba7e2f2c3f8392a2c7a24e7b09cd12577d2ead78d00da4b3
+source:
+  url: https://download.gnome.org/sources/papers/49/papers-49.5.tar.xz
+  sha256: 6e2a7a5870f7e10da5804cab4784b2f6bb55f97a4045ce5a64c36796bf2ff4bd
 install:
   type: archive
   format: tar.gz
@@ -30,3 +42,31 @@ dependencies:
   - poppler
   - gettext
   - harfbuzz
+build_dependencies:
+  - blueprint-compiler
+  - desktop-file-utils
+  - gettext
+  - gobject-introspection
+  - itstool
+  - meson
+  - ninja
+  - pkgconf
+  - python@3.14
+  - rust
+linux_dependencies:
+  - adwaita-icon-theme
+  - cairo
+  - djvulibre
+  - exempi
+  - gdk-pixbuf
+  - glib
+  - graphene
+  - gtk4
+  - gtksourceview5
+  - hicolor-icon-theme
+  - libadwaita
+  - libarchive
+  - libspelling
+  - libtiff
+  - pango
+  - poppler

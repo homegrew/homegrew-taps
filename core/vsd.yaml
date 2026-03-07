@@ -3,19 +3,32 @@ version: 0.4.3
 description: Download video streams over HTTP, DASH (.mpd), and HLS (.m3u8)
 homepage: https://github.com/clitic/vsd
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vsd/blobs/sha256:a6afb8eff7a7b62ee6b5c4d500f621c407afa66bf212fa4397fe8af7aa4ee87f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vsd/blobs/sha256:0a583dc975ea90844e8fa056cdcbccd99584fee50e59ae00d663cc4173457cb7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vsd/blobs/sha256:51be065f05066ab65664c99440369eeee9b629919fd635bef1e169849f0ce720
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vsd/blobs/sha256:a9eb0ce725f4b3592b446e05387e2a5f159c4b1e3c2223154093843cfeb18169
-sha256:
-  darwin_arm64: a6afb8eff7a7b62ee6b5c4d500f621c407afa66bf212fa4397fe8af7aa4ee87f
-  darwin_amd64: 0a583dc975ea90844e8fa056cdcbccd99584fee50e59ae00d663cc4173457cb7
-  linux_amd64: 51be065f05066ab65664c99440369eeee9b629919fd635bef1e169849f0ce720
-  linux_arm64: a9eb0ce725f4b3592b446e05387e2a5f159c4b1e3c2223154093843cfeb18169
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vsd/blobs/sha256:a6afb8eff7a7b62ee6b5c4d500f621c407afa66bf212fa4397fe8af7aa4ee87f
+    sha256: a6afb8eff7a7b62ee6b5c4d500f621c407afa66bf212fa4397fe8af7aa4ee87f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vsd/blobs/sha256:0a583dc975ea90844e8fa056cdcbccd99584fee50e59ae00d663cc4173457cb7
+    sha256: 0a583dc975ea90844e8fa056cdcbccd99584fee50e59ae00d663cc4173457cb7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vsd/blobs/sha256:51be065f05066ab65664c99440369eeee9b629919fd635bef1e169849f0ce720
+    sha256: 51be065f05066ab65664c99440369eeee9b629919fd635bef1e169849f0ce720
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vsd/blobs/sha256:a9eb0ce725f4b3592b446e05387e2a5f159c4b1e3c2223154093843cfeb18169
+    sha256: a9eb0ce725f4b3592b446e05387e2a5f159c4b1e3c2223154093843cfeb18169
+source:
+  url: https://github.com/clitic/vsd/archive/refs/tags/vsd-0.4.3.tar.gz
+  sha256: a50a7e749693dc38c48d8ea64178da8c513895f381f6c8a2516925c7442a7bfc
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - ffmpeg
+build_dependencies:
+  - pkgconf
+  - protobuf
+  - rust
+linux_dependencies:
+  - ffmpeg
+  - openssl@3

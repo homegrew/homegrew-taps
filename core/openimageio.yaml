@@ -3,16 +3,22 @@ version: 3.1.11.0
 description: Library for reading, processing and writing images
 homepage: https://openimageio.readthedocs.io/en/stable/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:1841d41e94680e93b40a7a4a604778148b82c21f3b2696013d73158bf61c6c9f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:1113a4b5ae372e4fa72f38528db152e2f8633504c6e57022199def059b590fc1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:48ef109ad6fb1b89f2d6745660208808833465c0ae0ef3920aeaa5f411ebf5ac
-  linux_arm64: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:8865337317ec459f4299cf212aed77fc77c377aff06968a09009c9fad62fb1c3
-sha256:
-  darwin_arm64: 1841d41e94680e93b40a7a4a604778148b82c21f3b2696013d73158bf61c6c9f
-  darwin_amd64: 1113a4b5ae372e4fa72f38528db152e2f8633504c6e57022199def059b590fc1
-  linux_amd64: 48ef109ad6fb1b89f2d6745660208808833465c0ae0ef3920aeaa5f411ebf5ac
-  linux_arm64: 8865337317ec459f4299cf212aed77fc77c377aff06968a09009c9fad62fb1c3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:1841d41e94680e93b40a7a4a604778148b82c21f3b2696013d73158bf61c6c9f
+    sha256: 1841d41e94680e93b40a7a4a604778148b82c21f3b2696013d73158bf61c6c9f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:1113a4b5ae372e4fa72f38528db152e2f8633504c6e57022199def059b590fc1
+    sha256: 1113a4b5ae372e4fa72f38528db152e2f8633504c6e57022199def059b590fc1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:48ef109ad6fb1b89f2d6745660208808833465c0ae0ef3920aeaa5f411ebf5ac
+    sha256: 48ef109ad6fb1b89f2d6745660208808833465c0ae0ef3920aeaa5f411ebf5ac
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:8865337317ec459f4299cf212aed77fc77c377aff06968a09009c9fad62fb1c3
+    sha256: 8865337317ec459f4299cf212aed77fc77c377aff06968a09009c9fad62fb1c3
+source:
+  url: https://github.com/AcademySoftwareFoundation/OpenImageIO/archive/refs/tags/v3.1.11.0.tar.gz
+  sha256: 992269ed9b24b17d283a2a05dd11dce582886e97b13b1793eca63b96251b095b
 install:
   type: archive
   format: tar.gz
@@ -36,3 +42,7 @@ dependencies:
   - tbb
   - webp
   - zlib-ng-compat
+build_dependencies:
+  - cmake
+  - pkgconf
+  - pybind11

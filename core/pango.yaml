@@ -3,16 +3,22 @@ version: 1.57.0
 description: Framework for layout and rendering of i18n text
 homepage: https://www.gtk.org/docs/architecture/pango
 license: LGPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pango/blobs/sha256:666e399270228506a57d243de5c340c42de149abc9c3a75b01044417f8db6222
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pango/blobs/sha256:0da3e9d5b786f46857fa9372b8644da690f3902421f5996e9bb058525cdf6d67
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pango/blobs/sha256:da9d2d48f51a6364f7e3edac502478231ccffab76ad8775ca3555ce87d39f524
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pango/blobs/sha256:c3e8f72ff6a5385bd5f24ec2bf7ec1f656c11bdb6ad57cc912a35d21db6ee3cd
-sha256:
-  darwin_arm64: 666e399270228506a57d243de5c340c42de149abc9c3a75b01044417f8db6222
-  darwin_amd64: 0da3e9d5b786f46857fa9372b8644da690f3902421f5996e9bb058525cdf6d67
-  linux_amd64: da9d2d48f51a6364f7e3edac502478231ccffab76ad8775ca3555ce87d39f524
-  linux_arm64: c3e8f72ff6a5385bd5f24ec2bf7ec1f656c11bdb6ad57cc912a35d21db6ee3cd
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pango/blobs/sha256:666e399270228506a57d243de5c340c42de149abc9c3a75b01044417f8db6222
+    sha256: 666e399270228506a57d243de5c340c42de149abc9c3a75b01044417f8db6222
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pango/blobs/sha256:0da3e9d5b786f46857fa9372b8644da690f3902421f5996e9bb058525cdf6d67
+    sha256: 0da3e9d5b786f46857fa9372b8644da690f3902421f5996e9bb058525cdf6d67
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pango/blobs/sha256:da9d2d48f51a6364f7e3edac502478231ccffab76ad8775ca3555ce87d39f524
+    sha256: da9d2d48f51a6364f7e3edac502478231ccffab76ad8775ca3555ce87d39f524
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pango/blobs/sha256:c3e8f72ff6a5385bd5f24ec2bf7ec1f656c11bdb6ad57cc912a35d21db6ee3cd
+    sha256: c3e8f72ff6a5385bd5f24ec2bf7ec1f656c11bdb6ad57cc912a35d21db6ee3cd
+source:
+  url: https://download.gnome.org/sources/pango/1.57/pango-1.57.0.tar.xz
+  sha256: 890640c841dae77d3ae3d8fe8953784b930fa241b17423e6120c7bfdf8b891e7
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,8 @@ dependencies:
   - glib
   - harfbuzz
   - libthai
+build_dependencies:
+  - gobject-introspection
+  - meson
+  - ninja
+  - pkgconf

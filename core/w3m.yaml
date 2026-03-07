@@ -3,16 +3,22 @@ version: 0.5.6
 description: Pager/text based browser
 homepage: https://w3m.sourceforge.net/
 license: w3m
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/w3m/blobs/sha256:6d5d85da3996059056c2306f74e1fc99b2d4a44f9d36ec27bf4773b0b7d526ab
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/w3m/blobs/sha256:e211672f7fbed8d9b27e9a2d06b8e0c20913e604c3e46977cfa5001fd736953d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/w3m/blobs/sha256:abb3d05a8cb940c9b8ae94845a6c143ad8a5b3014e56349a81979e9c1783f3f4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/w3m/blobs/sha256:8c421b7a978bf9271b31a6957f8683b04669552a7592e88208c9c613086ab51a
-sha256:
-  darwin_arm64: 6d5d85da3996059056c2306f74e1fc99b2d4a44f9d36ec27bf4773b0b7d526ab
-  darwin_amd64: e211672f7fbed8d9b27e9a2d06b8e0c20913e604c3e46977cfa5001fd736953d
-  linux_amd64: abb3d05a8cb940c9b8ae94845a6c143ad8a5b3014e56349a81979e9c1783f3f4
-  linux_arm64: 8c421b7a978bf9271b31a6957f8683b04669552a7592e88208c9c613086ab51a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/w3m/blobs/sha256:6d5d85da3996059056c2306f74e1fc99b2d4a44f9d36ec27bf4773b0b7d526ab
+    sha256: 6d5d85da3996059056c2306f74e1fc99b2d4a44f9d36ec27bf4773b0b7d526ab
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/w3m/blobs/sha256:e211672f7fbed8d9b27e9a2d06b8e0c20913e604c3e46977cfa5001fd736953d
+    sha256: e211672f7fbed8d9b27e9a2d06b8e0c20913e604c3e46977cfa5001fd736953d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/w3m/blobs/sha256:abb3d05a8cb940c9b8ae94845a6c143ad8a5b3014e56349a81979e9c1783f3f4
+    sha256: abb3d05a8cb940c9b8ae94845a6c143ad8a5b3014e56349a81979e9c1783f3f4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/w3m/blobs/sha256:8c421b7a978bf9271b31a6957f8683b04669552a7592e88208c9c613086ab51a
+    sha256: 8c421b7a978bf9271b31a6957f8683b04669552a7592e88208c9c613086ab51a
+source:
+  url: https://git.sr.ht/~rkta/w3m/archive/v0.5.6.tar.gz
+  sha256: 8dd652cd3f31817d68c7263c34eeffb50118c80be19e1159bf8cbf763037095e
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,10 @@ dependencies:
   - bdw-gc
   - openssl@3
   - gettext
+build_dependencies:
+  - gettext
+  - pkgconf
+linux_dependencies:
+  - bdw-gc
+  - openssl@3
+  - zlib-ng-compat

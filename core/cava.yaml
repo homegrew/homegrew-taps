@@ -3,16 +3,22 @@ version: 0.10.7
 description: Console-based Audio Visualizer for ALSA
 homepage: https://github.com/karlstav/cava
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cava/blobs/sha256:40bfbe3b8229358b42a646fad6d31616cf84ecc6f758d0cdf17b32f88b2e2430
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cava/blobs/sha256:e012cc6ab3a2bbf0f76244641e809882eea9190d94f34668d2dabfe83d6401d2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cava/blobs/sha256:43eda213bfc5d7e6f33894e04be08f1a32fcea5c230a65de659d73967ee6bf6e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cava/blobs/sha256:1e38d63792ba6bbbb12c1a1fe5d700e676f403bcce6c21681f000be9402d44e5
-sha256:
-  darwin_arm64: 40bfbe3b8229358b42a646fad6d31616cf84ecc6f758d0cdf17b32f88b2e2430
-  darwin_amd64: e012cc6ab3a2bbf0f76244641e809882eea9190d94f34668d2dabfe83d6401d2
-  linux_amd64: 43eda213bfc5d7e6f33894e04be08f1a32fcea5c230a65de659d73967ee6bf6e
-  linux_arm64: 1e38d63792ba6bbbb12c1a1fe5d700e676f403bcce6c21681f000be9402d44e5
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cava/blobs/sha256:40bfbe3b8229358b42a646fad6d31616cf84ecc6f758d0cdf17b32f88b2e2430
+    sha256: 40bfbe3b8229358b42a646fad6d31616cf84ecc6f758d0cdf17b32f88b2e2430
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cava/blobs/sha256:e012cc6ab3a2bbf0f76244641e809882eea9190d94f34668d2dabfe83d6401d2
+    sha256: e012cc6ab3a2bbf0f76244641e809882eea9190d94f34668d2dabfe83d6401d2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cava/blobs/sha256:43eda213bfc5d7e6f33894e04be08f1a32fcea5c230a65de659d73967ee6bf6e
+    sha256: 43eda213bfc5d7e6f33894e04be08f1a32fcea5c230a65de659d73967ee6bf6e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cava/blobs/sha256:1e38d63792ba6bbbb12c1a1fe5d700e676f403bcce6c21681f000be9402d44e5
+    sha256: 1e38d63792ba6bbbb12c1a1fe5d700e676f403bcce6c21681f000be9402d44e5
+source:
+  url: https://github.com/karlstav/cava/archive/refs/tags/0.10.7.tar.gz
+  sha256: 43f994f7e609fab843af868d8a7bc21471ac62c5a4724ef97693201eac42e70a
 install:
   type: archive
   format: tar.gz
@@ -20,4 +26,15 @@ install:
 dependencies:
   - fftw
   - iniparser
+  - portaudio
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - fftw
+  - iniparser
+  - jack
   - portaudio

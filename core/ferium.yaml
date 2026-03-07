@@ -3,17 +3,26 @@ version: 4.7.1
 description: Fast and multi-source CLI program for managing Minecraft mods and modpacks
 homepage: https://github.com/gorilla-devs/ferium
 license: MPL-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ferium/blobs/sha256:a58de2ac63160b743c382e37b8746d8dc1da9518e23fbf519156f56449dafa1a
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ferium/blobs/sha256:17bf54da7812220cc21c465ffa24dc296b6c7d96815712651a30ccf9fe10c540
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ferium/blobs/sha256:139b6568724b1ff83342d0e33539425f3d0c74a34319e8bfbe17eecdb37f03f6
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ferium/blobs/sha256:7ffac93ceda25507df1070fd4adf9b52157285992d6224838eef9139c680b200
-sha256:
-  darwin_arm64: a58de2ac63160b743c382e37b8746d8dc1da9518e23fbf519156f56449dafa1a
-  darwin_amd64: 17bf54da7812220cc21c465ffa24dc296b6c7d96815712651a30ccf9fe10c540
-  linux_amd64: 139b6568724b1ff83342d0e33539425f3d0c74a34319e8bfbe17eecdb37f03f6
-  linux_arm64: 7ffac93ceda25507df1070fd4adf9b52157285992d6224838eef9139c680b200
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ferium/blobs/sha256:a58de2ac63160b743c382e37b8746d8dc1da9518e23fbf519156f56449dafa1a
+    sha256: a58de2ac63160b743c382e37b8746d8dc1da9518e23fbf519156f56449dafa1a
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ferium/blobs/sha256:17bf54da7812220cc21c465ffa24dc296b6c7d96815712651a30ccf9fe10c540
+    sha256: 17bf54da7812220cc21c465ffa24dc296b6c7d96815712651a30ccf9fe10c540
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ferium/blobs/sha256:139b6568724b1ff83342d0e33539425f3d0c74a34319e8bfbe17eecdb37f03f6
+    sha256: 139b6568724b1ff83342d0e33539425f3d0c74a34319e8bfbe17eecdb37f03f6
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ferium/blobs/sha256:7ffac93ceda25507df1070fd4adf9b52157285992d6224838eef9139c680b200
+    sha256: 7ffac93ceda25507df1070fd4adf9b52157285992d6224838eef9139c680b200
+source:
+  url: https://github.com/gorilla-devs/ferium/archive/refs/tags/v4.7.1.tar.gz
+  sha256: a9b9fd966f47d5f8c32e483a21ea476f6883f194e7813f1f81b0001e14b046a5
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - pkgconf
+  - rust

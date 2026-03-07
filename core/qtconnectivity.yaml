@@ -3,19 +3,31 @@ version: 6.10.2
 description: Provides access to Bluetooth hardware
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/qtconnectivity/blobs/sha256:fe0a882bb13e4ee03b3def3ae19e15b55567e3e6582c4a7a93552dbac430020f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/qtconnectivity/blobs/sha256:cdbc3a39f363eda4d18305dfb316bc007c360d1e4a73a1d341fadb86291b1446
-  linux_amd64: https://ghcr.io/v2/homebrew/core/qtconnectivity/blobs/sha256:bced6bd1ec404123cefb1b7a45284093645c689f14308811906654e57daf1a9f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/qtconnectivity/blobs/sha256:fb365b19f11e3f3e01e85cdf60cd14374e1012cd7396f90151ecdc73dd8ec906
-sha256:
-  darwin_arm64: fe0a882bb13e4ee03b3def3ae19e15b55567e3e6582c4a7a93552dbac430020f
-  darwin_amd64: cdbc3a39f363eda4d18305dfb316bc007c360d1e4a73a1d341fadb86291b1446
-  linux_amd64: bced6bd1ec404123cefb1b7a45284093645c689f14308811906654e57daf1a9f
-  linux_arm64: fb365b19f11e3f3e01e85cdf60cd14374e1012cd7396f90151ecdc73dd8ec906
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qtconnectivity/blobs/sha256:fe0a882bb13e4ee03b3def3ae19e15b55567e3e6582c4a7a93552dbac430020f
+    sha256: fe0a882bb13e4ee03b3def3ae19e15b55567e3e6582c4a7a93552dbac430020f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qtconnectivity/blobs/sha256:cdbc3a39f363eda4d18305dfb316bc007c360d1e4a73a1d341fadb86291b1446
+    sha256: cdbc3a39f363eda4d18305dfb316bc007c360d1e4a73a1d341fadb86291b1446
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qtconnectivity/blobs/sha256:bced6bd1ec404123cefb1b7a45284093645c689f14308811906654e57daf1a9f
+    sha256: bced6bd1ec404123cefb1b7a45284093645c689f14308811906654e57daf1a9f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qtconnectivity/blobs/sha256:fb365b19f11e3f3e01e85cdf60cd14374e1012cd7396f90151ecdc73dd8ec906
+    sha256: fb365b19f11e3f3e01e85cdf60cd14374e1012cd7396f90151ecdc73dd8ec906
+source:
+  url: https://download.qt.io/official_releases/qt/6.10/6.10.2/submodules/qtconnectivity-everywhere-src-6.10.2.tar.xz
+  sha256: cf58f021f32857b5b6799cd4404ef613399ecc1c515492f0f620ce338a311a32
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
+  - qtbase
+build_dependencies:
+  - cmake
+  - ninja
+linux_dependencies:
+  - bluez
   - qtbase

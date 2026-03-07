@@ -3,16 +3,22 @@ version: 0.10.4
 description: Ayatana Indicator Display Objects
 homepage: https://github.com/AyatanaIndicators/ayatana-ido
 license: GPL-3.0-or-later OR LGPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:d057f3cc3501c6a142003866281a9290c052086decc8167138488d6a7fc906f8
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:a4633dc9cd30e3ccfb1079a42c91df5fefa6c4cf4e2f70e18a0c1538f9cd7356
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:0462edd4eaed23ad5557e1e733f4fbb17256f850da3c8a6c1f6cff6a9c95f750
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:8908314215b919c26a433bc0c539510a495a209ddd0361aa14cfe0f4f631558c
-sha256:
-  darwin_arm64: d057f3cc3501c6a142003866281a9290c052086decc8167138488d6a7fc906f8
-  darwin_amd64: a4633dc9cd30e3ccfb1079a42c91df5fefa6c4cf4e2f70e18a0c1538f9cd7356
-  linux_amd64: 0462edd4eaed23ad5557e1e733f4fbb17256f850da3c8a6c1f6cff6a9c95f750
-  linux_arm64: 8908314215b919c26a433bc0c539510a495a209ddd0361aa14cfe0f4f631558c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:d057f3cc3501c6a142003866281a9290c052086decc8167138488d6a7fc906f8
+    sha256: d057f3cc3501c6a142003866281a9290c052086decc8167138488d6a7fc906f8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:a4633dc9cd30e3ccfb1079a42c91df5fefa6c4cf4e2f70e18a0c1538f9cd7356
+    sha256: a4633dc9cd30e3ccfb1079a42c91df5fefa6c4cf4e2f70e18a0c1538f9cd7356
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:0462edd4eaed23ad5557e1e733f4fbb17256f850da3c8a6c1f6cff6a9c95f750
+    sha256: 0462edd4eaed23ad5557e1e733f4fbb17256f850da3c8a6c1f6cff6a9c95f750
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:8908314215b919c26a433bc0c539510a495a209ddd0361aa14cfe0f4f631558c
+    sha256: 8908314215b919c26a433bc0c539510a495a209ddd0361aa14cfe0f4f631558c
+source:
+  url: https://github.com/AyatanaIndicators/ayatana-ido/archive/refs/tags/0.10.4.tar.gz
+  sha256: bd59abd5f1314e411d0d55ce3643e91cef633271f58126be529de5fb71c5ab38
 install:
   type: archive
   format: tar.gz
@@ -26,3 +32,14 @@ dependencies:
   - at-spi2-core
   - gettext
   - harfbuzz
+build_dependencies:
+  - cmake
+  - gobject-introspection
+  - pkgconf
+  - vala
+linux_dependencies:
+  - cairo
+  - gdk-pixbuf
+  - glib
+  - gtk+3
+  - pango

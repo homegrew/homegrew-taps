@@ -3,16 +3,22 @@ version: 3.22
 description: Karlsruhe High Quality Partitioning
 homepage: https://algo2.iti.kit.edu/documents/kahip/index.html
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:b8302704ed34978e1bd2633a245c6d7e500f9ce23e5b241d30ab9859de2702c4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:6db59fcd4c5784a947ff2d72ad7bad65cfeca35f6d22751e23400b3187c0ff6b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:c49e5ecc90d304d3ec5dd892cb988b2a645fe486c75c86551f23d71485044604
-  linux_arm64: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:1dcc6cbd9ab85a0bfaf7267af73d673f4e48f6da591310384e8fac252dc5b6ec
-sha256:
-  darwin_arm64: b8302704ed34978e1bd2633a245c6d7e500f9ce23e5b241d30ab9859de2702c4
-  darwin_amd64: 6db59fcd4c5784a947ff2d72ad7bad65cfeca35f6d22751e23400b3187c0ff6b
-  linux_amd64: c49e5ecc90d304d3ec5dd892cb988b2a645fe486c75c86551f23d71485044604
-  linux_arm64: 1dcc6cbd9ab85a0bfaf7267af73d673f4e48f6da591310384e8fac252dc5b6ec
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:b8302704ed34978e1bd2633a245c6d7e500f9ce23e5b241d30ab9859de2702c4
+    sha256: b8302704ed34978e1bd2633a245c6d7e500f9ce23e5b241d30ab9859de2702c4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:6db59fcd4c5784a947ff2d72ad7bad65cfeca35f6d22751e23400b3187c0ff6b
+    sha256: 6db59fcd4c5784a947ff2d72ad7bad65cfeca35f6d22751e23400b3187c0ff6b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:c49e5ecc90d304d3ec5dd892cb988b2a645fe486c75c86551f23d71485044604
+    sha256: c49e5ecc90d304d3ec5dd892cb988b2a645fe486c75c86551f23d71485044604
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:1dcc6cbd9ab85a0bfaf7267af73d673f4e48f6da591310384e8fac252dc5b6ec
+    sha256: 1dcc6cbd9ab85a0bfaf7267af73d673f4e48f6da591310384e8fac252dc5b6ec
+source:
+  url: https://github.com/KaHIP/KaHIP/archive/refs/tags/v3.22.tar.gz
+  sha256: 3cbadfbf8d503351d921531413d3b66ad347a6d6e213120db87462093bb66b7c
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,7 @@ install:
 dependencies:
   - open-mpi
   - libomp
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - open-mpi

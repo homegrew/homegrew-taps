@@ -3,17 +3,25 @@ version: 0.19.12
 description: Tiny command-line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 homepage: https://github.com/natesales/q
 license: GPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/q/blobs/sha256:ee4dc8a277a2ba2978c43366c9ed1cd0410ca58b89f3950dc8f09cf6d09a85ee
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/q/blobs/sha256:eb9e47d8a8ef45e3def47976940c9e3a7604991198e247dcb706c7dc1564a45a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/q/blobs/sha256:49cb138a5a2993410b7ff3866a8088ba2cab0fc1fbd9ed56bbf1b9f987eb23e4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/q/blobs/sha256:87fed670b4705b13beaf7806b77d8f87bea6738ea8beab96e86c1f0d0a8a9b29
-sha256:
-  darwin_arm64: ee4dc8a277a2ba2978c43366c9ed1cd0410ca58b89f3950dc8f09cf6d09a85ee
-  darwin_amd64: eb9e47d8a8ef45e3def47976940c9e3a7604991198e247dcb706c7dc1564a45a
-  linux_amd64: 49cb138a5a2993410b7ff3866a8088ba2cab0fc1fbd9ed56bbf1b9f987eb23e4
-  linux_arm64: 87fed670b4705b13beaf7806b77d8f87bea6738ea8beab96e86c1f0d0a8a9b29
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/q/blobs/sha256:ee4dc8a277a2ba2978c43366c9ed1cd0410ca58b89f3950dc8f09cf6d09a85ee
+    sha256: ee4dc8a277a2ba2978c43366c9ed1cd0410ca58b89f3950dc8f09cf6d09a85ee
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/q/blobs/sha256:eb9e47d8a8ef45e3def47976940c9e3a7604991198e247dcb706c7dc1564a45a
+    sha256: eb9e47d8a8ef45e3def47976940c9e3a7604991198e247dcb706c7dc1564a45a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/q/blobs/sha256:49cb138a5a2993410b7ff3866a8088ba2cab0fc1fbd9ed56bbf1b9f987eb23e4
+    sha256: 49cb138a5a2993410b7ff3866a8088ba2cab0fc1fbd9ed56bbf1b9f987eb23e4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/q/blobs/sha256:87fed670b4705b13beaf7806b77d8f87bea6738ea8beab96e86c1f0d0a8a9b29
+    sha256: 87fed670b4705b13beaf7806b77d8f87bea6738ea8beab96e86c1f0d0a8a9b29
+source:
+  url: https://github.com/natesales/q/archive/refs/tags/v0.19.12.tar.gz
+  sha256: 1f56ebfb93fd380dee734cca9227149de2491c49db7b2c0f21019fd463081e4c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

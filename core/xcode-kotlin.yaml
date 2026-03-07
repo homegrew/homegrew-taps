@@ -3,13 +3,19 @@ version: 2.2.1
 description: Kotlin Native Xcode Plugin
 homepage: https://github.com/touchlab/xcode-kotlin
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/xcode-kotlin/blobs/sha256:c8432e2d622a06bacb457053e063480f63879c3e73abf22fe40b3114291ad881
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/xcode-kotlin/blobs/sha256:95af928c785a49d772eef8755d4854e7a89f5f8179a65dd0a5b2e512c63d0eb6
-sha256:
-  darwin_arm64: c8432e2d622a06bacb457053e063480f63879c3e73abf22fe40b3114291ad881
-  darwin_amd64: 95af928c785a49d772eef8755d4854e7a89f5f8179a65dd0a5b2e512c63d0eb6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xcode-kotlin/blobs/sha256:c8432e2d622a06bacb457053e063480f63879c3e73abf22fe40b3114291ad881
+    sha256: c8432e2d622a06bacb457053e063480f63879c3e73abf22fe40b3114291ad881
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xcode-kotlin/blobs/sha256:95af928c785a49d772eef8755d4854e7a89f5f8179a65dd0a5b2e512c63d0eb6
+    sha256: 95af928c785a49d772eef8755d4854e7a89f5f8179a65dd0a5b2e512c63d0eb6
+source:
+  url: https://github.com/touchlab/xcode-kotlin/archive/refs/tags/2.2.1.tar.gz
+  sha256: 3789d886022509cb232616679835a7dd67e4adb4983a24f1ce268aa244978aa8
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - gradle

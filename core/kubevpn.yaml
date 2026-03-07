@@ -3,17 +3,25 @@ version: 2.9.13
 description: Offers a Cloud-Native Dev Environment that connects to your K8s cluster network
 homepage: https://www.kubevpn.dev
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/kubevpn/blobs/sha256:82a2ac3b80ac07c04526e958410a38407cd4b80dd7f94fcdd242d0c6416869a1
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/kubevpn/blobs/sha256:8a77bfc7cdfe78241d78a282ce5a968b90c5a68e44e39268ba85e84bcb98a4c5
-  linux_amd64: https://ghcr.io/v2/homebrew/core/kubevpn/blobs/sha256:bf7e87aefca56710f8187b42657b79700142df6f4a297d456b99d8ad81cd89b4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/kubevpn/blobs/sha256:37ddbe98c7c12f0a2f5a8f3bf4c78864eb1540b8e583152c43c46db45f2c5140
-sha256:
-  darwin_arm64: 82a2ac3b80ac07c04526e958410a38407cd4b80dd7f94fcdd242d0c6416869a1
-  darwin_amd64: 8a77bfc7cdfe78241d78a282ce5a968b90c5a68e44e39268ba85e84bcb98a4c5
-  linux_amd64: bf7e87aefca56710f8187b42657b79700142df6f4a297d456b99d8ad81cd89b4
-  linux_arm64: 37ddbe98c7c12f0a2f5a8f3bf4c78864eb1540b8e583152c43c46db45f2c5140
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kubevpn/blobs/sha256:82a2ac3b80ac07c04526e958410a38407cd4b80dd7f94fcdd242d0c6416869a1
+    sha256: 82a2ac3b80ac07c04526e958410a38407cd4b80dd7f94fcdd242d0c6416869a1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kubevpn/blobs/sha256:8a77bfc7cdfe78241d78a282ce5a968b90c5a68e44e39268ba85e84bcb98a4c5
+    sha256: 8a77bfc7cdfe78241d78a282ce5a968b90c5a68e44e39268ba85e84bcb98a4c5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kubevpn/blobs/sha256:bf7e87aefca56710f8187b42657b79700142df6f4a297d456b99d8ad81cd89b4
+    sha256: bf7e87aefca56710f8187b42657b79700142df6f4a297d456b99d8ad81cd89b4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kubevpn/blobs/sha256:37ddbe98c7c12f0a2f5a8f3bf4c78864eb1540b8e583152c43c46db45f2c5140
+    sha256: 37ddbe98c7c12f0a2f5a8f3bf4c78864eb1540b8e583152c43c46db45f2c5140
+source:
+  url: https://github.com/kubenetworks/kubevpn/archive/refs/tags/v2.9.13.tar.gz
+  sha256: 10746959d2e2576072f25e8c45a4614fd88c0f8124dfb93c23e35a4ef6c10c2b
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

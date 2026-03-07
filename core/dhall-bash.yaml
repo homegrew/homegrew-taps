@@ -3,19 +3,31 @@ version: 1.0.41
 description: Compile Dhall to Bash
 homepage: https://github.com/dhall-lang/dhall-haskell/tree/main/dhall-bash
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dhall-bash/blobs/sha256:7f274ea970c65fd534fc7d341376d42b84b24ca994af99b98bab41e14cbe1be5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dhall-bash/blobs/sha256:bd81c8c4264ef63efcdd07c59d87d413a83b83f140ef737e114eec5db7b851fc
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dhall-bash/blobs/sha256:ce078653ce0eba7af9a386dea3090b7fbd36c141a08b8eb5cfff1197a77b971f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dhall-bash/blobs/sha256:2d0077fb6556ff60d8ff7fdd9ed89cc52424567bc03089237d588d8b9edb7ecf
-sha256:
-  darwin_arm64: 7f274ea970c65fd534fc7d341376d42b84b24ca994af99b98bab41e14cbe1be5
-  darwin_amd64: bd81c8c4264ef63efcdd07c59d87d413a83b83f140ef737e114eec5db7b851fc
-  linux_amd64: ce078653ce0eba7af9a386dea3090b7fbd36c141a08b8eb5cfff1197a77b971f
-  linux_arm64: 2d0077fb6556ff60d8ff7fdd9ed89cc52424567bc03089237d588d8b9edb7ecf
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dhall-bash/blobs/sha256:7f274ea970c65fd534fc7d341376d42b84b24ca994af99b98bab41e14cbe1be5
+    sha256: 7f274ea970c65fd534fc7d341376d42b84b24ca994af99b98bab41e14cbe1be5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dhall-bash/blobs/sha256:bd81c8c4264ef63efcdd07c59d87d413a83b83f140ef737e114eec5db7b851fc
+    sha256: bd81c8c4264ef63efcdd07c59d87d413a83b83f140ef737e114eec5db7b851fc
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dhall-bash/blobs/sha256:ce078653ce0eba7af9a386dea3090b7fbd36c141a08b8eb5cfff1197a77b971f
+    sha256: ce078653ce0eba7af9a386dea3090b7fbd36c141a08b8eb5cfff1197a77b971f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dhall-bash/blobs/sha256:2d0077fb6556ff60d8ff7fdd9ed89cc52424567bc03089237d588d8b9edb7ecf
+    sha256: 2d0077fb6556ff60d8ff7fdd9ed89cc52424567bc03089237d588d8b9edb7ecf
+source:
+  url: https://hackage.haskell.org/package/dhall-bash-1.0.41/dhall-bash-1.0.41.tar.gz
+  sha256: 2aeb9316c22ddbc0c9c53ca0b347c49087351f326cba7a1cb95f4265691a5f26
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - gmp
+build_dependencies:
+  - cabal-install
+  - ghc
+linux_dependencies:
+  - gmp
+  - zlib-ng-compat

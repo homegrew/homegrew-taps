@@ -3,16 +3,22 @@ version: 5.18.0
 description: Text view with syntax, undo/redo, and text marks
 homepage: https://projects.gnome.org/gtksourceview/
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gtksourceview5/blobs/sha256:1f9e3a56f8a065dad2316da088e50e1fa1b3e7e3dd2b7c1fe5df89e497c6e73c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gtksourceview5/blobs/sha256:0c635d1fece526969c585845a3c745c3ea7135f6d5af572131a7e7bffc86c68b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gtksourceview5/blobs/sha256:5a81d0babd17eab9868f12db42382bd15196762543bd91878575656685ee5c54
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gtksourceview5/blobs/sha256:21b402071c73160ba92de56bd03f1a88e2a43e4a535b6b5cc5a2b82c4bab0c43
-sha256:
-  darwin_arm64: 1f9e3a56f8a065dad2316da088e50e1fa1b3e7e3dd2b7c1fe5df89e497c6e73c
-  darwin_amd64: 0c635d1fece526969c585845a3c745c3ea7135f6d5af572131a7e7bffc86c68b
-  linux_amd64: 5a81d0babd17eab9868f12db42382bd15196762543bd91878575656685ee5c54
-  linux_arm64: 21b402071c73160ba92de56bd03f1a88e2a43e4a535b6b5cc5a2b82c4bab0c43
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gtksourceview5/blobs/sha256:1f9e3a56f8a065dad2316da088e50e1fa1b3e7e3dd2b7c1fe5df89e497c6e73c
+    sha256: 1f9e3a56f8a065dad2316da088e50e1fa1b3e7e3dd2b7c1fe5df89e497c6e73c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gtksourceview5/blobs/sha256:0c635d1fece526969c585845a3c745c3ea7135f6d5af572131a7e7bffc86c68b
+    sha256: 0c635d1fece526969c585845a3c745c3ea7135f6d5af572131a7e7bffc86c68b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gtksourceview5/blobs/sha256:5a81d0babd17eab9868f12db42382bd15196762543bd91878575656685ee5c54
+    sha256: 5a81d0babd17eab9868f12db42382bd15196762543bd91878575656685ee5c54
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gtksourceview5/blobs/sha256:21b402071c73160ba92de56bd03f1a88e2a43e4a535b6b5cc5a2b82c4bab0c43
+    sha256: 21b402071c73160ba92de56bd03f1a88e2a43e4a535b6b5cc5a2b82c4bab0c43
+source:
+  url: https://download.gnome.org/sources/gtksourceview/5.18/gtksourceview-5.18.0.tar.xz
+  sha256: 051a78fe38f793328047e5bcd6d855c6425c0b480c20d9432179e356742c6ac0
 install:
   type: archive
   format: tar.gz
@@ -28,3 +34,19 @@ dependencies:
   - pango
   - pcre2
   - gettext
+build_dependencies:
+  - gobject-introspection
+  - meson
+  - ninja
+  - pkgconf
+  - vala
+linux_dependencies:
+  - cairo
+  - fontconfig
+  - fribidi
+  - gdk-pixbuf
+  - glib
+  - graphene
+  - gtk4
+  - pango
+  - pcre2

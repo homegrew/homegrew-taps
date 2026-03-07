@@ -3,16 +3,22 @@ version: 3.2.0
 description: Double-entry accounting tool that works on plain text files
 homepage: https://beancount.github.io/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:3045ff72fe59dd3077e08f18d541b91421d5fdb08d1b0bbaf154418840685dae
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:96a14578b71603bb20ebf8f08e4a11fc8dcfde165d0e7ae9ace5c29cd80a36f7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:23f5e096016de0cfda9bbab51edfec9b71b4b888a135572ee61fd3d46245e287
-  linux_arm64: https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:e84599c4925de97bd2feb7e75162a9fe8e332bdb0e9b8d79954f73947dc40bca
-sha256:
-  darwin_arm64: 3045ff72fe59dd3077e08f18d541b91421d5fdb08d1b0bbaf154418840685dae
-  darwin_amd64: 96a14578b71603bb20ebf8f08e4a11fc8dcfde165d0e7ae9ace5c29cd80a36f7
-  linux_amd64: 23f5e096016de0cfda9bbab51edfec9b71b4b888a135572ee61fd3d46245e287
-  linux_arm64: e84599c4925de97bd2feb7e75162a9fe8e332bdb0e9b8d79954f73947dc40bca
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:3045ff72fe59dd3077e08f18d541b91421d5fdb08d1b0bbaf154418840685dae
+    sha256: 3045ff72fe59dd3077e08f18d541b91421d5fdb08d1b0bbaf154418840685dae
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:96a14578b71603bb20ebf8f08e4a11fc8dcfde165d0e7ae9ace5c29cd80a36f7
+    sha256: 96a14578b71603bb20ebf8f08e4a11fc8dcfde165d0e7ae9ace5c29cd80a36f7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:23f5e096016de0cfda9bbab51edfec9b71b4b888a135572ee61fd3d46245e287
+    sha256: 23f5e096016de0cfda9bbab51edfec9b71b4b888a135572ee61fd3d46245e287
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:e84599c4925de97bd2feb7e75162a9fe8e332bdb0e9b8d79954f73947dc40bca
+    sha256: e84599c4925de97bd2feb7e75162a9fe8e332bdb0e9b8d79954f73947dc40bca
+source:
+  url: https://files.pythonhosted.org/packages/57/e3/951015ad2e72917611e1a45c5fe9a33b4e2e202923d91455a9727aff441b/beancount-3.2.0.tar.gz
+  sha256: 9f374bdcbae63328d8a0cf6d539490f81caa647f2d1cc92c9fa6117a9eb092ca
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,7 @@ install:
 dependencies:
   - certifi
   - python@3.14
+build_dependencies:
+  - bison
+  - meson
+  - ninja

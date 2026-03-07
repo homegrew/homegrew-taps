@@ -3,16 +3,22 @@ version: 2.4.3
 description: Create and manage Android app repositories for F-Droid
 homepage: https://f-droid.org
 license: AGPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/fdroidserver/blobs/sha256:70ac1e098dc6b6825452b392081ad96452acc28722fc3ee68244fbe8f0a34504
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/fdroidserver/blobs/sha256:a80a9acb9fc70de5d2ef250a740689f93c90966ef56358102a4102dff9a97b1d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/fdroidserver/blobs/sha256:38338b5bf0093aaf3d2ac753bb6f5c85bd383b8ddc5dafb125a59a3d400e68a6
-  linux_arm64: https://ghcr.io/v2/homebrew/core/fdroidserver/blobs/sha256:2bf6796016a9a86875ac317e234d9c2bcd99a027578b82e3329b799cb0e3f0c2
-sha256:
-  darwin_arm64: 70ac1e098dc6b6825452b392081ad96452acc28722fc3ee68244fbe8f0a34504
-  darwin_amd64: a80a9acb9fc70de5d2ef250a740689f93c90966ef56358102a4102dff9a97b1d
-  linux_amd64: 38338b5bf0093aaf3d2ac753bb6f5c85bd383b8ddc5dafb125a59a3d400e68a6
-  linux_arm64: 2bf6796016a9a86875ac317e234d9c2bcd99a027578b82e3329b799cb0e3f0c2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fdroidserver/blobs/sha256:70ac1e098dc6b6825452b392081ad96452acc28722fc3ee68244fbe8f0a34504
+    sha256: 70ac1e098dc6b6825452b392081ad96452acc28722fc3ee68244fbe8f0a34504
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fdroidserver/blobs/sha256:a80a9acb9fc70de5d2ef250a740689f93c90966ef56358102a4102dff9a97b1d
+    sha256: a80a9acb9fc70de5d2ef250a740689f93c90966ef56358102a4102dff9a97b1d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fdroidserver/blobs/sha256:38338b5bf0093aaf3d2ac753bb6f5c85bd383b8ddc5dafb125a59a3d400e68a6
+    sha256: 38338b5bf0093aaf3d2ac753bb6f5c85bd383b8ddc5dafb125a59a3d400e68a6
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fdroidserver/blobs/sha256:2bf6796016a9a86875ac317e234d9c2bcd99a027578b82e3329b799cb0e3f0c2
+    sha256: 2bf6796016a9a86875ac317e234d9c2bcd99a027578b82e3329b799cb0e3f0c2
+source:
+  url: https://files.pythonhosted.org/packages/dd/1e/4f8b300092cef6f90f46041743c653156347063c15e81cdc60728c70dd28/fdroidserver-2.4.3.tar.gz
+  sha256: bb0da11f4ff087061af900a1c12404e7c26392aee8a214e1f842fa129a33a0db
 install:
   type: archive
   format: tar.gz
@@ -30,3 +36,8 @@ dependencies:
   - qhull
   - rclone
   - s3cmd
+build_dependencies:
+  - ninja
+  - pkgconf
+  - pybind11
+  - rust

@@ -3,17 +3,29 @@ version: 0.8.0
 description: Open Source Spotify client library
 homepage: https://github.com/librespot-org/librespot
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/librespot/blobs/sha256:9f29922e551c58ca9314a8866308fbc55681b5917d2ec6e9a329a9b7efe79647
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/librespot/blobs/sha256:a837315473b98774a6a1411853646c5c819d836f21153cf4d5eabd327ab3f6c2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/librespot/blobs/sha256:fadc5ec56dc24bac05ceacc76486ab8326d4c3f6a5f4513a791bc80fa6bdbd0a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/librespot/blobs/sha256:3333c791b5881eced0fb758e2a8d4e861d55aaa7c9c91e09df0183bc7aa68737
-sha256:
-  darwin_arm64: 9f29922e551c58ca9314a8866308fbc55681b5917d2ec6e9a329a9b7efe79647
-  darwin_amd64: a837315473b98774a6a1411853646c5c819d836f21153cf4d5eabd327ab3f6c2
-  linux_amd64: fadc5ec56dc24bac05ceacc76486ab8326d4c3f6a5f4513a791bc80fa6bdbd0a
-  linux_arm64: 3333c791b5881eced0fb758e2a8d4e861d55aaa7c9c91e09df0183bc7aa68737
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/librespot/blobs/sha256:9f29922e551c58ca9314a8866308fbc55681b5917d2ec6e9a329a9b7efe79647
+    sha256: 9f29922e551c58ca9314a8866308fbc55681b5917d2ec6e9a329a9b7efe79647
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/librespot/blobs/sha256:a837315473b98774a6a1411853646c5c819d836f21153cf4d5eabd327ab3f6c2
+    sha256: a837315473b98774a6a1411853646c5c819d836f21153cf4d5eabd327ab3f6c2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/librespot/blobs/sha256:fadc5ec56dc24bac05ceacc76486ab8326d4c3f6a5f4513a791bc80fa6bdbd0a
+    sha256: fadc5ec56dc24bac05ceacc76486ab8326d4c3f6a5f4513a791bc80fa6bdbd0a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/librespot/blobs/sha256:3333c791b5881eced0fb758e2a8d4e861d55aaa7c9c91e09df0183bc7aa68737
+    sha256: 3333c791b5881eced0fb758e2a8d4e861d55aaa7c9c91e09df0183bc7aa68737
+source:
+  url: https://github.com/librespot-org/librespot/archive/refs/tags/v0.8.0.tar.gz
+  sha256: 0e4922997e1c67d27b3f50dcc388ecb8a3c08eba23b764879071f6e9e8c07ec7
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - alsa-lib
+  - avahi

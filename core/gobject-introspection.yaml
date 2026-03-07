@@ -3,16 +3,22 @@ version: 1.86.0
 description: Generate introspection data for GObject libraries
 homepage: https://gi.readthedocs.io/en/latest/
 license: GPL-2.0-or-later AND LGPL-2.0-or-later AND MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gobject-introspection/blobs/sha256:e84d9ab63955e7da2a20bcd8d8ad72cfaa00ed17a076430c278ac6ae0a72c94c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gobject-introspection/blobs/sha256:981538c4d1b3c77f14bb71f3d195b9956cb3eb7d1d97a5f701152d08ddcfaad0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gobject-introspection/blobs/sha256:bf0ddf795ddfc70040e50d67d17c22e5e052f02e29fdfbf36832c439c11fa469
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gobject-introspection/blobs/sha256:628866b4608a6ed08ec3619ca7aafb4307717960537ecf5c3166731b35a9b56d
-sha256:
-  darwin_arm64: e84d9ab63955e7da2a20bcd8d8ad72cfaa00ed17a076430c278ac6ae0a72c94c
-  darwin_amd64: 981538c4d1b3c77f14bb71f3d195b9956cb3eb7d1d97a5f701152d08ddcfaad0
-  linux_amd64: bf0ddf795ddfc70040e50d67d17c22e5e052f02e29fdfbf36832c439c11fa469
-  linux_arm64: 628866b4608a6ed08ec3619ca7aafb4307717960537ecf5c3166731b35a9b56d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gobject-introspection/blobs/sha256:e84d9ab63955e7da2a20bcd8d8ad72cfaa00ed17a076430c278ac6ae0a72c94c
+    sha256: e84d9ab63955e7da2a20bcd8d8ad72cfaa00ed17a076430c278ac6ae0a72c94c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gobject-introspection/blobs/sha256:981538c4d1b3c77f14bb71f3d195b9956cb3eb7d1d97a5f701152d08ddcfaad0
+    sha256: 981538c4d1b3c77f14bb71f3d195b9956cb3eb7d1d97a5f701152d08ddcfaad0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gobject-introspection/blobs/sha256:bf0ddf795ddfc70040e50d67d17c22e5e052f02e29fdfbf36832c439c11fa469
+    sha256: bf0ddf795ddfc70040e50d67d17c22e5e052f02e29fdfbf36832c439c11fa469
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gobject-introspection/blobs/sha256:628866b4608a6ed08ec3619ca7aafb4307717960537ecf5c3166731b35a9b56d
+    sha256: 628866b4608a6ed08ec3619ca7aafb4307717960537ecf5c3166731b35a9b56d
+source:
+  url: https://download.gnome.org/sources/gobject-introspection/1.86/gobject-introspection-1.86.0.tar.xz
+  sha256: 920d1a3fcedeadc32acff95c2e203b319039dd4b4a08dd1a2dfd283d19c0b9ae
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,7 @@ dependencies:
   - glib
   - pkgconf
   - python@3.14
+build_dependencies:
+  - bison
+  - meson
+  - ninja

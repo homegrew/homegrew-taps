@@ -3,16 +3,22 @@ version: 0.2.20250521-115337-25ed6ac4
 description: Source control client
 homepage: https://sapling-scm.com
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/sapling/blobs/sha256:24e16f80032864b4adbf096223be034983f97f336a2dd3245d93f7d1e343faf9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/sapling/blobs/sha256:ab1e3160fb134a87be5d5268a11981051375cc9cd36f6719ab7714d34165acbf
-  linux_amd64: https://ghcr.io/v2/homebrew/core/sapling/blobs/sha256:12c50272688a28355e8d36757f857219e08a767cf6c51848040e91f4320485fd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/sapling/blobs/sha256:b6937e7736547bac6bc35ea0f75e2a47ff792457af39f1819686615e97af81c1
-sha256:
-  darwin_arm64: 24e16f80032864b4adbf096223be034983f97f336a2dd3245d93f7d1e343faf9
-  darwin_amd64: ab1e3160fb134a87be5d5268a11981051375cc9cd36f6719ab7714d34165acbf
-  linux_amd64: 12c50272688a28355e8d36757f857219e08a767cf6c51848040e91f4320485fd
-  linux_arm64: b6937e7736547bac6bc35ea0f75e2a47ff792457af39f1819686615e97af81c1
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sapling/blobs/sha256:24e16f80032864b4adbf096223be034983f97f336a2dd3245d93f7d1e343faf9
+    sha256: 24e16f80032864b4adbf096223be034983f97f336a2dd3245d93f7d1e343faf9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sapling/blobs/sha256:ab1e3160fb134a87be5d5268a11981051375cc9cd36f6719ab7714d34165acbf
+    sha256: ab1e3160fb134a87be5d5268a11981051375cc9cd36f6719ab7714d34165acbf
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sapling/blobs/sha256:12c50272688a28355e8d36757f857219e08a767cf6c51848040e91f4320485fd
+    sha256: 12c50272688a28355e8d36757f857219e08a767cf6c51848040e91f4320485fd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sapling/blobs/sha256:b6937e7736547bac6bc35ea0f75e2a47ff792457af39f1819686615e97af81c1
+    sha256: b6937e7736547bac6bc35ea0f75e2a47ff792457af39f1819686615e97af81c1
+source:
+  url: https://github.com/facebook/sapling/archive/refs/tags/0.2.20250521-115337+25ed6ac4.tar.gz
+  sha256: 53c48bb807a7c65965a9f9f154f955ec4ccbce6696f721db73d0873e4bf03244
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,16 @@ dependencies:
   - node
   - openssl@3
   - python@3.12
+build_dependencies:
+  - cmake
+  - pkgconf
+  - python-setuptools
+  - rust
+  - yarn
+linux_dependencies:
+  - gh
+  - libssh2
+  - node
+  - openssl@3
+  - python@3.12
+  - zlib-ng-compat

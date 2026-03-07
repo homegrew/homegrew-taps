@@ -3,16 +3,22 @@ version: 5.1.0
 description: Unified Robot Description Format (URDF) parser
 homepage: https://wiki.ros.org/urdf/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:3e7d801dcf69b7583b0937419e403febbd75e7462e4f3626671d95e57dfde346
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:3b4bb1f78375fa6a416d597238a11892f4a1fdd8487736cab2c452654d41c9c6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:567dfc0d2fefa4e90f8915abe3e142f5f2dd826b5a435915a417a4a5be98e40f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:0b980bae0bc61095fc6f6ec1d0f9ed0614c09c2965dceacbd126d05bae18abfc
-sha256:
-  darwin_arm64: 3e7d801dcf69b7583b0937419e403febbd75e7462e4f3626671d95e57dfde346
-  darwin_amd64: 3b4bb1f78375fa6a416d597238a11892f4a1fdd8487736cab2c452654d41c9c6
-  linux_amd64: 567dfc0d2fefa4e90f8915abe3e142f5f2dd826b5a435915a417a4a5be98e40f
-  linux_arm64: 0b980bae0bc61095fc6f6ec1d0f9ed0614c09c2965dceacbd126d05bae18abfc
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:3e7d801dcf69b7583b0937419e403febbd75e7462e4f3626671d95e57dfde346
+    sha256: 3e7d801dcf69b7583b0937419e403febbd75e7462e4f3626671d95e57dfde346
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:3b4bb1f78375fa6a416d597238a11892f4a1fdd8487736cab2c452654d41c9c6
+    sha256: 3b4bb1f78375fa6a416d597238a11892f4a1fdd8487736cab2c452654d41c9c6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:567dfc0d2fefa4e90f8915abe3e142f5f2dd826b5a435915a417a4a5be98e40f
+    sha256: 567dfc0d2fefa4e90f8915abe3e142f5f2dd826b5a435915a417a4a5be98e40f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:0b980bae0bc61095fc6f6ec1d0f9ed0614c09c2965dceacbd126d05bae18abfc
+    sha256: 0b980bae0bc61095fc6f6ec1d0f9ed0614c09c2965dceacbd126d05bae18abfc
+source:
+  url: https://github.com/ros/urdfdom/archive/refs/tags/5.1.0.tar.gz
+  sha256: 096478dc889fda2b375184304bd2511d4f33182ecd05732284c15978e2ef5d47
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,5 @@ dependencies:
   - console_bridge
   - tinyxml2
   - urdfdom_headers
+build_dependencies:
+  - cmake

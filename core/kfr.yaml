@@ -3,19 +3,30 @@ version: 7.0.1
 description: Fast, modern C++ DSP framework
 homepage: https://www.kfrlib.com/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/kfr/blobs/sha256:86b96b05477af3f3661276b223983fadd610b7e471407430f7cc1cf2e314a8eb
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/kfr/blobs/sha256:1fdb1f8bef584d04821453d680e647e7391d33c5a99508f2c7a1c166dc4a8a54
-  linux_amd64: https://ghcr.io/v2/homebrew/core/kfr/blobs/sha256:ae7a12b26f03bbc10216e6b018499cf826967814c5067df3631928b84bce4eb5
-  linux_arm64: https://ghcr.io/v2/homebrew/core/kfr/blobs/sha256:02b2233a450327c2fe7981153fa72dd2ae1f06ab752d805f66343753b27f66ae
-sha256:
-  darwin_arm64: 86b96b05477af3f3661276b223983fadd610b7e471407430f7cc1cf2e314a8eb
-  darwin_amd64: 1fdb1f8bef584d04821453d680e647e7391d33c5a99508f2c7a1c166dc4a8a54
-  linux_amd64: ae7a12b26f03bbc10216e6b018499cf826967814c5067df3631928b84bce4eb5
-  linux_arm64: 02b2233a450327c2fe7981153fa72dd2ae1f06ab752d805f66343753b27f66ae
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kfr/blobs/sha256:86b96b05477af3f3661276b223983fadd610b7e471407430f7cc1cf2e314a8eb
+    sha256: 86b96b05477af3f3661276b223983fadd610b7e471407430f7cc1cf2e314a8eb
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kfr/blobs/sha256:1fdb1f8bef584d04821453d680e647e7391d33c5a99508f2c7a1c166dc4a8a54
+    sha256: 1fdb1f8bef584d04821453d680e647e7391d33c5a99508f2c7a1c166dc4a8a54
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kfr/blobs/sha256:ae7a12b26f03bbc10216e6b018499cf826967814c5067df3631928b84bce4eb5
+    sha256: ae7a12b26f03bbc10216e6b018499cf826967814c5067df3631928b84bce4eb5
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kfr/blobs/sha256:02b2233a450327c2fe7981153fa72dd2ae1f06ab752d805f66343753b27f66ae
+    sha256: 02b2233a450327c2fe7981153fa72dd2ae1f06ab752d805f66343753b27f66ae
+source:
+  url: https://github.com/kfrlib/kfr/archive/refs/tags/7.0.1.tar.gz
+  sha256: 42b36126f2af8719eff6f26e87e9f155816bc3bb110376e4747ba5de536c2cce
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - boost
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - boost
+  - llvm

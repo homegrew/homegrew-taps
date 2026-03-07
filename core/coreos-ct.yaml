@@ -3,17 +3,25 @@ version: 0.9.4
 description: Convert a Container Linux Config into Ignition
 homepage: https://flatcar-linux.org/docs/latest/provisioning/config-transpiler/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:bbe2be9e5b17ddf5d2be97069bc9552adbe793b6739c6b6dfd07028af3aa1cc3
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:fb8712c14dc8c22531d57db5761aae9c52864bfb8c1c4efa3aa0a478a316c145
-  linux_amd64: https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:ebf7582f950db123c1c3e6281ca2947c95abe58b116af11681a24085d1eb1e82
-  linux_arm64: https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:1aea93999354ff21f48cf727352ce20bb8f0b1c52abee5c33f321020bb375cdf
-sha256:
-  darwin_arm64: bbe2be9e5b17ddf5d2be97069bc9552adbe793b6739c6b6dfd07028af3aa1cc3
-  darwin_amd64: fb8712c14dc8c22531d57db5761aae9c52864bfb8c1c4efa3aa0a478a316c145
-  linux_amd64: ebf7582f950db123c1c3e6281ca2947c95abe58b116af11681a24085d1eb1e82
-  linux_arm64: 1aea93999354ff21f48cf727352ce20bb8f0b1c52abee5c33f321020bb375cdf
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:bbe2be9e5b17ddf5d2be97069bc9552adbe793b6739c6b6dfd07028af3aa1cc3
+    sha256: bbe2be9e5b17ddf5d2be97069bc9552adbe793b6739c6b6dfd07028af3aa1cc3
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:fb8712c14dc8c22531d57db5761aae9c52864bfb8c1c4efa3aa0a478a316c145
+    sha256: fb8712c14dc8c22531d57db5761aae9c52864bfb8c1c4efa3aa0a478a316c145
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:ebf7582f950db123c1c3e6281ca2947c95abe58b116af11681a24085d1eb1e82
+    sha256: ebf7582f950db123c1c3e6281ca2947c95abe58b116af11681a24085d1eb1e82
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:1aea93999354ff21f48cf727352ce20bb8f0b1c52abee5c33f321020bb375cdf
+    sha256: 1aea93999354ff21f48cf727352ce20bb8f0b1c52abee5c33f321020bb375cdf
+source:
+  url: https://github.com/flatcar/container-linux-config-transpiler/archive/refs/tags/v0.9.4.tar.gz
+  sha256: c173ced842a6d178000f9bf01b26e9a8c296b1256ab713834f18d3f0883c4263
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

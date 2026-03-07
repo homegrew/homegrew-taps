@@ -3,16 +3,22 @@ version: 3.9
 description: Simple TTY terminal I/O application
 homepage: https://tio.github.io
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tio/blobs/sha256:6cb51485dcb3c3ecd0cfc60130ee73ea411e49b221aece71c220ea308a429cf4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tio/blobs/sha256:6205aa635e36060d9dda5af20f21cbd293c496be2039bfc340849aacc10cbb13
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tio/blobs/sha256:f659369b4ff6e0d857a677d8d8ec08bdacaba3dc1a81c7894f5667c7889e1072
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tio/blobs/sha256:5f92757b91dc466fa689ba967a097e24d0eb0a5357b84e7fae59095b803dba30
-sha256:
-  darwin_arm64: 6cb51485dcb3c3ecd0cfc60130ee73ea411e49b221aece71c220ea308a429cf4
-  darwin_amd64: 6205aa635e36060d9dda5af20f21cbd293c496be2039bfc340849aacc10cbb13
-  linux_amd64: f659369b4ff6e0d857a677d8d8ec08bdacaba3dc1a81c7894f5667c7889e1072
-  linux_arm64: 5f92757b91dc466fa689ba967a097e24d0eb0a5357b84e7fae59095b803dba30
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tio/blobs/sha256:6cb51485dcb3c3ecd0cfc60130ee73ea411e49b221aece71c220ea308a429cf4
+    sha256: 6cb51485dcb3c3ecd0cfc60130ee73ea411e49b221aece71c220ea308a429cf4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tio/blobs/sha256:6205aa635e36060d9dda5af20f21cbd293c496be2039bfc340849aacc10cbb13
+    sha256: 6205aa635e36060d9dda5af20f21cbd293c496be2039bfc340849aacc10cbb13
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tio/blobs/sha256:f659369b4ff6e0d857a677d8d8ec08bdacaba3dc1a81c7894f5667c7889e1072
+    sha256: f659369b4ff6e0d857a677d8d8ec08bdacaba3dc1a81c7894f5667c7889e1072
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tio/blobs/sha256:5f92757b91dc466fa689ba967a097e24d0eb0a5357b84e7fae59095b803dba30
+    sha256: 5f92757b91dc466fa689ba967a097e24d0eb0a5357b84e7fae59095b803dba30
+source:
+  url: https://github.com/tio/tio/releases/download/v3.9/tio-3.9.tar.xz
+  sha256: 06fe0c22e3e75274643c017928fbc85e86589bc1acd515d92f98eecd4bbab11b
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,7 @@ install:
 dependencies:
   - glib
   - lua
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf

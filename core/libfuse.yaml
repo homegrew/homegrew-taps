@@ -3,13 +3,20 @@ version: 3.18.1
 description: Reference implementation of the Linux FUSE interface
 homepage: https://github.com/libfuse/libfuse
 license: LGPL-2.1-only OR GPL-2.0-only
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libfuse/blobs/sha256:f01fc1f0d20338e3db75c0736855b20d8cb7e81f4e55ae113f72dee16af988ee
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libfuse/blobs/sha256:b47b8c0828754ab3ded4262a4c66d4604c7f0a30173c09b5c20b7c93bafa651c
-sha256:
-  linux_amd64: f01fc1f0d20338e3db75c0736855b20d8cb7e81f4e55ae113f72dee16af988ee
-  linux_arm64: b47b8c0828754ab3ded4262a4c66d4604c7f0a30173c09b5c20b7c93bafa651c
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libfuse/blobs/sha256:f01fc1f0d20338e3db75c0736855b20d8cb7e81f4e55ae113f72dee16af988ee
+    sha256: f01fc1f0d20338e3db75c0736855b20d8cb7e81f4e55ae113f72dee16af988ee
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libfuse/blobs/sha256:b47b8c0828754ab3ded4262a4c66d4604c7f0a30173c09b5c20b7c93bafa651c
+    sha256: b47b8c0828754ab3ded4262a4c66d4604c7f0a30173c09b5c20b7c93bafa651c
+source:
+  url: https://github.com/libfuse/libfuse/releases/download/fuse-3.18.1/fuse-3.18.1.tar.gz
+  sha256: dd395c88f29c7540bbdd0b830260ab8092ccb241bb6e66f603643f715fb9322c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - meson
+  - ninja

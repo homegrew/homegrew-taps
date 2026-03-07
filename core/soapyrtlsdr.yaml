@@ -3,16 +3,22 @@ version: 0.3.3
 description: SoapySDR RTL-SDR Support Module
 homepage: https://github.com/pothosware/SoapyRTLSDR/wiki
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:48f1464d0739465385b31f436ae6f9ea01ce68132730976767238c830f13c318
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:984fedf5e1b8712bacc86a3e2fcb225233dbd751955e17f61896cdd8cb811cb5
-  linux_amd64: https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:e4169428867a8b2d9fa11b6f601c735b8c2d5ffa0f46d3289cd1d1f58dfea6dc
-  linux_arm64: https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:17be80002546fb45015241d6c2e4de81d93067637128c4137a2e21035236d6be
-sha256:
-  darwin_arm64: 48f1464d0739465385b31f436ae6f9ea01ce68132730976767238c830f13c318
-  darwin_amd64: 984fedf5e1b8712bacc86a3e2fcb225233dbd751955e17f61896cdd8cb811cb5
-  linux_amd64: e4169428867a8b2d9fa11b6f601c735b8c2d5ffa0f46d3289cd1d1f58dfea6dc
-  linux_arm64: 17be80002546fb45015241d6c2e4de81d93067637128c4137a2e21035236d6be
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:48f1464d0739465385b31f436ae6f9ea01ce68132730976767238c830f13c318
+    sha256: 48f1464d0739465385b31f436ae6f9ea01ce68132730976767238c830f13c318
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:984fedf5e1b8712bacc86a3e2fcb225233dbd751955e17f61896cdd8cb811cb5
+    sha256: 984fedf5e1b8712bacc86a3e2fcb225233dbd751955e17f61896cdd8cb811cb5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:e4169428867a8b2d9fa11b6f601c735b8c2d5ffa0f46d3289cd1d1f58dfea6dc
+    sha256: e4169428867a8b2d9fa11b6f601c735b8c2d5ffa0f46d3289cd1d1f58dfea6dc
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:17be80002546fb45015241d6c2e4de81d93067637128c4137a2e21035236d6be
+    sha256: 17be80002546fb45015241d6c2e4de81d93067637128c4137a2e21035236d6be
+source:
+  url: https://github.com/pothosware/SoapyRTLSDR/archive/refs/tags/soapy-rtl-sdr-0.3.3.tar.gz
+  sha256: 757c3c3bd17c5a12c7168db2f2f0fd274457e65f35e23c5ec9aec34e3ef54ece
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - librtlsdr
   - soapysdr
+build_dependencies:
+  - cmake

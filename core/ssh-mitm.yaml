@@ -3,16 +3,22 @@ version: 5.0.1
 description: SSH server for security audits and malware analysis
 homepage: https://docs.ssh-mitm.at
 license: GPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:9aacf02b8edaac0d51db1761c733149853ab1767a92444bfd9ca0ef1fcda32b7
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:51bad8720276750080843a272e394aca10bae95411b7bb601b04abec2a8d65b1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:c788d3f37a0a03db875b307a9805b384d92efda60a2629769fcd80486f0ec4dd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:8553cf164c140040c777c54d9473200d9685c6589df7f676ca3e1ce5c2e6ba2c
-sha256:
-  darwin_arm64: 9aacf02b8edaac0d51db1761c733149853ab1767a92444bfd9ca0ef1fcda32b7
-  darwin_amd64: 51bad8720276750080843a272e394aca10bae95411b7bb601b04abec2a8d65b1
-  linux_amd64: c788d3f37a0a03db875b307a9805b384d92efda60a2629769fcd80486f0ec4dd
-  linux_arm64: 8553cf164c140040c777c54d9473200d9685c6589df7f676ca3e1ce5c2e6ba2c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:9aacf02b8edaac0d51db1761c733149853ab1767a92444bfd9ca0ef1fcda32b7
+    sha256: 9aacf02b8edaac0d51db1761c733149853ab1767a92444bfd9ca0ef1fcda32b7
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:51bad8720276750080843a272e394aca10bae95411b7bb601b04abec2a8d65b1
+    sha256: 51bad8720276750080843a272e394aca10bae95411b7bb601b04abec2a8d65b1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:c788d3f37a0a03db875b307a9805b384d92efda60a2629769fcd80486f0ec4dd
+    sha256: c788d3f37a0a03db875b307a9805b384d92efda60a2629769fcd80486f0ec4dd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:8553cf164c140040c777c54d9473200d9685c6589df7f676ca3e1ce5c2e6ba2c
+    sha256: 8553cf164c140040c777c54d9473200d9685c6589df7f676ca3e1ce5c2e6ba2c
+source:
+  url: https://files.pythonhosted.org/packages/f0/4e/c804d08c336bcff29fd665fdc3ff9d3698d529b1d75462b89bc53527862a/ssh_mitm-5.0.1.tar.gz
+  sha256: 221dafeed602c4cca7a3c7fb2eee55eb9725ea11d19a75fd13c9bc3a1cf274ed
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,5 @@ dependencies:
   - libsodium
   - libyaml
   - python@3.14
+build_dependencies:
+  - rust

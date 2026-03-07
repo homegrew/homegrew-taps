@@ -3,16 +3,22 @@ version: 4.2.1
 description: GTK+ dialog boxes for the command-line
 homepage: https://wiki.gnome.org/Projects/Zenity
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/zenity/blobs/sha256:8f857e8d696d9295e07f70eb9a5e0cc6cf719075067caa5165533bab70aeac34
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/zenity/blobs/sha256:ff2b7d1e22f598f6e57b680fd9be996d8bb55986dd4a6498ae4adc7b41402589
-  linux_amd64: https://ghcr.io/v2/homebrew/core/zenity/blobs/sha256:7ee597ea5175404f2aad125c99e2dbfc2108933e6e6de537089ce0b2907bc889
-  linux_arm64: https://ghcr.io/v2/homebrew/core/zenity/blobs/sha256:5439c7552f08d0dae1241b741ed4ccff7ba6feee581651043badb3cb395f2d53
-sha256:
-  darwin_arm64: 8f857e8d696d9295e07f70eb9a5e0cc6cf719075067caa5165533bab70aeac34
-  darwin_amd64: ff2b7d1e22f598f6e57b680fd9be996d8bb55986dd4a6498ae4adc7b41402589
-  linux_amd64: 7ee597ea5175404f2aad125c99e2dbfc2108933e6e6de537089ce0b2907bc889
-  linux_arm64: 5439c7552f08d0dae1241b741ed4ccff7ba6feee581651043badb3cb395f2d53
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zenity/blobs/sha256:8f857e8d696d9295e07f70eb9a5e0cc6cf719075067caa5165533bab70aeac34
+    sha256: 8f857e8d696d9295e07f70eb9a5e0cc6cf719075067caa5165533bab70aeac34
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zenity/blobs/sha256:ff2b7d1e22f598f6e57b680fd9be996d8bb55986dd4a6498ae4adc7b41402589
+    sha256: ff2b7d1e22f598f6e57b680fd9be996d8bb55986dd4a6498ae4adc7b41402589
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zenity/blobs/sha256:7ee597ea5175404f2aad125c99e2dbfc2108933e6e6de537089ce0b2907bc889
+    sha256: 7ee597ea5175404f2aad125c99e2dbfc2108933e6e6de537089ce0b2907bc889
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zenity/blobs/sha256:5439c7552f08d0dae1241b741ed4ccff7ba6feee581651043badb3cb395f2d53
+    sha256: 5439c7552f08d0dae1241b741ed4ccff7ba6feee581651043badb3cb395f2d53
+source:
+  url: https://download.gnome.org/sources/zenity/4.2/zenity-4.2.1.tar.xz
+  sha256: 5a9fd8d8316f90cb2e1a5a8f0d411eb9fcaf85957a8229ea3e803e81004a1ebd
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,15 @@ dependencies:
   - libadwaita
   - pango
   - gettext
+build_dependencies:
+  - gettext
+  - help2man
+  - itstool
+  - meson
+  - ninja
+  - pkgconf
+linux_dependencies:
+  - glib
+  - gtk4
+  - libadwaita
+  - pango

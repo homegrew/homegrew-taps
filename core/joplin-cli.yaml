@@ -3,16 +3,22 @@ version: 3.5.1
 description: Note taking and to-do application with synchronization capabilities
 homepage: https://joplinapp.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/joplin-cli/blobs/sha256:4c814f93dde7c7aec94b51f2747700986fb2792215c8ab6d7689f99456df414f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/joplin-cli/blobs/sha256:da78de3b3d94131a52bbba1379b2eeeb4cc25fed188afa97e78e105fab24b65d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/joplin-cli/blobs/sha256:7410c5b61863a8f7547ab4b979bdebcff44a658512bdb7681f1c70a8268b912e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/joplin-cli/blobs/sha256:a90ee5357fc60e44d44175c9b88a32ce05acd0e6e0afda3301d79a0049a23588
-sha256:
-  darwin_arm64: 4c814f93dde7c7aec94b51f2747700986fb2792215c8ab6d7689f99456df414f
-  darwin_amd64: da78de3b3d94131a52bbba1379b2eeeb4cc25fed188afa97e78e105fab24b65d
-  linux_amd64: 7410c5b61863a8f7547ab4b979bdebcff44a658512bdb7681f1c70a8268b912e
-  linux_arm64: a90ee5357fc60e44d44175c9b88a32ce05acd0e6e0afda3301d79a0049a23588
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/joplin-cli/blobs/sha256:4c814f93dde7c7aec94b51f2747700986fb2792215c8ab6d7689f99456df414f
+    sha256: 4c814f93dde7c7aec94b51f2747700986fb2792215c8ab6d7689f99456df414f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/joplin-cli/blobs/sha256:da78de3b3d94131a52bbba1379b2eeeb4cc25fed188afa97e78e105fab24b65d
+    sha256: da78de3b3d94131a52bbba1379b2eeeb4cc25fed188afa97e78e105fab24b65d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/joplin-cli/blobs/sha256:7410c5b61863a8f7547ab4b979bdebcff44a658512bdb7681f1c70a8268b912e
+    sha256: 7410c5b61863a8f7547ab4b979bdebcff44a658512bdb7681f1c70a8268b912e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/joplin-cli/blobs/sha256:a90ee5357fc60e44d44175c9b88a32ce05acd0e6e0afda3301d79a0049a23588
+    sha256: a90ee5357fc60e44d44175c9b88a32ce05acd0e6e0afda3301d79a0049a23588
+source:
+  url: https://registry.npmjs.org/joplin/-/joplin-3.5.1.tgz
+  sha256: 28182c1e0a2cf8ea05af62a3b7bf732a32d4872afb35346356bcd42bae25b3ab
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,11 @@ dependencies:
   - vips
   - gettext
   - terminal-notifier
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - glib
+  - libsecret
+  - node
+  - sqlite
+  - vips

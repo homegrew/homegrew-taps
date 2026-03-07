@@ -3,16 +3,22 @@ version: 26.0
 description: Binary newsgrabber for nzb files
 homepage: https://nzbget.com
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:0ef5b4f7469e5631621c1ed63d84933f7352abc73b937864bef5daecf00fa087
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:cfc0132db636459975d13d7670b11bc3be865932135ab4e4d079c1bfb9f55fea
-  linux_amd64: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:5baf160d0c98f2e683488824e3ee822a58b6f5abaab36f6f820036d53931965a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:c5d6e7929ac4cafac423cee1b6429a3d2728b9973d512af8ef478437d4402c48
-sha256:
-  darwin_arm64: 0ef5b4f7469e5631621c1ed63d84933f7352abc73b937864bef5daecf00fa087
-  darwin_amd64: cfc0132db636459975d13d7670b11bc3be865932135ab4e4d079c1bfb9f55fea
-  linux_amd64: 5baf160d0c98f2e683488824e3ee822a58b6f5abaab36f6f820036d53931965a
-  linux_arm64: c5d6e7929ac4cafac423cee1b6429a3d2728b9973d512af8ef478437d4402c48
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:0ef5b4f7469e5631621c1ed63d84933f7352abc73b937864bef5daecf00fa087
+    sha256: 0ef5b4f7469e5631621c1ed63d84933f7352abc73b937864bef5daecf00fa087
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:cfc0132db636459975d13d7670b11bc3be865932135ab4e4d079c1bfb9f55fea
+    sha256: cfc0132db636459975d13d7670b11bc3be865932135ab4e4d079c1bfb9f55fea
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:5baf160d0c98f2e683488824e3ee822a58b6f5abaab36f6f820036d53931965a
+    sha256: 5baf160d0c98f2e683488824e3ee822a58b6f5abaab36f6f820036d53931965a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:c5d6e7929ac4cafac423cee1b6429a3d2728b9973d512af8ef478437d4402c48
+    sha256: c5d6e7929ac4cafac423cee1b6429a3d2728b9973d512af8ef478437d4402c48
+source:
+  url: https://github.com/nzbgetcom/nzbget/archive/refs/tags/v26.0.tar.gz
+  sha256: 9b683ce96d7a2e5e702a169e3fbfd16824cfe0ce8ed887c76cc25a574f69c9cd
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,10 @@ dependencies:
   - boost
   - openssl@3
   - sevenzip
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - boost
+  - openssl@3
+  - sevenzip
+  - zlib-ng-compat

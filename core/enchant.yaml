@@ -3,16 +3,22 @@ version: 2.8.15
 description: Spellchecker wrapping library
 homepage: https://rrthomas.github.io/enchant/
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/enchant/blobs/sha256:b425927ed1f2cb4137b768acee1f4d8cb8bdc96f91af90edb17f6fd8c72ab86a
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/enchant/blobs/sha256:8103b1c3162c60927d99e64e8dab6f019434e784bb711230acad5248c5850152
-  linux_amd64: https://ghcr.io/v2/homebrew/core/enchant/blobs/sha256:60fa6904781a17dcb6344df28d80fe643d44257ac8868deb11e2da21130ff3fc
-  linux_arm64: https://ghcr.io/v2/homebrew/core/enchant/blobs/sha256:51932cee025f0838333ab3f3e27211b638fe464d17d8348160deeaf5d3afce72
-sha256:
-  darwin_arm64: b425927ed1f2cb4137b768acee1f4d8cb8bdc96f91af90edb17f6fd8c72ab86a
-  darwin_amd64: 8103b1c3162c60927d99e64e8dab6f019434e784bb711230acad5248c5850152
-  linux_amd64: 60fa6904781a17dcb6344df28d80fe643d44257ac8868deb11e2da21130ff3fc
-  linux_arm64: 51932cee025f0838333ab3f3e27211b638fe464d17d8348160deeaf5d3afce72
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/enchant/blobs/sha256:b425927ed1f2cb4137b768acee1f4d8cb8bdc96f91af90edb17f6fd8c72ab86a
+    sha256: b425927ed1f2cb4137b768acee1f4d8cb8bdc96f91af90edb17f6fd8c72ab86a
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/enchant/blobs/sha256:8103b1c3162c60927d99e64e8dab6f019434e784bb711230acad5248c5850152
+    sha256: 8103b1c3162c60927d99e64e8dab6f019434e784bb711230acad5248c5850152
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/enchant/blobs/sha256:60fa6904781a17dcb6344df28d80fe643d44257ac8868deb11e2da21130ff3fc
+    sha256: 60fa6904781a17dcb6344df28d80fe643d44257ac8868deb11e2da21130ff3fc
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/enchant/blobs/sha256:51932cee025f0838333ab3f3e27211b638fe464d17d8348160deeaf5d3afce72
+    sha256: 51932cee025f0838333ab3f3e27211b638fe464d17d8348160deeaf5d3afce72
+source:
+  url: https://github.com/rrthomas/enchant/releases/download/v2.8.15/enchant-2.8.15.tar.gz
+  sha256: d3fd9e4170bfb5110b0bda577fe764a38fb606b3c25d2f0c3840234521ff1252
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,9 @@ dependencies:
   - aspell
   - glib
   - gettext
+build_dependencies:
+  - pkgconf
+  - groff
+linux_dependencies:
+  - aspell
+  - glib

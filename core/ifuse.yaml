@@ -3,12 +3,16 @@ version: 1.2.0
 description: FUSE module for iOS devices
 homepage: https://libimobiledevice.org/
 license: LGPL-2.1-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ifuse/blobs/sha256:61d48166f2afbac7409f38dc618df93dd97dee916fc6d0c32410d4c112bcf282
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ifuse/blobs/sha256:22167141508080750debc73ef0718dee5bcf9fa06266e7620764ce5e4d2a7c75
-sha256:
-  linux_amd64: 61d48166f2afbac7409f38dc618df93dd97dee916fc6d0c32410d4c112bcf282
-  linux_arm64: 22167141508080750debc73ef0718dee5bcf9fa06266e7620764ce5e4d2a7c75
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ifuse/blobs/sha256:61d48166f2afbac7409f38dc618df93dd97dee916fc6d0c32410d4c112bcf282
+    sha256: 61d48166f2afbac7409f38dc618df93dd97dee916fc6d0c32410d4c112bcf282
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ifuse/blobs/sha256:22167141508080750debc73ef0718dee5bcf9fa06266e7620764ce5e4d2a7c75
+    sha256: 22167141508080750debc73ef0718dee5bcf9fa06266e7620764ce5e4d2a7c75
+source:
+  url: https://github.com/libimobiledevice/ifuse/archive/refs/tags/1.2.0.tar.gz
+  sha256: 29ab853037d781ef19f734936454c7f7806d1c46fbcca6e15ac179685ab37c9c
 install:
   type: archive
   format: tar.gz
@@ -18,3 +22,8 @@ dependencies:
   - libfuse
   - libimobiledevice
   - libplist
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf

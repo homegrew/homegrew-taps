@@ -3,16 +3,22 @@ version: 4.4.6
 description: Play, record, convert, and stream audio and video
 homepage: https://ffmpeg.org/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:19f443b24c6279c943197da8d7618d500403f4262efe8d9a1c70d38a674cb903
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:0075ffeccdfee3f465cff5b7f792825fa54df390d9cc02f3e0ffdfa0b265e86e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:9b860a4b780f6394b7635e52825be8f786b53020e3cbed1ea0c4203c461217c5
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:9ddb1b586bcff70eae241a304a5d15d02a342840f96c41e064f471e469ca9c1f
-sha256:
-  darwin_arm64: 19f443b24c6279c943197da8d7618d500403f4262efe8d9a1c70d38a674cb903
-  darwin_amd64: 0075ffeccdfee3f465cff5b7f792825fa54df390d9cc02f3e0ffdfa0b265e86e
-  linux_amd64: 9b860a4b780f6394b7635e52825be8f786b53020e3cbed1ea0c4203c461217c5
-  linux_arm64: 9ddb1b586bcff70eae241a304a5d15d02a342840f96c41e064f471e469ca9c1f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:19f443b24c6279c943197da8d7618d500403f4262efe8d9a1c70d38a674cb903
+    sha256: 19f443b24c6279c943197da8d7618d500403f4262efe8d9a1c70d38a674cb903
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:0075ffeccdfee3f465cff5b7f792825fa54df390d9cc02f3e0ffdfa0b265e86e
+    sha256: 0075ffeccdfee3f465cff5b7f792825fa54df390d9cc02f3e0ffdfa0b265e86e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:9b860a4b780f6394b7635e52825be8f786b53020e3cbed1ea0c4203c461217c5
+    sha256: 9b860a4b780f6394b7635e52825be8f786b53020e3cbed1ea0c4203c461217c5
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:9ddb1b586bcff70eae241a304a5d15d02a342840f96c41e064f471e469ca9c1f
+    sha256: 9ddb1b586bcff70eae241a304a5d15d02a342840f96c41e064f471e469ca9c1f
+source:
+  url: https://ffmpeg.org/releases/ffmpeg-4.4.6.tar.xz
+  sha256: 2290461f467c08ab801731ed412d8e724a5511d6c33173654bd9c1d2e25d0617
 install:
   type: archive
   format: tar.gz
@@ -55,4 +61,46 @@ dependencies:
   - libogg
   - libsamplerate
   - libvmaf
+build_dependencies:
+  - nasm
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - aom
+  - dav1d
+  - fontconfig
+  - freetype
+  - frei0r
+  - gnutls
+  - lame
+  - libass
+  - libbluray
+  - librist
+  - libsoxr
+  - libvidstab
+  - libvorbis
+  - libvpx
+  - libx11
+  - libxcb
+  - libxext
+  - libxv
+  - opencore-amr
+  - openjpeg
+  - opus
+  - rav1e
+  - rubberband
+  - sdl2
+  - snappy
+  - speex
+  - srt
+  - tesseract
+  - theora
+  - webp
+  - x264
+  - x265
+  - xvid
+  - xz
+  - zeromq
+  - zimg
+  - zlib-ng-compat
 keg_only: true

@@ -3,17 +3,25 @@ version: 5.1.1
 description: Terminal-based HTTP/REST client
 homepage: https://slumber.lucaspickering.me/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/slumber/blobs/sha256:c9ad0aa3e9da1f59059ac3d9c21010d95598f5c30ac7e60aa46845b1e9a561eb
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/slumber/blobs/sha256:982a70ed5c0839f99c96f5909f0a7dcd568d1a8dd0bcb969a834cfb8e10b9c4e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/slumber/blobs/sha256:2e65ae5f26886b481e7369e90abc2ba5980db4a9c610d249f8cadc4e44129887
-  linux_arm64: https://ghcr.io/v2/homebrew/core/slumber/blobs/sha256:b11aa99d038e34dccb7b4d0b694ae11d51dccf2162a551e4bd7797510034758c
-sha256:
-  darwin_arm64: c9ad0aa3e9da1f59059ac3d9c21010d95598f5c30ac7e60aa46845b1e9a561eb
-  darwin_amd64: 982a70ed5c0839f99c96f5909f0a7dcd568d1a8dd0bcb969a834cfb8e10b9c4e
-  linux_amd64: 2e65ae5f26886b481e7369e90abc2ba5980db4a9c610d249f8cadc4e44129887
-  linux_arm64: b11aa99d038e34dccb7b4d0b694ae11d51dccf2162a551e4bd7797510034758c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/slumber/blobs/sha256:c9ad0aa3e9da1f59059ac3d9c21010d95598f5c30ac7e60aa46845b1e9a561eb
+    sha256: c9ad0aa3e9da1f59059ac3d9c21010d95598f5c30ac7e60aa46845b1e9a561eb
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/slumber/blobs/sha256:982a70ed5c0839f99c96f5909f0a7dcd568d1a8dd0bcb969a834cfb8e10b9c4e
+    sha256: 982a70ed5c0839f99c96f5909f0a7dcd568d1a8dd0bcb969a834cfb8e10b9c4e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/slumber/blobs/sha256:2e65ae5f26886b481e7369e90abc2ba5980db4a9c610d249f8cadc4e44129887
+    sha256: 2e65ae5f26886b481e7369e90abc2ba5980db4a9c610d249f8cadc4e44129887
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/slumber/blobs/sha256:b11aa99d038e34dccb7b4d0b694ae11d51dccf2162a551e4bd7797510034758c
+    sha256: b11aa99d038e34dccb7b4d0b694ae11d51dccf2162a551e4bd7797510034758c
+source:
+  url: https://github.com/LucasPickering/slumber/archive/refs/tags/v5.1.1.tar.gz
+  sha256: 7ef5045fe3fb1def67ac9993eb0d10e20f02d3cbff4a6fc7c07a588b44119565
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

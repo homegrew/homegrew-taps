@@ -3,16 +3,22 @@ version: 6.10.2
 description: Facilitate the design, development, testing and deployment of applications
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND BSD-3-Clause AND BSL-1.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/qttools/blobs/sha256:1bb2951b965ac91201b28aa2060fb88c3784478baea5bd86395fe17b23618539
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/qttools/blobs/sha256:9d1cda0f05a6415afbafe2c8072b607d6b3f5b1c147803bd179292c221627c17
-  linux_amd64: https://ghcr.io/v2/homebrew/core/qttools/blobs/sha256:242c56b484d044f863a6c8d5b8e3c890d6e6ffeb35c5085bd602e922c16dea1f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/qttools/blobs/sha256:4036fe0f58be98de7b5f6f5e49b7cd496a7e322fc58f30723e1c5e30efab7e4e
-sha256:
-  darwin_arm64: 1bb2951b965ac91201b28aa2060fb88c3784478baea5bd86395fe17b23618539
-  darwin_amd64: 9d1cda0f05a6415afbafe2c8072b607d6b3f5b1c147803bd179292c221627c17
-  linux_amd64: 242c56b484d044f863a6c8d5b8e3c890d6e6ffeb35c5085bd602e922c16dea1f
-  linux_arm64: 4036fe0f58be98de7b5f6f5e49b7cd496a7e322fc58f30723e1c5e30efab7e4e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qttools/blobs/sha256:1bb2951b965ac91201b28aa2060fb88c3784478baea5bd86395fe17b23618539
+    sha256: 1bb2951b965ac91201b28aa2060fb88c3784478baea5bd86395fe17b23618539
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qttools/blobs/sha256:9d1cda0f05a6415afbafe2c8072b607d6b3f5b1c147803bd179292c221627c17
+    sha256: 9d1cda0f05a6415afbafe2c8072b607d6b3f5b1c147803bd179292c221627c17
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qttools/blobs/sha256:242c56b484d044f863a6c8d5b8e3c890d6e6ffeb35c5085bd602e922c16dea1f
+    sha256: 242c56b484d044f863a6c8d5b8e3c890d6e6ffeb35c5085bd602e922c16dea1f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qttools/blobs/sha256:4036fe0f58be98de7b5f6f5e49b7cd496a7e322fc58f30723e1c5e30efab7e4e
+    sha256: 4036fe0f58be98de7b5f6f5e49b7cd496a7e322fc58f30723e1c5e30efab7e4e
+source:
+  url: https://download.qt.io/official_releases/qt/6.10/6.10.2/submodules/qttools-everywhere-src-6.10.2.tar.xz
+  sha256: 1e3d2c07c1fd76d2425c6eaeeaa62ffaff5f79210c4e1a5bc2a6a9db668d5b24
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,12 @@ dependencies:
   - qtdeclarative
   - zstd
   - gumbo-parser
+build_dependencies:
+  - cmake
+  - ninja
+  - vulkan-headers
+linux_dependencies:
+  - litehtml
+  - qtbase
+  - qtdeclarative
+  - zstd

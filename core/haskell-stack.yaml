@@ -3,19 +3,31 @@ version: 3.9.3
 description: Cross-platform program for developing Haskell projects
 homepage: https://haskellstack.org/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/haskell-stack/blobs/sha256:966bac3da41b3141075c09addb159676fbb19da6d720a277e892504d465336ea
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/haskell-stack/blobs/sha256:8e4b8ace611090ae24e80d33046f7603d523bc66b2407e4ee44843e03a5ea6c5
-  linux_amd64: https://ghcr.io/v2/homebrew/core/haskell-stack/blobs/sha256:0b6589ec069f26a6b7ff4cc21a94284d8a0c1c3df37ba74cbdec5f76c2b4b1db
-  linux_arm64: https://ghcr.io/v2/homebrew/core/haskell-stack/blobs/sha256:af0742873c1d14df060eb3e3efce2ffb20356838c6ca48c1676febd4bdcb63e2
-sha256:
-  darwin_arm64: 966bac3da41b3141075c09addb159676fbb19da6d720a277e892504d465336ea
-  darwin_amd64: 8e4b8ace611090ae24e80d33046f7603d523bc66b2407e4ee44843e03a5ea6c5
-  linux_amd64: 0b6589ec069f26a6b7ff4cc21a94284d8a0c1c3df37ba74cbdec5f76c2b4b1db
-  linux_arm64: af0742873c1d14df060eb3e3efce2ffb20356838c6ca48c1676febd4bdcb63e2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/haskell-stack/blobs/sha256:966bac3da41b3141075c09addb159676fbb19da6d720a277e892504d465336ea
+    sha256: 966bac3da41b3141075c09addb159676fbb19da6d720a277e892504d465336ea
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/haskell-stack/blobs/sha256:8e4b8ace611090ae24e80d33046f7603d523bc66b2407e4ee44843e03a5ea6c5
+    sha256: 8e4b8ace611090ae24e80d33046f7603d523bc66b2407e4ee44843e03a5ea6c5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/haskell-stack/blobs/sha256:0b6589ec069f26a6b7ff4cc21a94284d8a0c1c3df37ba74cbdec5f76c2b4b1db
+    sha256: 0b6589ec069f26a6b7ff4cc21a94284d8a0c1c3df37ba74cbdec5f76c2b4b1db
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/haskell-stack/blobs/sha256:af0742873c1d14df060eb3e3efce2ffb20356838c6ca48c1676febd4bdcb63e2
+    sha256: af0742873c1d14df060eb3e3efce2ffb20356838c6ca48c1676febd4bdcb63e2
+source:
+  url: https://github.com/commercialhaskell/stack/archive/refs/tags/v3.9.3.tar.gz
+  sha256: 144bc7eaaf384228f6b0f960ced130b503dc4945ffa42f3ca2037abbc8136c05
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - gmp
+build_dependencies:
+  - cabal-install
+  - ghc
+linux_dependencies:
+  - gmp
+  - zlib-ng-compat

@@ -3,17 +3,25 @@ version: 0.7.2
 description: "Local CVE tracker & notification system"
 homepage: https://github.com/vulsio/gost
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vulsio-gost/blobs/sha256:813d140b549cab244bf2fa4de218034cd5066968ab0f869d64a74f934f017eaa
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vulsio-gost/blobs/sha256:e368bafbdbf01f8ca5e69331d3cf131626b5e69daa94fe43ec9944690dc067ca
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vulsio-gost/blobs/sha256:a975a3784dd47bb8e2a5c71b9ad596c412231fb427ebf7496686ee1f8e309e4b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vulsio-gost/blobs/sha256:7be514f0ece49d3c709983bb2e04c5754f555f534e32307e56be378637c1fef6
-sha256:
-  darwin_arm64: 813d140b549cab244bf2fa4de218034cd5066968ab0f869d64a74f934f017eaa
-  darwin_amd64: e368bafbdbf01f8ca5e69331d3cf131626b5e69daa94fe43ec9944690dc067ca
-  linux_amd64: a975a3784dd47bb8e2a5c71b9ad596c412231fb427ebf7496686ee1f8e309e4b
-  linux_arm64: 7be514f0ece49d3c709983bb2e04c5754f555f534e32307e56be378637c1fef6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vulsio-gost/blobs/sha256:813d140b549cab244bf2fa4de218034cd5066968ab0f869d64a74f934f017eaa
+    sha256: 813d140b549cab244bf2fa4de218034cd5066968ab0f869d64a74f934f017eaa
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vulsio-gost/blobs/sha256:e368bafbdbf01f8ca5e69331d3cf131626b5e69daa94fe43ec9944690dc067ca
+    sha256: e368bafbdbf01f8ca5e69331d3cf131626b5e69daa94fe43ec9944690dc067ca
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vulsio-gost/blobs/sha256:a975a3784dd47bb8e2a5c71b9ad596c412231fb427ebf7496686ee1f8e309e4b
+    sha256: a975a3784dd47bb8e2a5c71b9ad596c412231fb427ebf7496686ee1f8e309e4b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vulsio-gost/blobs/sha256:7be514f0ece49d3c709983bb2e04c5754f555f534e32307e56be378637c1fef6
+    sha256: 7be514f0ece49d3c709983bb2e04c5754f555f534e32307e56be378637c1fef6
+source:
+  url: https://github.com/vulsio/gost/archive/refs/tags/v0.7.2.tar.gz
+  sha256: e96c8c8f29b19c3cb9b2288e91903d60074a17d0525333a7712ad03e248dd96a
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

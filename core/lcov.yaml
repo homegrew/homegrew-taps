@@ -3,17 +3,25 @@ version: 2.4
 description: "Graphical front-end for GCC's coverage testing tool (gcov)"
 homepage: https://github.com/linux-test-project/lcov
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/lcov/blobs/sha256:31751d5ba63f010f5ba85d996f2a487d8f66210650a95c2bd125af69cb949fc3
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/lcov/blobs/sha256:bdcbbe5a978af3066860282aa095d8a2b983f965cb9a86600d29080ffdd18ea3
-  linux_amd64: https://ghcr.io/v2/homebrew/core/lcov/blobs/sha256:07128bf10fbe19a6fd27aab9739d6a5e55eccfaaa4c2d2c842961944fc70750f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/lcov/blobs/sha256:d79b0f67be549e9cc3bcff583fc5502c4384f5b3bb071035049cbb328ad20e23
-sha256:
-  darwin_arm64: 31751d5ba63f010f5ba85d996f2a487d8f66210650a95c2bd125af69cb949fc3
-  darwin_amd64: bdcbbe5a978af3066860282aa095d8a2b983f965cb9a86600d29080ffdd18ea3
-  linux_amd64: 07128bf10fbe19a6fd27aab9739d6a5e55eccfaaa4c2d2c842961944fc70750f
-  linux_arm64: d79b0f67be549e9cc3bcff583fc5502c4384f5b3bb071035049cbb328ad20e23
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/lcov/blobs/sha256:31751d5ba63f010f5ba85d996f2a487d8f66210650a95c2bd125af69cb949fc3
+    sha256: 31751d5ba63f010f5ba85d996f2a487d8f66210650a95c2bd125af69cb949fc3
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/lcov/blobs/sha256:bdcbbe5a978af3066860282aa095d8a2b983f965cb9a86600d29080ffdd18ea3
+    sha256: bdcbbe5a978af3066860282aa095d8a2b983f965cb9a86600d29080ffdd18ea3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/lcov/blobs/sha256:07128bf10fbe19a6fd27aab9739d6a5e55eccfaaa4c2d2c842961944fc70750f
+    sha256: 07128bf10fbe19a6fd27aab9739d6a5e55eccfaaa4c2d2c842961944fc70750f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/lcov/blobs/sha256:d79b0f67be549e9cc3bcff583fc5502c4384f5b3bb071035049cbb328ad20e23
+    sha256: d79b0f67be549e9cc3bcff583fc5502c4384f5b3bb071035049cbb328ad20e23
+source:
+  url: https://github.com/linux-test-project/lcov/releases/download/v2.4/lcov-2.4.tar.gz
+  sha256: 3457825c6b2fe4ef77c782b82a23875c84a3c955243823f05d8f2dec0d455820
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+linux_dependencies:
+  - zlib-ng-compat

@@ -1,12 +1,15 @@
 name: mlx-lm
-version: 0.30.7
+version: 0.31.0
 description: Run LLMs with MLX
 homepage: https://github.com/ml-explore/mlx-lm
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:3925b2cdc505ebaf29475f2cf7fe16666f670ce1f64f1491180712b0c3a31091
-sha256:
-  darwin_arm64: 3925b2cdc505ebaf29475f2cf7fe16666f670ce1f64f1491180712b0c3a31091
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:e8674296aaaf7de75865ed88150860fd86fc1bd6859a175d1c77b433869dfb79
+    sha256: e8674296aaaf7de75865ed88150860fd86fc1bd6859a175d1c77b433869dfb79
+source:
+  url: https://github.com/ml-explore/mlx-lm/archive/refs/tags/v0.31.0.tar.gz
+  sha256: c8f8643baa0da1f266438894886b7ab7798b026ffb26e717578c8fe896b1e281
 install:
   type: archive
   format: tar.gz
@@ -19,3 +22,6 @@ dependencies:
   - protobuf
   - python@3.14
   - sentencepiece
+build_dependencies:
+  - pkgconf
+  - rust

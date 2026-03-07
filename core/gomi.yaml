@@ -3,17 +3,25 @@ version: 1.6.2
 description: Functions like rm but with the ability to restore files
 homepage: https://gomi.dev
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gomi/blobs/sha256:a4fb51bf665b25c712e141d44968ddc08ba1d904417e2016380947edb862278c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gomi/blobs/sha256:01bbbe1fe183879d320af153111f618e641410696c5d0326481a7030e9b9872b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gomi/blobs/sha256:83fdaec4ab71501a2845a309bd43bfd9c3a84bff7e7f738a98b62158e4c5c390
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gomi/blobs/sha256:ba786a127bd8d20f410324b5885022eaedc91a7fed50a7c169103a29bc3e2b76
-sha256:
-  darwin_arm64: a4fb51bf665b25c712e141d44968ddc08ba1d904417e2016380947edb862278c
-  darwin_amd64: 01bbbe1fe183879d320af153111f618e641410696c5d0326481a7030e9b9872b
-  linux_amd64: 83fdaec4ab71501a2845a309bd43bfd9c3a84bff7e7f738a98b62158e4c5c390
-  linux_arm64: ba786a127bd8d20f410324b5885022eaedc91a7fed50a7c169103a29bc3e2b76
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gomi/blobs/sha256:a4fb51bf665b25c712e141d44968ddc08ba1d904417e2016380947edb862278c
+    sha256: a4fb51bf665b25c712e141d44968ddc08ba1d904417e2016380947edb862278c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gomi/blobs/sha256:01bbbe1fe183879d320af153111f618e641410696c5d0326481a7030e9b9872b
+    sha256: 01bbbe1fe183879d320af153111f618e641410696c5d0326481a7030e9b9872b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gomi/blobs/sha256:83fdaec4ab71501a2845a309bd43bfd9c3a84bff7e7f738a98b62158e4c5c390
+    sha256: 83fdaec4ab71501a2845a309bd43bfd9c3a84bff7e7f738a98b62158e4c5c390
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gomi/blobs/sha256:ba786a127bd8d20f410324b5885022eaedc91a7fed50a7c169103a29bc3e2b76
+    sha256: ba786a127bd8d20f410324b5885022eaedc91a7fed50a7c169103a29bc3e2b76
+source:
+  url: https://github.com/babarot/gomi/archive/refs/tags/v1.6.2.tar.gz
+  sha256: 352f7792c7917ecbb8ab6e46d6360c7fb03a8c7f8bb7dc53ff9f5bd4633fb269
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

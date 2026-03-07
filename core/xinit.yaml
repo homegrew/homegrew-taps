@@ -3,16 +3,22 @@ version: 1.4.4
 description: Start the X Window System server
 homepage: https://gitlab.freedesktop.org/xorg/app/xinit
 license: MIT AND APSL-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:dd3c7693b0185d79555d1f91e559612ad865688fe779f1c4986f86493058ba6b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:14ad40b8e7143eb60fd252ecadaa4012428a33d9572920fc7e4968ac52904d38
-  linux_amd64: https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:8b8186133c32e00a1411809fa7b2569bffacaa9fd2ddbd575605abd3555c6316
-  linux_arm64: https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:5afccb26823574faa9cc8e322ffa73ba0f5466862dd88ca5a8a4c828ab0d95cc
-sha256:
-  darwin_arm64: dd3c7693b0185d79555d1f91e559612ad865688fe779f1c4986f86493058ba6b
-  darwin_amd64: 14ad40b8e7143eb60fd252ecadaa4012428a33d9572920fc7e4968ac52904d38
-  linux_amd64: 8b8186133c32e00a1411809fa7b2569bffacaa9fd2ddbd575605abd3555c6316
-  linux_arm64: 5afccb26823574faa9cc8e322ffa73ba0f5466862dd88ca5a8a4c828ab0d95cc
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:dd3c7693b0185d79555d1f91e559612ad865688fe779f1c4986f86493058ba6b
+    sha256: dd3c7693b0185d79555d1f91e559612ad865688fe779f1c4986f86493058ba6b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:14ad40b8e7143eb60fd252ecadaa4012428a33d9572920fc7e4968ac52904d38
+    sha256: 14ad40b8e7143eb60fd252ecadaa4012428a33d9572920fc7e4968ac52904d38
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:8b8186133c32e00a1411809fa7b2569bffacaa9fd2ddbd575605abd3555c6316
+    sha256: 8b8186133c32e00a1411809fa7b2569bffacaa9fd2ddbd575605abd3555c6316
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:5afccb26823574faa9cc8e322ffa73ba0f5466862dd88ca5a8a4c828ab0d95cc
+    sha256: 5afccb26823574faa9cc8e322ffa73ba0f5466862dd88ca5a8a4c828ab0d95cc
+source:
+  url: https://www.x.org/releases/individual/app/xinit-1.4.4.tar.xz
+  sha256: 40a47c7a164c7f981ce3787b4b37f7e411fb43231dcde543d70094075dacfef9
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,16 @@ dependencies:
   - xrdb
   - xterm
   - quartz-wm
+build_dependencies:
+  - pkgconf
+  - tradcpp
+  - lndir
+  - mkfontscale
+linux_dependencies:
+  - libx11
+  - twm
+  - util-linux
+  - xauth
+  - xmodmap
+  - xrdb
+  - xterm

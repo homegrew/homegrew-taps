@@ -3,17 +3,25 @@ version: 0.1.0
 description: Check your project for common sources of contributor friction
 homepage: https://github.com/pengwynn/flint
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/flint-checker/blobs/sha256:dcbc6af7ead098630fa98be1dddcad97432d65ccfbed01d7fb98120cadab7257
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/flint-checker/blobs/sha256:fff4cb08e2ebcef9f5bbb73a4ae8afdcf01b0349841d59864399c4c627ca64bb
-  linux_amd64: https://ghcr.io/v2/homebrew/core/flint-checker/blobs/sha256:01e5b0c9b671bceb2c20ffac4f21f6bda8004d761746260ad82d6c16b13258ea
-  linux_arm64: https://ghcr.io/v2/homebrew/core/flint-checker/blobs/sha256:70ef7665f0a159f49400f121b6cedcf3b76f639dc517a422a0332d839fc1a8fd
-sha256:
-  darwin_arm64: dcbc6af7ead098630fa98be1dddcad97432d65ccfbed01d7fb98120cadab7257
-  darwin_amd64: fff4cb08e2ebcef9f5bbb73a4ae8afdcf01b0349841d59864399c4c627ca64bb
-  linux_amd64: 01e5b0c9b671bceb2c20ffac4f21f6bda8004d761746260ad82d6c16b13258ea
-  linux_arm64: 70ef7665f0a159f49400f121b6cedcf3b76f639dc517a422a0332d839fc1a8fd
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/flint-checker/blobs/sha256:dcbc6af7ead098630fa98be1dddcad97432d65ccfbed01d7fb98120cadab7257
+    sha256: dcbc6af7ead098630fa98be1dddcad97432d65ccfbed01d7fb98120cadab7257
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/flint-checker/blobs/sha256:fff4cb08e2ebcef9f5bbb73a4ae8afdcf01b0349841d59864399c4c627ca64bb
+    sha256: fff4cb08e2ebcef9f5bbb73a4ae8afdcf01b0349841d59864399c4c627ca64bb
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/flint-checker/blobs/sha256:01e5b0c9b671bceb2c20ffac4f21f6bda8004d761746260ad82d6c16b13258ea
+    sha256: 01e5b0c9b671bceb2c20ffac4f21f6bda8004d761746260ad82d6c16b13258ea
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/flint-checker/blobs/sha256:70ef7665f0a159f49400f121b6cedcf3b76f639dc517a422a0332d839fc1a8fd
+    sha256: 70ef7665f0a159f49400f121b6cedcf3b76f639dc517a422a0332d839fc1a8fd
+source:
+  url: https://github.com/pengwynn/flint/archive/refs/tags/v0.1.0.tar.gz
+  sha256: ec865ec5cad191c7fc9c7c6d5007754372696a708825627383913367f3ef8b7f
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

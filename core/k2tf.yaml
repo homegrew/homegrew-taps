@@ -3,17 +3,25 @@ version: 0.8.0
 description: Kubernetes YAML to Terraform HCL converter
 homepage: https://github.com/sl1pm4t/k2tf
 license: MPL-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/k2tf/blobs/sha256:d502873a00e376dd401a35fef734c406e676f78ce142fa74ddf586bfa7a32185
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/k2tf/blobs/sha256:85b15961f36f64d617228cfac86c173c3a5aa80c40e64442481f053e4647876e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/k2tf/blobs/sha256:6e36e46f8c6a0361f338cd665cb5b2899a95cd70acf46d2280367b206b24096d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/k2tf/blobs/sha256:21ada95d25defedff835157ba130ff2c7ada2bfeef49da4aaf56facb5c11bad3
-sha256:
-  darwin_arm64: d502873a00e376dd401a35fef734c406e676f78ce142fa74ddf586bfa7a32185
-  darwin_amd64: 85b15961f36f64d617228cfac86c173c3a5aa80c40e64442481f053e4647876e
-  linux_amd64: 6e36e46f8c6a0361f338cd665cb5b2899a95cd70acf46d2280367b206b24096d
-  linux_arm64: 21ada95d25defedff835157ba130ff2c7ada2bfeef49da4aaf56facb5c11bad3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/k2tf/blobs/sha256:d502873a00e376dd401a35fef734c406e676f78ce142fa74ddf586bfa7a32185
+    sha256: d502873a00e376dd401a35fef734c406e676f78ce142fa74ddf586bfa7a32185
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/k2tf/blobs/sha256:85b15961f36f64d617228cfac86c173c3a5aa80c40e64442481f053e4647876e
+    sha256: 85b15961f36f64d617228cfac86c173c3a5aa80c40e64442481f053e4647876e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/k2tf/blobs/sha256:6e36e46f8c6a0361f338cd665cb5b2899a95cd70acf46d2280367b206b24096d
+    sha256: 6e36e46f8c6a0361f338cd665cb5b2899a95cd70acf46d2280367b206b24096d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/k2tf/blobs/sha256:21ada95d25defedff835157ba130ff2c7ada2bfeef49da4aaf56facb5c11bad3
+    sha256: 21ada95d25defedff835157ba130ff2c7ada2bfeef49da4aaf56facb5c11bad3
+source:
+  url: https://github.com/sl1pm4t/k2tf/archive/refs/tags/v0.8.0.tar.gz
+  sha256: 9efdac448a99dbdda558eb93b63ed0b3ccabbac43c14df21ef3ba9bd402a4003
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

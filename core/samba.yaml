@@ -3,16 +3,22 @@ version: 4.23.6
 description: SMB/CIFS file, print, and login server for UNIX
 homepage: https://www.samba.org/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:392a9fadffc1583e70761f120d18a1125ab0def266ef3211c846ecab1f7cf2f4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:1327353cc7b7d1f287370139fac1aaab1b759e81b0dd0f195b1917d956d1a43e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:02d13d6849fe6da7f623d6bbb3abcad44013931741d1c2470c40f9555ad5929e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:d2d5a919f4fac595c989bf1a4b78f944efca288bc9200cce3e6970aba804a3c7
-sha256:
-  darwin_arm64: 392a9fadffc1583e70761f120d18a1125ab0def266ef3211c846ecab1f7cf2f4
-  darwin_amd64: 1327353cc7b7d1f287370139fac1aaab1b759e81b0dd0f195b1917d956d1a43e
-  linux_amd64: 02d13d6849fe6da7f623d6bbb3abcad44013931741d1c2470c40f9555ad5929e
-  linux_arm64: d2d5a919f4fac595c989bf1a4b78f944efca288bc9200cce3e6970aba804a3c7
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:392a9fadffc1583e70761f120d18a1125ab0def266ef3211c846ecab1f7cf2f4
+    sha256: 392a9fadffc1583e70761f120d18a1125ab0def266ef3211c846ecab1f7cf2f4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:1327353cc7b7d1f287370139fac1aaab1b759e81b0dd0f195b1917d956d1a43e
+    sha256: 1327353cc7b7d1f287370139fac1aaab1b759e81b0dd0f195b1917d956d1a43e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:02d13d6849fe6da7f623d6bbb3abcad44013931741d1c2470c40f9555ad5929e
+    sha256: 02d13d6849fe6da7f623d6bbb3abcad44013931741d1c2470c40f9555ad5929e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:d2d5a919f4fac595c989bf1a4b78f944efca288bc9200cce3e6970aba804a3c7
+    sha256: d2d5a919f4fac595c989bf1a4b78f944efca288bc9200cce3e6970aba804a3c7
+source:
+  url: https://download.samba.org/pub/samba/stable/samba-4.23.6.tar.gz
+  sha256: e3dabd8b5e42dc97669fa0faef032510a94e496b58f7067082e5036d88f0e702
 install:
   type: archive
   format: tar.gz
@@ -31,3 +37,21 @@ dependencies:
   - tevent
   - gettext
   - openssl@3
+build_dependencies:
+  - bison
+  - cmocka
+  - pkgconf
+linux_dependencies:
+  - gnutls
+  - icu4c@78
+  - krb5
+  - libtasn1
+  - libtirpc
+  - libxcrypt
+  - lmdb
+  - popt
+  - readline
+  - talloc
+  - tdb
+  - tevent
+  - zlib-ng-compat

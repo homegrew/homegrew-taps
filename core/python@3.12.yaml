@@ -3,16 +3,22 @@ version: 3.12.13
 description: Interpreted, interactive, object-oriented programming language
 homepage: https://www.python.org/
 license: Python-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:eefd96ed3d09bcd4e68738a5f9371fc556898213666c5b409076fffff3d30e80
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:4caa81999441c5614c1e078f64168c7219beec50bda62258959f53a2256c2b6b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:358961dc503e414a99acd2593ea2a82f839bcf84c3af66bea7f07a23b37cfa9a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:e7abc557c2250e41230de7ca532da5c225dcf81003007eb22f767c76eeb95a11
-sha256:
-  darwin_arm64: eefd96ed3d09bcd4e68738a5f9371fc556898213666c5b409076fffff3d30e80
-  darwin_amd64: 4caa81999441c5614c1e078f64168c7219beec50bda62258959f53a2256c2b6b
-  linux_amd64: 358961dc503e414a99acd2593ea2a82f839bcf84c3af66bea7f07a23b37cfa9a
-  linux_arm64: e7abc557c2250e41230de7ca532da5c225dcf81003007eb22f767c76eeb95a11
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:eefd96ed3d09bcd4e68738a5f9371fc556898213666c5b409076fffff3d30e80
+    sha256: eefd96ed3d09bcd4e68738a5f9371fc556898213666c5b409076fffff3d30e80
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:4caa81999441c5614c1e078f64168c7219beec50bda62258959f53a2256c2b6b
+    sha256: 4caa81999441c5614c1e078f64168c7219beec50bda62258959f53a2256c2b6b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:358961dc503e414a99acd2593ea2a82f839bcf84c3af66bea7f07a23b37cfa9a
+    sha256: 358961dc503e414a99acd2593ea2a82f839bcf84c3af66bea7f07a23b37cfa9a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:e7abc557c2250e41230de7ca532da5c225dcf81003007eb22f767c76eeb95a11
+    sha256: e7abc557c2250e41230de7ca532da5c225dcf81003007eb22f767c76eeb95a11
+source:
+  url: https://www.python.org/ftp/python/3.12.13/Python-3.12.13.tgz
+  sha256: 0816c4761c97ecdb3f50a3924de0a93fd78cb63ee8e6c04201ddfaedca500b0b
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,14 @@ dependencies:
   - openssl@3
   - sqlite
   - xz
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - berkeley-db@5
+  - libnsl
+  - libtirpc
+  - mpdecimal
+  - openssl@3
+  - sqlite
+  - xz
+  - zlib-ng-compat

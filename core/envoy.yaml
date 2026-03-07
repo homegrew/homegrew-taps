@@ -3,17 +3,37 @@ version: 1.37.0
 description: Cloud-native high-performance edge/middle/service proxy
 homepage: https://www.envoyproxy.io/index.html
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/envoy/blobs/sha256:3b661c2acf15cb1dc0175c7f033e93e7c3c4971c1f5a9325aca5b82bbb4d3627
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/envoy/blobs/sha256:818a6c6540418e54904fc7760127ff5e6e6fda32544b351d4a18354547ca8ed4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/envoy/blobs/sha256:69affc72258e9cd3256e4f661511305a3c98541ab483d7d00a4744fd62e7dcc5
-  linux_arm64: https://ghcr.io/v2/homebrew/core/envoy/blobs/sha256:52388099e15009b4895557874b65009e71639b28f606adcc1e6681e8f05c3f62
-sha256:
-  darwin_arm64: 3b661c2acf15cb1dc0175c7f033e93e7c3c4971c1f5a9325aca5b82bbb4d3627
-  darwin_amd64: 818a6c6540418e54904fc7760127ff5e6e6fda32544b351d4a18354547ca8ed4
-  linux_amd64: 69affc72258e9cd3256e4f661511305a3c98541ab483d7d00a4744fd62e7dcc5
-  linux_arm64: 52388099e15009b4895557874b65009e71639b28f606adcc1e6681e8f05c3f62
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/envoy/blobs/sha256:3b661c2acf15cb1dc0175c7f033e93e7c3c4971c1f5a9325aca5b82bbb4d3627
+    sha256: 3b661c2acf15cb1dc0175c7f033e93e7c3c4971c1f5a9325aca5b82bbb4d3627
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/envoy/blobs/sha256:818a6c6540418e54904fc7760127ff5e6e6fda32544b351d4a18354547ca8ed4
+    sha256: 818a6c6540418e54904fc7760127ff5e6e6fda32544b351d4a18354547ca8ed4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/envoy/blobs/sha256:69affc72258e9cd3256e4f661511305a3c98541ab483d7d00a4744fd62e7dcc5
+    sha256: 69affc72258e9cd3256e4f661511305a3c98541ab483d7d00a4744fd62e7dcc5
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/envoy/blobs/sha256:52388099e15009b4895557874b65009e71639b28f606adcc1e6681e8f05c3f62
+    sha256: 52388099e15009b4895557874b65009e71639b28f606adcc1e6681e8f05c3f62
+source:
+  url: https://github.com/envoyproxy/envoy/archive/refs/tags/v1.37.0.tar.gz
+  sha256: 5cf3a5342bdffe8c1cc28c0afa61a24654d1f781480d3dcc226c81fe41a1e713
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake
+  - bazelisk
+  - cmake
+  - go
+  - libtool
+  - llvm@18
+  - ninja
+  - pkgconf
+  - wget
+  - yq
+  - aspell
+  - clang-format

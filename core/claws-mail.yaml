@@ -3,16 +3,22 @@ version: 4.3.1
 description: User-friendly, lightweight, and fast email client
 homepage: https://www.claws-mail.org/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/claws-mail/blobs/sha256:9ea4f72acf61a1201eb135faca0a0024c545f9f358ec35ee561d8a06d8f3e63d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/claws-mail/blobs/sha256:28e9f6b5dba651921e758033f4f4cb23aa08c05258293c64a7f72c0a9c97c0ef
-  linux_amd64: https://ghcr.io/v2/homebrew/core/claws-mail/blobs/sha256:c2538ff144b8a628173be5ce98bb83b76d9082bd2d0fc6e0a68b073a4ea46f53
-  linux_arm64: https://ghcr.io/v2/homebrew/core/claws-mail/blobs/sha256:d4872867810e1204e5b432f1be4a6d124d1333f3ccf9b4f4eefb11b8540fa8dc
-sha256:
-  darwin_arm64: 9ea4f72acf61a1201eb135faca0a0024c545f9f358ec35ee561d8a06d8f3e63d
-  darwin_amd64: 28e9f6b5dba651921e758033f4f4cb23aa08c05258293c64a7f72c0a9c97c0ef
-  linux_amd64: c2538ff144b8a628173be5ce98bb83b76d9082bd2d0fc6e0a68b073a4ea46f53
-  linux_arm64: d4872867810e1204e5b432f1be4a6d124d1333f3ccf9b4f4eefb11b8540fa8dc
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/claws-mail/blobs/sha256:9ea4f72acf61a1201eb135faca0a0024c545f9f358ec35ee561d8a06d8f3e63d
+    sha256: 9ea4f72acf61a1201eb135faca0a0024c545f9f358ec35ee561d8a06d8f3e63d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/claws-mail/blobs/sha256:28e9f6b5dba651921e758033f4f4cb23aa08c05258293c64a7f72c0a9c97c0ef
+    sha256: 28e9f6b5dba651921e758033f4f4cb23aa08c05258293c64a7f72c0a9c97c0ef
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/claws-mail/blobs/sha256:c2538ff144b8a628173be5ce98bb83b76d9082bd2d0fc6e0a68b073a4ea46f53
+    sha256: c2538ff144b8a628173be5ce98bb83b76d9082bd2d0fc6e0a68b073a4ea46f53
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/claws-mail/blobs/sha256:d4872867810e1204e5b432f1be4a6d124d1333f3ccf9b4f4eefb11b8540fa8dc
+    sha256: d4872867810e1204e5b432f1be4a6d124d1333f3ccf9b4f4eefb11b8540fa8dc
+source:
+  url: https://www.claws-mail.org/releases/claws-mail-4.3.1.tar.gz
+  sha256: 8fc4f0e0f274297063e5e7682089a32b65ac1b2d21cfa13c54b980520952def2
 install:
   type: archive
   format: tar.gz
@@ -29,3 +35,17 @@ dependencies:
   - at-spi2-core
   - gettext
   - harfbuzz
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - cairo
+  - gdk-pixbuf
+  - glib
+  - gnutls
+  - gtk+3
+  - libetpan
+  - libice
+  - libsm
+  - nettle
+  - pango
+  - zlib-ng-compat

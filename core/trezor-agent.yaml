@@ -3,16 +3,22 @@ version: 0.13.0
 description: Hardware SSH/GPG agent for Trezor and Ledger
 homepage: https://github.com/romanz/trezor-agent
 license: LGPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/trezor-agent/blobs/sha256:b800ca04c501796f8d7dcf2b34d4b2a6066ea381795e48708100f572dc177d13
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/trezor-agent/blobs/sha256:1d8d36c26d76cb7a4355a944f130ec29130a6019addb66ef4b9dfcf9e6cc0f6f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/trezor-agent/blobs/sha256:fc646919d623cbe65d6bc35aaa54c913715f7b8fc550e6d96abe5573d1a1e48c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/trezor-agent/blobs/sha256:75d94b95fea1e36f0ebe1432593dfcc10e2ce9d38af0535c50fc04f08cd464a6
-sha256:
-  darwin_arm64: b800ca04c501796f8d7dcf2b34d4b2a6066ea381795e48708100f572dc177d13
-  darwin_amd64: 1d8d36c26d76cb7a4355a944f130ec29130a6019addb66ef4b9dfcf9e6cc0f6f
-  linux_amd64: fc646919d623cbe65d6bc35aaa54c913715f7b8fc550e6d96abe5573d1a1e48c
-  linux_arm64: 75d94b95fea1e36f0ebe1432593dfcc10e2ce9d38af0535c50fc04f08cd464a6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/trezor-agent/blobs/sha256:b800ca04c501796f8d7dcf2b34d4b2a6066ea381795e48708100f572dc177d13
+    sha256: b800ca04c501796f8d7dcf2b34d4b2a6066ea381795e48708100f572dc177d13
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/trezor-agent/blobs/sha256:1d8d36c26d76cb7a4355a944f130ec29130a6019addb66ef4b9dfcf9e6cc0f6f
+    sha256: 1d8d36c26d76cb7a4355a944f130ec29130a6019addb66ef4b9dfcf9e6cc0f6f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/trezor-agent/blobs/sha256:fc646919d623cbe65d6bc35aaa54c913715f7b8fc550e6d96abe5573d1a1e48c
+    sha256: fc646919d623cbe65d6bc35aaa54c913715f7b8fc550e6d96abe5573d1a1e48c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/trezor-agent/blobs/sha256:75d94b95fea1e36f0ebe1432593dfcc10e2ce9d38af0535c50fc04f08cd464a6
+    sha256: 75d94b95fea1e36f0ebe1432593dfcc10e2ce9d38af0535c50fc04f08cd464a6
+source:
+  url: https://files.pythonhosted.org/packages/d9/b1/e533c417259dc112a067226d4c95cb772d7c090b696a61a065e1e41429d6/trezor_agent-0.13.0.tar.gz
+  sha256: f3324a7c5708db0e40682e272720f5d9e9dac7b62281ee740ee7825e6a23e8ff
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,6 @@ dependencies:
   - libsodium
   - libusb
   - python@3.14
+build_dependencies:
+  - pkgconf
+  - rust

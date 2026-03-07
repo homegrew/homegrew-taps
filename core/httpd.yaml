@@ -3,16 +3,22 @@ version: 2.4.66
 description: Apache HTTP server
 homepage: https://httpd.apache.org/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:b956fa6f4d92ab06b6722b937c7904c4002498024f18bdd64c0fbeca4c0c9ea6
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
-  linux_amd64: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:21deedd9de715b969402e66662ba9a618183d491b04a55dc75839db4dca38ee0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:41c524055486b594469f54971c00486545eb7139a34000d6f521c5eeacf1c450
-sha256:
-  darwin_arm64: b956fa6f4d92ab06b6722b937c7904c4002498024f18bdd64c0fbeca4c0c9ea6
-  darwin_amd64: 42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
-  linux_amd64: 21deedd9de715b969402e66662ba9a618183d491b04a55dc75839db4dca38ee0
-  linux_arm64: 41c524055486b594469f54971c00486545eb7139a34000d6f521c5eeacf1c450
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:b956fa6f4d92ab06b6722b937c7904c4002498024f18bdd64c0fbeca4c0c9ea6
+    sha256: b956fa6f4d92ab06b6722b937c7904c4002498024f18bdd64c0fbeca4c0c9ea6
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+    sha256: 42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:21deedd9de715b969402e66662ba9a618183d491b04a55dc75839db4dca38ee0
+    sha256: 21deedd9de715b969402e66662ba9a618183d491b04a55dc75839db4dca38ee0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:41c524055486b594469f54971c00486545eb7139a34000d6f521c5eeacf1c450
+    sha256: 41c524055486b594469f54971c00486545eb7139a34000d6f521c5eeacf1c450
+source:
+  url: https://dlcdn.apache.org/httpd/httpd-2.4.66.tar.bz2
+  sha256: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,11 @@ dependencies:
   - libnghttp2
   - openssl@3
   - pcre2
+linux_dependencies:
+  - apr
+  - apr-util
+  - brotli
+  - libnghttp2
+  - openssl@3
+  - pcre2
+  - zlib-ng-compat

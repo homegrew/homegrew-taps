@@ -3,16 +3,22 @@ version: 4.0.2
 description: Protocol buffers JavaScript generator plugin
 homepage: https://github.com/protocolbuffers/protobuf-javascript
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/protoc-gen-js/blobs/sha256:b8c1a0ade17d45161443083e123d14792368a469c253cf86e450f4e2fa6943bb
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/protoc-gen-js/blobs/sha256:82f428a2770afa7da93a85173a397182c57658d5b81287dfcf0616852e653dfb
-  linux_amd64: https://ghcr.io/v2/homebrew/core/protoc-gen-js/blobs/sha256:1e7c5044ac80c0be7dce48b6653ea2a9b73c4b6679f9b903248278890021a9a0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/protoc-gen-js/blobs/sha256:bcbd06fdd4ccda8bcb915bc3e77575453923bc734d3009fd5ca6b0e775137f6b
-sha256:
-  darwin_arm64: b8c1a0ade17d45161443083e123d14792368a469c253cf86e450f4e2fa6943bb
-  darwin_amd64: 82f428a2770afa7da93a85173a397182c57658d5b81287dfcf0616852e653dfb
-  linux_amd64: 1e7c5044ac80c0be7dce48b6653ea2a9b73c4b6679f9b903248278890021a9a0
-  linux_arm64: bcbd06fdd4ccda8bcb915bc3e77575453923bc734d3009fd5ca6b0e775137f6b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/protoc-gen-js/blobs/sha256:b8c1a0ade17d45161443083e123d14792368a469c253cf86e450f4e2fa6943bb
+    sha256: b8c1a0ade17d45161443083e123d14792368a469c253cf86e450f4e2fa6943bb
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/protoc-gen-js/blobs/sha256:82f428a2770afa7da93a85173a397182c57658d5b81287dfcf0616852e653dfb
+    sha256: 82f428a2770afa7da93a85173a397182c57658d5b81287dfcf0616852e653dfb
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/protoc-gen-js/blobs/sha256:1e7c5044ac80c0be7dce48b6653ea2a9b73c4b6679f9b903248278890021a9a0
+    sha256: 1e7c5044ac80c0be7dce48b6653ea2a9b73c4b6679f9b903248278890021a9a0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/protoc-gen-js/blobs/sha256:bcbd06fdd4ccda8bcb915bc3e77575453923bc734d3009fd5ca6b0e775137f6b
+    sha256: bcbd06fdd4ccda8bcb915bc3e77575453923bc734d3009fd5ca6b0e775137f6b
+source:
+  url: https://github.com/protocolbuffers/protobuf-javascript/archive/refs/tags/v4.0.2.tar.gz
+  sha256: a08244115ed0535971ec894abf078da90ad2c0938700612f90dc550f218627ee
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - abseil
   - protobuf
+build_dependencies:
+  - pkgconf

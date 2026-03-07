@@ -3,16 +3,22 @@ version: 26.03.0
 description: PDF rendering library (based on the xpdf-3.0 code base)
 homepage: https://poppler.freedesktop.org/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:48a891c5fd0edc2950e43f9dc4bc309c7e99a58ccaffa50aa5a22fd9214df35b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:d71bf29c906bef479a506efd43b012d0d8c4b0b4889f40feda86ddb87bb11624
-  linux_amd64: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:f54feff3963960bc51007fa2866f6dc788766185b41a317625be981d10fd5ea6
-  linux_arm64: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:8ece40082167007fd03794788c2f7de1e137a9fe1555636098a739306b83e9f3
-sha256:
-  darwin_arm64: 48a891c5fd0edc2950e43f9dc4bc309c7e99a58ccaffa50aa5a22fd9214df35b
-  darwin_amd64: d71bf29c906bef479a506efd43b012d0d8c4b0b4889f40feda86ddb87bb11624
-  linux_amd64: f54feff3963960bc51007fa2866f6dc788766185b41a317625be981d10fd5ea6
-  linux_arm64: 8ece40082167007fd03794788c2f7de1e137a9fe1555636098a739306b83e9f3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:48a891c5fd0edc2950e43f9dc4bc309c7e99a58ccaffa50aa5a22fd9214df35b
+    sha256: 48a891c5fd0edc2950e43f9dc4bc309c7e99a58ccaffa50aa5a22fd9214df35b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:d71bf29c906bef479a506efd43b012d0d8c4b0b4889f40feda86ddb87bb11624
+    sha256: d71bf29c906bef479a506efd43b012d0d8c4b0b4889f40feda86ddb87bb11624
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:f54feff3963960bc51007fa2866f6dc788766185b41a317625be981d10fd5ea6
+    sha256: f54feff3963960bc51007fa2866f6dc788766185b41a317625be981d10fd5ea6
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:8ece40082167007fd03794788c2f7de1e137a9fe1555636098a739306b83e9f3
+    sha256: 8ece40082167007fd03794788c2f7de1e137a9fe1555636098a739306b83e9f3
+source:
+  url: https://poppler.freedesktop.org/poppler-26.03.0.tar.xz
+  sha256: 8b3c5e2a9f2ab4c3ec5029f28af1b433c6b71f0d1e7b3997aa561cf1c0ca4ebe
 install:
   type: archive
   format: tar.gz
@@ -33,3 +39,22 @@ dependencies:
   - gettext
   - gpgme
   - libassuan
+build_dependencies:
+  - cmake
+  - gettext
+  - gobject-introspection
+  - pkgconf
+linux_dependencies:
+  - cairo
+  - fontconfig
+  - freetype
+  - glib
+  - gpgmepp
+  - jpeg-turbo
+  - libpng
+  - libtiff
+  - little-cms2
+  - nspr
+  - nss
+  - openjpeg
+  - zlib-ng-compat

@@ -3,16 +3,22 @@ version: 3.7.0
 description: Visual Servoing Platform library
 homepage: https://visp.inria.fr/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/visp/blobs/sha256:e87d360a93bc731123468c94b5477f5ba0b7671d0c8e82287e5485961d75f748
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/visp/blobs/sha256:a81d6d090c775ff46b13ff5f20907245f7e7bf9040d36a7cc7014817bf4213ee
-  linux_amd64: https://ghcr.io/v2/homebrew/core/visp/blobs/sha256:6917b75a0f3820248a9fedde0ccc1be313ed093ece978de18824e5ed8fb8adaa
-  linux_arm64: https://ghcr.io/v2/homebrew/core/visp/blobs/sha256:f3f4da4c18762977aee9a6229ce25c8548aae804e458ea5035343cc3853b647a
-sha256:
-  darwin_arm64: e87d360a93bc731123468c94b5477f5ba0b7671d0c8e82287e5485961d75f748
-  darwin_amd64: a81d6d090c775ff46b13ff5f20907245f7e7bf9040d36a7cc7014817bf4213ee
-  linux_amd64: 6917b75a0f3820248a9fedde0ccc1be313ed093ece978de18824e5ed8fb8adaa
-  linux_arm64: f3f4da4c18762977aee9a6229ce25c8548aae804e458ea5035343cc3853b647a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/visp/blobs/sha256:e87d360a93bc731123468c94b5477f5ba0b7671d0c8e82287e5485961d75f748
+    sha256: e87d360a93bc731123468c94b5477f5ba0b7671d0c8e82287e5485961d75f748
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/visp/blobs/sha256:a81d6d090c775ff46b13ff5f20907245f7e7bf9040d36a7cc7014817bf4213ee
+    sha256: a81d6d090c775ff46b13ff5f20907245f7e7bf9040d36a7cc7014817bf4213ee
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/visp/blobs/sha256:6917b75a0f3820248a9fedde0ccc1be313ed093ece978de18824e5ed8fb8adaa
+    sha256: 6917b75a0f3820248a9fedde0ccc1be313ed093ece978de18824e5ed8fb8adaa
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/visp/blobs/sha256:f3f4da4c18762977aee9a6229ce25c8548aae804e458ea5035343cc3853b647a
+    sha256: f3f4da4c18762977aee9a6229ce25c8548aae804e458ea5035343cc3853b647a
+source:
+  url: https://visp-doc.inria.fr/download/releases/visp-3.7.0.tar.gz
+  sha256: 997f247f3702c83f0a8a6dc2f72ff98cfe3a5dcbd82f7c9f01d37ccd3b8ea97a
 install:
   type: archive
   format: tar.gz
@@ -36,3 +42,20 @@ dependencies:
   - libpcap
   - qhull
   - qtbase
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - eigen
+  - gsl
+  - jpeg-turbo
+  - libdc1394
+  - libnsl
+  - libpng
+  - lz4
+  - openblas
+  - opencv
+  - pcl
+  - vtk
+  - zbar
+  - zlib-ng-compat

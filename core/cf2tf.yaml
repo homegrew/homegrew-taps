@@ -3,16 +3,22 @@ version: 0.9.1
 description: Cloudformation templates to Terraform HCL converter
 homepage: https://github.com/DontShaveTheYak/cf2tf
 license: GPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cf2tf/blobs/sha256:33434478c2bc6390106480dd33b588a36d4af10009d743bcb17ab35f7bfaf3ab
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cf2tf/blobs/sha256:223a13bf419abd5ad40794d4a8d5c96ba4b5a96c013b4efe3adf5ccb8aab55ea
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cf2tf/blobs/sha256:ebe5ccbc615e2c1dad36c252b2cc63fd143fff95d314e4ea00de8f1985d2d026
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cf2tf/blobs/sha256:e00762e2d5a068485470b12a1e33f6bfc8e9ea57c8a18310fbcc4d88134d5777
-sha256:
-  darwin_arm64: 33434478c2bc6390106480dd33b588a36d4af10009d743bcb17ab35f7bfaf3ab
-  darwin_amd64: 223a13bf419abd5ad40794d4a8d5c96ba4b5a96c013b4efe3adf5ccb8aab55ea
-  linux_amd64: ebe5ccbc615e2c1dad36c252b2cc63fd143fff95d314e4ea00de8f1985d2d026
-  linux_arm64: e00762e2d5a068485470b12a1e33f6bfc8e9ea57c8a18310fbcc4d88134d5777
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cf2tf/blobs/sha256:33434478c2bc6390106480dd33b588a36d4af10009d743bcb17ab35f7bfaf3ab
+    sha256: 33434478c2bc6390106480dd33b588a36d4af10009d743bcb17ab35f7bfaf3ab
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cf2tf/blobs/sha256:223a13bf419abd5ad40794d4a8d5c96ba4b5a96c013b4efe3adf5ccb8aab55ea
+    sha256: 223a13bf419abd5ad40794d4a8d5c96ba4b5a96c013b4efe3adf5ccb8aab55ea
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cf2tf/blobs/sha256:ebe5ccbc615e2c1dad36c252b2cc63fd143fff95d314e4ea00de8f1985d2d026
+    sha256: ebe5ccbc615e2c1dad36c252b2cc63fd143fff95d314e4ea00de8f1985d2d026
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cf2tf/blobs/sha256:e00762e2d5a068485470b12a1e33f6bfc8e9ea57c8a18310fbcc4d88134d5777
+    sha256: e00762e2d5a068485470b12a1e33f6bfc8e9ea57c8a18310fbcc4d88134d5777
+source:
+  url: https://files.pythonhosted.org/packages/ba/c4/cd7ddd8c942b71a2db200c42e9ed8c336111db94e2399d3903db6e77eef2/cf2tf-0.9.1.tar.gz
+  sha256: cc334b8373412745b3790bed9db71e02d4c41e274e1774b3b23626bdd78bf357
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,5 @@ dependencies:
   - certifi
   - libyaml
   - python@3.14
+build_dependencies:
+  - cmake

@@ -3,17 +3,25 @@ version: 1.0.1
 description: Git-powered personal task tracker
 homepage: https://github.com/naggie/dstask
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dstask/blobs/sha256:efdbaee9c2da836d8c3d05b93d720bc050fcb6f46877cef12e76f414bf6569a6
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dstask/blobs/sha256:a9f4a54b271f2bdf01ee6ab72ec6362c4771c73fb9d8f600411eece08014b354
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dstask/blobs/sha256:6a6ac3f39000b80965df68e139c59b8b81d9f68bae6146c5f718fede4cfe7a00
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dstask/blobs/sha256:7e2fb5c0a8e18d13225127f8456e9c7c8a1420c8428716a05accc2710bf5fb6d
-sha256:
-  darwin_arm64: efdbaee9c2da836d8c3d05b93d720bc050fcb6f46877cef12e76f414bf6569a6
-  darwin_amd64: a9f4a54b271f2bdf01ee6ab72ec6362c4771c73fb9d8f600411eece08014b354
-  linux_amd64: 6a6ac3f39000b80965df68e139c59b8b81d9f68bae6146c5f718fede4cfe7a00
-  linux_arm64: 7e2fb5c0a8e18d13225127f8456e9c7c8a1420c8428716a05accc2710bf5fb6d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dstask/blobs/sha256:efdbaee9c2da836d8c3d05b93d720bc050fcb6f46877cef12e76f414bf6569a6
+    sha256: efdbaee9c2da836d8c3d05b93d720bc050fcb6f46877cef12e76f414bf6569a6
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dstask/blobs/sha256:a9f4a54b271f2bdf01ee6ab72ec6362c4771c73fb9d8f600411eece08014b354
+    sha256: a9f4a54b271f2bdf01ee6ab72ec6362c4771c73fb9d8f600411eece08014b354
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dstask/blobs/sha256:6a6ac3f39000b80965df68e139c59b8b81d9f68bae6146c5f718fede4cfe7a00
+    sha256: 6a6ac3f39000b80965df68e139c59b8b81d9f68bae6146c5f718fede4cfe7a00
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dstask/blobs/sha256:7e2fb5c0a8e18d13225127f8456e9c7c8a1420c8428716a05accc2710bf5fb6d
+    sha256: 7e2fb5c0a8e18d13225127f8456e9c7c8a1420c8428716a05accc2710bf5fb6d
+source:
+  url: https://github.com/naggie/dstask/archive/refs/tags/v1.0.1.tar.gz
+  sha256: afca526d049874e2609d91c0e5f186d614c684ec13b2fe517e00ec4eeb4f70da
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

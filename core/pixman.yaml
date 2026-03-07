@@ -3,17 +3,26 @@ version: 0.46.4
 description: Low-level library for pixel manipulation
 homepage: https://cairographics.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pixman/blobs/sha256:2b011051909d7f9ad432a76d32c0490f796ad545f7acbd6445356024f0c712e5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pixman/blobs/sha256:491c963c8c80dc12305465d1191e4f29670a0cbda311d741ef8d074660392abc
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pixman/blobs/sha256:acad642a52a0e39159ba340f1e676c63d014422bf1d90e218ba7397b5873a2d1
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pixman/blobs/sha256:c16a1c1e8cfd9b07b36f2c53eac2e8ab8d6b26e9c2961ff060588b8a60b217d3
-sha256:
-  darwin_arm64: 2b011051909d7f9ad432a76d32c0490f796ad545f7acbd6445356024f0c712e5
-  darwin_amd64: 491c963c8c80dc12305465d1191e4f29670a0cbda311d741ef8d074660392abc
-  linux_amd64: acad642a52a0e39159ba340f1e676c63d014422bf1d90e218ba7397b5873a2d1
-  linux_arm64: c16a1c1e8cfd9b07b36f2c53eac2e8ab8d6b26e9c2961ff060588b8a60b217d3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pixman/blobs/sha256:2b011051909d7f9ad432a76d32c0490f796ad545f7acbd6445356024f0c712e5
+    sha256: 2b011051909d7f9ad432a76d32c0490f796ad545f7acbd6445356024f0c712e5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pixman/blobs/sha256:491c963c8c80dc12305465d1191e4f29670a0cbda311d741ef8d074660392abc
+    sha256: 491c963c8c80dc12305465d1191e4f29670a0cbda311d741ef8d074660392abc
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pixman/blobs/sha256:acad642a52a0e39159ba340f1e676c63d014422bf1d90e218ba7397b5873a2d1
+    sha256: acad642a52a0e39159ba340f1e676c63d014422bf1d90e218ba7397b5873a2d1
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pixman/blobs/sha256:c16a1c1e8cfd9b07b36f2c53eac2e8ab8d6b26e9c2961ff060588b8a60b217d3
+    sha256: c16a1c1e8cfd9b07b36f2c53eac2e8ab8d6b26e9c2961ff060588b8a60b217d3
+source:
+  url: https://cairographics.org/releases/pixman-0.46.4.tar.gz
+  sha256: d09c44ebc3bd5bee7021c79f922fe8fb2fb57f7320f55e97ff9914d2346a591c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - meson
+  - ninja

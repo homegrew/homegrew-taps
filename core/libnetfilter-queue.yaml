@@ -3,12 +3,16 @@ version: 1.0.5
 description: Userspace API to packets queued by the kernel packet filter
 homepage: https://www.netfilter.org/projects/libnetfilter_queue
 license: LGPL-2.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libnetfilter-queue/blobs/sha256:92a395a74268dd17a019cf43ca0a5bbe38ad52e045697e403657abc3250e3f6e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libnetfilter-queue/blobs/sha256:0d88b35944420ead47b296ddc1e8a374591138b640c4aeede86e02b0104de7c4
-sha256:
-  linux_amd64: 92a395a74268dd17a019cf43ca0a5bbe38ad52e045697e403657abc3250e3f6e
-  linux_arm64: 0d88b35944420ead47b296ddc1e8a374591138b640c4aeede86e02b0104de7c4
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libnetfilter-queue/blobs/sha256:92a395a74268dd17a019cf43ca0a5bbe38ad52e045697e403657abc3250e3f6e
+    sha256: 92a395a74268dd17a019cf43ca0a5bbe38ad52e045697e403657abc3250e3f6e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libnetfilter-queue/blobs/sha256:0d88b35944420ead47b296ddc1e8a374591138b640c4aeede86e02b0104de7c4
+    sha256: 0d88b35944420ead47b296ddc1e8a374591138b640c4aeede86e02b0104de7c4
+source:
+  url: https://www.netfilter.org/projects/libnetfilter_queue/files/libnetfilter_queue-1.0.5.tar.bz2
+  sha256: f9ff3c11305d6e03d81405957bdc11aea18e0d315c3e3f48da53a24ba251b9f5
 install:
   type: archive
   format: tar.gz
@@ -16,3 +20,5 @@ install:
 dependencies:
   - libmnl
   - libnfnetlink
+build_dependencies:
+  - pkgconf

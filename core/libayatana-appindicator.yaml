@@ -3,12 +3,16 @@ version: 0.5.94
 description: Ayatana Application Indicators Shared Library
 homepage: https://github.com/AyatanaIndicators/libayatana-appindicator
 license: GPL-3.0-or-later OR LGPL-2.1-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:589e5c203dbcf5befc48f6e13e0e2e723312ceb2f59b65c7490b6f2e80587dab
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:253407ddf4628cd2a8c9343aa35df588d239bff65dff68779078e8ad93851ac9
-sha256:
-  linux_amd64: 589e5c203dbcf5befc48f6e13e0e2e723312ceb2f59b65c7490b6f2e80587dab
-  linux_arm64: 253407ddf4628cd2a8c9343aa35df588d239bff65dff68779078e8ad93851ac9
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:589e5c203dbcf5befc48f6e13e0e2e723312ceb2f59b65c7490b6f2e80587dab
+    sha256: 589e5c203dbcf5befc48f6e13e0e2e723312ceb2f59b65c7490b6f2e80587dab
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:253407ddf4628cd2a8c9343aa35df588d239bff65dff68779078e8ad93851ac9
+    sha256: 253407ddf4628cd2a8c9343aa35df588d239bff65dff68779078e8ad93851ac9
+source:
+  url: https://github.com/AyatanaIndicators/libayatana-appindicator/archive/refs/tags/0.5.94.tar.gz
+  sha256: 884a6bc77994c0b58c961613ca4c4b974dc91aa0f804e70e92f38a542d0d0f90
 install:
   type: archive
   format: tar.gz
@@ -23,3 +27,11 @@ dependencies:
   - libayatana-indicator
   - libdbusmenu
   - pango
+build_dependencies:
+  - at-spi2-core
+  - cmake
+  - gobject-introspection
+  - intltool
+  - libxml2
+  - pkgconf
+  - vala

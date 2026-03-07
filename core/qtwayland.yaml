@@ -3,12 +3,16 @@ version: 6.10.2
 description: Wayland platform plugin and QtWaylandCompositor API
 homepage: https://www.qt.io/
 license: GPL-3.0-only AND (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND BSD-3-Clause AND HPND AND LGPL-2.1-or-later AND MIT
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/qtwayland/blobs/sha256:2fe4f64aa2c21c5b6ac5a0f93e8fbf2c340399a6c01f5078f1e8cf4cfb26fc45
-  linux_arm64: https://ghcr.io/v2/homebrew/core/qtwayland/blobs/sha256:d31469fd73b406d844ec790555ae7ecbd1f76c04808193707b41647c19113588
-sha256:
-  linux_amd64: 2fe4f64aa2c21c5b6ac5a0f93e8fbf2c340399a6c01f5078f1e8cf4cfb26fc45
-  linux_arm64: d31469fd73b406d844ec790555ae7ecbd1f76c04808193707b41647c19113588
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qtwayland/blobs/sha256:2fe4f64aa2c21c5b6ac5a0f93e8fbf2c340399a6c01f5078f1e8cf4cfb26fc45
+    sha256: 2fe4f64aa2c21c5b6ac5a0f93e8fbf2c340399a6c01f5078f1e8cf4cfb26fc45
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qtwayland/blobs/sha256:d31469fd73b406d844ec790555ae7ecbd1f76c04808193707b41647c19113588
+    sha256: d31469fd73b406d844ec790555ae7ecbd1f76c04808193707b41647c19113588
+source:
+  url: https://download.qt.io/official_releases/qt/6.10/6.10.2/submodules/qtwayland-everywhere-src-6.10.2.tar.xz
+  sha256: 391998eb432719df26a6a67d8efdc67f8bf2afdd76c1ee3381ebff4fe7527ee2
 install:
   type: archive
   format: tar.gz
@@ -20,3 +24,7 @@ dependencies:
   - qtdeclarative
   - qtsvg
   - wayland
+build_dependencies:
+  - cmake
+  - ninja
+  - vulkan-headers

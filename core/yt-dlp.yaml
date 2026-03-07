@@ -3,16 +3,22 @@ version: 2026.3.3
 description: Feature-rich command-line audio/video downloader
 homepage: https://github.com/yt-dlp/yt-dlp
 license: Unlicense
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/yt-dlp/blobs/sha256:622f6652258da46fafd7adf8f3615d1144e9199f527a59a3bafa56951be6fb78
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/yt-dlp/blobs/sha256:9b14fcfdc4e066e67bdf0d28e47e8eb7f8e3f14533bdc267ef7fcb669ca1bbb1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/yt-dlp/blobs/sha256:60c3fe4408507a4d5430c620566731e0909e23eafe921d7e8a88268a16da004f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/yt-dlp/blobs/sha256:22c70896e2c80292643fd354a55653d7d573c7ffb02e5e8758b508805064c9b3
-sha256:
-  darwin_arm64: 622f6652258da46fafd7adf8f3615d1144e9199f527a59a3bafa56951be6fb78
-  darwin_amd64: 9b14fcfdc4e066e67bdf0d28e47e8eb7f8e3f14533bdc267ef7fcb669ca1bbb1
-  linux_amd64: 60c3fe4408507a4d5430c620566731e0909e23eafe921d7e8a88268a16da004f
-  linux_arm64: 22c70896e2c80292643fd354a55653d7d573c7ffb02e5e8758b508805064c9b3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/yt-dlp/blobs/sha256:622f6652258da46fafd7adf8f3615d1144e9199f527a59a3bafa56951be6fb78
+    sha256: 622f6652258da46fafd7adf8f3615d1144e9199f527a59a3bafa56951be6fb78
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/yt-dlp/blobs/sha256:9b14fcfdc4e066e67bdf0d28e47e8eb7f8e3f14533bdc267ef7fcb669ca1bbb1
+    sha256: 9b14fcfdc4e066e67bdf0d28e47e8eb7f8e3f14533bdc267ef7fcb669ca1bbb1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/yt-dlp/blobs/sha256:60c3fe4408507a4d5430c620566731e0909e23eafe921d7e8a88268a16da004f
+    sha256: 60c3fe4408507a4d5430c620566731e0909e23eafe921d7e8a88268a16da004f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/yt-dlp/blobs/sha256:22c70896e2c80292643fd354a55653d7d573c7ffb02e5e8758b508805064c9b3
+    sha256: 22c70896e2c80292643fd354a55653d7d573c7ffb02e5e8758b508805064c9b3
+source:
+  url: https://files.pythonhosted.org/packages/66/6f/7427d23609353e5ef3470ff43ef551b8bd7b166dd4fef48957f0d0e040fe/yt_dlp-2026.3.3.tar.gz
+  sha256: 3db7969e3a8964dc786bdebcffa2653f31123bf2a630f04a17bdafb7bbd39952
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,5 @@ dependencies:
   - certifi
   - deno
   - python@3.14
+build_dependencies:
+  - node

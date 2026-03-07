@@ -3,12 +3,16 @@ version: 9.1.1887
 description: GUI for vim, made for macOS
 homepage: https://github.com/macvim-dev/macvim
 license: Vim
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:7892d48385e201d848071dc0e16420e817650997b6307f3eaabfc8c82135b18f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:2ad9efbba6e6e08a7f1dd9bfec31f4dc81929b3cef33da92a17142631e3b1426
-sha256:
-  darwin_arm64: 7892d48385e201d848071dc0e16420e817650997b6307f3eaabfc8c82135b18f
-  darwin_amd64: 2ad9efbba6e6e08a7f1dd9bfec31f4dc81929b3cef33da92a17142631e3b1426
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:7892d48385e201d848071dc0e16420e817650997b6307f3eaabfc8c82135b18f
+    sha256: 7892d48385e201d848071dc0e16420e817650997b6307f3eaabfc8c82135b18f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:2ad9efbba6e6e08a7f1dd9bfec31f4dc81929b3cef33da92a17142631e3b1426
+    sha256: 2ad9efbba6e6e08a7f1dd9bfec31f4dc81929b3cef33da92a17142631e3b1426
+source:
+  url: https://github.com/macvim-dev/macvim/archive/refs/tags/release-182.tar.gz
+  sha256: 82148b9f7fa4c83e18ba7fea3f65289b1eb3e2775a4d17a4c3e0fe16087e0e53
 install:
   type: archive
   format: tar.gz
@@ -18,3 +22,6 @@ dependencies:
   - lua
   - python@3.14
   - ruby
+build_dependencies:
+  - gettext
+  - libsodium

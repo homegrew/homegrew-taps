@@ -3,16 +3,22 @@ version: 14.5
 description: Serves a fully RESTful API from any existing PostgreSQL database
 homepage: https://github.com/PostgREST/postgrest
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/postgrest/blobs/sha256:2e75c185ef1237b95628d3ca82dcdafc8ab14c629231106d9036cc9fb4137438
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/postgrest/blobs/sha256:f2fbdd7fc20abd3517679701ad3646e5f81ba46999d82c07f7b42ce6133a6e06
-  linux_amd64: https://ghcr.io/v2/homebrew/core/postgrest/blobs/sha256:0bc6147bfe85295e6770c349cd6e2a62e3295d28c9f798d3c36fff420c46642b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/postgrest/blobs/sha256:7bbf2306f812d5cd090be39dec1a35d03dd3c85a2fc816fb97aae479621cf052
-sha256:
-  darwin_arm64: 2e75c185ef1237b95628d3ca82dcdafc8ab14c629231106d9036cc9fb4137438
-  darwin_amd64: f2fbdd7fc20abd3517679701ad3646e5f81ba46999d82c07f7b42ce6133a6e06
-  linux_amd64: 0bc6147bfe85295e6770c349cd6e2a62e3295d28c9f798d3c36fff420c46642b
-  linux_arm64: 7bbf2306f812d5cd090be39dec1a35d03dd3c85a2fc816fb97aae479621cf052
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/postgrest/blobs/sha256:2e75c185ef1237b95628d3ca82dcdafc8ab14c629231106d9036cc9fb4137438
+    sha256: 2e75c185ef1237b95628d3ca82dcdafc8ab14c629231106d9036cc9fb4137438
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/postgrest/blobs/sha256:f2fbdd7fc20abd3517679701ad3646e5f81ba46999d82c07f7b42ce6133a6e06
+    sha256: f2fbdd7fc20abd3517679701ad3646e5f81ba46999d82c07f7b42ce6133a6e06
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/postgrest/blobs/sha256:0bc6147bfe85295e6770c349cd6e2a62e3295d28c9f798d3c36fff420c46642b
+    sha256: 0bc6147bfe85295e6770c349cd6e2a62e3295d28c9f798d3c36fff420c46642b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/postgrest/blobs/sha256:7bbf2306f812d5cd090be39dec1a35d03dd3c85a2fc816fb97aae479621cf052
+    sha256: 7bbf2306f812d5cd090be39dec1a35d03dd3c85a2fc816fb97aae479621cf052
+source:
+  url: https://github.com/PostgREST/postgrest/archive/refs/tags/v14.5.tar.gz
+  sha256: ffdc596aaaa10254b0c92f9edadb54bdd83b2751efa2b8e05e0f2ae31f456c93
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,10 @@ install:
 dependencies:
   - gmp
   - libpq
+build_dependencies:
+  - cabal-install
+  - ghc@9.12
+linux_dependencies:
+  - gmp
+  - libpq
+  - zlib-ng-compat

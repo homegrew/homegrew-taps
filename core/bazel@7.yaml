@@ -3,16 +3,22 @@ version: 7.7.1
 description: "Google's own build tool"
 homepage: https://bazel.build/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bazel/7/blobs/sha256:9951a2c2d7fb46a35db66a6a9adbc96b4ca75d184f0fa78545979b3e203b26cb
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bazel/7/blobs/sha256:4e304d2c45194de90324fb87be2cafb3a2bc4a32449676f2045114354c96b6d2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bazel/7/blobs/sha256:551daae69da44de6887ed21c29cfb5705c5dfd92be88fa47b9aeeb03adee474c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bazel/7/blobs/sha256:53a676cca2f198259a54d153ccbca884b6ff31046fe6d39cad15a3df20cd1eac
-sha256:
-  darwin_arm64: 9951a2c2d7fb46a35db66a6a9adbc96b4ca75d184f0fa78545979b3e203b26cb
-  darwin_amd64: 4e304d2c45194de90324fb87be2cafb3a2bc4a32449676f2045114354c96b6d2
-  linux_amd64: 551daae69da44de6887ed21c29cfb5705c5dfd92be88fa47b9aeeb03adee474c
-  linux_arm64: 53a676cca2f198259a54d153ccbca884b6ff31046fe6d39cad15a3df20cd1eac
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bazel/7/blobs/sha256:9951a2c2d7fb46a35db66a6a9adbc96b4ca75d184f0fa78545979b3e203b26cb
+    sha256: 9951a2c2d7fb46a35db66a6a9adbc96b4ca75d184f0fa78545979b3e203b26cb
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bazel/7/blobs/sha256:4e304d2c45194de90324fb87be2cafb3a2bc4a32449676f2045114354c96b6d2
+    sha256: 4e304d2c45194de90324fb87be2cafb3a2bc4a32449676f2045114354c96b6d2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bazel/7/blobs/sha256:551daae69da44de6887ed21c29cfb5705c5dfd92be88fa47b9aeeb03adee474c
+    sha256: 551daae69da44de6887ed21c29cfb5705c5dfd92be88fa47b9aeeb03adee474c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bazel/7/blobs/sha256:53a676cca2f198259a54d153ccbca884b6ff31046fe6d39cad15a3df20cd1eac
+    sha256: 53a676cca2f198259a54d153ccbca884b6ff31046fe6d39cad15a3df20cd1eac
+source:
+  url: https://github.com/bazelbuild/bazel/releases/download/7.7.1/bazel-7.7.1-dist.zip
+  sha256: 6181b3570c2f657d989b1141fb0c1a08eb5f08106ca577dc7dc52e7d0238379a
 install:
   type: archive
   format: tar.gz

@@ -3,16 +3,22 @@ version: 3.6.5
 description: 3D graphics toolkit
 homepage: https://github.com/openscenegraph/OpenSceneGraph
 license: LGPL-2.1-or-later WITH WxWindows-exception-3.1
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/open-scene-graph/blobs/sha256:e3174f80b6cec2585f35be266d182172c198b4ae8e0d10adf55e023d5d670b6c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/open-scene-graph/blobs/sha256:40f22b2e52822a8497bd217b8e6f4911a85a5a687741aae2c1d4c7c9d7732861
-  linux_amd64: https://ghcr.io/v2/homebrew/core/open-scene-graph/blobs/sha256:7ff70fc25d3113a46721cccb3498b4e21e90b81246d08bbb6f725c19b8a35c3d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/open-scene-graph/blobs/sha256:b5ac9df2c542db731f565e9d13b4082c54976160e98ca3db80b23b57fb33dbe1
-sha256:
-  darwin_arm64: e3174f80b6cec2585f35be266d182172c198b4ae8e0d10adf55e023d5d670b6c
-  darwin_amd64: 40f22b2e52822a8497bd217b8e6f4911a85a5a687741aae2c1d4c7c9d7732861
-  linux_amd64: 7ff70fc25d3113a46721cccb3498b4e21e90b81246d08bbb6f725c19b8a35c3d
-  linux_arm64: b5ac9df2c542db731f565e9d13b4082c54976160e98ca3db80b23b57fb33dbe1
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/open-scene-graph/blobs/sha256:e3174f80b6cec2585f35be266d182172c198b4ae8e0d10adf55e023d5d670b6c
+    sha256: e3174f80b6cec2585f35be266d182172c198b4ae8e0d10adf55e023d5d670b6c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/open-scene-graph/blobs/sha256:40f22b2e52822a8497bd217b8e6f4911a85a5a687741aae2c1d4c7c9d7732861
+    sha256: 40f22b2e52822a8497bd217b8e6f4911a85a5a687741aae2c1d4c7c9d7732861
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/open-scene-graph/blobs/sha256:7ff70fc25d3113a46721cccb3498b4e21e90b81246d08bbb6f725c19b8a35c3d
+    sha256: 7ff70fc25d3113a46721cccb3498b4e21e90b81246d08bbb6f725c19b8a35c3d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/open-scene-graph/blobs/sha256:b5ac9df2c542db731f565e9d13b4082c54976160e98ca3db80b23b57fb33dbe1
+    sha256: b5ac9df2c542db731f565e9d13b4082c54976160e98ca3db80b23b57fb33dbe1
+source:
+  url: https://github.com/openscenegraph/OpenSceneGraph/archive/refs/tags/OpenSceneGraph-3.6.5.tar.gz
+  sha256: aea196550f02974d6d09291c5d83b51ca6a03b3767e234a8c0e21322927d1e12
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,23 @@ dependencies:
   - freetype
   - jpeg-turbo
   - sdl2
+build_dependencies:
+  - cmake
+  - doxygen
+  - graphviz
+  - pkgconf
+linux_dependencies:
+  - cairo
+  - fontconfig
+  - freetype
+  - giflib
+  - glib
+  - jpeg-turbo
+  - libpng
+  - librsvg
+  - libx11
+  - libxinerama
+  - libxrandr
+  - mesa
+  - sdl2
+  - zlib-ng-compat

@@ -3,19 +3,30 @@ version: 0.8.6
 description: Documentation metadata library
 homepage: https://rarian.freedesktop.org/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:9902862041d1a77fada33e8ebaabedf67f77b3bc8050ea988f78f8650c2c4ce3
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:ed569b70aaf6ecb11c8e6c77306b9514c27ca2013c3ec6583e735935ad593962
-  linux_amd64: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:289b7f0d276337b070e632d435f8f85f96462c8982d2597cd90f552aac4d14cf
-  linux_arm64: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:71527d1afc769fb36f87f00e635acdf53f7b74f74cbe3448c00108ca368ad18e
-sha256:
-  darwin_arm64: 9902862041d1a77fada33e8ebaabedf67f77b3bc8050ea988f78f8650c2c4ce3
-  darwin_amd64: ed569b70aaf6ecb11c8e6c77306b9514c27ca2013c3ec6583e735935ad593962
-  linux_amd64: 289b7f0d276337b070e632d435f8f85f96462c8982d2597cd90f552aac4d14cf
-  linux_arm64: 71527d1afc769fb36f87f00e635acdf53f7b74f74cbe3448c00108ca368ad18e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:9902862041d1a77fada33e8ebaabedf67f77b3bc8050ea988f78f8650c2c4ce3
+    sha256: 9902862041d1a77fada33e8ebaabedf67f77b3bc8050ea988f78f8650c2c4ce3
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:ed569b70aaf6ecb11c8e6c77306b9514c27ca2013c3ec6583e735935ad593962
+    sha256: ed569b70aaf6ecb11c8e6c77306b9514c27ca2013c3ec6583e735935ad593962
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:289b7f0d276337b070e632d435f8f85f96462c8982d2597cd90f552aac4d14cf
+    sha256: 289b7f0d276337b070e632d435f8f85f96462c8982d2597cd90f552aac4d14cf
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:71527d1afc769fb36f87f00e635acdf53f7b74f74cbe3448c00108ca368ad18e
+    sha256: 71527d1afc769fb36f87f00e635acdf53f7b74f74cbe3448c00108ca368ad18e
+source:
+  url: https://gitlab.freedesktop.org/rarian/rarian/-/releases/0.8.6/downloads/assets/rarian-0.8.6.tar.bz2
+  sha256: 9d4f7873009d2e31b8b1ec762606b12bee5526e1fe75de48e9495382bfef2bea
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - tinyxml2
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf

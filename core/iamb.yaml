@@ -3,17 +3,28 @@ version: 0.0.11
 description: Matrix client for Vim addicts
 homepage: https://iamb.chat
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/iamb/blobs/sha256:60411f720f5ecb4b70440f08d92f30af8edea461235dece5d20f82b5d829d124
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/iamb/blobs/sha256:b71100aaa5a4888f16b72cb16d0026cae7e9b90ac37ae55bc48fc7d0199102f3
-  linux_amd64: https://ghcr.io/v2/homebrew/core/iamb/blobs/sha256:3d98fe51949cb159dfab07e4b1269bb5dcd8825f59ebec0a80d1a8d509b47be2
-  linux_arm64: https://ghcr.io/v2/homebrew/core/iamb/blobs/sha256:419e544f93e47f8698e75c427defdb7757832096ba0cad731b5a9901462bc139
-sha256:
-  darwin_arm64: 60411f720f5ecb4b70440f08d92f30af8edea461235dece5d20f82b5d829d124
-  darwin_amd64: b71100aaa5a4888f16b72cb16d0026cae7e9b90ac37ae55bc48fc7d0199102f3
-  linux_amd64: 3d98fe51949cb159dfab07e4b1269bb5dcd8825f59ebec0a80d1a8d509b47be2
-  linux_arm64: 419e544f93e47f8698e75c427defdb7757832096ba0cad731b5a9901462bc139
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/iamb/blobs/sha256:60411f720f5ecb4b70440f08d92f30af8edea461235dece5d20f82b5d829d124
+    sha256: 60411f720f5ecb4b70440f08d92f30af8edea461235dece5d20f82b5d829d124
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/iamb/blobs/sha256:b71100aaa5a4888f16b72cb16d0026cae7e9b90ac37ae55bc48fc7d0199102f3
+    sha256: b71100aaa5a4888f16b72cb16d0026cae7e9b90ac37ae55bc48fc7d0199102f3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/iamb/blobs/sha256:3d98fe51949cb159dfab07e4b1269bb5dcd8825f59ebec0a80d1a8d509b47be2
+    sha256: 3d98fe51949cb159dfab07e4b1269bb5dcd8825f59ebec0a80d1a8d509b47be2
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/iamb/blobs/sha256:419e544f93e47f8698e75c427defdb7757832096ba0cad731b5a9901462bc139
+    sha256: 419e544f93e47f8698e75c427defdb7757832096ba0cad731b5a9901462bc139
+source:
+  url: https://github.com/ulyssa/iamb/archive/refs/tags/v0.0.11.tar.gz
+  sha256: a5cf4f248e0893b5657c5ad1234207c09968018c5462d4063c096f0db459dd7c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - openssl@3

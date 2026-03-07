@@ -3,17 +3,25 @@ version: 3.1.2
 description: Cross-platform multi-target dotfiles manager
 homepage: https://shemnei.github.io/punktf/
 license: Apache-2.0 OR MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/punktf/blobs/sha256:0bc1e636ada40b6160fec2095fedbcd472a369b61ec45a1464801621b89ea61a
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/punktf/blobs/sha256:a4d96933235b92eedbfc083698c362ec32222191d87d7971f5f84ecc785c437d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/punktf/blobs/sha256:1656a42b900b124a41f8d6d155714dcf8879eea6823489b29fee3cc895b9c14d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/punktf/blobs/sha256:e3f7359d14c59e8948dab52df36093bbc121645c692bc8e7e8cbda8c3ce21842
-sha256:
-  darwin_arm64: 0bc1e636ada40b6160fec2095fedbcd472a369b61ec45a1464801621b89ea61a
-  darwin_amd64: a4d96933235b92eedbfc083698c362ec32222191d87d7971f5f84ecc785c437d
-  linux_amd64: 1656a42b900b124a41f8d6d155714dcf8879eea6823489b29fee3cc895b9c14d
-  linux_arm64: e3f7359d14c59e8948dab52df36093bbc121645c692bc8e7e8cbda8c3ce21842
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/punktf/blobs/sha256:0bc1e636ada40b6160fec2095fedbcd472a369b61ec45a1464801621b89ea61a
+    sha256: 0bc1e636ada40b6160fec2095fedbcd472a369b61ec45a1464801621b89ea61a
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/punktf/blobs/sha256:a4d96933235b92eedbfc083698c362ec32222191d87d7971f5f84ecc785c437d
+    sha256: a4d96933235b92eedbfc083698c362ec32222191d87d7971f5f84ecc785c437d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/punktf/blobs/sha256:1656a42b900b124a41f8d6d155714dcf8879eea6823489b29fee3cc895b9c14d
+    sha256: 1656a42b900b124a41f8d6d155714dcf8879eea6823489b29fee3cc895b9c14d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/punktf/blobs/sha256:e3f7359d14c59e8948dab52df36093bbc121645c692bc8e7e8cbda8c3ce21842
+    sha256: e3f7359d14c59e8948dab52df36093bbc121645c692bc8e7e8cbda8c3ce21842
+source:
+  url: https://github.com/Shemnei/punktf/archive/refs/tags/v3.1.2.tar.gz
+  sha256: 99d5c42a621a609c59cfa5088391e4e0384739850df0eab3917b4a7d10fbebcc
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

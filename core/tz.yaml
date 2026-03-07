@@ -3,17 +3,25 @@ version: 0.8.0
 description: CLI time zone visualizer
 homepage: https://github.com/oz/tz
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tz/blobs/sha256:042c065ef5a5f56fcbaeb67c1d462246a04fec0bf796788c8247478191b6d78e
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tz/blobs/sha256:ab630a5fcbb3eb9f3809a33defe7c6aae3af94c7f70474463bee74f0c8e7ec59
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tz/blobs/sha256:8e1921d53e895df6d45df6aad030ea2300f072117d5bffa8c31ae3de1807b20e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tz/blobs/sha256:d2ff7bdbf48bab0cb4185f04d003b962dba23472f7669f97e2e02ba48515ca8f
-sha256:
-  darwin_arm64: 042c065ef5a5f56fcbaeb67c1d462246a04fec0bf796788c8247478191b6d78e
-  darwin_amd64: ab630a5fcbb3eb9f3809a33defe7c6aae3af94c7f70474463bee74f0c8e7ec59
-  linux_amd64: 8e1921d53e895df6d45df6aad030ea2300f072117d5bffa8c31ae3de1807b20e
-  linux_arm64: d2ff7bdbf48bab0cb4185f04d003b962dba23472f7669f97e2e02ba48515ca8f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tz/blobs/sha256:042c065ef5a5f56fcbaeb67c1d462246a04fec0bf796788c8247478191b6d78e
+    sha256: 042c065ef5a5f56fcbaeb67c1d462246a04fec0bf796788c8247478191b6d78e
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tz/blobs/sha256:ab630a5fcbb3eb9f3809a33defe7c6aae3af94c7f70474463bee74f0c8e7ec59
+    sha256: ab630a5fcbb3eb9f3809a33defe7c6aae3af94c7f70474463bee74f0c8e7ec59
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tz/blobs/sha256:8e1921d53e895df6d45df6aad030ea2300f072117d5bffa8c31ae3de1807b20e
+    sha256: 8e1921d53e895df6d45df6aad030ea2300f072117d5bffa8c31ae3de1807b20e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tz/blobs/sha256:d2ff7bdbf48bab0cb4185f04d003b962dba23472f7669f97e2e02ba48515ca8f
+    sha256: d2ff7bdbf48bab0cb4185f04d003b962dba23472f7669f97e2e02ba48515ca8f
+source:
+  url: https://github.com/oz/tz/archive/refs/tags/v0.8.0.tar.gz
+  sha256: dfb6829483e7455e6d2038e946243022db15ea5475c096ad18f091eb9f6eb5ad
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

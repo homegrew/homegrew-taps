@@ -3,16 +3,22 @@ version: 2.5.0
 description: Extracts coastline data from OpenStreetMap planet file
 homepage: https://osmcode.org/osmcoastline/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:c594f9f9ef9f7dd27e3decdc3e17f52b040836ba8574901414134d1c94666ac0
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:d3d8c1f5652b522195c764a951abf041b962308757953c45caac2ec79195f15f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:bc4f8e794f3b8619d5dd0c24c61b75077cb775849cbc1442b9bd9fb07d36f744
-  linux_arm64: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:c251ca8a96cb5020fa83e406ed3aaccf1ff5c93d43284a86876ef62475cfc1af
-sha256:
-  darwin_arm64: c594f9f9ef9f7dd27e3decdc3e17f52b040836ba8574901414134d1c94666ac0
-  darwin_amd64: d3d8c1f5652b522195c764a951abf041b962308757953c45caac2ec79195f15f
-  linux_amd64: bc4f8e794f3b8619d5dd0c24c61b75077cb775849cbc1442b9bd9fb07d36f744
-  linux_arm64: c251ca8a96cb5020fa83e406ed3aaccf1ff5c93d43284a86876ef62475cfc1af
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:c594f9f9ef9f7dd27e3decdc3e17f52b040836ba8574901414134d1c94666ac0
+    sha256: c594f9f9ef9f7dd27e3decdc3e17f52b040836ba8574901414134d1c94666ac0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:d3d8c1f5652b522195c764a951abf041b962308757953c45caac2ec79195f15f
+    sha256: d3d8c1f5652b522195c764a951abf041b962308757953c45caac2ec79195f15f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:bc4f8e794f3b8619d5dd0c24c61b75077cb775849cbc1442b9bd9fb07d36f744
+    sha256: bc4f8e794f3b8619d5dd0c24c61b75077cb775849cbc1442b9bd9fb07d36f744
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:c251ca8a96cb5020fa83e406ed3aaccf1ff5c93d43284a86876ef62475cfc1af
+    sha256: c251ca8a96cb5020fa83e406ed3aaccf1ff5c93d43284a86876ef62475cfc1af
+source:
+  url: https://github.com/osmcode/osmcoastline/archive/refs/tags/v2.5.0.tar.gz
+  sha256: 7980c77acbbf460d6de7df1d30b2f2d9da550db1512d0e828623851c687b238a
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,13 @@ dependencies:
   - geos
   - libspatialite
   - lz4
+build_dependencies:
+  - cmake
+  - libosmium
+  - protozero
+linux_dependencies:
+  - gdal
+  - geos
+  - libspatialite
+  - lz4
+  - zlib-ng-compat

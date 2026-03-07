@@ -3,16 +3,22 @@ version: 1.6.6
 description: "X.Org: 3D Athena widget set based on the Xt library"
 homepage: https://www.x.org
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libxaw3d/blobs/sha256:6096ca109060e0d44327e3f087cac26e96fdad05e1abaf75e072ececf6390fed
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libxaw3d/blobs/sha256:7c63814a4ba44cd9b855922ae73e393fe8d1c75e74451b26de218cf790fffe2d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libxaw3d/blobs/sha256:ce52f2da8dd74a3df5d277ffeb678f86a9572b0c52a29e513aa688d37e704210
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libxaw3d/blobs/sha256:06d7e75d366e78189c6669037314423a41ef33afb196d4f503017739f6ec5704
-sha256:
-  darwin_arm64: 6096ca109060e0d44327e3f087cac26e96fdad05e1abaf75e072ececf6390fed
-  darwin_amd64: 7c63814a4ba44cd9b855922ae73e393fe8d1c75e74451b26de218cf790fffe2d
-  linux_amd64: ce52f2da8dd74a3df5d277ffeb678f86a9572b0c52a29e513aa688d37e704210
-  linux_arm64: 06d7e75d366e78189c6669037314423a41ef33afb196d4f503017739f6ec5704
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libxaw3d/blobs/sha256:6096ca109060e0d44327e3f087cac26e96fdad05e1abaf75e072ececf6390fed
+    sha256: 6096ca109060e0d44327e3f087cac26e96fdad05e1abaf75e072ececf6390fed
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libxaw3d/blobs/sha256:7c63814a4ba44cd9b855922ae73e393fe8d1c75e74451b26de218cf790fffe2d
+    sha256: 7c63814a4ba44cd9b855922ae73e393fe8d1c75e74451b26de218cf790fffe2d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libxaw3d/blobs/sha256:ce52f2da8dd74a3df5d277ffeb678f86a9572b0c52a29e513aa688d37e704210
+    sha256: ce52f2da8dd74a3df5d277ffeb678f86a9572b0c52a29e513aa688d37e704210
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libxaw3d/blobs/sha256:06d7e75d366e78189c6669037314423a41ef33afb196d4f503017739f6ec5704
+    sha256: 06d7e75d366e78189c6669037314423a41ef33afb196d4f503017739f6ec5704
+source:
+  url: https://xorg.freedesktop.org/archive/individual/lib/libXaw3d-1.6.6.tar.gz
+  sha256: 0cdb8f51c390b0f9f5bec74454e53b15b6b815bc280f6b7c969400c9ef595803
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,6 @@ dependencies:
   - libxmu
   - libxpm
   - libxt
+build_dependencies:
+  - pkgconf
+  - util-macros

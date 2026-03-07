@@ -1,18 +1,24 @@
 name: tach
-version: 0.33.4
+version: 0.34.0
 description: Tool to enforce dependencies using modular architecture
 homepage: https://docs.gauge.sh/getting-started/introduction
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tach/blobs/sha256:366ab9ee9c9abd2f9760541f181b12065575e232042ea757d667ad2c61ca6755
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tach/blobs/sha256:673bce6e11e461b8dfa6c5057c7ac60c77ada012b32842f77a1748a688e81de1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tach/blobs/sha256:f1e93e5fbee314949b17e90b0a71d376269c75f79ad431253bff4a5f303d346d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tach/blobs/sha256:1d1ecc3969c7b2885afbd5248c112958c6a1879c034ffb2d9867aea15c5dd6e6
-sha256:
-  darwin_arm64: 366ab9ee9c9abd2f9760541f181b12065575e232042ea757d667ad2c61ca6755
-  darwin_amd64: 673bce6e11e461b8dfa6c5057c7ac60c77ada012b32842f77a1748a688e81de1
-  linux_amd64: f1e93e5fbee314949b17e90b0a71d376269c75f79ad431253bff4a5f303d346d
-  linux_arm64: 1d1ecc3969c7b2885afbd5248c112958c6a1879c034ffb2d9867aea15c5dd6e6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tach/blobs/sha256:d1d35ff68d74c060ab5dcf7c24926d51a5092042b0e207319147b4a413d0a127
+    sha256: d1d35ff68d74c060ab5dcf7c24926d51a5092042b0e207319147b4a413d0a127
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tach/blobs/sha256:f54292c04ad4b28dcb74e03847b89c064edc8836cd20958956c79f0d3d06fdbf
+    sha256: f54292c04ad4b28dcb74e03847b89c064edc8836cd20958956c79f0d3d06fdbf
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tach/blobs/sha256:732ee73490a126f705a77a27672b09381e72853f191e79d259e9191d9b1fefbd
+    sha256: 732ee73490a126f705a77a27672b09381e72853f191e79d259e9191d9b1fefbd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tach/blobs/sha256:4c6ab110116a5314c99bb7370f3c9ec3a3ba8cbd2a2b75952d8e1f10b145e297
+    sha256: 4c6ab110116a5314c99bb7370f3c9ec3a3ba8cbd2a2b75952d8e1f10b145e297
+source:
+  url: https://files.pythonhosted.org/packages/37/3a/8b5a6da31b503b1e8d1c41583e7a538283dca89856b6d9fa99bf91c38ec5/tach-0.34.0.tar.gz
+  sha256: 0d531623aaa0792deb58ebbcee16fe342cfcf8db92eee664f6a2749500216cbe
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - libyaml
   - python@3.14
+build_dependencies:
+  - rust

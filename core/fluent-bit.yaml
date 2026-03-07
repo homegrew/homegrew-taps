@@ -3,16 +3,22 @@ version: 4.2.3
 description: Fast and Lightweight Logs and Metrics processor
 homepage: https://github.com/fluent/fluent-bit
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:3d12b053b24178b5826f0fe6e7e03fe6a69f08e708430bfd68ca1df0d7b2748b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:e45e3707238df9eb432437dee266180629eefb132323800a527e70223dbdfd04
-  linux_amd64: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:1e6f807c6e160d1015e5a0db3db88bbb2ab200ac0fa8d5f13b47b6b0ea71628d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:9a7432aca2ef9869eca928a76c884f9b842b5860e6d75f8050151be2f2a899ef
-sha256:
-  darwin_arm64: 3d12b053b24178b5826f0fe6e7e03fe6a69f08e708430bfd68ca1df0d7b2748b
-  darwin_amd64: e45e3707238df9eb432437dee266180629eefb132323800a527e70223dbdfd04
-  linux_amd64: 1e6f807c6e160d1015e5a0db3db88bbb2ab200ac0fa8d5f13b47b6b0ea71628d
-  linux_arm64: 9a7432aca2ef9869eca928a76c884f9b842b5860e6d75f8050151be2f2a899ef
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:3d12b053b24178b5826f0fe6e7e03fe6a69f08e708430bfd68ca1df0d7b2748b
+    sha256: 3d12b053b24178b5826f0fe6e7e03fe6a69f08e708430bfd68ca1df0d7b2748b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:e45e3707238df9eb432437dee266180629eefb132323800a527e70223dbdfd04
+    sha256: e45e3707238df9eb432437dee266180629eefb132323800a527e70223dbdfd04
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:1e6f807c6e160d1015e5a0db3db88bbb2ab200ac0fa8d5f13b47b6b0ea71628d
+    sha256: 1e6f807c6e160d1015e5a0db3db88bbb2ab200ac0fa8d5f13b47b6b0ea71628d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:9a7432aca2ef9869eca928a76c884f9b842b5860e6d75f8050151be2f2a899ef
+    sha256: 9a7432aca2ef9869eca928a76c884f9b842b5860e6d75f8050151be2f2a899ef
+source:
+  url: https://github.com/fluent/fluent-bit/archive/refs/tags/v4.2.3.tar.gz
+  sha256: b2dae50fb7a00bbab5eb6d47f3bfc4d56c698d72d485d748cb326bfeaa7249fa
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,13 @@ dependencies:
   - libyaml
   - luajit
   - openssl@3
+build_dependencies:
+  - bison
+  - cmake
+  - flex
+  - pkgconf
+linux_dependencies:
+  - libyaml
+  - luajit
+  - openssl@3
+  - zlib-ng-compat

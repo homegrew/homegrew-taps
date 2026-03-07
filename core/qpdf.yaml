@@ -3,16 +3,22 @@ version: 12.3.2
 description: Tools for and transforming and inspecting PDF files
 homepage: https://github.com/qpdf/qpdf
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:e1c5478e15efb7eccf35f0e1464ea0384d4afcd8c6d8347de2dd1ef3cdbd48da
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:ae97ea43f6d048aeb39bb4ef894305a6c5181bfc1436e415073add0c0ac93b3f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:257890275f350e66b25c6cdd5769713d038c41890d4710c644cffc1eb5cc6d66
-  linux_arm64: https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:017679e381a1b0179fead06203c3fceb0123d239c5443840a2e62e6327d3f38a
-sha256:
-  darwin_arm64: e1c5478e15efb7eccf35f0e1464ea0384d4afcd8c6d8347de2dd1ef3cdbd48da
-  darwin_amd64: ae97ea43f6d048aeb39bb4ef894305a6c5181bfc1436e415073add0c0ac93b3f
-  linux_amd64: 257890275f350e66b25c6cdd5769713d038c41890d4710c644cffc1eb5cc6d66
-  linux_arm64: 017679e381a1b0179fead06203c3fceb0123d239c5443840a2e62e6327d3f38a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:e1c5478e15efb7eccf35f0e1464ea0384d4afcd8c6d8347de2dd1ef3cdbd48da
+    sha256: e1c5478e15efb7eccf35f0e1464ea0384d4afcd8c6d8347de2dd1ef3cdbd48da
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:ae97ea43f6d048aeb39bb4ef894305a6c5181bfc1436e415073add0c0ac93b3f
+    sha256: ae97ea43f6d048aeb39bb4ef894305a6c5181bfc1436e415073add0c0ac93b3f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:257890275f350e66b25c6cdd5769713d038c41890d4710c644cffc1eb5cc6d66
+    sha256: 257890275f350e66b25c6cdd5769713d038c41890d4710c644cffc1eb5cc6d66
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:017679e381a1b0179fead06203c3fceb0123d239c5443840a2e62e6327d3f38a
+    sha256: 017679e381a1b0179fead06203c3fceb0123d239c5443840a2e62e6327d3f38a
+source:
+  url: https://github.com/qpdf/qpdf/releases/download/v12.3.2/qpdf-12.3.2.tar.gz
+  sha256: 6cba2f9f2cd887d905faeb99e0e51a307b217920d1bbf3e9cfbb2e8178a2deda
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,9 @@ install:
 dependencies:
   - jpeg-turbo
   - openssl@3
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - jpeg-turbo
+  - openssl@3
+  - zlib-ng-compat

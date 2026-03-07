@@ -3,16 +3,22 @@ version: 2.4.2
 description: IMAP/POP3 server
 homepage: https://dovecot.org/
 license: BSD-3-Clause AND LGPL-2.1-or-later AND MIT AND Unicode-DFS-2016 AND LicenseRef-Homebrew-public-domain
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:9573852c11266633a4b14d1f5222c7d022e24ac86f1872a5494adfc506c84451
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:9501f48fe09c9938f9430ce7f7f2ea28e85c4a6ea7234f49c23a51fd5bf514a1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:5fd824f7bed0ea3d69232bcadef9d419b28fbecc095eae80b3f5453bc0a53c1a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:ff350e7d40a66956306b68b73e2e95160cad1991451ac932e28b3b5b77dfad27
-sha256:
-  darwin_arm64: 9573852c11266633a4b14d1f5222c7d022e24ac86f1872a5494adfc506c84451
-  darwin_amd64: 9501f48fe09c9938f9430ce7f7f2ea28e85c4a6ea7234f49c23a51fd5bf514a1
-  linux_amd64: 5fd824f7bed0ea3d69232bcadef9d419b28fbecc095eae80b3f5453bc0a53c1a
-  linux_arm64: ff350e7d40a66956306b68b73e2e95160cad1991451ac932e28b3b5b77dfad27
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:9573852c11266633a4b14d1f5222c7d022e24ac86f1872a5494adfc506c84451
+    sha256: 9573852c11266633a4b14d1f5222c7d022e24ac86f1872a5494adfc506c84451
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:9501f48fe09c9938f9430ce7f7f2ea28e85c4a6ea7234f49c23a51fd5bf514a1
+    sha256: 9501f48fe09c9938f9430ce7f7f2ea28e85c4a6ea7234f49c23a51fd5bf514a1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:5fd824f7bed0ea3d69232bcadef9d419b28fbecc095eae80b3f5453bc0a53c1a
+    sha256: 5fd824f7bed0ea3d69232bcadef9d419b28fbecc095eae80b3f5453bc0a53c1a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:ff350e7d40a66956306b68b73e2e95160cad1991451ac932e28b3b5b77dfad27
+    sha256: ff350e7d40a66956306b68b73e2e95160cad1991451ac932e28b3b5b77dfad27
+source:
+  url: https://dovecot.org/releases/2.4/dovecot-2.4.2.tar.gz
+  sha256: 2cd62e4d22b9fc1c80bd38649739950f0dbda34fbc3e62624fb6842264e93c6e
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,17 @@ install:
 dependencies:
   - openldap
   - openssl@3
+build_dependencies:
+  - pkgconf
+  - autoconf
+  - automake
+  - libtool
+linux_dependencies:
+  - libtirpc
+  - linux-pam
+  - lz4
+  - openldap
+  - openssl@3
+  - xz
+  - zlib-ng-compat
+  - zstd

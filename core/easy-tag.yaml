@@ -3,16 +3,22 @@ version: 2.4.3
 description: Application for viewing and editing audio file tags
 homepage: https://wiki.gnome.org/Apps/EasyTAG
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/easy-tag/blobs/sha256:8251a64714fcb33ae2d6952b837cc4441424c68d85194fe85fa1ffb840d8f1af
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/easy-tag/blobs/sha256:bb4e3ef00876303f85ddd0013fb353e26317f4ac7d52e3c204a9ff583c4b3be5
-  linux_amd64: https://ghcr.io/v2/homebrew/core/easy-tag/blobs/sha256:9d32bfcd076b17f4e7f4fe1572e456d9a5539d6e7c95b2ecfd14fd960204e5f3
-  linux_arm64: https://ghcr.io/v2/homebrew/core/easy-tag/blobs/sha256:a0e221b36fad5782d5a9a63e55a636ffef07f8780f33263a63752ff9fa11935d
-sha256:
-  darwin_arm64: 8251a64714fcb33ae2d6952b837cc4441424c68d85194fe85fa1ffb840d8f1af
-  darwin_amd64: bb4e3ef00876303f85ddd0013fb353e26317f4ac7d52e3c204a9ff583c4b3be5
-  linux_amd64: 9d32bfcd076b17f4e7f4fe1572e456d9a5539d6e7c95b2ecfd14fd960204e5f3
-  linux_arm64: a0e221b36fad5782d5a9a63e55a636ffef07f8780f33263a63752ff9fa11935d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/easy-tag/blobs/sha256:8251a64714fcb33ae2d6952b837cc4441424c68d85194fe85fa1ffb840d8f1af
+    sha256: 8251a64714fcb33ae2d6952b837cc4441424c68d85194fe85fa1ffb840d8f1af
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/easy-tag/blobs/sha256:bb4e3ef00876303f85ddd0013fb353e26317f4ac7d52e3c204a9ff583c4b3be5
+    sha256: bb4e3ef00876303f85ddd0013fb353e26317f4ac7d52e3c204a9ff583c4b3be5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/easy-tag/blobs/sha256:9d32bfcd076b17f4e7f4fe1572e456d9a5539d6e7c95b2ecfd14fd960204e5f3
+    sha256: 9d32bfcd076b17f4e7f4fe1572e456d9a5539d6e7c95b2ecfd14fd960204e5f3
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/easy-tag/blobs/sha256:a0e221b36fad5782d5a9a63e55a636ffef07f8780f33263a63752ff9fa11935d
+    sha256: a0e221b36fad5782d5a9a63e55a636ffef07f8780f33263a63752ff9fa11935d
+source:
+  url: https://download.gnome.org/sources/easytag/2.4/easytag-2.4.3.tar.xz
+  sha256: fc51ee92a705e3c5979dff1655f7496effb68b98f1ada0547e8cbbc033b67dd5
 install:
   type: archive
   format: tar.gz
@@ -36,3 +42,32 @@ dependencies:
   - taglib
   - wavpack
   - gettext
+build_dependencies:
+  - appstream-glib
+  - autoconf
+  - automake
+  - gettext
+  - intltool
+  - itstool
+  - libtool
+  - pkgconf
+  - yelp-tools
+linux_dependencies:
+  - adwaita-icon-theme
+  - at-spi2-core
+  - cairo
+  - flac
+  - gdk-pixbuf
+  - glib
+  - gtk+3
+  - harfbuzz
+  - hicolor-icon-theme
+  - id3lib
+  - libid3tag
+  - libogg
+  - libvorbis
+  - pango
+  - speex
+  - taglib
+  - wavpack
+  - zlib-ng-compat

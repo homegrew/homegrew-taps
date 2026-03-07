@@ -3,16 +3,22 @@ version: 0.55.2
 description: Tool for collecting vulnerability data from various sources
 homepage: https://github.com/anchore/vunnel
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vunnel/blobs/sha256:5d5970e1bdba6d3b99e7784d4388b0926b92ebd0fc56bdbf89df9ec7191ce434
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vunnel/blobs/sha256:23cbc65c0d1f18f2cd7f7319425ef515336545a1dde8540fd607a81c6700a589
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vunnel/blobs/sha256:80ec224c5ba8a5c747ccefd3feeabee17bf5cd5062ce25835724156acdc233db
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vunnel/blobs/sha256:5d98794e2f34c2367f46a11e25889fa830272543fe02b7f219b0eb4790c92b24
-sha256:
-  darwin_arm64: 5d5970e1bdba6d3b99e7784d4388b0926b92ebd0fc56bdbf89df9ec7191ce434
-  darwin_amd64: 23cbc65c0d1f18f2cd7f7319425ef515336545a1dde8540fd607a81c6700a589
-  linux_amd64: 80ec224c5ba8a5c747ccefd3feeabee17bf5cd5062ce25835724156acdc233db
-  linux_arm64: 5d98794e2f34c2367f46a11e25889fa830272543fe02b7f219b0eb4790c92b24
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vunnel/blobs/sha256:5d5970e1bdba6d3b99e7784d4388b0926b92ebd0fc56bdbf89df9ec7191ce434
+    sha256: 5d5970e1bdba6d3b99e7784d4388b0926b92ebd0fc56bdbf89df9ec7191ce434
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vunnel/blobs/sha256:23cbc65c0d1f18f2cd7f7319425ef515336545a1dde8540fd607a81c6700a589
+    sha256: 23cbc65c0d1f18f2cd7f7319425ef515336545a1dde8540fd607a81c6700a589
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vunnel/blobs/sha256:80ec224c5ba8a5c747ccefd3feeabee17bf5cd5062ce25835724156acdc233db
+    sha256: 80ec224c5ba8a5c747ccefd3feeabee17bf5cd5062ce25835724156acdc233db
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vunnel/blobs/sha256:5d98794e2f34c2367f46a11e25889fa830272543fe02b7f219b0eb4790c92b24
+    sha256: 5d98794e2f34c2367f46a11e25889fa830272543fe02b7f219b0eb4790c92b24
+source:
+  url: https://files.pythonhosted.org/packages/71/4b/f620daa9c0f2addf909992351102f5abb5f0e2a5ef84925cca65808907f4/vunnel-0.55.2.tar.gz
+  sha256: 135dfcb12852e7b884581a87f2e45ed12d2b063e58ee55ab81b5ba3bdc5cee45
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,5 @@ dependencies:
   - libyaml
   - python@3.14
   - rpds-py
+build_dependencies:
+  - rust

@@ -3,16 +3,22 @@ version: 1.18.4
 description: Vector graphics library with cross-device output support
 homepage: https://cairographics.org/
 license: LGPL-2.1-only OR MPL-1.1
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:3099d9356456b9aced4b35bfb6723c45014c09d7b090190bcd8d17053244dd3c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:8eac751ce30d7e665220bb02d2bd7aa209c041951edca3439918554e9dcb0e63
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:3d852e0bcef8e7bf1f4e5b9defa709da64a2dc2dcef4c35d177cebdbf552e65b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:8d2393d42a2e6b4abda5d72981614960f30d35599f9a213944d3948b085529d7
-sha256:
-  darwin_arm64: 3099d9356456b9aced4b35bfb6723c45014c09d7b090190bcd8d17053244dd3c
-  darwin_amd64: 8eac751ce30d7e665220bb02d2bd7aa209c041951edca3439918554e9dcb0e63
-  linux_amd64: 3d852e0bcef8e7bf1f4e5b9defa709da64a2dc2dcef4c35d177cebdbf552e65b
-  linux_arm64: 8d2393d42a2e6b4abda5d72981614960f30d35599f9a213944d3948b085529d7
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:3099d9356456b9aced4b35bfb6723c45014c09d7b090190bcd8d17053244dd3c
+    sha256: 3099d9356456b9aced4b35bfb6723c45014c09d7b090190bcd8d17053244dd3c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:8eac751ce30d7e665220bb02d2bd7aa209c041951edca3439918554e9dcb0e63
+    sha256: 8eac751ce30d7e665220bb02d2bd7aa209c041951edca3439918554e9dcb0e63
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:3d852e0bcef8e7bf1f4e5b9defa709da64a2dc2dcef4c35d177cebdbf552e65b
+    sha256: 3d852e0bcef8e7bf1f4e5b9defa709da64a2dc2dcef4c35d177cebdbf552e65b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:8d2393d42a2e6b4abda5d72981614960f30d35599f9a213944d3948b085529d7
+    sha256: 8d2393d42a2e6b4abda5d72981614960f30d35599f9a213944d3948b085529d7
+source:
+  url: https://cairographics.org/releases/cairo-1.18.4.tar.xz
+  sha256: 445ed8208a6e4823de1226a74ca319d3600e83f6369f99b14265006599c32ccb
 install:
   type: archive
   format: tar.gz
@@ -29,3 +35,19 @@ dependencies:
   - lzo
   - pixman
   - gettext
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf
+linux_dependencies:
+  - fontconfig
+  - freetype
+  - glib
+  - libpng
+  - libx11
+  - libxcb
+  - libxext
+  - libxrender
+  - lzo
+  - pixman
+  - zlib-ng-compat

@@ -3,16 +3,22 @@ version: 9.4.0
 description: CLI for DiceBear - An avatar library for designers and developers
 homepage: https://github.com/dicebear/dicebear
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:55aca3510b08bb12217b0c7bb4937271c377811b52627818ddd2cb0b3508ecd2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:7b27b7280579f6919e3a6496bf10ebdb6011e7bf9090934101d22845848ae70a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:d6081b3bd16dfe70f338afb92cf77cb88023a6abf0e54707c547dcf380c3e345
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:9ae0ef7bbad82a96d4537de2e2fa3bf042586025b224633cb75b336c79686e86
-sha256:
-  darwin_arm64: 55aca3510b08bb12217b0c7bb4937271c377811b52627818ddd2cb0b3508ecd2
-  darwin_amd64: 7b27b7280579f6919e3a6496bf10ebdb6011e7bf9090934101d22845848ae70a
-  linux_amd64: d6081b3bd16dfe70f338afb92cf77cb88023a6abf0e54707c547dcf380c3e345
-  linux_arm64: 9ae0ef7bbad82a96d4537de2e2fa3bf042586025b224633cb75b336c79686e86
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:55aca3510b08bb12217b0c7bb4937271c377811b52627818ddd2cb0b3508ecd2
+    sha256: 55aca3510b08bb12217b0c7bb4937271c377811b52627818ddd2cb0b3508ecd2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:7b27b7280579f6919e3a6496bf10ebdb6011e7bf9090934101d22845848ae70a
+    sha256: 7b27b7280579f6919e3a6496bf10ebdb6011e7bf9090934101d22845848ae70a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:d6081b3bd16dfe70f338afb92cf77cb88023a6abf0e54707c547dcf380c3e345
+    sha256: d6081b3bd16dfe70f338afb92cf77cb88023a6abf0e54707c547dcf380c3e345
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:9ae0ef7bbad82a96d4537de2e2fa3bf042586025b224633cb75b336c79686e86
+    sha256: 9ae0ef7bbad82a96d4537de2e2fa3bf042586025b224633cb75b336c79686e86
+source:
+  url: https://registry.npmjs.org/dicebear/-/dicebear-9.4.0.tgz
+  sha256: f81355aa528371341dbf7007ae84f42dd0b0fcca50896762a19b6b6763f46af2
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,9 @@ dependencies:
   - node
   - vips
   - gettext
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - glib
+  - node
+  - vips

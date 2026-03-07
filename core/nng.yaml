@@ -3,17 +3,27 @@ version: 1.11
 description: Nanomsg-next-generation -- light-weight brokerless messaging
 homepage: https://nng.nanomsg.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:d1c5d69e4cd6874e9fc3a6c7d95e8444c730d7b9d4bddcb74092bf5c53a7b0c4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:f21583c80dc1ccd84cde614cb8ea7a8b7e7586ecd39aae010583a038e562580d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:25761374c9d2ca6fedff91630fb23e7fe10ae9f68369f7eaaddc1fa5ffc35e6b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:7df32fb58d3135bbeb0b9046534a0fb901dacfddc215546855146b3102c52eeb
-sha256:
-  darwin_arm64: d1c5d69e4cd6874e9fc3a6c7d95e8444c730d7b9d4bddcb74092bf5c53a7b0c4
-  darwin_amd64: f21583c80dc1ccd84cde614cb8ea7a8b7e7586ecd39aae010583a038e562580d
-  linux_amd64: 25761374c9d2ca6fedff91630fb23e7fe10ae9f68369f7eaaddc1fa5ffc35e6b
-  linux_arm64: 7df32fb58d3135bbeb0b9046534a0fb901dacfddc215546855146b3102c52eeb
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:d1c5d69e4cd6874e9fc3a6c7d95e8444c730d7b9d4bddcb74092bf5c53a7b0c4
+    sha256: d1c5d69e4cd6874e9fc3a6c7d95e8444c730d7b9d4bddcb74092bf5c53a7b0c4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:f21583c80dc1ccd84cde614cb8ea7a8b7e7586ecd39aae010583a038e562580d
+    sha256: f21583c80dc1ccd84cde614cb8ea7a8b7e7586ecd39aae010583a038e562580d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:25761374c9d2ca6fedff91630fb23e7fe10ae9f68369f7eaaddc1fa5ffc35e6b
+    sha256: 25761374c9d2ca6fedff91630fb23e7fe10ae9f68369f7eaaddc1fa5ffc35e6b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:7df32fb58d3135bbeb0b9046534a0fb901dacfddc215546855146b3102c52eeb
+    sha256: 7df32fb58d3135bbeb0b9046534a0fb901dacfddc215546855146b3102c52eeb
+source:
+  url: https://github.com/nanomsg/nng/archive/refs/tags/v1.11.tar.gz
+  sha256: 12aaff6f8f183ba0fec378af8620c47cf4be6da975d016ec6cdec2fbac0d3534
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - asciidoctor
+  - cmake
+  - ninja

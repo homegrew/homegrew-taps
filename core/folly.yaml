@@ -3,16 +3,22 @@ version: 2026.03.02.00
 description: Collection of reusable C++ library artifacts developed at Facebook
 homepage: https://github.com/facebook/folly
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:1cb23b2dda767c57c67f9af304c8b024f2e20915899f67a337babe2adcd6c439
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:1bb078819c030ca11558a371a4a256d75937ad8633fbdf55d831f4df8506794a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:bd64c8ea8cecfe6f2787fb9885d862efca2827f427a38bc93ee8f00d9eb47fad
-  linux_arm64: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:f8887b0f37d7b75d7e0a92b07f3d23afdc742edd62c5562033e37b068bc43888
-sha256:
-  darwin_arm64: 1cb23b2dda767c57c67f9af304c8b024f2e20915899f67a337babe2adcd6c439
-  darwin_amd64: 1bb078819c030ca11558a371a4a256d75937ad8633fbdf55d831f4df8506794a
-  linux_amd64: bd64c8ea8cecfe6f2787fb9885d862efca2827f427a38bc93ee8f00d9eb47fad
-  linux_arm64: f8887b0f37d7b75d7e0a92b07f3d23afdc742edd62c5562033e37b068bc43888
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:1cb23b2dda767c57c67f9af304c8b024f2e20915899f67a337babe2adcd6c439
+    sha256: 1cb23b2dda767c57c67f9af304c8b024f2e20915899f67a337babe2adcd6c439
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:1bb078819c030ca11558a371a4a256d75937ad8633fbdf55d831f4df8506794a
+    sha256: 1bb078819c030ca11558a371a4a256d75937ad8633fbdf55d831f4df8506794a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:bd64c8ea8cecfe6f2787fb9885d862efca2827f427a38bc93ee8f00d9eb47fad
+    sha256: bd64c8ea8cecfe6f2787fb9885d862efca2827f427a38bc93ee8f00d9eb47fad
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:f8887b0f37d7b75d7e0a92b07f3d23afdc742edd62c5562033e37b068bc43888
+    sha256: f8887b0f37d7b75d7e0a92b07f3d23afdc742edd62c5562033e37b068bc43888
+source:
+  url: https://github.com/facebook/folly/archive/refs/tags/v2026.03.02.00.tar.gz
+  sha256: f2a9bbd4bd36256d4554f9917fcefa9ec356cec637d2a743e01a6a1d569224dc
 install:
   type: archive
   format: tar.gz
@@ -29,4 +35,22 @@ dependencies:
   - openssl@3
   - snappy
   - xz
+  - zstd
+build_dependencies:
+  - cmake
+  - fast_float
+  - pkgconf
+linux_dependencies:
+  - boost
+  - double-conversion
+  - fmt
+  - gflags
+  - glog
+  - libevent
+  - libsodium
+  - lz4
+  - openssl@3
+  - snappy
+  - xz
+  - zlib-ng-compat
   - zstd

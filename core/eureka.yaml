@@ -3,19 +3,31 @@ version: 2.0.0
 description: CLI tool to input and store your ideas without leaving the terminal
 homepage: https://github.com/simeg/eureka
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/eureka/blobs/sha256:a6de6aac51a1f6070476d08477d227d50b78ffd6b4c6a0d5e2d49b4676ca8db8
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/eureka/blobs/sha256:3a266fce693e780d3544d243a2a3216f9af32954c983555bc92dfbb6ceb02876
-  linux_amd64: https://ghcr.io/v2/homebrew/core/eureka/blobs/sha256:dbb5f7b3f67f69af0ee2a55e048b067d644a980fa8bac2915f413c96b2cb6d64
-  linux_arm64: https://ghcr.io/v2/homebrew/core/eureka/blobs/sha256:40bc0dc3cca65bc7d4edfb6f40dfa33e5cdc742d462e63998b814e26d7959e21
-sha256:
-  darwin_arm64: a6de6aac51a1f6070476d08477d227d50b78ffd6b4c6a0d5e2d49b4676ca8db8
-  darwin_amd64: 3a266fce693e780d3544d243a2a3216f9af32954c983555bc92dfbb6ceb02876
-  linux_amd64: dbb5f7b3f67f69af0ee2a55e048b067d644a980fa8bac2915f413c96b2cb6d64
-  linux_arm64: 40bc0dc3cca65bc7d4edfb6f40dfa33e5cdc742d462e63998b814e26d7959e21
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/eureka/blobs/sha256:a6de6aac51a1f6070476d08477d227d50b78ffd6b4c6a0d5e2d49b4676ca8db8
+    sha256: a6de6aac51a1f6070476d08477d227d50b78ffd6b4c6a0d5e2d49b4676ca8db8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/eureka/blobs/sha256:3a266fce693e780d3544d243a2a3216f9af32954c983555bc92dfbb6ceb02876
+    sha256: 3a266fce693e780d3544d243a2a3216f9af32954c983555bc92dfbb6ceb02876
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/eureka/blobs/sha256:dbb5f7b3f67f69af0ee2a55e048b067d644a980fa8bac2915f413c96b2cb6d64
+    sha256: dbb5f7b3f67f69af0ee2a55e048b067d644a980fa8bac2915f413c96b2cb6d64
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/eureka/blobs/sha256:40bc0dc3cca65bc7d4edfb6f40dfa33e5cdc742d462e63998b814e26d7959e21
+    sha256: 40bc0dc3cca65bc7d4edfb6f40dfa33e5cdc742d462e63998b814e26d7959e21
+source:
+  url: https://github.com/simeg/eureka/archive/refs/tags/v2.0.0.tar.gz
+  sha256: e874549e1447ee849543828f49c4c1657f7e6cfe787deea13d44241666d4aaa0
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - openssl@3
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - openssl@3
+  - zlib-ng-compat

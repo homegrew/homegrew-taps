@@ -3,17 +3,27 @@ version: 0.8.3
 description: Run multiple commands in parallel
 homepage: https://github.com/pvolok/mprocs
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mprocs/blobs/sha256:8807d84fc02137877db54f8d343cb3c409e7b12a51776ac1e68e96cb819c85f2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mprocs/blobs/sha256:98b807d712c243c55b14747ec52c44cd9a9c5f1c988eff37a5c0e926fe4158f9
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mprocs/blobs/sha256:461942199bc0f9799faed2ae5583a14d7e44e277efa8739032fbe882149730e2
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mprocs/blobs/sha256:6a14fe395a18c6debf96d1ba97fa8c8fbd38261ffba26486bdb48b6fcf4ccbc8
-sha256:
-  darwin_arm64: 8807d84fc02137877db54f8d343cb3c409e7b12a51776ac1e68e96cb819c85f2
-  darwin_amd64: 98b807d712c243c55b14747ec52c44cd9a9c5f1c988eff37a5c0e926fe4158f9
-  linux_amd64: 461942199bc0f9799faed2ae5583a14d7e44e277efa8739032fbe882149730e2
-  linux_arm64: 6a14fe395a18c6debf96d1ba97fa8c8fbd38261ffba26486bdb48b6fcf4ccbc8
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mprocs/blobs/sha256:8807d84fc02137877db54f8d343cb3c409e7b12a51776ac1e68e96cb819c85f2
+    sha256: 8807d84fc02137877db54f8d343cb3c409e7b12a51776ac1e68e96cb819c85f2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mprocs/blobs/sha256:98b807d712c243c55b14747ec52c44cd9a9c5f1c988eff37a5c0e926fe4158f9
+    sha256: 98b807d712c243c55b14747ec52c44cd9a9c5f1c988eff37a5c0e926fe4158f9
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mprocs/blobs/sha256:461942199bc0f9799faed2ae5583a14d7e44e277efa8739032fbe882149730e2
+    sha256: 461942199bc0f9799faed2ae5583a14d7e44e277efa8739032fbe882149730e2
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mprocs/blobs/sha256:6a14fe395a18c6debf96d1ba97fa8c8fbd38261ffba26486bdb48b6fcf4ccbc8
+    sha256: 6a14fe395a18c6debf96d1ba97fa8c8fbd38261ffba26486bdb48b6fcf4ccbc8
+source:
+  url: https://github.com/pvolok/mprocs/archive/refs/tags/v0.8.3.tar.gz
+  sha256: e0e91097399b751df42558c3717e6be130bfd523612c772dd1e3f9070eddbc5e
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust
+linux_dependencies:
+  - libxcb

@@ -3,16 +3,22 @@ version: 6.10.2
 description: Provides APIs for playing back and recording audiovisual content
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND (MPL-2.0 AND BSD-3-Clause) AND Apache-2.0 AND BSD-3-Clause AND GPL-3.0-only AND MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/qtmultimedia/blobs/sha256:573997b9213c6569c8b6d84e99efcea71761ec9b8e4cd5f3b9885fe17f56fd1c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/qtmultimedia/blobs/sha256:3d9dd79b1198932bf20b86edababb6683326544bafc48e78d5cecd43b85407dd
-  linux_amd64: https://ghcr.io/v2/homebrew/core/qtmultimedia/blobs/sha256:10cc4d15f2a41d94c8cdeb726240fede279732dc76bd5ce66eb1228af4792af4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/qtmultimedia/blobs/sha256:fa73bd3ad4c203d3911e332e87fda147120065b51bed09e816cbad62ec60e28c
-sha256:
-  darwin_arm64: 573997b9213c6569c8b6d84e99efcea71761ec9b8e4cd5f3b9885fe17f56fd1c
-  darwin_amd64: 3d9dd79b1198932bf20b86edababb6683326544bafc48e78d5cecd43b85407dd
-  linux_amd64: 10cc4d15f2a41d94c8cdeb726240fede279732dc76bd5ce66eb1228af4792af4
-  linux_arm64: fa73bd3ad4c203d3911e332e87fda147120065b51bed09e816cbad62ec60e28c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qtmultimedia/blobs/sha256:573997b9213c6569c8b6d84e99efcea71761ec9b8e4cd5f3b9885fe17f56fd1c
+    sha256: 573997b9213c6569c8b6d84e99efcea71761ec9b8e4cd5f3b9885fe17f56fd1c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qtmultimedia/blobs/sha256:3d9dd79b1198932bf20b86edababb6683326544bafc48e78d5cecd43b85407dd
+    sha256: 3d9dd79b1198932bf20b86edababb6683326544bafc48e78d5cecd43b85407dd
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/qtmultimedia/blobs/sha256:10cc4d15f2a41d94c8cdeb726240fede279732dc76bd5ce66eb1228af4792af4
+    sha256: 10cc4d15f2a41d94c8cdeb726240fede279732dc76bd5ce66eb1228af4792af4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/qtmultimedia/blobs/sha256:fa73bd3ad4c203d3911e332e87fda147120065b51bed09e816cbad62ec60e28c
+    sha256: fa73bd3ad4c203d3911e332e87fda147120065b51bed09e816cbad62ec60e28c
+source:
+  url: https://download.qt.io/official_releases/qt/6.10/6.10.2/submodules/qtmultimedia-everywhere-src-6.10.2.tar.xz
+  sha256: 93f7ef0106fbd731165a2723f3e436c911fc5e6880f5bc987b55516c20833e2b
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,20 @@ dependencies:
   - qtdeclarative
   - qtquick3d
   - qtshadertools
+build_dependencies:
+  - cmake
+  - ninja
+  - qtshadertools
+  - vulkan-headers
+linux_dependencies:
+  - ffmpeg
+  - glib
+  - gstreamer
+  - libx11
+  - libxext
+  - libxrandr
+  - mesa
+  - pulseaudio
+  - qtbase
+  - qtdeclarative
+  - qtquick3d

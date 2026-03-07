@@ -3,16 +3,22 @@ version: 2.13.0
 description: Open source, community-driven MCP server and client manager
 homepage: https://mcpm.sh/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mcpm/blobs/sha256:924fe0fc054c801afddd1f882936b85b2bf65b12cc008aa7a363c2d5cedbcf00
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mcpm/blobs/sha256:f5118e494e92995ecdf870dda605d20f22b88b3bb540f64041c7c58323b7853e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mcpm/blobs/sha256:3bf1cf28ea46ba61fcf676be97331797c7b2e27a04f589b0c29afe21bd70551f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mcpm/blobs/sha256:80da8f197fe142af694db0f5d4cfccb1fb4198551c022ac890fc8554ae640588
-sha256:
-  darwin_arm64: 924fe0fc054c801afddd1f882936b85b2bf65b12cc008aa7a363c2d5cedbcf00
-  darwin_amd64: f5118e494e92995ecdf870dda605d20f22b88b3bb540f64041c7c58323b7853e
-  linux_amd64: 3bf1cf28ea46ba61fcf676be97331797c7b2e27a04f589b0c29afe21bd70551f
-  linux_arm64: 80da8f197fe142af694db0f5d4cfccb1fb4198551c022ac890fc8554ae640588
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mcpm/blobs/sha256:924fe0fc054c801afddd1f882936b85b2bf65b12cc008aa7a363c2d5cedbcf00
+    sha256: 924fe0fc054c801afddd1f882936b85b2bf65b12cc008aa7a363c2d5cedbcf00
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mcpm/blobs/sha256:f5118e494e92995ecdf870dda605d20f22b88b3bb540f64041c7c58323b7853e
+    sha256: f5118e494e92995ecdf870dda605d20f22b88b3bb540f64041c7c58323b7853e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mcpm/blobs/sha256:3bf1cf28ea46ba61fcf676be97331797c7b2e27a04f589b0c29afe21bd70551f
+    sha256: 3bf1cf28ea46ba61fcf676be97331797c7b2e27a04f589b0c29afe21bd70551f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mcpm/blobs/sha256:80da8f197fe142af694db0f5d4cfccb1fb4198551c022ac890fc8554ae640588
+    sha256: 80da8f197fe142af694db0f5d4cfccb1fb4198551c022ac890fc8554ae640588
+source:
+  url: https://files.pythonhosted.org/packages/84/68/152700f8bd9fe0d3d6631fccebbf6bd76213cd0817aa89fb2cd1ecd4111b/mcpm-2.13.0.tar.gz
+  sha256: da6c0fd0282b5710138eeecb65c5042395927c213afd52c8e33b77a451110269
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,6 @@ dependencies:
   - pydantic
   - python@3.14
   - rpds-py
+build_dependencies:
+  - cmake
+  - rust

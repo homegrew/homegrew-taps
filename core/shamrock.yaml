@@ -3,16 +3,22 @@ version: 2025.10.0
 description: Astrophysical hydrodynamics using SYCL
 homepage: https://github.com/Shamrock-code/Shamrock
 license: CECILL-2.1
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/shamrock/blobs/sha256:c47e9d92ac0748df6ae1b1a02ff190e4072323a79f0e5022ab970bf0a4c6f53a
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/shamrock/blobs/sha256:14e05876ef09736b68bf2ce5fb39efb449f63b7b503d83cd2c0b584e28329fba
-  linux_amd64: https://ghcr.io/v2/homebrew/core/shamrock/blobs/sha256:070d9694a2e302b0c4fc882cb8ab2bd473cb380c49ce74b5805cb3dcb83cbc80
-  linux_arm64: https://ghcr.io/v2/homebrew/core/shamrock/blobs/sha256:da7db3322a2330f9382b5a6bd28419b78fc2fd2c95f850ceed64a021452a124e
-sha256:
-  darwin_arm64: c47e9d92ac0748df6ae1b1a02ff190e4072323a79f0e5022ab970bf0a4c6f53a
-  darwin_amd64: 14e05876ef09736b68bf2ce5fb39efb449f63b7b503d83cd2c0b584e28329fba
-  linux_amd64: 070d9694a2e302b0c4fc882cb8ab2bd473cb380c49ce74b5805cb3dcb83cbc80
-  linux_arm64: da7db3322a2330f9382b5a6bd28419b78fc2fd2c95f850ceed64a021452a124e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/shamrock/blobs/sha256:c47e9d92ac0748df6ae1b1a02ff190e4072323a79f0e5022ab970bf0a4c6f53a
+    sha256: c47e9d92ac0748df6ae1b1a02ff190e4072323a79f0e5022ab970bf0a4c6f53a
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/shamrock/blobs/sha256:14e05876ef09736b68bf2ce5fb39efb449f63b7b503d83cd2c0b584e28329fba
+    sha256: 14e05876ef09736b68bf2ce5fb39efb449f63b7b503d83cd2c0b584e28329fba
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/shamrock/blobs/sha256:070d9694a2e302b0c4fc882cb8ab2bd473cb380c49ce74b5805cb3dcb83cbc80
+    sha256: 070d9694a2e302b0c4fc882cb8ab2bd473cb380c49ce74b5805cb3dcb83cbc80
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/shamrock/blobs/sha256:da7db3322a2330f9382b5a6bd28419b78fc2fd2c95f850ceed64a021452a124e
+    sha256: da7db3322a2330f9382b5a6bd28419b78fc2fd2c95f850ceed64a021452a124e
+source:
+  url: https://github.com/Shamrock-code/Shamrock/releases/download/v2025.10.0/shamrock-2025.10.0.tar
+  sha256: 72683352d862d7b3d39568151a17ea78633bd4976a40eacb77098d3ef0ca3c55
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,13 @@ dependencies:
   - open-mpi
   - python@3.14
   - libomp
+build_dependencies:
+  - cmake
+  - fmt
+  - nlohmann-json
+  - pybind11
+linux_dependencies:
+  - adaptivecpp
+  - boost
+  - open-mpi
+  - python@3.14

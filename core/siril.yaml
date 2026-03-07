@@ -3,16 +3,22 @@ version: 1.4.2
 description: Astronomical image processing tool
 homepage: https://www.siril.org
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:5f199ace91220b7f43bd12efcf51ab4b33da66c096feee738f3c015e7323b811
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:9c95d44b1d3e76166f6092fb88c88b0b2569acc8c16494c46966149678deb446
-  linux_amd64: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:04cc15d0adddc4a30eff2ce38a215f531ee07bb6e343dab197b0b9d825b06bc4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:04f87cb1e750024be8f00098967e289a5826d0799edaaa7ec7f81f31b6c51ae4
-sha256:
-  darwin_arm64: 5f199ace91220b7f43bd12efcf51ab4b33da66c096feee738f3c015e7323b811
-  darwin_amd64: 9c95d44b1d3e76166f6092fb88c88b0b2569acc8c16494c46966149678deb446
-  linux_amd64: 04cc15d0adddc4a30eff2ce38a215f531ee07bb6e343dab197b0b9d825b06bc4
-  linux_arm64: 04f87cb1e750024be8f00098967e289a5826d0799edaaa7ec7f81f31b6c51ae4
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:5f199ace91220b7f43bd12efcf51ab4b33da66c096feee738f3c015e7323b811
+    sha256: 5f199ace91220b7f43bd12efcf51ab4b33da66c096feee738f3c015e7323b811
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:9c95d44b1d3e76166f6092fb88c88b0b2569acc8c16494c46966149678deb446
+    sha256: 9c95d44b1d3e76166f6092fb88c88b0b2569acc8c16494c46966149678deb446
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:04cc15d0adddc4a30eff2ce38a215f531ee07bb6e343dab197b0b9d825b06bc4
+    sha256: 04cc15d0adddc4a30eff2ce38a215f531ee07bb6e343dab197b0b9d825b06bc4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:04f87cb1e750024be8f00098967e289a5826d0799edaaa7ec7f81f31b6c51ae4
+    sha256: 04f87cb1e750024be8f00098967e289a5826d0799edaaa7ec7f81f31b6c51ae4
+source:
+  url: https://free-astro.org/download/siril-1.4.2.tar.bz2
+  sha256: 451915627ae461ef992ac0f83bd3ff1db5102d72ca379eee55b9be4f12b1162b
 install:
   type: archive
   format: tar.gz
@@ -48,3 +54,37 @@ dependencies:
   - yyjson
   - gettext
   - libomp
+build_dependencies:
+  - cmake
+  - meson
+  - ninja
+  - pkgconf
+linux_dependencies:
+  - cairo
+  - cfitsio
+  - exiv2
+  - ffmpeg
+  - ffms2
+  - fftw
+  - gdk-pixbuf
+  - glib
+  - gnuplot
+  - gsl
+  - gtk+3
+  - gtksourceview4
+  - healpix
+  - jpeg-turbo
+  - jpeg-xl
+  - json-glib
+  - libgit2
+  - libheif
+  - libpng
+  - libraw
+  - librsvg
+  - libtiff
+  - little-cms2
+  - netpbm
+  - opencv
+  - pango
+  - wcslib
+  - yyjson

@@ -3,17 +3,25 @@ version: 0.14.3
 description: "In terminal graphical metrics for your *nix system"
 homepage: https://github.com/bvaisvil/zenith/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/zenith/blobs/sha256:c81ddc75796095724c82b528314108b9faef5bb5fc4b0f4957d6bce598a637f1
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/zenith/blobs/sha256:604878551ce967241a95e00fcd5a8c536143ac3885bda1c8e9ba709a10e3ac1d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/zenith/blobs/sha256:f6f97827bc9854759a38f7e5cb6b86dc14a92152809e0d06d0815adec23af64f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/zenith/blobs/sha256:04e3f9eca98968d07a3695cf519ced235645d4123bd7cc1d10a569c6fd0fa55e
-sha256:
-  darwin_arm64: c81ddc75796095724c82b528314108b9faef5bb5fc4b0f4957d6bce598a637f1
-  darwin_amd64: 604878551ce967241a95e00fcd5a8c536143ac3885bda1c8e9ba709a10e3ac1d
-  linux_amd64: f6f97827bc9854759a38f7e5cb6b86dc14a92152809e0d06d0815adec23af64f
-  linux_arm64: 04e3f9eca98968d07a3695cf519ced235645d4123bd7cc1d10a569c6fd0fa55e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zenith/blobs/sha256:c81ddc75796095724c82b528314108b9faef5bb5fc4b0f4957d6bce598a637f1
+    sha256: c81ddc75796095724c82b528314108b9faef5bb5fc4b0f4957d6bce598a637f1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zenith/blobs/sha256:604878551ce967241a95e00fcd5a8c536143ac3885bda1c8e9ba709a10e3ac1d
+    sha256: 604878551ce967241a95e00fcd5a8c536143ac3885bda1c8e9ba709a10e3ac1d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zenith/blobs/sha256:f6f97827bc9854759a38f7e5cb6b86dc14a92152809e0d06d0815adec23af64f
+    sha256: f6f97827bc9854759a38f7e5cb6b86dc14a92152809e0d06d0815adec23af64f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zenith/blobs/sha256:04e3f9eca98968d07a3695cf519ced235645d4123bd7cc1d10a569c6fd0fa55e
+    sha256: 04e3f9eca98968d07a3695cf519ced235645d4123bd7cc1d10a569c6fd0fa55e
+source:
+  url: https://github.com/bvaisvil/zenith/archive/refs/tags/0.14.3.tar.gz
+  sha256: b092048d1a9ce7234584d928e4b103aaaa7e47589923cf4e48dfa8919b3f8d88
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

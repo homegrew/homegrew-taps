@@ -3,17 +3,25 @@ version: 0.15.1
 description: Command-line csv viewer
 homepage: https://github.com/YS-L/csvlens
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/csvlens/blobs/sha256:c11aa18b416fc38eb25df2ec3963fb2c5c300f8979aeba2642ec780865858d34
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/csvlens/blobs/sha256:e8f401dec9ed33c0b345b96f5b4c2e454d48dd8c8f84357f7feaecb97754f96c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/csvlens/blobs/sha256:3149de80a4f3bce2c31ddfc8f3db96a8066460a7e4b113f8d3f0a40b4e2a2e42
-  linux_arm64: https://ghcr.io/v2/homebrew/core/csvlens/blobs/sha256:d8e442634b87705728a3064b56ceffe3100c2b2938ad654ba964c742b351350f
-sha256:
-  darwin_arm64: c11aa18b416fc38eb25df2ec3963fb2c5c300f8979aeba2642ec780865858d34
-  darwin_amd64: e8f401dec9ed33c0b345b96f5b4c2e454d48dd8c8f84357f7feaecb97754f96c
-  linux_amd64: 3149de80a4f3bce2c31ddfc8f3db96a8066460a7e4b113f8d3f0a40b4e2a2e42
-  linux_arm64: d8e442634b87705728a3064b56ceffe3100c2b2938ad654ba964c742b351350f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/csvlens/blobs/sha256:c11aa18b416fc38eb25df2ec3963fb2c5c300f8979aeba2642ec780865858d34
+    sha256: c11aa18b416fc38eb25df2ec3963fb2c5c300f8979aeba2642ec780865858d34
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/csvlens/blobs/sha256:e8f401dec9ed33c0b345b96f5b4c2e454d48dd8c8f84357f7feaecb97754f96c
+    sha256: e8f401dec9ed33c0b345b96f5b4c2e454d48dd8c8f84357f7feaecb97754f96c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/csvlens/blobs/sha256:3149de80a4f3bce2c31ddfc8f3db96a8066460a7e4b113f8d3f0a40b4e2a2e42
+    sha256: 3149de80a4f3bce2c31ddfc8f3db96a8066460a7e4b113f8d3f0a40b4e2a2e42
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/csvlens/blobs/sha256:d8e442634b87705728a3064b56ceffe3100c2b2938ad654ba964c742b351350f
+    sha256: d8e442634b87705728a3064b56ceffe3100c2b2938ad654ba964c742b351350f
+source:
+  url: https://github.com/YS-L/csvlens/archive/refs/tags/v0.15.1.tar.gz
+  sha256: 4396cf4e0c51be589f86aed662b9cb03f4f9414d8e2fd80dbc18f20eaf447bb7
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

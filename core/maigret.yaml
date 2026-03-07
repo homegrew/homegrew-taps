@@ -3,16 +3,22 @@ version: 0.5.0
 description: Collect a dossier on a person by username from thousands of sites
 homepage: https://github.com/soxoj/maigret
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/maigret/blobs/sha256:26aa8c28be8662f6baafb7002e8d09c041a214b8e00ada921e24111c31f64579
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/maigret/blobs/sha256:7757aed55d72172c49a7d553ce108938867906b21fd5be5a60972243b56598d3
-  linux_amd64: https://ghcr.io/v2/homebrew/core/maigret/blobs/sha256:79ae785149447cb3ce068c258426d56a65b8c2bfe8aecb4da7ceff326363c94e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/maigret/blobs/sha256:f3a025414cbe947b1490210c65d302756f4181036fed58f90a1af5fc494ad73b
-sha256:
-  darwin_arm64: 26aa8c28be8662f6baafb7002e8d09c041a214b8e00ada921e24111c31f64579
-  darwin_amd64: 7757aed55d72172c49a7d553ce108938867906b21fd5be5a60972243b56598d3
-  linux_amd64: 79ae785149447cb3ce068c258426d56a65b8c2bfe8aecb4da7ceff326363c94e
-  linux_arm64: f3a025414cbe947b1490210c65d302756f4181036fed58f90a1af5fc494ad73b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/maigret/blobs/sha256:26aa8c28be8662f6baafb7002e8d09c041a214b8e00ada921e24111c31f64579
+    sha256: 26aa8c28be8662f6baafb7002e8d09c041a214b8e00ada921e24111c31f64579
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/maigret/blobs/sha256:7757aed55d72172c49a7d553ce108938867906b21fd5be5a60972243b56598d3
+    sha256: 7757aed55d72172c49a7d553ce108938867906b21fd5be5a60972243b56598d3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/maigret/blobs/sha256:79ae785149447cb3ce068c258426d56a65b8c2bfe8aecb4da7ceff326363c94e
+    sha256: 79ae785149447cb3ce068c258426d56a65b8c2bfe8aecb4da7ceff326363c94e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/maigret/blobs/sha256:f3a025414cbe947b1490210c65d302756f4181036fed58f90a1af5fc494ad73b
+    sha256: f3a025414cbe947b1490210c65d302756f4181036fed58f90a1af5fc494ad73b
+source:
+  url: https://files.pythonhosted.org/packages/3d/29/ef75d365917075a72ad88b7b1027bc6f93d6e45f27aec1ee6410607eb5f6/maigret-0.5.0.tar.gz
+  sha256: d85c7f799cce51b6edf7179dda36019d0081bba528ce77284925499b07a49be7
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,12 @@ dependencies:
   - libyaml
   - pillow
   - python@3.14
+build_dependencies:
+  - rust
+linux_dependencies:
+  - certifi
+  - cryptography
+  - libyaml
+  - pillow
+  - python@3.14
+  - zlib-ng-compat

@@ -3,16 +3,22 @@ version: 4.11.0
 description: Verification-aware programming language
 homepage: https://github.com/dafny-lang/dafny/blob/master/README.md
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dafny/blobs/sha256:8e05c17dd373fc4990bfdbb912d8fa47eb1981a5fd34ec150283f53eddaa0c9e
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dafny/blobs/sha256:531c8d8608f45143c240ebcdb7c7bc92a47cf23d20b972f9d0d435318198a569
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dafny/blobs/sha256:af77022b146755d7d3504323a153d62fd2d234fd23b831884555d1d6a037e16f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dafny/blobs/sha256:61c5799971f66478103d85b42562172496531a3aa2e8e8566befc75079bb7154
-sha256:
-  darwin_arm64: 8e05c17dd373fc4990bfdbb912d8fa47eb1981a5fd34ec150283f53eddaa0c9e
-  darwin_amd64: 531c8d8608f45143c240ebcdb7c7bc92a47cf23d20b972f9d0d435318198a569
-  linux_amd64: af77022b146755d7d3504323a153d62fd2d234fd23b831884555d1d6a037e16f
-  linux_arm64: 61c5799971f66478103d85b42562172496531a3aa2e8e8566befc75079bb7154
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dafny/blobs/sha256:8e05c17dd373fc4990bfdbb912d8fa47eb1981a5fd34ec150283f53eddaa0c9e
+    sha256: 8e05c17dd373fc4990bfdbb912d8fa47eb1981a5fd34ec150283f53eddaa0c9e
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dafny/blobs/sha256:531c8d8608f45143c240ebcdb7c7bc92a47cf23d20b972f9d0d435318198a569
+    sha256: 531c8d8608f45143c240ebcdb7c7bc92a47cf23d20b972f9d0d435318198a569
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dafny/blobs/sha256:af77022b146755d7d3504323a153d62fd2d234fd23b831884555d1d6a037e16f
+    sha256: af77022b146755d7d3504323a153d62fd2d234fd23b831884555d1d6a037e16f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dafny/blobs/sha256:61c5799971f66478103d85b42562172496531a3aa2e8e8566befc75079bb7154
+    sha256: 61c5799971f66478103d85b42562172496531a3aa2e8e8566befc75079bb7154
+source:
+  url: https://github.com/dafny-lang/dafny/archive/refs/tags/v4.11.0.tar.gz
+  sha256: 05417a2250cea13494318a60d86bd0dc6d9622bd625d9f4fbeb42854462e6798
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,6 @@ install:
 dependencies:
   - dotnet@8
   - z3
+build_dependencies:
+  - gradle@8
+  - openjdk

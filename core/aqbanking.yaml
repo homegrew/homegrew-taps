@@ -3,16 +3,22 @@ version: 6.9.1
 description: Generic online banking interface
 homepage: https://www.aquamaniac.de/rdm/projects/aqbanking
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/aqbanking/blobs/sha256:4f05a3cddc798744d9174ad5ed28fb3f4bab78645d3cfa00a2420091aa3ff60b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/aqbanking/blobs/sha256:b920e6ccecfec70bb2e63b3ab787c648e5ecda32948735710b97ff43a3ea453a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/aqbanking/blobs/sha256:5b045c02d114e190ca69c13d0c878ac43c4cf6b27e629af9e259ac8bc554643d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/aqbanking/blobs/sha256:787f1bdbca1850988b0e8c8541ede16e5ef95ab2bc03d885266fb82877df2c7c
-sha256:
-  darwin_arm64: 4f05a3cddc798744d9174ad5ed28fb3f4bab78645d3cfa00a2420091aa3ff60b
-  darwin_amd64: b920e6ccecfec70bb2e63b3ab787c648e5ecda32948735710b97ff43a3ea453a
-  linux_amd64: 5b045c02d114e190ca69c13d0c878ac43c4cf6b27e629af9e259ac8bc554643d
-  linux_arm64: 787f1bdbca1850988b0e8c8541ede16e5ef95ab2bc03d885266fb82877df2c7c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/aqbanking/blobs/sha256:4f05a3cddc798744d9174ad5ed28fb3f4bab78645d3cfa00a2420091aa3ff60b
+    sha256: 4f05a3cddc798744d9174ad5ed28fb3f4bab78645d3cfa00a2420091aa3ff60b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/aqbanking/blobs/sha256:b920e6ccecfec70bb2e63b3ab787c648e5ecda32948735710b97ff43a3ea453a
+    sha256: b920e6ccecfec70bb2e63b3ab787c648e5ecda32948735710b97ff43a3ea453a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/aqbanking/blobs/sha256:5b045c02d114e190ca69c13d0c878ac43c4cf6b27e629af9e259ac8bc554643d
+    sha256: 5b045c02d114e190ca69c13d0c878ac43c4cf6b27e629af9e259ac8bc554643d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/aqbanking/blobs/sha256:787f1bdbca1850988b0e8c8541ede16e5ef95ab2bc03d885266fb82877df2c7c
+    sha256: 787f1bdbca1850988b0e8c8541ede16e5ef95ab2bc03d885266fb82877df2c7c
+source:
+  url: https://www.aquamaniac.de/rdm/attachments/download/652/aqbanking-6.9.1.tar.gz
+  sha256: fc94a2bebfbb4fc26b98dc93c8fa36a8026298cd7995f79821c480db35587f6b
 install:
   type: archive
   format: tar.gz
@@ -27,3 +33,13 @@ dependencies:
   - openssl@3
   - pkgconf
   - gettext
+linux_dependencies:
+  - gmp
+  - gwenhywfar
+  - ktoblzcheck
+  - libxml2
+  - libxmlsec1
+  - libxslt
+  - openssl@3
+  - pkgconf
+  - zlib-ng-compat

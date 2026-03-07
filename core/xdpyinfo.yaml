@@ -3,16 +3,22 @@ version: 1.4.0
 description: "X.Org: Utility for displaying information about an X server"
 homepage: https://www.x.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/xdpyinfo/blobs/sha256:7fcb8183733daa8e2ef8e35810c377ff385422aca8b10d37d0c85adcf99c2f2f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/xdpyinfo/blobs/sha256:7158d0c65b17a0b8aeb992070734e5739d1c9790d176a34a873cdb441aa60fad
-  linux_amd64: https://ghcr.io/v2/homebrew/core/xdpyinfo/blobs/sha256:38be82e4609b9b2900c19ad01c9fa0353b8ef6e477eb93a0e113eaec2ead5141
-  linux_arm64: https://ghcr.io/v2/homebrew/core/xdpyinfo/blobs/sha256:f29ec68f0bb272eb3e7da43584532558306edf67e933c19dc0dcc534226b17ef
-sha256:
-  darwin_arm64: 7fcb8183733daa8e2ef8e35810c377ff385422aca8b10d37d0c85adcf99c2f2f
-  darwin_amd64: 7158d0c65b17a0b8aeb992070734e5739d1c9790d176a34a873cdb441aa60fad
-  linux_amd64: 38be82e4609b9b2900c19ad01c9fa0353b8ef6e477eb93a0e113eaec2ead5141
-  linux_arm64: f29ec68f0bb272eb3e7da43584532558306edf67e933c19dc0dcc534226b17ef
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xdpyinfo/blobs/sha256:7fcb8183733daa8e2ef8e35810c377ff385422aca8b10d37d0c85adcf99c2f2f
+    sha256: 7fcb8183733daa8e2ef8e35810c377ff385422aca8b10d37d0c85adcf99c2f2f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xdpyinfo/blobs/sha256:7158d0c65b17a0b8aeb992070734e5739d1c9790d176a34a873cdb441aa60fad
+    sha256: 7158d0c65b17a0b8aeb992070734e5739d1c9790d176a34a873cdb441aa60fad
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xdpyinfo/blobs/sha256:38be82e4609b9b2900c19ad01c9fa0353b8ef6e477eb93a0e113eaec2ead5141
+    sha256: 38be82e4609b9b2900c19ad01c9fa0353b8ef6e477eb93a0e113eaec2ead5141
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xdpyinfo/blobs/sha256:f29ec68f0bb272eb3e7da43584532558306edf67e933c19dc0dcc534226b17ef
+    sha256: f29ec68f0bb272eb3e7da43584532558306edf67e933c19dc0dcc534226b17ef
+source:
+  url: https://www.x.org/archive/individual/app/xdpyinfo-1.4.0.tar.xz
+  sha256: dc1de6e6e091ed46c4837b0ae9811e8182f7be0d2af638cab3e530ff081a48b6
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,5 @@ dependencies:
   - libxext
   - libxi
   - libxtst
+build_dependencies:
+  - pkgconf

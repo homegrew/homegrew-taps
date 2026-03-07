@@ -3,16 +3,22 @@ version: 0.16.0
 description: Implements the server side of the SPICE protocol
 homepage: https://www.spice-space.org/
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/spice-server/blobs/sha256:07095428a0e9637309224c9dc6302a91caa37e2b22f8a678bf5c2a21d250b7ee
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/spice-server/blobs/sha256:222e8fd73393fb53e9b48f137d4d68abc5be1c7d99dfdeb54f430ac31af2c2a2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/spice-server/blobs/sha256:e5a261c1f9a99a02795a3530791493d4992ca792c5f9ba30204149b47a0701df
-  linux_arm64: https://ghcr.io/v2/homebrew/core/spice-server/blobs/sha256:896f8baf333c39adb63fc0e59a7169a09e2b667d992d1d0ae305cdfa1703ecb3
-sha256:
-  darwin_arm64: 07095428a0e9637309224c9dc6302a91caa37e2b22f8a678bf5c2a21d250b7ee
-  darwin_amd64: 222e8fd73393fb53e9b48f137d4d68abc5be1c7d99dfdeb54f430ac31af2c2a2
-  linux_amd64: e5a261c1f9a99a02795a3530791493d4992ca792c5f9ba30204149b47a0701df
-  linux_arm64: 896f8baf333c39adb63fc0e59a7169a09e2b667d992d1d0ae305cdfa1703ecb3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/spice-server/blobs/sha256:07095428a0e9637309224c9dc6302a91caa37e2b22f8a678bf5c2a21d250b7ee
+    sha256: 07095428a0e9637309224c9dc6302a91caa37e2b22f8a678bf5c2a21d250b7ee
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/spice-server/blobs/sha256:222e8fd73393fb53e9b48f137d4d68abc5be1c7d99dfdeb54f430ac31af2c2a2
+    sha256: 222e8fd73393fb53e9b48f137d4d68abc5be1c7d99dfdeb54f430ac31af2c2a2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/spice-server/blobs/sha256:e5a261c1f9a99a02795a3530791493d4992ca792c5f9ba30204149b47a0701df
+    sha256: e5a261c1f9a99a02795a3530791493d4992ca792c5f9ba30204149b47a0701df
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/spice-server/blobs/sha256:896f8baf333c39adb63fc0e59a7169a09e2b667d992d1d0ae305cdfa1703ecb3
+    sha256: 896f8baf333c39adb63fc0e59a7169a09e2b667d992d1d0ae305cdfa1703ecb3
+source:
+  url: https://gitlab.freedesktop.org/-/project/62/uploads/54a0f9f5d1840e1ad8060cb560f3dde6/spice-0.16.0.tar.bz2
+  sha256: 0a6ec9528f05371261bbb2d46ff35e7b5c45ff89bb975a99af95a5f20ff4717d
 install:
   type: archive
   format: tar.gz
@@ -27,3 +33,16 @@ dependencies:
   - orc
   - pixman
   - gettext
+build_dependencies:
+  - spice-protocol
+linux_dependencies:
+  - glib
+  - gstreamer
+  - jpeg-turbo
+  - lz4
+  - openssl@3
+  - opus
+  - orc
+  - pixman
+  - systemd
+  - zlib-ng-compat

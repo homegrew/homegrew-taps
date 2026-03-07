@@ -3,16 +3,22 @@ version: 0.23.93
 description: Suite of barcodes-reading tools
 homepage: https://github.com/mchehab/zbar
 license: LGPL-2.1-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/zbar/blobs/sha256:cc7a5ed357e5cbfed0707cbaf736d9519473252cffa52dff1a449640be47a9af
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/zbar/blobs/sha256:63ecefc21c58f41dcc73346b81fd1defabf3f2db855ec4a18fd0b63ec0cd5326
-  linux_amd64: https://ghcr.io/v2/homebrew/core/zbar/blobs/sha256:ecb7269a350f91339a4c6c05d014e27f38311431e54e948fa575aacb2056f03e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/zbar/blobs/sha256:53a60318800d01d8d5571cd82ada66c60dc14a7c739c5f4810358dbbbcbcd649
-sha256:
-  darwin_arm64: cc7a5ed357e5cbfed0707cbaf736d9519473252cffa52dff1a449640be47a9af
-  darwin_amd64: 63ecefc21c58f41dcc73346b81fd1defabf3f2db855ec4a18fd0b63ec0cd5326
-  linux_amd64: ecb7269a350f91339a4c6c05d014e27f38311431e54e948fa575aacb2056f03e
-  linux_arm64: 53a60318800d01d8d5571cd82ada66c60dc14a7c739c5f4810358dbbbcbcd649
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zbar/blobs/sha256:cc7a5ed357e5cbfed0707cbaf736d9519473252cffa52dff1a449640be47a9af
+    sha256: cc7a5ed357e5cbfed0707cbaf736d9519473252cffa52dff1a449640be47a9af
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zbar/blobs/sha256:63ecefc21c58f41dcc73346b81fd1defabf3f2db855ec4a18fd0b63ec0cd5326
+    sha256: 63ecefc21c58f41dcc73346b81fd1defabf3f2db855ec4a18fd0b63ec0cd5326
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zbar/blobs/sha256:ecb7269a350f91339a4c6c05d014e27f38311431e54e948fa575aacb2056f03e
+    sha256: ecb7269a350f91339a4c6c05d014e27f38311431e54e948fa575aacb2056f03e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zbar/blobs/sha256:53a60318800d01d8d5571cd82ada66c60dc14a7c739c5f4810358dbbbcbcd649
+    sha256: 53a60318800d01d8d5571cd82ada66c60dc14a7c739c5f4810358dbbbcbcd649
+source:
+  url: https://linuxtv.org/downloads/zbar/zbar-0.23.93.tar.bz2
+  sha256: 83be8f85fc7c288fd91f98d52fc55db7eedbddcf10a83d9221d7034636683fa0
 install:
   type: archive
   format: tar.gz
@@ -28,3 +34,10 @@ dependencies:
   - libomp
   - libtool
   - little-cms2
+build_dependencies:
+  - pkgconf
+  - xmlto
+linux_dependencies:
+  - dbus
+  - imagemagick
+  - jpeg-turbo

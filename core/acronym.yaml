@@ -3,16 +3,22 @@ version: 2.0.0
 description: Python-based tool for creating English-ish acronyms from your fancy project
 homepage: https://github.com/bacook17/acronym
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:fe9d58a50861621cc1e5cc93adbe8079337051eed85a84a19b1890e34f627b3d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:e58f08df88a9d4153f9fb31ea0b7d016935b5f65f56f16c60373cb4ca0c15fa4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:e7a7706a8da238c0a30682d3c65565157ceb6d6f30b54792753ccc3aae0015b8
-  linux_arm64: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:d6d9686539b292e0e0b80e80bb7431c8f60a3a769cf0deb0029ea50e29bf9426
-sha256:
-  darwin_arm64: fe9d58a50861621cc1e5cc93adbe8079337051eed85a84a19b1890e34f627b3d
-  darwin_amd64: e58f08df88a9d4153f9fb31ea0b7d016935b5f65f56f16c60373cb4ca0c15fa4
-  linux_amd64: e7a7706a8da238c0a30682d3c65565157ceb6d6f30b54792753ccc3aae0015b8
-  linux_arm64: d6d9686539b292e0e0b80e80bb7431c8f60a3a769cf0deb0029ea50e29bf9426
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:fe9d58a50861621cc1e5cc93adbe8079337051eed85a84a19b1890e34f627b3d
+    sha256: fe9d58a50861621cc1e5cc93adbe8079337051eed85a84a19b1890e34f627b3d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:e58f08df88a9d4153f9fb31ea0b7d016935b5f65f56f16c60373cb4ca0c15fa4
+    sha256: e58f08df88a9d4153f9fb31ea0b7d016935b5f65f56f16c60373cb4ca0c15fa4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:e7a7706a8da238c0a30682d3c65565157ceb6d6f30b54792753ccc3aae0015b8
+    sha256: e7a7706a8da238c0a30682d3c65565157ceb6d6f30b54792753ccc3aae0015b8
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:d6d9686539b292e0e0b80e80bb7431c8f60a3a769cf0deb0029ea50e29bf9426
+    sha256: d6d9686539b292e0e0b80e80bb7431c8f60a3a769cf0deb0029ea50e29bf9426
+source:
+  url: https://files.pythonhosted.org/packages/e3/1a/1a364f93053f9ad0d4f38b5c0078637db484bb4c1388ad0234b85c9d2ca8/acronym-2.0.0.tar.gz
+  sha256: 163cc1630b7c65cbca6426f80e267f5253ea787e17a329d1d55517868897bbf1
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,7 @@ install:
 dependencies:
   - numpy
   - python@3.14
+build_dependencies:
+  - cmake
+  - meson
+  - ninja

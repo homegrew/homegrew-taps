@@ -3,16 +3,22 @@ version: 1.20.1
 description: PlayStation Portable emulator
 homepage: https://ppsspp.org/
 license: GPL-2.0-or-later AND BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:9a56a20f8c60a1c070d903023b64234dd68f638a23a54878d64896b8af096ddb
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:487e9aa6a3b5df4dde737e09d9eb0435df2d5a4976f95231c7676590bd883141
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:1bfc04239950a84341a6042daa35f9f9177856ced9e3837db47c99c8e930472b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:de7e2e44697fb6b2d1d69ebdde8aad4e39983f8726ec683ca87407796987b06c
-sha256:
-  darwin_arm64: 9a56a20f8c60a1c070d903023b64234dd68f638a23a54878d64896b8af096ddb
-  darwin_amd64: 487e9aa6a3b5df4dde737e09d9eb0435df2d5a4976f95231c7676590bd883141
-  linux_amd64: 1bfc04239950a84341a6042daa35f9f9177856ced9e3837db47c99c8e930472b
-  linux_arm64: de7e2e44697fb6b2d1d69ebdde8aad4e39983f8726ec683ca87407796987b06c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:9a56a20f8c60a1c070d903023b64234dd68f638a23a54878d64896b8af096ddb
+    sha256: 9a56a20f8c60a1c070d903023b64234dd68f638a23a54878d64896b8af096ddb
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:487e9aa6a3b5df4dde737e09d9eb0435df2d5a4976f95231c7676590bd883141
+    sha256: 487e9aa6a3b5df4dde737e09d9eb0435df2d5a4976f95231c7676590bd883141
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:1bfc04239950a84341a6042daa35f9f9177856ced9e3837db47c99c8e930472b
+    sha256: 1bfc04239950a84341a6042daa35f9f9177856ced9e3837db47c99c8e930472b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:de7e2e44697fb6b2d1d69ebdde8aad4e39983f8726ec683ca87407796987b06c
+    sha256: de7e2e44697fb6b2d1d69ebdde8aad4e39983f8726ec683ca87407796987b06c
+source:
+  url: https://github.com/hrydgard/ppsspp/releases/download/v1.20.1/ppsspp-1.20.1.tar.xz
+  sha256: 063b224adc25c2b28e01c36033fff9b96e9e2b8d1004c6bb5db3d6f1b83b2e20
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,17 @@ dependencies:
   - snappy
   - zstd
   - molten-vk
+build_dependencies:
+  - cmake
+  - pkgconf
+  - yasm
+linux_dependencies:
+  - glew
+  - libpng
+  - libzip
+  - mesa
+  - miniupnpc
+  - sdl2
+  - snappy
+  - zlib-ng-compat
+  - zstd

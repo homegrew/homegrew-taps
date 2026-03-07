@@ -3,17 +3,25 @@ version: 4.3.0
 description: SIMD-accelerated C++ JSON parser
 homepage: https://simdjson.org
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/simdjson/blobs/sha256:a6daf4f695cf035bc5ba5b53916839d4e05bc0f3ac068532f39092d9b5fcc7eb
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/simdjson/blobs/sha256:bcfa0411781d52a19a0a19ef1077a5235cb7d0016fa5f9a52a1f71c7380ecc20
-  linux_amd64: https://ghcr.io/v2/homebrew/core/simdjson/blobs/sha256:f7462fc2fc7087bf37507c8c50a4198d2635497587909ca1fec972e7a5b79252
-  linux_arm64: https://ghcr.io/v2/homebrew/core/simdjson/blobs/sha256:3de286369d0caa6fe7d7cd6d0a90b99c71ce88b42d482e9fd9e493b2ce9e6316
-sha256:
-  darwin_arm64: a6daf4f695cf035bc5ba5b53916839d4e05bc0f3ac068532f39092d9b5fcc7eb
-  darwin_amd64: bcfa0411781d52a19a0a19ef1077a5235cb7d0016fa5f9a52a1f71c7380ecc20
-  linux_amd64: f7462fc2fc7087bf37507c8c50a4198d2635497587909ca1fec972e7a5b79252
-  linux_arm64: 3de286369d0caa6fe7d7cd6d0a90b99c71ce88b42d482e9fd9e493b2ce9e6316
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/simdjson/blobs/sha256:a6daf4f695cf035bc5ba5b53916839d4e05bc0f3ac068532f39092d9b5fcc7eb
+    sha256: a6daf4f695cf035bc5ba5b53916839d4e05bc0f3ac068532f39092d9b5fcc7eb
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/simdjson/blobs/sha256:bcfa0411781d52a19a0a19ef1077a5235cb7d0016fa5f9a52a1f71c7380ecc20
+    sha256: bcfa0411781d52a19a0a19ef1077a5235cb7d0016fa5f9a52a1f71c7380ecc20
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/simdjson/blobs/sha256:f7462fc2fc7087bf37507c8c50a4198d2635497587909ca1fec972e7a5b79252
+    sha256: f7462fc2fc7087bf37507c8c50a4198d2635497587909ca1fec972e7a5b79252
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/simdjson/blobs/sha256:3de286369d0caa6fe7d7cd6d0a90b99c71ce88b42d482e9fd9e493b2ce9e6316
+    sha256: 3de286369d0caa6fe7d7cd6d0a90b99c71ce88b42d482e9fd9e493b2ce9e6316
+source:
+  url: https://github.com/simdjson/simdjson/archive/refs/tags/v4.3.0.tar.gz
+  sha256: bf0d5fb1f6544153b50111fe644aa1f201e2d8fcf5109f17a9805dc6392974dd
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - cmake

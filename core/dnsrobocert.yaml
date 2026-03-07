@@ -3,16 +3,22 @@ version: 3.26.1
 description: "Manage Let's Encrypt SSL certificates based on DNS challenges"
 homepage: https://dnsrobocert.readthedocs.io/en/latest/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dnsrobocert/blobs/sha256:926e1d3d3eada06efbcbcd1718a12c5a9a0827327a3661751a0ccb17b09d0808
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dnsrobocert/blobs/sha256:130fed5ca48671b2203540e953b598506a0ed9c2fc76962646019bf08e1ed5e6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dnsrobocert/blobs/sha256:1b2f23086b8c665b5bf1a106f7badb812ca328cd8beb994ae9107b446192fe3c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dnsrobocert/blobs/sha256:43195480b5a553b6fddea2e16b05b7ed3304e3acc4a184ad6f5c727d7d3d2e74
-sha256:
-  darwin_arm64: 926e1d3d3eada06efbcbcd1718a12c5a9a0827327a3661751a0ccb17b09d0808
-  darwin_amd64: 130fed5ca48671b2203540e953b598506a0ed9c2fc76962646019bf08e1ed5e6
-  linux_amd64: 1b2f23086b8c665b5bf1a106f7badb812ca328cd8beb994ae9107b446192fe3c
-  linux_arm64: 43195480b5a553b6fddea2e16b05b7ed3304e3acc4a184ad6f5c727d7d3d2e74
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dnsrobocert/blobs/sha256:926e1d3d3eada06efbcbcd1718a12c5a9a0827327a3661751a0ccb17b09d0808
+    sha256: 926e1d3d3eada06efbcbcd1718a12c5a9a0827327a3661751a0ccb17b09d0808
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dnsrobocert/blobs/sha256:130fed5ca48671b2203540e953b598506a0ed9c2fc76962646019bf08e1ed5e6
+    sha256: 130fed5ca48671b2203540e953b598506a0ed9c2fc76962646019bf08e1ed5e6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dnsrobocert/blobs/sha256:1b2f23086b8c665b5bf1a106f7badb812ca328cd8beb994ae9107b446192fe3c
+    sha256: 1b2f23086b8c665b5bf1a106f7badb812ca328cd8beb994ae9107b446192fe3c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dnsrobocert/blobs/sha256:43195480b5a553b6fddea2e16b05b7ed3304e3acc4a184ad6f5c727d7d3d2e74
+    sha256: 43195480b5a553b6fddea2e16b05b7ed3304e3acc4a184ad6f5c727d7d3d2e74
+source:
+  url: https://files.pythonhosted.org/packages/5f/19/e8d64f9edb462c060c3fc95cae1410d7263fe8d66f80ff4a0253d7201758/dnsrobocert-3.26.1.tar.gz
+  sha256: b4f49ce4ff6db7e845e46597e99d9d464d1ddb15bea3e9dee729643a0092a911
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,5 @@ dependencies:
   - libyaml
   - python@3.14
   - rpds-py
+build_dependencies:
+  - rust

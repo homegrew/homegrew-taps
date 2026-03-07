@@ -3,16 +3,22 @@ version: 1.18.2
 description: Comprehensive, modular and portable cryptographic toolkit
 homepage: https://www.libtom.net/
 license: Unlicense
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libtomcrypt/blobs/sha256:373529c12106df1c9d42ee7b18397378695aab805e3f615578c3c4658773cd23
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libtomcrypt/blobs/sha256:6b0591e8b409b44cc5cd7eeca0e4562b573b8e2eb4d07bcf5332a7085e107ab4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libtomcrypt/blobs/sha256:27294aefd23c971546ba62354ee81327a45f84ae4bf5e953c0397def99dfce51
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libtomcrypt/blobs/sha256:7118ecc3f9a3986ee0fa6fd49e54d844092c5ead298e59dd6b9adb6a21b37653
-sha256:
-  darwin_arm64: 373529c12106df1c9d42ee7b18397378695aab805e3f615578c3c4658773cd23
-  darwin_amd64: 6b0591e8b409b44cc5cd7eeca0e4562b573b8e2eb4d07bcf5332a7085e107ab4
-  linux_amd64: 27294aefd23c971546ba62354ee81327a45f84ae4bf5e953c0397def99dfce51
-  linux_arm64: 7118ecc3f9a3986ee0fa6fd49e54d844092c5ead298e59dd6b9adb6a21b37653
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libtomcrypt/blobs/sha256:373529c12106df1c9d42ee7b18397378695aab805e3f615578c3c4658773cd23
+    sha256: 373529c12106df1c9d42ee7b18397378695aab805e3f615578c3c4658773cd23
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libtomcrypt/blobs/sha256:6b0591e8b409b44cc5cd7eeca0e4562b573b8e2eb4d07bcf5332a7085e107ab4
+    sha256: 6b0591e8b409b44cc5cd7eeca0e4562b573b8e2eb4d07bcf5332a7085e107ab4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libtomcrypt/blobs/sha256:27294aefd23c971546ba62354ee81327a45f84ae4bf5e953c0397def99dfce51
+    sha256: 27294aefd23c971546ba62354ee81327a45f84ae4bf5e953c0397def99dfce51
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libtomcrypt/blobs/sha256:7118ecc3f9a3986ee0fa6fd49e54d844092c5ead298e59dd6b9adb6a21b37653
+    sha256: 7118ecc3f9a3986ee0fa6fd49e54d844092c5ead298e59dd6b9adb6a21b37653
+source:
+  url: https://github.com/libtom/libtomcrypt/archive/refs/tags/v1.18.2.tar.gz
+  sha256: d870fad1e31cb787c85161a8894abb9d7283c2a654a9d3d4c6d45a1eba59952c
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - gmp
   - libtommath
+build_dependencies:
+  - libtool

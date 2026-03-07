@@ -1,0 +1,29 @@
+name: teku
+version: 26.3.0
+description: Java Implementation of the Ethereum 2.0 Beacon Chain
+homepage: https://docs.teku.consensys.net/
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/teku/blobs/sha256:30f6bfe434ba4e9d9c706be8c9fc088f72b5d77901b2667f5d4404bc92a9db3e
+    sha256: 30f6bfe434ba4e9d9c706be8c9fc088f72b5d77901b2667f5d4404bc92a9db3e
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/teku/blobs/sha256:30f6bfe434ba4e9d9c706be8c9fc088f72b5d77901b2667f5d4404bc92a9db3e
+    sha256: 30f6bfe434ba4e9d9c706be8c9fc088f72b5d77901b2667f5d4404bc92a9db3e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/teku/blobs/sha256:48c5f7e2ad3464ee41d1555a2a9f539ed77bb621d21f3e8057db229601de793f
+    sha256: 48c5f7e2ad3464ee41d1555a2a9f539ed77bb621d21f3e8057db229601de793f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/teku/blobs/sha256:48c5f7e2ad3464ee41d1555a2a9f539ed77bb621d21f3e8057db229601de793f
+    sha256: 48c5f7e2ad3464ee41d1555a2a9f539ed77bb621d21f3e8057db229601de793f
+source:
+  url: https://github.com/ConsenSys/teku.git
+  sha256: 
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - openjdk
+build_dependencies:
+  - gradle@8

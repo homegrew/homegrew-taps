@@ -3,16 +3,22 @@ version: 21.0.0
 description: Language for fast, portable data-parallel computation
 homepage: https://halide-lang.org
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:2971971113569192c7c113fc28e6e403037b5678aa1e18a4fdadbf198da94cd1
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
-  linux_amd64: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:6731e04b241447c0e900d54b50d3d69429250d46b2384fd3a9601a520555a33e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:5c69185c4c47845f19b7abc2be16eda2dfeba014a8ffcc357afce2ba44960339
-sha256:
-  darwin_arm64: 2971971113569192c7c113fc28e6e403037b5678aa1e18a4fdadbf198da94cd1
-  darwin_amd64: 3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
-  linux_amd64: 6731e04b241447c0e900d54b50d3d69429250d46b2384fd3a9601a520555a33e
-  linux_arm64: 5c69185c4c47845f19b7abc2be16eda2dfeba014a8ffcc357afce2ba44960339
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:2971971113569192c7c113fc28e6e403037b5678aa1e18a4fdadbf198da94cd1
+    sha256: 2971971113569192c7c113fc28e6e403037b5678aa1e18a4fdadbf198da94cd1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
+    sha256: 3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:6731e04b241447c0e900d54b50d3d69429250d46b2384fd3a9601a520555a33e
+    sha256: 6731e04b241447c0e900d54b50d3d69429250d46b2384fd3a9601a520555a33e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:5c69185c4c47845f19b7abc2be16eda2dfeba014a8ffcc357afce2ba44960339
+    sha256: 5c69185c4c47845f19b7abc2be16eda2dfeba014a8ffcc357afce2ba44960339
+source:
+  url: https://github.com/halide/Halide/archive/refs/tags/v21.0.0.tar.gz
+  sha256: aa6b6f5e89709ca6bc754ce72b8b13b2abce0d6b001cb2516b1c6f518f910141
 install:
   type: archive
   format: tar.gz
@@ -26,3 +32,14 @@ dependencies:
   - python@3.14
   - wabt
   - openssl@3
+build_dependencies:
+  - cmake
+  - pybind11
+linux_dependencies:
+  - flatbuffers
+  - jpeg-turbo
+  - libpng
+  - lld@21
+  - llvm@21
+  - python@3.14
+  - wabt

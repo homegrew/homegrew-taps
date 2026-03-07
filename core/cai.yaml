@@ -3,17 +3,29 @@ version: 0.13.0
 description: CLI tool for prompting LLMs
 homepage: https://github.com/ad-si/cai
 license: ISC
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cai/blobs/sha256:09673dfec36162105f0b4862e8fe7e2ec3ce00a51f056443d7ead5972fb822de
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cai/blobs/sha256:ee72d21142f09d3316c3a98f5ef993c98bc55f76ca09fd31adb0fafc8d9dbc79
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cai/blobs/sha256:5d254783eec727228983659f48e79dc5263248bbf8f7b4eb8b26c043f45e2065
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cai/blobs/sha256:7fcf810b92e598c45a5f71cb2e236bbcf5cb31026982cbf21f849d062d6297f5
-sha256:
-  darwin_arm64: 09673dfec36162105f0b4862e8fe7e2ec3ce00a51f056443d7ead5972fb822de
-  darwin_amd64: ee72d21142f09d3316c3a98f5ef993c98bc55f76ca09fd31adb0fafc8d9dbc79
-  linux_amd64: 5d254783eec727228983659f48e79dc5263248bbf8f7b4eb8b26c043f45e2065
-  linux_arm64: 7fcf810b92e598c45a5f71cb2e236bbcf5cb31026982cbf21f849d062d6297f5
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cai/blobs/sha256:09673dfec36162105f0b4862e8fe7e2ec3ce00a51f056443d7ead5972fb822de
+    sha256: 09673dfec36162105f0b4862e8fe7e2ec3ce00a51f056443d7ead5972fb822de
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cai/blobs/sha256:ee72d21142f09d3316c3a98f5ef993c98bc55f76ca09fd31adb0fafc8d9dbc79
+    sha256: ee72d21142f09d3316c3a98f5ef993c98bc55f76ca09fd31adb0fafc8d9dbc79
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cai/blobs/sha256:5d254783eec727228983659f48e79dc5263248bbf8f7b4eb8b26c043f45e2065
+    sha256: 5d254783eec727228983659f48e79dc5263248bbf8f7b4eb8b26c043f45e2065
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cai/blobs/sha256:7fcf810b92e598c45a5f71cb2e236bbcf5cb31026982cbf21f849d062d6297f5
+    sha256: 7fcf810b92e598c45a5f71cb2e236bbcf5cb31026982cbf21f849d062d6297f5
+source:
+  url: https://github.com/ad-si/cai/archive/refs/tags/v0.13.0.tar.gz
+  sha256: 5a2cc76aae7ebbc691ac5705749c254c95fda1c423418da9dfc869503a4229a6
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - openssl@3
+  - zlib-ng-compat

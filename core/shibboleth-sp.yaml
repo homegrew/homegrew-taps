@@ -3,16 +3,22 @@ version: 3.5.2
 description: Shibboleth 2 Service Provider daemon
 homepage: https://wiki.shibboleth.net/confluence/display/SHIB2
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:339c9579747a7ea9f59bcf07d27e54060929ab44549922d266e4e39f1a015f51
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:2f8d41cf20b047da3c6a5bc7c0cdf50eebc400d57781a4fb91b9bf2470df0c87
-  linux_amd64: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:b1ef8dbde97fc0158660d63a17852d64b24ff246bf4fb59bb880e6a4d35e1837
-  linux_arm64: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:b7f78e39e8dfb3f8b065dfba2012cc49d103fe314fdd1d987bb891363a19eb8f
-sha256:
-  darwin_arm64: 339c9579747a7ea9f59bcf07d27e54060929ab44549922d266e4e39f1a015f51
-  darwin_amd64: 2f8d41cf20b047da3c6a5bc7c0cdf50eebc400d57781a4fb91b9bf2470df0c87
-  linux_amd64: b1ef8dbde97fc0158660d63a17852d64b24ff246bf4fb59bb880e6a4d35e1837
-  linux_arm64: b7f78e39e8dfb3f8b065dfba2012cc49d103fe314fdd1d987bb891363a19eb8f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:339c9579747a7ea9f59bcf07d27e54060929ab44549922d266e4e39f1a015f51
+    sha256: 339c9579747a7ea9f59bcf07d27e54060929ab44549922d266e4e39f1a015f51
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:2f8d41cf20b047da3c6a5bc7c0cdf50eebc400d57781a4fb91b9bf2470df0c87
+    sha256: 2f8d41cf20b047da3c6a5bc7c0cdf50eebc400d57781a4fb91b9bf2470df0c87
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:b1ef8dbde97fc0158660d63a17852d64b24ff246bf4fb59bb880e6a4d35e1837
+    sha256: b1ef8dbde97fc0158660d63a17852d64b24ff246bf4fb59bb880e6a4d35e1837
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:b7f78e39e8dfb3f8b065dfba2012cc49d103fe314fdd1d987bb891363a19eb8f
+    sha256: b7f78e39e8dfb3f8b065dfba2012cc49d103fe314fdd1d987bb891363a19eb8f
+source:
+  url: https://shibboleth.net/downloads/service-provider/3.5.2/shibboleth-sp-3.5.2.tar.bz2
+  sha256: c4e92c11e56adaa5ea480aba1d78c5f30fbd5d1badb4a13bdd85684bd801298a
 install:
   type: archive
   format: tar.gz
@@ -29,3 +35,5 @@ dependencies:
   - xerces-c
   - xml-security-c
   - xml-tooling-c
+build_dependencies:
+  - pkgconf

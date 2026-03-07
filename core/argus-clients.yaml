@@ -3,16 +3,22 @@ version: 5.0.0
 description: Audit Record Generation and Utilization System clients
 homepage: https://openargus.org
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:ae80fb8ebf1ce278fb8c74c1a7a9f4fdb5e615103e15dc63283c217ebf525024
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:06fe4d80aadbd2a0d4cec2963d92706f7d168c9d43fff983689ac6aa755e9e70
-  linux_amd64: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:eda872f8bd03edefe8f6c54e096030be6f21e7515c37dfc507944a56944d82db
-  linux_arm64: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:51a9b33724d646314c65efc2841ada96f7825dfa8384aa9d6ecf0a8fbaaf4cae
-sha256:
-  darwin_arm64: ae80fb8ebf1ce278fb8c74c1a7a9f4fdb5e615103e15dc63283c217ebf525024
-  darwin_amd64: 06fe4d80aadbd2a0d4cec2963d92706f7d168c9d43fff983689ac6aa755e9e70
-  linux_amd64: eda872f8bd03edefe8f6c54e096030be6f21e7515c37dfc507944a56944d82db
-  linux_arm64: 51a9b33724d646314c65efc2841ada96f7825dfa8384aa9d6ecf0a8fbaaf4cae
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:ae80fb8ebf1ce278fb8c74c1a7a9f4fdb5e615103e15dc63283c217ebf525024
+    sha256: ae80fb8ebf1ce278fb8c74c1a7a9f4fdb5e615103e15dc63283c217ebf525024
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:06fe4d80aadbd2a0d4cec2963d92706f7d168c9d43fff983689ac6aa755e9e70
+    sha256: 06fe4d80aadbd2a0d4cec2963d92706f7d168c9d43fff983689ac6aa755e9e70
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:eda872f8bd03edefe8f6c54e096030be6f21e7515c37dfc507944a56944d82db
+    sha256: eda872f8bd03edefe8f6c54e096030be6f21e7515c37dfc507944a56944d82db
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:51a9b33724d646314c65efc2841ada96f7825dfa8384aa9d6ecf0a8fbaaf4cae
+    sha256: 51a9b33724d646314c65efc2841ada96f7825dfa8384aa9d6ecf0a8fbaaf4cae
+source:
+  url: https://github.com/openargus/clients/archive/refs/tags/v5.0.0.tar.gz
+  sha256: c695e69f8cfffcb6ed978f1f29b1292a2638e4882a66ea8652052ba1e42fe8bc
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,9 @@ dependencies:
   - perl
   - readline
   - rrdtool
+linux_dependencies:
+  - libtirpc
+  - perl
+  - readline
+  - rrdtool
+  - zlib-ng-compat

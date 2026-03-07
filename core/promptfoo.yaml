@@ -3,16 +3,22 @@ version: 0.120.26
 description: Test your LLM app locally
 homepage: https://promptfoo.dev/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/promptfoo/blobs/sha256:487598999b9055e2f93022865806bb7b2a7c27086185799f203d6c8f9441fe94
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/promptfoo/blobs/sha256:d6d08e1a9928eecdb30e524de79d42921ed979e7a0c9d65446d5ce2a49a6df96
-  linux_amd64: https://ghcr.io/v2/homebrew/core/promptfoo/blobs/sha256:80f917ca68cf4192c7d9a2227adc9d44a2a389cf6bf9e2582e4625a87ce8795e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/promptfoo/blobs/sha256:94876482947603d227b59aad84fe136c490bac6f5ca627f89e019e21f0aa2df2
-sha256:
-  darwin_arm64: 487598999b9055e2f93022865806bb7b2a7c27086185799f203d6c8f9441fe94
-  darwin_amd64: d6d08e1a9928eecdb30e524de79d42921ed979e7a0c9d65446d5ce2a49a6df96
-  linux_amd64: 80f917ca68cf4192c7d9a2227adc9d44a2a389cf6bf9e2582e4625a87ce8795e
-  linux_arm64: 94876482947603d227b59aad84fe136c490bac6f5ca627f89e019e21f0aa2df2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/promptfoo/blobs/sha256:487598999b9055e2f93022865806bb7b2a7c27086185799f203d6c8f9441fe94
+    sha256: 487598999b9055e2f93022865806bb7b2a7c27086185799f203d6c8f9441fe94
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/promptfoo/blobs/sha256:d6d08e1a9928eecdb30e524de79d42921ed979e7a0c9d65446d5ce2a49a6df96
+    sha256: d6d08e1a9928eecdb30e524de79d42921ed979e7a0c9d65446d5ce2a49a6df96
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/promptfoo/blobs/sha256:80f917ca68cf4192c7d9a2227adc9d44a2a389cf6bf9e2582e4625a87ce8795e
+    sha256: 80f917ca68cf4192c7d9a2227adc9d44a2a389cf6bf9e2582e4625a87ce8795e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/promptfoo/blobs/sha256:94876482947603d227b59aad84fe136c490bac6f5ca627f89e019e21f0aa2df2
+    sha256: 94876482947603d227b59aad84fe136c490bac6f5ca627f89e019e21f0aa2df2
+source:
+  url: https://registry.npmjs.org/promptfoo/-/promptfoo-0.120.26.tgz
+  sha256: 2835ee7da76c4af2d1c938cbb41f932b1e84a1b838da59e3fd48b504d3b772bd
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,7 @@ dependencies:
   - vips
   - gettext
   - pcre2
+linux_dependencies:
+  - glib
+  - node
+  - vips

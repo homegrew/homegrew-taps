@@ -3,17 +3,25 @@ version: 0.5.17
 description: Jq-like command-line tool for markdown processing
 homepage: https://mqlang.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mq/blobs/sha256:1cd183201c8e394eb026a3833dd4b1f574bbe70077ef52674c65b19ca5f4f507
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mq/blobs/sha256:7a2dcc7b5a74d457eb87396b3f7a09c8c3a1563419dcd9d40659c00ca9baf1b9
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mq/blobs/sha256:bfee402e53082cb8a2e85c715bab7e22ac8354d61378d91a882ac4dbcc057c2e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mq/blobs/sha256:07341ffd6171218de92876c3bac2a09c03a29027cb20c8ecbd57e3a66a5a522e
-sha256:
-  darwin_arm64: 1cd183201c8e394eb026a3833dd4b1f574bbe70077ef52674c65b19ca5f4f507
-  darwin_amd64: 7a2dcc7b5a74d457eb87396b3f7a09c8c3a1563419dcd9d40659c00ca9baf1b9
-  linux_amd64: bfee402e53082cb8a2e85c715bab7e22ac8354d61378d91a882ac4dbcc057c2e
-  linux_arm64: 07341ffd6171218de92876c3bac2a09c03a29027cb20c8ecbd57e3a66a5a522e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mq/blobs/sha256:1cd183201c8e394eb026a3833dd4b1f574bbe70077ef52674c65b19ca5f4f507
+    sha256: 1cd183201c8e394eb026a3833dd4b1f574bbe70077ef52674c65b19ca5f4f507
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mq/blobs/sha256:7a2dcc7b5a74d457eb87396b3f7a09c8c3a1563419dcd9d40659c00ca9baf1b9
+    sha256: 7a2dcc7b5a74d457eb87396b3f7a09c8c3a1563419dcd9d40659c00ca9baf1b9
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mq/blobs/sha256:bfee402e53082cb8a2e85c715bab7e22ac8354d61378d91a882ac4dbcc057c2e
+    sha256: bfee402e53082cb8a2e85c715bab7e22ac8354d61378d91a882ac4dbcc057c2e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mq/blobs/sha256:07341ffd6171218de92876c3bac2a09c03a29027cb20c8ecbd57e3a66a5a522e
+    sha256: 07341ffd6171218de92876c3bac2a09c03a29027cb20c8ecbd57e3a66a5a522e
+source:
+  url: https://github.com/harehare/mq/archive/refs/tags/v0.5.17.tar.gz
+  sha256: ecbf2ec04c50441cb75b5fa18a5b477b6740efdf3f2eb5307c1896f453509c3d
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

@@ -3,16 +3,22 @@ version: 4.7.0
 description: Presenter console with multi-monitor support for PDF files
 homepage: https://pdfpc.github.io/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pdfpc/blobs/sha256:b76907d094e032d1c6d6f67be0b1774b0ceaaad44ec21102fcb82084ae8c94c2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pdfpc/blobs/sha256:c4b524c67133b5517f563706ba4ef91438ec35d0248ff362ef83147a612c9ae1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pdfpc/blobs/sha256:243cdb84ac1abdc284cc3ff854d68344f549cc4cb94755eccd7b5c20e1c892b7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pdfpc/blobs/sha256:b1d11c2674eedab4f24630c2f9dc2888815feaa14a321d29e237045890e2b01d
-sha256:
-  darwin_arm64: b76907d094e032d1c6d6f67be0b1774b0ceaaad44ec21102fcb82084ae8c94c2
-  darwin_amd64: c4b524c67133b5517f563706ba4ef91438ec35d0248ff362ef83147a612c9ae1
-  linux_amd64: 243cdb84ac1abdc284cc3ff854d68344f549cc4cb94755eccd7b5c20e1c892b7
-  linux_arm64: b1d11c2674eedab4f24630c2f9dc2888815feaa14a321d29e237045890e2b01d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pdfpc/blobs/sha256:b76907d094e032d1c6d6f67be0b1774b0ceaaad44ec21102fcb82084ae8c94c2
+    sha256: b76907d094e032d1c6d6f67be0b1774b0ceaaad44ec21102fcb82084ae8c94c2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pdfpc/blobs/sha256:c4b524c67133b5517f563706ba4ef91438ec35d0248ff362ef83147a612c9ae1
+    sha256: c4b524c67133b5517f563706ba4ef91438ec35d0248ff362ef83147a612c9ae1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pdfpc/blobs/sha256:243cdb84ac1abdc284cc3ff854d68344f549cc4cb94755eccd7b5c20e1c892b7
+    sha256: 243cdb84ac1abdc284cc3ff854d68344f549cc4cb94755eccd7b5c20e1c892b7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pdfpc/blobs/sha256:b1d11c2674eedab4f24630c2f9dc2888815feaa14a321d29e237045890e2b01d
+    sha256: b1d11c2674eedab4f24630c2f9dc2888815feaa14a321d29e237045890e2b01d
+source:
+  url: https://github.com/pdfpc/pdfpc/archive/refs/tags/v4.7.0.tar.gz
+  sha256: 0083a958a2e9288a15c31aabb76b3eadf104672b4e815017f31ffa0d87db02ec
 install:
   type: archive
   format: tar.gz
@@ -33,3 +39,20 @@ dependencies:
   - at-spi2-core
   - gettext
   - harfbuzz
+build_dependencies:
+  - cmake
+  - vala
+linux_dependencies:
+  - cairo
+  - discount
+  - gdk-pixbuf
+  - glib
+  - gstreamer
+  - gtk+3
+  - json-glib
+  - libgee
+  - librsvg
+  - libx11
+  - pango
+  - poppler
+  - webkitgtk

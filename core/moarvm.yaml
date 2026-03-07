@@ -3,16 +3,22 @@ version: 2026.02
 description: VM with adaptive optimization and JIT compilation, built for Rakudo
 homepage: https://moarvm.org
 license: Artistic-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:3a01dcd9b0e7724c7c7ce0eed616035551fa8d63f3a3145ab3d04aaadddb7657
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:c7ac78f36200c9def93cdd612e5cfb7cf1bf67acc7af2b18fec18abd8bfa87f0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:4e6449e114d379f2edb191f46998174473d6ce739edbc663f7a3260c53d163b4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:456708dc93d5aa5dac0b477f0e603d893ee3c67403d355471d93c33f558ce510
-sha256:
-  darwin_arm64: 3a01dcd9b0e7724c7c7ce0eed616035551fa8d63f3a3145ab3d04aaadddb7657
-  darwin_amd64: c7ac78f36200c9def93cdd612e5cfb7cf1bf67acc7af2b18fec18abd8bfa87f0
-  linux_amd64: 4e6449e114d379f2edb191f46998174473d6ce739edbc663f7a3260c53d163b4
-  linux_arm64: 456708dc93d5aa5dac0b477f0e603d893ee3c67403d355471d93c33f558ce510
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:3a01dcd9b0e7724c7c7ce0eed616035551fa8d63f3a3145ab3d04aaadddb7657
+    sha256: 3a01dcd9b0e7724c7c7ce0eed616035551fa8d63f3a3145ab3d04aaadddb7657
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:c7ac78f36200c9def93cdd612e5cfb7cf1bf67acc7af2b18fec18abd8bfa87f0
+    sha256: c7ac78f36200c9def93cdd612e5cfb7cf1bf67acc7af2b18fec18abd8bfa87f0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:4e6449e114d379f2edb191f46998174473d6ce739edbc663f7a3260c53d163b4
+    sha256: 4e6449e114d379f2edb191f46998174473d6ce739edbc663f7a3260c53d163b4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:456708dc93d5aa5dac0b477f0e603d893ee3c67403d355471d93c33f558ce510
+    sha256: 456708dc93d5aa5dac0b477f0e603d893ee3c67403d355471d93c33f558ce510
+source:
+  url: https://github.com/MoarVM/MoarVM/releases/download/2026.02/MoarVM-2026.02.tar.gz
+  sha256: 7c07f509fefeb8e9682e44e24a4f65bb401b6628444c39f1a8e6c7f4782b944c
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,9 @@ dependencies:
   - mimalloc
   - zstd
   - libuv
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - libtommath
+  - mimalloc
+  - zstd

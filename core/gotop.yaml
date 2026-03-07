@@ -3,17 +3,25 @@ version: 4.2.0
 description: Terminal based graphical activity monitor inspired by gtop and vtop
 homepage: https://github.com/xxxserxxx/gotop
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gotop/blobs/sha256:2df77e8cb01b137d9bd919582a8b7860e482d45b8f4e0249dbee557e63d4724f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gotop/blobs/sha256:e16d440d5b7db710a63baa9f0d115c89c24a5980d684850df98f1f86f7e7c5ed
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gotop/blobs/sha256:5b4323239fa19e80fcec5d8ef9ba94b5be4015ae9ca0be3c3a74e06a86f15f29
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gotop/blobs/sha256:0c1f077e391f23aa8bb0dd8d4e1ee181b0bf3416c50ab26f718c73268711b201
-sha256:
-  darwin_arm64: 2df77e8cb01b137d9bd919582a8b7860e482d45b8f4e0249dbee557e63d4724f
-  darwin_amd64: e16d440d5b7db710a63baa9f0d115c89c24a5980d684850df98f1f86f7e7c5ed
-  linux_amd64: 5b4323239fa19e80fcec5d8ef9ba94b5be4015ae9ca0be3c3a74e06a86f15f29
-  linux_arm64: 0c1f077e391f23aa8bb0dd8d4e1ee181b0bf3416c50ab26f718c73268711b201
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gotop/blobs/sha256:2df77e8cb01b137d9bd919582a8b7860e482d45b8f4e0249dbee557e63d4724f
+    sha256: 2df77e8cb01b137d9bd919582a8b7860e482d45b8f4e0249dbee557e63d4724f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gotop/blobs/sha256:e16d440d5b7db710a63baa9f0d115c89c24a5980d684850df98f1f86f7e7c5ed
+    sha256: e16d440d5b7db710a63baa9f0d115c89c24a5980d684850df98f1f86f7e7c5ed
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gotop/blobs/sha256:5b4323239fa19e80fcec5d8ef9ba94b5be4015ae9ca0be3c3a74e06a86f15f29
+    sha256: 5b4323239fa19e80fcec5d8ef9ba94b5be4015ae9ca0be3c3a74e06a86f15f29
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gotop/blobs/sha256:0c1f077e391f23aa8bb0dd8d4e1ee181b0bf3416c50ab26f718c73268711b201
+    sha256: 0c1f077e391f23aa8bb0dd8d4e1ee181b0bf3416c50ab26f718c73268711b201
+source:
+  url: https://github.com/xxxserxxx/gotop/archive/refs/tags/v4.2.0.tar.gz
+  sha256: e9d9041903acb6bd3ffe94e0a02e69eea53f1128274da1bfe00fe44331ccceb1
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

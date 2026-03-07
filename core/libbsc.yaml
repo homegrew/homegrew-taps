@@ -3,19 +3,27 @@ version: 3.3.12
 description: High performance block-sorting data compression library
 homepage: http://libbsc.com
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libbsc/blobs/sha256:854969cf0bcec5a2b0f200300dcb083612cb1d88aee5b22e192acde3460fbb2b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libbsc/blobs/sha256:b0fb4bcf12cb54f6457c48d6c3ab4140b1f0196ed1deb018633f013cb02121cf
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libbsc/blobs/sha256:a40d01db777bfa872f61fa03440755c8a5c13cca0002942b68f5f0c55e3f4215
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libbsc/blobs/sha256:823338cedcf64c6f7de67238c9e71f5117011b009167301069674aeaadeb1253
-sha256:
-  darwin_arm64: 854969cf0bcec5a2b0f200300dcb083612cb1d88aee5b22e192acde3460fbb2b
-  darwin_amd64: b0fb4bcf12cb54f6457c48d6c3ab4140b1f0196ed1deb018633f013cb02121cf
-  linux_amd64: a40d01db777bfa872f61fa03440755c8a5c13cca0002942b68f5f0c55e3f4215
-  linux_arm64: 823338cedcf64c6f7de67238c9e71f5117011b009167301069674aeaadeb1253
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libbsc/blobs/sha256:854969cf0bcec5a2b0f200300dcb083612cb1d88aee5b22e192acde3460fbb2b
+    sha256: 854969cf0bcec5a2b0f200300dcb083612cb1d88aee5b22e192acde3460fbb2b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libbsc/blobs/sha256:b0fb4bcf12cb54f6457c48d6c3ab4140b1f0196ed1deb018633f013cb02121cf
+    sha256: b0fb4bcf12cb54f6457c48d6c3ab4140b1f0196ed1deb018633f013cb02121cf
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libbsc/blobs/sha256:a40d01db777bfa872f61fa03440755c8a5c13cca0002942b68f5f0c55e3f4215
+    sha256: a40d01db777bfa872f61fa03440755c8a5c13cca0002942b68f5f0c55e3f4215
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libbsc/blobs/sha256:823338cedcf64c6f7de67238c9e71f5117011b009167301069674aeaadeb1253
+    sha256: 823338cedcf64c6f7de67238c9e71f5117011b009167301069674aeaadeb1253
+source:
+  url: https://github.com/IlyaGrebnov/libbsc/archive/refs/tags/v3.3.12.tar.gz
+  sha256: 3d8eee9351468bdd3fb3bc28dda0e24cfc0332997eb0210ea7bd548d77c3d194
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - libomp
+build_dependencies:
+  - cmake

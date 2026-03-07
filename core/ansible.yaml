@@ -3,16 +3,22 @@ version: 13.4.0
 description: Automate deployment, configuration, and upgrading
 homepage: https://www.ansible.com/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:c7b41c4377c78c4134033e6804233ddd66761a62cfa45daa2c5589d00687cabe
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:76d81b6bc6c476ea33d283a41e7fd8b32e01f8e25347189007e8fb7e5838d436
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:3e3f1dbff7439369c3931c6c1e5fb5b393a8f65e2e82b01eeb83324197278adc
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:558515223f5fc8c37b21420b5316433571aba430f2b424cc9541bb34aa34150e
-sha256:
-  darwin_arm64: c7b41c4377c78c4134033e6804233ddd66761a62cfa45daa2c5589d00687cabe
-  darwin_amd64: 76d81b6bc6c476ea33d283a41e7fd8b32e01f8e25347189007e8fb7e5838d436
-  linux_amd64: 3e3f1dbff7439369c3931c6c1e5fb5b393a8f65e2e82b01eeb83324197278adc
-  linux_arm64: 558515223f5fc8c37b21420b5316433571aba430f2b424cc9541bb34aa34150e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:c7b41c4377c78c4134033e6804233ddd66761a62cfa45daa2c5589d00687cabe
+    sha256: c7b41c4377c78c4134033e6804233ddd66761a62cfa45daa2c5589d00687cabe
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:76d81b6bc6c476ea33d283a41e7fd8b32e01f8e25347189007e8fb7e5838d436
+    sha256: 76d81b6bc6c476ea33d283a41e7fd8b32e01f8e25347189007e8fb7e5838d436
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:3e3f1dbff7439369c3931c6c1e5fb5b393a8f65e2e82b01eeb83324197278adc
+    sha256: 3e3f1dbff7439369c3931c6c1e5fb5b393a8f65e2e82b01eeb83324197278adc
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:558515223f5fc8c37b21420b5316433571aba430f2b424cc9541bb34aa34150e
+    sha256: 558515223f5fc8c37b21420b5316433571aba430f2b424cc9541bb34aa34150e
+source:
+  url: https://files.pythonhosted.org/packages/e9/46/4f064be3a13f1239f259b3e6ebe94d52d609aac430eeaa6a0b36a5ca071d/ansible-13.4.0.tar.gz
+  sha256: 6d741511abc1f724443aa16992fb615cc822a22da427ade925ff937ccd691eb1
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,6 @@ dependencies:
   - libyaml
   - python@3.14
   - tree
+build_dependencies:
+  - pkgconf
+  - rust

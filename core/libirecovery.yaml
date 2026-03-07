@@ -3,16 +3,22 @@ version: 1.3.1
 description: Library and utility to talk to iBoot/iBSS via USB
 homepage: https://www.libimobiledevice.org/
 license: LGPL-2.1-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:14126dca02da81d6266e719840639fa3c7dba674a7fe5e22fe39c856f5f1eafd
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:95cb02d908ffb064784fd215510258e01417621f2689df80a7e702c7b02b3d96
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:e51daa52330dffe61ac4fa323b48023c9d638e960d977ddd0bc834d2d5483639
-sha256:
-  darwin_arm64: 14126dca02da81d6266e719840639fa3c7dba674a7fe5e22fe39c856f5f1eafd
-  darwin_amd64: 139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
-  linux_amd64: 95cb02d908ffb064784fd215510258e01417621f2689df80a7e702c7b02b3d96
-  linux_arm64: e51daa52330dffe61ac4fa323b48023c9d638e960d977ddd0bc834d2d5483639
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:14126dca02da81d6266e719840639fa3c7dba674a7fe5e22fe39c856f5f1eafd
+    sha256: 14126dca02da81d6266e719840639fa3c7dba674a7fe5e22fe39c856f5f1eafd
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
+    sha256: 139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:95cb02d908ffb064784fd215510258e01417621f2689df80a7e702c7b02b3d96
+    sha256: 95cb02d908ffb064784fd215510258e01417621f2689df80a7e702c7b02b3d96
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:e51daa52330dffe61ac4fa323b48023c9d638e960d977ddd0bc834d2d5483639
+    sha256: e51daa52330dffe61ac4fa323b48023c9d638e960d977ddd0bc834d2d5483639
+source:
+  url: https://github.com/libimobiledevice/libirecovery/releases/download/1.3.1/libirecovery-1.3.1.tar.bz2
+  sha256: 28a3a521782063c8eb2ee5f4c0f38a517e023853edb55856052cdd7ac400381b
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,12 @@ install:
 dependencies:
   - libimobiledevice-glue
   - libplist
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf
+linux_dependencies:
+  - libimobiledevice-glue
+  - libusb
+  - readline

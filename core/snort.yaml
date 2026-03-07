@@ -3,16 +3,22 @@ version: 3.11.1.0
 description: Flexible Network Intrusion Detection System
 homepage: https://www.snort.org
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:177d8367bd804e840b652dc80456c60fbd0fc36de2dec314c237f6dc63f9051a
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:c08a26e8c78cd44ea33713777630d0aecd8e54dd081ece075fe8408083c29fbc
-  linux_amd64: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:cf72acf3710c8cd48b1e88606e59bfd1e87645147563831ec5fab7614f0263c6
-  linux_arm64: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:6d611cb0f3e8dddbe82d7014d246da1ac49c7b1d04109c74ebee550d30693cdf
-sha256:
-  darwin_arm64: 177d8367bd804e840b652dc80456c60fbd0fc36de2dec314c237f6dc63f9051a
-  darwin_amd64: c08a26e8c78cd44ea33713777630d0aecd8e54dd081ece075fe8408083c29fbc
-  linux_amd64: cf72acf3710c8cd48b1e88606e59bfd1e87645147563831ec5fab7614f0263c6
-  linux_arm64: 6d611cb0f3e8dddbe82d7014d246da1ac49c7b1d04109c74ebee550d30693cdf
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:177d8367bd804e840b652dc80456c60fbd0fc36de2dec314c237f6dc63f9051a
+    sha256: 177d8367bd804e840b652dc80456c60fbd0fc36de2dec314c237f6dc63f9051a
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:c08a26e8c78cd44ea33713777630d0aecd8e54dd081ece075fe8408083c29fbc
+    sha256: c08a26e8c78cd44ea33713777630d0aecd8e54dd081ece075fe8408083c29fbc
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:cf72acf3710c8cd48b1e88606e59bfd1e87645147563831ec5fab7614f0263c6
+    sha256: cf72acf3710c8cd48b1e88606e59bfd1e87645147563831ec5fab7614f0263c6
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:6d611cb0f3e8dddbe82d7014d246da1ac49c7b1d04109c74ebee550d30693cdf
+    sha256: 6d611cb0f3e8dddbe82d7014d246da1ac49c7b1d04109c74ebee550d30693cdf
+source:
+  url: https://github.com/snort3/snort3/archive/refs/tags/3.11.1.0.tar.gz
+  sha256: 9465d19b0925088266504e8962e97e55359bafd6a19f66b4169dcd21ef1d8ec5
 install:
   type: archive
   format: tar.gz
@@ -28,3 +34,20 @@ dependencies:
   - pcre2
   - vectorscan
   - xz
+build_dependencies:
+  - cmake
+  - flex
+  - pkgconf
+linux_dependencies:
+  - daq
+  - hwloc
+  - jemalloc
+  - libdnet
+  - libpcap
+  - libunwind
+  - luajit
+  - openssl@3
+  - pcre2
+  - vectorscan
+  - xz
+  - zlib-ng-compat

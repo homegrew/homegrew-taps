@@ -3,16 +3,22 @@ version: 1.14.0
 description: Vehicle Routing Open-Source Optimization Machine
 homepage: http://vroom-project.org/
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vroom/blobs/sha256:603f9db571c5a11951f2d2f7a07e4a1108c07798cd1f347dbf4736e6baf6d7b3
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vroom/blobs/sha256:e4173177423d3cc154d5a13b740793bd9045ad5c410e224e91766d35a8fa1b33
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vroom/blobs/sha256:8d7e36a54cfde07f9cf24edfdc3ff570621414264cd20f4d4b9a83c2e9b8dab3
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vroom/blobs/sha256:3c01b046eb63ab22c7567f7ecfe3f48dabdb17f410658184e11eecf32ddb5ff2
-sha256:
-  darwin_arm64: 603f9db571c5a11951f2d2f7a07e4a1108c07798cd1f347dbf4736e6baf6d7b3
-  darwin_amd64: e4173177423d3cc154d5a13b740793bd9045ad5c410e224e91766d35a8fa1b33
-  linux_amd64: 8d7e36a54cfde07f9cf24edfdc3ff570621414264cd20f4d4b9a83c2e9b8dab3
-  linux_arm64: 3c01b046eb63ab22c7567f7ecfe3f48dabdb17f410658184e11eecf32ddb5ff2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vroom/blobs/sha256:603f9db571c5a11951f2d2f7a07e4a1108c07798cd1f347dbf4736e6baf6d7b3
+    sha256: 603f9db571c5a11951f2d2f7a07e4a1108c07798cd1f347dbf4736e6baf6d7b3
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vroom/blobs/sha256:e4173177423d3cc154d5a13b740793bd9045ad5c410e224e91766d35a8fa1b33
+    sha256: e4173177423d3cc154d5a13b740793bd9045ad5c410e224e91766d35a8fa1b33
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vroom/blobs/sha256:8d7e36a54cfde07f9cf24edfdc3ff570621414264cd20f4d4b9a83c2e9b8dab3
+    sha256: 8d7e36a54cfde07f9cf24edfdc3ff570621414264cd20f4d4b9a83c2e9b8dab3
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vroom/blobs/sha256:3c01b046eb63ab22c7567f7ecfe3f48dabdb17f410658184e11eecf32ddb5ff2
+    sha256: 3c01b046eb63ab22c7567f7ecfe3f48dabdb17f410658184e11eecf32ddb5ff2
+source:
+  url: https://github.com/VROOM-Project/vroom.git
+  sha256: 
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,7 @@ install:
 dependencies:
   - asio
   - openssl@3
+build_dependencies:
+  - cxxopts
+  - pkgconf
+  - rapidjson

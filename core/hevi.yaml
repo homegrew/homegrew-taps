@@ -3,17 +3,25 @@ version: 1.1.0
 description: Hex viewer
 homepage: https://codeberg.org/arnauc/hevi
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/hevi/blobs/sha256:76e18798c302421d681fdb0d0cada44b315b40f8e1a931122bc89ca4f658b5ed
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/hevi/blobs/sha256:c023afee5920d4732b9a9dd8d85e0c2922a877cb51b288901ea93bbb90897b37
-  linux_amd64: https://ghcr.io/v2/homebrew/core/hevi/blobs/sha256:98a58cbce9389c32d13ddf68be6a62b89113000d5ae6f82711174b90cf63174e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/hevi/blobs/sha256:99c83848d5160f04004119a73ffe2a2ba4ad978cc8c5d99d6faccf2f56d1218c
-sha256:
-  darwin_arm64: 76e18798c302421d681fdb0d0cada44b315b40f8e1a931122bc89ca4f658b5ed
-  darwin_amd64: c023afee5920d4732b9a9dd8d85e0c2922a877cb51b288901ea93bbb90897b37
-  linux_amd64: 98a58cbce9389c32d13ddf68be6a62b89113000d5ae6f82711174b90cf63174e
-  linux_arm64: 99c83848d5160f04004119a73ffe2a2ba4ad978cc8c5d99d6faccf2f56d1218c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/hevi/blobs/sha256:76e18798c302421d681fdb0d0cada44b315b40f8e1a931122bc89ca4f658b5ed
+    sha256: 76e18798c302421d681fdb0d0cada44b315b40f8e1a931122bc89ca4f658b5ed
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/hevi/blobs/sha256:c023afee5920d4732b9a9dd8d85e0c2922a877cb51b288901ea93bbb90897b37
+    sha256: c023afee5920d4732b9a9dd8d85e0c2922a877cb51b288901ea93bbb90897b37
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/hevi/blobs/sha256:98a58cbce9389c32d13ddf68be6a62b89113000d5ae6f82711174b90cf63174e
+    sha256: 98a58cbce9389c32d13ddf68be6a62b89113000d5ae6f82711174b90cf63174e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/hevi/blobs/sha256:99c83848d5160f04004119a73ffe2a2ba4ad978cc8c5d99d6faccf2f56d1218c
+    sha256: 99c83848d5160f04004119a73ffe2a2ba4ad978cc8c5d99d6faccf2f56d1218c
+source:
+  url: https://codeberg.org/arnauc/hevi/archive/v1.1.0.tar.gz
+  sha256: 8ad6a056cd7ae5e3ba52abeffc7e1c45f591266cf5896d8decb7e487a7596db9
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - zig

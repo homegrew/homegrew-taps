@@ -3,16 +3,22 @@ version: 0.8.5
 description: Spreadsheet program for the terminal, using ncurses
 homepage: https://github.com/andmarti1424/sc-im
 license: BSD-4-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/sc-im/blobs/sha256:1cc0a6f1c2ceaed2882bdfc320acff02e3aeca823226cffad9f9b53e5184d206
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/sc-im/blobs/sha256:9335efab4aba90b13bdef0d33547d82115a5f2ef08b1cfa3a2583bf10e7be3ca
-  linux_amd64: https://ghcr.io/v2/homebrew/core/sc-im/blobs/sha256:7c24185e644c1c3e654b8006f7aae4b9d62cfac6cac39f7b8d7dae27583bb43a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/sc-im/blobs/sha256:396e61cf946e7cf03a9f0712a9154589ca12bb6617f16b999e737988136a2a31
-sha256:
-  darwin_arm64: 1cc0a6f1c2ceaed2882bdfc320acff02e3aeca823226cffad9f9b53e5184d206
-  darwin_amd64: 9335efab4aba90b13bdef0d33547d82115a5f2ef08b1cfa3a2583bf10e7be3ca
-  linux_amd64: 7c24185e644c1c3e654b8006f7aae4b9d62cfac6cac39f7b8d7dae27583bb43a
-  linux_arm64: 396e61cf946e7cf03a9f0712a9154589ca12bb6617f16b999e737988136a2a31
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sc-im/blobs/sha256:1cc0a6f1c2ceaed2882bdfc320acff02e3aeca823226cffad9f9b53e5184d206
+    sha256: 1cc0a6f1c2ceaed2882bdfc320acff02e3aeca823226cffad9f9b53e5184d206
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sc-im/blobs/sha256:9335efab4aba90b13bdef0d33547d82115a5f2ef08b1cfa3a2583bf10e7be3ca
+    sha256: 9335efab4aba90b13bdef0d33547d82115a5f2ef08b1cfa3a2583bf10e7be3ca
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sc-im/blobs/sha256:7c24185e644c1c3e654b8006f7aae4b9d62cfac6cac39f7b8d7dae27583bb43a
+    sha256: 7c24185e644c1c3e654b8006f7aae4b9d62cfac6cac39f7b8d7dae27583bb43a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sc-im/blobs/sha256:396e61cf946e7cf03a9f0712a9154589ca12bb6617f16b999e737988136a2a31
+    sha256: 396e61cf946e7cf03a9f0712a9154589ca12bb6617f16b999e737988136a2a31
+source:
+  url: https://github.com/andmarti1424/sc-im/archive/refs/tags/v0.8.5.tar.gz
+  sha256: 49adb76fc55bc3e6ea8ee414f41428db4aef947e247718d9210be8d14a6524bd
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,5 @@ dependencies:
   - libzip
   - lua
   - ncurses
+build_dependencies:
+  - pkgconf

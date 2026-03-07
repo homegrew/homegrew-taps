@@ -3,17 +3,25 @@ version: 0.10.2
 description: Copy/paste anything over the network
 homepage: https://github.com/jedisct1/piknik
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:1f7929f75bf041543fa64ab97f1d36ae8bda93d70ab052e9e6e886c1fad752e6
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:794e44f78e1ac05b76da93e9ebcd02080d4dae1fbcdb5e186fd8779215499136
-  linux_amd64: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:ec30a0fe6f7a5e8995c8f14174d5e7fd5e51a843db398bdf1e5d05b5a1c0fa74
-  linux_arm64: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:b1b1c1a5ddc70994723a063303873b3283283e42bc38267630ffe613195e16bd
-sha256:
-  darwin_arm64: 1f7929f75bf041543fa64ab97f1d36ae8bda93d70ab052e9e6e886c1fad752e6
-  darwin_amd64: 794e44f78e1ac05b76da93e9ebcd02080d4dae1fbcdb5e186fd8779215499136
-  linux_amd64: ec30a0fe6f7a5e8995c8f14174d5e7fd5e51a843db398bdf1e5d05b5a1c0fa74
-  linux_arm64: b1b1c1a5ddc70994723a063303873b3283283e42bc38267630ffe613195e16bd
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:1f7929f75bf041543fa64ab97f1d36ae8bda93d70ab052e9e6e886c1fad752e6
+    sha256: 1f7929f75bf041543fa64ab97f1d36ae8bda93d70ab052e9e6e886c1fad752e6
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:794e44f78e1ac05b76da93e9ebcd02080d4dae1fbcdb5e186fd8779215499136
+    sha256: 794e44f78e1ac05b76da93e9ebcd02080d4dae1fbcdb5e186fd8779215499136
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:ec30a0fe6f7a5e8995c8f14174d5e7fd5e51a843db398bdf1e5d05b5a1c0fa74
+    sha256: ec30a0fe6f7a5e8995c8f14174d5e7fd5e51a843db398bdf1e5d05b5a1c0fa74
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:b1b1c1a5ddc70994723a063303873b3283283e42bc38267630ffe613195e16bd
+    sha256: b1b1c1a5ddc70994723a063303873b3283283e42bc38267630ffe613195e16bd
+source:
+  url: https://github.com/jedisct1/piknik/archive/refs/tags/0.10.2.tar.gz
+  sha256: 937e98cc80569e4e295baa0ad7fa998da593af137eb33e191b12b23d2ca3a666
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

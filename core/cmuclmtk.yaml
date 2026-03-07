@@ -3,17 +3,25 @@ version: 0.7
 description: Language model tools (from CMU Sphinx)
 homepage: https://cmusphinx.sourceforge.net/
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cmuclmtk/blobs/sha256:e382dbebb03c49d129bb2eacd23102d828d9814296bb751f275e2bd5cd4ac8e4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cmuclmtk/blobs/sha256:1585ae5f93e266d9189c985072808f6731b1ce52c75cc58d2caf4c27ec9edf4f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cmuclmtk/blobs/sha256:708324bb6cf751c76f927c6a648416ee38012499dddfc80c4b2c50cf36431c4d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cmuclmtk/blobs/sha256:fbf62c45fadfecaf2d9cd51668c6ea132d904afe1e456f099f067427667b1284
-sha256:
-  darwin_arm64: e382dbebb03c49d129bb2eacd23102d828d9814296bb751f275e2bd5cd4ac8e4
-  darwin_amd64: 1585ae5f93e266d9189c985072808f6731b1ce52c75cc58d2caf4c27ec9edf4f
-  linux_amd64: 708324bb6cf751c76f927c6a648416ee38012499dddfc80c4b2c50cf36431c4d
-  linux_arm64: fbf62c45fadfecaf2d9cd51668c6ea132d904afe1e456f099f067427667b1284
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cmuclmtk/blobs/sha256:e382dbebb03c49d129bb2eacd23102d828d9814296bb751f275e2bd5cd4ac8e4
+    sha256: e382dbebb03c49d129bb2eacd23102d828d9814296bb751f275e2bd5cd4ac8e4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cmuclmtk/blobs/sha256:1585ae5f93e266d9189c985072808f6731b1ce52c75cc58d2caf4c27ec9edf4f
+    sha256: 1585ae5f93e266d9189c985072808f6731b1ce52c75cc58d2caf4c27ec9edf4f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cmuclmtk/blobs/sha256:708324bb6cf751c76f927c6a648416ee38012499dddfc80c4b2c50cf36431c4d
+    sha256: 708324bb6cf751c76f927c6a648416ee38012499dddfc80c4b2c50cf36431c4d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cmuclmtk/blobs/sha256:fbf62c45fadfecaf2d9cd51668c6ea132d904afe1e456f099f067427667b1284
+    sha256: fbf62c45fadfecaf2d9cd51668c6ea132d904afe1e456f099f067427667b1284
+source:
+  url: https://downloads.sourceforge.net/project/cmusphinx/cmuclmtk/0.7/cmuclmtk-0.7.tar.gz
+  sha256: d23e47f00224667c059d69ac942f15dc3d4c3dd40e827318a6213699b7fa2915
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - pkgconf

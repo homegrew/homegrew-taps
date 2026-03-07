@@ -3,19 +3,31 @@ version: 4.5.2
 description: Library for Gigasampler and DLS (Downloadable Sounds) Level 1/2 files
 homepage: https://www.linuxsampler.org/libgig/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:e08b4cbd024fad1e563040ed574ced16e22ee0b3fb72a084e0375eafe9c7a102
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:68ce5928dba5671504d28a8268fc58b8ab5e1dd6cc85e2d65cc46a51f1665cdd
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:a528fc44ec562e7304d15d3be8728a35c32a209f82985bd99f59cb5b03fbc781
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:7c7488a743c560200d37a7620fe90c4f480134d944f8c81efb3458feff9e61e7
-sha256:
-  darwin_arm64: e08b4cbd024fad1e563040ed574ced16e22ee0b3fb72a084e0375eafe9c7a102
-  darwin_amd64: 68ce5928dba5671504d28a8268fc58b8ab5e1dd6cc85e2d65cc46a51f1665cdd
-  linux_amd64: a528fc44ec562e7304d15d3be8728a35c32a209f82985bd99f59cb5b03fbc781
-  linux_arm64: 7c7488a743c560200d37a7620fe90c4f480134d944f8c81efb3458feff9e61e7
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:58e7797503b7e5ef6da0a9c83309c61961fbecb1526d5fdbc6b76c566aef9ac1
+    sha256: 58e7797503b7e5ef6da0a9c83309c61961fbecb1526d5fdbc6b76c566aef9ac1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:39a06918cb0cd0bb14f245f8927e00c4e2a0cd94c90024089cfcc54343bf85b5
+    sha256: 39a06918cb0cd0bb14f245f8927e00c4e2a0cd94c90024089cfcc54343bf85b5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:9c4bd1c437f242d035116f3d2f136076d4599de01d8b0bea1309daec3f9ccfe2
+    sha256: 9c4bd1c437f242d035116f3d2f136076d4599de01d8b0bea1309daec3f9ccfe2
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:48e26ac9b17ef9b5e60d335f036853dd0cac878b735596ddf79bac241c216011
+    sha256: 48e26ac9b17ef9b5e60d335f036853dd0cac878b735596ddf79bac241c216011
+source:
+  url: https://download.linuxsampler.org/packages/libgig-4.5.2.tar.bz2
+  sha256: ca2be8ce5e0969f90c2df76e03d499f5e27fb5021edbc587de182ff27e8efddd
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - libsndfile
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - e2fsprogs
+  - libsndfile
+  - util-linux

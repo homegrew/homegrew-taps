@@ -3,16 +3,22 @@ version: 4.4.0.1
 description: Library for bits of crypto UI and parsing
 homepage: https://gitlab.gnome.org/GNOME/gcr
 license: LGPL-2.0-or-later AND LGPL-2.1-or-later AND GPL-2.0-or-later AND FSFULLRWD
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gcr/blobs/sha256:8a8b247f36bfc6a6343b6c4ea5de1b981d727f1a3b21c6b6185c6059baf806ff
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gcr/blobs/sha256:004a771f4d6e7194c3a1650d26be0eca85adbc5b3df92876ccc74d5aefe9ea1b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gcr/blobs/sha256:7ea854a5ee93e6e1ca91d593571b5881f3b387dc3a4ac5bb2e44daf3b4e99111
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gcr/blobs/sha256:57a4fea0430975807d6258ef58dda22db6eae2ac78b78d29876d9879dfc26977
-sha256:
-  darwin_arm64: 8a8b247f36bfc6a6343b6c4ea5de1b981d727f1a3b21c6b6185c6059baf806ff
-  darwin_amd64: 004a771f4d6e7194c3a1650d26be0eca85adbc5b3df92876ccc74d5aefe9ea1b
-  linux_amd64: 7ea854a5ee93e6e1ca91d593571b5881f3b387dc3a4ac5bb2e44daf3b4e99111
-  linux_arm64: 57a4fea0430975807d6258ef58dda22db6eae2ac78b78d29876d9879dfc26977
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gcr/blobs/sha256:8a8b247f36bfc6a6343b6c4ea5de1b981d727f1a3b21c6b6185c6059baf806ff
+    sha256: 8a8b247f36bfc6a6343b6c4ea5de1b981d727f1a3b21c6b6185c6059baf806ff
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gcr/blobs/sha256:004a771f4d6e7194c3a1650d26be0eca85adbc5b3df92876ccc74d5aefe9ea1b
+    sha256: 004a771f4d6e7194c3a1650d26be0eca85adbc5b3df92876ccc74d5aefe9ea1b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gcr/blobs/sha256:7ea854a5ee93e6e1ca91d593571b5881f3b387dc3a4ac5bb2e44daf3b4e99111
+    sha256: 7ea854a5ee93e6e1ca91d593571b5881f3b387dc3a4ac5bb2e44daf3b4e99111
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gcr/blobs/sha256:57a4fea0430975807d6258ef58dda22db6eae2ac78b78d29876d9879dfc26977
+    sha256: 57a4fea0430975807d6258ef58dda22db6eae2ac78b78d29876d9879dfc26977
+source:
+  url: https://download.gnome.org/sources/gcr/4.4/gcr-4.4.0.1.tar.xz
+  sha256: 0c3c341e49f9f4f2532a4884509804190a0c2663e6120360bb298c5d174a8098
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,18 @@ dependencies:
   - libsecret
   - p11-kit
   - gettext
+build_dependencies:
+  - gettext
+  - gobject-introspection
+  - meson
+  - ninja
+  - pkgconf
+  - vala
+linux_dependencies:
+  - glib
+  - gnupg
+  - libgcrypt
+  - libsecret
+  - openssh
+  - p11-kit
+  - systemd

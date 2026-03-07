@@ -3,16 +3,22 @@ version: 3.0.20
 description: Implementation of iCalendar protocols and data formats
 homepage: https://libical.github.io/libical/
 license: LGPL-2.1-or-later OR MPL-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libical/blobs/sha256:9947b3e026805b69dd932ff37e8f5b038f33d55042783f01320805aa0eaf2525
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libical/blobs/sha256:8cc7a1bc62d20db855e43f0c2c42cccb9cc17e2c14fe4bc2779ce40e410df32d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libical/blobs/sha256:e5cc9dc2fa2fe2deca5871429fc5f2023a9ca677f23d9680804652514a03edb2
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libical/blobs/sha256:e3662c9b1e5cf9c1f2824266ef71cebcc93dde2cef195477c1238f968353516f
-sha256:
-  darwin_arm64: 9947b3e026805b69dd932ff37e8f5b038f33d55042783f01320805aa0eaf2525
-  darwin_amd64: 8cc7a1bc62d20db855e43f0c2c42cccb9cc17e2c14fe4bc2779ce40e410df32d
-  linux_amd64: e5cc9dc2fa2fe2deca5871429fc5f2023a9ca677f23d9680804652514a03edb2
-  linux_arm64: e3662c9b1e5cf9c1f2824266ef71cebcc93dde2cef195477c1238f968353516f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libical/blobs/sha256:9947b3e026805b69dd932ff37e8f5b038f33d55042783f01320805aa0eaf2525
+    sha256: 9947b3e026805b69dd932ff37e8f5b038f33d55042783f01320805aa0eaf2525
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libical/blobs/sha256:8cc7a1bc62d20db855e43f0c2c42cccb9cc17e2c14fe4bc2779ce40e410df32d
+    sha256: 8cc7a1bc62d20db855e43f0c2c42cccb9cc17e2c14fe4bc2779ce40e410df32d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libical/blobs/sha256:e5cc9dc2fa2fe2deca5871429fc5f2023a9ca677f23d9680804652514a03edb2
+    sha256: e5cc9dc2fa2fe2deca5871429fc5f2023a9ca677f23d9680804652514a03edb2
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libical/blobs/sha256:e3662c9b1e5cf9c1f2824266ef71cebcc93dde2cef195477c1238f968353516f
+    sha256: e3662c9b1e5cf9c1f2824266ef71cebcc93dde2cef195477c1238f968353516f
+source:
+  url: https://github.com/libical/libical/releases/download/v3.0.20/libical-3.0.20.tar.gz
+  sha256: e73de92f5a6ce84c1b00306446b290a2b08cdf0a80988eca0a2c9d5c3510b4c2
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,10 @@ dependencies:
   - glib
   - icu4c@78
   - gettext
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - berkeley-db@5
+  - glib
+  - icu4c@78

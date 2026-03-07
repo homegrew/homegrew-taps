@@ -3,19 +3,27 @@ version: 0.5.1
 description: "Implementation of Signal's ratcheting forward secrecy protocol"
 homepage: https://github.com/dino/libomemo-c
 license: GPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libomemo-c/blobs/sha256:6aeea5ebef3efeaa6574535934720c669623385944ba942643c71826b54b2e09
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libomemo-c/blobs/sha256:b0255f92cf0699734dcc7bc612c8d9936c0d8a49fce2626a95cb366e52c2ee51
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libomemo-c/blobs/sha256:025532b47c92f3c63c4f7dda9c99423e3f1d191f03594473d62b83150402b84b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libomemo-c/blobs/sha256:2100e33cf8efbc544f7dc76e787b56bd2cd4d058ac36807d008bc480d9a135a4
-sha256:
-  darwin_arm64: 6aeea5ebef3efeaa6574535934720c669623385944ba942643c71826b54b2e09
-  darwin_amd64: b0255f92cf0699734dcc7bc612c8d9936c0d8a49fce2626a95cb366e52c2ee51
-  linux_amd64: 025532b47c92f3c63c4f7dda9c99423e3f1d191f03594473d62b83150402b84b
-  linux_arm64: 2100e33cf8efbc544f7dc76e787b56bd2cd4d058ac36807d008bc480d9a135a4
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libomemo-c/blobs/sha256:6aeea5ebef3efeaa6574535934720c669623385944ba942643c71826b54b2e09
+    sha256: 6aeea5ebef3efeaa6574535934720c669623385944ba942643c71826b54b2e09
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libomemo-c/blobs/sha256:b0255f92cf0699734dcc7bc612c8d9936c0d8a49fce2626a95cb366e52c2ee51
+    sha256: b0255f92cf0699734dcc7bc612c8d9936c0d8a49fce2626a95cb366e52c2ee51
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libomemo-c/blobs/sha256:025532b47c92f3c63c4f7dda9c99423e3f1d191f03594473d62b83150402b84b
+    sha256: 025532b47c92f3c63c4f7dda9c99423e3f1d191f03594473d62b83150402b84b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libomemo-c/blobs/sha256:2100e33cf8efbc544f7dc76e787b56bd2cd4d058ac36807d008bc480d9a135a4
+    sha256: 2100e33cf8efbc544f7dc76e787b56bd2cd4d058ac36807d008bc480d9a135a4
+source:
+  url: https://github.com/dino/libomemo-c/archive/refs/tags/v0.5.1.tar.gz
+  sha256: d1b65dbf7bccc67523abfd5e429707f540b2532932d128b2982f0246be2b22a0
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - protobuf-c
+build_dependencies:
+  - cmake

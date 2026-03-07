@@ -3,17 +3,25 @@ version: 26.2.3
 description: Dig into ClickHouse with TUI interface
 homepage: https://github.com/azat/chdig
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/chdig/blobs/sha256:82b1f8af833047a8f9a11173fbcc6054c9c4d17d75e432da6bde14064ad51063
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/chdig/blobs/sha256:1fca71ddde544243c3858e3c5a7cdafa5c17fa6376dd33da4d70f5b30ea64e15
-  linux_amd64: https://ghcr.io/v2/homebrew/core/chdig/blobs/sha256:25b9891422340d3d4aa85d9ed8b7d91263a4aa2c45cbe8a8392b12b5d52326b4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/chdig/blobs/sha256:807cc8744cd3ce84156d3c5a716d3e98a1faab59c8535b4318249faff64eb89a
-sha256:
-  darwin_arm64: 82b1f8af833047a8f9a11173fbcc6054c9c4d17d75e432da6bde14064ad51063
-  darwin_amd64: 1fca71ddde544243c3858e3c5a7cdafa5c17fa6376dd33da4d70f5b30ea64e15
-  linux_amd64: 25b9891422340d3d4aa85d9ed8b7d91263a4aa2c45cbe8a8392b12b5d52326b4
-  linux_arm64: 807cc8744cd3ce84156d3c5a716d3e98a1faab59c8535b4318249faff64eb89a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/chdig/blobs/sha256:82b1f8af833047a8f9a11173fbcc6054c9c4d17d75e432da6bde14064ad51063
+    sha256: 82b1f8af833047a8f9a11173fbcc6054c9c4d17d75e432da6bde14064ad51063
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/chdig/blobs/sha256:1fca71ddde544243c3858e3c5a7cdafa5c17fa6376dd33da4d70f5b30ea64e15
+    sha256: 1fca71ddde544243c3858e3c5a7cdafa5c17fa6376dd33da4d70f5b30ea64e15
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/chdig/blobs/sha256:25b9891422340d3d4aa85d9ed8b7d91263a4aa2c45cbe8a8392b12b5d52326b4
+    sha256: 25b9891422340d3d4aa85d9ed8b7d91263a4aa2c45cbe8a8392b12b5d52326b4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/chdig/blobs/sha256:807cc8744cd3ce84156d3c5a716d3e98a1faab59c8535b4318249faff64eb89a
+    sha256: 807cc8744cd3ce84156d3c5a716d3e98a1faab59c8535b4318249faff64eb89a
+source:
+  url: https://github.com/azat/chdig/archive/refs/tags/v26.2.3.tar.gz
+  sha256: 5e05de1cee0db50bbb709887ddf04625029756963edb5e2497e7ef86d03b3e7d
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

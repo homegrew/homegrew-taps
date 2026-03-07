@@ -3,16 +3,22 @@ version: 2.10.0
 description: Audits Python environments and dependency trees for known vulnerabilities
 homepage: https://pypi.org/project/pip-audit/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pip-audit/blobs/sha256:be9b2d8741933980214749e442b792842cade2fb8e47dee1f9751cdb7e5c4161
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pip-audit/blobs/sha256:b367263105835478f099d21ae16e174e3b57c79d409b812ddb1b226c1eb99b23
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pip-audit/blobs/sha256:89e4ef618daf152a7d9261bc6a5d56f3d48399551bf90cd601c21b0950b1cbcf
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pip-audit/blobs/sha256:9c02effca889fb8c6b96ec191f8830d7db2058db119231b635dc8f7c0a999958
-sha256:
-  darwin_arm64: be9b2d8741933980214749e442b792842cade2fb8e47dee1f9751cdb7e5c4161
-  darwin_amd64: b367263105835478f099d21ae16e174e3b57c79d409b812ddb1b226c1eb99b23
-  linux_amd64: 89e4ef618daf152a7d9261bc6a5d56f3d48399551bf90cd601c21b0950b1cbcf
-  linux_arm64: 9c02effca889fb8c6b96ec191f8830d7db2058db119231b635dc8f7c0a999958
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pip-audit/blobs/sha256:be9b2d8741933980214749e442b792842cade2fb8e47dee1f9751cdb7e5c4161
+    sha256: be9b2d8741933980214749e442b792842cade2fb8e47dee1f9751cdb7e5c4161
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pip-audit/blobs/sha256:b367263105835478f099d21ae16e174e3b57c79d409b812ddb1b226c1eb99b23
+    sha256: b367263105835478f099d21ae16e174e3b57c79d409b812ddb1b226c1eb99b23
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pip-audit/blobs/sha256:89e4ef618daf152a7d9261bc6a5d56f3d48399551bf90cd601c21b0950b1cbcf
+    sha256: 89e4ef618daf152a7d9261bc6a5d56f3d48399551bf90cd601c21b0950b1cbcf
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pip-audit/blobs/sha256:9c02effca889fb8c6b96ec191f8830d7db2058db119231b635dc8f7c0a999958
+    sha256: 9c02effca889fb8c6b96ec191f8830d7db2058db119231b635dc8f7c0a999958
+source:
+  url: https://files.pythonhosted.org/packages/bd/89/0e999b413facab81c33d118f3ac3739fd02c0622ccf7c4e82e37cebd8447/pip_audit-2.10.0.tar.gz
+  sha256: 427ea5bf61d1d06b98b1ae29b7feacc00288a2eced52c9c58ceed5253ef6c2a4
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - certifi
   - python@3.14
+build_dependencies:
+  - rust

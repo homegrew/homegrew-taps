@@ -3,16 +3,22 @@ version: 3.21.1
 description: Framework for scientific data networking
 homepage: https://www.opendap.org/
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libdap/blobs/sha256:d959fe3f680cc759bc8e6b5fc9ce3df87a0ba407fd8c121c7c0007b18a7391ed
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libdap/blobs/sha256:7bf3eb33efc70d4ef302c32eb64031d193004aee353d7d14c66afc69185eb90f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libdap/blobs/sha256:037920375d831bc140fd1bb65563045b7105abdcf57f6d3882b2e0680df18140
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libdap/blobs/sha256:b28520612f2942489d5fa1eb14051528d444558c63e3d04b4c14b028193577a3
-sha256:
-  darwin_arm64: d959fe3f680cc759bc8e6b5fc9ce3df87a0ba407fd8c121c7c0007b18a7391ed
-  darwin_amd64: 7bf3eb33efc70d4ef302c32eb64031d193004aee353d7d14c66afc69185eb90f
-  linux_amd64: 037920375d831bc140fd1bb65563045b7105abdcf57f6d3882b2e0680df18140
-  linux_arm64: b28520612f2942489d5fa1eb14051528d444558c63e3d04b4c14b028193577a3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libdap/blobs/sha256:d959fe3f680cc759bc8e6b5fc9ce3df87a0ba407fd8c121c7c0007b18a7391ed
+    sha256: d959fe3f680cc759bc8e6b5fc9ce3df87a0ba407fd8c121c7c0007b18a7391ed
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libdap/blobs/sha256:7bf3eb33efc70d4ef302c32eb64031d193004aee353d7d14c66afc69185eb90f
+    sha256: 7bf3eb33efc70d4ef302c32eb64031d193004aee353d7d14c66afc69185eb90f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libdap/blobs/sha256:037920375d831bc140fd1bb65563045b7105abdcf57f6d3882b2e0680df18140
+    sha256: 037920375d831bc140fd1bb65563045b7105abdcf57f6d3882b2e0680df18140
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libdap/blobs/sha256:b28520612f2942489d5fa1eb14051528d444558c63e3d04b4c14b028193577a3
+    sha256: b28520612f2942489d5fa1eb14051528d444558c63e3d04b4c14b028193577a3
+source:
+  url: https://www.opendap.org/pub/source/libdap-3.21.1.tar.gz
+  sha256: 1f6c084bdbf2686121f9b2f5e767275c1e37d9ccf67c8faabc762389f95a0c38
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,11 @@ install:
 dependencies:
   - libxml2
   - openssl@3
+build_dependencies:
+  - bison
+  - pkgconf
+linux_dependencies:
+  - libtirpc
+  - libxml2
+  - openssl@3
+  - util-linux

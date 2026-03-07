@@ -3,12 +3,16 @@ version: 34.2
 description: Linux kernel module handling
 homepage: https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git
 license: LGPL-2.1-or-later AND GPL-2.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/kmod/blobs/sha256:bf100adc797109c78f5a9811d224673e36f7670f90677cbf4d6ce1b5fbe49d3e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/kmod/blobs/sha256:61677724c3f5a7390c6fb6b7ea9bb8a63d579be87223b4d1bc4a958c5a2413dd
-sha256:
-  linux_amd64: bf100adc797109c78f5a9811d224673e36f7670f90677cbf4d6ce1b5fbe49d3e
-  linux_arm64: 61677724c3f5a7390c6fb6b7ea9bb8a63d579be87223b4d1bc4a958c5a2413dd
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kmod/blobs/sha256:bf100adc797109c78f5a9811d224673e36f7670f90677cbf4d6ce1b5fbe49d3e
+    sha256: bf100adc797109c78f5a9811d224673e36f7670f90677cbf4d6ce1b5fbe49d3e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kmod/blobs/sha256:61677724c3f5a7390c6fb6b7ea9bb8a63d579be87223b4d1bc4a958c5a2413dd
+    sha256: 61677724c3f5a7390c6fb6b7ea9bb8a63d579be87223b4d1bc4a958c5a2413dd
+source:
+  url: https://mirrors.edge.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.2.tar.xz
+  sha256: 5a5d5073070cc7e0c7a7a3c6ec2a0e1780850c8b47b3e3892226b93ffcb9cb54
 install:
   type: archive
   format: tar.gz
@@ -18,3 +22,8 @@ dependencies:
   - xz
   - zlib-ng-compat
   - zstd
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf
+  - scdoc

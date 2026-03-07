@@ -3,16 +3,22 @@ version: 3.4.0
 description: Ncurses UI for QEMU
 homepage: https://github.com/nemuTUI/nemu
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/nemu/blobs/sha256:e6f30abdf8f40e196974dad2c6f80ffb5353c98997f4a0733c388c0515e34ae8
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/nemu/blobs/sha256:bd4227695993da67ba07b55f0ee3eb3e671f33444dd013a62b060c76937489d2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/nemu/blobs/sha256:cc06ac5e231324623d7ef68c67c5a77c545b8c33aa1a1170357b6e62d8af8f21
-  linux_arm64: https://ghcr.io/v2/homebrew/core/nemu/blobs/sha256:53aa94025e389c228af7eae6478da28df2bc57dcae31ed8c19b594a923bff202
-sha256:
-  darwin_arm64: e6f30abdf8f40e196974dad2c6f80ffb5353c98997f4a0733c388c0515e34ae8
-  darwin_amd64: bd4227695993da67ba07b55f0ee3eb3e671f33444dd013a62b060c76937489d2
-  linux_amd64: cc06ac5e231324623d7ef68c67c5a77c545b8c33aa1a1170357b6e62d8af8f21
-  linux_arm64: 53aa94025e389c228af7eae6478da28df2bc57dcae31ed8c19b594a923bff202
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nemu/blobs/sha256:e6f30abdf8f40e196974dad2c6f80ffb5353c98997f4a0733c388c0515e34ae8
+    sha256: e6f30abdf8f40e196974dad2c6f80ffb5353c98997f4a0733c388c0515e34ae8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nemu/blobs/sha256:bd4227695993da67ba07b55f0ee3eb3e671f33444dd013a62b060c76937489d2
+    sha256: bd4227695993da67ba07b55f0ee3eb3e671f33444dd013a62b060c76937489d2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nemu/blobs/sha256:cc06ac5e231324623d7ef68c67c5a77c545b8c33aa1a1170357b6e62d8af8f21
+    sha256: cc06ac5e231324623d7ef68c67c5a77c545b8c33aa1a1170357b6e62d8af8f21
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nemu/blobs/sha256:53aa94025e389c228af7eae6478da28df2bc57dcae31ed8c19b594a923bff202
+    sha256: 53aa94025e389c228af7eae6478da28df2bc57dcae31ed8c19b594a923bff202
+source:
+  url: https://github.com/nemuTUI/nemu/archive/refs/tags/v3.4.0.tar.gz
+  sha256: e272b3e80623f8aef66c3ecb5e2d8846ac89b2514a4bbb5026e74f51c1a5ef42
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,13 @@ dependencies:
   - ncurses
   - openssl@3
   - gettext
+build_dependencies:
+  - cmake
+  - gettext
+  - pkgconf
+linux_dependencies:
+  - json-c
+  - libarchive
+  - libusb
+  - ncurses
+  - openssl@3

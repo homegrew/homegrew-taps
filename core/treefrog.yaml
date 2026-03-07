@@ -3,16 +3,22 @@ version: 2.11.2
 description: High-speed C++ MVC Framework for Web Application
 homepage: https://www.treefrogframework.org/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/treefrog/blobs/sha256:896f7bb5986da74d32a1ee21c1ce38f0f6dca1381114d3e07af0f5e5b8f5deae
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/treefrog/blobs/sha256:58ec3bfaebd43a660e01b08570090120fd6c9bd38aaeb4b30e8c268a59f408f9
-  linux_amd64: https://ghcr.io/v2/homebrew/core/treefrog/blobs/sha256:76475986419e64d57fb94386bf3ac5e4adc577652413579d3fa770dbbfc03d89
-  linux_arm64: https://ghcr.io/v2/homebrew/core/treefrog/blobs/sha256:6acdabe0c364720beaee152b6de4b9c1a14bfb1f238d3d43e53c9be1e7a82b8c
-sha256:
-  darwin_arm64: 896f7bb5986da74d32a1ee21c1ce38f0f6dca1381114d3e07af0f5e5b8f5deae
-  darwin_amd64: 58ec3bfaebd43a660e01b08570090120fd6c9bd38aaeb4b30e8c268a59f408f9
-  linux_amd64: 76475986419e64d57fb94386bf3ac5e4adc577652413579d3fa770dbbfc03d89
-  linux_arm64: 6acdabe0c364720beaee152b6de4b9c1a14bfb1f238d3d43e53c9be1e7a82b8c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/treefrog/blobs/sha256:896f7bb5986da74d32a1ee21c1ce38f0f6dca1381114d3e07af0f5e5b8f5deae
+    sha256: 896f7bb5986da74d32a1ee21c1ce38f0f6dca1381114d3e07af0f5e5b8f5deae
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/treefrog/blobs/sha256:58ec3bfaebd43a660e01b08570090120fd6c9bd38aaeb4b30e8c268a59f408f9
+    sha256: 58ec3bfaebd43a660e01b08570090120fd6c9bd38aaeb4b30e8c268a59f408f9
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/treefrog/blobs/sha256:76475986419e64d57fb94386bf3ac5e4adc577652413579d3fa770dbbfc03d89
+    sha256: 76475986419e64d57fb94386bf3ac5e4adc577652413579d3fa770dbbfc03d89
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/treefrog/blobs/sha256:6acdabe0c364720beaee152b6de4b9c1a14bfb1f238d3d43e53c9be1e7a82b8c
+    sha256: 6acdabe0c364720beaee152b6de4b9c1a14bfb1f238d3d43e53c9be1e7a82b8c
+source:
+  url: https://github.com/treefrogframework/treefrog-framework/archive/refs/tags/v2.11.2.tar.gz
+  sha256: 2c878603e8dd609ddabb02ee0e3a74fe306ccdf93ea65f9999f9a60ad68249be
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,5 @@ dependencies:
   - mongo-c-driver
   - qtbase
   - qtdeclarative
+build_dependencies:
+  - pkgconf

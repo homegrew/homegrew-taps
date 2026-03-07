@@ -3,16 +3,22 @@ version: 44.6
 description: GNOME archive manager
 homepage: https://wiki.gnome.org/Apps/FileRoller
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/file-roller/blobs/sha256:95587f5b3683fe7adedfbeb595298ad7523a2d49f42c56afcf197f8d5d0abd8f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/file-roller/blobs/sha256:f7b65189d4a73f7e6301cd87cc6bbe9495992190d87fbdceed98241956516747
-  linux_amd64: https://ghcr.io/v2/homebrew/core/file-roller/blobs/sha256:babf70dc9b287f09aada756e1b44743e01c39e89137f3b66725e7cf3f1960a3a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/file-roller/blobs/sha256:772259e557db001964b5ff2cc5df3b041aba0df75f54e8a41d33c8c9251b4db2
-sha256:
-  darwin_arm64: 95587f5b3683fe7adedfbeb595298ad7523a2d49f42c56afcf197f8d5d0abd8f
-  darwin_amd64: f7b65189d4a73f7e6301cd87cc6bbe9495992190d87fbdceed98241956516747
-  linux_amd64: babf70dc9b287f09aada756e1b44743e01c39e89137f3b66725e7cf3f1960a3a
-  linux_arm64: 772259e557db001964b5ff2cc5df3b041aba0df75f54e8a41d33c8c9251b4db2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/file-roller/blobs/sha256:95587f5b3683fe7adedfbeb595298ad7523a2d49f42c56afcf197f8d5d0abd8f
+    sha256: 95587f5b3683fe7adedfbeb595298ad7523a2d49f42c56afcf197f8d5d0abd8f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/file-roller/blobs/sha256:f7b65189d4a73f7e6301cd87cc6bbe9495992190d87fbdceed98241956516747
+    sha256: f7b65189d4a73f7e6301cd87cc6bbe9495992190d87fbdceed98241956516747
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/file-roller/blobs/sha256:babf70dc9b287f09aada756e1b44743e01c39e89137f3b66725e7cf3f1960a3a
+    sha256: babf70dc9b287f09aada756e1b44743e01c39e89137f3b66725e7cf3f1960a3a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/file-roller/blobs/sha256:772259e557db001964b5ff2cc5df3b041aba0df75f54e8a41d33c8c9251b4db2
+    sha256: 772259e557db001964b5ff2cc5df3b041aba0df75f54e8a41d33c8c9251b4db2
+source:
+  url: https://download.gnome.org/sources/file-roller/44/file-roller-44.6.tar.xz
+  sha256: 9e873b5005bc425799a8cd4b237e1fff430ec8d6b34a992c6033f1dfc6e3764e
 install:
   type: archive
   format: tar.gz
@@ -28,3 +34,19 @@ dependencies:
   - libarchive
   - pango
   - gettext
+build_dependencies:
+  - gettext
+  - itstool
+  - meson
+  - ninja
+  - pkgconf
+linux_dependencies:
+  - adwaita-icon-theme
+  - desktop-file-utils
+  - glib
+  - gtk4
+  - hicolor-icon-theme
+  - json-glib
+  - libadwaita
+  - libarchive
+  - pango

@@ -3,16 +3,22 @@ version: 3.1.0
 description: C++ library for GPU accelerated linear algebra
 homepage: https://coot.sourceforge.io/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bandicoot/blobs/sha256:5d67e6aed2699f62ee9f37b3bd2228349b82b826c6ccce2cff52ab5be84c3b2b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bandicoot/blobs/sha256:74c3eb05ae46f65f349e278a1ba74f39a301f66ddcc8d61e94efef7f91e220ff
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bandicoot/blobs/sha256:7e30826e78801be597bb8e6c8a7da8c0f468ee427c7942ac373e4596ab0372ff
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bandicoot/blobs/sha256:bbbe98b28fa63bc236bd1cf7ccfb644e2f047a9863d41d2cc1070af4b0e152cc
-sha256:
-  darwin_arm64: 5d67e6aed2699f62ee9f37b3bd2228349b82b826c6ccce2cff52ab5be84c3b2b
-  darwin_amd64: 74c3eb05ae46f65f349e278a1ba74f39a301f66ddcc8d61e94efef7f91e220ff
-  linux_amd64: 7e30826e78801be597bb8e6c8a7da8c0f468ee427c7942ac373e4596ab0372ff
-  linux_arm64: bbbe98b28fa63bc236bd1cf7ccfb644e2f047a9863d41d2cc1070af4b0e152cc
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bandicoot/blobs/sha256:5d67e6aed2699f62ee9f37b3bd2228349b82b826c6ccce2cff52ab5be84c3b2b
+    sha256: 5d67e6aed2699f62ee9f37b3bd2228349b82b826c6ccce2cff52ab5be84c3b2b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bandicoot/blobs/sha256:74c3eb05ae46f65f349e278a1ba74f39a301f66ddcc8d61e94efef7f91e220ff
+    sha256: 74c3eb05ae46f65f349e278a1ba74f39a301f66ddcc8d61e94efef7f91e220ff
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bandicoot/blobs/sha256:7e30826e78801be597bb8e6c8a7da8c0f468ee427c7942ac373e4596ab0372ff
+    sha256: 7e30826e78801be597bb8e6c8a7da8c0f468ee427c7942ac373e4596ab0372ff
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bandicoot/blobs/sha256:bbbe98b28fa63bc236bd1cf7ccfb644e2f047a9863d41d2cc1070af4b0e152cc
+    sha256: bbbe98b28fa63bc236bd1cf7ccfb644e2f047a9863d41d2cc1070af4b0e152cc
+source:
+  url: https://gitlab.com/bandicoot-lib/bandicoot-code/-/archive/3.1.0/bandicoot-code-3.1.0.tar.bz2
+  sha256: 27c8c6d36e6bbc64f4de0cfde89221f6d80a7d59de08c47666afeeacc806d1a5
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,11 @@ install:
 dependencies:
   - clblast
   - openblas
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - clblast
+  - openblas
+  - opencl-icd-loader
+  - pocl

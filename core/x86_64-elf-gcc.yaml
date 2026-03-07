@@ -3,16 +3,22 @@ version: 15.2.0
 description: GNU compiler collection for x86_64-elf
 homepage: https://gcc.gnu.org
 license: GPL-3.0-or-later WITH GCC-exception-3.1
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/x86_64-elf-gcc/blobs/sha256:c09336382ae4333e2e8f4f87bed391f86a47470a3432321a0f56c404c1146f36
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/x86_64-elf-gcc/blobs/sha256:e6e89c590cd3487f158f988cf1863712045e517286c04ff610320dba1cecb0fb
-  linux_amd64: https://ghcr.io/v2/homebrew/core/x86_64-elf-gcc/blobs/sha256:29f9506ffca0f41dbf6c866535ea4cef4dcdde626822d291adbdc27f3c6a0eac
-  linux_arm64: https://ghcr.io/v2/homebrew/core/x86_64-elf-gcc/blobs/sha256:69660b3b18050c91c9859d50d3406528769f9962151040832bb521c842333bad
-sha256:
-  darwin_arm64: c09336382ae4333e2e8f4f87bed391f86a47470a3432321a0f56c404c1146f36
-  darwin_amd64: e6e89c590cd3487f158f988cf1863712045e517286c04ff610320dba1cecb0fb
-  linux_amd64: 29f9506ffca0f41dbf6c866535ea4cef4dcdde626822d291adbdc27f3c6a0eac
-  linux_arm64: 69660b3b18050c91c9859d50d3406528769f9962151040832bb521c842333bad
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/x86_64-elf-gcc/blobs/sha256:c09336382ae4333e2e8f4f87bed391f86a47470a3432321a0f56c404c1146f36
+    sha256: c09336382ae4333e2e8f4f87bed391f86a47470a3432321a0f56c404c1146f36
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/x86_64-elf-gcc/blobs/sha256:e6e89c590cd3487f158f988cf1863712045e517286c04ff610320dba1cecb0fb
+    sha256: e6e89c590cd3487f158f988cf1863712045e517286c04ff610320dba1cecb0fb
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/x86_64-elf-gcc/blobs/sha256:29f9506ffca0f41dbf6c866535ea4cef4dcdde626822d291adbdc27f3c6a0eac
+    sha256: 29f9506ffca0f41dbf6c866535ea4cef4dcdde626822d291adbdc27f3c6a0eac
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/x86_64-elf-gcc/blobs/sha256:69660b3b18050c91c9859d50d3406528769f9962151040832bb521c842333bad
+    sha256: 69660b3b18050c91c9859d50d3406528769f9962151040832bb521c842333bad
+source:
+  url: https://ftpmirror.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz
+  sha256: 438fd996826b0c82485a29da03a72d71d6e3541a83ec702df4271f6fe025d24e
 install:
   type: archive
   format: tar.gz
@@ -22,4 +28,11 @@ dependencies:
   - libmpc
   - mpfr
   - x86_64-elf-binutils
+  - zstd
+linux_dependencies:
+  - gmp
+  - libmpc
+  - mpfr
+  - x86_64-elf-binutils
+  - zlib-ng-compat
   - zstd

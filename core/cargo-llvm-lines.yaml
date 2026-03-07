@@ -3,17 +3,25 @@ version: 0.4.45
 description: Count lines of LLVM IR per generic function
 homepage: https://github.com/dtolnay/cargo-llvm-lines
 license: Apache-2.0 OR MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cargo-llvm-lines/blobs/sha256:1f96bc5657cec596d1c8345a7b33c2b8eb0dcb5e80e677b8c1bcc55ee7153f05
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cargo-llvm-lines/blobs/sha256:6710eaf6730d103df0bbddd44ff1b71b80dd1c69590798d5a325d71f97cafa1b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cargo-llvm-lines/blobs/sha256:b83bd2492130d970f7488f4c2ae35852e026a01a79f1668d52704a7977f4dc01
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cargo-llvm-lines/blobs/sha256:93bbb22430a1d3b4dd16d55a5ce5759a370b973cc8272aa528ae80881acedf89
-sha256:
-  darwin_arm64: 1f96bc5657cec596d1c8345a7b33c2b8eb0dcb5e80e677b8c1bcc55ee7153f05
-  darwin_amd64: 6710eaf6730d103df0bbddd44ff1b71b80dd1c69590798d5a325d71f97cafa1b
-  linux_amd64: b83bd2492130d970f7488f4c2ae35852e026a01a79f1668d52704a7977f4dc01
-  linux_arm64: 93bbb22430a1d3b4dd16d55a5ce5759a370b973cc8272aa528ae80881acedf89
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-llvm-lines/blobs/sha256:1f96bc5657cec596d1c8345a7b33c2b8eb0dcb5e80e677b8c1bcc55ee7153f05
+    sha256: 1f96bc5657cec596d1c8345a7b33c2b8eb0dcb5e80e677b8c1bcc55ee7153f05
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-llvm-lines/blobs/sha256:6710eaf6730d103df0bbddd44ff1b71b80dd1c69590798d5a325d71f97cafa1b
+    sha256: 6710eaf6730d103df0bbddd44ff1b71b80dd1c69590798d5a325d71f97cafa1b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-llvm-lines/blobs/sha256:b83bd2492130d970f7488f4c2ae35852e026a01a79f1668d52704a7977f4dc01
+    sha256: b83bd2492130d970f7488f4c2ae35852e026a01a79f1668d52704a7977f4dc01
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-llvm-lines/blobs/sha256:93bbb22430a1d3b4dd16d55a5ce5759a370b973cc8272aa528ae80881acedf89
+    sha256: 93bbb22430a1d3b4dd16d55a5ce5759a370b973cc8272aa528ae80881acedf89
+source:
+  url: https://github.com/dtolnay/cargo-llvm-lines/archive/refs/tags/0.4.45.tar.gz
+  sha256: d1e6fb07760239c2f7ee1ee7e7a857ffb4f82df1378bbd0e4d2e8d75e74f13eb
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

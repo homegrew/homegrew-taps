@@ -3,17 +3,27 @@ version: 6.9.10
 description: Regular expressions library
 homepage: https://github.com/kkos/oniguruma/
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/oniguruma/blobs/sha256:eb6bda3b333f497b5d294388f39fd0902a5c79a52ae16858eff711d2d104cc4d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/oniguruma/blobs/sha256:174fa500f45c9421915e22c34f51abc2849cbce2c05b64f013e4949bf2edd7e0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/oniguruma/blobs/sha256:49eb885ab9a80ce30edc0aaa5f531fc0079a17e5cf41c2b6c34be0e53e763993
-  linux_arm64: https://ghcr.io/v2/homebrew/core/oniguruma/blobs/sha256:b9c6066f02e365ccac0ca20cbcb8ca5d586c0ae781977d363bd411594946d944
-sha256:
-  darwin_arm64: eb6bda3b333f497b5d294388f39fd0902a5c79a52ae16858eff711d2d104cc4d
-  darwin_amd64: 174fa500f45c9421915e22c34f51abc2849cbce2c05b64f013e4949bf2edd7e0
-  linux_amd64: 49eb885ab9a80ce30edc0aaa5f531fc0079a17e5cf41c2b6c34be0e53e763993
-  linux_arm64: b9c6066f02e365ccac0ca20cbcb8ca5d586c0ae781977d363bd411594946d944
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/oniguruma/blobs/sha256:eb6bda3b333f497b5d294388f39fd0902a5c79a52ae16858eff711d2d104cc4d
+    sha256: eb6bda3b333f497b5d294388f39fd0902a5c79a52ae16858eff711d2d104cc4d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/oniguruma/blobs/sha256:174fa500f45c9421915e22c34f51abc2849cbce2c05b64f013e4949bf2edd7e0
+    sha256: 174fa500f45c9421915e22c34f51abc2849cbce2c05b64f013e4949bf2edd7e0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/oniguruma/blobs/sha256:49eb885ab9a80ce30edc0aaa5f531fc0079a17e5cf41c2b6c34be0e53e763993
+    sha256: 49eb885ab9a80ce30edc0aaa5f531fc0079a17e5cf41c2b6c34be0e53e763993
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/oniguruma/blobs/sha256:b9c6066f02e365ccac0ca20cbcb8ca5d586c0ae781977d363bd411594946d944
+    sha256: b9c6066f02e365ccac0ca20cbcb8ca5d586c0ae781977d363bd411594946d944
+source:
+  url: https://github.com/kkos/oniguruma/releases/download/v6.9.10/onig-6.9.10.tar.gz
+  sha256: 2a5cfc5ae259e4e97f86b68dfffc152cdaffe94e2060b770cb827238d769fc05
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool

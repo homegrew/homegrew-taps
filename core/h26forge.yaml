@@ -3,17 +3,25 @@ version: 2024-07-06
 description: Tool for making syntactically valid but semantically spec-noncompliant videos
 homepage: https://github.com/h26forge/h26forge
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/h26forge/blobs/sha256:f1c1f2d0a4dcfaccd11770de03afbfcba696294d3167519fe72fc122ad4984f3
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/h26forge/blobs/sha256:00dc5feba7341d70ec4bd024f63de066cf1574b97832e87e2496ee268dcf5e5d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/h26forge/blobs/sha256:800da50e33cdc4bbce4222275b0337685a7aa3cea4bac0029c99b963d997a4f4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/h26forge/blobs/sha256:c37e9c31fbd4ef981277a591d851fcf9a1e10f21689917d698709a7b086ab0fc
-sha256:
-  darwin_arm64: f1c1f2d0a4dcfaccd11770de03afbfcba696294d3167519fe72fc122ad4984f3
-  darwin_amd64: 00dc5feba7341d70ec4bd024f63de066cf1574b97832e87e2496ee268dcf5e5d
-  linux_amd64: 800da50e33cdc4bbce4222275b0337685a7aa3cea4bac0029c99b963d997a4f4
-  linux_arm64: c37e9c31fbd4ef981277a591d851fcf9a1e10f21689917d698709a7b086ab0fc
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/h26forge/blobs/sha256:f1c1f2d0a4dcfaccd11770de03afbfcba696294d3167519fe72fc122ad4984f3
+    sha256: f1c1f2d0a4dcfaccd11770de03afbfcba696294d3167519fe72fc122ad4984f3
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/h26forge/blobs/sha256:00dc5feba7341d70ec4bd024f63de066cf1574b97832e87e2496ee268dcf5e5d
+    sha256: 00dc5feba7341d70ec4bd024f63de066cf1574b97832e87e2496ee268dcf5e5d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/h26forge/blobs/sha256:800da50e33cdc4bbce4222275b0337685a7aa3cea4bac0029c99b963d997a4f4
+    sha256: 800da50e33cdc4bbce4222275b0337685a7aa3cea4bac0029c99b963d997a4f4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/h26forge/blobs/sha256:c37e9c31fbd4ef981277a591d851fcf9a1e10f21689917d698709a7b086ab0fc
+    sha256: c37e9c31fbd4ef981277a591d851fcf9a1e10f21689917d698709a7b086ab0fc
+source:
+  url: https://github.com/h26forge/h26forge/archive/refs/tags/2024-07-06.tar.gz
+  sha256: 66e3bd1f63e6c70db334d103107ced2b2924aaee6472c71682ed34c8276203b0
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

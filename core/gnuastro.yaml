@@ -3,16 +3,22 @@ version: 0.24
 description: Astronomical data manipulation and analysis utilities and libraries
 homepage: https://www.gnu.org/software/gnuastro/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gnuastro/blobs/sha256:0ea7f7c21d2c2cb5bfe5e28bc5c713a054eaee0dc0a9332bbd6fd35513f786a8
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gnuastro/blobs/sha256:c259c00499eed3141ee5487b88156d000351b918ded15c5761115b8820f797f6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gnuastro/blobs/sha256:950a234cf681d54c30ebff2c2444684bf3785a679dbceee9220f1cc860bedf6c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gnuastro/blobs/sha256:497105abef07079083f746d51e72b217b124df950d28369fc3b4887321d1325f
-sha256:
-  darwin_arm64: 0ea7f7c21d2c2cb5bfe5e28bc5c713a054eaee0dc0a9332bbd6fd35513f786a8
-  darwin_amd64: c259c00499eed3141ee5487b88156d000351b918ded15c5761115b8820f797f6
-  linux_amd64: 950a234cf681d54c30ebff2c2444684bf3785a679dbceee9220f1cc860bedf6c
-  linux_arm64: 497105abef07079083f746d51e72b217b124df950d28369fc3b4887321d1325f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gnuastro/blobs/sha256:0ea7f7c21d2c2cb5bfe5e28bc5c713a054eaee0dc0a9332bbd6fd35513f786a8
+    sha256: 0ea7f7c21d2c2cb5bfe5e28bc5c713a054eaee0dc0a9332bbd6fd35513f786a8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gnuastro/blobs/sha256:c259c00499eed3141ee5487b88156d000351b918ded15c5761115b8820f797f6
+    sha256: c259c00499eed3141ee5487b88156d000351b918ded15c5761115b8820f797f6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gnuastro/blobs/sha256:950a234cf681d54c30ebff2c2444684bf3785a679dbceee9220f1cc860bedf6c
+    sha256: 950a234cf681d54c30ebff2c2444684bf3785a679dbceee9220f1cc860bedf6c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gnuastro/blobs/sha256:497105abef07079083f746d51e72b217b124df950d28369fc3b4887321d1325f
+    sha256: 497105abef07079083f746d51e72b217b124df950d28369fc3b4887321d1325f
+source:
+  url: https://ftpmirror.gnu.org/gnuastro/gnuastro-0.24.tar.gz
+  sha256: c4e6401eee5d81619b82d8d18a6447851b36e0754118ebf5bdfac7a03194f981
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,5 @@ dependencies:
   - libtiff
   - libtool
   - wcslib
+build_dependencies:
+  - pkgconf

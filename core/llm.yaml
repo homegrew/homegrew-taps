@@ -3,16 +3,22 @@ version: 0.28
 description: Access large language models from the command-line
 homepage: https://llm.datasette.io/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:88604275590d4b078111b44240a4f997f27b368a32e37108ddfe7c15ec1f89a8
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:f553258112f3e0137a509baca1713cfea8b41e51bca456f778c988232f178285
-  linux_amd64: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:a9571adbecd435481f94c9ae094518115f5a31927eb4b22b6d5982e77df16b9b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:6d80213899786814153d4ff205e0341d1163119e3ac307d7bd63dc0652fdbc6a
-sha256:
-  darwin_arm64: 88604275590d4b078111b44240a4f997f27b368a32e37108ddfe7c15ec1f89a8
-  darwin_amd64: f553258112f3e0137a509baca1713cfea8b41e51bca456f778c988232f178285
-  linux_amd64: a9571adbecd435481f94c9ae094518115f5a31927eb4b22b6d5982e77df16b9b
-  linux_arm64: 6d80213899786814153d4ff205e0341d1163119e3ac307d7bd63dc0652fdbc6a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:88604275590d4b078111b44240a4f997f27b368a32e37108ddfe7c15ec1f89a8
+    sha256: 88604275590d4b078111b44240a4f997f27b368a32e37108ddfe7c15ec1f89a8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:f553258112f3e0137a509baca1713cfea8b41e51bca456f778c988232f178285
+    sha256: f553258112f3e0137a509baca1713cfea8b41e51bca456f778c988232f178285
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:a9571adbecd435481f94c9ae094518115f5a31927eb4b22b6d5982e77df16b9b
+    sha256: a9571adbecd435481f94c9ae094518115f5a31927eb4b22b6d5982e77df16b9b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:6d80213899786814153d4ff205e0341d1163119e3ac307d7bd63dc0652fdbc6a
+    sha256: 6d80213899786814153d4ff205e0341d1163119e3ac307d7bd63dc0652fdbc6a
+source:
+  url: https://files.pythonhosted.org/packages/cb/91/5071c6e0e7eabbf3a95870a4b2ec0fc585e0d4d57532d305d08d6595f8a3/llm-0.28.tar.gz
+  sha256: e3d8bcc0f016fae8aeca1d702491a1891523702983459cb66afec99d74cabfc1
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,5 @@ dependencies:
   - libyaml
   - pydantic
   - python@3.14
+build_dependencies:
+  - rust

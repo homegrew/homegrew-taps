@@ -3,17 +3,25 @@ version: 3.2.1
 description: Secure file transfer software, optimized for large files
 homepage: https://gitlab.in2p3.fr/cc-in2p3-hpss-service/bbftp
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bbftp-client/blobs/sha256:18d463140dea6d3abd1361442b054a2cd01020e40c55ca2e6046c5760944d689
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bbftp-client/blobs/sha256:449c785073c769955666ce4833bb442984a2714629facd2a7b33dc218e429f20
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bbftp-client/blobs/sha256:b43e533d6799fb7e77c30bd1c8e6707925647d7220edd00edda2e30177298c47
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bbftp-client/blobs/sha256:23e60edad50fab29170e6333b357a7e422bfe7798d190f2d0b21c8b72fbe4d1a
-sha256:
-  darwin_arm64: 18d463140dea6d3abd1361442b054a2cd01020e40c55ca2e6046c5760944d689
-  darwin_amd64: 449c785073c769955666ce4833bb442984a2714629facd2a7b33dc218e429f20
-  linux_amd64: b43e533d6799fb7e77c30bd1c8e6707925647d7220edd00edda2e30177298c47
-  linux_arm64: 23e60edad50fab29170e6333b357a7e422bfe7798d190f2d0b21c8b72fbe4d1a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bbftp-client/blobs/sha256:18d463140dea6d3abd1361442b054a2cd01020e40c55ca2e6046c5760944d689
+    sha256: 18d463140dea6d3abd1361442b054a2cd01020e40c55ca2e6046c5760944d689
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bbftp-client/blobs/sha256:449c785073c769955666ce4833bb442984a2714629facd2a7b33dc218e429f20
+    sha256: 449c785073c769955666ce4833bb442984a2714629facd2a7b33dc218e429f20
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bbftp-client/blobs/sha256:b43e533d6799fb7e77c30bd1c8e6707925647d7220edd00edda2e30177298c47
+    sha256: b43e533d6799fb7e77c30bd1c8e6707925647d7220edd00edda2e30177298c47
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bbftp-client/blobs/sha256:23e60edad50fab29170e6333b357a7e422bfe7798d190f2d0b21c8b72fbe4d1a
+    sha256: 23e60edad50fab29170e6333b357a7e422bfe7798d190f2d0b21c8b72fbe4d1a
+source:
+  url: https://pkg.freebsd.org/ports-distfiles/bbftp-client-3.2.1.tar.gz
+  sha256: 4000009804d90926ad3c0e770099874084fb49013e8b0770b82678462304456d
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+linux_dependencies:
+  - zlib-ng-compat

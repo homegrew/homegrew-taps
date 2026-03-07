@@ -3,16 +3,22 @@ version: 3.5.18
 description: "X.Org: X Pixmap (XPM) image file format library"
 homepage: https://www.x.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libxpm/blobs/sha256:dfb4812d9570c75c744777378f7653ec3e0072cc64c1676652aba5a63ffb93be
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libxpm/blobs/sha256:7fd1c8870bcb2cd60c92ec28220a3815540cf2c36330fa457843e1f10ad55da4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libxpm/blobs/sha256:448c52d170a337416e588bc7d6b36d267de2ad1de1efe939a6b11bc48aa8fedd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libxpm/blobs/sha256:ba51d06c36169b8cc001fd6f284eb7a0787b1b59f621f68ff1913647ecb3a56f
-sha256:
-  darwin_arm64: dfb4812d9570c75c744777378f7653ec3e0072cc64c1676652aba5a63ffb93be
-  darwin_amd64: 7fd1c8870bcb2cd60c92ec28220a3815540cf2c36330fa457843e1f10ad55da4
-  linux_amd64: 448c52d170a337416e588bc7d6b36d267de2ad1de1efe939a6b11bc48aa8fedd
-  linux_arm64: ba51d06c36169b8cc001fd6f284eb7a0787b1b59f621f68ff1913647ecb3a56f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libxpm/blobs/sha256:dfb4812d9570c75c744777378f7653ec3e0072cc64c1676652aba5a63ffb93be
+    sha256: dfb4812d9570c75c744777378f7653ec3e0072cc64c1676652aba5a63ffb93be
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libxpm/blobs/sha256:7fd1c8870bcb2cd60c92ec28220a3815540cf2c36330fa457843e1f10ad55da4
+    sha256: 7fd1c8870bcb2cd60c92ec28220a3815540cf2c36330fa457843e1f10ad55da4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libxpm/blobs/sha256:448c52d170a337416e588bc7d6b36d267de2ad1de1efe939a6b11bc48aa8fedd
+    sha256: 448c52d170a337416e588bc7d6b36d267de2ad1de1efe939a6b11bc48aa8fedd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libxpm/blobs/sha256:ba51d06c36169b8cc001fd6f284eb7a0787b1b59f621f68ff1913647ecb3a56f
+    sha256: ba51d06c36169b8cc001fd6f284eb7a0787b1b59f621f68ff1913647ecb3a56f
+source:
+  url: https://www.x.org/archive/individual/lib/libXpm-3.5.18.tar.gz
+  sha256: 74eb57253ed3085686371a331737daf072223b77f76bba13ed65a4b3aa6cb403
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,6 @@ install:
 dependencies:
   - gettext
   - libx11
+build_dependencies:
+  - gettext
+  - pkgconf

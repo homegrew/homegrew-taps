@@ -3,16 +3,22 @@ version: 1.10.5
 description: SIXEL encoder/decoder implementation
 homepage: https://github.com/saitoha/sixel
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:6de5ac481b343617fb5a42b78ca935b32758394e101ac8bfe6bf5f2828a991a3
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:85f135277174340376fb0e6ba6de5804bc017380224411f4ffca4956c6b4512c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:afac541b74c1f46fea3c1e2b2c2443e93d769d221d3e512ef9af2a5ce2b292e4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:93f446a2e99e9751229ad41532799e0f4c40983088c6dd47d026c80270f74541
-sha256:
-  darwin_arm64: 6de5ac481b343617fb5a42b78ca935b32758394e101ac8bfe6bf5f2828a991a3
-  darwin_amd64: 85f135277174340376fb0e6ba6de5804bc017380224411f4ffca4956c6b4512c
-  linux_amd64: afac541b74c1f46fea3c1e2b2c2443e93d769d221d3e512ef9af2a5ce2b292e4
-  linux_arm64: 93f446a2e99e9751229ad41532799e0f4c40983088c6dd47d026c80270f74541
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:6de5ac481b343617fb5a42b78ca935b32758394e101ac8bfe6bf5f2828a991a3
+    sha256: 6de5ac481b343617fb5a42b78ca935b32758394e101ac8bfe6bf5f2828a991a3
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:85f135277174340376fb0e6ba6de5804bc017380224411f4ffca4956c6b4512c
+    sha256: 85f135277174340376fb0e6ba6de5804bc017380224411f4ffca4956c6b4512c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:afac541b74c1f46fea3c1e2b2c2443e93d769d221d3e512ef9af2a5ce2b292e4
+    sha256: afac541b74c1f46fea3c1e2b2c2443e93d769d221d3e512ef9af2a5ce2b292e4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:93f446a2e99e9751229ad41532799e0f4c40983088c6dd47d026c80270f74541
+    sha256: 93f446a2e99e9751229ad41532799e0f4c40983088c6dd47d026c80270f74541
+source:
+  url: https://github.com/libsixel/libsixel/archive/refs/tags/v1.10.5.tar.gz
+  sha256: b6654928bd423f92e6da39eb1f40f10000ae2cc6247247fc1882dcff6acbdfc8
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,6 @@ install:
 dependencies:
   - jpeg-turbo
   - libpng
+build_dependencies:
+  - meson
+  - ninja

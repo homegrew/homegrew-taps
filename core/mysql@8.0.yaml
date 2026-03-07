@@ -3,16 +3,22 @@ version: 8.0.45
 description: Open source relational database management system
 homepage: https://github.com/mysql/mysql-server
 license: GPL-2.0-only WITH Universal-FOSS-exception-1.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:d1e0e0944762b72470ed67b1006608aef0493937bfa2860a4a58a4206be8856f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:64e30d856d169ee7652cd3264259d5c232306bd334d910248fc2c10c646360f1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:f73f0afe7e0eafd1e17aa850bbb154c4599496eedf7448af4cd56fed007c70bb
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:66c8c1bc7ba766c3dd011f56398cd8b59a0a20b25759261ad696509a723c8cd1
-sha256:
-  darwin_arm64: d1e0e0944762b72470ed67b1006608aef0493937bfa2860a4a58a4206be8856f
-  darwin_amd64: 64e30d856d169ee7652cd3264259d5c232306bd334d910248fc2c10c646360f1
-  linux_amd64: f73f0afe7e0eafd1e17aa850bbb154c4599496eedf7448af4cd56fed007c70bb
-  linux_arm64: 66c8c1bc7ba766c3dd011f56398cd8b59a0a20b25759261ad696509a723c8cd1
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:d1e0e0944762b72470ed67b1006608aef0493937bfa2860a4a58a4206be8856f
+    sha256: d1e0e0944762b72470ed67b1006608aef0493937bfa2860a4a58a4206be8856f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:64e30d856d169ee7652cd3264259d5c232306bd334d910248fc2c10c646360f1
+    sha256: 64e30d856d169ee7652cd3264259d5c232306bd334d910248fc2c10c646360f1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:f73f0afe7e0eafd1e17aa850bbb154c4599496eedf7448af4cd56fed007c70bb
+    sha256: f73f0afe7e0eafd1e17aa850bbb154c4599496eedf7448af4cd56fed007c70bb
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:66c8c1bc7ba766c3dd011f56398cd8b59a0a20b25759261ad696509a723c8cd1
+    sha256: 66c8c1bc7ba766c3dd011f56398cd8b59a0a20b25759261ad696509a723c8cd1
+source:
+  url: https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.45.tar.gz
+  sha256: f679707d05f0c2b61e9b14961302e7f540c23e9e5e2bffd8ad9193599e295cee
 install:
   type: archive
   format: tar.gz
@@ -22,6 +28,21 @@ dependencies:
   - icu4c@78
   - libevent
   - libfido2
+  - lz4
+  - openssl@3
+  - protobuf
+  - zlib-ng-compat
+  - zstd
+build_dependencies:
+  - bison
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - abseil
+  - icu4c@78
+  - libevent
+  - libfido2
+  - libtirpc
   - lz4
   - openssl@3
   - protobuf

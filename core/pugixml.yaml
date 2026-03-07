@@ -3,17 +3,25 @@ version: 1.15
 description: Light-weight C++ XML processing library
 homepage: https://pugixml.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pugixml/blobs/sha256:815d949fe34679a2c3e0df5d253b824ebe69305ae29ce28d03e4e2cd604ce46c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pugixml/blobs/sha256:32cc92f8679e9a6d8b0c45140a19f0ac5c330e470bbca5cddcf494c6511beae6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pugixml/blobs/sha256:2578c1114075b488ec20a5c627d9616af5a6e5f22d9f99e54d0bb6221a861f77
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pugixml/blobs/sha256:dfd7825a7cb16dab42a7884e8626dc8d7380081f0e163517037e28bd5136491f
-sha256:
-  darwin_arm64: 815d949fe34679a2c3e0df5d253b824ebe69305ae29ce28d03e4e2cd604ce46c
-  darwin_amd64: 32cc92f8679e9a6d8b0c45140a19f0ac5c330e470bbca5cddcf494c6511beae6
-  linux_amd64: 2578c1114075b488ec20a5c627d9616af5a6e5f22d9f99e54d0bb6221a861f77
-  linux_arm64: dfd7825a7cb16dab42a7884e8626dc8d7380081f0e163517037e28bd5136491f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pugixml/blobs/sha256:815d949fe34679a2c3e0df5d253b824ebe69305ae29ce28d03e4e2cd604ce46c
+    sha256: 815d949fe34679a2c3e0df5d253b824ebe69305ae29ce28d03e4e2cd604ce46c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pugixml/blobs/sha256:32cc92f8679e9a6d8b0c45140a19f0ac5c330e470bbca5cddcf494c6511beae6
+    sha256: 32cc92f8679e9a6d8b0c45140a19f0ac5c330e470bbca5cddcf494c6511beae6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pugixml/blobs/sha256:2578c1114075b488ec20a5c627d9616af5a6e5f22d9f99e54d0bb6221a861f77
+    sha256: 2578c1114075b488ec20a5c627d9616af5a6e5f22d9f99e54d0bb6221a861f77
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pugixml/blobs/sha256:dfd7825a7cb16dab42a7884e8626dc8d7380081f0e163517037e28bd5136491f
+    sha256: dfd7825a7cb16dab42a7884e8626dc8d7380081f0e163517037e28bd5136491f
+source:
+  url: https://github.com/zeux/pugixml/releases/download/v1.15/pugixml-1.15.tar.gz
+  sha256: 655ade57fa703fb421c2eb9a0113b5064bddb145d415dd1f88c79353d90d511a
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - cmake

@@ -3,16 +3,22 @@ version: 1.8.0
 description: Cross-platform library for building Telegram clients
 homepage: https://github.com/tdlib/td
 license: BSL-1.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:9d1fd3dd4b4f6f6dd59c2e1534e86d48321e922ab731ac2f1fdefc1af67a10c1
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:625b06e1fb521c8e2dae96cc5715b0a9cf5c80714a2ff1c92eff9166784e4a30
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:c71a6f6d59ab8bb956483673fafbe5666e111856596661c6a3ebd210e1212ab4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:5db1c940a4cbf27205ab7bf666196ae0951d38661ecab0df338a6b0a8c548e46
-sha256:
-  darwin_arm64: 9d1fd3dd4b4f6f6dd59c2e1534e86d48321e922ab731ac2f1fdefc1af67a10c1
-  darwin_amd64: 625b06e1fb521c8e2dae96cc5715b0a9cf5c80714a2ff1c92eff9166784e4a30
-  linux_amd64: c71a6f6d59ab8bb956483673fafbe5666e111856596661c6a3ebd210e1212ab4
-  linux_arm64: 5db1c940a4cbf27205ab7bf666196ae0951d38661ecab0df338a6b0a8c548e46
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:9d1fd3dd4b4f6f6dd59c2e1534e86d48321e922ab731ac2f1fdefc1af67a10c1
+    sha256: 9d1fd3dd4b4f6f6dd59c2e1534e86d48321e922ab731ac2f1fdefc1af67a10c1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:625b06e1fb521c8e2dae96cc5715b0a9cf5c80714a2ff1c92eff9166784e4a30
+    sha256: 625b06e1fb521c8e2dae96cc5715b0a9cf5c80714a2ff1c92eff9166784e4a30
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:c71a6f6d59ab8bb956483673fafbe5666e111856596661c6a3ebd210e1212ab4
+    sha256: c71a6f6d59ab8bb956483673fafbe5666e111856596661c6a3ebd210e1212ab4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:5db1c940a4cbf27205ab7bf666196ae0951d38661ecab0df338a6b0a8c548e46
+    sha256: 5db1c940a4cbf27205ab7bf666196ae0951d38661ecab0df338a6b0a8c548e46
+source:
+  url: https://github.com/tdlib/td/archive/refs/tags/v1.8.0.tar.gz
+  sha256: 30d560205fe82fb811cd57a8fcbc7ac853a5b6195e9cb9e6ff142f5e2d8be217
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,10 @@ install:
 dependencies:
   - openssl@3
   - readline
+build_dependencies:
+  - cmake
+  - gperf
+linux_dependencies:
+  - openssl@3
+  - readline
+  - zlib-ng-compat

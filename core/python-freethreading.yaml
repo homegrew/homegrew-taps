@@ -3,16 +3,22 @@ version: 3.14.3
 description: Interpreted, interactive, object-oriented programming language
 homepage: https://www.python.org/
 license: Python-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/python-freethreading/blobs/sha256:055db8b1347ab3f3b190b9fdbdf7e3c62cdf2f39756affd88989d2cad2f2b5d2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/python-freethreading/blobs/sha256:0d69a978bfae96e6ab5a6d7e089ed90feadb3d35383a06987eda4aea39d74dcf
-  linux_amd64: https://ghcr.io/v2/homebrew/core/python-freethreading/blobs/sha256:848c4bef3cb80b4195a2499a5fe03d38130fb019180be113818020ee9a58b463
-  linux_arm64: https://ghcr.io/v2/homebrew/core/python-freethreading/blobs/sha256:21628837f08926d9f08dbb32729aff60f386a4246accc3a26372251b24ea0640
-sha256:
-  darwin_arm64: 055db8b1347ab3f3b190b9fdbdf7e3c62cdf2f39756affd88989d2cad2f2b5d2
-  darwin_amd64: 0d69a978bfae96e6ab5a6d7e089ed90feadb3d35383a06987eda4aea39d74dcf
-  linux_amd64: 848c4bef3cb80b4195a2499a5fe03d38130fb019180be113818020ee9a58b463
-  linux_arm64: 21628837f08926d9f08dbb32729aff60f386a4246accc3a26372251b24ea0640
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/python-freethreading/blobs/sha256:055db8b1347ab3f3b190b9fdbdf7e3c62cdf2f39756affd88989d2cad2f2b5d2
+    sha256: 055db8b1347ab3f3b190b9fdbdf7e3c62cdf2f39756affd88989d2cad2f2b5d2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/python-freethreading/blobs/sha256:0d69a978bfae96e6ab5a6d7e089ed90feadb3d35383a06987eda4aea39d74dcf
+    sha256: 0d69a978bfae96e6ab5a6d7e089ed90feadb3d35383a06987eda4aea39d74dcf
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/python-freethreading/blobs/sha256:848c4bef3cb80b4195a2499a5fe03d38130fb019180be113818020ee9a58b463
+    sha256: 848c4bef3cb80b4195a2499a5fe03d38130fb019180be113818020ee9a58b463
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/python-freethreading/blobs/sha256:21628837f08926d9f08dbb32729aff60f386a4246accc3a26372251b24ea0640
+    sha256: 21628837f08926d9f08dbb32729aff60f386a4246accc3a26372251b24ea0640
+source:
+  url: https://www.python.org/ftp/python/3.14.3/Python-3.14.3.tgz
+  sha256: d7fe130d0501ae047ca318fa92aa642603ab6f217901015a1df6ce650d5470cd
 install:
   type: archive
   format: tar.gz
@@ -22,4 +28,16 @@ dependencies:
   - openssl@3
   - sqlite
   - xz
+  - zstd
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - berkeley-db@5
+  - libnsl
+  - libtirpc
+  - mpdecimal
+  - openssl@3
+  - sqlite
+  - xz
+  - zlib-ng-compat
   - zstd

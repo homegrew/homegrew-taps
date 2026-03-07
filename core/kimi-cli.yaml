@@ -3,16 +3,22 @@ version: 1.17.0
 description: CLI agent for MoonshotAI Kimi platform
 homepage: https://github.com/MoonshotAI/kimi-cli
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/kimi-cli/blobs/sha256:99ba94cf6b4147c407eae4131060c9f1e3c750e28077be20fc3b218373e8d196
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/kimi-cli/blobs/sha256:f2abe301efbaeb27be48bba58232f1dd3993326dc04fe81f85b75a3e622cd468
-  linux_amd64: https://ghcr.io/v2/homebrew/core/kimi-cli/blobs/sha256:e6fb61521fb3f4823b443bac9928f9c9f78d64ae746eb66a0410aa555ca281fb
-  linux_arm64: https://ghcr.io/v2/homebrew/core/kimi-cli/blobs/sha256:b09f82660b6ce3f374cb409c690e55477d1b4e0b956f8fac7d680cf6c360e8fa
-sha256:
-  darwin_arm64: 99ba94cf6b4147c407eae4131060c9f1e3c750e28077be20fc3b218373e8d196
-  darwin_amd64: f2abe301efbaeb27be48bba58232f1dd3993326dc04fe81f85b75a3e622cd468
-  linux_amd64: e6fb61521fb3f4823b443bac9928f9c9f78d64ae746eb66a0410aa555ca281fb
-  linux_arm64: b09f82660b6ce3f374cb409c690e55477d1b4e0b956f8fac7d680cf6c360e8fa
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kimi-cli/blobs/sha256:99ba94cf6b4147c407eae4131060c9f1e3c750e28077be20fc3b218373e8d196
+    sha256: 99ba94cf6b4147c407eae4131060c9f1e3c750e28077be20fc3b218373e8d196
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kimi-cli/blobs/sha256:f2abe301efbaeb27be48bba58232f1dd3993326dc04fe81f85b75a3e622cd468
+    sha256: f2abe301efbaeb27be48bba58232f1dd3993326dc04fe81f85b75a3e622cd468
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kimi-cli/blobs/sha256:e6fb61521fb3f4823b443bac9928f9c9f78d64ae746eb66a0410aa555ca281fb
+    sha256: e6fb61521fb3f4823b443bac9928f9c9f78d64ae746eb66a0410aa555ca281fb
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kimi-cli/blobs/sha256:b09f82660b6ce3f374cb409c690e55477d1b4e0b956f8fac7d680cf6c360e8fa
+    sha256: b09f82660b6ce3f374cb409c690e55477d1b4e0b956f8fac7d680cf6c360e8fa
+source:
+  url: https://files.pythonhosted.org/packages/56/a5/741ea4010dea6109e1a59a4bf516cc3963cd2de96406d3ddce1ece84be4c/kimi_cli-1.17.0.tar.gz
+  sha256: 7cb1df1a39ce83fea2bb0e6428f822b33dae26aea21f75aa32a6ae0c7c3ccffd
 install:
   type: archive
   format: tar.gz
@@ -26,3 +32,7 @@ dependencies:
   - python@3.14
   - re2
   - rpds-py
+build_dependencies:
+  - pkgconf
+  - pybind11
+  - rust

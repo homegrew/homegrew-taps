@@ -3,16 +3,22 @@ version: 8.04.00
 description: Preprocessor and pretty-printer for OCaml
 homepage: https://camlp5.github.io/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:61dc0c7d0bf2a5e91afcba91ce127172c6ad3e2cd64d18950875ea6e914433f5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:83822f4200ee229c2d9c46b5c650efd37aba4cd0f73dc1effc815b841b649986
-  linux_amd64: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:a4411131337232c2a85b7dc0153fcc020ea43b177991952fe6bea444fd4f4cc7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:9037191c4e95682c02785002444fd5cbbea75035025216a49cecda6bb60b92f7
-sha256:
-  darwin_arm64: 61dc0c7d0bf2a5e91afcba91ce127172c6ad3e2cd64d18950875ea6e914433f5
-  darwin_amd64: 83822f4200ee229c2d9c46b5c650efd37aba4cd0f73dc1effc815b841b649986
-  linux_amd64: a4411131337232c2a85b7dc0153fcc020ea43b177991952fe6bea444fd4f4cc7
-  linux_arm64: 9037191c4e95682c02785002444fd5cbbea75035025216a49cecda6bb60b92f7
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:61dc0c7d0bf2a5e91afcba91ce127172c6ad3e2cd64d18950875ea6e914433f5
+    sha256: 61dc0c7d0bf2a5e91afcba91ce127172c6ad3e2cd64d18950875ea6e914433f5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:83822f4200ee229c2d9c46b5c650efd37aba4cd0f73dc1effc815b841b649986
+    sha256: 83822f4200ee229c2d9c46b5c650efd37aba4cd0f73dc1effc815b841b649986
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:a4411131337232c2a85b7dc0153fcc020ea43b177991952fe6bea444fd4f4cc7
+    sha256: a4411131337232c2a85b7dc0153fcc020ea43b177991952fe6bea444fd4f4cc7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:9037191c4e95682c02785002444fd5cbbea75035025216a49cecda6bb60b92f7
+    sha256: 9037191c4e95682c02785002444fd5cbbea75035025216a49cecda6bb60b92f7
+source:
+  url: https://github.com/camlp5/camlp5/archive/refs/tags/8.04.00.tar.gz
+  sha256: eb8c5bc0f47ce4b9518d37bcbf8be05ee80243c38e7019f8c3808456be8f15a8
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,7 @@ dependencies:
   - camlp-streams
   - ocaml
   - pcre2
+build_dependencies:
+  - ocaml-findlib
+  - opam
+  - pkgconf

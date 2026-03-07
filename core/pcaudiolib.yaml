@@ -3,17 +3,28 @@ version: 1.3
 description: Portable C Audio Library
 homepage: https://github.com/espeak-ng/pcaudiolib
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pcaudiolib/blobs/sha256:797c5e0ec4adb982e3efbcb3ff386d0ad3bbe212e731ce88375002cc6d0cf72d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pcaudiolib/blobs/sha256:48118ebffee0146173486843027d4b5a07c8dd0c7be2a17a8fac5de80aebf6f8
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pcaudiolib/blobs/sha256:103253ad42ee7905b3f45cba3c1fdfc646aca631b912f1346589e7f79e916fd4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pcaudiolib/blobs/sha256:9f2763bfa17d7805667730aeff7bcdc00f649d41e82e51415ad36b2a135da6dd
-sha256:
-  darwin_arm64: 797c5e0ec4adb982e3efbcb3ff386d0ad3bbe212e731ce88375002cc6d0cf72d
-  darwin_amd64: 48118ebffee0146173486843027d4b5a07c8dd0c7be2a17a8fac5de80aebf6f8
-  linux_amd64: 103253ad42ee7905b3f45cba3c1fdfc646aca631b912f1346589e7f79e916fd4
-  linux_arm64: 9f2763bfa17d7805667730aeff7bcdc00f649d41e82e51415ad36b2a135da6dd
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pcaudiolib/blobs/sha256:797c5e0ec4adb982e3efbcb3ff386d0ad3bbe212e731ce88375002cc6d0cf72d
+    sha256: 797c5e0ec4adb982e3efbcb3ff386d0ad3bbe212e731ce88375002cc6d0cf72d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pcaudiolib/blobs/sha256:48118ebffee0146173486843027d4b5a07c8dd0c7be2a17a8fac5de80aebf6f8
+    sha256: 48118ebffee0146173486843027d4b5a07c8dd0c7be2a17a8fac5de80aebf6f8
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pcaudiolib/blobs/sha256:103253ad42ee7905b3f45cba3c1fdfc646aca631b912f1346589e7f79e916fd4
+    sha256: 103253ad42ee7905b3f45cba3c1fdfc646aca631b912f1346589e7f79e916fd4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pcaudiolib/blobs/sha256:9f2763bfa17d7805667730aeff7bcdc00f649d41e82e51415ad36b2a135da6dd
+    sha256: 9f2763bfa17d7805667730aeff7bcdc00f649d41e82e51415ad36b2a135da6dd
+source:
+  url: https://github.com/espeak-ng/pcaudiolib/releases/download/1.3/pcaudiolib-1.3.tar.gz
+  sha256: e8bd15f460ea171ccd0769ea432e188532a7fb27fa73ec2d526088a082abaaad
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - pulseaudio

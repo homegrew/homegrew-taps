@@ -3,16 +3,22 @@ version: 4.4.4
 description: GNOME library for weather, locations and timezones
 homepage: https://wiki.gnome.org/Projects/LibGWeather
 license: GPL-2.0-or-later AND LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:a0f5b2a53daf3be868d2601e99ae2119a51457676016d1f15bb0932d6a413449
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:772860847b0744d9ee83a44cf92ff70894473bf87ddde2c14d37e5422b873a2f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:cf5d68a71f9c30705d01484985fe117809f4f5ad93f853638c6ca670b32314a1
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:7932cb5f77bcc83782f3816e631dd48d05198affdc9e1e6a3cdab639dc147394
-sha256:
-  darwin_arm64: a0f5b2a53daf3be868d2601e99ae2119a51457676016d1f15bb0932d6a413449
-  darwin_amd64: 772860847b0744d9ee83a44cf92ff70894473bf87ddde2c14d37e5422b873a2f
-  linux_amd64: cf5d68a71f9c30705d01484985fe117809f4f5ad93f853638c6ca670b32314a1
-  linux_arm64: 7932cb5f77bcc83782f3816e631dd48d05198affdc9e1e6a3cdab639dc147394
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:a0f5b2a53daf3be868d2601e99ae2119a51457676016d1f15bb0932d6a413449
+    sha256: a0f5b2a53daf3be868d2601e99ae2119a51457676016d1f15bb0932d6a413449
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:772860847b0744d9ee83a44cf92ff70894473bf87ddde2c14d37e5422b873a2f
+    sha256: 772860847b0744d9ee83a44cf92ff70894473bf87ddde2c14d37e5422b873a2f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:cf5d68a71f9c30705d01484985fe117809f4f5ad93f853638c6ca670b32314a1
+    sha256: cf5d68a71f9c30705d01484985fe117809f4f5ad93f853638c6ca670b32314a1
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:7932cb5f77bcc83782f3816e631dd48d05198affdc9e1e6a3cdab639dc147394
+    sha256: 7932cb5f77bcc83782f3816e631dd48d05198affdc9e1e6a3cdab639dc147394
+source:
+  url: https://download.gnome.org/sources/libgweather/4.4/libgweather-4.4.4.tar.xz
+  sha256: 7017677753cdf7d1fdc355e4bfcdb1eba8369793a8df24d241427a939cbf4283
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,17 @@ dependencies:
   - json-glib
   - libsoup
   - gettext
+build_dependencies:
+  - gettext
+  - gobject-introspection
+  - meson
+  - ninja
+  - pkgconf
+  - pygobject3
+  - python@3.14
+linux_dependencies:
+  - geocode-glib
+  - glib
+  - gtk+3
+  - json-glib
+  - libsoup

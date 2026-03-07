@@ -3,16 +3,22 @@ version: 1.8.10
 description: Open computer graphics interchange framework
 homepage: http://www.alembic.io/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:3a8207a61469b1d25e6b2b39968491931f8eeba421877ea6a24ec38044eaf9cd
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:819f54e39924e2e0ccbc1c00b74e7a9e4846497e0a6e0383543e4e037cd4b993
-  linux_amd64: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:03de0e5c013bd50a6cc411a5d4fd9200edd9b1273238327ab16f1e705ab1feb5
-  linux_arm64: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:eefaabb5c8e230694b7e045df9e11afa70c1b4864fc26621b19a469ef15b1317
-sha256:
-  darwin_arm64: 3a8207a61469b1d25e6b2b39968491931f8eeba421877ea6a24ec38044eaf9cd
-  darwin_amd64: 819f54e39924e2e0ccbc1c00b74e7a9e4846497e0a6e0383543e4e037cd4b993
-  linux_amd64: 03de0e5c013bd50a6cc411a5d4fd9200edd9b1273238327ab16f1e705ab1feb5
-  linux_arm64: eefaabb5c8e230694b7e045df9e11afa70c1b4864fc26621b19a469ef15b1317
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:3a8207a61469b1d25e6b2b39968491931f8eeba421877ea6a24ec38044eaf9cd
+    sha256: 3a8207a61469b1d25e6b2b39968491931f8eeba421877ea6a24ec38044eaf9cd
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:819f54e39924e2e0ccbc1c00b74e7a9e4846497e0a6e0383543e4e037cd4b993
+    sha256: 819f54e39924e2e0ccbc1c00b74e7a9e4846497e0a6e0383543e4e037cd4b993
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:03de0e5c013bd50a6cc411a5d4fd9200edd9b1273238327ab16f1e705ab1feb5
+    sha256: 03de0e5c013bd50a6cc411a5d4fd9200edd9b1273238327ab16f1e705ab1feb5
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:eefaabb5c8e230694b7e045df9e11afa70c1b4864fc26621b19a469ef15b1317
+    sha256: eefaabb5c8e230694b7e045df9e11afa70c1b4864fc26621b19a469ef15b1317
+source:
+  url: https://github.com/alembic/alembic/archive/refs/tags/1.8.10.tar.gz
+  sha256: 06c9172faf29e9fdebb7be99621ca18b32b474f8e481238a159c87d16b298553
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,9 @@ install:
 dependencies:
   - hdf5
   - imath
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - hdf5
+  - imath
+  - zlib-ng-compat

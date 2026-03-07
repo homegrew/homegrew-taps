@@ -3,16 +3,22 @@ version: 3.2.0.2
 description: Lua bindings for wxWidgets cross-platform GUI toolkit
 homepage: https://github.com/pkulchenko/wxlua
 license: LGPL-2.0-or-later WITH WxWindows-exception-3.1
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/wxlua/blobs/sha256:5615d825d18fa290ebb828623ad3276ab34c5943ad08c5cad47191afe7d6e2a8
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/wxlua/blobs/sha256:4b4a90537713c21f36a328dc40b3bad2382a15cbf7a4bf67d784f2b351304584
-  linux_amd64: https://ghcr.io/v2/homebrew/core/wxlua/blobs/sha256:f71f373105d739d9bc0a282e11d6bf117ace64b56cbb60268f4f39141f5631bb
-  linux_arm64: https://ghcr.io/v2/homebrew/core/wxlua/blobs/sha256:cf0c694a5941b36927f4912323c7346d230d145e92a88df37e6a1c6a63c948e4
-sha256:
-  darwin_arm64: 5615d825d18fa290ebb828623ad3276ab34c5943ad08c5cad47191afe7d6e2a8
-  darwin_amd64: 4b4a90537713c21f36a328dc40b3bad2382a15cbf7a4bf67d784f2b351304584
-  linux_amd64: f71f373105d739d9bc0a282e11d6bf117ace64b56cbb60268f4f39141f5631bb
-  linux_arm64: cf0c694a5941b36927f4912323c7346d230d145e92a88df37e6a1c6a63c948e4
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wxlua/blobs/sha256:5615d825d18fa290ebb828623ad3276ab34c5943ad08c5cad47191afe7d6e2a8
+    sha256: 5615d825d18fa290ebb828623ad3276ab34c5943ad08c5cad47191afe7d6e2a8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wxlua/blobs/sha256:4b4a90537713c21f36a328dc40b3bad2382a15cbf7a4bf67d784f2b351304584
+    sha256: 4b4a90537713c21f36a328dc40b3bad2382a15cbf7a4bf67d784f2b351304584
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wxlua/blobs/sha256:f71f373105d739d9bc0a282e11d6bf117ace64b56cbb60268f4f39141f5631bb
+    sha256: f71f373105d739d9bc0a282e11d6bf117ace64b56cbb60268f4f39141f5631bb
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wxlua/blobs/sha256:cf0c694a5941b36927f4912323c7346d230d145e92a88df37e6a1c6a63c948e4
+    sha256: cf0c694a5941b36927f4912323c7346d230d145e92a88df37e6a1c6a63c948e4
+source:
+  url: https://github.com/pkulchenko/wxlua/archive/refs/tags/v3.2.0.2.tar.gz
+  sha256: 62abe571803a9748e19e86e39cb0e254fd90a5925dc5f0e35669e693cbdb129e
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - lua@5.4
   - wxwidgets@3.2
+build_dependencies:
+  - cmake

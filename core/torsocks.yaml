@@ -3,17 +3,27 @@ version: 2.5.0
 description: Use SOCKS-friendly applications with Tor
 homepage: https://gitlab.torproject.org/tpo/core/torsocks
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/torsocks/blobs/sha256:176eff92c63f1ea09319b33df72fb67b6a1f57f1da4df3cdfcf8a0c60e9b0e22
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/torsocks/blobs/sha256:df428080ebd167aecf3abb603b6207ad469c9c52c55677a4e8deb0635ef1fac1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/torsocks/blobs/sha256:4b4330e179d1c4a866f8be595ed65c1b443f5cc40e21bb30d0fb6be030c6e6a7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/torsocks/blobs/sha256:3a273bb1e5923f05e4caa4d9a269c97020844c935a36845224acf4bf7799e129
-sha256:
-  darwin_arm64: 176eff92c63f1ea09319b33df72fb67b6a1f57f1da4df3cdfcf8a0c60e9b0e22
-  darwin_amd64: df428080ebd167aecf3abb603b6207ad469c9c52c55677a4e8deb0635ef1fac1
-  linux_amd64: 4b4330e179d1c4a866f8be595ed65c1b443f5cc40e21bb30d0fb6be030c6e6a7
-  linux_arm64: 3a273bb1e5923f05e4caa4d9a269c97020844c935a36845224acf4bf7799e129
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/torsocks/blobs/sha256:176eff92c63f1ea09319b33df72fb67b6a1f57f1da4df3cdfcf8a0c60e9b0e22
+    sha256: 176eff92c63f1ea09319b33df72fb67b6a1f57f1da4df3cdfcf8a0c60e9b0e22
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/torsocks/blobs/sha256:df428080ebd167aecf3abb603b6207ad469c9c52c55677a4e8deb0635ef1fac1
+    sha256: df428080ebd167aecf3abb603b6207ad469c9c52c55677a4e8deb0635ef1fac1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/torsocks/blobs/sha256:4b4330e179d1c4a866f8be595ed65c1b443f5cc40e21bb30d0fb6be030c6e6a7
+    sha256: 4b4330e179d1c4a866f8be595ed65c1b443f5cc40e21bb30d0fb6be030c6e6a7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/torsocks/blobs/sha256:3a273bb1e5923f05e4caa4d9a269c97020844c935a36845224acf4bf7799e129
+    sha256: 3a273bb1e5923f05e4caa4d9a269c97020844c935a36845224acf4bf7799e129
+source:
+  url: https://gitlab.torproject.org/tpo/core/torsocks/-/archive/v2.5.0/torsocks-v2.5.0.tar.bz2
+  sha256: 31a917328b221e955230b7663abfbc50d3a9b445a68cb0313c11cf884f8cb41f
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool

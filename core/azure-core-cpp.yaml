@@ -3,19 +3,27 @@ version: 1.16.2
 description: Primitives, abstractions and helpers for Azure SDK client libraries
 homepage: https://github.com/Azure/azure-sdk-for-cpp/tree/main/sdk/core/azure-core
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/azure-core-cpp/blobs/sha256:f20f2c19794b282c02ea7229aaa6e1dc242058a9125596368fa6fec83ef3d24c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/azure-core-cpp/blobs/sha256:14f574f33c5b0252eea9eab4761f21ad925628c1806078254d754e6db9bd8516
-  linux_amd64: https://ghcr.io/v2/homebrew/core/azure-core-cpp/blobs/sha256:fc0338cd373609bdb1431b0384d9215120c9160402bb9f71c610fcc12cbb84dd
-  linux_arm64: https://ghcr.io/v2/homebrew/core/azure-core-cpp/blobs/sha256:7dc622fddaeacddc5665ac5eaf264b68f795a2846f25b02288d71959a4f25ae0
-sha256:
-  darwin_arm64: f20f2c19794b282c02ea7229aaa6e1dc242058a9125596368fa6fec83ef3d24c
-  darwin_amd64: 14f574f33c5b0252eea9eab4761f21ad925628c1806078254d754e6db9bd8516
-  linux_amd64: fc0338cd373609bdb1431b0384d9215120c9160402bb9f71c610fcc12cbb84dd
-  linux_arm64: 7dc622fddaeacddc5665ac5eaf264b68f795a2846f25b02288d71959a4f25ae0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/azure-core-cpp/blobs/sha256:f20f2c19794b282c02ea7229aaa6e1dc242058a9125596368fa6fec83ef3d24c
+    sha256: f20f2c19794b282c02ea7229aaa6e1dc242058a9125596368fa6fec83ef3d24c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/azure-core-cpp/blobs/sha256:14f574f33c5b0252eea9eab4761f21ad925628c1806078254d754e6db9bd8516
+    sha256: 14f574f33c5b0252eea9eab4761f21ad925628c1806078254d754e6db9bd8516
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/azure-core-cpp/blobs/sha256:fc0338cd373609bdb1431b0384d9215120c9160402bb9f71c610fcc12cbb84dd
+    sha256: fc0338cd373609bdb1431b0384d9215120c9160402bb9f71c610fcc12cbb84dd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/azure-core-cpp/blobs/sha256:7dc622fddaeacddc5665ac5eaf264b68f795a2846f25b02288d71959a4f25ae0
+    sha256: 7dc622fddaeacddc5665ac5eaf264b68f795a2846f25b02288d71959a4f25ae0
+source:
+  url: https://github.com/Azure/azure-sdk-for-cpp/archive/refs/tags/azure-core_1.16.2.tar.gz
+  sha256: 647d7206a1eace0664ab8da9912fada0ae1d269097ee5f6397a9ce23a84549cf
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - openssl@3
+build_dependencies:
+  - cmake

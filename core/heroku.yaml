@@ -3,16 +3,22 @@ version: 10.17.0
 description: CLI for Heroku
 homepage: https://www.npmjs.com/package/heroku/
 license: ISC
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/heroku/blobs/sha256:cece3dc3c9e75ee4a711840477ba3afcafb6cf544f39c9154135adba21aa9e94
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/heroku/blobs/sha256:2d6dcefab89d672b0f76cee52a80b06fd2051af44a974ba6c035acc72c64a162
-  linux_amd64: https://ghcr.io/v2/homebrew/core/heroku/blobs/sha256:27239143925a4bf8e29e2ce55489f1210118b374f3bd5879cce80c1a98c99ee5
-  linux_arm64: https://ghcr.io/v2/homebrew/core/heroku/blobs/sha256:27239143925a4bf8e29e2ce55489f1210118b374f3bd5879cce80c1a98c99ee5
-sha256:
-  darwin_arm64: cece3dc3c9e75ee4a711840477ba3afcafb6cf544f39c9154135adba21aa9e94
-  darwin_amd64: 2d6dcefab89d672b0f76cee52a80b06fd2051af44a974ba6c035acc72c64a162
-  linux_amd64: 27239143925a4bf8e29e2ce55489f1210118b374f3bd5879cce80c1a98c99ee5
-  linux_arm64: 27239143925a4bf8e29e2ce55489f1210118b374f3bd5879cce80c1a98c99ee5
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/heroku/blobs/sha256:cece3dc3c9e75ee4a711840477ba3afcafb6cf544f39c9154135adba21aa9e94
+    sha256: cece3dc3c9e75ee4a711840477ba3afcafb6cf544f39c9154135adba21aa9e94
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/heroku/blobs/sha256:2d6dcefab89d672b0f76cee52a80b06fd2051af44a974ba6c035acc72c64a162
+    sha256: 2d6dcefab89d672b0f76cee52a80b06fd2051af44a974ba6c035acc72c64a162
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/heroku/blobs/sha256:27239143925a4bf8e29e2ce55489f1210118b374f3bd5879cce80c1a98c99ee5
+    sha256: 27239143925a4bf8e29e2ce55489f1210118b374f3bd5879cce80c1a98c99ee5
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/heroku/blobs/sha256:27239143925a4bf8e29e2ce55489f1210118b374f3bd5879cce80c1a98c99ee5
+    sha256: 27239143925a4bf8e29e2ce55489f1210118b374f3bd5879cce80c1a98c99ee5
+source:
+  url: https://registry.npmjs.org/heroku/-/heroku-10.17.0.tgz
+  sha256: a443d816a7d52aa58751c7a1a95406a83a58d88860e554b2b3d796e08e5a4ccf
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - node
   - terminal-notifier
+linux_dependencies:
+  - node

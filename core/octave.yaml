@@ -3,16 +3,22 @@ version: 11.1.0
 description: High-level interpreted language for numerical computing
 homepage: https://octave.org/index.html
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/octave/blobs/sha256:eb9e33aae3eda5c4c6f317c870051bf760af6e8baffcabf495ec096a1ac552db
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/octave/blobs/sha256:b6da3844e5b5a94578bdca36291c38d84e0e163da6fd9ac118b737ea08615749
-  linux_amd64: https://ghcr.io/v2/homebrew/core/octave/blobs/sha256:ae513c984d980c0ced1b4d3be890f5183b59cae6712b49162fdd65d57f412d2a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/octave/blobs/sha256:9c891f169b5a0bd821550baa5f63c7007e46b404acf526d912fdbf49e83422ca
-sha256:
-  darwin_arm64: eb9e33aae3eda5c4c6f317c870051bf760af6e8baffcabf495ec096a1ac552db
-  darwin_amd64: b6da3844e5b5a94578bdca36291c38d84e0e163da6fd9ac118b737ea08615749
-  linux_amd64: ae513c984d980c0ced1b4d3be890f5183b59cae6712b49162fdd65d57f412d2a
-  linux_arm64: 9c891f169b5a0bd821550baa5f63c7007e46b404acf526d912fdbf49e83422ca
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/octave/blobs/sha256:eb9e33aae3eda5c4c6f317c870051bf760af6e8baffcabf495ec096a1ac552db
+    sha256: eb9e33aae3eda5c4c6f317c870051bf760af6e8baffcabf495ec096a1ac552db
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/octave/blobs/sha256:b6da3844e5b5a94578bdca36291c38d84e0e163da6fd9ac118b737ea08615749
+    sha256: b6da3844e5b5a94578bdca36291c38d84e0e163da6fd9ac118b737ea08615749
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/octave/blobs/sha256:ae513c984d980c0ced1b4d3be890f5183b59cae6712b49162fdd65d57f412d2a
+    sha256: ae513c984d980c0ced1b4d3be890f5183b59cae6712b49162fdd65d57f412d2a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/octave/blobs/sha256:9c891f169b5a0bd821550baa5f63c7007e46b404acf526d912fdbf49e83422ca
+    sha256: 9c891f169b5a0bd821550baa5f63c7007e46b404acf526d912fdbf49e83422ca
+source:
+  url: https://ftpmirror.gnu.org/gnu/octave/octave-11.1.0.tar.xz
+  sha256: 8b3e2d0ec1809e8a2bed11de779014b6eb6a469c0caad1b339d29a6126e3cb6a
 install:
   type: archive
   format: tar.gz
@@ -49,3 +55,44 @@ dependencies:
   - sundials
   - texinfo
   - little-cms2
+build_dependencies:
+  - gnu-sed
+  - openjdk
+  - pkgconf
+linux_dependencies:
+  - arpack
+  - autoconf
+  - automake
+  - epstool
+  - fftw
+  - fig2dev
+  - fltk
+  - fontconfig
+  - freetype
+  - gcc
+  - ghostscript
+  - gl2ps
+  - glpk
+  - graphicsmagick
+  - hdf5
+  - libsndfile
+  - libtool
+  - mesa
+  - mesa-glu
+  - openblas
+  - pcre2
+  - portaudio
+  - pstoedit
+  - qhull
+  - qrupdate
+  - qscintilla2
+  - qt5compat
+  - qtbase
+  - qttools
+  - rapidjson
+  - readline
+  - suite-sparse
+  - sundials
+  - texinfo
+  - wayland
+  - zlib-ng-compat

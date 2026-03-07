@@ -3,17 +3,25 @@ version: 0.3.1001
 description: Language for writing HTML user interfaces in Go
 homepage: https://templ.guide
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/templ/blobs/sha256:f2546912280488c8997ea7740e74b20167ff665b1f715fbd946640989a3685f1
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/templ/blobs/sha256:836c8a67faa74a942231212f562dd5b28b51b297b4d6abe8a778e7008291e8d6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/templ/blobs/sha256:e81c30ee347d543627fdd10dbbba838b47b1446944e175badc542f53a56627ac
-  linux_arm64: https://ghcr.io/v2/homebrew/core/templ/blobs/sha256:1deda54c5e55e21dafac6f0a2a3be3422fb6e9270d3286b48956d5e90466c6d6
-sha256:
-  darwin_arm64: f2546912280488c8997ea7740e74b20167ff665b1f715fbd946640989a3685f1
-  darwin_amd64: 836c8a67faa74a942231212f562dd5b28b51b297b4d6abe8a778e7008291e8d6
-  linux_amd64: e81c30ee347d543627fdd10dbbba838b47b1446944e175badc542f53a56627ac
-  linux_arm64: 1deda54c5e55e21dafac6f0a2a3be3422fb6e9270d3286b48956d5e90466c6d6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/templ/blobs/sha256:f2546912280488c8997ea7740e74b20167ff665b1f715fbd946640989a3685f1
+    sha256: f2546912280488c8997ea7740e74b20167ff665b1f715fbd946640989a3685f1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/templ/blobs/sha256:836c8a67faa74a942231212f562dd5b28b51b297b4d6abe8a778e7008291e8d6
+    sha256: 836c8a67faa74a942231212f562dd5b28b51b297b4d6abe8a778e7008291e8d6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/templ/blobs/sha256:e81c30ee347d543627fdd10dbbba838b47b1446944e175badc542f53a56627ac
+    sha256: e81c30ee347d543627fdd10dbbba838b47b1446944e175badc542f53a56627ac
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/templ/blobs/sha256:1deda54c5e55e21dafac6f0a2a3be3422fb6e9270d3286b48956d5e90466c6d6
+    sha256: 1deda54c5e55e21dafac6f0a2a3be3422fb6e9270d3286b48956d5e90466c6d6
+source:
+  url: https://github.com/a-h/templ/archive/refs/tags/v0.3.1001.tar.gz
+  sha256: aa79ec1738beaa271cdc5a470176b6e2cf84c6db94b748e1e31d0628e9baf565
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

@@ -3,16 +3,22 @@ version: 25.0.2
 description: Development kit for the Java programming language
 homepage: https://openjdk.org/
 license: GPL-2.0-only WITH Classpath-exception-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:5c33d6c93e3f80a9571ba06fce035f8e4e16d91a98df91995992f30416c3deb4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:16dc0565951675ec4a1951e9b948c8839fb1d8ffd964707ba5fc334f218c4dcf
-  linux_amd64: https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:ceea61856c6c9f861c7c0662c3051a428a9870c99d2c14fd2429621ebf82acdc
-  linux_arm64: https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:cd6261f09d923dfa6d384f07863f5ced901cf8e3e7b79637e44d474fcc935086
-sha256:
-  darwin_arm64: 5c33d6c93e3f80a9571ba06fce035f8e4e16d91a98df91995992f30416c3deb4
-  darwin_amd64: 16dc0565951675ec4a1951e9b948c8839fb1d8ffd964707ba5fc334f218c4dcf
-  linux_amd64: ceea61856c6c9f861c7c0662c3051a428a9870c99d2c14fd2429621ebf82acdc
-  linux_arm64: cd6261f09d923dfa6d384f07863f5ced901cf8e3e7b79637e44d474fcc935086
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:5c33d6c93e3f80a9571ba06fce035f8e4e16d91a98df91995992f30416c3deb4
+    sha256: 5c33d6c93e3f80a9571ba06fce035f8e4e16d91a98df91995992f30416c3deb4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:16dc0565951675ec4a1951e9b948c8839fb1d8ffd964707ba5fc334f218c4dcf
+    sha256: 16dc0565951675ec4a1951e9b948c8839fb1d8ffd964707ba5fc334f218c4dcf
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:ceea61856c6c9f861c7c0662c3051a428a9870c99d2c14fd2429621ebf82acdc
+    sha256: ceea61856c6c9f861c7c0662c3051a428a9870c99d2c14fd2429621ebf82acdc
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:cd6261f09d923dfa6d384f07863f5ced901cf8e3e7b79637e44d474fcc935086
+    sha256: cd6261f09d923dfa6d384f07863f5ced901cf8e3e7b79637e44d474fcc935086
+source:
+  url: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.2-ga.tar.gz
+  sha256: e4b935e999a28ee732dfb932dcef4a8591b42f6fcd182099319db68e9d8017ff
 install:
   type: archive
   format: tar.gz
@@ -24,4 +30,24 @@ dependencies:
   - jpeg-turbo
   - libpng
   - little-cms2
+build_dependencies:
+  - autoconf
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - fontconfig
+  - freetype
+  - giflib
+  - harfbuzz
+  - jpeg-turbo
+  - libpng
+  - libx11
+  - libxext
+  - libxi
+  - libxrandr
+  - libxrender
+  - libxt
+  - libxtst
+  - little-cms2
+  - zlib-ng-compat
 keg_only: true

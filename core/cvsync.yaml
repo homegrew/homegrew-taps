@@ -3,19 +3,28 @@ version: 0.24.19
 description: Portable CVS repository synchronization utility
 homepage: https://www.cvsync.org/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cvsync/blobs/sha256:462780681001bc3d967095fe7299ea1a80d5c61a97445fa71906b9c313a3d524
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cvsync/blobs/sha256:4cd58fd98a0d40e093b9d4bd274713a13abdf3b4937c022d8d1d03fa763bc316
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cvsync/blobs/sha256:681d877926aaa76806b946e22c4d254a6b4e82bd22aca241113cf05d1271a5c1
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cvsync/blobs/sha256:e57f12788449006737f2a77356c2bd3a4c65e6301e78b8cbe50512087f9f03ee
-sha256:
-  darwin_arm64: 462780681001bc3d967095fe7299ea1a80d5c61a97445fa71906b9c313a3d524
-  darwin_amd64: 4cd58fd98a0d40e093b9d4bd274713a13abdf3b4937c022d8d1d03fa763bc316
-  linux_amd64: 681d877926aaa76806b946e22c4d254a6b4e82bd22aca241113cf05d1271a5c1
-  linux_arm64: e57f12788449006737f2a77356c2bd3a4c65e6301e78b8cbe50512087f9f03ee
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cvsync/blobs/sha256:462780681001bc3d967095fe7299ea1a80d5c61a97445fa71906b9c313a3d524
+    sha256: 462780681001bc3d967095fe7299ea1a80d5c61a97445fa71906b9c313a3d524
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cvsync/blobs/sha256:4cd58fd98a0d40e093b9d4bd274713a13abdf3b4937c022d8d1d03fa763bc316
+    sha256: 4cd58fd98a0d40e093b9d4bd274713a13abdf3b4937c022d8d1d03fa763bc316
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cvsync/blobs/sha256:681d877926aaa76806b946e22c4d254a6b4e82bd22aca241113cf05d1271a5c1
+    sha256: 681d877926aaa76806b946e22c4d254a6b4e82bd22aca241113cf05d1271a5c1
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cvsync/blobs/sha256:e57f12788449006737f2a77356c2bd3a4c65e6301e78b8cbe50512087f9f03ee
+    sha256: e57f12788449006737f2a77356c2bd3a4c65e6301e78b8cbe50512087f9f03ee
+source:
+  url: https://www.cvsync.org/dist/cvsync-0.24.19.tar.gz
+  sha256: 75d99fc387612cb47141de4d59cb3ba1d2965157230f10015fbaa3a1c3b27560
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - openssl@3
+linux_dependencies:
+  - openssl@3
+  - zlib-ng-compat

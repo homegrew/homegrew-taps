@@ -3,16 +3,22 @@ version: 3.0.0
 description: Implementation of primary security standards for XML
 homepage: https://santuario.apache.org/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/xml-security-c/blobs/sha256:da245352f56c05ef6603edff2f3ce8cd0831aeac2fe02b38ce11e56523fff2e9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/xml-security-c/blobs/sha256:58c0752a0c3a1aa6b51dd7c48058661c0d5c56e7d336412a47db907b851d6451
-  linux_amd64: https://ghcr.io/v2/homebrew/core/xml-security-c/blobs/sha256:2cce7dc9da8984c26b39b9e203162782902841d2ca55b40299c846522ba17407
-  linux_arm64: https://ghcr.io/v2/homebrew/core/xml-security-c/blobs/sha256:649bcd04da8d6bf105dab88cc9de4c1b6efb55e4b20a75371e7f4a4b96b47761
-sha256:
-  darwin_arm64: da245352f56c05ef6603edff2f3ce8cd0831aeac2fe02b38ce11e56523fff2e9
-  darwin_amd64: 58c0752a0c3a1aa6b51dd7c48058661c0d5c56e7d336412a47db907b851d6451
-  linux_amd64: 2cce7dc9da8984c26b39b9e203162782902841d2ca55b40299c846522ba17407
-  linux_arm64: 649bcd04da8d6bf105dab88cc9de4c1b6efb55e4b20a75371e7f4a4b96b47761
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xml-security-c/blobs/sha256:da245352f56c05ef6603edff2f3ce8cd0831aeac2fe02b38ce11e56523fff2e9
+    sha256: da245352f56c05ef6603edff2f3ce8cd0831aeac2fe02b38ce11e56523fff2e9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xml-security-c/blobs/sha256:58c0752a0c3a1aa6b51dd7c48058661c0d5c56e7d336412a47db907b851d6451
+    sha256: 58c0752a0c3a1aa6b51dd7c48058661c0d5c56e7d336412a47db907b851d6451
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xml-security-c/blobs/sha256:2cce7dc9da8984c26b39b9e203162782902841d2ca55b40299c846522ba17407
+    sha256: 2cce7dc9da8984c26b39b9e203162782902841d2ca55b40299c846522ba17407
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xml-security-c/blobs/sha256:649bcd04da8d6bf105dab88cc9de4c1b6efb55e4b20a75371e7f4a4b96b47761
+    sha256: 649bcd04da8d6bf105dab88cc9de4c1b6efb55e4b20a75371e7f4a4b96b47761
+source:
+  url: https://shibboleth.net/downloads/xml-security-c/3.0.0/xml-security-c-3.0.0.tar.bz2
+  sha256: a4c9e1ae3ed3e8dab5d82f4dbdb8414bcbd0199a562ad66cd7c0cd750804ff32
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - openssl@3
   - xerces-c
+build_dependencies:
+  - pkgconf

@@ -3,17 +3,25 @@ version: 1.0.29
 description: Foxglove command-line tool
 homepage: https://github.com/foxglove/foxglove-cli
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/foxglove-cli/blobs/sha256:32aaf14f7e2285b537ffca5b93207e4c53a54f115e227bd4baa968ff4a313a49
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/foxglove-cli/blobs/sha256:abb82d53f98f8eca215fc0117870abaadcb7051def536d78d3821377654d5e02
-  linux_amd64: https://ghcr.io/v2/homebrew/core/foxglove-cli/blobs/sha256:a6d31549e92a6d100243cadea8b175068a2b1ecc3e54e473bc21a20b63c6957d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/foxglove-cli/blobs/sha256:84585943329cbff1b9a9c7a7d24679b52bb0da2a198b31edd058e6aff955cfe0
-sha256:
-  darwin_arm64: 32aaf14f7e2285b537ffca5b93207e4c53a54f115e227bd4baa968ff4a313a49
-  darwin_amd64: abb82d53f98f8eca215fc0117870abaadcb7051def536d78d3821377654d5e02
-  linux_amd64: a6d31549e92a6d100243cadea8b175068a2b1ecc3e54e473bc21a20b63c6957d
-  linux_arm64: 84585943329cbff1b9a9c7a7d24679b52bb0da2a198b31edd058e6aff955cfe0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/foxglove-cli/blobs/sha256:32aaf14f7e2285b537ffca5b93207e4c53a54f115e227bd4baa968ff4a313a49
+    sha256: 32aaf14f7e2285b537ffca5b93207e4c53a54f115e227bd4baa968ff4a313a49
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/foxglove-cli/blobs/sha256:abb82d53f98f8eca215fc0117870abaadcb7051def536d78d3821377654d5e02
+    sha256: abb82d53f98f8eca215fc0117870abaadcb7051def536d78d3821377654d5e02
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/foxglove-cli/blobs/sha256:a6d31549e92a6d100243cadea8b175068a2b1ecc3e54e473bc21a20b63c6957d
+    sha256: a6d31549e92a6d100243cadea8b175068a2b1ecc3e54e473bc21a20b63c6957d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/foxglove-cli/blobs/sha256:84585943329cbff1b9a9c7a7d24679b52bb0da2a198b31edd058e6aff955cfe0
+    sha256: 84585943329cbff1b9a9c7a7d24679b52bb0da2a198b31edd058e6aff955cfe0
+source:
+  url: https://github.com/foxglove/foxglove-cli/archive/refs/tags/v1.0.29.tar.gz
+  sha256: 4a62cdec44de68b5aa0c90a5627babcb62404be0bf204ecb9967a033adf0faa9
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

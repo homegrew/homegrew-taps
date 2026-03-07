@@ -3,12 +3,16 @@ version: 0.9.2
 description: Filesystem for accessing FTP hosts based on FUSE and libcurl
 homepage: https://curlftpfs.sourceforge.net/
 license: GPL-2.0-only
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/curlftpfs/blobs/sha256:8a22354132db88625d88108d012df48264971d6afb561c6cbc348267d27b819e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/curlftpfs/blobs/sha256:97a66714ee7e858341e1605187e7e3990dbca8c065735aa24430e976d2899648
-sha256:
-  linux_amd64: 8a22354132db88625d88108d012df48264971d6afb561c6cbc348267d27b819e
-  linux_arm64: 97a66714ee7e858341e1605187e7e3990dbca8c065735aa24430e976d2899648
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/curlftpfs/blobs/sha256:8a22354132db88625d88108d012df48264971d6afb561c6cbc348267d27b819e
+    sha256: 8a22354132db88625d88108d012df48264971d6afb561c6cbc348267d27b819e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/curlftpfs/blobs/sha256:97a66714ee7e858341e1605187e7e3990dbca8c065735aa24430e976d2899648
+    sha256: 97a66714ee7e858341e1605187e7e3990dbca8c065735aa24430e976d2899648
+source:
+  url: https://downloads.sourceforge.net/project/curlftpfs/curlftpfs/0.9.2/curlftpfs-0.9.2.tar.gz
+  sha256: 4eb44739c7078ba0edde177bdd266c4cfb7c621075f47f64c85a06b12b3c6958
 install:
   type: archive
   format: tar.gz
@@ -17,3 +21,8 @@ dependencies:
   - curl
   - glib
   - libfuse@2
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf

@@ -3,12 +3,16 @@ version: 1.3.1
 description: "Convert between multiple input & output disk image types"
 homepage: https://www.sits.lu/xmount
 license: GPL-3.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/xmount/blobs/sha256:fe78cd0d0609e30fa63acce7871b03734181cb931948485158b70b687082a1c8
-  linux_arm64: https://ghcr.io/v2/homebrew/core/xmount/blobs/sha256:8d3444a83f6d79aa7b8034a4bcc93a3d2711b7209911ce0fd3b733011b94d2da
-sha256:
-  linux_amd64: fe78cd0d0609e30fa63acce7871b03734181cb931948485158b70b687082a1c8
-  linux_arm64: 8d3444a83f6d79aa7b8034a4bcc93a3d2711b7209911ce0fd3b733011b94d2da
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xmount/blobs/sha256:fe78cd0d0609e30fa63acce7871b03734181cb931948485158b70b687082a1c8
+    sha256: fe78cd0d0609e30fa63acce7871b03734181cb931948485158b70b687082a1c8
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xmount/blobs/sha256:8d3444a83f6d79aa7b8034a4bcc93a3d2711b7209911ce0fd3b733011b94d2da
+    sha256: 8d3444a83f6d79aa7b8034a4bcc93a3d2711b7209911ce0fd3b733011b94d2da
+source:
+  url: https://code.sits.lu/foss/xmount/-/archive/1.3.1/xmount-1.3.1.tar.bz2
+  sha256: 422185f1b99ec9e1077201a3a8587fa850068138d1ce685f636305bd19b7a71a
 install:
   type: archive
   format: tar.gz
@@ -18,3 +22,6 @@ dependencies:
   - libewf
   - libfuse
   - zlib-ng-compat
+build_dependencies:
+  - cmake
+  - pkgconf

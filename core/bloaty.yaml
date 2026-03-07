@@ -3,16 +3,22 @@ version: 1.1
 description: Size profiler for binaries
 homepage: https://github.com/google/bloaty
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bloaty/blobs/sha256:8507646f190fe173225906c0923b9c2e2356ffbf136e83fc1b46195554eeb2f9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bloaty/blobs/sha256:314e73716cf224d6a2a10909c26ffada90e233dae48fdcf824d0ecb809ae73ef
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bloaty/blobs/sha256:479a5fda2ce669c98311acf9d70b15f91b5c5a761365a525ea76c14d93a95edb
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bloaty/blobs/sha256:eca2391e6a009ead0ec9c5522d332b9d135650d48ba198d102485c461b3b5ec6
-sha256:
-  darwin_arm64: 8507646f190fe173225906c0923b9c2e2356ffbf136e83fc1b46195554eeb2f9
-  darwin_amd64: 314e73716cf224d6a2a10909c26ffada90e233dae48fdcf824d0ecb809ae73ef
-  linux_amd64: 479a5fda2ce669c98311acf9d70b15f91b5c5a761365a525ea76c14d93a95edb
-  linux_arm64: eca2391e6a009ead0ec9c5522d332b9d135650d48ba198d102485c461b3b5ec6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bloaty/blobs/sha256:8507646f190fe173225906c0923b9c2e2356ffbf136e83fc1b46195554eeb2f9
+    sha256: 8507646f190fe173225906c0923b9c2e2356ffbf136e83fc1b46195554eeb2f9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bloaty/blobs/sha256:314e73716cf224d6a2a10909c26ffada90e233dae48fdcf824d0ecb809ae73ef
+    sha256: 314e73716cf224d6a2a10909c26ffada90e233dae48fdcf824d0ecb809ae73ef
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bloaty/blobs/sha256:479a5fda2ce669c98311acf9d70b15f91b5c5a761365a525ea76c14d93a95edb
+    sha256: 479a5fda2ce669c98311acf9d70b15f91b5c5a761365a525ea76c14d93a95edb
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bloaty/blobs/sha256:eca2391e6a009ead0ec9c5522d332b9d135650d48ba198d102485c461b3b5ec6
+    sha256: eca2391e6a009ead0ec9c5522d332b9d135650d48ba198d102485c461b3b5ec6
+source:
+  url: https://github.com/google/bloaty/releases/download/v1.1/bloaty-1.1.tar.bz2
+  sha256: a308d8369d5812aba45982e55e7c3db2ea4780b7496a5455792fb3dcba9abd6f
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,6 @@ dependencies:
   - capstone
   - protobuf
   - re2
+build_dependencies:
+  - cmake
+  - pkgconf

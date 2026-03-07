@@ -3,16 +3,22 @@ version: 0.2.0
 description: Simple tool for visualizing and analyzing C/C++ project include graph
 homepage: https://github.com/bkryza/clang-include-graph
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/clang-include-graph/blobs/sha256:b91cadc2503430beeeb5007a71b88e6876f847f4498f7a03cb73ad4f9108de5f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/clang-include-graph/blobs/sha256:189c2348eb50bd617bd426baee9d24c82027f0c84fe014de6be1d1d1a4293030
-  linux_amd64: https://ghcr.io/v2/homebrew/core/clang-include-graph/blobs/sha256:d2fd912046181d18a635eac4bf5e1b44071ac369cf2acc9f84986e347ae47353
-  linux_arm64: https://ghcr.io/v2/homebrew/core/clang-include-graph/blobs/sha256:52658f4d4518c469688b333c5214393ef52853becbd85756d8a833c7c627bbe3
-sha256:
-  darwin_arm64: b91cadc2503430beeeb5007a71b88e6876f847f4498f7a03cb73ad4f9108de5f
-  darwin_amd64: 189c2348eb50bd617bd426baee9d24c82027f0c84fe014de6be1d1d1a4293030
-  linux_amd64: d2fd912046181d18a635eac4bf5e1b44071ac369cf2acc9f84986e347ae47353
-  linux_arm64: 52658f4d4518c469688b333c5214393ef52853becbd85756d8a833c7c627bbe3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/clang-include-graph/blobs/sha256:b91cadc2503430beeeb5007a71b88e6876f847f4498f7a03cb73ad4f9108de5f
+    sha256: b91cadc2503430beeeb5007a71b88e6876f847f4498f7a03cb73ad4f9108de5f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/clang-include-graph/blobs/sha256:189c2348eb50bd617bd426baee9d24c82027f0c84fe014de6be1d1d1a4293030
+    sha256: 189c2348eb50bd617bd426baee9d24c82027f0c84fe014de6be1d1d1a4293030
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/clang-include-graph/blobs/sha256:d2fd912046181d18a635eac4bf5e1b44071ac369cf2acc9f84986e347ae47353
+    sha256: d2fd912046181d18a635eac4bf5e1b44071ac369cf2acc9f84986e347ae47353
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/clang-include-graph/blobs/sha256:52658f4d4518c469688b333c5214393ef52853becbd85756d8a833c7c627bbe3
+    sha256: 52658f4d4518c469688b333c5214393ef52853becbd85756d8a833c7c627bbe3
+source:
+  url: https://github.com/bkryza/clang-include-graph/archive/refs/tags/0.2.0.tar.gz
+  sha256: 174bbf961a2426030102bcf444eb2ca4ac10c05cfd5b993fef24bf4d492c420c
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,6 @@ install:
 dependencies:
   - boost
   - llvm
+build_dependencies:
+  - cmake
+  - pkgconf

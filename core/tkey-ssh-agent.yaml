@@ -3,19 +3,29 @@ version: 1.0.0
 description: SSH agent for use with the TKey security stick
 homepage: https://tillitis.se/
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:07136724f75aaf2969204ecbda818cd0b66308a2d088d21984f254313d2a8804
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:4cfb085857fead5f33b038fc74a07ee555af9f96cf445247c10fe663426e0cd2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:e3dc65ac11001c1f6f963a3e9526f18565053e0a1fe674526a06cfac1beaa127
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:72b5bcdb56861eee3ea3c512141a041d171c14c6977195351fa5041b5d6dac57
-sha256:
-  darwin_arm64: 07136724f75aaf2969204ecbda818cd0b66308a2d088d21984f254313d2a8804
-  darwin_amd64: 4cfb085857fead5f33b038fc74a07ee555af9f96cf445247c10fe663426e0cd2
-  linux_amd64: e3dc65ac11001c1f6f963a3e9526f18565053e0a1fe674526a06cfac1beaa127
-  linux_arm64: 72b5bcdb56861eee3ea3c512141a041d171c14c6977195351fa5041b5d6dac57
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:07136724f75aaf2969204ecbda818cd0b66308a2d088d21984f254313d2a8804
+    sha256: 07136724f75aaf2969204ecbda818cd0b66308a2d088d21984f254313d2a8804
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:4cfb085857fead5f33b038fc74a07ee555af9f96cf445247c10fe663426e0cd2
+    sha256: 4cfb085857fead5f33b038fc74a07ee555af9f96cf445247c10fe663426e0cd2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:e3dc65ac11001c1f6f963a3e9526f18565053e0a1fe674526a06cfac1beaa127
+    sha256: e3dc65ac11001c1f6f963a3e9526f18565053e0a1fe674526a06cfac1beaa127
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:72b5bcdb56861eee3ea3c512141a041d171c14c6977195351fa5041b5d6dac57
+    sha256: 72b5bcdb56861eee3ea3c512141a041d171c14c6977195351fa5041b5d6dac57
+source:
+  url: https://github.com/tillitis/tkey-ssh-agent/archive/refs/tags/v1.0.0.tar.gz
+  sha256: abe43e1948101a5da007ff997161216ee7d44a54e3fa6b0aa255c22fcab11ae1
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - pinentry-mac
+build_dependencies:
+  - go
+linux_dependencies:
+  - pinentry

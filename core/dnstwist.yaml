@@ -3,16 +3,22 @@ version: 20250130
 description: Test domains for typo squatting, phishing and corporate espionage
 homepage: https://github.com/elceef/dnstwist
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dnstwist/blobs/sha256:f592fbabbf5a143792e91077044d5a5c81b0eecbfdb8cba4283168e7e37fb3ae
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dnstwist/blobs/sha256:dcac34394e12c42bdc3167d67d160c412f768aeebdb306a4c77ef26e6d4e1912
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dnstwist/blobs/sha256:4ecbbcc82af739c6ae941618a10746fb20cf2f89e36dc9f2468b6f02b99df76c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dnstwist/blobs/sha256:f6c59c3156bba162d453e31bad4969843e14fa4825810c9b1c35917fb2f1f604
-sha256:
-  darwin_arm64: f592fbabbf5a143792e91077044d5a5c81b0eecbfdb8cba4283168e7e37fb3ae
-  darwin_amd64: dcac34394e12c42bdc3167d67d160c412f768aeebdb306a4c77ef26e6d4e1912
-  linux_amd64: 4ecbbcc82af739c6ae941618a10746fb20cf2f89e36dc9f2468b6f02b99df76c
-  linux_arm64: f6c59c3156bba162d453e31bad4969843e14fa4825810c9b1c35917fb2f1f604
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dnstwist/blobs/sha256:f592fbabbf5a143792e91077044d5a5c81b0eecbfdb8cba4283168e7e37fb3ae
+    sha256: f592fbabbf5a143792e91077044d5a5c81b0eecbfdb8cba4283168e7e37fb3ae
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dnstwist/blobs/sha256:dcac34394e12c42bdc3167d67d160c412f768aeebdb306a4c77ef26e6d4e1912
+    sha256: dcac34394e12c42bdc3167d67d160c412f768aeebdb306a4c77ef26e6d4e1912
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dnstwist/blobs/sha256:4ecbbcc82af739c6ae941618a10746fb20cf2f89e36dc9f2468b6f02b99df76c
+    sha256: 4ecbbcc82af739c6ae941618a10746fb20cf2f89e36dc9f2468b6f02b99df76c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dnstwist/blobs/sha256:f6c59c3156bba162d453e31bad4969843e14fa4825810c9b1c35917fb2f1f604
+    sha256: f6c59c3156bba162d453e31bad4969843e14fa4825810c9b1c35917fb2f1f604
+source:
+  url: https://files.pythonhosted.org/packages/e7/0e/88b4c5c7f3077c0d2e8544a14e321fce80b3cf0148a46dec9724e27c61d3/dnstwist-20250130.tar.gz
+  sha256: 8b6dd9c42a643a0e8b087903c0e6d75c0f6cebf94920ab0b7760ac2522c6bb42
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,11 @@ dependencies:
   - libmaxminddb
   - python@3.14
   - ssdeep
+build_dependencies:
+  - rust
+linux_dependencies:
+  - certifi
+  - libmaxminddb
+  - python@3.14
+  - ssdeep
+  - whois

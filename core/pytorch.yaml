@@ -3,16 +3,22 @@ version: 2.10.0
 description: Tensors and dynamic neural networks
 homepage: https://pytorch.org/
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:fc4848bff7f991a53387ade0642c0341a282c7d4291332455aa5e204fce30293
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:b277be1a6767a2caa89e99ca851f9b683132f7d8e3ebc52ca73fcfa61af3281a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:61f51339313f84a808c9db871738ab9abd956f4e3e31af7ab2556ba15b18cd8c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:f72661c64aaec806f3ef2c8d420ac81eb578d59d63d8001544dc5917fe881cf0
-sha256:
-  darwin_arm64: fc4848bff7f991a53387ade0642c0341a282c7d4291332455aa5e204fce30293
-  darwin_amd64: b277be1a6767a2caa89e99ca851f9b683132f7d8e3ebc52ca73fcfa61af3281a
-  linux_amd64: 61f51339313f84a808c9db871738ab9abd956f4e3e31af7ab2556ba15b18cd8c
-  linux_arm64: f72661c64aaec806f3ef2c8d420ac81eb578d59d63d8001544dc5917fe881cf0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:fc4848bff7f991a53387ade0642c0341a282c7d4291332455aa5e204fce30293
+    sha256: fc4848bff7f991a53387ade0642c0341a282c7d4291332455aa5e204fce30293
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:b277be1a6767a2caa89e99ca851f9b683132f7d8e3ebc52ca73fcfa61af3281a
+    sha256: b277be1a6767a2caa89e99ca851f9b683132f7d8e3ebc52ca73fcfa61af3281a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:61f51339313f84a808c9db871738ab9abd956f4e3e31af7ab2556ba15b18cd8c
+    sha256: 61f51339313f84a808c9db871738ab9abd956f4e3e31af7ab2556ba15b18cd8c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:f72661c64aaec806f3ef2c8d420ac81eb578d59d63d8001544dc5917fe881cf0
+    sha256: f72661c64aaec806f3ef2c8d420ac81eb578d59d63d8001544dc5917fe881cf0
+source:
+  url: https://github.com/pytorch/pytorch/releases/download/v2.10.0/pytorch-v2.10.0.tar.gz
+  sha256: fa8ccbe87f83f48735505371c1c313b4aa6db400b0ae4f8a02844d1e150c695f
 install:
   type: archive
   format: tar.gz
@@ -27,3 +33,16 @@ dependencies:
   - protobuf@33
   - sleef
   - libomp
+build_dependencies:
+  - cmake
+  - ninja
+  - python@3.14
+linux_dependencies:
+  - abseil
+  - eigen
+  - libuv
+  - libyaml
+  - numpy
+  - openblas
+  - protobuf@33
+  - sleef

@@ -3,17 +3,25 @@ version: 1.15.4
 description: Simple auto reload (live reload) utility
 homepage: https://github.com/makiuchi-d/arelo
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:ef8b5e963b9357f36274cc3215e3c4bef786c2ca7f81d844ed7161426725d9a6
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:14da6734979c2342999a2387f2682858ca121f8252dbb946911b9bd64a2e33df
-  linux_amd64: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:592beafb82bd1f10d9b8a303b0d224e0378d71eac089a47be9f141c266788e35
-  linux_arm64: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:8051a15270ccfa1ac4ba18bb6421ecf51e1f6d3a89a462809890a6b41c760ca9
-sha256:
-  darwin_arm64: ef8b5e963b9357f36274cc3215e3c4bef786c2ca7f81d844ed7161426725d9a6
-  darwin_amd64: 14da6734979c2342999a2387f2682858ca121f8252dbb946911b9bd64a2e33df
-  linux_amd64: 592beafb82bd1f10d9b8a303b0d224e0378d71eac089a47be9f141c266788e35
-  linux_arm64: 8051a15270ccfa1ac4ba18bb6421ecf51e1f6d3a89a462809890a6b41c760ca9
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:ef8b5e963b9357f36274cc3215e3c4bef786c2ca7f81d844ed7161426725d9a6
+    sha256: ef8b5e963b9357f36274cc3215e3c4bef786c2ca7f81d844ed7161426725d9a6
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:14da6734979c2342999a2387f2682858ca121f8252dbb946911b9bd64a2e33df
+    sha256: 14da6734979c2342999a2387f2682858ca121f8252dbb946911b9bd64a2e33df
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:592beafb82bd1f10d9b8a303b0d224e0378d71eac089a47be9f141c266788e35
+    sha256: 592beafb82bd1f10d9b8a303b0d224e0378d71eac089a47be9f141c266788e35
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:8051a15270ccfa1ac4ba18bb6421ecf51e1f6d3a89a462809890a6b41c760ca9
+    sha256: 8051a15270ccfa1ac4ba18bb6421ecf51e1f6d3a89a462809890a6b41c760ca9
+source:
+  url: https://github.com/makiuchi-d/arelo/archive/refs/tags/v1.15.4.tar.gz
+  sha256: f687e04187145aa6ccaf68fc995f9e8297387a2f27871ccb132625e0635cf15d
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

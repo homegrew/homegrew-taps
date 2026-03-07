@@ -3,17 +3,25 @@ version: 0.8.8
 description: Filesystem cleaning tool
 homepage: https://github.com/trinhminhtriet/rmrfrs
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/rmrfrs/blobs/sha256:767161879f6a4b4c0aa585e7fad656b07c9cea7e4c8136463fa80e6ecdc604d4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/rmrfrs/blobs/sha256:adc828072f5c3393d4890903cce6cdb30d9246c51b5e9a5c480582cf274bbd8f
-  linux_amd64: https://ghcr.io/v2/homebrew/core/rmrfrs/blobs/sha256:0587d1e0f3b6be8ccbb3dda1e687c61369d6ccb268ae3d2d8ca36a61ed24bac7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/rmrfrs/blobs/sha256:4898d3ac82f3bb77f6a9bca82cc0629c25d627ab1f59e96ed45a2d403c376ff2
-sha256:
-  darwin_arm64: 767161879f6a4b4c0aa585e7fad656b07c9cea7e4c8136463fa80e6ecdc604d4
-  darwin_amd64: adc828072f5c3393d4890903cce6cdb30d9246c51b5e9a5c480582cf274bbd8f
-  linux_amd64: 0587d1e0f3b6be8ccbb3dda1e687c61369d6ccb268ae3d2d8ca36a61ed24bac7
-  linux_arm64: 4898d3ac82f3bb77f6a9bca82cc0629c25d627ab1f59e96ed45a2d403c376ff2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rmrfrs/blobs/sha256:767161879f6a4b4c0aa585e7fad656b07c9cea7e4c8136463fa80e6ecdc604d4
+    sha256: 767161879f6a4b4c0aa585e7fad656b07c9cea7e4c8136463fa80e6ecdc604d4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rmrfrs/blobs/sha256:adc828072f5c3393d4890903cce6cdb30d9246c51b5e9a5c480582cf274bbd8f
+    sha256: adc828072f5c3393d4890903cce6cdb30d9246c51b5e9a5c480582cf274bbd8f
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/rmrfrs/blobs/sha256:0587d1e0f3b6be8ccbb3dda1e687c61369d6ccb268ae3d2d8ca36a61ed24bac7
+    sha256: 0587d1e0f3b6be8ccbb3dda1e687c61369d6ccb268ae3d2d8ca36a61ed24bac7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/rmrfrs/blobs/sha256:4898d3ac82f3bb77f6a9bca82cc0629c25d627ab1f59e96ed45a2d403c376ff2
+    sha256: 4898d3ac82f3bb77f6a9bca82cc0629c25d627ab1f59e96ed45a2d403c376ff2
+source:
+  url: https://github.com/trinhminhtriet/rmrfrs/archive/refs/tags/v0.8.8.tar.gz
+  sha256: 50fb55c8dba436998de87725427ee336045a2ee67d7ef9430ce875fcf8826d51
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

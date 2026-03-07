@@ -3,16 +3,22 @@ version: 1.10.1
 description: Log analyzer and interactive viewer for the Apache Webserver
 homepage: https://goaccess.io/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/goaccess/blobs/sha256:34069388b4e05e37b420a84dfe884befa76395c5821141ac2ecf131e3dd21e1b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/goaccess/blobs/sha256:8832a89900638b2c49c8ec52555115b5bb1e5a4684256b58773dfc97a7faaa31
-  linux_amd64: https://ghcr.io/v2/homebrew/core/goaccess/blobs/sha256:d6bbc76dd779693b909012b4507fc809738bf0df6478023cb5825b8bebfd368f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/goaccess/blobs/sha256:788eb0bfa6852f5ee97084683b9219c1161b8078928e92f4c899a8ea0ea8d830
-sha256:
-  darwin_arm64: 34069388b4e05e37b420a84dfe884befa76395c5821141ac2ecf131e3dd21e1b
-  darwin_amd64: 8832a89900638b2c49c8ec52555115b5bb1e5a4684256b58773dfc97a7faaa31
-  linux_amd64: d6bbc76dd779693b909012b4507fc809738bf0df6478023cb5825b8bebfd368f
-  linux_arm64: 788eb0bfa6852f5ee97084683b9219c1161b8078928e92f4c899a8ea0ea8d830
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/goaccess/blobs/sha256:34069388b4e05e37b420a84dfe884befa76395c5821141ac2ecf131e3dd21e1b
+    sha256: 34069388b4e05e37b420a84dfe884befa76395c5821141ac2ecf131e3dd21e1b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/goaccess/blobs/sha256:8832a89900638b2c49c8ec52555115b5bb1e5a4684256b58773dfc97a7faaa31
+    sha256: 8832a89900638b2c49c8ec52555115b5bb1e5a4684256b58773dfc97a7faaa31
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/goaccess/blobs/sha256:d6bbc76dd779693b909012b4507fc809738bf0df6478023cb5825b8bebfd368f
+    sha256: d6bbc76dd779693b909012b4507fc809738bf0df6478023cb5825b8bebfd368f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/goaccess/blobs/sha256:788eb0bfa6852f5ee97084683b9219c1161b8078928e92f4c899a8ea0ea8d830
+    sha256: 788eb0bfa6852f5ee97084683b9219c1161b8078928e92f4c899a8ea0ea8d830
+source:
+  url: https://tar.goaccess.io/goaccess-1.10.1.tar.gz
+  sha256: 32293bc6bc5f6d113e8490c8ff78a10bbc629aa23b0fb428534f53cc0c9a756e
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - libmaxminddb
   - gettext
+linux_dependencies:
+  - libmaxminddb

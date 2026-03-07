@@ -3,16 +3,22 @@ version: 2.10.3
 description: Open-source coarray Fortran ABI, API, and compiler wrapper
 homepage: http://www.opencoarrays.org
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/opencoarrays/blobs/sha256:d1754a06e742ffd50f899af3cf5a186a43aaff6960e26806587e3613589dbd7b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/opencoarrays/blobs/sha256:15f31976e5b9b76817ce2c9e1967f2a88d5bcaa7ff363bdbb9935e6e903c7eb0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/opencoarrays/blobs/sha256:5518987ba0c0912603c3d75480c1cb80285c5608362155d374804f94d0332a06
-  linux_arm64: https://ghcr.io/v2/homebrew/core/opencoarrays/blobs/sha256:4399e9520d9d42d1df399004733966a82f39cb35b04a9917a088fa3fe8b0e83a
-sha256:
-  darwin_arm64: d1754a06e742ffd50f899af3cf5a186a43aaff6960e26806587e3613589dbd7b
-  darwin_amd64: 15f31976e5b9b76817ce2c9e1967f2a88d5bcaa7ff363bdbb9935e6e903c7eb0
-  linux_amd64: 5518987ba0c0912603c3d75480c1cb80285c5608362155d374804f94d0332a06
-  linux_arm64: 4399e9520d9d42d1df399004733966a82f39cb35b04a9917a088fa3fe8b0e83a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/opencoarrays/blobs/sha256:d1754a06e742ffd50f899af3cf5a186a43aaff6960e26806587e3613589dbd7b
+    sha256: d1754a06e742ffd50f899af3cf5a186a43aaff6960e26806587e3613589dbd7b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/opencoarrays/blobs/sha256:15f31976e5b9b76817ce2c9e1967f2a88d5bcaa7ff363bdbb9935e6e903c7eb0
+    sha256: 15f31976e5b9b76817ce2c9e1967f2a88d5bcaa7ff363bdbb9935e6e903c7eb0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/opencoarrays/blobs/sha256:5518987ba0c0912603c3d75480c1cb80285c5608362155d374804f94d0332a06
+    sha256: 5518987ba0c0912603c3d75480c1cb80285c5608362155d374804f94d0332a06
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/opencoarrays/blobs/sha256:4399e9520d9d42d1df399004733966a82f39cb35b04a9917a088fa3fe8b0e83a
+    sha256: 4399e9520d9d42d1df399004733966a82f39cb35b04a9917a088fa3fe8b0e83a
+source:
+  url: https://github.com/sourceryinstitute/OpenCoarrays/archive/refs/tags/2.10.3.tar.gz
+  sha256: f9f2fb6ac1fe92c1ea66976894b5cebe53812827b7d1238fed933e2845e8a022
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - gcc@13
   - open-mpi
+build_dependencies:
+  - cmake

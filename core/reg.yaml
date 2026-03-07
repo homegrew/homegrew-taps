@@ -3,17 +3,25 @@ version: 0.16.1
 description: Docker registry v2 command-line client
 homepage: https://github.com/genuinetools/reg
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/reg/blobs/sha256:84e42284b946dc3f88d65243680eeb75761c66ad88125bcfd0f95545c42371d9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/reg/blobs/sha256:0baa7f427b863fba20abfeb72d188c8b4052e6e218f37d231263b2fbee648327
-  linux_amd64: https://ghcr.io/v2/homebrew/core/reg/blobs/sha256:0e1f1396a2eec2571aed2861955e94d41c841e2e57d85202084f263e95ecb1ca
-  linux_arm64: https://ghcr.io/v2/homebrew/core/reg/blobs/sha256:293883fc2cf4c4380eac853819e833eeac21f8d184814aca4c0cb53d8ca80a57
-sha256:
-  darwin_arm64: 84e42284b946dc3f88d65243680eeb75761c66ad88125bcfd0f95545c42371d9
-  darwin_amd64: 0baa7f427b863fba20abfeb72d188c8b4052e6e218f37d231263b2fbee648327
-  linux_amd64: 0e1f1396a2eec2571aed2861955e94d41c841e2e57d85202084f263e95ecb1ca
-  linux_arm64: 293883fc2cf4c4380eac853819e833eeac21f8d184814aca4c0cb53d8ca80a57
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/reg/blobs/sha256:84e42284b946dc3f88d65243680eeb75761c66ad88125bcfd0f95545c42371d9
+    sha256: 84e42284b946dc3f88d65243680eeb75761c66ad88125bcfd0f95545c42371d9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/reg/blobs/sha256:0baa7f427b863fba20abfeb72d188c8b4052e6e218f37d231263b2fbee648327
+    sha256: 0baa7f427b863fba20abfeb72d188c8b4052e6e218f37d231263b2fbee648327
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/reg/blobs/sha256:0e1f1396a2eec2571aed2861955e94d41c841e2e57d85202084f263e95ecb1ca
+    sha256: 0e1f1396a2eec2571aed2861955e94d41c841e2e57d85202084f263e95ecb1ca
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/reg/blobs/sha256:293883fc2cf4c4380eac853819e833eeac21f8d184814aca4c0cb53d8ca80a57
+    sha256: 293883fc2cf4c4380eac853819e833eeac21f8d184814aca4c0cb53d8ca80a57
+source:
+  url: https://github.com/genuinetools/reg/archive/refs/tags/v0.16.1.tar.gz
+  sha256: b65787bff71bff21f21adc933799e70aa9b868d19b1e64f8fd24ebdc19058430
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

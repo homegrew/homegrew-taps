@@ -3,12 +3,16 @@ version: 2.15.0
 description: Linux Trace Toolkit Next Generation Userspace Tracer
 homepage: https://lttng.org/
 license: LGPL-2.1-only AND MIT AND GPL-2.0-only AND BSD-3-Clause AND BSD-2-Clause AND GPL-3.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/lttng-ust/blobs/sha256:5348e0b6be2ca8554dd9bcb1bce4b4e82408f954fd9505e19f45b4a384bd6b93
-  linux_arm64: https://ghcr.io/v2/homebrew/core/lttng-ust/blobs/sha256:ae17463266ec81f0c13af2523c6eec514d908e907eca4e415b5092b4258de9d6
-sha256:
-  linux_amd64: 5348e0b6be2ca8554dd9bcb1bce4b4e82408f954fd9505e19f45b4a384bd6b93
-  linux_arm64: ae17463266ec81f0c13af2523c6eec514d908e907eca4e415b5092b4258de9d6
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/lttng-ust/blobs/sha256:5348e0b6be2ca8554dd9bcb1bce4b4e82408f954fd9505e19f45b4a384bd6b93
+    sha256: 5348e0b6be2ca8554dd9bcb1bce4b4e82408f954fd9505e19f45b4a384bd6b93
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/lttng-ust/blobs/sha256:ae17463266ec81f0c13af2523c6eec514d908e907eca4e415b5092b4258de9d6
+    sha256: ae17463266ec81f0c13af2523c6eec514d908e907eca4e415b5092b4258de9d6
+source:
+  url: https://lttng.org/files/lttng-ust/lttng-ust-2.15.0.tar.bz2
+  sha256: 6bc9723c7a50dd00c7da83d40b3bbb4b0746819f4d6e377c9bd897c898993e28
 install:
   type: archive
   format: tar.gz
@@ -16,3 +20,5 @@ install:
 dependencies:
   - numactl
   - userspace-rcu
+build_dependencies:
+  - pkgconf

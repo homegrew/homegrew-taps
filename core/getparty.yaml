@@ -3,17 +3,25 @@ version: 1.26.1
 description: Multi-part HTTP download manager
 homepage: https://github.com/vbauerster/getparty
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/getparty/blobs/sha256:1e8a738a875501fe17023af8dfa6452add13f86fe6fadf9ca6bdbd01f397c4d1
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/getparty/blobs/sha256:47a313f111332a6317c0e269292372b82cf575c4d58b70c1216664c0e2ef2769
-  linux_amd64: https://ghcr.io/v2/homebrew/core/getparty/blobs/sha256:d60e0469aa69f675344d6ee6843ef5ea2548ee836cc03531060593b658563e8e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/getparty/blobs/sha256:70bdae3987a2a997178b166b937dfc1075307178a164b94fe5ace6e39313114f
-sha256:
-  darwin_arm64: 1e8a738a875501fe17023af8dfa6452add13f86fe6fadf9ca6bdbd01f397c4d1
-  darwin_amd64: 47a313f111332a6317c0e269292372b82cf575c4d58b70c1216664c0e2ef2769
-  linux_amd64: d60e0469aa69f675344d6ee6843ef5ea2548ee836cc03531060593b658563e8e
-  linux_arm64: 70bdae3987a2a997178b166b937dfc1075307178a164b94fe5ace6e39313114f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/getparty/blobs/sha256:1e8a738a875501fe17023af8dfa6452add13f86fe6fadf9ca6bdbd01f397c4d1
+    sha256: 1e8a738a875501fe17023af8dfa6452add13f86fe6fadf9ca6bdbd01f397c4d1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/getparty/blobs/sha256:47a313f111332a6317c0e269292372b82cf575c4d58b70c1216664c0e2ef2769
+    sha256: 47a313f111332a6317c0e269292372b82cf575c4d58b70c1216664c0e2ef2769
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/getparty/blobs/sha256:d60e0469aa69f675344d6ee6843ef5ea2548ee836cc03531060593b658563e8e
+    sha256: d60e0469aa69f675344d6ee6843ef5ea2548ee836cc03531060593b658563e8e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/getparty/blobs/sha256:70bdae3987a2a997178b166b937dfc1075307178a164b94fe5ace6e39313114f
+    sha256: 70bdae3987a2a997178b166b937dfc1075307178a164b94fe5ace6e39313114f
+source:
+  url: https://github.com/vbauerster/getparty/archive/refs/tags/v1.26.1.tar.gz
+  sha256: d907ce3679d7ab1d79657d0066cbfd5d3a963ee0a6a3fa2b48a1766c52daa2a4
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

@@ -3,17 +3,25 @@ version: 1.0.0
 description: Git plugin that prevents sensitive data from being committed
 homepage: https://github.com/ezekg/git-hound
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/git-hound/blobs/sha256:15f176bb2320758e6a88797ee77011a189b7814857a0ed920dd4b32a3335012d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/git-hound/blobs/sha256:8313b4d62a2b0d21d21bc42812431573b07585c179cbbad7c2d5bd1fba20d88d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/git-hound/blobs/sha256:f27441dca7619968e685c5b91221d251872376412332fea4d318a17d4c283c4c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/git-hound/blobs/sha256:b3f6b4750e32e5f6b3a11bd754c2b026261373e3e1b54256b6ae3e48dc3bc4a2
-sha256:
-  darwin_arm64: 15f176bb2320758e6a88797ee77011a189b7814857a0ed920dd4b32a3335012d
-  darwin_amd64: 8313b4d62a2b0d21d21bc42812431573b07585c179cbbad7c2d5bd1fba20d88d
-  linux_amd64: f27441dca7619968e685c5b91221d251872376412332fea4d318a17d4c283c4c
-  linux_arm64: b3f6b4750e32e5f6b3a11bd754c2b026261373e3e1b54256b6ae3e48dc3bc4a2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/git-hound/blobs/sha256:15f176bb2320758e6a88797ee77011a189b7814857a0ed920dd4b32a3335012d
+    sha256: 15f176bb2320758e6a88797ee77011a189b7814857a0ed920dd4b32a3335012d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/git-hound/blobs/sha256:8313b4d62a2b0d21d21bc42812431573b07585c179cbbad7c2d5bd1fba20d88d
+    sha256: 8313b4d62a2b0d21d21bc42812431573b07585c179cbbad7c2d5bd1fba20d88d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/git-hound/blobs/sha256:f27441dca7619968e685c5b91221d251872376412332fea4d318a17d4c283c4c
+    sha256: f27441dca7619968e685c5b91221d251872376412332fea4d318a17d4c283c4c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/git-hound/blobs/sha256:b3f6b4750e32e5f6b3a11bd754c2b026261373e3e1b54256b6ae3e48dc3bc4a2
+    sha256: b3f6b4750e32e5f6b3a11bd754c2b026261373e3e1b54256b6ae3e48dc3bc4a2
+source:
+  url: https://github.com/ezekg/git-hound/archive/refs/tags/1.0.0.tar.gz
+  sha256: 32f79f470c790db068a23fd68e9763b3bedc84309a281b4c99b941d4f33f5763
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

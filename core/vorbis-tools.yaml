@@ -3,16 +3,22 @@ version: 1.4.3
 description: Ogg Vorbis CODEC tools
 homepage: https://github.com/xiph/vorbis-tools
 license: LGPL-2.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/vorbis-tools/blobs/sha256:ba951810e66deef3e95f0221893c66ba61714a590200dea95af16590595aba94
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/vorbis-tools/blobs/sha256:c06c90a0f929edb01a55843de22d3d7c81c97ca23c3baf27ada5ef9ec0793872
-  linux_amd64: https://ghcr.io/v2/homebrew/core/vorbis-tools/blobs/sha256:b66ff3ed8885d6b8c6ba8aff13bdfd348907376039d1c9d218daec795886df6f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/vorbis-tools/blobs/sha256:817d166c647bc6e97d1a462c2d350c011dc4c298d09e77aed7fd939b90303a86
-sha256:
-  darwin_arm64: ba951810e66deef3e95f0221893c66ba61714a590200dea95af16590595aba94
-  darwin_amd64: c06c90a0f929edb01a55843de22d3d7c81c97ca23c3baf27ada5ef9ec0793872
-  linux_amd64: b66ff3ed8885d6b8c6ba8aff13bdfd348907376039d1c9d218daec795886df6f
-  linux_arm64: 817d166c647bc6e97d1a462c2d350c011dc4c298d09e77aed7fd939b90303a86
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vorbis-tools/blobs/sha256:ba951810e66deef3e95f0221893c66ba61714a590200dea95af16590595aba94
+    sha256: ba951810e66deef3e95f0221893c66ba61714a590200dea95af16590595aba94
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vorbis-tools/blobs/sha256:c06c90a0f929edb01a55843de22d3d7c81c97ca23c3baf27ada5ef9ec0793872
+    sha256: c06c90a0f929edb01a55843de22d3d7c81c97ca23c3baf27ada5ef9ec0793872
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vorbis-tools/blobs/sha256:b66ff3ed8885d6b8c6ba8aff13bdfd348907376039d1c9d218daec795886df6f
+    sha256: b66ff3ed8885d6b8c6ba8aff13bdfd348907376039d1c9d218daec795886df6f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vorbis-tools/blobs/sha256:817d166c647bc6e97d1a462c2d350c011dc4c298d09e77aed7fd939b90303a86
+    sha256: 817d166c647bc6e97d1a462c2d350c011dc4c298d09e77aed7fd939b90303a86
+source:
+  url: https://ftp.osuosl.org/pub/xiph/releases/vorbis/vorbis-tools-1.4.3.tar.gz
+  sha256: a1fe3ddc6777bdcebf6b797e7edfe0437954b24756ffcc8c6b816b63e0460dde
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,8 @@ dependencies:
   - libao
   - libogg
   - libvorbis
+build_dependencies:
+  - pkgconf
+  - autoconf
+  - automake
+  - libtool

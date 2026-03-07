@@ -3,16 +3,22 @@ version: 0.405.0
 description: DNAnexus toolkit utilities and platform API bindings for Python
 homepage: https://github.com/dnanexus/dx-toolkit
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:e048e0fc6d403c878898d34a8cb5e95ee5251284f0e25d2c8badaef6503c1496
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:64bbc96660e37d9bb9b48cd1f49275e7ccd49a0b5826cbfe010ec33bf9979345
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:f519b3b26b423249f255f39d5506b2ee66c0408719cbc2f3108857e7f589102c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:b2d605ca35855a6fe04f95064a146748eafd2f8b59cd5c52dc2a44d9c0d5509a
-sha256:
-  darwin_arm64: e048e0fc6d403c878898d34a8cb5e95ee5251284f0e25d2c8badaef6503c1496
-  darwin_amd64: 64bbc96660e37d9bb9b48cd1f49275e7ccd49a0b5826cbfe010ec33bf9979345
-  linux_amd64: f519b3b26b423249f255f39d5506b2ee66c0408719cbc2f3108857e7f589102c
-  linux_arm64: b2d605ca35855a6fe04f95064a146748eafd2f8b59cd5c52dc2a44d9c0d5509a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:e048e0fc6d403c878898d34a8cb5e95ee5251284f0e25d2c8badaef6503c1496
+    sha256: e048e0fc6d403c878898d34a8cb5e95ee5251284f0e25d2c8badaef6503c1496
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:64bbc96660e37d9bb9b48cd1f49275e7ccd49a0b5826cbfe010ec33bf9979345
+    sha256: 64bbc96660e37d9bb9b48cd1f49275e7ccd49a0b5826cbfe010ec33bf9979345
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:f519b3b26b423249f255f39d5506b2ee66c0408719cbc2f3108857e7f589102c
+    sha256: f519b3b26b423249f255f39d5506b2ee66c0408719cbc2f3108857e7f589102c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:b2d605ca35855a6fe04f95064a146748eafd2f8b59cd5c52dc2a44d9c0d5509a
+    sha256: b2d605ca35855a6fe04f95064a146748eafd2f8b59cd5c52dc2a44d9c0d5509a
+source:
+  url: https://files.pythonhosted.org/packages/b1/74/603937164d84904f453544d9a930330f5c38b1252557a0595619d590207e/dxpy-0.405.0.tar.gz
+  sha256: 535474d22c8dec2beea46dc22128f55351d5eade3abfcab34df4449742b79008
 install:
   type: archive
   format: tar.gz
@@ -34,3 +40,23 @@ dependencies:
   - openssl@3
   - python@3.14
   - readline
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - aws-c-auth
+  - aws-c-cal
+  - aws-c-common
+  - aws-c-compression
+  - aws-c-event-stream
+  - aws-c-http
+  - aws-c-io
+  - aws-c-mqtt
+  - aws-c-s3
+  - aws-c-sdkutils
+  - aws-checksums
+  - aws-lc
+  - certifi
+  - cryptography
+  - openssl@3
+  - python@3.14
+  - s2n

@@ -3,12 +3,16 @@ version: 1.4.1
 description: Xlib-based library for the Apple-WM extension
 homepage: https://www.x.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libapplewm/blobs/sha256:4b8eba3bb855a350470232642c48f34eb601408e1b7a4650bed5934bf0e6c6bc
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libapplewm/blobs/sha256:beefb395695ff755d3d88c6ce1373f03954888d22a737d353059500673605d3d
-sha256:
-  darwin_arm64: 4b8eba3bb855a350470232642c48f34eb601408e1b7a4650bed5934bf0e6c6bc
-  darwin_amd64: beefb395695ff755d3d88c6ce1373f03954888d22a737d353059500673605d3d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libapplewm/blobs/sha256:4b8eba3bb855a350470232642c48f34eb601408e1b7a4650bed5934bf0e6c6bc
+    sha256: 4b8eba3bb855a350470232642c48f34eb601408e1b7a4650bed5934bf0e6c6bc
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libapplewm/blobs/sha256:beefb395695ff755d3d88c6ce1373f03954888d22a737d353059500673605d3d
+    sha256: beefb395695ff755d3d88c6ce1373f03954888d22a737d353059500673605d3d
+source:
+  url: https://www.x.org/releases/individual/lib/libAppleWM-1.4.1.tar.bz2
+  sha256: 5e5c85bcd81152b7bd33083135bfe2287636e707bba25f43ea09e1422c121d65
 install:
   type: archive
   format: tar.gz
@@ -16,3 +20,5 @@ install:
 dependencies:
   - libx11
   - libxext
+build_dependencies:
+  - pkgconf

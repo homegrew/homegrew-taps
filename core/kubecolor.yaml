@@ -3,17 +3,25 @@ version: 0.5.3
 description: Colorize your kubectl output
 homepage: https://kubecolor.github.io/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/kubecolor/blobs/sha256:d69609824745f1ce761450aa5dfa153237d99e179310816b6bc51d9e30242b50
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/kubecolor/blobs/sha256:c15be243a5ee680db0fa939a3aa20f34db76834b9c648f10cd0f5320acb2971b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/kubecolor/blobs/sha256:79297c1478d18887ebe83fd2078b25403eebbba9cf01550b29954cf5cb9bde4b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/kubecolor/blobs/sha256:cd0dcb961bf16c19f64a6c3276b7c432ca5c9312aba94871356445014a5c6507
-sha256:
-  darwin_arm64: d69609824745f1ce761450aa5dfa153237d99e179310816b6bc51d9e30242b50
-  darwin_amd64: c15be243a5ee680db0fa939a3aa20f34db76834b9c648f10cd0f5320acb2971b
-  linux_amd64: 79297c1478d18887ebe83fd2078b25403eebbba9cf01550b29954cf5cb9bde4b
-  linux_arm64: cd0dcb961bf16c19f64a6c3276b7c432ca5c9312aba94871356445014a5c6507
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kubecolor/blobs/sha256:d69609824745f1ce761450aa5dfa153237d99e179310816b6bc51d9e30242b50
+    sha256: d69609824745f1ce761450aa5dfa153237d99e179310816b6bc51d9e30242b50
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kubecolor/blobs/sha256:c15be243a5ee680db0fa939a3aa20f34db76834b9c648f10cd0f5320acb2971b
+    sha256: c15be243a5ee680db0fa939a3aa20f34db76834b9c648f10cd0f5320acb2971b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kubecolor/blobs/sha256:79297c1478d18887ebe83fd2078b25403eebbba9cf01550b29954cf5cb9bde4b
+    sha256: 79297c1478d18887ebe83fd2078b25403eebbba9cf01550b29954cf5cb9bde4b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kubecolor/blobs/sha256:cd0dcb961bf16c19f64a6c3276b7c432ca5c9312aba94871356445014a5c6507
+    sha256: cd0dcb961bf16c19f64a6c3276b7c432ca5c9312aba94871356445014a5c6507
+source:
+  url: https://github.com/kubecolor/kubecolor/archive/refs/tags/v0.5.3.tar.gz
+  sha256: 68df2c57700095d4598f91807913a6d8052bfe2ff20046052fcc7350a1a34423
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

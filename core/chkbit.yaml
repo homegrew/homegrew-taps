@@ -3,17 +3,25 @@ version: 6.6.0
 description: Check your files for data corruption
 homepage: https://github.com/laktak/chkbit
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/chkbit/blobs/sha256:6315ef336fb679f12d36330f33eaf3478dce829eab2ad3739c84ee4731971b42
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/chkbit/blobs/sha256:dc7cdbc05d965096539880f0795d61ef44a828abdd9a88ffd77085f7fa683f6a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/chkbit/blobs/sha256:dc67cdc999e593f8d39d30e24a0763f947145498f2a09a6d1804e524e04d5d4e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/chkbit/blobs/sha256:9357e560586810ff168c204dc10a71b239248f61722057d03f079778ec332f64
-sha256:
-  darwin_arm64: 6315ef336fb679f12d36330f33eaf3478dce829eab2ad3739c84ee4731971b42
-  darwin_amd64: dc7cdbc05d965096539880f0795d61ef44a828abdd9a88ffd77085f7fa683f6a
-  linux_amd64: dc67cdc999e593f8d39d30e24a0763f947145498f2a09a6d1804e524e04d5d4e
-  linux_arm64: 9357e560586810ff168c204dc10a71b239248f61722057d03f079778ec332f64
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/chkbit/blobs/sha256:6315ef336fb679f12d36330f33eaf3478dce829eab2ad3739c84ee4731971b42
+    sha256: 6315ef336fb679f12d36330f33eaf3478dce829eab2ad3739c84ee4731971b42
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/chkbit/blobs/sha256:dc7cdbc05d965096539880f0795d61ef44a828abdd9a88ffd77085f7fa683f6a
+    sha256: dc7cdbc05d965096539880f0795d61ef44a828abdd9a88ffd77085f7fa683f6a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/chkbit/blobs/sha256:dc67cdc999e593f8d39d30e24a0763f947145498f2a09a6d1804e524e04d5d4e
+    sha256: dc67cdc999e593f8d39d30e24a0763f947145498f2a09a6d1804e524e04d5d4e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/chkbit/blobs/sha256:9357e560586810ff168c204dc10a71b239248f61722057d03f079778ec332f64
+    sha256: 9357e560586810ff168c204dc10a71b239248f61722057d03f079778ec332f64
+source:
+  url: https://github.com/laktak/chkbit/archive/refs/tags/v6.6.0.tar.gz
+  sha256: 69a5c709d78604ed9d21b5439b2fbae96e21f729d7d36f417d50348dc9fdcc81
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

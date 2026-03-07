@@ -3,16 +3,22 @@ version: 5.5
 description: Eight player Bomberman clone
 homepage: http://mrboom.mumblecore.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mrboom/blobs/sha256:0f75bf0a9e0a7ab7d6a6cdf4b4cc8cbcb4e1a10999900f82819dae07e211cd40
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mrboom/blobs/sha256:0e9ade944b362e11025baa34ca19d545f8ba6f92668044288fc9b67d6ba0c35b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mrboom/blobs/sha256:c5d458cb0a2f0ed01cca78bf15db00aa8e4f5750538456bd2024e640da79dc4e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mrboom/blobs/sha256:4e01474f0bc6aae305f5ca6bc0f0ed6de99fd70112540185d9d7baec1de89916
-sha256:
-  darwin_arm64: 0f75bf0a9e0a7ab7d6a6cdf4b4cc8cbcb4e1a10999900f82819dae07e211cd40
-  darwin_amd64: 0e9ade944b362e11025baa34ca19d545f8ba6f92668044288fc9b67d6ba0c35b
-  linux_amd64: c5d458cb0a2f0ed01cca78bf15db00aa8e4f5750538456bd2024e640da79dc4e
-  linux_arm64: 4e01474f0bc6aae305f5ca6bc0f0ed6de99fd70112540185d9d7baec1de89916
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mrboom/blobs/sha256:0f75bf0a9e0a7ab7d6a6cdf4b4cc8cbcb4e1a10999900f82819dae07e211cd40
+    sha256: 0f75bf0a9e0a7ab7d6a6cdf4b4cc8cbcb4e1a10999900f82819dae07e211cd40
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mrboom/blobs/sha256:0e9ade944b362e11025baa34ca19d545f8ba6f92668044288fc9b67d6ba0c35b
+    sha256: 0e9ade944b362e11025baa34ca19d545f8ba6f92668044288fc9b67d6ba0c35b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mrboom/blobs/sha256:c5d458cb0a2f0ed01cca78bf15db00aa8e4f5750538456bd2024e640da79dc4e
+    sha256: c5d458cb0a2f0ed01cca78bf15db00aa8e4f5750538456bd2024e640da79dc4e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mrboom/blobs/sha256:4e01474f0bc6aae305f5ca6bc0f0ed6de99fd70112540185d9d7baec1de89916
+    sha256: 4e01474f0bc6aae305f5ca6bc0f0ed6de99fd70112540185d9d7baec1de89916
+source:
+  url: https://github.com/Javanaise/mrboom-libretro/releases/download/5.5/MrBoom-src-5.5.tar.gz
+  sha256: c37c09c30662b17f1c7da337da1475f534674686ce78c7e15b603eeadc4498f0
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,5 @@ dependencies:
   - minizip
   - sdl2
   - sdl2_mixer
+build_dependencies:
+  - cmake

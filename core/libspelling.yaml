@@ -3,16 +3,22 @@ version: 0.4.10
 description: Spellcheck library for GTK 4
 homepage: https://gitlab.gnome.org/GNOME/libspelling
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:11153634aad81e3844d252f6d844a3959243360ff7a825594109d096512f6f97
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:b2f39ab29923d2773c74bc2065abf8cfbb517a7c5eb4f52057e21f141f194882
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:547925f26bc3a232e3774dd75c229b3b155691982c3db5a3e9082dc88791ed74
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:6f9877ad8aa58cce8bfeb6c6cd4c7e7d0753afefcf3d428bd2a8d019f9c5180e
-sha256:
-  darwin_arm64: 11153634aad81e3844d252f6d844a3959243360ff7a825594109d096512f6f97
-  darwin_amd64: b2f39ab29923d2773c74bc2065abf8cfbb517a7c5eb4f52057e21f141f194882
-  linux_amd64: 547925f26bc3a232e3774dd75c229b3b155691982c3db5a3e9082dc88791ed74
-  linux_arm64: 6f9877ad8aa58cce8bfeb6c6cd4c7e7d0753afefcf3d428bd2a8d019f9c5180e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:11153634aad81e3844d252f6d844a3959243360ff7a825594109d096512f6f97
+    sha256: 11153634aad81e3844d252f6d844a3959243360ff7a825594109d096512f6f97
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:b2f39ab29923d2773c74bc2065abf8cfbb517a7c5eb4f52057e21f141f194882
+    sha256: b2f39ab29923d2773c74bc2065abf8cfbb517a7c5eb4f52057e21f141f194882
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:547925f26bc3a232e3774dd75c229b3b155691982c3db5a3e9082dc88791ed74
+    sha256: 547925f26bc3a232e3774dd75c229b3b155691982c3db5a3e9082dc88791ed74
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:6f9877ad8aa58cce8bfeb6c6cd4c7e7d0753afefcf3d428bd2a8d019f9c5180e
+    sha256: 6f9877ad8aa58cce8bfeb6c6cd4c7e7d0753afefcf3d428bd2a8d019f9c5180e
+source:
+  url: https://gitlab.gnome.org/GNOME/libspelling/-/archive/0.4.10/libspelling-0.4.10.tar.bz2
+  sha256: d6388f3dc207269743ec920b14bb3be55ab4bd97a18e167b52a09cec0554dc2b
 install:
   type: archive
   format: tar.gz
@@ -29,3 +35,17 @@ dependencies:
   - gettext
   - graphene
   - harfbuzz
+build_dependencies:
+  - gobject-introspection
+  - meson
+  - ninja
+  - pkgconf
+  - vala
+linux_dependencies:
+  - enchant
+  - glib
+  - gtk4
+  - gtksourceview5
+  - icu4c@78
+  - pango
+  - sysprof

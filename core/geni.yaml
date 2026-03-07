@@ -3,17 +3,25 @@ version: 1.1.9
 description: Standalone database migration tool
 homepage: https://github.com/emilpriver/geni
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/geni/blobs/sha256:aadd4145294832bb28f3e7d7ef0a96c7d93be78fc9cc24abed572af6804f4a3d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/geni/blobs/sha256:a92883ccccfeb4e74850c6490f590c8d42915a91df6a7461f60cd85c4467edaa
-  linux_amd64: https://ghcr.io/v2/homebrew/core/geni/blobs/sha256:c72961dd2a9f193d161e1cdf0fa516fd9587b24e34a600b3194ac0f6f158df39
-  linux_arm64: https://ghcr.io/v2/homebrew/core/geni/blobs/sha256:647ed788257bc0b649226118ba3edcdcfe4a6a0b08e7afb5d690f997e822b47e
-sha256:
-  darwin_arm64: aadd4145294832bb28f3e7d7ef0a96c7d93be78fc9cc24abed572af6804f4a3d
-  darwin_amd64: a92883ccccfeb4e74850c6490f590c8d42915a91df6a7461f60cd85c4467edaa
-  linux_amd64: c72961dd2a9f193d161e1cdf0fa516fd9587b24e34a600b3194ac0f6f158df39
-  linux_arm64: 647ed788257bc0b649226118ba3edcdcfe4a6a0b08e7afb5d690f997e822b47e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/geni/blobs/sha256:aadd4145294832bb28f3e7d7ef0a96c7d93be78fc9cc24abed572af6804f4a3d
+    sha256: aadd4145294832bb28f3e7d7ef0a96c7d93be78fc9cc24abed572af6804f4a3d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/geni/blobs/sha256:a92883ccccfeb4e74850c6490f590c8d42915a91df6a7461f60cd85c4467edaa
+    sha256: a92883ccccfeb4e74850c6490f590c8d42915a91df6a7461f60cd85c4467edaa
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/geni/blobs/sha256:c72961dd2a9f193d161e1cdf0fa516fd9587b24e34a600b3194ac0f6f158df39
+    sha256: c72961dd2a9f193d161e1cdf0fa516fd9587b24e34a600b3194ac0f6f158df39
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/geni/blobs/sha256:647ed788257bc0b649226118ba3edcdcfe4a6a0b08e7afb5d690f997e822b47e
+    sha256: 647ed788257bc0b649226118ba3edcdcfe4a6a0b08e7afb5d690f997e822b47e
+source:
+  url: https://github.com/emilpriver/geni/archive/refs/tags/v1.1.9.tar.gz
+  sha256: c955d84b3a2c28830b7042c8d6e6c9084509a44c436bf9a2a873d2d57b71cd13
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

@@ -3,16 +3,22 @@ version: 26.02.0
 description: Multimedia framework for research and academic purposes
 homepage: https://gpac.io/
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gpac/blobs/sha256:b2d9c99d0d9bc24cd5c392091cb890363af39d9214ee1a2c35422208f06bff2c
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gpac/blobs/sha256:f31f73e8e8c7a7aec8b554b7a860b9e49081d0bc45299083e86316ded86be2f6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gpac/blobs/sha256:5a2cd87687f784c99df64a1580d282cf9b93c0922f3f4fe1457ba11c0ffc308e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gpac/blobs/sha256:c7ad558c0a70fcf23b5fa5d5e30adfeccd1776c3d96306a2e2e9e3b55ffa4232
-sha256:
-  darwin_arm64: b2d9c99d0d9bc24cd5c392091cb890363af39d9214ee1a2c35422208f06bff2c
-  darwin_amd64: f31f73e8e8c7a7aec8b554b7a860b9e49081d0bc45299083e86316ded86be2f6
-  linux_amd64: 5a2cd87687f784c99df64a1580d282cf9b93c0922f3f4fe1457ba11c0ffc308e
-  linux_arm64: c7ad558c0a70fcf23b5fa5d5e30adfeccd1776c3d96306a2e2e9e3b55ffa4232
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gpac/blobs/sha256:b2d9c99d0d9bc24cd5c392091cb890363af39d9214ee1a2c35422208f06bff2c
+    sha256: b2d9c99d0d9bc24cd5c392091cb890363af39d9214ee1a2c35422208f06bff2c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gpac/blobs/sha256:f31f73e8e8c7a7aec8b554b7a860b9e49081d0bc45299083e86316ded86be2f6
+    sha256: f31f73e8e8c7a7aec8b554b7a860b9e49081d0bc45299083e86316ded86be2f6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gpac/blobs/sha256:5a2cd87687f784c99df64a1580d282cf9b93c0922f3f4fe1457ba11c0ffc308e
+    sha256: 5a2cd87687f784c99df64a1580d282cf9b93c0922f3f4fe1457ba11c0ffc308e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gpac/blobs/sha256:c7ad558c0a70fcf23b5fa5d5e30adfeccd1776c3d96306a2e2e9e3b55ffa4232
+    sha256: c7ad558c0a70fcf23b5fa5d5e30adfeccd1776c3d96306a2e2e9e3b55ffa4232
+source:
+  url: https://github.com/gpac/gpac/archive/refs/tags/v26.02.0.tar.gz
+  sha256: 7a265e1cd58b317d8c9175816a54e0ab14199c21d81eb779047d7088fca52ae4
 install:
   type: archive
   format: tar.gz
@@ -32,3 +38,23 @@ dependencies:
   - theora
   - xz
   - libogg
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - ffmpeg
+  - freetype
+  - jpeg-turbo
+  - libnghttp2
+  - libpng
+  - libvorbis
+  - libx11
+  - libxext
+  - libxv
+  - openjpeg
+  - openssl@3
+  - pulseaudio
+  - sdl2
+  - theora
+  - xz
+  - zlib-ng-compat

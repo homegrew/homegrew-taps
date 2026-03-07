@@ -3,19 +3,29 @@ version: 0.5.0
 description: Reverse proxy application, based on the pingora library from Cloudflare
 homepage: https://github.com/memorysafety/river
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/river/blobs/sha256:6aa053883945074b92163f95377836cd8dac14606d0406d83bcfef4238f6a2a5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/river/blobs/sha256:32bf41e3c0baccfccc9aa73af1e00178cda928638dab11a67651342a54a9ce67
-  linux_amd64: https://ghcr.io/v2/homebrew/core/river/blobs/sha256:0ffd4142bf28d324a32169a8e5cd31640c89af81ae66e3f7f4b2fc548322dec0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/river/blobs/sha256:73562d84d8fb211d03d3c07c22145034298bb5bf601b3ff811b07c49569190de
-sha256:
-  darwin_arm64: 6aa053883945074b92163f95377836cd8dac14606d0406d83bcfef4238f6a2a5
-  darwin_amd64: 32bf41e3c0baccfccc9aa73af1e00178cda928638dab11a67651342a54a9ce67
-  linux_amd64: 0ffd4142bf28d324a32169a8e5cd31640c89af81ae66e3f7f4b2fc548322dec0
-  linux_arm64: 73562d84d8fb211d03d3c07c22145034298bb5bf601b3ff811b07c49569190de
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/river/blobs/sha256:6aa053883945074b92163f95377836cd8dac14606d0406d83bcfef4238f6a2a5
+    sha256: 6aa053883945074b92163f95377836cd8dac14606d0406d83bcfef4238f6a2a5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/river/blobs/sha256:32bf41e3c0baccfccc9aa73af1e00178cda928638dab11a67651342a54a9ce67
+    sha256: 32bf41e3c0baccfccc9aa73af1e00178cda928638dab11a67651342a54a9ce67
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/river/blobs/sha256:0ffd4142bf28d324a32169a8e5cd31640c89af81ae66e3f7f4b2fc548322dec0
+    sha256: 0ffd4142bf28d324a32169a8e5cd31640c89af81ae66e3f7f4b2fc548322dec0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/river/blobs/sha256:73562d84d8fb211d03d3c07c22145034298bb5bf601b3ff811b07c49569190de
+    sha256: 73562d84d8fb211d03d3c07c22145034298bb5bf601b3ff811b07c49569190de
+source:
+  url: https://github.com/memorysafety/river/archive/refs/tags/v0.5.0.tar.gz
+  sha256: fe96d3693d60be06d0d1810954835f79139495b890b597f42c2b0bfa2bd8c7a6
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - openssl@3
+build_dependencies:
+  - cmake
+  - pkgconf
+  - rust

@@ -3,19 +3,30 @@ version: 3.1.0
 description: Bauer stereophonic-to-binaural DSP
 homepage: https://bs2b.sourceforge.net/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libbs2b/blobs/sha256:1ba28dd968f0cee9f5e12adef12978ac728db271ffe588218ccd59ac8e3a3afe
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libbs2b/blobs/sha256:1f07651dd674bbccd300375b9c2405f6e116444763f1964be66cc64ee905c6c3
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libbs2b/blobs/sha256:1d6af3a009939d61fdec9ddd863c4c6e8b51d4f3bd5bc73f55dfc76ac2f48231
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libbs2b/blobs/sha256:2595f81bf293833f6aea6611164a1ca362517cf89e3ed64862c9171cb9390ea2
-sha256:
-  darwin_arm64: 1ba28dd968f0cee9f5e12adef12978ac728db271ffe588218ccd59ac8e3a3afe
-  darwin_amd64: 1f07651dd674bbccd300375b9c2405f6e116444763f1964be66cc64ee905c6c3
-  linux_amd64: 1d6af3a009939d61fdec9ddd863c4c6e8b51d4f3bd5bc73f55dfc76ac2f48231
-  linux_arm64: 2595f81bf293833f6aea6611164a1ca362517cf89e3ed64862c9171cb9390ea2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libbs2b/blobs/sha256:1ba28dd968f0cee9f5e12adef12978ac728db271ffe588218ccd59ac8e3a3afe
+    sha256: 1ba28dd968f0cee9f5e12adef12978ac728db271ffe588218ccd59ac8e3a3afe
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libbs2b/blobs/sha256:1f07651dd674bbccd300375b9c2405f6e116444763f1964be66cc64ee905c6c3
+    sha256: 1f07651dd674bbccd300375b9c2405f6e116444763f1964be66cc64ee905c6c3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libbs2b/blobs/sha256:1d6af3a009939d61fdec9ddd863c4c6e8b51d4f3bd5bc73f55dfc76ac2f48231
+    sha256: 1d6af3a009939d61fdec9ddd863c4c6e8b51d4f3bd5bc73f55dfc76ac2f48231
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libbs2b/blobs/sha256:2595f81bf293833f6aea6611164a1ca362517cf89e3ed64862c9171cb9390ea2
+    sha256: 2595f81bf293833f6aea6611164a1ca362517cf89e3ed64862c9171cb9390ea2
+source:
+  url: https://downloads.sourceforge.net/project/bs2b/libbs2b/3.1.0/libbs2b-3.1.0.tar.gz
+  sha256: 6aaafd81aae3898ee40148dd1349aab348db9bfae9767d0e66e0b07ddd4b2528
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - libsndfile
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf

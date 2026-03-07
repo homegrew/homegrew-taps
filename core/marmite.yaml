@@ -3,17 +3,25 @@ version: 0.2.7
 description: Static Site Generator for Blogs using Markdown
 homepage: https://rochacbruno.github.io/marmite/
 license: AGPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/marmite/blobs/sha256:514f120a07a927221e1d7b32d4bf88cd6803ccf89b0fb161f2df2c7bf0fde157
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/marmite/blobs/sha256:8c66b8196d07d5505d8bca9f22418b86456e6a1a575f159c97ec278e28816e68
-  linux_amd64: https://ghcr.io/v2/homebrew/core/marmite/blobs/sha256:60bfff999533244337df417baf2a6ceea6cd0de1540a2624350e552641590f8e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/marmite/blobs/sha256:7ca66295223c38697f46a5d5298c42f024e6aed96b3ac10f427474657cf9069c
-sha256:
-  darwin_arm64: 514f120a07a927221e1d7b32d4bf88cd6803ccf89b0fb161f2df2c7bf0fde157
-  darwin_amd64: 8c66b8196d07d5505d8bca9f22418b86456e6a1a575f159c97ec278e28816e68
-  linux_amd64: 60bfff999533244337df417baf2a6ceea6cd0de1540a2624350e552641590f8e
-  linux_arm64: 7ca66295223c38697f46a5d5298c42f024e6aed96b3ac10f427474657cf9069c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/marmite/blobs/sha256:514f120a07a927221e1d7b32d4bf88cd6803ccf89b0fb161f2df2c7bf0fde157
+    sha256: 514f120a07a927221e1d7b32d4bf88cd6803ccf89b0fb161f2df2c7bf0fde157
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/marmite/blobs/sha256:8c66b8196d07d5505d8bca9f22418b86456e6a1a575f159c97ec278e28816e68
+    sha256: 8c66b8196d07d5505d8bca9f22418b86456e6a1a575f159c97ec278e28816e68
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/marmite/blobs/sha256:60bfff999533244337df417baf2a6ceea6cd0de1540a2624350e552641590f8e
+    sha256: 60bfff999533244337df417baf2a6ceea6cd0de1540a2624350e552641590f8e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/marmite/blobs/sha256:7ca66295223c38697f46a5d5298c42f024e6aed96b3ac10f427474657cf9069c
+    sha256: 7ca66295223c38697f46a5d5298c42f024e6aed96b3ac10f427474657cf9069c
+source:
+  url: https://github.com/rochacbruno/marmite/archive/refs/tags/0.2.7.tar.gz
+  sha256: 49328d4df08c964562d4b4cb61e42a5d00f88fa4f19f2967241eb32e96b623d9
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

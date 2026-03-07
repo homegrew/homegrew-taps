@@ -3,16 +3,22 @@ version: 1.2.0
 description: OpenGL extension to GTK+
 homepage: https://gitlab.gnome.org/Archive/gtkglext
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gtkglext/blobs/sha256:764e97c887571389641f45ef171ca06af71ac4bc5fcaaff56e85c9d663cad92a
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gtkglext/blobs/sha256:ea372181dc03023ea581b14ca996646f6da8cdb54d81911f5b999281c70ecdd7
-  linux_amd64: https://ghcr.io/v2/homebrew/core/gtkglext/blobs/sha256:bea86597c739ebbf55d551970dee174085bfc3d0c4d70f06f0cce969979ef2af
-  linux_arm64: https://ghcr.io/v2/homebrew/core/gtkglext/blobs/sha256:8111b6fa90b879f9572ff71ebec5ff279bc5b4532c19f52331286f39783c04ab
-sha256:
-  darwin_arm64: 764e97c887571389641f45ef171ca06af71ac4bc5fcaaff56e85c9d663cad92a
-  darwin_amd64: ea372181dc03023ea581b14ca996646f6da8cdb54d81911f5b999281c70ecdd7
-  linux_amd64: bea86597c739ebbf55d551970dee174085bfc3d0c4d70f06f0cce969979ef2af
-  linux_arm64: 8111b6fa90b879f9572ff71ebec5ff279bc5b4532c19f52331286f39783c04ab
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gtkglext/blobs/sha256:764e97c887571389641f45ef171ca06af71ac4bc5fcaaff56e85c9d663cad92a
+    sha256: 764e97c887571389641f45ef171ca06af71ac4bc5fcaaff56e85c9d663cad92a
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gtkglext/blobs/sha256:ea372181dc03023ea581b14ca996646f6da8cdb54d81911f5b999281c70ecdd7
+    sha256: ea372181dc03023ea581b14ca996646f6da8cdb54d81911f5b999281c70ecdd7
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gtkglext/blobs/sha256:bea86597c739ebbf55d551970dee174085bfc3d0c4d70f06f0cce969979ef2af
+    sha256: bea86597c739ebbf55d551970dee174085bfc3d0c4d70f06f0cce969979ef2af
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gtkglext/blobs/sha256:8111b6fa90b879f9572ff71ebec5ff279bc5b4532c19f52331286f39783c04ab
+    sha256: 8111b6fa90b879f9572ff71ebec5ff279bc5b4532c19f52331286f39783c04ab
+source:
+  url: https://download.gnome.org/sources/gtkglext/1.2/gtkglext-1.2.0.tar.gz
+  sha256: e5073f3c6b816e7fa67d359d9745a5bb5de94a628ac85f624c992925a46844f9
 install:
   type: archive
   format: tar.gz
@@ -26,3 +32,12 @@ dependencies:
   - gdk-pixbuf
   - gettext
   - harfbuzz
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - glib
+  - gtk+
+  - libx11
+  - mesa
+  - mesa-glu
+  - pango

@@ -3,19 +3,27 @@ version: 2.5.0
 description: OCaml package manager
 homepage: https://opam.ocaml.org
 license: LGPL-2.1-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:49fa1631fb9dc7f680166f185f095d1eeedd84f30c34a363b9a57a86b286ab91
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:aebc9646975f09d68083d69eddf58221fa8e0bb221958b67fecbb6b9ce95e8fb
-  linux_amd64: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:0fc029045abb424f08f33f54b9bf6a48e6ffad9bce02f05c4e3e93a5093146b4
-  linux_arm64: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:71866a75c2a3f2c6f87927e7d74b059d8f49d792a03968364583df919adec39d
-sha256:
-  darwin_arm64: 49fa1631fb9dc7f680166f185f095d1eeedd84f30c34a363b9a57a86b286ab91
-  darwin_amd64: aebc9646975f09d68083d69eddf58221fa8e0bb221958b67fecbb6b9ce95e8fb
-  linux_amd64: 0fc029045abb424f08f33f54b9bf6a48e6ffad9bce02f05c4e3e93a5093146b4
-  linux_arm64: 71866a75c2a3f2c6f87927e7d74b059d8f49d792a03968364583df919adec39d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:49fa1631fb9dc7f680166f185f095d1eeedd84f30c34a363b9a57a86b286ab91
+    sha256: 49fa1631fb9dc7f680166f185f095d1eeedd84f30c34a363b9a57a86b286ab91
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:aebc9646975f09d68083d69eddf58221fa8e0bb221958b67fecbb6b9ce95e8fb
+    sha256: aebc9646975f09d68083d69eddf58221fa8e0bb221958b67fecbb6b9ce95e8fb
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:0fc029045abb424f08f33f54b9bf6a48e6ffad9bce02f05c4e3e93a5093146b4
+    sha256: 0fc029045abb424f08f33f54b9bf6a48e6ffad9bce02f05c4e3e93a5093146b4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:71866a75c2a3f2c6f87927e7d74b059d8f49d792a03968364583df919adec39d
+    sha256: 71866a75c2a3f2c6f87927e7d74b059d8f49d792a03968364583df919adec39d
+source:
+  url: https://github.com/ocaml/opam/releases/download/2.5.0/opam-full-2.5.0.tar.gz
+  sha256: 25fb98f962c4227c1261e142afc68a416778e6e819600bd5ee3ec4a18ae1e238
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - rsync
+build_dependencies:
+  - ocaml

@@ -3,17 +3,25 @@ version: 3.9.0
 description: Pins GitHub Actions to full hashes and versions
 homepage: https://github.com/suzuki-shunsuke/pinact
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pinact/blobs/sha256:b1f5c4b4b75404099ccb580789ee7eb9a3dbc9dd0fb111cd8bf2a0e47e5300f0
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pinact/blobs/sha256:231632e3d6eddee72e5514544c06ef3d9f84ee92bd9d94a2d86e7fc66abba9df
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pinact/blobs/sha256:4878d7a277b94b39a21923a39e0fb9eaa08e1dea34f672ece037312f5b306701
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pinact/blobs/sha256:e679fccf16aea372535b100c7136af9bf6854466ed52c5c826e81b8573bbfe30
-sha256:
-  darwin_arm64: b1f5c4b4b75404099ccb580789ee7eb9a3dbc9dd0fb111cd8bf2a0e47e5300f0
-  darwin_amd64: 231632e3d6eddee72e5514544c06ef3d9f84ee92bd9d94a2d86e7fc66abba9df
-  linux_amd64: 4878d7a277b94b39a21923a39e0fb9eaa08e1dea34f672ece037312f5b306701
-  linux_arm64: e679fccf16aea372535b100c7136af9bf6854466ed52c5c826e81b8573bbfe30
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pinact/blobs/sha256:b1f5c4b4b75404099ccb580789ee7eb9a3dbc9dd0fb111cd8bf2a0e47e5300f0
+    sha256: b1f5c4b4b75404099ccb580789ee7eb9a3dbc9dd0fb111cd8bf2a0e47e5300f0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pinact/blobs/sha256:231632e3d6eddee72e5514544c06ef3d9f84ee92bd9d94a2d86e7fc66abba9df
+    sha256: 231632e3d6eddee72e5514544c06ef3d9f84ee92bd9d94a2d86e7fc66abba9df
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pinact/blobs/sha256:4878d7a277b94b39a21923a39e0fb9eaa08e1dea34f672ece037312f5b306701
+    sha256: 4878d7a277b94b39a21923a39e0fb9eaa08e1dea34f672ece037312f5b306701
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pinact/blobs/sha256:e679fccf16aea372535b100c7136af9bf6854466ed52c5c826e81b8573bbfe30
+    sha256: e679fccf16aea372535b100c7136af9bf6854466ed52c5c826e81b8573bbfe30
+source:
+  url: https://github.com/suzuki-shunsuke/pinact/archive/refs/tags/v3.9.0.tar.gz
+  sha256: 4e4f5f1f98162f90fe688d9a82f00da56e545e15bec8d3a0fa334b1c72b59aef
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

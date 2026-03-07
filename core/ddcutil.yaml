@@ -3,12 +3,16 @@ version: 2.2.5
 description: Control monitor settings using DDC/CI and USB
 homepage: https://www.ddcutil.com
 license: GPL-2.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ddcutil/blobs/sha256:4b6d8e070804f19b64e0efd048ee50f08f62f764a10546590d6a7f310bec619d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ddcutil/blobs/sha256:3a29efc5efb10d278fe7502ca94a66b34b87371fdf658a2d811210acc9e3a393
-sha256:
-  linux_amd64: 4b6d8e070804f19b64e0efd048ee50f08f62f764a10546590d6a7f310bec619d
-  linux_arm64: 3a29efc5efb10d278fe7502ca94a66b34b87371fdf658a2d811210acc9e3a393
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ddcutil/blobs/sha256:4b6d8e070804f19b64e0efd048ee50f08f62f764a10546590d6a7f310bec619d
+    sha256: 4b6d8e070804f19b64e0efd048ee50f08f62f764a10546590d6a7f310bec619d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ddcutil/blobs/sha256:3a29efc5efb10d278fe7502ca94a66b34b87371fdf658a2d811210acc9e3a393
+    sha256: 3a29efc5efb10d278fe7502ca94a66b34b87371fdf658a2d811210acc9e3a393
+source:
+  url: https://www.ddcutil.com/tarballs/ddcutil-2.2.5.tar.gz
+  sha256: 795eae548d49611e989cd49046aff58d92e1792c0dabb673ed2bbd01bd4f1f8f
 install:
   type: archive
   format: tar.gz
@@ -24,3 +28,5 @@ dependencies:
   - libxext
   - libxrandr
   - systemd
+build_dependencies:
+  - pkgconf

@@ -3,10 +3,22 @@ version: 2.34.4
 description: Official Amazon AWS command-line interface
 homepage: https://aws.amazon.com/cli/
 license: Apache-2.0
-url:
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:f73499e4981ac2bdcdf54702b7887ce9cb17b61857855d5c8bed9687e02e321b
-sha256:
-  darwin_amd64: f73499e4981ac2bdcdf54702b7887ce9cb17b61857855d5c8bed9687e02e321b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:9c50c82e21a5e7f15579c0cca9d45b4c9318a23e891d4ae4aa3b309b13cabb01
+    sha256: 9c50c82e21a5e7f15579c0cca9d45b4c9318a23e891d4ae4aa3b309b13cabb01
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:73d013791f7da40f4d20865e204ef0935a29f8cd3d9f1c3afac169d7e40d4113
+    sha256: 73d013791f7da40f4d20865e204ef0935a29f8cd3d9f1c3afac169d7e40d4113
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:536bb83b5a113c678200300da21463e5b0c9324b23e4c24cddc54a835046ca8b
+    sha256: 536bb83b5a113c678200300da21463e5b0c9324b23e4c24cddc54a835046ca8b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:b815618420679e1454a18a1395f590455612e0e04b49e57f14cab0b4594d364c
+    sha256: b815618420679e1454a18a1395f590455612e0e04b49e57f14cab0b4594d364c
+source:
+  url: https://github.com/aws/aws-cli/archive/refs/tags/2.34.4.tar.gz
+  sha256: fee26e83416056de9cde704ab106abe1de60adddf62bacc70e37e87ccd62ffb0
 install:
   type: archive
   format: tar.gz
@@ -14,3 +26,5 @@ install:
 dependencies:
   - openssl@3
   - python@3.13
+build_dependencies:
+  - cmake

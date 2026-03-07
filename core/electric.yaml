@@ -3,14 +3,22 @@ version: 1.4.13
 description: Real-time sync for Postgres
 homepage: https://electric-sql.com
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/electric/blobs/sha256:85fd132c9430fc45e681273b1a57e720de20987c04746906fd2babf1c90a102c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/electric/blobs/sha256:e45e6005b1682867535dfa3bad41de5b5f2d8c4fde5b52161b3c0a1dd06cf1de
-  linux_arm64: https://ghcr.io/v2/homebrew/core/electric/blobs/sha256:b108f186e3ee4a571c409ae585c452abe2b60573779eb16ebbb9732911518dbd
-sha256:
-  darwin_arm64: 85fd132c9430fc45e681273b1a57e720de20987c04746906fd2babf1c90a102c
-  linux_amd64: e45e6005b1682867535dfa3bad41de5b5f2d8c4fde5b52161b3c0a1dd06cf1de
-  linux_arm64: b108f186e3ee4a571c409ae585c452abe2b60573779eb16ebbb9732911518dbd
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/electric/blobs/sha256:85fd132c9430fc45e681273b1a57e720de20987c04746906fd2babf1c90a102c
+    sha256: 85fd132c9430fc45e681273b1a57e720de20987c04746906fd2babf1c90a102c
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/electric/blobs/sha256:d58b5f8d3ffde921f6b1cb89bf3c1b69c8ce377fc8d18f306bb6d0fa7b27a82c
+    sha256: d58b5f8d3ffde921f6b1cb89bf3c1b69c8ce377fc8d18f306bb6d0fa7b27a82c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/electric/blobs/sha256:e45e6005b1682867535dfa3bad41de5b5f2d8c4fde5b52161b3c0a1dd06cf1de
+    sha256: e45e6005b1682867535dfa3bad41de5b5f2d8c4fde5b52161b3c0a1dd06cf1de
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/electric/blobs/sha256:b108f186e3ee4a571c409ae585c452abe2b60573779eb16ebbb9732911518dbd
+    sha256: b108f186e3ee4a571c409ae585c452abe2b60573779eb16ebbb9732911518dbd
+source:
+  url: https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.4.13.tar.gz
+  sha256: 985fabcbaab84f1f7def99b304bfd772c406b078ccdf8bba02512bc738b37c94
 install:
   type: archive
   format: tar.gz
@@ -18,3 +26,9 @@ install:
 dependencies:
   - erlang
   - openssl@3
+build_dependencies:
+  - elixir
+linux_dependencies:
+  - erlang
+  - openssl@3
+  - zlib-ng-compat

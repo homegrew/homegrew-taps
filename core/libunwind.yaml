@@ -3,12 +3,16 @@ version: 1.8.3
 description: C API for determining the call-chain of a program
 homepage: https://www.nongnu.org/libunwind/
 license: MIT
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libunwind/blobs/sha256:87c11a5130ea0663cb9e9b007d734470522501d25591b2a7f58034376f7aa3bb
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libunwind/blobs/sha256:c36c1cbc4e8cc6072c609ecc76f2fd8546dad4e1cebe8d41cd69984dcba2babb
-sha256:
-  linux_amd64: 87c11a5130ea0663cb9e9b007d734470522501d25591b2a7f58034376f7aa3bb
-  linux_arm64: c36c1cbc4e8cc6072c609ecc76f2fd8546dad4e1cebe8d41cd69984dcba2babb
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libunwind/blobs/sha256:87c11a5130ea0663cb9e9b007d734470522501d25591b2a7f58034376f7aa3bb
+    sha256: 87c11a5130ea0663cb9e9b007d734470522501d25591b2a7f58034376f7aa3bb
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libunwind/blobs/sha256:c36c1cbc4e8cc6072c609ecc76f2fd8546dad4e1cebe8d41cd69984dcba2babb
+    sha256: c36c1cbc4e8cc6072c609ecc76f2fd8546dad4e1cebe8d41cd69984dcba2babb
+source:
+  url: https://github.com/libunwind/libunwind/releases/download/v1.8.3/libunwind-1.8.3.tar.gz
+  sha256: be30d910e67f58d82e753231f1357f326a1a088acf126b21ff77e60aab19b90b
 install:
   type: archive
   format: tar.gz

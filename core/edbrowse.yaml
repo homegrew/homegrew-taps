@@ -3,16 +3,22 @@ version: 3.8.16
 description: Command-line editor and web browser
 homepage: https://edbrowse.org
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/edbrowse/blobs/sha256:8d82e9caa53a4306edf1ed0e546117cf2179fdfa681502ae2b2a32f0e3307cd9
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/edbrowse/blobs/sha256:fa1a0e8cf537963ab2d68728962453403b50f762be723cdf2320d90340cd8255
-  linux_amd64: https://ghcr.io/v2/homebrew/core/edbrowse/blobs/sha256:58489129de776b9a31a00852fa8e939e29685c2ae857cea281d8c7329044a380
-  linux_arm64: https://ghcr.io/v2/homebrew/core/edbrowse/blobs/sha256:d2875b7495df6a8bdc65c7fec1c1f1788be6b5aa04583703f62358d421dbc8da
-sha256:
-  darwin_arm64: 8d82e9caa53a4306edf1ed0e546117cf2179fdfa681502ae2b2a32f0e3307cd9
-  darwin_amd64: fa1a0e8cf537963ab2d68728962453403b50f762be723cdf2320d90340cd8255
-  linux_amd64: 58489129de776b9a31a00852fa8e939e29685c2ae857cea281d8c7329044a380
-  linux_arm64: d2875b7495df6a8bdc65c7fec1c1f1788be6b5aa04583703f62358d421dbc8da
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/edbrowse/blobs/sha256:8d82e9caa53a4306edf1ed0e546117cf2179fdfa681502ae2b2a32f0e3307cd9
+    sha256: 8d82e9caa53a4306edf1ed0e546117cf2179fdfa681502ae2b2a32f0e3307cd9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/edbrowse/blobs/sha256:fa1a0e8cf537963ab2d68728962453403b50f762be723cdf2320d90340cd8255
+    sha256: fa1a0e8cf537963ab2d68728962453403b50f762be723cdf2320d90340cd8255
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/edbrowse/blobs/sha256:58489129de776b9a31a00852fa8e939e29685c2ae857cea281d8c7329044a380
+    sha256: 58489129de776b9a31a00852fa8e939e29685c2ae857cea281d8c7329044a380
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/edbrowse/blobs/sha256:d2875b7495df6a8bdc65c7fec1c1f1788be6b5aa04583703f62358d421dbc8da
+    sha256: d2875b7495df6a8bdc65c7fec1c1f1788be6b5aa04583703f62358d421dbc8da
+source:
+  url: https://github.com/edbrowse/edbrowse/archive/refs/tags/v3.8.16.tar.gz
+  sha256: 7593e7ebd4ab0cff05c8d1a6cfb72c667a62aaffa2d84e0d4d29b8ab68459d0e
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,6 @@ dependencies:
   - pcre2
   - readline
   - unixodbc
+build_dependencies:
+  - pkgconf
+  - quickjs

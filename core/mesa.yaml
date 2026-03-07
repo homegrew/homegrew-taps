@@ -3,16 +3,22 @@ version: 26.0.1
 description: Graphics Library
 homepage: https://www.mesa3d.org/
 license: MIT AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND HPND AND HPND-sell-variant AND ICU AND MIT-Khronos-old AND SGI-B-2.0 AND LicenseRef-Homebrew-public-domain AND (GPL-1.0-or-later WITH Linux-syscall-note) AND (GPL-2.0-only WITH Linux-syscall-note)
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:ad3247da75feeb23237a62c1989a5cd42c1d6d7ddb43b0dd140c51971a561957
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:eb77c52f103fd471c6d363d7c6229d239100e0fa3413d1359ea8c127b6277189
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:8d99ce7c50f7cc71f05580a089464a445c76987cf335ece131dd8b30e24a6e94
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:2d9b737ccd31a23fedb14e2326e797ffb5148bef579a97dfd34d9550081df1b6
-sha256:
-  darwin_arm64: ad3247da75feeb23237a62c1989a5cd42c1d6d7ddb43b0dd140c51971a561957
-  darwin_amd64: eb77c52f103fd471c6d363d7c6229d239100e0fa3413d1359ea8c127b6277189
-  linux_amd64: 8d99ce7c50f7cc71f05580a089464a445c76987cf335ece131dd8b30e24a6e94
-  linux_arm64: 2d9b737ccd31a23fedb14e2326e797ffb5148bef579a97dfd34d9550081df1b6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:ad3247da75feeb23237a62c1989a5cd42c1d6d7ddb43b0dd140c51971a561957
+    sha256: ad3247da75feeb23237a62c1989a5cd42c1d6d7ddb43b0dd140c51971a561957
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:eb77c52f103fd471c6d363d7c6229d239100e0fa3413d1359ea8c127b6277189
+    sha256: eb77c52f103fd471c6d363d7c6229d239100e0fa3413d1359ea8c127b6277189
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:8d99ce7c50f7cc71f05580a089464a445c76987cf335ece131dd8b30e24a6e94
+    sha256: 8d99ce7c50f7cc71f05580a089464a445c76987cf335ece131dd8b30e24a6e94
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:2d9b737ccd31a23fedb14e2326e797ffb5148bef579a97dfd34d9550081df1b6
+    sha256: 2d9b737ccd31a23fedb14e2326e797ffb5148bef579a97dfd34d9550081df1b6
+source:
+  url: https://archive.mesa3d.org/mesa-26.0.1.tar.xz
+  sha256: bb5104f9f9a46c9b5175c24e601e0ef1ab44ce2d0fdbe81548b59adc8b385dcc
 install:
   type: archive
   format: tar.gz
@@ -30,3 +36,37 @@ dependencies:
   - xcb-util-keysyms
   - zstd
   - molten-vk
+build_dependencies:
+  - bindgen
+  - bison
+  - glslang
+  - libxrandr
+  - libxrender
+  - libxshmfence
+  - libyaml
+  - meson
+  - ninja
+  - pkgconf
+  - python@3.14
+  - rust
+  - xorgproto
+linux_dependencies:
+  - elfutils
+  - libclc
+  - libdrm
+  - libpng
+  - libx11
+  - libxcb
+  - libxext
+  - libxfixes
+  - libxml2
+  - libxshmfence
+  - libxxf86vm
+  - llvm
+  - lm-sensors
+  - spirv-llvm-translator
+  - spirv-tools
+  - wayland
+  - xcb-util-keysyms
+  - zlib-ng-compat
+  - zstd

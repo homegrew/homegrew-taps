@@ -3,16 +3,22 @@ version: 0.999
 description: Graphical scanning frontend
 homepage: https://gitlab.com/sane-project/frontend/xsane
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/xsane/blobs/sha256:941fa6509e6e252e468c894c6066dbd46c301b2c3046059e6c4f8215d391294f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/xsane/blobs/sha256:42c97c01bb304dbcc2ee1ee6648ca11f61aa373cab7ee3105e627b192f87a1f5
-  linux_amd64: https://ghcr.io/v2/homebrew/core/xsane/blobs/sha256:a37202cd6cbc1a49669b25b6131c30c5c0e555ea8a4d06a2ebbe5ee71b8eded8
-  linux_arm64: https://ghcr.io/v2/homebrew/core/xsane/blobs/sha256:2e6a96863d3108421a4f8907d76ef8e5d05399fe151af51a9864d04afe895493
-sha256:
-  darwin_arm64: 941fa6509e6e252e468c894c6066dbd46c301b2c3046059e6c4f8215d391294f
-  darwin_amd64: 42c97c01bb304dbcc2ee1ee6648ca11f61aa373cab7ee3105e627b192f87a1f5
-  linux_amd64: a37202cd6cbc1a49669b25b6131c30c5c0e555ea8a4d06a2ebbe5ee71b8eded8
-  linux_arm64: 2e6a96863d3108421a4f8907d76ef8e5d05399fe151af51a9864d04afe895493
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xsane/blobs/sha256:941fa6509e6e252e468c894c6066dbd46c301b2c3046059e6c4f8215d391294f
+    sha256: 941fa6509e6e252e468c894c6066dbd46c301b2c3046059e6c4f8215d391294f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xsane/blobs/sha256:42c97c01bb304dbcc2ee1ee6648ca11f61aa373cab7ee3105e627b192f87a1f5
+    sha256: 42c97c01bb304dbcc2ee1ee6648ca11f61aa373cab7ee3105e627b192f87a1f5
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xsane/blobs/sha256:a37202cd6cbc1a49669b25b6131c30c5c0e555ea8a4d06a2ebbe5ee71b8eded8
+    sha256: a37202cd6cbc1a49669b25b6131c30c5c0e555ea8a4d06a2ebbe5ee71b8eded8
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xsane/blobs/sha256:2e6a96863d3108421a4f8907d76ef8e5d05399fe151af51a9864d04afe895493
+    sha256: 2e6a96863d3108421a4f8907d76ef8e5d05399fe151af51a9864d04afe895493
+source:
+  url: https://ftp.osuosl.org/pub/blfs/conglomeration/xsane/xsane-0.999.tar.gz
+  sha256: 5782d23e67dc961c81eef13a87b17eb0144cae3d1ffc5cf7e0322da751482b4b
 install:
   type: archive
   format: tar.gz
@@ -30,3 +36,13 @@ dependencies:
   - gettext
   - harfbuzz
   - pango
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - glib
+  - gtk+
+  - jpeg-turbo
+  - libpng
+  - libtiff
+  - sane-backends
+  - zlib-ng-compat

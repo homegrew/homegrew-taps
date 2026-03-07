@@ -3,16 +3,22 @@ version: 1.27.1
 description: Python bindings for the PDF toolkit and renderer MuPDF
 homepage: https://pymupdf.readthedocs.io/en/latest/
 license: AGPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pymupdf/blobs/sha256:acad5b7f5a4e3c1df83bca955a281aa395470c78c6e3e53091f97e96f3367c48
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pymupdf/blobs/sha256:9e454a704d14a3d123cc123bbd756a1a608e89d3e074fcc9b1ea2e3c797a8365
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pymupdf/blobs/sha256:027cb3becedb7ad42e9a51842aa8dc8fda1c62abe0eb130dd997f7b23ecc882f
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pymupdf/blobs/sha256:471d590a246127266aa862df82580ea51cff2cda8904c20afbf59c1c86d23827
-sha256:
-  darwin_arm64: acad5b7f5a4e3c1df83bca955a281aa395470c78c6e3e53091f97e96f3367c48
-  darwin_amd64: 9e454a704d14a3d123cc123bbd756a1a608e89d3e074fcc9b1ea2e3c797a8365
-  linux_amd64: 027cb3becedb7ad42e9a51842aa8dc8fda1c62abe0eb130dd997f7b23ecc882f
-  linux_arm64: 471d590a246127266aa862df82580ea51cff2cda8904c20afbf59c1c86d23827
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pymupdf/blobs/sha256:acad5b7f5a4e3c1df83bca955a281aa395470c78c6e3e53091f97e96f3367c48
+    sha256: acad5b7f5a4e3c1df83bca955a281aa395470c78c6e3e53091f97e96f3367c48
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pymupdf/blobs/sha256:9e454a704d14a3d123cc123bbd756a1a608e89d3e074fcc9b1ea2e3c797a8365
+    sha256: 9e454a704d14a3d123cc123bbd756a1a608e89d3e074fcc9b1ea2e3c797a8365
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pymupdf/blobs/sha256:027cb3becedb7ad42e9a51842aa8dc8fda1c62abe0eb130dd997f7b23ecc882f
+    sha256: 027cb3becedb7ad42e9a51842aa8dc8fda1c62abe0eb130dd997f7b23ecc882f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pymupdf/blobs/sha256:471d590a246127266aa862df82580ea51cff2cda8904c20afbf59c1c86d23827
+    sha256: 471d590a246127266aa862df82580ea51cff2cda8904c20afbf59c1c86d23827
+source:
+  url: https://files.pythonhosted.org/packages/1b/0c/40dda0cc4bd2220a2ef75f8c53dd7d8ed1e29681fcb3df75db6ee9677a7e/pymupdf-1.27.1.tar.gz
+  sha256: 4afbde0769c336717a149ab0de3330dcb75378f795c1a8c5af55c1a628b17d55
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,7 @@ install:
 dependencies:
   - mupdf
   - python@3.14
+build_dependencies:
+  - freetype
+  - python-setuptools
+  - swig

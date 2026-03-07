@@ -3,12 +3,22 @@ version: 4.22.0
 description: Toolkit for creating graphical user interfaces
 homepage: https://gtk.org/
 license: LGPL-2.1-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/gtk4/blobs/sha256:efddc2db8b67e644d8033ccbfbe1e40efada45f260a02201088a2366f058e151
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/gtk4/blobs/sha256:eb25dfce38a7f74f9cb877dc0886812e262873beee30d5895d12aa695eab3ff9
-sha256:
-  darwin_arm64: efddc2db8b67e644d8033ccbfbe1e40efada45f260a02201088a2366f058e151
-  darwin_amd64: eb25dfce38a7f74f9cb877dc0886812e262873beee30d5895d12aa695eab3ff9
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gtk4/blobs/sha256:4477e0eacc0c37ebc8a0fc3f8f1e3b1dd578487a47eefcd44d21aa32ac12a1d0
+    sha256: 4477e0eacc0c37ebc8a0fc3f8f1e3b1dd578487a47eefcd44d21aa32ac12a1d0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gtk4/blobs/sha256:8d796c2d0090b1ce8b88085fd7d59149c2f3c9ef86229598558b66f866708fac
+    sha256: 8d796c2d0090b1ce8b88085fd7d59149c2f3c9ef86229598558b66f866708fac
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gtk4/blobs/sha256:44702959a8656d9f822bd3639bc59bd52605c55db9200ab9c9904239bad58fa4
+    sha256: 44702959a8656d9f822bd3639bc59bd52605c55db9200ab9c9904239bad58fa4
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gtk4/blobs/sha256:eb4192d1a5dca511a8758953de6b3aa062a91cd35b0b76e6a227560719f58bf9
+    sha256: eb4192d1a5dca511a8758953de6b3aa062a91cd35b0b76e6a227560719f58bf9
+source:
+  url: https://download.gnome.org/sources/gtk/4.22/gtk-4.22.0.tar.xz
+  sha256: ed3932469d3d891df53451f2cd28380af7673f736aa443bb3dda7adb40994f1e
 install:
   type: archive
   format: tar.gz
@@ -29,3 +39,38 @@ dependencies:
   - libtiff
   - pango
   - gettext
+build_dependencies:
+  - docbook
+  - docbook-xsl
+  - docutils
+  - gettext
+  - gobject-introspection
+  - meson
+  - ninja
+  - pkgconf
+  - sassc
+linux_dependencies:
+  - cairo
+  - fontconfig
+  - fribidi
+  - gdk-pixbuf
+  - glib
+  - graphene
+  - harfbuzz
+  - hicolor-icon-theme
+  - jpeg-turbo
+  - libepoxy
+  - libpng
+  - librsvg
+  - libtiff
+  - libx11
+  - libxcursor
+  - libxdamage
+  - libxext
+  - libxfixes
+  - libxi
+  - libxinerama
+  - libxkbcommon
+  - libxrandr
+  - pango
+  - wayland

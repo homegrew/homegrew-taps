@@ -3,16 +3,22 @@ version: 6.13.4
 description: Feature-rich top tool for monitoring MySQL
 homepage: https://github.com/charles-001/dolphie
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dolphie/blobs/sha256:c2f1c2efa3db71e4c4f090deb9e0451c83ef6481faa972b0957c1e7b529e89b7
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dolphie/blobs/sha256:66924fb72bc5491e6253bda17f5503e2afb819a9c38b1451b301cde86d7558d1
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dolphie/blobs/sha256:0335e70feb60efe9cc13987c52f29d19239913a5168203458ae4300529a3dead
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dolphie/blobs/sha256:59df2a1ebac4d13aa46942b0a2ec506074aafb45d68fdb94b9e8489a25ba8d5e
-sha256:
-  darwin_arm64: c2f1c2efa3db71e4c4f090deb9e0451c83ef6481faa972b0957c1e7b529e89b7
-  darwin_amd64: 66924fb72bc5491e6253bda17f5503e2afb819a9c38b1451b301cde86d7558d1
-  linux_amd64: 0335e70feb60efe9cc13987c52f29d19239913a5168203458ae4300529a3dead
-  linux_arm64: 59df2a1ebac4d13aa46942b0a2ec506074aafb45d68fdb94b9e8489a25ba8d5e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dolphie/blobs/sha256:c2f1c2efa3db71e4c4f090deb9e0451c83ef6481faa972b0957c1e7b529e89b7
+    sha256: c2f1c2efa3db71e4c4f090deb9e0451c83ef6481faa972b0957c1e7b529e89b7
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dolphie/blobs/sha256:66924fb72bc5491e6253bda17f5503e2afb819a9c38b1451b301cde86d7558d1
+    sha256: 66924fb72bc5491e6253bda17f5503e2afb819a9c38b1451b301cde86d7558d1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dolphie/blobs/sha256:0335e70feb60efe9cc13987c52f29d19239913a5168203458ae4300529a3dead
+    sha256: 0335e70feb60efe9cc13987c52f29d19239913a5168203458ae4300529a3dead
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dolphie/blobs/sha256:59df2a1ebac4d13aa46942b0a2ec506074aafb45d68fdb94b9e8489a25ba8d5e
+    sha256: 59df2a1ebac4d13aa46942b0a2ec506074aafb45d68fdb94b9e8489a25ba8d5e
+source:
+  url: https://files.pythonhosted.org/packages/e5/9d/a698bec0f8822c1d908ae1acbe879d03b6f77e30ab4dbd74a24507a4dd86/dolphie-6.13.4.tar.gz
+  sha256: dd1ac379f1b5531845f7c16fa0b07f004902d1a14e6c571a8edd9fa55be13f5c
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,5 @@ dependencies:
   - certifi
   - cryptography
   - python@3.14
+build_dependencies:
+  - rust

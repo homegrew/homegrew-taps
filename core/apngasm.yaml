@@ -3,16 +3,22 @@ version: 3.1.10
 description: Next generation of apngasm, the APNG assembler
 homepage: https://github.com/apngasm/apngasm
 license: Zlib
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:f648a9450c38c86f0a2790b194a3f44534dbf8eb4cdca060ed4ba011aaf106dd
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:d0cab8f5fe072f029bde277f83e27f77ff135e261eb37f7af74d9cd3dc531b9c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:7fd1796b7defa25851257aa4245f02d0b3e31f23c9bf88440c1a3ee910e1ef66
-  linux_arm64: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:7020b0940d9cf23dbd77afd912001b9d759d4b26722fecc4e1d482d54a8df890
-sha256:
-  darwin_arm64: f648a9450c38c86f0a2790b194a3f44534dbf8eb4cdca060ed4ba011aaf106dd
-  darwin_amd64: d0cab8f5fe072f029bde277f83e27f77ff135e261eb37f7af74d9cd3dc531b9c
-  linux_amd64: 7fd1796b7defa25851257aa4245f02d0b3e31f23c9bf88440c1a3ee910e1ef66
-  linux_arm64: 7020b0940d9cf23dbd77afd912001b9d759d4b26722fecc4e1d482d54a8df890
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:f648a9450c38c86f0a2790b194a3f44534dbf8eb4cdca060ed4ba011aaf106dd
+    sha256: f648a9450c38c86f0a2790b194a3f44534dbf8eb4cdca060ed4ba011aaf106dd
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:d0cab8f5fe072f029bde277f83e27f77ff135e261eb37f7af74d9cd3dc531b9c
+    sha256: d0cab8f5fe072f029bde277f83e27f77ff135e261eb37f7af74d9cd3dc531b9c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:7fd1796b7defa25851257aa4245f02d0b3e31f23c9bf88440c1a3ee910e1ef66
+    sha256: 7fd1796b7defa25851257aa4245f02d0b3e31f23c9bf88440c1a3ee910e1ef66
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:7020b0940d9cf23dbd77afd912001b9d759d4b26722fecc4e1d482d54a8df890
+    sha256: 7020b0940d9cf23dbd77afd912001b9d759d4b26722fecc4e1d482d54a8df890
+source:
+  url: https://github.com/apngasm/apngasm/archive/refs/tags/3.1.10.tar.gz
+  sha256: 8171e2c1d37ab231a2061320cb1e5d15cee37642e3ce78e8ab0b8dfc45b80f6c
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,11 @@ dependencies:
   - icu4c@78
   - libpng
   - lzlib
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - boost
+  - icu4c@78
+  - libpng
+  - lzlib
+  - zlib-ng-compat

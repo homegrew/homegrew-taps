@@ -3,16 +3,22 @@ version: 1.8.0
 description: Cross-platform image library
 homepage: https://sourceforge.net/projects/openil/
 license: LGPL-2.1-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/devil/blobs/sha256:b38672c3417c92fde8b5cca2a59f14c31201f9a5f043a1bb5d7d04c4983d5398
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/devil/blobs/sha256:98d8eaf39ca55e189b6add8d199d4527adbba229a7eaf170d5d21b7b41848dc2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/devil/blobs/sha256:39cfc26d4075c7e2be8b1fcc8ae762bd8897dca6460c632e1b63f3df69888a56
-  linux_arm64: https://ghcr.io/v2/homebrew/core/devil/blobs/sha256:35dca23ab5cbd470f6dfe8744a7ed0f7a414366215d0350c89819ca0b03d083e
-sha256:
-  darwin_arm64: b38672c3417c92fde8b5cca2a59f14c31201f9a5f043a1bb5d7d04c4983d5398
-  darwin_amd64: 98d8eaf39ca55e189b6add8d199d4527adbba229a7eaf170d5d21b7b41848dc2
-  linux_amd64: 39cfc26d4075c7e2be8b1fcc8ae762bd8897dca6460c632e1b63f3df69888a56
-  linux_arm64: 35dca23ab5cbd470f6dfe8744a7ed0f7a414366215d0350c89819ca0b03d083e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/devil/blobs/sha256:b38672c3417c92fde8b5cca2a59f14c31201f9a5f043a1bb5d7d04c4983d5398
+    sha256: b38672c3417c92fde8b5cca2a59f14c31201f9a5f043a1bb5d7d04c4983d5398
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/devil/blobs/sha256:98d8eaf39ca55e189b6add8d199d4527adbba229a7eaf170d5d21b7b41848dc2
+    sha256: 98d8eaf39ca55e189b6add8d199d4527adbba229a7eaf170d5d21b7b41848dc2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/devil/blobs/sha256:39cfc26d4075c7e2be8b1fcc8ae762bd8897dca6460c632e1b63f3df69888a56
+    sha256: 39cfc26d4075c7e2be8b1fcc8ae762bd8897dca6460c632e1b63f3df69888a56
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/devil/blobs/sha256:35dca23ab5cbd470f6dfe8744a7ed0f7a414366215d0350c89819ca0b03d083e
+    sha256: 35dca23ab5cbd470f6dfe8744a7ed0f7a414366215d0350c89819ca0b03d083e
+source:
+  url: https://downloads.sourceforge.net/project/openil/DevIL/1.8.0/DevIL-1.8.0.tar.gz
+  sha256: 0075973ee7dd89f0507873e2580ac78336452d29d34a07134b208f44e2feb709
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,5 @@ dependencies:
   - libpng
   - libtiff
   - little-cms2
+build_dependencies:
+  - cmake

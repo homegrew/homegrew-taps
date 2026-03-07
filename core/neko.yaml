@@ -3,16 +3,22 @@ version: 2.4.1
 description: High-level, dynamically typed programming language
 homepage: https://nekovm.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:89c971ad4c60726ebc84ce4a6b5ebb675cd65a5dc400d4cc152cba7b40e52f07
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:37b217ca868281d49936bb213ac8e27838254a04931b7f9f93493a6f40bc2f0a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:452562632f23c92792771f4df762168e34f51f1143ff7dc467e755c34594982c
-  linux_arm64: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:5c036ca3b850ae905d89e474af893486017fdbfc9aa7a8e696c62c4bfd59fddb
-sha256:
-  darwin_arm64: 89c971ad4c60726ebc84ce4a6b5ebb675cd65a5dc400d4cc152cba7b40e52f07
-  darwin_amd64: 37b217ca868281d49936bb213ac8e27838254a04931b7f9f93493a6f40bc2f0a
-  linux_amd64: 452562632f23c92792771f4df762168e34f51f1143ff7dc467e755c34594982c
-  linux_arm64: 5c036ca3b850ae905d89e474af893486017fdbfc9aa7a8e696c62c4bfd59fddb
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:89c971ad4c60726ebc84ce4a6b5ebb675cd65a5dc400d4cc152cba7b40e52f07
+    sha256: 89c971ad4c60726ebc84ce4a6b5ebb675cd65a5dc400d4cc152cba7b40e52f07
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:37b217ca868281d49936bb213ac8e27838254a04931b7f9f93493a6f40bc2f0a
+    sha256: 37b217ca868281d49936bb213ac8e27838254a04931b7f9f93493a6f40bc2f0a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:452562632f23c92792771f4df762168e34f51f1143ff7dc467e755c34594982c
+    sha256: 452562632f23c92792771f4df762168e34f51f1143ff7dc467e755c34594982c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:5c036ca3b850ae905d89e474af893486017fdbfc9aa7a8e696c62c4bfd59fddb
+    sha256: 5c036ca3b850ae905d89e474af893486017fdbfc9aa7a8e696c62c4bfd59fddb
+source:
+  url: https://github.com/HaxeFoundation/neko/archive/refs/tags/v2-4-1.tar.gz
+  sha256: 702282028190dffa2078b00cca515b8e2ba889186a221df2226d2b6deb3ffaca
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,15 @@ dependencies:
   - mariadb-connector-c
   - mbedtls@3
   - pcre2
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - apr-util
+  - bdw-gc
+  - gtk+3
+  - httpd
+  - mariadb-connector-c
+  - mbedtls@3
+  - pcre2
+  - zlib-ng-compat

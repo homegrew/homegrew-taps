@@ -3,16 +3,22 @@ version: 3.8.0
 description: Open-source alternative to the OpenGL Utility Toolkit (GLUT) library
 homepage: https://freeglut.sourceforge.net/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:c702ef020f0ee587f8a6c583bd91f0e0ae905aae875b19c9ce91a30918b04c77
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:271aaea7bbd3cce73d950c7dfbe2f68d1246e2dc35d3efd7e1e111f921aa870d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:d1a792596562e423cfc3c800166b2347d12b805a70395339bfe175752474d354
-  linux_arm64: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:a4028f390685ccdbc27d63e8a13b13ac04eeb38d59ea713a02e0e4cd957cd87e
-sha256:
-  darwin_arm64: c702ef020f0ee587f8a6c583bd91f0e0ae905aae875b19c9ce91a30918b04c77
-  darwin_amd64: 271aaea7bbd3cce73d950c7dfbe2f68d1246e2dc35d3efd7e1e111f921aa870d
-  linux_amd64: d1a792596562e423cfc3c800166b2347d12b805a70395339bfe175752474d354
-  linux_arm64: a4028f390685ccdbc27d63e8a13b13ac04eeb38d59ea713a02e0e4cd957cd87e
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:c702ef020f0ee587f8a6c583bd91f0e0ae905aae875b19c9ce91a30918b04c77
+    sha256: c702ef020f0ee587f8a6c583bd91f0e0ae905aae875b19c9ce91a30918b04c77
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:271aaea7bbd3cce73d950c7dfbe2f68d1246e2dc35d3efd7e1e111f921aa870d
+    sha256: 271aaea7bbd3cce73d950c7dfbe2f68d1246e2dc35d3efd7e1e111f921aa870d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:d1a792596562e423cfc3c800166b2347d12b805a70395339bfe175752474d354
+    sha256: d1a792596562e423cfc3c800166b2347d12b805a70395339bfe175752474d354
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:a4028f390685ccdbc27d63e8a13b13ac04eeb38d59ea713a02e0e4cd957cd87e
+    sha256: a4028f390685ccdbc27d63e8a13b13ac04eeb38d59ea713a02e0e4cd957cd87e
+source:
+  url: https://github.com/freeglut/freeglut/releases/download/v3.8.0/freeglut-3.8.0.tar.gz
+  sha256: 674dcaff25010e09e450aec458b8870d9e98c46f99538db457ab659b321d9989
 install:
   type: archive
   format: tar.gz
@@ -23,3 +29,13 @@ dependencies:
   - libxrandr
   - libxxf86vm
   - mesa
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - libx11
+  - libxi
+  - libxrandr
+  - libxxf86vm
+  - mesa
+  - mesa-glu
+  - xinput

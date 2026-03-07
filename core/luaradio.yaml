@@ -3,16 +3,22 @@ version: 0.11.0
 description: Lightweight, embeddable flow graph signal processing framework for SDR
 homepage: https://luaradio.io/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/luaradio/blobs/sha256:c4b12fa78bf46741625b1644686a6bb342f0cb2024d7c0f440ccfedbedf01d36
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/luaradio/blobs/sha256:a296107480f79b35bc759fa7cdb985238f795ed9ba24ab1a03e3b08dc224e041
-  linux_amd64: https://ghcr.io/v2/homebrew/core/luaradio/blobs/sha256:7d7cf352a29e4917fb03b64ced6278562518ec30fec3a189f3e75b869f560150
-  linux_arm64: https://ghcr.io/v2/homebrew/core/luaradio/blobs/sha256:f3a853344ab46cee8a3364ee489bcb3b34cac26e987ec9a311e762e660118a33
-sha256:
-  darwin_arm64: c4b12fa78bf46741625b1644686a6bb342f0cb2024d7c0f440ccfedbedf01d36
-  darwin_amd64: a296107480f79b35bc759fa7cdb985238f795ed9ba24ab1a03e3b08dc224e041
-  linux_amd64: 7d7cf352a29e4917fb03b64ced6278562518ec30fec3a189f3e75b869f560150
-  linux_arm64: f3a853344ab46cee8a3364ee489bcb3b34cac26e987ec9a311e762e660118a33
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/luaradio/blobs/sha256:c4b12fa78bf46741625b1644686a6bb342f0cb2024d7c0f440ccfedbedf01d36
+    sha256: c4b12fa78bf46741625b1644686a6bb342f0cb2024d7c0f440ccfedbedf01d36
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/luaradio/blobs/sha256:a296107480f79b35bc759fa7cdb985238f795ed9ba24ab1a03e3b08dc224e041
+    sha256: a296107480f79b35bc759fa7cdb985238f795ed9ba24ab1a03e3b08dc224e041
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/luaradio/blobs/sha256:7d7cf352a29e4917fb03b64ced6278562518ec30fec3a189f3e75b869f560150
+    sha256: 7d7cf352a29e4917fb03b64ced6278562518ec30fec3a189f3e75b869f560150
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/luaradio/blobs/sha256:f3a853344ab46cee8a3364ee489bcb3b34cac26e987ec9a311e762e660118a33
+    sha256: f3a853344ab46cee8a3364ee489bcb3b34cac26e987ec9a311e762e660118a33
+source:
+  url: https://github.com/vsergeev/luaradio/archive/refs/tags/v0.11.0.tar.gz
+  sha256: abd6077d32a2e83ec9e4bbda1f84ccb540c9d5195d30d7a8ebeb12676e33eb2e
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,5 @@ dependencies:
   - fftw
   - liquid-dsp
   - luajit
+build_dependencies:
+  - pkgconf

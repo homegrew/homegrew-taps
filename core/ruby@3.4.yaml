@@ -3,16 +3,22 @@ version: 3.4.8
 description: Powerful, clean, object-oriented scripting language
 homepage: https://www.ruby-lang.org/
 license: Ruby
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ruby/3.4/blobs/sha256:409b025b3b21185bd1c28f38d0223a2b86dda40119d0ada9bc757b3b2080612f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ruby/3.4/blobs/sha256:825f4d8c4026e2b326d69081233294eeed9c15dbeeafe0bc280d7de007d8e507
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ruby/3.4/blobs/sha256:9535eb45c07db0e35f004d12e694e8879e2843e88456f06b38a33bc92fa48c0e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ruby/3.4/blobs/sha256:c25fa11da95ac93b19562930e94500500398caf5598e0691b00161ef80efe2a9
-sha256:
-  darwin_arm64: 409b025b3b21185bd1c28f38d0223a2b86dda40119d0ada9bc757b3b2080612f
-  darwin_amd64: 825f4d8c4026e2b326d69081233294eeed9c15dbeeafe0bc280d7de007d8e507
-  linux_amd64: 9535eb45c07db0e35f004d12e694e8879e2843e88456f06b38a33bc92fa48c0e
-  linux_arm64: c25fa11da95ac93b19562930e94500500398caf5598e0691b00161ef80efe2a9
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ruby/3.4/blobs/sha256:409b025b3b21185bd1c28f38d0223a2b86dda40119d0ada9bc757b3b2080612f
+    sha256: 409b025b3b21185bd1c28f38d0223a2b86dda40119d0ada9bc757b3b2080612f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ruby/3.4/blobs/sha256:825f4d8c4026e2b326d69081233294eeed9c15dbeeafe0bc280d7de007d8e507
+    sha256: 825f4d8c4026e2b326d69081233294eeed9c15dbeeafe0bc280d7de007d8e507
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ruby/3.4/blobs/sha256:9535eb45c07db0e35f004d12e694e8879e2843e88456f06b38a33bc92fa48c0e
+    sha256: 9535eb45c07db0e35f004d12e694e8879e2843e88456f06b38a33bc92fa48c0e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ruby/3.4/blobs/sha256:c25fa11da95ac93b19562930e94500500398caf5598e0691b00161ef80efe2a9
+    sha256: c25fa11da95ac93b19562930e94500500398caf5598e0691b00161ef80efe2a9
+source:
+  url: https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.8.tar.gz
+  sha256: 53c4ddad41fbb6189f1f5ee0db57a51d54bd1f87f8755b3d68604156a35b045b
 install:
   type: archive
   format: tar.gz
@@ -20,4 +26,12 @@ install:
 dependencies:
   - libyaml
   - openssl@3
+build_dependencies:
+  - autoconf
+  - pkgconf
+  - rust
+linux_dependencies:
+  - libyaml
+  - openssl@3
+  - zlib-ng-compat
 keg_only: true

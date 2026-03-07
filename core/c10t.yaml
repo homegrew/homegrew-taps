@@ -3,16 +3,22 @@ version: 1.7
 description: Minecraft cartography tool
 homepage: https://github.com/udoprog/c10t
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/c10t/blobs/sha256:008b33ff7cc9eec1c4fce9a3fac4d9e5b3f30ad9a66b29edf911ab97f81e5238
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/c10t/blobs/sha256:7f8f155159ede038b7c498b3cff8c224f0a703abbeb3c916b0836cb43eca4de8
-  linux_amd64: https://ghcr.io/v2/homebrew/core/c10t/blobs/sha256:969f026850262233ec26984b700383db9a6fcbcd9c8601a98e34683bd419b838
-  linux_arm64: https://ghcr.io/v2/homebrew/core/c10t/blobs/sha256:2e1aa30f8e012ee8f21b97f26ca60c36781f4e7cffe3827795449464660db66f
-sha256:
-  darwin_arm64: 008b33ff7cc9eec1c4fce9a3fac4d9e5b3f30ad9a66b29edf911ab97f81e5238
-  darwin_amd64: 7f8f155159ede038b7c498b3cff8c224f0a703abbeb3c916b0836cb43eca4de8
-  linux_amd64: 969f026850262233ec26984b700383db9a6fcbcd9c8601a98e34683bd419b838
-  linux_arm64: 2e1aa30f8e012ee8f21b97f26ca60c36781f4e7cffe3827795449464660db66f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/c10t/blobs/sha256:008b33ff7cc9eec1c4fce9a3fac4d9e5b3f30ad9a66b29edf911ab97f81e5238
+    sha256: 008b33ff7cc9eec1c4fce9a3fac4d9e5b3f30ad9a66b29edf911ab97f81e5238
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/c10t/blobs/sha256:7f8f155159ede038b7c498b3cff8c224f0a703abbeb3c916b0836cb43eca4de8
+    sha256: 7f8f155159ede038b7c498b3cff8c224f0a703abbeb3c916b0836cb43eca4de8
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/c10t/blobs/sha256:969f026850262233ec26984b700383db9a6fcbcd9c8601a98e34683bd419b838
+    sha256: 969f026850262233ec26984b700383db9a6fcbcd9c8601a98e34683bd419b838
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/c10t/blobs/sha256:2e1aa30f8e012ee8f21b97f26ca60c36781f4e7cffe3827795449464660db66f
+    sha256: 2e1aa30f8e012ee8f21b97f26ca60c36781f4e7cffe3827795449464660db66f
+source:
+  url: https://github.com/udoprog/c10t/archive/refs/tags/1.7.tar.gz
+  sha256: 0e5779d517105bfdd14944c849a395e1a8670bedba5bdab281a0165c3eb077dc
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,10 @@ dependencies:
   - boost
   - freetype
   - libpng
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - boost
+  - freetype
+  - libpng
+  - zlib-ng-compat

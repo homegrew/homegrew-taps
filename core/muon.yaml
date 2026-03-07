@@ -3,16 +3,22 @@ version: 0.5.0
 description: Meson-compatible build system
 homepage: https://muon.build
 license: GPL-3.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:ee83480a39f996d669a98cec8b764ae5411b5ffb22ba81c2576a529a90d45f82
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:7b84b3449e6fab539f2a740c055419775388cf9155711adf63c88f3fe140d0ad
-  linux_amd64: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:333c9fadf69b0e182ccca75f781c8017e5a5dbc2f0bde8924f6e59b0b1a47ac5
-  linux_arm64: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:23221d5b0b3fe07ec7510852ed6cd065326204d26b95bd2ac254d07507cdd07b
-sha256:
-  darwin_arm64: ee83480a39f996d669a98cec8b764ae5411b5ffb22ba81c2576a529a90d45f82
-  darwin_amd64: 7b84b3449e6fab539f2a740c055419775388cf9155711adf63c88f3fe140d0ad
-  linux_amd64: 333c9fadf69b0e182ccca75f781c8017e5a5dbc2f0bde8924f6e59b0b1a47ac5
-  linux_arm64: 23221d5b0b3fe07ec7510852ed6cd065326204d26b95bd2ac254d07507cdd07b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:ee83480a39f996d669a98cec8b764ae5411b5ffb22ba81c2576a529a90d45f82
+    sha256: ee83480a39f996d669a98cec8b764ae5411b5ffb22ba81c2576a529a90d45f82
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:7b84b3449e6fab539f2a740c055419775388cf9155711adf63c88f3fe140d0ad
+    sha256: 7b84b3449e6fab539f2a740c055419775388cf9155711adf63c88f3fe140d0ad
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:333c9fadf69b0e182ccca75f781c8017e5a5dbc2f0bde8924f6e59b0b1a47ac5
+    sha256: 333c9fadf69b0e182ccca75f781c8017e5a5dbc2f0bde8924f6e59b0b1a47ac5
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:23221d5b0b3fe07ec7510852ed6cd065326204d26b95bd2ac254d07507cdd07b
+    sha256: 23221d5b0b3fe07ec7510852ed6cd065326204d26b95bd2ac254d07507cdd07b
+source:
+  url: https://git.sr.ht/~lattis/muon/archive/0.5.0.tar.gz
+  sha256: 565c1b6e1e58f7e90d8813fda0e2102df69fb493ddab4cf6a84ce3647466bee5
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,6 @@ dependencies:
   - libarchive
   - ninja
   - pkgconf
+build_dependencies:
+  - meson
+  - scdoc

@@ -3,16 +3,22 @@ version: 1.1.6
 description: Print information about windows on an X server
 homepage: https://gitlab.freedesktop.org/xorg/app/xwininfo
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/xwininfo/blobs/sha256:96d34d4f1087c1eafa6c74937b5b0df87ee49e80762ed24023e89e0c78878931
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/xwininfo/blobs/sha256:1d472ba18ecda4f5179eb264dd065876d1db5671c7b400302394e2014e70105a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/xwininfo/blobs/sha256:0eec07b0f162130654bb10cfa0911bd34c3e7f32a92b35454a1ffbf70a41c0d1
-  linux_arm64: https://ghcr.io/v2/homebrew/core/xwininfo/blobs/sha256:145243b1c9fcf322bbd5815d6dd2a968d3332d3281ef899fbf385aadb92dc1e6
-sha256:
-  darwin_arm64: 96d34d4f1087c1eafa6c74937b5b0df87ee49e80762ed24023e89e0c78878931
-  darwin_amd64: 1d472ba18ecda4f5179eb264dd065876d1db5671c7b400302394e2014e70105a
-  linux_amd64: 0eec07b0f162130654bb10cfa0911bd34c3e7f32a92b35454a1ffbf70a41c0d1
-  linux_arm64: 145243b1c9fcf322bbd5815d6dd2a968d3332d3281ef899fbf385aadb92dc1e6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xwininfo/blobs/sha256:96d34d4f1087c1eafa6c74937b5b0df87ee49e80762ed24023e89e0c78878931
+    sha256: 96d34d4f1087c1eafa6c74937b5b0df87ee49e80762ed24023e89e0c78878931
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xwininfo/blobs/sha256:1d472ba18ecda4f5179eb264dd065876d1db5671c7b400302394e2014e70105a
+    sha256: 1d472ba18ecda4f5179eb264dd065876d1db5671c7b400302394e2014e70105a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/xwininfo/blobs/sha256:0eec07b0f162130654bb10cfa0911bd34c3e7f32a92b35454a1ffbf70a41c0d1
+    sha256: 0eec07b0f162130654bb10cfa0911bd34c3e7f32a92b35454a1ffbf70a41c0d1
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/xwininfo/blobs/sha256:145243b1c9fcf322bbd5815d6dd2a968d3332d3281ef899fbf385aadb92dc1e6
+    sha256: 145243b1c9fcf322bbd5815d6dd2a968d3332d3281ef899fbf385aadb92dc1e6
+source:
+  url: https://www.x.org/archive/individual/app/xwininfo-1.1.6.tar.xz
+  sha256: 3518897c17448df9ba99ad6d9bb1ca0f17bc0ed7c0fd61281b34ceed29a9253f
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - libx11
   - libxcb
+build_dependencies:
+  - pkgconf

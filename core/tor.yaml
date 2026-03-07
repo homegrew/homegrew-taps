@@ -3,16 +3,22 @@ version: 0.4.9.5
 description: Anonymizing overlay network for TCP
 homepage: https://www.torproject.org/
 license: BSD-2-Clause AND BSD-3-Clause AND MIT AND NCSA
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:7d792f62a46a6218dca7a4568e4f9a891d1fdbb201af2859920df3a5420b5f39
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:4d41ecaec0d95286308b33d5c375f12722fd9184ac3386d006091f48a09748c8
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:8c926840c71b225e857264c374932818854ca61386066165b365a3ec58ecadff
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:6c925c345ce39c546ba733810a1b40feb3df72b185424bc2ca67d422e3517253
-sha256:
-  darwin_arm64: 7d792f62a46a6218dca7a4568e4f9a891d1fdbb201af2859920df3a5420b5f39
-  darwin_amd64: 4d41ecaec0d95286308b33d5c375f12722fd9184ac3386d006091f48a09748c8
-  linux_amd64: 8c926840c71b225e857264c374932818854ca61386066165b365a3ec58ecadff
-  linux_arm64: 6c925c345ce39c546ba733810a1b40feb3df72b185424bc2ca67d422e3517253
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:7d792f62a46a6218dca7a4568e4f9a891d1fdbb201af2859920df3a5420b5f39
+    sha256: 7d792f62a46a6218dca7a4568e4f9a891d1fdbb201af2859920df3a5420b5f39
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:4d41ecaec0d95286308b33d5c375f12722fd9184ac3386d006091f48a09748c8
+    sha256: 4d41ecaec0d95286308b33d5c375f12722fd9184ac3386d006091f48a09748c8
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:8c926840c71b225e857264c374932818854ca61386066165b365a3ec58ecadff
+    sha256: 8c926840c71b225e857264c374932818854ca61386066165b365a3ec58ecadff
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:6c925c345ce39c546ba733810a1b40feb3df72b185424bc2ca67d422e3517253
+    sha256: 6c925c345ce39c546ba733810a1b40feb3df72b185424bc2ca67d422e3517253
+source:
+  url: https://www.torproject.org/dist/tor-0.4.9.5.tar.gz
+  sha256: c949c2f86b348e64891976f6b1e49c177655b23df97193049bf1b8cd3099e179
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,10 @@ dependencies:
   - libevent
   - libscrypt
   - openssl@3
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - libevent
+  - libscrypt
+  - openssl@3
+  - zlib-ng-compat

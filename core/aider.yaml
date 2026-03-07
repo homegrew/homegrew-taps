@@ -3,16 +3,22 @@ version: 0.86.2
 description: AI pair programming in your terminal
 homepage: https://aider.chat/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/aider/blobs/sha256:7a247897eb06b35bdc2cc6f3a225a9c32f8c1448e9654192c0d30f2c6b56c00b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/aider/blobs/sha256:9c30c34a1fb1918b5e0c03ee818c9b3e9740fdd1ed4a2c53f4147507a9b6cca2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/aider/blobs/sha256:ccaf4e2995bd7295ff7c10d27a929e240f0edbeb2d3376a1ced69047a4359a7e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/aider/blobs/sha256:63b7eb2133d906cf3360f1afde95ab784323f92049f879f494ceaf94f0b7955c
-sha256:
-  darwin_arm64: 7a247897eb06b35bdc2cc6f3a225a9c32f8c1448e9654192c0d30f2c6b56c00b
-  darwin_amd64: 9c30c34a1fb1918b5e0c03ee818c9b3e9740fdd1ed4a2c53f4147507a9b6cca2
-  linux_amd64: ccaf4e2995bd7295ff7c10d27a929e240f0edbeb2d3376a1ced69047a4359a7e
-  linux_arm64: 63b7eb2133d906cf3360f1afde95ab784323f92049f879f494ceaf94f0b7955c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/aider/blobs/sha256:7a247897eb06b35bdc2cc6f3a225a9c32f8c1448e9654192c0d30f2c6b56c00b
+    sha256: 7a247897eb06b35bdc2cc6f3a225a9c32f8c1448e9654192c0d30f2c6b56c00b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/aider/blobs/sha256:9c30c34a1fb1918b5e0c03ee818c9b3e9740fdd1ed4a2c53f4147507a9b6cca2
+    sha256: 9c30c34a1fb1918b5e0c03ee818c9b3e9740fdd1ed4a2c53f4147507a9b6cca2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/aider/blobs/sha256:ccaf4e2995bd7295ff7c10d27a929e240f0edbeb2d3376a1ced69047a4359a7e
+    sha256: ccaf4e2995bd7295ff7c10d27a929e240f0edbeb2d3376a1ced69047a4359a7e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/aider/blobs/sha256:63b7eb2133d906cf3360f1afde95ab784323f92049f879f494ceaf94f0b7955c
+    sha256: 63b7eb2133d906cf3360f1afde95ab784323f92049f879f494ceaf94f0b7955c
+source:
+  url: https://files.pythonhosted.org/packages/39/45/71111a018c653b7e743216188fb73cd640a86abbda56b7e430f65cd45d23/aider_chat-0.86.2.tar.gz
+  sha256: f38a9d322f5609f0c13af82d50c6a11170185b3fdf26956e4a7e89ba19819159
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,16 @@ dependencies:
   - libyaml
   - openblas
   - python@3.12
+build_dependencies:
+  - ninja
+  - pkgconf
+  - rust
+linux_dependencies:
+  - certifi
+  - freetype
+  - gcc
+  - jpeg-turbo
+  - libyaml
+  - openblas
+  - python@3.12
+  - zlib-ng-compat

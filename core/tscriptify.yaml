@@ -3,17 +3,25 @@ version: 0.2.0
 description: Golang struct to TypeScript class/interface converter
 homepage: https://github.com/tkrajina/typescriptify-golang-structs
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tscriptify/blobs/sha256:7c7b915dd7c57bc5de916250093b2b5220065189ee0584c13e4e5bae75b88bdd
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tscriptify/blobs/sha256:8118e282ad8abb5ef7daaeac81d04b999788e413862fd08bdd75eac84a1800b0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tscriptify/blobs/sha256:d1c76e5da60912ab5f9e7b3b4bff42d5fc0e0ab103ac49143412bbf8217e32b1
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tscriptify/blobs/sha256:ee18dcd364ef21d18a9ce81d8b05078e19ef7901342d841f1d61046a30596cd5
-sha256:
-  darwin_arm64: 7c7b915dd7c57bc5de916250093b2b5220065189ee0584c13e4e5bae75b88bdd
-  darwin_amd64: 8118e282ad8abb5ef7daaeac81d04b999788e413862fd08bdd75eac84a1800b0
-  linux_amd64: d1c76e5da60912ab5f9e7b3b4bff42d5fc0e0ab103ac49143412bbf8217e32b1
-  linux_arm64: ee18dcd364ef21d18a9ce81d8b05078e19ef7901342d841f1d61046a30596cd5
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tscriptify/blobs/sha256:7c7b915dd7c57bc5de916250093b2b5220065189ee0584c13e4e5bae75b88bdd
+    sha256: 7c7b915dd7c57bc5de916250093b2b5220065189ee0584c13e4e5bae75b88bdd
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tscriptify/blobs/sha256:8118e282ad8abb5ef7daaeac81d04b999788e413862fd08bdd75eac84a1800b0
+    sha256: 8118e282ad8abb5ef7daaeac81d04b999788e413862fd08bdd75eac84a1800b0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tscriptify/blobs/sha256:d1c76e5da60912ab5f9e7b3b4bff42d5fc0e0ab103ac49143412bbf8217e32b1
+    sha256: d1c76e5da60912ab5f9e7b3b4bff42d5fc0e0ab103ac49143412bbf8217e32b1
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tscriptify/blobs/sha256:ee18dcd364ef21d18a9ce81d8b05078e19ef7901342d841f1d61046a30596cd5
+    sha256: ee18dcd364ef21d18a9ce81d8b05078e19ef7901342d841f1d61046a30596cd5
+source:
+  url: https://github.com/tkrajina/typescriptify-golang-structs/archive/refs/tags/v0.2.0.tar.gz
+  sha256: 0bc43bb0e4e70fb10402be448b58eae7babd19f69e9dcbf4ff77f8f62c1b8abc
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

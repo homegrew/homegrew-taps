@@ -3,12 +3,16 @@ version: 2.0.0
 description: Filesystem with transparent authenticated encryption
 homepage: https://github.com/netheril96/securefs
 license: MIT
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/securefs/blobs/sha256:edaeb4feb94f768fa002e6bca9d6b9473946d545703007102e195ff49b246a0a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/securefs/blobs/sha256:eb8ecc3d54f6cddcf748bd267356e56daf0fb4337a1759ca313893ae1a84c442
-sha256:
-  linux_amd64: edaeb4feb94f768fa002e6bca9d6b9473946d545703007102e195ff49b246a0a
-  linux_arm64: eb8ecc3d54f6cddcf748bd267356e56daf0fb4337a1759ca313893ae1a84c442
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/securefs/blobs/sha256:edaeb4feb94f768fa002e6bca9d6b9473946d545703007102e195ff49b246a0a
+    sha256: edaeb4feb94f768fa002e6bca9d6b9473946d545703007102e195ff49b246a0a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/securefs/blobs/sha256:eb8ecc3d54f6cddcf748bd267356e56daf0fb4337a1759ca313893ae1a84c442
+    sha256: eb8ecc3d54f6cddcf748bd267356e56daf0fb4337a1759ca313893ae1a84c442
+source:
+  url: https://github.com/netheril96/securefs/archive/refs/tags/v2.0.0.tar.gz
+  sha256: d7fac7adc70c09473173aeadee5b7041d7e63fbf392ef40bdd77888590bb12a2
 install:
   type: archive
   format: tar.gz
@@ -24,3 +28,7 @@ dependencies:
   - sqlite
   - uni-algo
   - utf8proc
+build_dependencies:
+  - cmake
+  - pkgconf
+  - tclap

@@ -3,16 +3,22 @@ version: 0.1.38
 description: BGP filtering automation for Cisco, Juniper, BIRD and OpenBGPD routers
 homepage: http://snar.spb.ru/prog/bgpq3/
 license: BSD-2-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bgpq3/blobs/sha256:3bf0242ea13e9360cd13d475dd15be3f7c889c831a4110194e1f7fed18aaedf1
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bgpq3/blobs/sha256:4f29830a26cca0ebac56d0978d1265d9078c09f782c23062710262296750d916
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bgpq3/blobs/sha256:c79dfd70b5f7abf543be803c8f3e65b1c42b5dc746a9380e923599062e360a63
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bgpq3/blobs/sha256:c5ad42018e54795c6aa663b7cf201eee6abbec7ccd6403041d619b4ecdd2dfa8
-sha256:
-  darwin_arm64: 3bf0242ea13e9360cd13d475dd15be3f7c889c831a4110194e1f7fed18aaedf1
-  darwin_amd64: 4f29830a26cca0ebac56d0978d1265d9078c09f782c23062710262296750d916
-  linux_amd64: c79dfd70b5f7abf543be803c8f3e65b1c42b5dc746a9380e923599062e360a63
-  linux_arm64: c5ad42018e54795c6aa663b7cf201eee6abbec7ccd6403041d619b4ecdd2dfa8
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bgpq3/blobs/sha256:3bf0242ea13e9360cd13d475dd15be3f7c889c831a4110194e1f7fed18aaedf1
+    sha256: 3bf0242ea13e9360cd13d475dd15be3f7c889c831a4110194e1f7fed18aaedf1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bgpq3/blobs/sha256:4f29830a26cca0ebac56d0978d1265d9078c09f782c23062710262296750d916
+    sha256: 4f29830a26cca0ebac56d0978d1265d9078c09f782c23062710262296750d916
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bgpq3/blobs/sha256:c79dfd70b5f7abf543be803c8f3e65b1c42b5dc746a9380e923599062e360a63
+    sha256: c79dfd70b5f7abf543be803c8f3e65b1c42b5dc746a9380e923599062e360a63
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bgpq3/blobs/sha256:c5ad42018e54795c6aa663b7cf201eee6abbec7ccd6403041d619b4ecdd2dfa8
+    sha256: c5ad42018e54795c6aa663b7cf201eee6abbec7ccd6403041d619b4ecdd2dfa8
+source:
+  url: https://github.com/snar/bgpq3/archive/refs/tags/v0.1.38.tar.gz
+  sha256: c4a424825e6c9c9ec48c2583dcbbfc3016d15cc0be1dc55d07827e1b9b79888c
 install:
   type: archive
   format: tar.gz

@@ -3,19 +3,27 @@ version: 0.3
 description: Color-based alternative to figlet (uses libcaca)
 homepage: http://caca.zoy.org/wiki/toilet
 license: WTFPL
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/toilet/blobs/sha256:bd5b942e1d680bf03e3cd4ca644c4468e4184804f9e42044cd4e8a3d8be4df13
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/toilet/blobs/sha256:66eb8162654bad10f2f6fe8bcee529b61c07e08d97fb4159dd13c903511f3da2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/toilet/blobs/sha256:774d107ea52b43b2224252e84eaf529d8b944fa34746935d34a9c4bb791a110e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/toilet/blobs/sha256:b9b9b289bfeca15d75013d0cb29999beccaf644a914c8a6ce154be438a24c417
-sha256:
-  darwin_arm64: bd5b942e1d680bf03e3cd4ca644c4468e4184804f9e42044cd4e8a3d8be4df13
-  darwin_amd64: 66eb8162654bad10f2f6fe8bcee529b61c07e08d97fb4159dd13c903511f3da2
-  linux_amd64: 774d107ea52b43b2224252e84eaf529d8b944fa34746935d34a9c4bb791a110e
-  linux_arm64: b9b9b289bfeca15d75013d0cb29999beccaf644a914c8a6ce154be438a24c417
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/toilet/blobs/sha256:bd5b942e1d680bf03e3cd4ca644c4468e4184804f9e42044cd4e8a3d8be4df13
+    sha256: bd5b942e1d680bf03e3cd4ca644c4468e4184804f9e42044cd4e8a3d8be4df13
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/toilet/blobs/sha256:66eb8162654bad10f2f6fe8bcee529b61c07e08d97fb4159dd13c903511f3da2
+    sha256: 66eb8162654bad10f2f6fe8bcee529b61c07e08d97fb4159dd13c903511f3da2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/toilet/blobs/sha256:774d107ea52b43b2224252e84eaf529d8b944fa34746935d34a9c4bb791a110e
+    sha256: 774d107ea52b43b2224252e84eaf529d8b944fa34746935d34a9c4bb791a110e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/toilet/blobs/sha256:b9b9b289bfeca15d75013d0cb29999beccaf644a914c8a6ce154be438a24c417
+    sha256: b9b9b289bfeca15d75013d0cb29999beccaf644a914c8a6ce154be438a24c417
+source:
+  url: https://deb.debian.org/debian/pool/main/t/toilet/toilet_0.3.orig.tar.gz
+  sha256: 89d4b530c394313cc3f3a4e07a7394fa82a6091f44df44dfcd0ebcb3300a81de
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - libcaca
+build_dependencies:
+  - pkgconf

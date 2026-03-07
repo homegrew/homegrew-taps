@@ -3,16 +3,22 @@ version: 0.8.4
 description: Multipurpose sniffer/interceptor/logger for switched LAN
 homepage: https://ettercap.github.io/ettercap/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:b0f697c28c4d4dc88b6f717abaf9bf9856b9fa26c2aa511b970dcfcc6ea1105d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:3dd8609d57b114735a7db0708b350a5587f4435c4b4b11d1ca20871c5837decf
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:98f5d49640400d62f0813d27d2d72c2a68473c28bd621004fd24b5ce13f9fc0a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:73a5e485dae3ee5339481f54ae56ccbb69bacc5d41ecbfc8053071be373d9b9a
-sha256:
-  darwin_arm64: b0f697c28c4d4dc88b6f717abaf9bf9856b9fa26c2aa511b970dcfcc6ea1105d
-  darwin_amd64: 3dd8609d57b114735a7db0708b350a5587f4435c4b4b11d1ca20871c5837decf
-  linux_amd64: 98f5d49640400d62f0813d27d2d72c2a68473c28bd621004fd24b5ce13f9fc0a
-  linux_arm64: 73a5e485dae3ee5339481f54ae56ccbb69bacc5d41ecbfc8053071be373d9b9a
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:b0f697c28c4d4dc88b6f717abaf9bf9856b9fa26c2aa511b970dcfcc6ea1105d
+    sha256: b0f697c28c4d4dc88b6f717abaf9bf9856b9fa26c2aa511b970dcfcc6ea1105d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:3dd8609d57b114735a7db0708b350a5587f4435c4b4b11d1ca20871c5837decf
+    sha256: 3dd8609d57b114735a7db0708b350a5587f4435c4b4b11d1ca20871c5837decf
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:98f5d49640400d62f0813d27d2d72c2a68473c28bd621004fd24b5ce13f9fc0a
+    sha256: 98f5d49640400d62f0813d27d2d72c2a68473c28bd621004fd24b5ce13f9fc0a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:73a5e485dae3ee5339481f54ae56ccbb69bacc5d41ecbfc8053071be373d9b9a
+    sha256: 73a5e485dae3ee5339481f54ae56ccbb69bacc5d41ecbfc8053071be373d9b9a
+source:
+  url: https://github.com/Ettercap/ettercap/archive/refs/tags/v0.8.4.tar.gz
+  sha256: 1674c235b16b2048888b85a697697eb0c4e742f875fdaaef7acacc152568ad06
 install:
   type: archive
   format: tar.gz
@@ -30,3 +36,15 @@ dependencies:
   - cairo
   - freetype
   - pango
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - gdk-pixbuf
+  - glib
+  - gtk+3
+  - libmaxminddb
+  - libnet
+  - ncurses
+  - openssl@3
+  - pcre2
+  - zlib-ng-compat

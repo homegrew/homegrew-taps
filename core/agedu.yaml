@@ -3,17 +3,25 @@ version: 20241013
 description: Unix utility for tracking down wasted disk space
 homepage: https://www.chiark.greenend.org.uk/~sgtatham/agedu/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/agedu/blobs/sha256:41f04708967fca0cee916a7361fc5aa4dd9c5bd3e639f1a1a9b83715d626e48d
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/agedu/blobs/sha256:17e793caa2392c484df501763ba40a368adbd1a093c37558690bb747eb95dd5c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/agedu/blobs/sha256:00ac7a445b632cb005add4e4d8a5aefeca4a537930de4c2638607ef3a1ed203b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/agedu/blobs/sha256:e65d93a8c50262817c010ea8f441dd820485bec296d7fb559a89f1765a88edc3
-sha256:
-  darwin_arm64: 41f04708967fca0cee916a7361fc5aa4dd9c5bd3e639f1a1a9b83715d626e48d
-  darwin_amd64: 17e793caa2392c484df501763ba40a368adbd1a093c37558690bb747eb95dd5c
-  linux_amd64: 00ac7a445b632cb005add4e4d8a5aefeca4a537930de4c2638607ef3a1ed203b
-  linux_arm64: e65d93a8c50262817c010ea8f441dd820485bec296d7fb559a89f1765a88edc3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/agedu/blobs/sha256:41f04708967fca0cee916a7361fc5aa4dd9c5bd3e639f1a1a9b83715d626e48d
+    sha256: 41f04708967fca0cee916a7361fc5aa4dd9c5bd3e639f1a1a9b83715d626e48d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/agedu/blobs/sha256:17e793caa2392c484df501763ba40a368adbd1a093c37558690bb747eb95dd5c
+    sha256: 17e793caa2392c484df501763ba40a368adbd1a093c37558690bb747eb95dd5c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/agedu/blobs/sha256:00ac7a445b632cb005add4e4d8a5aefeca4a537930de4c2638607ef3a1ed203b
+    sha256: 00ac7a445b632cb005add4e4d8a5aefeca4a537930de4c2638607ef3a1ed203b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/agedu/blobs/sha256:e65d93a8c50262817c010ea8f441dd820485bec296d7fb559a89f1765a88edc3
+    sha256: e65d93a8c50262817c010ea8f441dd820485bec296d7fb559a89f1765a88edc3
+source:
+  url: https://www.chiark.greenend.org.uk/~sgtatham/agedu/agedu-20241013.3622eda.tar.gz
+  sha256: 3f77cb2e4dd64c100f7a7b0789a6c06cc16f23e7fe78c1451f5020dd823cf2f8
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - cmake

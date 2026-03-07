@@ -3,12 +3,16 @@ version: 1.6.0
 description: Server and user space API to deal with multimedia pipelines
 homepage: https://pipewire.org
 license: GPL-2.0-only AND LGPL-2.1-or-later AND MIT
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pipewire/blobs/sha256:f26176b923bb9b6952a3f5c5e1eba497e4d6a309e426adf7ecc7bab84271b7ff
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pipewire/blobs/sha256:60947f057bb5175b8edab0fd3fe9b44a54cca7d2e17fc31a140c7ab3182998f4
-sha256:
-  linux_amd64: f26176b923bb9b6952a3f5c5e1eba497e4d6a309e426adf7ecc7bab84271b7ff
-  linux_arm64: 60947f057bb5175b8edab0fd3fe9b44a54cca7d2e17fc31a140c7ab3182998f4
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pipewire/blobs/sha256:f26176b923bb9b6952a3f5c5e1eba497e4d6a309e426adf7ecc7bab84271b7ff
+    sha256: f26176b923bb9b6952a3f5c5e1eba497e4d6a309e426adf7ecc7bab84271b7ff
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pipewire/blobs/sha256:60947f057bb5175b8edab0fd3fe9b44a54cca7d2e17fc31a140c7ab3182998f4
+    sha256: 60947f057bb5175b8edab0fd3fe9b44a54cca7d2e17fc31a140c7ab3182998f4
+source:
+  url: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.0/pipewire-1.6.0.tar.gz
+  sha256: eef582901d8323669560dd32e3b76b1b15011d73a38f0035a3f11b933112f397
 install:
   type: archive
   format: tar.gz
@@ -26,3 +30,7 @@ dependencies:
   - pulseaudio
   - readline
   - systemd
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf

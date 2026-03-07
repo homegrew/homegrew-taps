@@ -3,16 +3,22 @@ version: 3.3.2
 description: JSON Web Token C library
 homepage: https://libjwt.io/
 license: MPL-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libjwt/blobs/sha256:7b3c0e59441fd61310838be3bf56431278f62a40088bb2aa08e34aa367af07c2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libjwt/blobs/sha256:339ea2208717503a08ad98e08f65208bf9fb87f9be98a1413a9a490511a64d32
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libjwt/blobs/sha256:25e5ac26862c2ef56da81d43d666485124126a9164aa5188e449058709e5768b
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libjwt/blobs/sha256:c914225e05eadba04a87bce03a0b47de2bf17164a868c82a13718838d2b2a3b7
-sha256:
-  darwin_arm64: 7b3c0e59441fd61310838be3bf56431278f62a40088bb2aa08e34aa367af07c2
-  darwin_amd64: 339ea2208717503a08ad98e08f65208bf9fb87f9be98a1413a9a490511a64d32
-  linux_amd64: 25e5ac26862c2ef56da81d43d666485124126a9164aa5188e449058709e5768b
-  linux_arm64: c914225e05eadba04a87bce03a0b47de2bf17164a868c82a13718838d2b2a3b7
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libjwt/blobs/sha256:7b3c0e59441fd61310838be3bf56431278f62a40088bb2aa08e34aa367af07c2
+    sha256: 7b3c0e59441fd61310838be3bf56431278f62a40088bb2aa08e34aa367af07c2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libjwt/blobs/sha256:339ea2208717503a08ad98e08f65208bf9fb87f9be98a1413a9a490511a64d32
+    sha256: 339ea2208717503a08ad98e08f65208bf9fb87f9be98a1413a9a490511a64d32
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libjwt/blobs/sha256:25e5ac26862c2ef56da81d43d666485124126a9164aa5188e449058709e5768b
+    sha256: 25e5ac26862c2ef56da81d43d666485124126a9164aa5188e449058709e5768b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libjwt/blobs/sha256:c914225e05eadba04a87bce03a0b47de2bf17164a868c82a13718838d2b2a3b7
+    sha256: c914225e05eadba04a87bce03a0b47de2bf17164a868c82a13718838d2b2a3b7
+source:
+  url: https://github.com/benmcollins/libjwt/archive/refs/tags/v3.3.2.tar.gz
+  sha256: d1b16df8e7484d1856c21f770c6317cee3881c435a563160be76cf29d3142c8c
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,6 @@ dependencies:
   - gnutls
   - jansson
   - openssl@3
+build_dependencies:
+  - cmake
+  - pkgconf

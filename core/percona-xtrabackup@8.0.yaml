@@ -3,16 +3,22 @@ version: 8.0.35-35
 description: Open source hot backup tool for InnoDB and XtraDB databases
 homepage: https://www.percona.com/software/mysql-database/percona-xtrabackup
 license: GPL-2.0-only
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/percona-xtrabackup/8.0/blobs/sha256:dcdeddbf59e0b9218784bf99e76a642421d0ecf830e1c25b1a119fc9015cb2c2
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/percona-xtrabackup/8.0/blobs/sha256:d19ff4de3d97148b38fdaad3d4d19382fc86e7952b51c2dd93164859a7e39fcd
-  linux_amd64: https://ghcr.io/v2/homebrew/core/percona-xtrabackup/8.0/blobs/sha256:79a8925340f84bab3b4ca91509c44e826fa5fd5cdac93ee9c6d51d760a309d32
-  linux_arm64: https://ghcr.io/v2/homebrew/core/percona-xtrabackup/8.0/blobs/sha256:e5d21b91abb7a30819530c099e52665be41b8f823012c4ecc98a3335415c0f21
-sha256:
-  darwin_arm64: dcdeddbf59e0b9218784bf99e76a642421d0ecf830e1c25b1a119fc9015cb2c2
-  darwin_amd64: d19ff4de3d97148b38fdaad3d4d19382fc86e7952b51c2dd93164859a7e39fcd
-  linux_amd64: 79a8925340f84bab3b4ca91509c44e826fa5fd5cdac93ee9c6d51d760a309d32
-  linux_arm64: e5d21b91abb7a30819530c099e52665be41b8f823012c4ecc98a3335415c0f21
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/percona-xtrabackup/8.0/blobs/sha256:dcdeddbf59e0b9218784bf99e76a642421d0ecf830e1c25b1a119fc9015cb2c2
+    sha256: dcdeddbf59e0b9218784bf99e76a642421d0ecf830e1c25b1a119fc9015cb2c2
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/percona-xtrabackup/8.0/blobs/sha256:d19ff4de3d97148b38fdaad3d4d19382fc86e7952b51c2dd93164859a7e39fcd
+    sha256: d19ff4de3d97148b38fdaad3d4d19382fc86e7952b51c2dd93164859a7e39fcd
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/percona-xtrabackup/8.0/blobs/sha256:79a8925340f84bab3b4ca91509c44e826fa5fd5cdac93ee9c6d51d760a309d32
+    sha256: 79a8925340f84bab3b4ca91509c44e826fa5fd5cdac93ee9c6d51d760a309d32
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/percona-xtrabackup/8.0/blobs/sha256:e5d21b91abb7a30819530c099e52665be41b8f823012c4ecc98a3335415c0f21
+    sha256: e5d21b91abb7a30819530c099e52665be41b8f823012c4ecc98a3335415c0f21
+source:
+  url: https://downloads.percona.com/downloads/Percona-XtraBackup-8.0/Percona-XtraBackup-8.0.35-35/source/tarball/percona-xtrabackup-8.0.35-35.tar.gz
+  sha256: 012aa40e35d7186da1d0c4ccd20d703b2b56a69dc0d750056d969245226a3d67
 install:
   type: archive
   format: tar.gz
@@ -24,6 +30,24 @@ dependencies:
   - lz4
   - openssl@3
   - perl-dbd-mysql
+  - protobuf
+  - zlib-ng-compat
+  - zstd
+build_dependencies:
+  - bison
+  - cmake
+  - libevent
+  - pkgconf
+  - sphinx-doc
+linux_dependencies:
+  - icu4c@78
+  - libaio
+  - libev
+  - libgcrypt
+  - lz4
+  - openssl@3
+  - perl-dbd-mysql
+  - procps
   - protobuf
   - zlib-ng-compat
   - zstd

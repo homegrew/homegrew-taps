@@ -3,19 +3,30 @@ version: 4.0.1
 description: Provides geospatial routing for PostGIS/PostgreSQL database
 homepage: https://pgrouting.org/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pgrouting/blobs/sha256:2cd0feb635504f27684e307855317ac3be2c53badac8eaec7dbd2bf8cb1ff294
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pgrouting/blobs/sha256:5e097af595e04bfe9980cc34697d9fd4a2dd8a3c32e2f5859aeeae4718891200
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pgrouting/blobs/sha256:b7fb9d05ddb3b5d08373be7b1fcff16b1c7c00cb36b699b6b25a813a85564c6e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pgrouting/blobs/sha256:88c76b021a919cc69df0bf7a4e5f94d81a97a04c630fc1053e653a623f6dbde4
-sha256:
-  darwin_arm64: 2cd0feb635504f27684e307855317ac3be2c53badac8eaec7dbd2bf8cb1ff294
-  darwin_amd64: 5e097af595e04bfe9980cc34697d9fd4a2dd8a3c32e2f5859aeeae4718891200
-  linux_amd64: b7fb9d05ddb3b5d08373be7b1fcff16b1c7c00cb36b699b6b25a813a85564c6e
-  linux_arm64: 88c76b021a919cc69df0bf7a4e5f94d81a97a04c630fc1053e653a623f6dbde4
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pgrouting/blobs/sha256:2cd0feb635504f27684e307855317ac3be2c53badac8eaec7dbd2bf8cb1ff294
+    sha256: 2cd0feb635504f27684e307855317ac3be2c53badac8eaec7dbd2bf8cb1ff294
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pgrouting/blobs/sha256:5e097af595e04bfe9980cc34697d9fd4a2dd8a3c32e2f5859aeeae4718891200
+    sha256: 5e097af595e04bfe9980cc34697d9fd4a2dd8a3c32e2f5859aeeae4718891200
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pgrouting/blobs/sha256:b7fb9d05ddb3b5d08373be7b1fcff16b1c7c00cb36b699b6b25a813a85564c6e
+    sha256: b7fb9d05ddb3b5d08373be7b1fcff16b1c7c00cb36b699b6b25a813a85564c6e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pgrouting/blobs/sha256:88c76b021a919cc69df0bf7a4e5f94d81a97a04c630fc1053e653a623f6dbde4
+    sha256: 88c76b021a919cc69df0bf7a4e5f94d81a97a04c630fc1053e653a623f6dbde4
+source:
+  url: https://github.com/pgRouting/pgrouting/releases/download/v4.0.1/pgrouting-4.0.1.tar.gz
+  sha256: 21c071983a682e048da28f0f211205a20f27ef3708c0b637b4e6e29994d7d699
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - postgis
+build_dependencies:
+  - boost
+  - cmake
+  - postgresql@17
+  - postgresql@18

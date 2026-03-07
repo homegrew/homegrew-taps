@@ -3,16 +3,22 @@ version: 26.3.0
 description: Automated testing for Ansible roles
 homepage: https://molecule.readthedocs.io
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:65458a4484d79d54f90e56f8a154bcdd49b877765b38c4c1083b525eb6dbd538
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:79b554c71c1d18cc32053e430b523d0772521f5d8be05e93d702abf6142c6c61
-  linux_amd64: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:59d141710b1f88b8609ab95257e1d7704ff01f64dbc653bd0f820955966c36a7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:b082be99b7255a5dc38b7029d97c593cdd4c06ddebb10b17ffc84ca178842e56
-sha256:
-  darwin_arm64: 65458a4484d79d54f90e56f8a154bcdd49b877765b38c4c1083b525eb6dbd538
-  darwin_amd64: 79b554c71c1d18cc32053e430b523d0772521f5d8be05e93d702abf6142c6c61
-  linux_amd64: 59d141710b1f88b8609ab95257e1d7704ff01f64dbc653bd0f820955966c36a7
-  linux_arm64: b082be99b7255a5dc38b7029d97c593cdd4c06ddebb10b17ffc84ca178842e56
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:65458a4484d79d54f90e56f8a154bcdd49b877765b38c4c1083b525eb6dbd538
+    sha256: 65458a4484d79d54f90e56f8a154bcdd49b877765b38c4c1083b525eb6dbd538
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:79b554c71c1d18cc32053e430b523d0772521f5d8be05e93d702abf6142c6c61
+    sha256: 79b554c71c1d18cc32053e430b523d0772521f5d8be05e93d702abf6142c6c61
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:59d141710b1f88b8609ab95257e1d7704ff01f64dbc653bd0f820955966c36a7
+    sha256: 59d141710b1f88b8609ab95257e1d7704ff01f64dbc653bd0f820955966c36a7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:b082be99b7255a5dc38b7029d97c593cdd4c06ddebb10b17ffc84ca178842e56
+    sha256: b082be99b7255a5dc38b7029d97c593cdd4c06ddebb10b17ffc84ca178842e56
+source:
+  url: https://files.pythonhosted.org/packages/ec/a4/29f1738fa03ad997b07e8d48bdbcef0a35ee5aecee780d817711519b1f0b/molecule-26.3.0.tar.gz
+  sha256: e48c92383be5e580545dcc7d115b3f3559d6d5f28e1ab151a35dc780b7400a66
 install:
   type: archive
   format: tar.gz
@@ -21,6 +27,14 @@ dependencies:
   - ansible
   - certifi
   - cryptography
+  - libyaml
+  - python@3.14
+  - rpds-py
+linux_dependencies:
+  - ansible
+  - certifi
+  - cryptography
+  - gmp
   - libyaml
   - python@3.14
   - rpds-py

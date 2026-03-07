@@ -3,20 +3,31 @@ version: 2.4.16
 description: Common UNIX Printing System
 homepage: https://github.com/OpenPrinting/cups
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cups/blobs/sha256:8424841fac4c8cafb8179f5226928bfb2fcef71860f63dc6fa44d661e351ec63
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cups/blobs/sha256:56eff0f29e06651f360fe67b1879137b50239bbbad6ea67123f5b706b4912070
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cups/blobs/sha256:4f8fd899d1f1801fe74efed50f91e52a16287d2e60d2417a58d66e97bfa3077e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cups/blobs/sha256:573d09a9645a35852d77d7f134a810898ee2ff81333f6ecebe811ee92016100d
-sha256:
-  darwin_arm64: 8424841fac4c8cafb8179f5226928bfb2fcef71860f63dc6fa44d661e351ec63
-  darwin_amd64: 56eff0f29e06651f360fe67b1879137b50239bbbad6ea67123f5b706b4912070
-  linux_amd64: 4f8fd899d1f1801fe74efed50f91e52a16287d2e60d2417a58d66e97bfa3077e
-  linux_arm64: 573d09a9645a35852d77d7f134a810898ee2ff81333f6ecebe811ee92016100d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cups/blobs/sha256:8424841fac4c8cafb8179f5226928bfb2fcef71860f63dc6fa44d661e351ec63
+    sha256: 8424841fac4c8cafb8179f5226928bfb2fcef71860f63dc6fa44d661e351ec63
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cups/blobs/sha256:56eff0f29e06651f360fe67b1879137b50239bbbad6ea67123f5b706b4912070
+    sha256: 56eff0f29e06651f360fe67b1879137b50239bbbad6ea67123f5b706b4912070
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cups/blobs/sha256:4f8fd899d1f1801fe74efed50f91e52a16287d2e60d2417a58d66e97bfa3077e
+    sha256: 4f8fd899d1f1801fe74efed50f91e52a16287d2e60d2417a58d66e97bfa3077e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cups/blobs/sha256:573d09a9645a35852d77d7f134a810898ee2ff81333f6ecebe811ee92016100d
+    sha256: 573d09a9645a35852d77d7f134a810898ee2ff81333f6ecebe811ee92016100d
+source:
+  url: https://github.com/OpenPrinting/cups/releases/download/v2.4.16/cups-2.4.16-source.tar.gz
+  sha256: 0339587204b4f9428dd0592eb301dec0bf9ea6ea8dce5d9690d56be585aba92d
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - openssl@3
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - openssl@3
+  - zlib-ng-compat
 keg_only: true

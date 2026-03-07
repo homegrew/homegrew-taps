@@ -3,12 +3,16 @@ version: 1b
 description: File system for accessing archives using libarchive
 homepage: https://git.sr.ht/~nabijaczleweli/archivemount-ng
 license: LGPL-2.0-or-later
-url:
-  linux_amd64: https://ghcr.io/v2/homebrew/core/archivemount/blobs/sha256:aa0cc94db21b3b5cb29a330a8aab4b0fb5612f2b3fac6476fc298d99ca26b9d0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/archivemount/blobs/sha256:1b2c37826bee586ebbcf04b697dbd60f4056e87893597e26ac429091f99eb13b
-sha256:
-  linux_amd64: aa0cc94db21b3b5cb29a330a8aab4b0fb5612f2b3fac6476fc298d99ca26b9d0
-  linux_arm64: 1b2c37826bee586ebbcf04b697dbd60f4056e87893597e26ac429091f99eb13b
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/archivemount/blobs/sha256:aa0cc94db21b3b5cb29a330a8aab4b0fb5612f2b3fac6476fc298d99ca26b9d0
+    sha256: aa0cc94db21b3b5cb29a330a8aab4b0fb5612f2b3fac6476fc298d99ca26b9d0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/archivemount/blobs/sha256:1b2c37826bee586ebbcf04b697dbd60f4056e87893597e26ac429091f99eb13b
+    sha256: 1b2c37826bee586ebbcf04b697dbd60f4056e87893597e26ac429091f99eb13b
+source:
+  url: https://git.sr.ht/~nabijaczleweli/archivemount-ng/archive/1b.tar.gz
+  sha256: de10cfee3bff8c1dd2b92358531d3c0001db36a99e1098ed0c9d205d110e903d
 install:
   type: archive
   format: tar.gz
@@ -16,3 +20,5 @@ install:
 dependencies:
   - libarchive
   - libfuse
+build_dependencies:
+  - pkgconf

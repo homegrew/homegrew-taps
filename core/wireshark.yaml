@@ -3,14 +3,22 @@ version: 4.6.4
 description: Network analyzer and capture tool - without graphical user interface
 homepage: https://www.wireshark.org
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:b06ccbfaf7de9dab53effd709750f0157fe6cd01236b5f11c17f14d8e03d753e
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:d4571034a1f8e53852cc728a41f36240139d3b14c81413468c8cef09d8a73ce6
-  linux_amd64: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:f50e9cf5822d3baf7a521c0a70d3148297d4ccf0e56a67bab31cd197b451603c
-sha256:
-  darwin_arm64: b06ccbfaf7de9dab53effd709750f0157fe6cd01236b5f11c17f14d8e03d753e
-  darwin_amd64: d4571034a1f8e53852cc728a41f36240139d3b14c81413468c8cef09d8a73ce6
-  linux_amd64: f50e9cf5822d3baf7a521c0a70d3148297d4ccf0e56a67bab31cd197b451603c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:b06ccbfaf7de9dab53effd709750f0157fe6cd01236b5f11c17f14d8e03d753e
+    sha256: b06ccbfaf7de9dab53effd709750f0157fe6cd01236b5f11c17f14d8e03d753e
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:d4571034a1f8e53852cc728a41f36240139d3b14c81413468c8cef09d8a73ce6
+    sha256: d4571034a1f8e53852cc728a41f36240139d3b14c81413468c8cef09d8a73ce6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:f50e9cf5822d3baf7a521c0a70d3148297d4ccf0e56a67bab31cd197b451603c
+    sha256: f50e9cf5822d3baf7a521c0a70d3148297d4ccf0e56a67bab31cd197b451603c
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:c102409ccfabafdb24cde73b68690a7c75fdfcd784960b8ee30d09bf12819352
+    sha256: c102409ccfabafdb24cde73b68690a7c75fdfcd784960b8ee30d09bf12819352
+source:
+  url: https://www.wireshark.org/download/src/all-versions/wireshark-4.6.4.tar.xz
+  sha256: fbeab3d85c6c8a5763c8d9b7fe20b5c69ca9f9e7f2b824bedc73135bdca332e2
 install:
   type: archive
   format: tar.gz
@@ -31,3 +39,21 @@ dependencies:
   - speexdsp
   - zstd
   - libgpg-error
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - c-ares
+  - glib
+  - gnutls
+  - libgcrypt
+  - libmaxminddb
+  - libnghttp2
+  - libnghttp3
+  - libsmi
+  - libssh
+  - lua@5.4
+  - lz4
+  - pcre2
+  - speexdsp
+  - zlib-ng-compat
+  - zstd

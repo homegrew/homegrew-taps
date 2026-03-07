@@ -3,16 +3,22 @@ version: 1.5.4
 description: Command-line renderer
 homepage: https://www.synfig.org/
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/synfig/blobs/sha256:c4bfc5af3eacc379168007869d3bf2812783b6ac4ef7e40f615b13ae431fd9ee
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/synfig/blobs/sha256:804d7f628b553b269fd4fe7582f83c66af8ff22875fd766bd959ac3e9fda7d93
-  linux_amd64: https://ghcr.io/v2/homebrew/core/synfig/blobs/sha256:4b2241a4a7e43fc44cdfc02703a960af582331b97272a7ebc5ac87aab48cae23
-  linux_arm64: https://ghcr.io/v2/homebrew/core/synfig/blobs/sha256:db544e07b436f64df708bc6f19255dbd9d3e64634bda978bdcc274e363a8070d
-sha256:
-  darwin_arm64: c4bfc5af3eacc379168007869d3bf2812783b6ac4ef7e40f615b13ae431fd9ee
-  darwin_amd64: 804d7f628b553b269fd4fe7582f83c66af8ff22875fd766bd959ac3e9fda7d93
-  linux_amd64: 4b2241a4a7e43fc44cdfc02703a960af582331b97272a7ebc5ac87aab48cae23
-  linux_arm64: db544e07b436f64df708bc6f19255dbd9d3e64634bda978bdcc274e363a8070d
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/synfig/blobs/sha256:c4bfc5af3eacc379168007869d3bf2812783b6ac4ef7e40f615b13ae431fd9ee
+    sha256: c4bfc5af3eacc379168007869d3bf2812783b6ac4ef7e40f615b13ae431fd9ee
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/synfig/blobs/sha256:804d7f628b553b269fd4fe7582f83c66af8ff22875fd766bd959ac3e9fda7d93
+    sha256: 804d7f628b553b269fd4fe7582f83c66af8ff22875fd766bd959ac3e9fda7d93
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/synfig/blobs/sha256:4b2241a4a7e43fc44cdfc02703a960af582331b97272a7ebc5ac87aab48cae23
+    sha256: 4b2241a4a7e43fc44cdfc02703a960af582331b97272a7ebc5ac87aab48cae23
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/synfig/blobs/sha256:db544e07b436f64df708bc6f19255dbd9d3e64634bda978bdcc274e363a8070d
+    sha256: db544e07b436f64df708bc6f19255dbd9d3e64634bda978bdcc274e363a8070d
+source:
+  url: https://github.com/synfig/synfig/releases/download/v1.5.4/synfig-1.5.4.tar.gz
+  sha256: b8fb9d609e3aedebde7b0efa0c3de3b1fa5c4b61f5493b7f797b496a80f15fd0
 install:
   type: archive
   format: tar.gz
@@ -43,3 +49,33 @@ dependencies:
   - liblqr
   - libomp
   - little-cms2
+build_dependencies:
+  - autoconf
+  - automake
+  - intltool
+  - libtool
+  - pkgconf
+linux_dependencies:
+  - cairo
+  - etl
+  - ffmpeg
+  - fftw
+  - fontconfig
+  - freetype
+  - fribidi
+  - gettext
+  - glib
+  - glibmm@2.66
+  - harfbuzz
+  - imagemagick
+  - imath
+  - libmng
+  - libpng
+  - libsigc++@2
+  - libtool
+  - libxml++
+  - libzip
+  - mlt
+  - openexr
+  - pango
+  - zlib-ng-compat

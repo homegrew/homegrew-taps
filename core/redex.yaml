@@ -3,16 +3,22 @@ version: 2017.10.31
 description: Bytecode optimizer for Android apps
 homepage: https://fbredex.com/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:4290ded870843ef5a0f59274fe9242982c77542a1cbb367408151473849b21a1
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:c2eca79d391a44a6645c4d0cd17982c07316a49f20a4f3ff0b3bf5190936014b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff
-  linux_arm64: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:576c939a85047bae7e36eb7821407eb2046eb746069b4b8e5a13635837338799
-sha256:
-  darwin_arm64: 4290ded870843ef5a0f59274fe9242982c77542a1cbb367408151473849b21a1
-  darwin_amd64: c2eca79d391a44a6645c4d0cd17982c07316a49f20a4f3ff0b3bf5190936014b
-  linux_amd64: 40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff
-  linux_arm64: 576c939a85047bae7e36eb7821407eb2046eb746069b4b8e5a13635837338799
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:4290ded870843ef5a0f59274fe9242982c77542a1cbb367408151473849b21a1
+    sha256: 4290ded870843ef5a0f59274fe9242982c77542a1cbb367408151473849b21a1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:c2eca79d391a44a6645c4d0cd17982c07316a49f20a4f3ff0b3bf5190936014b
+    sha256: c2eca79d391a44a6645c4d0cd17982c07316a49f20a4f3ff0b3bf5190936014b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff
+    sha256: 40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:576c939a85047bae7e36eb7821407eb2046eb746069b4b8e5a13635837338799
+    sha256: 576c939a85047bae7e36eb7821407eb2046eb746069b4b8e5a13635837338799
+source:
+  url: https://github.com/facebook/redex/archive/refs/tags/v2017.10.31.tar.gz
+  sha256: 18a840e4db0fc51f79e17dfd749b2ffcce65a28e7ef9c2b3c255c5ad89f6fd6f
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,8 @@ dependencies:
   - boost
   - jsoncpp
   - python@3.14
+build_dependencies:
+  - autoconf
+  - automake
+  - libevent
+  - libtool

@@ -1,19 +1,27 @@
 name: zeptoclaw
-version: 0.6.2
+version: 0.7.0
 description: Lightweight personal AI gateway with layered safety controls
 homepage: https://zeptoclaw.com/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/zeptoclaw/blobs/sha256:2bb1553b484f621b686e9ebe68c8bba4bd51e55509d336c6a903fd25bb288d36
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/zeptoclaw/blobs/sha256:750d6ed58ed0710485a66e7e3bdff93328bd3215c151f14bea65ef18552a8b58
-  linux_amd64: https://ghcr.io/v2/homebrew/core/zeptoclaw/blobs/sha256:42e75f1661760a222d16674455e8c758bc03ec2769d5228e550f38f7e883ee38
-  linux_arm64: https://ghcr.io/v2/homebrew/core/zeptoclaw/blobs/sha256:c1b837c3937c17bdfdea483c5b6be993bca8f5815b5923446568d1bff71a6159
-sha256:
-  darwin_arm64: 2bb1553b484f621b686e9ebe68c8bba4bd51e55509d336c6a903fd25bb288d36
-  darwin_amd64: 750d6ed58ed0710485a66e7e3bdff93328bd3215c151f14bea65ef18552a8b58
-  linux_amd64: 42e75f1661760a222d16674455e8c758bc03ec2769d5228e550f38f7e883ee38
-  linux_arm64: c1b837c3937c17bdfdea483c5b6be993bca8f5815b5923446568d1bff71a6159
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zeptoclaw/blobs/sha256:9ce8a19a4fb0061d4b620d94a57a4ad10db4269f8c963a09cfd1e11de3a2c34e
+    sha256: 9ce8a19a4fb0061d4b620d94a57a4ad10db4269f8c963a09cfd1e11de3a2c34e
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zeptoclaw/blobs/sha256:b82195e029ac12eda8aa84b95e04fed53304665d29a498fee3bd9585e62c303b
+    sha256: b82195e029ac12eda8aa84b95e04fed53304665d29a498fee3bd9585e62c303b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zeptoclaw/blobs/sha256:f189f531fb61aba1b9244f11b7fd615be88ac9d6a411decfc92ba93c2c3f2173
+    sha256: f189f531fb61aba1b9244f11b7fd615be88ac9d6a411decfc92ba93c2c3f2173
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zeptoclaw/blobs/sha256:305ed4570aff4220f0321546d8217b47fc96bd478d9bca2e4c235e050d72c07e
+    sha256: 305ed4570aff4220f0321546d8217b47fc96bd478d9bca2e4c235e050d72c07e
+source:
+  url: https://github.com/qhkm/zeptoclaw/archive/refs/tags/v0.7.0.tar.gz
+  sha256: 97e2a39f5d1f533732e6ede27b0db5c792cd81c58f67849e6f836671b2786aa5
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

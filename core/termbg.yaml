@@ -3,17 +3,25 @@ version: 0.6.2
 description: Rust library for terminal background color detection
 homepage: https://github.com/dalance/termbg
 license: Apache-2.0 OR MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/termbg/blobs/sha256:0966ba2c3c68175f179c88b293c396a89867b38aeb1293200527aa66039dfda5
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/termbg/blobs/sha256:185c02be7e39375a0b96aaa18443010547bfab80b7afa1856b6c85db29bcb39e
-  linux_amd64: https://ghcr.io/v2/homebrew/core/termbg/blobs/sha256:98b27a88db545fce6ca91fa68de4370a715636f9313a000dc99a6e9188f8cb84
-  linux_arm64: https://ghcr.io/v2/homebrew/core/termbg/blobs/sha256:eb326e7812e6470aeb2da3737d385f02106bd8cf5b36f4d4abfd41c3d0a4f692
-sha256:
-  darwin_arm64: 0966ba2c3c68175f179c88b293c396a89867b38aeb1293200527aa66039dfda5
-  darwin_amd64: 185c02be7e39375a0b96aaa18443010547bfab80b7afa1856b6c85db29bcb39e
-  linux_amd64: 98b27a88db545fce6ca91fa68de4370a715636f9313a000dc99a6e9188f8cb84
-  linux_arm64: eb326e7812e6470aeb2da3737d385f02106bd8cf5b36f4d4abfd41c3d0a4f692
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/termbg/blobs/sha256:0966ba2c3c68175f179c88b293c396a89867b38aeb1293200527aa66039dfda5
+    sha256: 0966ba2c3c68175f179c88b293c396a89867b38aeb1293200527aa66039dfda5
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/termbg/blobs/sha256:185c02be7e39375a0b96aaa18443010547bfab80b7afa1856b6c85db29bcb39e
+    sha256: 185c02be7e39375a0b96aaa18443010547bfab80b7afa1856b6c85db29bcb39e
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/termbg/blobs/sha256:98b27a88db545fce6ca91fa68de4370a715636f9313a000dc99a6e9188f8cb84
+    sha256: 98b27a88db545fce6ca91fa68de4370a715636f9313a000dc99a6e9188f8cb84
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/termbg/blobs/sha256:eb326e7812e6470aeb2da3737d385f02106bd8cf5b36f4d4abfd41c3d0a4f692
+    sha256: eb326e7812e6470aeb2da3737d385f02106bd8cf5b36f4d4abfd41c3d0a4f692
+source:
+  url: https://github.com/dalance/termbg/archive/refs/tags/v0.6.2.tar.gz
+  sha256: b933907d181e59ce0aa522ed598a9fa70125a6523f7fbd1f537c3b99bd75ffdd
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

@@ -3,16 +3,22 @@ version: 8.4.8
 description: Open source relational database management system
 homepage: https://github.com/mysql/mysql-server
 license: GPL-2.0-only WITH Universal-FOSS-exception-1.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/mysql/8.4/blobs/sha256:7d3af0d53b05621cfbe07095e6699950c13ff5a16d81f5412437bb5a8b224b70
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/mysql/8.4/blobs/sha256:2cf37cbf47fe6eea64fba33618d0ddd848d0a1f8c3ac3749075138c1346a7ff8
-  linux_amd64: https://ghcr.io/v2/homebrew/core/mysql/8.4/blobs/sha256:8cff172f2d4c7da6b320f8042c561a2a831c6a3c710ad92974a3ca9ebbf9008a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/mysql/8.4/blobs/sha256:74116286da848a0de5f8d86fabe47c670a7b960e7598d82a1a786c7f9e2d8284
-sha256:
-  darwin_arm64: 7d3af0d53b05621cfbe07095e6699950c13ff5a16d81f5412437bb5a8b224b70
-  darwin_amd64: 2cf37cbf47fe6eea64fba33618d0ddd848d0a1f8c3ac3749075138c1346a7ff8
-  linux_amd64: 8cff172f2d4c7da6b320f8042c561a2a831c6a3c710ad92974a3ca9ebbf9008a
-  linux_arm64: 74116286da848a0de5f8d86fabe47c670a7b960e7598d82a1a786c7f9e2d8284
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mysql/8.4/blobs/sha256:7d3af0d53b05621cfbe07095e6699950c13ff5a16d81f5412437bb5a8b224b70
+    sha256: 7d3af0d53b05621cfbe07095e6699950c13ff5a16d81f5412437bb5a8b224b70
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mysql/8.4/blobs/sha256:2cf37cbf47fe6eea64fba33618d0ddd848d0a1f8c3ac3749075138c1346a7ff8
+    sha256: 2cf37cbf47fe6eea64fba33618d0ddd848d0a1f8c3ac3749075138c1346a7ff8
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/mysql/8.4/blobs/sha256:8cff172f2d4c7da6b320f8042c561a2a831c6a3c710ad92974a3ca9ebbf9008a
+    sha256: 8cff172f2d4c7da6b320f8042c561a2a831c6a3c710ad92974a3ca9ebbf9008a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/mysql/8.4/blobs/sha256:74116286da848a0de5f8d86fabe47c670a7b960e7598d82a1a786c7f9e2d8284
+    sha256: 74116286da848a0de5f8d86fabe47c670a7b960e7598d82a1a786c7f9e2d8284
+source:
+  url: https://cdn.mysql.com/Downloads/MySQL-8.4/mysql-8.4.8.tar.gz
+  sha256: be9d96cdf87f276952a2cdd960f106b960a8860e46c115ed39c1b5f2e0387a20
 install:
   type: archive
   format: tar.gz
@@ -20,6 +26,19 @@ install:
 dependencies:
   - abseil
   - icu4c@78
+  - lz4
+  - openssl@3
+  - protobuf
+  - zlib-ng-compat
+  - zstd
+build_dependencies:
+  - bison
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - abseil
+  - icu4c@78
+  - libtirpc
   - lz4
   - openssl@3
   - protobuf

@@ -3,16 +3,22 @@ version: 3.0.4
 description: PC Engine emulator
 homepage: https://github.com/kallisti5/huexpress
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/huexpress/blobs/sha256:0e4ce00990799c34600701c248f3cf8b2e8ed560b58b8616bd63aafdc2fe3f2f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/huexpress/blobs/sha256:ed758b69740bc72b5bdb5d463bea32d699c5f5e6d2de07ebfec1a035cebe6dd0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/huexpress/blobs/sha256:8f5ca6b63b8fc347e8221765dc09ac1000f4b6a62e53424fb578bb14103c8952
-  linux_arm64: https://ghcr.io/v2/homebrew/core/huexpress/blobs/sha256:cf8c9ea08ea0615c32f11b3b2574054bc950436bca1539c7c7d0625c1a7fd3ec
-sha256:
-  darwin_arm64: 0e4ce00990799c34600701c248f3cf8b2e8ed560b58b8616bd63aafdc2fe3f2f
-  darwin_amd64: ed758b69740bc72b5bdb5d463bea32d699c5f5e6d2de07ebfec1a035cebe6dd0
-  linux_amd64: 8f5ca6b63b8fc347e8221765dc09ac1000f4b6a62e53424fb578bb14103c8952
-  linux_arm64: cf8c9ea08ea0615c32f11b3b2574054bc950436bca1539c7c7d0625c1a7fd3ec
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/huexpress/blobs/sha256:0e4ce00990799c34600701c248f3cf8b2e8ed560b58b8616bd63aafdc2fe3f2f
+    sha256: 0e4ce00990799c34600701c248f3cf8b2e8ed560b58b8616bd63aafdc2fe3f2f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/huexpress/blobs/sha256:ed758b69740bc72b5bdb5d463bea32d699c5f5e6d2de07ebfec1a035cebe6dd0
+    sha256: ed758b69740bc72b5bdb5d463bea32d699c5f5e6d2de07ebfec1a035cebe6dd0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/huexpress/blobs/sha256:8f5ca6b63b8fc347e8221765dc09ac1000f4b6a62e53424fb578bb14103c8952
+    sha256: 8f5ca6b63b8fc347e8221765dc09ac1000f4b6a62e53424fb578bb14103c8952
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/huexpress/blobs/sha256:cf8c9ea08ea0615c32f11b3b2574054bc950436bca1539c7c7d0625c1a7fd3ec
+    sha256: cf8c9ea08ea0615c32f11b3b2574054bc950436bca1539c7c7d0625c1a7fd3ec
+source:
+  url: https://github.com/kallisti5/huexpress/archive/refs/tags/3.0.4.tar.gz
+  sha256: 76589f02d1640fc5063d48a47f017077c6b7557431221defe9e38679d86d4db8
 install:
   type: archive
   format: tar.gz
@@ -24,3 +30,13 @@ dependencies:
   - sdl2_mixer
   - gettext
   - glib
+build_dependencies:
+  - pkgconf
+  - scons
+linux_dependencies:
+  - libvorbis
+  - libzip
+  - mesa
+  - mesa-glu
+  - sdl2
+  - sdl2_mixer

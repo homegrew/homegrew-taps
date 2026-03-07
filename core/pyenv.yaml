@@ -3,16 +3,22 @@ version: 2.6.25
 description: Python version management
 homepage: https://github.com/pyenv/pyenv
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/pyenv/blobs/sha256:6fc789662bdb8aabbf9772ac953d9c5e8125eebe5be0e04a5a14250ab4c2f771
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/pyenv/blobs/sha256:48a87937048e6db9ac25b67da2f6aa319220af4881198a87684fff529db11ad4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/pyenv/blobs/sha256:d44b9c4a8dba875806526e2a08d014d582a192be894769f80b7923dad55a29fe
-  linux_arm64: https://ghcr.io/v2/homebrew/core/pyenv/blobs/sha256:3e4fbbd9c351933309774265816db6d39c91e59b4b3e410f8a55317102e23451
-sha256:
-  darwin_arm64: 6fc789662bdb8aabbf9772ac953d9c5e8125eebe5be0e04a5a14250ab4c2f771
-  darwin_amd64: 48a87937048e6db9ac25b67da2f6aa319220af4881198a87684fff529db11ad4
-  linux_amd64: d44b9c4a8dba875806526e2a08d014d582a192be894769f80b7923dad55a29fe
-  linux_arm64: 3e4fbbd9c351933309774265816db6d39c91e59b4b3e410f8a55317102e23451
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pyenv/blobs/sha256:6fc789662bdb8aabbf9772ac953d9c5e8125eebe5be0e04a5a14250ab4c2f771
+    sha256: 6fc789662bdb8aabbf9772ac953d9c5e8125eebe5be0e04a5a14250ab4c2f771
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pyenv/blobs/sha256:48a87937048e6db9ac25b67da2f6aa319220af4881198a87684fff529db11ad4
+    sha256: 48a87937048e6db9ac25b67da2f6aa319220af4881198a87684fff529db11ad4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pyenv/blobs/sha256:d44b9c4a8dba875806526e2a08d014d582a192be894769f80b7923dad55a29fe
+    sha256: d44b9c4a8dba875806526e2a08d014d582a192be894769f80b7923dad55a29fe
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pyenv/blobs/sha256:3e4fbbd9c351933309774265816db6d39c91e59b4b3e410f8a55317102e23451
+    sha256: 3e4fbbd9c351933309774265816db6d39c91e59b4b3e410f8a55317102e23451
+source:
+  url: https://github.com/pyenv/pyenv/archive/refs/tags/v2.6.25.tar.gz
+  sha256: 7e1e369c5d0ef93294002d166eb81a75e6c24792fa6dcea8be5980ead9b780a0
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,9 @@ dependencies:
   - openssl@3
   - pkgconf
   - readline
+linux_dependencies:
+  - autoconf
+  - openssl@3
+  - pkgconf
+  - readline
+  - zlib-ng-compat

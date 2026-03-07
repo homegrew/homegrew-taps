@@ -3,19 +3,33 @@ version: 5.0
 description: Libav/ffmpeg based source library and Avisynth plugin
 homepage: https://github.com/FFMS/ffms2
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/ffms2/blobs/sha256:762d4b37cda59b4d929851bb8a206922fe2b5e59919152dd78f4a53e27082217
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/ffms2/blobs/sha256:4bbc6ca72fa21c5ba1ab5cf8cc380ed30c4fce7983890ad55e169b942cb60655
-  linux_amd64: https://ghcr.io/v2/homebrew/core/ffms2/blobs/sha256:122322cb5af8f95bfac1fda7cfe7043b91d4205c940382f17ab463037b1fb43a
-  linux_arm64: https://ghcr.io/v2/homebrew/core/ffms2/blobs/sha256:fd0c0cbf02ecdc775ec98aa0db63dff6bbac02e3c1fbbefecba4eb12d1085098
-sha256:
-  darwin_arm64: 762d4b37cda59b4d929851bb8a206922fe2b5e59919152dd78f4a53e27082217
-  darwin_amd64: 4bbc6ca72fa21c5ba1ab5cf8cc380ed30c4fce7983890ad55e169b942cb60655
-  linux_amd64: 122322cb5af8f95bfac1fda7cfe7043b91d4205c940382f17ab463037b1fb43a
-  linux_arm64: fd0c0cbf02ecdc775ec98aa0db63dff6bbac02e3c1fbbefecba4eb12d1085098
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ffms2/blobs/sha256:762d4b37cda59b4d929851bb8a206922fe2b5e59919152dd78f4a53e27082217
+    sha256: 762d4b37cda59b4d929851bb8a206922fe2b5e59919152dd78f4a53e27082217
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ffms2/blobs/sha256:4bbc6ca72fa21c5ba1ab5cf8cc380ed30c4fce7983890ad55e169b942cb60655
+    sha256: 4bbc6ca72fa21c5ba1ab5cf8cc380ed30c4fce7983890ad55e169b942cb60655
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ffms2/blobs/sha256:122322cb5af8f95bfac1fda7cfe7043b91d4205c940382f17ab463037b1fb43a
+    sha256: 122322cb5af8f95bfac1fda7cfe7043b91d4205c940382f17ab463037b1fb43a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ffms2/blobs/sha256:fd0c0cbf02ecdc775ec98aa0db63dff6bbac02e3c1fbbefecba4eb12d1085098
+    sha256: fd0c0cbf02ecdc775ec98aa0db63dff6bbac02e3c1fbbefecba4eb12d1085098
+source:
+  url: https://github.com/FFMS/ffms2/archive/refs/tags/5.0.tar.gz
+  sha256: 7770af0bbc0063f9580a6a5c8e7c51f1788f171d7da0b352e48a1e60943a8c3c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - ffmpeg
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf
+linux_dependencies:
+  - ffmpeg
+  - zlib-ng-compat

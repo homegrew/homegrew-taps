@@ -3,17 +3,26 @@ version: 0.13.9
 description: Utility for managing cargo dependencies from the command-line
 homepage: https://killercup.github.io/cargo-edit/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cargo-edit/blobs/sha256:7ab62a4ac2255aa600b7c3d7547fd6a728147a4a2f82724bcde983c45631fbdb
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cargo-edit/blobs/sha256:315c86a642eda0a9d0d3e73ffad0ff0231747996b2b19e38e154e7f717b92164
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cargo-edit/blobs/sha256:2b6dfe460ebba68a20048c0a736e6006d026115295fb5826c892573a7968008e
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cargo-edit/blobs/sha256:7d74224cbaea3c30e8ce0634d5d413f31fddcc3d7d2fd934057e84ae3546a7b6
-sha256:
-  darwin_arm64: 7ab62a4ac2255aa600b7c3d7547fd6a728147a4a2f82724bcde983c45631fbdb
-  darwin_amd64: 315c86a642eda0a9d0d3e73ffad0ff0231747996b2b19e38e154e7f717b92164
-  linux_amd64: 2b6dfe460ebba68a20048c0a736e6006d026115295fb5826c892573a7968008e
-  linux_arm64: 7d74224cbaea3c30e8ce0634d5d413f31fddcc3d7d2fd934057e84ae3546a7b6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-edit/blobs/sha256:7ab62a4ac2255aa600b7c3d7547fd6a728147a4a2f82724bcde983c45631fbdb
+    sha256: 7ab62a4ac2255aa600b7c3d7547fd6a728147a4a2f82724bcde983c45631fbdb
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-edit/blobs/sha256:315c86a642eda0a9d0d3e73ffad0ff0231747996b2b19e38e154e7f717b92164
+    sha256: 315c86a642eda0a9d0d3e73ffad0ff0231747996b2b19e38e154e7f717b92164
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-edit/blobs/sha256:2b6dfe460ebba68a20048c0a736e6006d026115295fb5826c892573a7968008e
+    sha256: 2b6dfe460ebba68a20048c0a736e6006d026115295fb5826c892573a7968008e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-edit/blobs/sha256:7d74224cbaea3c30e8ce0634d5d413f31fddcc3d7d2fd934057e84ae3546a7b6
+    sha256: 7d74224cbaea3c30e8ce0634d5d413f31fddcc3d7d2fd934057e84ae3546a7b6
+source:
+  url: https://github.com/killercup/cargo-edit/archive/refs/tags/v0.13.9.tar.gz
+  sha256: d7aaaccfce974d9a47db2db1b78aa2d8f458d919970a1710256f9b4dbfb09ff0
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - pkgconf
+  - rust

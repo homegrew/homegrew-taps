@@ -3,16 +3,22 @@ version: 0.10.21
 description: Helper program to build and install c-like libraries
 homepage: https://github.com/lu-zero/cargo-c
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cargo-c/blobs/sha256:2cbd2f1bc81889d7af79dddbaabd599e59e7b2427ca00d845ebbf67a0952dde0
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cargo-c/blobs/sha256:65a758cbb0a0aa5ef10c0fadde9e705dcbad0bb4a11e2ea237a3141da161a71b
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cargo-c/blobs/sha256:8d16ec518c8cda3cfcb0d1e2e4289351855758df38c1e0235d57f445a07f0329
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cargo-c/blobs/sha256:89c6284905efda53e5f45d1ec89d6f95b671594bac5416c0e46e1722d7818b3b
-sha256:
-  darwin_arm64: 2cbd2f1bc81889d7af79dddbaabd599e59e7b2427ca00d845ebbf67a0952dde0
-  darwin_amd64: 65a758cbb0a0aa5ef10c0fadde9e705dcbad0bb4a11e2ea237a3141da161a71b
-  linux_amd64: 8d16ec518c8cda3cfcb0d1e2e4289351855758df38c1e0235d57f445a07f0329
-  linux_arm64: 89c6284905efda53e5f45d1ec89d6f95b671594bac5416c0e46e1722d7818b3b
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-c/blobs/sha256:2cbd2f1bc81889d7af79dddbaabd599e59e7b2427ca00d845ebbf67a0952dde0
+    sha256: 2cbd2f1bc81889d7af79dddbaabd599e59e7b2427ca00d845ebbf67a0952dde0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-c/blobs/sha256:65a758cbb0a0aa5ef10c0fadde9e705dcbad0bb4a11e2ea237a3141da161a71b
+    sha256: 65a758cbb0a0aa5ef10c0fadde9e705dcbad0bb4a11e2ea237a3141da161a71b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-c/blobs/sha256:8d16ec518c8cda3cfcb0d1e2e4289351855758df38c1e0235d57f445a07f0329
+    sha256: 8d16ec518c8cda3cfcb0d1e2e4289351855758df38c1e0235d57f445a07f0329
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cargo-c/blobs/sha256:89c6284905efda53e5f45d1ec89d6f95b671594bac5416c0e46e1722d7818b3b
+    sha256: 89c6284905efda53e5f45d1ec89d6f95b671594bac5416c0e46e1722d7818b3b
+source:
+  url: https://github.com/lu-zero/cargo-c/archive/refs/tags/v0.10.21.tar.gz
+  sha256: 819b62a61e5271924dffd122b7c713e446e5d65f3e630bbe9b90d4d46513d8fa
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,11 @@ dependencies:
   - libgit2
   - libssh2
   - openssl@3
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - libgit2
+  - libssh2
+  - openssl@3
+  - zlib-ng-compat

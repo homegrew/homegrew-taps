@@ -3,16 +3,22 @@ version: 1.0.20
 description: Implementation of IEEE 802.1ab (LLDP)
 homepage: https://lldpd.github.io/
 license: ISC
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:b06cc31ce05ecfd045b635377710710ec5fe085ed266004f8f7a37a8c5068326
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:e9f70ec215c94aeb86b18d98358a11733b349a765aa0fe3af97da03ce66f16e2
-  linux_amd64: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:a439e92e0747bcce38853c64504e732088c53507fbe1f1a8346d868b957d7bc0
-  linux_arm64: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:3381d8f39cc2ebbec18bd8feb89faccb7ca9db59569a7f5e7916b275ca223091
-sha256:
-  darwin_arm64: b06cc31ce05ecfd045b635377710710ec5fe085ed266004f8f7a37a8c5068326
-  darwin_amd64: e9f70ec215c94aeb86b18d98358a11733b349a765aa0fe3af97da03ce66f16e2
-  linux_amd64: a439e92e0747bcce38853c64504e732088c53507fbe1f1a8346d868b957d7bc0
-  linux_arm64: 3381d8f39cc2ebbec18bd8feb89faccb7ca9db59569a7f5e7916b275ca223091
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:b06cc31ce05ecfd045b635377710710ec5fe085ed266004f8f7a37a8c5068326
+    sha256: b06cc31ce05ecfd045b635377710710ec5fe085ed266004f8f7a37a8c5068326
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:e9f70ec215c94aeb86b18d98358a11733b349a765aa0fe3af97da03ce66f16e2
+    sha256: e9f70ec215c94aeb86b18d98358a11733b349a765aa0fe3af97da03ce66f16e2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:a439e92e0747bcce38853c64504e732088c53507fbe1f1a8346d868b957d7bc0
+    sha256: a439e92e0747bcce38853c64504e732088c53507fbe1f1a8346d868b957d7bc0
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:3381d8f39cc2ebbec18bd8feb89faccb7ca9db59569a7f5e7916b275ca223091
+    sha256: 3381d8f39cc2ebbec18bd8feb89faccb7ca9db59569a7f5e7916b275ca223091
+source:
+  url: https://media.luffy.cx/files/lldpd/lldpd-1.0.20.tar.gz
+  sha256: 61b8cb22d4879e68f7825a2fb8e1e92abb4aba4773977cf0258bc32ed9f55450
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - libevent
   - readline
+build_dependencies:
+  - pkgconf

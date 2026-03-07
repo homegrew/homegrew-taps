@@ -3,17 +3,25 @@ version: 1.35.0
 description: CLI and validation tools for Kubelet Container Runtime Interface (CRI)
 homepage: https://github.com/kubernetes-sigs/cri-tools
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/cri-tools/blobs/sha256:081c6255d0a264ebcc8e7a866b5df76b0d60af736284db53c60098b7451f064f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/cri-tools/blobs/sha256:53c1383942263cc214bd212545267ca9054ddd6808f94e4d8d407c3115ce6e43
-  linux_amd64: https://ghcr.io/v2/homebrew/core/cri-tools/blobs/sha256:779e6eac1bebe02029a5acfd586423d8a7b58428dc836780714d1bb3c6bd6a45
-  linux_arm64: https://ghcr.io/v2/homebrew/core/cri-tools/blobs/sha256:1d2c23cc4b59dda6b7f6e4f267d86adff7dcf5faa21e9368650e6ef5dbb8b0e3
-sha256:
-  darwin_arm64: 081c6255d0a264ebcc8e7a866b5df76b0d60af736284db53c60098b7451f064f
-  darwin_amd64: 53c1383942263cc214bd212545267ca9054ddd6808f94e4d8d407c3115ce6e43
-  linux_amd64: 779e6eac1bebe02029a5acfd586423d8a7b58428dc836780714d1bb3c6bd6a45
-  linux_arm64: 1d2c23cc4b59dda6b7f6e4f267d86adff7dcf5faa21e9368650e6ef5dbb8b0e3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cri-tools/blobs/sha256:081c6255d0a264ebcc8e7a866b5df76b0d60af736284db53c60098b7451f064f
+    sha256: 081c6255d0a264ebcc8e7a866b5df76b0d60af736284db53c60098b7451f064f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cri-tools/blobs/sha256:53c1383942263cc214bd212545267ca9054ddd6808f94e4d8d407c3115ce6e43
+    sha256: 53c1383942263cc214bd212545267ca9054ddd6808f94e4d8d407c3115ce6e43
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/cri-tools/blobs/sha256:779e6eac1bebe02029a5acfd586423d8a7b58428dc836780714d1bb3c6bd6a45
+    sha256: 779e6eac1bebe02029a5acfd586423d8a7b58428dc836780714d1bb3c6bd6a45
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/cri-tools/blobs/sha256:1d2c23cc4b59dda6b7f6e4f267d86adff7dcf5faa21e9368650e6ef5dbb8b0e3
+    sha256: 1d2c23cc4b59dda6b7f6e4f267d86adff7dcf5faa21e9368650e6ef5dbb8b0e3
+source:
+  url: https://github.com/kubernetes-sigs/cri-tools/archive/refs/tags/v1.35.0.tar.gz
+  sha256: 0edaa2bd4a6d44fc0406e1b4f45421e17b2ff7d49b2d76e57aba15eef25580bd
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - go

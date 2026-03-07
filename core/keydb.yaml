@@ -3,16 +3,22 @@ version: 6.3.4
 description: Multithreaded fork of Redis
 homepage: https://keydb.dev
 license: BSD-3-Clause
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/keydb/blobs/sha256:25bf74a3cd05a239a9669273f30390c270c43671284060048f01361c7c008a35
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/keydb/blobs/sha256:9c96a66a65ad45e31aded15e6a4306d1fc4c97d707a060a3c31bba357310449c
-  linux_amd64: https://ghcr.io/v2/homebrew/core/keydb/blobs/sha256:66f4992328aeaa000bb75107076cb9d05eb8b3ce229e94a51262d33d853af1b7
-  linux_arm64: https://ghcr.io/v2/homebrew/core/keydb/blobs/sha256:a30afa2a2f443a1ca41ce65f95f7b5e0db62d12c8048f200dbfbe58324a554f3
-sha256:
-  darwin_arm64: 25bf74a3cd05a239a9669273f30390c270c43671284060048f01361c7c008a35
-  darwin_amd64: 9c96a66a65ad45e31aded15e6a4306d1fc4c97d707a060a3c31bba357310449c
-  linux_amd64: 66f4992328aeaa000bb75107076cb9d05eb8b3ce229e94a51262d33d853af1b7
-  linux_arm64: a30afa2a2f443a1ca41ce65f95f7b5e0db62d12c8048f200dbfbe58324a554f3
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/keydb/blobs/sha256:25bf74a3cd05a239a9669273f30390c270c43671284060048f01361c7c008a35
+    sha256: 25bf74a3cd05a239a9669273f30390c270c43671284060048f01361c7c008a35
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/keydb/blobs/sha256:9c96a66a65ad45e31aded15e6a4306d1fc4c97d707a060a3c31bba357310449c
+    sha256: 9c96a66a65ad45e31aded15e6a4306d1fc4c97d707a060a3c31bba357310449c
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/keydb/blobs/sha256:66f4992328aeaa000bb75107076cb9d05eb8b3ce229e94a51262d33d853af1b7
+    sha256: 66f4992328aeaa000bb75107076cb9d05eb8b3ce229e94a51262d33d853af1b7
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/keydb/blobs/sha256:a30afa2a2f443a1ca41ce65f95f7b5e0db62d12c8048f200dbfbe58324a554f3
+    sha256: a30afa2a2f443a1ca41ce65f95f7b5e0db62d12c8048f200dbfbe58324a554f3
+source:
+  url: https://github.com/Snapchat/KeyDB/archive/refs/tags/v6.3.4.tar.gz
+  sha256: 229190b251f921e05aff7b0d2f04b5676c198131e2abbec1e2cfb2e61215e2f3
 install:
   type: archive
   format: tar.gz
@@ -20,4 +26,11 @@ install:
 dependencies:
   - openssl@3
   - snappy
+  - zstd
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - openssl@3
+  - snappy
+  - util-linux
   - zstd

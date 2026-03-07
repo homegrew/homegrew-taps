@@ -3,19 +3,32 @@ version: 1.11
 description: PAM module for two-factor authentication
 homepage: https://github.com/google/google-authenticator-libpam
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/google-authenticator-libpam/blobs/sha256:bd5ef94f8320f6da49f1cfa681d63bb58d9578ced890f6b1c2811b5451755e0f
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/google-authenticator-libpam/blobs/sha256:e8b04f1bb3a6d429869277493bde331a2423ebb8d4f79e59b2eda25f6878521d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/google-authenticator-libpam/blobs/sha256:664d3b02168d36aedad5165ad643a50686c1cc673b26333d119ffecc51ab92bc
-  linux_arm64: https://ghcr.io/v2/homebrew/core/google-authenticator-libpam/blobs/sha256:9a271e3a3354b737df9b52c0d00182d8a129c4bf4785fbcf024bedfaebbe9c60
-sha256:
-  darwin_arm64: bd5ef94f8320f6da49f1cfa681d63bb58d9578ced890f6b1c2811b5451755e0f
-  darwin_amd64: e8b04f1bb3a6d429869277493bde331a2423ebb8d4f79e59b2eda25f6878521d
-  linux_amd64: 664d3b02168d36aedad5165ad643a50686c1cc673b26333d119ffecc51ab92bc
-  linux_arm64: 9a271e3a3354b737df9b52c0d00182d8a129c4bf4785fbcf024bedfaebbe9c60
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/google-authenticator-libpam/blobs/sha256:bd5ef94f8320f6da49f1cfa681d63bb58d9578ced890f6b1c2811b5451755e0f
+    sha256: bd5ef94f8320f6da49f1cfa681d63bb58d9578ced890f6b1c2811b5451755e0f
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/google-authenticator-libpam/blobs/sha256:e8b04f1bb3a6d429869277493bde331a2423ebb8d4f79e59b2eda25f6878521d
+    sha256: e8b04f1bb3a6d429869277493bde331a2423ebb8d4f79e59b2eda25f6878521d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/google-authenticator-libpam/blobs/sha256:664d3b02168d36aedad5165ad643a50686c1cc673b26333d119ffecc51ab92bc
+    sha256: 664d3b02168d36aedad5165ad643a50686c1cc673b26333d119ffecc51ab92bc
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/google-authenticator-libpam/blobs/sha256:9a271e3a3354b737df9b52c0d00182d8a129c4bf4785fbcf024bedfaebbe9c60
+    sha256: 9a271e3a3354b737df9b52c0d00182d8a129c4bf4785fbcf024bedfaebbe9c60
+source:
+  url: https://github.com/google/google-authenticator-libpam/archive/refs/tags/1.11.tar.gz
+  sha256: 3ee08a6dd46aace7dba1c88cf47e9cd267447ccd1cd8be1d5a05fd0e6816062d
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
+  - qrencode
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+linux_dependencies:
+  - linux-pam
   - qrencode

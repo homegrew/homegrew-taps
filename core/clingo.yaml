@@ -3,16 +3,22 @@ version: 5.8.0
 description: ASP system to ground and solve logic programs
 homepage: https://potassco.org/clingo/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:7d606936da6a7f4091d200cf507e6d84dbadab7e44ccea7ddf1f85b04e1c92ec
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:0ce74dea22d40520801a1bad792df7cb8ea148b39f57fa7f24076beae86f01f0
-  linux_amd64: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:790e57292114c711904b97f44dfcd4f6bb09535f73b9d0e54d61f4e862d40156
-  linux_arm64: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:295fb70cc8ee473656c529f06107ca59bd4b439fb98fc50af1db18003940a109
-sha256:
-  darwin_arm64: 7d606936da6a7f4091d200cf507e6d84dbadab7e44ccea7ddf1f85b04e1c92ec
-  darwin_amd64: 0ce74dea22d40520801a1bad792df7cb8ea148b39f57fa7f24076beae86f01f0
-  linux_amd64: 790e57292114c711904b97f44dfcd4f6bb09535f73b9d0e54d61f4e862d40156
-  linux_arm64: 295fb70cc8ee473656c529f06107ca59bd4b439fb98fc50af1db18003940a109
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:7d606936da6a7f4091d200cf507e6d84dbadab7e44ccea7ddf1f85b04e1c92ec
+    sha256: 7d606936da6a7f4091d200cf507e6d84dbadab7e44ccea7ddf1f85b04e1c92ec
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:0ce74dea22d40520801a1bad792df7cb8ea148b39f57fa7f24076beae86f01f0
+    sha256: 0ce74dea22d40520801a1bad792df7cb8ea148b39f57fa7f24076beae86f01f0
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:790e57292114c711904b97f44dfcd4f6bb09535f73b9d0e54d61f4e862d40156
+    sha256: 790e57292114c711904b97f44dfcd4f6bb09535f73b9d0e54d61f4e862d40156
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:295fb70cc8ee473656c529f06107ca59bd4b439fb98fc50af1db18003940a109
+    sha256: 295fb70cc8ee473656c529f06107ca59bd4b439fb98fc50af1db18003940a109
+source:
+  url: https://github.com/potassco/clingo/archive/refs/tags/v5.8.0.tar.gz
+  sha256: 4ddd5975e79d7a0f8d126039f1b923a371b1a43e0e0687e1537a37d6d6d5cc7c
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,6 @@ dependencies:
   - cffi
   - lua
   - python@3.14
+build_dependencies:
+  - cmake
+  - doxygen

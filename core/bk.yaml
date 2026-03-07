@@ -3,17 +3,25 @@ version: 0.6.0
 description: Terminal EPUB Reader
 homepage: https://github.com/aeosynth/bk
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/bk/blobs/sha256:42cb86c453b9c30b09fd6d4cbec309748b0466a0de6cfbb9e5086c364d053e97
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/bk/blobs/sha256:8068f1d17daa139707c388f7941d5acd41f55a0d27d9e08c0b1f6e58b5667862
-  linux_amd64: https://ghcr.io/v2/homebrew/core/bk/blobs/sha256:efc14a838d10cc7fa1ceb15224041d836eb77d36bbda8c8a966afe158aabb2e5
-  linux_arm64: https://ghcr.io/v2/homebrew/core/bk/blobs/sha256:501750e75de55c4246ae4ba053ab3852be696d1d63a0f9e052a1ebae2f5e13e0
-sha256:
-  darwin_arm64: 42cb86c453b9c30b09fd6d4cbec309748b0466a0de6cfbb9e5086c364d053e97
-  darwin_amd64: 8068f1d17daa139707c388f7941d5acd41f55a0d27d9e08c0b1f6e58b5667862
-  linux_amd64: efc14a838d10cc7fa1ceb15224041d836eb77d36bbda8c8a966afe158aabb2e5
-  linux_arm64: 501750e75de55c4246ae4ba053ab3852be696d1d63a0f9e052a1ebae2f5e13e0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bk/blobs/sha256:42cb86c453b9c30b09fd6d4cbec309748b0466a0de6cfbb9e5086c364d053e97
+    sha256: 42cb86c453b9c30b09fd6d4cbec309748b0466a0de6cfbb9e5086c364d053e97
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bk/blobs/sha256:8068f1d17daa139707c388f7941d5acd41f55a0d27d9e08c0b1f6e58b5667862
+    sha256: 8068f1d17daa139707c388f7941d5acd41f55a0d27d9e08c0b1f6e58b5667862
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/bk/blobs/sha256:efc14a838d10cc7fa1ceb15224041d836eb77d36bbda8c8a966afe158aabb2e5
+    sha256: efc14a838d10cc7fa1ceb15224041d836eb77d36bbda8c8a966afe158aabb2e5
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/bk/blobs/sha256:501750e75de55c4246ae4ba053ab3852be696d1d63a0f9e052a1ebae2f5e13e0
+    sha256: 501750e75de55c4246ae4ba053ab3852be696d1d63a0f9e052a1ebae2f5e13e0
+source:
+  url: https://github.com/aeosynth/bk/archive/refs/tags/v0.6.0.tar.gz
+  sha256: c720c8e81e86709f8543ca1a97a3c30b3bb33d55692a536cefed0ad2e3dfabcd
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - rust

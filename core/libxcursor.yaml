@@ -3,16 +3,22 @@ version: 1.2.3
 description: "X.Org: X Window System Cursor management library"
 homepage: https://www.x.org/
 license: MIT
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libxcursor/blobs/sha256:e25282b8f94e56dee8e9e3ddceccab288e744db1cbad429fb89afe34e273aebd
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libxcursor/blobs/sha256:9a063644b479ef0269bb01a8faa79eaab44cf159ffb4cd30d399beea2d5bf459
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libxcursor/blobs/sha256:02e5f01e4940638fbcce577f05ac3bc57f87bf272959e286a323f6fe3c2fc86d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libxcursor/blobs/sha256:a2556c55f893b654072a287ea7ad7c5261beaf6cf3cd6b2c5feabc4c7b4a70d6
-sha256:
-  darwin_arm64: e25282b8f94e56dee8e9e3ddceccab288e744db1cbad429fb89afe34e273aebd
-  darwin_amd64: 9a063644b479ef0269bb01a8faa79eaab44cf159ffb4cd30d399beea2d5bf459
-  linux_amd64: 02e5f01e4940638fbcce577f05ac3bc57f87bf272959e286a323f6fe3c2fc86d
-  linux_arm64: a2556c55f893b654072a287ea7ad7c5261beaf6cf3cd6b2c5feabc4c7b4a70d6
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libxcursor/blobs/sha256:e25282b8f94e56dee8e9e3ddceccab288e744db1cbad429fb89afe34e273aebd
+    sha256: e25282b8f94e56dee8e9e3ddceccab288e744db1cbad429fb89afe34e273aebd
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libxcursor/blobs/sha256:9a063644b479ef0269bb01a8faa79eaab44cf159ffb4cd30d399beea2d5bf459
+    sha256: 9a063644b479ef0269bb01a8faa79eaab44cf159ffb4cd30d399beea2d5bf459
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libxcursor/blobs/sha256:02e5f01e4940638fbcce577f05ac3bc57f87bf272959e286a323f6fe3c2fc86d
+    sha256: 02e5f01e4940638fbcce577f05ac3bc57f87bf272959e286a323f6fe3c2fc86d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libxcursor/blobs/sha256:a2556c55f893b654072a287ea7ad7c5261beaf6cf3cd6b2c5feabc4c7b4a70d6
+    sha256: a2556c55f893b654072a287ea7ad7c5261beaf6cf3cd6b2c5feabc4c7b4a70d6
+source:
+  url: https://www.x.org/archive/individual/lib/libXcursor-1.2.3.tar.xz
+  sha256: fde9402dd4cfe79da71e2d96bb980afc5e6ff4f8a7d74c159e1966afb2b2c2c0
 install:
   type: archive
   format: tar.gz
@@ -21,3 +27,6 @@ dependencies:
   - libx11
   - libxfixes
   - libxrender
+build_dependencies:
+  - pkgconf
+  - util-macros

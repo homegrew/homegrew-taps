@@ -3,16 +3,22 @@ version: 3.0.1
 description: Tools for producing ebook files
 homepage: https://github.com/standardebooks/tools
 license: GPL-3.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/standardebooks/blobs/sha256:e582f322a44e500750ce9a0ea7737d21f9563936a4f32761e94ca531efc277f6
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/standardebooks/blobs/sha256:9c07743e30c8e7f11c7310adaaf430e2d7f8dc65076e33b05e5bdd75603f17c4
-  linux_amd64: https://ghcr.io/v2/homebrew/core/standardebooks/blobs/sha256:25e9dfb212cf538daf7ded74e8153e5770eabcd5dccfa22923aeda5b63c8cd58
-  linux_arm64: https://ghcr.io/v2/homebrew/core/standardebooks/blobs/sha256:4a907c6d7058a98dad7060d075303ffb0f75e42ce94e952246c394ac570b244c
-sha256:
-  darwin_arm64: e582f322a44e500750ce9a0ea7737d21f9563936a4f32761e94ca531efc277f6
-  darwin_amd64: 9c07743e30c8e7f11c7310adaaf430e2d7f8dc65076e33b05e5bdd75603f17c4
-  linux_amd64: 25e9dfb212cf538daf7ded74e8153e5770eabcd5dccfa22923aeda5b63c8cd58
-  linux_arm64: 4a907c6d7058a98dad7060d075303ffb0f75e42ce94e952246c394ac570b244c
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/standardebooks/blobs/sha256:e582f322a44e500750ce9a0ea7737d21f9563936a4f32761e94ca531efc277f6
+    sha256: e582f322a44e500750ce9a0ea7737d21f9563936a4f32761e94ca531efc277f6
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/standardebooks/blobs/sha256:9c07743e30c8e7f11c7310adaaf430e2d7f8dc65076e33b05e5bdd75603f17c4
+    sha256: 9c07743e30c8e7f11c7310adaaf430e2d7f8dc65076e33b05e5bdd75603f17c4
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/standardebooks/blobs/sha256:25e9dfb212cf538daf7ded74e8153e5770eabcd5dccfa22923aeda5b63c8cd58
+    sha256: 25e9dfb212cf538daf7ded74e8153e5770eabcd5dccfa22923aeda5b63c8cd58
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/standardebooks/blobs/sha256:4a907c6d7058a98dad7060d075303ffb0f75e42ce94e952246c394ac570b244c
+    sha256: 4a907c6d7058a98dad7060d075303ffb0f75e42ce94e952246c394ac570b244c
+source:
+  url: https://files.pythonhosted.org/packages/2d/12/0d6d34107353be2bc74c24473d242debaaf1655fcecb7e6264ef030d3809/standardebooks-3.0.1.tar.gz
+  sha256: 7fb8b2d81b0d7db36114963a15ac924e19f786779d455504c08f1ccdb93c8fb0
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,14 @@ dependencies:
   - py3cairo
   - pycparser
   - python@3.14
+build_dependencies:
+  - rust
+linux_dependencies:
+  - certifi
+  - cffi
+  - openjdk
+  - pillow
+  - py3cairo
+  - pycparser
+  - python@3.14
+  - zlib-ng-compat

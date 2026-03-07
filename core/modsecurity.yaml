@@ -3,16 +3,22 @@ version: 3.0.14
 description: Libmodsecurity is one component of the ModSecurity v3 project
 homepage: https://github.com/owasp-modsecurity/ModSecurity
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/modsecurity/blobs/sha256:903816449f1b48c8e20a657b978b80f93ee3f721ebb78a6c1216260983c60b67
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/modsecurity/blobs/sha256:c6e2865897da1cffe2d77764b905edd4c400af92385ffe32f9348cefea29f023
-  linux_amd64: https://ghcr.io/v2/homebrew/core/modsecurity/blobs/sha256:81c9b619a94eff97ee7e49985eaf493b984130de34f608eda9b283a94b64c538
-  linux_arm64: https://ghcr.io/v2/homebrew/core/modsecurity/blobs/sha256:90659a4c8e50293d7415e09a0e79e9f25bdca5af7cb54eb1134714ce40cd564f
-sha256:
-  darwin_arm64: 903816449f1b48c8e20a657b978b80f93ee3f721ebb78a6c1216260983c60b67
-  darwin_amd64: c6e2865897da1cffe2d77764b905edd4c400af92385ffe32f9348cefea29f023
-  linux_amd64: 81c9b619a94eff97ee7e49985eaf493b984130de34f608eda9b283a94b64c538
-  linux_arm64: 90659a4c8e50293d7415e09a0e79e9f25bdca5af7cb54eb1134714ce40cd564f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/modsecurity/blobs/sha256:903816449f1b48c8e20a657b978b80f93ee3f721ebb78a6c1216260983c60b67
+    sha256: 903816449f1b48c8e20a657b978b80f93ee3f721ebb78a6c1216260983c60b67
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/modsecurity/blobs/sha256:c6e2865897da1cffe2d77764b905edd4c400af92385ffe32f9348cefea29f023
+    sha256: c6e2865897da1cffe2d77764b905edd4c400af92385ffe32f9348cefea29f023
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/modsecurity/blobs/sha256:81c9b619a94eff97ee7e49985eaf493b984130de34f608eda9b283a94b64c538
+    sha256: 81c9b619a94eff97ee7e49985eaf493b984130de34f608eda9b283a94b64c538
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/modsecurity/blobs/sha256:90659a4c8e50293d7415e09a0e79e9f25bdca5af7cb54eb1134714ce40cd564f
+    sha256: 90659a4c8e50293d7415e09a0e79e9f25bdca5af7cb54eb1134714ce40cd564f
+source:
+  url: https://github.com/owasp-modsecurity/ModSecurity/releases/download/v3.0.14/modsecurity-v3.0.14.tar.gz
+  sha256: f7599057b35e67ab61764265daddf9ab03c35cee1e55527547afb073ce8f04e8
 install:
   type: archive
   format: tar.gz
@@ -22,3 +28,8 @@ dependencies:
   - lua@5.4
   - pcre2
   - yajl
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf

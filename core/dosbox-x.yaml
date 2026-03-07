@@ -3,16 +3,22 @@ version: 2026.01.02
 description: DOSBox with accurate emulation and wide testing
 homepage: https://dosbox-x.com/
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:46a81649179f13aeb4dbe640364bdfe030a938cc3525ea6c9a98b1f8acaad069
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:975161e502be78f6a728b5eddbf51b40223ed0e3bdcaad650f187cfbd32194c9
-  linux_amd64: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:b5b373764af3cd9384c20e4db2a91de894c21044b47751c8795f7f629540a789
-  linux_arm64: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:4e42f23a5aa402cd7a2c12d5838a87f308115d247c86f24ae592c61f7a5f24b2
-sha256:
-  darwin_arm64: 46a81649179f13aeb4dbe640364bdfe030a938cc3525ea6c9a98b1f8acaad069
-  darwin_amd64: 975161e502be78f6a728b5eddbf51b40223ed0e3bdcaad650f187cfbd32194c9
-  linux_amd64: b5b373764af3cd9384c20e4db2a91de894c21044b47751c8795f7f629540a789
-  linux_arm64: 4e42f23a5aa402cd7a2c12d5838a87f308115d247c86f24ae592c61f7a5f24b2
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:46a81649179f13aeb4dbe640364bdfe030a938cc3525ea6c9a98b1f8acaad069
+    sha256: 46a81649179f13aeb4dbe640364bdfe030a938cc3525ea6c9a98b1f8acaad069
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:975161e502be78f6a728b5eddbf51b40223ed0e3bdcaad650f187cfbd32194c9
+    sha256: 975161e502be78f6a728b5eddbf51b40223ed0e3bdcaad650f187cfbd32194c9
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:b5b373764af3cd9384c20e4db2a91de894c21044b47751c8795f7f629540a789
+    sha256: b5b373764af3cd9384c20e4db2a91de894c21044b47751c8795f7f629540a789
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:4e42f23a5aa402cd7a2c12d5838a87f308115d247c86f24ae592c61f7a5f24b2
+    sha256: 4e42f23a5aa402cd7a2c12d5838a87f308115d247c86f24ae592c61f7a5f24b2
+source:
+  url: https://github.com/joncampbell123/dosbox-x/archive/refs/tags/dosbox-x-v2026.01.02.tar.gz
+  sha256: 191e5de64f19b26f5a78a05b70e3216d62f3eaf2d0495f6258a12213a3d691c9
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,17 @@ dependencies:
   - sdl2
   - gettext
   - glib
+build_dependencies:
+  - autoconf
+  - automake
+  - pkgconf
+linux_dependencies:
+  - alsa-lib
+  - fluid-synth
+  - freetype
+  - libpng
+  - libslirp
+  - libx11
+  - libxrandr
+  - sdl2
+  - zlib-ng-compat

@@ -3,16 +3,22 @@ version: 1.6.1
 description: Library of C++ classes for flexible logging
 homepage: https://logging.apache.org/log4cxx/index.html
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:2e7d305b96aefd5a83ce663a838bef388b85a9cc3a60bee69dd7b53661c2088b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:ee2229f704625ee23db06ca15a2946250470c20e99091a924f00088a62a4c309
-  linux_amd64: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:f226f5049d3c0b2dd1ae642bc2ac7c1e39cd89583f4124b5922619c6efabd440
-  linux_arm64: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:9870e1e954d13a41db98603291cfdc101303fbe79e343b08d3019c4663b7cd44
-sha256:
-  darwin_arm64: 2e7d305b96aefd5a83ce663a838bef388b85a9cc3a60bee69dd7b53661c2088b
-  darwin_amd64: ee2229f704625ee23db06ca15a2946250470c20e99091a924f00088a62a4c309
-  linux_amd64: f226f5049d3c0b2dd1ae642bc2ac7c1e39cd89583f4124b5922619c6efabd440
-  linux_arm64: 9870e1e954d13a41db98603291cfdc101303fbe79e343b08d3019c4663b7cd44
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:2e7d305b96aefd5a83ce663a838bef388b85a9cc3a60bee69dd7b53661c2088b
+    sha256: 2e7d305b96aefd5a83ce663a838bef388b85a9cc3a60bee69dd7b53661c2088b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:ee2229f704625ee23db06ca15a2946250470c20e99091a924f00088a62a4c309
+    sha256: ee2229f704625ee23db06ca15a2946250470c20e99091a924f00088a62a4c309
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:f226f5049d3c0b2dd1ae642bc2ac7c1e39cd89583f4124b5922619c6efabd440
+    sha256: f226f5049d3c0b2dd1ae642bc2ac7c1e39cd89583f4124b5922619c6efabd440
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:9870e1e954d13a41db98603291cfdc101303fbe79e343b08d3019c4663b7cd44
+    sha256: 9870e1e954d13a41db98603291cfdc101303fbe79e343b08d3019c4663b7cd44
+source:
+  url: https://www.apache.org/dyn/closer.lua?path=logging/log4cxx/1.6.1/apache-log4cxx-1.6.1.tar.gz
+  sha256: 187c85836f5b2f27fb1e8d77c7f1f2939725f1f6498b742b0dd569ba30965fd2
 install:
   type: archive
   format: tar.gz
@@ -20,3 +26,5 @@ install:
 dependencies:
   - apr
   - apr-util
+build_dependencies:
+  - cmake

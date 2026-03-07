@@ -3,17 +3,26 @@ version: 1.5.0
 description: Access DVDs as block devices without the decryption
 homepage: https://www.videolan.org/developers/libdvdcss.html
 license: GPL-2.0-or-later
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/libdvdcss/blobs/sha256:a5d4c6891b5f9fb44fe66d4ab1317be59dbf8aa9ceb33c6f05b5952547705d0b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/libdvdcss/blobs/sha256:5223d1869afb3e6d00535d49c83eb5c78eef6173fdd9d15c137d6452d9aa6516
-  linux_amd64: https://ghcr.io/v2/homebrew/core/libdvdcss/blobs/sha256:29d4fd7b31ac1726a8778e1c010f6cc0a16c2170263c4932f59b619ec728ca83
-  linux_arm64: https://ghcr.io/v2/homebrew/core/libdvdcss/blobs/sha256:fd4ba20cd9a543abf5e6fa9780d535c9ad4751b0ee39464cbb73c0c1f00d6877
-sha256:
-  darwin_arm64: a5d4c6891b5f9fb44fe66d4ab1317be59dbf8aa9ceb33c6f05b5952547705d0b
-  darwin_amd64: 5223d1869afb3e6d00535d49c83eb5c78eef6173fdd9d15c137d6452d9aa6516
-  linux_amd64: 29d4fd7b31ac1726a8778e1c010f6cc0a16c2170263c4932f59b619ec728ca83
-  linux_arm64: fd4ba20cd9a543abf5e6fa9780d535c9ad4751b0ee39464cbb73c0c1f00d6877
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libdvdcss/blobs/sha256:a5d4c6891b5f9fb44fe66d4ab1317be59dbf8aa9ceb33c6f05b5952547705d0b
+    sha256: a5d4c6891b5f9fb44fe66d4ab1317be59dbf8aa9ceb33c6f05b5952547705d0b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libdvdcss/blobs/sha256:5223d1869afb3e6d00535d49c83eb5c78eef6173fdd9d15c137d6452d9aa6516
+    sha256: 5223d1869afb3e6d00535d49c83eb5c78eef6173fdd9d15c137d6452d9aa6516
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/libdvdcss/blobs/sha256:29d4fd7b31ac1726a8778e1c010f6cc0a16c2170263c4932f59b619ec728ca83
+    sha256: 29d4fd7b31ac1726a8778e1c010f6cc0a16c2170263c4932f59b619ec728ca83
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/libdvdcss/blobs/sha256:fd4ba20cd9a543abf5e6fa9780d535c9ad4751b0ee39464cbb73c0c1f00d6877
+    sha256: fd4ba20cd9a543abf5e6fa9780d535c9ad4751b0ee39464cbb73c0c1f00d6877
+source:
+  url: https://download.videolan.org/pub/videolan/libdvdcss/1.5.0/libdvdcss-1.5.0.tar.xz
+  sha256: 529463e4d1befef82e5c6e470db7661a2db0343e092a2fb0d6c037cab8a5c399
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+build_dependencies:
+  - meson
+  - ninja

@@ -3,16 +3,22 @@ version: 0.7
 description: Create high-quality charts from the command-line
 homepage: https://github.com/asmuth/clip
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/clip/blobs/sha256:db658e6fcb0e356d9c460e6a9d68a284b7cfc259410427072fe0a3e980a79c3b
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/clip/blobs/sha256:abf0e00a25e56c1791a9c02c00ce5aa0daacb4fb905e67710b6542d165a56e3d
-  linux_amd64: https://ghcr.io/v2/homebrew/core/clip/blobs/sha256:11bab1e5129fadb9ee981a3fce1a5d5398e5ca11b7dee3a10dc325b8db8b80bf
-  linux_arm64: https://ghcr.io/v2/homebrew/core/clip/blobs/sha256:b8681f1d1300b0344c10090065c88c6bd20a3131963d9253084bc9178428c25f
-sha256:
-  darwin_arm64: db658e6fcb0e356d9c460e6a9d68a284b7cfc259410427072fe0a3e980a79c3b
-  darwin_amd64: abf0e00a25e56c1791a9c02c00ce5aa0daacb4fb905e67710b6542d165a56e3d
-  linux_amd64: 11bab1e5129fadb9ee981a3fce1a5d5398e5ca11b7dee3a10dc325b8db8b80bf
-  linux_arm64: b8681f1d1300b0344c10090065c88c6bd20a3131963d9253084bc9178428c25f
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/clip/blobs/sha256:db658e6fcb0e356d9c460e6a9d68a284b7cfc259410427072fe0a3e980a79c3b
+    sha256: db658e6fcb0e356d9c460e6a9d68a284b7cfc259410427072fe0a3e980a79c3b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/clip/blobs/sha256:abf0e00a25e56c1791a9c02c00ce5aa0daacb4fb905e67710b6542d165a56e3d
+    sha256: abf0e00a25e56c1791a9c02c00ce5aa0daacb4fb905e67710b6542d165a56e3d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/clip/blobs/sha256:11bab1e5129fadb9ee981a3fce1a5d5398e5ca11b7dee3a10dc325b8db8b80bf
+    sha256: 11bab1e5129fadb9ee981a3fce1a5d5398e5ca11b7dee3a10dc325b8db8b80bf
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/clip/blobs/sha256:b8681f1d1300b0344c10090065c88c6bd20a3131963d9253084bc9178428c25f
+    sha256: b8681f1d1300b0344c10090065c88c6bd20a3131963d9253084bc9178428c25f
+source:
+  url: https://github.com/asmuth/clip/archive/refs/tags/v0.7.tar.gz
+  sha256: f38f455cf3e9201614ac71d8a871e4ff94a6e4cf461fd5bf81bdf457ba2e6b3e
 install:
   type: archive
   format: tar.gz
@@ -25,3 +31,6 @@ dependencies:
   - fribidi
   - harfbuzz
   - libpng
+build_dependencies:
+  - cmake
+  - pkgconf

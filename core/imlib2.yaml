@@ -3,16 +3,22 @@ version: 1.12.6
 description: Image loading and rendering library
 homepage: https://sourceforge.net/projects/enlightenment/
 license: Imlib2
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/imlib2/blobs/sha256:2b91eb5c5e4b335cb4ce21ac5f9379e37c1d798a99605db3edb384a9b92f2e6a
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/imlib2/blobs/sha256:a5894661719aa0e61993021bcf5683adb5c101098872bc6e4ddcae528752425a
-  linux_amd64: https://ghcr.io/v2/homebrew/core/imlib2/blobs/sha256:d86ce123067142a835df423eea2c8a2d4cb1d095ab44688c315a00297d7d6c2d
-  linux_arm64: https://ghcr.io/v2/homebrew/core/imlib2/blobs/sha256:3f6ba4191ffc83dafc78761ac21ff667f455caf1a8a88c718510f0ba51332e53
-sha256:
-  darwin_arm64: 2b91eb5c5e4b335cb4ce21ac5f9379e37c1d798a99605db3edb384a9b92f2e6a
-  darwin_amd64: a5894661719aa0e61993021bcf5683adb5c101098872bc6e4ddcae528752425a
-  linux_amd64: d86ce123067142a835df423eea2c8a2d4cb1d095ab44688c315a00297d7d6c2d
-  linux_arm64: 3f6ba4191ffc83dafc78761ac21ff667f455caf1a8a88c718510f0ba51332e53
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/imlib2/blobs/sha256:2b91eb5c5e4b335cb4ce21ac5f9379e37c1d798a99605db3edb384a9b92f2e6a
+    sha256: 2b91eb5c5e4b335cb4ce21ac5f9379e37c1d798a99605db3edb384a9b92f2e6a
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/imlib2/blobs/sha256:a5894661719aa0e61993021bcf5683adb5c101098872bc6e4ddcae528752425a
+    sha256: a5894661719aa0e61993021bcf5683adb5c101098872bc6e4ddcae528752425a
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/imlib2/blobs/sha256:d86ce123067142a835df423eea2c8a2d4cb1d095ab44688c315a00297d7d6c2d
+    sha256: d86ce123067142a835df423eea2c8a2d4cb1d095ab44688c315a00297d7d6c2d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/imlib2/blobs/sha256:3f6ba4191ffc83dafc78761ac21ff667f455caf1a8a88c718510f0ba51332e53
+    sha256: 3f6ba4191ffc83dafc78761ac21ff667f455caf1a8a88c718510f0ba51332e53
+source:
+  url: https://downloads.sourceforge.net/project/enlightenment/imlib2-src/1.12.6/imlib2-1.12.6.tar.gz
+  sha256: 59743ce82aefa9c1ec9476af608d541b74164714d2928fbd84ff5db6c4399079
 install:
   type: archive
   format: tar.gz
@@ -27,3 +33,16 @@ dependencies:
   - libxcb
   - libxext
   - xz
+build_dependencies:
+  - pkgconf
+linux_dependencies:
+  - freetype
+  - giflib
+  - jpeg-turbo
+  - libpng
+  - libtiff
+  - libx11
+  - libxcb
+  - libxext
+  - xz
+  - zlib-ng-compat

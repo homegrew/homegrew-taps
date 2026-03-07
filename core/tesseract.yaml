@@ -3,16 +3,22 @@ version: 5.5.2
 description: OCR (Optical Character Recognition) engine
 homepage: https://tesseract-ocr.github.io/
 license: Apache-2.0
-url:
-  darwin_arm64: https://ghcr.io/v2/homebrew/core/tesseract/blobs/sha256:5c573461bfef6b219120a51bff457cc7eca377c43b971cc5639c109517b1daf4
-  darwin_amd64: https://ghcr.io/v2/homebrew/core/tesseract/blobs/sha256:002f53df778424f6973071d5422061f2a07bd6da9294e05fbe5847a6763e4820
-  linux_amd64: https://ghcr.io/v2/homebrew/core/tesseract/blobs/sha256:89e359d2cb5283131f6d74c2bc4e26cbeb65ad36a3dad40eca500464eb5c5933
-  linux_arm64: https://ghcr.io/v2/homebrew/core/tesseract/blobs/sha256:56c554781e18f586dc232a1a08ff4b866948cd32e8c99a58c1bfc41dc434b165
-sha256:
-  darwin_arm64: 5c573461bfef6b219120a51bff457cc7eca377c43b971cc5639c109517b1daf4
-  darwin_amd64: 002f53df778424f6973071d5422061f2a07bd6da9294e05fbe5847a6763e4820
-  linux_amd64: 89e359d2cb5283131f6d74c2bc4e26cbeb65ad36a3dad40eca500464eb5c5933
-  linux_arm64: 56c554781e18f586dc232a1a08ff4b866948cd32e8c99a58c1bfc41dc434b165
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tesseract/blobs/sha256:5c573461bfef6b219120a51bff457cc7eca377c43b971cc5639c109517b1daf4
+    sha256: 5c573461bfef6b219120a51bff457cc7eca377c43b971cc5639c109517b1daf4
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tesseract/blobs/sha256:002f53df778424f6973071d5422061f2a07bd6da9294e05fbe5847a6763e4820
+    sha256: 002f53df778424f6973071d5422061f2a07bd6da9294e05fbe5847a6763e4820
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/tesseract/blobs/sha256:89e359d2cb5283131f6d74c2bc4e26cbeb65ad36a3dad40eca500464eb5c5933
+    sha256: 89e359d2cb5283131f6d74c2bc4e26cbeb65ad36a3dad40eca500464eb5c5933
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/tesseract/blobs/sha256:56c554781e18f586dc232a1a08ff4b866948cd32e8c99a58c1bfc41dc434b165
+    sha256: 56c554781e18f586dc232a1a08ff4b866948cd32e8c99a58c1bfc41dc434b165
+source:
+  url: https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.2.tar.gz
+  sha256: 6235ea0dae45ea137f59c09320406f5888383741924d98855bd2ce0d16b54f21
 install:
   type: archive
   format: tar.gz
@@ -28,3 +34,17 @@ dependencies:
   - pango
   - freetype
   - gettext
+build_dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - pkgconf
+linux_dependencies:
+  - cairo
+  - fontconfig
+  - glib
+  - harfbuzz
+  - icu4c@78
+  - leptonica
+  - libarchive
+  - pango
