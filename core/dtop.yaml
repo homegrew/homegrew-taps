@@ -1,0 +1,27 @@
+name: dtop
+version: 0.7.0
+description: Terminal dashboard for Docker monitoring across multiple hosts
+homepage: https://dtop.dev/
+license: MIT
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dtop/blobs/sha256:26a680d9c6205704c823d32cde9f27a8f78ea339183bf0bbb708200b86bf1f94
+    sha256: 26a680d9c6205704c823d32cde9f27a8f78ea339183bf0bbb708200b86bf1f94
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dtop/blobs/sha256:f76842f0d3bdbd68df22b14c7990bc54a18a579f8fdb568d8fa2a3a68c17b449
+    sha256: f76842f0d3bdbd68df22b14c7990bc54a18a579f8fdb568d8fa2a3a68c17b449
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/dtop/blobs/sha256:2df1aec28bd582fc58c7f6187ec5a6e07b995096b1bf378efe64791dda8bbefe
+    sha256: 2df1aec28bd582fc58c7f6187ec5a6e07b995096b1bf378efe64791dda8bbefe
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/dtop/blobs/sha256:9150498e51f85a77449cce7a2d2da5cf88d0355206fb20ee6d48695adc238860
+    sha256: 9150498e51f85a77449cce7a2d2da5cf88d0355206fb20ee6d48695adc238860
+source:
+  url: https://github.com/amir20/dtop/archive/refs/tags/v0.7.0.tar.gz
+  sha256: 3286ea5a4d04134879a88b04332fa885f2228e0e1a15de2d9724b7f523448f5b
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+build_dependencies:
+  - rust

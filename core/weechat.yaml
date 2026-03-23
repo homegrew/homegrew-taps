@@ -5,17 +5,17 @@ homepage: https://weechat.org/
 license: GPL-3.0-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:0c43de78771adcbc792ba4da4af78a915def6cc272b557c1f80016f63e700077
-    sha256: 0c43de78771adcbc792ba4da4af78a915def6cc272b557c1f80016f63e700077
+    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:6c54eb0323414f6cffc92dee72eee51b25d748747298ec2f1d451393d7888c49
+    sha256: 6c54eb0323414f6cffc92dee72eee51b25d748747298ec2f1d451393d7888c49
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:5796454f3891b552099d995d147ea429419a673cc6cce016dfac65c2a852c454
-    sha256: 5796454f3891b552099d995d147ea429419a673cc6cce016dfac65c2a852c454
+    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:7f80e8578ad21f50127e991556392b8f300a063e6a508e00a5b670d1c055eab1
+    sha256: 7f80e8578ad21f50127e991556392b8f300a063e6a508e00a5b670d1c055eab1
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:2d336a88c9e9c221c572d5d44e2684ed0dce4d7868835f71c2b0c3aeafcb6fc8
-    sha256: 2d336a88c9e9c221c572d5d44e2684ed0dce4d7868835f71c2b0c3aeafcb6fc8
+    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:2bc33dc30ba07196534b3db48bfc655404da909a733c309a493c600d3b5c86bb
+    sha256: 2bc33dc30ba07196534b3db48bfc655404da909a733c309a493c600d3b5c86bb
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:0c3dceb38f9465bba564acbd6587af01b9f6c33289f942f6bb25f9f26aa4d71f
-    sha256: 0c3dceb38f9465bba564acbd6587af01b9f6c33289f942f6bb25f9f26aa4d71f
+    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:cbfd2a909f72770e8aa95315d37fb4b1e0c8911e4b1ecc8bfba92430217889ce
+    sha256: cbfd2a909f72770e8aa95315d37fb4b1e0c8911e4b1ecc8bfba92430217889ce
 source:
   url: https://weechat.org/files/src/weechat-4.8.2.tar.xz
   sha256: 7e2f619d4dcd28d9d86864763581a1b453499f8dd0652af863b54045a8964d6c
@@ -24,8 +24,8 @@ install:
   format: tar.gz
   strip_components: 2
 dependencies:
-  - aspell
   - cjson
+  - enchant
   - gnutls
   - libgcrypt
   - lua
@@ -42,8 +42,8 @@ build_dependencies:
   - gettext
   - pkgconf
 linux_dependencies:
-  - aspell
   - cjson
+  - enchant
   - gnutls
   - libgcrypt
   - lua

@@ -5,23 +5,26 @@ homepage: https://zydis.re
 license: MIT
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zydis/blobs/sha256:79b00be9f9a41dc1ba17f76b0b7ad4017db140c44076666d210f1bbd50a6fcc1
-    sha256: 79b00be9f9a41dc1ba17f76b0b7ad4017db140c44076666d210f1bbd50a6fcc1
+    url: https://ghcr.io/v2/homebrew/core/zydis/blobs/sha256:3d64cf57d8e2eb55ac2457d12c35d227cca34db9c480d0c7fe6e41fd207bacd2
+    sha256: 3d64cf57d8e2eb55ac2457d12c35d227cca34db9c480d0c7fe6e41fd207bacd2
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zydis/blobs/sha256:0f1bd1d7a92035759a01a25a9c2e7657e5c7a6a0c64d121ca3821dd0d5bf6c26
-    sha256: 0f1bd1d7a92035759a01a25a9c2e7657e5c7a6a0c64d121ca3821dd0d5bf6c26
+    url: https://ghcr.io/v2/homebrew/core/zydis/blobs/sha256:01ec1f6ed5fb736d90dceded3f6ce60e79a97749441b1974d74038fec675ee62
+    sha256: 01ec1f6ed5fb736d90dceded3f6ce60e79a97749441b1974d74038fec675ee62
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zydis/blobs/sha256:57fa80a8a5f5de2515de7c9e0ec1df9c29bed0035716ca4abd64fadbc1e868ce
-    sha256: 57fa80a8a5f5de2515de7c9e0ec1df9c29bed0035716ca4abd64fadbc1e868ce
+    url: https://ghcr.io/v2/homebrew/core/zydis/blobs/sha256:eb5cf27e4ef3db8977e70c0f33f9aa71da5ca8140769cfdd13e65925ca86c4d9
+    sha256: eb5cf27e4ef3db8977e70c0f33f9aa71da5ca8140769cfdd13e65925ca86c4d9
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zydis/blobs/sha256:18b2f83673880c27fbbdf90ca73ca1d5cf2777727f188a0d18dd6b2d9849e1e6
-    sha256: 18b2f83673880c27fbbdf90ca73ca1d5cf2777727f188a0d18dd6b2d9849e1e6
+    url: https://ghcr.io/v2/homebrew/core/zydis/blobs/sha256:bfcb9abc2e3e2787212e9f9d3f2325730a33405e07567d2d0b67a4b82657b797
+    sha256: bfcb9abc2e3e2787212e9f9d3f2325730a33405e07567d2d0b67a4b82657b797
 source:
-  url: https://github.com/zyantific/zydis.git
-  sha256: 
+  url: https://github.com/zyantific/zydis/archive/refs/tags/v4.1.1.tar.gz
+  sha256: 45c6d4d499a1cc80780f7834747c637509777c01dca1e98c5e7c0bfaccdb1514
 install:
   type: archive
   format: tar.gz
   strip_components: 2
+dependencies:
+  - zycore-c
 build_dependencies:
   - cmake
+  - ronn-ng

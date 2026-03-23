@@ -1,0 +1,27 @@
+name: docker-agent
+version: 1.36.1
+description: Agent Builder and Runtime by Docker Engineering
+homepage: https://docker.github.io/docker-agent/
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/docker-agent/blobs/sha256:5f3fb5dd68d2653459ab7db02e43d0f185449f001afc9791edb22afaec6a7107
+    sha256: 5f3fb5dd68d2653459ab7db02e43d0f185449f001afc9791edb22afaec6a7107
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/docker-agent/blobs/sha256:18258c4d8ec93bac9a89373d2c0e3736a79ff087a62a0fc31f8f18f120592edf
+    sha256: 18258c4d8ec93bac9a89373d2c0e3736a79ff087a62a0fc31f8f18f120592edf
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/docker-agent/blobs/sha256:5c7faf84ce929374593ab25ffc128cdfcd12ec3104ee09067e88d27f87058376
+    sha256: 5c7faf84ce929374593ab25ffc128cdfcd12ec3104ee09067e88d27f87058376
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/docker-agent/blobs/sha256:06394678ba010144ae25e371834194eaafcb632d18fa86ebd95fccdd7583c977
+    sha256: 06394678ba010144ae25e371834194eaafcb632d18fa86ebd95fccdd7583c977
+source:
+  url: https://github.com/docker/docker-agent/archive/refs/tags/v1.36.1.tar.gz
+  sha256: 2012743914fc48cfabfa74821c5de4dff18f55e864a7f2afe59e8b4ec79770a9
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+build_dependencies:
+  - go

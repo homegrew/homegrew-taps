@@ -1,0 +1,29 @@
+name: ktfmt
+version: 0.62
+description: Kotlin code formatter
+homepage: https://facebook.github.io/ktfmt/
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ktfmt/blobs/sha256:a78b1d6dd17daf32f24b39c56462fd9b64fe78e110ee03f5cce9d7e720eaf1b1
+    sha256: a78b1d6dd17daf32f24b39c56462fd9b64fe78e110ee03f5cce9d7e720eaf1b1
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ktfmt/blobs/sha256:a78b1d6dd17daf32f24b39c56462fd9b64fe78e110ee03f5cce9d7e720eaf1b1
+    sha256: a78b1d6dd17daf32f24b39c56462fd9b64fe78e110ee03f5cce9d7e720eaf1b1
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ktfmt/blobs/sha256:8730ebfede680e8298d21438c5bad4cf3a088d088b3e8adaf1275fec54a18a3a
+    sha256: 8730ebfede680e8298d21438c5bad4cf3a088d088b3e8adaf1275fec54a18a3a
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ktfmt/blobs/sha256:8730ebfede680e8298d21438c5bad4cf3a088d088b3e8adaf1275fec54a18a3a
+    sha256: 8730ebfede680e8298d21438c5bad4cf3a088d088b3e8adaf1275fec54a18a3a
+source:
+  url: https://github.com/facebook/ktfmt/archive/refs/tags/v0.62.tar.gz
+  sha256: 266c4d774be0f61de17687a49b3acf454d5674dd30caace947c086ec2e00cd42
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - openjdk@17
+build_dependencies:
+  - gradle

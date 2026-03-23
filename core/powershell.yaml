@@ -1,0 +1,30 @@
+name: powershell
+version: 7.6.0
+description: Command-line shell and scripting language
+homepage: https://github.com/PowerShell/PowerShell
+license: MIT
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/powershell/blobs/sha256:7430f2dd3562a0dfd86f5db7c08109a6c521e31f4b3f3bbde9ffd0d7e4bd8dfa
+    sha256: 7430f2dd3562a0dfd86f5db7c08109a6c521e31f4b3f3bbde9ffd0d7e4bd8dfa
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/powershell/blobs/sha256:e91409d0da417cf0eafbfb2edb32a32bb5da850489ebe39df80bd7ed266172a6
+    sha256: e91409d0da417cf0eafbfb2edb32a32bb5da850489ebe39df80bd7ed266172a6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/powershell/blobs/sha256:442a9357bcedade96b7ea246c110ca1ff649ccd7520ba87e9d9adf998aceb298
+    sha256: 442a9357bcedade96b7ea246c110ca1ff649ccd7520ba87e9d9adf998aceb298
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/powershell/blobs/sha256:8e6c7cb0229b139c600f5d62fad7bd3fa33a36c30f90c50d4d5c265626da71d3
+    sha256: 8e6c7cb0229b139c600f5d62fad7bd3fa33a36c30f90c50d4d5c265626da71d3
+source:
+  url: https://github.com/PowerShell/PowerShell.git
+  sha256: 
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - dotnet
+linux_dependencies:
+  - dotnet
+  - openssl@3

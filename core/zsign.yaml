@@ -1,0 +1,30 @@
+name: zsign
+version: 0.9.7
+description: Cross-platform codesigning tool for iOS apps
+homepage: https://github.com/zhlynn/zsign
+license: MIT
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zsign/blobs/sha256:09f7baf0255ee39e1de47a40ca39fc23236db122bc185193396cff4ae7bf0d34
+    sha256: 09f7baf0255ee39e1de47a40ca39fc23236db122bc185193396cff4ae7bf0d34
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zsign/blobs/sha256:bd765ff2ae77407dfe6c5df0e7fe8c033f470fc0ad5336fed6e493bc1eaf8c87
+    sha256: bd765ff2ae77407dfe6c5df0e7fe8c033f470fc0ad5336fed6e493bc1eaf8c87
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/zsign/blobs/sha256:4fc5233ea8baa7fe7e52172652c98c3e1082a66c263716136127ad31d163f0e6
+    sha256: 4fc5233ea8baa7fe7e52172652c98c3e1082a66c263716136127ad31d163f0e6
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/zsign/blobs/sha256:3bccc331f4e5ae3d6ba0ce25aa91479a2183a2001baa2f8f59dada466d1f0029
+    sha256: 3bccc331f4e5ae3d6ba0ce25aa91479a2183a2001baa2f8f59dada466d1f0029
+source:
+  url: https://github.com/zhlynn/zsign/archive/refs/tags/v0.9.7.tar.gz
+  sha256: 2ba8b61369c0a6dd370c04ca51f65ad2e8fe2b6a8fcbc82656f30e3be97a6e17
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - minizip
+  - openssl@3
+build_dependencies:
+  - pkgconf

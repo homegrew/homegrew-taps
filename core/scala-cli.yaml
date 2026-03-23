@@ -1,0 +1,29 @@
+name: scala-cli
+version: 1.12.5
+description: Scala language runner and build tool
+homepage: https://scala-cli.virtuslab.org/
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:d6bbdf838f7c1888b1e299fe228e8ba383d5c3a815c9c5c1cd41b4f0edf59da0
+    sha256: d6bbdf838f7c1888b1e299fe228e8ba383d5c3a815c9c5c1cd41b4f0edf59da0
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:af77ec1bdc6f6b54cdb9259fedba82e3a898398a0d2d0bd7b88776b3ba6327dd
+    sha256: af77ec1bdc6f6b54cdb9259fedba82e3a898398a0d2d0bd7b88776b3ba6327dd
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:ebbfda1ea0d722e968883176f2cb586aef492f8c898e141bf00090ec78f63741
+    sha256: ebbfda1ea0d722e968883176f2cb586aef492f8c898e141bf00090ec78f63741
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:c41995148ae4034288a9552ba16eef0a14b4d462cee20003aff9badf297d4e2f
+    sha256: c41995148ae4034288a9552ba16eef0a14b4d462cee20003aff9badf297d4e2f
+source:
+  url: https://github.com/VirtusLab/scala-cli.git
+  sha256: 
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+build_dependencies:
+  - openjdk@17
+linux_dependencies:
+  - zlib-ng-compat

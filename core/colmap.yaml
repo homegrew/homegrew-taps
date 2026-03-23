@@ -1,24 +1,24 @@
 name: colmap
-version: 3.13.0
+version: 4.0.2
 description: Structure-from-Motion and Multi-View Stereo
 homepage: https://colmap.github.io/
 license: BSD-3-Clause
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/colmap/blobs/sha256:c3ddfd4601a31a3585f41cbcb156478a33504ef9e26f4bcf28e4b94edfc2fdb0
-    sha256: c3ddfd4601a31a3585f41cbcb156478a33504ef9e26f4bcf28e4b94edfc2fdb0
+    url: https://ghcr.io/v2/homebrew/core/colmap/blobs/sha256:38f81311d660ea880ffb384cb96f373f3557bae7ea17d25e12916bfe2519cd02
+    sha256: 38f81311d660ea880ffb384cb96f373f3557bae7ea17d25e12916bfe2519cd02
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/colmap/blobs/sha256:32915062b90b298a0e178910753d28e533f6cd8a1598db75b14bf0921ec705b0
-    sha256: 32915062b90b298a0e178910753d28e533f6cd8a1598db75b14bf0921ec705b0
+    url: https://ghcr.io/v2/homebrew/core/colmap/blobs/sha256:8126defc49671b961939ae69ba740ed97c58d2d6460e3854a9ca332c39f58a8d
+    sha256: 8126defc49671b961939ae69ba740ed97c58d2d6460e3854a9ca332c39f58a8d
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/colmap/blobs/sha256:633c1c82e404ff2c340d3f28d0a25d781190631ba060f0e2b2db36582aa85662
-    sha256: 633c1c82e404ff2c340d3f28d0a25d781190631ba060f0e2b2db36582aa85662
+    url: https://ghcr.io/v2/homebrew/core/colmap/blobs/sha256:c65ca41c703e97e868b2ca07af482e72a8fac5807be90576de58283408f31fe4
+    sha256: c65ca41c703e97e868b2ca07af482e72a8fac5807be90576de58283408f31fe4
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/colmap/blobs/sha256:144a551ecdef01a2b23157e9007b3770b243cd65b25d3705d6c914c77310f033
-    sha256: 144a551ecdef01a2b23157e9007b3770b243cd65b25d3705d6c914c77310f033
+    url: https://ghcr.io/v2/homebrew/core/colmap/blobs/sha256:1e94c9e88ad49631f0411695007d7ee9231cd77c490c3608f6a63543bdc5daf3
+    sha256: 1e94c9e88ad49631f0411695007d7ee9231cd77c490c3608f6a63543bdc5daf3
 source:
-  url: https://github.com/colmap/colmap/archive/refs/tags/3.13.0.tar.gz
-  sha256: 98a8f8cf6358774be223239a9b034cc9d55bf66c43f54fc6ddea9128a1ee197a
+  url: https://github.com/colmap/colmap/archive/refs/tags/4.0.2.tar.gz
+  sha256: d220b54481b08212dcfe9e6deca6e998546a462a80140c3bd4ed9318d8c74482
 install:
   type: archive
   format: tar.gz
@@ -36,6 +36,8 @@ dependencies:
   - gmp
   - lz4
   - metis
+  - onnx
+  - onnxruntime
   - openimageio
   - openssl@3
   - poselib
@@ -60,6 +62,8 @@ linux_dependencies:
   - lz4
   - mesa
   - metis
+  - onnx
+  - onnxruntime
   - openimageio
   - openssl@3
   - poselib

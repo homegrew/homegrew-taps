@@ -1,31 +1,31 @@
 name: vim
-version: 9.2.0100
+version: 9.2.0200
 description: "Vi 'workalike' with many additional features"
 homepage: https://www.vim.org/
 license: Vim
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:c6549b3ee92c0e1501d1bdaaec0fe1f3b81b7ad9a08f8af2bfd4e60a98e130ab
-    sha256: c6549b3ee92c0e1501d1bdaaec0fe1f3b81b7ad9a08f8af2bfd4e60a98e130ab
+    url: https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:e1f448bb0f1d3315648d525edfb0078de7c04076a3f763f0bb1ceb51076506d4
+    sha256: e1f448bb0f1d3315648d525edfb0078de7c04076a3f763f0bb1ceb51076506d4
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:f7465509d2b837dc611c507e8ed5d550c4101c4f413b6b8d0acfa4b25fd9a6ec
-    sha256: f7465509d2b837dc611c507e8ed5d550c4101c4f413b6b8d0acfa4b25fd9a6ec
+    url: https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:850671d7d54d985ca2bfaa5be8bed5ee5e4acc4d94d940956f34bb5859903cd1
+    sha256: 850671d7d54d985ca2bfaa5be8bed5ee5e4acc4d94d940956f34bb5859903cd1
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:dae43f6d823e90481aacf24a1bccc1ce7a5016813d85daae120a85f31077cbb1
-    sha256: dae43f6d823e90481aacf24a1bccc1ce7a5016813d85daae120a85f31077cbb1
+    url: https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:bcea480abe83669a34aa9864ab7c7afc259c7bd43e188ea2d439af260a7d571a
+    sha256: bcea480abe83669a34aa9864ab7c7afc259c7bd43e188ea2d439af260a7d571a
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:f96f2aa54d3620a49e192353b0d90ab35a96b192a906c48f477ab46b06cfc1f9
-    sha256: f96f2aa54d3620a49e192353b0d90ab35a96b192a906c48f477ab46b06cfc1f9
+    url: https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:61b6a483ccac2face468eddf2b0b452319f1bde1ecc73829cd26fa781838cde2
+    sha256: 61b6a483ccac2face468eddf2b0b452319f1bde1ecc73829cd26fa781838cde2
 source:
-  url: https://github.com/vim/vim/archive/refs/tags/v9.2.0100.tar.gz
-  sha256: 0f35dbb9bcebc00d97b06aa229129f1a707960b64f064f65c7bcb8b424fe129b
+  url: https://github.com/vim/vim/archive/refs/tags/v9.2.0200.tar.gz
+  sha256: 8456b6e7688e742df5df0498f80081a0ec323c0c213d4565dd5d41aff4cd5c9d
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - libsodium
-  - lua
+  - lua@5.4
   - ncurses
   - python@3.14
   - ruby
@@ -35,7 +35,7 @@ build_dependencies:
 linux_dependencies:
   - acl
   - libsodium
-  - lua
+  - lua@5.4
   - ncurses
   - python@3.14
   - ruby

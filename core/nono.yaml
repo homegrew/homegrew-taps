@@ -1,0 +1,30 @@
+name: nono
+version: 0.22.1
+description: Capability-based sandbox shell for AI agents with OS-enforced isolation
+homepage: https://github.com/always-further/nono
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nono/blobs/sha256:53d936a94ba87d080d98b33b23dbda6bb1d0a613e252f38dcb682d2830d66d3b
+    sha256: 53d936a94ba87d080d98b33b23dbda6bb1d0a613e252f38dcb682d2830d66d3b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nono/blobs/sha256:6b1fa3c0d75312200e541335f577113aabe4a341487624678f0cc340645affee
+    sha256: 6b1fa3c0d75312200e541335f577113aabe4a341487624678f0cc340645affee
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/nono/blobs/sha256:ac3d39842570d63a8997cd21fe210de326c3b5fdea54a65aa8eebebdb02c8054
+    sha256: ac3d39842570d63a8997cd21fe210de326c3b5fdea54a65aa8eebebdb02c8054
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/nono/blobs/sha256:ee2cf5e7460fba0f057b863814988fd2a476fcb06c57847ad5d30b4b1bf28ce1
+    sha256: ee2cf5e7460fba0f057b863814988fd2a476fcb06c57847ad5d30b4b1bf28ce1
+source:
+  url: https://github.com/always-further/nono/archive/refs/tags/v0.22.1.tar.gz
+  sha256: 0df86ae8158d963d9b0b2c2f077985fd28f59aa92d980ee151237bb73eae457d
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - dbus

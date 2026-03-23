@@ -1,0 +1,35 @@
+name: sem-cli
+version: 0.3.10
+description: Semantic version control CLI with entity-level diffs and blame
+homepage: https://github.com/Ataraxy-Labs/sem
+license: MIT OR Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sem-cli/blobs/sha256:cfa4678f06b271fef2e00f840d2d3420d98c46a0bfb2b9d047403e3810540df8
+    sha256: cfa4678f06b271fef2e00f840d2d3420d98c46a0bfb2b9d047403e3810540df8
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sem-cli/blobs/sha256:f26b9f883276274dcecee0bfd972bb8082b4a14afa948eaf27cade53d89b93ad
+    sha256: f26b9f883276274dcecee0bfd972bb8082b4a14afa948eaf27cade53d89b93ad
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/sem-cli/blobs/sha256:dd165cdb0bcf904db75bd905d9a8f0aca3ecad985bc7a2d344ab1c3e7777cff9
+    sha256: dd165cdb0bcf904db75bd905d9a8f0aca3ecad985bc7a2d344ab1c3e7777cff9
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/sem-cli/blobs/sha256:5af4ed87b7b156aaa7f14c4879f0c74e76d537ba3667f00ed641022332dbecf4
+    sha256: 5af4ed87b7b156aaa7f14c4879f0c74e76d537ba3667f00ed641022332dbecf4
+source:
+  url: https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.3.10.tar.gz
+  sha256: 97fcceab5745204001526220f6e207925466e49489d3af4cc76b9219a59b5a97
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - libgit2
+  - openssl@3
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - libgit2
+  - openssl@3
+  - zlib-ng-compat

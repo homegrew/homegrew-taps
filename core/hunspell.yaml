@@ -5,17 +5,17 @@ homepage: https://hunspell.github.io
 license: MPL-1.1 OR GPL-2.0-or-later OR LGPL-2.1-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hunspell/blobs/sha256:d2821926f2ded88b146f72f281ad7144485140429a432a21bf187eb90558d57f
-    sha256: d2821926f2ded88b146f72f281ad7144485140429a432a21bf187eb90558d57f
+    url: https://ghcr.io/v2/homebrew/core/hunspell/blobs/sha256:d8f2e9708570919c8e043e60ec23e98072be9f23e47924077c233fc7ed389fa3
+    sha256: d8f2e9708570919c8e043e60ec23e98072be9f23e47924077c233fc7ed389fa3
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hunspell/blobs/sha256:824cc2f1c917cc1a43872bbf9b36fba99072458de10b41631097dcf62e0d82f2
-    sha256: 824cc2f1c917cc1a43872bbf9b36fba99072458de10b41631097dcf62e0d82f2
+    url: https://ghcr.io/v2/homebrew/core/hunspell/blobs/sha256:fa7adc42070e6857705a43f4cf57b5999611c37de739b6706599d9da55bac05b
+    sha256: fa7adc42070e6857705a43f4cf57b5999611c37de739b6706599d9da55bac05b
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hunspell/blobs/sha256:09ba93523c0b255617dd5c9771da092b73a9e9f40f0e7f5c727b7b181f6c8248
-    sha256: 09ba93523c0b255617dd5c9771da092b73a9e9f40f0e7f5c727b7b181f6c8248
+    url: https://ghcr.io/v2/homebrew/core/hunspell/blobs/sha256:42fdde6e88f4fec0bdf4c8fcb259bb2cff651aaeaca575faaa147d0f22a18239
+    sha256: 42fdde6e88f4fec0bdf4c8fcb259bb2cff651aaeaca575faaa147d0f22a18239
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hunspell/blobs/sha256:cfbe072b957d6e8dcc23af726175c10452cd2069e0ff9e0e54c3ce064fe626e0
-    sha256: cfbe072b957d6e8dcc23af726175c10452cd2069e0ff9e0e54c3ce064fe626e0
+    url: https://ghcr.io/v2/homebrew/core/hunspell/blobs/sha256:dfa788550dae98243a9bb43ad1ae0e2cb5cd2d443bf02b01e0e4ac3412a8732c
+    sha256: dfa788550dae98243a9bb43ad1ae0e2cb5cd2d443bf02b01e0e4ac3412a8732c
 source:
   url: https://github.com/hunspell/hunspell/releases/download/v1.7.2/hunspell-1.7.2.tar.gz
   sha256: 11ddfa39afe28c28539fe65fc4f1592d410c1e9b6dd7d8a91ca25d85e9ec65b8
@@ -26,5 +26,10 @@ install:
 dependencies:
   - readline
   - gettext
+build_dependencies:
+  - autoconf
+  - automake
+  - gettext
+  - libtool
 linux_dependencies:
   - readline

@@ -1,0 +1,27 @@
+name: docker-engine
+version: 29.3.0
+description: Pack, ship and run any application as a lightweight container (Daemon)
+homepage: https://www.docker.com/
+license: Apache-2.0
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/docker-engine/blobs/sha256:91a734890e0c5f4b2738e2250e2a527e10b9ef7896536c98de5a9106d90e3aa5
+    sha256: 91a734890e0c5f4b2738e2250e2a527e10b9ef7896536c98de5a9106d90e3aa5
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/docker-engine/blobs/sha256:cda4b68b5ee363716980b3727d8c715cc5ed650007eb581c4128291b3197f88b
+    sha256: cda4b68b5ee363716980b3727d8c715cc5ed650007eb581c4128291b3197f88b
+source:
+  url: https://github.com/moby/moby.git
+  sha256: 
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - containerd
+  - nftables
+  - runc
+build_dependencies:
+  - go
+  - go-md2man
+  - pkgconf

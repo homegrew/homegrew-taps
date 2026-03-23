@@ -1,0 +1,32 @@
+name: ggml
+version: 0.9.8
+description: Tensor library for machine learning
+homepage: https://github.com/ggml-org/ggml
+license: MIT
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:69c486240fa80e4e1d0db4002ade1a6152425cca50869ef8cac3b995ab8f52de
+    sha256: 69c486240fa80e4e1d0db4002ade1a6152425cca50869ef8cac3b995ab8f52de
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:9be7f6b68ecf34fd2c767055df6827684e14fae8ea0e57927ff106ca1cd7c276
+    sha256: 9be7f6b68ecf34fd2c767055df6827684e14fae8ea0e57927ff106ca1cd7c276
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:28a7ea4ae8b17ab73941aac60daa44be9aa8109ac7fc25a734adb84631905e1d
+    sha256: 28a7ea4ae8b17ab73941aac60daa44be9aa8109ac7fc25a734adb84631905e1d
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:aa6acaf0edbc16e2403fb5586af96ef7f01fa91a2186fa281003f45b92c4c621
+    sha256: aa6acaf0edbc16e2403fb5586af96ef7f01fa91a2186fa281003f45b92c4c621
+source:
+  url: https://github.com/ggml-org/ggml/archive/refs/tags/v0.9.8.tar.gz
+  sha256: 9d8b38e473697e9014ea2275fadb4ed5c247b1ca82404875fe5ac336c0d0754c
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - libomp
+build_dependencies:
+  - cmake
+linux_dependencies:
+  - openblas
+  - vulkan-loader

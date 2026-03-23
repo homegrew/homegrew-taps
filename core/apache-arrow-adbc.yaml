@@ -1,0 +1,28 @@
+name: apache-arrow-adbc
+version: 22
+description: Cross-language, Arrow-native database access
+homepage: https://arrow.apache.org/adbc
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/apache-arrow-adbc/blobs/sha256:a35bdf7912d038c52bbc6c02b9ccc8c0d3daf1745ef2e0be9378d3e47ffd5426
+    sha256: a35bdf7912d038c52bbc6c02b9ccc8c0d3daf1745ef2e0be9378d3e47ffd5426
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/apache-arrow-adbc/blobs/sha256:7763bed036f66e8166974ea1c7b0e78bf25dd8a227696ae7b3d5aeaf94ec777b
+    sha256: 7763bed036f66e8166974ea1c7b0e78bf25dd8a227696ae7b3d5aeaf94ec777b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/apache-arrow-adbc/blobs/sha256:c86434868438430a0520e751c1f4a4d8040dd45e4bc2fd0185819400fd9b0b9e
+    sha256: c86434868438430a0520e751c1f4a4d8040dd45e4bc2fd0185819400fd9b0b9e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/apache-arrow-adbc/blobs/sha256:0f9474b593542cd0e86043999c7d5464bada5705452346aa36527062c7bcfe8e
+    sha256: 0f9474b593542cd0e86043999c7d5464bada5705452346aa36527062c7bcfe8e
+source:
+  url: https://www.apache.org/dyn/closer.lua?path=arrow/apache-arrow-adbc-22/apache-arrow-adbc-22.tar.gz
+  sha256: 48b19d70a734e789da99e3c53ebad57389c914b85fdc9c509188e5f50896b07c
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+build_dependencies:
+  - cmake
+  - pkgconf

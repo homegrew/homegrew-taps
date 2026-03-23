@@ -1,0 +1,32 @@
+name: vapoursynth-bm3d
+version: 9
+description: BM3D denoising filter for VapourSynth
+homepage: https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D
+license: MIT
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-bm3d/blobs/sha256:9ed1ce1b7d70147548a3084f5ea3f6e566dcd3eec95a73f8bebeae11dddcf068
+    sha256: 9ed1ce1b7d70147548a3084f5ea3f6e566dcd3eec95a73f8bebeae11dddcf068
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-bm3d/blobs/sha256:c6b1ef17861ac5132ddfb4e79d21dd626a28427f768184de39ff112ba11bca18
+    sha256: c6b1ef17861ac5132ddfb4e79d21dd626a28427f768184de39ff112ba11bca18
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-bm3d/blobs/sha256:6171db118b9fd5383ba2b35f3a13bfa6f2c358c952cfacebf600ef1bb552c4a2
+    sha256: 6171db118b9fd5383ba2b35f3a13bfa6f2c358c952cfacebf600ef1bb552c4a2
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-bm3d/blobs/sha256:379ddc96676ca5ab83823fb53e8ea11793764e33706ca648cf2f9fc8a74f4fc7
+    sha256: 379ddc96676ca5ab83823fb53e8ea11793764e33706ca648cf2f9fc8a74f4fc7
+source:
+  url: https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/archive/refs/tags/r9.tar.gz
+  sha256: 3eb38c9e4578059042c96b408f5336b18d1f3df44896954713532cff735f1188
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - fftw
+  - vapoursynth
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf

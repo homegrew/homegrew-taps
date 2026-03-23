@@ -1,29 +1,30 @@
 name: whisper-cpp
-version: 1.8.3
+version: 1.8.4
 description: "Port of OpenAI's Whisper model in C/C++"
 homepage: https://github.com/ggml-org/whisper.cpp
 license: MIT
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/whisper-cpp/blobs/sha256:5eedd491cfac5e7fb0212068d794ff129ab2b7b1e0353c16e9b69c3ef8040278
-    sha256: 5eedd491cfac5e7fb0212068d794ff129ab2b7b1e0353c16e9b69c3ef8040278
+    url: https://ghcr.io/v2/homebrew/core/whisper-cpp/blobs/sha256:fca60c843fa6658257b7a7664eb7d47b84ddb5439e76ffc3c2d9aaf3c58c1c83
+    sha256: fca60c843fa6658257b7a7664eb7d47b84ddb5439e76ffc3c2d9aaf3c58c1c83
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/whisper-cpp/blobs/sha256:e6c2f78cbc5d6b311dfe24d8c5d4ffc68a634465c5e35ed11746068583d273c4
-    sha256: e6c2f78cbc5d6b311dfe24d8c5d4ffc68a634465c5e35ed11746068583d273c4
+    url: https://ghcr.io/v2/homebrew/core/whisper-cpp/blobs/sha256:e0a6d4f8cb3e1fb7a31185c31fef44741e068af4632b46226c1a4a0f545b3e86
+    sha256: e0a6d4f8cb3e1fb7a31185c31fef44741e068af4632b46226c1a4a0f545b3e86
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/whisper-cpp/blobs/sha256:09defdf76a98554ed27b2fd4c2e34472b83603b17ed0411505166146799800ac
-    sha256: 09defdf76a98554ed27b2fd4c2e34472b83603b17ed0411505166146799800ac
+    url: https://ghcr.io/v2/homebrew/core/whisper-cpp/blobs/sha256:e1932e53d5a3c28174411c00939d2c74e3c328a07b8e62b75b3e90053b114629
+    sha256: e1932e53d5a3c28174411c00939d2c74e3c328a07b8e62b75b3e90053b114629
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/whisper-cpp/blobs/sha256:684199fd6bec28cddfa086c584a49d236386c109f901a443b577b857fd052f83
-    sha256: 684199fd6bec28cddfa086c584a49d236386c109f901a443b577b857fd052f83
+    url: https://ghcr.io/v2/homebrew/core/whisper-cpp/blobs/sha256:e42db9f12aa9c39d0238717f29d568464b10ae6fbcca6c0a03d3a7d6760be9aa
+    sha256: e42db9f12aa9c39d0238717f29d568464b10ae6fbcca6c0a03d3a7d6760be9aa
 source:
-  url: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.8.3.tar.gz
-  sha256: 870ba21409cdf66697dc4db15ebdb13bc67037d76c7cc63756c81471d8f1731a
+  url: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.8.4.tar.gz
+  sha256: b26f30e52c095ccb75da40b168437736605eb280de57381887bf9e2b65f31e66
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
+  - ggml
   - sdl2
 build_dependencies:
   - cmake

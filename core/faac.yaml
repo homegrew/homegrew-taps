@@ -1,29 +1,28 @@
 name: faac
-version: 1.31.1
+version: 1.40
 description: ISO AAC audio encoder
 homepage: https://sourceforge.net/projects/faac/
 license: LGPL-2.1-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/faac/blobs/sha256:00c66e8dd158e8c2f606e0707c261f8b5438951e9b38e316949900152058ddca
-    sha256: 00c66e8dd158e8c2f606e0707c261f8b5438951e9b38e316949900152058ddca
+    url: https://ghcr.io/v2/homebrew/core/faac/blobs/sha256:328ea5edf8aed0c2924d466aa547ecf361bb4329601eb0b46cdec7cadcc684f7
+    sha256: 328ea5edf8aed0c2924d466aa547ecf361bb4329601eb0b46cdec7cadcc684f7
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/faac/blobs/sha256:89a3968e3fcff90660fc6de8c59173f4b0b36769141875971edf0100956a428d
-    sha256: 89a3968e3fcff90660fc6de8c59173f4b0b36769141875971edf0100956a428d
+    url: https://ghcr.io/v2/homebrew/core/faac/blobs/sha256:83dbb04d3aa70aa85260ff1f8a80b35a1b9261d44a300efad76658ba49872bb1
+    sha256: 83dbb04d3aa70aa85260ff1f8a80b35a1b9261d44a300efad76658ba49872bb1
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/faac/blobs/sha256:30940df984b4f44d7c7b4bb0f55de660262490bf0e0288edfe5f5e673c26cea9
-    sha256: 30940df984b4f44d7c7b4bb0f55de660262490bf0e0288edfe5f5e673c26cea9
+    url: https://ghcr.io/v2/homebrew/core/faac/blobs/sha256:db68453ac31bbde0615ad36cd30214c019d5a718769f1febe5c8952220ea29c7
+    sha256: db68453ac31bbde0615ad36cd30214c019d5a718769f1febe5c8952220ea29c7
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/faac/blobs/sha256:e99c3b48cc15f3987c5d70cae13c4a8b4b3fd9d47543fc7fa77552c2be2c1cd5
-    sha256: e99c3b48cc15f3987c5d70cae13c4a8b4b3fd9d47543fc7fa77552c2be2c1cd5
+    url: https://ghcr.io/v2/homebrew/core/faac/blobs/sha256:0dc2fd31acbc1b6ab2272283143a64d17a7ef9155a1d83d95ce82a31041c4155
+    sha256: 0dc2fd31acbc1b6ab2272283143a64d17a7ef9155a1d83d95ce82a31041c4155
 source:
-  url: https://github.com/knik0/faac/archive/refs/tags/faac-1.31.1.tar.gz
-  sha256: 3191bf1b131f1213221ed86f65c2dfabf22d41f6b3771e7e65b6d29478433527
+  url: https://github.com/knik0/faac/archive/refs/tags/faac-1.40.tar.gz
+  sha256: 3ef4cc1fa6a750003602adc6eea892ca3815becd9145797b787f0999e8b2b89c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+  - meson
+  - ninja

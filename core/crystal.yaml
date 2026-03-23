@@ -5,17 +5,17 @@ homepage: https://crystal-lang.org/
 license: Apache-2.0
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:1e12ff8299d252518e4124e56ecc4cdb48ef0153d08c75715f7bcb076c8a2a0b
-    sha256: 1e12ff8299d252518e4124e56ecc4cdb48ef0153d08c75715f7bcb076c8a2a0b
+    url: https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:71da2d965964a9281cd93b2e5c4f3bc5050fa7fa51edfc2fb13f1c68d3e6a506
+    sha256: 71da2d965964a9281cd93b2e5c4f3bc5050fa7fa51edfc2fb13f1c68d3e6a506
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:44a252cb01c1de8c5f7d22119ecaee4dbecc6b62d550364d5c3ee3d43a72971a
-    sha256: 44a252cb01c1de8c5f7d22119ecaee4dbecc6b62d550364d5c3ee3d43a72971a
+    url: https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:a71f7db6b80c4d581eba51666ea1be16f10802c94e6d9af0093a464f3dc8af82
+    sha256: a71f7db6b80c4d581eba51666ea1be16f10802c94e6d9af0093a464f3dc8af82
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:6114a8ba26bcae0bd6fc50468f9eeb217df1a245be1a2ee49eadf634e3f27e82
-    sha256: 6114a8ba26bcae0bd6fc50468f9eeb217df1a245be1a2ee49eadf634e3f27e82
+    url: https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:50bdb6726fba33f256ea2f0df7b3adffe7d64b6328b06c2342bd72ee858f0fea
+    sha256: 50bdb6726fba33f256ea2f0df7b3adffe7d64b6328b06c2342bd72ee858f0fea
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:23fb74f2869d8a7a111c32490076c5042d6307ce85bf4eb540ea32e9cc8a13eb
-    sha256: 23fb74f2869d8a7a111c32490076c5042d6307ce85bf4eb540ea32e9cc8a13eb
+    url: https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:ef978bbc693bcf53d4294cff658ef5019648a10b09b7966a50e1fc2c4e319215
+    sha256: ef978bbc693bcf53d4294cff658ef5019648a10b09b7966a50e1fc2c4e319215
 source:
   url: https://github.com/crystal-lang/crystal/archive/refs/tags/1.19.1.tar.gz
   sha256: 2f9cfaa6bdc872f6e89d483cfe474f35232e5dd4a33dcc05ec69e5fadb2b0257
@@ -24,6 +24,14 @@ install:
   format: tar.gz
   strip_components: 2
 dependencies:
+  - bdw-gc
+  - gmp
+  - libyaml
+  - llvm
+  - openssl@3
+  - pcre2
+  - pkgconf
+linux_dependencies:
   - bdw-gc
   - gmp
   - libffi

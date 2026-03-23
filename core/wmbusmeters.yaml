@@ -1,0 +1,30 @@
+name: wmbusmeters
+version: 2.0.0
+description: Read wired or wireless mbus protocol to acquire utility meter readings
+homepage: https://github.com/wmbusmeters/wmbusmeters
+license: GPL-3.0-or-later
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:f22d9a9d1e4c5bb6d912e13d8811c692d16604b3e4d074c5293e23b053fe4967
+    sha256: f22d9a9d1e4c5bb6d912e13d8811c692d16604b3e4d074c5293e23b053fe4967
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:9dafae198efc565d7bbb344784eac5bddb19a60cbcd88afe4ee659cf45b0a0a6
+    sha256: 9dafae198efc565d7bbb344784eac5bddb19a60cbcd88afe4ee659cf45b0a0a6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:7890d501952fcaf0823ec5f3eccf7e28f70716c1a1a7d193d0c0e589fdb4f262
+    sha256: 7890d501952fcaf0823ec5f3eccf7e28f70716c1a1a7d193d0c0e589fdb4f262
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:2451083cdca31570262efa096b9384bfc2ddc336dd891c1b67e7511c0245ca4f
+    sha256: 2451083cdca31570262efa096b9384bfc2ddc336dd891c1b67e7511c0245ca4f
+source:
+  url: https://github.com/wmbusmeters/wmbusmeters/archive/refs/tags/2.0.0.tar.gz
+  sha256: 600beb099bc1ac1d4fd7a78dde89bb753b033cfd9de54ed6f25d3fc705c38042
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - librtlsdr
+  - libusb
+build_dependencies:
+  - pkgconf

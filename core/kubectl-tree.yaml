@@ -1,0 +1,29 @@
+name: kubectl-tree
+version: 0.5.0
+description: Kubectl plugin to browse Kubernetes object hierarchies as a tree
+homepage: https://github.com/ahmetb/kubectl-tree
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kubectl-tree/blobs/sha256:d829de1df35abf4ea5ce8d5e64f154178ac7b87aba4fee8ee3e41e85086b3ecd
+    sha256: d829de1df35abf4ea5ce8d5e64f154178ac7b87aba4fee8ee3e41e85086b3ecd
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kubectl-tree/blobs/sha256:25086a527e3b8ef3cb382a316ff9cbe06c4a212c81f6c8fda72e5766320f38d3
+    sha256: 25086a527e3b8ef3cb382a316ff9cbe06c4a212c81f6c8fda72e5766320f38d3
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/kubectl-tree/blobs/sha256:de85af9f5a8baa922b8664e71502227c8d0b70abdf254412bcf08aa26f2bfafd
+    sha256: de85af9f5a8baa922b8664e71502227c8d0b70abdf254412bcf08aa26f2bfafd
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/kubectl-tree/blobs/sha256:921484062c94213f86ac765fe82d20f27280ab182285186a8ca85d1a80052741
+    sha256: 921484062c94213f86ac765fe82d20f27280ab182285186a8ca85d1a80052741
+source:
+  url: https://github.com/ahmetb/kubectl-tree/archive/refs/tags/v0.5.0.tar.gz
+  sha256: 480c71b07f27e5c824367e328c7c1818b76766a990a3a786189b698a7f923922
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - kubernetes-cli
+build_dependencies:
+  - go

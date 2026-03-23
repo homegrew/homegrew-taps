@@ -1,0 +1,27 @@
+name: wumpus
+version: 1.11
+description: Exact clone of the ancient BASIC Hunt the Wumpus game
+homepage: http://www.catb.org/~esr/wumpus/
+license: BSD-2-Clause
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wumpus/blobs/sha256:ca80b761f2f03f3dc6edf792c87aec2c1cc25a99a4c27706bdf8720047cbe141
+    sha256: ca80b761f2f03f3dc6edf792c87aec2c1cc25a99a4c27706bdf8720047cbe141
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wumpus/blobs/sha256:37e7079f488ea57258b203ed2a4ce83a23c1919dc86bac68a97c92114f11ebcc
+    sha256: 37e7079f488ea57258b203ed2a4ce83a23c1919dc86bac68a97c92114f11ebcc
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/wumpus/blobs/sha256:21f6da1c1f436b41491e88e68bd184dad53852f0aa1dd95c6d34f433c5109471
+    sha256: 21f6da1c1f436b41491e88e68bd184dad53852f0aa1dd95c6d34f433c5109471
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/wumpus/blobs/sha256:bb85d9dd188dfc4842b6816e0696322c99a00e7b2722faeca5f891112dec9437
+    sha256: bb85d9dd188dfc4842b6816e0696322c99a00e7b2722faeca5f891112dec9437
+source:
+  url: https://gitlab.com/esr/wumpus/-/archive/1.11/wumpus-1.11.tar.bz2
+  sha256: 6b60884df963d785759ecde67382cacae2989f666be7b6269af511a51fde5458
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+build_dependencies:
+  - asciidoctor

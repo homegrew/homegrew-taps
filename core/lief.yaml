@@ -1,0 +1,35 @@
+name: lief
+version: 0.17.6
+description: Library to Instrument Executable Formats
+homepage: https://lief.re/
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/lief/blobs/sha256:b6f221f471b26cf8f34d1ae95cae33fa8ef6d28ef4d6859acab22d452b3b1a1b
+    sha256: b6f221f471b26cf8f34d1ae95cae33fa8ef6d28ef4d6859acab22d452b3b1a1b
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/lief/blobs/sha256:b5981714089ac3c5c9351daf530a56b5824fb204d002968b3f2e9cba5b62cfa6
+    sha256: b5981714089ac3c5c9351daf530a56b5824fb204d002968b3f2e9cba5b62cfa6
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/lief/blobs/sha256:b7b066a970ed4ed3ec174e6a5dafb462b3bab06b6dfdce5ce19445a9b350e25e
+    sha256: b7b066a970ed4ed3ec174e6a5dafb462b3bab06b6dfdce5ce19445a9b350e25e
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/lief/blobs/sha256:1293a3e476728b496a7cbb3c2053f11251e0f69b9b10a4b1974dc888642acf3b
+    sha256: 1293a3e476728b496a7cbb3c2053f11251e0f69b9b10a4b1974dc888642acf3b
+source:
+  url: https://github.com/lief-project/LIEF/archive/refs/tags/0.17.6.tar.gz
+  sha256: 5fbbd19c85912d417eabbaef2b98e70144496356964685b82e0792d708b9be87
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - fmt
+  - mbedtls@3
+  - spdlog
+  - tl-expected
+build_dependencies:
+  - cmake
+  - frozen
+  - nlohmann-json
+  - utf8cpp

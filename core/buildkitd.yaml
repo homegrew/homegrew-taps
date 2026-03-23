@@ -1,0 +1,23 @@
+name: buildkitd
+version: 0.28.0
+description: Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit (Daemon)
+homepage: https://github.com/moby/buildkit
+license: Apache-2.0
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/buildkitd/blobs/sha256:fb0f2ad2f794821947ac5c76d7cbd80aa7d9d965e0c3d52f53ba7c5f7df1a005
+    sha256: fb0f2ad2f794821947ac5c76d7cbd80aa7d9d965e0c3d52f53ba7c5f7df1a005
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/buildkitd/blobs/sha256:aeef826aa5ac6bba845296fd2aeb5fb7c8b32cf455ad85023e65e15b7354758e
+    sha256: aeef826aa5ac6bba845296fd2aeb5fb7c8b32cf455ad85023e65e15b7354758e
+source:
+  url: https://github.com/moby/buildkit/archive/refs/tags/v0.28.0.tar.gz
+  sha256: 2307112b30593fb8fc4d479ce4547862fa101fa2ecd50a852330a1117a988bbc
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - runc
+build_dependencies:
+  - go

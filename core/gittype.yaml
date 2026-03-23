@@ -1,0 +1,33 @@
+name: gittype
+version: 0.9.0
+description: CLI code-typing game that turns your source code into typing challenges
+homepage: https://github.com/unhappychoice/gittype
+license: MIT
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:7e88a8c36d46209b656fb61588d0983c20feb4262bbea466cd2d08a6318cf8c9
+    sha256: 7e88a8c36d46209b656fb61588d0983c20feb4262bbea466cd2d08a6318cf8c9
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:c41ef08d2cce1e3b3c81cf1558b75c7f7b29f3c0c54634c8a73a36fd135c284b
+    sha256: c41ef08d2cce1e3b3c81cf1558b75c7f7b29f3c0c54634c8a73a36fd135c284b
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:f92a14e1f59e49cda6a3d6e32d0d08abe6e427f62792c9a8ebacea3a0a8a5e9f
+    sha256: f92a14e1f59e49cda6a3d6e32d0d08abe6e427f62792c9a8ebacea3a0a8a5e9f
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:5a74f9dd2de4c3e15286faf7f0b00a13ff73320cb335c07969506e8bb37dfcc7
+    sha256: 5a74f9dd2de4c3e15286faf7f0b00a13ff73320cb335c07969506e8bb37dfcc7
+source:
+  url: https://github.com/unhappychoice/gittype/archive/refs/tags/v0.9.0.tar.gz
+  sha256: 2efb51de5b8e00a4bc0086a3811e473f5934ca08750a32bcc39b19dfdeff68e7
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - openssl@3
+build_dependencies:
+  - pkgconf
+  - rust
+linux_dependencies:
+  - openssl@3
+  - zlib-ng-compat

@@ -5,17 +5,17 @@ homepage: https://pytorch.org/
 license: BSD-3-Clause
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:fc4848bff7f991a53387ade0642c0341a282c7d4291332455aa5e204fce30293
-    sha256: fc4848bff7f991a53387ade0642c0341a282c7d4291332455aa5e204fce30293
+    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:58c0b4d7518af00a5004907b82ce228f09f9abdb0c9f3d2366db58b987f0ab01
+    sha256: 58c0b4d7518af00a5004907b82ce228f09f9abdb0c9f3d2366db58b987f0ab01
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:b277be1a6767a2caa89e99ca851f9b683132f7d8e3ebc52ca73fcfa61af3281a
-    sha256: b277be1a6767a2caa89e99ca851f9b683132f7d8e3ebc52ca73fcfa61af3281a
+    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:10a4846eee5bee4a3394f21e90c59a94fe0602c0459ee1a7ddfb6749987f7337
+    sha256: 10a4846eee5bee4a3394f21e90c59a94fe0602c0459ee1a7ddfb6749987f7337
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:61f51339313f84a808c9db871738ab9abd956f4e3e31af7ab2556ba15b18cd8c
-    sha256: 61f51339313f84a808c9db871738ab9abd956f4e3e31af7ab2556ba15b18cd8c
+    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:75f90413b0880c6b34f16b13dc0c3e2a3afc3405333e089b3627d47772676991
+    sha256: 75f90413b0880c6b34f16b13dc0c3e2a3afc3405333e089b3627d47772676991
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:f72661c64aaec806f3ef2c8d420ac81eb578d59d63d8001544dc5917fe881cf0
-    sha256: f72661c64aaec806f3ef2c8d420ac81eb578d59d63d8001544dc5917fe881cf0
+    url: https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:ceb62364871eadb386a1834b3a64fa4ff54e6bd076a14b1ebfa35721c030e81d
+    sha256: ceb62364871eadb386a1834b3a64fa4ff54e6bd076a14b1ebfa35721c030e81d
 source:
   url: https://github.com/pytorch/pytorch/releases/download/v2.10.0/pytorch-v2.10.0.tar.gz
   sha256: fa8ccbe87f83f48735505371c1c313b4aa6db400b0ae4f8a02844d1e150c695f
@@ -29,8 +29,9 @@ dependencies:
   - libuv
   - libyaml
   - numpy
+  - onnx
   - openblas
-  - protobuf@33
+  - protobuf
   - sleef
   - libomp
 build_dependencies:
@@ -43,6 +44,7 @@ linux_dependencies:
   - libuv
   - libyaml
   - numpy
+  - onnx
   - openblas
-  - protobuf@33
+  - protobuf
   - sleef

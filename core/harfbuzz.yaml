@@ -1,24 +1,24 @@
 name: harfbuzz
-version: 13.0.0
+version: 13.2.1
 description: OpenType text shaping engine
 homepage: https://github.com/harfbuzz/harfbuzz
 license: MIT
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:bda151a1bfbf79907da734748c575a71ec1c1ff2334b44d4caa249176eb7181a
-    sha256: bda151a1bfbf79907da734748c575a71ec1c1ff2334b44d4caa249176eb7181a
+    url: https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:9d8422fa3f07df372e508585dd4565beb9840d6fedb1e3eab50df8731ef268c2
+    sha256: 9d8422fa3f07df372e508585dd4565beb9840d6fedb1e3eab50df8731ef268c2
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:cb5325b3c3d088fdec3168788c62dc0bb0df909875749a59417696fab4b462cd
-    sha256: cb5325b3c3d088fdec3168788c62dc0bb0df909875749a59417696fab4b462cd
+    url: https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:d3c2db617ec38b61cf24ee0c3f032221e5f863040c571da009852ecb09f47edf
+    sha256: d3c2db617ec38b61cf24ee0c3f032221e5f863040c571da009852ecb09f47edf
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:129751a82e917f40df5d13b1fe2a21d2b0e322d0e814a60eca43d48539e5262e
-    sha256: 129751a82e917f40df5d13b1fe2a21d2b0e322d0e814a60eca43d48539e5262e
+    url: https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:4efe593c84e32a7066b0a3f1f494af75b77d3bb71c54e9a9c97bcdcd53200126
+    sha256: 4efe593c84e32a7066b0a3f1f494af75b77d3bb71c54e9a9c97bcdcd53200126
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:80e87c26e6aaf58d6dfb1e1eaf37d93f2b739269fda1af2534b9ed17b139505f
-    sha256: 80e87c26e6aaf58d6dfb1e1eaf37d93f2b739269fda1af2534b9ed17b139505f
+    url: https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:bfb9d364fe5df167174a640c6b63cb2ed106368189e761fdb70033d966fec217
+    sha256: bfb9d364fe5df167174a640c6b63cb2ed106368189e761fdb70033d966fec217
 source:
-  url: https://github.com/harfbuzz/harfbuzz/releases/download/13.0.0/harfbuzz-13.0.0.tar.xz
-  sha256: 1626ebc763d28f4bcca1531fef42e92ca995d45f8ad90ad2ae0b5d1a567fe67a
+  url: https://github.com/harfbuzz/harfbuzz/releases/download/13.2.1/harfbuzz-13.2.1.tar.xz
+  sha256: 6695da3eb7e1be0aa3092fe4d81433a33b47f4519259c759d729e3a9a55c1429
 install:
   type: archive
   format: tar.gz
@@ -29,9 +29,18 @@ dependencies:
   - glib
   - graphite2
   - icu4c@78
+  - libpng
 build_dependencies:
   - gobject-introspection
   - meson
   - ninja
   - pkgconf
   - python@3.14
+linux_dependencies:
+  - cairo
+  - freetype
+  - glib
+  - graphite2
+  - icu4c@78
+  - libpng
+  - zlib-ng-compat

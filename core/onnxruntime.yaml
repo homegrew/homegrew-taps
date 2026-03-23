@@ -1,24 +1,24 @@
 name: onnxruntime
-version: 1.24.3
+version: 1.24.4
 description: Cross-platform, high performance scoring engine for ML models
 homepage: https://github.com/microsoft/onnxruntime
 license: MIT
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:f9b842d60a3481701173b86968999757599e4b49471196acf45c5002a84adfda
-    sha256: f9b842d60a3481701173b86968999757599e4b49471196acf45c5002a84adfda
+    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:1e6c19f92971fd3b181d432199f9b9f6a60c69ba3bdee811bc960f01da5c7acb
+    sha256: 1e6c19f92971fd3b181d432199f9b9f6a60c69ba3bdee811bc960f01da5c7acb
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:44953690c61dd811b06860b917872f353c22e896d539733a9cfe4321e5ce4ab7
-    sha256: 44953690c61dd811b06860b917872f353c22e896d539733a9cfe4321e5ce4ab7
+    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:1b060f94c8a7f06f2d5abc47f08e3f0638963ccc76d041028d45d056699f5965
+    sha256: 1b060f94c8a7f06f2d5abc47f08e3f0638963ccc76d041028d45d056699f5965
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:c3f9bae89bc75aab7df601363e0cc6332531923caee21ed1acd7c23c11f3ea3f
-    sha256: c3f9bae89bc75aab7df601363e0cc6332531923caee21ed1acd7c23c11f3ea3f
+    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:f32f75f0ff82bf6d27478d521b4c566c006389f3930d3cc963f1136cd6aae694
+    sha256: f32f75f0ff82bf6d27478d521b4c566c006389f3930d3cc963f1136cd6aae694
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:a850263512d3319b4ec364c8fc5c48be1cce62aa8de4f87c54205e8c0f60f571
-    sha256: a850263512d3319b4ec364c8fc5c48be1cce62aa8de4f87c54205e8c0f60f571
+    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:e708455ac9d0298be30985858b747ad44c30c0a2cc142369909a49c6198d2cd9
+    sha256: e708455ac9d0298be30985858b747ad44c30c0a2cc142369909a49c6198d2cd9
 source:
-  url: https://github.com/microsoft/onnxruntime.git
-  sha256: 
+  url: https://github.com/microsoft/onnxruntime/archive/refs/tags/v1.24.4.tar.gz
+  sha256: 0cf4d2ee4392fbb8aedaabc6b2ba11b4a680d1071fa4f75546c2289ca5b404cf
 install:
   type: archive
   format: tar.gz
@@ -26,7 +26,7 @@ install:
 dependencies:
   - abseil
   - onnx
-  - protobuf@33
+  - protobuf
   - re2
 build_dependencies:
   - boost

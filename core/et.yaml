@@ -1,0 +1,38 @@
+name: et
+version: 6.2.11
+description: Remote terminal with IP roaming
+homepage: https://mistertea.github.io/EternalTerminal/
+license: Apache-2.0
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/et/blobs/sha256:c14ad953bcc4571ce51e889d15557bad0a15ddb203d8b73bf0ccac823f5f1405
+    sha256: c14ad953bcc4571ce51e889d15557bad0a15ddb203d8b73bf0ccac823f5f1405
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/et/blobs/sha256:acdda6aa6132c0e9652c901c806acd5f3d2a05b71a1f73c8ab182b8dea643dc2
+    sha256: acdda6aa6132c0e9652c901c806acd5f3d2a05b71a1f73c8ab182b8dea643dc2
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/et/blobs/sha256:0cc0303a8c6dd42fddfc899880ee2f60d3264817837a628bcd2e6595005f8e3b
+    sha256: 0cc0303a8c6dd42fddfc899880ee2f60d3264817837a628bcd2e6595005f8e3b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/et/blobs/sha256:776af490681d4b07a0ab51a5dd3bd1164b7db1d7064d0195c36d8ebcb3ba76df
+    sha256: 776af490681d4b07a0ab51a5dd3bd1164b7db1d7064d0195c36d8ebcb3ba76df
+source:
+  url: https://github.com/MisterTea/EternalTerminal/archive/refs/tags/et-v6.2.11.tar.gz
+  sha256: e8e80800babc026be610d50d402a8ecbdfbd39e130d1cfeb51fb102c1ad63b0f
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - libsodium
+  - openssl@3
+  - protobuf
+build_dependencies:
+  - cmake
+  - pkgconf
+linux_dependencies:
+  - brotli
+  - libsodium
+  - openssl@3
+  - protobuf
+  - zlib-ng-compat

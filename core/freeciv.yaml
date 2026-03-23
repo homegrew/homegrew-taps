@@ -1,62 +1,59 @@
 name: freeciv
-version: 3.2.3
+version: 3.2.4
 description: Free and Open Source empire-building strategy game
 homepage: https://freeciv.org/
 license: GPL-2.0-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/freeciv/blobs/sha256:3cbe6eaa8f40c6e4644eb1bb7d5af97f3425fd1f3378ff7d133c6673780c6e18
-    sha256: 3cbe6eaa8f40c6e4644eb1bb7d5af97f3425fd1f3378ff7d133c6673780c6e18
+    url: https://ghcr.io/v2/homebrew/core/freeciv/blobs/sha256:109cfd1ecf6d7b7a583e63adcf244196d5b11fc1be132bef50c51d4a69f07453
+    sha256: 109cfd1ecf6d7b7a583e63adcf244196d5b11fc1be132bef50c51d4a69f07453
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/freeciv/blobs/sha256:f34c1a025f36b55ac16f1790b6f9e282c299a61bf4fc1f19cad9d55f16a8852f
-    sha256: f34c1a025f36b55ac16f1790b6f9e282c299a61bf4fc1f19cad9d55f16a8852f
+    url: https://ghcr.io/v2/homebrew/core/freeciv/blobs/sha256:da78add7aeb770b21dc4e52682b281963a01cf8a324d15703db5cd1f852f6f8b
+    sha256: da78add7aeb770b21dc4e52682b281963a01cf8a324d15703db5cd1f852f6f8b
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/freeciv/blobs/sha256:9a114b68ec923737b713e617b4cc19c5ad25113ca27ccda5beb382dae48a1cae
-    sha256: 9a114b68ec923737b713e617b4cc19c5ad25113ca27ccda5beb382dae48a1cae
+    url: https://ghcr.io/v2/homebrew/core/freeciv/blobs/sha256:8f2bf88e394e20849d65b6b5283b4d3661b7ccf3b7faa00ad8598f1862d52771
+    sha256: 8f2bf88e394e20849d65b6b5283b4d3661b7ccf3b7faa00ad8598f1862d52771
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/freeciv/blobs/sha256:f926a11483072bd11599bfe1fead4d63a6a42955b217139f5d48e31b431ac468
-    sha256: f926a11483072bd11599bfe1fead4d63a6a42955b217139f5d48e31b431ac468
+    url: https://ghcr.io/v2/homebrew/core/freeciv/blobs/sha256:319677b0a829fb1aad86babc3ae3175ca0996d08a42ad5ae370cddcf08d0c26e
+    sha256: 319677b0a829fb1aad86babc3ae3175ca0996d08a42ad5ae370cddcf08d0c26e
 source:
-  url: https://downloads.sourceforge.net/project/freeciv/Freeciv%203.2/3.2.3/freeciv-3.2.3.tar.xz
-  sha256: 989d6d58bd4cd97a4899e7e25afdee6c35fd03f87a379428a6e196d600d8d307
+  url: https://downloads.sourceforge.net/project/freeciv/Freeciv%203.2/3.2.4/freeciv-3.2.4.tar.xz
+  sha256: e0a19508bf69dc4fb7c251d391253794d772bfcce2dbd30fa453521244edd32c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - adwaita-icon-theme
-  - at-spi2-core
   - cairo
-  - freetype
   - gdk-pixbuf
-  - gettext
   - glib
-  - gtk+3
-  - harfbuzz
+  - gtk4
   - icu4c@78
+  - lua
   - pango
   - readline
   - sdl2
   - sdl2_mixer
-  - sqlite
+  - xz
   - zstd
+  - gettext
 build_dependencies:
+  - meson
+  - ninja
   - pkgconf
 linux_dependencies:
   - adwaita-icon-theme
-  - at-spi2-core
   - cairo
-  - freetype
   - gdk-pixbuf
-  - gettext
   - glib
-  - gtk+3
-  - harfbuzz
+  - gtk4
   - icu4c@78
+  - lua
   - pango
   - readline
   - sdl2
   - sdl2_mixer
-  - sqlite
+  - xz
   - zlib-ng-compat
   - zstd

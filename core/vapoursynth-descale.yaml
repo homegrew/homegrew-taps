@@ -1,0 +1,31 @@
+name: vapoursynth-descale
+version: 8
+description: VapourSynth plugin to undo upscaling
+homepage: https://github.com/Irrational-Encoding-Wizardry/descale
+license: MIT
+bottle:
+  darwin_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-descale/blobs/sha256:367adf1613ed0354d8a93588f765437e072bc9c2fcfa7cd8cbcef9291f38475d
+    sha256: 367adf1613ed0354d8a93588f765437e072bc9c2fcfa7cd8cbcef9291f38475d
+  darwin_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-descale/blobs/sha256:46b58d656b8b7a374e1a759ca4e10e786d29356084308ed06d97f9919c56ce7d
+    sha256: 46b58d656b8b7a374e1a759ca4e10e786d29356084308ed06d97f9919c56ce7d
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-descale/blobs/sha256:9b57118f0638ab218aadc619c10a0790d97676ee8f0fee8de3ae9e8daf027fc8
+    sha256: 9b57118f0638ab218aadc619c10a0790d97676ee8f0fee8de3ae9e8daf027fc8
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/vapoursynth-descale/blobs/sha256:268756b29d7c04d9f28f6142462a51c77d6ab779b06011d12b42e6c71f18e279
+    sha256: 268756b29d7c04d9f28f6142462a51c77d6ab779b06011d12b42e6c71f18e279
+source:
+  url: https://github.com/Irrational-Encoding-Wizardry/descale/archive/refs/tags/r8.tar.gz
+  sha256: 317d955cc2dfbc3fd1aecef2ea2d56e4f1cd99434492d71c6a1d48213ff35972
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - vapoursynth
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf

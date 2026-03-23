@@ -1,21 +1,21 @@
 name: llama.cpp
-version: 8230
+version: 8480
 description: LLM inference in C/C++
 homepage: https://github.com/ggml-org/llama.cpp
 license: MIT
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/llama.cpp/blobs/sha256:673fa4563547b6a6353277a85fd2fd1ebf1ca0333b0177c3176b38ede9224d54
-    sha256: 673fa4563547b6a6353277a85fd2fd1ebf1ca0333b0177c3176b38ede9224d54
+    url: https://ghcr.io/v2/homebrew/core/llama.cpp/blobs/sha256:b20c304613acf994d617a295483a1bf419f79b9c59c21c4bc892345a33573882
+    sha256: b20c304613acf994d617a295483a1bf419f79b9c59c21c4bc892345a33573882
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/llama.cpp/blobs/sha256:ab2de5f17fbd94de08337ac9b40fb8f8ac712f9c4dbf3ffeb56cc6433e414bfa
-    sha256: ab2de5f17fbd94de08337ac9b40fb8f8ac712f9c4dbf3ffeb56cc6433e414bfa
+    url: https://ghcr.io/v2/homebrew/core/llama.cpp/blobs/sha256:24140ab869b59d1efdba3e7db31ed1e03d45208f54afcab0801f1b9eab93311f
+    sha256: 24140ab869b59d1efdba3e7db31ed1e03d45208f54afcab0801f1b9eab93311f
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/llama.cpp/blobs/sha256:c50c8f175c39cdf5a2891c406b562dca8049c88f6bfa40d2bfc123dd310adfa3
-    sha256: c50c8f175c39cdf5a2891c406b562dca8049c88f6bfa40d2bfc123dd310adfa3
+    url: https://ghcr.io/v2/homebrew/core/llama.cpp/blobs/sha256:69142176a6e16f20b0e7c907a38800579d67a7540c7730b22cb99c9b775c7cd1
+    sha256: 69142176a6e16f20b0e7c907a38800579d67a7540c7730b22cb99c9b775c7cd1
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/llama.cpp/blobs/sha256:6c084c8214934ef179665f58d704b2cf7250d0844596b56933cbb21733e1a61a
-    sha256: 6c084c8214934ef179665f58d704b2cf7250d0844596b56933cbb21733e1a61a
+    url: https://ghcr.io/v2/homebrew/core/llama.cpp/blobs/sha256:56de48f8e4c359701e0e0b7905db219099e2b7f2940a741bcff2fef68745462b
+    sha256: 56de48f8e4c359701e0e0b7905db219099e2b7f2940a741bcff2fef68745462b
 source:
   url: https://github.com/ggml-org/llama.cpp.git
   sha256: 
@@ -24,10 +24,7 @@ install:
   format: tar.gz
   strip_components: 2
 dependencies:
+  - ggml
   - openssl@3
 build_dependencies:
   - cmake
-  - pkgconf
-linux_dependencies:
-  - openblas
-  - openssl@3

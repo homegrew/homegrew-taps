@@ -1,24 +1,24 @@
 name: fwupd
-version: 2.0.20
+version: 2.1.1
 description: Firmware update daemon
 homepage: https://github.com/fwupd/fwupd
 license: LGPL-2.1-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fwupd/blobs/sha256:f02db25fe25e03c3caf97cfcc8464c5495b143e96c7d6b808e476618478e5063
-    sha256: f02db25fe25e03c3caf97cfcc8464c5495b143e96c7d6b808e476618478e5063
+    url: https://ghcr.io/v2/homebrew/core/fwupd/blobs/sha256:78b0a4e435cba73b480495b554ddc03141e8faad8e51610e3173c75220d10bc1
+    sha256: 78b0a4e435cba73b480495b554ddc03141e8faad8e51610e3173c75220d10bc1
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fwupd/blobs/sha256:6e14d639902116b5eb0ff6981dd20acd8c7dd15e1f3fb26388b7638aeb5e9949
-    sha256: 6e14d639902116b5eb0ff6981dd20acd8c7dd15e1f3fb26388b7638aeb5e9949
+    url: https://ghcr.io/v2/homebrew/core/fwupd/blobs/sha256:36b3d2a6996c800b1039827469aa6a6845f2f2ef6268d32732a1b3c2094b0e63
+    sha256: 36b3d2a6996c800b1039827469aa6a6845f2f2ef6268d32732a1b3c2094b0e63
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fwupd/blobs/sha256:140928bd8985ee49e3d470de4545ad797d363b1ebd296a5b072247d0c65310ae
-    sha256: 140928bd8985ee49e3d470de4545ad797d363b1ebd296a5b072247d0c65310ae
+    url: https://ghcr.io/v2/homebrew/core/fwupd/blobs/sha256:a31c8b63590dec1fe0abea7b1ba9ddb0b454b201e79023ad4dedf08233ee6461
+    sha256: a31c8b63590dec1fe0abea7b1ba9ddb0b454b201e79023ad4dedf08233ee6461
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fwupd/blobs/sha256:16cba80279645f7f0eeb0c082aebe0e9b7a49bdfdf059c11225a27f4095164df
-    sha256: 16cba80279645f7f0eeb0c082aebe0e9b7a49bdfdf059c11225a27f4095164df
+    url: https://ghcr.io/v2/homebrew/core/fwupd/blobs/sha256:87a4a084eda8deab87794d7d895ff86daad0dce9744b67936d330f40d1c49942
+    sha256: 87a4a084eda8deab87794d7d895ff86daad0dce9744b67936d330f40d1c49942
 source:
-  url: https://github.com/fwupd/fwupd/releases/download/2.0.20/fwupd-2.0.20.tar.xz
-  sha256: 431fb30fb27500ca55ae515d2fbda69878b58247cd4031d5c79f88b166db70c9
+  url: https://github.com/fwupd/fwupd/releases/download/2.1.1/fwupd-2.1.1.tar.xz
+  sha256: 0ae697f1f2011571310cef5d96429d8a5d541f73b0025bd2b622c9c7f4fe05b6
 install:
   type: archive
   format: tar.gz
@@ -26,13 +26,10 @@ install:
 dependencies:
   - glib
   - gnutls
-  - json-glib
-  - libarchive
   - libcbor
   - libjcat
   - libusb
   - libxmlb
-  - protobuf-c
   - readline
   - sqlite
   - usb.ids
@@ -49,13 +46,10 @@ build_dependencies:
 linux_dependencies:
   - glib
   - gnutls
-  - json-glib
-  - libarchive
   - libcbor
   - libjcat
   - libusb
   - libxmlb
-  - protobuf-c
   - readline
   - sqlite
   - usb.ids
