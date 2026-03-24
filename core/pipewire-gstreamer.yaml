@@ -1,0 +1,27 @@
+name: pipewire-gstreamer
+version: 1.6.2
+description: GStreamer Plugin for PipeWire
+homepage: https://pipewire.org
+license: MIT
+bottle:
+  linux_amd64:
+    url: https://ghcr.io/v2/homebrew/core/pipewire-gstreamer/blobs/sha256:154f32dce5a913be0bfac715017398d15fe38f97db96bad129dbd6d941be280b
+    sha256: 154f32dce5a913be0bfac715017398d15fe38f97db96bad129dbd6d941be280b
+  linux_arm64:
+    url: https://ghcr.io/v2/homebrew/core/pipewire-gstreamer/blobs/sha256:ee4e435ed86521beb4b421b9e6781a00982dae23a6de7747fdb55ab1639a5530
+    sha256: ee4e435ed86521beb4b421b9e6781a00982dae23a6de7747fdb55ab1639a5530
+source:
+  url: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.2/pipewire-1.6.2.tar.gz
+  sha256: 2014c187fccdd6d245585be4eda7dabd781dcddd921604c40ab015bba6cb042d
+install:
+  type: archive
+  format: tar.gz
+  strip_components: 2
+dependencies:
+  - glib
+  - gstreamer
+  - pipewire
+build_dependencies:
+  - meson
+  - ninja
+  - pkgconf
