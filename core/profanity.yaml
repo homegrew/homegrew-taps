@@ -1,47 +1,61 @@
 name: profanity
-version: 0.16.0
+version: 0.18.0
 description: Console based XMPP client
 homepage: https://profanity-im.github.io
 license: GPL-3.0-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:669b57ae421eea14e623d6306d16f62f8a3e7e5ac52fc69b6283d4a15f79ca9d
-    sha256: 669b57ae421eea14e623d6306d16f62f8a3e7e5ac52fc69b6283d4a15f79ca9d
+    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:6ff33b65801254c3f687f682c32a4a2bf5ff7294a5ca17c73f9001eec73e3651
+    sha256: 6ff33b65801254c3f687f682c32a4a2bf5ff7294a5ca17c73f9001eec73e3651
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:7d238042c8a6f2c67b8ff2bbf60e4e2902212976c613257fb2cd5adb39c6f061
-    sha256: 7d238042c8a6f2c67b8ff2bbf60e4e2902212976c613257fb2cd5adb39c6f061
+    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:28226b645ad41cda17521ea9b5d265429cf74fdc2ef59a3a1297cd5fc48ca8c7
+    sha256: 28226b645ad41cda17521ea9b5d265429cf74fdc2ef59a3a1297cd5fc48ca8c7
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:b041c981823cfc9d4bb96e6d78b49a040834b1cbbb6bdf5e759ec9b5b4824ee6
-    sha256: b041c981823cfc9d4bb96e6d78b49a040834b1cbbb6bdf5e759ec9b5b4824ee6
+    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:1ddd88181401770e9b1583f21228e01edb8bc721efee0fb0aa21a3b5928b8bc4
+    sha256: 1ddd88181401770e9b1583f21228e01edb8bc721efee0fb0aa21a3b5928b8bc4
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:bbfb37674269d2c6acd616e77c6022e346181b7093fb30b05e1c60343d48dffd
-    sha256: bbfb37674269d2c6acd616e77c6022e346181b7093fb30b05e1c60343d48dffd
+    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:11b138269c95cdd14e315f142874ed3f4b5dcd94d4b6bf80577922181248f40e
+    sha256: 11b138269c95cdd14e315f142874ed3f4b5dcd94d4b6bf80577922181248f40e
 source:
-  url: https://profanity-im.github.io/tarballs/profanity-0.16.0.tar.gz
-  sha256: 1f2e36a081cd299173f1c12b64b1cef971063e67bf226fb3f7048f2e67bd6a70
+  url: https://profanity-im.github.io/tarballs/profanity-0.18.0.tar.xz
+  sha256: a1ad441bf92ba0327e0740a15dfe7885cb14415a934c850b8b98ac2f728d7cf8
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
+  - gdk-pixbuf
   - glib
   - gpgme
+  - gtk+3
+  - libgcrypt
+  - libomemo-c
   - libotr
   - libstrophe
+  - libx11
+  - libxscrnsaver
   - python@3.14
+  - qrencode
   - readline
   - sqlite
-  - gettext
-  - libassuan
-  - libgpg-error
   - terminal-notifier
 build_dependencies:
+  - meson
+  - ninja
   - pkgconf
 linux_dependencies:
+  - gdk-pixbuf
   - glib
   - gpgme
+  - gtk+3
+  - libgcrypt
+  - libnotify
+  - libomemo-c
   - libotr
   - libstrophe
+  - libx11
+  - libxscrnsaver
   - python@3.14
+  - qrencode
   - readline
   - sqlite

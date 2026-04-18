@@ -1,24 +1,24 @@
 name: nut
-version: 2.8.4
+version: 2.8.5
 description: "Network UPS Tools: Support for various power devices"
 homepage: https://networkupstools.org/
 license: GPL-2.0-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:7a95f6f8b57362fe1a44db874c3e153df30cc6d6d7a1a12b1a8e4c67cda1a7e0
-    sha256: 7a95f6f8b57362fe1a44db874c3e153df30cc6d6d7a1a12b1a8e4c67cda1a7e0
+    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:3fe4c8bea0483722456da80d1565be5954b382243d0ca7daa19038d0705f1be9
+    sha256: 3fe4c8bea0483722456da80d1565be5954b382243d0ca7daa19038d0705f1be9
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:4865b9977f2d21a810a111e7d3d72f210f8081be30b19c1fe91be9dd8dc89303
-    sha256: 4865b9977f2d21a810a111e7d3d72f210f8081be30b19c1fe91be9dd8dc89303
+    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b
+    sha256: e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:2667c1b9ef3f1e6b2e3717f2241fd9b64a8cf0987274d49af7a4bc04d6804b9e
-    sha256: 2667c1b9ef3f1e6b2e3717f2241fd9b64a8cf0987274d49af7a4bc04d6804b9e
+    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:0648f8942e42afe5625ce26a6653fc263de93d5f8c402649b4af60eba88495f6
+    sha256: 0648f8942e42afe5625ce26a6653fc263de93d5f8c402649b4af60eba88495f6
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:ad0050eafb34fdd77245bbc97e046c37f83c01e42e300c63e897adbd97ed9e05
-    sha256: ad0050eafb34fdd77245bbc97e046c37f83c01e42e300c63e897adbd97ed9e05
+    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:8f5ff079a039c0bd20bf1fb9db3286a82ef5f021e470c8ef30464a225c9b4d5c
+    sha256: 8f5ff079a039c0bd20bf1fb9db3286a82ef5f021e470c8ef30464a225c9b4d5c
 source:
-  url: https://github.com/networkupstools/nut/releases/download/v2.8.4/nut-2.8.4.tar.gz
-  sha256: 0130ba82ea79f04ba4f34c5249a85943977efd984ed7df6aec1a518d5a3594f8
+  url: https://github.com/networkupstools/nut/releases/download/v2.8.5/nut-2.8.5.tar.gz
+  sha256: 18bf32e59eb764b13da3c4fa70384926d7fa584cb31d2fe7f137a570633eeec1
 install:
   type: archive
   format: tar.gz
@@ -32,6 +32,7 @@ build_dependencies:
   - libtool
   - pkgconf
 linux_dependencies:
+  - glib
   - libusb
   - openssl@3
   - systemd

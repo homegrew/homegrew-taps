@@ -1,24 +1,24 @@
 name: mcp-atlassian
-version: 0.21.0
+version: 0.21.1
 description: MCP server for Atlassian tools (Confluence, Jira)
 homepage: https://github.com/sooperset/mcp-atlassian
 license: MIT
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mcp-atlassian/blobs/sha256:111539a1a34fac60896682dea380ab23527ca42bb870751017d98d9b542b6dfd
-    sha256: 111539a1a34fac60896682dea380ab23527ca42bb870751017d98d9b542b6dfd
+    url: https://ghcr.io/v2/homebrew/core/mcp-atlassian/blobs/sha256:10ca116ff5746356a08d515de98ca61e05c61e4700c62190dd801d0bcd2e9ecf
+    sha256: 10ca116ff5746356a08d515de98ca61e05c61e4700c62190dd801d0bcd2e9ecf
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mcp-atlassian/blobs/sha256:a9c9aeb2cb6959173508befe903df6c652b655d6291d2455acf9d9fa35fcbfe2
-    sha256: a9c9aeb2cb6959173508befe903df6c652b655d6291d2455acf9d9fa35fcbfe2
+    url: https://ghcr.io/v2/homebrew/core/mcp-atlassian/blobs/sha256:096ffaca69d4ef06157dbdadcb2529c46301c8673f794856441d8050c6cb9d1d
+    sha256: 096ffaca69d4ef06157dbdadcb2529c46301c8673f794856441d8050c6cb9d1d
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mcp-atlassian/blobs/sha256:0f24dc1037baafcfc1207ced4c1a4a8ebd062e61ccc94e517dfe4db3e1fd52e9
-    sha256: 0f24dc1037baafcfc1207ced4c1a4a8ebd062e61ccc94e517dfe4db3e1fd52e9
+    url: https://ghcr.io/v2/homebrew/core/mcp-atlassian/blobs/sha256:77e171a1872599f9d24ffb38251a6a49a9059ca7ebce37b428e9bbfeb2117c81
+    sha256: 77e171a1872599f9d24ffb38251a6a49a9059ca7ebce37b428e9bbfeb2117c81
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mcp-atlassian/blobs/sha256:9e7d749a5e85e250c4e03e96768b4084eef2e232a8538312034dbd97b6c501b5
-    sha256: 9e7d749a5e85e250c4e03e96768b4084eef2e232a8538312034dbd97b6c501b5
+    url: https://ghcr.io/v2/homebrew/core/mcp-atlassian/blobs/sha256:731ae72cbda346d30a4df3d0792fc396c34ea04e9a04210fb5ab3f27394ad126
+    sha256: 731ae72cbda346d30a4df3d0792fc396c34ea04e9a04210fb5ab3f27394ad126
 source:
-  url: https://files.pythonhosted.org/packages/8c/dd/c086f89ed69b1968a59a3c4d25e4d83b446a0f78a3876bbda30f94957a6a/mcp_atlassian-0.21.0.tar.gz
-  sha256: a7dc462c63cbb168c2b3497a1021e47fd7778cfd7e88d55a889e376a6c75fc4c
+  url: https://files.pythonhosted.org/packages/c3/44/d879210be4178c408fbd8971f8dd36e9abc7ba3d729f7ccd4b790e73c1f6/mcp_atlassian-0.21.1.tar.gz
+  sha256: dff6c81541506cb0cc80d7ac9900ffdcb246fec7808e41e8df73c09dd4a28074
 install:
   type: archive
   format: tar.gz
@@ -31,4 +31,6 @@ dependencies:
   - python@3.14
   - rpds-py
 build_dependencies:
+  - luajit
+  - pkgconf
   - rust

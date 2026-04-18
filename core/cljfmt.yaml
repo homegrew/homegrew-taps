@@ -1,29 +1,27 @@
 name: cljfmt
-version: 0.16.3
+version: 0.16.4
 description: Formatting Clojure code
 homepage: https://github.com/weavejester/cljfmt
 license: EPL-1.0
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cljfmt/blobs/sha256:8abd34902376fc90c868478bea6311345bf74327cd9816313eb1382625e14ae7
-    sha256: 8abd34902376fc90c868478bea6311345bf74327cd9816313eb1382625e14ae7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cljfmt/blobs/sha256:c55ad099cc4bca60ef9744bfcd7ab3ba61c8dc89f525a0700a0767b718f06a8a
-    sha256: c55ad099cc4bca60ef9744bfcd7ab3ba61c8dc89f525a0700a0767b718f06a8a
+    url: https://ghcr.io/v2/homebrew/core/cljfmt/blobs/sha256:aa43d77791fcb0adde469c62c800dd0808182ab27e9ec1a381eac870f0a39edb
+    sha256: aa43d77791fcb0adde469c62c800dd0808182ab27e9ec1a381eac870f0a39edb
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cljfmt/blobs/sha256:37dc11b9b454cc8d8293fc74194dd07c89066b6913237eb8d6bf1fac006448f1
-    sha256: 37dc11b9b454cc8d8293fc74194dd07c89066b6913237eb8d6bf1fac006448f1
+    url: https://ghcr.io/v2/homebrew/core/cljfmt/blobs/sha256:fbd711421832d54ceb1cc4e7a8b419da0077749c294e18e3a62f5bda9e720fec
+    sha256: fbd711421832d54ceb1cc4e7a8b419da0077749c294e18e3a62f5bda9e720fec
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cljfmt/blobs/sha256:009dd1dfc3765bb1ba2de3c4e7d31104cfeeb4aec598f69c69a9308722348ead
-    sha256: 009dd1dfc3765bb1ba2de3c4e7d31104cfeeb4aec598f69c69a9308722348ead
+    url: https://ghcr.io/v2/homebrew/core/cljfmt/blobs/sha256:8bfc5e49d040f1261c9c7ad4f8d6a29a66f451572483804260ec0907ce41ee82
+    sha256: 8bfc5e49d040f1261c9c7ad4f8d6a29a66f451572483804260ec0907ce41ee82
 source:
-  url: https://github.com/weavejester/cljfmt/archive/refs/tags/0.16.3.tar.gz
-  sha256: 31e0588f3db0f7f1a69cc4c4922d5686731ef9353fee4d15b0bcef05bf3fc86b
+  url: https://github.com/weavejester/cljfmt/archive/refs/tags/0.16.4.tar.gz
+  sha256: 78f15de8726792f606f35c01bf9cb2b266e95f51938751335163f0d16404c56c
 install:
   type: archive
   format: tar.gz
   strip_components: 2
-dependencies:
-  - openjdk
 build_dependencies:
+  - graalvm
   - leiningen
+linux_dependencies:
+  - zlib-ng-compat

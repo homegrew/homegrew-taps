@@ -2,20 +2,20 @@ name: ffmpeg
 version: 8.1
 description: Play, record, convert, and stream select audio and video codecs
 homepage: https://ffmpeg.org/
-license: GPL-2.0-or-later
+license: GPL-3.0-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:7799f9b312c176157e897e87f07d23249b0da377573f93863f2a0934a8eb5da2
-    sha256: 7799f9b312c176157e897e87f07d23249b0da377573f93863f2a0934a8eb5da2
+    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:024e65624fd6c45be22c5584824a58f9d1574f011de2ab8663deb24859d7c270
+    sha256: 024e65624fd6c45be22c5584824a58f9d1574f011de2ab8663deb24859d7c270
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:da49bd1a0fb3cda65ccb444321a53f91e763051f41ac910e418187dd9ee6ccba
-    sha256: da49bd1a0fb3cda65ccb444321a53f91e763051f41ac910e418187dd9ee6ccba
+    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:a8436e19dbac435e356681824c94cd67d7382409241a0b748333568cbc85a972
+    sha256: a8436e19dbac435e356681824c94cd67d7382409241a0b748333568cbc85a972
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:08a5335d86b762b5079a1ccb37496dd59c4064490f2aff40f21f107cb51ff5c6
-    sha256: 08a5335d86b762b5079a1ccb37496dd59c4064490f2aff40f21f107cb51ff5c6
+    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:f6e9a913d33d319cc4c47876c71d06b91ef6e37df94555052d2674b7fed159e2
+    sha256: f6e9a913d33d319cc4c47876c71d06b91ef6e37df94555052d2674b7fed159e2
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:62b4efe1ea8f74a3f677a3a3aa7321476eb8f6baccaf7c466bc7467f20d7cf2f
-    sha256: 62b4efe1ea8f74a3f677a3a3aa7321476eb8f6baccaf7c466bc7467f20d7cf2f
+    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:b35368cffecc23ce31d656f0d1e27b594562de8398e7685e7dca3b293ffc2676
+    sha256: b35368cffecc23ce31d656f0d1e27b594562de8398e7685e7dca3b293ffc2676
 source:
   url: https://ffmpeg.org/releases/ffmpeg-8.1.tar.xz
   sha256: b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a
@@ -26,6 +26,7 @@ install:
 dependencies:
   - dav1d
   - lame
+  - libvmaf
   - libvpx
   - openssl@3
   - opus
@@ -39,6 +40,7 @@ linux_dependencies:
   - alsa-lib
   - dav1d
   - lame
+  - libvmaf
   - libvpx
   - libxcb
   - openssl@3

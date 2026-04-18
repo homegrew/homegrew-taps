@@ -1,24 +1,24 @@
 name: recc
-version: 1.4.1
+version: 1.4.3
 description: Remote Execution Caching Compiler
 homepage: https://buildgrid.gitlab.io/recc
 license: Apache-2.0
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:1394f89351299f5dfef34ff3fe7f7a7148695b5bcf509dd9018a1722131b1fc2
-    sha256: 1394f89351299f5dfef34ff3fe7f7a7148695b5bcf509dd9018a1722131b1fc2
+    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:ecc455fcd43cda17016ccc1080fdd74da82f2975eeba17cb2d19d3437bdb933e
+    sha256: ecc455fcd43cda17016ccc1080fdd74da82f2975eeba17cb2d19d3437bdb933e
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:e198d4887ff661ba147010aefe39940f340b34efd76ab330cdc26a118d4e011b
-    sha256: e198d4887ff661ba147010aefe39940f340b34efd76ab330cdc26a118d4e011b
+    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:c0c90f3c5ffbf6d8f71ad049b1311729752581332f6e409f29848c916971eb21
+    sha256: c0c90f3c5ffbf6d8f71ad049b1311729752581332f6e409f29848c916971eb21
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:f2406374498c07c6a31e8a3a12f9b9160401eb3b9c09f6b9885c1ba7e6ffa121
-    sha256: f2406374498c07c6a31e8a3a12f9b9160401eb3b9c09f6b9885c1ba7e6ffa121
+    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:f8e97a70de6bd28f9e0bdbbc75417a5a63b23d6111a0c762df695a1f4099cecb
+    sha256: f8e97a70de6bd28f9e0bdbbc75417a5a63b23d6111a0c762df695a1f4099cecb
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:cad7589f759e4f3f8352aac0c32e2aff968daa8ae73b05bfaba07832ae04af2e
-    sha256: cad7589f759e4f3f8352aac0c32e2aff968daa8ae73b05bfaba07832ae04af2e
+    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:b85f69cd7d58b3f5497133b3a9b8196052b3cc4f5f9899b703ce04a61e26779e
+    sha256: b85f69cd7d58b3f5497133b3a9b8196052b3cc4f5f9899b703ce04a61e26779e
 source:
-  url: https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.1/buildbox-1.4.1.tar.gz
-  sha256: 3463e6ed7100dc8ae601cfa38badc3fd9e771873980defc5a583fd8d251f9118
+  url: https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.3/buildbox-1.4.3.tar.gz
+  sha256: 87ebed00ad061bbc3c4faa1fb3e764222ab9b8b0397c610aebb071eace3aedf4
 install:
   type: archive
   format: tar.gz
@@ -26,12 +26,10 @@ install:
 dependencies:
   - abseil
   - c-ares
-  - glog
   - grpc
   - openssl@3
   - protobuf
   - re2
-  - gflags
 build_dependencies:
   - cmake
   - gettext
@@ -41,7 +39,6 @@ build_dependencies:
 linux_dependencies:
   - abseil
   - c-ares
-  - glog
   - grpc
   - openssl@3
   - protobuf

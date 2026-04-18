@@ -1,33 +1,34 @@
 name: pyside
-version: 6.10.2
+version: 6.11.0
 description: Official Python bindings for Qt
 homepage: https://wiki.qt.io/Qt_for_Python
 license: (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only)
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:1d31e4d4410de481977b89ba7fc1c57dece74cd4064bbc35486cac7e40c7957b
-    sha256: 1d31e4d4410de481977b89ba7fc1c57dece74cd4064bbc35486cac7e40c7957b
+    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:03512803455b2775535c47a6945ae7bcf84f6631f1ca5bfc2aaa95b141770a2e
+    sha256: 03512803455b2775535c47a6945ae7bcf84f6631f1ca5bfc2aaa95b141770a2e
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:1e3394704be6e83f8d192f5d082e640d590a72bb32f55056f81b49ca672d0670
-    sha256: 1e3394704be6e83f8d192f5d082e640d590a72bb32f55056f81b49ca672d0670
+    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:47c83f6c0174a63f0c1e31e7e81ab1ed92a8ba2d04a89a6cad01175e279110c9
+    sha256: 47c83f6c0174a63f0c1e31e7e81ab1ed92a8ba2d04a89a6cad01175e279110c9
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:9850022e3918536a2fb7896ff48db57e704cab0d8bd5e92017853105ce11000c
-    sha256: 9850022e3918536a2fb7896ff48db57e704cab0d8bd5e92017853105ce11000c
+    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:c8911cfb4c34770f42717b86b5d16ffaf4fc10fd28b61caacbc2474876de8764
+    sha256: c8911cfb4c34770f42717b86b5d16ffaf4fc10fd28b61caacbc2474876de8764
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:6c68c71db54c96b7d1aad68214b422b5a14b0faf71847152a8c6b74896e339d3
-    sha256: 6c68c71db54c96b7d1aad68214b422b5a14b0faf71847152a8c6b74896e339d3
+    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:e12ac78636758b76581e17da03d61f1fa8ec78c02c5977901cc241ec06cba4c6
+    sha256: e12ac78636758b76581e17da03d61f1fa8ec78c02c5977901cc241ec06cba4c6
 source:
-  url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.10.2-src/pyside-setup-everywhere-src-6.10.2.tar.xz
-  sha256: 05eec38bb71bffff8860786e3c0766cc4b86affc72439bd246c54889bdcb7400
+  url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.0-src/pyside-setup-everywhere-src-6.11.0.tar.xz
+  sha256: 48d5c44d7c3ed861055d5491486e6a220ef5006573cae01a5fae3fb69d786336
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
-  - llvm
+  - llvm@21
   - python@3.14
   - qt3d
   - qtbase
+  - qtcanvaspainter
   - qtcharts
   - qtconnectivity
   - qtdatavis3d
@@ -58,11 +59,12 @@ build_dependencies:
   - python-setuptools
   - qtshadertools
 linux_dependencies:
-  - llvm
+  - llvm@21
   - mesa
   - python@3.14
   - qt3d
   - qtbase
+  - qtcanvaspainter
   - qtcharts
   - qtconnectivity
   - qtdatavis3d

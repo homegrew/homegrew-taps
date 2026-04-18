@@ -1,31 +1,35 @@
 name: pgroonga
-version: 4.0.5
+version: 4.0.6
 description: PostgreSQL plugin to use Groonga as index
 homepage: https://pgroonga.github.io/
 license: PostgreSQL
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgroonga/blobs/sha256:a2f47f7e90efb15b9f07a65039b8da6928ba54f2fc9de435bc9a7528970beafd
-    sha256: a2f47f7e90efb15b9f07a65039b8da6928ba54f2fc9de435bc9a7528970beafd
+    url: https://ghcr.io/v2/homebrew/core/pgroonga/blobs/sha256:c7d13b628043228b867a2d311cf4a13630c26db57c06e7beb24d031fcdf90aec
+    sha256: c7d13b628043228b867a2d311cf4a13630c26db57c06e7beb24d031fcdf90aec
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgroonga/blobs/sha256:a37d21569aec5730eb2b83c5d78a4a26077ca44d15ff028081e515c21081c292
-    sha256: a37d21569aec5730eb2b83c5d78a4a26077ca44d15ff028081e515c21081c292
+    url: https://ghcr.io/v2/homebrew/core/pgroonga/blobs/sha256:42e56a4cc35cad3dbba9993bac2ca1bf61a4d3348a791cb7b9e28b43370a23cd
+    sha256: 42e56a4cc35cad3dbba9993bac2ca1bf61a4d3348a791cb7b9e28b43370a23cd
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgroonga/blobs/sha256:60269dc50f4ea28b4e35c57e0b560cbc4537d7b39774f201a57b4e8523793c8c
-    sha256: 60269dc50f4ea28b4e35c57e0b560cbc4537d7b39774f201a57b4e8523793c8c
+    url: https://ghcr.io/v2/homebrew/core/pgroonga/blobs/sha256:0bfaf194f28687b2e804b6fd5e17b95be323fe5eb461a2aabdc4383a2e123bcc
+    sha256: 0bfaf194f28687b2e804b6fd5e17b95be323fe5eb461a2aabdc4383a2e123bcc
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgroonga/blobs/sha256:56b3138d9ff12939d75e17a1d7425d50a259f5048b6330116bcbf7a3df166c04
-    sha256: 56b3138d9ff12939d75e17a1d7425d50a259f5048b6330116bcbf7a3df166c04
+    url: https://ghcr.io/v2/homebrew/core/pgroonga/blobs/sha256:7056be2b697c3407f960f0fec4e1e0abba10b368d4f95f52469d082de4f0328f
+    sha256: 7056be2b697c3407f960f0fec4e1e0abba10b368d4f95f52469d082de4f0328f
 source:
-  url: https://packages.groonga.org/source/pgroonga/pgroonga-4.0.5.tar.gz
-  sha256: 8fb7f0e559525594b7f2b20eae4495925c842ab86b3e09e256abfdc5be793133
+  url: https://packages.groonga.org/source/pgroonga/pgroonga-4.0.6.tar.gz
+  sha256: d0048944763c18f91bc67e043aafa64c2c53f6246547c9474311efbc05ccfe66
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
   - groonga
+  - msgpack
+  - xxhash
 build_dependencies:
+  - meson
+  - ninja
   - pkgconf
   - postgresql@17
   - postgresql@18

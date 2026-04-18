@@ -1,24 +1,24 @@
 name: node
-version: 25.8.1
+version: 25.9.0
 description: Open-source, cross-platform JavaScript runtime environment
 homepage: https://nodejs.org/
 license: MIT
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/node/blobs/sha256:12aeac1d868bcb3610f8c27978a40c796bbf60f1da79623618b582e612c72f98
-    sha256: 12aeac1d868bcb3610f8c27978a40c796bbf60f1da79623618b582e612c72f98
+    url: https://ghcr.io/v2/homebrew/core/node/blobs/sha256:3432dd22a4f6bb6b6a2decdaa6e39f980518120106b25e8f9032c92e97380938
+    sha256: 3432dd22a4f6bb6b6a2decdaa6e39f980518120106b25e8f9032c92e97380938
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/node/blobs/sha256:f0f04da274a7fcababba13cf43839918f5e5342a8dd46a9605dce8e46ff50408
-    sha256: f0f04da274a7fcababba13cf43839918f5e5342a8dd46a9605dce8e46ff50408
+    url: https://ghcr.io/v2/homebrew/core/node/blobs/sha256:492d9823b1e958a334d664b9694a02d2e2087280d248c398284d75787cdf8733
+    sha256: 492d9823b1e958a334d664b9694a02d2e2087280d248c398284d75787cdf8733
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/node/blobs/sha256:4fad79e85fd0cc8a4012d565297cf4610677ea6dfb2031423a1340e8e014680d
-    sha256: 4fad79e85fd0cc8a4012d565297cf4610677ea6dfb2031423a1340e8e014680d
+    url: https://ghcr.io/v2/homebrew/core/node/blobs/sha256:863422cefaae72ab333d662a64a39e81b97a00065c9bc0e7a460b1b16e010a1b
+    sha256: 863422cefaae72ab333d662a64a39e81b97a00065c9bc0e7a460b1b16e010a1b
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/node/blobs/sha256:a9c6479b41aafb4c1e90513bea8eaecb02395703c1a72ef93c5d641b1f91bfe0
-    sha256: a9c6479b41aafb4c1e90513bea8eaecb02395703c1a72ef93c5d641b1f91bfe0
+    url: https://ghcr.io/v2/homebrew/core/node/blobs/sha256:21c9e2e7f8fb82c2764cddf862baf49e5c86e7483b30902186e63f1f8aa77bbc
+    sha256: 21c9e2e7f8fb82c2764cddf862baf49e5c86e7483b30902186e63f1f8aa77bbc
 source:
-  url: https://nodejs.org/dist/v25.8.1/node-v25.8.1.tar.xz
-  sha256: 0b25b2b5fab80ea8b43fdaa7451f50065571e0bfda2524ca42bde8b98fe4d2d9
+  url: https://nodejs.org/dist/v25.9.0/node-v25.9.0.tar.xz
+  sha256: 8f78af3ee55fb278668b5f801db58bd1a38ea161318eb5ce2128ddbc9cd813aa
 install:
   type: archive
   format: tar.gz
@@ -34,6 +34,8 @@ dependencies:
   - libngtcp2
   - libuv
   - llhttp
+  - merve
+  - nbytes
   - openssl@3
   - simdjson
   - sqlite
@@ -53,6 +55,8 @@ linux_dependencies:
   - libngtcp2
   - libuv
   - llhttp
+  - merve
+  - nbytes
   - openssl@3
   - simdjson
   - sqlite

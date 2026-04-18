@@ -1,28 +1,31 @@
 name: observerward
-version: 2026.1.13
+version: 2026.4.8
 description: Web application and service fingerprint identification tool
 homepage: https://blog.kali-team.cn/projects/observer_ward/
 license: GPL-3.0-only
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/observerward/blobs/sha256:a512214aebb7ce2c5b30521407db42d54444ffe70138d9ef5148be6256ec6797
-    sha256: a512214aebb7ce2c5b30521407db42d54444ffe70138d9ef5148be6256ec6797
+    url: https://ghcr.io/v2/homebrew/core/observerward/blobs/sha256:43f8bd966feefc910a8a110507aaa8a77ab5843fb499c27841a6ee2507aa48a4
+    sha256: 43f8bd966feefc910a8a110507aaa8a77ab5843fb499c27841a6ee2507aa48a4
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/observerward/blobs/sha256:4b97113459bf0f3cfd930ce7108670b5669c425e9ae3bbcea8e203ba7bfd6ed1
-    sha256: 4b97113459bf0f3cfd930ce7108670b5669c425e9ae3bbcea8e203ba7bfd6ed1
+    url: https://ghcr.io/v2/homebrew/core/observerward/blobs/sha256:7adc3ee43dfdd1d82df1e2f33c585e30a96b3ed685d2f24182c880a86909cb51
+    sha256: 7adc3ee43dfdd1d82df1e2f33c585e30a96b3ed685d2f24182c880a86909cb51
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/observerward/blobs/sha256:2996035aa9b94a3a89a82f5fc45758a3cf1cb30fea55c7a5967e6fd7c3bd3924
-    sha256: 2996035aa9b94a3a89a82f5fc45758a3cf1cb30fea55c7a5967e6fd7c3bd3924
+    url: https://ghcr.io/v2/homebrew/core/observerward/blobs/sha256:fa5962a6daa911d399396387816d56fae4e41bce56196219482e777d42a55a14
+    sha256: fa5962a6daa911d399396387816d56fae4e41bce56196219482e777d42a55a14
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/observerward/blobs/sha256:a220e4fc24e90d8f1cc080b1cd79fc46de666a7323392cb45c0fd9c45ed54751
-    sha256: a220e4fc24e90d8f1cc080b1cd79fc46de666a7323392cb45c0fd9c45ed54751
+    url: https://ghcr.io/v2/homebrew/core/observerward/blobs/sha256:e88c1ae6906692f06f062a0057e9005017b404da06f8b2da548163ad5d4ab5bc
+    sha256: e88c1ae6906692f06f062a0057e9005017b404da06f8b2da548163ad5d4ab5bc
 source:
-  url: https://github.com/emo-crab/observer_ward/archive/refs/tags/v2026.1.13.tar.gz
-  sha256: 7f15a48928617b9acd08ec189b20e9dd796830328c27f7bdea8369a5605f30de
+  url: https://github.com/emo-crab/observer_ward/archive/refs/tags/v2026.4.8.tar.gz
+  sha256: 18135c9f93023b09efa078bb0e354ad9a31a261afbbafba17dc90dbb1a06c525
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 build_dependencies:
+  - pkgconf
   - protobuf
   - rust
+linux_dependencies:
+  - openssl@3

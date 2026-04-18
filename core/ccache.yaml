@@ -1,24 +1,24 @@
 name: ccache
-version: 4.13.2
+version: 4.13.3
 description: Object-file caching compiler wrapper
 homepage: https://ccache.dev/
 license: GPL-3.0-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:6cd46d9e3746ec91b40a1713d295ebc604f06d70082c7cb3e413361e871658c9
-    sha256: 6cd46d9e3746ec91b40a1713d295ebc604f06d70082c7cb3e413361e871658c9
+    url: https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:82c053bda466d8ab39dc9c3a4c676a73c712056241473c1e55e7e785933509d9
+    sha256: 82c053bda466d8ab39dc9c3a4c676a73c712056241473c1e55e7e785933509d9
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:815f349b137a52797c6de35df2463ae6636e32491036fb438c2bb41a29ba3a22
-    sha256: 815f349b137a52797c6de35df2463ae6636e32491036fb438c2bb41a29ba3a22
+    url: https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:df4178f855a5383ad6f4f261e0182c6c18456745736cac5374f38ce942e83a58
+    sha256: df4178f855a5383ad6f4f261e0182c6c18456745736cac5374f38ce942e83a58
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:a95c6269b794ce865269d3b34a7e05a6023ce8aaeacb9c241e1617cd3476444c
-    sha256: a95c6269b794ce865269d3b34a7e05a6023ce8aaeacb9c241e1617cd3476444c
+    url: https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:b3aeeb476f45e99ad73383dc6f3db5b91c689218f982fc14393cb11db471d577
+    sha256: b3aeeb476f45e99ad73383dc6f3db5b91c689218f982fc14393cb11db471d577
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:28fba73de04c8c85308564bbd0434e4f425a20b5756ccd7d9ca15329512ec449
-    sha256: 28fba73de04c8c85308564bbd0434e4f425a20b5756ccd7d9ca15329512ec449
+    url: https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:c00d2e952a52507f1e0d04bc8e4dc8bcd5b0357ec87f607ab3f1193acece32fd
+    sha256: c00d2e952a52507f1e0d04bc8e4dc8bcd5b0357ec87f607ab3f1193acece32fd
 source:
-  url: https://github.com/ccache/ccache/releases/download/v4.13.2/ccache-4.13.2.tar.xz
-  sha256: 4a0d835f1b3fd7e2ac58a511718bbc902532941f377f7990a3d33b5cf8733ba6
+  url: https://github.com/ccache/ccache/releases/download/v4.13.3/ccache-4.13.3.tar.xz
+  sha256: 1aefc18ba43c237723d224eeecfe47fd0fc7d3c93ccdda31a619b8eb90c3e470
 install:
   type: archive
   format: tar.gz
@@ -27,6 +27,7 @@ dependencies:
   - blake3
   - fmt
   - hiredis
+  - openssl@3
   - xxhash
   - zstd
 build_dependencies:
@@ -37,3 +38,11 @@ build_dependencies:
   - pkgconf
   - span-lite
   - tl-expected
+linux_dependencies:
+  - blake3
+  - fmt
+  - hiredis
+  - openssl@3
+  - xxhash
+  - zlib-ng-compat
+  - zstd

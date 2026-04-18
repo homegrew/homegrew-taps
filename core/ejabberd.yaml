@@ -1,29 +1,30 @@
 name: ejabberd
-version: 26.02
+version: 26.03
 description: XMPP application server
 homepage: https://www.ejabberd.im
-license: GPL-2.0-only
+license: GPL-2.0-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:d36ff4816c0888a12396d6d190abfbc8cde13ffbe35ca5465deefd5d54a1d1b2
-    sha256: d36ff4816c0888a12396d6d190abfbc8cde13ffbe35ca5465deefd5d54a1d1b2
+    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:b440c79f05b5cfa0bc7d6d855716cba0c2ae2a3605ac0ec2814d364a6aac7ded
+    sha256: b440c79f05b5cfa0bc7d6d855716cba0c2ae2a3605ac0ec2814d364a6aac7ded
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:c9d81c546e568d4f9cfc4bb4fa31dd6370de5bc6fdfc9b2139380f77b9cebf69
-    sha256: c9d81c546e568d4f9cfc4bb4fa31dd6370de5bc6fdfc9b2139380f77b9cebf69
+    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:6335a60927919311572936b8ac7b374a4545f9a3b734573fadd9b0278a132758
+    sha256: 6335a60927919311572936b8ac7b374a4545f9a3b734573fadd9b0278a132758
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:f7f145f5f49e92586079a8ecc7d6d8aef62d8942459a2f9d4925e1057f8493bd
-    sha256: f7f145f5f49e92586079a8ecc7d6d8aef62d8942459a2f9d4925e1057f8493bd
+    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:7edfd5b829a9e4db6d611eedb3e43e14b63d67f81019b1ce8b8b927a872bc3b3
+    sha256: 7edfd5b829a9e4db6d611eedb3e43e14b63d67f81019b1ce8b8b927a872bc3b3
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:c59a6280e58d3113b8d251402ebfe8b2c981e72eb2c329385c4a8442f2b04482
-    sha256: c59a6280e58d3113b8d251402ebfe8b2c981e72eb2c329385c4a8442f2b04482
+    url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:ebf0f8934a281d5ea9eac7cda328af2cd7f7fc5a503d2ba14bad156a12f94e6f
+    sha256: ebf0f8934a281d5ea9eac7cda328af2cd7f7fc5a503d2ba14bad156a12f94e6f
 source:
-  url: https://github.com/processone/ejabberd/archive/refs/tags/26.02.tar.gz
-  sha256: 676feea9ee8aeb3c1bc3c1844308a783941548d9befc3b252cd1ff0b7532842f
+  url: https://github.com/processone/ejabberd/archive/refs/tags/26.03.tar.gz
+  sha256: 584b9d43a1f67e929fdb08fa7429f359fabc022923aca311666b1073ed709a52
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
+  - elixir
   - erlang
   - gd
   - libyaml
@@ -32,8 +33,10 @@ build_dependencies:
   - autoconf
   - automake
 linux_dependencies:
+  - elixir
   - erlang
   - gd
   - libyaml
   - linux-pam
   - openssl@3
+  - zlib-ng-compat

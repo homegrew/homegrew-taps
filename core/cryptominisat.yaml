@@ -1,24 +1,24 @@
 name: cryptominisat
-version: 5.13.0
+version: 5.14.4
 description: Advanced SAT solver
 homepage: https://www.msoos.org/cryptominisat5/
 license: MIT
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:d56074a77028dcfdb9d9d59b2fcd57aad7e2df80c9f99df8f5c4286ef16c3b7f
-    sha256: d56074a77028dcfdb9d9d59b2fcd57aad7e2df80c9f99df8f5c4286ef16c3b7f
+    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:3ffc932cffd60239777dcacf11be1ba3e5b3aa33792759837e37f23e331514a4
+    sha256: 3ffc932cffd60239777dcacf11be1ba3e5b3aa33792759837e37f23e331514a4
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:50c0d3151e24e96ec77ce11263d701b9c2e911dd4a9eb1fbfb9173cc85777500
-    sha256: 50c0d3151e24e96ec77ce11263d701b9c2e911dd4a9eb1fbfb9173cc85777500
+    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:0446688d197106f1101a15233bde43c276193dfaea6f5d0c39a545f23055fa59
+    sha256: 0446688d197106f1101a15233bde43c276193dfaea6f5d0c39a545f23055fa59
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:a14f3873914b9f6631948386fe1a9ef164d7a5812597e508117aab2ea83f382c
-    sha256: a14f3873914b9f6631948386fe1a9ef164d7a5812597e508117aab2ea83f382c
+    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:e1f78aa17e3ce8c2ad98146ef71de77a09b29e90e76cf8106af1b55330bb3f6a
+    sha256: e1f78aa17e3ce8c2ad98146ef71de77a09b29e90e76cf8106af1b55330bb3f6a
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:1f973a7d348b3dc75f6bc4ef3c4d243617103a1e18e42be3c927ca075b8029de
-    sha256: 1f973a7d348b3dc75f6bc4ef3c4d243617103a1e18e42be3c927ca075b8029de
+    url: https://ghcr.io/v2/homebrew/core/cryptominisat/blobs/sha256:44bd4462780909e1f4f2f6ce4001f8aece70e985858a294e259e30c63036d07e
+    sha256: 44bd4462780909e1f4f2f6ce4001f8aece70e985858a294e259e30c63036d07e
 source:
-  url: https://github.com/msoos/cryptominisat/archive/refs/tags/release/5.13.0.tar.gz
-  sha256: 1bfcd8a314706b3ac7831f215bae50251d9b61f3bbe90cbdcbed190741f6ee54
+  url: https://github.com/msoos/cryptominisat/archive/refs/tags/release/v5.14.4.tar.gz
+  sha256: cc8ff7bd6aa72cf0ba1d4cb6aa0f430f4fc6155af4e9d29008acc06b2583087e
 install:
   type: archive
   format: tar.gz
@@ -27,6 +27,7 @@ dependencies:
   - gmp
 build_dependencies:
   - cmake
+  - pkgconf
   - python@3.14
 linux_dependencies:
   - gmp

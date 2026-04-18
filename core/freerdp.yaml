@@ -1,24 +1,24 @@
 name: freerdp
-version: 3.24.1
+version: 3.24.2
 description: X11 implementation of the Remote Desktop Protocol (RDP)
 homepage: https://www.freerdp.com/
 license: Apache-2.0
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:7d1fb24364310ac1a07b99523c2d0d801a47809ed04feecc77ea742c48f4e839
-    sha256: 7d1fb24364310ac1a07b99523c2d0d801a47809ed04feecc77ea742c48f4e839
+    url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:8988afd6e8828a4ff1454fde1173021c72af4d88324f95565c65703f66656175
+    sha256: 8988afd6e8828a4ff1454fde1173021c72af4d88324f95565c65703f66656175
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:cb73a1fcdd7755cf049b8f17189297607c65fe2820c902a3317ac193a09319d2
-    sha256: cb73a1fcdd7755cf049b8f17189297607c65fe2820c902a3317ac193a09319d2
+    url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:68da11845defe13f6045888f773921bb49be3a29fc2ab05f98c9ddecc3298b28
+    sha256: 68da11845defe13f6045888f773921bb49be3a29fc2ab05f98c9ddecc3298b28
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:d30a75a77768155b8ce63f953d771b3bbd4f5bbc3529c3a343f558b24f78c6f9
-    sha256: d30a75a77768155b8ce63f953d771b3bbd4f5bbc3529c3a343f558b24f78c6f9
+    url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:eac5e3e505caa38107c8d0874853d513bdd2fd13673644c0b53f8c16e2c80dfe
+    sha256: eac5e3e505caa38107c8d0874853d513bdd2fd13673644c0b53f8c16e2c80dfe
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:d8db6609b4084ed198f33fa35221786eb0f275ac3c65a5c7f506e61401ddff8d
-    sha256: d8db6609b4084ed198f33fa35221786eb0f275ac3c65a5c7f506e61401ddff8d
+    url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:65c24a6b100d92017dbb72ba5b1fedb5117a21790e57631ed270a9de5367eaeb
+    sha256: 65c24a6b100d92017dbb72ba5b1fedb5117a21790e57631ed270a9de5367eaeb
 source:
-  url: https://github.com/FreeRDP/FreeRDP/releases/download/3.24.1/freerdp-3.24.1.tar.gz
-  sha256: 3217e429735ff65377db664cc668746099bae5197299dbfab8d02222454ebb8c
+  url: https://github.com/FreeRDP/FreeRDP/archive/refs/tags/3.24.2.tar.gz
+  sha256: dcb46af2a4296c796c83de610613002ac5a89a3f4ed18122f889d65611cf473e
 install:
   type: archive
   format: tar.gz
@@ -26,6 +26,7 @@ install:
 dependencies:
   - cjson
   - ffmpeg
+  - jansson
   - jpeg-turbo
   - libusb
   - libx11
@@ -41,6 +42,7 @@ dependencies:
   - pkcs11-helper
   - sdl3
   - sdl3_ttf
+  - uriparser
 build_dependencies:
   - cmake
   - pkgconf
@@ -50,6 +52,7 @@ linux_dependencies:
   - ffmpeg
   - glib
   - icu4c@78
+  - jansson
   - jpeg-turbo
   - krb5
   - libfuse
@@ -68,5 +71,6 @@ linux_dependencies:
   - sdl3
   - sdl3_ttf
   - systemd
+  - uriparser
   - wayland
   - zlib-ng-compat

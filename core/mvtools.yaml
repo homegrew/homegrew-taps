@@ -1,24 +1,24 @@
 name: mvtools
-version: 24
+version: 26
 description: Filters for motion estimation and compensation
 homepage: https://github.com/dubhater/vapoursynth-mvtools
 license: GPL-2.0-or-later
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:3c0e17fdf774da0b5e0d8ae822a9401523ded7288cd98bcab79c5bb074867d95
-    sha256: 3c0e17fdf774da0b5e0d8ae822a9401523ded7288cd98bcab79c5bb074867d95
+    url: https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:406369000087292b5decc84727eaca52a88b83c99754744782203221fc522c6b
+    sha256: 406369000087292b5decc84727eaca52a88b83c99754744782203221fc522c6b
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:a6e2de4fb621cceec1a74362de32d27f2353ef18152d6401c170cf7f718470a0
-    sha256: a6e2de4fb621cceec1a74362de32d27f2353ef18152d6401c170cf7f718470a0
+    url: https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:d3ad99631ccc7a67b718a13811cd1c6881888d9ddd3050d8d71e32a5674e098c
+    sha256: d3ad99631ccc7a67b718a13811cd1c6881888d9ddd3050d8d71e32a5674e098c
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:b1e2a5e84ec6842466bca0a44a572a45c491e7fd3c30ea5e4125f02d664f04fa
-    sha256: b1e2a5e84ec6842466bca0a44a572a45c491e7fd3c30ea5e4125f02d664f04fa
+    url: https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:af62856555e6280aff6df278c801d45545de453d70321829c85893fcc606a912
+    sha256: af62856555e6280aff6df278c801d45545de453d70321829c85893fcc606a912
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:ae5a71a3625699b8ea9751865c61a537dba02dd5cd729bbac006761054112746
-    sha256: ae5a71a3625699b8ea9751865c61a537dba02dd5cd729bbac006761054112746
+    url: https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:6fca5e19f1687f108142e6988f216c0f066dbda83658707f5d0c45580b229429
+    sha256: 6fca5e19f1687f108142e6988f216c0f066dbda83658707f5d0c45580b229429
 source:
-  url: https://github.com/dubhater/vapoursynth-mvtools/archive/refs/tags/v24.tar.gz
-  sha256: ccff47f4ea25aa13b13fabd5cf38dd0be1ceda10d9ad6b52bd42ecf9d6eb24ad
+  url: https://github.com/dubhater/vapoursynth-mvtools/archive/refs/tags/v26.tar.gz
+  sha256: c39feedaf44e01c89264fa169a68318897b85bd445fb2a11c0125f9729103e54
 install:
   type: archive
   format: tar.gz
@@ -27,8 +27,7 @@ dependencies:
   - fftw
   - vapoursynth
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+  - meson
   - nasm
+  - ninja
   - pkgconf

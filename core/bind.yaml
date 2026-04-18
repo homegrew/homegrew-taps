@@ -1,36 +1,36 @@
 name: bind
-version: 9.20.20
+version: 9.20.22
 description: Implementation of the DNS protocols
 homepage: https://www.isc.org/bind/
 license: MPL-2.0
 bottle:
   darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:c0af37537615f064c4355b91660e37f27ce5e6cc0bb37141ba21c1692e999a2a
-    sha256: c0af37537615f064c4355b91660e37f27ce5e6cc0bb37141ba21c1692e999a2a
+    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:fb375ac33749724b2c9be2b869f0a20c5a3c10ebcc970f5dbd05ad55df4a723d
+    sha256: fb375ac33749724b2c9be2b869f0a20c5a3c10ebcc970f5dbd05ad55df4a723d
   darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:9f7bd40f4492db3251c5cf7eabdd754e288c3ecd8560fe44eba444c6e5c7361f
-    sha256: 9f7bd40f4492db3251c5cf7eabdd754e288c3ecd8560fe44eba444c6e5c7361f
+    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:4e539dcb32fc26442a7ea9b537c99201a78d992bd6d001a34f5c0992aff157b3
+    sha256: 4e539dcb32fc26442a7ea9b537c99201a78d992bd6d001a34f5c0992aff157b3
   linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:dc1d64d65f8e11633fa7d9001e246bd613c04cf14ae30dc1bc1e6e8c7535fe9f
-    sha256: dc1d64d65f8e11633fa7d9001e246bd613c04cf14ae30dc1bc1e6e8c7535fe9f
+    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:d016b1f6e728a085e613a7c14af6b4ffdaddc6c3cb7bb10cff4f0a4af3e45619
+    sha256: d016b1f6e728a085e613a7c14af6b4ffdaddc6c3cb7bb10cff4f0a4af3e45619
   linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:fd65e76c4b59f0cb82673edc171f2a06a3ca719bf5471f216f4617527bf4a952
-    sha256: fd65e76c4b59f0cb82673edc171f2a06a3ca719bf5471f216f4617527bf4a952
+    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:2c3f7cbe44fdcbbfa12a7b94659718d80e0b2ceb9dc216f16898d62d0cc968da
+    sha256: 2c3f7cbe44fdcbbfa12a7b94659718d80e0b2ceb9dc216f16898d62d0cc968da
 source:
-  url: https://downloads.isc.org/isc/bind9/9.20.20/bind-9.20.20.tar.xz
-  sha256: 19b8335d25305231d5eb8f7d924240d1ac97c4da7c93eaa6273503133aa6106a
+  url: https://downloads.isc.org/isc/bind9/9.20.22/bind-9.20.22.tar.xz
+  sha256: cba92ff631b949655f475fe4b54290f6860fd0070d399f2279f6437c0d383ec6
 install:
   type: archive
   format: tar.gz
   strip_components: 2
 dependencies:
+  - readline
   - jemalloc
   - json-c
   - libidn2
   - libnghttp2
   - libuv
   - openssl@3
-  - readline
   - userspace-rcu
 build_dependencies:
   - pkgconf
