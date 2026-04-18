@@ -3,28 +3,53 @@ version: 2.2.0
 description: Tool for interacting with RP2040/RP2350 devices and binaries
 homepage: https://github.com/raspberrypi/picotool
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/picotool/blobs/sha256:b12cf07252361b521281cf7602d0ab010555d02abac576e1ce3be340df4d66c7
-    sha256: b12cf07252361b521281cf7602d0ab010555d02abac576e1ce3be340df4d66c7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/picotool/blobs/sha256:08e87accab4171dd4d3fbd0fc2d68ba6b4212281f39664c0d6e833f2b76acdc7
-    sha256: 08e87accab4171dd4d3fbd0fc2d68ba6b4212281f39664c0d6e833f2b76acdc7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/picotool/blobs/sha256:3a7872893bf73e1fa954822415d7f3dbb72d16a83899635fe091d0adb1454994
-    sha256: 3a7872893bf73e1fa954822415d7f3dbb72d16a83899635fe091d0adb1454994
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/picotool/blobs/sha256:d0019fa8d364fc028d890587caca5944c3f49eaa559f3e4076fefe2b347e9fbd
-    sha256: d0019fa8d364fc028d890587caca5944c3f49eaa559f3e4076fefe2b347e9fbd
-source:
-  url: https://github.com/raspberrypi/picotool/archive/refs/tags/2.2.0.tar.gz
-  sha256: aab3d82fb1e576d97156ddcb962ae7cf290518a5f20d9002ac27e628dc657620
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libusb
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/picotool/blobs/sha256:08e87accab4171dd4d3fbd0fc2d68ba6b4212281f39664c0d6e833f2b76acdc7
+        sha256: 08e87accab4171dd4d3fbd0fc2d68ba6b4212281f39664c0d6e833f2b76acdc7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/picotool/blobs/sha256:b12cf07252361b521281cf7602d0ab010555d02abac576e1ce3be340df4d66c7
+        sha256: b12cf07252361b521281cf7602d0ab010555d02abac576e1ce3be340df4d66c7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/picotool/blobs/sha256:3a7872893bf73e1fa954822415d7f3dbb72d16a83899635fe091d0adb1454994
+        sha256: 3a7872893bf73e1fa954822415d7f3dbb72d16a83899635fe091d0adb1454994
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/picotool/blobs/sha256:d0019fa8d364fc028d890587caca5944c3f49eaa559f3e4076fefe2b347e9fbd
+        sha256: d0019fa8d364fc028d890587caca5944c3f49eaa559f3e4076fefe2b347e9fbd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/raspberrypi/picotool/archive/refs/tags/2.2.0.tar.gz
+    sha256: aab3d82fb1e576d97156ddcb962ae7cf290518a5f20d9002ac27e628dc657620
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

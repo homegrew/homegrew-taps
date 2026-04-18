@@ -3,27 +3,52 @@ version: 2.3.4
 description: Library that implements the rsync remote-delta algorithm
 homepage: https://librsync.github.io/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librsync/blobs/sha256:ac21e04cfd6723188b3894b674f618c9bfbeafc6c980c69edc49b1529d0f6d39
-    sha256: ac21e04cfd6723188b3894b674f618c9bfbeafc6c980c69edc49b1529d0f6d39
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librsync/blobs/sha256:eb3e34cc997b059385dcba6f8914b7e88815fba9dc2163f633fccfc9185c558c
-    sha256: eb3e34cc997b059385dcba6f8914b7e88815fba9dc2163f633fccfc9185c558c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librsync/blobs/sha256:9c48743c4c502118826bf142d7bb393099a994c882b55c1c11430c656382af16
-    sha256: 9c48743c4c502118826bf142d7bb393099a994c882b55c1c11430c656382af16
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librsync/blobs/sha256:0ab058d81de355cad8a2e2bd385733d08a58394e95ab025165ec1bcb69dc969a
-    sha256: 0ab058d81de355cad8a2e2bd385733d08a58394e95ab025165ec1bcb69dc969a
-source:
-  url: https://github.com/librsync/librsync/archive/refs/tags/v2.3.4.tar.gz
-  sha256: a0dedf9fff66d8e29e7c25d23c1f42beda2089fb4eac1b36e6acd8a29edfbd1f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - popt
+    - popt
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librsync/blobs/sha256:eb3e34cc997b059385dcba6f8914b7e88815fba9dc2163f633fccfc9185c558c
+        sha256: eb3e34cc997b059385dcba6f8914b7e88815fba9dc2163f633fccfc9185c558c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librsync/blobs/sha256:ac21e04cfd6723188b3894b674f618c9bfbeafc6c980c69edc49b1529d0f6d39
+        sha256: ac21e04cfd6723188b3894b674f618c9bfbeafc6c980c69edc49b1529d0f6d39
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librsync/blobs/sha256:9c48743c4c502118826bf142d7bb393099a994c882b55c1c11430c656382af16
+        sha256: 9c48743c4c502118826bf142d7bb393099a994c882b55c1c11430c656382af16
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librsync/blobs/sha256:0ab058d81de355cad8a2e2bd385733d08a58394e95ab025165ec1bcb69dc969a
+        sha256: 0ab058d81de355cad8a2e2bd385733d08a58394e95ab025165ec1bcb69dc969a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/librsync/librsync/archive/refs/tags/v2.3.4.tar.gz
+    sha256: a0dedf9fff66d8e29e7c25d23c1f42beda2089fb4eac1b36e6acd8a29edfbd1f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

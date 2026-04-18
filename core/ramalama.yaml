@@ -3,32 +3,57 @@ version: 0.18.0
 description: Goal of RamaLama is to make working with AI boring
 homepage: https://github.com/containers/ramalama
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ramalama/blobs/sha256:d8fd5b816acfa9193fc6fac992c381d14f465cd2f5fcdac98cbeee4506703994
-    sha256: d8fd5b816acfa9193fc6fac992c381d14f465cd2f5fcdac98cbeee4506703994
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ramalama/blobs/sha256:4501f3af4d4e8e28fb59fee8817f4b1cbb7a371f60cd6783d941435fa6e0657d
-    sha256: 4501f3af4d4e8e28fb59fee8817f4b1cbb7a371f60cd6783d941435fa6e0657d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ramalama/blobs/sha256:393da892a3b5e45aeec7b0dede1fd87a8c6cd39f343131c42529810637c066b0
-    sha256: 393da892a3b5e45aeec7b0dede1fd87a8c6cd39f343131c42529810637c066b0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ramalama/blobs/sha256:65ffa09511f0746d752ade097f007242db64c72b75d83581190faa821ebeafa4
-    sha256: 65ffa09511f0746d752ade097f007242db64c72b75d83581190faa821ebeafa4
-source:
-  url: https://files.pythonhosted.org/packages/78/00/785b31f9458fbe12b33724e79ca25bb8f537d5c88873b9f1fad4b8f98df2/ramalama-0.18.0.tar.gz
-  sha256: 18bb2af79d96468e3c306f11ee41e52bd29d5900b20627e3f8d147037801e92e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - python@3.14
-  - rpds-py
-  - llama.cpp
+    - libyaml
+    - python@3.14
+    - rpds-py
+    - llama.cpp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ramalama/blobs/sha256:4501f3af4d4e8e28fb59fee8817f4b1cbb7a371f60cd6783d941435fa6e0657d
+        sha256: 4501f3af4d4e8e28fb59fee8817f4b1cbb7a371f60cd6783d941435fa6e0657d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ramalama/blobs/sha256:d8fd5b816acfa9193fc6fac992c381d14f465cd2f5fcdac98cbeee4506703994
+        sha256: d8fd5b816acfa9193fc6fac992c381d14f465cd2f5fcdac98cbeee4506703994
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ramalama/blobs/sha256:393da892a3b5e45aeec7b0dede1fd87a8c6cd39f343131c42529810637c066b0
+        sha256: 393da892a3b5e45aeec7b0dede1fd87a8c6cd39f343131c42529810637c066b0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ramalama/blobs/sha256:65ffa09511f0746d752ade097f007242db64c72b75d83581190faa821ebeafa4
+        sha256: 65ffa09511f0746d752ade097f007242db64c72b75d83581190faa821ebeafa4
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/78/00/785b31f9458fbe12b33724e79ca25bb8f537d5c88873b9f1fad4b8f98df2/ramalama-0.18.0.tar.gz
+    sha256: 18bb2af79d96468e3c306f11ee41e52bd29d5900b20627e3f8d147037801e92e
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - libyaml
-  - python@3.14
-  - rpds-py
+    - libyaml
+    - python@3.14
+    - rpds-py
+build:
+    configure: []
+    install: []
+service: null

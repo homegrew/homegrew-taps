@@ -3,55 +3,79 @@ version: 2026.03.30.00
 description: Watch files and take action when they change
 homepage: https://github.com/facebook/watchman
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:968d2afa171f2b84ca96cdfcea5cedc370ac6a177afb340332855aa25058e738
-    sha256: 968d2afa171f2b84ca96cdfcea5cedc370ac6a177afb340332855aa25058e738
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:d80ce3420310ff07bddbdb44674fd56fa31df5b79bf565d0abbd3d8211c2599c
-    sha256: d80ce3420310ff07bddbdb44674fd56fa31df5b79bf565d0abbd3d8211c2599c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:60bc659923adc4ffb62759ad537b6d046f18fdf1d89b1701df2e2efd3c26e967
-    sha256: 60bc659923adc4ffb62759ad537b6d046f18fdf1d89b1701df2e2efd3c26e967
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:a0408bc60b3bfa525ba7ca522403fb76d1f464512d6d9b742aa0335181d62053
-    sha256: a0408bc60b3bfa525ba7ca522403fb76d1f464512d6d9b742aa0335181d62053
-source:
-  url: https://github.com/facebook/watchman/archive/refs/tags/v2026.03.30.00.tar.gz
-  sha256: 96cc550ec97b0dd3f60441d02eb673cadcc8c1351b2d35f6c19819decc5b1018
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - edencommon
-  - fb303
-  - fbthrift
-  - fmt
-  - folly
-  - glog
-  - pcre2
-  - python@3.14
+    - edencommon
+    - fb303
+    - fbthrift
+    - fmt
+    - folly
+    - glog
+    - pcre2
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:d80ce3420310ff07bddbdb44674fd56fa31df5b79bf565d0abbd3d8211c2599c
+        sha256: d80ce3420310ff07bddbdb44674fd56fa31df5b79bf565d0abbd3d8211c2599c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:968d2afa171f2b84ca96cdfcea5cedc370ac6a177afb340332855aa25058e738
+        sha256: 968d2afa171f2b84ca96cdfcea5cedc370ac6a177afb340332855aa25058e738
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:60bc659923adc4ffb62759ad537b6d046f18fdf1d89b1701df2e2efd3c26e967
+        sha256: 60bc659923adc4ffb62759ad537b6d046f18fdf1d89b1701df2e2efd3c26e967
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:a0408bc60b3bfa525ba7ca522403fb76d1f464512d6d9b742aa0335181d62053
+        sha256: a0408bc60b3bfa525ba7ca522403fb76d1f464512d6d9b742aa0335181d62053
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/facebook/watchman/archive/refs/tags/v2026.03.30.00.tar.gz
+    sha256: 96cc550ec97b0dd3f60441d02eb673cadcc8c1351b2d35f6c19819decc5b1018
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - cpptoml
-  - gflags
-  - googletest
-  - libevent
-  - mvfst
-  - openssl@3
-  - pkgconf
-  - python-setuptools
-  - rust
+    - cmake
+    - cpptoml
+    - gflags
+    - googletest
+    - libevent
+    - mvfst
+    - openssl@3
+    - pkgconf
+    - python-setuptools
+    - rust
 linux_dependencies:
-  - boost
-  - edencommon
-  - fb303
-  - fbthrift
-  - fmt
-  - folly
-  - glog
-  - libunwind
-  - openssl@3
-  - pcre2
-  - python@3.14
+    - boost
+    - edencommon
+    - fb303
+    - fbthrift
+    - fmt
+    - folly
+    - glog
+    - libunwind
+    - openssl@3
+    - pcre2
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

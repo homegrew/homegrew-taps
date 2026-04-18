@@ -3,32 +3,56 @@ version: 3.9.1
 description: Tool for packaging, publishing and managing VS Code extensions
 homepage: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#vsce
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vsce/blobs/sha256:e20db9724cf74c64e382d950930f4bded9c285d1d9dfa26ce9dd5e6b7482574e
-    sha256: e20db9724cf74c64e382d950930f4bded9c285d1d9dfa26ce9dd5e6b7482574e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vsce/blobs/sha256:8393771667562a37c23a519fb01cf71f0663e2953e756d0ec41f77f9159a5ddf
-    sha256: 8393771667562a37c23a519fb01cf71f0663e2953e756d0ec41f77f9159a5ddf
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vsce/blobs/sha256:d45e755f38be0fabfb62c232aa17973dd772edfbcc99f493d6607cda0209ed5c
-    sha256: d45e755f38be0fabfb62c232aa17973dd772edfbcc99f493d6607cda0209ed5c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vsce/blobs/sha256:b97e0f23f09108df09ec2148a3903593d4af5e3b169768b9f666e72505eb224d
-    sha256: b97e0f23f09108df09ec2148a3903593d4af5e3b169768b9f666e72505eb224d
-source:
-  url: https://registry.npmjs.org/@vscode/vsce/-/vsce-3.9.1.tgz
-  sha256: 986adf4550db8d16825c856c74851cb020f3b8bbf261b37a7cbab34429186b4f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - node
+    - node
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vsce/blobs/sha256:8393771667562a37c23a519fb01cf71f0663e2953e756d0ec41f77f9159a5ddf
+        sha256: 8393771667562a37c23a519fb01cf71f0663e2953e756d0ec41f77f9159a5ddf
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vsce/blobs/sha256:e20db9724cf74c64e382d950930f4bded9c285d1d9dfa26ce9dd5e6b7482574e
+        sha256: e20db9724cf74c64e382d950930f4bded9c285d1d9dfa26ce9dd5e6b7482574e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vsce/blobs/sha256:d45e755f38be0fabfb62c232aa17973dd772edfbcc99f493d6607cda0209ed5c
+        sha256: d45e755f38be0fabfb62c232aa17973dd772edfbcc99f493d6607cda0209ed5c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vsce/blobs/sha256:b97e0f23f09108df09ec2148a3903593d4af5e3b169768b9f666e72505eb224d
+        sha256: b97e0f23f09108df09ec2148a3903593d4af5e3b169768b9f666e72505eb224d
+        sha512: ""
+        signature: ""
+source:
+    url: https://registry.npmjs.org/@vscode/vsce/-/vsce-3.9.1.tgz
+    sha256: 986adf4550db8d16825c856c74851cb020f3b8bbf261b37a7cbab34429186b4f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - glib
-  - libsecret
-  - node
-  - zlib-ng-compat
+    - glib
+    - libsecret
+    - node
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

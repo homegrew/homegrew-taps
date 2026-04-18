@@ -3,32 +3,56 @@ version: 2.2.3
 description: Two-factor authentication for SSH
 homepage: https://www.duosecurity.com/docs/duounix
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/duo_unix/blobs/sha256:76285c5a46ff71f3d834c49b7c4ecc96daa7141c03a272c62b56e8be8de28e18
-    sha256: 76285c5a46ff71f3d834c49b7c4ecc96daa7141c03a272c62b56e8be8de28e18
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/duo_unix/blobs/sha256:dc2def25dde741ed3a88deb37d6b864079f21e0c59a94d56a248e754c5336cb6
-    sha256: dc2def25dde741ed3a88deb37d6b864079f21e0c59a94d56a248e754c5336cb6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/duo_unix/blobs/sha256:e6b732ccd3f10ab695925616ef0b031454eec757e5b9fe7c2d854254f30db884
-    sha256: e6b732ccd3f10ab695925616ef0b031454eec757e5b9fe7c2d854254f30db884
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/duo_unix/blobs/sha256:dde0bca5fbf5c159f16571f85545240787e67b156eab72b148c9d89a076e28e8
-    sha256: dde0bca5fbf5c159f16571f85545240787e67b156eab72b148c9d89a076e28e8
-source:
-  url: https://github.com/duosecurity/duo_unix/archive/refs/tags/duo_unix-2.2.3.tar.gz
-  sha256: 53e57e2471978851b7d7e3d0b479ce8d8e68fff1298cb2e597106f0c57ff22ff
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/duo_unix/blobs/sha256:dc2def25dde741ed3a88deb37d6b864079f21e0c59a94d56a248e754c5336cb6
+        sha256: dc2def25dde741ed3a88deb37d6b864079f21e0c59a94d56a248e754c5336cb6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/duo_unix/blobs/sha256:76285c5a46ff71f3d834c49b7c4ecc96daa7141c03a272c62b56e8be8de28e18
+        sha256: 76285c5a46ff71f3d834c49b7c4ecc96daa7141c03a272c62b56e8be8de28e18
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/duo_unix/blobs/sha256:e6b732ccd3f10ab695925616ef0b031454eec757e5b9fe7c2d854254f30db884
+        sha256: e6b732ccd3f10ab695925616ef0b031454eec757e5b9fe7c2d854254f30db884
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/duo_unix/blobs/sha256:dde0bca5fbf5c159f16571f85545240787e67b156eab72b148c9d89a076e28e8
+        sha256: dde0bca5fbf5c159f16571f85545240787e67b156eab72b148c9d89a076e28e8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/duosecurity/duo_unix/archive/refs/tags/duo_unix-2.2.3.tar.gz
+    sha256: 53e57e2471978851b7d7e3d0b479ce8d8e68fff1298cb2e597106f0c57ff22ff
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
 linux_dependencies:
-  - linux-pam
-  - openssl@3
+    - linux-pam
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

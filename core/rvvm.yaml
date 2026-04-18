@@ -1,0 +1,58 @@
+name: rvvm
+version: "0.6"
+description: RISC-V Virtual Machine
+homepage: https://github.com/LekKit/RVVM
+license: GPL-3.0-or-later
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
+install:
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies:
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rvvm/blobs/sha256:c0f67339d17e090fdd3e81ec635247963fbfbb90228dd2b7a1b1db2aafe590ee
+        sha256: c0f67339d17e090fdd3e81ec635247963fbfbb90228dd2b7a1b1db2aafe590ee
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rvvm/blobs/sha256:c2d1713f3ce9b6982d67db642cac2283c31edc0c0fbbb751a3827ba623678595
+        sha256: c2d1713f3ce9b6982d67db642cac2283c31edc0c0fbbb751a3827ba623678595
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rvvm/blobs/sha256:4be0a88e77f37c70fac2bd4d9bb49814bf8bdeed9a60840d4503a8e7920e7dd1
+        sha256: 4be0a88e77f37c70fac2bd4d9bb49814bf8bdeed9a60840d4503a8e7920e7dd1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rvvm/blobs/sha256:0626c4ac49b1b181da04f6d285c26bff39e475dde61dcf6158a3ad416727f48d
+        sha256: 0626c4ac49b1b181da04f6d285c26bff39e475dde61dcf6158a3ad416727f48d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/LekKit/RVVM/archive/refs/tags/v0.6.tar.gz
+    sha256: 97e98c95d8785438758b81fb5c695b8eafb564502c6af7f52555b056e3bb7d7a
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+linux_dependencies:
+    - libx11
+    - libxext
+    - libxkbcommon
+    - wayland
+build:
+    configure: []
+    install: []
+service: null

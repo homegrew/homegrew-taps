@@ -3,27 +3,52 @@ version: 7.7.32
 description: Portable OpenBSD vi for UNIX systems
 homepage: https://github.com/johnsonjh/OpenVi
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openvi/blobs/sha256:7f9f98c1766d28f774755c5504a4e0009aa9075d0810dac96a43f670543d0836
-    sha256: 7f9f98c1766d28f774755c5504a4e0009aa9075d0810dac96a43f670543d0836
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openvi/blobs/sha256:ab51a0599172f446d17f61bf0a1c93816100854d58bf6875fb1ae1635d97d662
-    sha256: ab51a0599172f446d17f61bf0a1c93816100854d58bf6875fb1ae1635d97d662
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openvi/blobs/sha256:070f50496b0c46cc89f50bc2884e227658778557f745a8f061cdebfe5e2c94a0
-    sha256: 070f50496b0c46cc89f50bc2884e227658778557f745a8f061cdebfe5e2c94a0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openvi/blobs/sha256:72b16c18985eafe024d7cfe55047850f7e36375d0ca6aa42e84f2dc0b701eb36
-    sha256: 72b16c18985eafe024d7cfe55047850f7e36375d0ca6aa42e84f2dc0b701eb36
-source:
-  url: https://github.com/johnsonjh/OpenVi/archive/refs/tags/7.7.32.tar.gz
-  sha256: 3378f371b7446708b5d909dcbf8608a74d771f2660f06014888da2163a77af81
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ncurses
+    - ncurses
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openvi/blobs/sha256:ab51a0599172f446d17f61bf0a1c93816100854d58bf6875fb1ae1635d97d662
+        sha256: ab51a0599172f446d17f61bf0a1c93816100854d58bf6875fb1ae1635d97d662
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openvi/blobs/sha256:7f9f98c1766d28f774755c5504a4e0009aa9075d0810dac96a43f670543d0836
+        sha256: 7f9f98c1766d28f774755c5504a4e0009aa9075d0810dac96a43f670543d0836
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openvi/blobs/sha256:070f50496b0c46cc89f50bc2884e227658778557f745a8f061cdebfe5e2c94a0
+        sha256: 070f50496b0c46cc89f50bc2884e227658778557f745a8f061cdebfe5e2c94a0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openvi/blobs/sha256:72b16c18985eafe024d7cfe55047850f7e36375d0ca6aa42e84f2dc0b701eb36
+        sha256: 72b16c18985eafe024d7cfe55047850f7e36375d0ca6aa42e84f2dc0b701eb36
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/johnsonjh/OpenVi/archive/refs/tags/7.7.32.tar.gz
+    sha256: 3378f371b7446708b5d909dcbf8608a74d771f2660f06014888da2163a77af81
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

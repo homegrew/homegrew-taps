@@ -3,27 +3,52 @@ version: 0.12.16
 description: Automates terminal operations
 homepage: https://github.com/koki-develop/clive
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clive/blobs/sha256:0a9327759ff50f04774163452e0a60dff60b69f527e6469d41160ff1b035febe
-    sha256: 0a9327759ff50f04774163452e0a60dff60b69f527e6469d41160ff1b035febe
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clive/blobs/sha256:13dfb211db8851a2a42ac0f4821157125b4883fab14b108b74cc0bf791dfef73
-    sha256: 13dfb211db8851a2a42ac0f4821157125b4883fab14b108b74cc0bf791dfef73
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clive/blobs/sha256:4a747c9d5ef60f51f3cc127f41f0bd83efb2785835d0e35c59ecb437c3bf36ba
-    sha256: 4a747c9d5ef60f51f3cc127f41f0bd83efb2785835d0e35c59ecb437c3bf36ba
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clive/blobs/sha256:f659f4937a4a0c6ac175d18849e424e6507f23ae7ea5eb5edebf2ea372adee44
-    sha256: f659f4937a4a0c6ac175d18849e424e6507f23ae7ea5eb5edebf2ea372adee44
-source:
-  url: https://github.com/koki-develop/clive/archive/refs/tags/v0.12.16.tar.gz
-  sha256: a08e5143d657a236edd1d90332b4d8c8e8a1899480b595fd8688678a86d7db84
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ttyd
+    - ttyd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clive/blobs/sha256:13dfb211db8851a2a42ac0f4821157125b4883fab14b108b74cc0bf791dfef73
+        sha256: 13dfb211db8851a2a42ac0f4821157125b4883fab14b108b74cc0bf791dfef73
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clive/blobs/sha256:0a9327759ff50f04774163452e0a60dff60b69f527e6469d41160ff1b035febe
+        sha256: 0a9327759ff50f04774163452e0a60dff60b69f527e6469d41160ff1b035febe
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clive/blobs/sha256:4a747c9d5ef60f51f3cc127f41f0bd83efb2785835d0e35c59ecb437c3bf36ba
+        sha256: 4a747c9d5ef60f51f3cc127f41f0bd83efb2785835d0e35c59ecb437c3bf36ba
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clive/blobs/sha256:f659f4937a4a0c6ac175d18849e424e6507f23ae7ea5eb5edebf2ea372adee44
+        sha256: f659f4937a4a0c6ac175d18849e424e6507f23ae7ea5eb5edebf2ea372adee44
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/koki-develop/clive/archive/refs/tags/v0.12.16.tar.gz
+    sha256: a08e5143d657a236edd1d90332b4d8c8e8a1899480b595fd8688678a86d7db84
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 5.1.1
 description: Compress/expand executable files
 homepage: https://upx.github.io/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/upx/blobs/sha256:ea9792e388feed47fb93fa3ac4445c29da427c1c58ce7d61893bfebe07b432ec
-    sha256: ea9792e388feed47fb93fa3ac4445c29da427c1c58ce7d61893bfebe07b432ec
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/upx/blobs/sha256:ceace73c72ce5579b77e459c8c2cc0937dd59d996d3318239052de60b73189a0
-    sha256: ceace73c72ce5579b77e459c8c2cc0937dd59d996d3318239052de60b73189a0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/upx/blobs/sha256:ae12d1951368371224a793b2fefbf7f76fb25eca11eaf32caf039fcd348c0b61
-    sha256: ae12d1951368371224a793b2fefbf7f76fb25eca11eaf32caf039fcd348c0b61
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/upx/blobs/sha256:3e9ee8e3613ef3434dff4dfed0ff37eb87406446a6c9cd5dfff4f8beff451754
-    sha256: 3e9ee8e3613ef3434dff4dfed0ff37eb87406446a6c9cd5dfff4f8beff451754
-source:
-  url: https://github.com/upx/upx/releases/download/v5.1.1/upx-5.1.1-src.tar.xz
-  sha256: 8eb914115b306fd9fd2110bd3d27ddb8ae7c5a03bb965f7d10f046a3a4ff9dfe
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/upx/blobs/sha256:ceace73c72ce5579b77e459c8c2cc0937dd59d996d3318239052de60b73189a0
+        sha256: ceace73c72ce5579b77e459c8c2cc0937dd59d996d3318239052de60b73189a0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/upx/blobs/sha256:ea9792e388feed47fb93fa3ac4445c29da427c1c58ce7d61893bfebe07b432ec
+        sha256: ea9792e388feed47fb93fa3ac4445c29da427c1c58ce7d61893bfebe07b432ec
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/upx/blobs/sha256:ae12d1951368371224a793b2fefbf7f76fb25eca11eaf32caf039fcd348c0b61
+        sha256: ae12d1951368371224a793b2fefbf7f76fb25eca11eaf32caf039fcd348c0b61
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/upx/blobs/sha256:3e9ee8e3613ef3434dff4dfed0ff37eb87406446a6c9cd5dfff4f8beff451754
+        sha256: 3e9ee8e3613ef3434dff4dfed0ff37eb87406446a6c9cd5dfff4f8beff451754
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/upx/upx/releases/download/v5.1.1/upx-5.1.1-src.tar.xz
+    sha256: 8eb914115b306fd9fd2110bd3d27ddb8ae7c5a03bb965f7d10f046a3a4ff9dfe
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ucl
+    - cmake
+    - ucl
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

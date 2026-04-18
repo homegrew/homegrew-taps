@@ -1,45 +1,67 @@
 name: klee
-version: 3.2
+version: "3.2"
 description: Symbolic Execution Engine
 homepage: https://klee-se.org
 license: NCSA
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/klee/blobs/sha256:203c689927268d04179ff379f721d67f07ed0891740c6bb594b320537e0c87bc
-    sha256: 203c689927268d04179ff379f721d67f07ed0891740c6bb594b320537e0c87bc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/klee/blobs/sha256:f421ee878c444e10d0baef47e564b9a4bd57172f9fbc022743c2d5aa7c98729d
-    sha256: f421ee878c444e10d0baef47e564b9a4bd57172f9fbc022743c2d5aa7c98729d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/klee/blobs/sha256:13447a3a22f6de2d472b98c971b193ed8dd89396b370c8f5184c4e1dc96cd908
-    sha256: 13447a3a22f6de2d472b98c971b193ed8dd89396b370c8f5184c4e1dc96cd908
-source:
-  url: https://github.com/klee/klee/archive/refs/tags/v3.2.tar.gz
-  sha256: 83d9b9ce0ba187e48c0e55623bf1a68b5eb61376da7ce82551c9d885715a21dd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cryptominisat
-  - gperftools
-  - llvm@16
-  - python@3.14
-  - sqlite
-  - stp
-  - wllvm
-  - z3
-  - gmp
-  - minisat
+    - cryptominisat
+    - gperftools
+    - llvm@16
+    - python@3.14
+    - sqlite
+    - stp
+    - wllvm
+    - z3
+    - gmp
+    - minisat
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/klee/blobs/sha256:f421ee878c444e10d0baef47e564b9a4bd57172f9fbc022743c2d5aa7c98729d
+        sha256: f421ee878c444e10d0baef47e564b9a4bd57172f9fbc022743c2d5aa7c98729d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/klee/blobs/sha256:203c689927268d04179ff379f721d67f07ed0891740c6bb594b320537e0c87bc
+        sha256: 203c689927268d04179ff379f721d67f07ed0891740c6bb594b320537e0c87bc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/klee/blobs/sha256:13447a3a22f6de2d472b98c971b193ed8dd89396b370c8f5184c4e1dc96cd908
+        sha256: 13447a3a22f6de2d472b98c971b193ed8dd89396b370c8f5184c4e1dc96cd908
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/klee/klee/archive/refs/tags/v3.2.tar.gz
+    sha256: 83d9b9ce0ba187e48c0e55623bf1a68b5eb61376da7ce82551c9d885715a21dd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - cryptominisat
-  - gperftools
-  - llvm@16
-  - python@3.14
-  - sqlite
-  - stp
-  - wllvm
-  - z3
-  - zlib-ng-compat
+    - cryptominisat
+    - gperftools
+    - llvm@16
+    - python@3.14
+    - sqlite
+    - stp
+    - wllvm
+    - z3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

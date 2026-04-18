@@ -3,28 +3,53 @@ version: 1.2.0
 description: Clone of ls with colorful output, file type icons, and more
 homepage: https://github.com/lsd-rs/lsd
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lsd/blobs/sha256:fa8f25c1284258f51c9404613e9916de94bdddb03cbfad25035f31b744d5f783
-    sha256: fa8f25c1284258f51c9404613e9916de94bdddb03cbfad25035f31b744d5f783
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lsd/blobs/sha256:24ae6b9716b0c8313085cc09de1ed5a493a639fbd04a3c440b0f356051f077d6
-    sha256: 24ae6b9716b0c8313085cc09de1ed5a493a639fbd04a3c440b0f356051f077d6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lsd/blobs/sha256:cdb617c2546080a6164e9badba18fdba7d1e1e6692168e15759f34d05f332765
-    sha256: cdb617c2546080a6164e9badba18fdba7d1e1e6692168e15759f34d05f332765
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lsd/blobs/sha256:671174793531f94debdbbe7fb1017e41a070b99a3e0556eb7424bf06fcbf65c1
-    sha256: 671174793531f94debdbbe7fb1017e41a070b99a3e0556eb7424bf06fcbf65c1
-source:
-  url: https://github.com/lsd-rs/lsd/archive/refs/tags/v1.2.0.tar.gz
-  sha256: dae8d43087686a4a1de0584922608e9cbab00727d0f72e4aa487860a9cbfeefa
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lsd/blobs/sha256:24ae6b9716b0c8313085cc09de1ed5a493a639fbd04a3c440b0f356051f077d6
+        sha256: 24ae6b9716b0c8313085cc09de1ed5a493a639fbd04a3c440b0f356051f077d6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lsd/blobs/sha256:fa8f25c1284258f51c9404613e9916de94bdddb03cbfad25035f31b744d5f783
+        sha256: fa8f25c1284258f51c9404613e9916de94bdddb03cbfad25035f31b744d5f783
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lsd/blobs/sha256:cdb617c2546080a6164e9badba18fdba7d1e1e6692168e15759f34d05f332765
+        sha256: cdb617c2546080a6164e9badba18fdba7d1e1e6692168e15759f34d05f332765
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lsd/blobs/sha256:671174793531f94debdbbe7fb1017e41a070b99a3e0556eb7424bf06fcbf65c1
+        sha256: 671174793531f94debdbbe7fb1017e41a070b99a3e0556eb7424bf06fcbf65c1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lsd-rs/lsd/archive/refs/tags/v1.2.0.tar.gz
+    sha256: dae8d43087686a4a1de0584922608e9cbab00727d0f72e4aa487860a9cbfeefa
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pandoc
-  - rust
+    - pandoc
+    - rust
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

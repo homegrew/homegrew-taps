@@ -3,30 +3,55 @@ version: 3.6.10
 description: Data loading tool for PostgreSQL
 homepage: https://github.com/dimitri/pgloader
 license: PostgreSQL
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgloader/blobs/sha256:12b8c22a69da1b380adc072b1f8ea9b9d2bdc69d03530a566251e163c7cfbe2b
-    sha256: 12b8c22a69da1b380adc072b1f8ea9b9d2bdc69d03530a566251e163c7cfbe2b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgloader/blobs/sha256:826b9b6529e101637416205667f78a0d0830f6f54c50b0b21f3ed8ef0d750758
-    sha256: 826b9b6529e101637416205667f78a0d0830f6f54c50b0b21f3ed8ef0d750758
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgloader/blobs/sha256:9f23ab10e44dba2d37a2581cf3ded0f0cfceb731e49af0f4565c98d60278a8a7
-    sha256: 9f23ab10e44dba2d37a2581cf3ded0f0cfceb731e49af0f4565c98d60278a8a7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgloader/blobs/sha256:f5640cc4d253febe88e8531a1767f7f3e3be20521192def77bac8bbeb1b10225
-    sha256: f5640cc4d253febe88e8531a1767f7f3e3be20521192def77bac8bbeb1b10225
-source:
-  url: https://github.com/dimitri/pgloader.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetds
-  - openssl@3
-  - zstd
+    - freetds
+    - openssl@3
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgloader/blobs/sha256:826b9b6529e101637416205667f78a0d0830f6f54c50b0b21f3ed8ef0d750758
+        sha256: 826b9b6529e101637416205667f78a0d0830f6f54c50b0b21f3ed8ef0d750758
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgloader/blobs/sha256:12b8c22a69da1b380adc072b1f8ea9b9d2bdc69d03530a566251e163c7cfbe2b
+        sha256: 12b8c22a69da1b380adc072b1f8ea9b9d2bdc69d03530a566251e163c7cfbe2b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgloader/blobs/sha256:9f23ab10e44dba2d37a2581cf3ded0f0cfceb731e49af0f4565c98d60278a8a7
+        sha256: 9f23ab10e44dba2d37a2581cf3ded0f0cfceb731e49af0f4565c98d60278a8a7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgloader/blobs/sha256:f5640cc4d253febe88e8531a1767f7f3e3be20521192def77bac8bbeb1b10225
+        sha256: f5640cc4d253febe88e8531a1767f7f3e3be20521192def77bac8bbeb1b10225
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dimitri/pgloader.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - buildapp
-  - sbcl
+    - buildapp
+    - sbcl
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

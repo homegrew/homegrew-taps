@@ -3,40 +3,65 @@ version: 2.3.1
 description: Mongrel of mail user agents (part elm, pine, mush, mh, etc.)
 homepage: http://www.mutt.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:b492a0d6b74fb1dbb1477a327c55b26cc8eaa8451c867b837d6e49b5181acd6d
-    sha256: b492a0d6b74fb1dbb1477a327c55b26cc8eaa8451c867b837d6e49b5181acd6d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:f7456438cf78303733ab16e7ebbf8f99a216963e6a7fd14a1ecd64061dd126f5
-    sha256: f7456438cf78303733ab16e7ebbf8f99a216963e6a7fd14a1ecd64061dd126f5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:1b4c6b177722724195f77220714a5c8aed80ae28cc5e5fa0bab09fc5bf5e05cc
-    sha256: 1b4c6b177722724195f77220714a5c8aed80ae28cc5e5fa0bab09fc5bf5e05cc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:8c2aeb33074a52410e91c6937b9cffcc0d3a4ed104df826834131e8af0d0e371
-    sha256: 8c2aeb33074a52410e91c6937b9cffcc0d3a4ed104df826834131e8af0d0e371
-source:
-  url: https://ftp.osuosl.org/pub/mutt/mutt-2.3.1.tar.gz
-  sha256: 470d7b0e3d134a05fb8064dedd74771b06bcd639c80fccd7773dc322aafbb7b6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gpgme
-  - libgpg-error
-  - libidn2
-  - ncurses
-  - openssl@3
-  - tokyo-cabinet
-  - gettext
-  - libunistring
+    - gpgme
+    - libgpg-error
+    - libidn2
+    - ncurses
+    - openssl@3
+    - tokyo-cabinet
+    - gettext
+    - libunistring
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:f7456438cf78303733ab16e7ebbf8f99a216963e6a7fd14a1ecd64061dd126f5
+        sha256: f7456438cf78303733ab16e7ebbf8f99a216963e6a7fd14a1ecd64061dd126f5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:b492a0d6b74fb1dbb1477a327c55b26cc8eaa8451c867b837d6e49b5181acd6d
+        sha256: b492a0d6b74fb1dbb1477a327c55b26cc8eaa8451c867b837d6e49b5181acd6d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:1b4c6b177722724195f77220714a5c8aed80ae28cc5e5fa0bab09fc5bf5e05cc
+        sha256: 1b4c6b177722724195f77220714a5c8aed80ae28cc5e5fa0bab09fc5bf5e05cc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:8c2aeb33074a52410e91c6937b9cffcc0d3a4ed104df826834131e8af0d0e371
+        sha256: 8c2aeb33074a52410e91c6937b9cffcc0d3a4ed104df826834131e8af0d0e371
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.osuosl.org/pub/mutt/mutt-2.3.1.tar.gz
+    sha256: 470d7b0e3d134a05fb8064dedd74771b06bcd639c80fccd7773dc322aafbb7b6
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - gpgme
-  - libgpg-error
-  - libidn2
-  - ncurses
-  - openssl@3
-  - tokyo-cabinet
-  - zlib-ng-compat
+    - gpgme
+    - libgpg-error
+    - libidn2
+    - ncurses
+    - openssl@3
+    - tokyo-cabinet
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

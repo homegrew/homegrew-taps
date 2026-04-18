@@ -1,27 +1,53 @@
 name: zboy
-version: 0.71
+version: "0.71"
 description: GameBoy emulator
 homepage: https://zboy.sourceforge.net/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zboy/blobs/sha256:6a88b48f0f07f47bea0da0a31aee45ba535c2f9afc3a612a859c68b322db3e0d
-    sha256: 6a88b48f0f07f47bea0da0a31aee45ba535c2f9afc3a612a859c68b322db3e0d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zboy/blobs/sha256:e0b8bbd2f090406aa2c67b4b3dd1ade28c8007f1b5b96552134e534d50652e37
-    sha256: e0b8bbd2f090406aa2c67b4b3dd1ade28c8007f1b5b96552134e534d50652e37
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zboy/blobs/sha256:e2baaf6491fe70279c22f669b2a64bd5467506ea9be7aa86807a06519f0b9311
-    sha256: e2baaf6491fe70279c22f669b2a64bd5467506ea9be7aa86807a06519f0b9311
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zboy/blobs/sha256:21f25a5ddc14d43b31ce8bbceff130e74252568f856359be2e99d3179b1cee8a
-    sha256: 21f25a5ddc14d43b31ce8bbceff130e74252568f856359be2e99d3179b1cee8a
-source:
-  url: https://downloads.sourceforge.net/project/zboy/zBoy%20v0.71/zboy-0.71.tar.xz
-  sha256: d359b87e3149418fbe1599247c9ca71e870d213b64a912616ffc6e77d1dff506
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sdl2
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zboy/blobs/sha256:e0b8bbd2f090406aa2c67b4b3dd1ade28c8007f1b5b96552134e534d50652e37
+        sha256: e0b8bbd2f090406aa2c67b4b3dd1ade28c8007f1b5b96552134e534d50652e37
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zboy/blobs/sha256:6a88b48f0f07f47bea0da0a31aee45ba535c2f9afc3a612a859c68b322db3e0d
+        sha256: 6a88b48f0f07f47bea0da0a31aee45ba535c2f9afc3a612a859c68b322db3e0d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zboy/blobs/sha256:e2baaf6491fe70279c22f669b2a64bd5467506ea9be7aa86807a06519f0b9311
+        sha256: e2baaf6491fe70279c22f669b2a64bd5467506ea9be7aa86807a06519f0b9311
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zboy/blobs/sha256:21f25a5ddc14d43b31ce8bbceff130e74252568f856359be2e99d3179b1cee8a
+        sha256: 21f25a5ddc14d43b31ce8bbceff130e74252568f856359be2e99d3179b1cee8a
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/zboy/zBoy%20v0.71/zboy-0.71.tar.xz
+    sha256: d359b87e3149418fbe1599247c9ca71e870d213b64a912616ffc6e77d1dff506
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

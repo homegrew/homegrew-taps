@@ -3,28 +3,53 @@ version: 0.25.0
 description: Security-first personal AI assistant with WASM sandbox channels
 homepage: https://github.com/nearai/ironclaw
 license: MIT OR Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:7b195ee4278e2c8b68e7fa662464d803d4d6e9481679874c0c1176f568c06e5d
-    sha256: 7b195ee4278e2c8b68e7fa662464d803d4d6e9481679874c0c1176f568c06e5d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:a659ae42ef8213e933794ed468c89868ae84da7771d8913a409765c3b0d8de3a
-    sha256: a659ae42ef8213e933794ed468c89868ae84da7771d8913a409765c3b0d8de3a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:0c3b064e56b0958e58bf0c792b7a824732badb76aa5c3cbf2b21e88176a13ba2
-    sha256: 0c3b064e56b0958e58bf0c792b7a824732badb76aa5c3cbf2b21e88176a13ba2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:a64e737c021ba93517c3bbb157efaaa8acfee2974e25096649374bf18dd53ca1
-    sha256: a64e737c021ba93517c3bbb157efaaa8acfee2974e25096649374bf18dd53ca1
-source:
-  url: https://github.com/nearai/ironclaw/archive/refs/tags/ironclaw-v0.25.0.tar.gz
-  sha256: 039da1591c71dee723d987dc785a9927ae5eda86f708f3f7990f95cb98397284
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:a659ae42ef8213e933794ed468c89868ae84da7771d8913a409765c3b0d8de3a
+        sha256: a659ae42ef8213e933794ed468c89868ae84da7771d8913a409765c3b0d8de3a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:7b195ee4278e2c8b68e7fa662464d803d4d6e9481679874c0c1176f568c06e5d
+        sha256: 7b195ee4278e2c8b68e7fa662464d803d4d6e9481679874c0c1176f568c06e5d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:0c3b064e56b0958e58bf0c792b7a824732badb76aa5c3cbf2b21e88176a13ba2
+        sha256: 0c3b064e56b0958e58bf0c792b7a824732badb76aa5c3cbf2b21e88176a13ba2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:a64e737c021ba93517c3bbb157efaaa8acfee2974e25096649374bf18dd53ca1
+        sha256: a64e737c021ba93517c3bbb157efaaa8acfee2974e25096649374bf18dd53ca1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nearai/ironclaw/archive/refs/tags/ironclaw-v0.25.0.tar.gz
+    sha256: 039da1591c71dee723d987dc785a9927ae5eda86f708f3f7990f95cb98397284
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

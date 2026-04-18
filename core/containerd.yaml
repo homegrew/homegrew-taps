@@ -3,26 +3,52 @@ version: 2.2.3
 description: Open and reliable container runtime
 homepage: https://containerd.io
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:4fc9ae1225ac8f3e0f9e8eb3726326eb834ecd83f653c68c2fd7a886de8aa25d
-    sha256: 4fc9ae1225ac8f3e0f9e8eb3726326eb834ecd83f653c68c2fd7a886de8aa25d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:627d6c3c45ae73f03598040f018f7130e063fdd5d1c18159df2544fba04d6712
-    sha256: 627d6c3c45ae73f03598040f018f7130e063fdd5d1c18159df2544fba04d6712
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:94d07bbce3d39ad3d956241b8af9c8f8a36084e5a52b680b1e74f81559f287c9
-    sha256: 94d07bbce3d39ad3d956241b8af9c8f8a36084e5a52b680b1e74f81559f287c9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:468a8911443eca43676417abed4ffbc12f6b00b4119430317e52679b870f734b
-    sha256: 468a8911443eca43676417abed4ffbc12f6b00b4119430317e52679b870f734b
-source:
-  url: https://github.com/containerd/containerd/archive/refs/tags/v2.2.3.tar.gz
-  sha256: b97780bde4b01ed3596b0b0c6f55bfb130794a3db4e6fe2e0fc9719244933945
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:627d6c3c45ae73f03598040f018f7130e063fdd5d1c18159df2544fba04d6712
+        sha256: 627d6c3c45ae73f03598040f018f7130e063fdd5d1c18159df2544fba04d6712
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:4fc9ae1225ac8f3e0f9e8eb3726326eb834ecd83f653c68c2fd7a886de8aa25d
+        sha256: 4fc9ae1225ac8f3e0f9e8eb3726326eb834ecd83f653c68c2fd7a886de8aa25d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:94d07bbce3d39ad3d956241b8af9c8f8a36084e5a52b680b1e74f81559f287c9
+        sha256: 94d07bbce3d39ad3d956241b8af9c8f8a36084e5a52b680b1e74f81559f287c9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:468a8911443eca43676417abed4ffbc12f6b00b4119430317e52679b870f734b
+        sha256: 468a8911443eca43676417abed4ffbc12f6b00b4119430317e52679b870f734b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/containerd/containerd/archive/refs/tags/v2.2.3.tar.gz
+    sha256: b97780bde4b01ed3596b0b0c6f55bfb130794a3db4e6fe2e0fc9719244933945
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - go-md2man
+    - go
+    - go-md2man
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

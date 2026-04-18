@@ -3,28 +3,53 @@ version: 1.2.0
 description: High-performance, geo-distributed, and federated metadata lake
 homepage: https://gravitino.apache.org
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gravitino/blobs/sha256:641a82af33b7429303564b2f84eb386ac4a2d9f5d01c25d1fdd63e0d07013fa9
-    sha256: 641a82af33b7429303564b2f84eb386ac4a2d9f5d01c25d1fdd63e0d07013fa9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gravitino/blobs/sha256:2362b8120e8a3a5bbd5bf7e02d0d4183fb679410a8fca44599e2f56cde0c54b7
-    sha256: 2362b8120e8a3a5bbd5bf7e02d0d4183fb679410a8fca44599e2f56cde0c54b7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gravitino/blobs/sha256:ea8bd081555348ab2c099a7628ca44d69940988c57407d56aafde1ad80012b57
-    sha256: ea8bd081555348ab2c099a7628ca44d69940988c57407d56aafde1ad80012b57
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gravitino/blobs/sha256:af63c907575edeb2f12fe71afcd49fdf53a2dc4f22a3725736c868f579f3853d
-    sha256: af63c907575edeb2f12fe71afcd49fdf53a2dc4f22a3725736c868f579f3853d
-source:
-  url: https://github.com/apache/gravitino/archive/refs/tags/v1.2.0.tar.gz
-  sha256: be6d91e82238b0e0f278da15aefc50f0aca6629cd8da9bdc166d480da37e7587
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk@17
+    - openjdk@17
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gravitino/blobs/sha256:2362b8120e8a3a5bbd5bf7e02d0d4183fb679410a8fca44599e2f56cde0c54b7
+        sha256: 2362b8120e8a3a5bbd5bf7e02d0d4183fb679410a8fca44599e2f56cde0c54b7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gravitino/blobs/sha256:641a82af33b7429303564b2f84eb386ac4a2d9f5d01c25d1fdd63e0d07013fa9
+        sha256: 641a82af33b7429303564b2f84eb386ac4a2d9f5d01c25d1fdd63e0d07013fa9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gravitino/blobs/sha256:ea8bd081555348ab2c099a7628ca44d69940988c57407d56aafde1ad80012b57
+        sha256: ea8bd081555348ab2c099a7628ca44d69940988c57407d56aafde1ad80012b57
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gravitino/blobs/sha256:af63c907575edeb2f12fe71afcd49fdf53a2dc4f22a3725736c868f579f3853d
+        sha256: af63c907575edeb2f12fe71afcd49fdf53a2dc4f22a3725736c868f579f3853d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/apache/gravitino/archive/refs/tags/v1.2.0.tar.gz
+    sha256: be6d91e82238b0e0f278da15aefc50f0aca6629cd8da9bdc166d480da37e7587
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gradle@8
-  - node
+    - gradle@8
+    - node
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

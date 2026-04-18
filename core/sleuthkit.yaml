@@ -3,40 +3,64 @@ version: 4.15.0
 description: Forensic toolkit
 homepage: https://www.sleuthkit.org/
 license: IPL-1.0 AND CPL-1.0 AND GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sleuthkit/blobs/sha256:8233c5659ba82a3205be66daffa367de9c19e3bd571fa7832f2834212410e6f8
-    sha256: 8233c5659ba82a3205be66daffa367de9c19e3bd571fa7832f2834212410e6f8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sleuthkit/blobs/sha256:e079c6a173f523658c6d26f536899c198178c953c76ccf5df0b41d646ccde891
-    sha256: e079c6a173f523658c6d26f536899c198178c953c76ccf5df0b41d646ccde891
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sleuthkit/blobs/sha256:09ffae9958cc8fcdc806aa0676b483b7a374024e612221b291f20abbe001f0b2
-    sha256: 09ffae9958cc8fcdc806aa0676b483b7a374024e612221b291f20abbe001f0b2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sleuthkit/blobs/sha256:fd317ae9a6cc96e26521c5a80e0c2cf83e6e692911f1d5ec97ae87b294bec0f0
-    sha256: fd317ae9a6cc96e26521c5a80e0c2cf83e6e692911f1d5ec97ae87b294bec0f0
-source:
-  url: https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.15.0/sleuthkit-4.15.0.tar.gz
-  sha256: 3a8c1e7d18a9b81f3e5e8aa78313974aceaafc6e051d636bc92cd7168286eca9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - afflib
-  - libewf
-  - libpq
-  - openjdk
-  - openssl@3
-  - sqlite
+    - afflib
+    - libewf
+    - libpq
+    - openjdk
+    - openssl@3
+    - sqlite
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sleuthkit/blobs/sha256:e079c6a173f523658c6d26f536899c198178c953c76ccf5df0b41d646ccde891
+        sha256: e079c6a173f523658c6d26f536899c198178c953c76ccf5df0b41d646ccde891
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sleuthkit/blobs/sha256:8233c5659ba82a3205be66daffa367de9c19e3bd571fa7832f2834212410e6f8
+        sha256: 8233c5659ba82a3205be66daffa367de9c19e3bd571fa7832f2834212410e6f8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sleuthkit/blobs/sha256:09ffae9958cc8fcdc806aa0676b483b7a374024e612221b291f20abbe001f0b2
+        sha256: 09ffae9958cc8fcdc806aa0676b483b7a374024e612221b291f20abbe001f0b2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sleuthkit/blobs/sha256:fd317ae9a6cc96e26521c5a80e0c2cf83e6e692911f1d5ec97ae87b294bec0f0
+        sha256: fd317ae9a6cc96e26521c5a80e0c2cf83e6e692911f1d5ec97ae87b294bec0f0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.15.0/sleuthkit-4.15.0.tar.gz
+    sha256: 3a8c1e7d18a9b81f3e5e8aa78313974aceaafc6e051d636bc92cd7168286eca9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ant
+    - ant
 linux_dependencies:
-  - afflib
-  - libewf
-  - libpq
-  - openjdk
-  - openssl@3
-  - sqlite
-  - zlib-ng-compat
+    - afflib
+    - libewf
+    - libpq
+    - openjdk
+    - openssl@3
+    - sqlite
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

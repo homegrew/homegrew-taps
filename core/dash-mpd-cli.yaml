@@ -3,30 +3,55 @@ version: 0.2.32
 description: Download media content from a DASH-MPEG or DASH-WebM MPD manifest
 homepage: https://emarsden.github.io/dash-mpd-cli/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dash-mpd-cli/blobs/sha256:8c18fa1e0c57953c4d12049080927e277a930a5cad4b632f933497692889c0f9
-    sha256: 8c18fa1e0c57953c4d12049080927e277a930a5cad4b632f933497692889c0f9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dash-mpd-cli/blobs/sha256:2684596559d446563fddaa86f68107bea142b51e3c313eaad68f75d91495d911
-    sha256: 2684596559d446563fddaa86f68107bea142b51e3c313eaad68f75d91495d911
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dash-mpd-cli/blobs/sha256:f0ba2952e73397b6376ee8537a27c5384caf342e8d7005e98d8fd9c2e86e9ecd
-    sha256: f0ba2952e73397b6376ee8537a27c5384caf342e8d7005e98d8fd9c2e86e9ecd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dash-mpd-cli/blobs/sha256:8f7b1243a1e0d4482b5c6b822db3af20dae0383965db43af7e401f7eb1f38b05
-    sha256: 8f7b1243a1e0d4482b5c6b822db3af20dae0383965db43af7e401f7eb1f38b05
-source:
-  url: https://github.com/emarsden/dash-mpd-cli/archive/refs/tags/v0.2.32.tar.gz
-  sha256: 8df3b56323ff305784e5807c1195877066738bf9476dccb843aa39d1b8072bb4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - bento4
-  - ffmpeg
-  - mkvtoolnix
+    - bento4
+    - ffmpeg
+    - mkvtoolnix
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dash-mpd-cli/blobs/sha256:2684596559d446563fddaa86f68107bea142b51e3c313eaad68f75d91495d911
+        sha256: 2684596559d446563fddaa86f68107bea142b51e3c313eaad68f75d91495d911
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dash-mpd-cli/blobs/sha256:8c18fa1e0c57953c4d12049080927e277a930a5cad4b632f933497692889c0f9
+        sha256: 8c18fa1e0c57953c4d12049080927e277a930a5cad4b632f933497692889c0f9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dash-mpd-cli/blobs/sha256:f0ba2952e73397b6376ee8537a27c5384caf342e8d7005e98d8fd9c2e86e9ecd
+        sha256: f0ba2952e73397b6376ee8537a27c5384caf342e8d7005e98d8fd9c2e86e9ecd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dash-mpd-cli/blobs/sha256:8f7b1243a1e0d4482b5c6b822db3af20dae0383965db43af7e401f7eb1f38b05
+        sha256: 8f7b1243a1e0d4482b5c6b822db3af20dae0383965db43af7e401f7eb1f38b05
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/emarsden/dash-mpd-cli/archive/refs/tags/v0.2.32.tar.gz
+    sha256: 8df3b56323ff305784e5807c1195877066738bf9476dccb843aa39d1b8072bb4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - protobuf
-  - rust
+    - protobuf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

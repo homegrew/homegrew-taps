@@ -3,28 +3,53 @@ version: 0.52.0
 description: App runtime and UX toolkit for pixel-based apps
 homepage: https://github.com/tronbyt/pixlet
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pixlet/blobs/sha256:b13307e83629598bf6a43d4e6a7ceda39c8d83d5b7e2f2d4c744b5e49b46be9e
-    sha256: b13307e83629598bf6a43d4e6a7ceda39c8d83d5b7e2f2d4c744b5e49b46be9e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pixlet/blobs/sha256:d454da2ff15e904f3c6f1eb2345d694bba369e6c6dcf9088a6fa254b7acb59d4
-    sha256: d454da2ff15e904f3c6f1eb2345d694bba369e6c6dcf9088a6fa254b7acb59d4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pixlet/blobs/sha256:76ccbc5242978bae43e39cd34e276f63b1258bd92dd06b188bd15d45ce5065f7
-    sha256: 76ccbc5242978bae43e39cd34e276f63b1258bd92dd06b188bd15d45ce5065f7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pixlet/blobs/sha256:3551298753d469e15c6f2a5f88fb88b687c4423a5e6b2f52853aca22e62d9e23
-    sha256: 3551298753d469e15c6f2a5f88fb88b687c4423a5e6b2f52853aca22e62d9e23
-source:
-  url: https://github.com/tronbyt/pixlet/archive/refs/tags/v0.52.0.tar.gz
-  sha256: 4c796ac25041000d9d04d5e92e30790ab232778451aaf715e203b66d1dd12840
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - webp
+    - webp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pixlet/blobs/sha256:d454da2ff15e904f3c6f1eb2345d694bba369e6c6dcf9088a6fa254b7acb59d4
+        sha256: d454da2ff15e904f3c6f1eb2345d694bba369e6c6dcf9088a6fa254b7acb59d4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pixlet/blobs/sha256:b13307e83629598bf6a43d4e6a7ceda39c8d83d5b7e2f2d4c744b5e49b46be9e
+        sha256: b13307e83629598bf6a43d4e6a7ceda39c8d83d5b7e2f2d4c744b5e49b46be9e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pixlet/blobs/sha256:76ccbc5242978bae43e39cd34e276f63b1258bd92dd06b188bd15d45ce5065f7
+        sha256: 76ccbc5242978bae43e39cd34e276f63b1258bd92dd06b188bd15d45ce5065f7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pixlet/blobs/sha256:3551298753d469e15c6f2a5f88fb88b687c4423a5e6b2f52853aca22e62d9e23
+        sha256: 3551298753d469e15c6f2a5f88fb88b687c4423a5e6b2f52853aca22e62d9e23
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tronbyt/pixlet/archive/refs/tags/v0.52.0.tar.gz
+    sha256: 4c796ac25041000d9d04d5e92e30790ab232778451aaf715e203b66d1dd12840
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - node
+    - go
+    - node
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

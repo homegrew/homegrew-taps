@@ -3,27 +3,52 @@ version: 1.86.3
 description: Git for Data
 homepage: https://github.com/dolthub/dolt
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:d6d68b299ad9d4dcf00252e304e3c0d361f6c6b8e83b3f12a2b5631d2b1b4d10
-    sha256: d6d68b299ad9d4dcf00252e304e3c0d361f6c6b8e83b3f12a2b5631d2b1b4d10
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:aed72dca2a305f3f6565f7c1b9a46313553210d6e99fd958851474847a027419
-    sha256: aed72dca2a305f3f6565f7c1b9a46313553210d6e99fd958851474847a027419
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:c030a8e081364eb6e9c17fe59f578f9f014dcfd908f16463ba7187704533d1e0
-    sha256: c030a8e081364eb6e9c17fe59f578f9f014dcfd908f16463ba7187704533d1e0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:6442f54572f33d0c0c38bbcc0a560eb4e8ad6c22ee1fe6f83c3380a0151cc9c7
-    sha256: 6442f54572f33d0c0c38bbcc0a560eb4e8ad6c22ee1fe6f83c3380a0151cc9c7
-source:
-  url: https://github.com/dolthub/dolt/archive/refs/tags/v1.86.3.tar.gz
-  sha256: 6a2778153fcb94efe7951263677b40b03faf8829bc2a4e51ef1a76155e4bc6cd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
+    - icu4c@78
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:aed72dca2a305f3f6565f7c1b9a46313553210d6e99fd958851474847a027419
+        sha256: aed72dca2a305f3f6565f7c1b9a46313553210d6e99fd958851474847a027419
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:d6d68b299ad9d4dcf00252e304e3c0d361f6c6b8e83b3f12a2b5631d2b1b4d10
+        sha256: d6d68b299ad9d4dcf00252e304e3c0d361f6c6b8e83b3f12a2b5631d2b1b4d10
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:c030a8e081364eb6e9c17fe59f578f9f014dcfd908f16463ba7187704533d1e0
+        sha256: c030a8e081364eb6e9c17fe59f578f9f014dcfd908f16463ba7187704533d1e0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:6442f54572f33d0c0c38bbcc0a560eb4e8ad6c22ee1fe6f83c3380a0151cc9c7
+        sha256: 6442f54572f33d0c0c38bbcc0a560eb4e8ad6c22ee1fe6f83c3380a0151cc9c7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dolthub/dolt/archive/refs/tags/v1.86.3.tar.gz
+    sha256: 6a2778153fcb94efe7951263677b40b03faf8829bc2a4e51ef1a76155e4bc6cd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

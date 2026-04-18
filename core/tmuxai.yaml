@@ -3,27 +3,52 @@ version: 2.1.2
 description: AI-powered, non-intrusive terminal assistant
 homepage: https://tmuxai.dev/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tmuxai/blobs/sha256:0227d5547d2bc286139172086ba8f89ca236b6d8d6505a565194e887348dde35
-    sha256: 0227d5547d2bc286139172086ba8f89ca236b6d8d6505a565194e887348dde35
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tmuxai/blobs/sha256:3dd1cb67c1ace942a00db51f678ea02eaf2801e60d02f81efeb81062154b5c12
-    sha256: 3dd1cb67c1ace942a00db51f678ea02eaf2801e60d02f81efeb81062154b5c12
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tmuxai/blobs/sha256:ae2e35bc64a732373a05878e0855381cebb5b8f52fb57016185f698b01e007e7
-    sha256: ae2e35bc64a732373a05878e0855381cebb5b8f52fb57016185f698b01e007e7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tmuxai/blobs/sha256:29ea784cc3f5fd705ed572ecaa911d3b6392df04e444e440d56e59f557487bd1
-    sha256: 29ea784cc3f5fd705ed572ecaa911d3b6392df04e444e440d56e59f557487bd1
-source:
-  url: https://github.com/BoringDystopiaDevelopment/tmuxai/archive/refs/tags/v2.1.2.tar.gz
-  sha256: d96418e9738bdc90c60f1bda7e8c88f1dbd06a448cdcf1b26a51ad8659ddc473
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - tmux
+    - tmux
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tmuxai/blobs/sha256:3dd1cb67c1ace942a00db51f678ea02eaf2801e60d02f81efeb81062154b5c12
+        sha256: 3dd1cb67c1ace942a00db51f678ea02eaf2801e60d02f81efeb81062154b5c12
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tmuxai/blobs/sha256:0227d5547d2bc286139172086ba8f89ca236b6d8d6505a565194e887348dde35
+        sha256: 0227d5547d2bc286139172086ba8f89ca236b6d8d6505a565194e887348dde35
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tmuxai/blobs/sha256:ae2e35bc64a732373a05878e0855381cebb5b8f52fb57016185f698b01e007e7
+        sha256: ae2e35bc64a732373a05878e0855381cebb5b8f52fb57016185f698b01e007e7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tmuxai/blobs/sha256:29ea784cc3f5fd705ed572ecaa911d3b6392df04e444e440d56e59f557487bd1
+        sha256: 29ea784cc3f5fd705ed572ecaa911d3b6392df04e444e440d56e59f557487bd1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/BoringDystopiaDevelopment/tmuxai/archive/refs/tags/v2.1.2.tar.gz
+    sha256: d96418e9738bdc90c60f1bda7e8c88f1dbd06a448cdcf1b26a51ad8659ddc473
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

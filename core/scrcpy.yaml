@@ -3,31 +3,56 @@ version: 3.3.4
 description: Display and control your Android device
 homepage: https://github.com/Genymobile/scrcpy
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scrcpy/blobs/sha256:9443d43f86e690c1cd6babffbd0b0e7f507e34e7c1ca919a8ad0c1b5ceae8e52
-    sha256: 9443d43f86e690c1cd6babffbd0b0e7f507e34e7c1ca919a8ad0c1b5ceae8e52
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scrcpy/blobs/sha256:163a29c09b6c139e7ed5641d348e80ff589e944a244f3ed266753df881c2b2fa
-    sha256: 163a29c09b6c139e7ed5641d348e80ff589e944a244f3ed266753df881c2b2fa
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scrcpy/blobs/sha256:a1128139c2508f754e0f94133e1630c54366fd3019f5966e3876baca11f887eb
-    sha256: a1128139c2508f754e0f94133e1630c54366fd3019f5966e3876baca11f887eb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scrcpy/blobs/sha256:5631757dff00cc6b78cc96495e123a971cb1b414b7465db3cc4cca8016acea5d
-    sha256: 5631757dff00cc6b78cc96495e123a971cb1b414b7465db3cc4cca8016acea5d
-source:
-  url: https://github.com/Genymobile/scrcpy/archive/refs/tags/v3.3.4.tar.gz
-  sha256: 03b72d1f71ca7783cff2995ca7cd8c67b9b75038a3cc35e443a1913e951b49dd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - libusb
-  - sdl2
+    - ffmpeg
+    - libusb
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scrcpy/blobs/sha256:163a29c09b6c139e7ed5641d348e80ff589e944a244f3ed266753df881c2b2fa
+        sha256: 163a29c09b6c139e7ed5641d348e80ff589e944a244f3ed266753df881c2b2fa
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scrcpy/blobs/sha256:9443d43f86e690c1cd6babffbd0b0e7f507e34e7c1ca919a8ad0c1b5ceae8e52
+        sha256: 9443d43f86e690c1cd6babffbd0b0e7f507e34e7c1ca919a8ad0c1b5ceae8e52
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scrcpy/blobs/sha256:a1128139c2508f754e0f94133e1630c54366fd3019f5966e3876baca11f887eb
+        sha256: a1128139c2508f754e0f94133e1630c54366fd3019f5966e3876baca11f887eb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scrcpy/blobs/sha256:5631757dff00cc6b78cc96495e123a971cb1b414b7465db3cc4cca8016acea5d
+        sha256: 5631757dff00cc6b78cc96495e123a971cb1b414b7465db3cc4cca8016acea5d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Genymobile/scrcpy/archive/refs/tags/v3.3.4.tar.gz
+    sha256: 03b72d1f71ca7783cff2995ca7cd8c67b9b75038a3cc35e443a1913e951b49dd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

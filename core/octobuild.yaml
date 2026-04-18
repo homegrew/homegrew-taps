@@ -3,28 +3,53 @@ version: 1.8.1
 description: Compiler cache for Unreal Engine
 homepage: https://github.com/octobuild/octobuild
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/octobuild/blobs/sha256:ae3196c00596806784136909afae180ce3556bc53770ca95c8266324c285f1a3
-    sha256: ae3196c00596806784136909afae180ce3556bc53770ca95c8266324c285f1a3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/octobuild/blobs/sha256:58d75af4d61aa6ade3e137c414c4b355949e63835c731db228f939b0e3e20c7c
-    sha256: 58d75af4d61aa6ade3e137c414c4b355949e63835c731db228f939b0e3e20c7c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/octobuild/blobs/sha256:252412dd4df54aa83cfe00168e09b16c2404a1269ce0ae86da3cbdff8d88fbab
-    sha256: 252412dd4df54aa83cfe00168e09b16c2404a1269ce0ae86da3cbdff8d88fbab
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/octobuild/blobs/sha256:32cd6cd48bb96e40477d91f1b0519c30ddf8b26654c0620060a107e931cd999a
-    sha256: 32cd6cd48bb96e40477d91f1b0519c30ddf8b26654c0620060a107e931cd999a
-source:
-  url: https://github.com/octobuild/octobuild/archive/refs/tags/1.8.1.tar.gz
-  sha256: 5638c8759899bfc7a5658d44d8cfcf091f0afc001fdcaa5d305a03f6aa668475
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/octobuild/blobs/sha256:58d75af4d61aa6ade3e137c414c4b355949e63835c731db228f939b0e3e20c7c
+        sha256: 58d75af4d61aa6ade3e137c414c4b355949e63835c731db228f939b0e3e20c7c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/octobuild/blobs/sha256:ae3196c00596806784136909afae180ce3556bc53770ca95c8266324c285f1a3
+        sha256: ae3196c00596806784136909afae180ce3556bc53770ca95c8266324c285f1a3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/octobuild/blobs/sha256:252412dd4df54aa83cfe00168e09b16c2404a1269ce0ae86da3cbdff8d88fbab
+        sha256: 252412dd4df54aa83cfe00168e09b16c2404a1269ce0ae86da3cbdff8d88fbab
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/octobuild/blobs/sha256:32cd6cd48bb96e40477d91f1b0519c30ddf8b26654c0620060a107e931cd999a
+        sha256: 32cd6cd48bb96e40477d91f1b0519c30ddf8b26654c0620060a107e931cd999a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/octobuild/octobuild/archive/refs/tags/1.8.1.tar.gz
+    sha256: 5638c8759899bfc7a5658d44d8cfcf091f0afc001fdcaa5d305a03f6aa668475
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

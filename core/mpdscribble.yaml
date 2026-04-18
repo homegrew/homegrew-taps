@@ -1,32 +1,57 @@
 name: mpdscribble
-version: 0.25
+version: "0.25"
 description: Last.fm reporting client for mpd
 homepage: https://www.musicpd.org/clients/mpdscribble/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpdscribble/blobs/sha256:2812de40e805a9ea32ff8e5108217294c2b71bd5fe8cea5de4dc0192817d8aaf
-    sha256: 2812de40e805a9ea32ff8e5108217294c2b71bd5fe8cea5de4dc0192817d8aaf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpdscribble/blobs/sha256:a56d2f601abc41777b2fead2ac177532a4520fc923d876c1505b29cee1c24e9d
-    sha256: a56d2f601abc41777b2fead2ac177532a4520fc923d876c1505b29cee1c24e9d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpdscribble/blobs/sha256:4e5852c3dcb301ca9378826b19a679be1b0592d1b99dc64bed775ef092f4eecc
-    sha256: 4e5852c3dcb301ca9378826b19a679be1b0592d1b99dc64bed775ef092f4eecc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpdscribble/blobs/sha256:5bf3500d5c908338c5389f4a212a7c85609b953943e8683fc4d8011ed266f51e
-    sha256: 5bf3500d5c908338c5389f4a212a7c85609b953943e8683fc4d8011ed266f51e
-source:
-  url: https://www.musicpd.org/download/mpdscribble/0.25/mpdscribble-0.25.tar.xz
-  sha256: 20f89d945bf517c4d68bf77a77a359fdb13842ab1295e8d21eda79be2b5b35ce
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgcrypt
-  - libmpdclient
+    - libgcrypt
+    - libmpdclient
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpdscribble/blobs/sha256:a56d2f601abc41777b2fead2ac177532a4520fc923d876c1505b29cee1c24e9d
+        sha256: a56d2f601abc41777b2fead2ac177532a4520fc923d876c1505b29cee1c24e9d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpdscribble/blobs/sha256:2812de40e805a9ea32ff8e5108217294c2b71bd5fe8cea5de4dc0192817d8aaf
+        sha256: 2812de40e805a9ea32ff8e5108217294c2b71bd5fe8cea5de4dc0192817d8aaf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpdscribble/blobs/sha256:4e5852c3dcb301ca9378826b19a679be1b0592d1b99dc64bed775ef092f4eecc
+        sha256: 4e5852c3dcb301ca9378826b19a679be1b0592d1b99dc64bed775ef092f4eecc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpdscribble/blobs/sha256:5bf3500d5c908338c5389f4a212a7c85609b953943e8683fc4d8011ed266f51e
+        sha256: 5bf3500d5c908338c5389f4a212a7c85609b953943e8683fc4d8011ed266f51e
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.musicpd.org/download/mpdscribble/0.25/mpdscribble-0.25.tar.xz
+    sha256: 20f89d945bf517c4d68bf77a77a359fdb13842ab1295e8d21eda79be2b5b35ce
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

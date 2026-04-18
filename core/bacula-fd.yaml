@@ -3,30 +3,55 @@ version: 15.0.3
 description: Network backup solution
 homepage: https://www.bacula.org/
 license: AGPL-3.0-only WITH openvpn-openssl-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:d8e6479890fe58003ea82668949e353c887a5142551e12fa482ab94291a41567
-    sha256: d8e6479890fe58003ea82668949e353c887a5142551e12fa482ab94291a41567
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:25564b366864ae82e37c6c6daebf04d060c416c47bd62981cfa984bacbe58dc8
-    sha256: 25564b366864ae82e37c6c6daebf04d060c416c47bd62981cfa984bacbe58dc8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:3f29b7a47f97ba906ad99a6ca74735719764540697d700495e4545bbf66c1038
-    sha256: 3f29b7a47f97ba906ad99a6ca74735719764540697d700495e4545bbf66c1038
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:00e58d0749aa2b73b7c7f41074e77f62c072cd02c47a0d9e0bcf781775bc415f
-    sha256: 00e58d0749aa2b73b7c7f41074e77f62c072cd02c47a0d9e0bcf781775bc415f
-source:
-  url: https://downloads.sourceforge.net/project/bacula/bacula/15.0.3/bacula-15.0.3.tar.gz
-  sha256: 294afd3d2eb9d5b71c3d0e88fdf19eb513bfdb843b28d35c0552e4ae062827a1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - readline
+    - openssl@3
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:25564b366864ae82e37c6c6daebf04d060c416c47bd62981cfa984bacbe58dc8
+        sha256: 25564b366864ae82e37c6c6daebf04d060c416c47bd62981cfa984bacbe58dc8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:d8e6479890fe58003ea82668949e353c887a5142551e12fa482ab94291a41567
+        sha256: d8e6479890fe58003ea82668949e353c887a5142551e12fa482ab94291a41567
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:3f29b7a47f97ba906ad99a6ca74735719764540697d700495e4545bbf66c1038
+        sha256: 3f29b7a47f97ba906ad99a6ca74735719764540697d700495e4545bbf66c1038
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:00e58d0749aa2b73b7c7f41074e77f62c072cd02c47a0d9e0bcf781775bc415f
+        sha256: 00e58d0749aa2b73b7c7f41074e77f62c072cd02c47a0d9e0bcf781775bc415f
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/bacula/bacula/15.0.3/bacula-15.0.3.tar.gz
+    sha256: 294afd3d2eb9d5b71c3d0e88fdf19eb513bfdb843b28d35c0552e4ae062827a1
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - openssl@3
-  - readline
-  - zlib-ng-compat
+    - openssl@3
+    - readline
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

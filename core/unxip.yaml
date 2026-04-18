@@ -1,29 +1,55 @@
 name: unxip
-version: 3.3
+version: "3.3"
 description: Fast Xcode unarchiver
 homepage: https://github.com/saagarjha/unxip
 license: LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unxip/blobs/sha256:3b6c919fc617737fbffc245d013c8e7512c6d7db1c33df373b2afa79d82db96b
-    sha256: 3b6c919fc617737fbffc245d013c8e7512c6d7db1c33df373b2afa79d82db96b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unxip/blobs/sha256:21d28010c3c9aac3ce826ff7a0f3ecb87d258786848b0b879e982b850388b707
-    sha256: 21d28010c3c9aac3ce826ff7a0f3ecb87d258786848b0b879e982b850388b707
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unxip/blobs/sha256:f980d6217df53dc0c7e7c976a4a8bca29e7c38028876ce17184917df790253f9
-    sha256: f980d6217df53dc0c7e7c976a4a8bca29e7c38028876ce17184917df790253f9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unxip/blobs/sha256:cc43a268cc4b16019d4f8b2379117f91e34f3ebab4eb25d516fc94a290baeec7
-    sha256: cc43a268cc4b16019d4f8b2379117f91e34f3ebab4eb25d516fc94a290baeec7
-source:
-  url: https://github.com/saagarjha/unxip/archive/refs/tags/v3.3.tar.gz
-  sha256: 490c27aeabad33a8c811ada09008d24835f0f701ad40092b450c4788cdf99198
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unxip/blobs/sha256:21d28010c3c9aac3ce826ff7a0f3ecb87d258786848b0b879e982b850388b707
+        sha256: 21d28010c3c9aac3ce826ff7a0f3ecb87d258786848b0b879e982b850388b707
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unxip/blobs/sha256:3b6c919fc617737fbffc245d013c8e7512c6d7db1c33df373b2afa79d82db96b
+        sha256: 3b6c919fc617737fbffc245d013c8e7512c6d7db1c33df373b2afa79d82db96b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unxip/blobs/sha256:f980d6217df53dc0c7e7c976a4a8bca29e7c38028876ce17184917df790253f9
+        sha256: f980d6217df53dc0c7e7c976a4a8bca29e7c38028876ce17184917df790253f9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unxip/blobs/sha256:cc43a268cc4b16019d4f8b2379117f91e34f3ebab4eb25d516fc94a290baeec7
+        sha256: cc43a268cc4b16019d4f8b2379117f91e34f3ebab4eb25d516fc94a290baeec7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/saagarjha/unxip/archive/refs/tags/v3.3.tar.gz
+    sha256: 490c27aeabad33a8c811ada09008d24835f0f701ad40092b450c4788cdf99198
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - libxml2
-  - xz
-  - zlib-ng-compat
+    - libxml2
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

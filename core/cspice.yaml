@@ -1,27 +1,53 @@
 name: cspice
-version: 67
+version: "67"
 description: Observation geometry system for robotic space science missions
 homepage: https://naif.jpl.nasa.gov/naif/toolkit.html
 license: LicenseRef-Homebrew-cannot-represent
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cspice/blobs/sha256:040bfcb0ac95b84d33600b31a20d6bb50a81f606a713077d86bc4fe47f115108
-    sha256: 040bfcb0ac95b84d33600b31a20d6bb50a81f606a713077d86bc4fe47f115108
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cspice/blobs/sha256:03e8ae8aec875223b2706a0c593879fb1eb483eab90ee30d9a89ac1cdd0bae61
-    sha256: 03e8ae8aec875223b2706a0c593879fb1eb483eab90ee30d9a89ac1cdd0bae61
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cspice/blobs/sha256:5c49763f72469907d773eef66b54ae8dce74c3df9f2f5dee29468de3ea9f0953
-    sha256: 5c49763f72469907d773eef66b54ae8dce74c3df9f2f5dee29468de3ea9f0953
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cspice/blobs/sha256:eab82a1e15614b89d2873ae64760df4da1053990b6f7e288d97a618a2d0c4ab2
-    sha256: eab82a1e15614b89d2873ae64760df4da1053990b6f7e288d97a618a2d0c4ab2
-source:
-  url: https://naif.jpl.nasa.gov/pub/naif/toolkit/C/MacIntel_OSX_AppleC_64bit/packages/cspice.tar.Z
-  sha256: 6f4980445fee4d363dbce6f571819f4a248358d2c1bebca47e0743eedfe9935e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cspice/blobs/sha256:03e8ae8aec875223b2706a0c593879fb1eb483eab90ee30d9a89ac1cdd0bae61
+        sha256: 03e8ae8aec875223b2706a0c593879fb1eb483eab90ee30d9a89ac1cdd0bae61
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cspice/blobs/sha256:040bfcb0ac95b84d33600b31a20d6bb50a81f606a713077d86bc4fe47f115108
+        sha256: 040bfcb0ac95b84d33600b31a20d6bb50a81f606a713077d86bc4fe47f115108
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cspice/blobs/sha256:5c49763f72469907d773eef66b54ae8dce74c3df9f2f5dee29468de3ea9f0953
+        sha256: 5c49763f72469907d773eef66b54ae8dce74c3df9f2f5dee29468de3ea9f0953
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cspice/blobs/sha256:eab82a1e15614b89d2873ae64760df4da1053990b6f7e288d97a618a2d0c4ab2
+        sha256: eab82a1e15614b89d2873ae64760df4da1053990b6f7e288d97a618a2d0c4ab2
+        sha512: ""
+        signature: ""
+source:
+    url: https://naif.jpl.nasa.gov/pub/naif/toolkit/C/MacIntel_OSX_AppleC_64bit/packages/cspice.tar.Z
+    sha256: 6f4980445fee4d363dbce6f571819f4a248358d2c1bebca47e0743eedfe9935e
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - tcsh
+    - tcsh
+build:
+    configure: []
+    install: []
+service: null

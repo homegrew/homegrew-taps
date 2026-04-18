@@ -3,27 +3,52 @@ version: 1.2.76
 description: SDL 1.2 compatibility layer that uses SDL 2.0 behind the scenes
 homepage: https://github.com/libsdl-org/sdl12-compat
 license: Zlib AND MIT-0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl12-compat/blobs/sha256:72161caba641a583c35ae7329d312e133e075d22181e6e73b05ee419606c02ef
-    sha256: 72161caba641a583c35ae7329d312e133e075d22181e6e73b05ee419606c02ef
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl12-compat/blobs/sha256:49274bc46c2f0f2ba1494e4ac6e70f494c894e0e6559835d4f7cc3f7c601ceed
-    sha256: 49274bc46c2f0f2ba1494e4ac6e70f494c894e0e6559835d4f7cc3f7c601ceed
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl12-compat/blobs/sha256:0510ee9c54c6ce20809c5bbad6e295d4cd1c280f64829f1ac2c1331863a7bbb9
-    sha256: 0510ee9c54c6ce20809c5bbad6e295d4cd1c280f64829f1ac2c1331863a7bbb9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl12-compat/blobs/sha256:5a4fe54f8946efbcc8db2e5775f09ece08c6fc0b7e141ad49c7e0caed0cf4a46
-    sha256: 5a4fe54f8946efbcc8db2e5775f09ece08c6fc0b7e141ad49c7e0caed0cf4a46
-source:
-  url: https://github.com/libsdl-org/sdl12-compat/archive/refs/tags/release-1.2.76.tar.gz
-  sha256: e889ac9c7e8a6bdfc31972bf1f1254b84882cb52931608bada62e8febbf0270b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sdl2
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl12-compat/blobs/sha256:49274bc46c2f0f2ba1494e4ac6e70f494c894e0e6559835d4f7cc3f7c601ceed
+        sha256: 49274bc46c2f0f2ba1494e4ac6e70f494c894e0e6559835d4f7cc3f7c601ceed
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl12-compat/blobs/sha256:72161caba641a583c35ae7329d312e133e075d22181e6e73b05ee419606c02ef
+        sha256: 72161caba641a583c35ae7329d312e133e075d22181e6e73b05ee419606c02ef
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl12-compat/blobs/sha256:0510ee9c54c6ce20809c5bbad6e295d4cd1c280f64829f1ac2c1331863a7bbb9
+        sha256: 0510ee9c54c6ce20809c5bbad6e295d4cd1c280f64829f1ac2c1331863a7bbb9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl12-compat/blobs/sha256:5a4fe54f8946efbcc8db2e5775f09ece08c6fc0b7e141ad49c7e0caed0cf4a46
+        sha256: 5a4fe54f8946efbcc8db2e5775f09ece08c6fc0b7e141ad49c7e0caed0cf4a46
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libsdl-org/sdl12-compat/archive/refs/tags/release-1.2.76.tar.gz
+    sha256: e889ac9c7e8a6bdfc31972bf1f1254b84882cb52931608bada62e8febbf0270b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

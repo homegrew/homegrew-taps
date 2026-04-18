@@ -3,25 +3,51 @@ version: 0.13.0
 description: Retrieve files over IPFS and save them locally
 homepage: https://github.com/ipfs/ipget/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ipget/blobs/sha256:ae191e404fb22d27e536be300bb1846eff193e07cd5f6ba708db4de72e6745ce
-    sha256: ae191e404fb22d27e536be300bb1846eff193e07cd5f6ba708db4de72e6745ce
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ipget/blobs/sha256:d2d37965fd49661e14955b9eed121b61d07c6b0b1b1154469162ad9f6c840885
-    sha256: d2d37965fd49661e14955b9eed121b61d07c6b0b1b1154469162ad9f6c840885
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ipget/blobs/sha256:15c1dd49bebdce8b9ab5fdbedd3cd48f9a831c42549fe9781c6de8284409d0fd
-    sha256: 15c1dd49bebdce8b9ab5fdbedd3cd48f9a831c42549fe9781c6de8284409d0fd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ipget/blobs/sha256:7a4531272cf503af7428a4b151489011936d2c3b1b1f9d569a8005af26e0ae5e
-    sha256: 7a4531272cf503af7428a4b151489011936d2c3b1b1f9d569a8005af26e0ae5e
-source:
-  url: https://github.com/ipfs/ipget/archive/refs/tags/v0.13.0.tar.gz
-  sha256: f23da18910d2cbed3d69f95d494bf60bc6465b668ff192e1e0980846052f7fbb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ipget/blobs/sha256:d2d37965fd49661e14955b9eed121b61d07c6b0b1b1154469162ad9f6c840885
+        sha256: d2d37965fd49661e14955b9eed121b61d07c6b0b1b1154469162ad9f6c840885
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ipget/blobs/sha256:ae191e404fb22d27e536be300bb1846eff193e07cd5f6ba708db4de72e6745ce
+        sha256: ae191e404fb22d27e536be300bb1846eff193e07cd5f6ba708db4de72e6745ce
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ipget/blobs/sha256:15c1dd49bebdce8b9ab5fdbedd3cd48f9a831c42549fe9781c6de8284409d0fd
+        sha256: 15c1dd49bebdce8b9ab5fdbedd3cd48f9a831c42549fe9781c6de8284409d0fd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ipget/blobs/sha256:7a4531272cf503af7428a4b151489011936d2c3b1b1f9d569a8005af26e0ae5e
+        sha256: 7a4531272cf503af7428a4b151489011936d2c3b1b1f9d569a8005af26e0ae5e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ipfs/ipget/archive/refs/tags/v0.13.0.tar.gz
+    sha256: f23da18910d2cbed3d69f95d494bf60bc6465b668ff192e1e0980846052f7fbb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

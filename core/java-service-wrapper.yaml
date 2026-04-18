@@ -3,26 +3,52 @@ version: 3.6.5
 description: Simplify the deployment, launch and monitoring of Java applications
 homepage: https://wrapper.tanukisoftware.com/
 license: GPL-2.0-only OR GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/java-service-wrapper/blobs/sha256:02d66dd4cb0b7c091065fe9a4ca074a9f1cde335a118fd78649ab83f2ef6b8a4
-    sha256: 02d66dd4cb0b7c091065fe9a4ca074a9f1cde335a118fd78649ab83f2ef6b8a4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/java-service-wrapper/blobs/sha256:78dfa3dd0a4ddfa5a47e120eb72ba8b7fb3f64d7f5fe466aecf1237d60e39eac
-    sha256: 78dfa3dd0a4ddfa5a47e120eb72ba8b7fb3f64d7f5fe466aecf1237d60e39eac
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/java-service-wrapper/blobs/sha256:e1884526297eddb52a7b9b445049fb5d58cdadb03fe6890690893a39011d011a
-    sha256: e1884526297eddb52a7b9b445049fb5d58cdadb03fe6890690893a39011d011a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/java-service-wrapper/blobs/sha256:9fa2df42bef313633426f63cf7967f4871d9b18f1cf5ed5c4428b7206ba6618a
-    sha256: 9fa2df42bef313633426f63cf7967f4871d9b18f1cf5ed5c4428b7206ba6618a
-source:
-  url: https://download.tanukisoftware.com/wrapper/3.6.5/wrapper_3.6.5_src.tar.gz
-  sha256: e1368eff719f7e1e358d5a3cb4749759cbdbdc455515eebf45ade646be1f82c0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/java-service-wrapper/blobs/sha256:78dfa3dd0a4ddfa5a47e120eb72ba8b7fb3f64d7f5fe466aecf1237d60e39eac
+        sha256: 78dfa3dd0a4ddfa5a47e120eb72ba8b7fb3f64d7f5fe466aecf1237d60e39eac
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/java-service-wrapper/blobs/sha256:02d66dd4cb0b7c091065fe9a4ca074a9f1cde335a118fd78649ab83f2ef6b8a4
+        sha256: 02d66dd4cb0b7c091065fe9a4ca074a9f1cde335a118fd78649ab83f2ef6b8a4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/java-service-wrapper/blobs/sha256:e1884526297eddb52a7b9b445049fb5d58cdadb03fe6890690893a39011d011a
+        sha256: e1884526297eddb52a7b9b445049fb5d58cdadb03fe6890690893a39011d011a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/java-service-wrapper/blobs/sha256:9fa2df42bef313633426f63cf7967f4871d9b18f1cf5ed5c4428b7206ba6618a
+        sha256: 9fa2df42bef313633426f63cf7967f4871d9b18f1cf5ed5c4428b7206ba6618a
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.tanukisoftware.com/wrapper/3.6.5/wrapper_3.6.5_src.tar.gz
+    sha256: e1368eff719f7e1e358d5a3cb4749759cbdbdc455515eebf45ade646be1f82c0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ant
-  - openjdk
+    - ant
+    - openjdk
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

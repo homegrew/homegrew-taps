@@ -3,30 +3,55 @@ version: 2.10.0
 description: Audio processing plugin system sdk
 homepage: https://www.vamp-plugins.org/
 license: X11 AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vamp-plugin-sdk/blobs/sha256:9bb7224a25dadc8224c09bee6594dcd2003a0d8a9f43f3bc392d889923ffb539
-    sha256: 9bb7224a25dadc8224c09bee6594dcd2003a0d8a9f43f3bc392d889923ffb539
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vamp-plugin-sdk/blobs/sha256:046ceaa07d234cb1e8bb83998f35a0a9d8188e0a650c5f56b89556ca2926cc95
-    sha256: 046ceaa07d234cb1e8bb83998f35a0a9d8188e0a650c5f56b89556ca2926cc95
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vamp-plugin-sdk/blobs/sha256:a9cb9dabefa0df5e50224c77c88a1b892f59fecbad8f987ac2cc94a87fd09a55
-    sha256: a9cb9dabefa0df5e50224c77c88a1b892f59fecbad8f987ac2cc94a87fd09a55
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vamp-plugin-sdk/blobs/sha256:f9db23c618723a54ba3fdf8481efeb39a46aed83c59c699eebb5e78e888f4aa0
-    sha256: f9db23c618723a54ba3fdf8481efeb39a46aed83c59c699eebb5e78e888f4aa0
-source:
-  url: https://deb.debian.org/debian/pool/main/v/vamp-plugin-sdk/vamp-plugin-sdk_2.10.0.orig.tar.gz
-  sha256: aeaf3762a44b148cebb10cde82f577317ffc9df2720e5445c3df85f3739ff75f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - flac
-  - libogg
-  - libsndfile
+    - flac
+    - libogg
+    - libsndfile
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vamp-plugin-sdk/blobs/sha256:046ceaa07d234cb1e8bb83998f35a0a9d8188e0a650c5f56b89556ca2926cc95
+        sha256: 046ceaa07d234cb1e8bb83998f35a0a9d8188e0a650c5f56b89556ca2926cc95
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vamp-plugin-sdk/blobs/sha256:9bb7224a25dadc8224c09bee6594dcd2003a0d8a9f43f3bc392d889923ffb539
+        sha256: 9bb7224a25dadc8224c09bee6594dcd2003a0d8a9f43f3bc392d889923ffb539
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vamp-plugin-sdk/blobs/sha256:a9cb9dabefa0df5e50224c77c88a1b892f59fecbad8f987ac2cc94a87fd09a55
+        sha256: a9cb9dabefa0df5e50224c77c88a1b892f59fecbad8f987ac2cc94a87fd09a55
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vamp-plugin-sdk/blobs/sha256:f9db23c618723a54ba3fdf8481efeb39a46aed83c59c699eebb5e78e888f4aa0
+        sha256: f9db23c618723a54ba3fdf8481efeb39a46aed83c59c699eebb5e78e888f4aa0
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/v/vamp-plugin-sdk/vamp-plugin-sdk_2.10.0.orig.tar.gz
+    sha256: aeaf3762a44b148cebb10cde82f577317ffc9df2720e5445c3df85f3739ff75f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - automake
-  - pkgconf
+    - automake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

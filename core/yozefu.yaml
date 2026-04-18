@@ -3,29 +3,54 @@ version: 0.0.29
 description: TUI for exploring data in a Kafka cluster
 homepage: https://github.com/MAIF/yozefu
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yozefu/blobs/sha256:9d3d98a3bd26791eb106de15c5bbe82df184380f505614fca87ecbe236e45f1f
-    sha256: 9d3d98a3bd26791eb106de15c5bbe82df184380f505614fca87ecbe236e45f1f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yozefu/blobs/sha256:7d5645505648912410ff5be5a9a4bb4c0def43dcec98ae22f9fac9a9cbc4305b
-    sha256: 7d5645505648912410ff5be5a9a4bb4c0def43dcec98ae22f9fac9a9cbc4305b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yozefu/blobs/sha256:f283ca950ae31f984dff568e7c58c0efa262c21ef4f4c980e02d81399289f8de
-    sha256: f283ca950ae31f984dff568e7c58c0efa262c21ef4f4c980e02d81399289f8de
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yozefu/blobs/sha256:47397779c59e3030fcb7749a51e21284e9d91f376983e93f7d01f00ded4a759b
-    sha256: 47397779c59e3030fcb7749a51e21284e9d91f376983e93f7d01f00ded4a759b
-source:
-  url: https://github.com/MAIF/yozefu/archive/refs/tags/v0.0.29.tar.gz
-  sha256: 67436dd73795d9b4267b351e3dd454468a05a23b1083f5dc02f1f792c4a4fe17
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yozefu/blobs/sha256:7d5645505648912410ff5be5a9a4bb4c0def43dcec98ae22f9fac9a9cbc4305b
+        sha256: 7d5645505648912410ff5be5a9a4bb4c0def43dcec98ae22f9fac9a9cbc4305b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yozefu/blobs/sha256:9d3d98a3bd26791eb106de15c5bbe82df184380f505614fca87ecbe236e45f1f
+        sha256: 9d3d98a3bd26791eb106de15c5bbe82df184380f505614fca87ecbe236e45f1f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yozefu/blobs/sha256:f283ca950ae31f984dff568e7c58c0efa262c21ef4f4c980e02d81399289f8de
+        sha256: f283ca950ae31f984dff568e7c58c0efa262c21ef4f4c980e02d81399289f8de
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yozefu/blobs/sha256:47397779c59e3030fcb7749a51e21284e9d91f376983e93f7d01f00ded4a759b
+        sha256: 47397779c59e3030fcb7749a51e21284e9d91f376983e93f7d01f00ded4a759b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/MAIF/yozefu/archive/refs/tags/v0.0.29.tar.gz
+    sha256: 67436dd73795d9b4267b351e3dd454468a05a23b1083f5dc02f1f792c4a4fe17
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - rust
+    - cmake
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

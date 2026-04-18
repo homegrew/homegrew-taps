@@ -3,47 +3,71 @@ version: 1.1.5
 description: Web server access log visualizer with retro style
 homepage: https://logstalgia.io/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/logstalgia/blobs/sha256:2bcc3f749465347934eceb6ec6922c9c927e7b8bc04513a263c58e8b69615a87
-    sha256: 2bcc3f749465347934eceb6ec6922c9c927e7b8bc04513a263c58e8b69615a87
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/logstalgia/blobs/sha256:eeabaeaedb6aa408ffa0d3248d69fb91230c36363b40e872a8248aa9dd109e6b
-    sha256: eeabaeaedb6aa408ffa0d3248d69fb91230c36363b40e872a8248aa9dd109e6b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/logstalgia/blobs/sha256:2a9a18916c48cf23d57b90db044357e2283c8ca13c7956467257a153a09ad692
-    sha256: 2a9a18916c48cf23d57b90db044357e2283c8ca13c7956467257a153a09ad692
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/logstalgia/blobs/sha256:a9847ee898ca58d0f4f77492b5fe95428a9ded03a01da144098d7c2275636cfb
-    sha256: a9847ee898ca58d0f4f77492b5fe95428a9ded03a01da144098d7c2275636cfb
-source:
-  url: https://github.com/acaudwell/Logstalgia/releases/download/logstalgia-1.1.5/logstalgia-1.1.5.tar.gz
-  sha256: 028936e9f663c877d6969ad25f145c7b420797e9a3e01c6c184815ed8309f481
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - freetype
-  - glew
-  - libpng
-  - pcre2
-  - sdl2
-  - sdl2_image
+    - boost
+    - freetype
+    - glew
+    - libpng
+    - pcre2
+    - sdl2
+    - sdl2_image
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/logstalgia/blobs/sha256:eeabaeaedb6aa408ffa0d3248d69fb91230c36363b40e872a8248aa9dd109e6b
+        sha256: eeabaeaedb6aa408ffa0d3248d69fb91230c36363b40e872a8248aa9dd109e6b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/logstalgia/blobs/sha256:2bcc3f749465347934eceb6ec6922c9c927e7b8bc04513a263c58e8b69615a87
+        sha256: 2bcc3f749465347934eceb6ec6922c9c927e7b8bc04513a263c58e8b69615a87
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/logstalgia/blobs/sha256:2a9a18916c48cf23d57b90db044357e2283c8ca13c7956467257a153a09ad692
+        sha256: 2a9a18916c48cf23d57b90db044357e2283c8ca13c7956467257a153a09ad692
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/logstalgia/blobs/sha256:a9847ee898ca58d0f4f77492b5fe95428a9ded03a01da144098d7c2275636cfb
+        sha256: a9847ee898ca58d0f4f77492b5fe95428a9ded03a01da144098d7c2275636cfb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/acaudwell/Logstalgia/releases/download/logstalgia-1.1.5/logstalgia-1.1.5.tar.gz
+    sha256: 028936e9f663c877d6969ad25f145c7b420797e9a3e01c6c184815ed8309f481
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - glm
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - glm
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - boost
-  - freetype
-  - glew
-  - libpng
-  - mesa
-  - mesa-glu
-  - pcre2
-  - sdl2
-  - sdl2_image
+    - boost
+    - freetype
+    - glew
+    - libpng
+    - mesa
+    - mesa-glu
+    - pcre2
+    - sdl2
+    - sdl2_image
+build:
+    configure: []
+    install: []
+service: null

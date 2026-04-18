@@ -3,43 +3,67 @@ version: 1.1.2
 description: Tools and libraries to work with AppStream metadata
 homepage: https://www.freedesktop.org/wiki/Distributions/AppStream/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/appstream/blobs/sha256:f2c581be46ed6b1247e389b64e1ad6362873ab8c03302cbf0dedc0120ab92299
-    sha256: f2c581be46ed6b1247e389b64e1ad6362873ab8c03302cbf0dedc0120ab92299
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/appstream/blobs/sha256:92b9ee15d004bc825753ae940b52a5ee6af25ff76baab576d7aacc5314515013
-    sha256: 92b9ee15d004bc825753ae940b52a5ee6af25ff76baab576d7aacc5314515013
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/appstream/blobs/sha256:9739adf95825abbf49377ad78790e4878f40e871ead0f2f38dd547f021b97b9e
-    sha256: 9739adf95825abbf49377ad78790e4878f40e871ead0f2f38dd547f021b97b9e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/appstream/blobs/sha256:4570742f348cdfc3f3308550fdd3a87997f7b32a5f1cce32bf514989bcae08b6
-    sha256: 4570742f348cdfc3f3308550fdd3a87997f7b32a5f1cce32bf514989bcae08b6
-source:
-  url: https://github.com/ximion/appstream/archive/refs/tags/v1.1.2.tar.gz
-  sha256: 564ec87b16e9e4ee81fb021e612250fd27f3a3ecd31c209a5dd1ff59def3022d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libfyaml
-  - libxmlb
-  - zstd
-  - gettext
+    - glib
+    - libfyaml
+    - libxmlb
+    - zstd
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/appstream/blobs/sha256:92b9ee15d004bc825753ae940b52a5ee6af25ff76baab576d7aacc5314515013
+        sha256: 92b9ee15d004bc825753ae940b52a5ee6af25ff76baab576d7aacc5314515013
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/appstream/blobs/sha256:f2c581be46ed6b1247e389b64e1ad6362873ab8c03302cbf0dedc0120ab92299
+        sha256: f2c581be46ed6b1247e389b64e1ad6362873ab8c03302cbf0dedc0120ab92299
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/appstream/blobs/sha256:9739adf95825abbf49377ad78790e4878f40e871ead0f2f38dd547f021b97b9e
+        sha256: 9739adf95825abbf49377ad78790e4878f40e871ead0f2f38dd547f021b97b9e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/appstream/blobs/sha256:4570742f348cdfc3f3308550fdd3a87997f7b32a5f1cce32bf514989bcae08b6
+        sha256: 4570742f348cdfc3f3308550fdd3a87997f7b32a5f1cce32bf514989bcae08b6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ximion/appstream/archive/refs/tags/v1.1.2.tar.gz
+    sha256: 564ec87b16e9e4ee81fb021e612250fd27f3a3ecd31c209a5dd1ff59def3022d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - gtk-doc
-  - itstool
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - gobject-introspection
+    - gtk-doc
+    - itstool
+    - meson
+    - ninja
+    - pkgconf
+    - vala
 linux_dependencies:
-  - glib
-  - libfyaml
-  - libxmlb
-  - systemd
-  - zstd
+    - glib
+    - libfyaml
+    - libxmlb
+    - systemd
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

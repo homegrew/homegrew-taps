@@ -3,29 +3,54 @@ version: 0.15.2
 description: C99 implementation of the MQTT 3.1.1 specification
 homepage: https://github.com/awslabs/aws-c-mqtt
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:211ccfe69cbe685448dee45a1216cb13e5a7ad55aeaa7c34cd6724b52628c3e9
-    sha256: 211ccfe69cbe685448dee45a1216cb13e5a7ad55aeaa7c34cd6724b52628c3e9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:7531d7c7f00deb50495d492bc43c54b41b740f8cb4d48b490b5a40b00dbb5113
-    sha256: 7531d7c7f00deb50495d492bc43c54b41b740f8cb4d48b490b5a40b00dbb5113
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:4152462671d2e4d77878060b6c395c0f011823c568966b7460c4c03f9d311385
-    sha256: 4152462671d2e4d77878060b6c395c0f011823c568966b7460c4c03f9d311385
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:201bdf663942e6270b90c00020f8a6f4f48636b97220b8b4df23997d6a5c8e62
-    sha256: 201bdf663942e6270b90c00020f8a6f4f48636b97220b8b4df23997d6a5c8e62
-source:
-  url: https://github.com/awslabs/aws-c-mqtt/archive/refs/tags/v0.15.2.tar.gz
-  sha256: 66f3f5edff4ad1f765a86d3342b6017d0f29f950c1c24f8c1edacdc895202edc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - aws-c-common
-  - aws-c-http
-  - aws-c-io
+    - aws-c-common
+    - aws-c-http
+    - aws-c-io
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:7531d7c7f00deb50495d492bc43c54b41b740f8cb4d48b490b5a40b00dbb5113
+        sha256: 7531d7c7f00deb50495d492bc43c54b41b740f8cb4d48b490b5a40b00dbb5113
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:211ccfe69cbe685448dee45a1216cb13e5a7ad55aeaa7c34cd6724b52628c3e9
+        sha256: 211ccfe69cbe685448dee45a1216cb13e5a7ad55aeaa7c34cd6724b52628c3e9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:4152462671d2e4d77878060b6c395c0f011823c568966b7460c4c03f9d311385
+        sha256: 4152462671d2e4d77878060b6c395c0f011823c568966b7460c4c03f9d311385
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:201bdf663942e6270b90c00020f8a6f4f48636b97220b8b4df23997d6a5c8e62
+        sha256: 201bdf663942e6270b90c00020f8a6f4f48636b97220b8b4df23997d6a5c8e62
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/awslabs/aws-c-mqtt/archive/refs/tags/v0.15.2.tar.gz
+    sha256: 66f3f5edff4ad1f765a86d3342b6017d0f29f950c1c24f8c1edacdc895202edc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

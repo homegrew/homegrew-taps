@@ -3,36 +3,60 @@ version: 4.5.0
 description: ANSI C compiler for Intel 8051, Maxim 80DS390, and Zilog Z80
 homepage: https://sdcc.sourceforge.net/
 license: GPL-2.0-only AND GPL-3.0-only AND LicenseRef-Homebrew-public-domain AND Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:42efbd33b94c29841d06d3e55dcdaca4d15c580283cafa557bcaa897d229c383
-    sha256: 42efbd33b94c29841d06d3e55dcdaca4d15c580283cafa557bcaa897d229c383
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:923eff6fa7522d6ef4bb001edb69ed9372b8eb55a143f8f1b392b2ef82604719
-    sha256: 923eff6fa7522d6ef4bb001edb69ed9372b8eb55a143f8f1b392b2ef82604719
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:93e44c24cbcd84f457b2e496d544261a4dfbd146824d36b6f86542727f570bae
-    sha256: 93e44c24cbcd84f457b2e496d544261a4dfbd146824d36b6f86542727f570bae
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:52df93b8ad9113b0a8c560a1702c58f2743e1e39ddba31de70316446a34d9f5c
-    sha256: 52df93b8ad9113b0a8c560a1702c58f2743e1e39ddba31de70316446a34d9f5c
-source:
-  url: https://downloads.sourceforge.net/project/sdcc/sdcc/4.5.0/sdcc-src-4.5.0.tar.bz2
-  sha256: d5030437fb436bb1d93a8dbdbfb46baaa60613318f4fb3f5871d72815d1eed80
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gputils
-  - readline
-  - zstd
+    - gputils
+    - readline
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:923eff6fa7522d6ef4bb001edb69ed9372b8eb55a143f8f1b392b2ef82604719
+        sha256: 923eff6fa7522d6ef4bb001edb69ed9372b8eb55a143f8f1b392b2ef82604719
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:42efbd33b94c29841d06d3e55dcdaca4d15c580283cafa557bcaa897d229c383
+        sha256: 42efbd33b94c29841d06d3e55dcdaca4d15c580283cafa557bcaa897d229c383
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:93e44c24cbcd84f457b2e496d544261a4dfbd146824d36b6f86542727f570bae
+        sha256: 93e44c24cbcd84f457b2e496d544261a4dfbd146824d36b6f86542727f570bae
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:52df93b8ad9113b0a8c560a1702c58f2743e1e39ddba31de70316446a34d9f5c
+        sha256: 52df93b8ad9113b0a8c560a1702c58f2743e1e39ddba31de70316446a34d9f5c
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/sdcc/sdcc/4.5.0/sdcc-src-4.5.0.tar.bz2
+    sha256: d5030437fb436bb1d93a8dbdbfb46baaa60613318f4fb3f5871d72815d1eed80
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - boost
-  - texinfo
+    - autoconf
+    - automake
+    - boost
+    - texinfo
 linux_dependencies:
-  - gputils
-  - readline
-  - zlib-ng-compat
+    - gputils
+    - readline
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

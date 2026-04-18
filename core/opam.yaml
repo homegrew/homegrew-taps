@@ -3,27 +3,52 @@ version: 2.5.1
 description: OCaml package manager
 homepage: https://opam.ocaml.org
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:2ffbf7f241b17f60038e8b997f136aa818ec77ee5ecb855445cc723f6d112834
-    sha256: 2ffbf7f241b17f60038e8b997f136aa818ec77ee5ecb855445cc723f6d112834
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:e59be521f2ead04874aa787b4984c8adb4af62736b25c5d0bbe0f7d3873893f2
-    sha256: e59be521f2ead04874aa787b4984c8adb4af62736b25c5d0bbe0f7d3873893f2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:05e4e66f31665ef1fcf0cec5e6853b58849d56585dec45d734b1e27e45d1c0c6
-    sha256: 05e4e66f31665ef1fcf0cec5e6853b58849d56585dec45d734b1e27e45d1c0c6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:ca2f8f0aeee21bb39fea9128b741e15424645156fb726edfa7afccbab9fb0c35
-    sha256: ca2f8f0aeee21bb39fea9128b741e15424645156fb726edfa7afccbab9fb0c35
-source:
-  url: https://github.com/ocaml/opam/releases/download/2.5.1/opam-full-2.5.1.tar.gz
-  sha256: 48c5bfaf5f5c4048cc5f40025de7385f5bad3a8269756216cd6dd2f2150033ed
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - rsync
+    - rsync
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:e59be521f2ead04874aa787b4984c8adb4af62736b25c5d0bbe0f7d3873893f2
+        sha256: e59be521f2ead04874aa787b4984c8adb4af62736b25c5d0bbe0f7d3873893f2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:2ffbf7f241b17f60038e8b997f136aa818ec77ee5ecb855445cc723f6d112834
+        sha256: 2ffbf7f241b17f60038e8b997f136aa818ec77ee5ecb855445cc723f6d112834
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:05e4e66f31665ef1fcf0cec5e6853b58849d56585dec45d734b1e27e45d1c0c6
+        sha256: 05e4e66f31665ef1fcf0cec5e6853b58849d56585dec45d734b1e27e45d1c0c6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opam/blobs/sha256:ca2f8f0aeee21bb39fea9128b741e15424645156fb726edfa7afccbab9fb0c35
+        sha256: ca2f8f0aeee21bb39fea9128b741e15424645156fb726edfa7afccbab9fb0c35
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ocaml/opam/releases/download/2.5.1/opam-full-2.5.1.tar.gz
+    sha256: 48c5bfaf5f5c4048cc5f40025de7385f5bad3a8269756216cd6dd2f2150033ed
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ocaml
+    - ocaml
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

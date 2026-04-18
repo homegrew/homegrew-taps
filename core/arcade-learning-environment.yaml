@@ -3,37 +3,61 @@ version: 0.11.2
 description: Platform for AI research
 homepage: https://github.com/Farama-Foundation/Arcade-Learning-Environment
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:b009980ff04c5a5b689483a5fcad22e0a559d29c399e062fac1a19e53f1a3556
-    sha256: b009980ff04c5a5b689483a5fcad22e0a559d29c399e062fac1a19e53f1a3556
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:a78b791f22db217b1fd7c21dfefe8713d227bd072919c5c27595cfe7bc348bf2
-    sha256: a78b791f22db217b1fd7c21dfefe8713d227bd072919c5c27595cfe7bc348bf2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:564c60983aee242bd8f04bfca81e40ac2b1214d2f15897ab2e59106dedf98e4f
-    sha256: 564c60983aee242bd8f04bfca81e40ac2b1214d2f15897ab2e59106dedf98e4f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:255d28dc23befe545d9cf3c78e6117d6b20b6b5cdc36b718ca49f8fdfdb46590
-    sha256: 255d28dc23befe545d9cf3c78e6117d6b20b6b5cdc36b718ca49f8fdfdb46590
-source:
-  url: https://github.com/Farama-Foundation/Arcade-Learning-Environment/archive/refs/tags/v0.11.2.tar.gz
-  sha256: d6ac9406690bb3533b37a99253bdfc59bc27779c5e1b6855c763d0b367bcbf96
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - numpy
-  - opencv
-  - python@3.14
-  - sdl2
+    - numpy
+    - opencv
+    - python@3.14
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:a78b791f22db217b1fd7c21dfefe8713d227bd072919c5c27595cfe7bc348bf2
+        sha256: a78b791f22db217b1fd7c21dfefe8713d227bd072919c5c27595cfe7bc348bf2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:b009980ff04c5a5b689483a5fcad22e0a559d29c399e062fac1a19e53f1a3556
+        sha256: b009980ff04c5a5b689483a5fcad22e0a559d29c399e062fac1a19e53f1a3556
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:564c60983aee242bd8f04bfca81e40ac2b1214d2f15897ab2e59106dedf98e4f
+        sha256: 564c60983aee242bd8f04bfca81e40ac2b1214d2f15897ab2e59106dedf98e4f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:255d28dc23befe545d9cf3c78e6117d6b20b6b5cdc36b718ca49f8fdfdb46590
+        sha256: 255d28dc23befe545d9cf3c78e6117d6b20b6b5cdc36b718ca49f8fdfdb46590
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Farama-Foundation/Arcade-Learning-Environment/archive/refs/tags/v0.11.2.tar.gz
+    sha256: d6ac9406690bb3533b37a99253bdfc59bc27779c5e1b6855c763d0b367bcbf96
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
 linux_dependencies:
-  - numpy
-  - opencv
-  - python@3.14
-  - sdl2
-  - zlib-ng-compat
+    - numpy
+    - opencv
+    - python@3.14
+    - sdl2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

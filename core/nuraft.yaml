@@ -3,32 +3,56 @@ version: 3.0.0
 description: C++ implementation of Raft core logic as a replication library
 homepage: https://github.com/eBay/NuRaft
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nuraft/blobs/sha256:ea3f306e6ff8caed8af6766269952ba484a9c93616bd3022536ecdf594244293
-    sha256: ea3f306e6ff8caed8af6766269952ba484a9c93616bd3022536ecdf594244293
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nuraft/blobs/sha256:6448d43767ede630932d6bdb91a5d898fa1009c2fe50ef151c39c02d9d1b6c01
-    sha256: 6448d43767ede630932d6bdb91a5d898fa1009c2fe50ef151c39c02d9d1b6c01
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nuraft/blobs/sha256:922ce348211e72adc865d2a6976cd7a2b914d1ea88c4508fb80fd7430cac185a
-    sha256: 922ce348211e72adc865d2a6976cd7a2b914d1ea88c4508fb80fd7430cac185a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nuraft/blobs/sha256:fc1791ce60a81c886fe5c3484636b8ef7645eb8fa08d7d4a0f1d7ab65d40b277
-    sha256: fc1791ce60a81c886fe5c3484636b8ef7645eb8fa08d7d4a0f1d7ab65d40b277
-source:
-  url: https://github.com/eBay/NuRaft/archive/refs/tags/v3.0.0.tar.gz
-  sha256: 073c3b321efec9ce6b2bc487c283e493a1b2dd41082c5e9ac0b8f00f9b73832d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - asio
-  - openssl@3
+    - asio
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nuraft/blobs/sha256:6448d43767ede630932d6bdb91a5d898fa1009c2fe50ef151c39c02d9d1b6c01
+        sha256: 6448d43767ede630932d6bdb91a5d898fa1009c2fe50ef151c39c02d9d1b6c01
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nuraft/blobs/sha256:ea3f306e6ff8caed8af6766269952ba484a9c93616bd3022536ecdf594244293
+        sha256: ea3f306e6ff8caed8af6766269952ba484a9c93616bd3022536ecdf594244293
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nuraft/blobs/sha256:922ce348211e72adc865d2a6976cd7a2b914d1ea88c4508fb80fd7430cac185a
+        sha256: 922ce348211e72adc865d2a6976cd7a2b914d1ea88c4508fb80fd7430cac185a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nuraft/blobs/sha256:fc1791ce60a81c886fe5c3484636b8ef7645eb8fa08d7d4a0f1d7ab65d40b277
+        sha256: fc1791ce60a81c886fe5c3484636b8ef7645eb8fa08d7d4a0f1d7ab65d40b277
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/eBay/NuRaft/archive/refs/tags/v3.0.0.tar.gz
+    sha256: 073c3b321efec9ce6b2bc487c283e493a1b2dd41082c5e9ac0b8f00f9b73832d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - asio
-  - openssl@3
-  - zlib-ng-compat
+    - asio
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

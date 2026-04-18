@@ -3,29 +3,54 @@ version: 2.4.0
 description: Plugins for nagios compatible monitoring systems
 homepage: https://www.monitoring-plugins.org
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/monitoring-plugins/blobs/sha256:e611a641792258e275bfcf3d98669753a3740e5815ccfb6c7e0ef1cc104a13f4
-    sha256: e611a641792258e275bfcf3d98669753a3740e5815ccfb6c7e0ef1cc104a13f4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/monitoring-plugins/blobs/sha256:8e139e077e10f664e33c4dafa4bc404d6bf47bcf1e82bfa5c1a8daa481a85af3
-    sha256: 8e139e077e10f664e33c4dafa4bc404d6bf47bcf1e82bfa5c1a8daa481a85af3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/monitoring-plugins/blobs/sha256:27b58371aa6e210a9510c9fd0b64ed2f0923425b336eeda2b5c9eb0fd08509ac
-    sha256: 27b58371aa6e210a9510c9fd0b64ed2f0923425b336eeda2b5c9eb0fd08509ac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/monitoring-plugins/blobs/sha256:2caa7d52925b286737f83a15a800de15edbbc4d280756b9ab268cd4e810b42ba
-    sha256: 2caa7d52925b286737f83a15a800de15edbbc4d280756b9ab268cd4e810b42ba
-source:
-  url: https://www.monitoring-plugins.org/download/monitoring-plugins-2.4.0.tar.gz
-  sha256: e5dfd4ad8fde0a40da50aab3aff6d9a27020b8f283e332bc4da6ef9914f4028c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - gettext
+    - openssl@3
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/monitoring-plugins/blobs/sha256:8e139e077e10f664e33c4dafa4bc404d6bf47bcf1e82bfa5c1a8daa481a85af3
+        sha256: 8e139e077e10f664e33c4dafa4bc404d6bf47bcf1e82bfa5c1a8daa481a85af3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/monitoring-plugins/blobs/sha256:e611a641792258e275bfcf3d98669753a3740e5815ccfb6c7e0ef1cc104a13f4
+        sha256: e611a641792258e275bfcf3d98669753a3740e5815ccfb6c7e0ef1cc104a13f4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/monitoring-plugins/blobs/sha256:27b58371aa6e210a9510c9fd0b64ed2f0923425b336eeda2b5c9eb0fd08509ac
+        sha256: 27b58371aa6e210a9510c9fd0b64ed2f0923425b336eeda2b5c9eb0fd08509ac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/monitoring-plugins/blobs/sha256:2caa7d52925b286737f83a15a800de15edbbc4d280756b9ab268cd4e810b42ba
+        sha256: 2caa7d52925b286737f83a15a800de15edbbc4d280756b9ab268cd4e810b42ba
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.monitoring-plugins.org/download/monitoring-plugins-2.4.0.tar.gz
+    sha256: e5dfd4ad8fde0a40da50aab3aff6d9a27020b8f283e332bc4da6ef9914f4028c
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - bind
-  - openssl@3
+    - bind
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

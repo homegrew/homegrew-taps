@@ -1,28 +1,54 @@
 name: vorbisgain
-version: 0.37
+version: "0.37"
 description: Add Replay Gain volume tags to Ogg Vorbis files
 homepage: https://sjeng.org/vorbisgain.html
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vorbisgain/blobs/sha256:2184e1fd2ac1887c416d3aef7c8596ff7b4b5bb34e5f1d2e47f9b4ef54e69094
-    sha256: 2184e1fd2ac1887c416d3aef7c8596ff7b4b5bb34e5f1d2e47f9b4ef54e69094
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vorbisgain/blobs/sha256:883d2c263b7328b4dc485555c3c0c5792a6cacc8a9588c5d2dc13db5d2ab8a02
-    sha256: 883d2c263b7328b4dc485555c3c0c5792a6cacc8a9588c5d2dc13db5d2ab8a02
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vorbisgain/blobs/sha256:98180bd55bee493621155475e77ba5de249c1ce27f85edc895a69c9d41a63df3
-    sha256: 98180bd55bee493621155475e77ba5de249c1ce27f85edc895a69c9d41a63df3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vorbisgain/blobs/sha256:32f7069967cb439534cab42cacd2edbc3e81d8fb180362260ccd8ee19759e85d
-    sha256: 32f7069967cb439534cab42cacd2edbc3e81d8fb180362260ccd8ee19759e85d
-source:
-  url: https://sjeng.org/ftp/vorbis/vorbisgain-0.37.tar.gz
-  sha256: dd6db051cad972bcac25d47b4a9e40e217bb548a1f16328eddbb4e66613530ec
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libogg
-  - libvorbis
+    - libogg
+    - libvorbis
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vorbisgain/blobs/sha256:883d2c263b7328b4dc485555c3c0c5792a6cacc8a9588c5d2dc13db5d2ab8a02
+        sha256: 883d2c263b7328b4dc485555c3c0c5792a6cacc8a9588c5d2dc13db5d2ab8a02
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vorbisgain/blobs/sha256:2184e1fd2ac1887c416d3aef7c8596ff7b4b5bb34e5f1d2e47f9b4ef54e69094
+        sha256: 2184e1fd2ac1887c416d3aef7c8596ff7b4b5bb34e5f1d2e47f9b4ef54e69094
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vorbisgain/blobs/sha256:98180bd55bee493621155475e77ba5de249c1ce27f85edc895a69c9d41a63df3
+        sha256: 98180bd55bee493621155475e77ba5de249c1ce27f85edc895a69c9d41a63df3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vorbisgain/blobs/sha256:32f7069967cb439534cab42cacd2edbc3e81d8fb180362260ccd8ee19759e85d
+        sha256: 32f7069967cb439534cab42cacd2edbc3e81d8fb180362260ccd8ee19759e85d
+        sha512: ""
+        signature: ""
+source:
+    url: https://sjeng.org/ftp/vorbis/vorbisgain-0.37.tar.gz
+    sha256: dd6db051cad972bcac25d47b4a9e40e217bb548a1f16328eddbb4e66613530ec
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

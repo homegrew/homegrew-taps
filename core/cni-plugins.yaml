@@ -3,20 +3,41 @@ version: 1.9.1
 description: Container Network Interface plugins
 homepage: https://www.cni.dev
 license: Apache-2.0
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cni-plugins/blobs/sha256:cd14e4979a63ef1371aa5999d680b2a799dee7db41648024c5bc56023bda941a
-    sha256: cd14e4979a63ef1371aa5999d680b2a799dee7db41648024c5bc56023bda941a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cni-plugins/blobs/sha256:58fea2ae3068fdf46c1cf84a585366785a46bef334f4b6bc88e5383e2891bbc6
-    sha256: 58fea2ae3068fdf46c1cf84a585366785a46bef334f4b6bc88e5383e2891bbc6
-source:
-  url: https://github.com/containernetworking/plugins/archive/refs/tags/v1.9.1.tar.gz
-  sha256: 34bd82d47e981940751619c9cc44c095bb90bfcaf8d71865cbb822c37690a764
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
-build_dependencies:
-  - go
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
 keg_only: true
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cni-plugins/blobs/sha256:cd14e4979a63ef1371aa5999d680b2a799dee7db41648024c5bc56023bda941a
+        sha256: cd14e4979a63ef1371aa5999d680b2a799dee7db41648024c5bc56023bda941a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cni-plugins/blobs/sha256:58fea2ae3068fdf46c1cf84a585366785a46bef334f4b6bc88e5383e2891bbc6
+        sha256: 58fea2ae3068fdf46c1cf84a585366785a46bef334f4b6bc88e5383e2891bbc6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/containernetworking/plugins/archive/refs/tags/v1.9.1.tar.gz
+    sha256: 34bd82d47e981940751619c9cc44c095bb90bfcaf8d71865cbb822c37690a764
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

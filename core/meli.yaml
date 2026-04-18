@@ -3,28 +3,53 @@ version: 0.8.13
 description: Terminal e-mail client and e-mail client library
 homepage: https://meli-email.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/meli/blobs/sha256:5784a603ab62624ab0f093ccc3f407c5390841ea780dedd72e3cbbcb87943259
-    sha256: 5784a603ab62624ab0f093ccc3f407c5390841ea780dedd72e3cbbcb87943259
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/meli/blobs/sha256:a1c21bf8bfe2800cd52c7f3d23dc76871b99635578defaed3db7f43064f88d4c
-    sha256: a1c21bf8bfe2800cd52c7f3d23dc76871b99635578defaed3db7f43064f88d4c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/meli/blobs/sha256:df9bb9511f829b1e9773a7d20f8998945daad30be756da93ebc6ae0306f0b6da
-    sha256: df9bb9511f829b1e9773a7d20f8998945daad30be756da93ebc6ae0306f0b6da
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/meli/blobs/sha256:c6aab574892fb5e9ef1b2654b840e94c364f4981086e5c7ba84ed4b477438700
-    sha256: c6aab574892fb5e9ef1b2654b840e94c364f4981086e5c7ba84ed4b477438700
-source:
-  url: https://git.meli-email.org/meli/meli/archive/v0.8.13.tar.gz
-  sha256: b1414defb7973a96ed0510b5cb888aa8671fe4f3f832c5baa0c79dcd61ba2edf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/meli/blobs/sha256:a1c21bf8bfe2800cd52c7f3d23dc76871b99635578defaed3db7f43064f88d4c
+        sha256: a1c21bf8bfe2800cd52c7f3d23dc76871b99635578defaed3db7f43064f88d4c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/meli/blobs/sha256:5784a603ab62624ab0f093ccc3f407c5390841ea780dedd72e3cbbcb87943259
+        sha256: 5784a603ab62624ab0f093ccc3f407c5390841ea780dedd72e3cbbcb87943259
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/meli/blobs/sha256:df9bb9511f829b1e9773a7d20f8998945daad30be756da93ebc6ae0306f0b6da
+        sha256: df9bb9511f829b1e9773a7d20f8998945daad30be756da93ebc6ae0306f0b6da
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/meli/blobs/sha256:c6aab574892fb5e9ef1b2654b840e94c364f4981086e5c7ba84ed4b477438700
+        sha256: c6aab574892fb5e9ef1b2654b840e94c364f4981086e5c7ba84ed4b477438700
+        sha512: ""
+        signature: ""
+source:
+    url: https://git.meli-email.org/meli/meli/archive/v0.8.13.tar.gz
+    sha256: b1414defb7973a96ed0510b5cb888aa8671fe4f3f832c5baa0c79dcd61ba2edf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

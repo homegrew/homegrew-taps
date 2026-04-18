@@ -3,27 +3,52 @@ version: 4.0.1
 description: Scanf for modern C++
 homepage: https://www.scnlib.dev/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scnlib/blobs/sha256:21cd67cc5c419b781ebb8e1bcfed7f17c78dc0cb3db21be38aa862af5e1e4467
-    sha256: 21cd67cc5c419b781ebb8e1bcfed7f17c78dc0cb3db21be38aa862af5e1e4467
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scnlib/blobs/sha256:3f0fc35c02be751f470426a42e2ff7f0b2ed80d2da7585dc62eb07a5905a6fa2
-    sha256: 3f0fc35c02be751f470426a42e2ff7f0b2ed80d2da7585dc62eb07a5905a6fa2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scnlib/blobs/sha256:24fbc7d2c410792aa8499dea07e901694b4dfe712f73fa40e6f09351c75fd6df
-    sha256: 24fbc7d2c410792aa8499dea07e901694b4dfe712f73fa40e6f09351c75fd6df
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scnlib/blobs/sha256:2b262e8c4395d69a9ce1c9e0dd08394614a0feeb865217f195c71e42ade0440c
-    sha256: 2b262e8c4395d69a9ce1c9e0dd08394614a0feeb865217f195c71e42ade0440c
-source:
-  url: https://github.com/eliaskosunen/scnlib/archive/refs/tags/v4.0.1.tar.gz
-  sha256: ece17b26840894cc57a7127138fe4540929adcb297524dec02c490c233ff46a7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - simdutf
+    - simdutf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scnlib/blobs/sha256:3f0fc35c02be751f470426a42e2ff7f0b2ed80d2da7585dc62eb07a5905a6fa2
+        sha256: 3f0fc35c02be751f470426a42e2ff7f0b2ed80d2da7585dc62eb07a5905a6fa2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scnlib/blobs/sha256:21cd67cc5c419b781ebb8e1bcfed7f17c78dc0cb3db21be38aa862af5e1e4467
+        sha256: 21cd67cc5c419b781ebb8e1bcfed7f17c78dc0cb3db21be38aa862af5e1e4467
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scnlib/blobs/sha256:24fbc7d2c410792aa8499dea07e901694b4dfe712f73fa40e6f09351c75fd6df
+        sha256: 24fbc7d2c410792aa8499dea07e901694b4dfe712f73fa40e6f09351c75fd6df
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scnlib/blobs/sha256:2b262e8c4395d69a9ce1c9e0dd08394614a0feeb865217f195c71e42ade0440c
+        sha256: 2b262e8c4395d69a9ce1c9e0dd08394614a0feeb865217f195c71e42ade0440c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/eliaskosunen/scnlib/archive/refs/tags/v4.0.1.tar.gz
+    sha256: ece17b26840894cc57a7127138fe4540929adcb297524dec02c490c233ff46a7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

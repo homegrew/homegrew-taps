@@ -3,30 +3,54 @@ version: 1.6.1
 description: TCP/IP packet demultiplexer
 homepage: https://github.com/simsong/tcpflow
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tcpflow/blobs/sha256:dad7f4b569f0c8e74af53589c23537d577f58717c07662496902d2feb152638c
-    sha256: dad7f4b569f0c8e74af53589c23537d577f58717c07662496902d2feb152638c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tcpflow/blobs/sha256:0921dda7fcdf893d64b1bd807d3e6a8cbc716105c49f12a2ae27019c173d77e8
-    sha256: 0921dda7fcdf893d64b1bd807d3e6a8cbc716105c49f12a2ae27019c173d77e8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tcpflow/blobs/sha256:7b23f8c43c21e3857d31fdee5007f650bc79fc06d2205028bd0a1c613f5b5aba
-    sha256: 7b23f8c43c21e3857d31fdee5007f650bc79fc06d2205028bd0a1c613f5b5aba
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tcpflow/blobs/sha256:f03cf13378d36ad9c60f50f3938054efd612de7be28bfc59a1a78c3ec11fd1df
-    sha256: f03cf13378d36ad9c60f50f3938054efd612de7be28bfc59a1a78c3ec11fd1df
-source:
-  url: https://corp.digitalcorpora.org/downloads/tcpflow/tcpflow-1.6.1.tar.gz
-  sha256: 436f93b1141be0abe593710947307d8f91129a5353c3a8c3c29e2ba0355e171e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tcpflow/blobs/sha256:0921dda7fcdf893d64b1bd807d3e6a8cbc716105c49f12a2ae27019c173d77e8
+        sha256: 0921dda7fcdf893d64b1bd807d3e6a8cbc716105c49f12a2ae27019c173d77e8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tcpflow/blobs/sha256:dad7f4b569f0c8e74af53589c23537d577f58717c07662496902d2feb152638c
+        sha256: dad7f4b569f0c8e74af53589c23537d577f58717c07662496902d2feb152638c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tcpflow/blobs/sha256:7b23f8c43c21e3857d31fdee5007f650bc79fc06d2205028bd0a1c613f5b5aba
+        sha256: 7b23f8c43c21e3857d31fdee5007f650bc79fc06d2205028bd0a1c613f5b5aba
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tcpflow/blobs/sha256:f03cf13378d36ad9c60f50f3938054efd612de7be28bfc59a1a78c3ec11fd1df
+        sha256: f03cf13378d36ad9c60f50f3938054efd612de7be28bfc59a1a78c3ec11fd1df
+        sha512: ""
+        signature: ""
+source:
+    url: https://corp.digitalcorpora.org/downloads/tcpflow/tcpflow-1.6.1.tar.gz
+    sha256: 436f93b1141be0abe593710947307d8f91129a5353c3a8c3c29e2ba0355e171e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
+    - boost
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

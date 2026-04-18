@@ -3,48 +3,72 @@ version: 1.8.3
 description: Building blocks for modern adaptive GNOME apps
 homepage: https://gitlab.gnome.org/GNOME/libhandy
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libhandy/blobs/sha256:620cf34883ae285873425a4f3ffa156b78e8b696872bd20b425008488ad0d232
-    sha256: 620cf34883ae285873425a4f3ffa156b78e8b696872bd20b425008488ad0d232
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libhandy/blobs/sha256:b7451a9bbf91864a025ac3df2473f9dc91398b22d3994f4cc9907344e9be6f1f
-    sha256: b7451a9bbf91864a025ac3df2473f9dc91398b22d3994f4cc9907344e9be6f1f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libhandy/blobs/sha256:6b470387d368374a5834bb3a73c2d0fcc4cc16121e785a064913735356581e85
-    sha256: 6b470387d368374a5834bb3a73c2d0fcc4cc16121e785a064913735356581e85
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libhandy/blobs/sha256:9c76cf625f3b293b62040fd9663afb365c5606479dd08b37871304e7e913f6b8
-    sha256: 9c76cf625f3b293b62040fd9663afb365c5606479dd08b37871304e7e913f6b8
-source:
-  url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.8.3/libhandy-1.8.3.tar.gz
-  sha256: 7e7670f5d0a6d0adc24b888da44dab938a6f52472b8944d6dd4e31b6d3569a5f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - at-spi2-core
-  - cairo
-  - fribidi
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - pango
-  - gettext
-  - harfbuzz
+    - at-spi2-core
+    - cairo
+    - fribidi
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - pango
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libhandy/blobs/sha256:b7451a9bbf91864a025ac3df2473f9dc91398b22d3994f4cc9907344e9be6f1f
+        sha256: b7451a9bbf91864a025ac3df2473f9dc91398b22d3994f4cc9907344e9be6f1f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libhandy/blobs/sha256:620cf34883ae285873425a4f3ffa156b78e8b696872bd20b425008488ad0d232
+        sha256: 620cf34883ae285873425a4f3ffa156b78e8b696872bd20b425008488ad0d232
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libhandy/blobs/sha256:6b470387d368374a5834bb3a73c2d0fcc4cc16121e785a064913735356581e85
+        sha256: 6b470387d368374a5834bb3a73c2d0fcc4cc16121e785a064913735356581e85
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libhandy/blobs/sha256:9c76cf625f3b293b62040fd9663afb365c5606479dd08b37871304e7e913f6b8
+        sha256: 9c76cf625f3b293b62040fd9663afb365c5606479dd08b37871304e7e913f6b8
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.8.3/libhandy-1.8.3.tar.gz
+    sha256: 7e7670f5d0a6d0adc24b888da44dab938a6f52472b8944d6dd4e31b6d3569a5f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - gettext
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
+    - vala
 linux_dependencies:
-  - at-spi2-core
-  - cairo
-  - fribidi
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - pango
+    - at-spi2-core
+    - cairo
+    - fribidi
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - pango
+build:
+    configure: []
+    install: []
+service: null

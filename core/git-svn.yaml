@@ -3,26 +3,52 @@ version: 2.53.0
 description: Bidirectional operation between a Subversion repository and Git
 homepage: https://git-scm.com
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-svn/blobs/sha256:65169649154dcc5dc2ee43ee32b6073d307f63a014309416bb096cc811a12081
-    sha256: 65169649154dcc5dc2ee43ee32b6073d307f63a014309416bb096cc811a12081
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-svn/blobs/sha256:65169649154dcc5dc2ee43ee32b6073d307f63a014309416bb096cc811a12081
-    sha256: 65169649154dcc5dc2ee43ee32b6073d307f63a014309416bb096cc811a12081
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-svn/blobs/sha256:d4591b4de99d5d4ee0ad984800a5eed4fce477ba5c92cb1a0e379ee5ac38a763
-    sha256: d4591b4de99d5d4ee0ad984800a5eed4fce477ba5c92cb1a0e379ee5ac38a763
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-svn/blobs/sha256:b908775e95be7e4108cf1637f241b3d5d6063155e825d5434780ef938ecca075
-    sha256: b908775e95be7e4108cf1637f241b3d5d6063155e825d5434780ef938ecca075
-source:
-  url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.53.0.tar.xz
-  sha256: 5818bd7d80b061bbbdfec8a433d609dc8818a05991f731ffc4a561e2ca18c653
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - git
-  - subversion
+    - git
+    - subversion
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-svn/blobs/sha256:65169649154dcc5dc2ee43ee32b6073d307f63a014309416bb096cc811a12081
+        sha256: 65169649154dcc5dc2ee43ee32b6073d307f63a014309416bb096cc811a12081
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-svn/blobs/sha256:65169649154dcc5dc2ee43ee32b6073d307f63a014309416bb096cc811a12081
+        sha256: 65169649154dcc5dc2ee43ee32b6073d307f63a014309416bb096cc811a12081
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-svn/blobs/sha256:d4591b4de99d5d4ee0ad984800a5eed4fce477ba5c92cb1a0e379ee5ac38a763
+        sha256: d4591b4de99d5d4ee0ad984800a5eed4fce477ba5c92cb1a0e379ee5ac38a763
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-svn/blobs/sha256:b908775e95be7e4108cf1637f241b3d5d6063155e825d5434780ef938ecca075
+        sha256: b908775e95be7e4108cf1637f241b3d5d6063155e825d5434780ef938ecca075
+        sha512: ""
+        signature: ""
+source:
+    url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.53.0.tar.xz
+    sha256: 5818bd7d80b061bbbdfec8a433d609dc8818a05991f731ffc4a561e2ca18c653
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

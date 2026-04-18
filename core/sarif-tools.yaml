@@ -3,51 +3,75 @@ version: 3.0.5
 description: Set of command-line tools and Python library for working with SARIF files
 homepage: https://github.com/microsoft/sarif-tools
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sarif-tools/blobs/sha256:4522d807b4baa1223fb68ccc14ef1dee380fc0b069c4d9f3f1d2f162cd0a1478
-    sha256: 4522d807b4baa1223fb68ccc14ef1dee380fc0b069c4d9f3f1d2f162cd0a1478
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sarif-tools/blobs/sha256:ac4c2b51cbe8a7087e706aa3f611aafc3855a84ac6207faf38381e974b86cbe9
-    sha256: ac4c2b51cbe8a7087e706aa3f611aafc3855a84ac6207faf38381e974b86cbe9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sarif-tools/blobs/sha256:f49083c2c06b3cfe2557f1a3486e1cca193c6158957f8b65f44a424e808a11d2
-    sha256: f49083c2c06b3cfe2557f1a3486e1cca193c6158957f8b65f44a424e808a11d2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sarif-tools/blobs/sha256:957623debd6182477f91f351e01b6562c816050a3e4ff3693bbeda789957a5fb
-    sha256: 957623debd6182477f91f351e01b6562c816050a3e4ff3693bbeda789957a5fb
-source:
-  url: https://files.pythonhosted.org/packages/16/3c/68e41db88aa15124175936017928e99182b3df8e6913c5e194c67d641996/sarif_tools-3.0.5.tar.gz
-  sha256: 52d09c101121231fb3489ad8c7af56896b8a95415cef726a6db5e7d74c6834d2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - jpeg-turbo
-  - libraqm
-  - libtiff
-  - libyaml
-  - little-cms2
-  - numpy
-  - pillow
-  - python@3.14
-  - webp
+    - freetype
+    - jpeg-turbo
+    - libraqm
+    - libtiff
+    - libyaml
+    - little-cms2
+    - numpy
+    - pillow
+    - python@3.14
+    - webp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sarif-tools/blobs/sha256:ac4c2b51cbe8a7087e706aa3f611aafc3855a84ac6207faf38381e974b86cbe9
+        sha256: ac4c2b51cbe8a7087e706aa3f611aafc3855a84ac6207faf38381e974b86cbe9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sarif-tools/blobs/sha256:4522d807b4baa1223fb68ccc14ef1dee380fc0b069c4d9f3f1d2f162cd0a1478
+        sha256: 4522d807b4baa1223fb68ccc14ef1dee380fc0b069c4d9f3f1d2f162cd0a1478
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sarif-tools/blobs/sha256:f49083c2c06b3cfe2557f1a3486e1cca193c6158957f8b65f44a424e808a11d2
+        sha256: f49083c2c06b3cfe2557f1a3486e1cca193c6158957f8b65f44a424e808a11d2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sarif-tools/blobs/sha256:957623debd6182477f91f351e01b6562c816050a3e4ff3693bbeda789957a5fb
+        sha256: 957623debd6182477f91f351e01b6562c816050a3e4ff3693bbeda789957a5fb
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/16/3c/68e41db88aa15124175936017928e99182b3df8e6913c5e194c67d641996/sarif_tools-3.0.5.tar.gz
+    sha256: 52d09c101121231fb3489ad8c7af56896b8a95415cef726a6db5e7d74c6834d2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - meson
-  - ninja
-  - pkgconf
+    - cmake
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - freetype
-  - jpeg-turbo
-  - libraqm
-  - libtiff
-  - libyaml
-  - little-cms2
-  - numpy
-  - pillow
-  - python@3.14
-  - webp
-  - zlib-ng-compat
+    - freetype
+    - jpeg-turbo
+    - libraqm
+    - libtiff
+    - libyaml
+    - little-cms2
+    - numpy
+    - pillow
+    - python@3.14
+    - webp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

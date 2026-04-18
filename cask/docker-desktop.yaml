@@ -2,23 +2,29 @@ name: docker-desktop
 version: 4.69.0,224084
 description: App to build and share containerised applications and microservices
 homepage: https://www.docker.com/products/docker-desktop
+license: ""
 url:
-  darwin_arm64: https://desktop.docker.com/mac/main/arm64/224084/Docker.dmg
-  darwin_amd64: https://desktop.docker.com/mac/main/amd64/224084/Docker.dmg
+    darwin_amd64: https://desktop.docker.com/mac/main/amd64/224084/Docker.dmg
+    darwin_arm64: https://desktop.docker.com/mac/main/arm64/224084/Docker.dmg
 sha256:
-  darwin_arm64: 8e4638f2d427a4fb9d0f86f21d0975a344a164228d20fc22a620750b7943d644
-  darwin_amd64: 56f5e3e63a710ef1cef7da905aa873a97b5a216cfaed7e19b7c88f604552de47
-source:
-  url: https://desktop.docker.com/mac/main/arm64/224084/Docker.dmg
-  sha256: 8e4638f2d427a4fb9d0f86f21d0975a344a164228d20fc22a620750b7943d644
+    darwin_amd64: 56f5e3e63a710ef1cef7da905aa873a97b5a216cfaed7e19b7c88f604552de47
+    darwin_arm64: 8e4638f2d427a4fb9d0f86f21d0975a344a164228d20fc22a620750b7943d644
+sha512:
+    darwin_amd64: ""
+    darwin_arm64: ""
 artifacts:
-  app:
-    - Docker.app
-  bin:
-    - /usr/local/cli-plugins/docker-compose
-    - /usr/local/bin/hub-tool
-    - /usr/local/bin/kubectl.docker
-    - /usr/local/bin/docker
-    - /usr/local/bin/docker-credential-desktop
-    - /usr/local/bin/docker-credential-ecr-login
-    - /usr/local/bin/docker-credential-osxkeychain
+    app:
+        - Docker.app
+    pkg: []
+    bin:
+        - /usr/local/cli-plugins/docker-compose
+        - /usr/local/bin/hub-tool
+        - /usr/local/bin/kubectl.docker
+        - /usr/local/bin/docker
+        - /usr/local/bin/docker-credential-desktop
+        - /usr/local/bin/docker-credential-ecr-login
+        - /usr/local/bin/docker-credential-osxkeychain
+source:
+    url: https://desktop.docker.com/mac/main/arm64/224084/Docker.dmg
+    sha256: 8e4638f2d427a4fb9d0f86f21d0975a344a164228d20fc22a620750b7943d644
+    sha512: ""

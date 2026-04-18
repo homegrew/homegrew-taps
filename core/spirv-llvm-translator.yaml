@@ -3,29 +3,54 @@ version: 22.1.1
 description: Tool and a library for bi-directional translation between SPIR-V and LLVM IR
 homepage: https://github.com/KhronosGroup/SPIRV-LLVM-Translator
 license: Apache-2.0 WITH LLVM-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/spirv-llvm-translator/blobs/sha256:0449829fa7e6508f56d170a06eb4e09e061a7881204320ce7f9e5605095e915f
-    sha256: 0449829fa7e6508f56d170a06eb4e09e061a7881204320ce7f9e5605095e915f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/spirv-llvm-translator/blobs/sha256:88a98c59819d15d57ff067cb0a663c5229515576d0cae2090f2ac5ec115300c5
-    sha256: 88a98c59819d15d57ff067cb0a663c5229515576d0cae2090f2ac5ec115300c5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/spirv-llvm-translator/blobs/sha256:38e548399334d8d8fcd63b2576aad033c2dbf3e60e83eabbf75fde01d2589441
-    sha256: 38e548399334d8d8fcd63b2576aad033c2dbf3e60e83eabbf75fde01d2589441
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/spirv-llvm-translator/blobs/sha256:5d6cfc4286473184465ed15671fc2db1a0eae264b30819b7864a295578716eef
-    sha256: 5d6cfc4286473184465ed15671fc2db1a0eae264b30819b7864a295578716eef
-source:
-  url: https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/refs/tags/v22.1.1.tar.gz
-  sha256: 83e7007b8b9b5536b30991661738a98e9cd607d4a203e9342b628aaea5ea32d7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - llvm
+    - llvm
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/spirv-llvm-translator/blobs/sha256:88a98c59819d15d57ff067cb0a663c5229515576d0cae2090f2ac5ec115300c5
+        sha256: 88a98c59819d15d57ff067cb0a663c5229515576d0cae2090f2ac5ec115300c5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/spirv-llvm-translator/blobs/sha256:0449829fa7e6508f56d170a06eb4e09e061a7881204320ce7f9e5605095e915f
+        sha256: 0449829fa7e6508f56d170a06eb4e09e061a7881204320ce7f9e5605095e915f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/spirv-llvm-translator/blobs/sha256:38e548399334d8d8fcd63b2576aad033c2dbf3e60e83eabbf75fde01d2589441
+        sha256: 38e548399334d8d8fcd63b2576aad033c2dbf3e60e83eabbf75fde01d2589441
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/spirv-llvm-translator/blobs/sha256:5d6cfc4286473184465ed15671fc2db1a0eae264b30819b7864a295578716eef
+        sha256: 5d6cfc4286473184465ed15671fc2db1a0eae264b30819b7864a295578716eef
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/refs/tags/v22.1.1.tar.gz
+    sha256: 83e7007b8b9b5536b30991661738a98e9cd607d4a203e9342b628aaea5ea32d7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - spirv-headers
+    - cmake
+    - pkgconf
+    - spirv-headers
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

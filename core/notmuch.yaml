@@ -1,50 +1,74 @@
 name: notmuch
-version: 0.40
+version: "0.40"
 description: Thread-based email index, search, and tagging
 homepage: https://notmuchmail.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/notmuch/blobs/sha256:eae24f49c3b10abfde979af48095a1a57930ed5bdcbc6812ccc54a19bad10860
-    sha256: eae24f49c3b10abfde979af48095a1a57930ed5bdcbc6812ccc54a19bad10860
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/notmuch/blobs/sha256:2b990b337a8c0ed0e2e086703ae947ee5b1fbfcb3131404855faf319032c0693
-    sha256: 2b990b337a8c0ed0e2e086703ae947ee5b1fbfcb3131404855faf319032c0693
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/notmuch/blobs/sha256:e9f8bd8f09dc8ccf7665e5adaba42916d2023ddc4c3420d4d5472ef1c1a784d6
-    sha256: e9f8bd8f09dc8ccf7665e5adaba42916d2023ddc4c3420d4d5472ef1c1a784d6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/notmuch/blobs/sha256:1c55b7b11e0bbe8128902da95371f0ddf2c4f25b248f54aaca9ddbdb1c12b74f
-    sha256: 1c55b7b11e0bbe8128902da95371f0ddf2c4f25b248f54aaca9ddbdb1c12b74f
-source:
-  url: https://notmuchmail.org/releases/notmuch-0.40.tar.xz
-  sha256: 4b4314bbf1c2029fdf793637e6c7bb15c1b1730d22be9aa04803c98c5bbc446f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cffi
-  - glib
-  - gmime
-  - python@3.14
-  - sfsexp
-  - talloc
-  - xapian
-  - gettext
+    - cffi
+    - glib
+    - gmime
+    - python@3.14
+    - sfsexp
+    - talloc
+    - xapian
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/notmuch/blobs/sha256:2b990b337a8c0ed0e2e086703ae947ee5b1fbfcb3131404855faf319032c0693
+        sha256: 2b990b337a8c0ed0e2e086703ae947ee5b1fbfcb3131404855faf319032c0693
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/notmuch/blobs/sha256:eae24f49c3b10abfde979af48095a1a57930ed5bdcbc6812ccc54a19bad10860
+        sha256: eae24f49c3b10abfde979af48095a1a57930ed5bdcbc6812ccc54a19bad10860
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/notmuch/blobs/sha256:e9f8bd8f09dc8ccf7665e5adaba42916d2023ddc4c3420d4d5472ef1c1a784d6
+        sha256: e9f8bd8f09dc8ccf7665e5adaba42916d2023ddc4c3420d4d5472ef1c1a784d6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/notmuch/blobs/sha256:1c55b7b11e0bbe8128902da95371f0ddf2c4f25b248f54aaca9ddbdb1c12b74f
+        sha256: 1c55b7b11e0bbe8128902da95371f0ddf2c4f25b248f54aaca9ddbdb1c12b74f
+        sha512: ""
+        signature: ""
+source:
+    url: https://notmuchmail.org/releases/notmuch-0.40.tar.xz
+    sha256: 4b4314bbf1c2029fdf793637e6c7bb15c1b1730d22be9aa04803c98c5bbc446f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - doxygen
-  - emacs
-  - gnupg
-  - libgpg-error
-  - pkgconf
-  - sphinx-doc
+    - doxygen
+    - emacs
+    - gnupg
+    - libgpg-error
+    - pkgconf
+    - sphinx-doc
 linux_dependencies:
-  - cffi
-  - glib
-  - gmime
-  - python@3.14
-  - sfsexp
-  - talloc
-  - xapian
-  - zlib-ng-compat
+    - cffi
+    - glib
+    - gmime
+    - python@3.14
+    - sfsexp
+    - talloc
+    - xapian
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

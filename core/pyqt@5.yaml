@@ -3,28 +3,53 @@ version: 5.15.11
 description: Python bindings for v5 of Qt
 homepage: https://www.riverbankcomputing.com/software/pyqt/intro
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pyqt/5/blobs/sha256:d3944d21d80b85aadc871416d4072fad865a21b7d19c213bcced248534c1c1c2
-    sha256: d3944d21d80b85aadc871416d4072fad865a21b7d19c213bcced248534c1c1c2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pyqt/5/blobs/sha256:9071ce79a740aaf8fad54d9f28796bc76a1a81342a377df0c143647155f09eb5
-    sha256: 9071ce79a740aaf8fad54d9f28796bc76a1a81342a377df0c143647155f09eb5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pyqt/5/blobs/sha256:cba9e3e411e7161d02642f0bf4cd4254d03b180a5c108f184d45e346b9c7c123
-    sha256: cba9e3e411e7161d02642f0bf4cd4254d03b180a5c108f184d45e346b9c7c123
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pyqt/5/blobs/sha256:92f0b1de8c364103ad2bdca8a22f6b786960d0f3df2ca86ec981ad8908bc0f5b
-    sha256: 92f0b1de8c364103ad2bdca8a22f6b786960d0f3df2ca86ec981ad8908bc0f5b
-source:
-  url: https://files.pythonhosted.org/packages/0e/07/c9ed0bd428df6f87183fca565a79fee19fa7c88c7f00a7f011ab4379e77a/PyQt5-5.15.11.tar.gz
-  sha256: fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
-  - qt@5
+    - python@3.14
+    - qt@5
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pyqt/5/blobs/sha256:9071ce79a740aaf8fad54d9f28796bc76a1a81342a377df0c143647155f09eb5
+        sha256: 9071ce79a740aaf8fad54d9f28796bc76a1a81342a377df0c143647155f09eb5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pyqt/5/blobs/sha256:d3944d21d80b85aadc871416d4072fad865a21b7d19c213bcced248534c1c1c2
+        sha256: d3944d21d80b85aadc871416d4072fad865a21b7d19c213bcced248534c1c1c2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pyqt/5/blobs/sha256:cba9e3e411e7161d02642f0bf4cd4254d03b180a5c108f184d45e346b9c7c123
+        sha256: cba9e3e411e7161d02642f0bf4cd4254d03b180a5c108f184d45e346b9c7c123
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pyqt/5/blobs/sha256:92f0b1de8c364103ad2bdca8a22f6b786960d0f3df2ca86ec981ad8908bc0f5b
+        sha256: 92f0b1de8c364103ad2bdca8a22f6b786960d0f3df2ca86ec981ad8908bc0f5b
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/0e/07/c9ed0bd428df6f87183fca565a79fee19fa7c88c7f00a7f011ab4379e77a/PyQt5-5.15.11.tar.gz
+    sha256: fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pyqt-builder
+    - pyqt-builder
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

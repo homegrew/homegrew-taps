@@ -3,26 +3,52 @@ version: 1.90.0
 description: C++ library for C++/MPI interoperability
 homepage: https://www.boost.org/
 license: BSL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/boost-mpi/blobs/sha256:670dd9f317690572c55e29b35f850fdb2a9bf6173b24659b7386195129c6fee2
-    sha256: 670dd9f317690572c55e29b35f850fdb2a9bf6173b24659b7386195129c6fee2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/boost-mpi/blobs/sha256:1f4b7c4cc2fd1ee4a5553385d5885162e11779d969ad949e8ddb59f1f2e8930d
-    sha256: 1f4b7c4cc2fd1ee4a5553385d5885162e11779d969ad949e8ddb59f1f2e8930d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/boost-mpi/blobs/sha256:d6b807df695489d80a4e89f0299941e10e733a4c1adc260bf31f425a3994db4f
-    sha256: d6b807df695489d80a4e89f0299941e10e733a4c1adc260bf31f425a3994db4f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/boost-mpi/blobs/sha256:68372159bf8d129e7212b757272a6b114637444382d9c246a170a2d7d5178c37
-    sha256: 68372159bf8d129e7212b757272a6b114637444382d9c246a170a2d7d5178c37
-source:
-  url: https://github.com/boostorg/boost/releases/download/boost-1.90.0/boost-1.90.0-b2-nodocs.tar.xz
-  sha256: 9e6bee9ab529fb2b0733049692d57d10a72202af085e553539a05b4204211a6f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - open-mpi
+    - boost
+    - open-mpi
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/boost-mpi/blobs/sha256:1f4b7c4cc2fd1ee4a5553385d5885162e11779d969ad949e8ddb59f1f2e8930d
+        sha256: 1f4b7c4cc2fd1ee4a5553385d5885162e11779d969ad949e8ddb59f1f2e8930d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/boost-mpi/blobs/sha256:670dd9f317690572c55e29b35f850fdb2a9bf6173b24659b7386195129c6fee2
+        sha256: 670dd9f317690572c55e29b35f850fdb2a9bf6173b24659b7386195129c6fee2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/boost-mpi/blobs/sha256:d6b807df695489d80a4e89f0299941e10e733a4c1adc260bf31f425a3994db4f
+        sha256: d6b807df695489d80a4e89f0299941e10e733a4c1adc260bf31f425a3994db4f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/boost-mpi/blobs/sha256:68372159bf8d129e7212b757272a6b114637444382d9c246a170a2d7d5178c37
+        sha256: 68372159bf8d129e7212b757272a6b114637444382d9c246a170a2d7d5178c37
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/boostorg/boost/releases/download/boost-1.90.0/boost-1.90.0-b2-nodocs.tar.xz
+    sha256: 9e6bee9ab529fb2b0733049692d57d10a72202af085e553539a05b4204211a6f
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

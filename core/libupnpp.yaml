@@ -3,29 +3,54 @@ version: 1.0.4
 description: C++ wrapper for libnpupnp
 homepage: https://www.lesbonscomptes.com/upmpdcli/libupnpp-refdoc/libupnpp-ctl.html
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libupnpp/blobs/sha256:85c47c5801796e4737a029ab321194f24dd0aa0bbf4bf593eba870a3f4649b8f
-    sha256: 85c47c5801796e4737a029ab321194f24dd0aa0bbf4bf593eba870a3f4649b8f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libupnpp/blobs/sha256:e58803076ea50f5046010dc8c4041f7cee6234f12a670f3354556acec8f57b32
-    sha256: e58803076ea50f5046010dc8c4041f7cee6234f12a670f3354556acec8f57b32
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libupnpp/blobs/sha256:1666386133c38c3b3bcf68b4af57ff5c57b43f5683d3f7767cc4d7aae7ddd05f
-    sha256: 1666386133c38c3b3bcf68b4af57ff5c57b43f5683d3f7767cc4d7aae7ddd05f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libupnpp/blobs/sha256:cf15fd96a718f69dc4fb2af3370f87e20b851d613ebef1be13d8370c8adf6f4d
-    sha256: cf15fd96a718f69dc4fb2af3370f87e20b851d613ebef1be13d8370c8adf6f4d
-source:
-  url: https://www.lesbonscomptes.com/upmpdcli/downloads/libupnpp-1.0.4.tar.gz
-  sha256: 4738a19be51c09bd59a26b28e305172e2052c0e970b2fad92320a2d7cf1157c5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libnpupnp
+    - libnpupnp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libupnpp/blobs/sha256:e58803076ea50f5046010dc8c4041f7cee6234f12a670f3354556acec8f57b32
+        sha256: e58803076ea50f5046010dc8c4041f7cee6234f12a670f3354556acec8f57b32
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libupnpp/blobs/sha256:85c47c5801796e4737a029ab321194f24dd0aa0bbf4bf593eba870a3f4649b8f
+        sha256: 85c47c5801796e4737a029ab321194f24dd0aa0bbf4bf593eba870a3f4649b8f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libupnpp/blobs/sha256:1666386133c38c3b3bcf68b4af57ff5c57b43f5683d3f7767cc4d7aae7ddd05f
+        sha256: 1666386133c38c3b3bcf68b4af57ff5c57b43f5683d3f7767cc4d7aae7ddd05f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libupnpp/blobs/sha256:cf15fd96a718f69dc4fb2af3370f87e20b851d613ebef1be13d8370c8adf6f4d
+        sha256: cf15fd96a718f69dc4fb2af3370f87e20b851d613ebef1be13d8370c8adf6f4d
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.lesbonscomptes.com/upmpdcli/downloads/libupnpp-1.0.4.tar.gz
+    sha256: 4738a19be51c09bd59a26b28e305172e2052c0e970b2fad92320a2d7cf1157c5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

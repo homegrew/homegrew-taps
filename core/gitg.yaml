@@ -1,72 +1,96 @@
 name: gitg
-version: 44
+version: "44"
 description: GNOME GUI client to view git repositories
 homepage: https://wiki.gnome.org/Apps/Gitg
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gitg/blobs/sha256:7e0c120472cfb2223b7615d56e431e51a865850aa768160458f27c8b0e8ba30a
-    sha256: 7e0c120472cfb2223b7615d56e431e51a865850aa768160458f27c8b0e8ba30a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gitg/blobs/sha256:b010e10497311ebb97003411fc0bb89e6ba1f0d65369ce9f7d0a47c6ee99cbd6
-    sha256: b010e10497311ebb97003411fc0bb89e6ba1f0d65369ce9f7d0a47c6ee99cbd6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gitg/blobs/sha256:9367ce2434837207a786ae3faaec0362f577fe08d8820bf02436d0d01ce5572d
-    sha256: 9367ce2434837207a786ae3faaec0362f577fe08d8820bf02436d0d01ce5572d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gitg/blobs/sha256:175fd3c4967bc7c203ffccf8a49b95c918f238d4c586194131c3f2307c9d38cf
-    sha256: 175fd3c4967bc7c203ffccf8a49b95c918f238d4c586194131c3f2307c9d38cf
-source:
-  url: https://download.gnome.org/sources/gitg/44/gitg-44.tar.xz
-  sha256: 342a31684dab9671cd341bd3e3ce665adcee0460c2a081ddc493cdbc03132530
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - adwaita-icon-theme
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gobject-introspection
-  - gpgme
-  - gspell
-  - gtk+3
-  - gtksourceview4
-  - hicolor-icon-theme
-  - json-glib
-  - libdazzle
-  - libgee
-  - libgit2
-  - libgit2-glib
-  - libhandy
-  - libpeas@1
-  - libsecret
-  - pango
-  - gettext
+    - adwaita-icon-theme
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gobject-introspection
+    - gpgme
+    - gspell
+    - gtk+3
+    - gtksourceview4
+    - hicolor-icon-theme
+    - json-glib
+    - libdazzle
+    - libgee
+    - libgit2
+    - libgit2-glib
+    - libhandy
+    - libpeas@1
+    - libsecret
+    - pango
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitg/blobs/sha256:b010e10497311ebb97003411fc0bb89e6ba1f0d65369ce9f7d0a47c6ee99cbd6
+        sha256: b010e10497311ebb97003411fc0bb89e6ba1f0d65369ce9f7d0a47c6ee99cbd6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitg/blobs/sha256:7e0c120472cfb2223b7615d56e431e51a865850aa768160458f27c8b0e8ba30a
+        sha256: 7e0c120472cfb2223b7615d56e431e51a865850aa768160458f27c8b0e8ba30a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitg/blobs/sha256:9367ce2434837207a786ae3faaec0362f577fe08d8820bf02436d0d01ce5572d
+        sha256: 9367ce2434837207a786ae3faaec0362f577fe08d8820bf02436d0d01ce5572d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitg/blobs/sha256:175fd3c4967bc7c203ffccf8a49b95c918f238d4c586194131c3f2307c9d38cf
+        sha256: 175fd3c4967bc7c203ffccf8a49b95c918f238d4c586194131c3f2307c9d38cf
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gitg/44/gitg-44.tar.xz
+    sha256: 342a31684dab9671cd341bd3e3ce665adcee0460c2a081ddc493cdbc03132530
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - gettext
+    - meson
+    - ninja
+    - pkgconf
+    - vala
 linux_dependencies:
-  - adwaita-icon-theme
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gobject-introspection
-  - gpgme
-  - gspell
-  - gtk+3
-  - gtksourceview4
-  - hicolor-icon-theme
-  - json-glib
-  - libdazzle
-  - libgee
-  - libgit2
-  - libgit2-glib
-  - libhandy
-  - libpeas@1
-  - libsecret
-  - pango
+    - adwaita-icon-theme
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gobject-introspection
+    - gpgme
+    - gspell
+    - gtk+3
+    - gtksourceview4
+    - hicolor-icon-theme
+    - json-glib
+    - libdazzle
+    - libgee
+    - libgit2
+    - libgit2-glib
+    - libhandy
+    - libpeas@1
+    - libsecret
+    - pango
+build:
+    configure: []
+    install: []
+service: null

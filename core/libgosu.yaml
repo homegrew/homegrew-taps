@@ -3,34 +3,58 @@ version: 1.4.6
 description: 2D game development library
 homepage: https://libgosu.org
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgosu/blobs/sha256:e0ecd1c01723e86606cf28780642bfe3992d3e8cf342715a13ec72ce563f30f9
-    sha256: e0ecd1c01723e86606cf28780642bfe3992d3e8cf342715a13ec72ce563f30f9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgosu/blobs/sha256:5bc693e53a3a48a990482ba76ef8d512099f48959a9be934d31d0e63533068da
-    sha256: 5bc693e53a3a48a990482ba76ef8d512099f48959a9be934d31d0e63533068da
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgosu/blobs/sha256:925189b43a69daaf38ec2011cdfa605d5f6f07aded7ca4828eb33570dee8f695
-    sha256: 925189b43a69daaf38ec2011cdfa605d5f6f07aded7ca4828eb33570dee8f695
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgosu/blobs/sha256:48f8286f58619e5155092fe286194251c63398dbcc20bdfd17bfe6ac82b792ba
-    sha256: 48f8286f58619e5155092fe286194251c63398dbcc20bdfd17bfe6ac82b792ba
-source:
-  url: https://github.com/gosu/gosu/archive/refs/tags/v1.4.6.tar.gz
-  sha256: bbd4c4a868549702e190542f0dc5be8210c8290378ae9b24a75a86e57aa8f39e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sdl2
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgosu/blobs/sha256:5bc693e53a3a48a990482ba76ef8d512099f48959a9be934d31d0e63533068da
+        sha256: 5bc693e53a3a48a990482ba76ef8d512099f48959a9be934d31d0e63533068da
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgosu/blobs/sha256:e0ecd1c01723e86606cf28780642bfe3992d3e8cf342715a13ec72ce563f30f9
+        sha256: e0ecd1c01723e86606cf28780642bfe3992d3e8cf342715a13ec72ce563f30f9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgosu/blobs/sha256:925189b43a69daaf38ec2011cdfa605d5f6f07aded7ca4828eb33570dee8f695
+        sha256: 925189b43a69daaf38ec2011cdfa605d5f6f07aded7ca4828eb33570dee8f695
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgosu/blobs/sha256:48f8286f58619e5155092fe286194251c63398dbcc20bdfd17bfe6ac82b792ba
+        sha256: 48f8286f58619e5155092fe286194251c63398dbcc20bdfd17bfe6ac82b792ba
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/gosu/gosu/archive/refs/tags/v1.4.6.tar.gz
+    sha256: bbd4c4a868549702e190542f0dc5be8210c8290378ae9b24a75a86e57aa8f39e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - fontconfig
-  - mesa
-  - mesa-glu
-  - openal-soft
-  - sdl2
+    - fontconfig
+    - mesa
+    - mesa-glu
+    - openal-soft
+    - sdl2
+build:
+    configure: []
+    install: []
+service: null

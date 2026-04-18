@@ -3,28 +3,53 @@ version: 2.1.20221123
 description: Open-source port of Tyrian
 homepage: https://github.com/opentyrian/opentyrian
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/open-tyrian/blobs/sha256:f6dd404f14a99279b9ea9d9dcc7343e56e2094a329a4424340c361dcb523ca30
-    sha256: f6dd404f14a99279b9ea9d9dcc7343e56e2094a329a4424340c361dcb523ca30
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/open-tyrian/blobs/sha256:d51dc11f8810d928b6c7e352a4e6542a2f7e65994b4bc703feb224f0c5e55fd8
-    sha256: d51dc11f8810d928b6c7e352a4e6542a2f7e65994b4bc703feb224f0c5e55fd8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/open-tyrian/blobs/sha256:20d32afb8db3ce9038cdbc8424c16a081b93e0060ac43f35a3d62bcde0c54fbd
-    sha256: 20d32afb8db3ce9038cdbc8424c16a081b93e0060ac43f35a3d62bcde0c54fbd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/open-tyrian/blobs/sha256:9031f900da6fba1bb5702d9c9dee4c128772f8c5012542aa0ed4d0c15fdb4b88
-    sha256: 9031f900da6fba1bb5702d9c9dee4c128772f8c5012542aa0ed4d0c15fdb4b88
-source:
-  url: https://github.com/opentyrian/opentyrian/archive/refs/tags/v2.1.20221123.tar.gz
-  sha256: e0e8a8b0d61de10a3a65789ace9ea8e8c5d8dc67f3e423d2c852d64da38aeeb9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sdl2
-  - sdl2_net
+    - sdl2
+    - sdl2_net
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/open-tyrian/blobs/sha256:d51dc11f8810d928b6c7e352a4e6542a2f7e65994b4bc703feb224f0c5e55fd8
+        sha256: d51dc11f8810d928b6c7e352a4e6542a2f7e65994b4bc703feb224f0c5e55fd8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/open-tyrian/blobs/sha256:f6dd404f14a99279b9ea9d9dcc7343e56e2094a329a4424340c361dcb523ca30
+        sha256: f6dd404f14a99279b9ea9d9dcc7343e56e2094a329a4424340c361dcb523ca30
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/open-tyrian/blobs/sha256:20d32afb8db3ce9038cdbc8424c16a081b93e0060ac43f35a3d62bcde0c54fbd
+        sha256: 20d32afb8db3ce9038cdbc8424c16a081b93e0060ac43f35a3d62bcde0c54fbd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/open-tyrian/blobs/sha256:9031f900da6fba1bb5702d9c9dee4c128772f8c5012542aa0ed4d0c15fdb4b88
+        sha256: 9031f900da6fba1bb5702d9c9dee4c128772f8c5012542aa0ed4d0c15fdb4b88
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/opentyrian/opentyrian/archive/refs/tags/v2.1.20221123.tar.gz
+    sha256: e0e8a8b0d61de10a3a65789ace9ea8e8c5d8dc67f3e423d2c852d64da38aeeb9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

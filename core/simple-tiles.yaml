@@ -3,37 +3,61 @@ version: 0.6.2
 description: Image generation library for spatial data
 homepage: https://github.com/propublica/simple-tiles
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/simple-tiles/blobs/sha256:c6422d3ddffa35605443bdf18158914654450f0ad0362673c6b136e1a116af4d
-    sha256: c6422d3ddffa35605443bdf18158914654450f0ad0362673c6b136e1a116af4d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/simple-tiles/blobs/sha256:a43ad30dc8509a71c44e09a8ed58416cd5f1c6b1f29e661223187564438eccd2
-    sha256: a43ad30dc8509a71c44e09a8ed58416cd5f1c6b1f29e661223187564438eccd2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/simple-tiles/blobs/sha256:8cac3424f59872d80f8dcaadc2ab0522f3cfafd7c12a6698c573d71767b66077
-    sha256: 8cac3424f59872d80f8dcaadc2ab0522f3cfafd7c12a6698c573d71767b66077
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/simple-tiles/blobs/sha256:1149b833c6586359e97f93673888bf3dbd68f070d74a819cd028c44ad054d1fa
-    sha256: 1149b833c6586359e97f93673888bf3dbd68f070d74a819cd028c44ad054d1fa
-source:
-  url: https://github.com/propublica/simple-tiles/archive/refs/tags/v0.6.2.tar.gz
-  sha256: 343ae52a0b20ee091b14bc145b7c78fed13b7272acd827626283b70f178dfa34
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - gdal
-  - glib
-  - pango
-  - gettext
-  - harfbuzz
+    - cairo
+    - gdal
+    - glib
+    - pango
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/simple-tiles/blobs/sha256:a43ad30dc8509a71c44e09a8ed58416cd5f1c6b1f29e661223187564438eccd2
+        sha256: a43ad30dc8509a71c44e09a8ed58416cd5f1c6b1f29e661223187564438eccd2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/simple-tiles/blobs/sha256:c6422d3ddffa35605443bdf18158914654450f0ad0362673c6b136e1a116af4d
+        sha256: c6422d3ddffa35605443bdf18158914654450f0ad0362673c6b136e1a116af4d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/simple-tiles/blobs/sha256:8cac3424f59872d80f8dcaadc2ab0522f3cfafd7c12a6698c573d71767b66077
+        sha256: 8cac3424f59872d80f8dcaadc2ab0522f3cfafd7c12a6698c573d71767b66077
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/simple-tiles/blobs/sha256:1149b833c6586359e97f93673888bf3dbd68f070d74a819cd028c44ad054d1fa
+        sha256: 1149b833c6586359e97f93673888bf3dbd68f070d74a819cd028c44ad054d1fa
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/propublica/simple-tiles/archive/refs/tags/v0.6.2.tar.gz
+    sha256: 343ae52a0b20ee091b14bc145b7c78fed13b7272acd827626283b70f178dfa34
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - gdal
-  - glib
-  - pango
+    - cairo
+    - gdal
+    - glib
+    - pango
+build:
+    configure: []
+    install: []
+service: null

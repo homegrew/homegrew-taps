@@ -1,38 +1,62 @@
 name: libxfont
 version: 1.5.4
-description: "X.Org: Core of the legacy X11 font system"
+description: 'X.Org: Core of the legacy X11 font system'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxfont/blobs/sha256:e67ab6488122aaf72e62534722893856d438840f8c2be91950e922f6b2aa509c
-    sha256: e67ab6488122aaf72e62534722893856d438840f8c2be91950e922f6b2aa509c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxfont/blobs/sha256:913aa317afeac3ee52224b4bab70b27047776573aaad9ae5d9f8a585731519e2
-    sha256: 913aa317afeac3ee52224b4bab70b27047776573aaad9ae5d9f8a585731519e2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxfont/blobs/sha256:fd3c5bf1aee1eda7aa8a4f56b8e1e25a91d138a220825e9f59e4f11f8f11ee1c
-    sha256: fd3c5bf1aee1eda7aa8a4f56b8e1e25a91d138a220825e9f59e4f11f8f11ee1c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxfont/blobs/sha256:fc80dc4b8c1597f1848ed8694f4f85073a7d983fd8750291424f04a19f75379c
-    sha256: fc80dc4b8c1597f1848ed8694f4f85073a7d983fd8750291424f04a19f75379c
-source:
-  url: https://www.x.org/archive/individual/lib/libXfont-1.5.4.tar.bz2
-  sha256: 1a7f7490774c87f2052d146d1e0e64518d32e6848184a18654e8d0bb57883242
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - libfontenc
-  - xorgproto
+    - freetype
+    - libfontenc
+    - xorgproto
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxfont/blobs/sha256:913aa317afeac3ee52224b4bab70b27047776573aaad9ae5d9f8a585731519e2
+        sha256: 913aa317afeac3ee52224b4bab70b27047776573aaad9ae5d9f8a585731519e2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxfont/blobs/sha256:e67ab6488122aaf72e62534722893856d438840f8c2be91950e922f6b2aa509c
+        sha256: e67ab6488122aaf72e62534722893856d438840f8c2be91950e922f6b2aa509c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxfont/blobs/sha256:fd3c5bf1aee1eda7aa8a4f56b8e1e25a91d138a220825e9f59e4f11f8f11ee1c
+        sha256: fd3c5bf1aee1eda7aa8a4f56b8e1e25a91d138a220825e9f59e4f11f8f11ee1c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxfont/blobs/sha256:fc80dc4b8c1597f1848ed8694f4f85073a7d983fd8750291424f04a19f75379c
+        sha256: fc80dc4b8c1597f1848ed8694f4f85073a7d983fd8750291424f04a19f75379c
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libXfont-1.5.4.tar.bz2
+    sha256: 1a7f7490774c87f2052d146d1e0e64518d32e6848184a18654e8d0bb57883242
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - util-macros
-  - xtrans
+    - pkgconf
+    - util-macros
+    - xtrans
 linux_dependencies:
-  - freetype
-  - libfontenc
-  - xorgproto
-  - zlib-ng-compat
+    - freetype
+    - libfontenc
+    - xorgproto
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

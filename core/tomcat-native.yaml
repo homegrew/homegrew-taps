@@ -3,27 +3,53 @@ version: 2.0.14
 description: Lets Tomcat use some native resources for performance
 homepage: https://tomcat.apache.org/native-doc/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:01b772187233970deb6369572b96780df249dd649ee0df8d0ea377021040a1ff
-    sha256: 01b772187233970deb6369572b96780df249dd649ee0df8d0ea377021040a1ff
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
-    sha256: d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:4a859cb4a87a10540f1f6ad44cbb043595d36c5049667be1097a2be24af8a54b
-    sha256: 4a859cb4a87a10540f1f6ad44cbb043595d36c5049667be1097a2be24af8a54b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:4cd5f44f63aeb7529c886a3962daccae4b9648d5f78066f613690e07de96524e
-    sha256: 4cd5f44f63aeb7529c886a3962daccae4b9648d5f78066f613690e07de96524e
-source:
-  url: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
-  sha256: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - apr
-  - openjdk
-  - openssl@3
+    - apr
+    - openjdk
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
+        sha256: d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:01b772187233970deb6369572b96780df249dd649ee0df8d0ea377021040a1ff
+        sha256: 01b772187233970deb6369572b96780df249dd649ee0df8d0ea377021040a1ff
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:4a859cb4a87a10540f1f6ad44cbb043595d36c5049667be1097a2be24af8a54b
+        sha256: 4a859cb4a87a10540f1f6ad44cbb043595d36c5049667be1097a2be24af8a54b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:4cd5f44f63aeb7529c886a3962daccae4b9648d5f78066f613690e07de96524e
+        sha256: 4cd5f44f63aeb7529c886a3962daccae4b9648d5f78066f613690e07de96524e
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    sha256: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

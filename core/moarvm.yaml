@@ -1,36 +1,60 @@
 name: moarvm
-version: 2026.03
+version: "2026.03"
 description: VM with adaptive optimization and JIT compilation, built for Rakudo
 homepage: https://moarvm.org
 license: Artistic-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:f3899928a2b821b2dad5f1daed17e3f51449a1def3f44aa3ee107c8140aefacb
-    sha256: f3899928a2b821b2dad5f1daed17e3f51449a1def3f44aa3ee107c8140aefacb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:3434d742fa3a5b27886196fef7f17d230cecc56be35c5fb63568fcfcf856b707
-    sha256: 3434d742fa3a5b27886196fef7f17d230cecc56be35c5fb63568fcfcf856b707
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:f4a17c949516ddf38f6706d60e73db413c3da71441ac5f5a639d34cd051c7e85
-    sha256: f4a17c949516ddf38f6706d60e73db413c3da71441ac5f5a639d34cd051c7e85
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:6a9f0ac8e418ca7db456d4f42a7adf32eb90ef95608ee43af4a477256b7da340
-    sha256: 6a9f0ac8e418ca7db456d4f42a7adf32eb90ef95608ee43af4a477256b7da340
-source:
-  url: https://github.com/MoarVM/MoarVM/releases/download/2026.03/MoarVM-2026.03.tar.gz
-  sha256: 67fdab474d0041df7003235108a4c31bbb0e4b5c7c88bba204520e6488aefcb6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtommath
-  - mimalloc
-  - zstd
-  - libuv
+    - libtommath
+    - mimalloc
+    - zstd
+    - libuv
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:3434d742fa3a5b27886196fef7f17d230cecc56be35c5fb63568fcfcf856b707
+        sha256: 3434d742fa3a5b27886196fef7f17d230cecc56be35c5fb63568fcfcf856b707
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:f3899928a2b821b2dad5f1daed17e3f51449a1def3f44aa3ee107c8140aefacb
+        sha256: f3899928a2b821b2dad5f1daed17e3f51449a1def3f44aa3ee107c8140aefacb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:f4a17c949516ddf38f6706d60e73db413c3da71441ac5f5a639d34cd051c7e85
+        sha256: f4a17c949516ddf38f6706d60e73db413c3da71441ac5f5a639d34cd051c7e85
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/moarvm/blobs/sha256:6a9f0ac8e418ca7db456d4f42a7adf32eb90ef95608ee43af4a477256b7da340
+        sha256: 6a9f0ac8e418ca7db456d4f42a7adf32eb90ef95608ee43af4a477256b7da340
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/MoarVM/MoarVM/releases/download/2026.03/MoarVM-2026.03.tar.gz
+    sha256: 67fdab474d0041df7003235108a4c31bbb0e4b5c7c88bba204520e6488aefcb6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - libtommath
-  - mimalloc
-  - zstd
+    - libtommath
+    - mimalloc
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

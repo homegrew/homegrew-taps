@@ -1,36 +1,60 @@
 name: phodav
-version: 3.0
+version: "3.0"
 description: WebDav server implementation using libsoup (RFC 4918)
 homepage: https://gitlab.gnome.org/GNOME/phodav
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/phodav/blobs/sha256:f1192115b21287b4a91568fa9257b8db536bb3529471c9fcf09da51f43408206
-    sha256: f1192115b21287b4a91568fa9257b8db536bb3529471c9fcf09da51f43408206
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/phodav/blobs/sha256:1b958681dab50441f112f3cc754f79f2f7f3a7766af6b5a85318a64d3692b5ad
-    sha256: 1b958681dab50441f112f3cc754f79f2f7f3a7766af6b5a85318a64d3692b5ad
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/phodav/blobs/sha256:44add3c66eabacd501c955a9ec7e41dc7c966b6abbf74df01d533bf1c25f2e69
-    sha256: 44add3c66eabacd501c955a9ec7e41dc7c966b6abbf74df01d533bf1c25f2e69
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/phodav/blobs/sha256:5d8943c4e2ebdf97363b6d5efc2d000debf452fd8d6614efba08e6ce05a2501c
-    sha256: 5d8943c4e2ebdf97363b6d5efc2d000debf452fd8d6614efba08e6ce05a2501c
-source:
-  url: https://download.gnome.org/sources/phodav/3.0/phodav-3.0.tar.xz
-  sha256: 392ec2d06d50300dcff1ef269a2a985304e29bce3520002fca29f2edc1d138d1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libsoup
-  - gettext
+    - glib
+    - libsoup
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/phodav/blobs/sha256:1b958681dab50441f112f3cc754f79f2f7f3a7766af6b5a85318a64d3692b5ad
+        sha256: 1b958681dab50441f112f3cc754f79f2f7f3a7766af6b5a85318a64d3692b5ad
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/phodav/blobs/sha256:f1192115b21287b4a91568fa9257b8db536bb3529471c9fcf09da51f43408206
+        sha256: f1192115b21287b4a91568fa9257b8db536bb3529471c9fcf09da51f43408206
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/phodav/blobs/sha256:44add3c66eabacd501c955a9ec7e41dc7c966b6abbf74df01d533bf1c25f2e69
+        sha256: 44add3c66eabacd501c955a9ec7e41dc7c966b6abbf74df01d533bf1c25f2e69
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/phodav/blobs/sha256:5d8943c4e2ebdf97363b6d5efc2d000debf452fd8d6614efba08e6ce05a2501c
+        sha256: 5d8943c4e2ebdf97363b6d5efc2d000debf452fd8d6614efba08e6ce05a2501c
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/phodav/3.0/phodav-3.0.tar.xz
+    sha256: 392ec2d06d50300dcff1ef269a2a985304e29bce3520002fca29f2edc1d138d1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - glib
-  - libsoup
+    - glib
+    - libsoup
+build:
+    configure: []
+    install: []
+service: null

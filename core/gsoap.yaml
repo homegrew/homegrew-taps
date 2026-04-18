@@ -3,30 +3,54 @@ version: 2.8.141
 description: SOAP stub and skeleton compiler for C and C++
 homepage: https://www.genivia.com/products.html
 license: GPL-2.0-or-later WITH openvpn-openssl-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gsoap/blobs/sha256:a0967a0c4cc80867fc181d277679a8107a67b6fef18835888022d27f0b6d1c8b
-    sha256: a0967a0c4cc80867fc181d277679a8107a67b6fef18835888022d27f0b6d1c8b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gsoap/blobs/sha256:a61e8e82f481d9be8ffbc84346d068683ba32aa83e704393d43560446224b9af
-    sha256: a61e8e82f481d9be8ffbc84346d068683ba32aa83e704393d43560446224b9af
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gsoap/blobs/sha256:dfd0ce24749e59232d2d636750e4686636326ced713316276e2b8d405ea47c41
-    sha256: dfd0ce24749e59232d2d636750e4686636326ced713316276e2b8d405ea47c41
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gsoap/blobs/sha256:276d44019e1b2b5e8d19e7c6db7191627d9ece9b72b2069677fe83a7c5fafdfc
-    sha256: 276d44019e1b2b5e8d19e7c6db7191627d9ece9b72b2069677fe83a7c5fafdfc
-source:
-  url: https://downloads.sourceforge.net/project/gsoap2/gsoap_2.8.141.zip
-  sha256: bc8210e97a81a659a18c748e998958ae369d35fc5f6ba3a097b42780fedd5a59
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gsoap/blobs/sha256:a61e8e82f481d9be8ffbc84346d068683ba32aa83e704393d43560446224b9af
+        sha256: a61e8e82f481d9be8ffbc84346d068683ba32aa83e704393d43560446224b9af
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gsoap/blobs/sha256:a0967a0c4cc80867fc181d277679a8107a67b6fef18835888022d27f0b6d1c8b
+        sha256: a0967a0c4cc80867fc181d277679a8107a67b6fef18835888022d27f0b6d1c8b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gsoap/blobs/sha256:dfd0ce24749e59232d2d636750e4686636326ced713316276e2b8d405ea47c41
+        sha256: dfd0ce24749e59232d2d636750e4686636326ced713316276e2b8d405ea47c41
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gsoap/blobs/sha256:276d44019e1b2b5e8d19e7c6db7191627d9ece9b72b2069677fe83a7c5fafdfc
+        sha256: 276d44019e1b2b5e8d19e7c6db7191627d9ece9b72b2069677fe83a7c5fafdfc
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/gsoap2/gsoap_2.8.141.zip
+    sha256: bc8210e97a81a659a18c748e998958ae369d35fc5f6ba3a097b42780fedd5a59
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
+    - autoconf
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

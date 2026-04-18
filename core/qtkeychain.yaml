@@ -3,32 +3,56 @@ version: 0.15.0
 description: Platform-independent Qt API for storing passwords securely
 homepage: https://github.com/frankosterfeld/qtkeychain
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtkeychain/blobs/sha256:4bac16d3d1b6ea7c7ef54da66872ca0b6eb106be5d8fe9a3b293bec8f28e5612
-    sha256: 4bac16d3d1b6ea7c7ef54da66872ca0b6eb106be5d8fe9a3b293bec8f28e5612
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtkeychain/blobs/sha256:94c0e9f2d3d3723769cc8084e3bef5e15f0990844782743a2f6fc501a7fc640c
-    sha256: 94c0e9f2d3d3723769cc8084e3bef5e15f0990844782743a2f6fc501a7fc640c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtkeychain/blobs/sha256:6c8606b46a5628d4ac64761e1bd0e5ae118c18267cbae6b9cbd8f2c0e95a26a8
-    sha256: 6c8606b46a5628d4ac64761e1bd0e5ae118c18267cbae6b9cbd8f2c0e95a26a8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtkeychain/blobs/sha256:1802b46a69c8458733001a41570a683c32bbccb682dc8dd9440af5ba774fc84f
-    sha256: 1802b46a69c8458733001a41570a683c32bbccb682dc8dd9440af5ba774fc84f
-source:
-  url: https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/0.15.0.tar.gz
-  sha256: f4254dc8f0933b06d90672d683eab08ef770acd8336e44dfa030ce041dc2ca22
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtkeychain/blobs/sha256:94c0e9f2d3d3723769cc8084e3bef5e15f0990844782743a2f6fc501a7fc640c
+        sha256: 94c0e9f2d3d3723769cc8084e3bef5e15f0990844782743a2f6fc501a7fc640c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtkeychain/blobs/sha256:4bac16d3d1b6ea7c7ef54da66872ca0b6eb106be5d8fe9a3b293bec8f28e5612
+        sha256: 4bac16d3d1b6ea7c7ef54da66872ca0b6eb106be5d8fe9a3b293bec8f28e5612
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtkeychain/blobs/sha256:6c8606b46a5628d4ac64761e1bd0e5ae118c18267cbae6b9cbd8f2c0e95a26a8
+        sha256: 6c8606b46a5628d4ac64761e1bd0e5ae118c18267cbae6b9cbd8f2c0e95a26a8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtkeychain/blobs/sha256:1802b46a69c8458733001a41570a683c32bbccb682dc8dd9440af5ba774fc84f
+        sha256: 1802b46a69c8458733001a41570a683c32bbccb682dc8dd9440af5ba774fc84f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/0.15.0.tar.gz
+    sha256: f4254dc8f0933b06d90672d683eab08ef770acd8336e44dfa030ce041dc2ca22
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - glib
-  - libsecret
-  - qtbase
+    - glib
+    - libsecret
+    - qtbase
+build:
+    configure: []
+    install: []
+service: null

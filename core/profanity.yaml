@@ -3,59 +3,83 @@ version: 0.18.0
 description: Console based XMPP client
 homepage: https://profanity-im.github.io
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:6ff33b65801254c3f687f682c32a4a2bf5ff7294a5ca17c73f9001eec73e3651
-    sha256: 6ff33b65801254c3f687f682c32a4a2bf5ff7294a5ca17c73f9001eec73e3651
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:28226b645ad41cda17521ea9b5d265429cf74fdc2ef59a3a1297cd5fc48ca8c7
-    sha256: 28226b645ad41cda17521ea9b5d265429cf74fdc2ef59a3a1297cd5fc48ca8c7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:1ddd88181401770e9b1583f21228e01edb8bc721efee0fb0aa21a3b5928b8bc4
-    sha256: 1ddd88181401770e9b1583f21228e01edb8bc721efee0fb0aa21a3b5928b8bc4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:11b138269c95cdd14e315f142874ed3f4b5dcd94d4b6bf80577922181248f40e
-    sha256: 11b138269c95cdd14e315f142874ed3f4b5dcd94d4b6bf80577922181248f40e
-source:
-  url: https://profanity-im.github.io/tarballs/profanity-0.18.0.tar.xz
-  sha256: a1ad441bf92ba0327e0740a15dfe7885cb14415a934c850b8b98ac2f728d7cf8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gdk-pixbuf
-  - glib
-  - gpgme
-  - gtk+3
-  - libgcrypt
-  - libomemo-c
-  - libotr
-  - libstrophe
-  - libx11
-  - libxscrnsaver
-  - python@3.14
-  - qrencode
-  - readline
-  - sqlite
-  - terminal-notifier
+    - gdk-pixbuf
+    - glib
+    - gpgme
+    - gtk+3
+    - libgcrypt
+    - libomemo-c
+    - libotr
+    - libstrophe
+    - libx11
+    - libxscrnsaver
+    - python@3.14
+    - qrencode
+    - readline
+    - sqlite
+    - terminal-notifier
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:28226b645ad41cda17521ea9b5d265429cf74fdc2ef59a3a1297cd5fc48ca8c7
+        sha256: 28226b645ad41cda17521ea9b5d265429cf74fdc2ef59a3a1297cd5fc48ca8c7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:6ff33b65801254c3f687f682c32a4a2bf5ff7294a5ca17c73f9001eec73e3651
+        sha256: 6ff33b65801254c3f687f682c32a4a2bf5ff7294a5ca17c73f9001eec73e3651
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:1ddd88181401770e9b1583f21228e01edb8bc721efee0fb0aa21a3b5928b8bc4
+        sha256: 1ddd88181401770e9b1583f21228e01edb8bc721efee0fb0aa21a3b5928b8bc4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:11b138269c95cdd14e315f142874ed3f4b5dcd94d4b6bf80577922181248f40e
+        sha256: 11b138269c95cdd14e315f142874ed3f4b5dcd94d4b6bf80577922181248f40e
+        sha512: ""
+        signature: ""
+source:
+    url: https://profanity-im.github.io/tarballs/profanity-0.18.0.tar.xz
+    sha256: a1ad441bf92ba0327e0740a15dfe7885cb14415a934c850b8b98ac2f728d7cf8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - gdk-pixbuf
-  - glib
-  - gpgme
-  - gtk+3
-  - libgcrypt
-  - libnotify
-  - libomemo-c
-  - libotr
-  - libstrophe
-  - libx11
-  - libxscrnsaver
-  - python@3.14
-  - qrencode
-  - readline
-  - sqlite
+    - gdk-pixbuf
+    - glib
+    - gpgme
+    - gtk+3
+    - libgcrypt
+    - libnotify
+    - libomemo-c
+    - libotr
+    - libstrophe
+    - libx11
+    - libxscrnsaver
+    - python@3.14
+    - qrencode
+    - readline
+    - sqlite
+build:
+    configure: []
+    install: []
+service: null

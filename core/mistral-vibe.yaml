@@ -3,32 +3,57 @@ version: 2.7.6
 description: Minimal CLI coding agent
 homepage: https://github.com/mistralai/mistral-vibe
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:b5f9d5f95664e55cbcbbe79ff8115ba1c2f45614b52b86e5637de3eef5eaae9e
-    sha256: b5f9d5f95664e55cbcbbe79ff8115ba1c2f45614b52b86e5637de3eef5eaae9e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:5e61323a52fe74d931a362a967124c1d8456afbbb100d4aa647e2615ec5948bc
-    sha256: 5e61323a52fe74d931a362a967124c1d8456afbbb100d4aa647e2615ec5948bc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:b3c23b751c3636ecd4cd4d1767f65987dff051a3aa469d694dfe1bb7e6667336
-    sha256: b3c23b751c3636ecd4cd4d1767f65987dff051a3aa469d694dfe1bb7e6667336
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:4f23471a8f92015a1161de62cbb205c3a894940da2914c2a5b3ec539bd0b564d
-    sha256: 4f23471a8f92015a1161de62cbb205c3a894940da2914c2a5b3ec539bd0b564d
-source:
-  url: https://files.pythonhosted.org/packages/df/fd/5e75d76ac0b56084e0afd6e6d3747852311aa4d445680ecf7829863f8dec/mistral_vibe-2.7.6.tar.gz
-  sha256: 6dfeec38495c7612acfef533ff1b133db8a0a5670f85a467b80ed1000f24ef31
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - libyaml
-  - pydantic
-  - python@3.14
-  - rpds-py
+    - certifi
+    - cryptography
+    - libyaml
+    - pydantic
+    - python@3.14
+    - rpds-py
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:5e61323a52fe74d931a362a967124c1d8456afbbb100d4aa647e2615ec5948bc
+        sha256: 5e61323a52fe74d931a362a967124c1d8456afbbb100d4aa647e2615ec5948bc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:b5f9d5f95664e55cbcbbe79ff8115ba1c2f45614b52b86e5637de3eef5eaae9e
+        sha256: b5f9d5f95664e55cbcbbe79ff8115ba1c2f45614b52b86e5637de3eef5eaae9e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:b3c23b751c3636ecd4cd4d1767f65987dff051a3aa469d694dfe1bb7e6667336
+        sha256: b3c23b751c3636ecd4cd4d1767f65987dff051a3aa469d694dfe1bb7e6667336
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mistral-vibe/blobs/sha256:4f23471a8f92015a1161de62cbb205c3a894940da2914c2a5b3ec539bd0b564d
+        sha256: 4f23471a8f92015a1161de62cbb205c3a894940da2914c2a5b3ec539bd0b564d
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/df/fd/5e75d76ac0b56084e0afd6e6d3747852311aa4d445680ecf7829863f8dec/mistral_vibe-2.7.6.tar.gz
+    sha256: 6dfeec38495c7612acfef533ff1b133db8a0a5670f85a467b80ed1000f24ef31
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

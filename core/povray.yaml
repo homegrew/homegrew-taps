@@ -3,42 +3,66 @@ version: 3.7.0.10
 description: Persistence Of Vision RAYtracer (POVRAY)
 homepage: https://www.povray.org/
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:55cd4d67cca78d36e98a6997489de220f80403bac07a1747732cdf5c5649ad56
-    sha256: 55cd4d67cca78d36e98a6997489de220f80403bac07a1747732cdf5c5649ad56
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:30f0919619a000450453ce8c07f58e421f2e12f8754d6ebc7c34768d61ac24db
-    sha256: 30f0919619a000450453ce8c07f58e421f2e12f8754d6ebc7c34768d61ac24db
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:00fdfd84a3e3258f024cd77a80696966cb4b5d57f74bdbe029f913831c92a2de
-    sha256: 00fdfd84a3e3258f024cd77a80696966cb4b5d57f74bdbe029f913831c92a2de
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:77375757a81bcdd67b267983256491b369a57803df9cd79438a1c48dfee3c204
-    sha256: 77375757a81bcdd67b267983256491b369a57803df9cd79438a1c48dfee3c204
-source:
-  url: https://github.com/POV-Ray/povray/archive/refs/tags/v3.7.0.10.tar.gz
-  sha256: 7bee83d9296b98b7956eb94210cf30aa5c1bbeada8ef6b93bb52228bbc83abff
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - imath
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - openexr
+    - boost
+    - imath
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - openexr
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:30f0919619a000450453ce8c07f58e421f2e12f8754d6ebc7c34768d61ac24db
+        sha256: 30f0919619a000450453ce8c07f58e421f2e12f8754d6ebc7c34768d61ac24db
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:55cd4d67cca78d36e98a6997489de220f80403bac07a1747732cdf5c5649ad56
+        sha256: 55cd4d67cca78d36e98a6997489de220f80403bac07a1747732cdf5c5649ad56
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:00fdfd84a3e3258f024cd77a80696966cb4b5d57f74bdbe029f913831c92a2de
+        sha256: 00fdfd84a3e3258f024cd77a80696966cb4b5d57f74bdbe029f913831c92a2de
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:77375757a81bcdd67b267983256491b369a57803df9cd79438a1c48dfee3c204
+        sha256: 77375757a81bcdd67b267983256491b369a57803df9cd79438a1c48dfee3c204
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/POV-Ray/povray/archive/refs/tags/v3.7.0.10.tar.gz
+    sha256: 7bee83d9296b98b7956eb94210cf30aa5c1bbeada8ef6b93bb52228bbc83abff
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - pkgconf
+    - autoconf
+    - automake
+    - pkgconf
 linux_dependencies:
-  - boost
-  - imath
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - openexr
-  - zlib-ng-compat
+    - boost
+    - imath
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - openexr
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

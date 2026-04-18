@@ -3,31 +3,56 @@ version: 8.04.00
 description: Preprocessor and pretty-printer for OCaml
 homepage: https://camlp5.github.io/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:61dc0c7d0bf2a5e91afcba91ce127172c6ad3e2cd64d18950875ea6e914433f5
-    sha256: 61dc0c7d0bf2a5e91afcba91ce127172c6ad3e2cd64d18950875ea6e914433f5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:83822f4200ee229c2d9c46b5c650efd37aba4cd0f73dc1effc815b841b649986
-    sha256: 83822f4200ee229c2d9c46b5c650efd37aba4cd0f73dc1effc815b841b649986
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:a4411131337232c2a85b7dc0153fcc020ea43b177991952fe6bea444fd4f4cc7
-    sha256: a4411131337232c2a85b7dc0153fcc020ea43b177991952fe6bea444fd4f4cc7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:9037191c4e95682c02785002444fd5cbbea75035025216a49cecda6bb60b92f7
-    sha256: 9037191c4e95682c02785002444fd5cbbea75035025216a49cecda6bb60b92f7
-source:
-  url: https://github.com/camlp5/camlp5/archive/refs/tags/8.04.00.tar.gz
-  sha256: eb8c5bc0f47ce4b9518d37bcbf8be05ee80243c38e7019f8c3808456be8f15a8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - camlp-streams
-  - ocaml
-  - pcre2
+    - camlp-streams
+    - ocaml
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:83822f4200ee229c2d9c46b5c650efd37aba4cd0f73dc1effc815b841b649986
+        sha256: 83822f4200ee229c2d9c46b5c650efd37aba4cd0f73dc1effc815b841b649986
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:61dc0c7d0bf2a5e91afcba91ce127172c6ad3e2cd64d18950875ea6e914433f5
+        sha256: 61dc0c7d0bf2a5e91afcba91ce127172c6ad3e2cd64d18950875ea6e914433f5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:a4411131337232c2a85b7dc0153fcc020ea43b177991952fe6bea444fd4f4cc7
+        sha256: a4411131337232c2a85b7dc0153fcc020ea43b177991952fe6bea444fd4f4cc7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/camlp5/blobs/sha256:9037191c4e95682c02785002444fd5cbbea75035025216a49cecda6bb60b92f7
+        sha256: 9037191c4e95682c02785002444fd5cbbea75035025216a49cecda6bb60b92f7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/camlp5/camlp5/archive/refs/tags/8.04.00.tar.gz
+    sha256: eb8c5bc0f47ce4b9518d37bcbf8be05ee80243c38e7019f8c3808456be8f15a8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ocaml-findlib
-  - opam
-  - pkgconf
+    - ocaml-findlib
+    - opam
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

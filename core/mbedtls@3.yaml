@@ -1,28 +1,53 @@
 name: mbedtls@3
 version: 3.6.6
-description: "Cryptographic & SSL/TLS library"
+description: Cryptographic & SSL/TLS library
 homepage: https://tls.mbed.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mbedtls/3/blobs/sha256:a363a40850d5eb49bd11028879d2b312eafb9b7b38fefb5cf089014ae3e428f7
-    sha256: a363a40850d5eb49bd11028879d2b312eafb9b7b38fefb5cf089014ae3e428f7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mbedtls/3/blobs/sha256:6dad4026c51512381cab9ac7a82e041a2a1cee120c23b869c97822b45e20daa7
-    sha256: 6dad4026c51512381cab9ac7a82e041a2a1cee120c23b869c97822b45e20daa7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mbedtls/3/blobs/sha256:78735c99e399005253f01a93ed4beab4e30600a749f96c4641309b4a1c5d89d2
-    sha256: 78735c99e399005253f01a93ed4beab4e30600a749f96c4641309b4a1c5d89d2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mbedtls/3/blobs/sha256:3a416c0fe1570337994e7ad7c5bbb6e1110c81abac768fc0a8837e60f9ae9426
-    sha256: 3a416c0fe1570337994e7ad7c5bbb6e1110c81abac768fc0a8837e60f9ae9426
-source:
-  url: https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-3.6.6/mbedtls-3.6.6.tar.bz2
-  sha256: 8fb65fae8dcae5840f793c0a334860a411f884cc537ea290ce1c52bb64ca007a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
-build_dependencies:
-  - cmake
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mbedtls/3/blobs/sha256:6dad4026c51512381cab9ac7a82e041a2a1cee120c23b869c97822b45e20daa7
+        sha256: 6dad4026c51512381cab9ac7a82e041a2a1cee120c23b869c97822b45e20daa7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mbedtls/3/blobs/sha256:a363a40850d5eb49bd11028879d2b312eafb9b7b38fefb5cf089014ae3e428f7
+        sha256: a363a40850d5eb49bd11028879d2b312eafb9b7b38fefb5cf089014ae3e428f7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mbedtls/3/blobs/sha256:78735c99e399005253f01a93ed4beab4e30600a749f96c4641309b4a1c5d89d2
+        sha256: 78735c99e399005253f01a93ed4beab4e30600a749f96c4641309b4a1c5d89d2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mbedtls/3/blobs/sha256:3a416c0fe1570337994e7ad7c5bbb6e1110c81abac768fc0a8837e60f9ae9426
+        sha256: 3a416c0fe1570337994e7ad7c5bbb6e1110c81abac768fc0a8837e60f9ae9426
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-3.6.6/mbedtls-3.6.6.tar.bz2
+    sha256: 8fb65fae8dcae5840f793c0a334860a411f884cc537ea290ce1c52bb64ca007a
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

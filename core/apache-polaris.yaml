@@ -3,27 +3,52 @@ version: 1.3.0
 description: Interoperable, open source catalog for Apache Iceberg
 homepage: https://polaris.apache.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:7fb75b040fe393a5b225af7ce9779e619a500f55bc87a75081bf824047e8510e
-    sha256: 7fb75b040fe393a5b225af7ce9779e619a500f55bc87a75081bf824047e8510e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:e56e2613dd258ec7ee6c2029a038fed632320f207256081159177a81c98ecfc3
-    sha256: e56e2613dd258ec7ee6c2029a038fed632320f207256081159177a81c98ecfc3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:560c8e1e3afc88b55ff8f0f6995c6d997ba53c856dcc79730e4b0671f1536fcb
-    sha256: 560c8e1e3afc88b55ff8f0f6995c6d997ba53c856dcc79730e4b0671f1536fcb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:35ab94550957709bdaa5443e748d94a9821fa7d09ff91c7ce2d508c5f982e9d5
-    sha256: 35ab94550957709bdaa5443e748d94a9821fa7d09ff91c7ce2d508c5f982e9d5
-source:
-  url: https://github.com/apache/polaris/archive/refs/tags/apache-polaris-1.3.0-incubating.tar.gz
-  sha256: 4a502ceb521c09a179d8a4e0f6b75ff0b76b60b707179df9535b2553a9585032
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:e56e2613dd258ec7ee6c2029a038fed632320f207256081159177a81c98ecfc3
+        sha256: e56e2613dd258ec7ee6c2029a038fed632320f207256081159177a81c98ecfc3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:7fb75b040fe393a5b225af7ce9779e619a500f55bc87a75081bf824047e8510e
+        sha256: 7fb75b040fe393a5b225af7ce9779e619a500f55bc87a75081bf824047e8510e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:560c8e1e3afc88b55ff8f0f6995c6d997ba53c856dcc79730e4b0671f1536fcb
+        sha256: 560c8e1e3afc88b55ff8f0f6995c6d997ba53c856dcc79730e4b0671f1536fcb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:35ab94550957709bdaa5443e748d94a9821fa7d09ff91c7ce2d508c5f982e9d5
+        sha256: 35ab94550957709bdaa5443e748d94a9821fa7d09ff91c7ce2d508c5f982e9d5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/apache/polaris/archive/refs/tags/apache-polaris-1.3.0-incubating.tar.gz
+    sha256: 4a502ceb521c09a179d8a4e0f6b75ff0b76b60b707179df9535b2553a9585032
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gradle
+    - gradle
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

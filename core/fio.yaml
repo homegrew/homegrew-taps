@@ -1,27 +1,53 @@
 name: fio
-version: 3.42
+version: "3.42"
 description: I/O benchmark and stress test
 homepage: https://github.com/axboe/fio
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fio/blobs/sha256:611c21aa09abf75e1df6e31658b1bf04182e7b7c678a0b29bb978cf15e2cbb9a
-    sha256: 611c21aa09abf75e1df6e31658b1bf04182e7b7c678a0b29bb978cf15e2cbb9a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fio/blobs/sha256:960759c937bf7dc1e54d4605ef912a443ced521e4531062e29c856af476add9f
-    sha256: 960759c937bf7dc1e54d4605ef912a443ced521e4531062e29c856af476add9f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fio/blobs/sha256:8539bfd65ae2df6839534e907f291e50943eab0df04bb9513b868a45ce6e5247
-    sha256: 8539bfd65ae2df6839534e907f291e50943eab0df04bb9513b868a45ce6e5247
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fio/blobs/sha256:dc1623f397fd345e7bcec43a36a9e679a20d108281c1f3581f67b03cfb599a6b
-    sha256: dc1623f397fd345e7bcec43a36a9e679a20d108281c1f3581f67b03cfb599a6b
-source:
-  url: https://github.com/axboe/fio/archive/refs/tags/fio-3.42.tar.gz
-  sha256: 56b03497a918d07692257890fd759bf73168ad79df5be78a2bcbbdc8ce67895b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fio/blobs/sha256:960759c937bf7dc1e54d4605ef912a443ced521e4531062e29c856af476add9f
+        sha256: 960759c937bf7dc1e54d4605ef912a443ced521e4531062e29c856af476add9f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fio/blobs/sha256:611c21aa09abf75e1df6e31658b1bf04182e7b7c678a0b29bb978cf15e2cbb9a
+        sha256: 611c21aa09abf75e1df6e31658b1bf04182e7b7c678a0b29bb978cf15e2cbb9a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fio/blobs/sha256:8539bfd65ae2df6839534e907f291e50943eab0df04bb9513b868a45ce6e5247
+        sha256: 8539bfd65ae2df6839534e907f291e50943eab0df04bb9513b868a45ce6e5247
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fio/blobs/sha256:dc1623f397fd345e7bcec43a36a9e679a20d108281c1f3581f67b03cfb599a6b
+        sha256: dc1623f397fd345e7bcec43a36a9e679a20d108281c1f3581f67b03cfb599a6b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/axboe/fio/archive/refs/tags/fio-3.42.tar.gz
+    sha256: 56b03497a918d07692257890fd759bf73168ad79df5be78a2bcbbdc8ce67895b
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

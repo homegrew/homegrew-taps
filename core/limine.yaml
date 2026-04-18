@@ -3,28 +3,54 @@ version: 11.3.1
 description: Modern, advanced, portable, multiprotocol bootloader and boot manager
 homepage: https://github.com/Limine-Bootloader/Limine
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/limine/blobs/sha256:7823620f664b4f158132b74cfb32b1bebc21a4307bf4fe6cd9af858706022d2e
-    sha256: 7823620f664b4f158132b74cfb32b1bebc21a4307bf4fe6cd9af858706022d2e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/limine/blobs/sha256:4ecb067137f53ff42765c1e3b620e2e725901b1b7a19a4d45a09db1e1ae1ff1e
-    sha256: 4ecb067137f53ff42765c1e3b620e2e725901b1b7a19a4d45a09db1e1ae1ff1e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/limine/blobs/sha256:cd5fdc6293b1b1d7721c70544a21840786274c15260dbc5f251521145ce47e92
-    sha256: cd5fdc6293b1b1d7721c70544a21840786274c15260dbc5f251521145ce47e92
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/limine/blobs/sha256:43a97fcbbf88fe5ec40b2d0a840d08031b86c125af04312fb78f97dcd9f4bebe
-    sha256: 43a97fcbbf88fe5ec40b2d0a840d08031b86c125af04312fb78f97dcd9f4bebe
-source:
-  url: https://github.com/Limine-Bootloader/Limine/releases/download/v11.3.1/limine-11.3.1.tar.gz
-  sha256: eefb2ddf7472027eaad2d24d2ef9ab12281514cf9ec546a3e3a759df2d8654e7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/limine/blobs/sha256:4ecb067137f53ff42765c1e3b620e2e725901b1b7a19a4d45a09db1e1ae1ff1e
+        sha256: 4ecb067137f53ff42765c1e3b620e2e725901b1b7a19a4d45a09db1e1ae1ff1e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/limine/blobs/sha256:7823620f664b4f158132b74cfb32b1bebc21a4307bf4fe6cd9af858706022d2e
+        sha256: 7823620f664b4f158132b74cfb32b1bebc21a4307bf4fe6cd9af858706022d2e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/limine/blobs/sha256:cd5fdc6293b1b1d7721c70544a21840786274c15260dbc5f251521145ce47e92
+        sha256: cd5fdc6293b1b1d7721c70544a21840786274c15260dbc5f251521145ce47e92
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/limine/blobs/sha256:43a97fcbbf88fe5ec40b2d0a840d08031b86c125af04312fb78f97dcd9f4bebe
+        sha256: 43a97fcbbf88fe5ec40b2d0a840d08031b86c125af04312fb78f97dcd9f4bebe
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Limine-Bootloader/Limine/releases/download/v11.3.1/limine-11.3.1.tar.gz
+    sha256: eefb2ddf7472027eaad2d24d2ef9ab12281514cf9ec546a3e3a759df2d8654e7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - lld
-  - llvm
-  - mtools
-  - nasm
+    - lld
+    - llvm
+    - mtools
+    - nasm
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

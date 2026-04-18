@@ -1,39 +1,63 @@
 name: x86_64-elf-grub
-version: 2.12
+version: "2.12"
 description: GNU GRUB bootloader for x86_64-elf
 homepage: https://savannah.gnu.org/projects/grub
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/x86_64-elf-grub/blobs/sha256:53b8b89694c2d829f0b1a2d2f66d2337c989701666214a98bda3669e835ad9bc
-    sha256: 53b8b89694c2d829f0b1a2d2f66d2337c989701666214a98bda3669e835ad9bc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/x86_64-elf-grub/blobs/sha256:550a7d1ac501183b9c04490744605f04c0320327832dfee05d0be280316db621
-    sha256: 550a7d1ac501183b9c04490744605f04c0320327832dfee05d0be280316db621
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/x86_64-elf-grub/blobs/sha256:02531df2a6711bb5519575d72c4c83f76f4d71f79caeb5172b3c102d601bc522
-    sha256: 02531df2a6711bb5519575d72c4c83f76f4d71f79caeb5172b3c102d601bc522
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/x86_64-elf-grub/blobs/sha256:ffb7c4eb420c42f558fe96e3692cbf5b2b3b3e1f1a2b6e66a5a5a03f5d7e2e20
-    sha256: ffb7c4eb420c42f558fe96e3692cbf5b2b3b3e1f1a2b6e66a5a5a03f5d7e2e20
-source:
-  url: https://ftpmirror.gnu.org/gnu/grub/grub-2.12.tar.xz
-  sha256: f3c97391f7c4eaa677a78e090c7e97e6dc47b16f655f04683ebd37bef7fe0faa
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - xz
-  - gettext
+    - freetype
+    - xz
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/x86_64-elf-grub/blobs/sha256:550a7d1ac501183b9c04490744605f04c0320327832dfee05d0be280316db621
+        sha256: 550a7d1ac501183b9c04490744605f04c0320327832dfee05d0be280316db621
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/x86_64-elf-grub/blobs/sha256:53b8b89694c2d829f0b1a2d2f66d2337c989701666214a98bda3669e835ad9bc
+        sha256: 53b8b89694c2d829f0b1a2d2f66d2337c989701666214a98bda3669e835ad9bc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/x86_64-elf-grub/blobs/sha256:02531df2a6711bb5519575d72c4c83f76f4d71f79caeb5172b3c102d601bc522
+        sha256: 02531df2a6711bb5519575d72c4c83f76f4d71f79caeb5172b3c102d601bc522
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/x86_64-elf-grub/blobs/sha256:ffb7c4eb420c42f558fe96e3692cbf5b2b3b3e1f1a2b6e66a5a5a03f5d7e2e20
+        sha256: ffb7c4eb420c42f558fe96e3692cbf5b2b3b3e1f1a2b6e66a5a5a03f5d7e2e20
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/grub/grub-2.12.tar.xz
+    sha256: f3c97391f7c4eaa677a78e090c7e97e6dc47b16f655f04683ebd37bef7fe0faa
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gawk
-  - help2man
-  - pkgconf
-  - texinfo
-  - x86_64-elf-binutils
-  - x86_64-elf-gcc
+    - gawk
+    - help2man
+    - pkgconf
+    - texinfo
+    - x86_64-elf-binutils
+    - x86_64-elf-gcc
 linux_dependencies:
-  - freetype
-  - xz
+    - freetype
+    - xz
+build:
+    configure: []
+    install: []
+service: null

@@ -3,34 +3,59 @@ version: 2026.03.30.00
 description: Modular, composable client/server abstractions framework
 homepage: https://github.com/facebook/wangle
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wangle/blobs/sha256:1f553be2dbecf500c3b6cff7cbc59ef725d9214084d64f8d97a944de3ea565f7
-    sha256: 1f553be2dbecf500c3b6cff7cbc59ef725d9214084d64f8d97a944de3ea565f7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wangle/blobs/sha256:ad6a376ff5e80a1b38e06aa348acc20df3720a6596dfd7c712c78d4e02ed631a
-    sha256: ad6a376ff5e80a1b38e06aa348acc20df3720a6596dfd7c712c78d4e02ed631a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wangle/blobs/sha256:cf46a25ede521244d9bf3a72a992fc09dff3ce3ed453d3f0545b0d56c1612073
-    sha256: cf46a25ede521244d9bf3a72a992fc09dff3ce3ed453d3f0545b0d56c1612073
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wangle/blobs/sha256:dc912f3de4167d7c57817f79a9ff4fc8cafe2d897c8fab6e05d5b73396ff47d2
-    sha256: dc912f3de4167d7c57817f79a9ff4fc8cafe2d897c8fab6e05d5b73396ff47d2
-source:
-  url: https://github.com/facebook/wangle/archive/refs/tags/v2026.03.30.00.tar.gz
-  sha256: 1bddd34e8c95ce6b427261083f7144342958036137d33210aa223b51109b4d94
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - double-conversion
-  - fizz
-  - fmt
-  - folly
-  - gflags
-  - glog
-  - openssl@3
+    - double-conversion
+    - fizz
+    - fmt
+    - folly
+    - gflags
+    - glog
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wangle/blobs/sha256:ad6a376ff5e80a1b38e06aa348acc20df3720a6596dfd7c712c78d4e02ed631a
+        sha256: ad6a376ff5e80a1b38e06aa348acc20df3720a6596dfd7c712c78d4e02ed631a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wangle/blobs/sha256:1f553be2dbecf500c3b6cff7cbc59ef725d9214084d64f8d97a944de3ea565f7
+        sha256: 1f553be2dbecf500c3b6cff7cbc59ef725d9214084d64f8d97a944de3ea565f7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wangle/blobs/sha256:cf46a25ede521244d9bf3a72a992fc09dff3ce3ed453d3f0545b0d56c1612073
+        sha256: cf46a25ede521244d9bf3a72a992fc09dff3ce3ed453d3f0545b0d56c1612073
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wangle/blobs/sha256:dc912f3de4167d7c57817f79a9ff4fc8cafe2d897c8fab6e05d5b73396ff47d2
+        sha256: dc912f3de4167d7c57817f79a9ff4fc8cafe2d897c8fab6e05d5b73396ff47d2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/facebook/wangle/archive/refs/tags/v2026.03.30.00.tar.gz
+    sha256: 1bddd34e8c95ce6b427261083f7144342958036137d33210aa223b51109b4d94
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - libevent
+    - cmake
+    - libevent
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 1.22.0
 description: Synthetic monitoring made easy
 homepage: https://monika.hyperjump.tech
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/monika/blobs/sha256:8758ea33703b5c0c17a2761f32c97f0deb21c08c6795eee47de06031645110e4
-    sha256: 8758ea33703b5c0c17a2761f32c97f0deb21c08c6795eee47de06031645110e4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/monika/blobs/sha256:53f106ddd400e9dc86a2d2071c01415593c6fd3d7aa13a8e010af483a94a43aa
-    sha256: 53f106ddd400e9dc86a2d2071c01415593c6fd3d7aa13a8e010af483a94a43aa
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/monika/blobs/sha256:b93ff991a39a3eb117d3a95d4acc8b1f05d6ab02445ee6dd6da0bb697fbc8370
-    sha256: b93ff991a39a3eb117d3a95d4acc8b1f05d6ab02445ee6dd6da0bb697fbc8370
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/monika/blobs/sha256:73017a52b8cc391a457495015cdea44011d82bdb362618cd5c305c55a65f5ed5
-    sha256: 73017a52b8cc391a457495015cdea44011d82bdb362618cd5c305c55a65f5ed5
-source:
-  url: https://registry.npmjs.org/@hyperjumptech/monika/-/monika-1.22.0.tgz
-  sha256: 2b2ed6ac3186d72a9f060efb62d183c4b156494b2c37de9808c108f54655b84c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - node@24
-  - sqlite
+    - node@24
+    - sqlite
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/monika/blobs/sha256:53f106ddd400e9dc86a2d2071c01415593c6fd3d7aa13a8e010af483a94a43aa
+        sha256: 53f106ddd400e9dc86a2d2071c01415593c6fd3d7aa13a8e010af483a94a43aa
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/monika/blobs/sha256:8758ea33703b5c0c17a2761f32c97f0deb21c08c6795eee47de06031645110e4
+        sha256: 8758ea33703b5c0c17a2761f32c97f0deb21c08c6795eee47de06031645110e4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/monika/blobs/sha256:b93ff991a39a3eb117d3a95d4acc8b1f05d6ab02445ee6dd6da0bb697fbc8370
+        sha256: b93ff991a39a3eb117d3a95d4acc8b1f05d6ab02445ee6dd6da0bb697fbc8370
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/monika/blobs/sha256:73017a52b8cc391a457495015cdea44011d82bdb362618cd5c305c55a65f5ed5
+        sha256: 73017a52b8cc391a457495015cdea44011d82bdb362618cd5c305c55a65f5ed5
+        sha512: ""
+        signature: ""
+source:
+    url: https://registry.npmjs.org/@hyperjumptech/monika/-/monika-1.22.0.tgz
+    sha256: 2b2ed6ac3186d72a9f060efb62d183c4b156494b2c37de9808c108f54655b84c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

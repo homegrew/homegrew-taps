@@ -3,28 +3,53 @@ version: 1.5beta7
 description: Traceroute implementation using TCP packets
 homepage: https://github.com/mct/tcptraceroute
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tcptraceroute/blobs/sha256:3487da59a7faa8fc676d540fd1b5f310b62b845250e1916db5dfbb192a37b76f
-    sha256: 3487da59a7faa8fc676d540fd1b5f310b62b845250e1916db5dfbb192a37b76f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tcptraceroute/blobs/sha256:8ed1d063b115127d0461606a589ddef863e39073dfbb9187a27470b7a7af8ac4
-    sha256: 8ed1d063b115127d0461606a589ddef863e39073dfbb9187a27470b7a7af8ac4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tcptraceroute/blobs/sha256:97750459321657901904cd492047c4d011d7e7b705d01ce37d82fe5622dec168
-    sha256: 97750459321657901904cd492047c4d011d7e7b705d01ce37d82fe5622dec168
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tcptraceroute/blobs/sha256:93f9bdf4d9051c31897edf8d96ea5b78e55ec2d1b8abb4b5f05f06ada2d7256a
-    sha256: 93f9bdf4d9051c31897edf8d96ea5b78e55ec2d1b8abb4b5f05f06ada2d7256a
-source:
-  url: https://github.com/mct/tcptraceroute/archive/refs/tags/tcptraceroute-1.5beta7.tar.gz
-  sha256: 57fd2e444935bc5be8682c302994ba218a7c738c3a6cae00593a866cd85be8e7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libnet
+    - libnet
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tcptraceroute/blobs/sha256:8ed1d063b115127d0461606a589ddef863e39073dfbb9187a27470b7a7af8ac4
+        sha256: 8ed1d063b115127d0461606a589ddef863e39073dfbb9187a27470b7a7af8ac4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tcptraceroute/blobs/sha256:3487da59a7faa8fc676d540fd1b5f310b62b845250e1916db5dfbb192a37b76f
+        sha256: 3487da59a7faa8fc676d540fd1b5f310b62b845250e1916db5dfbb192a37b76f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tcptraceroute/blobs/sha256:97750459321657901904cd492047c4d011d7e7b705d01ce37d82fe5622dec168
+        sha256: 97750459321657901904cd492047c4d011d7e7b705d01ce37d82fe5622dec168
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tcptraceroute/blobs/sha256:93f9bdf4d9051c31897edf8d96ea5b78e55ec2d1b8abb4b5f05f06ada2d7256a
+        sha256: 93f9bdf4d9051c31897edf8d96ea5b78e55ec2d1b8abb4b5f05f06ada2d7256a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mct/tcptraceroute/archive/refs/tags/tcptraceroute-1.5beta7.tar.gz
+    sha256: 57fd2e444935bc5be8682c302994ba218a7c738c3a6cae00593a866cd85be8e7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,31 +3,56 @@ version: 2022.3.0
 description: Rich and complete approach to parallelism in C++
 homepage: https://uxlfoundation.github.io/oneTBB/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tbb/blobs/sha256:cc9fcdb5dd902f43174d0da933d9fd5cbefbc0a64782564b5b8193abc627ec0f
-    sha256: cc9fcdb5dd902f43174d0da933d9fd5cbefbc0a64782564b5b8193abc627ec0f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tbb/blobs/sha256:8a759acc184a76c75165db15bd39903332e980221963da164b8a0356780acfcd
-    sha256: 8a759acc184a76c75165db15bd39903332e980221963da164b8a0356780acfcd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tbb/blobs/sha256:d8e86274bf47f0546c742ffbd718b78c83703e3d6f8a2cd33ca7bd93c34b9291
-    sha256: d8e86274bf47f0546c742ffbd718b78c83703e3d6f8a2cd33ca7bd93c34b9291
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tbb/blobs/sha256:7cac87ad2e8f4fbf64aea23ea3ed64a54b8df675102b3013a09407ea0f43fb0b
-    sha256: 7cac87ad2e8f4fbf64aea23ea3ed64a54b8df675102b3013a09407ea0f43fb0b
-source:
-  url: https://github.com/uxlfoundation/oneTBB/archive/refs/tags/v2022.3.0.tar.gz
-  sha256: 01598a46c1162c27253a0de0236f520fd8ee8166e9ebb84a4243574f88e6e50a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hwloc
+    - hwloc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tbb/blobs/sha256:8a759acc184a76c75165db15bd39903332e980221963da164b8a0356780acfcd
+        sha256: 8a759acc184a76c75165db15bd39903332e980221963da164b8a0356780acfcd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tbb/blobs/sha256:cc9fcdb5dd902f43174d0da933d9fd5cbefbc0a64782564b5b8193abc627ec0f
+        sha256: cc9fcdb5dd902f43174d0da933d9fd5cbefbc0a64782564b5b8193abc627ec0f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tbb/blobs/sha256:d8e86274bf47f0546c742ffbd718b78c83703e3d6f8a2cd33ca7bd93c34b9291
+        sha256: d8e86274bf47f0546c742ffbd718b78c83703e3d6f8a2cd33ca7bd93c34b9291
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tbb/blobs/sha256:7cac87ad2e8f4fbf64aea23ea3ed64a54b8df675102b3013a09407ea0f43fb0b
+        sha256: 7cac87ad2e8f4fbf64aea23ea3ed64a54b8df675102b3013a09407ea0f43fb0b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/uxlfoundation/oneTBB/archive/refs/tags/v2022.3.0.tar.gz
+    sha256: 01598a46c1162c27253a0de0236f520fd8ee8166e9ebb84a4243574f88e6e50a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - python-setuptools
-  - python@3.14
-  - swig
+    - cmake
+    - pkgconf
+    - python-setuptools
+    - python@3.14
+    - swig
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

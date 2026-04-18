@@ -3,28 +3,53 @@ version: 1.7.0
 description: Digital signal processing library for software-defined radios
 homepage: https://liquidsdr.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/liquid-dsp/blobs/sha256:de67d0f577325b67c1130c3c0b851da268184c5b0d7110f61dcaa24166dc6a74
-    sha256: de67d0f577325b67c1130c3c0b851da268184c5b0d7110f61dcaa24166dc6a74
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/liquid-dsp/blobs/sha256:45c2eacbc105dc60a05650f8a26b1030d8d68f2e1ad5658b3aac69e55a935fac
-    sha256: 45c2eacbc105dc60a05650f8a26b1030d8d68f2e1ad5658b3aac69e55a935fac
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/liquid-dsp/blobs/sha256:677337e96a58a18d51ac014d4471b111a0b00ce735eea54cc1a788fac95cccd1
-    sha256: 677337e96a58a18d51ac014d4471b111a0b00ce735eea54cc1a788fac95cccd1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/liquid-dsp/blobs/sha256:17cc4d0a408358eaa7c80819e7ac7ba89142626be83feeea495252b0b73a0653
-    sha256: 17cc4d0a408358eaa7c80819e7ac7ba89142626be83feeea495252b0b73a0653
-source:
-  url: https://github.com/jgaeddert/liquid-dsp/archive/refs/tags/v1.7.0.tar.gz
-  sha256: 33c42ebc2e6088570421e282c6332e899705d42b4f73ebd1212e6a11da714dd4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fftw
+    - fftw
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/liquid-dsp/blobs/sha256:45c2eacbc105dc60a05650f8a26b1030d8d68f2e1ad5658b3aac69e55a935fac
+        sha256: 45c2eacbc105dc60a05650f8a26b1030d8d68f2e1ad5658b3aac69e55a935fac
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/liquid-dsp/blobs/sha256:de67d0f577325b67c1130c3c0b851da268184c5b0d7110f61dcaa24166dc6a74
+        sha256: de67d0f577325b67c1130c3c0b851da268184c5b0d7110f61dcaa24166dc6a74
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/liquid-dsp/blobs/sha256:677337e96a58a18d51ac014d4471b111a0b00ce735eea54cc1a788fac95cccd1
+        sha256: 677337e96a58a18d51ac014d4471b111a0b00ce735eea54cc1a788fac95cccd1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/liquid-dsp/blobs/sha256:17cc4d0a408358eaa7c80819e7ac7ba89142626be83feeea495252b0b73a0653
+        sha256: 17cc4d0a408358eaa7c80819e7ac7ba89142626be83feeea495252b0b73a0653
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jgaeddert/liquid-dsp/archive/refs/tags/v1.7.0.tar.gz
+    sha256: 33c42ebc2e6088570421e282c6332e899705d42b4f73ebd1212e6a11da714dd4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

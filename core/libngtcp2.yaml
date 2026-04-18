@@ -3,27 +3,52 @@ version: 1.22.1
 description: IETF QUIC protocol implementation
 homepage: https://nghttp2.org/ngtcp2/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:9b5ecd7bfaa9480d125e9dd5bf96ab2cde59557e9a8797f04ec6ee1af66ad9b5
-    sha256: 9b5ecd7bfaa9480d125e9dd5bf96ab2cde59557e9a8797f04ec6ee1af66ad9b5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:6ef4ea330fbbbbfe6a94ad85d7bad8a4f78586bbe91f2824756c3a3eb0d2e48c
-    sha256: 6ef4ea330fbbbbfe6a94ad85d7bad8a4f78586bbe91f2824756c3a3eb0d2e48c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:6cb712caac1c531346ad50dd0b40c30b7ba768aa5e3d332da82673f3dd16793a
-    sha256: 6cb712caac1c531346ad50dd0b40c30b7ba768aa5e3d332da82673f3dd16793a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:275827e764af82be486645dd0e4e27409f8b2c4883f68c58fdeb1fbbddc2f3aa
-    sha256: 275827e764af82be486645dd0e4e27409f8b2c4883f68c58fdeb1fbbddc2f3aa
-source:
-  url: https://github.com/ngtcp2/ngtcp2/releases/download/v1.22.1/ngtcp2-1.22.1.tar.xz
-  sha256: dfd2c68bd64b89847c611425b9487105c46e8447b5c21e6aeb00642c8fbe2ca8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:6ef4ea330fbbbbfe6a94ad85d7bad8a4f78586bbe91f2824756c3a3eb0d2e48c
+        sha256: 6ef4ea330fbbbbfe6a94ad85d7bad8a4f78586bbe91f2824756c3a3eb0d2e48c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:9b5ecd7bfaa9480d125e9dd5bf96ab2cde59557e9a8797f04ec6ee1af66ad9b5
+        sha256: 9b5ecd7bfaa9480d125e9dd5bf96ab2cde59557e9a8797f04ec6ee1af66ad9b5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:6cb712caac1c531346ad50dd0b40c30b7ba768aa5e3d332da82673f3dd16793a
+        sha256: 6cb712caac1c531346ad50dd0b40c30b7ba768aa5e3d332da82673f3dd16793a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:275827e764af82be486645dd0e4e27409f8b2c4883f68c58fdeb1fbbddc2f3aa
+        sha256: 275827e764af82be486645dd0e4e27409f8b2c4883f68c58fdeb1fbbddc2f3aa
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ngtcp2/ngtcp2/releases/download/v1.22.1/ngtcp2-1.22.1.tar.xz
+    sha256: dfd2c68bd64b89847c611425b9487105c46e8447b5c21e6aeb00642c8fbe2ca8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

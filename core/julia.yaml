@@ -3,62 +3,86 @@ version: 1.12.6
 description: Fast, Dynamic Programming Language
 homepage: https://julialang.org/
 license: MIT AND BSD-3-Clause AND Apache-2.0 AND BSL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:0bb211e4fd86ece2ac70c41d8837dca72ff8f0211aa9c1bf6d145a9dd417eca3
-    sha256: 0bb211e4fd86ece2ac70c41d8837dca72ff8f0211aa9c1bf6d145a9dd417eca3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:a08682c717772c224125dfb554ee72728e5c113d9767f039123012c8c409bf07
-    sha256: a08682c717772c224125dfb554ee72728e5c113d9767f039123012c8c409bf07
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:960bce588ddc557aecf7b73089f1c9529c671bc029b7141e6444adf1e232e27c
-    sha256: 960bce588ddc557aecf7b73089f1c9529c671bc029b7141e6444adf1e232e27c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:031f2fad72004425fda1465d469056ae4b1be7c4b0ab9b4789bb065708c51cb4
-    sha256: 031f2fad72004425fda1465d469056ae4b1be7c4b0ab9b4789bb065708c51cb4
-source:
-  url: https://github.com/JuliaLang/julia/releases/download/v1.12.6/julia-1.12.6-full.tar.gz
-  sha256: 711f3aa8d6ec5c9004593eb8f3d53e3564cd759acba8ad4adae967afc20332cc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ca-certificates
-  - curl
-  - gcc
-  - gmp
-  - libblastrampoline
-  - libgit2
-  - libnghttp2
-  - libssh2
-  - mpfr
-  - openblas64
-  - openlibm
-  - openssl@3
-  - p7zip
-  - pcre2
-  - suite-sparse
-  - utf8proc
-  - zstd
+    - ca-certificates
+    - curl
+    - gcc
+    - gmp
+    - libblastrampoline
+    - libgit2
+    - libnghttp2
+    - libssh2
+    - mpfr
+    - openblas64
+    - openlibm
+    - openssl@3
+    - p7zip
+    - pcre2
+    - suite-sparse
+    - utf8proc
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:a08682c717772c224125dfb554ee72728e5c113d9767f039123012c8c409bf07
+        sha256: a08682c717772c224125dfb554ee72728e5c113d9767f039123012c8c409bf07
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:0bb211e4fd86ece2ac70c41d8837dca72ff8f0211aa9c1bf6d145a9dd417eca3
+        sha256: 0bb211e4fd86ece2ac70c41d8837dca72ff8f0211aa9c1bf6d145a9dd417eca3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:960bce588ddc557aecf7b73089f1c9529c671bc029b7141e6444adf1e232e27c
+        sha256: 960bce588ddc557aecf7b73089f1c9529c671bc029b7141e6444adf1e232e27c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:031f2fad72004425fda1465d469056ae4b1be7c4b0ab9b4789bb065708c51cb4
+        sha256: 031f2fad72004425fda1465d469056ae4b1be7c4b0ab9b4789bb065708c51cb4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/JuliaLang/julia/releases/download/v1.12.6/julia-1.12.6-full.tar.gz
+    sha256: 711f3aa8d6ec5c9004593eb8f3d53e3564cd759acba8ad4adae967afc20332cc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - ca-certificates
-  - curl
-  - gcc
-  - gmp
-  - libblastrampoline
-  - libgit2
-  - libnghttp2
-  - libssh2
-  - mpfr
-  - openblas64
-  - openlibm
-  - openssl@3
-  - p7zip
-  - pcre2
-  - suite-sparse
-  - utf8proc
-  - zlib-ng-compat
-  - zstd
+    - ca-certificates
+    - curl
+    - gcc
+    - gmp
+    - libblastrampoline
+    - libgit2
+    - libnghttp2
+    - libssh2
+    - mpfr
+    - openblas64
+    - openlibm
+    - openssl@3
+    - p7zip
+    - pcre2
+    - suite-sparse
+    - utf8proc
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

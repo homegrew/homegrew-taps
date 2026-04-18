@@ -3,33 +3,58 @@ version: 0.7.2
 description: Advanced Proximal Optimization Toolbox
 homepage: https://github.com/Simple-Robotics/proxsuite
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proxsuite/blobs/sha256:2912fb63e15581feb0bb390fd5ed3e525c46bcb7b6781d12bd813dfe6282ce59
-    sha256: 2912fb63e15581feb0bb390fd5ed3e525c46bcb7b6781d12bd813dfe6282ce59
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proxsuite/blobs/sha256:3ff24000da0064252d189835999b4775042709339922ac3891c75c7201a91a08
-    sha256: 3ff24000da0064252d189835999b4775042709339922ac3891c75c7201a91a08
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proxsuite/blobs/sha256:bd84dda9a674cf2ff721ce5cd3a2b62d03977601306072a905adec2559de78e2
-    sha256: bd84dda9a674cf2ff721ce5cd3a2b62d03977601306072a905adec2559de78e2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proxsuite/blobs/sha256:696c5bd08330dba311f390d3aa3be29016d4d74ebc7d714bf2aee89c31580537
-    sha256: 696c5bd08330dba311f390d3aa3be29016d4d74ebc7d714bf2aee89c31580537
-source:
-  url: https://github.com/Simple-Robotics/proxsuite/releases/download/v0.7.2/proxsuite-0.7.2.tar.gz
-  sha256: dedda8e06b2880f99562622368abb0c0130cc2ab3bff0dc0b26477f88458a136
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - eigen
-  - numpy
-  - python@3.14
-  - scipy
-  - simde
+    - eigen
+    - numpy
+    - python@3.14
+    - scipy
+    - simde
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proxsuite/blobs/sha256:3ff24000da0064252d189835999b4775042709339922ac3891c75c7201a91a08
+        sha256: 3ff24000da0064252d189835999b4775042709339922ac3891c75c7201a91a08
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proxsuite/blobs/sha256:2912fb63e15581feb0bb390fd5ed3e525c46bcb7b6781d12bd813dfe6282ce59
+        sha256: 2912fb63e15581feb0bb390fd5ed3e525c46bcb7b6781d12bd813dfe6282ce59
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proxsuite/blobs/sha256:bd84dda9a674cf2ff721ce5cd3a2b62d03977601306072a905adec2559de78e2
+        sha256: bd84dda9a674cf2ff721ce5cd3a2b62d03977601306072a905adec2559de78e2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proxsuite/blobs/sha256:696c5bd08330dba311f390d3aa3be29016d4d74ebc7d714bf2aee89c31580537
+        sha256: 696c5bd08330dba311f390d3aa3be29016d4d74ebc7d714bf2aee89c31580537
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Simple-Robotics/proxsuite/releases/download/v0.7.2/proxsuite-0.7.2.tar.gz
+    sha256: dedda8e06b2880f99562622368abb0c0130cc2ab3bff0dc0b26477f88458a136
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
-  - pkgconf
+    - cmake
+    - doxygen
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

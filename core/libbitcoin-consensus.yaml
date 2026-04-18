@@ -3,29 +3,55 @@ version: 3.8.0
 description: Bitcoin Consensus Library (optional)
 homepage: https://github.com/libbitcoin/libbitcoin-consensus
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libbitcoin-consensus/blobs/sha256:a208eab2c355028b035129dac7a3f1316dff9cec8d84aeee74a0ffc66fc94ac4
-    sha256: a208eab2c355028b035129dac7a3f1316dff9cec8d84aeee74a0ffc66fc94ac4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libbitcoin-consensus/blobs/sha256:6f7adeb8f31361a7962ec8130c23829f8a8c5efe265d54c541bce38642a9fbb4
-    sha256: 6f7adeb8f31361a7962ec8130c23829f8a8c5efe265d54c541bce38642a9fbb4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libbitcoin-consensus/blobs/sha256:32b0d72b5ff1f2de8effc219182d08b8e3a4a92ec714ddea76691196ca42df61
-    sha256: 32b0d72b5ff1f2de8effc219182d08b8e3a4a92ec714ddea76691196ca42df61
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libbitcoin-consensus/blobs/sha256:9f14d11d115821d69e9aff1270ad08ef647468621148af9693b71d8d59fa0a57
-    sha256: 9f14d11d115821d69e9aff1270ad08ef647468621148af9693b71d8d59fa0a57
-source:
-  url: https://github.com/libbitcoin/libbitcoin-consensus/archive/refs/tags/v3.8.0.tar.gz
-  sha256: 3f63b233a25323ff81de71a6c96455a6f5141e21cb0678a2304b36b56e771ca2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libbitcoin-consensus/blobs/sha256:6f7adeb8f31361a7962ec8130c23829f8a8c5efe265d54c541bce38642a9fbb4
+        sha256: 6f7adeb8f31361a7962ec8130c23829f8a8c5efe265d54c541bce38642a9fbb4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libbitcoin-consensus/blobs/sha256:a208eab2c355028b035129dac7a3f1316dff9cec8d84aeee74a0ffc66fc94ac4
+        sha256: a208eab2c355028b035129dac7a3f1316dff9cec8d84aeee74a0ffc66fc94ac4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libbitcoin-consensus/blobs/sha256:32b0d72b5ff1f2de8effc219182d08b8e3a4a92ec714ddea76691196ca42df61
+        sha256: 32b0d72b5ff1f2de8effc219182d08b8e3a4a92ec714ddea76691196ca42df61
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libbitcoin-consensus/blobs/sha256:9f14d11d115821d69e9aff1270ad08ef647468621148af9693b71d8d59fa0a57
+        sha256: 9f14d11d115821d69e9aff1270ad08ef647468621148af9693b71d8d59fa0a57
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libbitcoin/libbitcoin-consensus/archive/refs/tags/v3.8.0.tar.gz
+    sha256: 3f63b233a25323ff81de71a6c96455a6f5141e21cb0678a2304b36b56e771ca2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - boost
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - boost
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

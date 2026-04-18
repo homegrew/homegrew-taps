@@ -3,30 +3,55 @@ version: 2.5.0
 description: Mathematical Components for the Coq proof assistant
 homepage: https://math-comp.github.io/math-comp/
 license: CECILL-B
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/math-comp/blobs/sha256:03645172fd12fc8a419b3220cc5b868dbfd5ca1a8a36e9866b0a1479f37a4a18
-    sha256: 03645172fd12fc8a419b3220cc5b868dbfd5ca1a8a36e9866b0a1479f37a4a18
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/math-comp/blobs/sha256:f1b7e1c3a77f020fecae846ff27843f89fb7eb3f86a52cf9c3d74790219ba80e
-    sha256: f1b7e1c3a77f020fecae846ff27843f89fb7eb3f86a52cf9c3d74790219ba80e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/math-comp/blobs/sha256:cdd53214167d5ec66265df1a429cf0d2914b01337d530147ef0cc0e5178b7613
-    sha256: cdd53214167d5ec66265df1a429cf0d2914b01337d530147ef0cc0e5178b7613
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/math-comp/blobs/sha256:562db5b63ed008ca669ffbadb7c3623ffa85a0857507302045f115222f1781d2
-    sha256: 562db5b63ed008ca669ffbadb7c3623ffa85a0857507302045f115222f1781d2
-source:
-  url: https://github.com/math-comp/math-comp/archive/refs/tags/mathcomp-2.5.0.tar.gz
-  sha256: 3db2f4b1b7f9f5a12d3d0c4ba4e325a26a77712074200319660c0e67e25679f1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hierarchy-builder
-  - rocq
-  - rocq-elpi
+    - hierarchy-builder
+    - rocq
+    - rocq-elpi
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/math-comp/blobs/sha256:f1b7e1c3a77f020fecae846ff27843f89fb7eb3f86a52cf9c3d74790219ba80e
+        sha256: f1b7e1c3a77f020fecae846ff27843f89fb7eb3f86a52cf9c3d74790219ba80e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/math-comp/blobs/sha256:03645172fd12fc8a419b3220cc5b868dbfd5ca1a8a36e9866b0a1479f37a4a18
+        sha256: 03645172fd12fc8a419b3220cc5b868dbfd5ca1a8a36e9866b0a1479f37a4a18
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/math-comp/blobs/sha256:cdd53214167d5ec66265df1a429cf0d2914b01337d530147ef0cc0e5178b7613
+        sha256: cdd53214167d5ec66265df1a429cf0d2914b01337d530147ef0cc0e5178b7613
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/math-comp/blobs/sha256:562db5b63ed008ca669ffbadb7c3623ffa85a0857507302045f115222f1781d2
+        sha256: 562db5b63ed008ca669ffbadb7c3623ffa85a0857507302045f115222f1781d2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/math-comp/math-comp/archive/refs/tags/mathcomp-2.5.0.tar.gz
+    sha256: 3db2f4b1b7f9f5a12d3d0c4ba4e325a26a77712074200319660c0e67e25679f1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ocaml
-  - ocaml-findlib
+    - ocaml
+    - ocaml-findlib
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

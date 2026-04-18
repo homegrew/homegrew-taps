@@ -1,31 +1,56 @@
 name: libxinerama
 version: 1.1.6
-description: "X.Org: API for Xinerama extension to X11 Protocol"
+description: 'X.Org: API for Xinerama extension to X11 Protocol'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxinerama/blobs/sha256:1661f76115723be21049a852556fe270ce1f53693beab0931ffa88b40b757129
-    sha256: 1661f76115723be21049a852556fe270ce1f53693beab0931ffa88b40b757129
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxinerama/blobs/sha256:1a447fd892652cccfda6f323ebc191d8855532a381381e2c2b05358f1f0bbea4
-    sha256: 1a447fd892652cccfda6f323ebc191d8855532a381381e2c2b05358f1f0bbea4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxinerama/blobs/sha256:52991cf289d5e90078916a2e43d188e4f3fcbef3eaa83ba3a6a911715b17a1fa
-    sha256: 52991cf289d5e90078916a2e43d188e4f3fcbef3eaa83ba3a6a911715b17a1fa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxinerama/blobs/sha256:68ea21d37025e719630cfd403bfdc5f43e5458c4f0305d71c510ba17ebf3d858
-    sha256: 68ea21d37025e719630cfd403bfdc5f43e5458c4f0305d71c510ba17ebf3d858
-source:
-  url: https://www.x.org/archive/individual/lib/libXinerama-1.1.6.tar.xz
-  sha256: d00fc1599c303dc5cbc122b8068bdc7405d6fcb19060f4597fc51bd3a8be51d7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - libxext
-  - xorgproto
+    - libx11
+    - libxext
+    - xorgproto
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxinerama/blobs/sha256:1a447fd892652cccfda6f323ebc191d8855532a381381e2c2b05358f1f0bbea4
+        sha256: 1a447fd892652cccfda6f323ebc191d8855532a381381e2c2b05358f1f0bbea4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxinerama/blobs/sha256:1661f76115723be21049a852556fe270ce1f53693beab0931ffa88b40b757129
+        sha256: 1661f76115723be21049a852556fe270ce1f53693beab0931ffa88b40b757129
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxinerama/blobs/sha256:52991cf289d5e90078916a2e43d188e4f3fcbef3eaa83ba3a6a911715b17a1fa
+        sha256: 52991cf289d5e90078916a2e43d188e4f3fcbef3eaa83ba3a6a911715b17a1fa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxinerama/blobs/sha256:68ea21d37025e719630cfd403bfdc5f43e5458c4f0305d71c510ba17ebf3d858
+        sha256: 68ea21d37025e719630cfd403bfdc5f43e5458c4f0305d71c510ba17ebf3d858
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libXinerama-1.1.6.tar.xz
+    sha256: d00fc1599c303dc5cbc122b8068bdc7405d6fcb19060f4597fc51bd3a8be51d7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

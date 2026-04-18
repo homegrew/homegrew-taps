@@ -3,30 +3,55 @@ version: 4.7.0
 description: Scalable C++ machine learning library
 homepage: https://www.mlpack.org
 license: BSD-3-Clause AND MPL-2.0 AND BSL-1.0 AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mlpack/blobs/sha256:9b331d69b57ed9d4d0019c88e06df3279b143bfcee03f081675d6224e611e83d
-    sha256: 9b331d69b57ed9d4d0019c88e06df3279b143bfcee03f081675d6224e611e83d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mlpack/blobs/sha256:85365a6ce18c3e3d22cf43e84867e82dfd804176c1bf83ebeb714e51e6eb3bfc
-    sha256: 85365a6ce18c3e3d22cf43e84867e82dfd804176c1bf83ebeb714e51e6eb3bfc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mlpack/blobs/sha256:e85b017257022ffc33619d39237a1b612453b594c0aa04179cae05c241c36fcf
-    sha256: e85b017257022ffc33619d39237a1b612453b594c0aa04179cae05c241c36fcf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mlpack/blobs/sha256:22de66681bdcf9d2e8345a9211add0e8baa16f0fb26afdb8f888040bc3c52887
-    sha256: 22de66681bdcf9d2e8345a9211add0e8baa16f0fb26afdb8f888040bc3c52887
-source:
-  url: https://mlpack.org/files/mlpack-4.7.0.tar.gz
-  sha256: a3f0fb530e51d51f8d7eceb7998b4699906d628000b158ada80541465595324e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - armadillo
-  - cereal
-  - ensmallen
+    - armadillo
+    - cereal
+    - ensmallen
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mlpack/blobs/sha256:85365a6ce18c3e3d22cf43e84867e82dfd804176c1bf83ebeb714e51e6eb3bfc
+        sha256: 85365a6ce18c3e3d22cf43e84867e82dfd804176c1bf83ebeb714e51e6eb3bfc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mlpack/blobs/sha256:9b331d69b57ed9d4d0019c88e06df3279b143bfcee03f081675d6224e611e83d
+        sha256: 9b331d69b57ed9d4d0019c88e06df3279b143bfcee03f081675d6224e611e83d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mlpack/blobs/sha256:e85b017257022ffc33619d39237a1b612453b594c0aa04179cae05c241c36fcf
+        sha256: e85b017257022ffc33619d39237a1b612453b594c0aa04179cae05c241c36fcf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mlpack/blobs/sha256:22de66681bdcf9d2e8345a9211add0e8baa16f0fb26afdb8f888040bc3c52887
+        sha256: 22de66681bdcf9d2e8345a9211add0e8baa16f0fb26afdb8f888040bc3c52887
+        sha512: ""
+        signature: ""
+source:
+    url: https://mlpack.org/files/mlpack-4.7.0.tar.gz
+    sha256: a3f0fb530e51d51f8d7eceb7998b4699906d628000b158ada80541465595324e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

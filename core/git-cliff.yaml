@@ -3,28 +3,53 @@ version: 2.12.0
 description: Highly customizable changelog generator
 homepage: https://git-cliff.org/
 license: Apache-2.0 AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-cliff/blobs/sha256:d8ff71f07e4ca5d7e5c1a1d0e40272a261be049d7e433872c1ebb03d281cf4f2
-    sha256: d8ff71f07e4ca5d7e5c1a1d0e40272a261be049d7e433872c1ebb03d281cf4f2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-cliff/blobs/sha256:191f40af9fe03bbfd35c4309f994821a0fe51e3698dae4f9a21ef1074aabbe5f
-    sha256: 191f40af9fe03bbfd35c4309f994821a0fe51e3698dae4f9a21ef1074aabbe5f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-cliff/blobs/sha256:b4f4d9d3c654f43227a90669f4ae00114b8b06ef49e076a6af17a9f6ab65aa09
-    sha256: b4f4d9d3c654f43227a90669f4ae00114b8b06ef49e076a6af17a9f6ab65aa09
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-cliff/blobs/sha256:016b1f59ad4750b2623bf567d5affe869de4da94f6bc8ab2d9ac1f1119081cd6
-    sha256: 016b1f59ad4750b2623bf567d5affe869de4da94f6bc8ab2d9ac1f1119081cd6
-source:
-  url: https://github.com/orhun/git-cliff/archive/refs/tags/v2.12.0.tar.gz
-  sha256: 2a55fd44467dfb6b0a0a494328af2b664775f938367603e1f0441f66c7146732
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
+    - libgit2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-cliff/blobs/sha256:191f40af9fe03bbfd35c4309f994821a0fe51e3698dae4f9a21ef1074aabbe5f
+        sha256: 191f40af9fe03bbfd35c4309f994821a0fe51e3698dae4f9a21ef1074aabbe5f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-cliff/blobs/sha256:d8ff71f07e4ca5d7e5c1a1d0e40272a261be049d7e433872c1ebb03d281cf4f2
+        sha256: d8ff71f07e4ca5d7e5c1a1d0e40272a261be049d7e433872c1ebb03d281cf4f2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-cliff/blobs/sha256:b4f4d9d3c654f43227a90669f4ae00114b8b06ef49e076a6af17a9f6ab65aa09
+        sha256: b4f4d9d3c654f43227a90669f4ae00114b8b06ef49e076a6af17a9f6ab65aa09
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-cliff/blobs/sha256:016b1f59ad4750b2623bf567d5affe869de4da94f6bc8ab2d9ac1f1119081cd6
+        sha256: 016b1f59ad4750b2623bf567d5affe869de4da94f6bc8ab2d9ac1f1119081cd6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/orhun/git-cliff/archive/refs/tags/v2.12.0.tar.gz
+    sha256: 2a55fd44467dfb6b0a0a494328af2b664775f938367603e1f0441f66c7146732
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

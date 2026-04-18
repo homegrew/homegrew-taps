@@ -3,33 +3,58 @@ version: 1.4.2
 description: Collection of software that can help managing (very) large TIFF files
 homepage: https://pperso.ijclab.in2p3.fr/page_perso/Deroulers/software/largetifftools/
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/largetifftools/blobs/sha256:84f779bd4774fc9825d78fc4b2b485652c52bb3b06dc4147fbf70efc99c61c61
-    sha256: 84f779bd4774fc9825d78fc4b2b485652c52bb3b06dc4147fbf70efc99c61c61
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/largetifftools/blobs/sha256:1d4d9cce695d92295f325ca875c16b7a4c2cf57223ce8e28f05beca25de519ee
-    sha256: 1d4d9cce695d92295f325ca875c16b7a4c2cf57223ce8e28f05beca25de519ee
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/largetifftools/blobs/sha256:dd6458d660821a0038f8ce37977442e31e638dd8a0e0f408f2cc3512eb1ea404
-    sha256: dd6458d660821a0038f8ce37977442e31e638dd8a0e0f408f2cc3512eb1ea404
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/largetifftools/blobs/sha256:fba139ab0c3a04448191f5596e5d233824f672fb3e3bacb166c4b7e5e9363fb1
-    sha256: fba139ab0c3a04448191f5596e5d233824f672fb3e3bacb166c4b7e5e9363fb1
-source:
-  url: https://pperso.ijclab.in2p3.fr/page_perso/Deroulers/software/largetifftools/download/largetifftools-1.4.2/largetifftools-1.4.2.tar.bz2
-  sha256: a7544d79a93349ebbc755f2b7b6c5fbcd71a01f68d2939dbcba749ba6069fabb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - webp
-  - zstd
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - webp
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/largetifftools/blobs/sha256:1d4d9cce695d92295f325ca875c16b7a4c2cf57223ce8e28f05beca25de519ee
+        sha256: 1d4d9cce695d92295f325ca875c16b7a4c2cf57223ce8e28f05beca25de519ee
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/largetifftools/blobs/sha256:84f779bd4774fc9825d78fc4b2b485652c52bb3b06dc4147fbf70efc99c61c61
+        sha256: 84f779bd4774fc9825d78fc4b2b485652c52bb3b06dc4147fbf70efc99c61c61
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/largetifftools/blobs/sha256:dd6458d660821a0038f8ce37977442e31e638dd8a0e0f408f2cc3512eb1ea404
+        sha256: dd6458d660821a0038f8ce37977442e31e638dd8a0e0f408f2cc3512eb1ea404
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/largetifftools/blobs/sha256:fba139ab0c3a04448191f5596e5d233824f672fb3e3bacb166c4b7e5e9363fb1
+        sha256: fba139ab0c3a04448191f5596e5d233824f672fb3e3bacb166c4b7e5e9363fb1
+        sha512: ""
+        signature: ""
+source:
+    url: https://pperso.ijclab.in2p3.fr/page_perso/Deroulers/software/largetifftools/download/largetifftools-1.4.2/largetifftools-1.4.2.tar.bz2
+    sha256: a7544d79a93349ebbc755f2b7b6c5fbcd71a01f68d2939dbcba749ba6069fabb
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - jpeg-turbo
-  - libpng
-  - libtiff
+    - jpeg-turbo
+    - libpng
+    - libtiff
+build:
+    configure: []
+    install: []
+service: null

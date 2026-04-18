@@ -1,29 +1,54 @@
 name: dsh
 version: 0.25.10
-description: "Dancer's shell, or distributed shell"
+description: Dancer's shell, or distributed shell
 homepage: https://www.netfort.gr.jp/~dancer/software/dsh.html.en
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dsh/blobs/sha256:cbb546751736cb2f93c9f59a4851ad2157a1440e5f5e914c15f5efb8800f2196
-    sha256: cbb546751736cb2f93c9f59a4851ad2157a1440e5f5e914c15f5efb8800f2196
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dsh/blobs/sha256:a271df504a6cf92cb16de16b9200f42190c2aa0dddf70827c11ba0cb935519c4
-    sha256: a271df504a6cf92cb16de16b9200f42190c2aa0dddf70827c11ba0cb935519c4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dsh/blobs/sha256:b0489652a4291212811da8fdc746690777acbfaafd90f0dfd050fb4699e57734
-    sha256: b0489652a4291212811da8fdc746690777acbfaafd90f0dfd050fb4699e57734
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dsh/blobs/sha256:07d63285b278ccbbedc618fc2722652b7bde0b671c25aa98cb1e1a34cbe3506e
-    sha256: 07d63285b278ccbbedc618fc2722652b7bde0b671c25aa98cb1e1a34cbe3506e
-source:
-  url: https://www.netfort.gr.jp/~dancer/software/downloads/dsh-0.25.10.tar.gz
-  sha256: 520031a5474c25c6b3f9a0840e06a4fea4750734043ab06342522f533fa5b4d0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libdshconfig
+    - libdshconfig
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dsh/blobs/sha256:a271df504a6cf92cb16de16b9200f42190c2aa0dddf70827c11ba0cb935519c4
+        sha256: a271df504a6cf92cb16de16b9200f42190c2aa0dddf70827c11ba0cb935519c4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dsh/blobs/sha256:cbb546751736cb2f93c9f59a4851ad2157a1440e5f5e914c15f5efb8800f2196
+        sha256: cbb546751736cb2f93c9f59a4851ad2157a1440e5f5e914c15f5efb8800f2196
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dsh/blobs/sha256:b0489652a4291212811da8fdc746690777acbfaafd90f0dfd050fb4699e57734
+        sha256: b0489652a4291212811da8fdc746690777acbfaafd90f0dfd050fb4699e57734
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dsh/blobs/sha256:07d63285b278ccbbedc618fc2722652b7bde0b671c25aa98cb1e1a34cbe3506e
+        sha256: 07d63285b278ccbbedc618fc2722652b7bde0b671c25aa98cb1e1a34cbe3506e
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.netfort.gr.jp/~dancer/software/downloads/dsh-0.25.10.tar.gz
+    sha256: 520031a5474c25c6b3f9a0840e06a4fea4750734043ab06342522f533fa5b4d0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gnu-sed
+    - gnu-sed
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

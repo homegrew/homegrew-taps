@@ -3,35 +3,59 @@ version: 0.4.3
 description: DNS privacy enabled stub resolver service based on getdns
 homepage: https://dnsprivacy.org/wiki/display/DP/DNS+Privacy+Daemon+-+Stubby
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:cf21effb238d2df0de643661b21cd67328a8cb440f7858b2fcee1ed7e7b851bf
-    sha256: cf21effb238d2df0de643661b21cd67328a8cb440f7858b2fcee1ed7e7b851bf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:3064b04c529f9ce23df5d0df80ac8aba0bbdbfaecd5dc61384de7dc38e0addac
-    sha256: 3064b04c529f9ce23df5d0df80ac8aba0bbdbfaecd5dc61384de7dc38e0addac
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:9be25773bc7f384a70943d6edf294174a59d901c17f497e3dc91c855cb00733e
-    sha256: 9be25773bc7f384a70943d6edf294174a59d901c17f497e3dc91c855cb00733e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:74cff1a598c66d7b8bbe09bba4ac23617ae0d89d58d0c1179b8eb8fe1c5bc965
-    sha256: 74cff1a598c66d7b8bbe09bba4ac23617ae0d89d58d0c1179b8eb8fe1c5bc965
-source:
-  url: https://github.com/getdnsapi/stubby/archive/refs/tags/v0.4.3.tar.gz
-  sha256: 99291ab4f09bce3743000ed3ecbf58961648a35ca955889f1c41d36810cc4463
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - getdns
-  - libyaml
-  - libidn2
-  - openssl@3
-  - unbound
+    - getdns
+    - libyaml
+    - libidn2
+    - openssl@3
+    - unbound
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:3064b04c529f9ce23df5d0df80ac8aba0bbdbfaecd5dc61384de7dc38e0addac
+        sha256: 3064b04c529f9ce23df5d0df80ac8aba0bbdbfaecd5dc61384de7dc38e0addac
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:cf21effb238d2df0de643661b21cd67328a8cb440f7858b2fcee1ed7e7b851bf
+        sha256: cf21effb238d2df0de643661b21cd67328a8cb440f7858b2fcee1ed7e7b851bf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:9be25773bc7f384a70943d6edf294174a59d901c17f497e3dc91c855cb00733e
+        sha256: 9be25773bc7f384a70943d6edf294174a59d901c17f497e3dc91c855cb00733e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:74cff1a598c66d7b8bbe09bba4ac23617ae0d89d58d0c1179b8eb8fe1c5bc965
+        sha256: 74cff1a598c66d7b8bbe09bba4ac23617ae0d89d58d0c1179b8eb8fe1c5bc965
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/getdnsapi/stubby/archive/refs/tags/v0.4.3.tar.gz
+    sha256: 99291ab4f09bce3743000ed3ecbf58961648a35ca955889f1c41d36810cc4463
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - libtool
+    - cmake
+    - libtool
 linux_dependencies:
-  - getdns
-  - libyaml
+    - getdns
+    - libyaml
+build:
+    configure: []
+    install: []
+service: null

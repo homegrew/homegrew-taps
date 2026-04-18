@@ -3,26 +3,52 @@ version: 1.6.41
 description: High performance, distributed memory object caching system
 homepage: https://memcached.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:73994b98ba41eaeee0e79d4b5ffab8b9fb68856d5e9136148f1aee6b68cc151b
-    sha256: 73994b98ba41eaeee0e79d4b5ffab8b9fb68856d5e9136148f1aee6b68cc151b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:9014d9f2c632c4095b22a05b6476416bef77993e8ccf7f79bc81560d5e2bb21f
-    sha256: 9014d9f2c632c4095b22a05b6476416bef77993e8ccf7f79bc81560d5e2bb21f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:1e3fd0efd8dd876cbfb403902908c66b28af041d665b6acbf41f5cfd9ee7ecf2
-    sha256: 1e3fd0efd8dd876cbfb403902908c66b28af041d665b6acbf41f5cfd9ee7ecf2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:59ef13bbcea7a66128350ddecb643619f3d1c9e616fc43d82634f5d341048410
-    sha256: 59ef13bbcea7a66128350ddecb643619f3d1c9e616fc43d82634f5d341048410
-source:
-  url: https://www.memcached.org/files/memcached-1.6.41.tar.gz
-  sha256: e097073c156eeff9e12655b054f446d57374cfba5c132dcdbe7fac64e728286a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libevent
-  - openssl@3
+    - libevent
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:9014d9f2c632c4095b22a05b6476416bef77993e8ccf7f79bc81560d5e2bb21f
+        sha256: 9014d9f2c632c4095b22a05b6476416bef77993e8ccf7f79bc81560d5e2bb21f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:73994b98ba41eaeee0e79d4b5ffab8b9fb68856d5e9136148f1aee6b68cc151b
+        sha256: 73994b98ba41eaeee0e79d4b5ffab8b9fb68856d5e9136148f1aee6b68cc151b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:1e3fd0efd8dd876cbfb403902908c66b28af041d665b6acbf41f5cfd9ee7ecf2
+        sha256: 1e3fd0efd8dd876cbfb403902908c66b28af041d665b6acbf41f5cfd9ee7ecf2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:59ef13bbcea7a66128350ddecb643619f3d1c9e616fc43d82634f5d341048410
+        sha256: 59ef13bbcea7a66128350ddecb643619f3d1c9e616fc43d82634f5d341048410
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.memcached.org/files/memcached-1.6.41.tar.gz
+    sha256: e097073c156eeff9e12655b054f446d57374cfba5c132dcdbe7fac64e728286a
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

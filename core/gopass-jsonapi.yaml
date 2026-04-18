@@ -3,27 +3,52 @@ version: 1.16.1
 description: Gopass Browser Bindings
 homepage: https://github.com/gopasspw/gopass-jsonapi
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gopass-jsonapi/blobs/sha256:63e40f2563f43b12908bdb89509d8b568ac3e797fe43d1c0bee05f56bcd4aa2a
-    sha256: 63e40f2563f43b12908bdb89509d8b568ac3e797fe43d1c0bee05f56bcd4aa2a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gopass-jsonapi/blobs/sha256:ff59e9b4d90e3bf9d5fe694477827b7b6676f21ba75fc1ca00d63fa4c56a904c
-    sha256: ff59e9b4d90e3bf9d5fe694477827b7b6676f21ba75fc1ca00d63fa4c56a904c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gopass-jsonapi/blobs/sha256:497f201696c8c1e7d5098e55e064f5537c4ace06a40eac22a6ea6f552dfb94c8
-    sha256: 497f201696c8c1e7d5098e55e064f5537c4ace06a40eac22a6ea6f552dfb94c8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gopass-jsonapi/blobs/sha256:4da1e2900218d466f4e58fa97948b8d19e0dc20078d503b06bf0406415cb176f
-    sha256: 4da1e2900218d466f4e58fa97948b8d19e0dc20078d503b06bf0406415cb176f
-source:
-  url: https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.16.1.tar.gz
-  sha256: 73449a7c359836a995946e54d91e32afe5a54e1519b5a01f78c9923c13c0894f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gopass
+    - gopass
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gopass-jsonapi/blobs/sha256:ff59e9b4d90e3bf9d5fe694477827b7b6676f21ba75fc1ca00d63fa4c56a904c
+        sha256: ff59e9b4d90e3bf9d5fe694477827b7b6676f21ba75fc1ca00d63fa4c56a904c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gopass-jsonapi/blobs/sha256:63e40f2563f43b12908bdb89509d8b568ac3e797fe43d1c0bee05f56bcd4aa2a
+        sha256: 63e40f2563f43b12908bdb89509d8b568ac3e797fe43d1c0bee05f56bcd4aa2a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gopass-jsonapi/blobs/sha256:497f201696c8c1e7d5098e55e064f5537c4ace06a40eac22a6ea6f552dfb94c8
+        sha256: 497f201696c8c1e7d5098e55e064f5537c4ace06a40eac22a6ea6f552dfb94c8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gopass-jsonapi/blobs/sha256:4da1e2900218d466f4e58fa97948b8d19e0dc20078d503b06bf0406415cb176f
+        sha256: 4da1e2900218d466f4e58fa97948b8d19e0dc20078d503b06bf0406415cb176f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.16.1.tar.gz
+    sha256: 73449a7c359836a995946e54d91e32afe5a54e1519b5a01f78c9923c13c0894f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

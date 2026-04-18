@@ -3,34 +3,58 @@ version: 0.2.15
 description: Library for converting WMF (Window Metafile Format) files
 homepage: https://github.com/caolanm/libwmf
 license: LGPL-2.0-or-later AND GPL-2.0-or-later AND GD
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libwmf/blobs/sha256:2c6e1d26d2213cbe408a6289a20cab2d9a385babb56997ad30afc0c733f89569
-    sha256: 2c6e1d26d2213cbe408a6289a20cab2d9a385babb56997ad30afc0c733f89569
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libwmf/blobs/sha256:96d66c997be9b333c085daeda09d2ec1bca0613cfbb6ea66b5ec6bfac260129e
-    sha256: 96d66c997be9b333c085daeda09d2ec1bca0613cfbb6ea66b5ec6bfac260129e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libwmf/blobs/sha256:bdf120383ed21317c5931926dcc30b3c8d662b0e0873213b321a72ec07b5411f
-    sha256: bdf120383ed21317c5931926dcc30b3c8d662b0e0873213b321a72ec07b5411f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libwmf/blobs/sha256:71f7063942f28d921e37b56cba7b7a323ac3d27fde289ab4adc4f1dabf4f207c
-    sha256: 71f7063942f28d921e37b56cba7b7a323ac3d27fde289ab4adc4f1dabf4f207c
-source:
-  url: https://github.com/caolanm/libwmf/releases/download/v0.2.15/libwmf-0.2.15.tar.gz
-  sha256: bbc90f22b9e86d5f1890d7da11cf7a8e61f429d4c220d900c285021deabe7a52
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - jpeg-turbo
-  - libpng
+    - freetype
+    - jpeg-turbo
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libwmf/blobs/sha256:96d66c997be9b333c085daeda09d2ec1bca0613cfbb6ea66b5ec6bfac260129e
+        sha256: 96d66c997be9b333c085daeda09d2ec1bca0613cfbb6ea66b5ec6bfac260129e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libwmf/blobs/sha256:2c6e1d26d2213cbe408a6289a20cab2d9a385babb56997ad30afc0c733f89569
+        sha256: 2c6e1d26d2213cbe408a6289a20cab2d9a385babb56997ad30afc0c733f89569
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libwmf/blobs/sha256:bdf120383ed21317c5931926dcc30b3c8d662b0e0873213b321a72ec07b5411f
+        sha256: bdf120383ed21317c5931926dcc30b3c8d662b0e0873213b321a72ec07b5411f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libwmf/blobs/sha256:71f7063942f28d921e37b56cba7b7a323ac3d27fde289ab4adc4f1dabf4f207c
+        sha256: 71f7063942f28d921e37b56cba7b7a323ac3d27fde289ab4adc4f1dabf4f207c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/caolanm/libwmf/releases/download/v0.2.15/libwmf-0.2.15.tar.gz
+    sha256: bbc90f22b9e86d5f1890d7da11cf7a8e61f429d4c220d900c285021deabe7a52
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - freetype
-  - jpeg-turbo
-  - libpng
-  - zlib-ng-compat
+    - freetype
+    - jpeg-turbo
+    - libpng
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

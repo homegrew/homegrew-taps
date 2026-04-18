@@ -3,48 +3,72 @@ version: 8.4.8-8
 description: Drop-in MySQL replacement
 homepage: https://www.percona.com
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:c891a528752c5d71cefeb3d49d82241389d0d722609806bfacc7c6d62acdec37
-    sha256: c891a528752c5d71cefeb3d49d82241389d0d722609806bfacc7c6d62acdec37
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
-    sha256: 488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:1c83b09f506e8855ba84ca1a4afb388f8c14009214a074c91c649ed10df8a63d
-    sha256: 1c83b09f506e8855ba84ca1a4afb388f8c14009214a074c91c649ed10df8a63d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:15922ecb65d0660c317568174d8721c4c597b7876d5912a7da54e1ec441c0545
-    sha256: 15922ecb65d0660c317568174d8721c4c597b7876d5912a7da54e1ec441c0545
-source:
-  url: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
-  sha256: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - icu4c@78
-  - libfido2
-  - lz4
-  - openldap
-  - openssl@3
-  - protobuf
-  - zlib-ng-compat
-  - zstd
+    - abseil
+    - icu4c@78
+    - libfido2
+    - lz4
+    - openldap
+    - openssl@3
+    - protobuf
+    - zlib-ng-compat
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        sha256: 488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:c891a528752c5d71cefeb3d49d82241389d0d722609806bfacc7c6d62acdec37
+        sha256: c891a528752c5d71cefeb3d49d82241389d0d722609806bfacc7c6d62acdec37
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:1c83b09f506e8855ba84ca1a4afb388f8c14009214a074c91c649ed10df8a63d
+        sha256: 1c83b09f506e8855ba84ca1a4afb388f8c14009214a074c91c649ed10df8a63d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:15922ecb65d0660c317568174d8721c4c597b7876d5912a7da54e1ec441c0545
+        sha256: 15922ecb65d0660c317568174d8721c4c597b7876d5912a7da54e1ec441c0545
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    sha256: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
-  - cmake
-  - pkgconf
+    - bison
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - abseil
-  - icu4c@78
-  - libfido2
-  - libtirpc
-  - lz4
-  - openldap
-  - openssl@3
-  - protobuf
-  - zlib-ng-compat
-  - zstd
+    - abseil
+    - icu4c@78
+    - libfido2
+    - libtirpc
+    - lz4
+    - openldap
+    - openssl@3
+    - protobuf
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

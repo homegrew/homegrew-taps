@@ -3,27 +3,53 @@ version: 1.16.1
 description: Save your dotfiles once, deploy them everywhere
 homepage: https://github.com/deadc0de6/dotdrop
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dotdrop/blobs/sha256:073607807341c402978bcedc4b448d3b6e7d6c91edc0ffaad675a9bdaa96c86d
-    sha256: 073607807341c402978bcedc4b448d3b6e7d6c91edc0ffaad675a9bdaa96c86d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dotdrop/blobs/sha256:7d16ba200c7faf358221bc49700d81ad7decf23e3feb7053d7925fc7d77956c8
-    sha256: 7d16ba200c7faf358221bc49700d81ad7decf23e3feb7053d7925fc7d77956c8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dotdrop/blobs/sha256:f8edaf494723f1648f3b0a1f3957ba1fa4bf68c73d64834a2b371f7e19d64f00
-    sha256: f8edaf494723f1648f3b0a1f3957ba1fa4bf68c73d64834a2b371f7e19d64f00
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dotdrop/blobs/sha256:54ec953e9c19ab6206043e1a68043efe22b3f9188ea5f8a9b2bc81e17e4a0652
-    sha256: 54ec953e9c19ab6206043e1a68043efe22b3f9188ea5f8a9b2bc81e17e4a0652
-source:
-  url: https://github.com/deadc0de6/dotdrop/archive/refs/tags/v1.16.1.tar.gz
-  sha256: 6c898b55839fba9632d85e15b501697e0dfe9718f3c2a02fdc11dec4f5f6a261
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libmagic
-  - python@3.14
+    - certifi
+    - libmagic
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dotdrop/blobs/sha256:7d16ba200c7faf358221bc49700d81ad7decf23e3feb7053d7925fc7d77956c8
+        sha256: 7d16ba200c7faf358221bc49700d81ad7decf23e3feb7053d7925fc7d77956c8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dotdrop/blobs/sha256:073607807341c402978bcedc4b448d3b6e7d6c91edc0ffaad675a9bdaa96c86d
+        sha256: 073607807341c402978bcedc4b448d3b6e7d6c91edc0ffaad675a9bdaa96c86d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dotdrop/blobs/sha256:f8edaf494723f1648f3b0a1f3957ba1fa4bf68c73d64834a2b371f7e19d64f00
+        sha256: f8edaf494723f1648f3b0a1f3957ba1fa4bf68c73d64834a2b371f7e19d64f00
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dotdrop/blobs/sha256:54ec953e9c19ab6206043e1a68043efe22b3f9188ea5f8a9b2bc81e17e4a0652
+        sha256: 54ec953e9c19ab6206043e1a68043efe22b3f9188ea5f8a9b2bc81e17e4a0652
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/deadc0de6/dotdrop/archive/refs/tags/v1.16.1.tar.gz
+    sha256: 6c898b55839fba9632d85e15b501697e0dfe9718f3c2a02fdc11dec4f5f6a261
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

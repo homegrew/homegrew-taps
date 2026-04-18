@@ -3,34 +3,59 @@ version: 3.7.1
 description: C++17 Distributed Hash Table implementation
 homepage: https://github.com/savoirfairelinux/opendht
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opendht/blobs/sha256:0fc3ce493601f30db6e3a6a15c7b56cbfa0d90f911e4c0b3d4d33cd80a1b5323
-    sha256: 0fc3ce493601f30db6e3a6a15c7b56cbfa0d90f911e4c0b3d4d33cd80a1b5323
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opendht/blobs/sha256:bac677e8a34fd7f609412a32724e7ea59c985845c9d4b1931f5ece1e2e771ff2
-    sha256: bac677e8a34fd7f609412a32724e7ea59c985845c9d4b1931f5ece1e2e771ff2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opendht/blobs/sha256:3b65244d50d8ff23e65173fd246c0e93006543f19b888c16245924b87a126aeb
-    sha256: 3b65244d50d8ff23e65173fd246c0e93006543f19b888c16245924b87a126aeb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opendht/blobs/sha256:29bbab9a704134cafded477704180ef11f4f983f8f56974b97a50d2c8481e510
-    sha256: 29bbab9a704134cafded477704180ef11f4f983f8f56974b97a50d2c8481e510
-source:
-  url: https://github.com/savoirfairelinux/opendht/archive/refs/tags/v3.7.1.tar.gz
-  sha256: 363bbe80e937e612c6642e0a395a9efbc0714dfeb65935ec6a63194a55ca8aec
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - argon2
-  - asio
-  - fmt
-  - gnutls
-  - msgpack-cxx
-  - nettle
-  - readline
+    - argon2
+    - asio
+    - fmt
+    - gnutls
+    - msgpack-cxx
+    - nettle
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opendht/blobs/sha256:bac677e8a34fd7f609412a32724e7ea59c985845c9d4b1931f5ece1e2e771ff2
+        sha256: bac677e8a34fd7f609412a32724e7ea59c985845c9d4b1931f5ece1e2e771ff2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opendht/blobs/sha256:0fc3ce493601f30db6e3a6a15c7b56cbfa0d90f911e4c0b3d4d33cd80a1b5323
+        sha256: 0fc3ce493601f30db6e3a6a15c7b56cbfa0d90f911e4c0b3d4d33cd80a1b5323
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opendht/blobs/sha256:3b65244d50d8ff23e65173fd246c0e93006543f19b888c16245924b87a126aeb
+        sha256: 3b65244d50d8ff23e65173fd246c0e93006543f19b888c16245924b87a126aeb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opendht/blobs/sha256:29bbab9a704134cafded477704180ef11f4f983f8f56974b97a50d2c8481e510
+        sha256: 29bbab9a704134cafded477704180ef11f4f983f8f56974b97a50d2c8481e510
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/savoirfairelinux/opendht/archive/refs/tags/v3.7.1.tar.gz
+    sha256: 363bbe80e937e612c6642e0a395a9efbc0714dfeb65935ec6a63194a55ca8aec
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

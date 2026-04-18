@@ -3,27 +3,52 @@ version: 3.5.1
 description: Fast multiple sequence alignment program for biological sequences
 homepage: https://github.com/TimoLassmann/kalign
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kalign/blobs/sha256:8f71e40d9b45732086ee415ec130e03e09db751f393cffb319bc842992ea28b2
-    sha256: 8f71e40d9b45732086ee415ec130e03e09db751f393cffb319bc842992ea28b2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kalign/blobs/sha256:10acec6e6df25811d99e0719a143a5a7c7bba1e1c223baf2e249b942c3dfb0f0
-    sha256: 10acec6e6df25811d99e0719a143a5a7c7bba1e1c223baf2e249b942c3dfb0f0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kalign/blobs/sha256:f797b66afe74876d22fb87c3e59b2d0ba9f004873d2127e631a4026178409e5f
-    sha256: f797b66afe74876d22fb87c3e59b2d0ba9f004873d2127e631a4026178409e5f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kalign/blobs/sha256:86fb9adacf8e8c08495cf7c8673618272540df6c7b26cc4d584d850b066b1d64
-    sha256: 86fb9adacf8e8c08495cf7c8673618272540df6c7b26cc4d584d850b066b1d64
-source:
-  url: https://github.com/TimoLassmann/kalign/archive/refs/tags/v3.5.1.tar.gz
-  sha256: 983bfd7da76010d59c3de3bae3d977cac78642c5eb061009dd12b11b9db5190d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libomp
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kalign/blobs/sha256:10acec6e6df25811d99e0719a143a5a7c7bba1e1c223baf2e249b942c3dfb0f0
+        sha256: 10acec6e6df25811d99e0719a143a5a7c7bba1e1c223baf2e249b942c3dfb0f0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kalign/blobs/sha256:8f71e40d9b45732086ee415ec130e03e09db751f393cffb319bc842992ea28b2
+        sha256: 8f71e40d9b45732086ee415ec130e03e09db751f393cffb319bc842992ea28b2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kalign/blobs/sha256:f797b66afe74876d22fb87c3e59b2d0ba9f004873d2127e631a4026178409e5f
+        sha256: f797b66afe74876d22fb87c3e59b2d0ba9f004873d2127e631a4026178409e5f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kalign/blobs/sha256:86fb9adacf8e8c08495cf7c8673618272540df6c7b26cc4d584d850b066b1d64
+        sha256: 86fb9adacf8e8c08495cf7c8673618272540df6c7b26cc4d584d850b066b1d64
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/TimoLassmann/kalign/archive/refs/tags/v3.5.1.tar.gz
+    sha256: 983bfd7da76010d59c3de3bae3d977cac78642c5eb061009dd12b11b9db5190d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,18 +3,40 @@ version: 5.15.202
 description: Header files of the Linux kernel
 homepage: https://kernel.org/
 license: GPL-2.0-only
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/linux-headers/5.15/blobs/sha256:f0b371a097922a88d08903513193bdad78f25d03d8ecf6cd195e921d8ba6a3f7
-    sha256: f0b371a097922a88d08903513193bdad78f25d03d8ecf6cd195e921d8ba6a3f7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/linux-headers/5.15/blobs/sha256:6cbf863563b2e3c05b2ca1be1e7ef340286d50333ff00a9d7657da75efd39bd9
-    sha256: 6cbf863563b2e3c05b2ca1be1e7ef340286d50333ff00a9d7657da75efd39bd9
-source:
-  url: https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.202.tar.gz
-  sha256: 7459799f7138c67817f587225d453647b2219f5371d0b610823a5fcecbc496d8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
 keg_only: true
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/linux-headers/5.15/blobs/sha256:f0b371a097922a88d08903513193bdad78f25d03d8ecf6cd195e921d8ba6a3f7
+        sha256: f0b371a097922a88d08903513193bdad78f25d03d8ecf6cd195e921d8ba6a3f7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/linux-headers/5.15/blobs/sha256:6cbf863563b2e3c05b2ca1be1e7ef340286d50333ff00a9d7657da75efd39bd9
+        sha256: 6cbf863563b2e3c05b2ca1be1e7ef340286d50333ff00a9d7657da75efd39bd9
+        sha512: ""
+        signature: ""
+source:
+    url: https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.202.tar.gz
+    sha256: 7459799f7138c67817f587225d453647b2219f5371d0b610823a5fcecbc496d8
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,31 +3,55 @@ version: 4.0.10
 description: HTTP server
 homepage: https://kazu-yamamoto.github.io/mighttpd2/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:66fbd63b606e13da4d46baebd96a6a26de5dc555553ede663a49be878d6091d7
-    sha256: 66fbd63b606e13da4d46baebd96a6a26de5dc555553ede663a49be878d6091d7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:1d87006977c3e8d4d4f64ee888e52c14dab67d14011d5f4d9f333739f10cf8e5
-    sha256: 1d87006977c3e8d4d4f64ee888e52c14dab67d14011d5f4d9f333739f10cf8e5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:61f34699423a6e6e60e12776b21141712b2220b27b515365a469f4bfa41214ec
-    sha256: 61f34699423a6e6e60e12776b21141712b2220b27b515365a469f4bfa41214ec
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:e5d0a2d98d44a5f042aa42c95129f90ea90fe6a8355cf047f9545924c00d1867
-    sha256: e5d0a2d98d44a5f042aa42c95129f90ea90fe6a8355cf047f9545924c00d1867
-source:
-  url: https://hackage.haskell.org/package/mighttpd2-4.0.10/mighttpd2-4.0.10.tar.gz
-  sha256: 7512f967748517537f526cb1ff6c6bd4e896d432691dd14c613530071e8357db
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:1d87006977c3e8d4d4f64ee888e52c14dab67d14011d5f4d9f333739f10cf8e5
+        sha256: 1d87006977c3e8d4d4f64ee888e52c14dab67d14011d5f4d9f333739f10cf8e5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:66fbd63b606e13da4d46baebd96a6a26de5dc555553ede663a49be878d6091d7
+        sha256: 66fbd63b606e13da4d46baebd96a6a26de5dc555553ede663a49be878d6091d7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:61f34699423a6e6e60e12776b21141712b2220b27b515365a469f4bfa41214ec
+        sha256: 61f34699423a6e6e60e12776b21141712b2220b27b515365a469f4bfa41214ec
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mighttpd2/blobs/sha256:e5d0a2d98d44a5f042aa42c95129f90ea90fe6a8355cf047f9545924c00d1867
+        sha256: e5d0a2d98d44a5f042aa42c95129f90ea90fe6a8355cf047f9545924c00d1867
+        sha512: ""
+        signature: ""
+source:
+    url: https://hackage.haskell.org/package/mighttpd2-4.0.10/mighttpd2-4.0.10.tar.gz
+    sha256: 7512f967748517537f526cb1ff6c6bd4e896d432691dd14c613530071e8357db
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
+    - cabal-install
+    - ghc
 linux_dependencies:
-  - gmp
-  - zlib-ng-compat
+    - gmp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

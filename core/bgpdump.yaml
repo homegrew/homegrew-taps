@@ -3,27 +3,52 @@ version: 1.6.2
 description: C library for analyzing MRT/Zebra/Quagga dump files
 homepage: https://github.com/RIPE-NCC/bgpdump/wiki
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bgpdump/blobs/sha256:b7466c828dd9c4dc63b62c670ad9bf9270ae4b7b4a512ad7ea6d4f3852100879
-    sha256: b7466c828dd9c4dc63b62c670ad9bf9270ae4b7b4a512ad7ea6d4f3852100879
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bgpdump/blobs/sha256:ec5587f68240ae4c67304b2d3a95d3b4956436c2cacebf2d8e40c3f7a4947efe
-    sha256: ec5587f68240ae4c67304b2d3a95d3b4956436c2cacebf2d8e40c3f7a4947efe
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bgpdump/blobs/sha256:3e87438d5bebcb4e594b7af638eb0f5b81b89838a5deca962c319d1027a25d7f
-    sha256: 3e87438d5bebcb4e594b7af638eb0f5b81b89838a5deca962c319d1027a25d7f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bgpdump/blobs/sha256:f9301becc1293c918c53f5699ff9ed9f6973d685e9c5fc91550199031d0aae91
-    sha256: f9301becc1293c918c53f5699ff9ed9f6973d685e9c5fc91550199031d0aae91
-source:
-  url: https://github.com/RIPE-NCC/bgpdump/archive/refs/tags/v1.6.2.tar.gz
-  sha256: 415692c173a84c48b1e927a6423a4f8fd3e6359bc3008c06b7702fe143a76223
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bgpdump/blobs/sha256:ec5587f68240ae4c67304b2d3a95d3b4956436c2cacebf2d8e40c3f7a4947efe
+        sha256: ec5587f68240ae4c67304b2d3a95d3b4956436c2cacebf2d8e40c3f7a4947efe
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bgpdump/blobs/sha256:b7466c828dd9c4dc63b62c670ad9bf9270ae4b7b4a512ad7ea6d4f3852100879
+        sha256: b7466c828dd9c4dc63b62c670ad9bf9270ae4b7b4a512ad7ea6d4f3852100879
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bgpdump/blobs/sha256:3e87438d5bebcb4e594b7af638eb0f5b81b89838a5deca962c319d1027a25d7f
+        sha256: 3e87438d5bebcb4e594b7af638eb0f5b81b89838a5deca962c319d1027a25d7f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bgpdump/blobs/sha256:f9301becc1293c918c53f5699ff9ed9f6973d685e9c5fc91550199031d0aae91
+        sha256: f9301becc1293c918c53f5699ff9ed9f6973d685e9c5fc91550199031d0aae91
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/RIPE-NCC/bgpdump/archive/refs/tags/v1.6.2.tar.gz
+    sha256: 415692c173a84c48b1e927a6423a4f8fd3e6359bc3008c06b7702fe143a76223
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
+    - autoconf
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,26 +3,52 @@ version: 1.34.2
 description: CLI tool for the Kubewarden policy engine for Kubernetes
 homepage: https://www.kubewarden.io/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kwctl/blobs/sha256:06923013cee7fd6571f53fdfe181411b46faef1ddd3ac959ce42ec3e8bf47293
-    sha256: 06923013cee7fd6571f53fdfe181411b46faef1ddd3ac959ce42ec3e8bf47293
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kwctl/blobs/sha256:b42d272002e35b75b8ff7d1ee3984e0b4274033a8309dfc3e986375275af4b64
-    sha256: b42d272002e35b75b8ff7d1ee3984e0b4274033a8309dfc3e986375275af4b64
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kwctl/blobs/sha256:eec04db71fb89a216e64754d3f5b4a851b82caf54349cec3607e22196c3295b4
-    sha256: eec04db71fb89a216e64754d3f5b4a851b82caf54349cec3607e22196c3295b4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kwctl/blobs/sha256:422eefe06f83ece0237717468e0b26c68b5cd7b9b78f8bd94ae35b0cec4fdcc4
-    sha256: 422eefe06f83ece0237717468e0b26c68b5cd7b9b78f8bd94ae35b0cec4fdcc4
-source:
-  url: https://github.com/kubewarden/kubewarden-controller/archive/refs/tags/v1.34.2.tar.gz
-  sha256: e06f3534102ed62f0c44c1d9e6438d8a8ef3d2b62051f397a749b12a41c39f99
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kwctl/blobs/sha256:b42d272002e35b75b8ff7d1ee3984e0b4274033a8309dfc3e986375275af4b64
+        sha256: b42d272002e35b75b8ff7d1ee3984e0b4274033a8309dfc3e986375275af4b64
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kwctl/blobs/sha256:06923013cee7fd6571f53fdfe181411b46faef1ddd3ac959ce42ec3e8bf47293
+        sha256: 06923013cee7fd6571f53fdfe181411b46faef1ddd3ac959ce42ec3e8bf47293
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kwctl/blobs/sha256:eec04db71fb89a216e64754d3f5b4a851b82caf54349cec3607e22196c3295b4
+        sha256: eec04db71fb89a216e64754d3f5b4a851b82caf54349cec3607e22196c3295b4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kwctl/blobs/sha256:422eefe06f83ece0237717468e0b26c68b5cd7b9b78f8bd94ae35b0cec4fdcc4
+        sha256: 422eefe06f83ece0237717468e0b26c68b5cd7b9b78f8bd94ae35b0cec4fdcc4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/kubewarden/kubewarden-controller/archive/refs/tags/v1.34.2.tar.gz
+    sha256: e06f3534102ed62f0c44c1d9e6438d8a8ef3d2b62051f397a749b12a41c39f99
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

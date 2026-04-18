@@ -3,27 +3,53 @@ version: 2.2.0
 description: Automate the use of pandoc
 homepage: https://heerdebeer.org/Software/markdown/pandocomatic/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pandocomatic/blobs/sha256:94dead39e2809e446ca5663efc490bde891f3d0e61169c092e7a9b71e1c6d04b
-    sha256: 94dead39e2809e446ca5663efc490bde891f3d0e61169c092e7a9b71e1c6d04b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pandocomatic/blobs/sha256:108f671c2357bb6574f6f139b0e84ba591c938d58ea2dc5da311b7f5c578bf3a
-    sha256: 108f671c2357bb6574f6f139b0e84ba591c938d58ea2dc5da311b7f5c578bf3a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pandocomatic/blobs/sha256:476704ca09fb05e3a0bc5b75818886130c40b05f72ca4b35dbd35a502997910c
-    sha256: 476704ca09fb05e3a0bc5b75818886130c40b05f72ca4b35dbd35a502997910c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pandocomatic/blobs/sha256:f1260ba565529a1e73f1e4ab697c498b1a6e7338de14884483cc3cbeee61262b
-    sha256: f1260ba565529a1e73f1e4ab697c498b1a6e7338de14884483cc3cbeee61262b
-source:
-  url: https://github.com/htdebeer/pandocomatic/archive/refs/tags/2.2.0.tar.gz
-  sha256: 8138b403aaa1d23db11701bf2bbcbf14447d89b7b05030fc2faf91d6fe11163c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - pandoc
-  - ruby@3.4
+    - libyaml
+    - pandoc
+    - ruby@3.4
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pandocomatic/blobs/sha256:108f671c2357bb6574f6f139b0e84ba591c938d58ea2dc5da311b7f5c578bf3a
+        sha256: 108f671c2357bb6574f6f139b0e84ba591c938d58ea2dc5da311b7f5c578bf3a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pandocomatic/blobs/sha256:94dead39e2809e446ca5663efc490bde891f3d0e61169c092e7a9b71e1c6d04b
+        sha256: 94dead39e2809e446ca5663efc490bde891f3d0e61169c092e7a9b71e1c6d04b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pandocomatic/blobs/sha256:476704ca09fb05e3a0bc5b75818886130c40b05f72ca4b35dbd35a502997910c
+        sha256: 476704ca09fb05e3a0bc5b75818886130c40b05f72ca4b35dbd35a502997910c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pandocomatic/blobs/sha256:f1260ba565529a1e73f1e4ab697c498b1a6e7338de14884483cc3cbeee61262b
+        sha256: f1260ba565529a1e73f1e4ab697c498b1a6e7338de14884483cc3cbeee61262b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/htdebeer/pandocomatic/archive/refs/tags/2.2.0.tar.gz
+    sha256: 8138b403aaa1d23db11701bf2bbcbf14447d89b7b05030fc2faf91d6fe11163c
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

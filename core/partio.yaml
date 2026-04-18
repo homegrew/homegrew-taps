@@ -3,34 +3,58 @@ version: 1.20.0
 description: Particle library for 3D graphics
 homepage: https://github.com/wdas/partio
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/partio/blobs/sha256:1df6144f110d59a0a2702a819891b5d2431c1b2d5320c8a754c70c7afe121979
-    sha256: 1df6144f110d59a0a2702a819891b5d2431c1b2d5320c8a754c70c7afe121979
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/partio/blobs/sha256:23633ba6707787461a94f4093040e6cf61a0d0e47e0bf4cc76122554952f5dcc
-    sha256: 23633ba6707787461a94f4093040e6cf61a0d0e47e0bf4cc76122554952f5dcc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/partio/blobs/sha256:dc0eb880e0fd2c7c033434e9433dd6ffc9af4b3ec6b61f81f705877f337f3bb6
-    sha256: dc0eb880e0fd2c7c033434e9433dd6ffc9af4b3ec6b61f81f705877f337f3bb6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/partio/blobs/sha256:d26cd91d005741e2c3953bd72ec068bad724c4bfe83914ab96b18f988aeac93f
-    sha256: d26cd91d005741e2c3953bd72ec068bad724c4bfe83914ab96b18f988aeac93f
-source:
-  url: https://github.com/wdas/partio/archive/refs/tags/v1.20.0.tar.gz
-  sha256: e60a89364f2b5d9c9b1f143175fc1a5018027a59bb31af56e5df88806b506e49
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/partio/blobs/sha256:23633ba6707787461a94f4093040e6cf61a0d0e47e0bf4cc76122554952f5dcc
+        sha256: 23633ba6707787461a94f4093040e6cf61a0d0e47e0bf4cc76122554952f5dcc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/partio/blobs/sha256:1df6144f110d59a0a2702a819891b5d2431c1b2d5320c8a754c70c7afe121979
+        sha256: 1df6144f110d59a0a2702a819891b5d2431c1b2d5320c8a754c70c7afe121979
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/partio/blobs/sha256:dc0eb880e0fd2c7c033434e9433dd6ffc9af4b3ec6b61f81f705877f337f3bb6
+        sha256: dc0eb880e0fd2c7c033434e9433dd6ffc9af4b3ec6b61f81f705877f337f3bb6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/partio/blobs/sha256:d26cd91d005741e2c3953bd72ec068bad724c4bfe83914ab96b18f988aeac93f
+        sha256: d26cd91d005741e2c3953bd72ec068bad724c4bfe83914ab96b18f988aeac93f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/wdas/partio/archive/refs/tags/v1.20.0.tar.gz
+    sha256: e60a89364f2b5d9c9b1f143175fc1a5018027a59bb31af56e5df88806b506e49
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
+    - cmake
+    - doxygen
 linux_dependencies:
-  - freeglut
-  - mesa
-  - mesa-glu
-  - python@3.14
-  - zlib-ng-compat
+    - freeglut
+    - mesa
+    - mesa-glu
+    - python@3.14
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

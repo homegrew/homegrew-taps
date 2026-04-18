@@ -3,35 +3,59 @@ version: 4.0.8
 description: Open Inventor 2.1 API implementation (Coin)
 homepage: https://coin3d.github.io/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/coin3d/blobs/sha256:c99f420721e92e91139456224982baac1eb95863a36880bcff3d7892f96dc777
-    sha256: c99f420721e92e91139456224982baac1eb95863a36880bcff3d7892f96dc777
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/coin3d/blobs/sha256:c97ccb81514a19c8e18fb1144e60cde5e9cb6979e2a0eb11a62030dc647073fe
-    sha256: c97ccb81514a19c8e18fb1144e60cde5e9cb6979e2a0eb11a62030dc647073fe
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/coin3d/blobs/sha256:d44311b6e8b687dcd7010a3aac45c37ee96f50586a0283712cb23405771e1582
-    sha256: d44311b6e8b687dcd7010a3aac45c37ee96f50586a0283712cb23405771e1582
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/coin3d/blobs/sha256:75155d00c26b9df819b006d8a4b0abfbeda5fffbde5f4dbc8ad09bedcc52b4dc
-    sha256: 75155d00c26b9df819b006d8a4b0abfbeda5fffbde5f4dbc8ad09bedcc52b4dc
-source:
-  url: https://github.com/coin3d/coin/releases/download/v4.0.8/coin-4.0.8-src.tar.gz
-  sha256: aff6c7edf24cfb935edba46574ec5f83b543c47ff79e40c21fb92dc709b0f2c4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/coin3d/blobs/sha256:c97ccb81514a19c8e18fb1144e60cde5e9cb6979e2a0eb11a62030dc647073fe
+        sha256: c97ccb81514a19c8e18fb1144e60cde5e9cb6979e2a0eb11a62030dc647073fe
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coin3d/blobs/sha256:c99f420721e92e91139456224982baac1eb95863a36880bcff3d7892f96dc777
+        sha256: c99f420721e92e91139456224982baac1eb95863a36880bcff3d7892f96dc777
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/coin3d/blobs/sha256:d44311b6e8b687dcd7010a3aac45c37ee96f50586a0283712cb23405771e1582
+        sha256: d44311b6e8b687dcd7010a3aac45c37ee96f50586a0283712cb23405771e1582
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coin3d/blobs/sha256:75155d00c26b9df819b006d8a4b0abfbeda5fffbde5f4dbc8ad09bedcc52b4dc
+        sha256: 75155d00c26b9df819b006d8a4b0abfbeda5fffbde5f4dbc8ad09bedcc52b4dc
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/coin3d/coin/releases/download/v4.0.8/coin-4.0.8-src.tar.gz
+    sha256: aff6c7edf24cfb935edba46574ec5f83b543c47ff79e40c21fb92dc709b0f2c4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - cmake
-  - doxygen
+    - boost
+    - cmake
+    - doxygen
 linux_dependencies:
-  - libx11
-  - libxi
-  - mesa
-  - mesa-glu
-  - qtbase
+    - libx11
+    - libxi
+    - mesa
+    - mesa-glu
+    - qtbase
+build:
+    configure: []
+    install: []
+service: null

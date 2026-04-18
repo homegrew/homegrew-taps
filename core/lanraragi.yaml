@@ -3,35 +3,60 @@ version: 0.9.70
 description: Web application for archival and reading of manga/doujinshi
 homepage: https://github.com/Difegue/LANraragi
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lanraragi/blobs/sha256:4f86576d118a1637ce0782199448d27fe6c1c1b85b5f677a28a00ac0d74291a3
-    sha256: 4f86576d118a1637ce0782199448d27fe6c1c1b85b5f677a28a00ac0d74291a3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lanraragi/blobs/sha256:1868bc4be55401b487271bcc1c0f9f7034721df9bec6454b4870f20ffb194937
-    sha256: 1868bc4be55401b487271bcc1c0f9f7034721df9bec6454b4870f20ffb194937
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lanraragi/blobs/sha256:bf65e28832e61f3175af0122013761366850c4b5147255d202cbda3f402f1d38
-    sha256: bf65e28832e61f3175af0122013761366850c4b5147255d202cbda3f402f1d38
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lanraragi/blobs/sha256:ce916c932637a2d482c9ef431e72bf6a008e957acb3cfec235abd4f607a0bb1e
-    sha256: ce916c932637a2d482c9ef431e72bf6a008e957acb3cfec235abd4f607a0bb1e
-source:
-  url: https://github.com/Difegue/LANraragi/archive/refs/tags/v.0.9.70.tar.gz
-  sha256: bc89ae47873a35145a0db5a4d93d274b89e7f546deaa396d389fe7975693f7a6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ghostscript
-  - imagemagick
-  - libarchive
-  - node
-  - openssl@3
-  - perl
-  - redis
-  - zstd
+    - ghostscript
+    - imagemagick
+    - libarchive
+    - node
+    - openssl@3
+    - perl
+    - redis
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lanraragi/blobs/sha256:1868bc4be55401b487271bcc1c0f9f7034721df9bec6454b4870f20ffb194937
+        sha256: 1868bc4be55401b487271bcc1c0f9f7034721df9bec6454b4870f20ffb194937
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lanraragi/blobs/sha256:4f86576d118a1637ce0782199448d27fe6c1c1b85b5f677a28a00ac0d74291a3
+        sha256: 4f86576d118a1637ce0782199448d27fe6c1c1b85b5f677a28a00ac0d74291a3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lanraragi/blobs/sha256:bf65e28832e61f3175af0122013761366850c4b5147255d202cbda3f402f1d38
+        sha256: bf65e28832e61f3175af0122013761366850c4b5147255d202cbda3f402f1d38
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lanraragi/blobs/sha256:ce916c932637a2d482c9ef431e72bf6a008e957acb3cfec235abd4f607a0bb1e
+        sha256: ce916c932637a2d482c9ef431e72bf6a008e957acb3cfec235abd4f607a0bb1e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Difegue/LANraragi/archive/refs/tags/v.0.9.70.tar.gz
+    sha256: bc89ae47873a35145a0db5a4d93d274b89e7f546deaa396d389fe7975693f7a6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cpanminus
-  - pkgconf
+    - cpanminus
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,52 @@ version: 2.10.3
 description: Standalone binary that can run anything
 homepage: https://pkgx.sh
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pkgx/blobs/sha256:6f1ad62d8baef97a5719648f8474d104c766b5a302dd851d2c60fcd4a617d006
-    sha256: 6f1ad62d8baef97a5719648f8474d104c766b5a302dd851d2c60fcd4a617d006
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pkgx/blobs/sha256:0788ae2f351d725cb1b0d4bb38d4860c6869e4155d6aa97440fc5e5873ec92a1
-    sha256: 0788ae2f351d725cb1b0d4bb38d4860c6869e4155d6aa97440fc5e5873ec92a1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pkgx/blobs/sha256:ec9e6613fb9d4197d862897c369189597579a1845358f57a0728a98d83ad6601
-    sha256: ec9e6613fb9d4197d862897c369189597579a1845358f57a0728a98d83ad6601
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pkgx/blobs/sha256:1dae000456643ada790f9bbd0330985cad0292f29f5eb45eeafde486bbf32ed0
-    sha256: 1dae000456643ada790f9bbd0330985cad0292f29f5eb45eeafde486bbf32ed0
-source:
-  url: https://github.com/pkgxdev/pkgx/archive/refs/tags/v2.10.3.tar.gz
-  sha256: 6df90a10139006a9ab36102b1e4394a2a6741120b197d1e84da7ec3b9f211b95
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pkgx/blobs/sha256:0788ae2f351d725cb1b0d4bb38d4860c6869e4155d6aa97440fc5e5873ec92a1
+        sha256: 0788ae2f351d725cb1b0d4bb38d4860c6869e4155d6aa97440fc5e5873ec92a1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pkgx/blobs/sha256:6f1ad62d8baef97a5719648f8474d104c766b5a302dd851d2c60fcd4a617d006
+        sha256: 6f1ad62d8baef97a5719648f8474d104c766b5a302dd851d2c60fcd4a617d006
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pkgx/blobs/sha256:ec9e6613fb9d4197d862897c369189597579a1845358f57a0728a98d83ad6601
+        sha256: ec9e6613fb9d4197d862897c369189597579a1845358f57a0728a98d83ad6601
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pkgx/blobs/sha256:1dae000456643ada790f9bbd0330985cad0292f29f5eb45eeafde486bbf32ed0
+        sha256: 1dae000456643ada790f9bbd0330985cad0292f29f5eb45eeafde486bbf32ed0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pkgxdev/pkgx/archive/refs/tags/v2.10.3.tar.gz
+    sha256: 6df90a10139006a9ab36102b1e4394a2a6741120b197d1e84da7ec3b9f211b95
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

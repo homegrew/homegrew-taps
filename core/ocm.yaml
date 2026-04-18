@@ -3,25 +3,51 @@ version: 1.0.13
 description: CLI for the Red Hat OpenShift Cluster Manager
 homepage: https://www.openshift.com/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocm/blobs/sha256:da3bb72fb8ba7464f1cc46b04acae51703a1fe77d1ed3d64a430bf2146491fe3
-    sha256: da3bb72fb8ba7464f1cc46b04acae51703a1fe77d1ed3d64a430bf2146491fe3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocm/blobs/sha256:c904d308cd0efaf6ef0b9d09364ec7eed0a3c4097f3485fa05ae417af598baee
-    sha256: c904d308cd0efaf6ef0b9d09364ec7eed0a3c4097f3485fa05ae417af598baee
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocm/blobs/sha256:a22117289214bd859fe7fec61611a6631d1382e2f538d29c1d57af93969cb1fe
-    sha256: a22117289214bd859fe7fec61611a6631d1382e2f538d29c1d57af93969cb1fe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocm/blobs/sha256:ff1a75d7df9bc7ad5ca21d2272ef4eac9c54b013fa580ca8edfada8d2340154d
-    sha256: ff1a75d7df9bc7ad5ca21d2272ef4eac9c54b013fa580ca8edfada8d2340154d
-source:
-  url: https://github.com/openshift-online/ocm-cli/archive/refs/tags/v1.0.13.tar.gz
-  sha256: 7ac0158b6a53ff56159c18decb0b8cc43739b7421120d4d88da0c6c721a25310
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocm/blobs/sha256:c904d308cd0efaf6ef0b9d09364ec7eed0a3c4097f3485fa05ae417af598baee
+        sha256: c904d308cd0efaf6ef0b9d09364ec7eed0a3c4097f3485fa05ae417af598baee
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocm/blobs/sha256:da3bb72fb8ba7464f1cc46b04acae51703a1fe77d1ed3d64a430bf2146491fe3
+        sha256: da3bb72fb8ba7464f1cc46b04acae51703a1fe77d1ed3d64a430bf2146491fe3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocm/blobs/sha256:a22117289214bd859fe7fec61611a6631d1382e2f538d29c1d57af93969cb1fe
+        sha256: a22117289214bd859fe7fec61611a6631d1382e2f538d29c1d57af93969cb1fe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocm/blobs/sha256:ff1a75d7df9bc7ad5ca21d2272ef4eac9c54b013fa580ca8edfada8d2340154d
+        sha256: ff1a75d7df9bc7ad5ca21d2272ef4eac9c54b013fa580ca8edfada8d2340154d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/openshift-online/ocm-cli/archive/refs/tags/v1.0.13.tar.gz
+    sha256: 7ac0158b6a53ff56159c18decb0b8cc43739b7421120d4d88da0c6c721a25310
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

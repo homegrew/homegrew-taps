@@ -3,34 +3,58 @@ version: 0.112.2
 description: Modern shell for the GitHub era
 homepage: https://www.nushell.sh
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nushell/blobs/sha256:373560623fa162fee96124c8449a44b3275716ae539d604334937a8d56da589c
-    sha256: 373560623fa162fee96124c8449a44b3275716ae539d604334937a8d56da589c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nushell/blobs/sha256:2de7bf5a2c36c93d24793160aa73aa8e58c4bb83c93b33503e437dc1d246f387
-    sha256: 2de7bf5a2c36c93d24793160aa73aa8e58c4bb83c93b33503e437dc1d246f387
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nushell/blobs/sha256:2abe66b0e3468b0c5dd40a54c5929eb2bbf615144dad3181d15da948193aa94b
-    sha256: 2abe66b0e3468b0c5dd40a54c5929eb2bbf615144dad3181d15da948193aa94b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nushell/blobs/sha256:e40194648b8f4cbc582ddd6b3fda9b4a0f7532b020f717a6f1d1f41450d63a2a
-    sha256: e40194648b8f4cbc582ddd6b3fda9b4a0f7532b020f717a6f1d1f41450d63a2a
-source:
-  url: https://github.com/nushell/nushell/archive/refs/tags/0.112.2.tar.gz
-  sha256: 32ebcfe41b6390145e90eb86273e221f22eeacd53ecac5274405f148fb4258c2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nushell/blobs/sha256:2de7bf5a2c36c93d24793160aa73aa8e58c4bb83c93b33503e437dc1d246f387
+        sha256: 2de7bf5a2c36c93d24793160aa73aa8e58c4bb83c93b33503e437dc1d246f387
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nushell/blobs/sha256:373560623fa162fee96124c8449a44b3275716ae539d604334937a8d56da589c
+        sha256: 373560623fa162fee96124c8449a44b3275716ae539d604334937a8d56da589c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nushell/blobs/sha256:2abe66b0e3468b0c5dd40a54c5929eb2bbf615144dad3181d15da948193aa94b
+        sha256: 2abe66b0e3468b0c5dd40a54c5929eb2bbf615144dad3181d15da948193aa94b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nushell/blobs/sha256:e40194648b8f4cbc582ddd6b3fda9b4a0f7532b020f717a6f1d1f41450d63a2a
+        sha256: e40194648b8f4cbc582ddd6b3fda9b4a0f7532b020f717a6f1d1f41450d63a2a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nushell/nushell/archive/refs/tags/0.112.2.tar.gz
+    sha256: 32ebcfe41b6390145e90eb86273e221f22eeacd53ecac5274405f148fb4258c2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - libgit2
-  - libx11
-  - libxcb
-  - openssl@3
-  - zlib-ng-compat
+    - libgit2
+    - libx11
+    - libxcb
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

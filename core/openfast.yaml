@@ -3,28 +3,53 @@ version: 5.0.0
 description: NREL-supported OpenFAST whole-turbine simulation code
 homepage: https://openfast.readthedocs.io
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openfast/blobs/sha256:6ecde78845e6ac56c38f2fa722a7c87704836d010bf68bc97126cf18ca2684fd
-    sha256: 6ecde78845e6ac56c38f2fa722a7c87704836d010bf68bc97126cf18ca2684fd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openfast/blobs/sha256:5a606d97ad7687766f227121be94676b5d0b9f3e46f8ee4bee95ccf28d69d815
-    sha256: 5a606d97ad7687766f227121be94676b5d0b9f3e46f8ee4bee95ccf28d69d815
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openfast/blobs/sha256:24eb63f4b4eb5324399d775bd67938af304d1f92c1e26cbad2ff418c00c6c7eb
-    sha256: 24eb63f4b4eb5324399d775bd67938af304d1f92c1e26cbad2ff418c00c6c7eb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openfast/blobs/sha256:6b3ab5b1825081dab92545f3b2d80592e4adc400e6df581fdd9e76e8ea354aa2
-    sha256: 6b3ab5b1825081dab92545f3b2d80592e4adc400e6df581fdd9e76e8ea354aa2
-source:
-  url: https://github.com/openfast/openfast.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gcc
-  - openblas
+    - gcc
+    - openblas
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openfast/blobs/sha256:5a606d97ad7687766f227121be94676b5d0b9f3e46f8ee4bee95ccf28d69d815
+        sha256: 5a606d97ad7687766f227121be94676b5d0b9f3e46f8ee4bee95ccf28d69d815
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openfast/blobs/sha256:6ecde78845e6ac56c38f2fa722a7c87704836d010bf68bc97126cf18ca2684fd
+        sha256: 6ecde78845e6ac56c38f2fa722a7c87704836d010bf68bc97126cf18ca2684fd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openfast/blobs/sha256:24eb63f4b4eb5324399d775bd67938af304d1f92c1e26cbad2ff418c00c6c7eb
+        sha256: 24eb63f4b4eb5324399d775bd67938af304d1f92c1e26cbad2ff418c00c6c7eb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openfast/blobs/sha256:6b3ab5b1825081dab92545f3b2d80592e4adc400e6df581fdd9e76e8ea354aa2
+        sha256: 6b3ab5b1825081dab92545f3b2d80592e4adc400e6df581fdd9e76e8ea354aa2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/openfast/openfast.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

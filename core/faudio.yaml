@@ -1,29 +1,54 @@
 name: faudio
-version: 26.04
+version: "26.04"
 description: Accuracy-focused XAudio reimplementation for open platforms
 homepage: https://fna-xna.github.io/
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/faudio/blobs/sha256:90b4e8a6747ee1ab1eb66d1a92f6ebe147d78d9e74be5636acdd2201145bf034
-    sha256: 90b4e8a6747ee1ab1eb66d1a92f6ebe147d78d9e74be5636acdd2201145bf034
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/faudio/blobs/sha256:97ada89348928eca68be6d46d10476918b460e404a1e4ab5ec307c64d338a386
-    sha256: 97ada89348928eca68be6d46d10476918b460e404a1e4ab5ec307c64d338a386
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/faudio/blobs/sha256:9ec935b67a75f04159dfe703305657ad4831b2d8aecac85da3d312b35378e709
-    sha256: 9ec935b67a75f04159dfe703305657ad4831b2d8aecac85da3d312b35378e709
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/faudio/blobs/sha256:b93314d94d0dab5829523734fefcdc483b9cbf1cae2d600a77c706eb63787e7b
-    sha256: b93314d94d0dab5829523734fefcdc483b9cbf1cae2d600a77c706eb63787e7b
-source:
-  url: https://github.com/FNA-XNA/FAudio/archive/refs/tags/26.04.tar.gz
-  sha256: d5030cff133ababe33bbc036a21ae5de911f8928ba81bde3d6c2395d62bb8096
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sdl3
+    - sdl3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/faudio/blobs/sha256:97ada89348928eca68be6d46d10476918b460e404a1e4ab5ec307c64d338a386
+        sha256: 97ada89348928eca68be6d46d10476918b460e404a1e4ab5ec307c64d338a386
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/faudio/blobs/sha256:90b4e8a6747ee1ab1eb66d1a92f6ebe147d78d9e74be5636acdd2201145bf034
+        sha256: 90b4e8a6747ee1ab1eb66d1a92f6ebe147d78d9e74be5636acdd2201145bf034
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/faudio/blobs/sha256:9ec935b67a75f04159dfe703305657ad4831b2d8aecac85da3d312b35378e709
+        sha256: 9ec935b67a75f04159dfe703305657ad4831b2d8aecac85da3d312b35378e709
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/faudio/blobs/sha256:b93314d94d0dab5829523734fefcdc483b9cbf1cae2d600a77c706eb63787e7b
+        sha256: b93314d94d0dab5829523734fefcdc483b9cbf1cae2d600a77c706eb63787e7b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/FNA-XNA/FAudio/archive/refs/tags/26.04.tar.gz
+    sha256: d5030cff133ababe33bbc036a21ae5de911f8928ba81bde3d6c2395d62bb8096
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,49 +3,73 @@ version: 12.2.0
 description: C virtualization API
 homepage: https://libvirt.org/
 license: LGPL-2.1-or-later AND GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:ffb806afc2152123e5ef0d3f376d0ba3b4116783fad70f5384724174a2bfe12c
-    sha256: ffb806afc2152123e5ef0d3f376d0ba3b4116783fad70f5384724174a2bfe12c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:80e0f6964593b76be00a21aa8ca051bdbfeed0130e7bad43974a54f863b328e8
-    sha256: 80e0f6964593b76be00a21aa8ca051bdbfeed0130e7bad43974a54f863b328e8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:43f27490c969ba3a84eb4019d91642d1cd4e0c78addb9166b0c6ac923fff5cfd
-    sha256: 43f27490c969ba3a84eb4019d91642d1cd4e0c78addb9166b0c6ac923fff5cfd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:fc7544d4b72c817e719f07b7da6a013e5acbd898eb233a9ab43a67aa1008b831
-    sha256: fc7544d4b72c817e719f07b7da6a013e5acbd898eb233a9ab43a67aa1008b831
-source:
-  url: https://download.libvirt.org/libvirt-12.2.0.tar.xz
-  sha256: ac93cd0da743a6c231911fb549399b415102ecfee775329bebbf61ed843b9786
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gnutls
-  - json-c
-  - libiscsi
-  - libssh2
-  - readline
-  - gettext
+    - glib
+    - gnutls
+    - json-c
+    - libiscsi
+    - libssh2
+    - readline
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:80e0f6964593b76be00a21aa8ca051bdbfeed0130e7bad43974a54f863b328e8
+        sha256: 80e0f6964593b76be00a21aa8ca051bdbfeed0130e7bad43974a54f863b328e8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:ffb806afc2152123e5ef0d3f376d0ba3b4116783fad70f5384724174a2bfe12c
+        sha256: ffb806afc2152123e5ef0d3f376d0ba3b4116783fad70f5384724174a2bfe12c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:43f27490c969ba3a84eb4019d91642d1cd4e0c78addb9166b0c6ac923fff5cfd
+        sha256: 43f27490c969ba3a84eb4019d91642d1cd4e0c78addb9166b0c6ac923fff5cfd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:fc7544d4b72c817e719f07b7da6a013e5acbd898eb233a9ab43a67aa1008b831
+        sha256: fc7544d4b72c817e719f07b7da6a013e5acbd898eb233a9ab43a67aa1008b831
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.libvirt.org/libvirt-12.2.0.tar.xz
+    sha256: ac93cd0da743a6c231911fb549399b415102ecfee775329bebbf61ed843b9786
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docutils
-  - gettext
-  - meson
-  - ninja
-  - pkgconf
+    - docutils
+    - gettext
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - acl
-  - cyrus-sasl
-  - glib
-  - gnutls
-  - json-c
-  - libiscsi
-  - libnl
-  - libssh2
-  - libtirpc
-  - readline
-  - util-linux
+    - acl
+    - cyrus-sasl
+    - glib
+    - gnutls
+    - json-c
+    - libiscsi
+    - libnl
+    - libssh2
+    - libtirpc
+    - readline
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

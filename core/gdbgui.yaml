@@ -3,26 +3,52 @@ version: 0.15.3.0
 description: Modern, browser-based frontend to gdb (gnu debugger)
 homepage: https://www.gdbgui.com/
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gdbgui/blobs/sha256:305daf07812dd5941548e611414a1dd7ea509a8230275b12c7981f04481abb90
-    sha256: 305daf07812dd5941548e611414a1dd7ea509a8230275b12c7981f04481abb90
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gdbgui/blobs/sha256:3a5a99218db05c8875e10ed5dae431912493f7296c8933763c163adbe0c7e7da
-    sha256: 3a5a99218db05c8875e10ed5dae431912493f7296c8933763c163adbe0c7e7da
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gdbgui/blobs/sha256:42ddd8b183bbf4134c83b15345f53480bc73d0f246ef71891de56179ee094cb0
-    sha256: 42ddd8b183bbf4134c83b15345f53480bc73d0f246ef71891de56179ee094cb0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gdbgui/blobs/sha256:e5cab7defea471b94a728c30bf2fcecb57f9b0ffcde63f704246cc02958e3a51
-    sha256: e5cab7defea471b94a728c30bf2fcecb57f9b0ffcde63f704246cc02958e3a51
-source:
-  url: https://files.pythonhosted.org/packages/d6/e6/024e8e183ef8e414a9efbca356f7755a813c4a3420892bcac9e9bb23bfb3/gdbgui-0.15.3.0.tar.gz
-  sha256: fc7c85134267a0dd37083c82402a3f63d4721f860e328781ee48517886fcb7b6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gdb
-  - python@3.14
+    - gdb
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gdbgui/blobs/sha256:3a5a99218db05c8875e10ed5dae431912493f7296c8933763c163adbe0c7e7da
+        sha256: 3a5a99218db05c8875e10ed5dae431912493f7296c8933763c163adbe0c7e7da
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gdbgui/blobs/sha256:305daf07812dd5941548e611414a1dd7ea509a8230275b12c7981f04481abb90
+        sha256: 305daf07812dd5941548e611414a1dd7ea509a8230275b12c7981f04481abb90
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gdbgui/blobs/sha256:42ddd8b183bbf4134c83b15345f53480bc73d0f246ef71891de56179ee094cb0
+        sha256: 42ddd8b183bbf4134c83b15345f53480bc73d0f246ef71891de56179ee094cb0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gdbgui/blobs/sha256:e5cab7defea471b94a728c30bf2fcecb57f9b0ffcde63f704246cc02958e3a51
+        sha256: e5cab7defea471b94a728c30bf2fcecb57f9b0ffcde63f704246cc02958e3a51
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/d6/e6/024e8e183ef8e414a9efbca356f7755a813c4a3420892bcac9e9bb23bfb3/gdbgui-0.15.3.0.tar.gz
+    sha256: fc7c85134267a0dd37083c82402a3f63d4721f860e328781ee48517886fcb7b6
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

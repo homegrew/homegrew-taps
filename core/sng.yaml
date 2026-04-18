@@ -3,26 +3,52 @@ version: 1.1.1
 description: Enable lossless editing of PNGs via a textual representation
 homepage: https://sng.sourceforge.net/
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sng/blobs/sha256:21a7abd0b2c11b995a816141ba9fd6681090a3bcea817ecd3d9947be6d36e02d
-    sha256: 21a7abd0b2c11b995a816141ba9fd6681090a3bcea817ecd3d9947be6d36e02d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sng/blobs/sha256:168b65eff4e5fbca14f90676b704bbd0d114ca78fe82cf23ab5f03328af62fa4
-    sha256: 168b65eff4e5fbca14f90676b704bbd0d114ca78fe82cf23ab5f03328af62fa4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sng/blobs/sha256:d22fe6d563b5cbc5b8addbe26239cae3ba3fda6c0f1799fac4587af971a8a41b
-    sha256: d22fe6d563b5cbc5b8addbe26239cae3ba3fda6c0f1799fac4587af971a8a41b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sng/blobs/sha256:d3698cd1399af9fe64ce9f4cc8f68350b12383166dd7c528da05a1570e081324
-    sha256: d3698cd1399af9fe64ce9f4cc8f68350b12383166dd7c528da05a1570e081324
-source:
-  url: https://downloads.sourceforge.net/project/sng/sng-1.1.1.tar.xz
-  sha256: c9bdfb80f5a17db1aab9337baed64a8ebea5c0ddf82915c6887b8cfb87ece61e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpng
-  - xorgrgb
+    - libpng
+    - xorgrgb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sng/blobs/sha256:168b65eff4e5fbca14f90676b704bbd0d114ca78fe82cf23ab5f03328af62fa4
+        sha256: 168b65eff4e5fbca14f90676b704bbd0d114ca78fe82cf23ab5f03328af62fa4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sng/blobs/sha256:21a7abd0b2c11b995a816141ba9fd6681090a3bcea817ecd3d9947be6d36e02d
+        sha256: 21a7abd0b2c11b995a816141ba9fd6681090a3bcea817ecd3d9947be6d36e02d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sng/blobs/sha256:d22fe6d563b5cbc5b8addbe26239cae3ba3fda6c0f1799fac4587af971a8a41b
+        sha256: d22fe6d563b5cbc5b8addbe26239cae3ba3fda6c0f1799fac4587af971a8a41b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sng/blobs/sha256:d3698cd1399af9fe64ce9f4cc8f68350b12383166dd7c528da05a1570e081324
+        sha256: d3698cd1399af9fe64ce9f4cc8f68350b12383166dd7c528da05a1570e081324
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/sng/sng-1.1.1.tar.xz
+    sha256: c9bdfb80f5a17db1aab9337baed64a8ebea5c0ddf82915c6887b8cfb87ece61e
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

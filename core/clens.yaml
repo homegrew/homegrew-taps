@@ -3,25 +3,51 @@ version: 0.7.0
 description: Library to help port code from OpenBSD to other operating systems
 homepage: https://github.com/conformal/clens
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clens/blobs/sha256:ae9f115b19edd75f00e434a0cbc10025f607c99482ca901323005abf3a9fc93a
-    sha256: ae9f115b19edd75f00e434a0cbc10025f607c99482ca901323005abf3a9fc93a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clens/blobs/sha256:da3d996540074d18fd0b1b9929b3c8d49604639ad47a44d398f8d3da1eb63546
-    sha256: da3d996540074d18fd0b1b9929b3c8d49604639ad47a44d398f8d3da1eb63546
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clens/blobs/sha256:4b5d5f5cba941676c726e09e2b14c9069dfebf9db9d6cb2b75fc321a2481aedf
-    sha256: 4b5d5f5cba941676c726e09e2b14c9069dfebf9db9d6cb2b75fc321a2481aedf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clens/blobs/sha256:30170cc04b93089a889764fdb8ffffe69b24b762fcfdf51dc2419e6ff51f5d27
-    sha256: 30170cc04b93089a889764fdb8ffffe69b24b762fcfdf51dc2419e6ff51f5d27
-source:
-  url: https://github.com/conformal/clens/archive/refs/tags/CLENS_0_7_0.tar.gz
-  sha256: 0cc18155c2c98077cb90f07f6ad8334314606c4be0b6ffc13d6996171c7dc09d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clens/blobs/sha256:da3d996540074d18fd0b1b9929b3c8d49604639ad47a44d398f8d3da1eb63546
+        sha256: da3d996540074d18fd0b1b9929b3c8d49604639ad47a44d398f8d3da1eb63546
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clens/blobs/sha256:ae9f115b19edd75f00e434a0cbc10025f607c99482ca901323005abf3a9fc93a
+        sha256: ae9f115b19edd75f00e434a0cbc10025f607c99482ca901323005abf3a9fc93a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clens/blobs/sha256:4b5d5f5cba941676c726e09e2b14c9069dfebf9db9d6cb2b75fc321a2481aedf
+        sha256: 4b5d5f5cba941676c726e09e2b14c9069dfebf9db9d6cb2b75fc321a2481aedf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clens/blobs/sha256:30170cc04b93089a889764fdb8ffffe69b24b762fcfdf51dc2419e6ff51f5d27
+        sha256: 30170cc04b93089a889764fdb8ffffe69b24b762fcfdf51dc2419e6ff51f5d27
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/conformal/clens/archive/refs/tags/CLENS_0_7_0.tar.gz
+    sha256: 0cc18155c2c98077cb90f07f6ad8334314606c4be0b6ffc13d6996171c7dc09d
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - libbsd
+    - libbsd
+build:
+    configure: []
+    install: []
+service: null

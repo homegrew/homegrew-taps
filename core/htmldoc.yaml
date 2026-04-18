@@ -3,33 +3,57 @@ version: 1.9.23
 description: Convert HTML to PDF or PostScript
 homepage: https://www.msweet.org/htmldoc/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/htmldoc/blobs/sha256:a65465e42cb84f558378c966a77ae8b7ca0409bc8686f89c62b4fc45d55bd18a
-    sha256: a65465e42cb84f558378c966a77ae8b7ca0409bc8686f89c62b4fc45d55bd18a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/htmldoc/blobs/sha256:25ade32fb291157a367cb4900027b04baeb229a21aac12516ede7caa86b1a583
-    sha256: 25ade32fb291157a367cb4900027b04baeb229a21aac12516ede7caa86b1a583
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/htmldoc/blobs/sha256:9bc6c13c652f278395d6a156d10b1f5cc9afccae9a123fb465b840d0eb9446be
-    sha256: 9bc6c13c652f278395d6a156d10b1f5cc9afccae9a123fb465b840d0eb9446be
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/htmldoc/blobs/sha256:85a884b0c94907488539fcd47a78530fe1102045e052dd14647bdcbcb4de4556
-    sha256: 85a884b0c94907488539fcd47a78530fe1102045e052dd14647bdcbcb4de4556
-source:
-  url: https://github.com/michaelrsweet/htmldoc/archive/refs/tags/v1.9.23.tar.gz
-  sha256: 03cc7c0c2c825c3576350745a3c9a3644ca5a9282f5052602de2eceee0c4c347
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - libpng
+    - jpeg-turbo
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/htmldoc/blobs/sha256:25ade32fb291157a367cb4900027b04baeb229a21aac12516ede7caa86b1a583
+        sha256: 25ade32fb291157a367cb4900027b04baeb229a21aac12516ede7caa86b1a583
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/htmldoc/blobs/sha256:a65465e42cb84f558378c966a77ae8b7ca0409bc8686f89c62b4fc45d55bd18a
+        sha256: a65465e42cb84f558378c966a77ae8b7ca0409bc8686f89c62b4fc45d55bd18a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/htmldoc/blobs/sha256:9bc6c13c652f278395d6a156d10b1f5cc9afccae9a123fb465b840d0eb9446be
+        sha256: 9bc6c13c652f278395d6a156d10b1f5cc9afccae9a123fb465b840d0eb9446be
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/htmldoc/blobs/sha256:85a884b0c94907488539fcd47a78530fe1102045e052dd14647bdcbcb4de4556
+        sha256: 85a884b0c94907488539fcd47a78530fe1102045e052dd14647bdcbcb4de4556
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/michaelrsweet/htmldoc/archive/refs/tags/v1.9.23.tar.gz
+    sha256: 03cc7c0c2c825c3576350745a3c9a3644ca5a9282f5052602de2eceee0c4c347
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - gnutls
-  - jpeg-turbo
-  - libpng
-  - zlib-ng-compat
+    - gnutls
+    - jpeg-turbo
+    - libpng
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

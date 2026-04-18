@@ -3,27 +3,52 @@ version: 3.19.5
 description: Toolkit for localization engineers
 homepage: https://toolkit.translatehouse.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/translate-toolkit/blobs/sha256:c5a625fad34bb7cb0a41ebdc8ae210d5a74c36a46130cd4e95b8984b7fa769a6
-    sha256: c5a625fad34bb7cb0a41ebdc8ae210d5a74c36a46130cd4e95b8984b7fa769a6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/translate-toolkit/blobs/sha256:81318c166eae604212050f2c165b6f238ca13782537251230cb5e4eaff9e4794
-    sha256: 81318c166eae604212050f2c165b6f238ca13782537251230cb5e4eaff9e4794
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/translate-toolkit/blobs/sha256:793b73eb0f66c45525c8f13e26b76dd8412e07f8c53e6f6a3262cf09f7ba464c
-    sha256: 793b73eb0f66c45525c8f13e26b76dd8412e07f8c53e6f6a3262cf09f7ba464c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/translate-toolkit/blobs/sha256:a34c4cd600241de4bd466fc9ec56742425b4ce0e1b1a45eadc33f79fa77fd73f
-    sha256: a34c4cd600241de4bd466fc9ec56742425b4ce0e1b1a45eadc33f79fa77fd73f
-source:
-  url: https://files.pythonhosted.org/packages/37/0b/5267a9814ed05495da25bf8b1786e6657eddb50a08a5c497942217cab76d/translate_toolkit-3.19.5.tar.gz
-  sha256: ccd4af6b5a33d50ba77f231dcc488696581fdd750ec3edad42aa6fd640bdbe56
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/translate-toolkit/blobs/sha256:81318c166eae604212050f2c165b6f238ca13782537251230cb5e4eaff9e4794
+        sha256: 81318c166eae604212050f2c165b6f238ca13782537251230cb5e4eaff9e4794
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/translate-toolkit/blobs/sha256:c5a625fad34bb7cb0a41ebdc8ae210d5a74c36a46130cd4e95b8984b7fa769a6
+        sha256: c5a625fad34bb7cb0a41ebdc8ae210d5a74c36a46130cd4e95b8984b7fa769a6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/translate-toolkit/blobs/sha256:793b73eb0f66c45525c8f13e26b76dd8412e07f8c53e6f6a3262cf09f7ba464c
+        sha256: 793b73eb0f66c45525c8f13e26b76dd8412e07f8c53e6f6a3262cf09f7ba464c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/translate-toolkit/blobs/sha256:a34c4cd600241de4bd466fc9ec56742425b4ce0e1b1a45eadc33f79fa77fd73f
+        sha256: a34c4cd600241de4bd466fc9ec56742425b4ce0e1b1a45eadc33f79fa77fd73f
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/37/0b/5267a9814ed05495da25bf8b1786e6657eddb50a08a5c497942217cab76d/translate_toolkit-3.19.5.tar.gz
+    sha256: ccd4af6b5a33d50ba77f231dcc488696581fdd750ec3edad42aa6fd640bdbe56
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,51 +3,75 @@ version: 3.12.1.0
 description: Flexible Network Intrusion Detection System
 homepage: https://www.snort.org
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:512056c62eec84f0cc03104f69dfd13d62e4776d01df8866ea578365b3b4b1d3
-    sha256: 512056c62eec84f0cc03104f69dfd13d62e4776d01df8866ea578365b3b4b1d3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:6a67590b6c212f9cff493745d19e546e4076b14d72d05a5ea2019e100cc93b58
-    sha256: 6a67590b6c212f9cff493745d19e546e4076b14d72d05a5ea2019e100cc93b58
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:0dafc62606bdb5d765ee10bee9d780ef83a0f8367229084a4c275ca7c3b920ac
-    sha256: 0dafc62606bdb5d765ee10bee9d780ef83a0f8367229084a4c275ca7c3b920ac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:ee91e70a94b4cbc85a392137e8158147f5fe9b3739b735c40adadc96b9bd82a1
-    sha256: ee91e70a94b4cbc85a392137e8158147f5fe9b3739b735c40adadc96b9bd82a1
-source:
-  url: https://github.com/snort3/snort3/archive/refs/tags/3.12.1.0.tar.gz
-  sha256: 257410621c4b726f1e01b4a00d9d094d4570d8bbfe060143c7195db7530f8887
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - daq
-  - hwloc
-  - jemalloc
-  - libdnet
-  - libpcap
-  - luajit
-  - openssl@3
-  - pcre2
-  - vectorscan
-  - xz
+    - daq
+    - hwloc
+    - jemalloc
+    - libdnet
+    - libpcap
+    - luajit
+    - openssl@3
+    - pcre2
+    - vectorscan
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:6a67590b6c212f9cff493745d19e546e4076b14d72d05a5ea2019e100cc93b58
+        sha256: 6a67590b6c212f9cff493745d19e546e4076b14d72d05a5ea2019e100cc93b58
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:512056c62eec84f0cc03104f69dfd13d62e4776d01df8866ea578365b3b4b1d3
+        sha256: 512056c62eec84f0cc03104f69dfd13d62e4776d01df8866ea578365b3b4b1d3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:0dafc62606bdb5d765ee10bee9d780ef83a0f8367229084a4c275ca7c3b920ac
+        sha256: 0dafc62606bdb5d765ee10bee9d780ef83a0f8367229084a4c275ca7c3b920ac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/snort/blobs/sha256:ee91e70a94b4cbc85a392137e8158147f5fe9b3739b735c40adadc96b9bd82a1
+        sha256: ee91e70a94b4cbc85a392137e8158147f5fe9b3739b735c40adadc96b9bd82a1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/snort3/snort3/archive/refs/tags/3.12.1.0.tar.gz
+    sha256: 257410621c4b726f1e01b4a00d9d094d4570d8bbfe060143c7195db7530f8887
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - flex
-  - pkgconf
+    - cmake
+    - flex
+    - pkgconf
 linux_dependencies:
-  - daq
-  - hwloc
-  - jemalloc
-  - libdnet
-  - libpcap
-  - libunwind
-  - luajit
-  - openssl@3
-  - pcre2
-  - vectorscan
-  - xz
-  - zlib-ng-compat
+    - daq
+    - hwloc
+    - jemalloc
+    - libdnet
+    - libpcap
+    - libunwind
+    - luajit
+    - openssl@3
+    - pcre2
+    - vectorscan
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

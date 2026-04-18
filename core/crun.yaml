@@ -1,31 +1,52 @@
 name: crun
-version: 1.27
+version: "1.27"
 description: Fast and lightweight fully featured OCI runtime and C library
 homepage: https://github.com/containers/crun
 license: GPL-2.0-or-later OR LGPL-2.1-or-later
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/crun/blobs/sha256:98924d28b5c8f0e288fc30a89ff7a72ddc24bbb3aac8be9c71109cb1f67a49fd
-    sha256: 98924d28b5c8f0e288fc30a89ff7a72ddc24bbb3aac8be9c71109cb1f67a49fd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/crun/blobs/sha256:6efa86e562e3e22a8385e1f98b6c49c5c0153aa6761129655175aa934bce7ee7
-    sha256: 6efa86e562e3e22a8385e1f98b6c49c5c0153aa6761129655175aa934bce7ee7
-source:
-  url: https://github.com/containers/crun/releases/download/1.27/crun-1.27.tar.zst
-  sha256: bfe10f9201f71191b9339f56560b60f097cffb6b4d2a4d68da8e2e5b3ab16017
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libcap
-  - libseccomp
-  - systemd
-  - yajl
+    - libcap
+    - libseccomp
+    - systemd
+    - yajl
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/crun/blobs/sha256:98924d28b5c8f0e288fc30a89ff7a72ddc24bbb3aac8be9c71109cb1f67a49fd
+        sha256: 98924d28b5c8f0e288fc30a89ff7a72ddc24bbb3aac8be9c71109cb1f67a49fd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/crun/blobs/sha256:6efa86e562e3e22a8385e1f98b6c49c5c0153aa6761129655175aa934bce7ee7
+        sha256: 6efa86e562e3e22a8385e1f98b6c49c5c0153aa6761129655175aa934bce7ee7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/containers/crun/releases/download/1.27/crun-1.27.tar.zst
+    sha256: bfe10f9201f71191b9339f56560b60f097cffb6b4d2a4d68da8e2e5b3ab16017
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - go-md2man
-  - libtool
-  - pkgconf
-  - python@3.14
+    - autoconf
+    - automake
+    - go-md2man
+    - libtool
+    - pkgconf
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

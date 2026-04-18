@@ -3,28 +3,53 @@ version: 1.1.2
 description: High-performance cache-store
 homepage: https://microsoft.github.io/garnet/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/garnet/blobs/sha256:d43c5bbfcb158d56b4d07598b02a3ddccda1fb460a1251a1d51c5300337d4bb2
-    sha256: d43c5bbfcb158d56b4d07598b02a3ddccda1fb460a1251a1d51c5300337d4bb2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/garnet/blobs/sha256:7e6b01d5a62c7bb9c3ce5579c9d166faad9f1c11c347e81928a09b0c99a11f5c
-    sha256: 7e6b01d5a62c7bb9c3ce5579c9d166faad9f1c11c347e81928a09b0c99a11f5c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/garnet/blobs/sha256:42a07cfe9c32ff60a2237976698f94041d816afe2f8e4d17af5d79c03f9cb030
-    sha256: 42a07cfe9c32ff60a2237976698f94041d816afe2f8e4d17af5d79c03f9cb030
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/garnet/blobs/sha256:1a645acafdded692bf712db8853d79602908f4309ba65bd6bdd4202f51ad603f
-    sha256: 1a645acafdded692bf712db8853d79602908f4309ba65bd6bdd4202f51ad603f
-source:
-  url: https://github.com/microsoft/garnet/archive/refs/tags/v1.1.2.tar.gz
-  sha256: 525506d347ef668258c94b5b873ae88f090cb0c70b89e9f77d684fa10af4b194
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dotnet
+    - dotnet
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/garnet/blobs/sha256:7e6b01d5a62c7bb9c3ce5579c9d166faad9f1c11c347e81928a09b0c99a11f5c
+        sha256: 7e6b01d5a62c7bb9c3ce5579c9d166faad9f1c11c347e81928a09b0c99a11f5c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/garnet/blobs/sha256:d43c5bbfcb158d56b4d07598b02a3ddccda1fb460a1251a1d51c5300337d4bb2
+        sha256: d43c5bbfcb158d56b4d07598b02a3ddccda1fb460a1251a1d51c5300337d4bb2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/garnet/blobs/sha256:42a07cfe9c32ff60a2237976698f94041d816afe2f8e4d17af5d79c03f9cb030
+        sha256: 42a07cfe9c32ff60a2237976698f94041d816afe2f8e4d17af5d79c03f9cb030
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/garnet/blobs/sha256:1a645acafdded692bf712db8853d79602908f4309ba65bd6bdd4202f51ad603f
+        sha256: 1a645acafdded692bf712db8853d79602908f4309ba65bd6bdd4202f51ad603f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/microsoft/garnet/archive/refs/tags/v1.1.2.tar.gz
+    sha256: 525506d347ef668258c94b5b873ae88f090cb0c70b89e9f77d684fa10af4b194
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - dotnet
-  - libaio
+    - dotnet
+    - libaio
+build:
+    configure: []
+    install: []
+service: null

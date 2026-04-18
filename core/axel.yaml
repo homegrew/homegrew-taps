@@ -3,30 +3,54 @@ version: 2.17.14
 description: Light UNIX download accelerator
 homepage: https://github.com/axel-download-accelerator/axel
 license: GPL-2.0-or-later WITH cryptsetup-OpenSSL-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:1f8ad603fc44127acc3b97b453360043ffa0610d63248035509a8b9c70d93fdc
-    sha256: 1f8ad603fc44127acc3b97b453360043ffa0610d63248035509a8b9c70d93fdc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:10439c6710098fb8022d91ce619e8c459810845beee5d20f2aab33c6cf1a13df
-    sha256: 10439c6710098fb8022d91ce619e8c459810845beee5d20f2aab33c6cf1a13df
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:bf422304c452796fc7a1c020f7bf067fe1ff5eb7be4757a56b249eef815dfa9d
-    sha256: bf422304c452796fc7a1c020f7bf067fe1ff5eb7be4757a56b249eef815dfa9d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:5a1e69568f0649bd3fc53694bf840b8a626e507c11cbb12496b8485ac82553af
-    sha256: 5a1e69568f0649bd3fc53694bf840b8a626e507c11cbb12496b8485ac82553af
-source:
-  url: https://github.com/axel-download-accelerator/axel/releases/download/v2.17.14/axel-2.17.14.tar.xz
-  sha256: 938ee7c8c478bf6fcc82359bbf9576f298033e8b13908e53e3ea9c45c1443693
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - gettext
+    - openssl@3
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:10439c6710098fb8022d91ce619e8c459810845beee5d20f2aab33c6cf1a13df
+        sha256: 10439c6710098fb8022d91ce619e8c459810845beee5d20f2aab33c6cf1a13df
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:1f8ad603fc44127acc3b97b453360043ffa0610d63248035509a8b9c70d93fdc
+        sha256: 1f8ad603fc44127acc3b97b453360043ffa0610d63248035509a8b9c70d93fdc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:bf422304c452796fc7a1c020f7bf067fe1ff5eb7be4757a56b249eef815dfa9d
+        sha256: bf422304c452796fc7a1c020f7bf067fe1ff5eb7be4757a56b249eef815dfa9d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:5a1e69568f0649bd3fc53694bf840b8a626e507c11cbb12496b8485ac82553af
+        sha256: 5a1e69568f0649bd3fc53694bf840b8a626e507c11cbb12496b8485ac82553af
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/axel-download-accelerator/axel/releases/download/v2.17.14/axel-2.17.14.tar.xz
+    sha256: 938ee7c8c478bf6fcc82359bbf9576f298033e8b13908e53e3ea9c45c1443693
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

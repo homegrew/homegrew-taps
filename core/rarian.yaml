@@ -3,30 +3,55 @@ version: 0.8.6
 description: Documentation metadata library
 homepage: https://rarian.freedesktop.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:9902862041d1a77fada33e8ebaabedf67f77b3bc8050ea988f78f8650c2c4ce3
-    sha256: 9902862041d1a77fada33e8ebaabedf67f77b3bc8050ea988f78f8650c2c4ce3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:ed569b70aaf6ecb11c8e6c77306b9514c27ca2013c3ec6583e735935ad593962
-    sha256: ed569b70aaf6ecb11c8e6c77306b9514c27ca2013c3ec6583e735935ad593962
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:289b7f0d276337b070e632d435f8f85f96462c8982d2597cd90f552aac4d14cf
-    sha256: 289b7f0d276337b070e632d435f8f85f96462c8982d2597cd90f552aac4d14cf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:71527d1afc769fb36f87f00e635acdf53f7b74f74cbe3448c00108ca368ad18e
-    sha256: 71527d1afc769fb36f87f00e635acdf53f7b74f74cbe3448c00108ca368ad18e
-source:
-  url: https://gitlab.freedesktop.org/rarian/rarian/-/releases/0.8.6/downloads/assets/rarian-0.8.6.tar.bz2
-  sha256: 9d4f7873009d2e31b8b1ec762606b12bee5526e1fe75de48e9495382bfef2bea
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - tinyxml2
+    - tinyxml2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:ed569b70aaf6ecb11c8e6c77306b9514c27ca2013c3ec6583e735935ad593962
+        sha256: ed569b70aaf6ecb11c8e6c77306b9514c27ca2013c3ec6583e735935ad593962
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:9902862041d1a77fada33e8ebaabedf67f77b3bc8050ea988f78f8650c2c4ce3
+        sha256: 9902862041d1a77fada33e8ebaabedf67f77b3bc8050ea988f78f8650c2c4ce3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:289b7f0d276337b070e632d435f8f85f96462c8982d2597cd90f552aac4d14cf
+        sha256: 289b7f0d276337b070e632d435f8f85f96462c8982d2597cd90f552aac4d14cf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rarian/blobs/sha256:71527d1afc769fb36f87f00e635acdf53f7b74f74cbe3448c00108ca368ad18e
+        sha256: 71527d1afc769fb36f87f00e635acdf53f7b74f74cbe3448c00108ca368ad18e
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.freedesktop.org/rarian/rarian/-/releases/0.8.6/downloads/assets/rarian-0.8.6.tar.bz2
+    sha256: 9d4f7873009d2e31b8b1ec762606b12bee5526e1fe75de48e9495382bfef2bea
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

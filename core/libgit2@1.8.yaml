@@ -3,33 +3,56 @@ version: 1.8.5
 description: C library of Git core methods that is re-entrant and linkable
 homepage: https://libgit2.org/
 license: GPL-2.0-only WITH GCC-exception-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgit2/1.8/blobs/sha256:906d5ccc5117c9e2c7273223571961fbc1942a61c652ed31f494f85423069af2
-    sha256: 906d5ccc5117c9e2c7273223571961fbc1942a61c652ed31f494f85423069af2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgit2/1.8/blobs/sha256:f13c93f8f111aa5b58366fae780223237438c3486be7481b4263bbad0a23dcee
-    sha256: f13c93f8f111aa5b58366fae780223237438c3486be7481b4263bbad0a23dcee
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgit2/1.8/blobs/sha256:3a03d39fce85a0f92345248fcdfff263023ee9eaf6a1b0103191d4302f5bddde
-    sha256: 3a03d39fce85a0f92345248fcdfff263023ee9eaf6a1b0103191d4302f5bddde
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgit2/1.8/blobs/sha256:1feecd76d9334b09f4a24b69eb19af77910d1e1d5b83508ea115e3c63bb50d98
-    sha256: 1feecd76d9334b09f4a24b69eb19af77910d1e1d5b83508ea115e3c63bb50d98
-source:
-  url: https://github.com/libgit2/libgit2/archive/refs/tags/v1.8.5.tar.gz
-  sha256: ec70049b8af823b21032447f91a2274fd8d91c435ef326a533dff3824e21b27f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libssh2
-build_dependencies:
-  - cmake
-  - pkgconf
-linux_dependencies:
-  - libssh2
-  - openssl@3
-  - zlib-ng-compat
+    - libssh2
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgit2/1.8/blobs/sha256:f13c93f8f111aa5b58366fae780223237438c3486be7481b4263bbad0a23dcee
+        sha256: f13c93f8f111aa5b58366fae780223237438c3486be7481b4263bbad0a23dcee
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgit2/1.8/blobs/sha256:906d5ccc5117c9e2c7273223571961fbc1942a61c652ed31f494f85423069af2
+        sha256: 906d5ccc5117c9e2c7273223571961fbc1942a61c652ed31f494f85423069af2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgit2/1.8/blobs/sha256:3a03d39fce85a0f92345248fcdfff263023ee9eaf6a1b0103191d4302f5bddde
+        sha256: 3a03d39fce85a0f92345248fcdfff263023ee9eaf6a1b0103191d4302f5bddde
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgit2/1.8/blobs/sha256:1feecd76d9334b09f4a24b69eb19af77910d1e1d5b83508ea115e3c63bb50d98
+        sha256: 1feecd76d9334b09f4a24b69eb19af77910d1e1d5b83508ea115e3c63bb50d98
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libgit2/libgit2/archive/refs/tags/v1.8.5.tar.gz
+    sha256: ec70049b8af823b21032447f91a2274fd8d91c435ef326a533dff3824e21b27f
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - cmake
+    - pkgconf
+linux_dependencies:
+    - libssh2
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

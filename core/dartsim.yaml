@@ -3,59 +3,83 @@ version: 6.16.7
 description: Dynamic Animation and Robotics Toolkit
 homepage: https://dartsim.github.io/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dartsim/blobs/sha256:dcbf0408267da7cfe6be73ac03fde0da400b87252135e36d6c4ac96d7aa15891
-    sha256: dcbf0408267da7cfe6be73ac03fde0da400b87252135e36d6c4ac96d7aa15891
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dartsim/blobs/sha256:f526a59eb77d8f16f7fbba5f1a2ab47c8c1396d1f14f84cfe6c07bec1681025e
-    sha256: f526a59eb77d8f16f7fbba5f1a2ab47c8c1396d1f14f84cfe6c07bec1681025e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dartsim/blobs/sha256:2a2caf269b29404c8bf9329963183b0eea63d459fe0bd04aa7f310342b965838
-    sha256: 2a2caf269b29404c8bf9329963183b0eea63d459fe0bd04aa7f310342b965838
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dartsim/blobs/sha256:2bd1c628019da80cd34a8a09a492d7e770540cf6f78500588666ef1728ba694f
-    sha256: 2bd1c628019da80cd34a8a09a492d7e770540cf6f78500588666ef1728ba694f
-source:
-  url: https://github.com/dartsim/dart/archive/refs/tags/v6.16.7.tar.gz
-  sha256: 7c8c76126db31046c1d5e40267645e3a78199c1b88ae4f6346b18b97eee000dd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - assimp
-  - bullet
-  - eigen
-  - fcl
-  - flann
-  - fmt
-  - ipopt
-  - libccd
-  - nlopt
-  - octomap
-  - ode
-  - open-scene-graph
-  - spdlog
-  - tinyxml2
-  - urdfdom
+    - assimp
+    - bullet
+    - eigen
+    - fcl
+    - flann
+    - fmt
+    - ipopt
+    - libccd
+    - nlopt
+    - octomap
+    - ode
+    - open-scene-graph
+    - spdlog
+    - tinyxml2
+    - urdfdom
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dartsim/blobs/sha256:f526a59eb77d8f16f7fbba5f1a2ab47c8c1396d1f14f84cfe6c07bec1681025e
+        sha256: f526a59eb77d8f16f7fbba5f1a2ab47c8c1396d1f14f84cfe6c07bec1681025e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dartsim/blobs/sha256:dcbf0408267da7cfe6be73ac03fde0da400b87252135e36d6c4ac96d7aa15891
+        sha256: dcbf0408267da7cfe6be73ac03fde0da400b87252135e36d6c4ac96d7aa15891
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dartsim/blobs/sha256:2a2caf269b29404c8bf9329963183b0eea63d459fe0bd04aa7f310342b965838
+        sha256: 2a2caf269b29404c8bf9329963183b0eea63d459fe0bd04aa7f310342b965838
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dartsim/blobs/sha256:2bd1c628019da80cd34a8a09a492d7e770540cf6f78500588666ef1728ba694f
+        sha256: 2bd1c628019da80cd34a8a09a492d7e770540cf6f78500588666ef1728ba694f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dartsim/dart/archive/refs/tags/v6.16.7.tar.gz
+    sha256: 7c8c76126db31046c1d5e40267645e3a78199c1b88ae4f6346b18b97eee000dd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - assimp
-  - bullet
-  - eigen
-  - fcl
-  - flann
-  - fmt
-  - ipopt
-  - libccd
-  - mesa
-  - nlopt
-  - octomap
-  - ode
-  - open-scene-graph
-  - spdlog
-  - tinyxml2
-  - urdfdom
+    - assimp
+    - bullet
+    - eigen
+    - fcl
+    - flann
+    - fmt
+    - ipopt
+    - libccd
+    - mesa
+    - nlopt
+    - octomap
+    - ode
+    - open-scene-graph
+    - spdlog
+    - tinyxml2
+    - urdfdom
+build:
+    configure: []
+    install: []
+service: null

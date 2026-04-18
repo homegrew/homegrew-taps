@@ -3,28 +3,53 @@ version: 0.54.0
 description: Pluggable and configurable code formatting platform written in Rust
 homepage: https://dprint.dev/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dprint/blobs/sha256:7ce446bf4d666d34116cdd34c38a14ac25cafc0bcc15d062bea39a42883417af
-    sha256: 7ce446bf4d666d34116cdd34c38a14ac25cafc0bcc15d062bea39a42883417af
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dprint/blobs/sha256:d35a8feb0a83ded26184e6a24aec240e5e1827e1f4c21f30211e970e45929134
-    sha256: d35a8feb0a83ded26184e6a24aec240e5e1827e1f4c21f30211e970e45929134
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dprint/blobs/sha256:bb1f11229517adc4d059f391f731edf0ad0967d548978b8d160ba8cdaa7b413b
-    sha256: bb1f11229517adc4d059f391f731edf0ad0967d548978b8d160ba8cdaa7b413b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dprint/blobs/sha256:b8baa8d6d33843804dc1bf874626b90d8f5449368744123d425d1305f0fa0521
-    sha256: b8baa8d6d33843804dc1bf874626b90d8f5449368744123d425d1305f0fa0521
-source:
-  url: https://github.com/dprint/dprint/archive/refs/tags/0.54.0.tar.gz
-  sha256: 5a2748d4d0ba053727f78d5ef121c192c73832bf9b2303474eca8d6e9bc7635d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - xz
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dprint/blobs/sha256:d35a8feb0a83ded26184e6a24aec240e5e1827e1f4c21f30211e970e45929134
+        sha256: d35a8feb0a83ded26184e6a24aec240e5e1827e1f4c21f30211e970e45929134
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dprint/blobs/sha256:7ce446bf4d666d34116cdd34c38a14ac25cafc0bcc15d062bea39a42883417af
+        sha256: 7ce446bf4d666d34116cdd34c38a14ac25cafc0bcc15d062bea39a42883417af
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dprint/blobs/sha256:bb1f11229517adc4d059f391f731edf0ad0967d548978b8d160ba8cdaa7b413b
+        sha256: bb1f11229517adc4d059f391f731edf0ad0967d548978b8d160ba8cdaa7b413b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dprint/blobs/sha256:b8baa8d6d33843804dc1bf874626b90d8f5449368744123d425d1305f0fa0521
+        sha256: b8baa8d6d33843804dc1bf874626b90d8f5449368744123d425d1305f0fa0521
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dprint/dprint/archive/refs/tags/0.54.0.tar.gz
+    sha256: 5a2748d4d0ba053727f78d5ef121c192c73832bf9b2303474eca8d6e9bc7635d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

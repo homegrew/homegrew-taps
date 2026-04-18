@@ -3,29 +3,54 @@ version: 0.3.2
 description: Graphical tool to visualize binary data
 homepage: https://github.com/sharkdp/binocle
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/binocle/blobs/sha256:0424cbc18de1317d37bd6716b7923f617c800b2bf4afaca3284cdd37dab4e795
-    sha256: 0424cbc18de1317d37bd6716b7923f617c800b2bf4afaca3284cdd37dab4e795
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/binocle/blobs/sha256:d55ffda75e2ed88f3230d2769438cc207fdb099a96abb635d9748415fa275396
-    sha256: d55ffda75e2ed88f3230d2769438cc207fdb099a96abb635d9748415fa275396
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/binocle/blobs/sha256:5b316af1ebdf59111913cbb1bbe8836075316c7ebff977ebe12467815dfcf1ac
-    sha256: 5b316af1ebdf59111913cbb1bbe8836075316c7ebff977ebe12467815dfcf1ac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/binocle/blobs/sha256:2a19bfb4cba506bee5c78b864bb52473611d58d1356e51371573c2235180c839
-    sha256: 2a19bfb4cba506bee5c78b864bb52473611d58d1356e51371573c2235180c839
-source:
-  url: https://github.com/sharkdp/binocle/archive/refs/tags/v0.3.2.tar.gz
-  sha256: b58d450f343539242b9f146606f5e70d0d183e12ce03e1b003c5197e6e41727b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/binocle/blobs/sha256:d55ffda75e2ed88f3230d2769438cc207fdb099a96abb635d9748415fa275396
+        sha256: d55ffda75e2ed88f3230d2769438cc207fdb099a96abb635d9748415fa275396
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/binocle/blobs/sha256:0424cbc18de1317d37bd6716b7923f617c800b2bf4afaca3284cdd37dab4e795
+        sha256: 0424cbc18de1317d37bd6716b7923f617c800b2bf4afaca3284cdd37dab4e795
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/binocle/blobs/sha256:5b316af1ebdf59111913cbb1bbe8836075316c7ebff977ebe12467815dfcf1ac
+        sha256: 5b316af1ebdf59111913cbb1bbe8836075316c7ebff977ebe12467815dfcf1ac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/binocle/blobs/sha256:2a19bfb4cba506bee5c78b864bb52473611d58d1356e51371573c2235180c839
+        sha256: 2a19bfb4cba506bee5c78b864bb52473611d58d1356e51371573c2235180c839
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sharkdp/binocle/archive/refs/tags/v0.3.2.tar.gz
+    sha256: b58d450f343539242b9f146606f5e70d0d183e12ce03e1b003c5197e6e41727b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
 linux_dependencies:
-  - libx11
-  - libxcursor
-  - libxrandr
+    - libx11
+    - libxcursor
+    - libxrandr
+build:
+    configure: []
+    install: []
+service: null

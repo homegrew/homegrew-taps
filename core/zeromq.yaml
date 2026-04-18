@@ -3,29 +3,54 @@ version: 4.3.5
 description: High-performance, asynchronous messaging library
 homepage: https://zeromq.org/
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:76e3d40941eb6d5d2ea5f94c017fd3503b68aee2aefc017291ab38b729fbcf08
-    sha256: 76e3d40941eb6d5d2ea5f94c017fd3503b68aee2aefc017291ab38b729fbcf08
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:d605668191163ba70b7298653eab755dc07cf378244f0795c432cff918069008
-    sha256: d605668191163ba70b7298653eab755dc07cf378244f0795c432cff918069008
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:f98a86b96ff8acd27fe0d06f651f376a392a5aa25fd61e084cd26718e241df30
-    sha256: f98a86b96ff8acd27fe0d06f651f376a392a5aa25fd61e084cd26718e241df30
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:1839d81ada31e9622a60dbd0617c9d12709ad290d3b3d2c7d83690e6da756802
-    sha256: 1839d81ada31e9622a60dbd0617c9d12709ad290d3b3d2c7d83690e6da756802
-source:
-  url: https://github.com/zeromq/libzmq/releases/download/v4.3.5/zeromq-4.3.5.tar.gz
-  sha256: 6653ef5910f17954861fe72332e68b03ca6e4d9c7160eb3a8de5a5a913bfab43
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libsodium
+    - libsodium
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:d605668191163ba70b7298653eab755dc07cf378244f0795c432cff918069008
+        sha256: d605668191163ba70b7298653eab755dc07cf378244f0795c432cff918069008
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:76e3d40941eb6d5d2ea5f94c017fd3503b68aee2aefc017291ab38b729fbcf08
+        sha256: 76e3d40941eb6d5d2ea5f94c017fd3503b68aee2aefc017291ab38b729fbcf08
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:f98a86b96ff8acd27fe0d06f651f376a392a5aa25fd61e084cd26718e241df30
+        sha256: f98a86b96ff8acd27fe0d06f651f376a392a5aa25fd61e084cd26718e241df30
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:1839d81ada31e9622a60dbd0617c9d12709ad290d3b3d2c7d83690e6da756802
+        sha256: 1839d81ada31e9622a60dbd0617c9d12709ad290d3b3d2c7d83690e6da756802
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/zeromq/libzmq/releases/download/v4.3.5/zeromq-4.3.5.tar.gz
+    sha256: 6653ef5910f17954861fe72332e68b03ca6e4d9c7160eb3a8de5a5a913bfab43
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoc
-  - pkgconf
-  - xmlto
+    - asciidoc
+    - pkgconf
+    - xmlto
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

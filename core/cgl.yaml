@@ -3,34 +3,58 @@ version: 0.60.10
 description: Cut Generation Library
 homepage: https://github.com/coin-or/Cgl
 license: EPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cgl/blobs/sha256:9ea3fb77acf4c37b612b9b679d107a72816e5b649252d6e81e3257041a2d08e5
-    sha256: 9ea3fb77acf4c37b612b9b679d107a72816e5b649252d6e81e3257041a2d08e5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cgl/blobs/sha256:1a63ce22fdd51c336c7d4ba64240b29f6fa5e548bc007f28186b9f62345d8dac
-    sha256: 1a63ce22fdd51c336c7d4ba64240b29f6fa5e548bc007f28186b9f62345d8dac
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cgl/blobs/sha256:0aaa762baad6596687a1ee66a677e5c6346bb94b6b48ecc95b6f8cb8352c03c8
-    sha256: 0aaa762baad6596687a1ee66a677e5c6346bb94b6b48ecc95b6f8cb8352c03c8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cgl/blobs/sha256:ee2ddfbd7c3f9e85937d596e6a3fc526718178c10303e4438fd292828e4211ba
-    sha256: ee2ddfbd7c3f9e85937d596e6a3fc526718178c10303e4438fd292828e4211ba
-source:
-  url: https://github.com/coin-or/Cgl/archive/refs/tags/releases/0.60.10.tar.gz
-  sha256: 41b7ac9402db883d9c487eb7101e59eb513cefd726e6e7a669dc94664d9385e6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - clp
-  - coinutils
-  - osi
-  - openblas
+    - clp
+    - coinutils
+    - osi
+    - openblas
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cgl/blobs/sha256:1a63ce22fdd51c336c7d4ba64240b29f6fa5e548bc007f28186b9f62345d8dac
+        sha256: 1a63ce22fdd51c336c7d4ba64240b29f6fa5e548bc007f28186b9f62345d8dac
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cgl/blobs/sha256:9ea3fb77acf4c37b612b9b679d107a72816e5b649252d6e81e3257041a2d08e5
+        sha256: 9ea3fb77acf4c37b612b9b679d107a72816e5b649252d6e81e3257041a2d08e5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cgl/blobs/sha256:0aaa762baad6596687a1ee66a677e5c6346bb94b6b48ecc95b6f8cb8352c03c8
+        sha256: 0aaa762baad6596687a1ee66a677e5c6346bb94b6b48ecc95b6f8cb8352c03c8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cgl/blobs/sha256:ee2ddfbd7c3f9e85937d596e6a3fc526718178c10303e4438fd292828e4211ba
+        sha256: ee2ddfbd7c3f9e85937d596e6a3fc526718178c10303e4438fd292828e4211ba
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/coin-or/Cgl/archive/refs/tags/releases/0.60.10.tar.gz
+    sha256: 41b7ac9402db883d9c487eb7101e59eb513cefd726e6e7a669dc94664d9385e6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - clp
-  - coinutils
-  - osi
+    - clp
+    - coinutils
+    - osi
+build:
+    configure: []
+    install: []
+service: null

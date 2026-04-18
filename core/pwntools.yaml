@@ -3,32 +3,57 @@ version: 4.15.0
 description: CTF framework used by Gallopsled in every CTF
 homepage: https://github.com/Gallopsled/pwntools
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:143d8a85eb759ae9d4df94b982effe7e8a4c3604c390263502919e4d58c84946
-    sha256: 143d8a85eb759ae9d4df94b982effe7e8a4c3604c390263502919e4d58c84946
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:33cf5ff4af31be9bb771130b52d26d87302e18e398986fba185bded66e14afb9
-    sha256: 33cf5ff4af31be9bb771130b52d26d87302e18e398986fba185bded66e14afb9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:ebc88917f0c5dfa4b0d5b7dfcf2b2a572c4380d6e203ca991569a088447113f4
-    sha256: ebc88917f0c5dfa4b0d5b7dfcf2b2a572c4380d6e203ca991569a088447113f4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:30af6829604732352055440e5de36b49f004c0cc4249f90c139ba9716b3f5160
-    sha256: 30af6829604732352055440e5de36b49f004c0cc4249f90c139ba9716b3f5160
-source:
-  url: https://files.pythonhosted.org/packages/f2/5c/9ae3d94c98b0b038ffd7f09ebdac506d346fe1b964999f71c96c8a904efd/pwntools-4.15.0.tar.gz
-  sha256: d99a917298c1ca7241b51bba9ad2212f2af441ef66488059b2426508e9a2a776
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - capstone
-  - certifi
-  - cryptography
-  - libsodium
-  - python@3.14
-  - unicorn
+    - capstone
+    - certifi
+    - cryptography
+    - libsodium
+    - python@3.14
+    - unicorn
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:33cf5ff4af31be9bb771130b52d26d87302e18e398986fba185bded66e14afb9
+        sha256: 33cf5ff4af31be9bb771130b52d26d87302e18e398986fba185bded66e14afb9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:143d8a85eb759ae9d4df94b982effe7e8a4c3604c390263502919e4d58c84946
+        sha256: 143d8a85eb759ae9d4df94b982effe7e8a4c3604c390263502919e4d58c84946
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:ebc88917f0c5dfa4b0d5b7dfcf2b2a572c4380d6e203ca991569a088447113f4
+        sha256: ebc88917f0c5dfa4b0d5b7dfcf2b2a572c4380d6e203ca991569a088447113f4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pwntools/blobs/sha256:30af6829604732352055440e5de36b49f004c0cc4249f90c139ba9716b3f5160
+        sha256: 30af6829604732352055440e5de36b49f004c0cc4249f90c139ba9716b3f5160
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/f2/5c/9ae3d94c98b0b038ffd7f09ebdac506d346fe1b964999f71c96c8a904efd/pwntools-4.15.0.tar.gz
+    sha256: d99a917298c1ca7241b51bba9ad2212f2af441ef66488059b2426508e9a2a776
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

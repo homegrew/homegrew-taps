@@ -3,30 +3,55 @@ version: 0.8.0
 description: System tray for kanata keyboard remapper
 homepage: https://github.com/rszyma/kanata-tray
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kanata-tray/blobs/sha256:bb526f18706af690003f2ed01864946f9d571f6c4806b283686980a640482ba5
-    sha256: bb526f18706af690003f2ed01864946f9d571f6c4806b283686980a640482ba5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kanata-tray/blobs/sha256:ab65e1afa544494a2d88f75b534a1ee92b991a9dea378960811eaa2ed28f9c00
-    sha256: ab65e1afa544494a2d88f75b534a1ee92b991a9dea378960811eaa2ed28f9c00
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kanata-tray/blobs/sha256:df26679273f6a01d075bdc7d46b725c1a439f3060a94d3ce4b80f77e69ac38ac
-    sha256: df26679273f6a01d075bdc7d46b725c1a439f3060a94d3ce4b80f77e69ac38ac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kanata-tray/blobs/sha256:4b3f913d959bd3b930477eeab58ab7b60b98e760c17015cd9c02c74e709ef87c
-    sha256: 4b3f913d959bd3b930477eeab58ab7b60b98e760c17015cd9c02c74e709ef87c
-source:
-  url: https://github.com/rszyma/kanata-tray/archive/refs/tags/v0.8.0.tar.gz
-  sha256: 18d17493d20f6a06db31131c41059d2a8224494479fdf98498eb76c0fab70885
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kanata-tray/blobs/sha256:ab65e1afa544494a2d88f75b534a1ee92b991a9dea378960811eaa2ed28f9c00
+        sha256: ab65e1afa544494a2d88f75b534a1ee92b991a9dea378960811eaa2ed28f9c00
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kanata-tray/blobs/sha256:bb526f18706af690003f2ed01864946f9d571f6c4806b283686980a640482ba5
+        sha256: bb526f18706af690003f2ed01864946f9d571f6c4806b283686980a640482ba5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kanata-tray/blobs/sha256:df26679273f6a01d075bdc7d46b725c1a439f3060a94d3ce4b80f77e69ac38ac
+        sha256: df26679273f6a01d075bdc7d46b725c1a439f3060a94d3ce4b80f77e69ac38ac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kanata-tray/blobs/sha256:4b3f913d959bd3b930477eeab58ab7b60b98e760c17015cd9c02c74e709ef87c
+        sha256: 4b3f913d959bd3b930477eeab58ab7b60b98e760c17015cd9c02c74e709ef87c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rszyma/kanata-tray/archive/refs/tags/v0.8.0.tar.gz
+    sha256: 18d17493d20f6a06db31131c41059d2a8224494479fdf98498eb76c0fab70885
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - pkgconf
+    - go
+    - pkgconf
 linux_dependencies:
-  - glib
-  - gtk+3
-  - libayatana-appindicator
+    - glib
+    - gtk+3
+    - libayatana-appindicator
+build:
+    configure: []
+    install: []
+service: null

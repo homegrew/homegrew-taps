@@ -3,32 +3,57 @@ version: 1.2.0
 description: Tool for managing apps on iOS devices
 homepage: https://libimobiledevice.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:40252ee42c978cd9772f4722a842d6df4c740bdc75016bc12a43d048177cbd9e
-    sha256: 40252ee42c978cd9772f4722a842d6df4c740bdc75016bc12a43d048177cbd9e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:b499a23005d13e350b43f4e72fe58c2ce52656d998c8dc5f8477a7ab28a4d05d
-    sha256: b499a23005d13e350b43f4e72fe58c2ce52656d998c8dc5f8477a7ab28a4d05d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:2f9ad95e575560317e3e1dd048d120baab443565b20338c41f070bced2b4d25f
-    sha256: 2f9ad95e575560317e3e1dd048d120baab443565b20338c41f070bced2b4d25f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:fb0bf7d7b34adb781f9228da0f456d54624f8c8bf3a7689931a391d6735fe69d
-    sha256: fb0bf7d7b34adb781f9228da0f456d54624f8c8bf3a7689931a391d6735fe69d
-source:
-  url: https://github.com/libimobiledevice/ideviceinstaller/releases/download/1.2.0/ideviceinstaller-1.2.0.tar.bz2
-  sha256: 26115288e50d003bbb7d23c05441c54ea69b255974303bfd44fef6943e042f94
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libimobiledevice
-  - libplist
-  - libzip
+    - libimobiledevice
+    - libplist
+    - libzip
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:b499a23005d13e350b43f4e72fe58c2ce52656d998c8dc5f8477a7ab28a4d05d
+        sha256: b499a23005d13e350b43f4e72fe58c2ce52656d998c8dc5f8477a7ab28a4d05d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:40252ee42c978cd9772f4722a842d6df4c740bdc75016bc12a43d048177cbd9e
+        sha256: 40252ee42c978cd9772f4722a842d6df4c740bdc75016bc12a43d048177cbd9e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:2f9ad95e575560317e3e1dd048d120baab443565b20338c41f070bced2b4d25f
+        sha256: 2f9ad95e575560317e3e1dd048d120baab443565b20338c41f070bced2b4d25f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:fb0bf7d7b34adb781f9228da0f456d54624f8c8bf3a7689931a391d6735fe69d
+        sha256: fb0bf7d7b34adb781f9228da0f456d54624f8c8bf3a7689931a391d6735fe69d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libimobiledevice/ideviceinstaller/releases/download/1.2.0/ideviceinstaller-1.2.0.tar.bz2
+    sha256: 26115288e50d003bbb7d23c05441c54ea69b255974303bfd44fef6943e042f94
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

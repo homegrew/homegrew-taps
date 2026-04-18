@@ -3,29 +3,53 @@ version: 1.1.1
 description: SSH agent for use with the TKey security stick
 homepage: https://tillitis.se/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:12f0f2068128036add825cab6c379ff57b17288e675ef771e44931fa8fb1aba1
-    sha256: 12f0f2068128036add825cab6c379ff57b17288e675ef771e44931fa8fb1aba1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:207012f364b1ee24f1a1da21b05949e528ed3c09ef611fe593089ff3166ca2f0
-    sha256: 207012f364b1ee24f1a1da21b05949e528ed3c09ef611fe593089ff3166ca2f0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:6dcd2f951740ed9dd9814e7009e66dbc3f7409cd8095083ca5f2e813e8d7723b
-    sha256: 6dcd2f951740ed9dd9814e7009e66dbc3f7409cd8095083ca5f2e813e8d7723b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:843332db81352ee2130ed860b1ee03a30da62e881abc6d1a5b435ab0e2f5e68d
-    sha256: 843332db81352ee2130ed860b1ee03a30da62e881abc6d1a5b435ab0e2f5e68d
-source:
-  url: https://github.com/tillitis/tkey-ssh-agent/archive/refs/tags/v1.1.1.tar.gz
-  sha256: cdd91008020d1c68778c8bc9869e77f230a314cb389621e3fa0aa1034283faea
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - pinentry-mac
+    - pinentry-mac
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:207012f364b1ee24f1a1da21b05949e528ed3c09ef611fe593089ff3166ca2f0
+        sha256: 207012f364b1ee24f1a1da21b05949e528ed3c09ef611fe593089ff3166ca2f0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:12f0f2068128036add825cab6c379ff57b17288e675ef771e44931fa8fb1aba1
+        sha256: 12f0f2068128036add825cab6c379ff57b17288e675ef771e44931fa8fb1aba1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:6dcd2f951740ed9dd9814e7009e66dbc3f7409cd8095083ca5f2e813e8d7723b
+        sha256: 6dcd2f951740ed9dd9814e7009e66dbc3f7409cd8095083ca5f2e813e8d7723b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tkey-ssh-agent/blobs/sha256:843332db81352ee2130ed860b1ee03a30da62e881abc6d1a5b435ab0e2f5e68d
+        sha256: 843332db81352ee2130ed860b1ee03a30da62e881abc6d1a5b435ab0e2f5e68d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tillitis/tkey-ssh-agent/archive/refs/tags/v1.1.1.tar.gz
+    sha256: cdd91008020d1c68778c8bc9869e77f230a314cb389621e3fa0aa1034283faea
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
 linux_dependencies:
-  - pinentry
+    - pinentry
+build:
+    configure: []
+    install: []
+service: null

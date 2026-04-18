@@ -3,28 +3,53 @@ version: 0.2.2
 description: Pretty feed reader (ATOM/RSS) that stores articles in Markdown files
 homepage: https://bulletty.croci.dev/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bulletty/blobs/sha256:fb415a2b4039680c6eace43e6af4763fefb71b437d9bce4d0bad199b39d087f9
-    sha256: fb415a2b4039680c6eace43e6af4763fefb71b437d9bce4d0bad199b39d087f9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bulletty/blobs/sha256:f2546aad4f98d0099aee5da1ae230d38f75dcd89ed5624283bf4cedd86ef9cda
-    sha256: f2546aad4f98d0099aee5da1ae230d38f75dcd89ed5624283bf4cedd86ef9cda
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bulletty/blobs/sha256:b338b398b9111ad128704e0f5945fd9e7bac34b89e325ea0b902c26cf01402a5
-    sha256: b338b398b9111ad128704e0f5945fd9e7bac34b89e325ea0b902c26cf01402a5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bulletty/blobs/sha256:687efab8b3c8b790dc9a8633ec163e8b6ab0dd9352f54b878a5ac461b2677b50
-    sha256: 687efab8b3c8b790dc9a8633ec163e8b6ab0dd9352f54b878a5ac461b2677b50
-source:
-  url: https://github.com/CrociDB/bulletty/archive/refs/tags/v0.2.2.tar.gz
-  sha256: e13b5743ee66a1d62c87f1ffa791a0c290d031fbb5d9363ce2c1e81cda25682d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bulletty/blobs/sha256:f2546aad4f98d0099aee5da1ae230d38f75dcd89ed5624283bf4cedd86ef9cda
+        sha256: f2546aad4f98d0099aee5da1ae230d38f75dcd89ed5624283bf4cedd86ef9cda
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bulletty/blobs/sha256:fb415a2b4039680c6eace43e6af4763fefb71b437d9bce4d0bad199b39d087f9
+        sha256: fb415a2b4039680c6eace43e6af4763fefb71b437d9bce4d0bad199b39d087f9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bulletty/blobs/sha256:b338b398b9111ad128704e0f5945fd9e7bac34b89e325ea0b902c26cf01402a5
+        sha256: b338b398b9111ad128704e0f5945fd9e7bac34b89e325ea0b902c26cf01402a5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bulletty/blobs/sha256:687efab8b3c8b790dc9a8633ec163e8b6ab0dd9352f54b878a5ac461b2677b50
+        sha256: 687efab8b3c8b790dc9a8633ec163e8b6ab0dd9352f54b878a5ac461b2677b50
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/CrociDB/bulletty/archive/refs/tags/v0.2.2.tar.gz
+    sha256: e13b5743ee66a1d62c87f1ffa791a0c290d031fbb5d9363ce2c1e81cda25682d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

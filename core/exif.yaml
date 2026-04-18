@@ -3,28 +3,53 @@ version: 0.6.22
 description: Read, write, modify, and display EXIF data on the command-line
 homepage: https://libexif.github.io/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/exif/blobs/sha256:bfb1b7b9782dd4c888442a3dc2d6872894e1acfde781fc8b819e631fd1f4ed23
-    sha256: bfb1b7b9782dd4c888442a3dc2d6872894e1acfde781fc8b819e631fd1f4ed23
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/exif/blobs/sha256:3c655100531630bc28a4c7b09b37f4791395cae06446a34700343a22cd3824c5
-    sha256: 3c655100531630bc28a4c7b09b37f4791395cae06446a34700343a22cd3824c5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/exif/blobs/sha256:a41aa53dd457e0318526a6ec043f18ff97a8a23a9009e0a556c271d0eae14d09
-    sha256: a41aa53dd457e0318526a6ec043f18ff97a8a23a9009e0a556c271d0eae14d09
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/exif/blobs/sha256:df114ade71a7d16168b5416d7b649c109477e4815f73933d814cdcd3b884f76d
-    sha256: df114ade71a7d16168b5416d7b649c109477e4815f73933d814cdcd3b884f76d
-source:
-  url: https://github.com/libexif/exif/releases/download/exif-0_6_22-release/exif-0.6.22.tar.xz
-  sha256: 0fe268736e0ca0538d4af941022761a438854a64c8024a4175e57bf0418117b9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libexif
-  - popt
+    - libexif
+    - popt
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/exif/blobs/sha256:3c655100531630bc28a4c7b09b37f4791395cae06446a34700343a22cd3824c5
+        sha256: 3c655100531630bc28a4c7b09b37f4791395cae06446a34700343a22cd3824c5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/exif/blobs/sha256:bfb1b7b9782dd4c888442a3dc2d6872894e1acfde781fc8b819e631fd1f4ed23
+        sha256: bfb1b7b9782dd4c888442a3dc2d6872894e1acfde781fc8b819e631fd1f4ed23
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/exif/blobs/sha256:a41aa53dd457e0318526a6ec043f18ff97a8a23a9009e0a556c271d0eae14d09
+        sha256: a41aa53dd457e0318526a6ec043f18ff97a8a23a9009e0a556c271d0eae14d09
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/exif/blobs/sha256:df114ade71a7d16168b5416d7b649c109477e4815f73933d814cdcd3b884f76d
+        sha256: df114ade71a7d16168b5416d7b649c109477e4815f73933d814cdcd3b884f76d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libexif/exif/releases/download/exif-0_6_22-release/exif-0.6.22.tar.xz
+    sha256: 0fe268736e0ca0538d4af941022761a438854a64c8024a4175e57bf0418117b9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

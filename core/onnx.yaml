@@ -3,28 +3,53 @@ version: 1.21.0
 description: Open standard for machine learning interoperability
 homepage: https://onnx.ai/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onnx/blobs/sha256:8cd8c0daff9b8c47f945a07a7eb43c0e2fc34520341734ca93af877e9ddb03d9
-    sha256: 8cd8c0daff9b8c47f945a07a7eb43c0e2fc34520341734ca93af877e9ddb03d9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onnx/blobs/sha256:5b37df5d538ab2d9663dc3d36d4b387c22c368f854b9105a0d90f3e856ee5cbe
-    sha256: 5b37df5d538ab2d9663dc3d36d4b387c22c368f854b9105a0d90f3e856ee5cbe
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onnx/blobs/sha256:dc50ad4ddbb1e6df2a603697e0a211daf210c6619621ac6da16bcbcee0ef23a1
-    sha256: dc50ad4ddbb1e6df2a603697e0a211daf210c6619621ac6da16bcbcee0ef23a1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onnx/blobs/sha256:e6f1e737833f65c753da7cc5734137ba1b0ff21f6403b1d92afa442b26e1144b
-    sha256: e6f1e737833f65c753da7cc5734137ba1b0ff21f6403b1d92afa442b26e1144b
-source:
-  url: https://github.com/onnx/onnx/archive/refs/tags/v1.21.0.tar.gz
-  sha256: 42ffedcd8c9b6363694300c6ffec1ada77f9620176465719acb27b13a4d6f2de
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - protobuf
+    - abseil
+    - protobuf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onnx/blobs/sha256:5b37df5d538ab2d9663dc3d36d4b387c22c368f854b9105a0d90f3e856ee5cbe
+        sha256: 5b37df5d538ab2d9663dc3d36d4b387c22c368f854b9105a0d90f3e856ee5cbe
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onnx/blobs/sha256:8cd8c0daff9b8c47f945a07a7eb43c0e2fc34520341734ca93af877e9ddb03d9
+        sha256: 8cd8c0daff9b8c47f945a07a7eb43c0e2fc34520341734ca93af877e9ddb03d9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onnx/blobs/sha256:dc50ad4ddbb1e6df2a603697e0a211daf210c6619621ac6da16bcbcee0ef23a1
+        sha256: dc50ad4ddbb1e6df2a603697e0a211daf210c6619621ac6da16bcbcee0ef23a1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onnx/blobs/sha256:e6f1e737833f65c753da7cc5734137ba1b0ff21f6403b1d92afa442b26e1144b
+        sha256: e6f1e737833f65c753da7cc5734137ba1b0ff21f6403b1d92afa442b26e1144b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/onnx/onnx/archive/refs/tags/v1.21.0.tar.gz
+    sha256: 42ffedcd8c9b6363694300c6ffec1ada77f9620176465719acb27b13a4d6f2de
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

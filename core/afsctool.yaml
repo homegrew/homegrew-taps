@@ -3,21 +3,43 @@ version: 1.7.3
 description: Utility for manipulating APFS and ZFS compressed files
 homepage: https://brkirch.wordpress.com/afsctool/
 license: GPL-3.0-only AND BSL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/afsctool/blobs/sha256:551e9f8910b53ce228f1f710e100c54266cbed7ffa3a087ecec516c71bba5dbb
-    sha256: 551e9f8910b53ce228f1f710e100c54266cbed7ffa3a087ecec516c71bba5dbb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/afsctool/blobs/sha256:74f60adb27bfbec7b4add84a60f73ae3d7c804632dd99a39b61c270bf8125e92
-    sha256: 74f60adb27bfbec7b4add84a60f73ae3d7c804632dd99a39b61c270bf8125e92
-source:
-  url: https://github.com/RJVB/afsctool/archive/refs/tags/v1.7.3.tar.gz
-  sha256: 5776ff5aaf05c513bead107536d9e98e6037019a0de8a1435cc9da89ea8d49b8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/afsctool/blobs/sha256:74f60adb27bfbec7b4add84a60f73ae3d7c804632dd99a39b61c270bf8125e92
+        sha256: 74f60adb27bfbec7b4add84a60f73ae3d7c804632dd99a39b61c270bf8125e92
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/afsctool/blobs/sha256:551e9f8910b53ce228f1f710e100c54266cbed7ffa3a087ecec516c71bba5dbb
+        sha256: 551e9f8910b53ce228f1f710e100c54266cbed7ffa3a087ecec516c71bba5dbb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/RJVB/afsctool/archive/refs/tags/v1.7.3.tar.gz
+    sha256: 5776ff5aaf05c513bead107536d9e98e6037019a0de8a1435cc9da89ea8d49b8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - google-sparsehash
-  - pkgconf
+    - cmake
+    - google-sparsehash
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

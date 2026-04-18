@@ -3,26 +3,52 @@ version: 1.2.0
 description: Manage multiple Solidity compiler versions
 homepage: https://github.com/crytic/solc-select
 license: AGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/solc-select/blobs/sha256:b9ab36fdaca2ba04fc8053d828e9418e49b49f9ddc4a041305b2fc69a140e05e
-    sha256: b9ab36fdaca2ba04fc8053d828e9418e49b49f9ddc4a041305b2fc69a140e05e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/solc-select/blobs/sha256:775c9cce4b4685951b0d63de078b2b602a13ca39ec30a2112e3dc2b3c767918e
-    sha256: 775c9cce4b4685951b0d63de078b2b602a13ca39ec30a2112e3dc2b3c767918e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/solc-select/blobs/sha256:ffc3d31b961e32baf3ab3d6409b33d273772a4f5650cf28ba7ce9206869f021c
-    sha256: ffc3d31b961e32baf3ab3d6409b33d273772a4f5650cf28ba7ce9206869f021c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/solc-select/blobs/sha256:4d90042fbaae048ac031dbb5a85e76ba3ee8157f605224113348259fc51c6441
-    sha256: 4d90042fbaae048ac031dbb5a85e76ba3ee8157f605224113348259fc51c6441
-source:
-  url: https://files.pythonhosted.org/packages/62/89/51e614fdbf26f47268c18f8a3b6cf1cb67c9a8b48b7b7231c948cae97814/solc_select-1.2.0.tar.gz
-  sha256: ad0a7afcae05061ce5e7632950b1fa0193ba9eaf05e4956f86effee024c6fb07
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - python@3.14
+    - certifi
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/solc-select/blobs/sha256:775c9cce4b4685951b0d63de078b2b602a13ca39ec30a2112e3dc2b3c767918e
+        sha256: 775c9cce4b4685951b0d63de078b2b602a13ca39ec30a2112e3dc2b3c767918e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/solc-select/blobs/sha256:b9ab36fdaca2ba04fc8053d828e9418e49b49f9ddc4a041305b2fc69a140e05e
+        sha256: b9ab36fdaca2ba04fc8053d828e9418e49b49f9ddc4a041305b2fc69a140e05e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/solc-select/blobs/sha256:ffc3d31b961e32baf3ab3d6409b33d273772a4f5650cf28ba7ce9206869f021c
+        sha256: ffc3d31b961e32baf3ab3d6409b33d273772a4f5650cf28ba7ce9206869f021c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/solc-select/blobs/sha256:4d90042fbaae048ac031dbb5a85e76ba3ee8157f605224113348259fc51c6441
+        sha256: 4d90042fbaae048ac031dbb5a85e76ba3ee8157f605224113348259fc51c6441
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/62/89/51e614fdbf26f47268c18f8a3b6cf1cb67c9a8b48b7b7231c948cae97814/solc_select-1.2.0.tar.gz
+    sha256: ad0a7afcae05061ce5e7632950b1fa0193ba9eaf05e4956f86effee024c6fb07
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

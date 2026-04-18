@@ -3,32 +3,56 @@ version: 2.5.4
 description: Implements the IPFIX Protocol as a C library
 homepage: https://tools.netsa.cert.org/fixbuf/
 license: LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfixbuf/blobs/sha256:e2b8afeb4d9ce3d8d2b55f488e3f4df93c85791bb64b32c33fcc1d662eba7e11
-    sha256: e2b8afeb4d9ce3d8d2b55f488e3f4df93c85791bb64b32c33fcc1d662eba7e11
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfixbuf/blobs/sha256:64d4455a477ea65a1cc54c6f0633286d42c35da7328e04708a56b45cac3a095c
-    sha256: 64d4455a477ea65a1cc54c6f0633286d42c35da7328e04708a56b45cac3a095c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfixbuf/blobs/sha256:8ce88f5bcefb33debbe42fb4c64f5d72488988d59a110ad95c6598a3abfbddb3
-    sha256: 8ce88f5bcefb33debbe42fb4c64f5d72488988d59a110ad95c6598a3abfbddb3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfixbuf/blobs/sha256:d339e5ada6c9d514e5d5dd4e757f52673aeb189cc151d29bdce63c48be1e0f82
-    sha256: d339e5ada6c9d514e5d5dd4e757f52673aeb189cc151d29bdce63c48be1e0f82
-source:
-  url: https://tools.netsa.cert.org/releases/libfixbuf-2.5.4.tar.gz
-  sha256: 106b8e1e560928a4dc91d8264326bd2463767570d77417535964f450de1f972e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - openssl@3
-  - gettext
+    - glib
+    - openssl@3
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfixbuf/blobs/sha256:64d4455a477ea65a1cc54c6f0633286d42c35da7328e04708a56b45cac3a095c
+        sha256: 64d4455a477ea65a1cc54c6f0633286d42c35da7328e04708a56b45cac3a095c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfixbuf/blobs/sha256:e2b8afeb4d9ce3d8d2b55f488e3f4df93c85791bb64b32c33fcc1d662eba7e11
+        sha256: e2b8afeb4d9ce3d8d2b55f488e3f4df93c85791bb64b32c33fcc1d662eba7e11
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfixbuf/blobs/sha256:8ce88f5bcefb33debbe42fb4c64f5d72488988d59a110ad95c6598a3abfbddb3
+        sha256: 8ce88f5bcefb33debbe42fb4c64f5d72488988d59a110ad95c6598a3abfbddb3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfixbuf/blobs/sha256:d339e5ada6c9d514e5d5dd4e757f52673aeb189cc151d29bdce63c48be1e0f82
+        sha256: d339e5ada6c9d514e5d5dd4e757f52673aeb189cc151d29bdce63c48be1e0f82
+        sha512: ""
+        signature: ""
+source:
+    url: https://tools.netsa.cert.org/releases/libfixbuf-2.5.4.tar.gz
+    sha256: 106b8e1e560928a4dc91d8264326bd2463767570d77417535964f450de1f972e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - glib
-  - openssl@3
+    - glib
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

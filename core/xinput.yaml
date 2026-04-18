@@ -3,32 +3,57 @@ version: 1.6.4
 description: Utility to configure and test X input devices
 homepage: https://gitlab.freedesktop.org/xorg/app/xinput
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xinput/blobs/sha256:c8e2d341b5603fdbf07d9ec892b235a61f69ab54e0b6911969064766a6b1976a
-    sha256: c8e2d341b5603fdbf07d9ec892b235a61f69ab54e0b6911969064766a6b1976a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xinput/blobs/sha256:b63fde9b48bc4477a6a4606ffb121f6ea86c9d388d6723ad1a46f5cd80656d62
-    sha256: b63fde9b48bc4477a6a4606ffb121f6ea86c9d388d6723ad1a46f5cd80656d62
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xinput/blobs/sha256:48811518afc1be944c7f11606493feeffa4acd7653ad98f80e2dd583e6144bf0
-    sha256: 48811518afc1be944c7f11606493feeffa4acd7653ad98f80e2dd583e6144bf0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xinput/blobs/sha256:ec5a8a49c566256840876bb3ffe0d4748343b7ba863c30b3c045c7cd39f59dbe
-    sha256: ec5a8a49c566256840876bb3ffe0d4748343b7ba863c30b3c045c7cd39f59dbe
-source:
-  url: https://www.x.org/pub/individual/app/xinput-1.6.4.tar.xz
-  sha256: ad04d00d656884d133110eeddc34e9c69e626ebebbbab04dc95791c2907057c8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - libxext
-  - libxi
-  - libxinerama
-  - libxrandr
+    - libx11
+    - libxext
+    - libxi
+    - libxinerama
+    - libxrandr
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xinput/blobs/sha256:b63fde9b48bc4477a6a4606ffb121f6ea86c9d388d6723ad1a46f5cd80656d62
+        sha256: b63fde9b48bc4477a6a4606ffb121f6ea86c9d388d6723ad1a46f5cd80656d62
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xinput/blobs/sha256:c8e2d341b5603fdbf07d9ec892b235a61f69ab54e0b6911969064766a6b1976a
+        sha256: c8e2d341b5603fdbf07d9ec892b235a61f69ab54e0b6911969064766a6b1976a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xinput/blobs/sha256:48811518afc1be944c7f11606493feeffa4acd7653ad98f80e2dd583e6144bf0
+        sha256: 48811518afc1be944c7f11606493feeffa4acd7653ad98f80e2dd583e6144bf0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xinput/blobs/sha256:ec5a8a49c566256840876bb3ffe0d4748343b7ba863c30b3c045c7cd39f59dbe
+        sha256: ec5a8a49c566256840876bb3ffe0d4748343b7ba863c30b3c045c7cd39f59dbe
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/pub/individual/app/xinput-1.6.4.tar.xz
+    sha256: ad04d00d656884d133110eeddc34e9c69e626ebebbbab04dc95791c2907057c8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - xorgproto
+    - pkgconf
+    - xorgproto
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

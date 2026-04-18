@@ -3,27 +3,52 @@ version: 23.0.3
 description: Database clustering system for horizontal scaling of MySQL
 homepage: https://vitess.io
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vitess/blobs/sha256:9942b02f88dcf12545b44ecfef3a29a9deb5db4dc2c01494534e00a54d123894
-    sha256: 9942b02f88dcf12545b44ecfef3a29a9deb5db4dc2c01494534e00a54d123894
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vitess/blobs/sha256:21713748331a18a52f2190d7c34327f2a27dc86be27f46ce554dce430fe8aca5
-    sha256: 21713748331a18a52f2190d7c34327f2a27dc86be27f46ce554dce430fe8aca5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vitess/blobs/sha256:e7d5a210645a270884ba33ed343a8f68b02f572dac87045d080404ae55209f50
-    sha256: e7d5a210645a270884ba33ed343a8f68b02f572dac87045d080404ae55209f50
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vitess/blobs/sha256:6ee569d4d05b5a880f9b508cbe7849427ae3851522517b094fa5c1cf324c8477
-    sha256: 6ee569d4d05b5a880f9b508cbe7849427ae3851522517b094fa5c1cf324c8477
-source:
-  url: https://github.com/vitessio/vitess/archive/refs/tags/v23.0.3.tar.gz
-  sha256: b517deb54d0802a6864cbf9e728b9ba5b0d1746842d53ef45c82796bfaf0769d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - etcd
+    - etcd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vitess/blobs/sha256:21713748331a18a52f2190d7c34327f2a27dc86be27f46ce554dce430fe8aca5
+        sha256: 21713748331a18a52f2190d7c34327f2a27dc86be27f46ce554dce430fe8aca5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vitess/blobs/sha256:9942b02f88dcf12545b44ecfef3a29a9deb5db4dc2c01494534e00a54d123894
+        sha256: 9942b02f88dcf12545b44ecfef3a29a9deb5db4dc2c01494534e00a54d123894
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vitess/blobs/sha256:e7d5a210645a270884ba33ed343a8f68b02f572dac87045d080404ae55209f50
+        sha256: e7d5a210645a270884ba33ed343a8f68b02f572dac87045d080404ae55209f50
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vitess/blobs/sha256:6ee569d4d05b5a880f9b508cbe7849427ae3851522517b094fa5c1cf324c8477
+        sha256: 6ee569d4d05b5a880f9b508cbe7849427ae3851522517b094fa5c1cf324c8477
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/vitessio/vitess/archive/refs/tags/v23.0.3.tar.gz
+    sha256: b517deb54d0802a6864cbf9e728b9ba5b0d1746842d53ef45c82796bfaf0769d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

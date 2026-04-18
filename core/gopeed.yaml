@@ -3,25 +3,51 @@ version: 1.9.3
 description: Modern download manager that supports all platform
 homepage: https://gopeed.com
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gopeed/blobs/sha256:5371a3df1130b0045c7b3ff44192e50975946b82d41b1fe5db0d04c97377a730
-    sha256: 5371a3df1130b0045c7b3ff44192e50975946b82d41b1fe5db0d04c97377a730
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gopeed/blobs/sha256:9d256f495e41b9d337c35917427fbcb5b437b0cb6c374f4ff7b9a432983119b9
-    sha256: 9d256f495e41b9d337c35917427fbcb5b437b0cb6c374f4ff7b9a432983119b9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gopeed/blobs/sha256:9fd3e6d0e1e37c0bc86e55f914817b67ccdae2c6455b6d5abd214cfee1c5e788
-    sha256: 9fd3e6d0e1e37c0bc86e55f914817b67ccdae2c6455b6d5abd214cfee1c5e788
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gopeed/blobs/sha256:50f2623e58e483e73e7176213c40db30c1f9c5ba3261cb32e4b23f59ad213d13
-    sha256: 50f2623e58e483e73e7176213c40db30c1f9c5ba3261cb32e4b23f59ad213d13
-source:
-  url: https://github.com/GopeedLab/gopeed/archive/refs/tags/v1.9.3.tar.gz
-  sha256: da8da9516fbe2a01db1dab11dda97c7e3096e43a14a7c13202a2f92976aa6db9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gopeed/blobs/sha256:9d256f495e41b9d337c35917427fbcb5b437b0cb6c374f4ff7b9a432983119b9
+        sha256: 9d256f495e41b9d337c35917427fbcb5b437b0cb6c374f4ff7b9a432983119b9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gopeed/blobs/sha256:5371a3df1130b0045c7b3ff44192e50975946b82d41b1fe5db0d04c97377a730
+        sha256: 5371a3df1130b0045c7b3ff44192e50975946b82d41b1fe5db0d04c97377a730
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gopeed/blobs/sha256:9fd3e6d0e1e37c0bc86e55f914817b67ccdae2c6455b6d5abd214cfee1c5e788
+        sha256: 9fd3e6d0e1e37c0bc86e55f914817b67ccdae2c6455b6d5abd214cfee1c5e788
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gopeed/blobs/sha256:50f2623e58e483e73e7176213c40db30c1f9c5ba3261cb32e4b23f59ad213d13
+        sha256: 50f2623e58e483e73e7176213c40db30c1f9c5ba3261cb32e4b23f59ad213d13
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/GopeedLab/gopeed/archive/refs/tags/v1.9.3.tar.gz
+    sha256: da8da9516fbe2a01db1dab11dda97c7e3096e43a14a7c13202a2f92976aa6db9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

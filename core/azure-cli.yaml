@@ -3,31 +3,56 @@ version: 2.85.0
 description: Microsoft Azure CLI 2.0
 homepage: https://docs.microsoft.com/cli/azure/overview
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/azure-cli/blobs/sha256:d8a9601b61ca52700563b96f187c2bdeb009074165576b60a73e59404a214b2e
-    sha256: d8a9601b61ca52700563b96f187c2bdeb009074165576b60a73e59404a214b2e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/azure-cli/blobs/sha256:37b88371f46024b63144498658d9b8fe0ba2dc2dcecae29214022f06de475f60
-    sha256: 37b88371f46024b63144498658d9b8fe0ba2dc2dcecae29214022f06de475f60
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/azure-cli/blobs/sha256:141a2b2c9f09da1d456cfb652920b75aed7acc3093c86da7440852e4ebde5ea1
-    sha256: 141a2b2c9f09da1d456cfb652920b75aed7acc3093c86da7440852e4ebde5ea1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/azure-cli/blobs/sha256:9452f1475966ae554b335ef852c784b219b923c9848e7790e841da70509feb6d
-    sha256: 9452f1475966ae554b335ef852c784b219b923c9848e7790e841da70509feb6d
-source:
-  url: https://github.com/Azure/azure-cli/archive/refs/tags/azure-cli-2.85.0.tar.gz
-  sha256: f8a5b47ff56c592cdb1fe8cd759b9cb1ab893ca882e3de3ed6a089596c1763c4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libsodium
-  - libyaml
-  - openssl@3
-  - python@3.13
+    - libsodium
+    - libyaml
+    - openssl@3
+    - python@3.13
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/azure-cli/blobs/sha256:37b88371f46024b63144498658d9b8fe0ba2dc2dcecae29214022f06de475f60
+        sha256: 37b88371f46024b63144498658d9b8fe0ba2dc2dcecae29214022f06de475f60
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/azure-cli/blobs/sha256:d8a9601b61ca52700563b96f187c2bdeb009074165576b60a73e59404a214b2e
+        sha256: d8a9601b61ca52700563b96f187c2bdeb009074165576b60a73e59404a214b2e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/azure-cli/blobs/sha256:141a2b2c9f09da1d456cfb652920b75aed7acc3093c86da7440852e4ebde5ea1
+        sha256: 141a2b2c9f09da1d456cfb652920b75aed7acc3093c86da7440852e4ebde5ea1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/azure-cli/blobs/sha256:9452f1475966ae554b335ef852c784b219b923c9848e7790e841da70509feb6d
+        sha256: 9452f1475966ae554b335ef852c784b219b923c9848e7790e841da70509feb6d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Azure/azure-cli/archive/refs/tags/azure-cli-2.85.0.tar.gz
+    sha256: f8a5b47ff56c592cdb1fe8cd759b9cb1ab893ca882e3de3ed6a089596c1763c4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

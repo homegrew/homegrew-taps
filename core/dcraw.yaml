@@ -3,27 +3,53 @@ version: 9.28.0
 description: Digital camera RAW photo decoding software
 homepage: https://dechifro.org/dcraw/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dcraw/blobs/sha256:06e4e4b56c7abf6a3401a398f2b0caca6851a348dc87215c53ccb1eef0b38e18
-    sha256: 06e4e4b56c7abf6a3401a398f2b0caca6851a348dc87215c53ccb1eef0b38e18
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dcraw/blobs/sha256:9021dfd0fd80939f8cf06808522ac0bc3a4ab8daece0489c782ac798946a5e6a
-    sha256: 9021dfd0fd80939f8cf06808522ac0bc3a4ab8daece0489c782ac798946a5e6a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dcraw/blobs/sha256:e450712cc23c8501e21e7ff438480b0debcb27703a6ba4dcea9e6b00a2ec6fac
-    sha256: e450712cc23c8501e21e7ff438480b0debcb27703a6ba4dcea9e6b00a2ec6fac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dcraw/blobs/sha256:2783cb8eca424cae5dece8fd11a9aa41c533d14861791aaf66cd60391e75619a
-    sha256: 2783cb8eca424cae5dece8fd11a9aa41c533d14861791aaf66cd60391e75619a
-source:
-  url: https://dechifro.org/dcraw/archive/dcraw-9.28.0.tar.gz
-  sha256: 2890c3da2642cd44c5f3bfed2c9b2c1db83da5cec09cc17e0fa72e17541fb4b9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jasper
-  - jpeg-turbo
-  - little-cms2
+    - jasper
+    - jpeg-turbo
+    - little-cms2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dcraw/blobs/sha256:9021dfd0fd80939f8cf06808522ac0bc3a4ab8daece0489c782ac798946a5e6a
+        sha256: 9021dfd0fd80939f8cf06808522ac0bc3a4ab8daece0489c782ac798946a5e6a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dcraw/blobs/sha256:06e4e4b56c7abf6a3401a398f2b0caca6851a348dc87215c53ccb1eef0b38e18
+        sha256: 06e4e4b56c7abf6a3401a398f2b0caca6851a348dc87215c53ccb1eef0b38e18
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dcraw/blobs/sha256:e450712cc23c8501e21e7ff438480b0debcb27703a6ba4dcea9e6b00a2ec6fac
+        sha256: e450712cc23c8501e21e7ff438480b0debcb27703a6ba4dcea9e6b00a2ec6fac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dcraw/blobs/sha256:2783cb8eca424cae5dece8fd11a9aa41c533d14861791aaf66cd60391e75619a
+        sha256: 2783cb8eca424cae5dece8fd11a9aa41c533d14861791aaf66cd60391e75619a
+        sha512: ""
+        signature: ""
+source:
+    url: https://dechifro.org/dcraw/archive/dcraw-9.28.0.tar.gz
+    sha256: 2890c3da2642cd44c5f3bfed2c9b2c1db83da5cec09cc17e0fa72e17541fb4b9
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

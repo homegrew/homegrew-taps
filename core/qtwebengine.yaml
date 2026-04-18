@@ -3,74 +3,96 @@ version: 6.11.0
 description: Provides functionality for rendering regions of dynamic web content
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND BSD-3-Clause AND Apache-2.0 AND blessing AND BSD-2-Clause AND LGPL-2.1-or-later AND libpng-2.0 AND MIT AND MPL-1.1 AND NCL AND SGI-B-2.0 AND SunPro AND Zlib AND LicenseRef-Homebrew-public-domain
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebengine/blobs/sha256:b14e11b3baf33f5e98aaab5a7ba09275fd23d1b57251e30d7e7ada7a4f580d19
-    sha256: b14e11b3baf33f5e98aaab5a7ba09275fd23d1b57251e30d7e7ada7a4f580d19
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebengine/blobs/sha256:06dde7423868b3f32b49cf2169b0298542efd457f2341831baf3810e671c4c2f
-    sha256: 06dde7423868b3f32b49cf2169b0298542efd457f2341831baf3810e671c4c2f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebengine/blobs/sha256:7147da96828ae61a82ebca7e3be1d081e4d70951c7070dcec50ae295ef5c7f1c
-    sha256: 7147da96828ae61a82ebca7e3be1d081e4d70951c7070dcec50ae295ef5c7f1c
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtwebengine-everywhere-src-6.11.0.tar.xz
-  sha256: 63b921c8b2dd59152ced9a796676010166df044588ee00ef9429dc2fd2146736
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpng
-  - qtbase
-  - qtdeclarative
-  - qtpositioning
-  - qtwebchannel
-  - qttools
+    - libpng
+    - qtbase
+    - qtdeclarative
+    - qtpositioning
+    - qtwebchannel
+    - qttools
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebengine/blobs/sha256:06dde7423868b3f32b49cf2169b0298542efd457f2341831baf3810e671c4c2f
+        sha256: 06dde7423868b3f32b49cf2169b0298542efd457f2341831baf3810e671c4c2f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebengine/blobs/sha256:b14e11b3baf33f5e98aaab5a7ba09275fd23d1b57251e30d7e7ada7a4f580d19
+        sha256: b14e11b3baf33f5e98aaab5a7ba09275fd23d1b57251e30d7e7ada7a4f580d19
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebengine/blobs/sha256:7147da96828ae61a82ebca7e3be1d081e4d70951c7070dcec50ae295ef5c7f1c
+        sha256: 7147da96828ae61a82ebca7e3be1d081e4d70951c7070dcec50ae295ef5c7f1c
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtwebengine-everywhere-src-6.11.0.tar.xz
+    sha256: 63b921c8b2dd59152ced9a796676010166df044588ee00ef9429dc2fd2146736
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - node
-  - pkgconf
-  - python@3.14
-  - qttools
+    - cmake
+    - ninja
+    - node
+    - pkgconf
+    - python@3.14
+    - qttools
 linux_dependencies:
-  - alsa-lib
-  - dbus
-  - expat
-  - fontconfig
-  - freetype
-  - harfbuzz
-  - icu4c@78
-  - jpeg-turbo
-  - libdrm
-  - libevent
-  - libpng
-  - libtiff
-  - libx11
-  - libxcb
-  - libxcomposite
-  - libxdamage
-  - libxext
-  - libxfixes
-  - libxkbcommon
-  - libxkbfile
-  - libxml2
-  - libxrandr
-  - libxslt
-  - libxtst
-  - little-cms2
-  - mesa
-  - minizip
-  - nspr
-  - nss
-  - openjpeg
-  - opus
-  - qtbase
-  - qtdeclarative
-  - qtpositioning
-  - qtwebchannel
-  - snappy
-  - systemd
-  - webp
-  - zlib-ng-compat
+    - alsa-lib
+    - dbus
+    - expat
+    - fontconfig
+    - freetype
+    - harfbuzz
+    - icu4c@78
+    - jpeg-turbo
+    - libdrm
+    - libevent
+    - libpng
+    - libtiff
+    - libx11
+    - libxcb
+    - libxcomposite
+    - libxdamage
+    - libxext
+    - libxfixes
+    - libxkbcommon
+    - libxkbfile
+    - libxml2
+    - libxrandr
+    - libxslt
+    - libxtst
+    - little-cms2
+    - mesa
+    - minizip
+    - nspr
+    - nss
+    - openjpeg
+    - opus
+    - qtbase
+    - qtdeclarative
+    - qtpositioning
+    - qtwebchannel
+    - snappy
+    - systemd
+    - webp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,38 +3,62 @@ version: 1.80.0
 description: Next generation open source RPC library and framework
 homepage: https://grpc.io/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grpc/blobs/sha256:e07f534a474548118ba1879799be8e560678911b0e91bbd52a27e3d6abfde6cb
-    sha256: e07f534a474548118ba1879799be8e560678911b0e91bbd52a27e3d6abfde6cb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grpc/blobs/sha256:97db373cd4f8f885a4ebd22f1e8328a26d6918a2f128c6fc6886de4ea3d39456
-    sha256: 97db373cd4f8f885a4ebd22f1e8328a26d6918a2f128c6fc6886de4ea3d39456
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grpc/blobs/sha256:c7c4c58471157c69b9faf935d2e9d91846af8c68b39015fbcff5670211718bb7
-    sha256: c7c4c58471157c69b9faf935d2e9d91846af8c68b39015fbcff5670211718bb7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grpc/blobs/sha256:19c584caa0b6853cf6d67c271d3e524826aaea629a3adcfe520f7e65e5c9aec3
-    sha256: 19c584caa0b6853cf6d67c271d3e524826aaea629a3adcfe520f7e65e5c9aec3
-source:
-  url: https://github.com/grpc/grpc.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - c-ares
-  - openssl@3
-  - protobuf
-  - re2
+    - abseil
+    - c-ares
+    - openssl@3
+    - protobuf
+    - re2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grpc/blobs/sha256:97db373cd4f8f885a4ebd22f1e8328a26d6918a2f128c6fc6886de4ea3d39456
+        sha256: 97db373cd4f8f885a4ebd22f1e8328a26d6918a2f128c6fc6886de4ea3d39456
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grpc/blobs/sha256:e07f534a474548118ba1879799be8e560678911b0e91bbd52a27e3d6abfde6cb
+        sha256: e07f534a474548118ba1879799be8e560678911b0e91bbd52a27e3d6abfde6cb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grpc/blobs/sha256:c7c4c58471157c69b9faf935d2e9d91846af8c68b39015fbcff5670211718bb7
+        sha256: c7c4c58471157c69b9faf935d2e9d91846af8c68b39015fbcff5670211718bb7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grpc/blobs/sha256:19c584caa0b6853cf6d67c271d3e524826aaea629a3adcfe520f7e65e5c9aec3
+        sha256: 19c584caa0b6853cf6d67c271d3e524826aaea629a3adcfe520f7e65e5c9aec3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/grpc/grpc.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - abseil
-  - c-ares
-  - openssl@3
-  - protobuf
-  - re2
-  - zlib-ng-compat
+    - abseil
+    - c-ares
+    - openssl@3
+    - protobuf
+    - re2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

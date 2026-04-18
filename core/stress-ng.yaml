@@ -3,26 +3,52 @@ version: 0.21.00
 description: Stress test a computer system in various selectable ways
 homepage: https://wiki.ubuntu.com/Kernel/Reference/stress-ng
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stress-ng/blobs/sha256:c263f5c6e997c7e388e9ee8be9eee33e901af11b9cca58f8f5998e2d67515e1a
-    sha256: c263f5c6e997c7e388e9ee8be9eee33e901af11b9cca58f8f5998e2d67515e1a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stress-ng/blobs/sha256:b43e3627f435901273def8fc2dbdd6731393c6b8dca3d7e11448bacb0f81b672
-    sha256: b43e3627f435901273def8fc2dbdd6731393c6b8dca3d7e11448bacb0f81b672
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stress-ng/blobs/sha256:7f3f321d85c582369a921d8f21726bd2543dddfe787c44621d81a8cbdbd57004
-    sha256: 7f3f321d85c582369a921d8f21726bd2543dddfe787c44621d81a8cbdbd57004
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stress-ng/blobs/sha256:1d890c784813e93215aff2a62dd226f067bfc6ebb960fb52d780eab7ad268aff
-    sha256: 1d890c784813e93215aff2a62dd226f067bfc6ebb960fb52d780eab7ad268aff
-source:
-  url: https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.21.00.tar.gz
-  sha256: 1339cbc6ccbff7e2ee2177bf0fd67e7b94e8ff7b07fe89bcfaec0280d800cf34
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stress-ng/blobs/sha256:b43e3627f435901273def8fc2dbdd6731393c6b8dca3d7e11448bacb0f81b672
+        sha256: b43e3627f435901273def8fc2dbdd6731393c6b8dca3d7e11448bacb0f81b672
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stress-ng/blobs/sha256:c263f5c6e997c7e388e9ee8be9eee33e901af11b9cca58f8f5998e2d67515e1a
+        sha256: c263f5c6e997c7e388e9ee8be9eee33e901af11b9cca58f8f5998e2d67515e1a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stress-ng/blobs/sha256:7f3f321d85c582369a921d8f21726bd2543dddfe787c44621d81a8cbdbd57004
+        sha256: 7f3f321d85c582369a921d8f21726bd2543dddfe787c44621d81a8cbdbd57004
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stress-ng/blobs/sha256:1d890c784813e93215aff2a62dd226f067bfc6ebb960fb52d780eab7ad268aff
+        sha256: 1d890c784813e93215aff2a62dd226f067bfc6ebb960fb52d780eab7ad268aff
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.21.00.tar.gz
+    sha256: 1339cbc6ccbff7e2ee2177bf0fd67e7b94e8ff7b07fe89bcfaec0280d800cf34
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - acl
-  - zlib-ng-compat
+    - acl
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

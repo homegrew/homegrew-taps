@@ -3,43 +3,68 @@ version: 3.0.4
 description: Command-line tool for isolation, routing and drilling of PCBs
 homepage: https://github.com/pcb2gcode/pcb2gcode
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pcb2gcode/blobs/sha256:373eb016147cacaae8a92764e90174ec55bcc27171d9238f289ec76f4f45255a
-    sha256: 373eb016147cacaae8a92764e90174ec55bcc27171d9238f289ec76f4f45255a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pcb2gcode/blobs/sha256:c65064eac44c6d3e2b7358fff30ac7ae2a4d7c8bd475c1368367664d336ddb58
-    sha256: c65064eac44c6d3e2b7358fff30ac7ae2a4d7c8bd475c1368367664d336ddb58
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pcb2gcode/blobs/sha256:a8e41931226ba97f4a05603125be2831a1e3d2f987ca88b920d3ebf8ca1adc3b
-    sha256: a8e41931226ba97f4a05603125be2831a1e3d2f987ca88b920d3ebf8ca1adc3b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pcb2gcode/blobs/sha256:83faded151315a4904655a62a8db3282c5894ded28fe620a81ea7512324c4961
-    sha256: 83faded151315a4904655a62a8db3282c5894ded28fe620a81ea7512324c4961
-source:
-  url: https://github.com/pcb2gcode/pcb2gcode/archive/refs/tags/v3.0.4.tar.gz
-  sha256: 46351d4b7479059becae064cc68f2d1d68d42ae314ff7a1d9a240c71a3c0c98c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - at-spi2-core
-  - boost
-  - cairo
-  - gdk-pixbuf
-  - gerbv
-  - gettext
-  - glib
-  - gtk+
-  - harfbuzz
-  - pango
+    - at-spi2-core
+    - boost
+    - cairo
+    - gdk-pixbuf
+    - gerbv
+    - gettext
+    - glib
+    - gtk+
+    - harfbuzz
+    - pango
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pcb2gcode/blobs/sha256:c65064eac44c6d3e2b7358fff30ac7ae2a4d7c8bd475c1368367664d336ddb58
+        sha256: c65064eac44c6d3e2b7358fff30ac7ae2a4d7c8bd475c1368367664d336ddb58
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pcb2gcode/blobs/sha256:373eb016147cacaae8a92764e90174ec55bcc27171d9238f289ec76f4f45255a
+        sha256: 373eb016147cacaae8a92764e90174ec55bcc27171d9238f289ec76f4f45255a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pcb2gcode/blobs/sha256:a8e41931226ba97f4a05603125be2831a1e3d2f987ca88b920d3ebf8ca1adc3b
+        sha256: a8e41931226ba97f4a05603125be2831a1e3d2f987ca88b920d3ebf8ca1adc3b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pcb2gcode/blobs/sha256:83faded151315a4904655a62a8db3282c5894ded28fe620a81ea7512324c4961
+        sha256: 83faded151315a4904655a62a8db3282c5894ded28fe620a81ea7512324c4961
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pcb2gcode/pcb2gcode/archive/refs/tags/v3.0.4.tar.gz
+    sha256: 46351d4b7479059becae064cc68f2d1d68d42ae314ff7a1d9a240c71a3c0c98c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cairomm@1.14
-  - cmake
-  - glibmm@2.66
-  - gtkmm
-  - librsvg
-  - libsigc++@2
-  - pangomm@2.46
-  - pkgconf
+    - cairomm@1.14
+    - cmake
+    - glibmm@2.66
+    - gtkmm
+    - librsvg
+    - libsigc++@2
+    - pangomm@2.46
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,53 @@ version: 2.0.18
 description: FFmpeg automation layer
 homepage: https://docs.ffmate.io
 license: AGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffmate/blobs/sha256:a4f901c820ac104d4256c8d761f6f5bfec7b621b19327601c314f70e8551296f
-    sha256: a4f901c820ac104d4256c8d761f6f5bfec7b621b19327601c314f70e8551296f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffmate/blobs/sha256:df1a62ec4c813fd397ef41dbf05db9a6d635511e0631a992861491ec47d5cc1a
-    sha256: df1a62ec4c813fd397ef41dbf05db9a6d635511e0631a992861491ec47d5cc1a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffmate/blobs/sha256:8871f212b527926a2ff1308b60d9ad8c3ce5e3c47edd793e8614512b9011a0bc
-    sha256: 8871f212b527926a2ff1308b60d9ad8c3ce5e3c47edd793e8614512b9011a0bc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffmate/blobs/sha256:31a81ab007e6ecb47a8fb319ad244c84b492173a0c96db789e510549cba3d5fb
-    sha256: 31a81ab007e6ecb47a8fb319ad244c84b492173a0c96db789e510549cba3d5fb
-source:
-  url: https://github.com/welovemedia/ffmate.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ffmate/blobs/sha256:df1a62ec4c813fd397ef41dbf05db9a6d635511e0631a992861491ec47d5cc1a
+        sha256: df1a62ec4c813fd397ef41dbf05db9a6d635511e0631a992861491ec47d5cc1a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffmate/blobs/sha256:a4f901c820ac104d4256c8d761f6f5bfec7b621b19327601c314f70e8551296f
+        sha256: a4f901c820ac104d4256c8d761f6f5bfec7b621b19327601c314f70e8551296f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ffmate/blobs/sha256:8871f212b527926a2ff1308b60d9ad8c3ce5e3c47edd793e8614512b9011a0bc
+        sha256: 8871f212b527926a2ff1308b60d9ad8c3ce5e3c47edd793e8614512b9011a0bc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffmate/blobs/sha256:31a81ab007e6ecb47a8fb319ad244c84b492173a0c96db789e510549cba3d5fb
+        sha256: 31a81ab007e6ecb47a8fb319ad244c84b492173a0c96db789e510549cba3d5fb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/welovemedia/ffmate.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - node
-  - pnpm
+    - go
+    - node
+    - pnpm
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

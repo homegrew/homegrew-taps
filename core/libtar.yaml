@@ -3,29 +3,54 @@ version: 1.2.20
 description: C library for manipulating POSIX tar files
 homepage: https://repo.or.cz/libtar.git
 license: NCSA
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libtar/blobs/sha256:23ceb454b2f6611082364f55c92c573111df507f73b3d19ca69555bc4ebac48a
-    sha256: 23ceb454b2f6611082364f55c92c573111df507f73b3d19ca69555bc4ebac48a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libtar/blobs/sha256:6f63b617e34b6a198feafb7330800d8a47960cf2bdcd412cc1bcdad98fb07108
-    sha256: 6f63b617e34b6a198feafb7330800d8a47960cf2bdcd412cc1bcdad98fb07108
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libtar/blobs/sha256:d636db798faefdeba582d4b33c6ee41f659a46c7e99cd9b5aab9eb4af1b10b37
-    sha256: d636db798faefdeba582d4b33c6ee41f659a46c7e99cd9b5aab9eb4af1b10b37
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libtar/blobs/sha256:3cfe7b8ddcc43ac4ff3271b9bcc59589799c70700ad2a231f8ee645213aa8e0c
-    sha256: 3cfe7b8ddcc43ac4ff3271b9bcc59589799c70700ad2a231f8ee645213aa8e0c
-source:
-  url: https://repo.or.cz/libtar.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libtar/blobs/sha256:6f63b617e34b6a198feafb7330800d8a47960cf2bdcd412cc1bcdad98fb07108
+        sha256: 6f63b617e34b6a198feafb7330800d8a47960cf2bdcd412cc1bcdad98fb07108
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libtar/blobs/sha256:23ceb454b2f6611082364f55c92c573111df507f73b3d19ca69555bc4ebac48a
+        sha256: 23ceb454b2f6611082364f55c92c573111df507f73b3d19ca69555bc4ebac48a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libtar/blobs/sha256:d636db798faefdeba582d4b33c6ee41f659a46c7e99cd9b5aab9eb4af1b10b37
+        sha256: d636db798faefdeba582d4b33c6ee41f659a46c7e99cd9b5aab9eb4af1b10b37
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libtar/blobs/sha256:3cfe7b8ddcc43ac4ff3271b9bcc59589799c70700ad2a231f8ee645213aa8e0c
+        sha256: 3cfe7b8ddcc43ac4ff3271b9bcc59589799c70700ad2a231f8ee645213aa8e0c
+        sha512: ""
+        signature: ""
+source:
+    url: https://repo.or.cz/libtar.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,33 +3,57 @@ version: 0.19.0
 description: Cargo subcommand for displaying when Rust dependencies are out of date
 homepage: https://github.com/kbknapp/cargo-outdated
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-outdated/blobs/sha256:6174085b6cd0d46cd1be2c6dda1a24a0f7bcd4e98c362808c63e09d0c11bf3bc
-    sha256: 6174085b6cd0d46cd1be2c6dda1a24a0f7bcd4e98c362808c63e09d0c11bf3bc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-outdated/blobs/sha256:6afd5d52a700fd64b1f613980c399f08a05ccfe5f38072f42bfc438bd89a826f
-    sha256: 6afd5d52a700fd64b1f613980c399f08a05ccfe5f38072f42bfc438bd89a826f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-outdated/blobs/sha256:8d8f21cc13aba011e544f746cb9096799337c335ff8796586c23163bab069f1c
-    sha256: 8d8f21cc13aba011e544f746cb9096799337c335ff8796586c23163bab069f1c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-outdated/blobs/sha256:1f4b8afc5760e243f583e60f81e11cd92a9819a14d6d00bfdc7125fcede1b035
-    sha256: 1f4b8afc5760e243f583e60f81e11cd92a9819a14d6d00bfdc7125fcede1b035
-source:
-  url: https://github.com/kbknapp/cargo-outdated/archive/refs/tags/v0.19.0.tar.gz
-  sha256: ea6592c08d4e8ea53aa0251cbbfbf8ad2b2167f794cb9599715eecb3653507f2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
-  - openssl@3
+    - libgit2
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-outdated/blobs/sha256:6afd5d52a700fd64b1f613980c399f08a05ccfe5f38072f42bfc438bd89a826f
+        sha256: 6afd5d52a700fd64b1f613980c399f08a05ccfe5f38072f42bfc438bd89a826f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-outdated/blobs/sha256:6174085b6cd0d46cd1be2c6dda1a24a0f7bcd4e98c362808c63e09d0c11bf3bc
+        sha256: 6174085b6cd0d46cd1be2c6dda1a24a0f7bcd4e98c362808c63e09d0c11bf3bc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-outdated/blobs/sha256:8d8f21cc13aba011e544f746cb9096799337c335ff8796586c23163bab069f1c
+        sha256: 8d8f21cc13aba011e544f746cb9096799337c335ff8796586c23163bab069f1c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-outdated/blobs/sha256:1f4b8afc5760e243f583e60f81e11cd92a9819a14d6d00bfdc7125fcede1b035
+        sha256: 1f4b8afc5760e243f583e60f81e11cd92a9819a14d6d00bfdc7125fcede1b035
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/kbknapp/cargo-outdated/archive/refs/tags/v0.19.0.tar.gz
+    sha256: ea6592c08d4e8ea53aa0251cbbfbf8ad2b2167f794cb9599715eecb3653507f2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - libgit2
-  - openssl@3
-  - zlib-ng-compat
+    - libgit2
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

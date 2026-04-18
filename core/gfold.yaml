@@ -3,31 +3,55 @@ version: 2026.3.0
 description: Help keep track of your Git repositories, written in Rust
 homepage: https://github.com/nickgerace/gfold
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gfold/blobs/sha256:db41a670045dc8a7876c729a952d1fba166f287eea7024b8719588f1da51e871
-    sha256: db41a670045dc8a7876c729a952d1fba166f287eea7024b8719588f1da51e871
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gfold/blobs/sha256:528334f580d8869521b1b1d0ee3b8cd282c191f350596d77c49acef16a31d7f4
-    sha256: 528334f580d8869521b1b1d0ee3b8cd282c191f350596d77c49acef16a31d7f4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gfold/blobs/sha256:0fd6dcad1f035d6dd3652a9a9ced56e2212a155a4428008e7cc09b4953fde63f
-    sha256: 0fd6dcad1f035d6dd3652a9a9ced56e2212a155a4428008e7cc09b4953fde63f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gfold/blobs/sha256:5907c31d6a83a8ec8f14c3aae1d282bd2bcb1d279532f7503562e9e232f90276
-    sha256: 5907c31d6a83a8ec8f14c3aae1d282bd2bcb1d279532f7503562e9e232f90276
-source:
-  url: https://github.com/nickgerace/gfold/archive/refs/tags/2026.3.0.tar.gz
-  sha256: e8e0667c324658c0c816c909e880879f606ca7d874b7cbf4820ef47ba517d558
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
+    - libgit2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gfold/blobs/sha256:528334f580d8869521b1b1d0ee3b8cd282c191f350596d77c49acef16a31d7f4
+        sha256: 528334f580d8869521b1b1d0ee3b8cd282c191f350596d77c49acef16a31d7f4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gfold/blobs/sha256:db41a670045dc8a7876c729a952d1fba166f287eea7024b8719588f1da51e871
+        sha256: db41a670045dc8a7876c729a952d1fba166f287eea7024b8719588f1da51e871
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gfold/blobs/sha256:0fd6dcad1f035d6dd3652a9a9ced56e2212a155a4428008e7cc09b4953fde63f
+        sha256: 0fd6dcad1f035d6dd3652a9a9ced56e2212a155a4428008e7cc09b4953fde63f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gfold/blobs/sha256:5907c31d6a83a8ec8f14c3aae1d282bd2bcb1d279532f7503562e9e232f90276
+        sha256: 5907c31d6a83a8ec8f14c3aae1d282bd2bcb1d279532f7503562e9e232f90276
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nickgerace/gfold/archive/refs/tags/2026.3.0.tar.gz
+    sha256: e8e0667c324658c0c816c909e880879f606ca7d874b7cbf4820ef47ba517d558
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - libgit2
-  - zlib-ng-compat
+    - libgit2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

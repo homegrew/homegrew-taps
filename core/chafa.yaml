@@ -3,47 +3,71 @@ version: 1.18.1
 description: Versatile and fast Unicode/ASCII/ANSI graphics renderer
 homepage: https://hpjansson.org/chafa/
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/chafa/blobs/sha256:8481084fe39e9971a49c4e1aa094c161230de635d53afb45e07e25a21b654cb5
-    sha256: 8481084fe39e9971a49c4e1aa094c161230de635d53afb45e07e25a21b654cb5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/chafa/blobs/sha256:c4cc89aed4c4637d304044c4f44bc8a761f348dedad467a955d22b98bf6628a2
-    sha256: c4cc89aed4c4637d304044c4f44bc8a761f348dedad467a955d22b98bf6628a2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/chafa/blobs/sha256:356f1d9486e4e1a759490d85492e7eda81262ac3e36299bc1d8724c98ac98b73
-    sha256: 356f1d9486e4e1a759490d85492e7eda81262ac3e36299bc1d8724c98ac98b73
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/chafa/blobs/sha256:04eeb0c26b507b7b9c6b71c46f1aa92f03ee255cf52a78eef07926c64b867b57
-    sha256: 04eeb0c26b507b7b9c6b71c46f1aa92f03ee255cf52a78eef07926c64b867b57
-source:
-  url: https://hpjansson.org/chafa/releases/chafa-1.18.1.tar.xz
-  sha256: e75a9772444247a70178cdd238b522d35c613dfb6f3a3bf516457958109e9910
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - freetype
-  - glib
-  - jpeg-turbo
-  - jpeg-xl
-  - libavif
-  - librsvg
-  - libtiff
-  - webp
-  - gdk-pixbuf
-  - gettext
+    - cairo
+    - freetype
+    - glib
+    - jpeg-turbo
+    - jpeg-xl
+    - libavif
+    - librsvg
+    - libtiff
+    - webp
+    - gdk-pixbuf
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/chafa/blobs/sha256:c4cc89aed4c4637d304044c4f44bc8a761f348dedad467a955d22b98bf6628a2
+        sha256: c4cc89aed4c4637d304044c4f44bc8a761f348dedad467a955d22b98bf6628a2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/chafa/blobs/sha256:8481084fe39e9971a49c4e1aa094c161230de635d53afb45e07e25a21b654cb5
+        sha256: 8481084fe39e9971a49c4e1aa094c161230de635d53afb45e07e25a21b654cb5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/chafa/blobs/sha256:356f1d9486e4e1a759490d85492e7eda81262ac3e36299bc1d8724c98ac98b73
+        sha256: 356f1d9486e4e1a759490d85492e7eda81262ac3e36299bc1d8724c98ac98b73
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/chafa/blobs/sha256:04eeb0c26b507b7b9c6b71c46f1aa92f03ee255cf52a78eef07926c64b867b57
+        sha256: 04eeb0c26b507b7b9c6b71c46f1aa92f03ee255cf52a78eef07926c64b867b57
+        sha512: ""
+        signature: ""
+source:
+    url: https://hpjansson.org/chafa/releases/chafa-1.18.1.tar.xz
+    sha256: e75a9772444247a70178cdd238b522d35c613dfb6f3a3bf516457958109e9910
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - freetype
-  - glib
-  - jpeg-turbo
-  - jpeg-xl
-  - libavif
-  - librsvg
-  - libtiff
-  - webp
+    - cairo
+    - freetype
+    - glib
+    - jpeg-turbo
+    - jpeg-xl
+    - libavif
+    - librsvg
+    - libtiff
+    - webp
+build:
+    configure: []
+    install: []
+service: null

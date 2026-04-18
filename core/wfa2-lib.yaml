@@ -3,28 +3,53 @@ version: 2.3.6
 description: Wavefront alignment algorithm library v2
 homepage: https://github.com/smarco/WFA2-lib
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wfa2-lib/blobs/sha256:d34f0af8f0ea0c1aaebbf9d2323016c94ade299e5c0cfc2751944c4daafa2034
-    sha256: d34f0af8f0ea0c1aaebbf9d2323016c94ade299e5c0cfc2751944c4daafa2034
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wfa2-lib/blobs/sha256:af478289bfe51ecdf40158ac6c780660b63c1837f451665517bc042296690baa
-    sha256: af478289bfe51ecdf40158ac6c780660b63c1837f451665517bc042296690baa
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wfa2-lib/blobs/sha256:1f5b02177c40379b0e0de12a31d54779bf069223c49984ca04102a062421806d
-    sha256: 1f5b02177c40379b0e0de12a31d54779bf069223c49984ca04102a062421806d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wfa2-lib/blobs/sha256:d54a15b0df4a1fb66c99ee1c65778e0261b1cbd71999ea4c1069f5fba66109ad
-    sha256: d54a15b0df4a1fb66c99ee1c65778e0261b1cbd71999ea4c1069f5fba66109ad
-source:
-  url: https://github.com/smarco/WFA2-lib/archive/refs/tags/v2.3.6.tar.gz
-  sha256: fd74c4bfdd5764ae8668cdeee7a80bfa35583b1980e261daa9dbf425bf12bb0b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libomp
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wfa2-lib/blobs/sha256:af478289bfe51ecdf40158ac6c780660b63c1837f451665517bc042296690baa
+        sha256: af478289bfe51ecdf40158ac6c780660b63c1837f451665517bc042296690baa
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wfa2-lib/blobs/sha256:d34f0af8f0ea0c1aaebbf9d2323016c94ade299e5c0cfc2751944c4daafa2034
+        sha256: d34f0af8f0ea0c1aaebbf9d2323016c94ade299e5c0cfc2751944c4daafa2034
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wfa2-lib/blobs/sha256:1f5b02177c40379b0e0de12a31d54779bf069223c49984ca04102a062421806d
+        sha256: 1f5b02177c40379b0e0de12a31d54779bf069223c49984ca04102a062421806d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wfa2-lib/blobs/sha256:d54a15b0df4a1fb66c99ee1c65778e0261b1cbd71999ea4c1069f5fba66109ad
+        sha256: d54a15b0df4a1fb66c99ee1c65778e0261b1cbd71999ea4c1069f5fba66109ad
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/smarco/WFA2-lib/archive/refs/tags/v2.3.6.tar.gz
+    sha256: fd74c4bfdd5764ae8668cdeee7a80bfa35583b1980e261daa9dbf425bf12bb0b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

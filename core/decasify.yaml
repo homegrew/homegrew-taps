@@ -3,28 +3,53 @@ version: 0.11.3
 description: Utility for casting strings to title-case according to locale-aware style guides
 homepage: https://github.com/alerque/decasify
 license: LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/decasify/blobs/sha256:e4ff19c29a173914d458494a071d57926dae0d7144f8fdc02d4896da4937a523
-    sha256: e4ff19c29a173914d458494a071d57926dae0d7144f8fdc02d4896da4937a523
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/decasify/blobs/sha256:b78974c9dd3ccfb401c2ebb9c9a44ab44cf75e9cd81f27c7fc118822f4c70b6c
-    sha256: b78974c9dd3ccfb401c2ebb9c9a44ab44cf75e9cd81f27c7fc118822f4c70b6c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/decasify/blobs/sha256:eaebb4b35dc5f6bdfd169b106bcc2b73c2b71d15943100aafda52beb2e1dc09f
-    sha256: eaebb4b35dc5f6bdfd169b106bcc2b73c2b71d15943100aafda52beb2e1dc09f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/decasify/blobs/sha256:39912a574e08da91ded66573bb340a5a5cbacafcea47a0030d44abfe496df055
-    sha256: 39912a574e08da91ded66573bb340a5a5cbacafcea47a0030d44abfe496df055
-source:
-  url: https://github.com/alerque/decasify/releases/download/v0.11.3/decasify-0.11.3.tar.zst
-  sha256: 2404c9f1c163b4290aeb93694d3ad49181c0a389c3aea7ed6abab22489d14e93
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/decasify/blobs/sha256:b78974c9dd3ccfb401c2ebb9c9a44ab44cf75e9cd81f27c7fc118822f4c70b6c
+        sha256: b78974c9dd3ccfb401c2ebb9c9a44ab44cf75e9cd81f27c7fc118822f4c70b6c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/decasify/blobs/sha256:e4ff19c29a173914d458494a071d57926dae0d7144f8fdc02d4896da4937a523
+        sha256: e4ff19c29a173914d458494a071d57926dae0d7144f8fdc02d4896da4937a523
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/decasify/blobs/sha256:eaebb4b35dc5f6bdfd169b106bcc2b73c2b71d15943100aafda52beb2e1dc09f
+        sha256: eaebb4b35dc5f6bdfd169b106bcc2b73c2b71d15943100aafda52beb2e1dc09f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/decasify/blobs/sha256:39912a574e08da91ded66573bb340a5a5cbacafcea47a0030d44abfe496df055
+        sha256: 39912a574e08da91ded66573bb340a5a5cbacafcea47a0030d44abfe496df055
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/alerque/decasify/releases/download/v0.11.3/decasify-0.11.3.tar.zst
+    sha256: 2404c9f1c163b4290aeb93694d3ad49181c0a389c3aea7ed6abab22489d14e93
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

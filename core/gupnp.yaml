@@ -3,36 +3,61 @@ version: 1.6.9
 description: Framework for creating UPnP devices and control points
 homepage: https://wiki.gnome.org/Projects/GUPnP
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gupnp/blobs/sha256:aab39250b6637df75928cd584b22ac892b3bc88ade13c441c196462147c1e93e
-    sha256: aab39250b6637df75928cd584b22ac892b3bc88ade13c441c196462147c1e93e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gupnp/blobs/sha256:20d86cbc848ba2e6cf7eda321d5c88e8ea40193657440d65da84bf34444b7805
-    sha256: 20d86cbc848ba2e6cf7eda321d5c88e8ea40193657440d65da84bf34444b7805
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gupnp/blobs/sha256:ad0e453a04da1f3183e56f79bb793215ce8703bc11f34671aaa28b8b4b4ac5e8
-    sha256: ad0e453a04da1f3183e56f79bb793215ce8703bc11f34671aaa28b8b4b4ac5e8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gupnp/blobs/sha256:c1d473934e2af40455da184401559fd4a280f7f9ccf41c0ed1f62aa4a7849528
-    sha256: c1d473934e2af40455da184401559fd4a280f7f9ccf41c0ed1f62aa4a7849528
-source:
-  url: https://download.gnome.org/sources/gupnp/1.6/gupnp-1.6.9.tar.xz
-  sha256: 2edb6ee3613558e62f538735368aee27151b7e09d4e2e2c51606833da801869b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gssdp
-  - libsoup
-  - libxml2
-  - python@3.14
+    - glib
+    - gssdp
+    - libsoup
+    - libxml2
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gupnp/blobs/sha256:20d86cbc848ba2e6cf7eda321d5c88e8ea40193657440d65da84bf34444b7805
+        sha256: 20d86cbc848ba2e6cf7eda321d5c88e8ea40193657440d65da84bf34444b7805
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gupnp/blobs/sha256:aab39250b6637df75928cd584b22ac892b3bc88ade13c441c196462147c1e93e
+        sha256: aab39250b6637df75928cd584b22ac892b3bc88ade13c441c196462147c1e93e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gupnp/blobs/sha256:ad0e453a04da1f3183e56f79bb793215ce8703bc11f34671aaa28b8b4b4ac5e8
+        sha256: ad0e453a04da1f3183e56f79bb793215ce8703bc11f34671aaa28b8b4b4ac5e8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gupnp/blobs/sha256:c1d473934e2af40455da184401559fd4a280f7f9ccf41c0ed1f62aa4a7849528
+        sha256: c1d473934e2af40455da184401559fd4a280f7f9ccf41c0ed1f62aa4a7849528
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gupnp/1.6/gupnp-1.6.9.tar.xz
+    sha256: 2edb6ee3613558e62f538735368aee27151b7e09d4e2e2c51606833da801869b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docbook-xsl
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - docbook-xsl
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
+    - vala
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

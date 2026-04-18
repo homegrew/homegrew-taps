@@ -3,27 +3,52 @@ version: 2.4.0
 description: AWS IAM import and export tool
 homepage: https://github.com/99designs/iamy
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/iamy/blobs/sha256:fe6c68658f3713fa2b96c7d35c08e68b4bd245ac4854cd16174a576984a62cf9
-    sha256: fe6c68658f3713fa2b96c7d35c08e68b4bd245ac4854cd16174a576984a62cf9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/iamy/blobs/sha256:86d99df6409eccfe7fc1ade637a446fd5490fa29f485bdb1b783bce3c10a311a
-    sha256: 86d99df6409eccfe7fc1ade637a446fd5490fa29f485bdb1b783bce3c10a311a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/iamy/blobs/sha256:dc26edb3bea1993f7650cce2cfd848318ba19cf3a155ae7838823b4f4c3c8041
-    sha256: dc26edb3bea1993f7650cce2cfd848318ba19cf3a155ae7838823b4f4c3c8041
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/iamy/blobs/sha256:bc327310da54a5217129a8e967420742c3264e4cc9913829b777f06b412344f9
-    sha256: bc327310da54a5217129a8e967420742c3264e4cc9913829b777f06b412344f9
-source:
-  url: https://github.com/99designs/iamy/archive/refs/tags/v2.4.0.tar.gz
-  sha256: 13bd9e66afbeb30d386aa132a4af5d2e9a231d2aadf54fe8e5dc325583379359
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - awscli
+    - awscli
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/iamy/blobs/sha256:86d99df6409eccfe7fc1ade637a446fd5490fa29f485bdb1b783bce3c10a311a
+        sha256: 86d99df6409eccfe7fc1ade637a446fd5490fa29f485bdb1b783bce3c10a311a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/iamy/blobs/sha256:fe6c68658f3713fa2b96c7d35c08e68b4bd245ac4854cd16174a576984a62cf9
+        sha256: fe6c68658f3713fa2b96c7d35c08e68b4bd245ac4854cd16174a576984a62cf9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/iamy/blobs/sha256:dc26edb3bea1993f7650cce2cfd848318ba19cf3a155ae7838823b4f4c3c8041
+        sha256: dc26edb3bea1993f7650cce2cfd848318ba19cf3a155ae7838823b4f4c3c8041
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/iamy/blobs/sha256:bc327310da54a5217129a8e967420742c3264e4cc9913829b777f06b412344f9
+        sha256: bc327310da54a5217129a8e967420742c3264e4cc9913829b777f06b412344f9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/99designs/iamy/archive/refs/tags/v2.4.0.tar.gz
+    sha256: 13bd9e66afbeb30d386aa132a4af5d2e9a231d2aadf54fe8e5dc325583379359
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,46 +3,70 @@ version: 7.1.2-19
 description: Tools and libraries to manipulate images in select formats
 homepage: https://imagemagick.org/index.php
 license: ImageMagick
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imagemagick/blobs/sha256:2eea0ca9861763328771136bf63240bbd722ce94e362bd055fa0ef68c707284b
-    sha256: 2eea0ca9861763328771136bf63240bbd722ce94e362bd055fa0ef68c707284b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imagemagick/blobs/sha256:73ac559cab494f26b5524cec06ec660c7d8e36fe574e64ebbad5f7b38919b468
-    sha256: 73ac559cab494f26b5524cec06ec660c7d8e36fe574e64ebbad5f7b38919b468
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imagemagick/blobs/sha256:e30c7c4c2ec5b0f4f91195ae2042e46c95da53e7f3ec1a51b9bd11eb6337a0d0
-    sha256: e30c7c4c2ec5b0f4f91195ae2042e46c95da53e7f3ec1a51b9bd11eb6337a0d0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imagemagick/blobs/sha256:59dee5da2f9296d2160ba48d2a83506b670dfc9f068b632ba2338cdb3252acc5
-    sha256: 59dee5da2f9296d2160ba48d2a83506b670dfc9f068b632ba2338cdb3252acc5
-source:
-  url: https://imagemagick.org/archive/releases/ImageMagick-7.1.2-19.tar.xz
-  sha256: 4ffd17387d0b55c1f7465ea2baf39e1404afcfe7321ee66430741045d282fc6a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - jpeg-turbo
-  - libheif
-  - libpng
-  - libtiff
-  - libtool
-  - little-cms2
-  - webp
-  - xz
+    - freetype
+    - jpeg-turbo
+    - libheif
+    - libpng
+    - libtiff
+    - libtool
+    - little-cms2
+    - webp
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/blobs/sha256:73ac559cab494f26b5524cec06ec660c7d8e36fe574e64ebbad5f7b38919b468
+        sha256: 73ac559cab494f26b5524cec06ec660c7d8e36fe574e64ebbad5f7b38919b468
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/blobs/sha256:2eea0ca9861763328771136bf63240bbd722ce94e362bd055fa0ef68c707284b
+        sha256: 2eea0ca9861763328771136bf63240bbd722ce94e362bd055fa0ef68c707284b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/blobs/sha256:e30c7c4c2ec5b0f4f91195ae2042e46c95da53e7f3ec1a51b9bd11eb6337a0d0
+        sha256: e30c7c4c2ec5b0f4f91195ae2042e46c95da53e7f3ec1a51b9bd11eb6337a0d0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/blobs/sha256:59dee5da2f9296d2160ba48d2a83506b670dfc9f068b632ba2338cdb3252acc5
+        sha256: 59dee5da2f9296d2160ba48d2a83506b670dfc9f068b632ba2338cdb3252acc5
+        sha512: ""
+        signature: ""
+source:
+    url: https://imagemagick.org/archive/releases/ImageMagick-7.1.2-19.tar.xz
+    sha256: 4ffd17387d0b55c1f7465ea2baf39e1404afcfe7321ee66430741045d282fc6a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - freetype
-  - jpeg-turbo
-  - libheif
-  - libpng
-  - libtiff
-  - libtool
-  - little-cms2
-  - webp
-  - xz
-  - zlib-ng-compat
+    - freetype
+    - jpeg-turbo
+    - libheif
+    - libpng
+    - libtiff
+    - libtool
+    - little-cms2
+    - webp
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

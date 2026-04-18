@@ -3,27 +3,53 @@ version: 0.65.2
 description: Open source multi-tool for exploring and publishing data
 homepage: https://docs.datasette.io/en/stable/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/datasette/blobs/sha256:0e696f2ba01d3b948e76adc777ecec65c5d95d76aadecfac5708027c5826c7c8
-    sha256: 0e696f2ba01d3b948e76adc777ecec65c5d95d76aadecfac5708027c5826c7c8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/datasette/blobs/sha256:e0b5b0388c23932be1715f0c320cd8d925e40a23aee878475be992f1a73bffaa
-    sha256: e0b5b0388c23932be1715f0c320cd8d925e40a23aee878475be992f1a73bffaa
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/datasette/blobs/sha256:3a0d9e6f3eb1bd9b91c6c870bb84452bc9535129348f821cd4a51a9e8f99d607
-    sha256: 3a0d9e6f3eb1bd9b91c6c870bb84452bc9535129348f821cd4a51a9e8f99d607
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/datasette/blobs/sha256:d0c3d394070f3c77f90301a8066d3e0fc34d1aca9a74bb5f84672de56c9ca3ba
-    sha256: d0c3d394070f3c77f90301a8066d3e0fc34d1aca9a74bb5f84672de56c9ca3ba
-source:
-  url: https://files.pythonhosted.org/packages/80/26/80b5480921d71891b8ff880fed6d44150b9164903d683efe2eb7405b61d8/datasette-0.65.2.tar.gz
-  sha256: be956fb2633b8380d7f818b5ddab40d5c7346d5e9d4d24e81c43b1fb60267432
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - python@3.14
+    - certifi
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/datasette/blobs/sha256:e0b5b0388c23932be1715f0c320cd8d925e40a23aee878475be992f1a73bffaa
+        sha256: e0b5b0388c23932be1715f0c320cd8d925e40a23aee878475be992f1a73bffaa
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/datasette/blobs/sha256:0e696f2ba01d3b948e76adc777ecec65c5d95d76aadecfac5708027c5826c7c8
+        sha256: 0e696f2ba01d3b948e76adc777ecec65c5d95d76aadecfac5708027c5826c7c8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/datasette/blobs/sha256:3a0d9e6f3eb1bd9b91c6c870bb84452bc9535129348f821cd4a51a9e8f99d607
+        sha256: 3a0d9e6f3eb1bd9b91c6c870bb84452bc9535129348f821cd4a51a9e8f99d607
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/datasette/blobs/sha256:d0c3d394070f3c77f90301a8066d3e0fc34d1aca9a74bb5f84672de56c9ca3ba
+        sha256: d0c3d394070f3c77f90301a8066d3e0fc34d1aca9a74bb5f84672de56c9ca3ba
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/80/26/80b5480921d71891b8ff880fed6d44150b9164903d683efe2eb7405b61d8/datasette-0.65.2.tar.gz
+    sha256: be956fb2633b8380d7f818b5ddab40d5c7346d5e9d4d24e81c43b1fb60267432
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

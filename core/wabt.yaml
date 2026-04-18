@@ -3,27 +3,52 @@ version: 1.0.40
 description: Web Assembly Binary Toolkit
 homepage: https://github.com/WebAssembly/wabt
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wabt/blobs/sha256:2825e7369c2068e1ba6ed713e8064919482347a8a535565c17c578bc40ca8efc
-    sha256: 2825e7369c2068e1ba6ed713e8064919482347a8a535565c17c578bc40ca8efc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wabt/blobs/sha256:e9f2c887130dd4c7f1aeea5f1a49b38e2f382fd8aaed77f230314db2e2831de3
-    sha256: e9f2c887130dd4c7f1aeea5f1a49b38e2f382fd8aaed77f230314db2e2831de3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wabt/blobs/sha256:12237fca24f1c1aace64b7e6cc5122710a07c9a88d3e911624e1ec9148d6c33d
-    sha256: 12237fca24f1c1aace64b7e6cc5122710a07c9a88d3e911624e1ec9148d6c33d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wabt/blobs/sha256:2330042a1c61ef857c5202e82fa61d9e9afd217a8df3011cdb6637f3a4a370e3
-    sha256: 2330042a1c61ef857c5202e82fa61d9e9afd217a8df3011cdb6637f3a4a370e3
-source:
-  url: https://github.com/WebAssembly/wabt/releases/download/1.0.40/wabt-1.0.40.tar.xz
-  sha256: e152b0c348825923df10dc39ca248609dca67ef52c7a1575f3ac61a808603073
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wabt/blobs/sha256:e9f2c887130dd4c7f1aeea5f1a49b38e2f382fd8aaed77f230314db2e2831de3
+        sha256: e9f2c887130dd4c7f1aeea5f1a49b38e2f382fd8aaed77f230314db2e2831de3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wabt/blobs/sha256:2825e7369c2068e1ba6ed713e8064919482347a8a535565c17c578bc40ca8efc
+        sha256: 2825e7369c2068e1ba6ed713e8064919482347a8a535565c17c578bc40ca8efc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wabt/blobs/sha256:12237fca24f1c1aace64b7e6cc5122710a07c9a88d3e911624e1ec9148d6c33d
+        sha256: 12237fca24f1c1aace64b7e6cc5122710a07c9a88d3e911624e1ec9148d6c33d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wabt/blobs/sha256:2330042a1c61ef857c5202e82fa61d9e9afd217a8df3011cdb6637f3a4a370e3
+        sha256: 2330042a1c61ef857c5202e82fa61d9e9afd217a8df3011cdb6637f3a4a370e3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/WebAssembly/wabt/releases/download/1.0.40/wabt-1.0.40.tar.xz
+    sha256: e152b0c348825923df10dc39ca248609dca67ef52c7a1575f3ac61a808603073
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

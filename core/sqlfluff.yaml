@@ -3,26 +3,52 @@ version: 4.1.0
 description: SQL linter and auto-formatter for Humans
 homepage: https://docs.sqlfluff.com/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqlfluff/blobs/sha256:ea40a1cee6310631fc83e3edc1521a08fd5ca190c9fa078f6f621b91cd073a45
-    sha256: ea40a1cee6310631fc83e3edc1521a08fd5ca190c9fa078f6f621b91cd073a45
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqlfluff/blobs/sha256:3291a3d820bcff64450d004448ce1498a299dec3edd37be9a24a64389225279d
-    sha256: 3291a3d820bcff64450d004448ce1498a299dec3edd37be9a24a64389225279d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqlfluff/blobs/sha256:c9d1e5537bd9a5dad34e9b98f53dea5f54e7c70bd8b44eab98844300e53cd2bd
-    sha256: c9d1e5537bd9a5dad34e9b98f53dea5f54e7c70bd8b44eab98844300e53cd2bd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqlfluff/blobs/sha256:92cc9eaff5313a4dc12e86b9e73d70a2dc7b6f0ac4e39162ded031850dcc76ff
-    sha256: 92cc9eaff5313a4dc12e86b9e73d70a2dc7b6f0ac4e39162ded031850dcc76ff
-source:
-  url: https://files.pythonhosted.org/packages/d5/c1/ffe7b97441b8a6febfb8288226344898944fa2007e93779607096e8bc93a/sqlfluff-4.1.0.tar.gz
-  sha256: 83dd4c081afb48c0af861833015a18b13d52726bfe52a286246dbd7a64b7d111
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - python@3.14
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqlfluff/blobs/sha256:3291a3d820bcff64450d004448ce1498a299dec3edd37be9a24a64389225279d
+        sha256: 3291a3d820bcff64450d004448ce1498a299dec3edd37be9a24a64389225279d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqlfluff/blobs/sha256:ea40a1cee6310631fc83e3edc1521a08fd5ca190c9fa078f6f621b91cd073a45
+        sha256: ea40a1cee6310631fc83e3edc1521a08fd5ca190c9fa078f6f621b91cd073a45
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqlfluff/blobs/sha256:c9d1e5537bd9a5dad34e9b98f53dea5f54e7c70bd8b44eab98844300e53cd2bd
+        sha256: c9d1e5537bd9a5dad34e9b98f53dea5f54e7c70bd8b44eab98844300e53cd2bd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqlfluff/blobs/sha256:92cc9eaff5313a4dc12e86b9e73d70a2dc7b6f0ac4e39162ded031850dcc76ff
+        sha256: 92cc9eaff5313a4dc12e86b9e73d70a2dc7b6f0ac4e39162ded031850dcc76ff
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/d5/c1/ffe7b97441b8a6febfb8288226344898944fa2007e93779607096e8bc93a/sqlfluff-4.1.0.tar.gz
+    sha256: 83dd4c081afb48c0af861833015a18b13d52726bfe52a286246dbd7a64b7d111
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

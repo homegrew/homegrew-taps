@@ -3,43 +3,68 @@ version: 2.0.0
 description: Window switcher, application launcher and dmenu replacement
 homepage: https://davatorium.github.io/rofi/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rofi/blobs/sha256:56cf0ce09c7e1c24b44a42074ce27963461dc6f1494a231d67878607cc4445da
-    sha256: 56cf0ce09c7e1c24b44a42074ce27963461dc6f1494a231d67878607cc4445da
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rofi/blobs/sha256:9b93ea8da34ccd6ba683b62e20d354377704b272e5f288fc09e786d549a027f2
-    sha256: 9b93ea8da34ccd6ba683b62e20d354377704b272e5f288fc09e786d549a027f2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rofi/blobs/sha256:fcfbd2f40d45b02ada2b790949354a4b17382edd6fb84a16815f57045e1e6793
-    sha256: fcfbd2f40d45b02ada2b790949354a4b17382edd6fb84a16815f57045e1e6793
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rofi/blobs/sha256:481b5771288fe8bdda79947b5662d8660b3db1d497259bcf251954d3a9ec000d
-    sha256: 481b5771288fe8bdda79947b5662d8660b3db1d497259bcf251954d3a9ec000d
-source:
-  url: https://github.com/davatorium/rofi/releases/download/2.0.0/rofi-2.0.0.tar.gz
-  sha256: f81659b175306ff487e35d88d6b36128e85a793bfb56b64fa22c62eb54c4abd0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - gdk-pixbuf
-  - gettext
-  - glib
-  - harfbuzz
-  - libxcb
-  - libxkbcommon
-  - pango
-  - startup-notification
-  - xcb-util
-  - xcb-util-cursor
-  - xcb-util-wm
-  - xorg-server
+    - cairo
+    - gdk-pixbuf
+    - gettext
+    - glib
+    - harfbuzz
+    - libxcb
+    - libxkbcommon
+    - pango
+    - startup-notification
+    - xcb-util
+    - xcb-util-cursor
+    - xcb-util-wm
+    - xorg-server
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rofi/blobs/sha256:9b93ea8da34ccd6ba683b62e20d354377704b272e5f288fc09e786d549a027f2
+        sha256: 9b93ea8da34ccd6ba683b62e20d354377704b272e5f288fc09e786d549a027f2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rofi/blobs/sha256:56cf0ce09c7e1c24b44a42074ce27963461dc6f1494a231d67878607cc4445da
+        sha256: 56cf0ce09c7e1c24b44a42074ce27963461dc6f1494a231d67878607cc4445da
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rofi/blobs/sha256:fcfbd2f40d45b02ada2b790949354a4b17382edd6fb84a16815f57045e1e6793
+        sha256: fcfbd2f40d45b02ada2b790949354a4b17382edd6fb84a16815f57045e1e6793
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rofi/blobs/sha256:481b5771288fe8bdda79947b5662d8660b3db1d497259bcf251954d3a9ec000d
+        sha256: 481b5771288fe8bdda79947b5662d8660b3db1d497259bcf251954d3a9ec000d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/davatorium/rofi/releases/download/2.0.0/rofi-2.0.0.tar.gz
+    sha256: f81659b175306ff487e35d88d6b36128e85a793bfb56b64fa22c62eb54c4abd0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
-  - check
-  - meson
-  - ninja
-  - pkgconf
+    - bison
+    - check
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,31 +3,56 @@ version: 6.11.0
 description: Provides support for communicating with gRPC services
 homepage: https://www.qt.io/
 license: GPL-3.0-only AND (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtgrpc/blobs/sha256:72c2c4f232f4effad2a39d3b154f23e0f3b35999e882b291a6ebd5e894e780bb
-    sha256: 72c2c4f232f4effad2a39d3b154f23e0f3b35999e882b291a6ebd5e894e780bb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtgrpc/blobs/sha256:bf8e2601a9e60648e5d262facf2d5246358446dda710a4271d5334fde02e01c5
-    sha256: bf8e2601a9e60648e5d262facf2d5246358446dda710a4271d5334fde02e01c5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtgrpc/blobs/sha256:feb06fcd45ec4e4bb7200f423887347318eded9fcb360cf2137dffa302c0b474
-    sha256: feb06fcd45ec4e4bb7200f423887347318eded9fcb360cf2137dffa302c0b474
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtgrpc/blobs/sha256:a1c3ca8353196b43b10856b1c3514f0053d468ef6f29818ad0e0f07f332fa207
-    sha256: a1c3ca8353196b43b10856b1c3514f0053d468ef6f29818ad0e0f07f332fa207
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtgrpc-everywhere-src-6.11.0.tar.xz
-  sha256: 9dedcb51836cd0e8703764f0c89ef5a7da414e0c9a0d67d0d8d6ab17bb94a879
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - protobuf
-  - qtbase
-  - qtdeclarative
+    - abseil
+    - protobuf
+    - qtbase
+    - qtdeclarative
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtgrpc/blobs/sha256:bf8e2601a9e60648e5d262facf2d5246358446dda710a4271d5334fde02e01c5
+        sha256: bf8e2601a9e60648e5d262facf2d5246358446dda710a4271d5334fde02e01c5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtgrpc/blobs/sha256:72c2c4f232f4effad2a39d3b154f23e0f3b35999e882b291a6ebd5e894e780bb
+        sha256: 72c2c4f232f4effad2a39d3b154f23e0f3b35999e882b291a6ebd5e894e780bb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtgrpc/blobs/sha256:feb06fcd45ec4e4bb7200f423887347318eded9fcb360cf2137dffa302c0b474
+        sha256: feb06fcd45ec4e4bb7200f423887347318eded9fcb360cf2137dffa302c0b474
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtgrpc/blobs/sha256:a1c3ca8353196b43b10856b1c3514f0053d468ef6f29818ad0e0f07f332fa207
+        sha256: a1c3ca8353196b43b10856b1c3514f0053d468ef6f29818ad0e0f07f332fa207
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtgrpc-everywhere-src-6.11.0.tar.xz
+    sha256: 9dedcb51836cd0e8703764f0c89ef5a7da414e0c9a0d67d0d8d6ab17bb94a879
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

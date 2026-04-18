@@ -1,28 +1,54 @@
 name: testdisk
-version: 7.2
+version: "7.2"
 description: Powerful free data recovery utility
 homepage: https://www.cgsecurity.org/wiki/TestDisk
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/testdisk/blobs/sha256:e329a6e62f3a3a45d211f502f2d9286e1f33740bae6b63777166f18b2051138c
-    sha256: e329a6e62f3a3a45d211f502f2d9286e1f33740bae6b63777166f18b2051138c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/testdisk/blobs/sha256:381c8a908f2ed4becfa397a6115690108a5e830a331c2def84b7e2f774bf25f1
-    sha256: 381c8a908f2ed4becfa397a6115690108a5e830a331c2def84b7e2f774bf25f1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/testdisk/blobs/sha256:89f05af94ead3d6dacecac6bab3ecbf64fcb3b3147504a1018a620134d211e53
-    sha256: 89f05af94ead3d6dacecac6bab3ecbf64fcb3b3147504a1018a620134d211e53
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/testdisk/blobs/sha256:46e93192d84e0d2321b54d436b1cae92a578b30a062a117ee19184ca1fdf8942
-    sha256: 46e93192d84e0d2321b54d436b1cae92a578b30a062a117ee19184ca1fdf8942
-source:
-  url: https://www.cgsecurity.org/testdisk-7.2.tar.bz2
-  sha256: f8343be20cb4001c5d91a2e3bcd918398f00ae6d8310894a5a9f2feb813c283f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/testdisk/blobs/sha256:381c8a908f2ed4becfa397a6115690108a5e830a331c2def84b7e2f774bf25f1
+        sha256: 381c8a908f2ed4becfa397a6115690108a5e830a331c2def84b7e2f774bf25f1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/testdisk/blobs/sha256:e329a6e62f3a3a45d211f502f2d9286e1f33740bae6b63777166f18b2051138c
+        sha256: e329a6e62f3a3a45d211f502f2d9286e1f33740bae6b63777166f18b2051138c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/testdisk/blobs/sha256:89f05af94ead3d6dacecac6bab3ecbf64fcb3b3147504a1018a620134d211e53
+        sha256: 89f05af94ead3d6dacecac6bab3ecbf64fcb3b3147504a1018a620134d211e53
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/testdisk/blobs/sha256:46e93192d84e0d2321b54d436b1cae92a578b30a062a117ee19184ca1fdf8942
+        sha256: 46e93192d84e0d2321b54d436b1cae92a578b30a062a117ee19184ca1fdf8942
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.cgsecurity.org/testdisk-7.2.tar.bz2
+    sha256: f8343be20cb4001c5d91a2e3bcd918398f00ae6d8310894a5a9f2feb813c283f
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - util-linux
-  - zlib-ng-compat
+    - util-linux
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

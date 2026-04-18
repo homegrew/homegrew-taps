@@ -3,29 +3,54 @@ version: 4.0.0
 description: Source code line counter
 homepage: https://github.com/blackducksoftware/ohcount
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ohcount/blobs/sha256:9615278e57b6c482ce61401b0fedef9bdb322b7a7adb23f86c3322d1bfd18123
-    sha256: 9615278e57b6c482ce61401b0fedef9bdb322b7a7adb23f86c3322d1bfd18123
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ohcount/blobs/sha256:a152e81df3a3a299919fddce7809d4313b3ea1fc518274dcb460cce85055ded3
-    sha256: a152e81df3a3a299919fddce7809d4313b3ea1fc518274dcb460cce85055ded3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ohcount/blobs/sha256:bf23b772fbaf08da94df72051a63eb74562310b9b328c56a60f47b16d2414565
-    sha256: bf23b772fbaf08da94df72051a63eb74562310b9b328c56a60f47b16d2414565
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ohcount/blobs/sha256:40730cf6a816e974616ac45b32abe5fb17b21a06b1d542274f02c44fdf3a834a
-    sha256: 40730cf6a816e974616ac45b32abe5fb17b21a06b1d542274f02c44fdf3a834a
-source:
-  url: https://github.com/blackducksoftware/ohcount/archive/refs/tags/4.0.0.tar.gz
-  sha256: d71f69fd025f5bae58040988108f0d8d84f7204edda1247013cae555bfdae1b9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libmagic
-  - pcre2
-  - ragel
+    - libmagic
+    - pcre2
+    - ragel
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ohcount/blobs/sha256:a152e81df3a3a299919fddce7809d4313b3ea1fc518274dcb460cce85055ded3
+        sha256: a152e81df3a3a299919fddce7809d4313b3ea1fc518274dcb460cce85055ded3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ohcount/blobs/sha256:9615278e57b6c482ce61401b0fedef9bdb322b7a7adb23f86c3322d1bfd18123
+        sha256: 9615278e57b6c482ce61401b0fedef9bdb322b7a7adb23f86c3322d1bfd18123
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ohcount/blobs/sha256:bf23b772fbaf08da94df72051a63eb74562310b9b328c56a60f47b16d2414565
+        sha256: bf23b772fbaf08da94df72051a63eb74562310b9b328c56a60f47b16d2414565
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ohcount/blobs/sha256:40730cf6a816e974616ac45b32abe5fb17b21a06b1d542274f02c44fdf3a834a
+        sha256: 40730cf6a816e974616ac45b32abe5fb17b21a06b1d542274f02c44fdf3a834a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/blackducksoftware/ohcount/archive/refs/tags/4.0.0.tar.gz
+    sha256: d71f69fd025f5bae58040988108f0d8d84f7204edda1247013cae555bfdae1b9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gperf
+    - gperf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

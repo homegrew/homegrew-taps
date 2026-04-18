@@ -1,30 +1,55 @@
 name: kitchen-sync
-version: 2.21
-description: "Fast efficiently sync database without dumping & reloading"
+version: "2.21"
+description: Fast efficiently sync database without dumping & reloading
 homepage: https://github.com/willbryant/kitchen_sync
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kitchen-sync/blobs/sha256:1541f10205f1f95dc6c3e77553abf9292dd90889a1ade99bd3e9ec7242c5be21
-    sha256: 1541f10205f1f95dc6c3e77553abf9292dd90889a1ade99bd3e9ec7242c5be21
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kitchen-sync/blobs/sha256:d5c53943f1d960045b1fbd64124d2004531f9c046b3ed7cae5246b4d813c0cc5
-    sha256: d5c53943f1d960045b1fbd64124d2004531f9c046b3ed7cae5246b4d813c0cc5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kitchen-sync/blobs/sha256:7884a6d66df364341ac6ee59613ed1a1198f8171fbb22a53f2849194cf4ac728
-    sha256: 7884a6d66df364341ac6ee59613ed1a1198f8171fbb22a53f2849194cf4ac728
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kitchen-sync/blobs/sha256:afb7f3f8129476eec9257b88dda07e647af4209af5784b9b3758a37e95786f54
-    sha256: afb7f3f8129476eec9257b88dda07e647af4209af5784b9b3758a37e95786f54
-source:
-  url: https://github.com/willbryant/kitchen_sync/archive/refs/tags/v2.21.tar.gz
-  sha256: 0a2c25001069c90135a91b1cc70c1b9096c3c6e127f6a14f1b45cdbb0c209f09
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpq
-  - mariadb-connector-c
+    - libpq
+    - mariadb-connector-c
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kitchen-sync/blobs/sha256:d5c53943f1d960045b1fbd64124d2004531f9c046b3ed7cae5246b4d813c0cc5
+        sha256: d5c53943f1d960045b1fbd64124d2004531f9c046b3ed7cae5246b4d813c0cc5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kitchen-sync/blobs/sha256:1541f10205f1f95dc6c3e77553abf9292dd90889a1ade99bd3e9ec7242c5be21
+        sha256: 1541f10205f1f95dc6c3e77553abf9292dd90889a1ade99bd3e9ec7242c5be21
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kitchen-sync/blobs/sha256:7884a6d66df364341ac6ee59613ed1a1198f8171fbb22a53f2849194cf4ac728
+        sha256: 7884a6d66df364341ac6ee59613ed1a1198f8171fbb22a53f2849194cf4ac728
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kitchen-sync/blobs/sha256:afb7f3f8129476eec9257b88dda07e647af4209af5784b9b3758a37e95786f54
+        sha256: afb7f3f8129476eec9257b88dda07e647af4209af5784b9b3758a37e95786f54
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/willbryant/kitchen_sync/archive/refs/tags/v2.21.tar.gz
+    sha256: 0a2c25001069c90135a91b1cc70c1b9096c3c6e127f6a14f1b45cdbb0c209f09
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

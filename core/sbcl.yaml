@@ -3,27 +3,52 @@ version: 2.6.3
 description: Steel Bank Common Lisp system
 homepage: https://www.sbcl.org/
 license: LicenseRef-Homebrew-public-domain AND MIT AND Xerox AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sbcl/blobs/sha256:827c8d74236e71fae9d70b6c12eef97a91600f1bb2b37c62d618bcc8b55a91e7
-    sha256: 827c8d74236e71fae9d70b6c12eef97a91600f1bb2b37c62d618bcc8b55a91e7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sbcl/blobs/sha256:169bd86053af6824eaf209569084b6e0d5b8e6cbc6621fc4ac398f6ac0774e03
-    sha256: 169bd86053af6824eaf209569084b6e0d5b8e6cbc6621fc4ac398f6ac0774e03
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sbcl/blobs/sha256:73e15c32771621dbfafc6894b6d4e6fbfa6d46c3547138ad208bfd4b71dec3b0
-    sha256: 73e15c32771621dbfafc6894b6d4e6fbfa6d46c3547138ad208bfd4b71dec3b0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sbcl/blobs/sha256:afb34e28909281ebf2f649a1c8938b6329727672eb258456af855fd8f9f7b416
-    sha256: afb34e28909281ebf2f649a1c8938b6329727672eb258456af855fd8f9f7b416
-source:
-  url: https://downloads.sourceforge.net/project/sbcl/sbcl/2.6.3/sbcl-2.6.3-source.tar.bz2
-  sha256: e7432fb642952dd25a5fc0c56d218f3d0aa596ce42d33efa83091bca7d69988a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - zstd
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sbcl/blobs/sha256:169bd86053af6824eaf209569084b6e0d5b8e6cbc6621fc4ac398f6ac0774e03
+        sha256: 169bd86053af6824eaf209569084b6e0d5b8e6cbc6621fc4ac398f6ac0774e03
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sbcl/blobs/sha256:827c8d74236e71fae9d70b6c12eef97a91600f1bb2b37c62d618bcc8b55a91e7
+        sha256: 827c8d74236e71fae9d70b6c12eef97a91600f1bb2b37c62d618bcc8b55a91e7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sbcl/blobs/sha256:73e15c32771621dbfafc6894b6d4e6fbfa6d46c3547138ad208bfd4b71dec3b0
+        sha256: 73e15c32771621dbfafc6894b6d4e6fbfa6d46c3547138ad208bfd4b71dec3b0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sbcl/blobs/sha256:afb34e28909281ebf2f649a1c8938b6329727672eb258456af855fd8f9f7b416
+        sha256: afb34e28909281ebf2f649a1c8938b6329727672eb258456af855fd8f9f7b416
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/sbcl/sbcl/2.6.3/sbcl-2.6.3-source.tar.bz2
+    sha256: e7432fb642952dd25a5fc0c56d218f3d0aa596ce42d33efa83091bca7d69988a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ecl
+    - ecl
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

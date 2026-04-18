@@ -3,34 +3,59 @@ version: 13.5.0
 description: Automate deployment, configuration, and upgrading
 homepage: https://www.ansible.com/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:255323f38b2bbb52f7a86f9e5309aa0962070dbb78bdab39ffb51f01582d06a7
-    sha256: 255323f38b2bbb52f7a86f9e5309aa0962070dbb78bdab39ffb51f01582d06a7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:e7dec58b2e8f7b3d93438a660b5c1ded745bd7fd96563d39737be80866e7c52a
-    sha256: e7dec58b2e8f7b3d93438a660b5c1ded745bd7fd96563d39737be80866e7c52a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:1a0776879a6a86d7b8aedf2aa75ddf3885ea388c1992dd36428a4c25aee4f89c
-    sha256: 1a0776879a6a86d7b8aedf2aa75ddf3885ea388c1992dd36428a4c25aee4f89c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:d30ad9c0350410d277d08da18388ae3ced4ce4ad933632d654fea532bedd7436
-    sha256: d30ad9c0350410d277d08da18388ae3ced4ce4ad933632d654fea532bedd7436
-source:
-  url: https://files.pythonhosted.org/packages/e0/de/07e07221bb555a1cb3506135377923ce4caefe8306f5ca6431801738b74a/ansible-13.5.0.tar.gz
-  sha256: 69b175e694d9511fec838b0a82f150bab366dd9cb7a829096c3d3a72f6046719
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - libsodium
-  - libssh
-  - libyaml
-  - python@3.14
-  - tree
+    - certifi
+    - cryptography
+    - libsodium
+    - libssh
+    - libyaml
+    - python@3.14
+    - tree
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:e7dec58b2e8f7b3d93438a660b5c1ded745bd7fd96563d39737be80866e7c52a
+        sha256: e7dec58b2e8f7b3d93438a660b5c1ded745bd7fd96563d39737be80866e7c52a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:255323f38b2bbb52f7a86f9e5309aa0962070dbb78bdab39ffb51f01582d06a7
+        sha256: 255323f38b2bbb52f7a86f9e5309aa0962070dbb78bdab39ffb51f01582d06a7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:1a0776879a6a86d7b8aedf2aa75ddf3885ea388c1992dd36428a4c25aee4f89c
+        sha256: 1a0776879a6a86d7b8aedf2aa75ddf3885ea388c1992dd36428a4c25aee4f89c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:d30ad9c0350410d277d08da18388ae3ced4ce4ad933632d654fea532bedd7436
+        sha256: d30ad9c0350410d277d08da18388ae3ced4ce4ad933632d654fea532bedd7436
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/e0/de/07e07221bb555a1cb3506135377923ce4caefe8306f5ca6431801738b74a/ansible-13.5.0.tar.gz
+    sha256: 69b175e694d9511fec838b0a82f150bab366dd9cb7a829096c3d3a72f6046719
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,49 +3,72 @@ version: 8.0.45
 description: Open source relational database management system
 homepage: https://github.com/mysql/mysql-server
 license: GPL-2.0-only WITH Universal-FOSS-exception-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:f9f22a31ea9b1605ffd859b452d79c8b9a6970e0ac24962fab34dfa258a26fa7
-    sha256: f9f22a31ea9b1605ffd859b452d79c8b9a6970e0ac24962fab34dfa258a26fa7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:c1a474b14edf0471368c5a3609391c5fa6b150ac61b0d904f1a2307138567ee3
-    sha256: c1a474b14edf0471368c5a3609391c5fa6b150ac61b0d904f1a2307138567ee3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:4a8be95a47ccb21b241795ab88c8df1a63bb1eb158bb7e994bcef52afd8c88d7
-    sha256: 4a8be95a47ccb21b241795ab88c8df1a63bb1eb158bb7e994bcef52afd8c88d7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:d08eb99b8f65367f7e5b9464f5d489f9e7055e25f6911c8e0703ceef7fc81005
-    sha256: d08eb99b8f65367f7e5b9464f5d489f9e7055e25f6911c8e0703ceef7fc81005
-source:
-  url: https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.45.tar.gz
-  sha256: f679707d05f0c2b61e9b14961302e7f540c23e9e5e2bffd8ad9193599e295cee
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - icu4c@78
-  - libevent
-  - libfido2
-  - lz4
-  - openssl@3
-  - protobuf
-  - zlib-ng-compat
-  - zstd
-build_dependencies:
-  - bison
-  - cmake
-  - pkgconf
-linux_dependencies:
-  - abseil
-  - icu4c@78
-  - libevent
-  - libfido2
-  - libtirpc
-  - lz4
-  - openssl@3
-  - protobuf
-  - zlib-ng-compat
-  - zstd
+    - abseil
+    - icu4c@78
+    - libevent
+    - libfido2
+    - lz4
+    - openssl@3
+    - protobuf
+    - zlib-ng-compat
+    - zstd
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:c1a474b14edf0471368c5a3609391c5fa6b150ac61b0d904f1a2307138567ee3
+        sha256: c1a474b14edf0471368c5a3609391c5fa6b150ac61b0d904f1a2307138567ee3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:f9f22a31ea9b1605ffd859b452d79c8b9a6970e0ac24962fab34dfa258a26fa7
+        sha256: f9f22a31ea9b1605ffd859b452d79c8b9a6970e0ac24962fab34dfa258a26fa7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:4a8be95a47ccb21b241795ab88c8df1a63bb1eb158bb7e994bcef52afd8c88d7
+        sha256: 4a8be95a47ccb21b241795ab88c8df1a63bb1eb158bb7e994bcef52afd8c88d7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:d08eb99b8f65367f7e5b9464f5d489f9e7055e25f6911c8e0703ceef7fc81005
+        sha256: d08eb99b8f65367f7e5b9464f5d489f9e7055e25f6911c8e0703ceef7fc81005
+        sha512: ""
+        signature: ""
+source:
+    url: https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.45.tar.gz
+    sha256: f679707d05f0c2b61e9b14961302e7f540c23e9e5e2bffd8ad9193599e295cee
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - bison
+    - cmake
+    - pkgconf
+linux_dependencies:
+    - abseil
+    - icu4c@78
+    - libevent
+    - libfido2
+    - libtirpc
+    - lz4
+    - openssl@3
+    - protobuf
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

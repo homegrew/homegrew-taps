@@ -3,32 +3,56 @@ version: 2.8.0
 description: Neovim support for Agda
 homepage: https://github.com/agda/cornelis
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cornelis/blobs/sha256:3ab116742d0b8c90533803a535510040520b1a90d8e0b68e9a9d10fc6ca065af
-    sha256: 3ab116742d0b8c90533803a535510040520b1a90d8e0b68e9a9d10fc6ca065af
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cornelis/blobs/sha256:05c0bca472d34b3ab32a48d4e67005584e2be329c93996817029724ffb857547
-    sha256: 05c0bca472d34b3ab32a48d4e67005584e2be329c93996817029724ffb857547
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cornelis/blobs/sha256:26837b1b79f08ab9ed366fd425cabec1d927cea8ba6d3355480c8e324be9476f
-    sha256: 26837b1b79f08ab9ed366fd425cabec1d927cea8ba6d3355480c8e324be9476f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cornelis/blobs/sha256:681e3180af2e1f4bd4c88f2ecaf47b73c5cf3999bfbe61fe9497bc3e618ebef0
-    sha256: 681e3180af2e1f4bd4c88f2ecaf47b73c5cf3999bfbe61fe9497bc3e618ebef0
-source:
-  url: https://github.com/agda/cornelis/archive/refs/tags/v2.8.0.tar.gz
-  sha256: 41787428319dbde15b51ce427451d4a48f14d54a7c42902d004458e232ca3022
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cornelis/blobs/sha256:05c0bca472d34b3ab32a48d4e67005584e2be329c93996817029724ffb857547
+        sha256: 05c0bca472d34b3ab32a48d4e67005584e2be329c93996817029724ffb857547
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cornelis/blobs/sha256:3ab116742d0b8c90533803a535510040520b1a90d8e0b68e9a9d10fc6ca065af
+        sha256: 3ab116742d0b8c90533803a535510040520b1a90d8e0b68e9a9d10fc6ca065af
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cornelis/blobs/sha256:26837b1b79f08ab9ed366fd425cabec1d927cea8ba6d3355480c8e324be9476f
+        sha256: 26837b1b79f08ab9ed366fd425cabec1d927cea8ba6d3355480c8e324be9476f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cornelis/blobs/sha256:681e3180af2e1f4bd4c88f2ecaf47b73c5cf3999bfbe61fe9497bc3e618ebef0
+        sha256: 681e3180af2e1f4bd4c88f2ecaf47b73c5cf3999bfbe61fe9497bc3e618ebef0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/agda/cornelis/archive/refs/tags/v2.8.0.tar.gz
+    sha256: 41787428319dbde15b51ce427451d4a48f14d54a7c42902d004458e232ca3022
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
-  - hpack
+    - cabal-install
+    - ghc
+    - hpack
 linux_dependencies:
-  - gmp
-  - zlib-ng-compat
+    - gmp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

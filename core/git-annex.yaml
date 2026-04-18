@@ -1,36 +1,60 @@
 name: git-annex
-version: 10.20260316
+version: "10.20260316"
 description: Manage files with git without checking in file contents
 homepage: https://git-annex.branchable.com/
 license: AGPL-3.0-or-later AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-only AND GPL-3.0-or-later AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:4c9f1f4ba2287c46bfa5bf7ea11ebd01037d8c23550126f00002f65545cb8e89
-    sha256: 4c9f1f4ba2287c46bfa5bf7ea11ebd01037d8c23550126f00002f65545cb8e89
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:23af7c516480886ae64808f05da065916f97a0301f74213a855a013a667ed3eb
-    sha256: 23af7c516480886ae64808f05da065916f97a0301f74213a855a013a667ed3eb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:72200aea0a9830d129c422ad80740677169d79ba772bf7399a0d6580024e63c6
-    sha256: 72200aea0a9830d129c422ad80740677169d79ba772bf7399a0d6580024e63c6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:9656a28504a99b889c810173a4e42d565b5c29bb2ba2e95a155343a3f14da94d
-    sha256: 9656a28504a99b889c810173a4e42d565b5c29bb2ba2e95a155343a3f14da94d
-source:
-  url: https://hackage.haskell.org/package/git-annex-10.20260316/git-annex-10.20260316.tar.gz
-  sha256: 57c36e06aa97ed950bb59a050b85ebdc8748220c2457b4dbb10163d2cb57f009
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - libmagic
+    - gmp
+    - libmagic
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:23af7c516480886ae64808f05da065916f97a0301f74213a855a013a667ed3eb
+        sha256: 23af7c516480886ae64808f05da065916f97a0301f74213a855a013a667ed3eb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:4c9f1f4ba2287c46bfa5bf7ea11ebd01037d8c23550126f00002f65545cb8e89
+        sha256: 4c9f1f4ba2287c46bfa5bf7ea11ebd01037d8c23550126f00002f65545cb8e89
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:72200aea0a9830d129c422ad80740677169d79ba772bf7399a0d6580024e63c6
+        sha256: 72200aea0a9830d129c422ad80740677169d79ba772bf7399a0d6580024e63c6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:9656a28504a99b889c810173a4e42d565b5c29bb2ba2e95a155343a3f14da94d
+        sha256: 9656a28504a99b889c810173a4e42d565b5c29bb2ba2e95a155343a3f14da94d
+        sha512: ""
+        signature: ""
+source:
+    url: https://hackage.haskell.org/package/git-annex-10.20260316/git-annex-10.20260316.tar.gz
+    sha256: 57c36e06aa97ed950bb59a050b85ebdc8748220c2457b4dbb10163d2cb57f009
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
-  - pkgconf
+    - cabal-install
+    - ghc
+    - pkgconf
 linux_dependencies:
-  - gmp
-  - libmagic
-  - zlib-ng-compat
+    - gmp
+    - libmagic
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,32 +3,56 @@ version: 0.19.2
 description: Terminal markdown viewer
 homepage: https://github.com/benjajaja/mdfried
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:4e5d6d5dd979fc684117dbf90387975e15ea8e3f9771d8b4feef283dce02f889
-    sha256: 4e5d6d5dd979fc684117dbf90387975e15ea8e3f9771d8b4feef283dce02f889
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:2ce179ab2bf9dd06853717321ac9769eadddc3bb3b029314f32929b79163960d
-    sha256: 2ce179ab2bf9dd06853717321ac9769eadddc3bb3b029314f32929b79163960d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:39691e970db7506124ccce2cd722f79a5415630491583e8049b4ab65c9473b5d
-    sha256: 39691e970db7506124ccce2cd722f79a5415630491583e8049b4ab65c9473b5d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:da8a5c4ea556bc045059599eb320a807101db7a9823236d8344b3c5c3615ccb9
-    sha256: da8a5c4ea556bc045059599eb320a807101db7a9823236d8344b3c5c3615ccb9
-source:
-  url: https://github.com/benjajaja/mdfried/archive/refs/tags/v0.19.2.tar.gz
-  sha256: 7d1bb0f157c6fb05877deb26ca1e733128708fc5b60959967c0dd297b7ed7840
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - chafa
-  - gettext
-  - glib
+    - chafa
+    - gettext
+    - glib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:2ce179ab2bf9dd06853717321ac9769eadddc3bb3b029314f32929b79163960d
+        sha256: 2ce179ab2bf9dd06853717321ac9769eadddc3bb3b029314f32929b79163960d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:4e5d6d5dd979fc684117dbf90387975e15ea8e3f9771d8b4feef283dce02f889
+        sha256: 4e5d6d5dd979fc684117dbf90387975e15ea8e3f9771d8b4feef283dce02f889
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:39691e970db7506124ccce2cd722f79a5415630491583e8049b4ab65c9473b5d
+        sha256: 39691e970db7506124ccce2cd722f79a5415630491583e8049b4ab65c9473b5d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mdfried/blobs/sha256:da8a5c4ea556bc045059599eb320a807101db7a9823236d8344b3c5c3615ccb9
+        sha256: da8a5c4ea556bc045059599eb320a807101db7a9823236d8344b3c5c3615ccb9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/benjajaja/mdfried/archive/refs/tags/v0.19.2.tar.gz
+    sha256: 7d1bb0f157c6fb05877deb26ca1e733128708fc5b60959967c0dd297b7ed7840
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - chafa
+    - chafa
+build:
+    configure: []
+    install: []
+service: null

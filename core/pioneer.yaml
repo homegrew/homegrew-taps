@@ -1,47 +1,71 @@
 name: pioneer
-version: 20260203
+version: "20260203"
 description: Game of lonely space adventure
 homepage: https://pioneerspacesim.net/
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pioneer/blobs/sha256:7ae2eb5796a4910a15bd829f3fddf5ca9cd053f5728c3efbc2685642ed13b5b6
-    sha256: 7ae2eb5796a4910a15bd829f3fddf5ca9cd053f5728c3efbc2685642ed13b5b6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pioneer/blobs/sha256:7f1425f262ba4e222d0e28249b560a910011bb6ee3c2ae0c4ccb799dd063328f
-    sha256: 7f1425f262ba4e222d0e28249b560a910011bb6ee3c2ae0c4ccb799dd063328f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pioneer/blobs/sha256:70ae3174bf568ea87f9a65dfb766b246e66ff09529bc30724d79c34760c91ee1
-    sha256: 70ae3174bf568ea87f9a65dfb766b246e66ff09529bc30724d79c34760c91ee1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pioneer/blobs/sha256:23bf36101661131d354b456e8258be52a359a53c3d4ca80941d7719bb2e00102
-    sha256: 23bf36101661131d354b456e8258be52a359a53c3d4ca80941d7719bb2e00102
-source:
-  url: https://github.com/pioneerspacesim/pioneer/archive/refs/tags/20260203.tar.gz
-  sha256: 861341d317fc0ca506e3a2e8ff00858983652a5656289f8fe9ad1525df1a95da
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - assimp
-  - freetype
-  - glew
-  - libpng
-  - libsigc++@2
-  - libvorbis
-  - sdl2
-  - sdl2_image
+    - assimp
+    - freetype
+    - glew
+    - libpng
+    - libsigc++@2
+    - libvorbis
+    - sdl2
+    - sdl2_image
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pioneer/blobs/sha256:7f1425f262ba4e222d0e28249b560a910011bb6ee3c2ae0c4ccb799dd063328f
+        sha256: 7f1425f262ba4e222d0e28249b560a910011bb6ee3c2ae0c4ccb799dd063328f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pioneer/blobs/sha256:7ae2eb5796a4910a15bd829f3fddf5ca9cd053f5728c3efbc2685642ed13b5b6
+        sha256: 7ae2eb5796a4910a15bd829f3fddf5ca9cd053f5728c3efbc2685642ed13b5b6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pioneer/blobs/sha256:70ae3174bf568ea87f9a65dfb766b246e66ff09529bc30724d79c34760c91ee1
+        sha256: 70ae3174bf568ea87f9a65dfb766b246e66ff09529bc30724d79c34760c91ee1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pioneer/blobs/sha256:23bf36101661131d354b456e8258be52a359a53c3d4ca80941d7719bb2e00102
+        sha256: 23bf36101661131d354b456e8258be52a359a53c3d4ca80941d7719bb2e00102
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pioneerspacesim/pioneer/archive/refs/tags/20260203.tar.gz
+    sha256: 861341d317fc0ca506e3a2e8ff00858983652a5656289f8fe9ad1525df1a95da
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - assimp
-  - freetype
-  - glew
-  - libpng
-  - libsigc++@2
-  - libvorbis
-  - mesa
-  - sdl2
-  - sdl2_image
+    - assimp
+    - freetype
+    - glew
+    - libpng
+    - libsigc++@2
+    - libvorbis
+    - mesa
+    - sdl2
+    - sdl2_image
+build:
+    configure: []
+    install: []
+service: null

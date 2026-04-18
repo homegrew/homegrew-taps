@@ -3,31 +3,57 @@ version: 2.3.3
 description: Graphics library to dynamically manipulate images
 homepage: https://libgd.github.io/
 license: GD
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gd/blobs/sha256:db4a448757d199dc1a925c0d0b36a990c8126ab81cf6a634374cd7307d042fb0
-    sha256: db4a448757d199dc1a925c0d0b36a990c8126ab81cf6a634374cd7307d042fb0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gd/blobs/sha256:7bc1099e53432209a4c5da106c8105e0f8e95728a6cc77438e2761c8b6fcf05b
-    sha256: 7bc1099e53432209a4c5da106c8105e0f8e95728a6cc77438e2761c8b6fcf05b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gd/blobs/sha256:da124ea2c614748107f9683ed08afa140d98a5d429332137f4f6ce17460360ec
-    sha256: da124ea2c614748107f9683ed08afa140d98a5d429332137f4f6ce17460360ec
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gd/blobs/sha256:dd5992ca69dd7f7e38228b403e1e4297b56eee6850a7b59a592da2130d158ec7
-    sha256: dd5992ca69dd7f7e38228b403e1e4297b56eee6850a7b59a592da2130d158ec7
-source:
-  url: https://github.com/libgd/libgd/releases/download/gd-2.3.3/libgd-2.3.3.tar.xz
-  sha256: 3fe822ece20796060af63b7c60acb151e5844204d289da0ce08f8fdf131e5a61
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fontconfig
-  - freetype
-  - jpeg-turbo
-  - libavif
-  - libpng
-  - libtiff
-  - webp
+    - fontconfig
+    - freetype
+    - jpeg-turbo
+    - libavif
+    - libpng
+    - libtiff
+    - webp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gd/blobs/sha256:7bc1099e53432209a4c5da106c8105e0f8e95728a6cc77438e2761c8b6fcf05b
+        sha256: 7bc1099e53432209a4c5da106c8105e0f8e95728a6cc77438e2761c8b6fcf05b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gd/blobs/sha256:db4a448757d199dc1a925c0d0b36a990c8126ab81cf6a634374cd7307d042fb0
+        sha256: db4a448757d199dc1a925c0d0b36a990c8126ab81cf6a634374cd7307d042fb0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gd/blobs/sha256:da124ea2c614748107f9683ed08afa140d98a5d429332137f4f6ce17460360ec
+        sha256: da124ea2c614748107f9683ed08afa140d98a5d429332137f4f6ce17460360ec
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gd/blobs/sha256:dd5992ca69dd7f7e38228b403e1e4297b56eee6850a7b59a592da2130d158ec7
+        sha256: dd5992ca69dd7f7e38228b403e1e4297b56eee6850a7b59a592da2130d158ec7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libgd/libgd/releases/download/gd-2.3.3/libgd-2.3.3.tar.xz
+    sha256: 3fe822ece20796060af63b7c60acb151e5844204d289da0ce08f8fdf131e5a61
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

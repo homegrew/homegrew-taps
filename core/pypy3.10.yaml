@@ -3,32 +3,57 @@ version: 7.3.17
 description: Implementation of Python 3 in Python
 homepage: https://pypy.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:de425a276a64d92a0e2d69d589753d119733d0e3cc18aa985ae329aaf1bfa910
-    sha256: de425a276a64d92a0e2d69d589753d119733d0e3cc18aa985ae329aaf1bfa910
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
-    sha256: cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:c4032a756625270ffb7945d97b0116ac7e9acb1e5731eab7590241874f2fb12d
-    sha256: c4032a756625270ffb7945d97b0116ac7e9acb1e5731eab7590241874f2fb12d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:6c838f8f2bde36ec834a8d390cd441e75aec83b1cc21126e8e974e05024a5d09
-    sha256: 6c838f8f2bde36ec834a8d390cd441e75aec83b1cc21126e8e974e05024a5d09
-source:
-  url: https://downloads.python.org/pypy/pypy3.10-v7.3.17-src.tar.bz2
-  sha256: 6ad74bc578e9c6d3a8a1c51503313058e3c58c35df86f7485453c4be6ab24bf7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gdbm
-  - openssl@3
-  - sqlite
-  - tcl-tk@8
-  - xz
+    - gdbm
+    - openssl@3
+    - sqlite
+    - tcl-tk@8
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
+        sha256: cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:de425a276a64d92a0e2d69d589753d119733d0e3cc18aa985ae329aaf1bfa910
+        sha256: de425a276a64d92a0e2d69d589753d119733d0e3cc18aa985ae329aaf1bfa910
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:c4032a756625270ffb7945d97b0116ac7e9acb1e5731eab7590241874f2fb12d
+        sha256: c4032a756625270ffb7945d97b0116ac7e9acb1e5731eab7590241874f2fb12d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:6c838f8f2bde36ec834a8d390cd441e75aec83b1cc21126e8e974e05024a5d09
+        sha256: 6c838f8f2bde36ec834a8d390cd441e75aec83b1cc21126e8e974e05024a5d09
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.python.org/pypy/pypy3.10-v7.3.17-src.tar.bz2
+    sha256: 6ad74bc578e9c6d3a8a1c51503313058e3c58c35df86f7485453c4be6ab24bf7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - pypy
+    - pkgconf
+    - pypy
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

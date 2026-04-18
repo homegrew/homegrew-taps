@@ -3,56 +3,79 @@ version: 24.15.0
 description: Open-source, cross-platform JavaScript runtime environment
 homepage: https://nodejs.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:f08293c7e6496ffe8191d051d5cf8786b614ecab5825b824ba8e9031aa517d25
-    sha256: f08293c7e6496ffe8191d051d5cf8786b614ecab5825b824ba8e9031aa517d25
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:afc81a9ee3c219d3054da056b19d653dc39e6fc396c9d531b0d03988f56b1884
-    sha256: afc81a9ee3c219d3054da056b19d653dc39e6fc396c9d531b0d03988f56b1884
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:5fac5be0f58fd355c54dd71ebce48b49309c078b4f15098e201054611ea7be3a
-    sha256: 5fac5be0f58fd355c54dd71ebce48b49309c078b4f15098e201054611ea7be3a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:420f56970527dc9e47f1024edc47435ccf389532e0fde6a6b1e6b14ffefc70c8
-    sha256: 420f56970527dc9e47f1024edc47435ccf389532e0fde6a6b1e6b14ffefc70c8
-source:
-  url: https://nodejs.org/dist/v24.15.0/node-v24.15.0.tar.xz
-  sha256: a4f653d79ed140aaad921e8c22a3b585ca85cfdab80d4030f6309e4663a8a1c8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - brotli
-  - c-ares
-  - hdrhistogram_c
-  - icu4c@78
-  - libnghttp2
-  - libnghttp3
-  - libngtcp2
-  - libuv
-  - openssl@3
-  - simdjson
-  - sqlite
-  - uvwasi
-  - zstd
-build_dependencies:
-  - pkgconf
-  - python@3.13
-linux_dependencies:
-  - brotli
-  - c-ares
-  - hdrhistogram_c
-  - icu4c@78
-  - libnghttp2
-  - libnghttp3
-  - libngtcp2
-  - libuv
-  - openssl@3
-  - simdjson
-  - sqlite
-  - uvwasi
-  - zlib-ng-compat
-  - zstd
+    - brotli
+    - c-ares
+    - hdrhistogram_c
+    - icu4c@78
+    - libnghttp2
+    - libnghttp3
+    - libngtcp2
+    - libuv
+    - openssl@3
+    - simdjson
+    - sqlite
+    - uvwasi
+    - zstd
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:afc81a9ee3c219d3054da056b19d653dc39e6fc396c9d531b0d03988f56b1884
+        sha256: afc81a9ee3c219d3054da056b19d653dc39e6fc396c9d531b0d03988f56b1884
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:f08293c7e6496ffe8191d051d5cf8786b614ecab5825b824ba8e9031aa517d25
+        sha256: f08293c7e6496ffe8191d051d5cf8786b614ecab5825b824ba8e9031aa517d25
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:5fac5be0f58fd355c54dd71ebce48b49309c078b4f15098e201054611ea7be3a
+        sha256: 5fac5be0f58fd355c54dd71ebce48b49309c078b4f15098e201054611ea7be3a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/node/24/blobs/sha256:420f56970527dc9e47f1024edc47435ccf389532e0fde6a6b1e6b14ffefc70c8
+        sha256: 420f56970527dc9e47f1024edc47435ccf389532e0fde6a6b1e6b14ffefc70c8
+        sha512: ""
+        signature: ""
+source:
+    url: https://nodejs.org/dist/v24.15.0/node-v24.15.0.tar.xz
+    sha256: a4f653d79ed140aaad921e8c22a3b585ca85cfdab80d4030f6309e4663a8a1c8
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+    - python@3.13
+linux_dependencies:
+    - brotli
+    - c-ares
+    - hdrhistogram_c
+    - icu4c@78
+    - libnghttp2
+    - libnghttp3
+    - libngtcp2
+    - libuv
+    - openssl@3
+    - simdjson
+    - sqlite
+    - uvwasi
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

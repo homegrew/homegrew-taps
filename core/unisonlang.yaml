@@ -3,31 +3,56 @@ version: 1.2.0
 description: Friendly programming language from the future
 homepage: https://unison-lang.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unisonlang/blobs/sha256:98936d34a386126a0aa4fc9a31deee125d8fb4614c1efa1259a3612551ac2358
-    sha256: 98936d34a386126a0aa4fc9a31deee125d8fb4614c1efa1259a3612551ac2358
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unisonlang/blobs/sha256:28d7f7349b8ef6e04d2cc5e294aac0b45864b527fdbb8811406288383cbc2813
-    sha256: 28d7f7349b8ef6e04d2cc5e294aac0b45864b527fdbb8811406288383cbc2813
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unisonlang/blobs/sha256:737989266a2649eeac5e8698e6fa0cb50a68043c2766ab577434664eccba6558
-    sha256: 737989266a2649eeac5e8698e6fa0cb50a68043c2766ab577434664eccba6558
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unisonlang/blobs/sha256:e9fd6b7a209f23f16e66159d9fc823f9f74bf209c7d08239a1bb2089fd5404b6
-    sha256: e9fd6b7a209f23f16e66159d9fc823f9f74bf209c7d08239a1bb2089fd5404b6
-source:
-  url: https://github.com/unisonweb/unison/archive/refs/tags/release/1.2.0.tar.gz
-  sha256: 743c359b1a214ca33dbf8d3276298e59c5c41cddef0fbe987d05aedbbe949273
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unisonlang/blobs/sha256:28d7f7349b8ef6e04d2cc5e294aac0b45864b527fdbb8811406288383cbc2813
+        sha256: 28d7f7349b8ef6e04d2cc5e294aac0b45864b527fdbb8811406288383cbc2813
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unisonlang/blobs/sha256:98936d34a386126a0aa4fc9a31deee125d8fb4614c1efa1259a3612551ac2358
+        sha256: 98936d34a386126a0aa4fc9a31deee125d8fb4614c1efa1259a3612551ac2358
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unisonlang/blobs/sha256:737989266a2649eeac5e8698e6fa0cb50a68043c2766ab577434664eccba6558
+        sha256: 737989266a2649eeac5e8698e6fa0cb50a68043c2766ab577434664eccba6558
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unisonlang/blobs/sha256:e9fd6b7a209f23f16e66159d9fc823f9f74bf209c7d08239a1bb2089fd5404b6
+        sha256: e9fd6b7a209f23f16e66159d9fc823f9f74bf209c7d08239a1bb2089fd5404b6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/unisonweb/unison/archive/refs/tags/release/1.2.0.tar.gz
+    sha256: 743c359b1a214ca33dbf8d3276298e59c5c41cddef0fbe987d05aedbbe949273
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - elm
-  - elm-format
-  - ghc@9.10
-  - haskell-stack
-  - node
+    - elm
+    - elm-format
+    - ghc@9.10
+    - haskell-stack
+    - node
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

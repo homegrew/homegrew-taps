@@ -3,26 +3,52 @@ version: 18.15.2
 description: Sync server for atuin - Improved shell history for zsh, bash, fish and nushell
 homepage: https://atuin.sh
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/atuin-server/blobs/sha256:60d9d0bdf1ca670008a6421ec271daf2f4e5df1747379266f9ce7430545e1873
-    sha256: 60d9d0bdf1ca670008a6421ec271daf2f4e5df1747379266f9ce7430545e1873
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/atuin-server/blobs/sha256:06856538eb53b070b7ad08822c465682f3857c963f124c5687a7080c48f8e5c2
-    sha256: 06856538eb53b070b7ad08822c465682f3857c963f124c5687a7080c48f8e5c2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/atuin-server/blobs/sha256:9e8fcbc5030595691354bb333b1bb0b398acde0497c0d3b19ab94891dc9864e1
-    sha256: 9e8fcbc5030595691354bb333b1bb0b398acde0497c0d3b19ab94891dc9864e1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/atuin-server/blobs/sha256:bbcedcfbfd719b435f9424cb56982dca6efb62c51120f88f6b654884aebb043e
-    sha256: bbcedcfbfd719b435f9424cb56982dca6efb62c51120f88f6b654884aebb043e
-source:
-  url: https://github.com/atuinsh/atuin/releases/download/v18.15.2/source.tar.gz
-  sha256: ede9b9640392c8688f22ab0e252de3b2b047dd0824c62d31a32c7462ddcb56aa
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/atuin-server/blobs/sha256:06856538eb53b070b7ad08822c465682f3857c963f124c5687a7080c48f8e5c2
+        sha256: 06856538eb53b070b7ad08822c465682f3857c963f124c5687a7080c48f8e5c2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/atuin-server/blobs/sha256:60d9d0bdf1ca670008a6421ec271daf2f4e5df1747379266f9ce7430545e1873
+        sha256: 60d9d0bdf1ca670008a6421ec271daf2f4e5df1747379266f9ce7430545e1873
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/atuin-server/blobs/sha256:9e8fcbc5030595691354bb333b1bb0b398acde0497c0d3b19ab94891dc9864e1
+        sha256: 9e8fcbc5030595691354bb333b1bb0b398acde0497c0d3b19ab94891dc9864e1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/atuin-server/blobs/sha256:bbcedcfbfd719b435f9424cb56982dca6efb62c51120f88f6b654884aebb043e
+        sha256: bbcedcfbfd719b435f9424cb56982dca6efb62c51120f88f6b654884aebb043e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/atuinsh/atuin/releases/download/v18.15.2/source.tar.gz
+    sha256: ede9b9640392c8688f22ab0e252de3b2b047dd0824c62d31a32c7462ddcb56aa
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - protobuf
-  - rust
+    - protobuf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,32 +3,57 @@ version: 6.11.0
 description: QML, Qt Quick and several related modules
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND BSD-2-Clause AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtdeclarative/blobs/sha256:6f557e598b3bf669684d83108c38ecb1f48d09e8d839f84250d5eac7d1f48668
-    sha256: 6f557e598b3bf669684d83108c38ecb1f48d09e8d839f84250d5eac7d1f48668
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtdeclarative/blobs/sha256:e31f983a649e5df483fc894c9db88a8ab8e6de48d1ffcb3d6f49a06d0b695b35
-    sha256: e31f983a649e5df483fc894c9db88a8ab8e6de48d1ffcb3d6f49a06d0b695b35
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtdeclarative/blobs/sha256:ba1dd1467beeb9872fec5a5163fead19abead4a3ca7fc5803ada7203578602e4
-    sha256: ba1dd1467beeb9872fec5a5163fead19abead4a3ca7fc5803ada7203578602e4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtdeclarative/blobs/sha256:89bc2ebb7a623fc377807e39e8f5f71c7cf48a8577ede31a178fe160904d3f34
-    sha256: 89bc2ebb7a623fc377807e39e8f5f71c7cf48a8577ede31a178fe160904d3f34
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtdeclarative-everywhere-src-6.11.0.tar.xz
-  sha256: 4eece569431ddf8324e7d322fa27001916570b23df535f8fb28aba445eedfde9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
-  - qtsvg
+    - qtbase
+    - qtsvg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtdeclarative/blobs/sha256:e31f983a649e5df483fc894c9db88a8ab8e6de48d1ffcb3d6f49a06d0b695b35
+        sha256: e31f983a649e5df483fc894c9db88a8ab8e6de48d1ffcb3d6f49a06d0b695b35
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtdeclarative/blobs/sha256:6f557e598b3bf669684d83108c38ecb1f48d09e8d839f84250d5eac7d1f48668
+        sha256: 6f557e598b3bf669684d83108c38ecb1f48d09e8d839f84250d5eac7d1f48668
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtdeclarative/blobs/sha256:ba1dd1467beeb9872fec5a5163fead19abead4a3ca7fc5803ada7203578602e4
+        sha256: ba1dd1467beeb9872fec5a5163fead19abead4a3ca7fc5803ada7203578602e4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtdeclarative/blobs/sha256:89bc2ebb7a623fc377807e39e8f5f71c7cf48a8577ede31a178fe160904d3f34
+        sha256: 89bc2ebb7a623fc377807e39e8f5f71c7cf48a8577ede31a178fe160904d3f34
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtdeclarative-everywhere-src-6.11.0.tar.xz
+    sha256: 4eece569431ddf8324e7d322fa27001916570b23df535f8fb28aba445eedfde9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - qtlanguageserver
-  - qtshadertools
-  - vulkan-headers
+    - cmake
+    - ninja
+    - qtlanguageserver
+    - qtshadertools
+    - vulkan-headers
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

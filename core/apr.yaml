@@ -3,26 +3,51 @@ version: 1.7.6
 description: Apache Portable Runtime library
 homepage: https://apr.apache.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:a8dbcf3f996ba1148b936081612ff5228cb4ba5a08de6635a695bd9ec6963266
-    sha256: a8dbcf3f996ba1148b936081612ff5228cb4ba5a08de6635a695bd9ec6963266
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:fdf0f628598225db7ea43128abaf944011df61e2469811709c250607745b8570
-    sha256: fdf0f628598225db7ea43128abaf944011df61e2469811709c250607745b8570
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:a52537b5ff653a7c477dd67be99faeb1684d3002cd9afe6c24501118083a6154
-    sha256: a52537b5ff653a7c477dd67be99faeb1684d3002cd9afe6c24501118083a6154
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:ee70c4b7041ea9743a1f87c8c0c9dc14e7a3372ab5d5e073912913b83cf2bcc3
-    sha256: ee70c4b7041ea9743a1f87c8c0c9dc14e7a3372ab5d5e073912913b83cf2bcc3
-source:
-  url: https://www.apache.org/dyn/closer.lua?path=apr/apr-1.7.6.tar.bz2
-  sha256: 49030d92d2575da735791b496dc322f3ce5cff9494779ba8cc28c7f46c5deb32
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
-linux_dependencies:
-  - util-linux
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:fdf0f628598225db7ea43128abaf944011df61e2469811709c250607745b8570
+        sha256: fdf0f628598225db7ea43128abaf944011df61e2469811709c250607745b8570
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:a8dbcf3f996ba1148b936081612ff5228cb4ba5a08de6635a695bd9ec6963266
+        sha256: a8dbcf3f996ba1148b936081612ff5228cb4ba5a08de6635a695bd9ec6963266
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:a52537b5ff653a7c477dd67be99faeb1684d3002cd9afe6c24501118083a6154
+        sha256: a52537b5ff653a7c477dd67be99faeb1684d3002cd9afe6c24501118083a6154
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:ee70c4b7041ea9743a1f87c8c0c9dc14e7a3372ab5d5e073912913b83cf2bcc3
+        sha256: ee70c4b7041ea9743a1f87c8c0c9dc14e7a3372ab5d5e073912913b83cf2bcc3
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=apr/apr-1.7.6.tar.bz2
+    sha256: 49030d92d2575da735791b496dc322f3ce5cff9494779ba8cc28c7f46c5deb32
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies:
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

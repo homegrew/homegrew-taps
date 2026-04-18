@@ -3,31 +3,55 @@ version: 0.8.10
 description: Library and tools for advanced file I/O with HTTP-based protocols
 homepage: https://github.com/cern-fts/davix
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/davix/blobs/sha256:147668e36df19a8719d55dbb89b1e3e2cdd0d8c024e945986ff606182570db6e
-    sha256: 147668e36df19a8719d55dbb89b1e3e2cdd0d8c024e945986ff606182570db6e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/davix/blobs/sha256:ca1f0617f83aa057c573860e846f9805f789b8ddbfa6bbcc4d5686b11b534406
-    sha256: ca1f0617f83aa057c573860e846f9805f789b8ddbfa6bbcc4d5686b11b534406
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/davix/blobs/sha256:e8097034116f7ade56b9aa9206c51d823ddb1b687dd7c7d38eaf300fa25caa17
-    sha256: e8097034116f7ade56b9aa9206c51d823ddb1b687dd7c7d38eaf300fa25caa17
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/davix/blobs/sha256:90ba00d5d1122350f59985e06eee426689bf071bfb4afbfc1b1fcf039d2e3d8b
-    sha256: 90ba00d5d1122350f59985e06eee426689bf071bfb4afbfc1b1fcf039d2e3d8b
-source:
-  url: https://github.com/cern-fts/davix/releases/download/R_0_8_10/davix-0.8.10.tar.gz
-  sha256: 66aa9adadee6ff2bae14caba731597ba7a7cd158763d9d80a9cfe395afc17403
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/davix/blobs/sha256:ca1f0617f83aa057c573860e846f9805f789b8ddbfa6bbcc4d5686b11b534406
+        sha256: ca1f0617f83aa057c573860e846f9805f789b8ddbfa6bbcc4d5686b11b534406
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/davix/blobs/sha256:147668e36df19a8719d55dbb89b1e3e2cdd0d8c024e945986ff606182570db6e
+        sha256: 147668e36df19a8719d55dbb89b1e3e2cdd0d8c024e945986ff606182570db6e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/davix/blobs/sha256:e8097034116f7ade56b9aa9206c51d823ddb1b687dd7c7d38eaf300fa25caa17
+        sha256: e8097034116f7ade56b9aa9206c51d823ddb1b687dd7c7d38eaf300fa25caa17
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/davix/blobs/sha256:90ba00d5d1122350f59985e06eee426689bf071bfb4afbfc1b1fcf039d2e3d8b
+        sha256: 90ba00d5d1122350f59985e06eee426689bf071bfb4afbfc1b1fcf039d2e3d8b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cern-fts/davix/releases/download/R_0_8_10/davix-0.8.10.tar.gz
+    sha256: 66aa9adadee6ff2bae14caba731597ba7a7cd158763d9d80a9cfe395afc17403
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
+    - cmake
+    - doxygen
 linux_dependencies:
-  - openssl@3
-  - util-linux
+    - openssl@3
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

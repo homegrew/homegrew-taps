@@ -1,36 +1,60 @@
 name: qcli
-version: 1.4
+version: "1.4"
 description: Report audiovisual metrics via libavfilter
 homepage: https://bavc.org/preserve-media/preservation-tools
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:e05bc0c79aae6f0fe1a9d888e36e9d046550df0885eb4f16a0f3e9d39b6db1fc
-    sha256: e05bc0c79aae6f0fe1a9d888e36e9d046550df0885eb4f16a0f3e9d39b6db1fc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:51ec32892dfaf29f0ba4870f9fb1871f7f9053d6226002b79d76bdc9d0276097
-    sha256: 51ec32892dfaf29f0ba4870f9fb1871f7f9053d6226002b79d76bdc9d0276097
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:470749fbaafaa552f2398c6937d878609142c5c701ba1b3fa37bde12f98b8432
-    sha256: 470749fbaafaa552f2398c6937d878609142c5c701ba1b3fa37bde12f98b8432
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:266ba78a5f9da200e9ce2a3f1d857f6267e3cecbca8c5dc34b72a26b89128484
-    sha256: 266ba78a5f9da200e9ce2a3f1d857f6267e3cecbca8c5dc34b72a26b89128484
-source:
-  url: https://github.com/bavc/qctools.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg@6
-  - qtbase
+    - ffmpeg@6
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:51ec32892dfaf29f0ba4870f9fb1871f7f9053d6226002b79d76bdc9d0276097
+        sha256: 51ec32892dfaf29f0ba4870f9fb1871f7f9053d6226002b79d76bdc9d0276097
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:e05bc0c79aae6f0fe1a9d888e36e9d046550df0885eb4f16a0f3e9d39b6db1fc
+        sha256: e05bc0c79aae6f0fe1a9d888e36e9d046550df0885eb4f16a0f3e9d39b6db1fc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:470749fbaafaa552f2398c6937d878609142c5c701ba1b3fa37bde12f98b8432
+        sha256: 470749fbaafaa552f2398c6937d878609142c5c701ba1b3fa37bde12f98b8432
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qcli/blobs/sha256:266ba78a5f9da200e9ce2a3f1d857f6267e3cecbca8c5dc34b72a26b89128484
+        sha256: 266ba78a5f9da200e9ce2a3f1d857f6267e3cecbca8c5dc34b72a26b89128484
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bavc/qctools.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - qtmultimedia
-  - qwt
+    - pkgconf
+    - qtmultimedia
+    - qwt
 linux_dependencies:
-  - ffmpeg@6
-  - qtbase
-  - zlib-ng-compat
+    - ffmpeg@6
+    - qtbase
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

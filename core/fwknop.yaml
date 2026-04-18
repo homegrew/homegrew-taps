@@ -3,32 +3,56 @@ version: 2.6.11
 description: Single Packet Authorization and Port Knocking
 homepage: https://www.cipherdyne.org/fwknop/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fwknop/blobs/sha256:7963f9f9f757720644a3df1cfaeb3307b43dfc3148ece268a48fca4ca47bf83b
-    sha256: 7963f9f9f757720644a3df1cfaeb3307b43dfc3148ece268a48fca4ca47bf83b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fwknop/blobs/sha256:dadbd89d12097cafb572e66e31295745cb7420ff940fd985932946a23859fb6d
-    sha256: dadbd89d12097cafb572e66e31295745cb7420ff940fd985932946a23859fb6d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fwknop/blobs/sha256:dc5ed49f5029429d1e0db9e575844e6517dd3339924d55c986df9a48485bfd95
-    sha256: dc5ed49f5029429d1e0db9e575844e6517dd3339924d55c986df9a48485bfd95
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fwknop/blobs/sha256:403b551d5a2cf7b34feae53ac83a788de7af8d7d32982262d1bba500529ac6cc
-    sha256: 403b551d5a2cf7b34feae53ac83a788de7af8d7d32982262d1bba500529ac6cc
-source:
-  url: https://www.cipherdyne.org/fwknop/download/fwknop-2.6.11.tar.gz
-  sha256: bcb4e0e2eb5fcece5083d506da8471f68e33fb6b17d9379c71427a95f9ca1ec8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gpgme
-  - libassuan
-  - libgpg-error
+    - gpgme
+    - libassuan
+    - libgpg-error
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fwknop/blobs/sha256:dadbd89d12097cafb572e66e31295745cb7420ff940fd985932946a23859fb6d
+        sha256: dadbd89d12097cafb572e66e31295745cb7420ff940fd985932946a23859fb6d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fwknop/blobs/sha256:7963f9f9f757720644a3df1cfaeb3307b43dfc3148ece268a48fca4ca47bf83b
+        sha256: 7963f9f9f757720644a3df1cfaeb3307b43dfc3148ece268a48fca4ca47bf83b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fwknop/blobs/sha256:dc5ed49f5029429d1e0db9e575844e6517dd3339924d55c986df9a48485bfd95
+        sha256: dc5ed49f5029429d1e0db9e575844e6517dd3339924d55c986df9a48485bfd95
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fwknop/blobs/sha256:403b551d5a2cf7b34feae53ac83a788de7af8d7d32982262d1bba500529ac6cc
+        sha256: 403b551d5a2cf7b34feae53ac83a788de7af8d7d32982262d1bba500529ac6cc
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.cipherdyne.org/fwknop/download/fwknop-2.6.11.tar.gz
+    sha256: bcb4e0e2eb5fcece5083d506da8471f68e33fb6b17d9379c71427a95f9ca1ec8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - texinfo
+    - texinfo
 linux_dependencies:
-  - gpgme
-  - iptables
+    - gpgme
+    - iptables
+build:
+    configure: []
+    install: []
+service: null

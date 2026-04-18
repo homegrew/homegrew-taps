@@ -3,29 +3,54 @@ version: 5.1.7
 description: Fast and safe spellchecking C++ library
 homepage: https://nuspell.github.io/
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nuspell/blobs/sha256:6863e34c58596b85e558b7184ac455bf449ff65cd5b9ac2f3d3f4c509ca155a6
-    sha256: 6863e34c58596b85e558b7184ac455bf449ff65cd5b9ac2f3d3f4c509ca155a6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nuspell/blobs/sha256:38a0d023c75e8bb42cf442000fcf1e652517dbac3ad292d744a0f405e77e30ff
-    sha256: 38a0d023c75e8bb42cf442000fcf1e652517dbac3ad292d744a0f405e77e30ff
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nuspell/blobs/sha256:4f038716f553adbecc58cf191544f5cca27c9bdcdc0e79f8c380e66a13f1a34e
-    sha256: 4f038716f553adbecc58cf191544f5cca27c9bdcdc0e79f8c380e66a13f1a34e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nuspell/blobs/sha256:d32911d3302e34fc0d672550c67d524070c0313b29f2f8177154644eff4402c1
-    sha256: d32911d3302e34fc0d672550c67d524070c0313b29f2f8177154644eff4402c1
-source:
-  url: https://github.com/nuspell/nuspell/archive/refs/tags/v5.1.7.tar.gz
-  sha256: 9aee944e86924ce44434741cb950fee8f9a6ff9c4f002803ab5f04698c8e4c68
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
+    - icu4c@78
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nuspell/blobs/sha256:38a0d023c75e8bb42cf442000fcf1e652517dbac3ad292d744a0f405e77e30ff
+        sha256: 38a0d023c75e8bb42cf442000fcf1e652517dbac3ad292d744a0f405e77e30ff
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nuspell/blobs/sha256:6863e34c58596b85e558b7184ac455bf449ff65cd5b9ac2f3d3f4c509ca155a6
+        sha256: 6863e34c58596b85e558b7184ac455bf449ff65cd5b9ac2f3d3f4c509ca155a6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nuspell/blobs/sha256:4f038716f553adbecc58cf191544f5cca27c9bdcdc0e79f8c380e66a13f1a34e
+        sha256: 4f038716f553adbecc58cf191544f5cca27c9bdcdc0e79f8c380e66a13f1a34e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nuspell/blobs/sha256:d32911d3302e34fc0d672550c67d524070c0313b29f2f8177154644eff4402c1
+        sha256: d32911d3302e34fc0d672550c67d524070c0313b29f2f8177154644eff4402c1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nuspell/nuspell/archive/refs/tags/v5.1.7.tar.gz
+    sha256: 9aee944e86924ce44434741cb950fee8f9a6ff9c4f002803ab5f04698c8e4c68
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
-  - pandoc
+    - cmake
+    - doxygen
+    - pandoc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,26 +3,52 @@ version: 3.0.25.02.14
 description: Print information about OpenCL platforms and devices
 homepage: https://github.com/Oblomov/clinfo
 license: CC0-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clinfo/blobs/sha256:4f9f30aecde66c0eb0938f035b92db105242a3fe45ece3bc6c9c7d4b97f663d6
-    sha256: 4f9f30aecde66c0eb0938f035b92db105242a3fe45ece3bc6c9c7d4b97f663d6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clinfo/blobs/sha256:b844184911efd1eea8fc994b07e2e02c1ffbbc63c3fcb771ebd1ea588d02e337
-    sha256: b844184911efd1eea8fc994b07e2e02c1ffbbc63c3fcb771ebd1ea588d02e337
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clinfo/blobs/sha256:90e95ee551467da22ea1a32580ad4e42ff3ea26a1cdb66e3a63dd9b53e01f5f1
-    sha256: 90e95ee551467da22ea1a32580ad4e42ff3ea26a1cdb66e3a63dd9b53e01f5f1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clinfo/blobs/sha256:cbdeca056b99bf6960da8a6ab7c8533da3aba2efbf6afea09d5fa7be08bbba5a
-    sha256: cbdeca056b99bf6960da8a6ab7c8533da3aba2efbf6afea09d5fa7be08bbba5a
-source:
-  url: https://github.com/Oblomov/clinfo/archive/refs/tags/3.0.25.02.14.tar.gz
-  sha256: 48b77dc33315e6f760791a2984f98ea4bff28504ff37d460d8291585f49fcd3a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clinfo/blobs/sha256:b844184911efd1eea8fc994b07e2e02c1ffbbc63c3fcb771ebd1ea588d02e337
+        sha256: b844184911efd1eea8fc994b07e2e02c1ffbbc63c3fcb771ebd1ea588d02e337
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clinfo/blobs/sha256:4f9f30aecde66c0eb0938f035b92db105242a3fe45ece3bc6c9c7d4b97f663d6
+        sha256: 4f9f30aecde66c0eb0938f035b92db105242a3fe45ece3bc6c9c7d4b97f663d6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clinfo/blobs/sha256:90e95ee551467da22ea1a32580ad4e42ff3ea26a1cdb66e3a63dd9b53e01f5f1
+        sha256: 90e95ee551467da22ea1a32580ad4e42ff3ea26a1cdb66e3a63dd9b53e01f5f1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clinfo/blobs/sha256:cbdeca056b99bf6960da8a6ab7c8533da3aba2efbf6afea09d5fa7be08bbba5a
+        sha256: cbdeca056b99bf6960da8a6ab7c8533da3aba2efbf6afea09d5fa7be08bbba5a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Oblomov/clinfo/archive/refs/tags/3.0.25.02.14.tar.gz
+    sha256: 48b77dc33315e6f760791a2984f98ea4bff28504ff37d460d8291585f49fcd3a
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - opencl-icd-loader
-  - pocl
+    - opencl-icd-loader
+    - pocl
+build:
+    configure: []
+    install: []
+service: null

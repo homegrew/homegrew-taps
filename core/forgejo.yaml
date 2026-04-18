@@ -3,26 +3,52 @@ version: 15.0.0
 description: Self-hosted lightweight software forge
 homepage: https://forgejo.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:271545b243a078975d02ff87121506e870cda69d51c0ea94bc2ab891b412e7a6
-    sha256: 271545b243a078975d02ff87121506e870cda69d51c0ea94bc2ab891b412e7a6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:92467f5e19250b6305351a25606710cada704042dc54e77f07adeaba987e266e
-    sha256: 92467f5e19250b6305351a25606710cada704042dc54e77f07adeaba987e266e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:17ec1a7999d1f4ac314d47116de7c8eea88d67355a39ff8e08cbe5684103a2c7
-    sha256: 17ec1a7999d1f4ac314d47116de7c8eea88d67355a39ff8e08cbe5684103a2c7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:ef84b3ae7d03f7069b850368ade4b46b3bb8f1c36e4b2378f9bca0f989184fe6
-    sha256: ef84b3ae7d03f7069b850368ade4b46b3bb8f1c36e4b2378f9bca0f989184fe6
-source:
-  url: https://codeberg.org/forgejo/forgejo/releases/download/v15.0.0/forgejo-src-15.0.0.tar.gz
-  sha256: deb9daa0aa72a95d44d871f5e79dfdb6ab080f83b47fc7f53965059429fc45ac
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:92467f5e19250b6305351a25606710cada704042dc54e77f07adeaba987e266e
+        sha256: 92467f5e19250b6305351a25606710cada704042dc54e77f07adeaba987e266e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:271545b243a078975d02ff87121506e870cda69d51c0ea94bc2ab891b412e7a6
+        sha256: 271545b243a078975d02ff87121506e870cda69d51c0ea94bc2ab891b412e7a6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:17ec1a7999d1f4ac314d47116de7c8eea88d67355a39ff8e08cbe5684103a2c7
+        sha256: 17ec1a7999d1f4ac314d47116de7c8eea88d67355a39ff8e08cbe5684103a2c7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:ef84b3ae7d03f7069b850368ade4b46b3bb8f1c36e4b2378f9bca0f989184fe6
+        sha256: ef84b3ae7d03f7069b850368ade4b46b3bb8f1c36e4b2378f9bca0f989184fe6
+        sha512: ""
+        signature: ""
+source:
+    url: https://codeberg.org/forgejo/forgejo/releases/download/v15.0.0/forgejo-src-15.0.0.tar.gz
+    sha256: deb9daa0aa72a95d44d871f5e79dfdb6ab080f83b47fc7f53965059429fc45ac
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - node
+    - go
+    - node
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

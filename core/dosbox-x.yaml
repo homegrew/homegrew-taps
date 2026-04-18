@@ -3,45 +3,69 @@ version: 2026.03.29
 description: DOSBox with accurate emulation and wide testing
 homepage: https://dosbox-x.com/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:abfe3c35d1a3a979b7ffba33d3935bfdd2d9f7d66d99d584bba15146cdb00826
-    sha256: abfe3c35d1a3a979b7ffba33d3935bfdd2d9f7d66d99d584bba15146cdb00826
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:adf6f26f58dda10a72fbe863da1d020e8f5324a11cbd2d38c2d969cfa366ec4c
-    sha256: adf6f26f58dda10a72fbe863da1d020e8f5324a11cbd2d38c2d969cfa366ec4c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:d40415deaa37d47ce17b189af832bbf90902e9486891157219bc0a354325ebdd
-    sha256: d40415deaa37d47ce17b189af832bbf90902e9486891157219bc0a354325ebdd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:8f1a3554eb1c1f31fde14c65d85c47e799edd76633d3070c796117a3af5aa657
-    sha256: 8f1a3554eb1c1f31fde14c65d85c47e799edd76633d3070c796117a3af5aa657
-source:
-  url: https://github.com/joncampbell123/dosbox-x/archive/refs/tags/dosbox-x-v2026.03.29.tar.gz
-  sha256: c244c1910444a0ad886d9bae05cc72b3ef036e340d5e2fc33edf364c0dce344e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fluid-synth
-  - freetype
-  - libpng
-  - libslirp
-  - sdl2
-  - gettext
-  - glib
+    - fluid-synth
+    - freetype
+    - libpng
+    - libslirp
+    - sdl2
+    - gettext
+    - glib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:adf6f26f58dda10a72fbe863da1d020e8f5324a11cbd2d38c2d969cfa366ec4c
+        sha256: adf6f26f58dda10a72fbe863da1d020e8f5324a11cbd2d38c2d969cfa366ec4c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:abfe3c35d1a3a979b7ffba33d3935bfdd2d9f7d66d99d584bba15146cdb00826
+        sha256: abfe3c35d1a3a979b7ffba33d3935bfdd2d9f7d66d99d584bba15146cdb00826
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:d40415deaa37d47ce17b189af832bbf90902e9486891157219bc0a354325ebdd
+        sha256: d40415deaa37d47ce17b189af832bbf90902e9486891157219bc0a354325ebdd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dosbox-x/blobs/sha256:8f1a3554eb1c1f31fde14c65d85c47e799edd76633d3070c796117a3af5aa657
+        sha256: 8f1a3554eb1c1f31fde14c65d85c47e799edd76633d3070c796117a3af5aa657
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/joncampbell123/dosbox-x/archive/refs/tags/dosbox-x-v2026.03.29.tar.gz
+    sha256: c244c1910444a0ad886d9bae05cc72b3ef036e340d5e2fc33edf364c0dce344e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - pkgconf
+    - autoconf
+    - automake
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - fluid-synth
-  - freetype
-  - libpng
-  - libslirp
-  - libx11
-  - libxrandr
-  - sdl2
-  - zlib-ng-compat
+    - alsa-lib
+    - fluid-synth
+    - freetype
+    - libpng
+    - libslirp
+    - libx11
+    - libxrandr
+    - sdl2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

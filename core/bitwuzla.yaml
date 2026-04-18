@@ -3,30 +3,55 @@ version: 0.9.0
 description: SMT solver for bit-vectors, floating-points, arrays and uninterpreted functions
 homepage: https://bitwuzla.github.io
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bitwuzla/blobs/sha256:1aefec513dad32a1fa2276294090522577a32bb2423fe07574099d972652488b
-    sha256: 1aefec513dad32a1fa2276294090522577a32bb2423fe07574099d972652488b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bitwuzla/blobs/sha256:f11a33d62af85cd1d026e685466c793bafa7e0610e889e8342963aa9d21493e3
-    sha256: f11a33d62af85cd1d026e685466c793bafa7e0610e889e8342963aa9d21493e3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bitwuzla/blobs/sha256:3de69500d8b2cbc2ee2c85a0a07e4be5aade0bd1b315926d3b83641f620d6c32
-    sha256: 3de69500d8b2cbc2ee2c85a0a07e4be5aade0bd1b315926d3b83641f620d6c32
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bitwuzla/blobs/sha256:8347a56e18adc32eef4d53e6ae3f3e7e046ff9aa592fe380c051471f5f6bc56b
-    sha256: 8347a56e18adc32eef4d53e6ae3f3e7e046ff9aa592fe380c051471f5f6bc56b
-source:
-  url: https://github.com/bitwuzla/bitwuzla/archive/refs/tags/0.9.0.tar.gz
-  sha256: e15420eaaef586c0d02d4b46cf3bdf203ba2511147b0decab99a9df9c9f115ca
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - mpfr
+    - gmp
+    - mpfr
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bitwuzla/blobs/sha256:f11a33d62af85cd1d026e685466c793bafa7e0610e889e8342963aa9d21493e3
+        sha256: f11a33d62af85cd1d026e685466c793bafa7e0610e889e8342963aa9d21493e3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bitwuzla/blobs/sha256:1aefec513dad32a1fa2276294090522577a32bb2423fe07574099d972652488b
+        sha256: 1aefec513dad32a1fa2276294090522577a32bb2423fe07574099d972652488b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bitwuzla/blobs/sha256:3de69500d8b2cbc2ee2c85a0a07e4be5aade0bd1b315926d3b83641f620d6c32
+        sha256: 3de69500d8b2cbc2ee2c85a0a07e4be5aade0bd1b315926d3b83641f620d6c32
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bitwuzla/blobs/sha256:8347a56e18adc32eef4d53e6ae3f3e7e046ff9aa592fe380c051471f5f6bc56b
+        sha256: 8347a56e18adc32eef4d53e6ae3f3e7e046ff9aa592fe380c051471f5f6bc56b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bitwuzla/bitwuzla/archive/refs/tags/0.9.0.tar.gz
+    sha256: e15420eaaef586c0d02d4b46cf3bdf203ba2511147b0decab99a9df9c9f115ca
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

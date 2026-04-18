@@ -3,27 +3,52 @@ version: 1.6.7
 description: Scala language server
 homepage: https://github.com/scalameta/metals
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/metals/blobs/sha256:ca1c56a41c01cb722370d5ed47728eeebe4318fcd131576508b97b5800d76b96
-    sha256: ca1c56a41c01cb722370d5ed47728eeebe4318fcd131576508b97b5800d76b96
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/metals/blobs/sha256:71d05dea8e42f7bdff1e84b3a4a3531b33d647e83e5ad5225abee2f24afee9f0
-    sha256: 71d05dea8e42f7bdff1e84b3a4a3531b33d647e83e5ad5225abee2f24afee9f0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/metals/blobs/sha256:88940c32e5eb6ac360941dd9db13b4ac0809cdb8aaa9ae2bd4d8606541d07233
-    sha256: 88940c32e5eb6ac360941dd9db13b4ac0809cdb8aaa9ae2bd4d8606541d07233
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/metals/blobs/sha256:65ab4cc07ddd43ec50f098fb6afa9a976c67d0ec875303679dbc4cf849f27def
-    sha256: 65ab4cc07ddd43ec50f098fb6afa9a976c67d0ec875303679dbc4cf849f27def
-source:
-  url: https://github.com/scalameta/metals/archive/refs/tags/v1.6.7.tar.gz
-  sha256: a83ab1596997720e83980b781f3d96d2753b7548415606694e15c26e93359445
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/metals/blobs/sha256:71d05dea8e42f7bdff1e84b3a4a3531b33d647e83e5ad5225abee2f24afee9f0
+        sha256: 71d05dea8e42f7bdff1e84b3a4a3531b33d647e83e5ad5225abee2f24afee9f0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/metals/blobs/sha256:ca1c56a41c01cb722370d5ed47728eeebe4318fcd131576508b97b5800d76b96
+        sha256: ca1c56a41c01cb722370d5ed47728eeebe4318fcd131576508b97b5800d76b96
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/metals/blobs/sha256:88940c32e5eb6ac360941dd9db13b4ac0809cdb8aaa9ae2bd4d8606541d07233
+        sha256: 88940c32e5eb6ac360941dd9db13b4ac0809cdb8aaa9ae2bd4d8606541d07233
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/metals/blobs/sha256:65ab4cc07ddd43ec50f098fb6afa9a976c67d0ec875303679dbc4cf849f27def
+        sha256: 65ab4cc07ddd43ec50f098fb6afa9a976c67d0ec875303679dbc4cf849f27def
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/scalameta/metals/archive/refs/tags/v1.6.7.tar.gz
+    sha256: a83ab1596997720e83980b781f3d96d2753b7548415606694e15c26e93359445
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - sbt
+    - sbt
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

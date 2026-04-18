@@ -3,29 +3,55 @@ version: 0.0.17
 description: Tool to find common vulnerabilities in cryptographic public keys
 homepage: https://badkeys.info
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:ff514f83c3e336777e658ed4113ae33d55003a5ea623aa3ace810e94fa9d00fe
-    sha256: ff514f83c3e336777e658ed4113ae33d55003a5ea623aa3ace810e94fa9d00fe
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:c4d385ff9e584c3289891e8eb78f4b35158995da701895458ff8e9fab6d4b0d4
-    sha256: c4d385ff9e584c3289891e8eb78f4b35158995da701895458ff8e9fab6d4b0d4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:449c92c21e80fed4714358834e26b652047fdd9865bf75c53e8f494328f0afac
-    sha256: 449c92c21e80fed4714358834e26b652047fdd9865bf75c53e8f494328f0afac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:342bf80dcfc695ac6fe4ee708ebad245ed26211cd4bbba4345b262d20ecc8680
-    sha256: 342bf80dcfc695ac6fe4ee708ebad245ed26211cd4bbba4345b262d20ecc8680
-source:
-  url: https://files.pythonhosted.org/packages/5b/b8/9c5fdec4eb0b0a8b2e6a5a7a2d6da0fa5a905601a5e6a8c1f2aecb22f5c7/badkeys-0.0.17.tar.gz
-  sha256: 5562f2276a0343c5cfa5ecc54dc0e658e1b65fd36016858c04af9f33f7e9f826
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cryptography
-  - gmp
-  - libmpc
-  - mpfr
-  - python@3.14
+    - cryptography
+    - gmp
+    - libmpc
+    - mpfr
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:c4d385ff9e584c3289891e8eb78f4b35158995da701895458ff8e9fab6d4b0d4
+        sha256: c4d385ff9e584c3289891e8eb78f4b35158995da701895458ff8e9fab6d4b0d4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:ff514f83c3e336777e658ed4113ae33d55003a5ea623aa3ace810e94fa9d00fe
+        sha256: ff514f83c3e336777e658ed4113ae33d55003a5ea623aa3ace810e94fa9d00fe
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:449c92c21e80fed4714358834e26b652047fdd9865bf75c53e8f494328f0afac
+        sha256: 449c92c21e80fed4714358834e26b652047fdd9865bf75c53e8f494328f0afac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:342bf80dcfc695ac6fe4ee708ebad245ed26211cd4bbba4345b262d20ecc8680
+        sha256: 342bf80dcfc695ac6fe4ee708ebad245ed26211cd4bbba4345b262d20ecc8680
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/5b/b8/9c5fdec4eb0b0a8b2e6a5a7a2d6da0fa5a905601a5e6a8c1f2aecb22f5c7/badkeys-0.0.17.tar.gz
+    sha256: 5562f2276a0343c5cfa5ecc54dc0e658e1b65fd36016858c04af9f33f7e9f826
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

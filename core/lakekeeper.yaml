@@ -3,28 +3,53 @@ version: 0.12.0
 description: Apache Iceberg REST Catalog
 homepage: https://github.com/lakekeeper/lakekeeper
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lakekeeper/blobs/sha256:7a8924951600ecf35f81fa63fcb3e67bdf56c1bda649db6c1a14fa53dc40e131
-    sha256: 7a8924951600ecf35f81fa63fcb3e67bdf56c1bda649db6c1a14fa53dc40e131
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lakekeeper/blobs/sha256:a0005ccc9e68c91cdc5d38526da8af9bfa6f09689123f3a4ed33be0995b6f9ba
-    sha256: a0005ccc9e68c91cdc5d38526da8af9bfa6f09689123f3a4ed33be0995b6f9ba
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lakekeeper/blobs/sha256:478cb48065afb02a043597135ad9f687cb5e80d112b6f75d90c048368acc0a05
-    sha256: 478cb48065afb02a043597135ad9f687cb5e80d112b6f75d90c048368acc0a05
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lakekeeper/blobs/sha256:372008f206ec3186c1a74dd2a18cc7d8485a0c13abbce406a35dfb9e14e2eb4f
-    sha256: 372008f206ec3186c1a74dd2a18cc7d8485a0c13abbce406a35dfb9e14e2eb4f
-source:
-  url: https://github.com/lakekeeper/lakekeeper/archive/refs/tags/v0.12.0.tar.gz
-  sha256: 0831ebb452f0dd0ddd678b0970b2ad1ead7ce2945da622997cd13f91e8cead1d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lakekeeper/blobs/sha256:a0005ccc9e68c91cdc5d38526da8af9bfa6f09689123f3a4ed33be0995b6f9ba
+        sha256: a0005ccc9e68c91cdc5d38526da8af9bfa6f09689123f3a4ed33be0995b6f9ba
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lakekeeper/blobs/sha256:7a8924951600ecf35f81fa63fcb3e67bdf56c1bda649db6c1a14fa53dc40e131
+        sha256: 7a8924951600ecf35f81fa63fcb3e67bdf56c1bda649db6c1a14fa53dc40e131
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lakekeeper/blobs/sha256:478cb48065afb02a043597135ad9f687cb5e80d112b6f75d90c048368acc0a05
+        sha256: 478cb48065afb02a043597135ad9f687cb5e80d112b6f75d90c048368acc0a05
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lakekeeper/blobs/sha256:372008f206ec3186c1a74dd2a18cc7d8485a0c13abbce406a35dfb9e14e2eb4f
+        sha256: 372008f206ec3186c1a74dd2a18cc7d8485a0c13abbce406a35dfb9e14e2eb4f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lakekeeper/lakekeeper/archive/refs/tags/v0.12.0.tar.gz
+    sha256: 0831ebb452f0dd0ddd678b0970b2ad1ead7ce2945da622997cd13f91e8cead1d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - rust
+    - cmake
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

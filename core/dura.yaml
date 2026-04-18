@@ -3,31 +3,55 @@ version: 0.2.0
 description: Backs up your work automatically via Git commits
 homepage: https://github.com/tkellogg/dura
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dura/blobs/sha256:04d67662331f277b9b5393600713ddfbe74e834add68af49d7a58badaad41840
-    sha256: 04d67662331f277b9b5393600713ddfbe74e834add68af49d7a58badaad41840
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dura/blobs/sha256:03c924c660fd676488e9e1843237b37ff7e07cb929960f5b5eddb205db31c97f
-    sha256: 03c924c660fd676488e9e1843237b37ff7e07cb929960f5b5eddb205db31c97f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dura/blobs/sha256:09767ecf799c0429b79c715025b0f92e384fb2847fafd8db0432edbf8a535da1
-    sha256: 09767ecf799c0429b79c715025b0f92e384fb2847fafd8db0432edbf8a535da1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dura/blobs/sha256:18daffe15b51f35e50bc3a3d70e9775aa4c525b8eaf98f8a8c6b509f77215dd6
-    sha256: 18daffe15b51f35e50bc3a3d70e9775aa4c525b8eaf98f8a8c6b509f77215dd6
-source:
-  url: https://github.com/tkellogg/dura/archive/refs/tags/v0.2.0.tar.gz
-  sha256: 6486afa167cc2c9b6b6646b9a3cb36e76c1a55e986f280607c8933a045d58cca
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dura/blobs/sha256:03c924c660fd676488e9e1843237b37ff7e07cb929960f5b5eddb205db31c97f
+        sha256: 03c924c660fd676488e9e1843237b37ff7e07cb929960f5b5eddb205db31c97f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dura/blobs/sha256:04d67662331f277b9b5393600713ddfbe74e834add68af49d7a58badaad41840
+        sha256: 04d67662331f277b9b5393600713ddfbe74e834add68af49d7a58badaad41840
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dura/blobs/sha256:09767ecf799c0429b79c715025b0f92e384fb2847fafd8db0432edbf8a535da1
+        sha256: 09767ecf799c0429b79c715025b0f92e384fb2847fafd8db0432edbf8a535da1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dura/blobs/sha256:18daffe15b51f35e50bc3a3d70e9775aa4c525b8eaf98f8a8c6b509f77215dd6
+        sha256: 18daffe15b51f35e50bc3a3d70e9775aa4c525b8eaf98f8a8c6b509f77215dd6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tkellogg/dura/archive/refs/tags/v0.2.0.tar.gz
+    sha256: 6486afa167cc2c9b6b6646b9a3cb36e76c1a55e986f280607c8933a045d58cca
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

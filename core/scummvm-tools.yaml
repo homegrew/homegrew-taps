@@ -3,42 +3,67 @@ version: 2.9.0
 description: Collection of tools for ScummVM
 homepage: https://www.scummvm.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scummvm-tools/blobs/sha256:d28a7955a87d0efcbf04f382122f517576a039283383c6f22ddb6298b00edfad
-    sha256: d28a7955a87d0efcbf04f382122f517576a039283383c6f22ddb6298b00edfad
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scummvm-tools/blobs/sha256:1e10ac9dd30c9d189516e5a3fc756c1e316637b3739b831a3d025a4e89fdb31f
-    sha256: 1e10ac9dd30c9d189516e5a3fc756c1e316637b3739b831a3d025a4e89fdb31f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scummvm-tools/blobs/sha256:da2882fe5bdb6fc4b5a9eca98543fc23a47ec15a8ad352dfbe38387f5649882d
-    sha256: da2882fe5bdb6fc4b5a9eca98543fc23a47ec15a8ad352dfbe38387f5649882d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scummvm-tools/blobs/sha256:fb7c611303c6cb34706789248e67fe70ec974ce5e0fe76920a6b95ed2888fff2
-    sha256: fb7c611303c6cb34706789248e67fe70ec974ce5e0fe76920a6b95ed2888fff2
-source:
-  url: https://downloads.scummvm.org/frs/scummvm-tools/2.9.0/scummvm-tools-2.9.0.tar.xz
-  sha256: 1b4bbd7a7ccf4584bfc2c0142b7c1b4e5db97c39d8d214757c72d50e0905b71d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - flac
-  - freetype
-  - libogg
-  - libpng
-  - libvorbis
-  - mad
-  - wxwidgets
+    - boost
+    - flac
+    - freetype
+    - libogg
+    - libpng
+    - libvorbis
+    - mad
+    - wxwidgets
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scummvm-tools/blobs/sha256:1e10ac9dd30c9d189516e5a3fc756c1e316637b3739b831a3d025a4e89fdb31f
+        sha256: 1e10ac9dd30c9d189516e5a3fc756c1e316637b3739b831a3d025a4e89fdb31f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scummvm-tools/blobs/sha256:d28a7955a87d0efcbf04f382122f517576a039283383c6f22ddb6298b00edfad
+        sha256: d28a7955a87d0efcbf04f382122f517576a039283383c6f22ddb6298b00edfad
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scummvm-tools/blobs/sha256:da2882fe5bdb6fc4b5a9eca98543fc23a47ec15a8ad352dfbe38387f5649882d
+        sha256: da2882fe5bdb6fc4b5a9eca98543fc23a47ec15a8ad352dfbe38387f5649882d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scummvm-tools/blobs/sha256:fb7c611303c6cb34706789248e67fe70ec974ce5e0fe76920a6b95ed2888fff2
+        sha256: fb7c611303c6cb34706789248e67fe70ec974ce5e0fe76920a6b95ed2888fff2
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.scummvm.org/frs/scummvm-tools/2.9.0/scummvm-tools-2.9.0.tar.xz
+    sha256: 1b4bbd7a7ccf4584bfc2c0142b7c1b4e5db97c39d8d214757c72d50e0905b71d
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - boost
-  - flac
-  - freetype
-  - libogg
-  - libpng
-  - libvorbis
-  - mad
-  - wxwidgets
-  - zlib-ng-compat
+    - boost
+    - flac
+    - freetype
+    - libogg
+    - libpng
+    - libvorbis
+    - mad
+    - wxwidgets
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

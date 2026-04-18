@@ -3,34 +3,59 @@ version: 0.26.0
 description: Datasets, transforms, and models for computer vision
 homepage: https://pytorch.org/vision/stable/index.html
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/torchvision/blobs/sha256:75ec3e46949f6a10496aa5655385f1889e600946ebf8bbdee960811e6dc9e5d3
-    sha256: 75ec3e46949f6a10496aa5655385f1889e600946ebf8bbdee960811e6dc9e5d3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/torchvision/blobs/sha256:e64457040f2f588f3473dfb58fa6d0cb969c2552c53eaaa41cd16d3f7be43587
-    sha256: e64457040f2f588f3473dfb58fa6d0cb969c2552c53eaaa41cd16d3f7be43587
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/torchvision/blobs/sha256:7d7db000dd7b790d3be3e4214a7a4af203b65d74c3e483e16697f6618d70f910
-    sha256: 7d7db000dd7b790d3be3e4214a7a4af203b65d74c3e483e16697f6618d70f910
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/torchvision/blobs/sha256:11db9c082034d1a305ea7a211809211a4b22e53c3a94b5b8b8d116bda8fdb712
-    sha256: 11db9c082034d1a305ea7a211809211a4b22e53c3a94b5b8b8d116bda8fdb712
-source:
-  url: https://github.com/pytorch/vision/archive/refs/tags/v0.26.0.tar.gz
-  sha256: fb95b6b78b3801c4d4d6332f7a5a0b6c624588e1b39e0d6fa145227b0c749403
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - libpng
-  - numpy
-  - pillow
-  - pytorch
-  - webp
+    - jpeg-turbo
+    - libpng
+    - numpy
+    - pillow
+    - pytorch
+    - webp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/torchvision/blobs/sha256:e64457040f2f588f3473dfb58fa6d0cb969c2552c53eaaa41cd16d3f7be43587
+        sha256: e64457040f2f588f3473dfb58fa6d0cb969c2552c53eaaa41cd16d3f7be43587
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/torchvision/blobs/sha256:75ec3e46949f6a10496aa5655385f1889e600946ebf8bbdee960811e6dc9e5d3
+        sha256: 75ec3e46949f6a10496aa5655385f1889e600946ebf8bbdee960811e6dc9e5d3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/torchvision/blobs/sha256:7d7db000dd7b790d3be3e4214a7a4af203b65d74c3e483e16697f6618d70f910
+        sha256: 7d7db000dd7b790d3be3e4214a7a4af203b65d74c3e483e16697f6618d70f910
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/torchvision/blobs/sha256:11db9c082034d1a305ea7a211809211a4b22e53c3a94b5b8b8d116bda8fdb712
+        sha256: 11db9c082034d1a305ea7a211809211a4b22e53c3a94b5b8b8d116bda8fdb712
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pytorch/vision/archive/refs/tags/v0.26.0.tar.gz
+    sha256: fb95b6b78b3801c4d4d6332f7a5a0b6c624588e1b39e0d6fa145227b0c749403
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - python@3.14
+    - cmake
+    - ninja
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

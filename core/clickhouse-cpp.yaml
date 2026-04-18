@@ -3,30 +3,55 @@ version: 2.6.1
 description: C++ client library for ClickHouse
 homepage: https://github.com/ClickHouse/clickhouse-cpp
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:f07f29ec90bdf515cdc5399f615de9ca8e1d74995fa1409002c1ef5bbff99bea
-    sha256: f07f29ec90bdf515cdc5399f615de9ca8e1d74995fa1409002c1ef5bbff99bea
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:8495d22062c587986ddad967e3bb7a2e82ce1a7ed02b9911aa055c1753ea4c22
-    sha256: 8495d22062c587986ddad967e3bb7a2e82ce1a7ed02b9911aa055c1753ea4c22
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:dd67e96e427e490a49e9c0b22f0d0a1d2810f19fd8317e28279bba0b92ef38fe
-    sha256: dd67e96e427e490a49e9c0b22f0d0a1d2810f19fd8317e28279bba0b92ef38fe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:9822d275136deb4aa978f117fe6745cb71593826640832cc379a995a49246a3e
-    sha256: 9822d275136deb4aa978f117fe6745cb71593826640832cc379a995a49246a3e
-source:
-  url: https://github.com/ClickHouse/clickhouse-cpp/archive/refs/tags/v2.6.1.tar.gz
-  sha256: 51b9592f4b348d7aa0e5b598ed75c781ee9e3dd6f671e6d198dda3a6c5a7b222
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - lz4
-  - openssl@3
-  - zstd
+    - abseil
+    - lz4
+    - openssl@3
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:8495d22062c587986ddad967e3bb7a2e82ce1a7ed02b9911aa055c1753ea4c22
+        sha256: 8495d22062c587986ddad967e3bb7a2e82ce1a7ed02b9911aa055c1753ea4c22
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:f07f29ec90bdf515cdc5399f615de9ca8e1d74995fa1409002c1ef5bbff99bea
+        sha256: f07f29ec90bdf515cdc5399f615de9ca8e1d74995fa1409002c1ef5bbff99bea
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:dd67e96e427e490a49e9c0b22f0d0a1d2810f19fd8317e28279bba0b92ef38fe
+        sha256: dd67e96e427e490a49e9c0b22f0d0a1d2810f19fd8317e28279bba0b92ef38fe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:9822d275136deb4aa978f117fe6745cb71593826640832cc379a995a49246a3e
+        sha256: 9822d275136deb4aa978f117fe6745cb71593826640832cc379a995a49246a3e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ClickHouse/clickhouse-cpp/archive/refs/tags/v2.6.1.tar.gz
+    sha256: 51b9592f4b348d7aa0e5b598ed75c781ee9e3dd6f671e6d198dda3a6c5a7b222
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

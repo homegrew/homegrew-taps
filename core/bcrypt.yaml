@@ -1,27 +1,53 @@
 name: bcrypt
-version: 1.1
+version: "1.1"
 description: Cross platform file encryption utility using blowfish
 homepage: https://bcrypt.sourceforge.net/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bcrypt/blobs/sha256:d49aa09bacc40f805eba8376e5b444b9c7824737b8beaffea99a15b9a1fe58b3
-    sha256: d49aa09bacc40f805eba8376e5b444b9c7824737b8beaffea99a15b9a1fe58b3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bcrypt/blobs/sha256:8810055ef8834286872f5594e8baca4f24e95f37f9a1cac9ac5523e0d2e0d4e9
-    sha256: 8810055ef8834286872f5594e8baca4f24e95f37f9a1cac9ac5523e0d2e0d4e9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bcrypt/blobs/sha256:fa2316da920f0a6857cf2ede173897a15ae590dbfa18d48d54bb35c3a9209621
-    sha256: fa2316da920f0a6857cf2ede173897a15ae590dbfa18d48d54bb35c3a9209621
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bcrypt/blobs/sha256:6c456f948c8acb858f885c385b2e579e13fc583041a3d20eb12e53043287bab6
-    sha256: 6c456f948c8acb858f885c385b2e579e13fc583041a3d20eb12e53043287bab6
-source:
-  url: https://bcrypt.sourceforge.net/bcrypt-1.1.tar.gz
-  sha256: b9c1a7c0996a305465135b90123b0c63adbb5fa7c47a24b3f347deb2696d417d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bcrypt/blobs/sha256:8810055ef8834286872f5594e8baca4f24e95f37f9a1cac9ac5523e0d2e0d4e9
+        sha256: 8810055ef8834286872f5594e8baca4f24e95f37f9a1cac9ac5523e0d2e0d4e9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bcrypt/blobs/sha256:d49aa09bacc40f805eba8376e5b444b9c7824737b8beaffea99a15b9a1fe58b3
+        sha256: d49aa09bacc40f805eba8376e5b444b9c7824737b8beaffea99a15b9a1fe58b3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bcrypt/blobs/sha256:fa2316da920f0a6857cf2ede173897a15ae590dbfa18d48d54bb35c3a9209621
+        sha256: fa2316da920f0a6857cf2ede173897a15ae590dbfa18d48d54bb35c3a9209621
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bcrypt/blobs/sha256:6c456f948c8acb858f885c385b2e579e13fc583041a3d20eb12e53043287bab6
+        sha256: 6c456f948c8acb858f885c385b2e579e13fc583041a3d20eb12e53043287bab6
+        sha512: ""
+        signature: ""
+source:
+    url: https://bcrypt.sourceforge.net/bcrypt-1.1.tar.gz
+    sha256: b9c1a7c0996a305465135b90123b0c63adbb5fa7c47a24b3f347deb2696d417d
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

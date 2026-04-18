@@ -3,29 +3,55 @@ version: 0.18.1
 description: Ahead of Time compiler for numeric kernels
 homepage: https://pythran.readthedocs.io/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pythran/blobs/sha256:aff9d2c2a5d918f91c0a5b127b29d0bebd75fb0462792029c38328001aa2ff65
-    sha256: aff9d2c2a5d918f91c0a5b127b29d0bebd75fb0462792029c38328001aa2ff65
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pythran/blobs/sha256:c286044b3234f30a258ad58e431437afb2d91f72c6279dc8bb73f83a1871f03e
-    sha256: c286044b3234f30a258ad58e431437afb2d91f72c6279dc8bb73f83a1871f03e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pythran/blobs/sha256:149c237198e2b7a95bf33157b5ba16d5a02c6b571480401a988d3fec0b86ed2d
-    sha256: 149c237198e2b7a95bf33157b5ba16d5a02c6b571480401a988d3fec0b86ed2d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pythran/blobs/sha256:149c237198e2b7a95bf33157b5ba16d5a02c6b571480401a988d3fec0b86ed2d
-    sha256: 149c237198e2b7a95bf33157b5ba16d5a02c6b571480401a988d3fec0b86ed2d
-source:
-  url: https://files.pythonhosted.org/packages/d4/84/17c4c44a24f5ec709991e603e601bf316d09c4fe915fbe348c689dede998/pythran-0.18.1.tar.gz
-  sha256: 8803ed948bf841a11bbbb10472a8ff6ea24ebd70e67c3f77b77be3db900eccfe
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - numpy
-  - openblas
-  - python@3.14
-  - xsimd
+    - boost
+    - numpy
+    - openblas
+    - python@3.14
+    - xsimd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pythran/blobs/sha256:c286044b3234f30a258ad58e431437afb2d91f72c6279dc8bb73f83a1871f03e
+        sha256: c286044b3234f30a258ad58e431437afb2d91f72c6279dc8bb73f83a1871f03e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pythran/blobs/sha256:aff9d2c2a5d918f91c0a5b127b29d0bebd75fb0462792029c38328001aa2ff65
+        sha256: aff9d2c2a5d918f91c0a5b127b29d0bebd75fb0462792029c38328001aa2ff65
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pythran/blobs/sha256:149c237198e2b7a95bf33157b5ba16d5a02c6b571480401a988d3fec0b86ed2d
+        sha256: 149c237198e2b7a95bf33157b5ba16d5a02c6b571480401a988d3fec0b86ed2d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pythran/blobs/sha256:149c237198e2b7a95bf33157b5ba16d5a02c6b571480401a988d3fec0b86ed2d
+        sha256: 149c237198e2b7a95bf33157b5ba16d5a02c6b571480401a988d3fec0b86ed2d
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/d4/84/17c4c44a24f5ec709991e603e601bf316d09c4fe915fbe348c689dede998/pythran-0.18.1.tar.gz
+    sha256: 8803ed948bf841a11bbbb10472a8ff6ea24ebd70e67c3f77b77be3db900eccfe
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

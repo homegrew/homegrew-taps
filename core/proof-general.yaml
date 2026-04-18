@@ -1,30 +1,55 @@
 name: proof-general
-version: 4.5
+version: "4.5"
 description: Emacs-based generic interface for theorem provers
 homepage: https://proofgeneral.github.io
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proof-general/blobs/sha256:4efbf2e4aacd72d00f58a2f6a0f0748790e44a22af1bf97543c29ce077c133de
-    sha256: 4efbf2e4aacd72d00f58a2f6a0f0748790e44a22af1bf97543c29ce077c133de
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proof-general/blobs/sha256:4c7ea3668b2b0df4de8eb60962f128fdbb26fbf1c7f72511c67a707c3d0c833c
-    sha256: 4c7ea3668b2b0df4de8eb60962f128fdbb26fbf1c7f72511c67a707c3d0c833c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proof-general/blobs/sha256:b87a94e0c06c19d5d57aedd9a628b69a22d559cfd331f563dcb93c02b5f0a402
-    sha256: b87a94e0c06c19d5d57aedd9a628b69a22d559cfd331f563dcb93c02b5f0a402
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proof-general/blobs/sha256:68fae82f1c9768c66e94b3a413a4b8c17ab7207629e1faf8645593a8bda8cfb5
-    sha256: 68fae82f1c9768c66e94b3a413a4b8c17ab7207629e1faf8645593a8bda8cfb5
-source:
-  url: https://github.com/ProofGeneral/PG/archive/refs/tags/v4.5.tar.gz
-  sha256: b408ab943cfbfe4fcb0d3322f079f41e2a2d29b50cf0cc704fbb4d5e6c26e3a2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - emacs
+    - emacs
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proof-general/blobs/sha256:4c7ea3668b2b0df4de8eb60962f128fdbb26fbf1c7f72511c67a707c3d0c833c
+        sha256: 4c7ea3668b2b0df4de8eb60962f128fdbb26fbf1c7f72511c67a707c3d0c833c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proof-general/blobs/sha256:4efbf2e4aacd72d00f58a2f6a0f0748790e44a22af1bf97543c29ce077c133de
+        sha256: 4efbf2e4aacd72d00f58a2f6a0f0748790e44a22af1bf97543c29ce077c133de
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proof-general/blobs/sha256:b87a94e0c06c19d5d57aedd9a628b69a22d559cfd331f563dcb93c02b5f0a402
+        sha256: b87a94e0c06c19d5d57aedd9a628b69a22d559cfd331f563dcb93c02b5f0a402
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proof-general/blobs/sha256:68fae82f1c9768c66e94b3a413a4b8c17ab7207629e1faf8645593a8bda8cfb5
+        sha256: 68fae82f1c9768c66e94b3a413a4b8c17ab7207629e1faf8645593a8bda8cfb5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ProofGeneral/PG/archive/refs/tags/v4.5.tar.gz
+    sha256: b408ab943cfbfe4fcb0d3322f079f41e2a2d29b50cf0cc704fbb4d5e6c26e3a2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - texi2html
-  - texinfo
+    - texi2html
+    - texinfo
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

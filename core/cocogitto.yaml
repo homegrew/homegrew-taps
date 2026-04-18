@@ -3,28 +3,53 @@ version: 7.0.0
 description: Conventional Commits toolbox
 homepage: https://docs.cocogitto.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cocogitto/blobs/sha256:88ff662284f7f242372e75430dacd7eafcfc26918e61981abfd74de963c9b34e
-    sha256: 88ff662284f7f242372e75430dacd7eafcfc26918e61981abfd74de963c9b34e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cocogitto/blobs/sha256:e3aa13b9c500755886f8cef11eb5d4b68d01d3d60d237a3a2cd1d73978f4923a
-    sha256: e3aa13b9c500755886f8cef11eb5d4b68d01d3d60d237a3a2cd1d73978f4923a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cocogitto/blobs/sha256:3404ea70767d5d51bd225b30da32e17fbf6c45df751731360c76610027ad7268
-    sha256: 3404ea70767d5d51bd225b30da32e17fbf6c45df751731360c76610027ad7268
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cocogitto/blobs/sha256:2c28d53145ad804f7f71bc5140425a21d31b0093fbf3318a64aa378f3220e5e3
-    sha256: 2c28d53145ad804f7f71bc5140425a21d31b0093fbf3318a64aa378f3220e5e3
-source:
-  url: https://github.com/cocogitto/cocogitto/archive/refs/tags/7.0.0.tar.gz
-  sha256: cc00dacf1dd12b63976b0ca3c4ec383f902a95ed148968ccd35d9a174f66966f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
+    - libgit2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cocogitto/blobs/sha256:e3aa13b9c500755886f8cef11eb5d4b68d01d3d60d237a3a2cd1d73978f4923a
+        sha256: e3aa13b9c500755886f8cef11eb5d4b68d01d3d60d237a3a2cd1d73978f4923a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cocogitto/blobs/sha256:88ff662284f7f242372e75430dacd7eafcfc26918e61981abfd74de963c9b34e
+        sha256: 88ff662284f7f242372e75430dacd7eafcfc26918e61981abfd74de963c9b34e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cocogitto/blobs/sha256:3404ea70767d5d51bd225b30da32e17fbf6c45df751731360c76610027ad7268
+        sha256: 3404ea70767d5d51bd225b30da32e17fbf6c45df751731360c76610027ad7268
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cocogitto/blobs/sha256:2c28d53145ad804f7f71bc5140425a21d31b0093fbf3318a64aa378f3220e5e3
+        sha256: 2c28d53145ad804f7f71bc5140425a21d31b0093fbf3318a64aa378f3220e5e3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cocogitto/cocogitto/archive/refs/tags/7.0.0.tar.gz
+    sha256: cc00dacf1dd12b63976b0ca3c4ec383f902a95ed148968ccd35d9a174f66966f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

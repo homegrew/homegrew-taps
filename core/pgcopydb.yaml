@@ -1,30 +1,55 @@
 name: pgcopydb
-version: 0.17
+version: "0.17"
 description: Copy a Postgres database to a target Postgres server
 homepage: https://github.com/dimitri/pgcopydb
 license: PostgreSQL
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgcopydb/blobs/sha256:0922fc7e2a6d606e02d8e140e9d621bb9b865cb9c9ba074a057d132cb1b3b187
-    sha256: 0922fc7e2a6d606e02d8e140e9d621bb9b865cb9c9ba074a057d132cb1b3b187
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgcopydb/blobs/sha256:a3e2806d74af8c705b2077032255a7cd39ac079c4997c980231b49651416c109
-    sha256: a3e2806d74af8c705b2077032255a7cd39ac079c4997c980231b49651416c109
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgcopydb/blobs/sha256:6f99b95987e4d9873cb365c5be588e3b55281ccf09e2879f67d63dd97cf8370e
-    sha256: 6f99b95987e4d9873cb365c5be588e3b55281ccf09e2879f67d63dd97cf8370e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgcopydb/blobs/sha256:c92d7b713b5620eee463b7c5a355c9c9d04676cc3d7d5e1bbf298d3bc0c4bd0d
-    sha256: c92d7b713b5620eee463b7c5a355c9c9d04676cc3d7d5e1bbf298d3bc0c4bd0d
-source:
-  url: https://github.com/dimitri/pgcopydb/archive/refs/tags/v0.17.tar.gz
-  sha256: 7ed96f7bbc0a5250f3b73252c3a88d665df9c8101a89109cde774c3505882fdf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - bdw-gc
-  - libpq
+    - bdw-gc
+    - libpq
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgcopydb/blobs/sha256:a3e2806d74af8c705b2077032255a7cd39ac079c4997c980231b49651416c109
+        sha256: a3e2806d74af8c705b2077032255a7cd39ac079c4997c980231b49651416c109
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgcopydb/blobs/sha256:0922fc7e2a6d606e02d8e140e9d621bb9b865cb9c9ba074a057d132cb1b3b187
+        sha256: 0922fc7e2a6d606e02d8e140e9d621bb9b865cb9c9ba074a057d132cb1b3b187
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgcopydb/blobs/sha256:6f99b95987e4d9873cb365c5be588e3b55281ccf09e2879f67d63dd97cf8370e
+        sha256: 6f99b95987e4d9873cb365c5be588e3b55281ccf09e2879f67d63dd97cf8370e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgcopydb/blobs/sha256:c92d7b713b5620eee463b7c5a355c9c9d04676cc3d7d5e1bbf298d3bc0c4bd0d
+        sha256: c92d7b713b5620eee463b7c5a355c9c9d04676cc3d7d5e1bbf298d3bc0c4bd0d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dimitri/pgcopydb/archive/refs/tags/v0.17.tar.gz
+    sha256: 7ed96f7bbc0a5250f3b73252c3a88d665df9c8101a89109cde774c3505882fdf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - sphinx-doc
+    - sphinx-doc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

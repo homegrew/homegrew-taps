@@ -3,29 +3,54 @@ version: 6.26.0
 description: Monero (XMR) CPU miner
 homepage: https://github.com/xmrig/xmrig
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xmrig/blobs/sha256:692f6ffb157058a5aaa59129c0d89bc74092c983c3b6b3a01af358f6727feb2f
-    sha256: 692f6ffb157058a5aaa59129c0d89bc74092c983c3b6b3a01af358f6727feb2f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xmrig/blobs/sha256:174150b95684a5c1028b8e357b1ee237bd6a8f05fe0449272ced4890b052661d
-    sha256: 174150b95684a5c1028b8e357b1ee237bd6a8f05fe0449272ced4890b052661d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xmrig/blobs/sha256:eb396eb41ae6942456d4aacef16ae8d0fb7a3e3b348e6406ec36f2cdd3dc8205
-    sha256: eb396eb41ae6942456d4aacef16ae8d0fb7a3e3b348e6406ec36f2cdd3dc8205
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xmrig/blobs/sha256:739a3ddf564aa207c96c05746aeed50a8b7dd9497adf9572e044984f2d5d52b7
-    sha256: 739a3ddf564aa207c96c05746aeed50a8b7dd9497adf9572e044984f2d5d52b7
-source:
-  url: https://github.com/xmrig/xmrig/archive/refs/tags/v6.26.0.tar.gz
-  sha256: 5005144e78571f26586410c2b2ede2b0c72afe22f97f1708ea24cfb253c3939b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hwloc
-  - libuv
-  - openssl@3
+    - hwloc
+    - libuv
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xmrig/blobs/sha256:174150b95684a5c1028b8e357b1ee237bd6a8f05fe0449272ced4890b052661d
+        sha256: 174150b95684a5c1028b8e357b1ee237bd6a8f05fe0449272ced4890b052661d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xmrig/blobs/sha256:692f6ffb157058a5aaa59129c0d89bc74092c983c3b6b3a01af358f6727feb2f
+        sha256: 692f6ffb157058a5aaa59129c0d89bc74092c983c3b6b3a01af358f6727feb2f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xmrig/blobs/sha256:eb396eb41ae6942456d4aacef16ae8d0fb7a3e3b348e6406ec36f2cdd3dc8205
+        sha256: eb396eb41ae6942456d4aacef16ae8d0fb7a3e3b348e6406ec36f2cdd3dc8205
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xmrig/blobs/sha256:739a3ddf564aa207c96c05746aeed50a8b7dd9497adf9572e044984f2d5d52b7
+        sha256: 739a3ddf564aa207c96c05746aeed50a8b7dd9497adf9572e044984f2d5d52b7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/xmrig/xmrig/archive/refs/tags/v6.26.0.tar.gz
+    sha256: 5005144e78571f26586410c2b2ede2b0c72afe22f97f1708ea24cfb253c3939b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

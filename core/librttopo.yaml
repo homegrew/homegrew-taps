@@ -3,29 +3,54 @@ version: 1.1.0
 description: RT Topology Library
 homepage: https://git.osgeo.org/gitea/rttopo/librttopo
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librttopo/blobs/sha256:96402f9ebcae6c7b387f95565523e927a702cee02b90253b8fa0c1e654e3a4a5
-    sha256: 96402f9ebcae6c7b387f95565523e927a702cee02b90253b8fa0c1e654e3a4a5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librttopo/blobs/sha256:e6e7886d1eb7273ee7d7b8745111f9d4eaccbc789138bcd0fb5b05ceb9883222
-    sha256: e6e7886d1eb7273ee7d7b8745111f9d4eaccbc789138bcd0fb5b05ceb9883222
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librttopo/blobs/sha256:7d6d9cbbb4846b4a3147ef8be9041c2d155e2b9c8c3b7b3720b71ec78b472667
-    sha256: 7d6d9cbbb4846b4a3147ef8be9041c2d155e2b9c8c3b7b3720b71ec78b472667
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librttopo/blobs/sha256:9665c432abd2195df0985819c583373e355ad0ca39d57fc05814e90194a4d745
-    sha256: 9665c432abd2195df0985819c583373e355ad0ca39d57fc05814e90194a4d745
-source:
-  url: https://deb.debian.org/debian/pool/main/libr/librttopo/librttopo_1.1.0.orig.tar.gz
-  sha256: 2e2fcabb48193a712a6c76ac9a9be2a53f82e32f91a2bc834d9f1b4fa9cd879f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - geos
+    - geos
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librttopo/blobs/sha256:e6e7886d1eb7273ee7d7b8745111f9d4eaccbc789138bcd0fb5b05ceb9883222
+        sha256: e6e7886d1eb7273ee7d7b8745111f9d4eaccbc789138bcd0fb5b05ceb9883222
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librttopo/blobs/sha256:96402f9ebcae6c7b387f95565523e927a702cee02b90253b8fa0c1e654e3a4a5
+        sha256: 96402f9ebcae6c7b387f95565523e927a702cee02b90253b8fa0c1e654e3a4a5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librttopo/blobs/sha256:7d6d9cbbb4846b4a3147ef8be9041c2d155e2b9c8c3b7b3720b71ec78b472667
+        sha256: 7d6d9cbbb4846b4a3147ef8be9041c2d155e2b9c8c3b7b3720b71ec78b472667
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librttopo/blobs/sha256:9665c432abd2195df0985819c583373e355ad0ca39d57fc05814e90194a4d745
+        sha256: 9665c432abd2195df0985819c583373e355ad0ca39d57fc05814e90194a4d745
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/libr/librttopo/librttopo_1.1.0.orig.tar.gz
+    sha256: 2e2fcabb48193a712a6c76ac9a9be2a53f82e32f91a2bc834d9f1b4fa9cd879f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

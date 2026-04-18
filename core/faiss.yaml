@@ -3,30 +3,54 @@ version: 1.14.1
 description: Efficient similarity search and clustering of dense vectors
 homepage: https://github.com/facebookresearch/faiss
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/faiss/blobs/sha256:f9f8ae843b91c46fba4ae7ac8f5e863721099aa7db6c84ef9ac5840f69e43a7c
-    sha256: f9f8ae843b91c46fba4ae7ac8f5e863721099aa7db6c84ef9ac5840f69e43a7c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/faiss/blobs/sha256:dc01d70a4338c134bf51277cc3e23e3e721224fe36c8b67e7b4b6f6294edcc0c
-    sha256: dc01d70a4338c134bf51277cc3e23e3e721224fe36c8b67e7b4b6f6294edcc0c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/faiss/blobs/sha256:a789aa1e023671b4c02894871f5a4c63f7886e8586cdabf60b4f0f792751ec75
-    sha256: a789aa1e023671b4c02894871f5a4c63f7886e8586cdabf60b4f0f792751ec75
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/faiss/blobs/sha256:ca531cb4ccab1ce090f96146d862af48057f1110a827230bb0e71d1c7241b2eb
-    sha256: ca531cb4ccab1ce090f96146d862af48057f1110a827230bb0e71d1c7241b2eb
-source:
-  url: https://github.com/facebookresearch/faiss/archive/refs/tags/v1.14.1.tar.gz
-  sha256: fa61ba99973fc3f5cd8f54b112b02d9be162bf29c6cc7c393604cda2d11e0446
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openblas
-  - libomp
+    - openblas
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/faiss/blobs/sha256:dc01d70a4338c134bf51277cc3e23e3e721224fe36c8b67e7b4b6f6294edcc0c
+        sha256: dc01d70a4338c134bf51277cc3e23e3e721224fe36c8b67e7b4b6f6294edcc0c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/faiss/blobs/sha256:f9f8ae843b91c46fba4ae7ac8f5e863721099aa7db6c84ef9ac5840f69e43a7c
+        sha256: f9f8ae843b91c46fba4ae7ac8f5e863721099aa7db6c84ef9ac5840f69e43a7c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/faiss/blobs/sha256:a789aa1e023671b4c02894871f5a4c63f7886e8586cdabf60b4f0f792751ec75
+        sha256: a789aa1e023671b4c02894871f5a4c63f7886e8586cdabf60b4f0f792751ec75
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/faiss/blobs/sha256:ca531cb4ccab1ce090f96146d862af48057f1110a827230bb0e71d1c7241b2eb
+        sha256: ca531cb4ccab1ce090f96146d862af48057f1110a827230bb0e71d1c7241b2eb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/facebookresearch/faiss/archive/refs/tags/v1.14.1.tar.gz
+    sha256: fa61ba99973fc3f5cd8f54b112b02d9be162bf29c6cc7c393604cda2d11e0446
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - openblas
+    - openblas
+build:
+    configure: []
+    install: []
+service: null

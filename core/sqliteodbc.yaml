@@ -1,34 +1,58 @@
 name: sqliteodbc
-version: 0.99991
+version: "0.99991"
 description: ODBC driver for SQLite
 homepage: https://ch-werner.hier-im-netz.de/sqliteodbc/
 license: TCL
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqliteodbc/blobs/sha256:ef7576d687d514cf3e6691537bee8e66eaca106ef598ad5cf07c4e20d520aecb
-    sha256: ef7576d687d514cf3e6691537bee8e66eaca106ef598ad5cf07c4e20d520aecb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqliteodbc/blobs/sha256:1a219550850f7e7aba34e7695ffd1768141bb8ee469a0ab81f19c66292c33fec
-    sha256: 1a219550850f7e7aba34e7695ffd1768141bb8ee469a0ab81f19c66292c33fec
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqliteodbc/blobs/sha256:9c3e2942b9b3d486a777ca95d5303fc556ae08435e60a2fa0f099a21d3db473b
-    sha256: 9c3e2942b9b3d486a777ca95d5303fc556ae08435e60a2fa0f099a21d3db473b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqliteodbc/blobs/sha256:3f2c84110c49b8b78f0c9cba7c38a4164f42e6d7ec370b8ac7deb83e70d978ce
-    sha256: 3f2c84110c49b8b78f0c9cba7c38a4164f42e6d7ec370b8ac7deb83e70d978ce
-source:
-  url: https://ch-werner.hier-im-netz.de/sqliteodbc/sqliteodbc-0.99991.tar.gz
-  sha256: 4d94adb8d3cde1fa94a28aeb0dfcc7be73145bcdfcdf3d5e225434db31dc8a5c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sqlite
-  - unixodbc
+    - sqlite
+    - unixodbc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqliteodbc/blobs/sha256:1a219550850f7e7aba34e7695ffd1768141bb8ee469a0ab81f19c66292c33fec
+        sha256: 1a219550850f7e7aba34e7695ffd1768141bb8ee469a0ab81f19c66292c33fec
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqliteodbc/blobs/sha256:ef7576d687d514cf3e6691537bee8e66eaca106ef598ad5cf07c4e20d520aecb
+        sha256: ef7576d687d514cf3e6691537bee8e66eaca106ef598ad5cf07c4e20d520aecb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqliteodbc/blobs/sha256:9c3e2942b9b3d486a777ca95d5303fc556ae08435e60a2fa0f099a21d3db473b
+        sha256: 9c3e2942b9b3d486a777ca95d5303fc556ae08435e60a2fa0f099a21d3db473b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqliteodbc/blobs/sha256:3f2c84110c49b8b78f0c9cba7c38a4164f42e6d7ec370b8ac7deb83e70d978ce
+        sha256: 3f2c84110c49b8b78f0c9cba7c38a4164f42e6d7ec370b8ac7deb83e70d978ce
+        sha512: ""
+        signature: ""
+source:
+    url: https://ch-werner.hier-im-netz.de/sqliteodbc/sqliteodbc-0.99991.tar.gz
+    sha256: 4d94adb8d3cde1fa94a28aeb0dfcc7be73145bcdfcdf3d5e225434db31dc8a5c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - automake
+    - automake
 linux_dependencies:
-  - sqlite
-  - unixodbc
-  - zlib-ng-compat
+    - sqlite
+    - unixodbc
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

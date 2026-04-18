@@ -1,32 +1,57 @@
 name: rtl_433
-version: 25.12
+version: "25.12"
 description: Program to decode radio transmissions from devices
 homepage: https://github.com/merbanan/rtl_433
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rtl_433/blobs/sha256:22b43f0eb2c9899189e3c33d8bf75164d21b7165a7f31abad2067553df8a7a0f
-    sha256: 22b43f0eb2c9899189e3c33d8bf75164d21b7165a7f31abad2067553df8a7a0f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rtl_433/blobs/sha256:922beeb4abc104f5e5b653ff83fca1412006b1debbab210a3013454f1e70fcbc
-    sha256: 922beeb4abc104f5e5b653ff83fca1412006b1debbab210a3013454f1e70fcbc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rtl_433/blobs/sha256:e4871e6bb7ec1b56935a8f99accef274a29bc2f90c9b2e7f54d06de9f1197073
-    sha256: e4871e6bb7ec1b56935a8f99accef274a29bc2f90c9b2e7f54d06de9f1197073
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rtl_433/blobs/sha256:dba0bb785442b49492e69176003117025384dbea6e71e782c0138fdcde6abcfe
-    sha256: dba0bb785442b49492e69176003117025384dbea6e71e782c0138fdcde6abcfe
-source:
-  url: https://github.com/merbanan/rtl_433/archive/refs/tags/25.12.tar.gz
-  sha256: d283ec7a41a02d398e8918b20b65df3bf684cf4478371830662004005dadcdd2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - librtlsdr
-  - libusb
-  - openssl@3
+    - librtlsdr
+    - libusb
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rtl_433/blobs/sha256:922beeb4abc104f5e5b653ff83fca1412006b1debbab210a3013454f1e70fcbc
+        sha256: 922beeb4abc104f5e5b653ff83fca1412006b1debbab210a3013454f1e70fcbc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rtl_433/blobs/sha256:22b43f0eb2c9899189e3c33d8bf75164d21b7165a7f31abad2067553df8a7a0f
+        sha256: 22b43f0eb2c9899189e3c33d8bf75164d21b7165a7f31abad2067553df8a7a0f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rtl_433/blobs/sha256:e4871e6bb7ec1b56935a8f99accef274a29bc2f90c9b2e7f54d06de9f1197073
+        sha256: e4871e6bb7ec1b56935a8f99accef274a29bc2f90c9b2e7f54d06de9f1197073
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rtl_433/blobs/sha256:dba0bb785442b49492e69176003117025384dbea6e71e782c0138fdcde6abcfe
+        sha256: dba0bb785442b49492e69176003117025384dbea6e71e782c0138fdcde6abcfe
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/merbanan/rtl_433/archive/refs/tags/25.12.tar.gz
+    sha256: d283ec7a41a02d398e8918b20b65df3bf684cf4478371830662004005dadcdd2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

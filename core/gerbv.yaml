@@ -3,41 +3,65 @@ version: 2.11.1
 description: Gerber (RS-274X) viewer
 homepage: https://gerbv.github.io/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gerbv/blobs/sha256:4dc6433925aeac44a2a626ba71738c2e34758a19f4f50cad7a194e61f8052fa4
-    sha256: 4dc6433925aeac44a2a626ba71738c2e34758a19f4f50cad7a194e61f8052fa4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gerbv/blobs/sha256:7520ca2ae7c43b1c466c3d150403cffd43815ad79c0ccfcca1d611ba8cbffdef
-    sha256: 7520ca2ae7c43b1c466c3d150403cffd43815ad79c0ccfcca1d611ba8cbffdef
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gerbv/blobs/sha256:1552e7fc822f0fb03a3768d7aa095d70c7b1bd9ebee8dfa4d6efa79b8e2155a7
-    sha256: 1552e7fc822f0fb03a3768d7aa095d70c7b1bd9ebee8dfa4d6efa79b8e2155a7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gerbv/blobs/sha256:31c9be5a7194ec14a38eb81f4eb60ac0d8e7cef0bca37852a286d0a3c261790f
-    sha256: 31c9be5a7194ec14a38eb81f4eb60ac0d8e7cef0bca37852a286d0a3c261790f
-source:
-  url: https://github.com/gerbv/gerbv/archive/refs/tags/v2.11.1.tar.gz
-  sha256: b9a01ed892702f21f78b6ef4ec701e2db3220b5702d1cf93b10e843cad1e69a1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk+
-  - at-spi2-core
-  - gettext
-  - harfbuzz
-  - pango
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk+
+    - at-spi2-core
+    - gettext
+    - harfbuzz
+    - pango
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gerbv/blobs/sha256:7520ca2ae7c43b1c466c3d150403cffd43815ad79c0ccfcca1d611ba8cbffdef
+        sha256: 7520ca2ae7c43b1c466c3d150403cffd43815ad79c0ccfcca1d611ba8cbffdef
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gerbv/blobs/sha256:4dc6433925aeac44a2a626ba71738c2e34758a19f4f50cad7a194e61f8052fa4
+        sha256: 4dc6433925aeac44a2a626ba71738c2e34758a19f4f50cad7a194e61f8052fa4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gerbv/blobs/sha256:1552e7fc822f0fb03a3768d7aa095d70c7b1bd9ebee8dfa4d6efa79b8e2155a7
+        sha256: 1552e7fc822f0fb03a3768d7aa095d70c7b1bd9ebee8dfa4d6efa79b8e2155a7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gerbv/blobs/sha256:31c9be5a7194ec14a38eb81f4eb60ac0d8e7cef0bca37852a286d0a3c261790f
+        sha256: 31c9be5a7194ec14a38eb81f4eb60ac0d8e7cef0bca37852a286d0a3c261790f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/gerbv/gerbv/archive/refs/tags/v2.11.1.tar.gz
+    sha256: b9a01ed892702f21f78b6ef4ec701e2db3220b5702d1cf93b10e843cad1e69a1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - gettext
-  - pkgconf
+    - cmake
+    - gettext
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk+
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk+
+build:
+    configure: []
+    install: []
+service: null

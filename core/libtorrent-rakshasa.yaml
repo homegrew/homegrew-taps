@@ -3,33 +3,57 @@ version: 0.16.9
 description: BitTorrent library with a focus on high performance
 homepage: https://github.com/rakshasa/libtorrent
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libtorrent-rakshasa/blobs/sha256:23d003866ceb54e471df38f41dd0cb632a1ee3fa7f4d44686e1f04d2d2d44be0
-    sha256: 23d003866ceb54e471df38f41dd0cb632a1ee3fa7f4d44686e1f04d2d2d44be0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libtorrent-rakshasa/blobs/sha256:9fc18de97fd9b2edd190534f36fb9d520483b86861046a99180a2936ca4096bc
-    sha256: 9fc18de97fd9b2edd190534f36fb9d520483b86861046a99180a2936ca4096bc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libtorrent-rakshasa/blobs/sha256:a49a2a9132af8cde7c162d99500e99932fc9af99b71c149866095542ffb4ef77
-    sha256: a49a2a9132af8cde7c162d99500e99932fc9af99b71c149866095542ffb4ef77
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libtorrent-rakshasa/blobs/sha256:c692677aa7736d875f8f825976645a81fecf474977a6cdfd4ecc43d62ac2f438
-    sha256: c692677aa7736d875f8f825976645a81fecf474977a6cdfd4ecc43d62ac2f438
-source:
-  url: https://github.com/rakshasa/libtorrent/archive/refs/tags/v0.16.9.tar.gz
-  sha256: 530e6cc472feeb492113ca1051ac546c093e17f250394f58eb64d65859bff84e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libtorrent-rakshasa/blobs/sha256:9fc18de97fd9b2edd190534f36fb9d520483b86861046a99180a2936ca4096bc
+        sha256: 9fc18de97fd9b2edd190534f36fb9d520483b86861046a99180a2936ca4096bc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libtorrent-rakshasa/blobs/sha256:23d003866ceb54e471df38f41dd0cb632a1ee3fa7f4d44686e1f04d2d2d44be0
+        sha256: 23d003866ceb54e471df38f41dd0cb632a1ee3fa7f4d44686e1f04d2d2d44be0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libtorrent-rakshasa/blobs/sha256:a49a2a9132af8cde7c162d99500e99932fc9af99b71c149866095542ffb4ef77
+        sha256: a49a2a9132af8cde7c162d99500e99932fc9af99b71c149866095542ffb4ef77
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libtorrent-rakshasa/blobs/sha256:c692677aa7736d875f8f825976645a81fecf474977a6cdfd4ecc43d62ac2f438
+        sha256: c692677aa7736d875f8f825976645a81fecf474977a6cdfd4ecc43d62ac2f438
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rakshasa/libtorrent/archive/refs/tags/v0.16.9.tar.gz
+    sha256: 530e6cc472feeb492113ca1051ac546c093e17f250394f58eb64d65859bff84e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

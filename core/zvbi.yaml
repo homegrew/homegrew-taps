@@ -3,31 +3,56 @@ version: 0.2.44
 description: Vertical Blanking Interval (VBI) decoding library
 homepage: https://github.com/zapping-vbi/zvbi
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zvbi/blobs/sha256:f7803981991063b4265a50a8b870311edc8afafe9362c7334f768f8b6322b27f
-    sha256: f7803981991063b4265a50a8b870311edc8afafe9362c7334f768f8b6322b27f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zvbi/blobs/sha256:337e382234bbce4a697bfb11013c522d303ff922f953dfff0d03817c6a933168
-    sha256: 337e382234bbce4a697bfb11013c522d303ff922f953dfff0d03817c6a933168
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zvbi/blobs/sha256:f5ee604a80ba6c9d1d36d125953b4ca446d7d250cd5fe0797af9dae285e642a4
-    sha256: f5ee604a80ba6c9d1d36d125953b4ca446d7d250cd5fe0797af9dae285e642a4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zvbi/blobs/sha256:a1d79ee36f8a7b4611c73d5bbe9e2d7bd9572bd4f3763a51fc894c32d4c4b37a
-    sha256: a1d79ee36f8a7b4611c73d5bbe9e2d7bd9572bd4f3763a51fc894c32d4c4b37a
-source:
-  url: https://github.com/zapping-vbi/zvbi/archive/refs/tags/v0.2.44.tar.gz
-  sha256: bca620ab670328ad732d161e4ce8d9d9fc832533cb7440e98c50e112b805ac5e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
-  - libpng
+    - gettext
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zvbi/blobs/sha256:337e382234bbce4a697bfb11013c522d303ff922f953dfff0d03817c6a933168
+        sha256: 337e382234bbce4a697bfb11013c522d303ff922f953dfff0d03817c6a933168
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zvbi/blobs/sha256:f7803981991063b4265a50a8b870311edc8afafe9362c7334f768f8b6322b27f
+        sha256: f7803981991063b4265a50a8b870311edc8afafe9362c7334f768f8b6322b27f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zvbi/blobs/sha256:f5ee604a80ba6c9d1d36d125953b4ca446d7d250cd5fe0797af9dae285e642a4
+        sha256: f5ee604a80ba6c9d1d36d125953b4ca446d7d250cd5fe0797af9dae285e642a4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zvbi/blobs/sha256:a1d79ee36f8a7b4611c73d5bbe9e2d7bd9572bd4f3763a51fc894c32d4c4b37a
+        sha256: a1d79ee36f8a7b4611c73d5bbe9e2d7bd9572bd4f3763a51fc894c32d4c4b37a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/zapping-vbi/zvbi/archive/refs/tags/v0.2.44.tar.gz
+    sha256: bca620ab670328ad732d161e4ce8d9d9fc832533cb7440e98c50e112b805ac5e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

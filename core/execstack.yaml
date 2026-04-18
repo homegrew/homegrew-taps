@@ -1,21 +1,43 @@
 name: execstack
-version: 20130503
+version: "20130503"
 description: Utility to set/clear/query executable stack bit
 homepage: https://people.redhat.com/jakub/prelink/
 license: GPL-2.0-or-later
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/execstack/blobs/sha256:497141bb3d6078b8b285ea1267f50ae2e0fd66004c623e16bf1d8aca6a2cbebb
-    sha256: 497141bb3d6078b8b285ea1267f50ae2e0fd66004c623e16bf1d8aca6a2cbebb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/execstack/blobs/sha256:4be2b1cfe1811986b8406622120ae17471a21be714cf82ad33dbb7a5be5eb23c
-    sha256: 4be2b1cfe1811986b8406622120ae17471a21be714cf82ad33dbb7a5be5eb23c
-source:
-  url: https://people.redhat.com/jakub/prelink/prelink-20130503.tar.bz2
-  sha256: 6339c7605e9b6f414d1be32530c9c8011f38820d36431c8a62e8674ca37140f0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - elfutils
+    - elfutils
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/execstack/blobs/sha256:497141bb3d6078b8b285ea1267f50ae2e0fd66004c623e16bf1d8aca6a2cbebb
+        sha256: 497141bb3d6078b8b285ea1267f50ae2e0fd66004c623e16bf1d8aca6a2cbebb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/execstack/blobs/sha256:4be2b1cfe1811986b8406622120ae17471a21be714cf82ad33dbb7a5be5eb23c
+        sha256: 4be2b1cfe1811986b8406622120ae17471a21be714cf82ad33dbb7a5be5eb23c
+        sha512: ""
+        signature: ""
+source:
+    url: https://people.redhat.com/jakub/prelink/prelink-20130503.tar.bz2
+    sha256: 6339c7605e9b6f414d1be32530c9c8011f38820d36431c8a62e8674ca37140f0
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

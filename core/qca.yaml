@@ -3,47 +3,71 @@ version: 2.3.10
 description: Qt Cryptographic Architecture (QCA)
 homepage: https://userbase.kde.org/QCA
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qca/blobs/sha256:818d341dae76b762accb69b2ce4f4c9c07c58639d82dbeff6b7f1c55fd9e7a66
-    sha256: 818d341dae76b762accb69b2ce4f4c9c07c58639d82dbeff6b7f1c55fd9e7a66
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qca/blobs/sha256:05b9faa226a1ffc150cd6ddc6e6d7328725b81413b8e56e0007bfceebe34de47
-    sha256: 05b9faa226a1ffc150cd6ddc6e6d7328725b81413b8e56e0007bfceebe34de47
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qca/blobs/sha256:697e728c265a6852dc25ebd2a87b62a87a6abb4d2f76ae9de6b669b406bf24e8
-    sha256: 697e728c265a6852dc25ebd2a87b62a87a6abb4d2f76ae9de6b669b406bf24e8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qca/blobs/sha256:4f5b7027eff968ab96d3eb53db93deb0b1ae3d51d08617abbfc94c689ee0f995
-    sha256: 4f5b7027eff968ab96d3eb53db93deb0b1ae3d51d08617abbfc94c689ee0f995
-source:
-  url: https://download.kde.org/stable/qca/2.3.10/qca-2.3.10.tar.xz
-  sha256: 1c5b722da93d559365719226bb121c726ec3c0dc4c67dea34f1e50e4e0d14a02
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - botan
-  - ca-certificates
-  - gnupg
-  - libgcrypt
-  - nss
-  - openssl@3
-  - pkcs11-helper
-  - qt5compat
-  - qtbase
-  - nspr
+    - botan
+    - ca-certificates
+    - gnupg
+    - libgcrypt
+    - nss
+    - openssl@3
+    - pkcs11-helper
+    - qt5compat
+    - qtbase
+    - nspr
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qca/blobs/sha256:05b9faa226a1ffc150cd6ddc6e6d7328725b81413b8e56e0007bfceebe34de47
+        sha256: 05b9faa226a1ffc150cd6ddc6e6d7328725b81413b8e56e0007bfceebe34de47
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qca/blobs/sha256:818d341dae76b762accb69b2ce4f4c9c07c58639d82dbeff6b7f1c55fd9e7a66
+        sha256: 818d341dae76b762accb69b2ce4f4c9c07c58639d82dbeff6b7f1c55fd9e7a66
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qca/blobs/sha256:697e728c265a6852dc25ebd2a87b62a87a6abb4d2f76ae9de6b669b406bf24e8
+        sha256: 697e728c265a6852dc25ebd2a87b62a87a6abb4d2f76ae9de6b669b406bf24e8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qca/blobs/sha256:4f5b7027eff968ab96d3eb53db93deb0b1ae3d51d08617abbfc94c689ee0f995
+        sha256: 4f5b7027eff968ab96d3eb53db93deb0b1ae3d51d08617abbfc94c689ee0f995
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.kde.org/stable/qca/2.3.10/qca-2.3.10.tar.xz
+    sha256: 1c5b722da93d559365719226bb121c726ec3c0dc4c67dea34f1e50e4e0d14a02
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - botan
-  - ca-certificates
-  - gnupg
-  - libgcrypt
-  - nss
-  - openssl@3
-  - pkcs11-helper
-  - qt5compat
-  - qtbase
+    - botan
+    - ca-certificates
+    - gnupg
+    - libgcrypt
+    - nss
+    - openssl@3
+    - pkcs11-helper
+    - qt5compat
+    - qtbase
+build:
+    configure: []
+    install: []
+service: null

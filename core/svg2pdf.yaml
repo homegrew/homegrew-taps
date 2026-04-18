@@ -3,34 +3,58 @@ version: 0.1.3
 description: Renders SVG images to a PDF file (using Cairo)
 homepage: https://cairographics.org/
 license: HPND-sell-variant
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/svg2pdf/blobs/sha256:d9da1569adeb4b46ba5ffda2b7d4a70f99351d0e277ceb655d6cdbde8bd67325
-    sha256: d9da1569adeb4b46ba5ffda2b7d4a70f99351d0e277ceb655d6cdbde8bd67325
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/svg2pdf/blobs/sha256:09f9f27a23b92933b6f3d83db93fc8e72e597aa270c5ea9d9a5a24087eb5e86e
-    sha256: 09f9f27a23b92933b6f3d83db93fc8e72e597aa270c5ea9d9a5a24087eb5e86e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/svg2pdf/blobs/sha256:da8f29a9fa362e43d754a326cf274898b7ee24dda8591b4169cfb8e31b6a51a4
-    sha256: da8f29a9fa362e43d754a326cf274898b7ee24dda8591b4169cfb8e31b6a51a4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/svg2pdf/blobs/sha256:57a062a1e6b804c18c3361878b078da84d86d78ea93d92e9b62f6a8c2aee8366
-    sha256: 57a062a1e6b804c18c3361878b078da84d86d78ea93d92e9b62f6a8c2aee8366
-source:
-  url: https://cairographics.org/snapshots/svg2pdf-0.1.3.tar.gz
-  sha256: 854a870722a9d7f6262881e304a0b5e08a1c61cecb16c23a8a2f42f2b6a9406b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - libsvg-cairo
-  - jpeg-turbo
-  - libpng
-  - libsvg
+    - cairo
+    - libsvg-cairo
+    - jpeg-turbo
+    - libpng
+    - libsvg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/svg2pdf/blobs/sha256:09f9f27a23b92933b6f3d83db93fc8e72e597aa270c5ea9d9a5a24087eb5e86e
+        sha256: 09f9f27a23b92933b6f3d83db93fc8e72e597aa270c5ea9d9a5a24087eb5e86e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/svg2pdf/blobs/sha256:d9da1569adeb4b46ba5ffda2b7d4a70f99351d0e277ceb655d6cdbde8bd67325
+        sha256: d9da1569adeb4b46ba5ffda2b7d4a70f99351d0e277ceb655d6cdbde8bd67325
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/svg2pdf/blobs/sha256:da8f29a9fa362e43d754a326cf274898b7ee24dda8591b4169cfb8e31b6a51a4
+        sha256: da8f29a9fa362e43d754a326cf274898b7ee24dda8591b4169cfb8e31b6a51a4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/svg2pdf/blobs/sha256:57a062a1e6b804c18c3361878b078da84d86d78ea93d92e9b62f6a8c2aee8366
+        sha256: 57a062a1e6b804c18c3361878b078da84d86d78ea93d92e9b62f6a8c2aee8366
+        sha512: ""
+        signature: ""
+source:
+    url: https://cairographics.org/snapshots/svg2pdf-0.1.3.tar.gz
+    sha256: 854a870722a9d7f6262881e304a0b5e08a1c61cecb16c23a8a2f42f2b6a9406b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - libsvg-cairo
+    - cairo
+    - libsvg-cairo
+build:
+    configure: []
+    install: []
+service: null

@@ -3,36 +3,60 @@ version: 4.9.0.1
 description: Hardware driver for all USRP devices
 homepage: https://files.ettus.com/manual/
 license: GPL-3.0-or-later AND LGPL-3.0-or-later AND MIT AND BSD-3-Clause AND Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uhd/blobs/sha256:c571d569fab53e1ca24a0b4b391bb63dd5f5c0d5d5f35c3e12de533c2fb18a27
-    sha256: c571d569fab53e1ca24a0b4b391bb63dd5f5c0d5d5f35c3e12de533c2fb18a27
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uhd/blobs/sha256:5cf536d223fcaed31cb4bcfbad8ca906e447054411c350d366ae507097a9838c
-    sha256: 5cf536d223fcaed31cb4bcfbad8ca906e447054411c350d366ae507097a9838c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uhd/blobs/sha256:4b7d5afac326a53d266329f8205c6a5ea1c87efca8d64613b2c5e7fbc60936a3
-    sha256: 4b7d5afac326a53d266329f8205c6a5ea1c87efca8d64613b2c5e7fbc60936a3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uhd/blobs/sha256:853774c5012b7ae12fff00b8aa0fc98471c5a3c1d728636b465230a23bc832e4
-    sha256: 853774c5012b7ae12fff00b8aa0fc98471c5a3c1d728636b465230a23bc832e4
-source:
-  url: https://github.com/EttusResearch/uhd/archive/refs/tags/v4.9.0.1.tar.gz
-  sha256: 0be26a139f23041c1fb6e9666d84cba839460e3c756057dc48dc067cc356a7bc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - libusb
-  - python@3.14
+    - boost
+    - libusb
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uhd/blobs/sha256:5cf536d223fcaed31cb4bcfbad8ca906e447054411c350d366ae507097a9838c
+        sha256: 5cf536d223fcaed31cb4bcfbad8ca906e447054411c350d366ae507097a9838c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uhd/blobs/sha256:c571d569fab53e1ca24a0b4b391bb63dd5f5c0d5d5f35c3e12de533c2fb18a27
+        sha256: c571d569fab53e1ca24a0b4b391bb63dd5f5c0d5d5f35c3e12de533c2fb18a27
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uhd/blobs/sha256:4b7d5afac326a53d266329f8205c6a5ea1c87efca8d64613b2c5e7fbc60936a3
+        sha256: 4b7d5afac326a53d266329f8205c6a5ea1c87efca8d64613b2c5e7fbc60936a3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uhd/blobs/sha256:853774c5012b7ae12fff00b8aa0fc98471c5a3c1d728636b465230a23bc832e4
+        sha256: 853774c5012b7ae12fff00b8aa0fc98471c5a3c1d728636b465230a23bc832e4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/EttusResearch/uhd/archive/refs/tags/v4.9.0.1.tar.gz
+    sha256: 0be26a139f23041c1fb6e9666d84cba839460e3c756057dc48dc067cc356a7bc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
-  - pkgconf
+    - cmake
+    - doxygen
+    - pkgconf
 linux_dependencies:
-  - boost
-  - libusb
-  - ncurses
-  - python@3.14
+    - boost
+    - libusb
+    - ncurses
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

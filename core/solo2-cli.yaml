@@ -3,29 +3,54 @@ version: 0.2.2
 description: CLI to update and use Solo 2 security keys
 homepage: https://solokeys.com/
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/solo2-cli/blobs/sha256:dad9f3c2ecd0fa082e66d3013262b487a46c9d5000dd93af6ecb092d1c1b9298
-    sha256: dad9f3c2ecd0fa082e66d3013262b487a46c9d5000dd93af6ecb092d1c1b9298
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/solo2-cli/blobs/sha256:4b0ce4ae4cc661cb11b6746b536e736256c6a3b978af3508ea36997bd667d0c9
-    sha256: 4b0ce4ae4cc661cb11b6746b536e736256c6a3b978af3508ea36997bd667d0c9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/solo2-cli/blobs/sha256:00c7bd01f05ac244c1b50fbfc559a9dcc641c23d71a2f9664e8d88d22a522316
-    sha256: 00c7bd01f05ac244c1b50fbfc559a9dcc641c23d71a2f9664e8d88d22a522316
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/solo2-cli/blobs/sha256:9a38668bcd74a109b726bc666553352c1688ee7c9b51061e2f0767cd3bb7d06a
-    sha256: 9a38668bcd74a109b726bc666553352c1688ee7c9b51061e2f0767cd3bb7d06a
-source:
-  url: https://github.com/solokeys/solo2-cli/archive/refs/tags/v0.2.2.tar.gz
-  sha256: 49a30c5ee6f38be968a520089741f8b936099611e98e6bf2b25d05e5e9335fb4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/solo2-cli/blobs/sha256:4b0ce4ae4cc661cb11b6746b536e736256c6a3b978af3508ea36997bd667d0c9
+        sha256: 4b0ce4ae4cc661cb11b6746b536e736256c6a3b978af3508ea36997bd667d0c9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/solo2-cli/blobs/sha256:dad9f3c2ecd0fa082e66d3013262b487a46c9d5000dd93af6ecb092d1c1b9298
+        sha256: dad9f3c2ecd0fa082e66d3013262b487a46c9d5000dd93af6ecb092d1c1b9298
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/solo2-cli/blobs/sha256:00c7bd01f05ac244c1b50fbfc559a9dcc641c23d71a2f9664e8d88d22a522316
+        sha256: 00c7bd01f05ac244c1b50fbfc559a9dcc641c23d71a2f9664e8d88d22a522316
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/solo2-cli/blobs/sha256:9a38668bcd74a109b726bc666553352c1688ee7c9b51061e2f0767cd3bb7d06a
+        sha256: 9a38668bcd74a109b726bc666553352c1688ee7c9b51061e2f0767cd3bb7d06a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/solokeys/solo2-cli/archive/refs/tags/v0.2.2.tar.gz
+    sha256: 49a30c5ee6f38be968a520089741f8b936099611e98e6bf2b25d05e5e9335fb4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - pcsc-lite
-  - systemd
+    - pcsc-lite
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

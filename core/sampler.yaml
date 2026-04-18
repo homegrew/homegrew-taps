@@ -3,27 +3,52 @@ version: 1.1.0
 description: Tool for shell commands execution, visualization and alerting
 homepage: https://sampler.dev
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sampler/blobs/sha256:aca2f9375a5efc43bcd98549ac7d7ba6becd88a86ba41b5791b9d751260d0616
-    sha256: aca2f9375a5efc43bcd98549ac7d7ba6becd88a86ba41b5791b9d751260d0616
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sampler/blobs/sha256:d85ed3f3b130be8bf7141e9c7b236668c1f758f0a1ed86e7cb0d6d98d1457ae8
-    sha256: d85ed3f3b130be8bf7141e9c7b236668c1f758f0a1ed86e7cb0d6d98d1457ae8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sampler/blobs/sha256:71d294afc5ecad041132801fa2d6848f8e4fa1ca1756b2d17b440f23ccaa11ec
-    sha256: 71d294afc5ecad041132801fa2d6848f8e4fa1ca1756b2d17b440f23ccaa11ec
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sampler/blobs/sha256:2bb024eb1121fcbdb7591fc43d76192122a98b1e0f8805151fac95108e8ea20a
-    sha256: 2bb024eb1121fcbdb7591fc43d76192122a98b1e0f8805151fac95108e8ea20a
-source:
-  url: https://github.com/sqshq/sampler/archive/refs/tags/v1.1.0.tar.gz
-  sha256: 8b60bc5c0f94ddd4291abc2b89c1792da424fa590733932871f7b5e07e7587f9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sampler/blobs/sha256:d85ed3f3b130be8bf7141e9c7b236668c1f758f0a1ed86e7cb0d6d98d1457ae8
+        sha256: d85ed3f3b130be8bf7141e9c7b236668c1f758f0a1ed86e7cb0d6d98d1457ae8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sampler/blobs/sha256:aca2f9375a5efc43bcd98549ac7d7ba6becd88a86ba41b5791b9d751260d0616
+        sha256: aca2f9375a5efc43bcd98549ac7d7ba6becd88a86ba41b5791b9d751260d0616
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sampler/blobs/sha256:71d294afc5ecad041132801fa2d6848f8e4fa1ca1756b2d17b440f23ccaa11ec
+        sha256: 71d294afc5ecad041132801fa2d6848f8e4fa1ca1756b2d17b440f23ccaa11ec
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sampler/blobs/sha256:2bb024eb1121fcbdb7591fc43d76192122a98b1e0f8805151fac95108e8ea20a
+        sha256: 2bb024eb1121fcbdb7591fc43d76192122a98b1e0f8805151fac95108e8ea20a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sqshq/sampler/archive/refs/tags/v1.1.0.tar.gz
+    sha256: 8b60bc5c0f94ddd4291abc2b89c1792da424fa590733932871f7b5e07e7587f9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
 linux_dependencies:
-  - alsa-lib
+    - alsa-lib
+build:
+    configure: []
+    install: []
+service: null

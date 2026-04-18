@@ -3,28 +3,53 @@ version: 4.2.0
 description: Cloud-native distributed messaging and streaming platform
 homepage: https://pulsar.apache.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:ad65e3611379186ba1959a3f20eca8a80d63eabfd277b67523bdcb5b96db7172
-    sha256: ad65e3611379186ba1959a3f20eca8a80d63eabfd277b67523bdcb5b96db7172
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:f5568335145842cf866357523e98871c39b15397bd36f3c7e94e26a7abb50843
-    sha256: f5568335145842cf866357523e98871c39b15397bd36f3c7e94e26a7abb50843
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:5cc5a288674c7434ff517c2cd16c2c62cccd6863bf532c666f7341fa200e208d
-    sha256: 5cc5a288674c7434ff517c2cd16c2c62cccd6863bf532c666f7341fa200e208d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:a607599400e03c1700ea8549102c33d6a889a4a6713840d6b8c70cfc4ebd698e
-    sha256: a607599400e03c1700ea8549102c33d6a889a4a6713840d6b8c70cfc4ebd698e
-source:
-  url: https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-4.2.0/apache-pulsar-4.2.0-src.tar.gz
-  sha256: 012f70996330c8c6b47c082d8c0f4028ca0a61f711f3007576c0ac114067f6bb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk@21
+    - openjdk@21
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:f5568335145842cf866357523e98871c39b15397bd36f3c7e94e26a7abb50843
+        sha256: f5568335145842cf866357523e98871c39b15397bd36f3c7e94e26a7abb50843
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:ad65e3611379186ba1959a3f20eca8a80d63eabfd277b67523bdcb5b96db7172
+        sha256: ad65e3611379186ba1959a3f20eca8a80d63eabfd277b67523bdcb5b96db7172
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:5cc5a288674c7434ff517c2cd16c2c62cccd6863bf532c666f7341fa200e208d
+        sha256: 5cc5a288674c7434ff517c2cd16c2c62cccd6863bf532c666f7341fa200e208d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:a607599400e03c1700ea8549102c33d6a889a4a6713840d6b8c70cfc4ebd698e
+        sha256: a607599400e03c1700ea8549102c33d6a889a4a6713840d6b8c70cfc4ebd698e
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-4.2.0/apache-pulsar-4.2.0-src.tar.gz
+    sha256: 012f70996330c8c6b47c082d8c0f4028ca0a61f711f3007576c0ac114067f6bb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - maven
-  - protoc-gen-grpc-java
+    - maven
+    - protoc-gen-grpc-java
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

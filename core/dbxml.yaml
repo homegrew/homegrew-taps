@@ -3,32 +3,57 @@ version: 6.1.4
 description: Embeddable XML database with XQuery support and other advanced features
 homepage: https://www.oracle.com/database/technologies/related/berkeleydb.html
 license: AGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dbxml/blobs/sha256:3828eca647ae656062c684b2a22643d28cd2f0f1664ec44c960a5f7b20a7d5e6
-    sha256: 3828eca647ae656062c684b2a22643d28cd2f0f1664ec44c960a5f7b20a7d5e6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dbxml/blobs/sha256:e40be797484590b2d264134fff52a2f77dd3e8e7f1104bbc312d9618828b9e0f
-    sha256: e40be797484590b2d264134fff52a2f77dd3e8e7f1104bbc312d9618828b9e0f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dbxml/blobs/sha256:afed5853113aeb049c66efecd663697396c9cca6466c67c5b34b7f37981415c6
-    sha256: afed5853113aeb049c66efecd663697396c9cca6466c67c5b34b7f37981415c6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dbxml/blobs/sha256:9a19a0a31bfa89f8b1ae945f05cd44281267114d25d49cc6f0b3f06f6c3f43bc
-    sha256: 9a19a0a31bfa89f8b1ae945f05cd44281267114d25d49cc6f0b3f06f6c3f43bc
-source:
-  url: https://download.oracle.com/berkeley-db/dbxml-6.1.4.tar.gz
-  sha256: a8fc8f5e0c3b6e42741fa4dfc3b878c982ff8f5e5f14843f6a7e20d22e64251a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - berkeley-db
-  - xerces-c
-  - xqilla
+    - berkeley-db
+    - xerces-c
+    - xqilla
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dbxml/blobs/sha256:e40be797484590b2d264134fff52a2f77dd3e8e7f1104bbc312d9618828b9e0f
+        sha256: e40be797484590b2d264134fff52a2f77dd3e8e7f1104bbc312d9618828b9e0f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dbxml/blobs/sha256:3828eca647ae656062c684b2a22643d28cd2f0f1664ec44c960a5f7b20a7d5e6
+        sha256: 3828eca647ae656062c684b2a22643d28cd2f0f1664ec44c960a5f7b20a7d5e6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dbxml/blobs/sha256:afed5853113aeb049c66efecd663697396c9cca6466c67c5b34b7f37981415c6
+        sha256: afed5853113aeb049c66efecd663697396c9cca6466c67c5b34b7f37981415c6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dbxml/blobs/sha256:9a19a0a31bfa89f8b1ae945f05cd44281267114d25d49cc6f0b3f06f6c3f43bc
+        sha256: 9a19a0a31bfa89f8b1ae945f05cd44281267114d25d49cc6f0b3f06f6c3f43bc
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.oracle.com/berkeley-db/dbxml-6.1.4.tar.gz
+    sha256: a8fc8f5e0c3b6e42741fa4dfc3b878c982ff8f5e5f14843f6a7e20d22e64251a
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - berkeley-db
-  - xerces-c
-  - xqilla
-  - zlib-ng-compat
+    - berkeley-db
+    - xerces-c
+    - xqilla
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

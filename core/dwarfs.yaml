@@ -3,60 +3,84 @@ version: 0.15.3
 description: Fast high compression read-only file system for Linux, Windows, and macOS
 homepage: https://github.com/mhx/dwarfs
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dwarfs/blobs/sha256:eb0df7e1ff55f49ac73430d2fba04f51783356ed5a4637150ace7ff4cfa39681
-    sha256: eb0df7e1ff55f49ac73430d2fba04f51783356ed5a4637150ace7ff4cfa39681
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dwarfs/blobs/sha256:0621cdb883746e82f746782af5626cc72962b3a45c6addb2ec803d7a33cc444e
-    sha256: 0621cdb883746e82f746782af5626cc72962b3a45c6addb2ec803d7a33cc444e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dwarfs/blobs/sha256:225a82a5cc48d2014732c1dbb2dabbbddeeeb3dfe74cf99feb44abe0f9ac82b3
-    sha256: 225a82a5cc48d2014732c1dbb2dabbbddeeeb3dfe74cf99feb44abe0f9ac82b3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dwarfs/blobs/sha256:ca1dc50195afd13e63856de31e0d25933703adbe012edecfd01f41a4e075d187
-    sha256: ca1dc50195afd13e63856de31e0d25933703adbe012edecfd01f41a4e075d187
-source:
-  url: https://github.com/mhx/dwarfs/releases/download/v0.15.3/dwarfs-0.15.3.tar.xz
-  sha256: 2a9c6b7cb2841f3c7b75839da9326724a2817e4467b20e79e3e24c3eefc13eca
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - brotli
-  - flac
-  - fmt
-  - howard-hinnant-date
-  - libarchive
-  - lz4
-  - nlohmann-json
-  - openssl@3
-  - parallel-hashmap
-  - range-v3
-  - utf8cpp
-  - xxhash
-  - xz
-  - zstd
+    - boost
+    - brotli
+    - flac
+    - fmt
+    - howard-hinnant-date
+    - libarchive
+    - lz4
+    - nlohmann-json
+    - openssl@3
+    - parallel-hashmap
+    - range-v3
+    - utf8cpp
+    - xxhash
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dwarfs/blobs/sha256:0621cdb883746e82f746782af5626cc72962b3a45c6addb2ec803d7a33cc444e
+        sha256: 0621cdb883746e82f746782af5626cc72962b3a45c6addb2ec803d7a33cc444e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dwarfs/blobs/sha256:eb0df7e1ff55f49ac73430d2fba04f51783356ed5a4637150ace7ff4cfa39681
+        sha256: eb0df7e1ff55f49ac73430d2fba04f51783356ed5a4637150ace7ff4cfa39681
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dwarfs/blobs/sha256:225a82a5cc48d2014732c1dbb2dabbbddeeeb3dfe74cf99feb44abe0f9ac82b3
+        sha256: 225a82a5cc48d2014732c1dbb2dabbbddeeeb3dfe74cf99feb44abe0f9ac82b3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dwarfs/blobs/sha256:ca1dc50195afd13e63856de31e0d25933703adbe012edecfd01f41a4e075d187
+        sha256: ca1dc50195afd13e63856de31e0d25933703adbe012edecfd01f41a4e075d187
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mhx/dwarfs/releases/download/v0.15.3/dwarfs-0.15.3.tar.xz
+    sha256: 2a9c6b7cb2841f3c7b75839da9326724a2817e4467b20e79e3e24c3eefc13eca
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - googletest
-  - pkgconf
+    - cmake
+    - googletest
+    - pkgconf
 linux_dependencies:
-  - boost
-  - brotli
-  - flac
-  - fmt
-  - howard-hinnant-date
-  - jemalloc
-  - libarchive
-  - lz4
-  - nlohmann-json
-  - openssl@3
-  - parallel-hashmap
-  - range-v3
-  - utf8cpp
-  - xxhash
-  - xz
-  - zstd
+    - boost
+    - brotli
+    - flac
+    - fmt
+    - howard-hinnant-date
+    - jemalloc
+    - libarchive
+    - lz4
+    - nlohmann-json
+    - openssl@3
+    - parallel-hashmap
+    - range-v3
+    - utf8cpp
+    - xxhash
+    - xz
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

@@ -3,31 +3,55 @@ version: 1.8.0
 description: Sovereign code forge built on Git
 homepage: https://radicle.xyz
 license: MIT AND Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/radicle/blobs/sha256:4d208f5a25bbab7fa45a173aa7fc5d9a2110553a59edab74c64e885c1f4f7d20
-    sha256: 4d208f5a25bbab7fa45a173aa7fc5d9a2110553a59edab74c64e885c1f4f7d20
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/radicle/blobs/sha256:f8f4631c56c352441e6000fec0a921b9655cd54e064b669bbae56474ccb09076
-    sha256: f8f4631c56c352441e6000fec0a921b9655cd54e064b669bbae56474ccb09076
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/radicle/blobs/sha256:326623a7b34c86eef1c598e00f5be67fe3a0fc730ed38fdda76876512c1cdc33
-    sha256: 326623a7b34c86eef1c598e00f5be67fe3a0fc730ed38fdda76876512c1cdc33
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/radicle/blobs/sha256:e42a705b7fd6dd5203491791ea3943af98ea6b81c6da04f0dcf3bba476c8563f
-    sha256: e42a705b7fd6dd5203491791ea3943af98ea6b81c6da04f0dcf3bba476c8563f
-source:
-  url: https://files.radicle.xyz/releases/latest/heartwood-1.8.0.tar.gz
-  sha256: c1de84fee59ae1c69fac5e42c932f4d2765a85630b27642f77792fc765948097
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssh
+    - openssh
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/radicle/blobs/sha256:f8f4631c56c352441e6000fec0a921b9655cd54e064b669bbae56474ccb09076
+        sha256: f8f4631c56c352441e6000fec0a921b9655cd54e064b669bbae56474ccb09076
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/radicle/blobs/sha256:4d208f5a25bbab7fa45a173aa7fc5d9a2110553a59edab74c64e885c1f4f7d20
+        sha256: 4d208f5a25bbab7fa45a173aa7fc5d9a2110553a59edab74c64e885c1f4f7d20
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/radicle/blobs/sha256:326623a7b34c86eef1c598e00f5be67fe3a0fc730ed38fdda76876512c1cdc33
+        sha256: 326623a7b34c86eef1c598e00f5be67fe3a0fc730ed38fdda76876512c1cdc33
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/radicle/blobs/sha256:e42a705b7fd6dd5203491791ea3943af98ea6b81c6da04f0dcf3bba476c8563f
+        sha256: e42a705b7fd6dd5203491791ea3943af98ea6b81c6da04f0dcf3bba476c8563f
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.radicle.xyz/releases/latest/heartwood-1.8.0.tar.gz
+    sha256: c1de84fee59ae1c69fac5e42c932f4d2765a85630b27642f77792fc765948097
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoctor
-  - rust
+    - asciidoctor
+    - rust
 linux_dependencies:
-  - openssh
-  - zlib-ng-compat
+    - openssh
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

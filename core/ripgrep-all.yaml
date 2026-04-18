@@ -3,27 +3,52 @@ version: 0.10.10
 description: Wrapper around ripgrep that adds multiple rich file types
 homepage: https://github.com/phiresky/ripgrep-all
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ripgrep-all/blobs/sha256:6a9273f9063c28cf81ea8cc7c5149e587a68ee73ebe6a11ca8d5899ad97b05a3
-    sha256: 6a9273f9063c28cf81ea8cc7c5149e587a68ee73ebe6a11ca8d5899ad97b05a3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ripgrep-all/blobs/sha256:492ea96a51e34f1ecdba5c5da4c587324eb0c7e5959d4e493a663b528b5b885c
-    sha256: 492ea96a51e34f1ecdba5c5da4c587324eb0c7e5959d4e493a663b528b5b885c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ripgrep-all/blobs/sha256:640b5394853bac77a1805e11518ab09d1623a8ff9dcacd161eabbacc4c46cd85
-    sha256: 640b5394853bac77a1805e11518ab09d1623a8ff9dcacd161eabbacc4c46cd85
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ripgrep-all/blobs/sha256:039158fe4635df5c4b1596be7d62d4e0177a8c3caa09bd1ba5a9715c1e3dab75
-    sha256: 039158fe4635df5c4b1596be7d62d4e0177a8c3caa09bd1ba5a9715c1e3dab75
-source:
-  url: https://github.com/phiresky/ripgrep-all/archive/refs/tags/v0.10.10.tar.gz
-  sha256: 17fadc7b73a51608d57f82b4a11f3edc0da87716cc4b302103eed9d4b9010fe5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ripgrep
+    - ripgrep
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ripgrep-all/blobs/sha256:492ea96a51e34f1ecdba5c5da4c587324eb0c7e5959d4e493a663b528b5b885c
+        sha256: 492ea96a51e34f1ecdba5c5da4c587324eb0c7e5959d4e493a663b528b5b885c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ripgrep-all/blobs/sha256:6a9273f9063c28cf81ea8cc7c5149e587a68ee73ebe6a11ca8d5899ad97b05a3
+        sha256: 6a9273f9063c28cf81ea8cc7c5149e587a68ee73ebe6a11ca8d5899ad97b05a3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ripgrep-all/blobs/sha256:640b5394853bac77a1805e11518ab09d1623a8ff9dcacd161eabbacc4c46cd85
+        sha256: 640b5394853bac77a1805e11518ab09d1623a8ff9dcacd161eabbacc4c46cd85
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ripgrep-all/blobs/sha256:039158fe4635df5c4b1596be7d62d4e0177a8c3caa09bd1ba5a9715c1e3dab75
+        sha256: 039158fe4635df5c4b1596be7d62d4e0177a8c3caa09bd1ba5a9715c1e3dab75
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/phiresky/ripgrep-all/archive/refs/tags/v0.10.10.tar.gz
+    sha256: 17fadc7b73a51608d57f82b4a11f3edc0da87716cc4b302103eed9d4b9010fe5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

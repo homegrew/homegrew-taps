@@ -3,43 +3,67 @@ version: 3.0.2
 description: Stream I/O Library
 homepage: https://github.com/cminyard/gensio
 license: LGPL-2.1-only AND GPL-2.0-only AND Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:0db89caf2ed24a6fe56baad6d75e2c330f3d844615476130ed40c96886ce1d8e
-    sha256: 0db89caf2ed24a6fe56baad6d75e2c330f3d844615476130ed40c96886ce1d8e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:33301c2bd0538d62b33f72ab6ab7356b0de2d95416f2f85bad06467f3a87b072
-    sha256: 33301c2bd0538d62b33f72ab6ab7356b0de2d95416f2f85bad06467f3a87b072
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:0d72619224d245f776aa9866523a636f1546e1479fea40f928fde9e5af98961e
-    sha256: 0d72619224d245f776aa9866523a636f1546e1479fea40f928fde9e5af98961e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:d28a9500f998e1e699484373c0044827613b2dc4e4707b6814fec1603604272b
-    sha256: d28a9500f998e1e699484373c0044827613b2dc4e4707b6814fec1603604272b
-source:
-  url: https://github.com/cminyard/gensio/releases/download/v3.0.2/gensio-3.0.2.tar.gz
-  sha256: f05e96d3497c4085c5493b36a3a6d5e25d8787a3de220135335f1ec93fca3637
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - openssl@3
-  - python@3.14
-  - tcl-tk
-  - gettext
-  - portaudio
+    - glib
+    - openssl@3
+    - python@3.14
+    - tcl-tk
+    - gettext
+    - portaudio
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:33301c2bd0538d62b33f72ab6ab7356b0de2d95416f2f85bad06467f3a87b072
+        sha256: 33301c2bd0538d62b33f72ab6ab7356b0de2d95416f2f85bad06467f3a87b072
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:0db89caf2ed24a6fe56baad6d75e2c330f3d844615476130ed40c96886ce1d8e
+        sha256: 0db89caf2ed24a6fe56baad6d75e2c330f3d844615476130ed40c96886ce1d8e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:0d72619224d245f776aa9866523a636f1546e1479fea40f928fde9e5af98961e
+        sha256: 0d72619224d245f776aa9866523a636f1546e1479fea40f928fde9e5af98961e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:d28a9500f998e1e699484373c0044827613b2dc4e4707b6814fec1603604272b
+        sha256: d28a9500f998e1e699484373c0044827613b2dc4e4707b6814fec1603604272b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cminyard/gensio/releases/download/v3.0.2/gensio-3.0.2.tar.gz
+    sha256: f05e96d3497c4085c5493b36a3a6d5e25d8787a3de220135335f1ec93fca3637
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - pkgconf
-  - swig
+    - go
+    - pkgconf
+    - swig
 linux_dependencies:
-  - alsa-lib
-  - avahi
-  - glib
-  - linux-pam
-  - openssl@3
-  - python@3.14
-  - systemd
-  - tcl-tk
+    - alsa-lib
+    - avahi
+    - glib
+    - linux-pam
+    - openssl@3
+    - python@3.14
+    - systemd
+    - tcl-tk
+build:
+    configure: []
+    install: []
+service: null

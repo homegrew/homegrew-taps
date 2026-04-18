@@ -3,25 +3,51 @@ version: 0.20.12
 description: Helm-inspired infrastructure-as-code package deployer
 homepage: https://yokecd.github.io/docs/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yoke/blobs/sha256:095281abf6d3dadebabad5ff15d7203470c102b3a0b64c5ade2f44c84eeeed63
-    sha256: 095281abf6d3dadebabad5ff15d7203470c102b3a0b64c5ade2f44c84eeeed63
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yoke/blobs/sha256:4311d519316e734cfb08f1f346bb0cc94c41d17f1c4e7de7c6c9bcc7afdda06d
-    sha256: 4311d519316e734cfb08f1f346bb0cc94c41d17f1c4e7de7c6c9bcc7afdda06d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yoke/blobs/sha256:665471b80de0f80effa5966c81eec43d27fd152b336a6f9944693148e7857687
-    sha256: 665471b80de0f80effa5966c81eec43d27fd152b336a6f9944693148e7857687
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yoke/blobs/sha256:9e4bd624074aee6aaa3b4ac4c966c97e9cb17ef73316d4101f29b1dbe6bf00d5
-    sha256: 9e4bd624074aee6aaa3b4ac4c966c97e9cb17ef73316d4101f29b1dbe6bf00d5
-source:
-  url: https://github.com/yokecd/yoke.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yoke/blobs/sha256:4311d519316e734cfb08f1f346bb0cc94c41d17f1c4e7de7c6c9bcc7afdda06d
+        sha256: 4311d519316e734cfb08f1f346bb0cc94c41d17f1c4e7de7c6c9bcc7afdda06d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yoke/blobs/sha256:095281abf6d3dadebabad5ff15d7203470c102b3a0b64c5ade2f44c84eeeed63
+        sha256: 095281abf6d3dadebabad5ff15d7203470c102b3a0b64c5ade2f44c84eeeed63
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yoke/blobs/sha256:665471b80de0f80effa5966c81eec43d27fd152b336a6f9944693148e7857687
+        sha256: 665471b80de0f80effa5966c81eec43d27fd152b336a6f9944693148e7857687
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yoke/blobs/sha256:9e4bd624074aee6aaa3b4ac4c966c97e9cb17ef73316d4101f29b1dbe6bf00d5
+        sha256: 9e4bd624074aee6aaa3b4ac4c966c97e9cb17ef73316d4101f29b1dbe6bf00d5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/yokecd/yoke.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

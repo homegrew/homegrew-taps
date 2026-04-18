@@ -3,29 +3,55 @@ version: 1.4.5
 description: Bayesian state-space modelling on parallel computer hardware
 homepage: https://libbi.org/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libbi/blobs/sha256:8f3492d6763bd53c9d705448646ae73c947d565cd274b66a3b134a9caa208377
-    sha256: 8f3492d6763bd53c9d705448646ae73c947d565cd274b66a3b134a9caa208377
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libbi/blobs/sha256:e1f3d23667728f04406e6805caca846da06390fa314cbd8a3850043ccbbe7e48
-    sha256: e1f3d23667728f04406e6805caca846da06390fa314cbd8a3850043ccbbe7e48
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libbi/blobs/sha256:a5883454a2aa5566a18586e365924c1b2ea48cbd153e545cf41fb5404eba8106
-    sha256: a5883454a2aa5566a18586e365924c1b2ea48cbd153e545cf41fb5404eba8106
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libbi/blobs/sha256:a91700fec63d29480a0137368f5541355c294fbe6124fff98aa8599a575aa0c4
-    sha256: a91700fec63d29480a0137368f5541355c294fbe6124fff98aa8599a575aa0c4
-source:
-  url: https://github.com/lawmurray/LibBi/archive/refs/tags/1.4.5.tar.gz
-  sha256: af2b6d30e1502f99a3950d63ceaf7d7275a236f4d81eff337121c24fbb802fbe
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - automake
-  - boost
-  - gsl
-  - netcdf
-  - qrupdate
+    - automake
+    - boost
+    - gsl
+    - netcdf
+    - qrupdate
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libbi/blobs/sha256:e1f3d23667728f04406e6805caca846da06390fa314cbd8a3850043ccbbe7e48
+        sha256: e1f3d23667728f04406e6805caca846da06390fa314cbd8a3850043ccbbe7e48
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libbi/blobs/sha256:8f3492d6763bd53c9d705448646ae73c947d565cd274b66a3b134a9caa208377
+        sha256: 8f3492d6763bd53c9d705448646ae73c947d565cd274b66a3b134a9caa208377
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libbi/blobs/sha256:a5883454a2aa5566a18586e365924c1b2ea48cbd153e545cf41fb5404eba8106
+        sha256: a5883454a2aa5566a18586e365924c1b2ea48cbd153e545cf41fb5404eba8106
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libbi/blobs/sha256:a91700fec63d29480a0137368f5541355c294fbe6124fff98aa8599a575aa0c4
+        sha256: a91700fec63d29480a0137368f5541355c294fbe6124fff98aa8599a575aa0c4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lawmurray/LibBi/archive/refs/tags/1.4.5.tar.gz
+    sha256: af2b6d30e1502f99a3950d63ceaf7d7275a236f4d81eff337121c24fbb802fbe
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

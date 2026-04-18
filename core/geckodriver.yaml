@@ -1,27 +1,53 @@
 name: geckodriver
 version: 0.36.0
-description: "WebDriver <-> Marionette proxy"
+description: WebDriver <-> Marionette proxy
 homepage: https://github.com/mozilla/geckodriver
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/geckodriver/blobs/sha256:ef35a96f86a562d2e4ce13a0bc898e5ae48512877091f31a1dc54b3c3da3d9e5
-    sha256: ef35a96f86a562d2e4ce13a0bc898e5ae48512877091f31a1dc54b3c3da3d9e5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/geckodriver/blobs/sha256:de49fdc83e656b413608cfb40bc59425df4a3538d3e53162cb2b8a55466f219e
-    sha256: de49fdc83e656b413608cfb40bc59425df4a3538d3e53162cb2b8a55466f219e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/geckodriver/blobs/sha256:fa9e1b98be14b7ab9af9a7c1ee458ddc55045f11666e5fe8edcf7c59156fd1d3
-    sha256: fa9e1b98be14b7ab9af9a7c1ee458ddc55045f11666e5fe8edcf7c59156fd1d3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/geckodriver/blobs/sha256:caea91cd4156e7b148c5328f5a0590cfc0fac5819a8baca8a80938cab96f28a2
-    sha256: caea91cd4156e7b148c5328f5a0590cfc0fac5819a8baca8a80938cab96f28a2
-source:
-  url: https://hg.mozilla.org/mozilla-central/archive/a3d508507022919429308d9c2d9cace99ff2be56.zip/testing/geckodriver/
-  sha256: 26e6ed2233d88172b30728c21f84a2019c01617bb25c6235f852003835416d99
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/geckodriver/blobs/sha256:de49fdc83e656b413608cfb40bc59425df4a3538d3e53162cb2b8a55466f219e
+        sha256: de49fdc83e656b413608cfb40bc59425df4a3538d3e53162cb2b8a55466f219e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/geckodriver/blobs/sha256:ef35a96f86a562d2e4ce13a0bc898e5ae48512877091f31a1dc54b3c3da3d9e5
+        sha256: ef35a96f86a562d2e4ce13a0bc898e5ae48512877091f31a1dc54b3c3da3d9e5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/geckodriver/blobs/sha256:fa9e1b98be14b7ab9af9a7c1ee458ddc55045f11666e5fe8edcf7c59156fd1d3
+        sha256: fa9e1b98be14b7ab9af9a7c1ee458ddc55045f11666e5fe8edcf7c59156fd1d3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/geckodriver/blobs/sha256:caea91cd4156e7b148c5328f5a0590cfc0fac5819a8baca8a80938cab96f28a2
+        sha256: caea91cd4156e7b148c5328f5a0590cfc0fac5819a8baca8a80938cab96f28a2
+        sha512: ""
+        signature: ""
+source:
+    url: https://hg.mozilla.org/mozilla-central/archive/a3d508507022919429308d9c2d9cace99ff2be56.zip/testing/geckodriver/
+    sha256: 26e6ed2233d88172b30728c21f84a2019c01617bb25c6235f852003835416d99
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

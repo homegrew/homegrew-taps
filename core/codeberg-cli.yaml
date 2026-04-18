@@ -3,31 +3,55 @@ version: 0.5.5
 description: CLI for Codeberg
 homepage: https://codeberg.org/Aviac/codeberg-cli
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/codeberg-cli/blobs/sha256:8bd5f830c3221b1ac74d72d87d2fc73e56600dc2136089223f4e1b254d12f49f
-    sha256: 8bd5f830c3221b1ac74d72d87d2fc73e56600dc2136089223f4e1b254d12f49f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/codeberg-cli/blobs/sha256:6d5995f7e35e1db9126b3777c035b0848915e4cb1b738d2e57230583dee34b58
-    sha256: 6d5995f7e35e1db9126b3777c035b0848915e4cb1b738d2e57230583dee34b58
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/codeberg-cli/blobs/sha256:12d605e557b17e8a81d430e8d5a8bae6aec6b6206b015506a4ed8adfc497a5d2
-    sha256: 12d605e557b17e8a81d430e8d5a8bae6aec6b6206b015506a4ed8adfc497a5d2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/codeberg-cli/blobs/sha256:c92e3099bddbb7a90d72b69e6d829d203202361e123072fc11838b77b48ecd72
-    sha256: c92e3099bddbb7a90d72b69e6d829d203202361e123072fc11838b77b48ecd72
-source:
-  url: https://codeberg.org/Aviac/codeberg-cli/archive/v0.5.5.tar.gz
-  sha256: 09902e3511c24316e9aab4cbd51492d00eb978ee81429e873de80bc9a485c549
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/codeberg-cli/blobs/sha256:6d5995f7e35e1db9126b3777c035b0848915e4cb1b738d2e57230583dee34b58
+        sha256: 6d5995f7e35e1db9126b3777c035b0848915e4cb1b738d2e57230583dee34b58
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/codeberg-cli/blobs/sha256:8bd5f830c3221b1ac74d72d87d2fc73e56600dc2136089223f4e1b254d12f49f
+        sha256: 8bd5f830c3221b1ac74d72d87d2fc73e56600dc2136089223f4e1b254d12f49f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/codeberg-cli/blobs/sha256:12d605e557b17e8a81d430e8d5a8bae6aec6b6206b015506a4ed8adfc497a5d2
+        sha256: 12d605e557b17e8a81d430e8d5a8bae6aec6b6206b015506a4ed8adfc497a5d2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/codeberg-cli/blobs/sha256:c92e3099bddbb7a90d72b69e6d829d203202361e123072fc11838b77b48ecd72
+        sha256: c92e3099bddbb7a90d72b69e6d829d203202361e123072fc11838b77b48ecd72
+        sha512: ""
+        signature: ""
+source:
+    url: https://codeberg.org/Aviac/codeberg-cli/archive/v0.5.5.tar.gz
+    sha256: 09902e3511c24316e9aab4cbd51492d00eb978ee81429e873de80bc9a485c549
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

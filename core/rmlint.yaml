@@ -3,37 +3,61 @@ version: 2.10.3
 description: Extremely fast tool to remove dupes and other lint from your filesystem
 homepage: https://rmlint.readthedocs.io/en/master/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rmlint/blobs/sha256:0d90cd13c8a94f6fc34bbdbf82ae92ce390a501cb7719eed1c3e5ba7e5a17311
-    sha256: 0d90cd13c8a94f6fc34bbdbf82ae92ce390a501cb7719eed1c3e5ba7e5a17311
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rmlint/blobs/sha256:bfc2a7bbbd018d9fa63b6dc5fcdc312e6811bd713a465da66b9a81f1ae03f72e
-    sha256: bfc2a7bbbd018d9fa63b6dc5fcdc312e6811bd713a465da66b9a81f1ae03f72e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rmlint/blobs/sha256:0e9369f955ae09325e3c66a511024ea6dd65cb6c5bcca1cba03b7ad3fecc8cfb
-    sha256: 0e9369f955ae09325e3c66a511024ea6dd65cb6c5bcca1cba03b7ad3fecc8cfb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rmlint/blobs/sha256:e7bbe7f7dd26aa3ca9a053570ab919cf162b723ae2f92fd1e90e98e22a54afdd
-    sha256: e7bbe7f7dd26aa3ca9a053570ab919cf162b723ae2f92fd1e90e98e22a54afdd
-source:
-  url: https://github.com/sahib/rmlint/archive/refs/tags/v2.10.3.tar.gz
-  sha256: 8ffdbd5d09d15c8717ae55497e90d6fa46f085b45ac1056f2727076da180c33e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - json-glib
-  - gettext
+    - glib
+    - json-glib
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rmlint/blobs/sha256:bfc2a7bbbd018d9fa63b6dc5fcdc312e6811bd713a465da66b9a81f1ae03f72e
+        sha256: bfc2a7bbbd018d9fa63b6dc5fcdc312e6811bd713a465da66b9a81f1ae03f72e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rmlint/blobs/sha256:0d90cd13c8a94f6fc34bbdbf82ae92ce390a501cb7719eed1c3e5ba7e5a17311
+        sha256: 0d90cd13c8a94f6fc34bbdbf82ae92ce390a501cb7719eed1c3e5ba7e5a17311
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rmlint/blobs/sha256:0e9369f955ae09325e3c66a511024ea6dd65cb6c5bcca1cba03b7ad3fecc8cfb
+        sha256: 0e9369f955ae09325e3c66a511024ea6dd65cb6c5bcca1cba03b7ad3fecc8cfb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rmlint/blobs/sha256:e7bbe7f7dd26aa3ca9a053570ab919cf162b723ae2f92fd1e90e98e22a54afdd
+        sha256: e7bbe7f7dd26aa3ca9a053570ab919cf162b723ae2f92fd1e90e98e22a54afdd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sahib/rmlint/archive/refs/tags/v2.10.3.tar.gz
+    sha256: 8ffdbd5d09d15c8717ae55497e90d6fa46f085b45ac1056f2727076da180c33e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - pkgconf
-  - scons
-  - sphinx-doc
+    - gettext
+    - pkgconf
+    - scons
+    - sphinx-doc
 linux_dependencies:
-  - elfutils
-  - glib
-  - json-glib
-  - util-linux
+    - elfutils
+    - glib
+    - json-glib
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,52 @@ version: 4.2.0
 description: Command-line player for module music formats (MOD, S3M, IT, etc)
 homepage: https://xmp.sourceforge.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xmp/blobs/sha256:36e826302cd05a73582ffc6d1a196b64c71aa256069b9a605da25ab1692cb2d4
-    sha256: 36e826302cd05a73582ffc6d1a196b64c71aa256069b9a605da25ab1692cb2d4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xmp/blobs/sha256:9ba602fd8dd7bf63d5aa794f5b3e265cca8b851107bae5db9dbb40396cb47eb8
-    sha256: 9ba602fd8dd7bf63d5aa794f5b3e265cca8b851107bae5db9dbb40396cb47eb8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xmp/blobs/sha256:bfa9f0f48823e7861c008d89c25cd43bdbe3553196b6684d15d962c8ca7087b4
-    sha256: bfa9f0f48823e7861c008d89c25cd43bdbe3553196b6684d15d962c8ca7087b4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xmp/blobs/sha256:43d7f8abecadad5b2730da6399bce8db70e7f27289be34a5fc404afccfda33c5
-    sha256: 43d7f8abecadad5b2730da6399bce8db70e7f27289be34a5fc404afccfda33c5
-source:
-  url: https://github.com/libxmp/xmp-cli/releases/download/xmp-4.2.0/xmp-4.2.0.tar.gz
-  sha256: dc54513af9a4681029a1243fd0c9cdf153d813a1125de6c782926674285bc5ae
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libxmp
+    - libxmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xmp/blobs/sha256:9ba602fd8dd7bf63d5aa794f5b3e265cca8b851107bae5db9dbb40396cb47eb8
+        sha256: 9ba602fd8dd7bf63d5aa794f5b3e265cca8b851107bae5db9dbb40396cb47eb8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xmp/blobs/sha256:36e826302cd05a73582ffc6d1a196b64c71aa256069b9a605da25ab1692cb2d4
+        sha256: 36e826302cd05a73582ffc6d1a196b64c71aa256069b9a605da25ab1692cb2d4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xmp/blobs/sha256:bfa9f0f48823e7861c008d89c25cd43bdbe3553196b6684d15d962c8ca7087b4
+        sha256: bfa9f0f48823e7861c008d89c25cd43bdbe3553196b6684d15d962c8ca7087b4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xmp/blobs/sha256:43d7f8abecadad5b2730da6399bce8db70e7f27289be34a5fc404afccfda33c5
+        sha256: 43d7f8abecadad5b2730da6399bce8db70e7f27289be34a5fc404afccfda33c5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libxmp/xmp-cli/releases/download/xmp-4.2.0/xmp-4.2.0.tar.gz
+    sha256: dc54513af9a4681029a1243fd0c9cdf153d813a1125de6c782926674285bc5ae
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,25 +3,51 @@ version: 1.14.3
 description: Manage applications and infrastructure on Massdriver Cloud
 homepage: https://www.massdriver.cloud/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/massdriver/blobs/sha256:485ea63cea2a0e6e80bbafeaaf0a440a0cabd2ef6dd81c87783686f93957da07
-    sha256: 485ea63cea2a0e6e80bbafeaaf0a440a0cabd2ef6dd81c87783686f93957da07
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/massdriver/blobs/sha256:bacb4b9af494ad011fb21410e3edec784625b8f3994da6c7554971d285bfafdf
-    sha256: bacb4b9af494ad011fb21410e3edec784625b8f3994da6c7554971d285bfafdf
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/massdriver/blobs/sha256:a654a8df8433747c7157d93655bbc113f5f9a9a86eb23f2763a3bd875e4dbd91
-    sha256: a654a8df8433747c7157d93655bbc113f5f9a9a86eb23f2763a3bd875e4dbd91
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/massdriver/blobs/sha256:431cfd30ed6bca896103f5399f2e879925b6c70ed466c4e52fa25a602a5db979
-    sha256: 431cfd30ed6bca896103f5399f2e879925b6c70ed466c4e52fa25a602a5db979
-source:
-  url: https://github.com/massdriver-cloud/mass/archive/refs/tags/1.14.3.tar.gz
-  sha256: d07f81e0dc0aa08dae22db9de2ac38b76b13afad84e1beefaa91694178f4c153
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/massdriver/blobs/sha256:bacb4b9af494ad011fb21410e3edec784625b8f3994da6c7554971d285bfafdf
+        sha256: bacb4b9af494ad011fb21410e3edec784625b8f3994da6c7554971d285bfafdf
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/massdriver/blobs/sha256:485ea63cea2a0e6e80bbafeaaf0a440a0cabd2ef6dd81c87783686f93957da07
+        sha256: 485ea63cea2a0e6e80bbafeaaf0a440a0cabd2ef6dd81c87783686f93957da07
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/massdriver/blobs/sha256:a654a8df8433747c7157d93655bbc113f5f9a9a86eb23f2763a3bd875e4dbd91
+        sha256: a654a8df8433747c7157d93655bbc113f5f9a9a86eb23f2763a3bd875e4dbd91
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/massdriver/blobs/sha256:431cfd30ed6bca896103f5399f2e879925b6c70ed466c4e52fa25a602a5db979
+        sha256: 431cfd30ed6bca896103f5399f2e879925b6c70ed466c4e52fa25a602a5db979
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/massdriver-cloud/mass/archive/refs/tags/1.14.3.tar.gz
+    sha256: d07f81e0dc0aa08dae22db9de2ac38b76b13afad84e1beefaa91694178f4c153
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

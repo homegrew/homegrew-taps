@@ -3,30 +3,55 @@ version: 2.0.7
 description: Make XML documents translatable through PO files
 homepage: https://itstool.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/itstool/blobs/sha256:716cb0efd44428ef62000438ff166627c117befbdd87b6d9c5580afac54c9dc2
-    sha256: 716cb0efd44428ef62000438ff166627c117befbdd87b6d9c5580afac54c9dc2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/itstool/blobs/sha256:9304cac2b3d4b0ce0cc09134157dcd281536f5ece469dda5f2bff14fbb16c126
-    sha256: 9304cac2b3d4b0ce0cc09134157dcd281536f5ece469dda5f2bff14fbb16c126
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/itstool/blobs/sha256:8847008ec88f06667281b8517d4a934cf68757cb3b835d2c00a0fe356190f02a
-    sha256: 8847008ec88f06667281b8517d4a934cf68757cb3b835d2c00a0fe356190f02a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/itstool/blobs/sha256:d6482a8c862c867c1c53bd78c2128c9997d67a0905c700ba05eebbc0417742d6
-    sha256: d6482a8c862c867c1c53bd78c2128c9997d67a0905c700ba05eebbc0417742d6
-source:
-  url: https://files.itstool.org/itstool/itstool-2.0.7.tar.bz2
-  sha256: 6b9a7cd29a12bb95598f5750e8763cee78836a1a207f85b74d8b3275b27e87ca
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libxml2
-  - python@3.14
+    - libxml2
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/itstool/blobs/sha256:9304cac2b3d4b0ce0cc09134157dcd281536f5ece469dda5f2bff14fbb16c126
+        sha256: 9304cac2b3d4b0ce0cc09134157dcd281536f5ece469dda5f2bff14fbb16c126
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/itstool/blobs/sha256:716cb0efd44428ef62000438ff166627c117befbdd87b6d9c5580afac54c9dc2
+        sha256: 716cb0efd44428ef62000438ff166627c117befbdd87b6d9c5580afac54c9dc2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/itstool/blobs/sha256:8847008ec88f06667281b8517d4a934cf68757cb3b835d2c00a0fe356190f02a
+        sha256: 8847008ec88f06667281b8517d4a934cf68757cb3b835d2c00a0fe356190f02a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/itstool/blobs/sha256:d6482a8c862c867c1c53bd78c2128c9997d67a0905c700ba05eebbc0417742d6
+        sha256: d6482a8c862c867c1c53bd78c2128c9997d67a0905c700ba05eebbc0417742d6
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.itstool.org/itstool/itstool-2.0.7.tar.bz2
+    sha256: 6b9a7cd29a12bb95598f5750e8763cee78836a1a207f85b74d8b3275b27e87ca
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - doxygen
-  - pkgconf
-  - python-setuptools
+    - doxygen
+    - pkgconf
+    - python-setuptools
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

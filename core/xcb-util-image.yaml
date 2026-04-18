@@ -1,30 +1,55 @@
 name: xcb-util-image
 version: 0.4.1
-description: "XCB port of Xlib's XImage and XShmImage"
+description: XCB port of Xlib's XImage and XShmImage
 homepage: https://xcb.freedesktop.org
 license: X11
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xcb-util-image/blobs/sha256:6f1af8fedcf855ff37794ed6fb607be0a4d560afee79e3fa5ba79ec6bd877d29
-    sha256: 6f1af8fedcf855ff37794ed6fb607be0a4d560afee79e3fa5ba79ec6bd877d29
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xcb-util-image/blobs/sha256:9fb54a1443ff6bd3b08f8a2b2b9724924d60c25ec65383e4949e47ed98456f68
-    sha256: 9fb54a1443ff6bd3b08f8a2b2b9724924d60c25ec65383e4949e47ed98456f68
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xcb-util-image/blobs/sha256:edac92f05202f6a66955b860ff1a3cf65e851568f6ad6ffce0237af6833c5087
-    sha256: edac92f05202f6a66955b860ff1a3cf65e851568f6ad6ffce0237af6833c5087
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xcb-util-image/blobs/sha256:3a97fcf25d84f03c1114e588464768ef38160faf0beadbbd816c92a25a914bb5
-    sha256: 3a97fcf25d84f03c1114e588464768ef38160faf0beadbbd816c92a25a914bb5
-source:
-  url: https://xcb.freedesktop.org/dist/xcb-util-image-0.4.1.tar.gz
-  sha256: 0ebd4cf809043fdeb4f980d58cdcf2b527035018924f8c14da76d1c81001293b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libxcb
-  - xcb-util
+    - libxcb
+    - xcb-util
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xcb-util-image/blobs/sha256:9fb54a1443ff6bd3b08f8a2b2b9724924d60c25ec65383e4949e47ed98456f68
+        sha256: 9fb54a1443ff6bd3b08f8a2b2b9724924d60c25ec65383e4949e47ed98456f68
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xcb-util-image/blobs/sha256:6f1af8fedcf855ff37794ed6fb607be0a4d560afee79e3fa5ba79ec6bd877d29
+        sha256: 6f1af8fedcf855ff37794ed6fb607be0a4d560afee79e3fa5ba79ec6bd877d29
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xcb-util-image/blobs/sha256:edac92f05202f6a66955b860ff1a3cf65e851568f6ad6ffce0237af6833c5087
+        sha256: edac92f05202f6a66955b860ff1a3cf65e851568f6ad6ffce0237af6833c5087
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xcb-util-image/blobs/sha256:3a97fcf25d84f03c1114e588464768ef38160faf0beadbbd816c92a25a914bb5
+        sha256: 3a97fcf25d84f03c1114e588464768ef38160faf0beadbbd816c92a25a914bb5
+        sha512: ""
+        signature: ""
+source:
+    url: https://xcb.freedesktop.org/dist/xcb-util-image-0.4.1.tar.gz
+    sha256: 0ebd4cf809043fdeb4f980d58cdcf2b527035018924f8c14da76d1c81001293b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

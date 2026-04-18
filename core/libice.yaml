@@ -1,30 +1,55 @@
 name: libice
 version: 1.1.2
-description: "X.Org: Inter-Client Exchange Library"
+description: 'X.Org: Inter-Client Exchange Library'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libice/blobs/sha256:7c7fe005691e3b774bd67fd52e5a16bfe335a6a326a53ee47dc7027ccc26c911
-    sha256: 7c7fe005691e3b774bd67fd52e5a16bfe335a6a326a53ee47dc7027ccc26c911
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libice/blobs/sha256:c62d9319100ce6332a7c6335c3365b2e2a216f7df9aa5bf1daae891bdb88edd0
-    sha256: c62d9319100ce6332a7c6335c3365b2e2a216f7df9aa5bf1daae891bdb88edd0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libice/blobs/sha256:b4031d0484219c9a701184de11ae283694a3e1067a0103ff661a29e165acc52b
-    sha256: b4031d0484219c9a701184de11ae283694a3e1067a0103ff661a29e165acc52b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libice/blobs/sha256:b4347742f36796e398b33430cd91fd1935f50aa73473dfea2aedb48bf62b5943
-    sha256: b4347742f36796e398b33430cd91fd1935f50aa73473dfea2aedb48bf62b5943
-source:
-  url: https://www.x.org/archive/individual/lib/libICE-1.1.2.tar.xz
-  sha256: 974e4ed414225eb3c716985df9709f4da8d22a67a2890066bc6dfc89ad298625
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - xorgproto
+    - xorgproto
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libice/blobs/sha256:c62d9319100ce6332a7c6335c3365b2e2a216f7df9aa5bf1daae891bdb88edd0
+        sha256: c62d9319100ce6332a7c6335c3365b2e2a216f7df9aa5bf1daae891bdb88edd0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libice/blobs/sha256:7c7fe005691e3b774bd67fd52e5a16bfe335a6a326a53ee47dc7027ccc26c911
+        sha256: 7c7fe005691e3b774bd67fd52e5a16bfe335a6a326a53ee47dc7027ccc26c911
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libice/blobs/sha256:b4031d0484219c9a701184de11ae283694a3e1067a0103ff661a29e165acc52b
+        sha256: b4031d0484219c9a701184de11ae283694a3e1067a0103ff661a29e165acc52b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libice/blobs/sha256:b4347742f36796e398b33430cd91fd1935f50aa73473dfea2aedb48bf62b5943
+        sha256: b4347742f36796e398b33430cd91fd1935f50aa73473dfea2aedb48bf62b5943
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libICE-1.1.2.tar.xz
+    sha256: 974e4ed414225eb3c716985df9709f4da8d22a67a2890066bc6dfc89ad298625
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - xtrans
+    - pkgconf
+    - xtrans
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

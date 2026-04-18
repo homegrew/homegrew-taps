@@ -3,53 +3,77 @@ version: 2.5.0
 description: Fast Cross-Platform Package Manager
 homepage: https://github.com/mamba-org/mamba
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/micromamba/blobs/sha256:82c2d3f7c9d2228eeae2f9dbec041258c057fcec87a786cf0de47db322b8bae1
-    sha256: 82c2d3f7c9d2228eeae2f9dbec041258c057fcec87a786cf0de47db322b8bae1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/micromamba/blobs/sha256:c2318ce5ea9d5b6fd47d96b4ada82314d72d017ff867b4e4f1159bb39cca539e
-    sha256: c2318ce5ea9d5b6fd47d96b4ada82314d72d017ff867b4e4f1159bb39cca539e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/micromamba/blobs/sha256:332084d85a8f0b08e3b3ffb3a28251fda2dbafc7d6ca9d3b45ee63d425b26dff
-    sha256: 332084d85a8f0b08e3b3ffb3a28251fda2dbafc7d6ca9d3b45ee63d425b26dff
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/micromamba/blobs/sha256:aaf380dc9975012d53b5bc32a101723fb2fa80729f4c43a3484338259724524a
-    sha256: aaf380dc9975012d53b5bc32a101723fb2fa80729f4c43a3484338259724524a
-source:
-  url: https://github.com/mamba-org/mamba/archive/refs/tags/2.5.0.tar.gz
-  sha256: 2d8761e423275b2e2b46352c99bdedc062ca22b98871ffa82e044d2be74b350f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fmt
-  - libarchive
-  - libsolv
-  - lz4
-  - openssl@3
-  - reproc
-  - simdjson
-  - xz
-  - yaml-cpp
-  - zstd
+    - fmt
+    - libarchive
+    - libsolv
+    - lz4
+    - openssl@3
+    - reproc
+    - simdjson
+    - xz
+    - yaml-cpp
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/micromamba/blobs/sha256:c2318ce5ea9d5b6fd47d96b4ada82314d72d017ff867b4e4f1159bb39cca539e
+        sha256: c2318ce5ea9d5b6fd47d96b4ada82314d72d017ff867b4e4f1159bb39cca539e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/micromamba/blobs/sha256:82c2d3f7c9d2228eeae2f9dbec041258c057fcec87a786cf0de47db322b8bae1
+        sha256: 82c2d3f7c9d2228eeae2f9dbec041258c057fcec87a786cf0de47db322b8bae1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/micromamba/blobs/sha256:332084d85a8f0b08e3b3ffb3a28251fda2dbafc7d6ca9d3b45ee63d425b26dff
+        sha256: 332084d85a8f0b08e3b3ffb3a28251fda2dbafc7d6ca9d3b45ee63d425b26dff
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/micromamba/blobs/sha256:aaf380dc9975012d53b5bc32a101723fb2fa80729f4c43a3484338259724524a
+        sha256: aaf380dc9975012d53b5bc32a101723fb2fa80729f4c43a3484338259724524a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mamba-org/mamba/archive/refs/tags/2.5.0.tar.gz
+    sha256: 2d8761e423275b2e2b46352c99bdedc062ca22b98871ffa82e044d2be74b350f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cli11
-  - cmake
-  - nlohmann-json
-  - pkgconf
-  - spdlog
-  - tl-expected
+    - cli11
+    - cmake
+    - nlohmann-json
+    - pkgconf
+    - spdlog
+    - tl-expected
 linux_dependencies:
-  - fmt
-  - libarchive
-  - libsolv
-  - lz4
-  - openssl@3
-  - reproc
-  - simdjson
-  - xz
-  - yaml-cpp
-  - zlib-ng-compat
-  - zstd
+    - fmt
+    - libarchive
+    - libsolv
+    - lz4
+    - openssl@3
+    - reproc
+    - simdjson
+    - xz
+    - yaml-cpp
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

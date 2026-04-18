@@ -3,35 +3,59 @@ version: 4.1.1
 description: Lightweight BitTorrent client
 homepage: https://transmissionbt.com/
 license: GPL-2.0-only OR GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:fe9261335dbea9b764860e7f7896c130224e8303c5531396c4c7ed10169c3e80
-    sha256: fe9261335dbea9b764860e7f7896c130224e8303c5531396c4c7ed10169c3e80
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:416b077bc874b0cb0a5da08a14162401d6edae76bf23c15e78fbd218d965fa82
-    sha256: 416b077bc874b0cb0a5da08a14162401d6edae76bf23c15e78fbd218d965fa82
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:48925f46cf3a75f1538b3860fc126eee79b69a56858c7a33f78af872aa56b82b
-    sha256: 48925f46cf3a75f1538b3860fc126eee79b69a56858c7a33f78af872aa56b82b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:54110a1b36c0687ce75ff829bb125bb338790574bbc13a5412552f20523b7261
-    sha256: 54110a1b36c0687ce75ff829bb125bb338790574bbc13a5412552f20523b7261
-source:
-  url: https://github.com/transmission/transmission/releases/download/4.1.1/transmission-4.1.1.tar.xz
-  sha256: e743283ee03a42c4d0b08fed2bd52b554aa6c9f65b4d4d45b795c32d98762a79
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libevent
-  - miniupnpc
+    - libevent
+    - miniupnpc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:416b077bc874b0cb0a5da08a14162401d6edae76bf23c15e78fbd218d965fa82
+        sha256: 416b077bc874b0cb0a5da08a14162401d6edae76bf23c15e78fbd218d965fa82
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:fe9261335dbea9b764860e7f7896c130224e8303c5531396c4c7ed10169c3e80
+        sha256: fe9261335dbea9b764860e7f7896c130224e8303c5531396c4c7ed10169c3e80
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:48925f46cf3a75f1538b3860fc126eee79b69a56858c7a33f78af872aa56b82b
+        sha256: 48925f46cf3a75f1538b3860fc126eee79b69a56858c7a33f78af872aa56b82b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:54110a1b36c0687ce75ff829bb125bb338790574bbc13a5412552f20523b7261
+        sha256: 54110a1b36c0687ce75ff829bb125bb338790574bbc13a5412552f20523b7261
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/transmission/transmission/releases/download/4.1.1/transmission-4.1.1.tar.xz
+    sha256: e743283ee03a42c4d0b08fed2bd52b554aa6c9f65b4d4d45b795c32d98762a79
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - gettext
-  - pkgconf
+    - cmake
+    - gettext
+    - pkgconf
 linux_dependencies:
-  - libevent
-  - miniupnpc
-  - openssl@3
-  - zlib-ng-compat
+    - libevent
+    - miniupnpc
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

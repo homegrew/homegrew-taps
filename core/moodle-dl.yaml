@@ -3,30 +3,55 @@ version: 2.3.13
 description: Downloads course content fast from Moodle (e.g., lecture PDFs)
 homepage: https://github.com/C0D3D3V/Moodle-DL
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/moodle-dl/blobs/sha256:bd9b28bf2034258f3045a7af18ad7906c590a1efd1710c696bd0e548e0b6192c
-    sha256: bd9b28bf2034258f3045a7af18ad7906c590a1efd1710c696bd0e548e0b6192c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/moodle-dl/blobs/sha256:ac3dd55c907dc68a70d0036ef092171f391917730b932088c2d8e9915ad5039a
-    sha256: ac3dd55c907dc68a70d0036ef092171f391917730b932088c2d8e9915ad5039a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/moodle-dl/blobs/sha256:1ce166fc3a285335ec4e0fa973d74cbd5f676ebeaa10ae90c3052ae2fcfee2aa
-    sha256: 1ce166fc3a285335ec4e0fa973d74cbd5f676ebeaa10ae90c3052ae2fcfee2aa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/moodle-dl/blobs/sha256:d54db73caac159144072ed3e16eb76e9cb2b2131d8b208b16fb5a1d6cb24d8ce
-    sha256: d54db73caac159144072ed3e16eb76e9cb2b2131d8b208b16fb5a1d6cb24d8ce
-source:
-  url: https://files.pythonhosted.org/packages/0b/44/9c283a04b0ede0bcaa2f3595b523cb115c662fe349f215631484035126d1/moodle_dl-2.3.13.tar.gz
-  sha256: 7a6d813b3241497fb79a34a428aa266b2d2d3c175e05d46752e0a8040adaddce
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cffi
-  - ffmpeg
-  - python@3.14
+    - certifi
+    - cffi
+    - ffmpeg
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/moodle-dl/blobs/sha256:ac3dd55c907dc68a70d0036ef092171f391917730b932088c2d8e9915ad5039a
+        sha256: ac3dd55c907dc68a70d0036ef092171f391917730b932088c2d8e9915ad5039a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/moodle-dl/blobs/sha256:bd9b28bf2034258f3045a7af18ad7906c590a1efd1710c696bd0e548e0b6192c
+        sha256: bd9b28bf2034258f3045a7af18ad7906c590a1efd1710c696bd0e548e0b6192c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/moodle-dl/blobs/sha256:1ce166fc3a285335ec4e0fa973d74cbd5f676ebeaa10ae90c3052ae2fcfee2aa
+        sha256: 1ce166fc3a285335ec4e0fa973d74cbd5f676ebeaa10ae90c3052ae2fcfee2aa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/moodle-dl/blobs/sha256:d54db73caac159144072ed3e16eb76e9cb2b2131d8b208b16fb5a1d6cb24d8ce
+        sha256: d54db73caac159144072ed3e16eb76e9cb2b2131d8b208b16fb5a1d6cb24d8ce
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/0b/44/9c283a04b0ede0bcaa2f3595b523cb115c662fe349f215631484035126d1/moodle_dl-2.3.13.tar.gz
+    sha256: 7a6d813b3241497fb79a34a428aa266b2d2d3c175e05d46752e0a8040adaddce
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

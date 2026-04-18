@@ -3,30 +3,55 @@ version: 2.0.2
 description: Protoc plugin that generates code for gRPC-Web clients
 homepage: https://github.com/grpc/grpc-web
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/protoc-gen-grpc-web/blobs/sha256:436f7b2afc7848bcce1f759f043a107fc3ec61d312b3144de8a0d5d25eb50f06
-    sha256: 436f7b2afc7848bcce1f759f043a107fc3ec61d312b3144de8a0d5d25eb50f06
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/protoc-gen-grpc-web/blobs/sha256:6c56579d6d53676942e7ad5d00524cc5fca5847e434b88ea81851df38b31866c
-    sha256: 6c56579d6d53676942e7ad5d00524cc5fca5847e434b88ea81851df38b31866c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/protoc-gen-grpc-web/blobs/sha256:b7101d72606da62adac644cf18c1a4cb55bd12d88b79152f380d148ac3904918
-    sha256: b7101d72606da62adac644cf18c1a4cb55bd12d88b79152f380d148ac3904918
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/protoc-gen-grpc-web/blobs/sha256:e1f9ce755130f9b1a35cfff5cc5b7fb84c5b1fa71d705a230fa9e6d5460c20bd
-    sha256: e1f9ce755130f9b1a35cfff5cc5b7fb84c5b1fa71d705a230fa9e6d5460c20bd
-source:
-  url: https://github.com/grpc/grpc-web/archive/refs/tags/2.0.2.tar.gz
-  sha256: 0f0c8c0c1104306d67dad678be7c14efe52a698795a58b2b72ab67a8bb100c15
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - protobuf
-  - protoc-gen-js
+    - abseil
+    - protobuf
+    - protoc-gen-js
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/protoc-gen-grpc-web/blobs/sha256:6c56579d6d53676942e7ad5d00524cc5fca5847e434b88ea81851df38b31866c
+        sha256: 6c56579d6d53676942e7ad5d00524cc5fca5847e434b88ea81851df38b31866c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/protoc-gen-grpc-web/blobs/sha256:436f7b2afc7848bcce1f759f043a107fc3ec61d312b3144de8a0d5d25eb50f06
+        sha256: 436f7b2afc7848bcce1f759f043a107fc3ec61d312b3144de8a0d5d25eb50f06
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/protoc-gen-grpc-web/blobs/sha256:b7101d72606da62adac644cf18c1a4cb55bd12d88b79152f380d148ac3904918
+        sha256: b7101d72606da62adac644cf18c1a4cb55bd12d88b79152f380d148ac3904918
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/protoc-gen-grpc-web/blobs/sha256:e1f9ce755130f9b1a35cfff5cc5b7fb84c5b1fa71d705a230fa9e6d5460c20bd
+        sha256: e1f9ce755130f9b1a35cfff5cc5b7fb84c5b1fa71d705a230fa9e6d5460c20bd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/grpc/grpc-web/archive/refs/tags/2.0.2.tar.gz
+    sha256: 0f0c8c0c1104306d67dad678be7c14efe52a698795a58b2b72ab67a8bb100c15
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

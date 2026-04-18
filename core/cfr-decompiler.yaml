@@ -1,29 +1,54 @@
 name: cfr-decompiler
-version: 0.152
+version: "0.152"
 description: Yet Another Java Decompiler
 homepage: https://www.benf.org/other/cfr/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cfr-decompiler/blobs/sha256:b9f2ede10e95cb821c217666b2d683599416db1dfc2322f6f906e3206f35495d
-    sha256: b9f2ede10e95cb821c217666b2d683599416db1dfc2322f6f906e3206f35495d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cfr-decompiler/blobs/sha256:0a450d930591e8c9da2fa0c5ea0f3bae35e5aacb44473713a5594998e0ecfa19
-    sha256: 0a450d930591e8c9da2fa0c5ea0f3bae35e5aacb44473713a5594998e0ecfa19
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cfr-decompiler/blobs/sha256:b236e8effb84d1da66a9eec9c6b4d857d3471da8de57543ac7d029adb09b9eed
-    sha256: b236e8effb84d1da66a9eec9c6b4d857d3471da8de57543ac7d029adb09b9eed
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cfr-decompiler/blobs/sha256:03afb187594d2a088f3a6a111f7a34645860e0d51fb55afd82d6faa3404304ee
-    sha256: 03afb187594d2a088f3a6a111f7a34645860e0d51fb55afd82d6faa3404304ee
-source:
-  url: https://github.com/leibnitz27/cfr.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk@11
+    - openjdk@11
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cfr-decompiler/blobs/sha256:0a450d930591e8c9da2fa0c5ea0f3bae35e5aacb44473713a5594998e0ecfa19
+        sha256: 0a450d930591e8c9da2fa0c5ea0f3bae35e5aacb44473713a5594998e0ecfa19
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cfr-decompiler/blobs/sha256:b9f2ede10e95cb821c217666b2d683599416db1dfc2322f6f906e3206f35495d
+        sha256: b9f2ede10e95cb821c217666b2d683599416db1dfc2322f6f906e3206f35495d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cfr-decompiler/blobs/sha256:b236e8effb84d1da66a9eec9c6b4d857d3471da8de57543ac7d029adb09b9eed
+        sha256: b236e8effb84d1da66a9eec9c6b4d857d3471da8de57543ac7d029adb09b9eed
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cfr-decompiler/blobs/sha256:03afb187594d2a088f3a6a111f7a34645860e0d51fb55afd82d6faa3404304ee
+        sha256: 03afb187594d2a088f3a6a111f7a34645860e0d51fb55afd82d6faa3404304ee
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/leibnitz27/cfr.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - maven
+    - maven
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

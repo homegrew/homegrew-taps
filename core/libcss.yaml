@@ -3,29 +3,54 @@ version: 0.9.2
 description: CSS parser and selection engine
 homepage: https://www.netsurf-browser.org/projects/libcss/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libcss/blobs/sha256:e9814ca0ac5b4222f4465ab3fd614f08d73fe9572e2c551cf456c636f71278b9
-    sha256: e9814ca0ac5b4222f4465ab3fd614f08d73fe9572e2c551cf456c636f71278b9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libcss/blobs/sha256:69f0f19a1a2b2cd7e9493620542a5a2479035e2c2366889993091240366f21c5
-    sha256: 69f0f19a1a2b2cd7e9493620542a5a2479035e2c2366889993091240366f21c5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libcss/blobs/sha256:459691f366d4877a30ac535cf1767ed6f681a922435c3b7893d52eb6871c93a8
-    sha256: 459691f366d4877a30ac535cf1767ed6f681a922435c3b7893d52eb6871c93a8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libcss/blobs/sha256:c725d0e2a77a61777ee7704025ff633f09efd3011f99c456a855db6122744f81
-    sha256: c725d0e2a77a61777ee7704025ff633f09efd3011f99c456a855db6122744f81
-source:
-  url: https://download.netsurf-browser.org/libs/releases/libcss-0.9.2-src.tar.gz
-  sha256: 2df215bbec34d51d60c1a04b01b2df4d5d18f510f1f3a7af4b80cddb5671154e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libparserutils
-  - libwapcaplet
+    - libparserutils
+    - libwapcaplet
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libcss/blobs/sha256:69f0f19a1a2b2cd7e9493620542a5a2479035e2c2366889993091240366f21c5
+        sha256: 69f0f19a1a2b2cd7e9493620542a5a2479035e2c2366889993091240366f21c5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libcss/blobs/sha256:e9814ca0ac5b4222f4465ab3fd614f08d73fe9572e2c551cf456c636f71278b9
+        sha256: e9814ca0ac5b4222f4465ab3fd614f08d73fe9572e2c551cf456c636f71278b9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libcss/blobs/sha256:459691f366d4877a30ac535cf1767ed6f681a922435c3b7893d52eb6871c93a8
+        sha256: 459691f366d4877a30ac535cf1767ed6f681a922435c3b7893d52eb6871c93a8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libcss/blobs/sha256:c725d0e2a77a61777ee7704025ff633f09efd3011f99c456a855db6122744f81
+        sha256: c725d0e2a77a61777ee7704025ff633f09efd3011f99c456a855db6122744f81
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.netsurf-browser.org/libs/releases/libcss-0.9.2-src.tar.gz
+    sha256: 2df215bbec34d51d60c1a04b01b2df4d5d18f510f1f3a7af4b80cddb5671154e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - netsurf-buildsystem
-  - pkgconf
+    - netsurf-buildsystem
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

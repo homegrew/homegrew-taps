@@ -3,38 +3,62 @@ version: 0.1.23
 description: GStreamer Plugin for libnice
 homepage: https://wiki.freedesktop.org/nice/
 license: LGPL-2.1-only OR MPL-1.1
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libnice-gstreamer/blobs/sha256:8c35c126361bae664d0cedd53e2df6115a1303cf2566b9a28a3486b2159731f5
-    sha256: 8c35c126361bae664d0cedd53e2df6115a1303cf2566b9a28a3486b2159731f5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libnice-gstreamer/blobs/sha256:f78f64870d3d5ec10b8cf25af5ac7ae92c3106b577f1bf13d9cab0dccbe9fbb7
-    sha256: f78f64870d3d5ec10b8cf25af5ac7ae92c3106b577f1bf13d9cab0dccbe9fbb7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libnice-gstreamer/blobs/sha256:2570d646e3fff87a4227109021740629384f63d27278ae1ec5060278c6169148
-    sha256: 2570d646e3fff87a4227109021740629384f63d27278ae1ec5060278c6169148
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libnice-gstreamer/blobs/sha256:ed30b7a595d0bf0f5798158f4f142af5c71ae72d0e3fe9a4c815beca104df736
-    sha256: ed30b7a595d0bf0f5798158f4f142af5c71ae72d0e3fe9a4c815beca104df736
-source:
-  url: https://libnice.freedesktop.org/releases/libnice-0.1.23.tar.gz
-  sha256: 618fc4e8de393b719b1641c1d8eec01826d4d39d15ade92679d221c7f5e4e70d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gnutls
-  - gstreamer
-  - libnice
-  - gettext
+    - glib
+    - gnutls
+    - gstreamer
+    - libnice
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libnice-gstreamer/blobs/sha256:f78f64870d3d5ec10b8cf25af5ac7ae92c3106b577f1bf13d9cab0dccbe9fbb7
+        sha256: f78f64870d3d5ec10b8cf25af5ac7ae92c3106b577f1bf13d9cab0dccbe9fbb7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libnice-gstreamer/blobs/sha256:8c35c126361bae664d0cedd53e2df6115a1303cf2566b9a28a3486b2159731f5
+        sha256: 8c35c126361bae664d0cedd53e2df6115a1303cf2566b9a28a3486b2159731f5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libnice-gstreamer/blobs/sha256:2570d646e3fff87a4227109021740629384f63d27278ae1ec5060278c6169148
+        sha256: 2570d646e3fff87a4227109021740629384f63d27278ae1ec5060278c6169148
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libnice-gstreamer/blobs/sha256:ed30b7a595d0bf0f5798158f4f142af5c71ae72d0e3fe9a4c815beca104df736
+        sha256: ed30b7a595d0bf0f5798158f4f142af5c71ae72d0e3fe9a4c815beca104df736
+        sha512: ""
+        signature: ""
+source:
+    url: https://libnice.freedesktop.org/releases/libnice-0.1.23.tar.gz
+    sha256: 618fc4e8de393b719b1641c1d8eec01826d4d39d15ade92679d221c7f5e4e70d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - glib
-  - gnutls
-  - gstreamer
-  - libnice
+    - glib
+    - gnutls
+    - gstreamer
+    - libnice
+build:
+    configure: []
+    install: []
+service: null

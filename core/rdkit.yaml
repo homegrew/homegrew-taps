@@ -3,41 +3,66 @@ version: 2026.03.1
 description: Open-source chemoinformatics library
 homepage: https://rdkit.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rdkit/blobs/sha256:52b7b9cdd45e1608a46944ff59341d8267b3da53b9528d24ca92f99b7c3fcc18
-    sha256: 52b7b9cdd45e1608a46944ff59341d8267b3da53b9528d24ca92f99b7c3fcc18
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rdkit/blobs/sha256:1097710e468657edc39b583f9f63cb5dbcd07af2e440afffcb069ff4c8f6297d
-    sha256: 1097710e468657edc39b583f9f63cb5dbcd07af2e440afffcb069ff4c8f6297d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rdkit/blobs/sha256:68f0765568815e699522a337d4c08fba763706f0fc91e9051c9aa3a4dd056c19
-    sha256: 68f0765568815e699522a337d4c08fba763706f0fc91e9051c9aa3a4dd056c19
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rdkit/blobs/sha256:902a013f1dcf1f94fa2d5885dde0267d326340977ce2cee729c6fa08f9445560
-    sha256: 902a013f1dcf1f94fa2d5885dde0267d326340977ce2cee729c6fa08f9445560
-source:
-  url: https://github.com/rdkit/rdkit/archive/refs/tags/Release_2026_03_1.tar.gz
-  sha256: 715e0d069416fc1643404df0d8ab969636cfd2c85c13e4f7cc55e4118ce10055
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - boost-python3
-  - cairo
-  - coordgen
-  - eigen
-  - freetype
-  - inchi
-  - maeparser
-  - numpy
-  - py3cairo
-  - python@3.14
+    - boost
+    - boost-python3
+    - cairo
+    - coordgen
+    - eigen
+    - freetype
+    - inchi
+    - maeparser
+    - numpy
+    - py3cairo
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rdkit/blobs/sha256:1097710e468657edc39b583f9f63cb5dbcd07af2e440afffcb069ff4c8f6297d
+        sha256: 1097710e468657edc39b583f9f63cb5dbcd07af2e440afffcb069ff4c8f6297d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rdkit/blobs/sha256:52b7b9cdd45e1608a46944ff59341d8267b3da53b9528d24ca92f99b7c3fcc18
+        sha256: 52b7b9cdd45e1608a46944ff59341d8267b3da53b9528d24ca92f99b7c3fcc18
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rdkit/blobs/sha256:68f0765568815e699522a337d4c08fba763706f0fc91e9051c9aa3a4dd056c19
+        sha256: 68f0765568815e699522a337d4c08fba763706f0fc91e9051c9aa3a4dd056c19
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rdkit/blobs/sha256:902a013f1dcf1f94fa2d5885dde0267d326340977ce2cee729c6fa08f9445560
+        sha256: 902a013f1dcf1f94fa2d5885dde0267d326340977ce2cee729c6fa08f9445560
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rdkit/rdkit/archive/refs/tags/Release_2026_03_1.tar.gz
+    sha256: 715e0d069416fc1643404df0d8ab969636cfd2c85c13e4f7cc55e4118ce10055
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - catch2
-  - cmake
-  - pkgconf
-  - postgresql@17
-  - postgresql@18
+    - catch2
+    - cmake
+    - pkgconf
+    - postgresql@17
+    - postgresql@18
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

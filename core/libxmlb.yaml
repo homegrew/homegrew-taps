@@ -3,35 +3,60 @@ version: 0.3.26
 description: Library for querying compressed XML metadata
 homepage: https://github.com/hughsie/libxmlb
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxmlb/blobs/sha256:26444295fa3f0a3196a3cefc81945ac38f4eb634b252ae6661b6a93b92f6492b
-    sha256: 26444295fa3f0a3196a3cefc81945ac38f4eb634b252ae6661b6a93b92f6492b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxmlb/blobs/sha256:6aa91c24dd6da83c7c91e00268deba06ab25c5bc208274b7e4930aac4a418378
-    sha256: 6aa91c24dd6da83c7c91e00268deba06ab25c5bc208274b7e4930aac4a418378
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxmlb/blobs/sha256:bb55d875f9cc32023299161dae441cd2919fd732ca91172453fc0f307de80be4
-    sha256: bb55d875f9cc32023299161dae441cd2919fd732ca91172453fc0f307de80be4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxmlb/blobs/sha256:2ee39e243e70aa3588593869cc2b1b63837d990ee9ed942c833940e42ad16006
-    sha256: 2ee39e243e70aa3588593869cc2b1b63837d990ee9ed942c833940e42ad16006
-source:
-  url: https://github.com/hughsie/libxmlb/releases/download/0.3.26/libxmlb-0.3.26.tar.xz
-  sha256: a18bc447fff0dd0d76a2e6cd4a603b4712047c027f9bbbdc31ebc25f0e2c1ed9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - xz
-  - zstd
+    - glib
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxmlb/blobs/sha256:6aa91c24dd6da83c7c91e00268deba06ab25c5bc208274b7e4930aac4a418378
+        sha256: 6aa91c24dd6da83c7c91e00268deba06ab25c5bc208274b7e4930aac4a418378
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxmlb/blobs/sha256:26444295fa3f0a3196a3cefc81945ac38f4eb634b252ae6661b6a93b92f6492b
+        sha256: 26444295fa3f0a3196a3cefc81945ac38f4eb634b252ae6661b6a93b92f6492b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxmlb/blobs/sha256:bb55d875f9cc32023299161dae441cd2919fd732ca91172453fc0f307de80be4
+        sha256: bb55d875f9cc32023299161dae441cd2919fd732ca91172453fc0f307de80be4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxmlb/blobs/sha256:2ee39e243e70aa3588593869cc2b1b63837d990ee9ed942c833940e42ad16006
+        sha256: 2ee39e243e70aa3588593869cc2b1b63837d990ee9ed942c833940e42ad16006
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/hughsie/libxmlb/releases/download/0.3.26/libxmlb-0.3.26.tar.xz
+    sha256: a18bc447fff0dd0d76a2e6cd4a603b4712047c027f9bbbdc31ebc25f0e2c1ed9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gi-docgen
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
-  - python@3.14
-  - vala
+    - gi-docgen
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
+    - python@3.14
+    - vala
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

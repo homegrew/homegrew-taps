@@ -3,34 +3,55 @@ version: 0.9-rc4
 description: Service Discovery for Linux using mDNS/DNS-SD
 homepage: https://avahi.org
 license: LGPL-2.1-or-later
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/avahi/blobs/sha256:e9136eabe53604d46164d013c689d1d565fd754069a36dd76eab1d8f2e7bd7e3
-    sha256: e9136eabe53604d46164d013c689d1d565fd754069a36dd76eab1d8f2e7bd7e3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/avahi/blobs/sha256:a86b81c920d871c0f159c3e1008330c29c04170a30da27ed11ce4aac933e43b7
-    sha256: a86b81c920d871c0f159c3e1008330c29c04170a30da27ed11ce4aac933e43b7
-source:
-  url: https://github.com/avahi/avahi/archive/refs/tags/v0.9-rc4.tar.gz
-  sha256: 08fcc57377ed05416ec4b3d8a179da716a7a9376821551a5ae16f8276a1ef0b5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dbus
-  - expat
-  - gdbm
-  - glib
-  - libcap
-  - libdaemon
-  - systemd
+    - dbus
+    - expat
+    - gdbm
+    - glib
+    - libcap
+    - libdaemon
+    - systemd
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/avahi/blobs/sha256:e9136eabe53604d46164d013c689d1d565fd754069a36dd76eab1d8f2e7bd7e3
+        sha256: e9136eabe53604d46164d013c689d1d565fd754069a36dd76eab1d8f2e7bd7e3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/avahi/blobs/sha256:a86b81c920d871c0f159c3e1008330c29c04170a30da27ed11ce4aac933e43b7
+        sha256: a86b81c920d871c0f159c3e1008330c29c04170a30da27ed11ce4aac933e43b7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/avahi/avahi/archive/refs/tags/v0.9-rc4.tar.gz
+    sha256: 08fcc57377ed05416ec4b3d8a179da716a7a9376821551a5ae16f8276a1ef0b5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - gettext
-  - libtool
-  - m4
-  - perl
-  - pkgconf
-  - xmltoman
+    - autoconf
+    - automake
+    - gettext
+    - libtool
+    - m4
+    - perl
+    - pkgconf
+    - xmltoman
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

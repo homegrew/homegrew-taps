@@ -3,38 +3,62 @@ version: 1.1.3
 description: C++ stream output interface for creating Postscript documents
 homepage: https://www.unifont.org/lasi/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lasi/blobs/sha256:b912d8b980908ab389f63632dd5f37dd43689714732f64eb5d581c40bb7d2b59
-    sha256: b912d8b980908ab389f63632dd5f37dd43689714732f64eb5d581c40bb7d2b59
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lasi/blobs/sha256:3ba98494b45476be8d8b75f2b2d2f2e8fe366618b7cc26b2ced89ba5bb5124f8
-    sha256: 3ba98494b45476be8d8b75f2b2d2f2e8fe366618b7cc26b2ced89ba5bb5124f8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lasi/blobs/sha256:a81717d41a1ac50a3f35199b82877d62fce7abb1da670c98cd2abb762e2a1b8b
-    sha256: a81717d41a1ac50a3f35199b82877d62fce7abb1da670c98cd2abb762e2a1b8b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lasi/blobs/sha256:70ef82ea6ebb0ad9deea3e12e5a88db9f24653599a256d0577422b2481f8d498
-    sha256: 70ef82ea6ebb0ad9deea3e12e5a88db9f24653599a256d0577422b2481f8d498
-source:
-  url: https://downloads.sourceforge.net/project/lasi/lasi/1.1.3%20Source/libLASi-1.1.3.tar.gz
-  sha256: 5e5d2306f7d5a275949fb8f15e6d79087371e2a1caa0d8f00585029d1b47ba3b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - glib
-  - pango
-  - fontconfig
-  - gettext
-  - harfbuzz
+    - freetype
+    - glib
+    - pango
+    - fontconfig
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lasi/blobs/sha256:3ba98494b45476be8d8b75f2b2d2f2e8fe366618b7cc26b2ced89ba5bb5124f8
+        sha256: 3ba98494b45476be8d8b75f2b2d2f2e8fe366618b7cc26b2ced89ba5bb5124f8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lasi/blobs/sha256:b912d8b980908ab389f63632dd5f37dd43689714732f64eb5d581c40bb7d2b59
+        sha256: b912d8b980908ab389f63632dd5f37dd43689714732f64eb5d581c40bb7d2b59
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lasi/blobs/sha256:a81717d41a1ac50a3f35199b82877d62fce7abb1da670c98cd2abb762e2a1b8b
+        sha256: a81717d41a1ac50a3f35199b82877d62fce7abb1da670c98cd2abb762e2a1b8b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lasi/blobs/sha256:70ef82ea6ebb0ad9deea3e12e5a88db9f24653599a256d0577422b2481f8d498
+        sha256: 70ef82ea6ebb0ad9deea3e12e5a88db9f24653599a256d0577422b2481f8d498
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/lasi/lasi/1.1.3%20Source/libLASi-1.1.3.tar.gz
+    sha256: 5e5d2306f7d5a275949fb8f15e6d79087371e2a1caa0d8f00585029d1b47ba3b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
-  - pkgconf
+    - cmake
+    - doxygen
+    - pkgconf
 linux_dependencies:
-  - freetype
-  - glib
-  - pango
+    - freetype
+    - glib
+    - pango
+build:
+    configure: []
+    install: []
+service: null

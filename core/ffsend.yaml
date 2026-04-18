@@ -3,27 +3,52 @@ version: 0.2.77
 description: Fully featured Firefox Send client
 homepage: https://gitlab.com/timvisee/ffsend
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffsend/blobs/sha256:77cae62ecbbd3f434c1d50b40ac1f7fb281ea070d2afecf5751d2d1e7694735b
-    sha256: 77cae62ecbbd3f434c1d50b40ac1f7fb281ea070d2afecf5751d2d1e7694735b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffsend/blobs/sha256:58610267085cd19c5445172c1f59662c58b840b6ac3bcc4da04a8598ba222f6a
-    sha256: 58610267085cd19c5445172c1f59662c58b840b6ac3bcc4da04a8598ba222f6a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffsend/blobs/sha256:2800da04659f26aacbd7ca4619fa0a06762cc5ef0c652630c139881f64c5aeba
-    sha256: 2800da04659f26aacbd7ca4619fa0a06762cc5ef0c652630c139881f64c5aeba
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffsend/blobs/sha256:57499a24df5e2e1f1042b40d7d81fc7257af612d36e593516935d6a768a560ef
-    sha256: 57499a24df5e2e1f1042b40d7d81fc7257af612d36e593516935d6a768a560ef
-source:
-  url: https://github.com/timvisee/ffsend/archive/refs/tags/v0.2.77.tar.gz
-  sha256: b13329704c5eab7c74ebc29c3f2209290ea00e758139daaefc0ab0d5728c2fa4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ffsend/blobs/sha256:58610267085cd19c5445172c1f59662c58b840b6ac3bcc4da04a8598ba222f6a
+        sha256: 58610267085cd19c5445172c1f59662c58b840b6ac3bcc4da04a8598ba222f6a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffsend/blobs/sha256:77cae62ecbbd3f434c1d50b40ac1f7fb281ea070d2afecf5751d2d1e7694735b
+        sha256: 77cae62ecbbd3f434c1d50b40ac1f7fb281ea070d2afecf5751d2d1e7694735b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ffsend/blobs/sha256:2800da04659f26aacbd7ca4619fa0a06762cc5ef0c652630c139881f64c5aeba
+        sha256: 2800da04659f26aacbd7ca4619fa0a06762cc5ef0c652630c139881f64c5aeba
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffsend/blobs/sha256:57499a24df5e2e1f1042b40d7d81fc7257af612d36e593516935d6a768a560ef
+        sha256: 57499a24df5e2e1f1042b40d7d81fc7257af612d36e593516935d6a768a560ef
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/timvisee/ffsend/archive/refs/tags/v0.2.77.tar.gz
+    sha256: b13329704c5eab7c74ebc29c3f2209290ea00e758139daaefc0ab0d5728c2fa4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 1.5.4
 description: Command-line utility to communicate with ModBus slave (RTU or TCP)
 homepage: https://epsilonrt.fr
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mbpoll/blobs/sha256:10b1218b9b816f0931d893ce7cc81f3e1af5a0cd16933c7bb299122281a409ca
-    sha256: 10b1218b9b816f0931d893ce7cc81f3e1af5a0cd16933c7bb299122281a409ca
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mbpoll/blobs/sha256:be89f71b83662d272b2fe11a1cda6a2d666839014aea1f0cd97b09e006b72f37
-    sha256: be89f71b83662d272b2fe11a1cda6a2d666839014aea1f0cd97b09e006b72f37
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mbpoll/blobs/sha256:bdca044ed55118e25a83d39bc6e463f614fffc7f2aff84d484855eaa8714b36b
-    sha256: bdca044ed55118e25a83d39bc6e463f614fffc7f2aff84d484855eaa8714b36b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mbpoll/blobs/sha256:325eeaf4fd666c7208fc4eb2c0094c9842331144663ef03200ebd8d8f783511c
-    sha256: 325eeaf4fd666c7208fc4eb2c0094c9842331144663ef03200ebd8d8f783511c
-source:
-  url: https://github.com/epsilonrt/mbpoll/archive/refs/tags/v1.5.4.tar.gz
-  sha256: a9bcc3afa3b85b3794505d07827873ead280d96a94769d236892eb8a4fb9956f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libmodbus
+    - libmodbus
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mbpoll/blobs/sha256:be89f71b83662d272b2fe11a1cda6a2d666839014aea1f0cd97b09e006b72f37
+        sha256: be89f71b83662d272b2fe11a1cda6a2d666839014aea1f0cd97b09e006b72f37
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mbpoll/blobs/sha256:10b1218b9b816f0931d893ce7cc81f3e1af5a0cd16933c7bb299122281a409ca
+        sha256: 10b1218b9b816f0931d893ce7cc81f3e1af5a0cd16933c7bb299122281a409ca
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mbpoll/blobs/sha256:bdca044ed55118e25a83d39bc6e463f614fffc7f2aff84d484855eaa8714b36b
+        sha256: bdca044ed55118e25a83d39bc6e463f614fffc7f2aff84d484855eaa8714b36b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mbpoll/blobs/sha256:325eeaf4fd666c7208fc4eb2c0094c9842331144663ef03200ebd8d8f783511c
+        sha256: 325eeaf4fd666c7208fc4eb2c0094c9842331144663ef03200ebd8d8f783511c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/epsilonrt/mbpoll/archive/refs/tags/v1.5.4.tar.gz
+    sha256: a9bcc3afa3b85b3794505d07827873ead280d96a94769d236892eb8a4fb9956f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,25 +3,51 @@ version: 2.6.0
 description: H.264 codec from Cisco
 homepage: https://www.openh264.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openh264/blobs/sha256:66b45539594a83afa29294059d4b82cbfeb149549cf90f6034c4c786db39486f
-    sha256: 66b45539594a83afa29294059d4b82cbfeb149549cf90f6034c4c786db39486f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openh264/blobs/sha256:8ccc47d06160704ddd908e021aa95d8f9e57c99b50d72eb4392bcc15bff2a1c5
-    sha256: 8ccc47d06160704ddd908e021aa95d8f9e57c99b50d72eb4392bcc15bff2a1c5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openh264/blobs/sha256:9a5b7c2ddbf8e02c9590b66e49e25119cf06ca2ff1ca48bb85f89c498828304e
-    sha256: 9a5b7c2ddbf8e02c9590b66e49e25119cf06ca2ff1ca48bb85f89c498828304e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openh264/blobs/sha256:ca36990de40af30ea3f0175926c87baaa780ad0e0abddc3328f69e22fc4ff908
-    sha256: ca36990de40af30ea3f0175926c87baaa780ad0e0abddc3328f69e22fc4ff908
-source:
-  url: https://github.com/cisco/openh264/archive/refs/tags/v2.6.0.tar.gz
-  sha256: 558544ad358283a7ab2930d69a9ceddf913f4a51ee9bf1bfb9e377322af81a69
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openh264/blobs/sha256:8ccc47d06160704ddd908e021aa95d8f9e57c99b50d72eb4392bcc15bff2a1c5
+        sha256: 8ccc47d06160704ddd908e021aa95d8f9e57c99b50d72eb4392bcc15bff2a1c5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openh264/blobs/sha256:66b45539594a83afa29294059d4b82cbfeb149549cf90f6034c4c786db39486f
+        sha256: 66b45539594a83afa29294059d4b82cbfeb149549cf90f6034c4c786db39486f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openh264/blobs/sha256:9a5b7c2ddbf8e02c9590b66e49e25119cf06ca2ff1ca48bb85f89c498828304e
+        sha256: 9a5b7c2ddbf8e02c9590b66e49e25119cf06ca2ff1ca48bb85f89c498828304e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openh264/blobs/sha256:ca36990de40af30ea3f0175926c87baaa780ad0e0abddc3328f69e22fc4ff908
+        sha256: ca36990de40af30ea3f0175926c87baaa780ad0e0abddc3328f69e22fc4ff908
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cisco/openh264/archive/refs/tags/v2.6.0.tar.gz
+    sha256: 558544ad358283a7ab2930d69a9ceddf913f4a51ee9bf1bfb9e377322af81a69
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - nasm
+    - nasm
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

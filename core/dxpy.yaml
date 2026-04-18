@@ -3,60 +3,84 @@ version: 0.408.2
 description: DNAnexus toolkit utilities and platform API bindings for Python
 homepage: https://github.com/dnanexus/dx-toolkit
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:f3a5e3cf7c20cdb0a38e80e637b20cc37205a5b4b9916bee92c06ff38a14d409
-    sha256: f3a5e3cf7c20cdb0a38e80e637b20cc37205a5b4b9916bee92c06ff38a14d409
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:e345a969e2acfb30f432d8824cff2a95b900d4ab2a45f19511a8bbe32aedf8ac
-    sha256: e345a969e2acfb30f432d8824cff2a95b900d4ab2a45f19511a8bbe32aedf8ac
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:bfc7cf9b4ac97b9ebd81cd7355eb044d03e7244b121e47171370ba60470d00e9
-    sha256: bfc7cf9b4ac97b9ebd81cd7355eb044d03e7244b121e47171370ba60470d00e9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:d0cc8ac24ca77841503eb265adb92cdebf7a2c053f51ea15698ad4586acb7d66
-    sha256: d0cc8ac24ca77841503eb265adb92cdebf7a2c053f51ea15698ad4586acb7d66
-source:
-  url: https://files.pythonhosted.org/packages/0f/c9/adbd07666a6ca61f88a33ce914a804f6fb80c082fb7b9c1e4ee8e880be29/dxpy-0.408.2.tar.gz
-  sha256: a7d7acef13596f63243a36243bc1d499b82d49e49a32795098b5018c545e47bb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - aws-c-auth
-  - aws-c-cal
-  - aws-c-common
-  - aws-c-compression
-  - aws-c-event-stream
-  - aws-c-http
-  - aws-c-io
-  - aws-c-mqtt
-  - aws-c-s3
-  - aws-c-sdkutils
-  - aws-checksums
-  - certifi
-  - cryptography
-  - openssl@3
-  - python@3.14
-  - readline
+    - aws-c-auth
+    - aws-c-cal
+    - aws-c-common
+    - aws-c-compression
+    - aws-c-event-stream
+    - aws-c-http
+    - aws-c-io
+    - aws-c-mqtt
+    - aws-c-s3
+    - aws-c-sdkutils
+    - aws-checksums
+    - certifi
+    - cryptography
+    - openssl@3
+    - python@3.14
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:e345a969e2acfb30f432d8824cff2a95b900d4ab2a45f19511a8bbe32aedf8ac
+        sha256: e345a969e2acfb30f432d8824cff2a95b900d4ab2a45f19511a8bbe32aedf8ac
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:f3a5e3cf7c20cdb0a38e80e637b20cc37205a5b4b9916bee92c06ff38a14d409
+        sha256: f3a5e3cf7c20cdb0a38e80e637b20cc37205a5b4b9916bee92c06ff38a14d409
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:bfc7cf9b4ac97b9ebd81cd7355eb044d03e7244b121e47171370ba60470d00e9
+        sha256: bfc7cf9b4ac97b9ebd81cd7355eb044d03e7244b121e47171370ba60470d00e9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:d0cc8ac24ca77841503eb265adb92cdebf7a2c053f51ea15698ad4586acb7d66
+        sha256: d0cc8ac24ca77841503eb265adb92cdebf7a2c053f51ea15698ad4586acb7d66
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/0f/c9/adbd07666a6ca61f88a33ce914a804f6fb80c082fb7b9c1e4ee8e880be29/dxpy-0.408.2.tar.gz
+    sha256: a7d7acef13596f63243a36243bc1d499b82d49e49a32795098b5018c545e47bb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - aws-c-auth
-  - aws-c-cal
-  - aws-c-common
-  - aws-c-compression
-  - aws-c-event-stream
-  - aws-c-http
-  - aws-c-io
-  - aws-c-mqtt
-  - aws-c-s3
-  - aws-c-sdkutils
-  - aws-checksums
-  - aws-lc
-  - certifi
-  - cryptography
-  - openssl@3
-  - python@3.14
-  - s2n
+    - aws-c-auth
+    - aws-c-cal
+    - aws-c-common
+    - aws-c-compression
+    - aws-c-event-stream
+    - aws-c-http
+    - aws-c-io
+    - aws-c-mqtt
+    - aws-c-s3
+    - aws-c-sdkutils
+    - aws-checksums
+    - aws-lc
+    - certifi
+    - cryptography
+    - openssl@3
+    - python@3.14
+    - s2n
+build:
+    configure: []
+    install: []
+service: null

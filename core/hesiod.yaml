@@ -3,29 +3,54 @@ version: 3.2.1
 description: Library for the simple string lookup service built on top of DNS
 homepage: https://github.com/achernya/hesiod
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hesiod/blobs/sha256:735e3fed1785ef6b190ece9c2d9e4da37dab5d07e246302d786fad85c6bee0c7
-    sha256: 735e3fed1785ef6b190ece9c2d9e4da37dab5d07e246302d786fad85c6bee0c7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hesiod/blobs/sha256:e84876e787316bb428e51e487e32bba65ad77323d34c4d2f3d1b72a0749e69ab
-    sha256: e84876e787316bb428e51e487e32bba65ad77323d34c4d2f3d1b72a0749e69ab
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hesiod/blobs/sha256:3f798b02cd050763429e1db3c6e8afbb591bca678a8352fa8305cdbaa544a3f9
-    sha256: 3f798b02cd050763429e1db3c6e8afbb591bca678a8352fa8305cdbaa544a3f9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hesiod/blobs/sha256:61a92d40669db1231ac941a5d2f4f71a09e9bad4907e36239dd22f9b71da305c
-    sha256: 61a92d40669db1231ac941a5d2f4f71a09e9bad4907e36239dd22f9b71da305c
-source:
-  url: https://github.com/achernya/hesiod/archive/refs/tags/hesiod-3.2.1.tar.gz
-  sha256: 813ccb091ad15d516a323bb8c7693597eec2ef616f36b73a8db78ff0b856ad63
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libidn
+    - libidn
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hesiod/blobs/sha256:e84876e787316bb428e51e487e32bba65ad77323d34c4d2f3d1b72a0749e69ab
+        sha256: e84876e787316bb428e51e487e32bba65ad77323d34c4d2f3d1b72a0749e69ab
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hesiod/blobs/sha256:735e3fed1785ef6b190ece9c2d9e4da37dab5d07e246302d786fad85c6bee0c7
+        sha256: 735e3fed1785ef6b190ece9c2d9e4da37dab5d07e246302d786fad85c6bee0c7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hesiod/blobs/sha256:3f798b02cd050763429e1db3c6e8afbb591bca678a8352fa8305cdbaa544a3f9
+        sha256: 3f798b02cd050763429e1db3c6e8afbb591bca678a8352fa8305cdbaa544a3f9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hesiod/blobs/sha256:61a92d40669db1231ac941a5d2f4f71a09e9bad4907e36239dd22f9b71da305c
+        sha256: 61a92d40669db1231ac941a5d2f4f71a09e9bad4907e36239dd22f9b71da305c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/achernya/hesiod/archive/refs/tags/hesiod-3.2.1.tar.gz
+    sha256: 813ccb091ad15d516a323bb8c7693597eec2ef616f36b73a8db78ff0b856ad63
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

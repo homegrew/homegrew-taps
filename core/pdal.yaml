@@ -3,61 +3,85 @@ version: 2.10.1
 description: Point data abstraction library
 homepage: https://pdal.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pdal/blobs/sha256:514334b718dfa268bccc32a0e0a9746f30c70723cdc8d2c88f8be9eb14b40cd2
-    sha256: 514334b718dfa268bccc32a0e0a9746f30c70723cdc8d2c88f8be9eb14b40cd2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pdal/blobs/sha256:a2d04e5af7925d00d5b00f2f4719e8c6eef140d62f467449c3e80d63e5e08907
-    sha256: a2d04e5af7925d00d5b00f2f4719e8c6eef140d62f467449c3e80d63e5e08907
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pdal/blobs/sha256:f423839c855b2c0fe0d43a303d4f828080aed7d8488379e6cb82d551508ee5f3
-    sha256: f423839c855b2c0fe0d43a303d4f828080aed7d8488379e6cb82d551508ee5f3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pdal/blobs/sha256:11aeea44e1318ae538bb09b92ada6ac9dd64d1f70c521e9241180884e14b7caf
-    sha256: 11aeea44e1318ae538bb09b92ada6ac9dd64d1f70c521e9241180884e14b7caf
-source:
-  url: https://github.com/PDAL/PDAL/releases/download/2.10.1/PDAL-2.10.1-src.tar.bz2
-  sha256: 78765f1d06584c8e9b3b4a5b58c0ebea478d42ad21f1432717b31c20def05522
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - apache-arrow
-  - curl
-  - draco
-  - gdal
-  - hdf5
-  - libgeotiff
-  - libpq
-  - libxml2
-  - lz4
-  - numpy
-  - openssl@3
-  - proj
-  - tiledb
-  - xerces-c
-  - zstd
+    - apache-arrow
+    - curl
+    - draco
+    - gdal
+    - hdf5
+    - libgeotiff
+    - libpq
+    - libxml2
+    - lz4
+    - numpy
+    - openssl@3
+    - proj
+    - tiledb
+    - xerces-c
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pdal/blobs/sha256:a2d04e5af7925d00d5b00f2f4719e8c6eef140d62f467449c3e80d63e5e08907
+        sha256: a2d04e5af7925d00d5b00f2f4719e8c6eef140d62f467449c3e80d63e5e08907
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pdal/blobs/sha256:514334b718dfa268bccc32a0e0a9746f30c70723cdc8d2c88f8be9eb14b40cd2
+        sha256: 514334b718dfa268bccc32a0e0a9746f30c70723cdc8d2c88f8be9eb14b40cd2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pdal/blobs/sha256:f423839c855b2c0fe0d43a303d4f828080aed7d8488379e6cb82d551508ee5f3
+        sha256: f423839c855b2c0fe0d43a303d4f828080aed7d8488379e6cb82d551508ee5f3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pdal/blobs/sha256:11aeea44e1318ae538bb09b92ada6ac9dd64d1f70c521e9241180884e14b7caf
+        sha256: 11aeea44e1318ae538bb09b92ada6ac9dd64d1f70c521e9241180884e14b7caf
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/PDAL/PDAL/releases/download/2.10.1/PDAL-2.10.1-src.tar.bz2
+    sha256: 78765f1d06584c8e9b3b4a5b58c0ebea478d42ad21f1432717b31c20def05522
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - googletest
-  - pkgconf
+    - cmake
+    - googletest
+    - pkgconf
 linux_dependencies:
-  - apache-arrow
-  - curl
-  - draco
-  - gdal
-  - hdf5
-  - libgeotiff
-  - libpq
-  - libunwind
-  - libxml2
-  - lz4
-  - numpy
-  - openssl@3
-  - proj
-  - tiledb
-  - xerces-c
-  - zlib-ng-compat
-  - zstd
+    - apache-arrow
+    - curl
+    - draco
+    - gdal
+    - hdf5
+    - libgeotiff
+    - libpq
+    - libunwind
+    - libxml2
+    - lz4
+    - numpy
+    - openssl@3
+    - proj
+    - tiledb
+    - xerces-c
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

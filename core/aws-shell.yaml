@@ -3,26 +3,52 @@ version: 0.2.2
 description: Integrated shell for working with the AWS CLI
 homepage: https://github.com/awslabs/aws-shell
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aws-shell/blobs/sha256:ca6d34f714ae72324f77196e80fd42b6e3d3c65195c5b1e2991e1c96ec434b3e
-    sha256: ca6d34f714ae72324f77196e80fd42b6e3d3c65195c5b1e2991e1c96ec434b3e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aws-shell/blobs/sha256:751944203b7872672027b26d70c24f5d12cd25e5f69445cfd054bd2e86043484
-    sha256: 751944203b7872672027b26d70c24f5d12cd25e5f69445cfd054bd2e86043484
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aws-shell/blobs/sha256:b5bf05559cfc9b4ed5fb515308d7f4d850cb6d60083b3ab5761ba53c7130ccb2
-    sha256: b5bf05559cfc9b4ed5fb515308d7f4d850cb6d60083b3ab5761ba53c7130ccb2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aws-shell/blobs/sha256:a2f0def3cf970d2e06642673477680b82041ff5a1e019b0ff6212dd6bc0eb090
-    sha256: a2f0def3cf970d2e06642673477680b82041ff5a1e019b0ff6212dd6bc0eb090
-source:
-  url: https://files.pythonhosted.org/packages/01/31/ee166a91c865a855af4f15e393974eadf57762629fc2a163a3eb3f470ac5/aws-shell-0.2.2.tar.gz
-  sha256: fd1699ea5f201e7cbaacaeb34bf1eb88c8fe6dc6b248bce1b3d22b3e099a41e5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - python@3.14
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aws-shell/blobs/sha256:751944203b7872672027b26d70c24f5d12cd25e5f69445cfd054bd2e86043484
+        sha256: 751944203b7872672027b26d70c24f5d12cd25e5f69445cfd054bd2e86043484
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aws-shell/blobs/sha256:ca6d34f714ae72324f77196e80fd42b6e3d3c65195c5b1e2991e1c96ec434b3e
+        sha256: ca6d34f714ae72324f77196e80fd42b6e3d3c65195c5b1e2991e1c96ec434b3e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aws-shell/blobs/sha256:b5bf05559cfc9b4ed5fb515308d7f4d850cb6d60083b3ab5761ba53c7130ccb2
+        sha256: b5bf05559cfc9b4ed5fb515308d7f4d850cb6d60083b3ab5761ba53c7130ccb2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aws-shell/blobs/sha256:a2f0def3cf970d2e06642673477680b82041ff5a1e019b0ff6212dd6bc0eb090
+        sha256: a2f0def3cf970d2e06642673477680b82041ff5a1e019b0ff6212dd6bc0eb090
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/01/31/ee166a91c865a855af4f15e393974eadf57762629fc2a163a3eb3f470ac5/aws-shell-0.2.2.tar.gz
+    sha256: fd1699ea5f201e7cbaacaeb34bf1eb88c8fe6dc6b248bce1b3d22b3e099a41e5
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

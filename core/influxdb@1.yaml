@@ -3,28 +3,53 @@ version: 1.12.4
 description: Time series, events, and metrics database
 homepage: https://influxdata.com/time-series-platform/influxdb/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:16b3548c415d304a629c379939a0f7379febf35f3d180af60415a791cf261ae6
-    sha256: 16b3548c415d304a629c379939a0f7379febf35f3d180af60415a791cf261ae6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:14c6a693ba5ba1e90b6bbe6a454b499e5704e40260b565fac98e806f030aa2c5
-    sha256: 14c6a693ba5ba1e90b6bbe6a454b499e5704e40260b565fac98e806f030aa2c5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:a82e92d4339b7e6383dec00fb60e88cddafa23949749639ca82e635d93dd71b2
-    sha256: a82e92d4339b7e6383dec00fb60e88cddafa23949749639ca82e635d93dd71b2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:4152ccee52235ce87ab368dfadaae872d048a570f23ad4e6edb50b0f43f34b6b
-    sha256: 4152ccee52235ce87ab368dfadaae872d048a570f23ad4e6edb50b0f43f34b6b
-source:
-  url: https://github.com/influxdata/influxdb/archive/refs/tags/v1.12.4.tar.gz
-  sha256: 72c2d8e49b1e6dc312a4455a8cc1b5d21e3102be2728f02845e65e178e6446ea
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
-build_dependencies:
-  - go
-  - pkgconf
-  - rust
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:14c6a693ba5ba1e90b6bbe6a454b499e5704e40260b565fac98e806f030aa2c5
+        sha256: 14c6a693ba5ba1e90b6bbe6a454b499e5704e40260b565fac98e806f030aa2c5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:16b3548c415d304a629c379939a0f7379febf35f3d180af60415a791cf261ae6
+        sha256: 16b3548c415d304a629c379939a0f7379febf35f3d180af60415a791cf261ae6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:a82e92d4339b7e6383dec00fb60e88cddafa23949749639ca82e635d93dd71b2
+        sha256: a82e92d4339b7e6383dec00fb60e88cddafa23949749639ca82e635d93dd71b2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:4152ccee52235ce87ab368dfadaae872d048a570f23ad4e6edb50b0f43f34b6b
+        sha256: 4152ccee52235ce87ab368dfadaae872d048a570f23ad4e6edb50b0f43f34b6b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/influxdata/influxdb/archive/refs/tags/v1.12.4.tar.gz
+    sha256: 72c2d8e49b1e6dc312a4455a8cc1b5d21e3102be2728f02845e65e178e6446ea
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - go
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

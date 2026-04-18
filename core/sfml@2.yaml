@@ -3,44 +3,67 @@ version: 2.6.2
 description: Multi-media library with bindings for multiple languages
 homepage: https://www.sfml-dev.org/
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sfml/2/blobs/sha256:3b56c69d70b30eca4493fcd6ab9063a5f281cc3c82def8c43d55a63312372971
-    sha256: 3b56c69d70b30eca4493fcd6ab9063a5f281cc3c82def8c43d55a63312372971
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sfml/2/blobs/sha256:96b5e8246f95125ed017da1a3b0ebf37ec9006c644efb2587d8e7e6d3fb4a5ec
-    sha256: 96b5e8246f95125ed017da1a3b0ebf37ec9006c644efb2587d8e7e6d3fb4a5ec
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sfml/2/blobs/sha256:83c161b5438b103ca014927de4b1ccba2782c9e6a654cce77e6041e02c91d1f3
-    sha256: 83c161b5438b103ca014927de4b1ccba2782c9e6a654cce77e6041e02c91d1f3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sfml/2/blobs/sha256:de95401fa9357605881a1ff217dffa3c0fc7703968ce9f99ee25db3fb16fd2f8
-    sha256: de95401fa9357605881a1ff217dffa3c0fc7703968ce9f99ee25db3fb16fd2f8
-source:
-  url: https://www.sfml-dev.org/files/SFML-2.6.2-sources.zip
-  sha256: 19d6dbd9c901c74441d9888c13cb1399f614fe8993d59062a72cfbceb00fed04
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - flac
-  - freetype
-  - libogg
-  - libvorbis
-build_dependencies:
-  - cmake
-  - doxygen
-linux_dependencies:
-  - flac
-  - freetype
-  - libogg
-  - libvorbis
-  - libx11
-  - libxcursor
-  - libxrandr
-  - mesa
-  - mesa-glu
-  - openal-soft
-  - systemd
+    - flac
+    - freetype
+    - libogg
+    - libvorbis
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sfml/2/blobs/sha256:96b5e8246f95125ed017da1a3b0ebf37ec9006c644efb2587d8e7e6d3fb4a5ec
+        sha256: 96b5e8246f95125ed017da1a3b0ebf37ec9006c644efb2587d8e7e6d3fb4a5ec
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sfml/2/blobs/sha256:3b56c69d70b30eca4493fcd6ab9063a5f281cc3c82def8c43d55a63312372971
+        sha256: 3b56c69d70b30eca4493fcd6ab9063a5f281cc3c82def8c43d55a63312372971
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sfml/2/blobs/sha256:83c161b5438b103ca014927de4b1ccba2782c9e6a654cce77e6041e02c91d1f3
+        sha256: 83c161b5438b103ca014927de4b1ccba2782c9e6a654cce77e6041e02c91d1f3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sfml/2/blobs/sha256:de95401fa9357605881a1ff217dffa3c0fc7703968ce9f99ee25db3fb16fd2f8
+        sha256: de95401fa9357605881a1ff217dffa3c0fc7703968ce9f99ee25db3fb16fd2f8
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.sfml-dev.org/files/SFML-2.6.2-sources.zip
+    sha256: 19d6dbd9c901c74441d9888c13cb1399f614fe8993d59062a72cfbceb00fed04
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - cmake
+    - doxygen
+linux_dependencies:
+    - flac
+    - freetype
+    - libogg
+    - libvorbis
+    - libx11
+    - libxcursor
+    - libxrandr
+    - mesa
+    - mesa-glu
+    - openal-soft
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

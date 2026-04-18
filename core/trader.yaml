@@ -1,32 +1,56 @@
 name: trader
-version: 7.20
+version: "7.20"
 description: Star Traders
 homepage: https://www.zap.org.au/projects/trader/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/trader/blobs/sha256:e1479fb417ef273bfa538ccd0427ff4721ddf9861e253f20886bb8924b85422f
-    sha256: e1479fb417ef273bfa538ccd0427ff4721ddf9861e253f20886bb8924b85422f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/trader/blobs/sha256:cf2f81124457ed2d2e149befd2a4ae5565b4bbbeee4489065f5728a7258e9c1d
-    sha256: cf2f81124457ed2d2e149befd2a4ae5565b4bbbeee4489065f5728a7258e9c1d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/trader/blobs/sha256:39db68dcc4e59eb947e208f403ae5f1f3a8abbefe5b530339b2bd860768288b8
-    sha256: 39db68dcc4e59eb947e208f403ae5f1f3a8abbefe5b530339b2bd860768288b8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/trader/blobs/sha256:9c2b9f22360ef13d813e3b024cc74855e4e0cc4ef5933eda96f19f1961e793a7
-    sha256: 9c2b9f22360ef13d813e3b024cc74855e4e0cc4ef5933eda96f19f1961e793a7
-source:
-  url: https://ftp.zap.org.au/pub/trader/unix/trader-7.20.tar.xz
-  sha256: bad368c471d7f4c371fbe8f5da24872f9e3ad609ddb7dad0e015c960c88b3aa9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ncurses
-  - gettext
+    - ncurses
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/trader/blobs/sha256:cf2f81124457ed2d2e149befd2a4ae5565b4bbbeee4489065f5728a7258e9c1d
+        sha256: cf2f81124457ed2d2e149befd2a4ae5565b4bbbeee4489065f5728a7258e9c1d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/trader/blobs/sha256:e1479fb417ef273bfa538ccd0427ff4721ddf9861e253f20886bb8924b85422f
+        sha256: e1479fb417ef273bfa538ccd0427ff4721ddf9861e253f20886bb8924b85422f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/trader/blobs/sha256:39db68dcc4e59eb947e208f403ae5f1f3a8abbefe5b530339b2bd860768288b8
+        sha256: 39db68dcc4e59eb947e208f403ae5f1f3a8abbefe5b530339b2bd860768288b8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/trader/blobs/sha256:9c2b9f22360ef13d813e3b024cc74855e4e0cc4ef5933eda96f19f1961e793a7
+        sha256: 9c2b9f22360ef13d813e3b024cc74855e4e0cc4ef5933eda96f19f1961e793a7
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.zap.org.au/pub/trader/unix/trader-7.20.tar.xz
+    sha256: bad368c471d7f4c371fbe8f5da24872f9e3ad609ddb7dad0e015c960c88b3aa9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - ncurses
+    - ncurses
+build:
+    configure: []
+    install: []
+service: null

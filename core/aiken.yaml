@@ -3,28 +3,53 @@ version: 1.1.21
 description: Modern smart contract platform for Cardano
 homepage: https://aiken-lang.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aiken/blobs/sha256:7c9ae36751833384d16c8a4df43c8fb3ef0755d4b05d3363486b48e54ee207d4
-    sha256: 7c9ae36751833384d16c8a4df43c8fb3ef0755d4b05d3363486b48e54ee207d4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aiken/blobs/sha256:cac6ef2d9163db78866a858eb745edbda9d016956dcf08f0f7d1ad5a3c2e38bc
-    sha256: cac6ef2d9163db78866a858eb745edbda9d016956dcf08f0f7d1ad5a3c2e38bc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aiken/blobs/sha256:2dd61e0126ab3d0b44ea3e085d69d20b36c9fec4cd36fd8431236514d1ec70d7
-    sha256: 2dd61e0126ab3d0b44ea3e085d69d20b36c9fec4cd36fd8431236514d1ec70d7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aiken/blobs/sha256:87156bc45bd1fe859eeaebb4307725e38b8ce9098551efec869574f2ce509bc7
-    sha256: 87156bc45bd1fe859eeaebb4307725e38b8ce9098551efec869574f2ce509bc7
-source:
-  url: https://github.com/aiken-lang/aiken/archive/refs/tags/v1.1.21.tar.gz
-  sha256: c6bbdba11a37a6452d6a00c6fee9473264b757475912c4dfd9c3fd18ea60ed4c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aiken/blobs/sha256:cac6ef2d9163db78866a858eb745edbda9d016956dcf08f0f7d1ad5a3c2e38bc
+        sha256: cac6ef2d9163db78866a858eb745edbda9d016956dcf08f0f7d1ad5a3c2e38bc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aiken/blobs/sha256:7c9ae36751833384d16c8a4df43c8fb3ef0755d4b05d3363486b48e54ee207d4
+        sha256: 7c9ae36751833384d16c8a4df43c8fb3ef0755d4b05d3363486b48e54ee207d4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aiken/blobs/sha256:2dd61e0126ab3d0b44ea3e085d69d20b36c9fec4cd36fd8431236514d1ec70d7
+        sha256: 2dd61e0126ab3d0b44ea3e085d69d20b36c9fec4cd36fd8431236514d1ec70d7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aiken/blobs/sha256:87156bc45bd1fe859eeaebb4307725e38b8ce9098551efec869574f2ce509bc7
+        sha256: 87156bc45bd1fe859eeaebb4307725e38b8ce9098551efec869574f2ce509bc7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/aiken-lang/aiken/archive/refs/tags/v1.1.21.tar.gz
+    sha256: c6bbdba11a37a6452d6a00c6fee9473264b757475912c4dfd9c3fd18ea60ed4c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

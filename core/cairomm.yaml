@@ -3,31 +3,56 @@ version: 1.18.0
 description: Vector graphics library with cross-device output support
 homepage: https://cairographics.org/cairomm/
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cairomm/blobs/sha256:f0343ad4ea24ef24041422413d36b5a8aae65628dd5d756c94114d22e09709ad
-    sha256: f0343ad4ea24ef24041422413d36b5a8aae65628dd5d756c94114d22e09709ad
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cairomm/blobs/sha256:0e38e709e43a068694a9a36c743930e133e0c1da6647de9ea82391e7a82052c9
-    sha256: 0e38e709e43a068694a9a36c743930e133e0c1da6647de9ea82391e7a82052c9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cairomm/blobs/sha256:a7f537f71f9176e26a94e7b5db2a30f0ea266085486ca78af8e957e401d7de63
-    sha256: a7f537f71f9176e26a94e7b5db2a30f0ea266085486ca78af8e957e401d7de63
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cairomm/blobs/sha256:3b866bb4f2e4ba2bf7772bd89e40e540473f7787f90bc0504991b80b5e578455
-    sha256: 3b866bb4f2e4ba2bf7772bd89e40e540473f7787f90bc0504991b80b5e578455
-source:
-  url: https://cairographics.org/releases/cairomm-1.18.0.tar.xz
-  sha256: b81255394e3ea8e8aa887276d22afa8985fc8daef60692eb2407d23049f03cfb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - libpng
-  - libsigc++
+    - cairo
+    - libpng
+    - libsigc++
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cairomm/blobs/sha256:0e38e709e43a068694a9a36c743930e133e0c1da6647de9ea82391e7a82052c9
+        sha256: 0e38e709e43a068694a9a36c743930e133e0c1da6647de9ea82391e7a82052c9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cairomm/blobs/sha256:f0343ad4ea24ef24041422413d36b5a8aae65628dd5d756c94114d22e09709ad
+        sha256: f0343ad4ea24ef24041422413d36b5a8aae65628dd5d756c94114d22e09709ad
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cairomm/blobs/sha256:a7f537f71f9176e26a94e7b5db2a30f0ea266085486ca78af8e957e401d7de63
+        sha256: a7f537f71f9176e26a94e7b5db2a30f0ea266085486ca78af8e957e401d7de63
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cairomm/blobs/sha256:3b866bb4f2e4ba2bf7772bd89e40e540473f7787f90bc0504991b80b5e578455
+        sha256: 3b866bb4f2e4ba2bf7772bd89e40e540473f7787f90bc0504991b80b5e578455
+        sha512: ""
+        signature: ""
+source:
+    url: https://cairographics.org/releases/cairomm-1.18.0.tar.xz
+    sha256: b81255394e3ea8e8aa887276d22afa8985fc8daef60692eb2407d23049f03cfb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

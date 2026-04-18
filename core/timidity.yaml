@@ -3,33 +3,58 @@ version: 2.15.0
 description: Software synthesizer
 homepage: https://timidity.sourceforge.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/timidity/blobs/sha256:d1870a696de648a1ed46e25d590b6f6a3bfa73091044c8623fbf77901e71c7a9
-    sha256: d1870a696de648a1ed46e25d590b6f6a3bfa73091044c8623fbf77901e71c7a9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/timidity/blobs/sha256:e64e294d42736c8781c217604b149e2bbc03754312416f92b3bae9a6e2ecde54
-    sha256: e64e294d42736c8781c217604b149e2bbc03754312416f92b3bae9a6e2ecde54
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/timidity/blobs/sha256:641143b8f2f77b6d9c41cf16994b389cfd2523ec4f97d6bd1acabca4a5f376d1
-    sha256: 641143b8f2f77b6d9c41cf16994b389cfd2523ec4f97d6bd1acabca4a5f376d1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/timidity/blobs/sha256:4c6b979e2ec599528a1fa01884d6886e757ccfb57624785b27f3ca2c4bf6167c
-    sha256: 4c6b979e2ec599528a1fa01884d6886e757ccfb57624785b27f3ca2c4bf6167c
-source:
-  url: https://downloads.sourceforge.net/project/timidity/TiMidity++/TiMidity++-2.15.0/TiMidity++-2.15.0.tar.bz2
-  sha256: 161fc0395af16b51f7117ad007c3e434c825a308fa29ad44b626ee8f9bb1c8f5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - flac
-  - libao
-  - libogg
-  - libvorbis
-  - speex
+    - flac
+    - libao
+    - libogg
+    - libvorbis
+    - speex
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/timidity/blobs/sha256:e64e294d42736c8781c217604b149e2bbc03754312416f92b3bae9a6e2ecde54
+        sha256: e64e294d42736c8781c217604b149e2bbc03754312416f92b3bae9a6e2ecde54
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/timidity/blobs/sha256:d1870a696de648a1ed46e25d590b6f6a3bfa73091044c8623fbf77901e71c7a9
+        sha256: d1870a696de648a1ed46e25d590b6f6a3bfa73091044c8623fbf77901e71c7a9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/timidity/blobs/sha256:641143b8f2f77b6d9c41cf16994b389cfd2523ec4f97d6bd1acabca4a5f376d1
+        sha256: 641143b8f2f77b6d9c41cf16994b389cfd2523ec4f97d6bd1acabca4a5f376d1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/timidity/blobs/sha256:4c6b979e2ec599528a1fa01884d6886e757ccfb57624785b27f3ca2c4bf6167c
+        sha256: 4c6b979e2ec599528a1fa01884d6886e757ccfb57624785b27f3ca2c4bf6167c
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/timidity/TiMidity++/TiMidity++-2.15.0/TiMidity++-2.15.0.tar.bz2
+    sha256: 161fc0395af16b51f7117ad007c3e434c825a308fa29ad44b626ee8f9bb1c8f5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

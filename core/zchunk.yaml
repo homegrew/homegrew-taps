@@ -3,31 +3,56 @@ version: 1.5.3
 description: Compressed file format for efficient deltas
 homepage: https://github.com/zchunk/zchunk
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zchunk/blobs/sha256:46b7edb3748b367ba4b35700dbd3369744c16b37d31e2843492ca47af28333c1
-    sha256: 46b7edb3748b367ba4b35700dbd3369744c16b37d31e2843492ca47af28333c1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zchunk/blobs/sha256:39d1b2d55f294285fcdf94c11ead1d87e11ffbc80c541c059867c4d7bbcfe557
-    sha256: 39d1b2d55f294285fcdf94c11ead1d87e11ffbc80c541c059867c4d7bbcfe557
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zchunk/blobs/sha256:45fae766d814be7734fd3815c7ed8e817feb045f901c270a243cb3d19e7f2e29
-    sha256: 45fae766d814be7734fd3815c7ed8e817feb045f901c270a243cb3d19e7f2e29
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zchunk/blobs/sha256:1f97cc161198905c6092068d829cdf206aae5b92609adf419b63cb6bb38edaf1
-    sha256: 1f97cc161198905c6092068d829cdf206aae5b92609adf419b63cb6bb38edaf1
-source:
-  url: https://github.com/zchunk/zchunk/archive/refs/tags/1.5.3.tar.gz
-  sha256: 832381dafe192109742c141ab90a6bc0a9d7e9926a4bafbdf98f596680da2a95
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - zstd
+    - openssl@3
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zchunk/blobs/sha256:39d1b2d55f294285fcdf94c11ead1d87e11ffbc80c541c059867c4d7bbcfe557
+        sha256: 39d1b2d55f294285fcdf94c11ead1d87e11ffbc80c541c059867c4d7bbcfe557
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zchunk/blobs/sha256:46b7edb3748b367ba4b35700dbd3369744c16b37d31e2843492ca47af28333c1
+        sha256: 46b7edb3748b367ba4b35700dbd3369744c16b37d31e2843492ca47af28333c1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zchunk/blobs/sha256:45fae766d814be7734fd3815c7ed8e817feb045f901c270a243cb3d19e7f2e29
+        sha256: 45fae766d814be7734fd3815c7ed8e817feb045f901c270a243cb3d19e7f2e29
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zchunk/blobs/sha256:1f97cc161198905c6092068d829cdf206aae5b92609adf419b63cb6bb38edaf1
+        sha256: 1f97cc161198905c6092068d829cdf206aae5b92609adf419b63cb6bb38edaf1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/zchunk/zchunk/archive/refs/tags/1.5.3.tar.gz
+    sha256: 832381dafe192109742c141ab90a6bc0a9d7e9926a4bafbdf98f596680da2a95
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
-  - argp-standalone
+    - meson
+    - ninja
+    - pkgconf
+    - argp-standalone
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

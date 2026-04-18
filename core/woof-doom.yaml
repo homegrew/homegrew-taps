@@ -1,46 +1,70 @@
 name: woof-doom
 version: 15.3.0
-description: "Woof! is a continuation of the Boom/MBF bloodline of Doom source ports"
+description: Woof! is a continuation of the Boom/MBF bloodline of Doom source ports
 homepage: https://github.com/fabiangreffrath/woof
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/woof-doom/blobs/sha256:5fe5942382f6b24dfd928f023279f36ea7fc8686a92affbfe9dac93d4df6ea50
-    sha256: 5fe5942382f6b24dfd928f023279f36ea7fc8686a92affbfe9dac93d4df6ea50
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/woof-doom/blobs/sha256:ce1a252768cd9d70a653330c55b3fc53b8a8c922d15fd7184d36561e2403a48a
-    sha256: ce1a252768cd9d70a653330c55b3fc53b8a8c922d15fd7184d36561e2403a48a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/woof-doom/blobs/sha256:6f25b3b170b7b2b6bd627f551ea0dd4fe229898bf039a72508a441fd1ecf4ca6
-    sha256: 6f25b3b170b7b2b6bd627f551ea0dd4fe229898bf039a72508a441fd1ecf4ca6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/woof-doom/blobs/sha256:f97536230d32c3733dbee65719503d45d620112ab004de741542f1c125e193f1
-    sha256: f97536230d32c3733dbee65719503d45d620112ab004de741542f1c125e193f1
-source:
-  url: https://github.com/fabiangreffrath/woof/archive/refs/tags/woof_15.3.0.tar.gz
-  sha256: ace929952479bf42f2bbf404f6bc95ca5fabde23f3c8d656c6d1339b9baebbcc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sdl2
-  - sdl2_net
-  - fluid-synth
-  - libebur128
-  - libsndfile
-  - libxmp
-  - openal-soft
-  - yyjson
+    - sdl2
+    - sdl2_net
+    - fluid-synth
+    - libebur128
+    - libsndfile
+    - libxmp
+    - openal-soft
+    - yyjson
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/woof-doom/blobs/sha256:ce1a252768cd9d70a653330c55b3fc53b8a8c922d15fd7184d36561e2403a48a
+        sha256: ce1a252768cd9d70a653330c55b3fc53b8a8c922d15fd7184d36561e2403a48a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/woof-doom/blobs/sha256:5fe5942382f6b24dfd928f023279f36ea7fc8686a92affbfe9dac93d4df6ea50
+        sha256: 5fe5942382f6b24dfd928f023279f36ea7fc8686a92affbfe9dac93d4df6ea50
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/woof-doom/blobs/sha256:6f25b3b170b7b2b6bd627f551ea0dd4fe229898bf039a72508a441fd1ecf4ca6
+        sha256: 6f25b3b170b7b2b6bd627f551ea0dd4fe229898bf039a72508a441fd1ecf4ca6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/woof-doom/blobs/sha256:f97536230d32c3733dbee65719503d45d620112ab004de741542f1c125e193f1
+        sha256: f97536230d32c3733dbee65719503d45d620112ab004de741542f1c125e193f1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fabiangreffrath/woof/archive/refs/tags/woof_15.3.0.tar.gz
+    sha256: ace929952479bf42f2bbf404f6bc95ca5fabde23f3c8d656c6d1339b9baebbcc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - alsa-lib
-  - fluid-synth
-  - libebur128
-  - libsndfile
-  - libxmp
-  - openal-soft
-  - sdl2
-  - sdl2_net
-  - yyjson
+    - alsa-lib
+    - fluid-synth
+    - libebur128
+    - libsndfile
+    - libxmp
+    - openal-soft
+    - sdl2
+    - sdl2_net
+    - yyjson
+build:
+    configure: []
+    install: []
+service: null

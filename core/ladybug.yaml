@@ -3,27 +3,52 @@ version: 0.15.3
 description: Embedded graph database built for query speed and scalability
 homepage: https://ladybugdb.com/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ladybug/blobs/sha256:f87b1de983a4628da1c4816b421b95ae6a9bc1325630c19089c84d47e297d5f8
-    sha256: f87b1de983a4628da1c4816b421b95ae6a9bc1325630c19089c84d47e297d5f8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ladybug/blobs/sha256:ee943343ef0ae1d768c1b40450eb885f0998130ab255195ec592c1a8a253e407
-    sha256: ee943343ef0ae1d768c1b40450eb885f0998130ab255195ec592c1a8a253e407
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ladybug/blobs/sha256:e7cc19c09379647d54a1486acb69fbbd15af94db87c3d33f689831f615a4130e
-    sha256: e7cc19c09379647d54a1486acb69fbbd15af94db87c3d33f689831f615a4130e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ladybug/blobs/sha256:5fa4c11881612858bdda650677927ed731c081b3347125312640e4a8c9af2d5d
-    sha256: 5fa4c11881612858bdda650677927ed731c081b3347125312640e4a8c9af2d5d
-source:
-  url: https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.15.3.tar.gz
-  sha256: 5549b5a50a84f61cb18c35a964ee8c9b26c56952905f9e108ad58fe33fb9a5c6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ladybug/blobs/sha256:ee943343ef0ae1d768c1b40450eb885f0998130ab255195ec592c1a8a253e407
+        sha256: ee943343ef0ae1d768c1b40450eb885f0998130ab255195ec592c1a8a253e407
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ladybug/blobs/sha256:f87b1de983a4628da1c4816b421b95ae6a9bc1325630c19089c84d47e297d5f8
+        sha256: f87b1de983a4628da1c4816b421b95ae6a9bc1325630c19089c84d47e297d5f8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ladybug/blobs/sha256:e7cc19c09379647d54a1486acb69fbbd15af94db87c3d33f689831f615a4130e
+        sha256: e7cc19c09379647d54a1486acb69fbbd15af94db87c3d33f689831f615a4130e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ladybug/blobs/sha256:5fa4c11881612858bdda650677927ed731c081b3347125312640e4a8c9af2d5d
+        sha256: 5fa4c11881612858bdda650677927ed731c081b3347125312640e4a8c9af2d5d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.15.3.tar.gz
+    sha256: 5549b5a50a84f61cb18c35a964ee8c9b26c56952905f9e108ad58fe33fb9a5c6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - gcc
+    - gcc
+build:
+    configure: []
+    install: []
+service: null

@@ -3,34 +3,58 @@ version: 2.2.0
 description: Search PDFs for strings matching a regular expression
 homepage: https://pdfgrep.org/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pdfgrep/blobs/sha256:43c65c4fdb2f725fda1346cb7a8164d5877f570b8a91625b7dfd1ac09123f4e2
-    sha256: 43c65c4fdb2f725fda1346cb7a8164d5877f570b8a91625b7dfd1ac09123f4e2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pdfgrep/blobs/sha256:30ee8819e93cff1c67e4f5ecbad366e00fa94cc834c3999e533967f9b649c29c
-    sha256: 30ee8819e93cff1c67e4f5ecbad366e00fa94cc834c3999e533967f9b649c29c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pdfgrep/blobs/sha256:a9b1777fcc905b1f41a679135059d92c0b5c1ef2ac560f409b5e69910014c99c
-    sha256: a9b1777fcc905b1f41a679135059d92c0b5c1ef2ac560f409b5e69910014c99c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pdfgrep/blobs/sha256:0e0238a85a206f54c6fe141721bcf345e02a6274dc95cafe2cc4690eac7b3a2c
-    sha256: 0e0238a85a206f54c6fe141721bcf345e02a6274dc95cafe2cc4690eac7b3a2c
-source:
-  url: https://pdfgrep.org/download/pdfgrep-2.2.0.tar.gz
-  sha256: 0661e531e4c0ef097959aa1c9773796585db39c72c84a02ff87d2c3637c620cb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgcrypt
-  - pcre2
-  - poppler
-  - libgpg-error
+    - libgcrypt
+    - pcre2
+    - poppler
+    - libgpg-error
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pdfgrep/blobs/sha256:30ee8819e93cff1c67e4f5ecbad366e00fa94cc834c3999e533967f9b649c29c
+        sha256: 30ee8819e93cff1c67e4f5ecbad366e00fa94cc834c3999e533967f9b649c29c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pdfgrep/blobs/sha256:43c65c4fdb2f725fda1346cb7a8164d5877f570b8a91625b7dfd1ac09123f4e2
+        sha256: 43c65c4fdb2f725fda1346cb7a8164d5877f570b8a91625b7dfd1ac09123f4e2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pdfgrep/blobs/sha256:a9b1777fcc905b1f41a679135059d92c0b5c1ef2ac560f409b5e69910014c99c
+        sha256: a9b1777fcc905b1f41a679135059d92c0b5c1ef2ac560f409b5e69910014c99c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pdfgrep/blobs/sha256:0e0238a85a206f54c6fe141721bcf345e02a6274dc95cafe2cc4690eac7b3a2c
+        sha256: 0e0238a85a206f54c6fe141721bcf345e02a6274dc95cafe2cc4690eac7b3a2c
+        sha512: ""
+        signature: ""
+source:
+    url: https://pdfgrep.org/download/pdfgrep-2.2.0.tar.gz
+    sha256: 0661e531e4c0ef097959aa1c9773796585db39c72c84a02ff87d2c3637c620cb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - libgcrypt
-  - pcre2
-  - poppler
+    - libgcrypt
+    - pcre2
+    - poppler
+build:
+    configure: []
+    install: []
+service: null

@@ -3,34 +3,58 @@ version: 2.1.1
 description: File format designed to store large amounts of data
 homepage: https://www.hdfgroup.org/solutions/hdf5/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hdf5/blobs/sha256:114c9d8e9bea42989f21fb2910f29aa80906bd6924c6d332783d2b38c7a63419
-    sha256: 114c9d8e9bea42989f21fb2910f29aa80906bd6924c6d332783d2b38c7a63419
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hdf5/blobs/sha256:23e4bf63102a12668a5a1cf07e610a46ced3a917b818fa88592cf721dc7e87e1
-    sha256: 23e4bf63102a12668a5a1cf07e610a46ced3a917b818fa88592cf721dc7e87e1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hdf5/blobs/sha256:e8e15df7406f1ae8ef07a41c86c8390a6bf931947becc7de20864206878ad86d
-    sha256: e8e15df7406f1ae8ef07a41c86c8390a6bf931947becc7de20864206878ad86d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hdf5/blobs/sha256:55e6b9b7905a97cc4bb846368bc88f39f9717c8033cf9c2591d15b5b6e47e0a3
-    sha256: 55e6b9b7905a97cc4bb846368bc88f39f9717c8033cf9c2591d15b5b6e47e0a3
-source:
-  url: https://github.com/HDFGroup/hdf5/releases/download/2.1.1/hdf5-2.1.1.tar.gz
-  sha256: efff93b5a904d66e8f626d7da60b5eedc9faf544be27dbabbaa87967b8ad798b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gcc
-  - libaec
-  - pkgconf
+    - gcc
+    - libaec
+    - pkgconf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hdf5/blobs/sha256:23e4bf63102a12668a5a1cf07e610a46ced3a917b818fa88592cf721dc7e87e1
+        sha256: 23e4bf63102a12668a5a1cf07e610a46ced3a917b818fa88592cf721dc7e87e1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hdf5/blobs/sha256:114c9d8e9bea42989f21fb2910f29aa80906bd6924c6d332783d2b38c7a63419
+        sha256: 114c9d8e9bea42989f21fb2910f29aa80906bd6924c6d332783d2b38c7a63419
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hdf5/blobs/sha256:e8e15df7406f1ae8ef07a41c86c8390a6bf931947becc7de20864206878ad86d
+        sha256: e8e15df7406f1ae8ef07a41c86c8390a6bf931947becc7de20864206878ad86d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hdf5/blobs/sha256:55e6b9b7905a97cc4bb846368bc88f39f9717c8033cf9c2591d15b5b6e47e0a3
+        sha256: 55e6b9b7905a97cc4bb846368bc88f39f9717c8033cf9c2591d15b5b6e47e0a3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/HDFGroup/hdf5/releases/download/2.1.1/hdf5-2.1.1.tar.gz
+    sha256: efff93b5a904d66e8f626d7da60b5eedc9faf544be27dbabbaa87967b8ad798b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - gcc
-  - libaec
-  - pkgconf
-  - zlib-ng-compat
+    - gcc
+    - libaec
+    - pkgconf
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

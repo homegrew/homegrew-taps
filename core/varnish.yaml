@@ -3,31 +3,56 @@ version: 9.0.1
 description: High-performance HTTP accelerator
 homepage: https://www.varnish-cache.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:1d49563f4ae95371fcbba88cbc9e60417074f3691c405097f75e1db341636ff2
-    sha256: 1d49563f4ae95371fcbba88cbc9e60417074f3691c405097f75e1db341636ff2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:5f0c5f04d7fb322cd485baec2a6709504c8b5bef3cc737f6bb9a6d60d6ee2402
-    sha256: 5f0c5f04d7fb322cd485baec2a6709504c8b5bef3cc737f6bb9a6d60d6ee2402
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:b93fd3fec7295a4ea3b1065244ffb5c24c32e12a84f76cf4b4fe4ac6131a0432
-    sha256: b93fd3fec7295a4ea3b1065244ffb5c24c32e12a84f76cf4b4fe4ac6131a0432
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:a2de9352c313119ffc212e46783ee25ef9608e4547fa8d3e8a881dad4874d759
-    sha256: a2de9352c313119ffc212e46783ee25ef9608e4547fa8d3e8a881dad4874d759
-source:
-  url: https://github.com/varnish/varnish/releases/download/varnish-9.0.1/varnish-9.0.1.tar.gz
-  sha256: c237a6cb856cf6e3b418a63cab56f7e9844efa7d9a0f0924ed6be1ab71894ed2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - pcre2
+    - openssl@3
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:5f0c5f04d7fb322cd485baec2a6709504c8b5bef3cc737f6bb9a6d60d6ee2402
+        sha256: 5f0c5f04d7fb322cd485baec2a6709504c8b5bef3cc737f6bb9a6d60d6ee2402
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:1d49563f4ae95371fcbba88cbc9e60417074f3691c405097f75e1db341636ff2
+        sha256: 1d49563f4ae95371fcbba88cbc9e60417074f3691c405097f75e1db341636ff2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:b93fd3fec7295a4ea3b1065244ffb5c24c32e12a84f76cf4b4fe4ac6131a0432
+        sha256: b93fd3fec7295a4ea3b1065244ffb5c24c32e12a84f76cf4b4fe4ac6131a0432
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:a2de9352c313119ffc212e46783ee25ef9608e4547fa8d3e8a881dad4874d759
+        sha256: a2de9352c313119ffc212e46783ee25ef9608e4547fa8d3e8a881dad4874d759
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/varnish/varnish/releases/download/varnish-9.0.1/varnish-9.0.1.tar.gz
+    sha256: c237a6cb856cf6e3b418a63cab56f7e9844efa7d9a0f0924ed6be1ab71894ed2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docutils
-  - graphviz
-  - pkgconf
-  - sphinx-doc
+    - docutils
+    - graphviz
+    - pkgconf
+    - sphinx-doc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,27 +1,53 @@
 name: iperf3
-version: 3.21
-description: "Update of iperf: measures TCP, UDP, and SCTP bandwidth"
+version: "3.21"
+description: 'Update of iperf: measures TCP, UDP, and SCTP bandwidth'
 homepage: https://github.com/esnet/iperf
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/iperf3/blobs/sha256:faf851fbea9c2a60d2c15a6dfa8d7a040084b886fa1e68caa6f59d51e0242471
-    sha256: faf851fbea9c2a60d2c15a6dfa8d7a040084b886fa1e68caa6f59d51e0242471
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/iperf3/blobs/sha256:6d3e55b3f30523a32bd346378c3692269ee59aa1c0747a1c68445f167ca7c93a
-    sha256: 6d3e55b3f30523a32bd346378c3692269ee59aa1c0747a1c68445f167ca7c93a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/iperf3/blobs/sha256:306ca27c214fa39d10756e3d0802ea2912e2636ac6bf454aa00f0cdfc9fff8c7
-    sha256: 306ca27c214fa39d10756e3d0802ea2912e2636ac6bf454aa00f0cdfc9fff8c7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/iperf3/blobs/sha256:3b199341bf7cb3caa6229e077980e57ade60851de489c34470e0c56535b43a71
-    sha256: 3b199341bf7cb3caa6229e077980e57ade60851de489c34470e0c56535b43a71
-source:
-  url: https://downloads.es.net/pub/iperf/iperf-3.21.tar.gz
-  sha256: 656e4405ebd620121de7ceca3eaf43a88f79ea1b857d041a6a0b1314801acdd8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/iperf3/blobs/sha256:6d3e55b3f30523a32bd346378c3692269ee59aa1c0747a1c68445f167ca7c93a
+        sha256: 6d3e55b3f30523a32bd346378c3692269ee59aa1c0747a1c68445f167ca7c93a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/iperf3/blobs/sha256:faf851fbea9c2a60d2c15a6dfa8d7a040084b886fa1e68caa6f59d51e0242471
+        sha256: faf851fbea9c2a60d2c15a6dfa8d7a040084b886fa1e68caa6f59d51e0242471
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/iperf3/blobs/sha256:306ca27c214fa39d10756e3d0802ea2912e2636ac6bf454aa00f0cdfc9fff8c7
+        sha256: 306ca27c214fa39d10756e3d0802ea2912e2636ac6bf454aa00f0cdfc9fff8c7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/iperf3/blobs/sha256:3b199341bf7cb3caa6229e077980e57ade60851de489c34470e0c56535b43a71
+        sha256: 3b199341bf7cb3caa6229e077980e57ade60851de489c34470e0c56535b43a71
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.es.net/pub/iperf/iperf-3.21.tar.gz
+    sha256: 656e4405ebd620121de7ceca3eaf43a88f79ea1b857d041a6a0b1314801acdd8
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

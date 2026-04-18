@@ -3,33 +3,56 @@ version: 0.14.1
 description: Programming language designed for robustness, optimality, and clarity
 homepage: https://ziglang.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zig/0.14/blobs/sha256:ed459b4f22e43748e723704ba25ed2019707082ecc27fffb9b2772c7ec8a6d56
-    sha256: ed459b4f22e43748e723704ba25ed2019707082ecc27fffb9b2772c7ec8a6d56
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zig/0.14/blobs/sha256:2e77847e273785c7db555a9f563eaeb2cfe65c0d2310862ef404933c28ee6828
-    sha256: 2e77847e273785c7db555a9f563eaeb2cfe65c0d2310862ef404933c28ee6828
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zig/0.14/blobs/sha256:1f53b11bf84acc90c55d583801bd50470ac2532bffbb977d8e47401bf38a5679
-    sha256: 1f53b11bf84acc90c55d583801bd50470ac2532bffbb977d8e47401bf38a5679
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zig/0.14/blobs/sha256:b8c0ee0e04b687903f8ee93cf9d2c294dd41b872edbb0ff6938db0a888cad051
-    sha256: b8c0ee0e04b687903f8ee93cf9d2c294dd41b872edbb0ff6938db0a888cad051
-source:
-  url: https://ziglang.org/download/0.14.1/zig-0.14.1.tar.xz
-  sha256: 237f8abcc8c3fd68c70c66cdbf63dce4fb5ad4a2e6225ac925e3d5b4c388f203
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lld@19
-  - llvm@19
-  - zstd
-build_dependencies:
-  - cmake
-linux_dependencies:
-  - lld@19
-  - llvm@19
+    - lld@19
+    - llvm@19
+    - zstd
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zig/0.14/blobs/sha256:2e77847e273785c7db555a9f563eaeb2cfe65c0d2310862ef404933c28ee6828
+        sha256: 2e77847e273785c7db555a9f563eaeb2cfe65c0d2310862ef404933c28ee6828
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zig/0.14/blobs/sha256:ed459b4f22e43748e723704ba25ed2019707082ecc27fffb9b2772c7ec8a6d56
+        sha256: ed459b4f22e43748e723704ba25ed2019707082ecc27fffb9b2772c7ec8a6d56
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zig/0.14/blobs/sha256:1f53b11bf84acc90c55d583801bd50470ac2532bffbb977d8e47401bf38a5679
+        sha256: 1f53b11bf84acc90c55d583801bd50470ac2532bffbb977d8e47401bf38a5679
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zig/0.14/blobs/sha256:b8c0ee0e04b687903f8ee93cf9d2c294dd41b872edbb0ff6938db0a888cad051
+        sha256: b8c0ee0e04b687903f8ee93cf9d2c294dd41b872edbb0ff6938db0a888cad051
+        sha512: ""
+        signature: ""
+source:
+    url: https://ziglang.org/download/0.14.1/zig-0.14.1.tar.xz
+    sha256: 237f8abcc8c3fd68c70c66cdbf63dce4fb5ad4a2e6225ac925e3d5b4c388f203
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - cmake
+linux_dependencies:
+    - lld@19
+    - llvm@19
+build:
+    configure: []
+    install: []
+service: null

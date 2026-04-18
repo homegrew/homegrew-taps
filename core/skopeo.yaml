@@ -3,32 +3,56 @@ version: 1.22.2
 description: Work with remote images registries
 homepage: https://github.com/containers/skopeo
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/skopeo/blobs/sha256:e36348d1a9b374d7e26ed244e22812b06b975c9e366dc86f062754b6e44333bd
-    sha256: e36348d1a9b374d7e26ed244e22812b06b975c9e366dc86f062754b6e44333bd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/skopeo/blobs/sha256:7cd6c9189287dafbd5007a79ea8e9bd53809f38f13417b9bf0c29fb6a4e61b03
-    sha256: 7cd6c9189287dafbd5007a79ea8e9bd53809f38f13417b9bf0c29fb6a4e61b03
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/skopeo/blobs/sha256:a04548ac4277a5c6e144814e5e4b99d56f70b98ab779ad6e107158d6bbc1e287
-    sha256: a04548ac4277a5c6e144814e5e4b99d56f70b98ab779ad6e107158d6bbc1e287
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/skopeo/blobs/sha256:5055e6a401bf22ccc27841582a02214cb0c85b6d5c842424fb87728e63636c32
-    sha256: 5055e6a401bf22ccc27841582a02214cb0c85b6d5c842424fb87728e63636c32
-source:
-  url: https://github.com/containers/skopeo/archive/refs/tags/v1.22.2.tar.gz
-  sha256: b6e1f208c1048f7a80613e8154774e6a3fdc891aeb45325c8ed905be4dee48d8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gpgme
+    - gpgme
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/skopeo/blobs/sha256:7cd6c9189287dafbd5007a79ea8e9bd53809f38f13417b9bf0c29fb6a4e61b03
+        sha256: 7cd6c9189287dafbd5007a79ea8e9bd53809f38f13417b9bf0c29fb6a4e61b03
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/skopeo/blobs/sha256:e36348d1a9b374d7e26ed244e22812b06b975c9e366dc86f062754b6e44333bd
+        sha256: e36348d1a9b374d7e26ed244e22812b06b975c9e366dc86f062754b6e44333bd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/skopeo/blobs/sha256:a04548ac4277a5c6e144814e5e4b99d56f70b98ab779ad6e107158d6bbc1e287
+        sha256: a04548ac4277a5c6e144814e5e4b99d56f70b98ab779ad6e107158d6bbc1e287
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/skopeo/blobs/sha256:5055e6a401bf22ccc27841582a02214cb0c85b6d5c842424fb87728e63636c32
+        sha256: 5055e6a401bf22ccc27841582a02214cb0c85b6d5c842424fb87728e63636c32
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/containers/skopeo/archive/refs/tags/v1.22.2.tar.gz
+    sha256: b6e1f208c1048f7a80613e8154774e6a3fdc891aeb45325c8ed905be4dee48d8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - go-md2man
-  - pkgconf
+    - go
+    - go-md2man
+    - pkgconf
 linux_dependencies:
-  - device-mapper
-  - gpgme
+    - device-mapper
+    - gpgme
+build:
+    configure: []
+    install: []
+service: null

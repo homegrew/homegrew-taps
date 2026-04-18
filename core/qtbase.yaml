@@ -3,78 +3,102 @@ version: 6.11.0
 description: Cross-platform application and UI framework
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND BSD-3-Clause AND GFDL-1.3-no-invariants-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtbase/blobs/sha256:e54d87a2110336ecb9455a59db6a90c113fd31d3311f3389aaca2788d217d4f3
-    sha256: e54d87a2110336ecb9455a59db6a90c113fd31d3311f3389aaca2788d217d4f3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtbase/blobs/sha256:3c95bee09ac829a039de421a1ef7fafa07dbcbc7e8239fa55efe5db776db0089
-    sha256: 3c95bee09ac829a039de421a1ef7fafa07dbcbc7e8239fa55efe5db776db0089
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtbase/blobs/sha256:7e4f49b1d9a0c9cca22a906a5f97ac823a3953c73e5e62432b05add42ddbdb0d
-    sha256: 7e4f49b1d9a0c9cca22a906a5f97ac823a3953c73e5e62432b05add42ddbdb0d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtbase/blobs/sha256:645fd4be6c6810cc3b4fbb5366727cc4719f200afd3692286c3ba6b6aca0bb10
-    sha256: 645fd4be6c6810cc3b4fbb5366727cc4719f200afd3692286c3ba6b6aca0bb10
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
-  sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - brotli
-  - dbus
-  - double-conversion
-  - freetype
-  - glib
-  - harfbuzz
-  - icu4c@78
-  - jpeg-turbo
-  - libb2
-  - libpng
-  - md4c
-  - openssl@3
-  - pcre2
-  - zstd
+    - brotli
+    - dbus
+    - double-conversion
+    - freetype
+    - glib
+    - harfbuzz
+    - icu4c@78
+    - jpeg-turbo
+    - libb2
+    - libpng
+    - md4c
+    - openssl@3
+    - pcre2
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtbase/blobs/sha256:3c95bee09ac829a039de421a1ef7fafa07dbcbc7e8239fa55efe5db776db0089
+        sha256: 3c95bee09ac829a039de421a1ef7fafa07dbcbc7e8239fa55efe5db776db0089
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtbase/blobs/sha256:e54d87a2110336ecb9455a59db6a90c113fd31d3311f3389aaca2788d217d4f3
+        sha256: e54d87a2110336ecb9455a59db6a90c113fd31d3311f3389aaca2788d217d4f3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtbase/blobs/sha256:7e4f49b1d9a0c9cca22a906a5f97ac823a3953c73e5e62432b05add42ddbdb0d
+        sha256: 7e4f49b1d9a0c9cca22a906a5f97ac823a3953c73e5e62432b05add42ddbdb0d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtbase/blobs/sha256:645fd4be6c6810cc3b4fbb5366727cc4719f200afd3692286c3ba6b6aca0bb10
+        sha256: 645fd4be6c6810cc3b4fbb5366727cc4719f200afd3692286c3ba6b6aca0bb10
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
+    sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - pkgconf
-  - vulkan-headers
-  - molten-vk
+    - cmake
+    - ninja
+    - pkgconf
+    - vulkan-headers
+    - molten-vk
 linux_dependencies:
-  - brotli
-  - dbus
-  - double-conversion
-  - fontconfig
-  - freetype
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - harfbuzz
-  - icu4c@78
-  - jpeg-turbo
-  - libb2
-  - libdrm
-  - libice
-  - libpng
-  - libsm
-  - libx11
-  - libxcb
-  - libxkbcommon
-  - md4c
-  - mesa
-  - openssl@3
-  - pango
-  - pcre2
-  - systemd
-  - wayland
-  - xcb-util-cursor
-  - xcb-util-image
-  - xcb-util-keysyms
-  - xcb-util-renderutil
-  - xcb-util-wm
-  - zlib-ng-compat
-  - zstd
+    - brotli
+    - dbus
+    - double-conversion
+    - fontconfig
+    - freetype
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - harfbuzz
+    - icu4c@78
+    - jpeg-turbo
+    - libb2
+    - libdrm
+    - libice
+    - libpng
+    - libsm
+    - libx11
+    - libxcb
+    - libxkbcommon
+    - md4c
+    - mesa
+    - openssl@3
+    - pango
+    - pcre2
+    - systemd
+    - wayland
+    - xcb-util-cursor
+    - xcb-util-image
+    - xcb-util-keysyms
+    - xcb-util-renderutil
+    - xcb-util-wm
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

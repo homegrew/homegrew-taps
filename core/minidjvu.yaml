@@ -1,36 +1,60 @@
 name: minidjvu
-version: 0.8
+version: "0.8"
 description: DjVu multipage encoder, single page encoder/decoder
 homepage: https://minidjvu.sourceforge.net/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/minidjvu/blobs/sha256:4efc0167c66e2dcc3d940290a93f1c263d2b2f0f77aa2be56a46b698a72fc998
-    sha256: 4efc0167c66e2dcc3d940290a93f1c263d2b2f0f77aa2be56a46b698a72fc998
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/minidjvu/blobs/sha256:44991a7f8c62e2020d8d37e9d3ee1e2f1637bdeda9e8f7a4c21762a52c4956bc
-    sha256: 44991a7f8c62e2020d8d37e9d3ee1e2f1637bdeda9e8f7a4c21762a52c4956bc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/minidjvu/blobs/sha256:1ec855a0237182522d9598ea0afa9e42bb1b008c5a5233d79bb5630e2cf86802
-    sha256: 1ec855a0237182522d9598ea0afa9e42bb1b008c5a5233d79bb5630e2cf86802
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/minidjvu/blobs/sha256:d5f55dab0d6f87ddc0433308b582a901da2ab14244213b7392afd081f4ffde5a
-    sha256: d5f55dab0d6f87ddc0433308b582a901da2ab14244213b7392afd081f4ffde5a
-source:
-  url: https://downloads.sourceforge.net/project/minidjvu/minidjvu/0.8/minidjvu-0.8.tar.gz
-  sha256: e9c892e0272ee4e560eaa2dbd16b40719b9797a1fa2749efeb6622f388dfb74a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - djvulibre
-  - libtiff
+    - djvulibre
+    - libtiff
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/minidjvu/blobs/sha256:44991a7f8c62e2020d8d37e9d3ee1e2f1637bdeda9e8f7a4c21762a52c4956bc
+        sha256: 44991a7f8c62e2020d8d37e9d3ee1e2f1637bdeda9e8f7a4c21762a52c4956bc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/minidjvu/blobs/sha256:4efc0167c66e2dcc3d940290a93f1c263d2b2f0f77aa2be56a46b698a72fc998
+        sha256: 4efc0167c66e2dcc3d940290a93f1c263d2b2f0f77aa2be56a46b698a72fc998
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/minidjvu/blobs/sha256:1ec855a0237182522d9598ea0afa9e42bb1b008c5a5233d79bb5630e2cf86802
+        sha256: 1ec855a0237182522d9598ea0afa9e42bb1b008c5a5233d79bb5630e2cf86802
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/minidjvu/blobs/sha256:d5f55dab0d6f87ddc0433308b582a901da2ab14244213b7392afd081f4ffde5a
+        sha256: d5f55dab0d6f87ddc0433308b582a901da2ab14244213b7392afd081f4ffde5a
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/minidjvu/minidjvu/0.8/minidjvu-0.8.tar.gz
+    sha256: e9c892e0272ee4e560eaa2dbd16b40719b9797a1fa2749efeb6622f388dfb74a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
 linux_dependencies:
-  - djvulibre
-  - gzip
-  - libtiff
+    - djvulibre
+    - gzip
+    - libtiff
+build:
+    configure: []
+    install: []
+service: null

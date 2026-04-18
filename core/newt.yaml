@@ -3,32 +3,57 @@ version: 0.52.25
 description: Library for color text mode, widget based user interfaces
 homepage: https://pagure.io/newt
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/newt/blobs/sha256:aa18d4ccbf4acef83986a3b12ba9a530ba02cf6b6c84d88865e2e838ce4288a8
-    sha256: aa18d4ccbf4acef83986a3b12ba9a530ba02cf6b6c84d88865e2e838ce4288a8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/newt/blobs/sha256:2c60203dd3204211de30dc48baaf246fc11aaa7e653805b31bc381bdd650cc04
-    sha256: 2c60203dd3204211de30dc48baaf246fc11aaa7e653805b31bc381bdd650cc04
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/newt/blobs/sha256:3b360a1c7abe35cfa3382b5ac27ec36d2a28264fd2c62285ecfbac2bd0fe12de
-    sha256: 3b360a1c7abe35cfa3382b5ac27ec36d2a28264fd2c62285ecfbac2bd0fe12de
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/newt/blobs/sha256:364d416e80eb3bd0c3b0985abcb98191445397cffa5cd3c5161626d3ee632990
-    sha256: 364d416e80eb3bd0c3b0985abcb98191445397cffa5cd3c5161626d3ee632990
-source:
-  url: https://releases.pagure.org/newt/newt-0.52.25.tar.gz
-  sha256: ef0ca9ee27850d1a5c863bb7ff9aa08096c9ed312ece9087b30f3a426828de82
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - popt
-  - python@3.14
-  - s-lang
-  - gettext
+    - popt
+    - python@3.14
+    - s-lang
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/newt/blobs/sha256:2c60203dd3204211de30dc48baaf246fc11aaa7e653805b31bc381bdd650cc04
+        sha256: 2c60203dd3204211de30dc48baaf246fc11aaa7e653805b31bc381bdd650cc04
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/newt/blobs/sha256:aa18d4ccbf4acef83986a3b12ba9a530ba02cf6b6c84d88865e2e838ce4288a8
+        sha256: aa18d4ccbf4acef83986a3b12ba9a530ba02cf6b6c84d88865e2e838ce4288a8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/newt/blobs/sha256:3b360a1c7abe35cfa3382b5ac27ec36d2a28264fd2c62285ecfbac2bd0fe12de
+        sha256: 3b360a1c7abe35cfa3382b5ac27ec36d2a28264fd2c62285ecfbac2bd0fe12de
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/newt/blobs/sha256:364d416e80eb3bd0c3b0985abcb98191445397cffa5cd3c5161626d3ee632990
+        sha256: 364d416e80eb3bd0c3b0985abcb98191445397cffa5cd3c5161626d3ee632990
+        sha512: ""
+        signature: ""
+source:
+    url: https://releases.pagure.org/newt/newt-0.52.25.tar.gz
+    sha256: ef0ca9ee27850d1a5c863bb7ff9aa08096c9ed312ece9087b30f3a426828de82
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - popt
-  - python@3.14
-  - s-lang
+    - popt
+    - python@3.14
+    - s-lang
+build:
+    configure: []
+    install: []
+service: null

@@ -3,33 +3,56 @@ version: 1.1.45
 description: C XSLT library for GNOME
 homepage: http://xmlsoft.org/XSLT/
 license: X11
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:5247978b2374fcb0d2a4f9b0ce74c08fde85305c2d2816b458e8a64fc7013c7d
-    sha256: 5247978b2374fcb0d2a4f9b0ce74c08fde85305c2d2816b458e8a64fc7013c7d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:75584f355ae00d06a7e5b1844e08acad55ea3a8d48db8425ef7f5066db590a5c
-    sha256: 75584f355ae00d06a7e5b1844e08acad55ea3a8d48db8425ef7f5066db590a5c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:4b03c065c1b506ebe8caac9d6ad14b9d46950faad527e6ca89aafcd9eec234e5
-    sha256: 4b03c065c1b506ebe8caac9d6ad14b9d46950faad527e6ca89aafcd9eec234e5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:4a08d60e1ea50a89702e83b5ac483104831961bb42d47684ba7f6f8bd3bbed98
-    sha256: 4a08d60e1ea50a89702e83b5ac483104831961bb42d47684ba7f6f8bd3bbed98
-source:
-  url: https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.45.tar.xz
-  sha256: 9acfe68419c4d06a45c550321b3212762d92f41465062ca4ea19e632ee5d216e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgcrypt
-  - libxml2
-  - libgpg-error
-build_dependencies:
-  - pkgconf
-linux_dependencies:
-  - libgcrypt
-  - libxml2
+    - libgcrypt
+    - libxml2
+    - libgpg-error
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:75584f355ae00d06a7e5b1844e08acad55ea3a8d48db8425ef7f5066db590a5c
+        sha256: 75584f355ae00d06a7e5b1844e08acad55ea3a8d48db8425ef7f5066db590a5c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:5247978b2374fcb0d2a4f9b0ce74c08fde85305c2d2816b458e8a64fc7013c7d
+        sha256: 5247978b2374fcb0d2a4f9b0ce74c08fde85305c2d2816b458e8a64fc7013c7d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:4b03c065c1b506ebe8caac9d6ad14b9d46950faad527e6ca89aafcd9eec234e5
+        sha256: 4b03c065c1b506ebe8caac9d6ad14b9d46950faad527e6ca89aafcd9eec234e5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:4a08d60e1ea50a89702e83b5ac483104831961bb42d47684ba7f6f8bd3bbed98
+        sha256: 4a08d60e1ea50a89702e83b5ac483104831961bb42d47684ba7f6f8bd3bbed98
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.45.tar.xz
+    sha256: 9acfe68419c4d06a45c550321b3212762d92f41465062ca4ea19e632ee5d216e
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+linux_dependencies:
+    - libgcrypt
+    - libxml2
+build:
+    configure: []
+    install: []
+service: null

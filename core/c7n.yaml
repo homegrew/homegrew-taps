@@ -3,28 +3,54 @@ version: 0.9.50.0
 description: Rules engine for cloud security, cost optimization, and governance
 homepage: https://github.com/cloud-custodian/cloud-custodian
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/c7n/blobs/sha256:2626c100a605d0c616d7845c18d5a2cb18a70a54a24d4a996cbce7e62ae960ba
-    sha256: 2626c100a605d0c616d7845c18d5a2cb18a70a54a24d4a996cbce7e62ae960ba
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/c7n/blobs/sha256:604f49b84bbbfec41ee487caa3897933feef10062fdc8245eaa581bd71906269
-    sha256: 604f49b84bbbfec41ee487caa3897933feef10062fdc8245eaa581bd71906269
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/c7n/blobs/sha256:f4a4508609286d3b11b7609f0de66796fd86475a65a79898c843fc83da53bd63
-    sha256: f4a4508609286d3b11b7609f0de66796fd86475a65a79898c843fc83da53bd63
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/c7n/blobs/sha256:ae24d71713d2b4e2102658a8c17bfcfd3f1682a1c41acc9622e5fe9a6113a251
-    sha256: ae24d71713d2b4e2102658a8c17bfcfd3f1682a1c41acc9622e5fe9a6113a251
-source:
-  url: https://github.com/cloud-custodian/cloud-custodian/archive/refs/tags/0.9.50.0.tar.gz
-  sha256: 72d756cd42f2006f9cca65c302d28ab8d5986755c1eafaedfa6cbae898ededa5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cryptography
-  - libyaml
-  - python@3.14
-  - rpds-py
+    - cryptography
+    - libyaml
+    - python@3.14
+    - rpds-py
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/c7n/blobs/sha256:604f49b84bbbfec41ee487caa3897933feef10062fdc8245eaa581bd71906269
+        sha256: 604f49b84bbbfec41ee487caa3897933feef10062fdc8245eaa581bd71906269
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/c7n/blobs/sha256:2626c100a605d0c616d7845c18d5a2cb18a70a54a24d4a996cbce7e62ae960ba
+        sha256: 2626c100a605d0c616d7845c18d5a2cb18a70a54a24d4a996cbce7e62ae960ba
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/c7n/blobs/sha256:f4a4508609286d3b11b7609f0de66796fd86475a65a79898c843fc83da53bd63
+        sha256: f4a4508609286d3b11b7609f0de66796fd86475a65a79898c843fc83da53bd63
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/c7n/blobs/sha256:ae24d71713d2b4e2102658a8c17bfcfd3f1682a1c41acc9622e5fe9a6113a251
+        sha256: ae24d71713d2b4e2102658a8c17bfcfd3f1682a1c41acc9622e5fe9a6113a251
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cloud-custodian/cloud-custodian/archive/refs/tags/0.9.50.0.tar.gz
+    sha256: 72d756cd42f2006f9cca65c302d28ab8d5986755c1eafaedfa6cbae898ededa5
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

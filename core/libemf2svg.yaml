@@ -3,30 +3,55 @@ version: 1.8.1
 description: Microsoft (MS) EMF to SVG conversion library
 homepage: https://github.com/kakwa/libemf2svg
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libemf2svg/blobs/sha256:b097e6912f5088e54da1fd430b2dc6c990267cf5adeaef50027b6731d8850849
-    sha256: b097e6912f5088e54da1fd430b2dc6c990267cf5adeaef50027b6731d8850849
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libemf2svg/blobs/sha256:43ca789862051ce4d6f4efad49c7ad5a376c71db49c1af363d64848dd5ab652d
-    sha256: 43ca789862051ce4d6f4efad49c7ad5a376c71db49c1af363d64848dd5ab652d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libemf2svg/blobs/sha256:63881c05d28fbb48bb25d3aa7272d12524357cb69b4657862b24a17b36c13835
-    sha256: 63881c05d28fbb48bb25d3aa7272d12524357cb69b4657862b24a17b36c13835
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libemf2svg/blobs/sha256:d5e0714ac651f7c10cf98b5d40c08996a731eb3c127d9f18738ce6096378f35d
-    sha256: d5e0714ac651f7c10cf98b5d40c08996a731eb3c127d9f18738ce6096378f35d
-source:
-  url: https://github.com/kakwa/libemf2svg/archive/refs/tags/1.8.1.tar.gz
-  sha256: 5a4b0051a2e8a7f999ecc1bb3451032833dc4c4f1e4bc6d938e4d5b4bec19c10
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fontconfig
-  - freetype
-  - libpng
+    - fontconfig
+    - freetype
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libemf2svg/blobs/sha256:43ca789862051ce4d6f4efad49c7ad5a376c71db49c1af363d64848dd5ab652d
+        sha256: 43ca789862051ce4d6f4efad49c7ad5a376c71db49c1af363d64848dd5ab652d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libemf2svg/blobs/sha256:b097e6912f5088e54da1fd430b2dc6c990267cf5adeaef50027b6731d8850849
+        sha256: b097e6912f5088e54da1fd430b2dc6c990267cf5adeaef50027b6731d8850849
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libemf2svg/blobs/sha256:63881c05d28fbb48bb25d3aa7272d12524357cb69b4657862b24a17b36c13835
+        sha256: 63881c05d28fbb48bb25d3aa7272d12524357cb69b4657862b24a17b36c13835
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libemf2svg/blobs/sha256:d5e0714ac651f7c10cf98b5d40c08996a731eb3c127d9f18738ce6096378f35d
+        sha256: d5e0714ac651f7c10cf98b5d40c08996a731eb3c127d9f18738ce6096378f35d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/kakwa/libemf2svg/archive/refs/tags/1.8.1.tar.gz
+    sha256: 5a4b0051a2e8a7f999ecc1bb3451032833dc4c4f1e4bc6d938e4d5b4bec19c10
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - argp-standalone
+    - cmake
+    - argp-standalone
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

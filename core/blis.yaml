@@ -1,27 +1,53 @@
 name: blis
-version: 2.0
+version: "2.0"
 description: BLAS-like Library Instantiation Software Framework
 homepage: https://github.com/flame/blis
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/blis/blobs/sha256:ae5b40dcc1bb83dcc0742f24a1bfe0991bc3a349d34aa329a0b12f88b2b880fe
-    sha256: ae5b40dcc1bb83dcc0742f24a1bfe0991bc3a349d34aa329a0b12f88b2b880fe
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/blis/blobs/sha256:a6f83d702d2ca94890919df8c80e998a874846677d9c6131358e10f5c03bdb35
-    sha256: a6f83d702d2ca94890919df8c80e998a874846677d9c6131358e10f5c03bdb35
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/blis/blobs/sha256:f201ae6efcebd05d84ae5360d95bffa2871344f6384a92be7019948429704776
-    sha256: f201ae6efcebd05d84ae5360d95bffa2871344f6384a92be7019948429704776
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/blis/blobs/sha256:3c654866bff3d54735f76b81eb0318d3d85727b3224c84c95f7e4a3db851593b
-    sha256: 3c654866bff3d54735f76b81eb0318d3d85727b3224c84c95f7e4a3db851593b
-source:
-  url: https://github.com/flame/blis/archive/refs/tags/2.0.tar.gz
-  sha256: 08bbebd77914a6d1a43874ae5ec2f54fe6a77cba745f2532df28361b0f1ad1b3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libomp
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/blis/blobs/sha256:a6f83d702d2ca94890919df8c80e998a874846677d9c6131358e10f5c03bdb35
+        sha256: a6f83d702d2ca94890919df8c80e998a874846677d9c6131358e10f5c03bdb35
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/blis/blobs/sha256:ae5b40dcc1bb83dcc0742f24a1bfe0991bc3a349d34aa329a0b12f88b2b880fe
+        sha256: ae5b40dcc1bb83dcc0742f24a1bfe0991bc3a349d34aa329a0b12f88b2b880fe
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/blis/blobs/sha256:f201ae6efcebd05d84ae5360d95bffa2871344f6384a92be7019948429704776
+        sha256: f201ae6efcebd05d84ae5360d95bffa2871344f6384a92be7019948429704776
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/blis/blobs/sha256:3c654866bff3d54735f76b81eb0318d3d85727b3224c84c95f7e4a3db851593b
+        sha256: 3c654866bff3d54735f76b81eb0318d3d85727b3224c84c95f7e4a3db851593b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/flame/blis/archive/refs/tags/2.0.tar.gz
+    sha256: 08bbebd77914a6d1a43874ae5ec2f54fe6a77cba745f2532df28361b0f1ad1b3
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

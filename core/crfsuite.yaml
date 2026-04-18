@@ -1,31 +1,56 @@
 name: crfsuite
-version: 0.12
+version: "0.12"
 description: Fast implementation of conditional random fields
 homepage: https://www.chokkan.org/software/crfsuite/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/crfsuite/blobs/sha256:65a13d4653a19e899bdbcec57f9d7dc4852dce18c753e31c42102f7ce734bda6
-    sha256: 65a13d4653a19e899bdbcec57f9d7dc4852dce18c753e31c42102f7ce734bda6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/crfsuite/blobs/sha256:80c120367694a16a8aa47bea0107a4bbdf34cd765b1cb111e6ee59bc76815df3
-    sha256: 80c120367694a16a8aa47bea0107a4bbdf34cd765b1cb111e6ee59bc76815df3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/crfsuite/blobs/sha256:45a6dd13114c20e2a4bd3d82033e463316b635d8c7a61c582e299bca8832ec58
-    sha256: 45a6dd13114c20e2a4bd3d82033e463316b635d8c7a61c582e299bca8832ec58
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/crfsuite/blobs/sha256:057472092e2730abbd995d9b23b61f77e9b6f5f829f36b63786110ef657c27f2
-    sha256: 057472092e2730abbd995d9b23b61f77e9b6f5f829f36b63786110ef657c27f2
-source:
-  url: https://github.com/chokkan/crfsuite/archive/refs/tags/0.12.tar.gz
-  sha256: ab83084ed5d4532ec772d96c3e964104d689f2c295915e80299ea3c315335b00
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - liblbfgs
+    - liblbfgs
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/crfsuite/blobs/sha256:80c120367694a16a8aa47bea0107a4bbdf34cd765b1cb111e6ee59bc76815df3
+        sha256: 80c120367694a16a8aa47bea0107a4bbdf34cd765b1cb111e6ee59bc76815df3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/crfsuite/blobs/sha256:65a13d4653a19e899bdbcec57f9d7dc4852dce18c753e31c42102f7ce734bda6
+        sha256: 65a13d4653a19e899bdbcec57f9d7dc4852dce18c753e31c42102f7ce734bda6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/crfsuite/blobs/sha256:45a6dd13114c20e2a4bd3d82033e463316b635d8c7a61c582e299bca8832ec58
+        sha256: 45a6dd13114c20e2a4bd3d82033e463316b635d8c7a61c582e299bca8832ec58
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/crfsuite/blobs/sha256:057472092e2730abbd995d9b23b61f77e9b6f5f829f36b63786110ef657c27f2
+        sha256: 057472092e2730abbd995d9b23b61f77e9b6f5f829f36b63786110ef657c27f2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/chokkan/crfsuite/archive/refs/tags/0.12.tar.gz
+    sha256: ab83084ed5d4532ec772d96c3e964104d689f2c295915e80299ea3c315335b00
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,51 +3,75 @@ version: 1.0.8
 description: ChatGPT client with native iTerm2 support
 homepage: https://github.com/gnachman/gptline
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gptline/blobs/sha256:a3a355c706fdd095759e4b77b391d502852969058e332ee0b6c7712ace4080b5
-    sha256: a3a355c706fdd095759e4b77b391d502852969058e332ee0b6c7712ace4080b5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gptline/blobs/sha256:1318b147dbd31d9fde22c274006bc4323b2cae035f3bc2822c3181411a27bf68
-    sha256: 1318b147dbd31d9fde22c274006bc4323b2cae035f3bc2822c3181411a27bf68
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gptline/blobs/sha256:9af7454966d06bc8978380e1a7c7f8c505e0a073d1f442ec50e1d32462069e5d
-    sha256: 9af7454966d06bc8978380e1a7c7f8c505e0a073d1f442ec50e1d32462069e5d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gptline/blobs/sha256:811a183c560b1eb10cf7ea601b8cafbc95f604a845d72b66101a7ceaed2e166c
-    sha256: 811a183c560b1eb10cf7ea601b8cafbc95f604a845d72b66101a7ceaed2e166c
-source:
-  url: https://files.pythonhosted.org/packages/5b/28/d15a9a5b349c77a051a633e13141151314f352067ec7d516220bd6b20fcf/gptline-1.0.8.tar.gz
-  sha256: 4a0a0b5fa4f23e5f2ad7ac5bf44a9143e5de3757b0b8eefe5d78a7757d1d34bb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - freetype
-  - jpeg-turbo
-  - libraqm
-  - libtiff
-  - libyaml
-  - little-cms2
-  - pillow
-  - pydantic
-  - python@3.14
-  - webp
+    - certifi
+    - freetype
+    - jpeg-turbo
+    - libraqm
+    - libtiff
+    - libyaml
+    - little-cms2
+    - pillow
+    - pydantic
+    - python@3.14
+    - webp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gptline/blobs/sha256:1318b147dbd31d9fde22c274006bc4323b2cae035f3bc2822c3181411a27bf68
+        sha256: 1318b147dbd31d9fde22c274006bc4323b2cae035f3bc2822c3181411a27bf68
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gptline/blobs/sha256:a3a355c706fdd095759e4b77b391d502852969058e332ee0b6c7712ace4080b5
+        sha256: a3a355c706fdd095759e4b77b391d502852969058e332ee0b6c7712ace4080b5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gptline/blobs/sha256:9af7454966d06bc8978380e1a7c7f8c505e0a073d1f442ec50e1d32462069e5d
+        sha256: 9af7454966d06bc8978380e1a7c7f8c505e0a073d1f442ec50e1d32462069e5d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gptline/blobs/sha256:811a183c560b1eb10cf7ea601b8cafbc95f604a845d72b66101a7ceaed2e166c
+        sha256: 811a183c560b1eb10cf7ea601b8cafbc95f604a845d72b66101a7ceaed2e166c
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/5b/28/d15a9a5b349c77a051a633e13141151314f352067ec7d516220bd6b20fcf/gptline-1.0.8.tar.gz
+    sha256: 4a0a0b5fa4f23e5f2ad7ac5bf44a9143e5de3757b0b8eefe5d78a7757d1d34bb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - certifi
-  - freetype
-  - jpeg-turbo
-  - libraqm
-  - libtiff
-  - libyaml
-  - little-cms2
-  - pillow
-  - pydantic
-  - python@3.14
-  - webp
-  - zlib-ng-compat
+    - certifi
+    - freetype
+    - jpeg-turbo
+    - libraqm
+    - libtiff
+    - libyaml
+    - little-cms2
+    - pillow
+    - pydantic
+    - python@3.14
+    - webp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

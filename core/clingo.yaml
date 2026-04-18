@@ -3,30 +3,55 @@ version: 5.8.0
 description: ASP system to ground and solve logic programs
 homepage: https://potassco.org/clingo/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:7d606936da6a7f4091d200cf507e6d84dbadab7e44ccea7ddf1f85b04e1c92ec
-    sha256: 7d606936da6a7f4091d200cf507e6d84dbadab7e44ccea7ddf1f85b04e1c92ec
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:0ce74dea22d40520801a1bad792df7cb8ea148b39f57fa7f24076beae86f01f0
-    sha256: 0ce74dea22d40520801a1bad792df7cb8ea148b39f57fa7f24076beae86f01f0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:790e57292114c711904b97f44dfcd4f6bb09535f73b9d0e54d61f4e862d40156
-    sha256: 790e57292114c711904b97f44dfcd4f6bb09535f73b9d0e54d61f4e862d40156
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:295fb70cc8ee473656c529f06107ca59bd4b439fb98fc50af1db18003940a109
-    sha256: 295fb70cc8ee473656c529f06107ca59bd4b439fb98fc50af1db18003940a109
-source:
-  url: https://github.com/potassco/clingo/archive/refs/tags/v5.8.0.tar.gz
-  sha256: 4ddd5975e79d7a0f8d126039f1b923a371b1a43e0e0687e1537a37d6d6d5cc7c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cffi
-  - lua
-  - python@3.14
+    - cffi
+    - lua
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:0ce74dea22d40520801a1bad792df7cb8ea148b39f57fa7f24076beae86f01f0
+        sha256: 0ce74dea22d40520801a1bad792df7cb8ea148b39f57fa7f24076beae86f01f0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:7d606936da6a7f4091d200cf507e6d84dbadab7e44ccea7ddf1f85b04e1c92ec
+        sha256: 7d606936da6a7f4091d200cf507e6d84dbadab7e44ccea7ddf1f85b04e1c92ec
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:790e57292114c711904b97f44dfcd4f6bb09535f73b9d0e54d61f4e862d40156
+        sha256: 790e57292114c711904b97f44dfcd4f6bb09535f73b9d0e54d61f4e862d40156
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clingo/blobs/sha256:295fb70cc8ee473656c529f06107ca59bd4b439fb98fc50af1db18003940a109
+        sha256: 295fb70cc8ee473656c529f06107ca59bd4b439fb98fc50af1db18003940a109
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/potassco/clingo/archive/refs/tags/v5.8.0.tar.gz
+    sha256: 4ddd5975e79d7a0f8d126039f1b923a371b1a43e0e0687e1537a37d6d6d5cc7c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
+    - cmake
+    - doxygen
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

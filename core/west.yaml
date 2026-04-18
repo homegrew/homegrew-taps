@@ -3,26 +3,52 @@ version: 1.5.0
 description: Zephyr meta-tool
 homepage: https://github.com/zephyrproject-rtos/west
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/west/blobs/sha256:f870725d0d96ad5062cedb8513fd3ba49aaa38cae49d98dbf54610bbe61ca460
-    sha256: f870725d0d96ad5062cedb8513fd3ba49aaa38cae49d98dbf54610bbe61ca460
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/west/blobs/sha256:b00b0d9a49752f758cb38f4a38503f927c545f5e330557299f3ca7d3d14ee491
-    sha256: b00b0d9a49752f758cb38f4a38503f927c545f5e330557299f3ca7d3d14ee491
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/west/blobs/sha256:95330775a87e799568bbb903db4c95534fd1ff4c6f3335aa0c06c4244a5b104a
-    sha256: 95330775a87e799568bbb903db4c95534fd1ff4c6f3335aa0c06c4244a5b104a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/west/blobs/sha256:aebbd91683301166bb13c402192372c33949595503c00afc1ee93b4f0b27920d
-    sha256: aebbd91683301166bb13c402192372c33949595503c00afc1ee93b4f0b27920d
-source:
-  url: https://files.pythonhosted.org/packages/54/8e/ddb81e2635e58d156092556934a2cffe245978c91e4a08e11d72591f46e4/west-1.5.0.tar.gz
-  sha256: 7088fe0e9afe0719ebee95c51c529149f7bcfc919d83a8206d35fa9c683ed0a5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - python@3.14
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/west/blobs/sha256:b00b0d9a49752f758cb38f4a38503f927c545f5e330557299f3ca7d3d14ee491
+        sha256: b00b0d9a49752f758cb38f4a38503f927c545f5e330557299f3ca7d3d14ee491
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/west/blobs/sha256:f870725d0d96ad5062cedb8513fd3ba49aaa38cae49d98dbf54610bbe61ca460
+        sha256: f870725d0d96ad5062cedb8513fd3ba49aaa38cae49d98dbf54610bbe61ca460
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/west/blobs/sha256:95330775a87e799568bbb903db4c95534fd1ff4c6f3335aa0c06c4244a5b104a
+        sha256: 95330775a87e799568bbb903db4c95534fd1ff4c6f3335aa0c06c4244a5b104a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/west/blobs/sha256:aebbd91683301166bb13c402192372c33949595503c00afc1ee93b4f0b27920d
+        sha256: aebbd91683301166bb13c402192372c33949595503c00afc1ee93b4f0b27920d
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/54/8e/ddb81e2635e58d156092556934a2cffe245978c91e4a08e11d72591f46e4/west-1.5.0.tar.gz
+    sha256: 7088fe0e9afe0719ebee95c51c529149f7bcfc919d83a8206d35fa9c683ed0a5
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

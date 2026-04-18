@@ -3,34 +3,58 @@ version: 3.5.0
 description: Tools for managing and querying large text corpora with linguistic annotations
 homepage: https://cwb.sourceforge.io/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cwb3/blobs/sha256:29bea0c252b17882c4f5b6bd3dbc8f754ba28f49b65ea07b2635ee9b8f1d8723
-    sha256: 29bea0c252b17882c4f5b6bd3dbc8f754ba28f49b65ea07b2635ee9b8f1d8723
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cwb3/blobs/sha256:647782abbc558ce33f2ba5f8395c87f1766a97f29f1579e4e4a90e68ee726b95
-    sha256: 647782abbc558ce33f2ba5f8395c87f1766a97f29f1579e4e4a90e68ee726b95
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cwb3/blobs/sha256:c67cd104f2291f73ba6785c1a023c39677e7132dbb23673fed7729a73aebb669
-    sha256: c67cd104f2291f73ba6785c1a023c39677e7132dbb23673fed7729a73aebb669
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cwb3/blobs/sha256:9bd38dd9f85b5bf1fea476b21c524d2c7ccd4cdac339f455f3b971516d0ea255
-    sha256: 9bd38dd9f85b5bf1fea476b21c524d2c7ccd4cdac339f455f3b971516d0ea255
-source:
-  url: https://downloads.sourceforge.net/project/cwb/cwb/cwb-3.5/source/cwb-3.5.0-src.tar.gz
-  sha256: 20bbd00b7c830389ce384fe70124bc0f55ea7f3d70afc3a159e6530d51b24059
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - pcre2
-  - readline
-  - gettext
+    - glib
+    - pcre2
+    - readline
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cwb3/blobs/sha256:647782abbc558ce33f2ba5f8395c87f1766a97f29f1579e4e4a90e68ee726b95
+        sha256: 647782abbc558ce33f2ba5f8395c87f1766a97f29f1579e4e4a90e68ee726b95
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cwb3/blobs/sha256:29bea0c252b17882c4f5b6bd3dbc8f754ba28f49b65ea07b2635ee9b8f1d8723
+        sha256: 29bea0c252b17882c4f5b6bd3dbc8f754ba28f49b65ea07b2635ee9b8f1d8723
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cwb3/blobs/sha256:c67cd104f2291f73ba6785c1a023c39677e7132dbb23673fed7729a73aebb669
+        sha256: c67cd104f2291f73ba6785c1a023c39677e7132dbb23673fed7729a73aebb669
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cwb3/blobs/sha256:9bd38dd9f85b5bf1fea476b21c524d2c7ccd4cdac339f455f3b971516d0ea255
+        sha256: 9bd38dd9f85b5bf1fea476b21c524d2c7ccd4cdac339f455f3b971516d0ea255
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/cwb/cwb/cwb-3.5/source/cwb-3.5.0-src.tar.gz
+    sha256: 20bbd00b7c830389ce384fe70124bc0f55ea7f3d70afc3a159e6530d51b24059
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - glib
-  - pcre2
-  - readline
+    - glib
+    - pcre2
+    - readline
+build:
+    configure: []
+    install: []
+service: null

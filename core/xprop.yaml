@@ -3,27 +3,52 @@ version: 1.2.8
 description: Property displayer for X
 homepage: https://gitlab.freedesktop.org/xorg/app/xprop
 license: MIT-open-group
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xprop/blobs/sha256:16498c5be35fa49d3fb077e47270d30e791d045f9ad1a6ec52b5e375168b56aa
-    sha256: 16498c5be35fa49d3fb077e47270d30e791d045f9ad1a6ec52b5e375168b56aa
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xprop/blobs/sha256:1c66f81bd54f83a640e7f6e6a7ec95232f8d18715d7b9bf0b5c3b3b618b093f5
-    sha256: 1c66f81bd54f83a640e7f6e6a7ec95232f8d18715d7b9bf0b5c3b3b618b093f5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xprop/blobs/sha256:14cddb19c4fd84f405036ecbdcf37e3d030840b3d21a81bff0ceec4da68a4a0a
-    sha256: 14cddb19c4fd84f405036ecbdcf37e3d030840b3d21a81bff0ceec4da68a4a0a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xprop/blobs/sha256:9365e5e98c06c4d155393e2e152ed39a61dfde7a5c74c3b470e978fbcf7712c5
-    sha256: 9365e5e98c06c4d155393e2e152ed39a61dfde7a5c74c3b470e978fbcf7712c5
-source:
-  url: https://www.x.org/archive/individual/app/xprop-1.2.8.tar.xz
-  sha256: d689e2adb7ef7b439f6469b51cda8a7daefc83243854c2a3b8f84d0f029d67ee
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
+    - libx11
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xprop/blobs/sha256:1c66f81bd54f83a640e7f6e6a7ec95232f8d18715d7b9bf0b5c3b3b618b093f5
+        sha256: 1c66f81bd54f83a640e7f6e6a7ec95232f8d18715d7b9bf0b5c3b3b618b093f5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xprop/blobs/sha256:16498c5be35fa49d3fb077e47270d30e791d045f9ad1a6ec52b5e375168b56aa
+        sha256: 16498c5be35fa49d3fb077e47270d30e791d045f9ad1a6ec52b5e375168b56aa
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xprop/blobs/sha256:14cddb19c4fd84f405036ecbdcf37e3d030840b3d21a81bff0ceec4da68a4a0a
+        sha256: 14cddb19c4fd84f405036ecbdcf37e3d030840b3d21a81bff0ceec4da68a4a0a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xprop/blobs/sha256:9365e5e98c06c4d155393e2e152ed39a61dfde7a5c74c3b470e978fbcf7712c5
+        sha256: 9365e5e98c06c4d155393e2e152ed39a61dfde7a5c74c3b470e978fbcf7712c5
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/app/xprop-1.2.8.tar.xz
+    sha256: d689e2adb7ef7b439f6469b51cda8a7daefc83243854c2a3b8f84d0f029d67ee
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

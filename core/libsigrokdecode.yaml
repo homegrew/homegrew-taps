@@ -3,37 +3,61 @@ version: 0.5.3
 description: Drivers for logic analyzers and other supported devices
 homepage: https://sigrok.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libsigrokdecode/blobs/sha256:23396e67a66de629ac081dc782c68f9fcd38617f0b6f9127f2f46dbd245f2d37
-    sha256: 23396e67a66de629ac081dc782c68f9fcd38617f0b6f9127f2f46dbd245f2d37
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libsigrokdecode/blobs/sha256:3d88591dccf61eaa1381eabf2b0dcff873d72238cf4268f9e2820a9ad4c2648d
-    sha256: 3d88591dccf61eaa1381eabf2b0dcff873d72238cf4268f9e2820a9ad4c2648d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libsigrokdecode/blobs/sha256:4ff7dc34d6405ca194b26dc6cf68637aa81f8161786d7ceb4dd49d2abe1f7b5e
-    sha256: 4ff7dc34d6405ca194b26dc6cf68637aa81f8161786d7ceb4dd49d2abe1f7b5e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libsigrokdecode/blobs/sha256:d642fc4f3665d70301ea2195b43926e5bf9deefdee64dab83717b90476c68a6a
-    sha256: d642fc4f3665d70301ea2195b43926e5bf9deefdee64dab83717b90476c68a6a
-source:
-  url: https://sigrok.org/download/source/libsigrokdecode/libsigrokdecode-0.5.3.tar.gz
-  sha256: c50814aa6743cd8c4e88c84a0cdd8889d883c3be122289be90c63d7d67883fc0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - python@3.14
-  - gettext
+    - glib
+    - python@3.14
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libsigrokdecode/blobs/sha256:3d88591dccf61eaa1381eabf2b0dcff873d72238cf4268f9e2820a9ad4c2648d
+        sha256: 3d88591dccf61eaa1381eabf2b0dcff873d72238cf4268f9e2820a9ad4c2648d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libsigrokdecode/blobs/sha256:23396e67a66de629ac081dc782c68f9fcd38617f0b6f9127f2f46dbd245f2d37
+        sha256: 23396e67a66de629ac081dc782c68f9fcd38617f0b6f9127f2f46dbd245f2d37
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libsigrokdecode/blobs/sha256:4ff7dc34d6405ca194b26dc6cf68637aa81f8161786d7ceb4dd49d2abe1f7b5e
+        sha256: 4ff7dc34d6405ca194b26dc6cf68637aa81f8161786d7ceb4dd49d2abe1f7b5e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libsigrokdecode/blobs/sha256:d642fc4f3665d70301ea2195b43926e5bf9deefdee64dab83717b90476c68a6a
+        sha256: d642fc4f3665d70301ea2195b43926e5bf9deefdee64dab83717b90476c68a6a
+        sha512: ""
+        signature: ""
+source:
+    url: https://sigrok.org/download/source/libsigrokdecode/libsigrokdecode-0.5.3.tar.gz
+    sha256: c50814aa6743cd8c4e88c84a0cdd8889d883c3be122289be90c63d7d67883fc0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - doxygen
-  - graphviz
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - doxygen
+    - graphviz
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - glib
-  - python@3.14
+    - glib
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

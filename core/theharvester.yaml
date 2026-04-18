@@ -3,31 +3,56 @@ version: 4.10.1
 description: Gather materials from public sources (for pen testers)
 homepage: https://www.edge-security.com
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/theharvester/blobs/sha256:636d1505928e2d2caeee8060a354e057ccf41d06e71e2ca404bdb8c2514db213
-    sha256: 636d1505928e2d2caeee8060a354e057ccf41d06e71e2ca404bdb8c2514db213
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/theharvester/blobs/sha256:d17f9018009b14c85ac8083eabfc5377e4f0ebc659ecdc62407a55a884c253bd
-    sha256: d17f9018009b14c85ac8083eabfc5377e4f0ebc659ecdc62407a55a884c253bd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/theharvester/blobs/sha256:ddc8a5cda194958c55ccf31e7b3eb97d282900c24a9136a74edc759b8ac01724
-    sha256: ddc8a5cda194958c55ccf31e7b3eb97d282900c24a9136a74edc759b8ac01724
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/theharvester/blobs/sha256:9e689de814ac121f7eacf512a3a9be59dcd45450bd93ebd35780ddb7b1b639ae
-    sha256: 9e689de814ac121f7eacf512a3a9be59dcd45450bd93ebd35780ddb7b1b639ae
-source:
-  url: https://github.com/laramies/theHarvester/archive/refs/tags/4.10.1.tar.gz
-  sha256: 0bb13026606b6a91e3e7f05ecb98daa508b13d176cb1850a7a47822a03f4412e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cffi
-  - libyaml
-  - pydantic
-  - python@3.14
+    - certifi
+    - cffi
+    - libyaml
+    - pydantic
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/theharvester/blobs/sha256:d17f9018009b14c85ac8083eabfc5377e4f0ebc659ecdc62407a55a884c253bd
+        sha256: d17f9018009b14c85ac8083eabfc5377e4f0ebc659ecdc62407a55a884c253bd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/theharvester/blobs/sha256:636d1505928e2d2caeee8060a354e057ccf41d06e71e2ca404bdb8c2514db213
+        sha256: 636d1505928e2d2caeee8060a354e057ccf41d06e71e2ca404bdb8c2514db213
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/theharvester/blobs/sha256:ddc8a5cda194958c55ccf31e7b3eb97d282900c24a9136a74edc759b8ac01724
+        sha256: ddc8a5cda194958c55ccf31e7b3eb97d282900c24a9136a74edc759b8ac01724
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/theharvester/blobs/sha256:9e689de814ac121f7eacf512a3a9be59dcd45450bd93ebd35780ddb7b1b639ae
+        sha256: 9e689de814ac121f7eacf512a3a9be59dcd45450bd93ebd35780ddb7b1b639ae
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/laramies/theHarvester/archive/refs/tags/4.10.1.tar.gz
+    sha256: 0bb13026606b6a91e3e7f05ecb98daa508b13d176cb1850a7a47822a03f4412e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

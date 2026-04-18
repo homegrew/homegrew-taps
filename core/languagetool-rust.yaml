@@ -3,28 +3,53 @@ version: 3.0.1
 description: LanguageTool API in Rust
 homepage: https://docs.rs/languagetool-rust
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/languagetool-rust/blobs/sha256:85ee9015416398103969d20ca8b24f1ba8f1565b41fbdbc4cfd2434f5fb579f9
-    sha256: 85ee9015416398103969d20ca8b24f1ba8f1565b41fbdbc4cfd2434f5fb579f9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/languagetool-rust/blobs/sha256:ff878a7ce6bad5b54eb2da7429f7c8369e7849b243e986f972e71b5289f004ff
-    sha256: ff878a7ce6bad5b54eb2da7429f7c8369e7849b243e986f972e71b5289f004ff
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/languagetool-rust/blobs/sha256:075629cf87a0dfae2b2325ec87aa58e71a372bcdc04e8cf97a113e23c7a21d7d
-    sha256: 075629cf87a0dfae2b2325ec87aa58e71a372bcdc04e8cf97a113e23c7a21d7d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/languagetool-rust/blobs/sha256:5d09aad8f14ff45e52e6056ef9ac7d5f549e2d4de21bdf83a9235d6c3fb7c2a9
-    sha256: 5d09aad8f14ff45e52e6056ef9ac7d5f549e2d4de21bdf83a9235d6c3fb7c2a9
-source:
-  url: https://github.com/jeertmans/languagetool-rust/archive/refs/tags/v3.0.1.tar.gz
-  sha256: fc3dfcb73f21c58bb143b5f31495892755bc1e945aa64f522f3640e1cf77de31
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/languagetool-rust/blobs/sha256:ff878a7ce6bad5b54eb2da7429f7c8369e7849b243e986f972e71b5289f004ff
+        sha256: ff878a7ce6bad5b54eb2da7429f7c8369e7849b243e986f972e71b5289f004ff
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/languagetool-rust/blobs/sha256:85ee9015416398103969d20ca8b24f1ba8f1565b41fbdbc4cfd2434f5fb579f9
+        sha256: 85ee9015416398103969d20ca8b24f1ba8f1565b41fbdbc4cfd2434f5fb579f9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/languagetool-rust/blobs/sha256:075629cf87a0dfae2b2325ec87aa58e71a372bcdc04e8cf97a113e23c7a21d7d
+        sha256: 075629cf87a0dfae2b2325ec87aa58e71a372bcdc04e8cf97a113e23c7a21d7d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/languagetool-rust/blobs/sha256:5d09aad8f14ff45e52e6056ef9ac7d5f549e2d4de21bdf83a9235d6c3fb7c2a9
+        sha256: 5d09aad8f14ff45e52e6056ef9ac7d5f549e2d4de21bdf83a9235d6c3fb7c2a9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jeertmans/languagetool-rust/archive/refs/tags/v3.0.1.tar.gz
+    sha256: fc3dfcb73f21c58bb143b5f31495892755bc1e945aa64f522f3640e1cf77de31
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

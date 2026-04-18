@@ -3,33 +3,57 @@ version: 1.2.3
 description: Create an index of scalable font files for X
 homepage: https://www.x.org/
 license: X11
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mkfontscale/blobs/sha256:2029b136126ebb853f7c72befec91cb833b8218d54e04e1707c51a61a51d9ed8
-    sha256: 2029b136126ebb853f7c72befec91cb833b8218d54e04e1707c51a61a51d9ed8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mkfontscale/blobs/sha256:9a091c7ef6f917c5227d1311c66a72bf9981b74aff2fcb3b2592bb2883dfe74f
-    sha256: 9a091c7ef6f917c5227d1311c66a72bf9981b74aff2fcb3b2592bb2883dfe74f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mkfontscale/blobs/sha256:b3112c5e6d39688bdfee2ed411f2c9f9a98416a9751212f3c5bc305694ef2a0f
-    sha256: b3112c5e6d39688bdfee2ed411f2c9f9a98416a9751212f3c5bc305694ef2a0f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mkfontscale/blobs/sha256:84f1ae828213f379ec6558b5206633cbece34cca0d40fe965dd683591e825f0f
-    sha256: 84f1ae828213f379ec6558b5206633cbece34cca0d40fe965dd683591e825f0f
-source:
-  url: https://www.x.org/releases/individual/app/mkfontscale-1.2.3.tar.xz
-  sha256: 2921cdc344f1acee04bcd6ea1e29565c1308263006e134a9ee38cf9c9d6fe75e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - libfontenc
+    - freetype
+    - libfontenc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mkfontscale/blobs/sha256:9a091c7ef6f917c5227d1311c66a72bf9981b74aff2fcb3b2592bb2883dfe74f
+        sha256: 9a091c7ef6f917c5227d1311c66a72bf9981b74aff2fcb3b2592bb2883dfe74f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mkfontscale/blobs/sha256:2029b136126ebb853f7c72befec91cb833b8218d54e04e1707c51a61a51d9ed8
+        sha256: 2029b136126ebb853f7c72befec91cb833b8218d54e04e1707c51a61a51d9ed8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mkfontscale/blobs/sha256:b3112c5e6d39688bdfee2ed411f2c9f9a98416a9751212f3c5bc305694ef2a0f
+        sha256: b3112c5e6d39688bdfee2ed411f2c9f9a98416a9751212f3c5bc305694ef2a0f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mkfontscale/blobs/sha256:84f1ae828213f379ec6558b5206633cbece34cca0d40fe965dd683591e825f0f
+        sha256: 84f1ae828213f379ec6558b5206633cbece34cca0d40fe965dd683591e825f0f
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/releases/individual/app/mkfontscale-1.2.3.tar.xz
+    sha256: 2921cdc344f1acee04bcd6ea1e29565c1308263006e134a9ee38cf9c9d6fe75e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - xorgproto
+    - pkgconf
+    - xorgproto
 linux_dependencies:
-  - freetype
-  - libfontenc
-  - zlib-ng-compat
+    - freetype
+    - libfontenc
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

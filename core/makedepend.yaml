@@ -3,28 +3,53 @@ version: 1.0.9
 description: Creates dependencies in makefiles
 homepage: https://x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/makedepend/blobs/sha256:bcbae90cda88768f019767a02e2311d80b3425308893a30acdefe9553b4448ff
-    sha256: bcbae90cda88768f019767a02e2311d80b3425308893a30acdefe9553b4448ff
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/makedepend/blobs/sha256:c6874f996ef7a5687bf1f83a0f1697c0e8360b4dda635b18be0926411dfabb7a
-    sha256: c6874f996ef7a5687bf1f83a0f1697c0e8360b4dda635b18be0926411dfabb7a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/makedepend/blobs/sha256:3513c65618644fc944f76db3cb1975f843d82eaf6198d58770c23ee145c1efed
-    sha256: 3513c65618644fc944f76db3cb1975f843d82eaf6198d58770c23ee145c1efed
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/makedepend/blobs/sha256:d285353719e76dfc8b61c138d72ed14b3e3167b3aeb817a3dfd5b2a6710250a4
-    sha256: d285353719e76dfc8b61c138d72ed14b3e3167b3aeb817a3dfd5b2a6710250a4
-source:
-  url: https://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.9.tar.xz
-  sha256: 92d0deb659fff6d8ddbc1d27fc4ca8ceb2b6dbe15d73f0a04edc09f1c5782dd4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - util-macros
-  - xorgproto
+    - util-macros
+    - xorgproto
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/makedepend/blobs/sha256:c6874f996ef7a5687bf1f83a0f1697c0e8360b4dda635b18be0926411dfabb7a
+        sha256: c6874f996ef7a5687bf1f83a0f1697c0e8360b4dda635b18be0926411dfabb7a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/makedepend/blobs/sha256:bcbae90cda88768f019767a02e2311d80b3425308893a30acdefe9553b4448ff
+        sha256: bcbae90cda88768f019767a02e2311d80b3425308893a30acdefe9553b4448ff
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/makedepend/blobs/sha256:3513c65618644fc944f76db3cb1975f843d82eaf6198d58770c23ee145c1efed
+        sha256: 3513c65618644fc944f76db3cb1975f843d82eaf6198d58770c23ee145c1efed
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/makedepend/blobs/sha256:d285353719e76dfc8b61c138d72ed14b3e3167b3aeb817a3dfd5b2a6710250a4
+        sha256: d285353719e76dfc8b61c138d72ed14b3e3167b3aeb817a3dfd5b2a6710250a4
+        sha512: ""
+        signature: ""
+source:
+    url: https://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.9.tar.xz
+    sha256: 92d0deb659fff6d8ddbc1d27fc4ca8ceb2b6dbe15d73f0a04edc09f1c5782dd4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

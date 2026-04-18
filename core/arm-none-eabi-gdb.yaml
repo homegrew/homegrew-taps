@@ -1,45 +1,69 @@
 name: arm-none-eabi-gdb
-version: 17.1
+version: "17.1"
 description: GNU debugger for arm-none-eabi cross development
 homepage: https://www.gnu.org/software/gdb/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:493c701535ef53e4243eb5e516f6d94f667c277f0a60b7d8e0eb5d8b8ba6a42f
-    sha256: 493c701535ef53e4243eb5e516f6d94f667c277f0a60b7d8e0eb5d8b8ba6a42f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:124d8057149346ddba697efa276f442896837c7c08d16b7b9d986e3b97df8604
-    sha256: 124d8057149346ddba697efa276f442896837c7c08d16b7b9d986e3b97df8604
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:44b87f3e81c6bac17d73b8f5b85bfb99fdd5f00d69a812f9375860ce63101ae7
-    sha256: 44b87f3e81c6bac17d73b8f5b85bfb99fdd5f00d69a812f9375860ce63101ae7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:a17d354b457fa74827f9a1819247edff1d5169f91ff92019d864c8fe177615f5
-    sha256: a17d354b457fa74827f9a1819247edff1d5169f91ff92019d864c8fe177615f5
-source:
-  url: https://ftpmirror.gnu.org/gnu/gdb/gdb-17.1.tar.xz
-  sha256: 14996f5f74c9f68f5a543fdc45bca7800207f91f92aeea6c2e791822c7c6d876
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - mpfr
-  - ncurses
-  - python@3.14
-  - readline
-  - xz
-  - zstd
+    - gmp
+    - mpfr
+    - ncurses
+    - python@3.14
+    - readline
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:124d8057149346ddba697efa276f442896837c7c08d16b7b9d986e3b97df8604
+        sha256: 124d8057149346ddba697efa276f442896837c7c08d16b7b9d986e3b97df8604
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:493c701535ef53e4243eb5e516f6d94f667c277f0a60b7d8e0eb5d8b8ba6a42f
+        sha256: 493c701535ef53e4243eb5e516f6d94f667c277f0a60b7d8e0eb5d8b8ba6a42f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:44b87f3e81c6bac17d73b8f5b85bfb99fdd5f00d69a812f9375860ce63101ae7
+        sha256: 44b87f3e81c6bac17d73b8f5b85bfb99fdd5f00d69a812f9375860ce63101ae7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:a17d354b457fa74827f9a1819247edff1d5169f91ff92019d864c8fe177615f5
+        sha256: a17d354b457fa74827f9a1819247edff1d5169f91ff92019d864c8fe177615f5
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/gdb/gdb-17.1.tar.xz
+    sha256: 14996f5f74c9f68f5a543fdc45bca7800207f91f92aeea6c2e791822c7c6d876
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - texinfo
+    - pkgconf
+    - texinfo
 linux_dependencies:
-  - gmp
-  - mpfr
-  - ncurses
-  - python@3.14
-  - readline
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - gmp
+    - mpfr
+    - ncurses
+    - python@3.14
+    - readline
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

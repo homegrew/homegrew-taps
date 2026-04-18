@@ -1,57 +1,81 @@
 name: gwyddion
-version: 2.71
+version: "2.71"
 description: Scanning Probe Microscopy visualization and analysis tool
 homepage: https://gwyddion.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gwyddion/blobs/sha256:0b68818a49fef20580c6d7f3055ad7e108fda64592c4e66353dbe91762ab2830
-    sha256: 0b68818a49fef20580c6d7f3055ad7e108fda64592c4e66353dbe91762ab2830
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gwyddion/blobs/sha256:9fa8d23ece1da41bcb48ee217e92ce1579b76741f2d456dd2d2c35c80eefdad9
-    sha256: 9fa8d23ece1da41bcb48ee217e92ce1579b76741f2d456dd2d2c35c80eefdad9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gwyddion/blobs/sha256:4a4aba81dfb4883218e0b5f2f9237285f1c1fc7b18bd364c28d4e773a5d658a2
-    sha256: 4a4aba81dfb4883218e0b5f2f9237285f1c1fc7b18bd364c28d4e773a5d658a2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gwyddion/blobs/sha256:0b3934f11b431c089878be3263c8a26e86e25ab5fd5b138eb4524449ef0657a4
-    sha256: 0b3934f11b431c089878be3263c8a26e86e25ab5fd5b138eb4524449ef0657a4
-source:
-  url: https://downloads.sourceforge.net/project/gwyddion/gwyddion/2.71/gwyddion-2.71.tar.xz
-  sha256: 2df721befccbe4d5ee2ba564b32e69341f8ce1de637e2045838a09a2d46b5dba
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gtk+
-  - cairo
-  - fftw
-  - gdk-pixbuf
-  - glib
-  - libpng
-  - libxml2
-  - libzip
-  - pango
-  - zstd
-  - at-spi2-core
-  - gettext
-  - harfbuzz
+    - gtk+
+    - cairo
+    - fftw
+    - gdk-pixbuf
+    - glib
+    - libpng
+    - libxml2
+    - libzip
+    - pango
+    - zstd
+    - at-spi2-core
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gwyddion/blobs/sha256:9fa8d23ece1da41bcb48ee217e92ce1579b76741f2d456dd2d2c35c80eefdad9
+        sha256: 9fa8d23ece1da41bcb48ee217e92ce1579b76741f2d456dd2d2c35c80eefdad9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gwyddion/blobs/sha256:0b68818a49fef20580c6d7f3055ad7e108fda64592c4e66353dbe91762ab2830
+        sha256: 0b68818a49fef20580c6d7f3055ad7e108fda64592c4e66353dbe91762ab2830
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gwyddion/blobs/sha256:4a4aba81dfb4883218e0b5f2f9237285f1c1fc7b18bd364c28d4e773a5d658a2
+        sha256: 4a4aba81dfb4883218e0b5f2f9237285f1c1fc7b18bd364c28d4e773a5d658a2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gwyddion/blobs/sha256:0b3934f11b431c089878be3263c8a26e86e25ab5fd5b138eb4524449ef0657a4
+        sha256: 0b3934f11b431c089878be3263c8a26e86e25ab5fd5b138eb4524449ef0657a4
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/gwyddion/gwyddion/2.71/gwyddion-2.71.tar.xz
+    sha256: 2df721befccbe4d5ee2ba564b32e69341f8ce1de637e2045838a09a2d46b5dba
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - autoconf
-  - automake
-  - gtk-doc
-  - libtool
+    - pkgconf
+    - autoconf
+    - automake
+    - gtk-doc
+    - libtool
 linux_dependencies:
-  - cairo
-  - fftw
-  - gdk-pixbuf
-  - glib
-  - gtk+
-  - libpng
-  - libxml2
-  - libzip
-  - pango
-  - zlib-ng-compat
-  - zstd
+    - cairo
+    - fftw
+    - gdk-pixbuf
+    - glib
+    - gtk+
+    - libpng
+    - libxml2
+    - libzip
+    - pango
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

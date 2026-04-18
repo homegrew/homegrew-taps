@@ -3,31 +3,56 @@ version: 0.2.1
 description: OpenGL based ANSI C implementation of the OpenVG standard
 homepage: https://sourceforge.net/projects/shivavg/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/shivavg/blobs/sha256:0aaf1bb18c79c32a37185bca6b61d84f088d434be24e051128d48f6c8d4e779f
-    sha256: 0aaf1bb18c79c32a37185bca6b61d84f088d434be24e051128d48f6c8d4e779f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/shivavg/blobs/sha256:1c8c3d89d312804881bb803c2e8d372af69035f4a4a66ee1a69dde8e531be29c
-    sha256: 1c8c3d89d312804881bb803c2e8d372af69035f4a4a66ee1a69dde8e531be29c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/shivavg/blobs/sha256:ae5c74db54f64e3a75e394cba457cd969612c741de20f12b5941af967db03470
-    sha256: ae5c74db54f64e3a75e394cba457cd969612c741de20f12b5941af967db03470
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/shivavg/blobs/sha256:c0b735943a8d9d52d9089d252a1b7fb0d9aa4cb6630e24a284d082f0a29c6016
-    sha256: c0b735943a8d9d52d9089d252a1b7fb0d9aa4cb6630e24a284d082f0a29c6016
-source:
-  url: https://downloads.sourceforge.net/project/shivavg/ShivaVG/0.2.1/ShivaVG-0.2.1.zip
-  sha256: 9735079392829f7aaf79e02ed84dd74f5c443c39c02ff461cfdd19cfc4ae89c4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/shivavg/blobs/sha256:1c8c3d89d312804881bb803c2e8d372af69035f4a4a66ee1a69dde8e531be29c
+        sha256: 1c8c3d89d312804881bb803c2e8d372af69035f4a4a66ee1a69dde8e531be29c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shivavg/blobs/sha256:0aaf1bb18c79c32a37185bca6b61d84f088d434be24e051128d48f6c8d4e779f
+        sha256: 0aaf1bb18c79c32a37185bca6b61d84f088d434be24e051128d48f6c8d4e779f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/shivavg/blobs/sha256:ae5c74db54f64e3a75e394cba457cd969612c741de20f12b5941af967db03470
+        sha256: ae5c74db54f64e3a75e394cba457cd969612c741de20f12b5941af967db03470
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shivavg/blobs/sha256:c0b735943a8d9d52d9089d252a1b7fb0d9aa4cb6630e24a284d082f0a29c6016
+        sha256: c0b735943a8d9d52d9089d252a1b7fb0d9aa4cb6630e24a284d082f0a29c6016
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/shivavg/ShivaVG/0.2.1/ShivaVG-0.2.1.zip
+    sha256: 9735079392829f7aaf79e02ed84dd74f5c443c39c02ff461cfdd19cfc4ae89c4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
 linux_dependencies:
-  - freeglut
-  - mesa
-  - mesa-glu
+    - freeglut
+    - mesa
+    - mesa-glu
+build:
+    configure: []
+    install: []
+service: null

@@ -1,27 +1,53 @@
 name: libnet
-version: 1.3
+version: "1.3"
 description: C library for creating IP packets
 homepage: https://github.com/libnet/libnet
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libnet/blobs/sha256:1a947f6508603cdc9c46aab18eb6b812ddc91d39be2f6431d912e271b041779b
-    sha256: 1a947f6508603cdc9c46aab18eb6b812ddc91d39be2f6431d912e271b041779b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libnet/blobs/sha256:8e92431961fce081d8094362611f3550938938f3e8d7de7c369c691be9ef77c2
-    sha256: 8e92431961fce081d8094362611f3550938938f3e8d7de7c369c691be9ef77c2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libnet/blobs/sha256:c80410be8c65b37b135596873de64f7587068d32d0b8ba8ba91f4299f609e8ed
-    sha256: c80410be8c65b37b135596873de64f7587068d32d0b8ba8ba91f4299f609e8ed
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libnet/blobs/sha256:be160672c2f61d20fee38a54c6f7e308c73ee085f9d47ec91a27c210a93a6cea
-    sha256: be160672c2f61d20fee38a54c6f7e308c73ee085f9d47ec91a27c210a93a6cea
-source:
-  url: https://github.com/libnet/libnet/releases/download/v1.3/libnet-1.3.tar.gz
-  sha256: ad1e2dd9b500c58ee462acd839d0a0ea9a2b9248a1287840bc601e774fb6b28f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libnet/blobs/sha256:8e92431961fce081d8094362611f3550938938f3e8d7de7c369c691be9ef77c2
+        sha256: 8e92431961fce081d8094362611f3550938938f3e8d7de7c369c691be9ef77c2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libnet/blobs/sha256:1a947f6508603cdc9c46aab18eb6b812ddc91d39be2f6431d912e271b041779b
+        sha256: 1a947f6508603cdc9c46aab18eb6b812ddc91d39be2f6431d912e271b041779b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libnet/blobs/sha256:c80410be8c65b37b135596873de64f7587068d32d0b8ba8ba91f4299f609e8ed
+        sha256: c80410be8c65b37b135596873de64f7587068d32d0b8ba8ba91f4299f609e8ed
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libnet/blobs/sha256:be160672c2f61d20fee38a54c6f7e308c73ee085f9d47ec91a27c210a93a6cea
+        sha256: be160672c2f61d20fee38a54c6f7e308c73ee085f9d47ec91a27c210a93a6cea
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libnet/libnet/releases/download/v1.3/libnet-1.3.tar.gz
+    sha256: ad1e2dd9b500c58ee462acd839d0a0ea9a2b9248a1287840bc601e774fb6b28f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - doxygen
+    - doxygen
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

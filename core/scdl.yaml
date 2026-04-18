@@ -3,28 +3,54 @@ version: 3.0.4
 description: Command-line tool to download music from SoundCloud
 homepage: https://github.com/scdl-org/scdl
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scdl/blobs/sha256:8c53dd9bca484cb1314f2b245366cfe2827398fd37cb90825dfdf7c33b124834
-    sha256: 8c53dd9bca484cb1314f2b245366cfe2827398fd37cb90825dfdf7c33b124834
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scdl/blobs/sha256:bf0119c66fbca86e2385c89eaa216a3b7f28e666c6651a060ca0290fff64cec2
-    sha256: bf0119c66fbca86e2385c89eaa216a3b7f28e666c6651a060ca0290fff64cec2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scdl/blobs/sha256:440a651fb52aa6dbfea3b5e05f3127d22df5d75092933d31889233f64dc5ff39
-    sha256: 440a651fb52aa6dbfea3b5e05f3127d22df5d75092933d31889233f64dc5ff39
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scdl/blobs/sha256:60ab05fbd09e5ab81f729edd62c934749e68a50726bf0fc0ef79dce5022c697a
-    sha256: 60ab05fbd09e5ab81f729edd62c934749e68a50726bf0fc0ef79dce5022c697a
-source:
-  url: https://files.pythonhosted.org/packages/29/68/602ea370bb383a043f577787a4bbfd9f4e193ffcbe1a7b6325e37f126a08/scdl-3.0.4.tar.gz
-  sha256: afb72fb28293584d16fe96e399b686aab6bdfaa6f5303c5fd81e42feb76b09d5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cffi
-  - ffmpeg
-  - python@3.14
+    - certifi
+    - cffi
+    - ffmpeg
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scdl/blobs/sha256:bf0119c66fbca86e2385c89eaa216a3b7f28e666c6651a060ca0290fff64cec2
+        sha256: bf0119c66fbca86e2385c89eaa216a3b7f28e666c6651a060ca0290fff64cec2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scdl/blobs/sha256:8c53dd9bca484cb1314f2b245366cfe2827398fd37cb90825dfdf7c33b124834
+        sha256: 8c53dd9bca484cb1314f2b245366cfe2827398fd37cb90825dfdf7c33b124834
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scdl/blobs/sha256:440a651fb52aa6dbfea3b5e05f3127d22df5d75092933d31889233f64dc5ff39
+        sha256: 440a651fb52aa6dbfea3b5e05f3127d22df5d75092933d31889233f64dc5ff39
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scdl/blobs/sha256:60ab05fbd09e5ab81f729edd62c934749e68a50726bf0fc0ef79dce5022c697a
+        sha256: 60ab05fbd09e5ab81f729edd62c934749e68a50726bf0fc0ef79dce5022c697a
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/29/68/602ea370bb383a043f577787a4bbfd9f4e193ffcbe1a7b6325e37f126a08/scdl-3.0.4.tar.gz
+    sha256: afb72fb28293584d16fe96e399b686aab6bdfaa6f5303c5fd81e42feb76b09d5
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

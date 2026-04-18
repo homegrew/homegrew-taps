@@ -3,27 +3,52 @@ version: 0.37.0
 description: JavaScript on Fiber
 homepage: https://fibjs.org/
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fibjs/blobs/sha256:fd81ea326f8dd8bd3ed2c7fbcf7856d00b13d699d26f88d0baf34e07d9367207
-    sha256: fd81ea326f8dd8bd3ed2c7fbcf7856d00b13d699d26f88d0baf34e07d9367207
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fibjs/blobs/sha256:db4327b9a6f16d42e8e568e635a84b4acc2726b3740a928221f1876707574a9e
-    sha256: db4327b9a6f16d42e8e568e635a84b4acc2726b3740a928221f1876707574a9e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fibjs/blobs/sha256:623b81dd27d99e33d98b905cd33a756b9b1f70a1ec3d2399370f1e48ba108f0d
-    sha256: 623b81dd27d99e33d98b905cd33a756b9b1f70a1ec3d2399370f1e48ba108f0d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fibjs/blobs/sha256:3dfbb08919d6b3152be45d24e5267d0026db256b1936c08e49bb562ff9e76296
-    sha256: 3dfbb08919d6b3152be45d24e5267d0026db256b1936c08e49bb562ff9e76296
-source:
-  url: https://github.com/fibjs/fibjs/releases/download/v0.37.0/fullsrc.zip
-  sha256: 51908a22a5ddbdb2c772c2cf08ba61cee96d89a4da0f678014423b86690478fd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fibjs/blobs/sha256:db4327b9a6f16d42e8e568e635a84b4acc2726b3740a928221f1876707574a9e
+        sha256: db4327b9a6f16d42e8e568e635a84b4acc2726b3740a928221f1876707574a9e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fibjs/blobs/sha256:fd81ea326f8dd8bd3ed2c7fbcf7856d00b13d699d26f88d0baf34e07d9367207
+        sha256: fd81ea326f8dd8bd3ed2c7fbcf7856d00b13d699d26f88d0baf34e07d9367207
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fibjs/blobs/sha256:623b81dd27d99e33d98b905cd33a756b9b1f70a1ec3d2399370f1e48ba108f0d
+        sha256: 623b81dd27d99e33d98b905cd33a756b9b1f70a1ec3d2399370f1e48ba108f0d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fibjs/blobs/sha256:3dfbb08919d6b3152be45d24e5267d0026db256b1936c08e49bb562ff9e76296
+        sha256: 3dfbb08919d6b3152be45d24e5267d0026db256b1936c08e49bb562ff9e76296
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fibjs/fibjs/releases/download/v0.37.0/fullsrc.zip
+    sha256: 51908a22a5ddbdb2c772c2cf08ba61cee96d89a4da0f678014423b86690478fd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - libx11
+    - libx11
+build:
+    configure: []
+    install: []
+service: null

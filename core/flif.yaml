@@ -1,31 +1,56 @@
 name: flif
-version: 0.4
+version: "0.4"
 description: Free Loseless Image Format
 homepage: https://flif.info/
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flif/blobs/sha256:9f31d2fdf99e6e6a7bc79e1cb303d246a023edae4a4cbab9010c991a42b3f15d
-    sha256: 9f31d2fdf99e6e6a7bc79e1cb303d246a023edae4a4cbab9010c991a42b3f15d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flif/blobs/sha256:23d44bc668159febffba7d69a39050438097b9abdccd979e604f19463338dc07
-    sha256: 23d44bc668159febffba7d69a39050438097b9abdccd979e604f19463338dc07
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flif/blobs/sha256:7fe8d950811505c384945d0dd7901010b548cd1f06a59bd6438f2f8417cc01b3
-    sha256: 7fe8d950811505c384945d0dd7901010b548cd1f06a59bd6438f2f8417cc01b3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flif/blobs/sha256:d6d277b41d4575ffc47d7a6db35c7a8ef7eb4a124ac3fc1fed3abeebbfcfb71a
-    sha256: d6d277b41d4575ffc47d7a6db35c7a8ef7eb4a124ac3fc1fed3abeebbfcfb71a
-source:
-  url: https://github.com/FLIF-hub/FLIF/archive/refs/tags/v0.4.tar.gz
-  sha256: cc98313ef0dbfef65d72bc21f730edf2a97a414f14bd73ad424368ce032fdb7f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpng
-  - sdl2
+    - libpng
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flif/blobs/sha256:23d44bc668159febffba7d69a39050438097b9abdccd979e604f19463338dc07
+        sha256: 23d44bc668159febffba7d69a39050438097b9abdccd979e604f19463338dc07
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flif/blobs/sha256:9f31d2fdf99e6e6a7bc79e1cb303d246a023edae4a4cbab9010c991a42b3f15d
+        sha256: 9f31d2fdf99e6e6a7bc79e1cb303d246a023edae4a4cbab9010c991a42b3f15d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flif/blobs/sha256:7fe8d950811505c384945d0dd7901010b548cd1f06a59bd6438f2f8417cc01b3
+        sha256: 7fe8d950811505c384945d0dd7901010b548cd1f06a59bd6438f2f8417cc01b3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flif/blobs/sha256:d6d277b41d4575ffc47d7a6db35c7a8ef7eb4a124ac3fc1fed3abeebbfcfb71a
+        sha256: d6d277b41d4575ffc47d7a6db35c7a8ef7eb4a124ac3fc1fed3abeebbfcfb71a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/FLIF-hub/FLIF/archive/refs/tags/v0.4.tar.gz
+    sha256: cc98313ef0dbfef65d72bc21f730edf2a97a414f14bd73ad424368ce032fdb7f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

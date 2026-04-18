@@ -3,26 +3,52 @@ version: 4.1.1
 description: Python bindings for MPI
 homepage: https://mpi4py.github.io/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpi4py/blobs/sha256:90e4d286c7363f44451bef72bf75eb139d55454c35bb240eaf37d49c6649ab0d
-    sha256: 90e4d286c7363f44451bef72bf75eb139d55454c35bb240eaf37d49c6649ab0d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpi4py/blobs/sha256:6fe3a1ea44cc66cd2ab36531d66848f9f0e363591b14c272864d914c1e9422ba
-    sha256: 6fe3a1ea44cc66cd2ab36531d66848f9f0e363591b14c272864d914c1e9422ba
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpi4py/blobs/sha256:749d4547c856b8cb35bd70869b15deffef02f4e42f9915792715da5338b3deb8
-    sha256: 749d4547c856b8cb35bd70869b15deffef02f4e42f9915792715da5338b3deb8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpi4py/blobs/sha256:badce9774ee0885b972ce95082c2dc904d8f7113baae29231a09a884cabbcad2
-    sha256: badce9774ee0885b972ce95082c2dc904d8f7113baae29231a09a884cabbcad2
-source:
-  url: https://github.com/mpi4py/mpi4py/releases/download/4.1.1/mpi4py-4.1.1.tar.gz
-  sha256: eb2c8489bdbc47fdc6b26ca7576e927a11b070b6de196a443132766b3d0a2a22
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - open-mpi
-  - python@3.14
+    - open-mpi
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpi4py/blobs/sha256:6fe3a1ea44cc66cd2ab36531d66848f9f0e363591b14c272864d914c1e9422ba
+        sha256: 6fe3a1ea44cc66cd2ab36531d66848f9f0e363591b14c272864d914c1e9422ba
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpi4py/blobs/sha256:90e4d286c7363f44451bef72bf75eb139d55454c35bb240eaf37d49c6649ab0d
+        sha256: 90e4d286c7363f44451bef72bf75eb139d55454c35bb240eaf37d49c6649ab0d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpi4py/blobs/sha256:749d4547c856b8cb35bd70869b15deffef02f4e42f9915792715da5338b3deb8
+        sha256: 749d4547c856b8cb35bd70869b15deffef02f4e42f9915792715da5338b3deb8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpi4py/blobs/sha256:badce9774ee0885b972ce95082c2dc904d8f7113baae29231a09a884cabbcad2
+        sha256: badce9774ee0885b972ce95082c2dc904d8f7113baae29231a09a884cabbcad2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mpi4py/mpi4py/releases/download/4.1.1/mpi4py-4.1.1.tar.gz
+    sha256: eb2c8489bdbc47fdc6b26ca7576e927a11b070b6de196a443132766b3d0a2a22
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

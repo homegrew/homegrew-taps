@@ -3,31 +3,56 @@ version: 1.7.0
 description: Open Motion Planning Library consists of many motion planning algorithms
 homepage: https://ompl.kavrakilab.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ompl/blobs/sha256:9db8d1a17411555b340f9bce884fe93aa94a38e8bd009ae6b15e0fcc74407030
-    sha256: 9db8d1a17411555b340f9bce884fe93aa94a38e8bd009ae6b15e0fcc74407030
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ompl/blobs/sha256:183762369e5bc2543905d58a0158bebc8cd6c5b56f912345db7d46d72989d3ca
-    sha256: 183762369e5bc2543905d58a0158bebc8cd6c5b56f912345db7d46d72989d3ca
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ompl/blobs/sha256:2e4f7207a2f37310c638a8c09624177d5a9cf154e6379b677acca62426976a1c
-    sha256: 2e4f7207a2f37310c638a8c09624177d5a9cf154e6379b677acca62426976a1c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ompl/blobs/sha256:3b7975058b695b73d56c8dabfd35031ba8979d0ffc72e77c76e5ddd0aacb1630
-    sha256: 3b7975058b695b73d56c8dabfd35031ba8979d0ffc72e77c76e5ddd0aacb1630
-source:
-  url: https://github.com/ompl/ompl/archive/refs/tags/1.7.0.tar.gz
-  sha256: e2e2700dfb0b4c2d86e216736754dd1b316bd6a46cc8818e1ffcbce4a388aca9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - eigen
-  - flann
-  - ode
+    - boost
+    - eigen
+    - flann
+    - ode
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ompl/blobs/sha256:183762369e5bc2543905d58a0158bebc8cd6c5b56f912345db7d46d72989d3ca
+        sha256: 183762369e5bc2543905d58a0158bebc8cd6c5b56f912345db7d46d72989d3ca
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ompl/blobs/sha256:9db8d1a17411555b340f9bce884fe93aa94a38e8bd009ae6b15e0fcc74407030
+        sha256: 9db8d1a17411555b340f9bce884fe93aa94a38e8bd009ae6b15e0fcc74407030
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ompl/blobs/sha256:2e4f7207a2f37310c638a8c09624177d5a9cf154e6379b677acca62426976a1c
+        sha256: 2e4f7207a2f37310c638a8c09624177d5a9cf154e6379b677acca62426976a1c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ompl/blobs/sha256:3b7975058b695b73d56c8dabfd35031ba8979d0ffc72e77c76e5ddd0aacb1630
+        sha256: 3b7975058b695b73d56c8dabfd35031ba8979d0ffc72e77c76e5ddd0aacb1630
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ompl/ompl/archive/refs/tags/1.7.0.tar.gz
+    sha256: e2e2700dfb0b4c2d86e216736754dd1b316bd6a46cc8818e1ffcbce4a388aca9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

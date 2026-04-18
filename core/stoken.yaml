@@ -1,33 +1,58 @@
 name: stoken
-version: 0.93
+version: "0.93"
 description: Tokencode generator compatible with RSA SecurID 128-bit (AES)
 homepage: https://github.com/stoken-dev/stoken
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:120ccd4eea9a910df80ea95e8041919027ef03d74fa87f982e25da2dea11bd72
-    sha256: 120ccd4eea9a910df80ea95e8041919027ef03d74fa87f982e25da2dea11bd72
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
-    sha256: 1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:99879a1ca2556a68d5c70e0e48d1ba6fcb05dae8eeed6b5899b09a3fc192595c
-    sha256: 99879a1ca2556a68d5c70e0e48d1ba6fcb05dae8eeed6b5899b09a3fc192595c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:48fb52e148c6e57cc6ff3423f04f7ced5302bf5c64c3eee2144272e2675288bf
-    sha256: 48fb52e148c6e57cc6ff3423f04f7ced5302bf5c64c3eee2144272e2675288bf
-source:
-  url: https://github.com/stoken-dev/stoken/archive/refs/tags/v0.93.tar.gz
-  sha256: 102e2d112b275efcdc20ef438670e4f24f08870b9072a81fda316efcc38aef9c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - nettle
+    - gmp
+    - nettle
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
+        sha256: 1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:120ccd4eea9a910df80ea95e8041919027ef03d74fa87f982e25da2dea11bd72
+        sha256: 120ccd4eea9a910df80ea95e8041919027ef03d74fa87f982e25da2dea11bd72
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:99879a1ca2556a68d5c70e0e48d1ba6fcb05dae8eeed6b5899b09a3fc192595c
+        sha256: 99879a1ca2556a68d5c70e0e48d1ba6fcb05dae8eeed6b5899b09a3fc192595c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:48fb52e148c6e57cc6ff3423f04f7ced5302bf5c64c3eee2144272e2675288bf
+        sha256: 48fb52e148c6e57cc6ff3423f04f7ced5302bf5c64c3eee2144272e2675288bf
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/stoken-dev/stoken/archive/refs/tags/v0.93.tar.gz
+    sha256: 102e2d112b275efcdc20ef438670e4f24f08870b9072a81fda316efcc38aef9c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

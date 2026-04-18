@@ -3,28 +3,53 @@ version: 2.1.16
 description: Fast Web log analyzer using probabilistic data structures
 homepage: https://www.logswan.org
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/logswan/blobs/sha256:c9332d6b9093ea70660ed6fda5834c76c60a5bd68d069ba5d766902d77d2b95d
-    sha256: c9332d6b9093ea70660ed6fda5834c76c60a5bd68d069ba5d766902d77d2b95d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/logswan/blobs/sha256:924f3b9130a56a68193e8d209cfb31dacf2a7347dedf355c5c43454cb386466a
-    sha256: 924f3b9130a56a68193e8d209cfb31dacf2a7347dedf355c5c43454cb386466a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/logswan/blobs/sha256:694736b14898f12898edaebc9ba5f07d050f83fc59f16c802c89b66a67c816ee
-    sha256: 694736b14898f12898edaebc9ba5f07d050f83fc59f16c802c89b66a67c816ee
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/logswan/blobs/sha256:ff8dd3ec7671cea407b56821c73c11a0c4b53331476446f74f350c356d876e54
-    sha256: ff8dd3ec7671cea407b56821c73c11a0c4b53331476446f74f350c356d876e54
-source:
-  url: https://github.com/fcambus/logswan/archive/refs/tags/2.1.16.tar.gz
-  sha256: 9b1e944647114cb9cb6c42370369d4aa0d3de011eb518e12af3c25b0fb19336d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jansson
-  - libmaxminddb
+    - jansson
+    - libmaxminddb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/logswan/blobs/sha256:924f3b9130a56a68193e8d209cfb31dacf2a7347dedf355c5c43454cb386466a
+        sha256: 924f3b9130a56a68193e8d209cfb31dacf2a7347dedf355c5c43454cb386466a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/logswan/blobs/sha256:c9332d6b9093ea70660ed6fda5834c76c60a5bd68d069ba5d766902d77d2b95d
+        sha256: c9332d6b9093ea70660ed6fda5834c76c60a5bd68d069ba5d766902d77d2b95d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/logswan/blobs/sha256:694736b14898f12898edaebc9ba5f07d050f83fc59f16c802c89b66a67c816ee
+        sha256: 694736b14898f12898edaebc9ba5f07d050f83fc59f16c802c89b66a67c816ee
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/logswan/blobs/sha256:ff8dd3ec7671cea407b56821c73c11a0c4b53331476446f74f350c356d876e54
+        sha256: ff8dd3ec7671cea407b56821c73c11a0c4b53331476446f74f350c356d876e54
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fcambus/logswan/archive/refs/tags/2.1.16.tar.gz
+    sha256: 9b1e944647114cb9cb6c42370369d4aa0d3de011eb518e12af3c25b0fb19336d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

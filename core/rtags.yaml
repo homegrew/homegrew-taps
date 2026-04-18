@@ -1,36 +1,60 @@
 name: rtags
-version: 2.44
+version: "2.44"
 description: Source code cross-referencer like ctags with a clang frontend
 homepage: https://github.com/Andersbakken/rtags
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rtags/blobs/sha256:d5cbf12e8b49fea2e82bfe1d149fac6a4b8491cc88b134d5dfb364fbc4d116d8
-    sha256: d5cbf12e8b49fea2e82bfe1d149fac6a4b8491cc88b134d5dfb364fbc4d116d8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rtags/blobs/sha256:06375c067b9667b6f201e3ce67853ca432133747249a90b53049bdec0742d0ba
-    sha256: 06375c067b9667b6f201e3ce67853ca432133747249a90b53049bdec0742d0ba
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rtags/blobs/sha256:6189640b1116d0a70c690175bf2c37bdae14eda7c9b42b0e97789d4e5d24d675
-    sha256: 6189640b1116d0a70c690175bf2c37bdae14eda7c9b42b0e97789d4e5d24d675
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rtags/blobs/sha256:b9b7c563f938a73fd2537389b0c93037d95221f6b4002e0832b0a8518a4429f5
-    sha256: b9b7c563f938a73fd2537389b0c93037d95221f6b4002e0832b0a8518a4429f5
-source:
-  url: https://github.com/Andersbakken/rtags/releases/download/v2.44/rtags-2.44.tar.bz2
-  sha256: 3db5b36216e0b0a98fa7ad1e03a29b2ca7c9d895d85dbe3b2760fcdc2f962db3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - emacs
-  - llvm
-  - openssl@3
+    - emacs
+    - llvm
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rtags/blobs/sha256:06375c067b9667b6f201e3ce67853ca432133747249a90b53049bdec0742d0ba
+        sha256: 06375c067b9667b6f201e3ce67853ca432133747249a90b53049bdec0742d0ba
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rtags/blobs/sha256:d5cbf12e8b49fea2e82bfe1d149fac6a4b8491cc88b134d5dfb364fbc4d116d8
+        sha256: d5cbf12e8b49fea2e82bfe1d149fac6a4b8491cc88b134d5dfb364fbc4d116d8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rtags/blobs/sha256:6189640b1116d0a70c690175bf2c37bdae14eda7c9b42b0e97789d4e5d24d675
+        sha256: 6189640b1116d0a70c690175bf2c37bdae14eda7c9b42b0e97789d4e5d24d675
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rtags/blobs/sha256:b9b7c563f938a73fd2537389b0c93037d95221f6b4002e0832b0a8518a4429f5
+        sha256: b9b7c563f938a73fd2537389b0c93037d95221f6b4002e0832b0a8518a4429f5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Andersbakken/rtags/releases/download/v2.44/rtags-2.44.tar.bz2
+    sha256: 3db5b36216e0b0a98fa7ad1e03a29b2ca7c9d895d85dbe3b2760fcdc2f962db3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - emacs
-  - llvm
-  - openssl@3
-  - zlib-ng-compat
+    - emacs
+    - llvm
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

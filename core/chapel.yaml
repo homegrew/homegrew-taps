@@ -3,31 +3,57 @@ version: 2.8.0
 description: Programming language for productive parallel computing at scale
 homepage: https://chapel-lang.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:a73efe05b4551688355d1ddc3707424ae86573fc91352aec8c0eae6e0c4f6ce4
-    sha256: a73efe05b4551688355d1ddc3707424ae86573fc91352aec8c0eae6e0c4f6ce4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:8cdec547c132c71423804efa6c22c49dd802351b5e4984b8caa21ff09130e785
-    sha256: 8cdec547c132c71423804efa6c22c49dd802351b5e4984b8caa21ff09130e785
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:69749327935b602942509d11a242e12641fb5d5c3692592cf7794d18519802ac
-    sha256: 69749327935b602942509d11a242e12641fb5d5c3692592cf7794d18519802ac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:2a8974a412dad807f368dc6ec6d0e81be099202c12536a741cd414752b864efb
-    sha256: 2a8974a412dad807f368dc6ec6d0e81be099202c12536a741cd414752b864efb
-source:
-  url: https://github.com/chapel-lang/chapel/releases/download/2.8.0/chapel-2.8.0.tar.gz
-  sha256: 80e8c3018e33e49674c7a2542e062547ea41d64d6595edb3b799e90c88f963f8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cmake
-  - gmp
-  - hwloc
-  - jemalloc
-  - llvm@21
-  - pkgconf
-  - python@3.14
+    - cmake
+    - gmp
+    - hwloc
+    - jemalloc
+    - llvm@21
+    - pkgconf
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:8cdec547c132c71423804efa6c22c49dd802351b5e4984b8caa21ff09130e785
+        sha256: 8cdec547c132c71423804efa6c22c49dd802351b5e4984b8caa21ff09130e785
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:a73efe05b4551688355d1ddc3707424ae86573fc91352aec8c0eae6e0c4f6ce4
+        sha256: a73efe05b4551688355d1ddc3707424ae86573fc91352aec8c0eae6e0c4f6ce4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:69749327935b602942509d11a242e12641fb5d5c3692592cf7794d18519802ac
+        sha256: 69749327935b602942509d11a242e12641fb5d5c3692592cf7794d18519802ac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:2a8974a412dad807f368dc6ec6d0e81be099202c12536a741cd414752b864efb
+        sha256: 2a8974a412dad807f368dc6ec6d0e81be099202c12536a741cd414752b864efb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/chapel-lang/chapel/releases/download/2.8.0/chapel-2.8.0.tar.gz
+    sha256: 80e8c3018e33e49674c7a2542e062547ea41d64d6595edb3b799e90c88f963f8
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

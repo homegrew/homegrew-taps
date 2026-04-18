@@ -3,29 +3,54 @@ version: 0.13.0
 description: CLI for operating AI coding agents from mobile devices
 homepage: https://happy.engineering
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/happy-coder/blobs/sha256:03313b663fe8310e65192bf523cec55c71aac6c6921a19812e713789647cc11c
-    sha256: 03313b663fe8310e65192bf523cec55c71aac6c6921a19812e713789647cc11c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/happy-coder/blobs/sha256:7e961c5aaee5f1b54553a239ec2dee90a4b16942217ce6027d3ee442a904a9f2
-    sha256: 7e961c5aaee5f1b54553a239ec2dee90a4b16942217ce6027d3ee442a904a9f2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/happy-coder/blobs/sha256:bb9de9d2959ccac07a1d8ec38ea92c54cb850cb98b5da6e038ebaf077a475d17
-    sha256: bb9de9d2959ccac07a1d8ec38ea92c54cb850cb98b5da6e038ebaf077a475d17
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/happy-coder/blobs/sha256:bb9de9d2959ccac07a1d8ec38ea92c54cb850cb98b5da6e038ebaf077a475d17
-    sha256: bb9de9d2959ccac07a1d8ec38ea92c54cb850cb98b5da6e038ebaf077a475d17
-source:
-  url: https://github.com/slopus/happy-cli/archive/refs/tags/v0.13.0.tar.gz
-  sha256: 42e1281f806aa2e604d684853213e4936f2424ea220e90f2cd6c06f4f37f297d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - difftastic
-  - node
-  - ripgrep
+    - difftastic
+    - node
+    - ripgrep
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/happy-coder/blobs/sha256:7e961c5aaee5f1b54553a239ec2dee90a4b16942217ce6027d3ee442a904a9f2
+        sha256: 7e961c5aaee5f1b54553a239ec2dee90a4b16942217ce6027d3ee442a904a9f2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/happy-coder/blobs/sha256:03313b663fe8310e65192bf523cec55c71aac6c6921a19812e713789647cc11c
+        sha256: 03313b663fe8310e65192bf523cec55c71aac6c6921a19812e713789647cc11c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/happy-coder/blobs/sha256:bb9de9d2959ccac07a1d8ec38ea92c54cb850cb98b5da6e038ebaf077a475d17
+        sha256: bb9de9d2959ccac07a1d8ec38ea92c54cb850cb98b5da6e038ebaf077a475d17
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/happy-coder/blobs/sha256:bb9de9d2959ccac07a1d8ec38ea92c54cb850cb98b5da6e038ebaf077a475d17
+        sha256: bb9de9d2959ccac07a1d8ec38ea92c54cb850cb98b5da6e038ebaf077a475d17
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/slopus/happy-cli/archive/refs/tags/v0.13.0.tar.gz
+    sha256: 42e1281f806aa2e604d684853213e4936f2424ea220e90f2cd6c06f4f37f297d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - yarn
+    - yarn
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

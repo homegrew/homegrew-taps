@@ -3,29 +3,54 @@ version: 0.4.6
 description: Library for building interactive full-screen terminal programs
 homepage: https://www.leonerd.org.uk/code/libtickit/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libtickit/blobs/sha256:f22fdb55d11dfa484d90767cf3f07c18f5ccdcff5daa6fab016f057954b6d2d5
-    sha256: f22fdb55d11dfa484d90767cf3f07c18f5ccdcff5daa6fab016f057954b6d2d5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libtickit/blobs/sha256:eb3af7695420dac55df6c001b7ad33499becbb371a36771fd593bffb70142235
-    sha256: eb3af7695420dac55df6c001b7ad33499becbb371a36771fd593bffb70142235
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libtickit/blobs/sha256:827aef929dfb62b502d153fb1bc6b94459cecc4c760eb6607a244d46bed32d66
-    sha256: 827aef929dfb62b502d153fb1bc6b94459cecc4c760eb6607a244d46bed32d66
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libtickit/blobs/sha256:c22c2e1fd63e4adc972310f520678704db6518963f9b44dd36dcbbb3bf8351fb
-    sha256: c22c2e1fd63e4adc972310f520678704db6518963f9b44dd36dcbbb3bf8351fb
-source:
-  url: https://www.leonerd.org.uk/code/libtickit/libtickit-0.4.6.tar.gz
-  sha256: 4af827ba3aeaf591f4364c20d6e31c608e46fa6ada9ef7389ed5fba597f797b8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtermkey
-  - unibilium
+    - libtermkey
+    - unibilium
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libtickit/blobs/sha256:eb3af7695420dac55df6c001b7ad33499becbb371a36771fd593bffb70142235
+        sha256: eb3af7695420dac55df6c001b7ad33499becbb371a36771fd593bffb70142235
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libtickit/blobs/sha256:f22fdb55d11dfa484d90767cf3f07c18f5ccdcff5daa6fab016f057954b6d2d5
+        sha256: f22fdb55d11dfa484d90767cf3f07c18f5ccdcff5daa6fab016f057954b6d2d5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libtickit/blobs/sha256:827aef929dfb62b502d153fb1bc6b94459cecc4c760eb6607a244d46bed32d66
+        sha256: 827aef929dfb62b502d153fb1bc6b94459cecc4c760eb6607a244d46bed32d66
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libtickit/blobs/sha256:c22c2e1fd63e4adc972310f520678704db6518963f9b44dd36dcbbb3bf8351fb
+        sha256: c22c2e1fd63e4adc972310f520678704db6518963f9b44dd36dcbbb3bf8351fb
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.leonerd.org.uk/code/libtickit/libtickit-0.4.6.tar.gz
+    sha256: 4af827ba3aeaf591f4364c20d6e31c608e46fa6ada9ef7389ed5fba597f797b8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - libtool
-  - pkgconf
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,52 @@ version: 0.3.0
 description: Share one language instance between multiple LSP clients to save resources
 homepage: https://codeberg.org/p2502/lspmux
 license: EUPL-1.2
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lspmux/blobs/sha256:5d37f6ac1c9841457e8533f39ca4b7090d6f7a0851722a8ed777677798b875f9
-    sha256: 5d37f6ac1c9841457e8533f39ca4b7090d6f7a0851722a8ed777677798b875f9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lspmux/blobs/sha256:c3304e7b57e6455f4a8deed2fc292bac9400d5ff0bbc84bd4a96f177b161f506
-    sha256: c3304e7b57e6455f4a8deed2fc292bac9400d5ff0bbc84bd4a96f177b161f506
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lspmux/blobs/sha256:4c45d94f75046f86d12aa28761fd4d29735598fec4277662d2a1f8f3511319c1
-    sha256: 4c45d94f75046f86d12aa28761fd4d29735598fec4277662d2a1f8f3511319c1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lspmux/blobs/sha256:e90116b031291bf519f529efac2ab4995b32408f4466121c4c0a756edd43a87c
-    sha256: e90116b031291bf519f529efac2ab4995b32408f4466121c4c0a756edd43a87c
-source:
-  url: https://codeberg.org/p2502/lspmux/archive/v0.3.0.tar.gz
-  sha256: 92410dfcda4429e0463db91b67712da00fda5fa9fb5316174126e702eb988440
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - rust-analyzer
+    - rust-analyzer
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lspmux/blobs/sha256:c3304e7b57e6455f4a8deed2fc292bac9400d5ff0bbc84bd4a96f177b161f506
+        sha256: c3304e7b57e6455f4a8deed2fc292bac9400d5ff0bbc84bd4a96f177b161f506
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lspmux/blobs/sha256:5d37f6ac1c9841457e8533f39ca4b7090d6f7a0851722a8ed777677798b875f9
+        sha256: 5d37f6ac1c9841457e8533f39ca4b7090d6f7a0851722a8ed777677798b875f9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lspmux/blobs/sha256:4c45d94f75046f86d12aa28761fd4d29735598fec4277662d2a1f8f3511319c1
+        sha256: 4c45d94f75046f86d12aa28761fd4d29735598fec4277662d2a1f8f3511319c1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lspmux/blobs/sha256:e90116b031291bf519f529efac2ab4995b32408f4466121c4c0a756edd43a87c
+        sha256: e90116b031291bf519f529efac2ab4995b32408f4466121c4c0a756edd43a87c
+        sha512: ""
+        signature: ""
+source:
+    url: https://codeberg.org/p2502/lspmux/archive/v0.3.0.tar.gz
+    sha256: 92410dfcda4429e0463db91b67712da00fda5fa9fb5316174126e702eb988440
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,27 +1,53 @@
 name: epstool
-version: 3.09
+version: "3.09"
 description: Edit preview images and fix bounding boxes in EPS files
 homepage: http://www.ghostgum.com.au/software/epstool.htm
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/epstool/blobs/sha256:29ea3ebb0169c4f25d1fae90b5abacf77cda82f3da47c9052d02427521a98535
-    sha256: 29ea3ebb0169c4f25d1fae90b5abacf77cda82f3da47c9052d02427521a98535
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/epstool/blobs/sha256:bb7d8756339499ca2e88f0fd32b45712cbbab7041186eb9e9af9f6cad2dc5749
-    sha256: bb7d8756339499ca2e88f0fd32b45712cbbab7041186eb9e9af9f6cad2dc5749
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/epstool/blobs/sha256:7c42db9d44c6ab04a5a969520692384bfe13b3c7c8e93d0fd47fae36b8cb59eb
-    sha256: 7c42db9d44c6ab04a5a969520692384bfe13b3c7c8e93d0fd47fae36b8cb59eb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/epstool/blobs/sha256:7b2d8922bd4f7430e4b83f6fd98b4ce1555b30aa5a9db62606d9c0bf358a3e95
-    sha256: 7b2d8922bd4f7430e4b83f6fd98b4ce1555b30aa5a9db62606d9c0bf358a3e95
-source:
-  url: https://deb.debian.org/debian/pool/main/e/epstool/epstool_3.09.orig.tar.xz
-  sha256: 1e85249d1a44f9418b1f95a3aebd8b0784dab8e49deb6417ac9b996ca08f6011
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ghostscript
+    - ghostscript
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/epstool/blobs/sha256:bb7d8756339499ca2e88f0fd32b45712cbbab7041186eb9e9af9f6cad2dc5749
+        sha256: bb7d8756339499ca2e88f0fd32b45712cbbab7041186eb9e9af9f6cad2dc5749
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/epstool/blobs/sha256:29ea3ebb0169c4f25d1fae90b5abacf77cda82f3da47c9052d02427521a98535
+        sha256: 29ea3ebb0169c4f25d1fae90b5abacf77cda82f3da47c9052d02427521a98535
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/epstool/blobs/sha256:7c42db9d44c6ab04a5a969520692384bfe13b3c7c8e93d0fd47fae36b8cb59eb
+        sha256: 7c42db9d44c6ab04a5a969520692384bfe13b3c7c8e93d0fd47fae36b8cb59eb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/epstool/blobs/sha256:7b2d8922bd4f7430e4b83f6fd98b4ce1555b30aa5a9db62606d9c0bf358a3e95
+        sha256: 7b2d8922bd4f7430e4b83f6fd98b4ce1555b30aa5a9db62606d9c0bf358a3e95
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/e/epstool/epstool_3.09.orig.tar.xz
+    sha256: 1e85249d1a44f9418b1f95a3aebd8b0784dab8e49deb6417ac9b996ca08f6011
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

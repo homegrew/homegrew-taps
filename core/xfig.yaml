@@ -3,38 +3,63 @@ version: 3.2.9a
 description: Facility for interactive generation of figures
 homepage: https://mcj.sourceforge.net/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xfig/blobs/sha256:c847f3f5d301242e39854aaa5a240f927fe20f54ea5122933de39b7fc67ce5e0
-    sha256: c847f3f5d301242e39854aaa5a240f927fe20f54ea5122933de39b7fc67ce5e0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xfig/blobs/sha256:9ed33c2acaeb19e8826d4e82057ffccd949e7de53334d924b3005a02b50baf78
-    sha256: 9ed33c2acaeb19e8826d4e82057ffccd949e7de53334d924b3005a02b50baf78
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xfig/blobs/sha256:f4faa9ef548b215a82a5098c94bfcb09ad1acd51eebfa0539818f1a5fd20a112
-    sha256: f4faa9ef548b215a82a5098c94bfcb09ad1acd51eebfa0539818f1a5fd20a112
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xfig/blobs/sha256:ffa26e011fab5d5d529bab92892b47c4911b9126bf1a0d8f7f62de152e6d7c56
-    sha256: ffa26e011fab5d5d529bab92892b47c4911b9126bf1a0d8f7f62de152e6d7c56
-source:
-  url: https://downloads.sourceforge.net/mcj/xfig-3.2.9a.tar.xz
-  sha256: bc572a1881e5e20987ac590158b041ab7803845a9691036d3ba5e982f66d9ca3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fig2dev
-  - fontconfig
-  - freetype
-  - ghostscript
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - libx11
-  - libxaw3d
-  - libxft
-  - libxpm
-  - libxt
+    - fig2dev
+    - fontconfig
+    - freetype
+    - ghostscript
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - libx11
+    - libxaw3d
+    - libxft
+    - libxpm
+    - libxt
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xfig/blobs/sha256:9ed33c2acaeb19e8826d4e82057ffccd949e7de53334d924b3005a02b50baf78
+        sha256: 9ed33c2acaeb19e8826d4e82057ffccd949e7de53334d924b3005a02b50baf78
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xfig/blobs/sha256:c847f3f5d301242e39854aaa5a240f927fe20f54ea5122933de39b7fc67ce5e0
+        sha256: c847f3f5d301242e39854aaa5a240f927fe20f54ea5122933de39b7fc67ce5e0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xfig/blobs/sha256:f4faa9ef548b215a82a5098c94bfcb09ad1acd51eebfa0539818f1a5fd20a112
+        sha256: f4faa9ef548b215a82a5098c94bfcb09ad1acd51eebfa0539818f1a5fd20a112
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xfig/blobs/sha256:ffa26e011fab5d5d529bab92892b47c4911b9126bf1a0d8f7f62de152e6d7c56
+        sha256: ffa26e011fab5d5d529bab92892b47c4911b9126bf1a0d8f7f62de152e6d7c56
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/mcj/xfig-3.2.9a.tar.xz
+    sha256: bc572a1881e5e20987ac590158b041ab7803845a9691036d3ba5e982f66d9ca3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gnu-sed
+    - gnu-sed
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

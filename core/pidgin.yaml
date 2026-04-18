@@ -3,62 +3,86 @@ version: 2.14.14
 description: Multi-protocol chat client
 homepage: https://pidgin.im/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pidgin/blobs/sha256:ae1289bca94151de51149aab865e414377fcd3ce385b1b771c7aec98b87c0387
-    sha256: ae1289bca94151de51149aab865e414377fcd3ce385b1b771c7aec98b87c0387
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pidgin/blobs/sha256:72919ceb55d3dbaa92f938e4a2850681a5265933fe27a306859d7f05eecee374
-    sha256: 72919ceb55d3dbaa92f938e4a2850681a5265933fe27a306859d7f05eecee374
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pidgin/blobs/sha256:fc8acd8bda4c38df7f4bc5b55e15087196689cb5c40ef000bbbd1eb105bfbe69
-    sha256: fc8acd8bda4c38df7f4bc5b55e15087196689cb5c40ef000bbbd1eb105bfbe69
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pidgin/blobs/sha256:90da19fee3264f2d6a568d87449405fa785219fa39085be9b0e1189d803bf5a0
-    sha256: 90da19fee3264f2d6a568d87449405fa785219fa39085be9b0e1189d803bf5a0
-source:
-  url: https://downloads.sourceforge.net/project/pidgin/Pidgin/2.14.14/pidgin-2.14.14.tar.bz2
-  sha256: 0ffc9994def10260f98a55cd132deefa8dc4a9835451cc0e982747bd458e2356
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - at-spi2-core
-  - gnutls
-  - gtk+
-  - libgcrypt
-  - libgnt
-  - libotr
-  - ncurses
-  - tcl-tk@8
-  - harfbuzz
-  - libgpg-error
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - libidn
-  - pango
-  - gettext
+    - at-spi2-core
+    - gnutls
+    - gtk+
+    - libgcrypt
+    - libgnt
+    - libotr
+    - ncurses
+    - tcl-tk@8
+    - harfbuzz
+    - libgpg-error
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - libidn
+    - pango
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pidgin/blobs/sha256:72919ceb55d3dbaa92f938e4a2850681a5265933fe27a306859d7f05eecee374
+        sha256: 72919ceb55d3dbaa92f938e4a2850681a5265933fe27a306859d7f05eecee374
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pidgin/blobs/sha256:ae1289bca94151de51149aab865e414377fcd3ce385b1b771c7aec98b87c0387
+        sha256: ae1289bca94151de51149aab865e414377fcd3ce385b1b771c7aec98b87c0387
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pidgin/blobs/sha256:fc8acd8bda4c38df7f4bc5b55e15087196689cb5c40ef000bbbd1eb105bfbe69
+        sha256: fc8acd8bda4c38df7f4bc5b55e15087196689cb5c40ef000bbbd1eb105bfbe69
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pidgin/blobs/sha256:90da19fee3264f2d6a568d87449405fa785219fa39085be9b0e1189d803bf5a0
+        sha256: 90da19fee3264f2d6a568d87449405fa785219fa39085be9b0e1189d803bf5a0
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/pidgin/Pidgin/2.14.14/pidgin-2.14.14.tar.bz2
+    sha256: 0ffc9994def10260f98a55cd132deefa8dc4a9835451cc0e982747bd458e2356
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - intltool
-  - gettext
-  - pkgconf
+    - intltool
+    - gettext
+    - pkgconf
 linux_dependencies:
-  - at-spi2-core
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gnutls
-  - gtk+
-  - libgcrypt
-  - libgnt
-  - libice
-  - libidn
-  - libotr
-  - libsm
-  - libx11
-  - libxscrnsaver
-  - ncurses
-  - pango
-  - tcl-tk@8
+    - at-spi2-core
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gnutls
+    - gtk+
+    - libgcrypt
+    - libgnt
+    - libice
+    - libidn
+    - libotr
+    - libsm
+    - libx11
+    - libxscrnsaver
+    - ncurses
+    - pango
+    - tcl-tk@8
+build:
+    configure: []
+    install: []
+service: null

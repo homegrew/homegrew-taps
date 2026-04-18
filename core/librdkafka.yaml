@@ -3,36 +3,60 @@ version: 2.14.1
 description: Apache Kafka C/C++ library
 homepage: https://github.com/confluentinc/librdkafka
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librdkafka/blobs/sha256:95f35b537ea0904ee9f33b63e46efa8616bec1bba9b9d0776268b1ab916c5a3d
-    sha256: 95f35b537ea0904ee9f33b63e46efa8616bec1bba9b9d0776268b1ab916c5a3d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librdkafka/blobs/sha256:77bf2f6cbb2405861cf092b4ffb466048e28fd7378b4bee3096d567fb95fcd4a
-    sha256: 77bf2f6cbb2405861cf092b4ffb466048e28fd7378b4bee3096d567fb95fcd4a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librdkafka/blobs/sha256:91552f82b23b14ff2ebb95e1e8bb1fa918ad86061cb34cb6ac1a72f372c8a277
-    sha256: 91552f82b23b14ff2ebb95e1e8bb1fa918ad86061cb34cb6ac1a72f372c8a277
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librdkafka/blobs/sha256:61d011bb5eed6e322df92835323c36faf71e955d3db21e05ea8558b467dffc86
-    sha256: 61d011bb5eed6e322df92835323c36faf71e955d3db21e05ea8558b467dffc86
-source:
-  url: https://github.com/confluentinc/librdkafka/archive/refs/tags/v2.14.1.tar.gz
-  sha256: bb246e754dee3560e9b42bf4e844dc05de4b146a3cae937e36301ffacdc456e7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lz4
-  - lzlib
-  - openssl@3
-  - zstd
+    - lz4
+    - lzlib
+    - openssl@3
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librdkafka/blobs/sha256:77bf2f6cbb2405861cf092b4ffb466048e28fd7378b4bee3096d567fb95fcd4a
+        sha256: 77bf2f6cbb2405861cf092b4ffb466048e28fd7378b4bee3096d567fb95fcd4a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librdkafka/blobs/sha256:95f35b537ea0904ee9f33b63e46efa8616bec1bba9b9d0776268b1ab916c5a3d
+        sha256: 95f35b537ea0904ee9f33b63e46efa8616bec1bba9b9d0776268b1ab916c5a3d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librdkafka/blobs/sha256:91552f82b23b14ff2ebb95e1e8bb1fa918ad86061cb34cb6ac1a72f372c8a277
+        sha256: 91552f82b23b14ff2ebb95e1e8bb1fa918ad86061cb34cb6ac1a72f372c8a277
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librdkafka/blobs/sha256:61d011bb5eed6e322df92835323c36faf71e955d3db21e05ea8558b467dffc86
+        sha256: 61d011bb5eed6e322df92835323c36faf71e955d3db21e05ea8558b467dffc86
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/confluentinc/librdkafka/archive/refs/tags/v2.14.1.tar.gz
+    sha256: bb246e754dee3560e9b42bf4e844dc05de4b146a3cae937e36301ffacdc456e7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - lz4
-  - lzlib
-  - openssl@3
-  - zlib-ng-compat
-  - zstd
+    - lz4
+    - lzlib
+    - openssl@3
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

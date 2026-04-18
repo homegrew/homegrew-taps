@@ -3,26 +3,52 @@ version: 0.68.1
 description: Server app of fast reverse proxy to expose a local server to the internet
 homepage: https://github.com/fatedier/frp
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
-    sha256: 095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:deca4a8220ca79c3ee7d334251b37cf15dc930eec83573961ed7f9cf18c55acf
-    sha256: deca4a8220ca79c3ee7d334251b37cf15dc930eec83573961ed7f9cf18c55acf
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:3a33e85ab66e44906447c4b5a8a25b1a6c71572e837b3b8ac162151770fdb114
-    sha256: 3a33e85ab66e44906447c4b5a8a25b1a6c71572e837b3b8ac162151770fdb114
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:8811946cbd29c9ed352fa5de21fbd72887bd1a0c6ebe5017bd4a006c267fdef0
-    sha256: 8811946cbd29c9ed352fa5de21fbd72887bd1a0c6ebe5017bd4a006c267fdef0
-source:
-  url: https://github.com/fatedier/frp/archive/refs/tags/v0.68.1.tar.gz
-  sha256: 44ed7107bf35e4f68dc0e77cd5805102effa5301528b89ee5ab0ab379088edc6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:deca4a8220ca79c3ee7d334251b37cf15dc930eec83573961ed7f9cf18c55acf
+        sha256: deca4a8220ca79c3ee7d334251b37cf15dc930eec83573961ed7f9cf18c55acf
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
+        sha256: 095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:3a33e85ab66e44906447c4b5a8a25b1a6c71572e837b3b8ac162151770fdb114
+        sha256: 3a33e85ab66e44906447c4b5a8a25b1a6c71572e837b3b8ac162151770fdb114
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:8811946cbd29c9ed352fa5de21fbd72887bd1a0c6ebe5017bd4a006c267fdef0
+        sha256: 8811946cbd29c9ed352fa5de21fbd72887bd1a0c6ebe5017bd4a006c267fdef0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fatedier/frp/archive/refs/tags/v0.68.1.tar.gz
+    sha256: 44ed7107bf35e4f68dc0e77cd5805102effa5301528b89ee5ab0ab379088edc6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - node
+    - go
+    - node
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

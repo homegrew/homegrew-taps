@@ -3,34 +3,59 @@ version: 3.3.0
 description: File management automation tool
 homepage: https://github.com/tfeldmann/organize
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/organize-tool/blobs/sha256:f4fc6f95460633e52c4e265f854ce333aaf65e74d5c4a98f0fd78eb8db8a31e3
-    sha256: f4fc6f95460633e52c4e265f854ce333aaf65e74d5c4a98f0fd78eb8db8a31e3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/organize-tool/blobs/sha256:7e0245cc071bf7a39149d8186d0394abfdbc63b356d6f570f9057d6397cbf0f1
-    sha256: 7e0245cc071bf7a39149d8186d0394abfdbc63b356d6f570f9057d6397cbf0f1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/organize-tool/blobs/sha256:f0956d76e28b12b6a1cebcacc74c6f0844baafdfdf8f769fabe4cdeedfd3012f
-    sha256: f0956d76e28b12b6a1cebcacc74c6f0844baafdfdf8f769fabe4cdeedfd3012f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/organize-tool/blobs/sha256:2ea5598318b04a6fee04bd6f92804393c55a69ef8f8f2754ad90aef39ae4152c
-    sha256: 2ea5598318b04a6fee04bd6f92804393c55a69ef8f8f2754ad90aef39ae4152c
-source:
-  url: https://files.pythonhosted.org/packages/3c/bd/1b4217217aadce0d46e28042c0e06bb28863bfdfb383ce7afb18f69a1553/organize_tool-3.3.0.tar.gz
-  sha256: 034fdcf9ffeb23d21b495e038665278e589fa04dc7c0c0a01a4a3b30a06c539f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cryptography
-  - freetype
-  - libyaml
-  - openjpeg
-  - pydantic
-  - python@3.14
+    - cryptography
+    - freetype
+    - libyaml
+    - openjpeg
+    - pydantic
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/organize-tool/blobs/sha256:7e0245cc071bf7a39149d8186d0394abfdbc63b356d6f570f9057d6397cbf0f1
+        sha256: 7e0245cc071bf7a39149d8186d0394abfdbc63b356d6f570f9057d6397cbf0f1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/organize-tool/blobs/sha256:f4fc6f95460633e52c4e265f854ce333aaf65e74d5c4a98f0fd78eb8db8a31e3
+        sha256: f4fc6f95460633e52c4e265f854ce333aaf65e74d5c4a98f0fd78eb8db8a31e3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/organize-tool/blobs/sha256:f0956d76e28b12b6a1cebcacc74c6f0844baafdfdf8f769fabe4cdeedfd3012f
+        sha256: f0956d76e28b12b6a1cebcacc74c6f0844baafdfdf8f769fabe4cdeedfd3012f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/organize-tool/blobs/sha256:2ea5598318b04a6fee04bd6f92804393c55a69ef8f8f2754ad90aef39ae4152c
+        sha256: 2ea5598318b04a6fee04bd6f92804393c55a69ef8f8f2754ad90aef39ae4152c
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/3c/bd/1b4217217aadce0d46e28042c0e06bb28863bfdfb383ce7afb18f69a1553/organize_tool-3.3.0.tar.gz
+    sha256: 034fdcf9ffeb23d21b495e038665278e589fa04dc7c0c0a01a4a3b30a06c539f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - rust
+    - cmake
+    - ninja
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

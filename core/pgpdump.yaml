@@ -1,30 +1,55 @@
 name: pgpdump
-version: 0.37
+version: "0.37"
 description: PGP packet visualizer
 homepage: https://www.mew.org/~kazu/proj/pgpdump/en/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgpdump/blobs/sha256:7271c0c87d0ab2641ee5ba2b4a56087dc676c94c74114f35864c2b05bfd5d740
-    sha256: 7271c0c87d0ab2641ee5ba2b4a56087dc676c94c74114f35864c2b05bfd5d740
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgpdump/blobs/sha256:5bd623ea842793c2e06a30ec74e377ba98b6cc671c1bd3437f124af2a1b5028c
-    sha256: 5bd623ea842793c2e06a30ec74e377ba98b6cc671c1bd3437f124af2a1b5028c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgpdump/blobs/sha256:cc370e7ed6cd6bf5ea931c21086f4c2c1e493f166f663212682b4d4427d50cb0
-    sha256: cc370e7ed6cd6bf5ea931c21086f4c2c1e493f166f663212682b4d4427d50cb0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgpdump/blobs/sha256:37130fe3de7e8189c3ebdc12b5d8f83a7d91aeb6932183266b7c48ea93244b82
-    sha256: 37130fe3de7e8189c3ebdc12b5d8f83a7d91aeb6932183266b7c48ea93244b82
-source:
-  url: https://github.com/kazu-yamamoto/pgpdump/archive/refs/tags/v0.37.tar.gz
-  sha256: bc3b6b85f3c95c68010883675283c1c905e6c4070ac5609ced1a87c53b3ee814
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgpdump/blobs/sha256:5bd623ea842793c2e06a30ec74e377ba98b6cc671c1bd3437f124af2a1b5028c
+        sha256: 5bd623ea842793c2e06a30ec74e377ba98b6cc671c1bd3437f124af2a1b5028c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgpdump/blobs/sha256:7271c0c87d0ab2641ee5ba2b4a56087dc676c94c74114f35864c2b05bfd5d740
+        sha256: 7271c0c87d0ab2641ee5ba2b4a56087dc676c94c74114f35864c2b05bfd5d740
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgpdump/blobs/sha256:cc370e7ed6cd6bf5ea931c21086f4c2c1e493f166f663212682b4d4427d50cb0
+        sha256: cc370e7ed6cd6bf5ea931c21086f4c2c1e493f166f663212682b4d4427d50cb0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgpdump/blobs/sha256:37130fe3de7e8189c3ebdc12b5d8f83a7d91aeb6932183266b7c48ea93244b82
+        sha256: 37130fe3de7e8189c3ebdc12b5d8f83a7d91aeb6932183266b7c48ea93244b82
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/kazu-yamamoto/pgpdump/archive/refs/tags/v0.37.tar.gz
+    sha256: bc3b6b85f3c95c68010883675283c1c905e6c4070ac5609ced1a87c53b3ee814
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -1,27 +1,48 @@
 name: elfutils
-version: 0.195
+version: "0.195"
 description: Libraries and utilities for handling ELF objects
 homepage: https://fedorahosted.org/elfutils/
 license: GPL-2.0-or-later AND GPL-3.0-or-later AND LGPL-2.0-only
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/elfutils/blobs/sha256:c465671b13a19bdf9eb686ed3f6a42fe4c404a05ae46b1be58db8da25166a5a8
-    sha256: c465671b13a19bdf9eb686ed3f6a42fe4c404a05ae46b1be58db8da25166a5a8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/elfutils/blobs/sha256:463f09ff4d31b7cd73e99b42437071126849962fde8ab8b0c96a64105f7afa06
-    sha256: 463f09ff4d31b7cd73e99b42437071126849962fde8ab8b0c96a64105f7afa06
-source:
-  url: https://sourceware.org/elfutils/ftp/0.195/elfutils-0.195.tar.bz2
-  sha256: 37629fdf7f1f3dc2818e138fca2b8094177d6c2d0f701d3bb650a561218dc026
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - bzip2
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - bzip2
+    - xz
+    - zlib-ng-compat
+    - zstd
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/elfutils/blobs/sha256:c465671b13a19bdf9eb686ed3f6a42fe4c404a05ae46b1be58db8da25166a5a8
+        sha256: c465671b13a19bdf9eb686ed3f6a42fe4c404a05ae46b1be58db8da25166a5a8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/elfutils/blobs/sha256:463f09ff4d31b7cd73e99b42437071126849962fde8ab8b0c96a64105f7afa06
+        sha256: 463f09ff4d31b7cd73e99b42437071126849962fde8ab8b0c96a64105f7afa06
+        sha512: ""
+        signature: ""
+source:
+    url: https://sourceware.org/elfutils/ftp/0.195/elfutils-0.195.tar.bz2
+    sha256: 37629fdf7f1f3dc2818e138fca2b8094177d6c2d0f701d3bb650a561218dc026
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - m4
-  - pkgconf
+    - m4
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

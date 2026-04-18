@@ -3,28 +3,53 @@ version: 1.2.0
 description: Shell wrapper for Taskwarrior commands
 homepage: https://github.com/GothenburgBitFactory/taskshell
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tasksh/blobs/sha256:0b87af510cb7ba2daf5c1bc8b21d17c30a9ba43512dcc180beed93d9a8cda5bd
-    sha256: 0b87af510cb7ba2daf5c1bc8b21d17c30a9ba43512dcc180beed93d9a8cda5bd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tasksh/blobs/sha256:fc26e6d677232268991d4926c4c2e5f13f839918be416b4675326d227f4fc1ac
-    sha256: fc26e6d677232268991d4926c4c2e5f13f839918be416b4675326d227f4fc1ac
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tasksh/blobs/sha256:e8a89402e614a9f93aa6716e6b4c442b44f2f0471c0d8534096ee8428565a149
-    sha256: e8a89402e614a9f93aa6716e6b4c442b44f2f0471c0d8534096ee8428565a149
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tasksh/blobs/sha256:c18914e24a50c9ea3489db09b04c7d702555bc703bb799ff51244419135f5bca
-    sha256: c18914e24a50c9ea3489db09b04c7d702555bc703bb799ff51244419135f5bca
-source:
-  url: https://github.com/GothenburgBitFactory/taskshell/releases/download/v1.2.0/tasksh-1.2.0.tar.gz
-  sha256: 6e42f949bfd7fbdde4870af0e7b923114cc96c4344f82d9d924e984629e21ffd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - readline
-  - task
+    - readline
+    - task
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tasksh/blobs/sha256:fc26e6d677232268991d4926c4c2e5f13f839918be416b4675326d227f4fc1ac
+        sha256: fc26e6d677232268991d4926c4c2e5f13f839918be416b4675326d227f4fc1ac
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tasksh/blobs/sha256:0b87af510cb7ba2daf5c1bc8b21d17c30a9ba43512dcc180beed93d9a8cda5bd
+        sha256: 0b87af510cb7ba2daf5c1bc8b21d17c30a9ba43512dcc180beed93d9a8cda5bd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tasksh/blobs/sha256:e8a89402e614a9f93aa6716e6b4c442b44f2f0471c0d8534096ee8428565a149
+        sha256: e8a89402e614a9f93aa6716e6b4c442b44f2f0471c0d8534096ee8428565a149
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tasksh/blobs/sha256:c18914e24a50c9ea3489db09b04c7d702555bc703bb799ff51244419135f5bca
+        sha256: c18914e24a50c9ea3489db09b04c7d702555bc703bb799ff51244419135f5bca
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/GothenburgBitFactory/taskshell/releases/download/v1.2.0/tasksh-1.2.0.tar.gz
+    sha256: 6e42f949bfd7fbdde4870af0e7b923114cc96c4344f82d9d924e984629e21ffd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

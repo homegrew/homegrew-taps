@@ -3,70 +3,94 @@ version: 26.0.5
 description: Graphics Library
 homepage: https://www.mesa3d.org/
 license: MIT AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND HPND AND HPND-sell-variant AND ICU AND MIT-Khronos-old AND SGI-B-2.0 AND LicenseRef-Homebrew-public-domain AND (GPL-1.0-or-later WITH Linux-syscall-note) AND (GPL-2.0-only WITH Linux-syscall-note)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:d509bbd7fe114da6795f6e3ab2fb227edd880dfdeb5bc74247531c7d499f8d95
-    sha256: d509bbd7fe114da6795f6e3ab2fb227edd880dfdeb5bc74247531c7d499f8d95
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:a27d769f6c27f5dc4e05260e14c2b93802fe281df3c8228e775f2152dad21fa1
-    sha256: a27d769f6c27f5dc4e05260e14c2b93802fe281df3c8228e775f2152dad21fa1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:992d9a58e36a46f1334cea37c739224b451f8142d96b30f08099c778183a211f
-    sha256: 992d9a58e36a46f1334cea37c739224b451f8142d96b30f08099c778183a211f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:d94fd79823ed016ae241d595d0de70d9a0b622fd4f70ce8ed2235cc399fa1119
-    sha256: d94fd79823ed016ae241d595d0de70d9a0b622fd4f70ce8ed2235cc399fa1119
-source:
-  url: https://archive.mesa3d.org/mesa-26.0.5.tar.xz
-  sha256: d229c9937d9a25ca0a8958c59f425174563d300ec42acbea2dbe84a055023368
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libclc
-  - libpng
-  - libx11
-  - libxcb
-  - libxext
-  - libxfixes
-  - llvm
-  - spirv-llvm-translator
-  - spirv-tools
-  - xcb-util-keysyms
-  - zstd
-  - molten-vk
+    - libclc
+    - libpng
+    - libx11
+    - libxcb
+    - libxext
+    - libxfixes
+    - llvm
+    - spirv-llvm-translator
+    - spirv-tools
+    - xcb-util-keysyms
+    - zstd
+    - molten-vk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:a27d769f6c27f5dc4e05260e14c2b93802fe281df3c8228e775f2152dad21fa1
+        sha256: a27d769f6c27f5dc4e05260e14c2b93802fe281df3c8228e775f2152dad21fa1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:d509bbd7fe114da6795f6e3ab2fb227edd880dfdeb5bc74247531c7d499f8d95
+        sha256: d509bbd7fe114da6795f6e3ab2fb227edd880dfdeb5bc74247531c7d499f8d95
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:992d9a58e36a46f1334cea37c739224b451f8142d96b30f08099c778183a211f
+        sha256: 992d9a58e36a46f1334cea37c739224b451f8142d96b30f08099c778183a211f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:d94fd79823ed016ae241d595d0de70d9a0b622fd4f70ce8ed2235cc399fa1119
+        sha256: d94fd79823ed016ae241d595d0de70d9a0b622fd4f70ce8ed2235cc399fa1119
+        sha512: ""
+        signature: ""
+source:
+    url: https://archive.mesa3d.org/mesa-26.0.5.tar.xz
+    sha256: d229c9937d9a25ca0a8958c59f425174563d300ec42acbea2dbe84a055023368
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bindgen
-  - bison
-  - glslang
-  - libxrandr
-  - libxrender
-  - libxshmfence
-  - libyaml
-  - meson
-  - ninja
-  - pkgconf
-  - python@3.14
-  - rust
-  - xorgproto
+    - bindgen
+    - bison
+    - glslang
+    - libxrandr
+    - libxrender
+    - libxshmfence
+    - libyaml
+    - meson
+    - ninja
+    - pkgconf
+    - python@3.14
+    - rust
+    - xorgproto
 linux_dependencies:
-  - elfutils
-  - libclc
-  - libdrm
-  - libpng
-  - libx11
-  - libxcb
-  - libxext
-  - libxfixes
-  - libxml2
-  - libxshmfence
-  - libxxf86vm
-  - llvm
-  - lm-sensors
-  - spirv-llvm-translator
-  - spirv-tools
-  - wayland
-  - xcb-util-keysyms
-  - zlib-ng-compat
-  - zstd
+    - elfutils
+    - libclc
+    - libdrm
+    - libpng
+    - libx11
+    - libxcb
+    - libxext
+    - libxfixes
+    - libxml2
+    - libxshmfence
+    - libxxf86vm
+    - llvm
+    - lm-sensors
+    - spirv-llvm-translator
+    - spirv-tools
+    - wayland
+    - xcb-util-keysyms
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

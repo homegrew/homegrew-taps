@@ -3,28 +3,49 @@ version: 6.11.0
 description: Wayland platform plugin and QtWaylandCompositor API
 homepage: https://www.qt.io/
 license: GPL-3.0-only AND (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND BSD-3-Clause AND HPND AND LGPL-2.1-or-later AND MIT
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtwayland/blobs/sha256:b204aede43af23e5e7724c54894ea0d94f1c7182ba281f959a3679c8fa995159
-    sha256: b204aede43af23e5e7724c54894ea0d94f1c7182ba281f959a3679c8fa995159
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtwayland/blobs/sha256:f8fb0f841454cd060f8fb449b38fc88e2911de6c7c444dff7cbfafca0b6e2d6f
-    sha256: f8fb0f841454cd060f8fb449b38fc88e2911de6c7c444dff7cbfafca0b6e2d6f
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtwayland-everywhere-src-6.11.0.tar.xz
-  sha256: e710e6e760f92922b86e4dd68f6bbe94ef6510919519d1b0068e874b5ad84d37
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libxkbcommon
-  - mesa
-  - qtbase
-  - qtdeclarative
-  - qtsvg
-  - wayland
+    - libxkbcommon
+    - mesa
+    - qtbase
+    - qtdeclarative
+    - qtsvg
+    - wayland
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtwayland/blobs/sha256:b204aede43af23e5e7724c54894ea0d94f1c7182ba281f959a3679c8fa995159
+        sha256: b204aede43af23e5e7724c54894ea0d94f1c7182ba281f959a3679c8fa995159
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtwayland/blobs/sha256:f8fb0f841454cd060f8fb449b38fc88e2911de6c7c444dff7cbfafca0b6e2d6f
+        sha256: f8fb0f841454cd060f8fb449b38fc88e2911de6c7c444dff7cbfafca0b6e2d6f
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtwayland-everywhere-src-6.11.0.tar.xz
+    sha256: e710e6e760f92922b86e4dd68f6bbe94ef6510919519d1b0068e874b5ad84d37
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - vulkan-headers
+    - cmake
+    - ninja
+    - vulkan-headers
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

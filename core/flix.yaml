@@ -3,28 +3,53 @@ version: 0.71.0
 description: Statically typed functional, imperative, and logic programming language
 homepage: https://flix.dev/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:ac3971fd083afecc49000b03c737c6dbf2969d4dc6a15815626e1ca659a4391e
-    sha256: ac3971fd083afecc49000b03c737c6dbf2969d4dc6a15815626e1ca659a4391e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:2eec9cf5d8552773b791b77d0909f402e3375709b5351f1e184142b6cc224132
-    sha256: 2eec9cf5d8552773b791b77d0909f402e3375709b5351f1e184142b6cc224132
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:3df34e37e0475566e6ce1d82b73fe2a6eaf9ee8ce369aba677414d35c330fb42
-    sha256: 3df34e37e0475566e6ce1d82b73fe2a6eaf9ee8ce369aba677414d35c330fb42
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:4ea67e5290284f687355db81e407e56fc8c4051a7643474fe51f15fdf9ff5f70
-    sha256: 4ea67e5290284f687355db81e407e56fc8c4051a7643474fe51f15fdf9ff5f70
-source:
-  url: https://github.com/flix/flix/archive/refs/tags/v0.71.0.tar.gz
-  sha256: d7e90a19e6d9812c7eaf0a844f621ec1c1d3039c36556f192273898d4b177dc0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:2eec9cf5d8552773b791b77d0909f402e3375709b5351f1e184142b6cc224132
+        sha256: 2eec9cf5d8552773b791b77d0909f402e3375709b5351f1e184142b6cc224132
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:ac3971fd083afecc49000b03c737c6dbf2969d4dc6a15815626e1ca659a4391e
+        sha256: ac3971fd083afecc49000b03c737c6dbf2969d4dc6a15815626e1ca659a4391e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:3df34e37e0475566e6ce1d82b73fe2a6eaf9ee8ce369aba677414d35c330fb42
+        sha256: 3df34e37e0475566e6ce1d82b73fe2a6eaf9ee8ce369aba677414d35c330fb42
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flix/blobs/sha256:4ea67e5290284f687355db81e407e56fc8c4051a7643474fe51f15fdf9ff5f70
+        sha256: 4ea67e5290284f687355db81e407e56fc8c4051a7643474fe51f15fdf9ff5f70
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/flix/flix/archive/refs/tags/v0.71.0.tar.gz
+    sha256: d7e90a19e6d9812c7eaf0a844f621ec1c1d3039c36556f192273898d4b177dc0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - mill
-  - scala
+    - mill
+    - scala
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

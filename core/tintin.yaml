@@ -3,30 +3,55 @@ version: 2.02.61
 description: MUD client
 homepage: https://tintin.mudhalla.net/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tintin/blobs/sha256:1b32873045afd7f28de23d1f2e7bb8cf6d2443b5be875a075e9788f338f941b0
-    sha256: 1b32873045afd7f28de23d1f2e7bb8cf6d2443b5be875a075e9788f338f941b0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tintin/blobs/sha256:ed898b18d439132d6275d38e94a2f4dacc7d71de933bfe637562782e32e06def
-    sha256: ed898b18d439132d6275d38e94a2f4dacc7d71de933bfe637562782e32e06def
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tintin/blobs/sha256:09c43f08ffc98738dff09bbec41da931652f2ab68f932c6ac74f5271313bc170
-    sha256: 09c43f08ffc98738dff09bbec41da931652f2ab68f932c6ac74f5271313bc170
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tintin/blobs/sha256:f935a18a99c16d1f8f9544970620f0e06877c933f5ca081b7dd30d4eedf3de29
-    sha256: f935a18a99c16d1f8f9544970620f0e06877c933f5ca081b7dd30d4eedf3de29
-source:
-  url: https://github.com/scandum/tintin/releases/download/2.02.61/tintin-2.02.61.tar.gz
-  sha256: 640b4823b6f24ada6d417311bfd6263ab13be2422573c3b4ad4352223b535d88
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gnutls
-  - pcre2
+    - gnutls
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tintin/blobs/sha256:ed898b18d439132d6275d38e94a2f4dacc7d71de933bfe637562782e32e06def
+        sha256: ed898b18d439132d6275d38e94a2f4dacc7d71de933bfe637562782e32e06def
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tintin/blobs/sha256:1b32873045afd7f28de23d1f2e7bb8cf6d2443b5be875a075e9788f338f941b0
+        sha256: 1b32873045afd7f28de23d1f2e7bb8cf6d2443b5be875a075e9788f338f941b0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tintin/blobs/sha256:09c43f08ffc98738dff09bbec41da931652f2ab68f932c6ac74f5271313bc170
+        sha256: 09c43f08ffc98738dff09bbec41da931652f2ab68f932c6ac74f5271313bc170
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tintin/blobs/sha256:f935a18a99c16d1f8f9544970620f0e06877c933f5ca081b7dd30d4eedf3de29
+        sha256: f935a18a99c16d1f8f9544970620f0e06877c933f5ca081b7dd30d4eedf3de29
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/scandum/tintin/releases/download/2.02.61/tintin-2.02.61.tar.gz
+    sha256: 640b4823b6f24ada6d417311bfd6263ab13be2422573c3b4ad4352223b535d88
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - gnutls
-  - pcre2
-  - zlib-ng-compat
+    - gnutls
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

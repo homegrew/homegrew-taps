@@ -3,36 +3,60 @@ version: 4.3.7
 description: Multi-platform programming language
 homepage: https://haxe.org/
 license: GPL-2.0-or-later AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/haxe/blobs/sha256:780794ad8ebbd6e46a8b065fea1395f8e36e880abfdee6cbb9c1a75f80dbf69e
-    sha256: 780794ad8ebbd6e46a8b065fea1395f8e36e880abfdee6cbb9c1a75f80dbf69e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/haxe/blobs/sha256:236ee018bfc0f0628852bcb490ea2dab1c0acfa9f54537f4089245a4e39b5988
-    sha256: 236ee018bfc0f0628852bcb490ea2dab1c0acfa9f54537f4089245a4e39b5988
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/haxe/blobs/sha256:fd290d4961bf7e566b8d04881ccf8b8fdebab317f64bb1ecb6eafff60bdb9ce4
-    sha256: fd290d4961bf7e566b8d04881ccf8b8fdebab317f64bb1ecb6eafff60bdb9ce4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/haxe/blobs/sha256:fa61c88d7c07b125cb86d444e226ed74b827c4e3f0786043f73d48936e9a23cd
-    sha256: fa61c88d7c07b125cb86d444e226ed74b827c4e3f0786043f73d48936e9a23cd
-source:
-  url: https://github.com/HaxeFoundation/haxe.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - mbedtls@3
-  - neko
-  - pcre2
+    - mbedtls@3
+    - neko
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/haxe/blobs/sha256:236ee018bfc0f0628852bcb490ea2dab1c0acfa9f54537f4089245a4e39b5988
+        sha256: 236ee018bfc0f0628852bcb490ea2dab1c0acfa9f54537f4089245a4e39b5988
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/haxe/blobs/sha256:780794ad8ebbd6e46a8b065fea1395f8e36e880abfdee6cbb9c1a75f80dbf69e
+        sha256: 780794ad8ebbd6e46a8b065fea1395f8e36e880abfdee6cbb9c1a75f80dbf69e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/haxe/blobs/sha256:fd290d4961bf7e566b8d04881ccf8b8fdebab317f64bb1ecb6eafff60bdb9ce4
+        sha256: fd290d4961bf7e566b8d04881ccf8b8fdebab317f64bb1ecb6eafff60bdb9ce4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/haxe/blobs/sha256:fa61c88d7c07b125cb86d444e226ed74b827c4e3f0786043f73d48936e9a23cd
+        sha256: fa61c88d7c07b125cb86d444e226ed74b827c4e3f0786043f73d48936e9a23cd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/HaxeFoundation/haxe.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ocaml
-  - opam
-  - pkgconf
+    - ocaml
+    - opam
+    - pkgconf
 linux_dependencies:
-  - mbedtls@3
-  - neko
-  - pcre2
-  - zlib-ng-compat
+    - mbedtls@3
+    - neko
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

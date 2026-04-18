@@ -3,25 +3,51 @@ version: 3.0.6
 description: Container Signing
 homepage: https://github.com/sigstore/cosign
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cosign/blobs/sha256:7fdbfccfe2271c3d91123578d6ee759b4df5fc87b52206c6a6958c290bd04712
-    sha256: 7fdbfccfe2271c3d91123578d6ee759b4df5fc87b52206c6a6958c290bd04712
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cosign/blobs/sha256:22fb75e2328d601d0d68160d0c40cd75dd3b2d6f5c384b0b6b208c36f57af01c
-    sha256: 22fb75e2328d601d0d68160d0c40cd75dd3b2d6f5c384b0b6b208c36f57af01c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cosign/blobs/sha256:fb055876386a02c06c1e5ccaeb76a5f79d9ad8656b74ec1ac0be34d4ea875343
-    sha256: fb055876386a02c06c1e5ccaeb76a5f79d9ad8656b74ec1ac0be34d4ea875343
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cosign/blobs/sha256:6eb3878feba957a4b585c27c87108e37aa3e35fb04234941ebc86969781d30a4
-    sha256: 6eb3878feba957a4b585c27c87108e37aa3e35fb04234941ebc86969781d30a4
-source:
-  url: https://github.com/sigstore/cosign.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cosign/blobs/sha256:22fb75e2328d601d0d68160d0c40cd75dd3b2d6f5c384b0b6b208c36f57af01c
+        sha256: 22fb75e2328d601d0d68160d0c40cd75dd3b2d6f5c384b0b6b208c36f57af01c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cosign/blobs/sha256:7fdbfccfe2271c3d91123578d6ee759b4df5fc87b52206c6a6958c290bd04712
+        sha256: 7fdbfccfe2271c3d91123578d6ee759b4df5fc87b52206c6a6958c290bd04712
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cosign/blobs/sha256:fb055876386a02c06c1e5ccaeb76a5f79d9ad8656b74ec1ac0be34d4ea875343
+        sha256: fb055876386a02c06c1e5ccaeb76a5f79d9ad8656b74ec1ac0be34d4ea875343
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cosign/blobs/sha256:6eb3878feba957a4b585c27c87108e37aa3e35fb04234941ebc86969781d30a4
+        sha256: 6eb3878feba957a4b585c27c87108e37aa3e35fb04234941ebc86969781d30a4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sigstore/cosign.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

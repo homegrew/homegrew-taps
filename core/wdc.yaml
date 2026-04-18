@@ -3,29 +3,54 @@ version: 1.1.5
 description: WebDAV Client provides easy and convenient to work with WebDAV-servers
 homepage: https://cloudpolis.github.io/webdav-client-cpp
 license: curl
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wdc/blobs/sha256:6b30e7b5d8ab33c0831c6a217a4f1ec5b28745ba8f068a8fb81e714b6ca75287
-    sha256: 6b30e7b5d8ab33c0831c6a217a4f1ec5b28745ba8f068a8fb81e714b6ca75287
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wdc/blobs/sha256:a5a1823e37f7aced3a355008f7b85768d1c37600c2da80cf385d2efdf5c2543d
-    sha256: a5a1823e37f7aced3a355008f7b85768d1c37600c2da80cf385d2efdf5c2543d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wdc/blobs/sha256:68eb8337eee2c79f2892966a4311e56a5af9c24e32c07795f7dd8c5089474c8b
-    sha256: 68eb8337eee2c79f2892966a4311e56a5af9c24e32c07795f7dd8c5089474c8b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wdc/blobs/sha256:6027f317ac27ca1e4769b2c7337215d1e81354d627d55ade164b359b1092f524
-    sha256: 6027f317ac27ca1e4769b2c7337215d1e81354d627d55ade164b359b1092f524
-source:
-  url: https://github.com/CloudPolis/webdav-client-cpp/archive/refs/tags/v1.1.5.tar.gz
-  sha256: 3c45341521da9c68328c5fa8909d838915e8a768e7652ff1bcc2fbbd46ab9f64
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - pugixml
+    - openssl@3
+    - pugixml
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wdc/blobs/sha256:a5a1823e37f7aced3a355008f7b85768d1c37600c2da80cf385d2efdf5c2543d
+        sha256: a5a1823e37f7aced3a355008f7b85768d1c37600c2da80cf385d2efdf5c2543d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wdc/blobs/sha256:6b30e7b5d8ab33c0831c6a217a4f1ec5b28745ba8f068a8fb81e714b6ca75287
+        sha256: 6b30e7b5d8ab33c0831c6a217a4f1ec5b28745ba8f068a8fb81e714b6ca75287
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wdc/blobs/sha256:68eb8337eee2c79f2892966a4311e56a5af9c24e32c07795f7dd8c5089474c8b
+        sha256: 68eb8337eee2c79f2892966a4311e56a5af9c24e32c07795f7dd8c5089474c8b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wdc/blobs/sha256:6027f317ac27ca1e4769b2c7337215d1e81354d627d55ade164b359b1092f524
+        sha256: 6027f317ac27ca1e4769b2c7337215d1e81354d627d55ade164b359b1092f524
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/CloudPolis/webdav-client-cpp/archive/refs/tags/v1.1.5.tar.gz
+    sha256: 3c45341521da9c68328c5fa8909d838915e8a768e7652ff1bcc2fbbd46ab9f64
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - cmake
+    - boost
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

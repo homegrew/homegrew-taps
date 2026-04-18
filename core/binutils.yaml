@@ -3,31 +3,54 @@ version: 2.46.0
 description: GNU binary tools for native development
 homepage: https://www.gnu.org/software/binutils/binutils.html
 license: GPL-2.0-or-later AND GPL-3.0-or-later AND LGPL-2.0-or-later AND LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:274e1e41ddb008e2089fe5faaa832a0383abdda48acf26134ee59510cb8aac63
-    sha256: 274e1e41ddb008e2089fe5faaa832a0383abdda48acf26134ee59510cb8aac63
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:9f4c9c9923a27f2be826e8d20d16ff9c1de50cd87aab5b10a1bd0e2641028d5d
-    sha256: 9f4c9c9923a27f2be826e8d20d16ff9c1de50cd87aab5b10a1bd0e2641028d5d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:016d03201f1fa5f3c65a17a041f176f2e9037ae6a9c888dcad56b4710aa629c1
-    sha256: 016d03201f1fa5f3c65a17a041f176f2e9037ae6a9c888dcad56b4710aa629c1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:f8ffe8d70c5462a8cd0364aa70ceb484707683e1a87e2f56d8315820ddf5beb5
-    sha256: f8ffe8d70c5462a8cd0364aa70ceb484707683e1a87e2f56d8315820ddf5beb5
-source:
-  url: https://ftpmirror.gnu.org/gnu/binutils/binutils-2.46.0.tar.bz2
-  sha256: 0f3152632a2a9ce066f20963e9bb40af7cf85b9b6c409ed892fd0676e84ecd12
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - zstd
-build_dependencies:
-  - pkgconf
-linux_dependencies:
-  - zlib-ng-compat
-  - zstd
+    - zstd
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:9f4c9c9923a27f2be826e8d20d16ff9c1de50cd87aab5b10a1bd0e2641028d5d
+        sha256: 9f4c9c9923a27f2be826e8d20d16ff9c1de50cd87aab5b10a1bd0e2641028d5d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:274e1e41ddb008e2089fe5faaa832a0383abdda48acf26134ee59510cb8aac63
+        sha256: 274e1e41ddb008e2089fe5faaa832a0383abdda48acf26134ee59510cb8aac63
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:016d03201f1fa5f3c65a17a041f176f2e9037ae6a9c888dcad56b4710aa629c1
+        sha256: 016d03201f1fa5f3c65a17a041f176f2e9037ae6a9c888dcad56b4710aa629c1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:f8ffe8d70c5462a8cd0364aa70ceb484707683e1a87e2f56d8315820ddf5beb5
+        sha256: f8ffe8d70c5462a8cd0364aa70ceb484707683e1a87e2f56d8315820ddf5beb5
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/binutils/binutils-2.46.0.tar.bz2
+    sha256: 0f3152632a2a9ce066f20963e9bb40af7cf85b9b6c409ed892fd0676e84ecd12
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+linux_dependencies:
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

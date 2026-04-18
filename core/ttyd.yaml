@@ -3,38 +3,62 @@ version: 1.7.7
 description: Command-line tool for sharing terminal over the web
 homepage: https://tsl0922.github.io/ttyd/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ttyd/blobs/sha256:b0285d45774be9ad71801ef8f588bc9b8be96cc9da2be6d7cbba6c3701701913
-    sha256: b0285d45774be9ad71801ef8f588bc9b8be96cc9da2be6d7cbba6c3701701913
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ttyd/blobs/sha256:ca9817e17c911a710a9df297cb195b80f4af2a9098f460409bf9c7c0910de5d1
-    sha256: ca9817e17c911a710a9df297cb195b80f4af2a9098f460409bf9c7c0910de5d1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ttyd/blobs/sha256:921dbd457a02f4578317da406a081155dc5c88c9cbdf0c0926a2d10b747c2109
-    sha256: 921dbd457a02f4578317da406a081155dc5c88c9cbdf0c0926a2d10b747c2109
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ttyd/blobs/sha256:80a24784f939cef75c9af2d4ef862b3813365fd9cd11520be520c7aeda4dc5e2
-    sha256: 80a24784f939cef75c9af2d4ef862b3813365fd9cd11520be520c7aeda4dc5e2
-source:
-  url: https://github.com/tsl0922/ttyd/archive/refs/tags/1.7.7.tar.gz
-  sha256: 039dd995229377caee919898b7bd54484accec3bba49c118e2d5cd6ec51e3650
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - json-c
-  - libevent
-  - libuv
-  - libwebsockets
-  - openssl@3
+    - json-c
+    - libevent
+    - libuv
+    - libwebsockets
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ttyd/blobs/sha256:ca9817e17c911a710a9df297cb195b80f4af2a9098f460409bf9c7c0910de5d1
+        sha256: ca9817e17c911a710a9df297cb195b80f4af2a9098f460409bf9c7c0910de5d1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ttyd/blobs/sha256:b0285d45774be9ad71801ef8f588bc9b8be96cc9da2be6d7cbba6c3701701913
+        sha256: b0285d45774be9ad71801ef8f588bc9b8be96cc9da2be6d7cbba6c3701701913
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ttyd/blobs/sha256:921dbd457a02f4578317da406a081155dc5c88c9cbdf0c0926a2d10b747c2109
+        sha256: 921dbd457a02f4578317da406a081155dc5c88c9cbdf0c0926a2d10b747c2109
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ttyd/blobs/sha256:80a24784f939cef75c9af2d4ef862b3813365fd9cd11520be520c7aeda4dc5e2
+        sha256: 80a24784f939cef75c9af2d4ef862b3813365fd9cd11520be520c7aeda4dc5e2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tsl0922/ttyd/archive/refs/tags/1.7.7.tar.gz
+    sha256: 039dd995229377caee919898b7bd54484accec3bba49c118e2d5cd6ec51e3650
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - json-c
-  - libevent
-  - libuv
-  - libwebsockets
-  - openssl@3
-  - zlib-ng-compat
+    - json-c
+    - libevent
+    - libuv
+    - libwebsockets
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 0.3.8
 description: MiFare Classic Universal toolKit
 homepage: https://github.com/nfc-tools/mfcuk
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mfcuk/blobs/sha256:d64c65224a51793f1dd148741d3750dfed188a452c99793321837ee4e6ff98e0
-    sha256: d64c65224a51793f1dd148741d3750dfed188a452c99793321837ee4e6ff98e0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mfcuk/blobs/sha256:f9b5beef9f7da2eebc104e24cd3fa5021a0cd0b5a592931f7ca8e7e90ededffb
-    sha256: f9b5beef9f7da2eebc104e24cd3fa5021a0cd0b5a592931f7ca8e7e90ededffb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mfcuk/blobs/sha256:ce46cb3bb5f400139ff5e306dbdd76d4e1c0fe62acd3b9bc5711e3cc734ee835
-    sha256: ce46cb3bb5f400139ff5e306dbdd76d4e1c0fe62acd3b9bc5711e3cc734ee835
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mfcuk/blobs/sha256:360682a51ff5e48899affc75b1fa66db90faf99ebdde7059cc0dce49f319bf03
-    sha256: 360682a51ff5e48899affc75b1fa66db90faf99ebdde7059cc0dce49f319bf03
-source:
-  url: https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mfcuk/mfcuk-0.3.8.tar.gz
-  sha256: 977595765b4b46e4f47817e9500703aaf5c1bcad39cb02661f862f9d83f13a55
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libnfc
-  - libusb
+    - libnfc
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mfcuk/blobs/sha256:f9b5beef9f7da2eebc104e24cd3fa5021a0cd0b5a592931f7ca8e7e90ededffb
+        sha256: f9b5beef9f7da2eebc104e24cd3fa5021a0cd0b5a592931f7ca8e7e90ededffb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mfcuk/blobs/sha256:d64c65224a51793f1dd148741d3750dfed188a452c99793321837ee4e6ff98e0
+        sha256: d64c65224a51793f1dd148741d3750dfed188a452c99793321837ee4e6ff98e0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mfcuk/blobs/sha256:ce46cb3bb5f400139ff5e306dbdd76d4e1c0fe62acd3b9bc5711e3cc734ee835
+        sha256: ce46cb3bb5f400139ff5e306dbdd76d4e1c0fe62acd3b9bc5711e3cc734ee835
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mfcuk/blobs/sha256:360682a51ff5e48899affc75b1fa66db90faf99ebdde7059cc0dce49f319bf03
+        sha256: 360682a51ff5e48899affc75b1fa66db90faf99ebdde7059cc0dce49f319bf03
+        sha512: ""
+        signature: ""
+source:
+    url: https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mfcuk/mfcuk-0.3.8.tar.gz
+    sha256: 977595765b4b46e4f47817e9500703aaf5c1bcad39cb02661f862f9d83f13a55
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

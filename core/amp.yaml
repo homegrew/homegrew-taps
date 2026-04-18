@@ -3,29 +3,54 @@ version: 0.7.1
 description: Text editor for your terminal
 homepage: https://amp.rs
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/amp/blobs/sha256:e68d39d4763586359bea02f2ac21612dd8c0a0fb6030bd02981c5d5f57ce8a24
-    sha256: e68d39d4763586359bea02f2ac21612dd8c0a0fb6030bd02981c5d5f57ce8a24
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/amp/blobs/sha256:e80a76fa14710e2778d4ffade1dacaec64957c00196b41f578839ea570d1df75
-    sha256: e80a76fa14710e2778d4ffade1dacaec64957c00196b41f578839ea570d1df75
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/amp/blobs/sha256:12cefdab22a6ef3ada34249fcda4837d5fccfe7c20f2816945f2298b1e68c2e4
-    sha256: 12cefdab22a6ef3ada34249fcda4837d5fccfe7c20f2816945f2298b1e68c2e4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/amp/blobs/sha256:401144f0dfe99ea1f3e498417b000aedfcb165f5cd75346cee3e287263f0c709
-    sha256: 401144f0dfe99ea1f3e498417b000aedfcb165f5cd75346cee3e287263f0c709
-source:
-  url: https://github.com/jmacdonald/amp/archive/refs/tags/0.7.1.tar.gz
-  sha256: 59a65c2c4592eed188433fe7c4bf2ba84206f217bdafc5a2c7f97623f5607c12
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/amp/blobs/sha256:e80a76fa14710e2778d4ffade1dacaec64957c00196b41f578839ea570d1df75
+        sha256: e80a76fa14710e2778d4ffade1dacaec64957c00196b41f578839ea570d1df75
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/amp/blobs/sha256:e68d39d4763586359bea02f2ac21612dd8c0a0fb6030bd02981c5d5f57ce8a24
+        sha256: e68d39d4763586359bea02f2ac21612dd8c0a0fb6030bd02981c5d5f57ce8a24
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/amp/blobs/sha256:12cefdab22a6ef3ada34249fcda4837d5fccfe7c20f2816945f2298b1e68c2e4
+        sha256: 12cefdab22a6ef3ada34249fcda4837d5fccfe7c20f2816945f2298b1e68c2e4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/amp/blobs/sha256:401144f0dfe99ea1f3e498417b000aedfcb165f5cd75346cee3e287263f0c709
+        sha256: 401144f0dfe99ea1f3e498417b000aedfcb165f5cd75346cee3e287263f0c709
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jmacdonald/amp/archive/refs/tags/0.7.1.tar.gz
+    sha256: 59a65c2c4592eed188433fe7c4bf2ba84206f217bdafc5a2c7f97623f5607c12
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - rust
+    - cmake
+    - rust
 linux_dependencies:
-  - libxcb
-  - zlib-ng-compat
+    - libxcb
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,54 @@ version: 0.13.0
 description: Terminal IRC client
 homepage: https://github.com/osa1/tiny
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tiny/blobs/sha256:f39273bea2d44c1f991cb568d3bb3caeec238629895d7332f93cc3fd8cb8a8c2
-    sha256: f39273bea2d44c1f991cb568d3bb3caeec238629895d7332f93cc3fd8cb8a8c2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tiny/blobs/sha256:d9c036c42cf375368d2668c63e52da17ffd3432f96729c41b685bcc0cfaeee87
-    sha256: d9c036c42cf375368d2668c63e52da17ffd3432f96729c41b685bcc0cfaeee87
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tiny/blobs/sha256:82dba4c308ec8fd1b7185f7a92427f69dae4ca52a2c503088e8d284dd3746e1a
-    sha256: 82dba4c308ec8fd1b7185f7a92427f69dae4ca52a2c503088e8d284dd3746e1a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tiny/blobs/sha256:5d245db5944104a25d7623ca20f447ae4a0960ad0ad085351efadb8f7cc4a51a
-    sha256: 5d245db5944104a25d7623ca20f447ae4a0960ad0ad085351efadb8f7cc4a51a
-source:
-  url: https://github.com/osa1/tiny/archive/refs/tags/v0.13.0.tar.gz
-  sha256: 599697fa736d7500b093566a32204691093bd16abd76f43a76b761487a7c584c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tiny/blobs/sha256:d9c036c42cf375368d2668c63e52da17ffd3432f96729c41b685bcc0cfaeee87
+        sha256: d9c036c42cf375368d2668c63e52da17ffd3432f96729c41b685bcc0cfaeee87
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tiny/blobs/sha256:f39273bea2d44c1f991cb568d3bb3caeec238629895d7332f93cc3fd8cb8a8c2
+        sha256: f39273bea2d44c1f991cb568d3bb3caeec238629895d7332f93cc3fd8cb8a8c2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tiny/blobs/sha256:82dba4c308ec8fd1b7185f7a92427f69dae4ca52a2c503088e8d284dd3746e1a
+        sha256: 82dba4c308ec8fd1b7185f7a92427f69dae4ca52a2c503088e8d284dd3746e1a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tiny/blobs/sha256:5d245db5944104a25d7623ca20f447ae4a0960ad0ad085351efadb8f7cc4a51a
+        sha256: 5d245db5944104a25d7623ca20f447ae4a0960ad0ad085351efadb8f7cc4a51a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/osa1/tiny/archive/refs/tags/v0.13.0.tar.gz
+    sha256: 599697fa736d7500b093566a32204691093bd16abd76f43a76b761487a7c584c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - dbus
-  - openssl@3
+    - dbus
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

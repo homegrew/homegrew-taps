@@ -3,27 +3,52 @@ version: 0.7.5
 description: Drivers and libraries for the Xbox Kinect device
 homepage: https://openkinect.org/
 license: Apache-2.0 OR GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfreenect/blobs/sha256:7dbfb69f15f0be8a9f5c9fc6e39ebb8c5abe9d120071ab3eca3f6a1f1ca057d6
-    sha256: 7dbfb69f15f0be8a9f5c9fc6e39ebb8c5abe9d120071ab3eca3f6a1f1ca057d6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfreenect/blobs/sha256:b904426be3a9c6ed08769df3ff687a0864dcffb2175a508705783504fa62ee5c
-    sha256: b904426be3a9c6ed08769df3ff687a0864dcffb2175a508705783504fa62ee5c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfreenect/blobs/sha256:1719d3272072df8495b60651dbfa15b865d4db9e0e481a1a050ba04afca4fc13
-    sha256: 1719d3272072df8495b60651dbfa15b865d4db9e0e481a1a050ba04afca4fc13
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfreenect/blobs/sha256:5ae7b0d8bd7d70454f7179215f28270e75adb75b89fdd0c1ba54ee7f7ee0ac1a
-    sha256: 5ae7b0d8bd7d70454f7179215f28270e75adb75b89fdd0c1ba54ee7f7ee0ac1a
-source:
-  url: https://github.com/OpenKinect/libfreenect/archive/refs/tags/v0.7.5.tar.gz
-  sha256: 3c668053db726206a8c3a92e92e91ef7a64407968f422b9c4b828d0fd234c866
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libusb
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfreenect/blobs/sha256:b904426be3a9c6ed08769df3ff687a0864dcffb2175a508705783504fa62ee5c
+        sha256: b904426be3a9c6ed08769df3ff687a0864dcffb2175a508705783504fa62ee5c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfreenect/blobs/sha256:7dbfb69f15f0be8a9f5c9fc6e39ebb8c5abe9d120071ab3eca3f6a1f1ca057d6
+        sha256: 7dbfb69f15f0be8a9f5c9fc6e39ebb8c5abe9d120071ab3eca3f6a1f1ca057d6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfreenect/blobs/sha256:1719d3272072df8495b60651dbfa15b865d4db9e0e481a1a050ba04afca4fc13
+        sha256: 1719d3272072df8495b60651dbfa15b865d4db9e0e481a1a050ba04afca4fc13
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfreenect/blobs/sha256:5ae7b0d8bd7d70454f7179215f28270e75adb75b89fdd0c1ba54ee7f7ee0ac1a
+        sha256: 5ae7b0d8bd7d70454f7179215f28270e75adb75b89fdd0c1ba54ee7f7ee0ac1a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/OpenKinect/libfreenect/archive/refs/tags/v0.7.5.tar.gz
+    sha256: 3c668053db726206a8c3a92e92e91ef7a64407968f422b9c4b828d0fd234c866
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

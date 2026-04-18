@@ -3,27 +3,53 @@ version: 1.35.4
 description: Kubernetes command-line interface
 homepage: https://kubernetes.io/docs/reference/kubectl/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kubernetes-cli/blobs/sha256:2298163a4dd8c398c3a167bc3730e51255dcb1f593677dc966baf6f0e6c4937c
-    sha256: 2298163a4dd8c398c3a167bc3730e51255dcb1f593677dc966baf6f0e6c4937c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kubernetes-cli/blobs/sha256:ed7c5fd0c6ca2c0ed23ef0e1973af5fd54792501f98760c9a5b77a315b067d4a
-    sha256: ed7c5fd0c6ca2c0ed23ef0e1973af5fd54792501f98760c9a5b77a315b067d4a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kubernetes-cli/blobs/sha256:6fa476287dde9ff929e43aa7afa66ab9f1dfdce83cafa09e0ba359d457090ba9
-    sha256: 6fa476287dde9ff929e43aa7afa66ab9f1dfdce83cafa09e0ba359d457090ba9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kubernetes-cli/blobs/sha256:9443c60faa0b2a85778066165172ba7380f35362b1d1bdaef10e6030e1a19cb3
-    sha256: 9443c60faa0b2a85778066165172ba7380f35362b1d1bdaef10e6030e1a19cb3
-source:
-  url: https://github.com/kubernetes/kubernetes.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kubernetes-cli/blobs/sha256:ed7c5fd0c6ca2c0ed23ef0e1973af5fd54792501f98760c9a5b77a315b067d4a
+        sha256: ed7c5fd0c6ca2c0ed23ef0e1973af5fd54792501f98760c9a5b77a315b067d4a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kubernetes-cli/blobs/sha256:2298163a4dd8c398c3a167bc3730e51255dcb1f593677dc966baf6f0e6c4937c
+        sha256: 2298163a4dd8c398c3a167bc3730e51255dcb1f593677dc966baf6f0e6c4937c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kubernetes-cli/blobs/sha256:6fa476287dde9ff929e43aa7afa66ab9f1dfdce83cafa09e0ba359d457090ba9
+        sha256: 6fa476287dde9ff929e43aa7afa66ab9f1dfdce83cafa09e0ba359d457090ba9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kubernetes-cli/blobs/sha256:9443c60faa0b2a85778066165172ba7380f35362b1d1bdaef10e6030e1a19cb3
+        sha256: 9443c60faa0b2a85778066165172ba7380f35362b1d1bdaef10e6030e1a19cb3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/kubernetes/kubernetes.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - bash
-  - coreutils
+    - go
+    - bash
+    - coreutils
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

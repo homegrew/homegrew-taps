@@ -3,26 +3,52 @@ version: 1.16.0
 description: Generate firewall configs for multiple firewall platforms
 homepage: https://aerleon.readthedocs.io/en/latest/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aerleon/blobs/sha256:3a26808bb88e041a8681a42639932c0791c5600d6d671cc529afee3b73882b34
-    sha256: 3a26808bb88e041a8681a42639932c0791c5600d6d671cc529afee3b73882b34
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aerleon/blobs/sha256:13327dffd80008987d3d62077fd5b19244df2aac25cb3c4d7e7524f26c05aa86
-    sha256: 13327dffd80008987d3d62077fd5b19244df2aac25cb3c4d7e7524f26c05aa86
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aerleon/blobs/sha256:aa49ed0e1471da0aef020b20852871e99ada06d4e01c3030a9885330b3152bb9
-    sha256: aa49ed0e1471da0aef020b20852871e99ada06d4e01c3030a9885330b3152bb9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aerleon/blobs/sha256:f1c14613ced8a37ec2302f2b0e11786d15c457cb33dfb0cc0a53d140bbd490dd
-    sha256: f1c14613ced8a37ec2302f2b0e11786d15c457cb33dfb0cc0a53d140bbd490dd
-source:
-  url: https://files.pythonhosted.org/packages/91/27/aeaf0098e517f9eeda65e71f5764f3913d465d2c7557281f69b43a66d83c/aerleon-1.16.0.tar.gz
-  sha256: 3678e15a1faf00fc63263bbbc413e746261893c59d3383358d23a7f1a04ab61c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - python@3.14
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aerleon/blobs/sha256:13327dffd80008987d3d62077fd5b19244df2aac25cb3c4d7e7524f26c05aa86
+        sha256: 13327dffd80008987d3d62077fd5b19244df2aac25cb3c4d7e7524f26c05aa86
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aerleon/blobs/sha256:3a26808bb88e041a8681a42639932c0791c5600d6d671cc529afee3b73882b34
+        sha256: 3a26808bb88e041a8681a42639932c0791c5600d6d671cc529afee3b73882b34
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aerleon/blobs/sha256:aa49ed0e1471da0aef020b20852871e99ada06d4e01c3030a9885330b3152bb9
+        sha256: aa49ed0e1471da0aef020b20852871e99ada06d4e01c3030a9885330b3152bb9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aerleon/blobs/sha256:f1c14613ced8a37ec2302f2b0e11786d15c457cb33dfb0cc0a53d140bbd490dd
+        sha256: f1c14613ced8a37ec2302f2b0e11786d15c457cb33dfb0cc0a53d140bbd490dd
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/91/27/aeaf0098e517f9eeda65e71f5764f3913d465d2c7557281f69b43a66d83c/aerleon-1.16.0.tar.gz
+    sha256: 3678e15a1faf00fc63263bbbc413e746261893c59d3383358d23a7f1a04ab61c
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

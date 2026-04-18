@@ -3,31 +3,55 @@ version: 4.5.2
 description: Library for Gigasampler and DLS (Downloadable Sounds) Level 1/2 files
 homepage: https://www.linuxsampler.org/libgig/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:58e7797503b7e5ef6da0a9c83309c61961fbecb1526d5fdbc6b76c566aef9ac1
-    sha256: 58e7797503b7e5ef6da0a9c83309c61961fbecb1526d5fdbc6b76c566aef9ac1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:39a06918cb0cd0bb14f245f8927e00c4e2a0cd94c90024089cfcc54343bf85b5
-    sha256: 39a06918cb0cd0bb14f245f8927e00c4e2a0cd94c90024089cfcc54343bf85b5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:9c4bd1c437f242d035116f3d2f136076d4599de01d8b0bea1309daec3f9ccfe2
-    sha256: 9c4bd1c437f242d035116f3d2f136076d4599de01d8b0bea1309daec3f9ccfe2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:48e26ac9b17ef9b5e60d335f036853dd0cac878b735596ddf79bac241c216011
-    sha256: 48e26ac9b17ef9b5e60d335f036853dd0cac878b735596ddf79bac241c216011
-source:
-  url: https://download.linuxsampler.org/packages/libgig-4.5.2.tar.bz2
-  sha256: ca2be8ce5e0969f90c2df76e03d499f5e27fb5021edbc587de182ff27e8efddd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libsndfile
+    - libsndfile
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:39a06918cb0cd0bb14f245f8927e00c4e2a0cd94c90024089cfcc54343bf85b5
+        sha256: 39a06918cb0cd0bb14f245f8927e00c4e2a0cd94c90024089cfcc54343bf85b5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:58e7797503b7e5ef6da0a9c83309c61961fbecb1526d5fdbc6b76c566aef9ac1
+        sha256: 58e7797503b7e5ef6da0a9c83309c61961fbecb1526d5fdbc6b76c566aef9ac1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:9c4bd1c437f242d035116f3d2f136076d4599de01d8b0bea1309daec3f9ccfe2
+        sha256: 9c4bd1c437f242d035116f3d2f136076d4599de01d8b0bea1309daec3f9ccfe2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgig/blobs/sha256:48e26ac9b17ef9b5e60d335f036853dd0cac878b735596ddf79bac241c216011
+        sha256: 48e26ac9b17ef9b5e60d335f036853dd0cac878b735596ddf79bac241c216011
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.linuxsampler.org/packages/libgig-4.5.2.tar.bz2
+    sha256: ca2be8ce5e0969f90c2df76e03d499f5e27fb5021edbc587de182ff27e8efddd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - e2fsprogs
-  - libsndfile
-  - util-linux
+    - e2fsprogs
+    - libsndfile
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

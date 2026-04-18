@@ -1,30 +1,55 @@
 name: ocaml-zarith
-version: 1.14
+version: "1.14"
 description: OCaml library for arbitrary-precision arithmetic
 homepage: https://github.com/ocaml/Zarith
 license: LGPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocaml-zarith/blobs/sha256:a5f328838a9fb4010132b59a63e5c0df644c9193377b500a0ff4e10bd83ee925
-    sha256: a5f328838a9fb4010132b59a63e5c0df644c9193377b500a0ff4e10bd83ee925
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocaml-zarith/blobs/sha256:7eeba2fab635c73bae503c4f7188af67412ffd4f6a16b7eaa81e1bd206ef7839
-    sha256: 7eeba2fab635c73bae503c4f7188af67412ffd4f6a16b7eaa81e1bd206ef7839
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocaml-zarith/blobs/sha256:72e1e830a5e594e3bd966df2e426ff5c19c89aed7176cc5a277032017792a669
-    sha256: 72e1e830a5e594e3bd966df2e426ff5c19c89aed7176cc5a277032017792a669
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocaml-zarith/blobs/sha256:43c9bf11d4fca48437a3f8a146be4bd517a79faa566d4fcf1b81d4afebf435d2
-    sha256: 43c9bf11d4fca48437a3f8a146be4bd517a79faa566d4fcf1b81d4afebf435d2
-source:
-  url: https://github.com/ocaml/Zarith/archive/refs/tags/release-1.14.tar.gz
-  sha256: 5db9dcbd939153942a08581fabd846d0f3f2b8c67fe68b855127e0472d4d1859
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - ocaml
+    - gmp
+    - ocaml
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocaml-zarith/blobs/sha256:7eeba2fab635c73bae503c4f7188af67412ffd4f6a16b7eaa81e1bd206ef7839
+        sha256: 7eeba2fab635c73bae503c4f7188af67412ffd4f6a16b7eaa81e1bd206ef7839
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocaml-zarith/blobs/sha256:a5f328838a9fb4010132b59a63e5c0df644c9193377b500a0ff4e10bd83ee925
+        sha256: a5f328838a9fb4010132b59a63e5c0df644c9193377b500a0ff4e10bd83ee925
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocaml-zarith/blobs/sha256:72e1e830a5e594e3bd966df2e426ff5c19c89aed7176cc5a277032017792a669
+        sha256: 72e1e830a5e594e3bd966df2e426ff5c19c89aed7176cc5a277032017792a669
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocaml-zarith/blobs/sha256:43c9bf11d4fca48437a3f8a146be4bd517a79faa566d4fcf1b81d4afebf435d2
+        sha256: 43c9bf11d4fca48437a3f8a146be4bd517a79faa566d4fcf1b81d4afebf435d2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ocaml/Zarith/archive/refs/tags/release-1.14.tar.gz
+    sha256: 5db9dcbd939153942a08581fabd846d0f3f2b8c67fe68b855127e0472d4d1859
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ocaml-findlib
+    - ocaml-findlib
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

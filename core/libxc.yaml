@@ -3,27 +3,52 @@ version: 7.0.0
 description: Library of exchange and correlation functionals for codes
 homepage: https://libxc.gitlab.io/
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxc/blobs/sha256:d099fdc57a95d85727f5c4b605f64253144ba64ae545439947684f065553ae9e
-    sha256: d099fdc57a95d85727f5c4b605f64253144ba64ae545439947684f065553ae9e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxc/blobs/sha256:6bcdc1b4b2820d7124c5b4c0b39566ff52cac816054945a960ef1c3a43838308
-    sha256: 6bcdc1b4b2820d7124c5b4c0b39566ff52cac816054945a960ef1c3a43838308
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxc/blobs/sha256:bfd3bd380e66af839073487bcdb4934684b437f48b8880334cdc2afed1e4782c
-    sha256: bfd3bd380e66af839073487bcdb4934684b437f48b8880334cdc2afed1e4782c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxc/blobs/sha256:89f20334a32a623644fa01b73d2c7fb1e8ba63bb94aff2e52154b2fb794a0b01
-    sha256: 89f20334a32a623644fa01b73d2c7fb1e8ba63bb94aff2e52154b2fb794a0b01
-source:
-  url: https://gitlab.com/libxc/libxc/-/archive/7.0.0/libxc-7.0.0.tar.bz2
-  sha256: e9ae69f8966d8de6b7585abd9fab588794ada1fab8f689337959a35abbf9527d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gcc
+    - gcc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxc/blobs/sha256:6bcdc1b4b2820d7124c5b4c0b39566ff52cac816054945a960ef1c3a43838308
+        sha256: 6bcdc1b4b2820d7124c5b4c0b39566ff52cac816054945a960ef1c3a43838308
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxc/blobs/sha256:d099fdc57a95d85727f5c4b605f64253144ba64ae545439947684f065553ae9e
+        sha256: d099fdc57a95d85727f5c4b605f64253144ba64ae545439947684f065553ae9e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxc/blobs/sha256:bfd3bd380e66af839073487bcdb4934684b437f48b8880334cdc2afed1e4782c
+        sha256: bfd3bd380e66af839073487bcdb4934684b437f48b8880334cdc2afed1e4782c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxc/blobs/sha256:89f20334a32a623644fa01b73d2c7fb1e8ba63bb94aff2e52154b2fb794a0b01
+        sha256: 89f20334a32a623644fa01b73d2c7fb1e8ba63bb94aff2e52154b2fb794a0b01
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.com/libxc/libxc/-/archive/7.0.0/libxc-7.0.0.tar.bz2
+    sha256: e9ae69f8966d8de6b7585abd9fab588794ada1fab8f689337959a35abbf9527d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

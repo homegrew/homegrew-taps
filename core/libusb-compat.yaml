@@ -3,30 +3,55 @@ version: 0.1.8
 description: Library for USB device access
 homepage: https://libusb.info/
 license: LGPL-2.1-or-later AND (LGPL-2.1-or-later OR BSD-3-Clause)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libusb-compat/blobs/sha256:63dfe2cf30c69c8f654177fbd754d013e0b5d86636cf731f5e22fbf3071d228e
-    sha256: 63dfe2cf30c69c8f654177fbd754d013e0b5d86636cf731f5e22fbf3071d228e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libusb-compat/blobs/sha256:4ee27e4e0b9a716fd2b15db94b1595901276078780d377432e2fde4e9d78c324
-    sha256: 4ee27e4e0b9a716fd2b15db94b1595901276078780d377432e2fde4e9d78c324
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libusb-compat/blobs/sha256:0201a3ccb74c1a239274bf0d0ed68541e738d09f4ae46dd93501334bce39c24c
-    sha256: 0201a3ccb74c1a239274bf0d0ed68541e738d09f4ae46dd93501334bce39c24c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libusb-compat/blobs/sha256:878121af3e546d38c3574dd0d43f284044fdfab4c6930cd14e615bce37801d4f
-    sha256: 878121af3e546d38c3574dd0d43f284044fdfab4c6930cd14e615bce37801d4f
-source:
-  url: https://downloads.sourceforge.net/project/libusb/libusb-compat-0.1/libusb-compat-0.1.8/libusb-compat-0.1.8.tar.bz2
-  sha256: b692dcf674c070c8c0bee3c8230ce4ee5903f926d77dc8b968a4dd1b70f9b05c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libusb
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libusb-compat/blobs/sha256:4ee27e4e0b9a716fd2b15db94b1595901276078780d377432e2fde4e9d78c324
+        sha256: 4ee27e4e0b9a716fd2b15db94b1595901276078780d377432e2fde4e9d78c324
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libusb-compat/blobs/sha256:63dfe2cf30c69c8f654177fbd754d013e0b5d86636cf731f5e22fbf3071d228e
+        sha256: 63dfe2cf30c69c8f654177fbd754d013e0b5d86636cf731f5e22fbf3071d228e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libusb-compat/blobs/sha256:0201a3ccb74c1a239274bf0d0ed68541e738d09f4ae46dd93501334bce39c24c
+        sha256: 0201a3ccb74c1a239274bf0d0ed68541e738d09f4ae46dd93501334bce39c24c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libusb-compat/blobs/sha256:878121af3e546d38c3574dd0d43f284044fdfab4c6930cd14e615bce37801d4f
+        sha256: 878121af3e546d38c3574dd0d43f284044fdfab4c6930cd14e615bce37801d4f
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/libusb/libusb-compat-0.1/libusb-compat-0.1.8/libusb-compat-0.1.8.tar.bz2
+    sha256: b692dcf674c070c8c0bee3c8230ce4ee5903f926d77dc8b968a4dd1b70f9b05c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

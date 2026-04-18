@@ -3,27 +3,53 @@ version: 0.5.0
 description: Tarsnap wrapper which expires backups using a gfs-scheme
 homepage: https://github.com/miracle2k/tarsnapper
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tarsnapper/blobs/sha256:32c13f98b225238a1c36beb4aea44cc7aa9fc5f0ea6916836e9f24c9009a759a
-    sha256: 32c13f98b225238a1c36beb4aea44cc7aa9fc5f0ea6916836e9f24c9009a759a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tarsnapper/blobs/sha256:4368cf715ad3a98e93ae54bcd6df1532199927753a4bb5915155141a183ea5a0
-    sha256: 4368cf715ad3a98e93ae54bcd6df1532199927753a4bb5915155141a183ea5a0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tarsnapper/blobs/sha256:ba5eacaf4328d52c8277a96a4befdcac0570cb99372882717562683797c677c5
-    sha256: ba5eacaf4328d52c8277a96a4befdcac0570cb99372882717562683797c677c5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tarsnapper/blobs/sha256:4a08f2b3ac06f061600d9a402ac6ffca74de70f9e973699fbf14e9f3dfaa7a08
-    sha256: 4a08f2b3ac06f061600d9a402ac6ffca74de70f9e973699fbf14e9f3dfaa7a08
-source:
-  url: https://files.pythonhosted.org/packages/4e/c5/0a08950e5faba96e211715571c68ef64ee37b399ef4f0c4ab55e66c3c4fe/tarsnapper-0.5.0.tar.gz
-  sha256: b129b0fba3a24b2ce80c8a2ecd4375e36b6c7428b400e7b7ab9ea68ec9bb23ec
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - python@3.14
-  - tarsnap
+    - libyaml
+    - python@3.14
+    - tarsnap
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tarsnapper/blobs/sha256:4368cf715ad3a98e93ae54bcd6df1532199927753a4bb5915155141a183ea5a0
+        sha256: 4368cf715ad3a98e93ae54bcd6df1532199927753a4bb5915155141a183ea5a0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tarsnapper/blobs/sha256:32c13f98b225238a1c36beb4aea44cc7aa9fc5f0ea6916836e9f24c9009a759a
+        sha256: 32c13f98b225238a1c36beb4aea44cc7aa9fc5f0ea6916836e9f24c9009a759a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tarsnapper/blobs/sha256:ba5eacaf4328d52c8277a96a4befdcac0570cb99372882717562683797c677c5
+        sha256: ba5eacaf4328d52c8277a96a4befdcac0570cb99372882717562683797c677c5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tarsnapper/blobs/sha256:4a08f2b3ac06f061600d9a402ac6ffca74de70f9e973699fbf14e9f3dfaa7a08
+        sha256: 4a08f2b3ac06f061600d9a402ac6ffca74de70f9e973699fbf14e9f3dfaa7a08
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/4e/c5/0a08950e5faba96e211715571c68ef64ee37b399ef4f0c4ab55e66c3c4fe/tarsnapper-0.5.0.tar.gz
+    sha256: b129b0fba3a24b2ce80c8a2ecd4375e36b6c7428b400e7b7ab9ea68ec9bb23ec
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

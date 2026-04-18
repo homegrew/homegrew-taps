@@ -3,27 +3,53 @@ version: 1.20.1
 description: Library and CLI tool to analyse CloudFormation templates for security issues
 homepage: https://cfripper.readthedocs.io
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cfripper/blobs/sha256:07613958b87b5a601cec34d010ecf6bf5eabd41705cefdba45a785f5aba65437
-    sha256: 07613958b87b5a601cec34d010ecf6bf5eabd41705cefdba45a785f5aba65437
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cfripper/blobs/sha256:0d320f2acdec2f305a6ec65c73147cb5aa506c7ae500e4732fbb7a6d49c63958
-    sha256: 0d320f2acdec2f305a6ec65c73147cb5aa506c7ae500e4732fbb7a6d49c63958
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cfripper/blobs/sha256:952b01573866452db292c3fc614197901dce8a54c43b497a709e564643ccd00e
-    sha256: 952b01573866452db292c3fc614197901dce8a54c43b497a709e564643ccd00e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cfripper/blobs/sha256:25027b0a0f2b84b5cc1899e1d3c6377786c9fce16e1e0dd0093b6571ecc0166e
-    sha256: 25027b0a0f2b84b5cc1899e1d3c6377786c9fce16e1e0dd0093b6571ecc0166e
-source:
-  url: https://files.pythonhosted.org/packages/19/76/fdea07181d0988203f83dbb54be4db52f42243879372cd099cb45bbe405d/cfripper-1.20.1.tar.gz
-  sha256: 3a6e1674b3d6346cca6c87f39f8db8d7d112a3ecc6b396ccf32b8048881e1458
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - pydantic
-  - python@3.14
+    - libyaml
+    - pydantic
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cfripper/blobs/sha256:0d320f2acdec2f305a6ec65c73147cb5aa506c7ae500e4732fbb7a6d49c63958
+        sha256: 0d320f2acdec2f305a6ec65c73147cb5aa506c7ae500e4732fbb7a6d49c63958
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cfripper/blobs/sha256:07613958b87b5a601cec34d010ecf6bf5eabd41705cefdba45a785f5aba65437
+        sha256: 07613958b87b5a601cec34d010ecf6bf5eabd41705cefdba45a785f5aba65437
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cfripper/blobs/sha256:952b01573866452db292c3fc614197901dce8a54c43b497a709e564643ccd00e
+        sha256: 952b01573866452db292c3fc614197901dce8a54c43b497a709e564643ccd00e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cfripper/blobs/sha256:25027b0a0f2b84b5cc1899e1d3c6377786c9fce16e1e0dd0093b6571ecc0166e
+        sha256: 25027b0a0f2b84b5cc1899e1d3c6377786c9fce16e1e0dd0093b6571ecc0166e
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/19/76/fdea07181d0988203f83dbb54be4db52f42243879372cd099cb45bbe405d/cfripper-1.20.1.tar.gz
+    sha256: 3a6e1674b3d6346cca6c87f39f8db8d7d112a3ecc6b396ccf32b8048881e1458
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

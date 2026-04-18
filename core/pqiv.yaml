@@ -3,52 +3,76 @@ version: 2.13.3
 description: Powerful image viewer with minimal UI
 homepage: https://github.com/phillipberndt/pqiv
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pqiv/blobs/sha256:76263c5243859ce83f0e66ee9d822ab72b7ef0d61436cd7dfeef84a8deb1a106
-    sha256: 76263c5243859ce83f0e66ee9d822ab72b7ef0d61436cd7dfeef84a8deb1a106
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pqiv/blobs/sha256:d70569fe2e223bdefa6d7ac96de2b7679df5ec75383c4df70453d08d6ecccce5
-    sha256: d70569fe2e223bdefa6d7ac96de2b7679df5ec75383c4df70453d08d6ecccce5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pqiv/blobs/sha256:468db466a148a516531a8f82d4190cefbcc3f5bef1ae562bfa91472d1e0f0ccf
-    sha256: 468db466a148a516531a8f82d4190cefbcc3f5bef1ae562bfa91472d1e0f0ccf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pqiv/blobs/sha256:f66de8c5c0b02ea39ac1952c77c605e91155a2a516eebcb471de151f5c438241
-    sha256: f66de8c5c0b02ea39ac1952c77c605e91155a2a516eebcb471de151f5c438241
-source:
-  url: https://github.com/phillipberndt/pqiv/archive/refs/tags/2.13.3.tar.gz
-  sha256: f0ffaa33e93299b38058c507da2945976a4b350c92cf1c4b3649586444395dfd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - imagemagick
-  - libarchive
-  - libspectre
-  - pango
-  - poppler
-  - webp
-  - at-spi2-core
-  - gettext
-  - harfbuzz
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - imagemagick
+    - libarchive
+    - libspectre
+    - pango
+    - poppler
+    - webp
+    - at-spi2-core
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pqiv/blobs/sha256:d70569fe2e223bdefa6d7ac96de2b7679df5ec75383c4df70453d08d6ecccce5
+        sha256: d70569fe2e223bdefa6d7ac96de2b7679df5ec75383c4df70453d08d6ecccce5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pqiv/blobs/sha256:76263c5243859ce83f0e66ee9d822ab72b7ef0d61436cd7dfeef84a8deb1a106
+        sha256: 76263c5243859ce83f0e66ee9d822ab72b7ef0d61436cd7dfeef84a8deb1a106
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pqiv/blobs/sha256:468db466a148a516531a8f82d4190cefbcc3f5bef1ae562bfa91472d1e0f0ccf
+        sha256: 468db466a148a516531a8f82d4190cefbcc3f5bef1ae562bfa91472d1e0f0ccf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pqiv/blobs/sha256:f66de8c5c0b02ea39ac1952c77c605e91155a2a516eebcb471de151f5c438241
+        sha256: f66de8c5c0b02ea39ac1952c77c605e91155a2a516eebcb471de151f5c438241
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/phillipberndt/pqiv/archive/refs/tags/2.13.3.tar.gz
+    sha256: f0ffaa33e93299b38058c507da2945976a4b350c92cf1c4b3649586444395dfd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - imagemagick
-  - libarchive
-  - libspectre
-  - libtiff
-  - libx11
-  - pango
-  - poppler
-  - webp
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - imagemagick
+    - libarchive
+    - libspectre
+    - libtiff
+    - libx11
+    - pango
+    - poppler
+    - webp
+build:
+    configure: []
+    install: []
+service: null

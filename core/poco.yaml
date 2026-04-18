@@ -3,36 +3,60 @@ version: 1.15.2
 description: C++ class libraries for building network and internet-based applications
 homepage: https://pocoproject.org/
 license: BSL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/poco/blobs/sha256:934905cf3c812f394df5038a09993105c44a8de61b952e354dca63b3c5c946b6
-    sha256: 934905cf3c812f394df5038a09993105c44a8de61b952e354dca63b3c5c946b6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/poco/blobs/sha256:f1aef25e16e8b458af4cbbe0907f87faa7268ca8288182c68776cd39658787ef
-    sha256: f1aef25e16e8b458af4cbbe0907f87faa7268ca8288182c68776cd39658787ef
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/poco/blobs/sha256:78ecd404cb34c3efb0b8fc268029022551530c093879819f963b88fe9c414e63
-    sha256: 78ecd404cb34c3efb0b8fc268029022551530c093879819f963b88fe9c414e63
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/poco/blobs/sha256:7575c9ce0d274baf37ace10f78f458c0feda0b2daacfd88d7df8c3780f287da1
-    sha256: 7575c9ce0d274baf37ace10f78f458c0feda0b2daacfd88d7df8c3780f287da1
-source:
-  url: https://pocoproject.org/releases/poco-1.15.2/poco-1.15.2-all.tar.bz2
-  sha256: ca56eb58f0b8f44940c1901b8cff0fad2ac95e5b646850efbdd3d76ce8013225
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpng
-  - openssl@3
-  - pcre2
-  - utf8proc
+    - libpng
+    - openssl@3
+    - pcre2
+    - utf8proc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/poco/blobs/sha256:f1aef25e16e8b458af4cbbe0907f87faa7268ca8288182c68776cd39658787ef
+        sha256: f1aef25e16e8b458af4cbbe0907f87faa7268ca8288182c68776cd39658787ef
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/poco/blobs/sha256:934905cf3c812f394df5038a09993105c44a8de61b952e354dca63b3c5c946b6
+        sha256: 934905cf3c812f394df5038a09993105c44a8de61b952e354dca63b3c5c946b6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/poco/blobs/sha256:78ecd404cb34c3efb0b8fc268029022551530c093879819f963b88fe9c414e63
+        sha256: 78ecd404cb34c3efb0b8fc268029022551530c093879819f963b88fe9c414e63
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/poco/blobs/sha256:7575c9ce0d274baf37ace10f78f458c0feda0b2daacfd88d7df8c3780f287da1
+        sha256: 7575c9ce0d274baf37ace10f78f458c0feda0b2daacfd88d7df8c3780f287da1
+        sha512: ""
+        signature: ""
+source:
+    url: https://pocoproject.org/releases/poco-1.15.2/poco-1.15.2-all.tar.bz2
+    sha256: ca56eb58f0b8f44940c1901b8cff0fad2ac95e5b646850efbdd3d76ce8013225
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - libpng
-  - openssl@3
-  - pcre2
-  - utf8proc
-  - zlib-ng-compat
+    - libpng
+    - openssl@3
+    - pcre2
+    - utf8proc
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

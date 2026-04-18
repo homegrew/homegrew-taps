@@ -1,30 +1,55 @@
 name: auto-editor
 version: 30.1.4
-description: "Effort free video editing!"
+description: Effort free video editing!
 homepage: https://auto-editor.com
 license: Unlicense
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/auto-editor/blobs/sha256:9546ed767f6f00069cf5d1573a3f0af6f2ec1bf156910b3e739d4851c4a54eef
-    sha256: 9546ed767f6f00069cf5d1573a3f0af6f2ec1bf156910b3e739d4851c4a54eef
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/auto-editor/blobs/sha256:92db5039b2987cd86ffc5e565ffbde574460b55d776166d9047a5e62da3f8eec
-    sha256: 92db5039b2987cd86ffc5e565ffbde574460b55d776166d9047a5e62da3f8eec
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/auto-editor/blobs/sha256:8641be33bcef9b38b877282d14eb3b26ab76024a4baaffd0b11ceefb22e57f91
-    sha256: 8641be33bcef9b38b877282d14eb3b26ab76024a4baaffd0b11ceefb22e57f91
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/auto-editor/blobs/sha256:d84d748208689146f10c127682ceac3dcdafc100ebf2f832cfb4726718f49d83
-    sha256: d84d748208689146f10c127682ceac3dcdafc100ebf2f832cfb4726718f49d83
-source:
-  url: https://github.com/WyattBlue/auto-editor/archive/refs/tags/30.1.4.tar.gz
-  sha256: 8acc28560d16fa21692ae19eaefd385cb8bc4ed5dbeb25f76555d75637f844d7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
+    - ffmpeg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/auto-editor/blobs/sha256:92db5039b2987cd86ffc5e565ffbde574460b55d776166d9047a5e62da3f8eec
+        sha256: 92db5039b2987cd86ffc5e565ffbde574460b55d776166d9047a5e62da3f8eec
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/auto-editor/blobs/sha256:9546ed767f6f00069cf5d1573a3f0af6f2ec1bf156910b3e739d4851c4a54eef
+        sha256: 9546ed767f6f00069cf5d1573a3f0af6f2ec1bf156910b3e739d4851c4a54eef
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/auto-editor/blobs/sha256:8641be33bcef9b38b877282d14eb3b26ab76024a4baaffd0b11ceefb22e57f91
+        sha256: 8641be33bcef9b38b877282d14eb3b26ab76024a4baaffd0b11ceefb22e57f91
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/auto-editor/blobs/sha256:d84d748208689146f10c127682ceac3dcdafc100ebf2f832cfb4726718f49d83
+        sha256: d84d748208689146f10c127682ceac3dcdafc100ebf2f832cfb4726718f49d83
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/WyattBlue/auto-editor/archive/refs/tags/30.1.4.tar.gz
+    sha256: 8acc28560d16fa21692ae19eaefd385cb8bc4ed5dbeb25f76555d75637f844d7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - nim
-  - pkgconf
+    - nim
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

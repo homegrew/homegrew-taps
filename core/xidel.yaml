@@ -3,27 +3,52 @@ version: 0.9.8
 description: XPath/XQuery 3.0, JSONiq interpreter to extract data from HTML/XML/JSON
 homepage: https://www.videlibri.de/xidel.html
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xidel/blobs/sha256:ab0881d178eb07b3b22246dea5ded4a0c5380084001b85a602aa38cbadd6e8b5
-    sha256: ab0881d178eb07b3b22246dea5ded4a0c5380084001b85a602aa38cbadd6e8b5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xidel/blobs/sha256:94a17492216d780afa50e763dd25057985439cbbbf28363fe1b9a1444becbdd7
-    sha256: 94a17492216d780afa50e763dd25057985439cbbbf28363fe1b9a1444becbdd7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xidel/blobs/sha256:9a486375fd54f408102f37ffc3071fa806d318b56cdb03d6d0eeecc9f45f0b32
-    sha256: 9a486375fd54f408102f37ffc3071fa806d318b56cdb03d6d0eeecc9f45f0b32
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xidel/blobs/sha256:da15ea47a8f2f01ecd1bbfdbbf0d29f44e8fe68093c78df36b1dab3ba08adc98
-    sha256: da15ea47a8f2f01ecd1bbfdbbf0d29f44e8fe68093c78df36b1dab3ba08adc98
-source:
-  url: https://github.com/benibela/xidel/releases/download/Xidel_0.9.8/xidel-0.9.8.src.tar.gz
-  sha256: 72b5b1a2fc44a0a61831e268c45bc6a6c28e3533b5445151bfbdeaf1562af39c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xidel/blobs/sha256:94a17492216d780afa50e763dd25057985439cbbbf28363fe1b9a1444becbdd7
+        sha256: 94a17492216d780afa50e763dd25057985439cbbbf28363fe1b9a1444becbdd7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xidel/blobs/sha256:ab0881d178eb07b3b22246dea5ded4a0c5380084001b85a602aa38cbadd6e8b5
+        sha256: ab0881d178eb07b3b22246dea5ded4a0c5380084001b85a602aa38cbadd6e8b5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xidel/blobs/sha256:9a486375fd54f408102f37ffc3071fa806d318b56cdb03d6d0eeecc9f45f0b32
+        sha256: 9a486375fd54f408102f37ffc3071fa806d318b56cdb03d6d0eeecc9f45f0b32
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xidel/blobs/sha256:da15ea47a8f2f01ecd1bbfdbbf0d29f44e8fe68093c78df36b1dab3ba08adc98
+        sha256: da15ea47a8f2f01ecd1bbfdbbf0d29f44e8fe68093c78df36b1dab3ba08adc98
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/benibela/xidel/releases/download/Xidel_0.9.8/xidel-0.9.8.src.tar.gz
+    sha256: 72b5b1a2fc44a0a61831e268c45bc6a6c28e3533b5445151bfbdeaf1562af39c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - fpc
+    - fpc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

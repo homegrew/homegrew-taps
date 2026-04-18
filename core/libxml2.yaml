@@ -3,31 +3,54 @@ version: 2.15.3
 description: GNOME XML library
 homepage: http://xmlsoft.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:fa797509d0bd7d73b1c296bb696d544a6c5e212f1a196d867aba7e53d0d6c6b4
-    sha256: fa797509d0bd7d73b1c296bb696d544a6c5e212f1a196d867aba7e53d0d6c6b4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:c39f8567f5d228ab173ab8c467b65cae0b85f7da07d8cd8984597d5e3caeafd3
-    sha256: c39f8567f5d228ab173ab8c467b65cae0b85f7da07d8cd8984597d5e3caeafd3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:a76858b74071c78ad6f70ccdcb29563944d18da9350504c4d95bed17279593d1
-    sha256: a76858b74071c78ad6f70ccdcb29563944d18da9350504c4d95bed17279593d1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:3a2523b36bbc7cff373c7325d5cba58c53d94bebfcac43d7a570ec84dfe4f4c9
-    sha256: 3a2523b36bbc7cff373c7325d5cba58c53d94bebfcac43d7a570ec84dfe4f4c9
-source:
-  url: https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.3.tar.xz
-  sha256: 78262a6e7ac170d6528ebfe2efccdf220191a5af6a6cd61ea4a9a9a5042c7a07
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - readline
-build_dependencies:
-  - pkgconf
-linux_dependencies:
-  - readline
-  - zlib-ng-compat
+    - readline
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:c39f8567f5d228ab173ab8c467b65cae0b85f7da07d8cd8984597d5e3caeafd3
+        sha256: c39f8567f5d228ab173ab8c467b65cae0b85f7da07d8cd8984597d5e3caeafd3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:fa797509d0bd7d73b1c296bb696d544a6c5e212f1a196d867aba7e53d0d6c6b4
+        sha256: fa797509d0bd7d73b1c296bb696d544a6c5e212f1a196d867aba7e53d0d6c6b4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:a76858b74071c78ad6f70ccdcb29563944d18da9350504c4d95bed17279593d1
+        sha256: a76858b74071c78ad6f70ccdcb29563944d18da9350504c4d95bed17279593d1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:3a2523b36bbc7cff373c7325d5cba58c53d94bebfcac43d7a570ec84dfe4f4c9
+        sha256: 3a2523b36bbc7cff373c7325d5cba58c53d94bebfcac43d7a570ec84dfe4f4c9
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.3.tar.xz
+    sha256: 78262a6e7ac170d6528ebfe2efccdf220191a5af6a6cd61ea4a9a9a5042c7a07
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+linux_dependencies:
+    - readline
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

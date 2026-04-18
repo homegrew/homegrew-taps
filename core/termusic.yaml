@@ -3,35 +3,59 @@ version: 0.12.1
 description: Music Player TUI written in Rust
 homepage: https://github.com/tramhao/termusic
 license: MIT AND GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/termusic/blobs/sha256:e3facb7042db6b4dd321d40077b8f19c1c4db1880fe2e1814555f573656cb44b
-    sha256: e3facb7042db6b4dd321d40077b8f19c1c4db1880fe2e1814555f573656cb44b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/termusic/blobs/sha256:a63a6ab065346edc1f230305318ba7ca301b2c065c3fe6414f6f4bcc8c5eb774
-    sha256: a63a6ab065346edc1f230305318ba7ca301b2c065c3fe6414f6f4bcc8c5eb774
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/termusic/blobs/sha256:53a444e5a34adb183b14326f05c0f5a251d4e17e6e59d7d6cd2e4e4a397b2d24
-    sha256: 53a444e5a34adb183b14326f05c0f5a251d4e17e6e59d7d6cd2e4e4a397b2d24
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/termusic/blobs/sha256:5bb1fb574dd37e881471ae1eb8e8b027ae83ab1626d3aed9c8fae06568f7ac6b
-    sha256: 5bb1fb574dd37e881471ae1eb8e8b027ae83ab1626d3aed9c8fae06568f7ac6b
-source:
-  url: https://github.com/tramhao/termusic/archive/refs/tags/v0.12.1.tar.gz
-  sha256: 686f66856d755f2d2056a9548f074b11ba9568ac8075fafd8903e332bf166227
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - opus
+    - openssl@3
+    - opus
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/termusic/blobs/sha256:a63a6ab065346edc1f230305318ba7ca301b2c065c3fe6414f6f4bcc8c5eb774
+        sha256: a63a6ab065346edc1f230305318ba7ca301b2c065c3fe6414f6f4bcc8c5eb774
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/termusic/blobs/sha256:e3facb7042db6b4dd321d40077b8f19c1c4db1880fe2e1814555f573656cb44b
+        sha256: e3facb7042db6b4dd321d40077b8f19c1c4db1880fe2e1814555f573656cb44b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/termusic/blobs/sha256:53a444e5a34adb183b14326f05c0f5a251d4e17e6e59d7d6cd2e4e4a397b2d24
+        sha256: 53a444e5a34adb183b14326f05c0f5a251d4e17e6e59d7d6cd2e4e4a397b2d24
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/termusic/blobs/sha256:5bb1fb574dd37e881471ae1eb8e8b027ae83ab1626d3aed9c8fae06568f7ac6b
+        sha256: 5bb1fb574dd37e881471ae1eb8e8b027ae83ab1626d3aed9c8fae06568f7ac6b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tramhao/termusic/archive/refs/tags/v0.12.1.tar.gz
+    sha256: 686f66856d755f2d2056a9548f074b11ba9568ac8075fafd8903e332bf166227
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - protobuf
-  - rust
+    - pkgconf
+    - protobuf
+    - rust
 linux_dependencies:
-  - alsa-lib
-  - libgccjit
-  - openssl@3
-  - opus
+    - alsa-lib
+    - libgccjit
+    - openssl@3
+    - opus
+build:
+    configure: []
+    install: []
+service: null

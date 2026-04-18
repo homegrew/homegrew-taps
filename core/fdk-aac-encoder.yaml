@@ -3,30 +3,55 @@ version: 1.0.6
 description: Command-line encoder frontend for libfdk-aac
 homepage: https://github.com/nu774/fdkaac
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fdk-aac-encoder/blobs/sha256:e89af6a6d4d3cbfc2a5e312ca4a0f5d5eb74205fa9d328e2b8e1f197680c9779
-    sha256: e89af6a6d4d3cbfc2a5e312ca4a0f5d5eb74205fa9d328e2b8e1f197680c9779
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fdk-aac-encoder/blobs/sha256:99f243a63d88d1350bc798ca8f90ed703485462aa7a99b92588aafecd2867874
-    sha256: 99f243a63d88d1350bc798ca8f90ed703485462aa7a99b92588aafecd2867874
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fdk-aac-encoder/blobs/sha256:5d3bcffd33552747f8c107a46e42f3cff7b500647fd2f268d688bee77ef711aa
-    sha256: 5d3bcffd33552747f8c107a46e42f3cff7b500647fd2f268d688bee77ef711aa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fdk-aac-encoder/blobs/sha256:4b941b4a0be48f5ec58726a7f25547007f8085683a8b060ad24552532bd0880e
-    sha256: 4b941b4a0be48f5ec58726a7f25547007f8085683a8b060ad24552532bd0880e
-source:
-  url: https://github.com/nu774/fdkaac/archive/refs/tags/v1.0.6.tar.gz
-  sha256: ed34c8dcae3d49d385e1ceaa380c5871cda744402358c61bcb49950a25bfae58
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fdk-aac
+    - fdk-aac
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fdk-aac-encoder/blobs/sha256:99f243a63d88d1350bc798ca8f90ed703485462aa7a99b92588aafecd2867874
+        sha256: 99f243a63d88d1350bc798ca8f90ed703485462aa7a99b92588aafecd2867874
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fdk-aac-encoder/blobs/sha256:e89af6a6d4d3cbfc2a5e312ca4a0f5d5eb74205fa9d328e2b8e1f197680c9779
+        sha256: e89af6a6d4d3cbfc2a5e312ca4a0f5d5eb74205fa9d328e2b8e1f197680c9779
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fdk-aac-encoder/blobs/sha256:5d3bcffd33552747f8c107a46e42f3cff7b500647fd2f268d688bee77ef711aa
+        sha256: 5d3bcffd33552747f8c107a46e42f3cff7b500647fd2f268d688bee77ef711aa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fdk-aac-encoder/blobs/sha256:4b941b4a0be48f5ec58726a7f25547007f8085683a8b060ad24552532bd0880e
+        sha256: 4b941b4a0be48f5ec58726a7f25547007f8085683a8b060ad24552532bd0880e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nu774/fdkaac/archive/refs/tags/v1.0.6.tar.gz
+    sha256: ed34c8dcae3d49d385e1ceaa380c5871cda744402358c61bcb49950a25bfae58
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,33 +3,58 @@ version: 2.17.0
 description: Basic Local Alignment Search Tool
 homepage: https://blast.ncbi.nlm.nih.gov/
 license: LicenseRef-Homebrew-public-domain
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/blast/blobs/sha256:c899b804e8fe6495c89198d57cc47c37a3a75bd20bd671e224244ef956be8459
-    sha256: c899b804e8fe6495c89198d57cc47c37a3a75bd20bd671e224244ef956be8459
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/blast/blobs/sha256:eb6553ea5219eb2369852aa9da77bc0afc683172707b0b2e49cdca45a0d25dbe
-    sha256: eb6553ea5219eb2369852aa9da77bc0afc683172707b0b2e49cdca45a0d25dbe
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/blast/blobs/sha256:08990287f4f3ae8cc07763209bfe7a5a52f04d79b9baca6207cdf50c25172ca9
-    sha256: 08990287f4f3ae8cc07763209bfe7a5a52f04d79b9baca6207cdf50c25172ca9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/blast/blobs/sha256:5f1789a3a285888887723a7a606c0a74c072f99557ae5590a30b7ccfc088c2a0
-    sha256: 5f1789a3a285888887723a7a606c0a74c072f99557ae5590a30b7ccfc088c2a0
-source:
-  url: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.17.0/ncbi-blast-2.17.0+-src.tar.gz
-  sha256: 502057a88e9990e34e62758be21ea474cc0ad68d6a63a2e37b2372af1e5ea147
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lmdb
-  - mbedtls@3
-  - pcre2
-  - libomp
+    - lmdb
+    - mbedtls@3
+    - pcre2
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/blast/blobs/sha256:eb6553ea5219eb2369852aa9da77bc0afc683172707b0b2e49cdca45a0d25dbe
+        sha256: eb6553ea5219eb2369852aa9da77bc0afc683172707b0b2e49cdca45a0d25dbe
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/blast/blobs/sha256:c899b804e8fe6495c89198d57cc47c37a3a75bd20bd671e224244ef956be8459
+        sha256: c899b804e8fe6495c89198d57cc47c37a3a75bd20bd671e224244ef956be8459
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/blast/blobs/sha256:08990287f4f3ae8cc07763209bfe7a5a52f04d79b9baca6207cdf50c25172ca9
+        sha256: 08990287f4f3ae8cc07763209bfe7a5a52f04d79b9baca6207cdf50c25172ca9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/blast/blobs/sha256:5f1789a3a285888887723a7a606c0a74c072f99557ae5590a30b7ccfc088c2a0
+        sha256: 5f1789a3a285888887723a7a606c0a74c072f99557ae5590a30b7ccfc088c2a0
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.17.0/ncbi-blast-2.17.0+-src.tar.gz
+    sha256: 502057a88e9990e34e62758be21ea474cc0ad68d6a63a2e37b2372af1e5ea147
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - lmdb
-  - mbedtls@3
-  - pcre2
-  - zlib-ng-compat
+    - lmdb
+    - mbedtls@3
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

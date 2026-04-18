@@ -1,52 +1,76 @@
 name: fbthrift
 version: 2026.03.30.00
-description: "Facebook's branch of Apache Thrift, including a new C++ server"
+description: Facebook's branch of Apache Thrift, including a new C++ server
 homepage: https://github.com/facebook/fbthrift
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:1ee1ffc00fd67c7e25e4d978f2f67a36e8ad350c0ee0588181d0db08c3594ff9
-    sha256: 1ee1ffc00fd67c7e25e4d978f2f67a36e8ad350c0ee0588181d0db08c3594ff9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:f5e6492fb62e53662029a3b96558971ce6db47ca6b7e260742fbc8b1ada8e927
-    sha256: f5e6492fb62e53662029a3b96558971ce6db47ca6b7e260742fbc8b1ada8e927
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:8ab861de07071a2d3d9c28346678911586e1542a2a564938906a7d79aff1970f
-    sha256: 8ab861de07071a2d3d9c28346678911586e1542a2a564938906a7d79aff1970f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:c299646c7f66babb2fca8902a44cf2be90ed112d332d552819b9bb51c58ed277
-    sha256: c299646c7f66babb2fca8902a44cf2be90ed112d332d552819b9bb51c58ed277
-source:
-  url: https://github.com/facebook/fbthrift/archive/refs/tags/v2026.03.30.00.tar.gz
-  sha256: 6c936c224e249720ebf87629b9aab4c2386bc5ef3acd7d01fdb350645abf2128
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - double-conversion
-  - fizz
-  - fmt
-  - folly
-  - gflags
-  - glog
-  - openssl@3
-  - wangle
-  - xxhash
+    - double-conversion
+    - fizz
+    - fmt
+    - folly
+    - gflags
+    - glog
+    - openssl@3
+    - wangle
+    - xxhash
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:f5e6492fb62e53662029a3b96558971ce6db47ca6b7e260742fbc8b1ada8e927
+        sha256: f5e6492fb62e53662029a3b96558971ce6db47ca6b7e260742fbc8b1ada8e927
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:1ee1ffc00fd67c7e25e4d978f2f67a36e8ad350c0ee0588181d0db08c3594ff9
+        sha256: 1ee1ffc00fd67c7e25e4d978f2f67a36e8ad350c0ee0588181d0db08c3594ff9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:8ab861de07071a2d3d9c28346678911586e1542a2a564938906a7d79aff1970f
+        sha256: 8ab861de07071a2d3d9c28346678911586e1542a2a564938906a7d79aff1970f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fbthrift/blobs/sha256:c299646c7f66babb2fca8902a44cf2be90ed112d332d552819b9bb51c58ed277
+        sha256: c299646c7f66babb2fca8902a44cf2be90ed112d332d552819b9bb51c58ed277
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/facebook/fbthrift/archive/refs/tags/v2026.03.30.00.tar.gz
+    sha256: 6c936c224e249720ebf87629b9aab4c2386bc5ef3acd7d01fdb350645abf2128
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
-  - cmake
-  - mvfst
-  - zstd
+    - bison
+    - cmake
+    - mvfst
+    - zstd
 linux_dependencies:
-  - boost
-  - double-conversion
-  - fizz
-  - fmt
-  - folly
-  - gflags
-  - glog
-  - openssl@3
-  - wangle
-  - xxhash
-  - zlib-ng-compat
+    - boost
+    - double-conversion
+    - fizz
+    - fmt
+    - folly
+    - gflags
+    - glog
+    - openssl@3
+    - wangle
+    - xxhash
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

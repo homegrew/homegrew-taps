@@ -3,30 +3,55 @@ version: 0.10.1
 description: Build man pages from Markdown
 homepage: https://github.com/apjanke/ronn-ng
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ronn-ng/blobs/sha256:cde2a1921cd09603374d28ee44d9c470f0b187add7b9d9eb0b526d7dbe5a3305
-    sha256: cde2a1921cd09603374d28ee44d9c470f0b187add7b9d9eb0b526d7dbe5a3305
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ronn-ng/blobs/sha256:e81143c3c8d224765b7db5c39a07caa7c2d7d2c9a291064f99186a1b6a7578d5
-    sha256: e81143c3c8d224765b7db5c39a07caa7c2d7d2c9a291064f99186a1b6a7578d5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ronn-ng/blobs/sha256:e4fd9f3b447f24382a9d97e7a1aa2cfdda53eed5ad75f19b0e6d2ae6e210938e
-    sha256: e4fd9f3b447f24382a9d97e7a1aa2cfdda53eed5ad75f19b0e6d2ae6e210938e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ronn-ng/blobs/sha256:43cce7ff99b681bb070ad22d1b9ee17a4c2093c79921cd5211095242a05222a1
-    sha256: 43cce7ff99b681bb070ad22d1b9ee17a4c2093c79921cd5211095242a05222a1
-source:
-  url: https://github.com/apjanke/ronn-ng/archive/refs/tags/v0.10.1.tar.gz
-  sha256: 180f18015ce01be1d10c24e13414134363d56f9efb741fda460358bb67d96684
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ruby
-  - xz
+    - ruby
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ronn-ng/blobs/sha256:e81143c3c8d224765b7db5c39a07caa7c2d7d2c9a291064f99186a1b6a7578d5
+        sha256: e81143c3c8d224765b7db5c39a07caa7c2d7d2c9a291064f99186a1b6a7578d5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ronn-ng/blobs/sha256:cde2a1921cd09603374d28ee44d9c470f0b187add7b9d9eb0b526d7dbe5a3305
+        sha256: cde2a1921cd09603374d28ee44d9c470f0b187add7b9d9eb0b526d7dbe5a3305
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ronn-ng/blobs/sha256:e4fd9f3b447f24382a9d97e7a1aa2cfdda53eed5ad75f19b0e6d2ae6e210938e
+        sha256: e4fd9f3b447f24382a9d97e7a1aa2cfdda53eed5ad75f19b0e6d2ae6e210938e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ronn-ng/blobs/sha256:43cce7ff99b681bb070ad22d1b9ee17a4c2093c79921cd5211095242a05222a1
+        sha256: 43cce7ff99b681bb070ad22d1b9ee17a4c2093c79921cd5211095242a05222a1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/apjanke/ronn-ng/archive/refs/tags/v0.10.1.tar.gz
+    sha256: 180f18015ce01be1d10c24e13414134363d56f9efb741fda460358bb67d96684
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - ruby
-  - xz
-  - zlib-ng-compat
+    - ruby
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

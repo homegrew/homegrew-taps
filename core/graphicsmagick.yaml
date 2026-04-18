@@ -3,50 +3,74 @@ version: 1.3.46
 description: Image processing tools collection
 homepage: https://graphicsmagick.sourceforge.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/graphicsmagick/blobs/sha256:6b65ffb0b494077277b0c9b654d1e2185cd88ed612a3ceac6f3c6ad5fc677cd2
-    sha256: 6b65ffb0b494077277b0c9b654d1e2185cd88ed612a3ceac6f3c6ad5fc677cd2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/graphicsmagick/blobs/sha256:2c1d774a217f0dcd8951cff4e1e93f397a1e6f8040cd4c37ce4134443c68c5c6
-    sha256: 2c1d774a217f0dcd8951cff4e1e93f397a1e6f8040cd4c37ce4134443c68c5c6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/graphicsmagick/blobs/sha256:8053553100e6ffbefe17bbf8cf563937ed988da6723ca8522d80bd261a096b63
-    sha256: 8053553100e6ffbefe17bbf8cf563937ed988da6723ca8522d80bd261a096b63
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/graphicsmagick/blobs/sha256:c2769339084f247efba341dc9580863597526503ab5fc7ad96445e2531a54554
-    sha256: c2769339084f247efba341dc9580863597526503ab5fc7ad96445e2531a54554
-source:
-  url: https://downloads.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.46/GraphicsMagick-1.3.46.tar.xz
-  sha256: c7c706a505e9c6c3764156bb94a0c9644d79131785df15a89c9f8721d1abd061
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - jasper
-  - jpeg-turbo
-  - jpeg-xl
-  - libheif
-  - libpng
-  - libtiff
-  - libtool
-  - little-cms2
-  - webp
-  - zstd
+    - freetype
+    - jasper
+    - jpeg-turbo
+    - jpeg-xl
+    - libheif
+    - libpng
+    - libtiff
+    - libtool
+    - little-cms2
+    - webp
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/graphicsmagick/blobs/sha256:2c1d774a217f0dcd8951cff4e1e93f397a1e6f8040cd4c37ce4134443c68c5c6
+        sha256: 2c1d774a217f0dcd8951cff4e1e93f397a1e6f8040cd4c37ce4134443c68c5c6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/graphicsmagick/blobs/sha256:6b65ffb0b494077277b0c9b654d1e2185cd88ed612a3ceac6f3c6ad5fc677cd2
+        sha256: 6b65ffb0b494077277b0c9b654d1e2185cd88ed612a3ceac6f3c6ad5fc677cd2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/graphicsmagick/blobs/sha256:8053553100e6ffbefe17bbf8cf563937ed988da6723ca8522d80bd261a096b63
+        sha256: 8053553100e6ffbefe17bbf8cf563937ed988da6723ca8522d80bd261a096b63
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/graphicsmagick/blobs/sha256:c2769339084f247efba341dc9580863597526503ab5fc7ad96445e2531a54554
+        sha256: c2769339084f247efba341dc9580863597526503ab5fc7ad96445e2531a54554
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.46/GraphicsMagick-1.3.46.tar.xz
+    sha256: c7c706a505e9c6c3764156bb94a0c9644d79131785df15a89c9f8721d1abd061
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - freetype
-  - jasper
-  - jpeg-turbo
-  - jpeg-xl
-  - libheif
-  - libpng
-  - libtiff
-  - libtool
-  - little-cms2
-  - webp
-  - zlib-ng-compat
-  - zstd
+    - freetype
+    - jasper
+    - jpeg-turbo
+    - jpeg-xl
+    - libheif
+    - libpng
+    - libtiff
+    - libtool
+    - little-cms2
+    - webp
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

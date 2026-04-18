@@ -3,30 +3,55 @@ version: 18.00.0001
 description: Official PostgreSQL ODBC driver
 homepage: https://odbc.postgresql.org
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/psqlodbc/blobs/sha256:8ea1a4ecf8e6a609fdc9b2c38efc6a1f48c905420eee73abc502e466de797328
-    sha256: 8ea1a4ecf8e6a609fdc9b2c38efc6a1f48c905420eee73abc502e466de797328
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/psqlodbc/blobs/sha256:319330d341a6d3bab2fe8f0c197f9f647fb3255cb07e8f539199dcee639014c1
-    sha256: 319330d341a6d3bab2fe8f0c197f9f647fb3255cb07e8f539199dcee639014c1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/psqlodbc/blobs/sha256:f7ef65df1154b69caecb031b91196a70c3c9c2f46561149f5655a2909ee1bdb7
-    sha256: f7ef65df1154b69caecb031b91196a70c3c9c2f46561149f5655a2909ee1bdb7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/psqlodbc/blobs/sha256:f0ddc9cac55df470dfe893d2bc17678471f17723acadbcebb82615539c3872f8
-    sha256: f0ddc9cac55df470dfe893d2bc17678471f17723acadbcebb82615539c3872f8
-source:
-  url: https://github.com/postgresql-interfaces/psqlodbc/archive/refs/tags/REL-18_00_0001.tar.gz
-  sha256: 2cf6f19d72765f0b8c2a8a9f4000f1ae1835e737c4899dc931dd6d7a7a0c87dc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpq
-  - unixodbc
+    - libpq
+    - unixodbc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/psqlodbc/blobs/sha256:319330d341a6d3bab2fe8f0c197f9f647fb3255cb07e8f539199dcee639014c1
+        sha256: 319330d341a6d3bab2fe8f0c197f9f647fb3255cb07e8f539199dcee639014c1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/psqlodbc/blobs/sha256:8ea1a4ecf8e6a609fdc9b2c38efc6a1f48c905420eee73abc502e466de797328
+        sha256: 8ea1a4ecf8e6a609fdc9b2c38efc6a1f48c905420eee73abc502e466de797328
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/psqlodbc/blobs/sha256:f7ef65df1154b69caecb031b91196a70c3c9c2f46561149f5655a2909ee1bdb7
+        sha256: f7ef65df1154b69caecb031b91196a70c3c9c2f46561149f5655a2909ee1bdb7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/psqlodbc/blobs/sha256:f0ddc9cac55df470dfe893d2bc17678471f17723acadbcebb82615539c3872f8
+        sha256: f0ddc9cac55df470dfe893d2bc17678471f17723acadbcebb82615539c3872f8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/postgresql-interfaces/psqlodbc/archive/refs/tags/REL-18_00_0001.tar.gz
+    sha256: 2cf6f19d72765f0b8c2a8a9f4000f1ae1835e737c4899dc931dd6d7a7a0c87dc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

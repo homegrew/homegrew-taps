@@ -3,31 +3,55 @@ version: 0.5.0
 description: CLI tool for interacting with Forgejo
 homepage: https://codeberg.org/forgejo-contrib/forgejo-cli
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/forgejo-cli/blobs/sha256:da03e5e9283bacfecb9085684ba35701932a95254486a5d25b841f898715bcc5
-    sha256: da03e5e9283bacfecb9085684ba35701932a95254486a5d25b841f898715bcc5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/forgejo-cli/blobs/sha256:90fdf8e55f03114a11c912f20ea1eeb60c09f26a69628ce94c6e1a5d9066076b
-    sha256: 90fdf8e55f03114a11c912f20ea1eeb60c09f26a69628ce94c6e1a5d9066076b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/forgejo-cli/blobs/sha256:8bd9495f4637a8392608b9dfb0cb76c9b1e4a6fac326e5ef29008ee232d1f218
-    sha256: 8bd9495f4637a8392608b9dfb0cb76c9b1e4a6fac326e5ef29008ee232d1f218
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/forgejo-cli/blobs/sha256:dee5a25bc9af4873f25cadd9152a7b43a7fe9f281694cc617d9b7c5a181ee4e0
-    sha256: dee5a25bc9af4873f25cadd9152a7b43a7fe9f281694cc617d9b7c5a181ee4e0
-source:
-  url: https://codeberg.org/forgejo-contrib/forgejo-cli/archive/v0.5.0.tar.gz
-  sha256: 028ebcbd744301fbfd144cd9bc5ff0a27e02d99b02c8abafb20742299715c556
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/forgejo-cli/blobs/sha256:90fdf8e55f03114a11c912f20ea1eeb60c09f26a69628ce94c6e1a5d9066076b
+        sha256: 90fdf8e55f03114a11c912f20ea1eeb60c09f26a69628ce94c6e1a5d9066076b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/forgejo-cli/blobs/sha256:da03e5e9283bacfecb9085684ba35701932a95254486a5d25b841f898715bcc5
+        sha256: da03e5e9283bacfecb9085684ba35701932a95254486a5d25b841f898715bcc5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/forgejo-cli/blobs/sha256:8bd9495f4637a8392608b9dfb0cb76c9b1e4a6fac326e5ef29008ee232d1f218
+        sha256: 8bd9495f4637a8392608b9dfb0cb76c9b1e4a6fac326e5ef29008ee232d1f218
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/forgejo-cli/blobs/sha256:dee5a25bc9af4873f25cadd9152a7b43a7fe9f281694cc617d9b7c5a181ee4e0
+        sha256: dee5a25bc9af4873f25cadd9152a7b43a7fe9f281694cc617d9b7c5a181ee4e0
+        sha512: ""
+        signature: ""
+source:
+    url: https://codeberg.org/forgejo-contrib/forgejo-cli/archive/v0.5.0.tar.gz
+    sha256: 028ebcbd744301fbfd144cd9bc5ff0a27e02d99b02c8abafb20742299715c556
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

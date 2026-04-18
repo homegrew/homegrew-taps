@@ -3,31 +3,56 @@ version: 5.0.0
 description: Audit Record Generation and Utilization System clients
 homepage: https://openargus.org
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:7e26b45c0acd6b6da44868f99227cea5680806709c2a1fe6765cb75548595e27
-    sha256: 7e26b45c0acd6b6da44868f99227cea5680806709c2a1fe6765cb75548595e27
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:c6fc9682378acd09e4b37e294a9aa8d61378d7861187fe240187c5f7cb92898c
-    sha256: c6fc9682378acd09e4b37e294a9aa8d61378d7861187fe240187c5f7cb92898c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:f91a2424dec64075a85d4c86b849a4e0cdc097a3b1766cd4eca97d96d3e0f525
-    sha256: f91a2424dec64075a85d4c86b849a4e0cdc097a3b1766cd4eca97d96d3e0f525
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:7c0b14a2dd371d30a8a8d9302e820c0dea30e0d0ec8c0ce869094a5f33fbc3e5
-    sha256: 7c0b14a2dd371d30a8a8d9302e820c0dea30e0d0ec8c0ce869094a5f33fbc3e5
-source:
-  url: https://github.com/openargus/clients/archive/refs/tags/v5.0.0.tar.gz
-  sha256: c695e69f8cfffcb6ed978f1f29b1292a2638e4882a66ea8652052ba1e42fe8bc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - readline
-  - rrdtool
+    - readline
+    - rrdtool
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:c6fc9682378acd09e4b37e294a9aa8d61378d7861187fe240187c5f7cb92898c
+        sha256: c6fc9682378acd09e4b37e294a9aa8d61378d7861187fe240187c5f7cb92898c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:7e26b45c0acd6b6da44868f99227cea5680806709c2a1fe6765cb75548595e27
+        sha256: 7e26b45c0acd6b6da44868f99227cea5680806709c2a1fe6765cb75548595e27
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:f91a2424dec64075a85d4c86b849a4e0cdc097a3b1766cd4eca97d96d3e0f525
+        sha256: f91a2424dec64075a85d4c86b849a4e0cdc097a3b1766cd4eca97d96d3e0f525
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/argus-clients/blobs/sha256:7c0b14a2dd371d30a8a8d9302e820c0dea30e0d0ec8c0ce869094a5f33fbc3e5
+        sha256: 7c0b14a2dd371d30a8a8d9302e820c0dea30e0d0ec8c0ce869094a5f33fbc3e5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/openargus/clients/archive/refs/tags/v5.0.0.tar.gz
+    sha256: c695e69f8cfffcb6ed978f1f29b1292a2638e4882a66ea8652052ba1e42fe8bc
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - libtirpc
-  - readline
-  - rrdtool
-  - zlib-ng-compat
+    - libtirpc
+    - readline
+    - rrdtool
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

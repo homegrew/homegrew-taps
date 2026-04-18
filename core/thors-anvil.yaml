@@ -3,40 +3,64 @@ version: 9.1.14
 description: Set of modern C++20 libraries for writing interactive Web-Services
 homepage: https://github.com/Loki-Astari/ThorsAnvil
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/thors-anvil/blobs/sha256:b10235fa39a6491082a96e13d1baf4c1c0a3c9c02ac68b1c7116cc8ec83c4e21
-    sha256: b10235fa39a6491082a96e13d1baf4c1c0a3c9c02ac68b1c7116cc8ec83c4e21
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/thors-anvil/blobs/sha256:f6d143db25795bb19bbb10dfbcd31397eed970debb8f5e60444d4d8dbe53065a
-    sha256: f6d143db25795bb19bbb10dfbcd31397eed970debb8f5e60444d4d8dbe53065a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/thors-anvil/blobs/sha256:ff413bdd5da4ea620faf5ad6cbafb45476ee411b26c2982edcebf3aded1bf70f
-    sha256: ff413bdd5da4ea620faf5ad6cbafb45476ee411b26c2982edcebf3aded1bf70f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/thors-anvil/blobs/sha256:b5955c773927e445d95d0aa06c2fefc48289ff12994902fef5434e9bc40f15a7
-    sha256: b5955c773927e445d95d0aa06c2fefc48289ff12994902fef5434e9bc40f15a7
-source:
-  url: https://github.com/Loki-Astari/ThorsAnvil.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - libevent
-  - libyaml
-  - magic_enum
-  - openssl@3
-  - snappy
+    - boost
+    - libevent
+    - libyaml
+    - magic_enum
+    - openssl@3
+    - snappy
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/thors-anvil/blobs/sha256:f6d143db25795bb19bbb10dfbcd31397eed970debb8f5e60444d4d8dbe53065a
+        sha256: f6d143db25795bb19bbb10dfbcd31397eed970debb8f5e60444d4d8dbe53065a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/thors-anvil/blobs/sha256:b10235fa39a6491082a96e13d1baf4c1c0a3c9c02ac68b1c7116cc8ec83c4e21
+        sha256: b10235fa39a6491082a96e13d1baf4c1c0a3c9c02ac68b1c7116cc8ec83c4e21
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/thors-anvil/blobs/sha256:ff413bdd5da4ea620faf5ad6cbafb45476ee411b26c2982edcebf3aded1bf70f
+        sha256: ff413bdd5da4ea620faf5ad6cbafb45476ee411b26c2982edcebf3aded1bf70f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/thors-anvil/blobs/sha256:b5955c773927e445d95d0aa06c2fefc48289ff12994902fef5434e9bc40f15a7
+        sha256: b5955c773927e445d95d0aa06c2fefc48289ff12994902fef5434e9bc40f15a7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Loki-Astari/ThorsAnvil.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - boost
-  - libevent
-  - libyaml
-  - magic_enum
-  - openssl@3
-  - snappy
-  - zlib-ng-compat
+    - boost
+    - libevent
+    - libyaml
+    - magic_enum
+    - openssl@3
+    - snappy
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

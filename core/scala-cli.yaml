@@ -3,27 +3,52 @@ version: 1.13.0
 description: Scala language runner and build tool
 homepage: https://scala-cli.virtuslab.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:52ed6ab02c010767cbe0a971c4286267976296cef0c4cb3a0864d68daf4d9776
-    sha256: 52ed6ab02c010767cbe0a971c4286267976296cef0c4cb3a0864d68daf4d9776
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:2c4a1a12fba82bf11b68c85da7134f59c7cabd0e0e8002e8e9bd87f3010b5e75
-    sha256: 2c4a1a12fba82bf11b68c85da7134f59c7cabd0e0e8002e8e9bd87f3010b5e75
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:8fe72e808caf09315d3dec22c8e534023ce221d53f0578b352e0cd7a72aed213
-    sha256: 8fe72e808caf09315d3dec22c8e534023ce221d53f0578b352e0cd7a72aed213
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:74710deac0a9ee4c15eec9802b11dfc8f3c18d16f38f019656475b8c0e692ac9
-    sha256: 74710deac0a9ee4c15eec9802b11dfc8f3c18d16f38f019656475b8c0e692ac9
-source:
-  url: https://github.com/VirtusLab/scala-cli.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:2c4a1a12fba82bf11b68c85da7134f59c7cabd0e0e8002e8e9bd87f3010b5e75
+        sha256: 2c4a1a12fba82bf11b68c85da7134f59c7cabd0e0e8002e8e9bd87f3010b5e75
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:52ed6ab02c010767cbe0a971c4286267976296cef0c4cb3a0864d68daf4d9776
+        sha256: 52ed6ab02c010767cbe0a971c4286267976296cef0c4cb3a0864d68daf4d9776
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:8fe72e808caf09315d3dec22c8e534023ce221d53f0578b352e0cd7a72aed213
+        sha256: 8fe72e808caf09315d3dec22c8e534023ce221d53f0578b352e0cd7a72aed213
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scala-cli/blobs/sha256:74710deac0a9ee4c15eec9802b11dfc8f3c18d16f38f019656475b8c0e692ac9
+        sha256: 74710deac0a9ee4c15eec9802b11dfc8f3c18d16f38f019656475b8c0e692ac9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/VirtusLab/scala-cli.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - openjdk@17
+    - openjdk@17
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

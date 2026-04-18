@@ -1,30 +1,55 @@
 name: s6
 version: 2.14.0.1
-description: "Small & secure supervision software suite"
+description: Small & secure supervision software suite
 homepage: https://skarnet.org/software/s6/
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/s6/blobs/sha256:e95cfad8adbf092855ba5944124b102614af34d54a2e230705079e5ff40fc24c
-    sha256: e95cfad8adbf092855ba5944124b102614af34d54a2e230705079e5ff40fc24c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/s6/blobs/sha256:864fbc30f870d4a8558093e66f1dc61cb80bfd824bcc532a288cb0b64c7a085b
-    sha256: 864fbc30f870d4a8558093e66f1dc61cb80bfd824bcc532a288cb0b64c7a085b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/s6/blobs/sha256:f1fd2a0f981c7fac694786821beedb20d65b697c486fe6b3d2f575a53ef1334d
-    sha256: f1fd2a0f981c7fac694786821beedb20d65b697c486fe6b3d2f575a53ef1334d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/s6/blobs/sha256:0982099a11389c9d3f4d38985de2c070f8c88b1ddc6b7b38e218a0791b7e55e3
-    sha256: 0982099a11389c9d3f4d38985de2c070f8c88b1ddc6b7b38e218a0791b7e55e3
-source:
-  url: https://skarnet.org/software/s6/s6-2.14.0.1.tar.gz
-  sha256: c25afe817cbc3f594efc5050351f8b9101ba78616d0ce915658f370e7ee2e258
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - execline
-  - skalibs
+    - execline
+    - skalibs
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/s6/blobs/sha256:864fbc30f870d4a8558093e66f1dc61cb80bfd824bcc532a288cb0b64c7a085b
+        sha256: 864fbc30f870d4a8558093e66f1dc61cb80bfd824bcc532a288cb0b64c7a085b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/s6/blobs/sha256:e95cfad8adbf092855ba5944124b102614af34d54a2e230705079e5ff40fc24c
+        sha256: e95cfad8adbf092855ba5944124b102614af34d54a2e230705079e5ff40fc24c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/s6/blobs/sha256:f1fd2a0f981c7fac694786821beedb20d65b697c486fe6b3d2f575a53ef1334d
+        sha256: f1fd2a0f981c7fac694786821beedb20d65b697c486fe6b3d2f575a53ef1334d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/s6/blobs/sha256:0982099a11389c9d3f4d38985de2c070f8c88b1ddc6b7b38e218a0791b7e55e3
+        sha256: 0982099a11389c9d3f4d38985de2c070f8c88b1ddc6b7b38e218a0791b7e55e3
+        sha512: ""
+        signature: ""
+source:
+    url: https://skarnet.org/software/s6/s6-2.14.0.1.tar.gz
+    sha256: c25afe817cbc3f594efc5050351f8b9101ba78616d0ce915658f370e7ee2e258
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

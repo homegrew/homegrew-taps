@@ -3,25 +3,51 @@ version: 8.2.12
 description: Garbage collector for C and C++
 homepage: https://www.hboehm.info/gc/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bdw-gc/blobs/sha256:31d372ffb4bcce22e9871a81aeba2864f2233a9050b4f326deafdfbb31d21a58
-    sha256: 31d372ffb4bcce22e9871a81aeba2864f2233a9050b4f326deafdfbb31d21a58
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bdw-gc/blobs/sha256:0bbf5a3924c6e7ffcdca91a2d3bd2569d918ae0c97ac7cc5caaa948dc881d106
-    sha256: 0bbf5a3924c6e7ffcdca91a2d3bd2569d918ae0c97ac7cc5caaa948dc881d106
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bdw-gc/blobs/sha256:bd45675d8ded697e19ec009c1d6ad2848e6a28af0c2ff26cd41222f9627cd411
-    sha256: bd45675d8ded697e19ec009c1d6ad2848e6a28af0c2ff26cd41222f9627cd411
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bdw-gc/blobs/sha256:c2db694f39b6f10d361221b3a8641152bac1a50624e120c4f4e8755efc3cdaef
-    sha256: c2db694f39b6f10d361221b3a8641152bac1a50624e120c4f4e8755efc3cdaef
-source:
-  url: https://github.com/bdwgc/bdwgc/releases/download/v8.2.12/gc-8.2.12.tar.gz
-  sha256: 42e5194ad06ab6ffb806c83eb99c03462b495d979cda782f3c72c08af833cd4e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bdw-gc/blobs/sha256:0bbf5a3924c6e7ffcdca91a2d3bd2569d918ae0c97ac7cc5caaa948dc881d106
+        sha256: 0bbf5a3924c6e7ffcdca91a2d3bd2569d918ae0c97ac7cc5caaa948dc881d106
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bdw-gc/blobs/sha256:31d372ffb4bcce22e9871a81aeba2864f2233a9050b4f326deafdfbb31d21a58
+        sha256: 31d372ffb4bcce22e9871a81aeba2864f2233a9050b4f326deafdfbb31d21a58
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bdw-gc/blobs/sha256:bd45675d8ded697e19ec009c1d6ad2848e6a28af0c2ff26cd41222f9627cd411
+        sha256: bd45675d8ded697e19ec009c1d6ad2848e6a28af0c2ff26cd41222f9627cd411
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bdw-gc/blobs/sha256:c2db694f39b6f10d361221b3a8641152bac1a50624e120c4f4e8755efc3cdaef
+        sha256: c2db694f39b6f10d361221b3a8641152bac1a50624e120c4f4e8755efc3cdaef
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bdwgc/bdwgc/releases/download/v8.2.12/gc-8.2.12.tar.gz
+    sha256: 42e5194ad06ab6ffb806c83eb99c03462b495d979cda782f3c72c08af833cd4e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

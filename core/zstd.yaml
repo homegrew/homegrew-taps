@@ -3,32 +3,56 @@ version: 1.5.7
 description: Zstandard is a real-time compression algorithm
 homepage: https://facebook.github.io/zstd/
 license: (BSD-3-Clause OR GPL-2.0-only) AND BSD-2-Clause AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:628a4ef53428d0078e3d76d297171ce8d0294f5ec1de3f20305e08c4dd333565
-    sha256: 628a4ef53428d0078e3d76d297171ce8d0294f5ec1de3f20305e08c4dd333565
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:90c345a174a631a157f7ea056fe41205fb77778e65d4bdc91097a3fb3a62faa6
-    sha256: 90c345a174a631a157f7ea056fe41205fb77778e65d4bdc91097a3fb3a62faa6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:3d5ca8948526a2e3a487db0cd0acec9f4b415d5a4b08cffe27e2ea0c339c9dbe
-    sha256: 3d5ca8948526a2e3a487db0cd0acec9f4b415d5a4b08cffe27e2ea0c339c9dbe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:575617c1532fe90e212c052fb14fcd4fa295890e3bc9ac69dc52404a04a95855
-    sha256: 575617c1532fe90e212c052fb14fcd4fa295890e3bc9ac69dc52404a04a95855
-source:
-  url: https://github.com/facebook/zstd/archive/refs/tags/v1.5.7.tar.gz
-  sha256: 37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lz4
-  - xz
+    - lz4
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:90c345a174a631a157f7ea056fe41205fb77778e65d4bdc91097a3fb3a62faa6
+        sha256: 90c345a174a631a157f7ea056fe41205fb77778e65d4bdc91097a3fb3a62faa6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:628a4ef53428d0078e3d76d297171ce8d0294f5ec1de3f20305e08c4dd333565
+        sha256: 628a4ef53428d0078e3d76d297171ce8d0294f5ec1de3f20305e08c4dd333565
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:3d5ca8948526a2e3a487db0cd0acec9f4b415d5a4b08cffe27e2ea0c339c9dbe
+        sha256: 3d5ca8948526a2e3a487db0cd0acec9f4b415d5a4b08cffe27e2ea0c339c9dbe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:575617c1532fe90e212c052fb14fcd4fa295890e3bc9ac69dc52404a04a95855
+        sha256: 575617c1532fe90e212c052fb14fcd4fa295890e3bc9ac69dc52404a04a95855
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/facebook/zstd/archive/refs/tags/v1.5.7.tar.gz
+    sha256: 37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - lz4
-  - xz
-  - zlib-ng-compat
+    - lz4
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

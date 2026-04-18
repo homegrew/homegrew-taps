@@ -3,38 +3,63 @@ version: 26.4.0
 description: Automated testing for Ansible roles
 homepage: https://molecule.readthedocs.io
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:3d89d2525b8e81165bdac7822480b7390ea9c315e5a2b8255489bdbe050dcf20
-    sha256: 3d89d2525b8e81165bdac7822480b7390ea9c315e5a2b8255489bdbe050dcf20
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:9610072d1ec6b66c29e527a986f72e40a24f5da52a869e0572566d32a01c2eb2
-    sha256: 9610072d1ec6b66c29e527a986f72e40a24f5da52a869e0572566d32a01c2eb2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:ff6b2225d87ed88046f32c4eaa4a67c348b0c33ef55d72356b80de85be8e71be
-    sha256: ff6b2225d87ed88046f32c4eaa4a67c348b0c33ef55d72356b80de85be8e71be
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:4a9458875f42763abe7fe75f7029680d4379216080b4fdaa04979445427f75ef
-    sha256: 4a9458875f42763abe7fe75f7029680d4379216080b4fdaa04979445427f75ef
-source:
-  url: https://files.pythonhosted.org/packages/09/e0/f671b5b0742a60b6067cbe9e57720b600ded5e0fcabb837663dd21b57568/molecule-26.4.0.tar.gz
-  sha256: 12e4c905079f67628ae765506c697d2b8a744a65f2d4cbf5a3b22cb09d0dafc4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ansible
-  - certifi
-  - cryptography
-  - libyaml
-  - python@3.14
-  - rpds-py
+    - ansible
+    - certifi
+    - cryptography
+    - libyaml
+    - python@3.14
+    - rpds-py
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:9610072d1ec6b66c29e527a986f72e40a24f5da52a869e0572566d32a01c2eb2
+        sha256: 9610072d1ec6b66c29e527a986f72e40a24f5da52a869e0572566d32a01c2eb2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:3d89d2525b8e81165bdac7822480b7390ea9c315e5a2b8255489bdbe050dcf20
+        sha256: 3d89d2525b8e81165bdac7822480b7390ea9c315e5a2b8255489bdbe050dcf20
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:ff6b2225d87ed88046f32c4eaa4a67c348b0c33ef55d72356b80de85be8e71be
+        sha256: ff6b2225d87ed88046f32c4eaa4a67c348b0c33ef55d72356b80de85be8e71be
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/molecule/blobs/sha256:4a9458875f42763abe7fe75f7029680d4379216080b4fdaa04979445427f75ef
+        sha256: 4a9458875f42763abe7fe75f7029680d4379216080b4fdaa04979445427f75ef
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/09/e0/f671b5b0742a60b6067cbe9e57720b600ded5e0fcabb837663dd21b57568/molecule-26.4.0.tar.gz
+    sha256: 12e4c905079f67628ae765506c697d2b8a744a65f2d4cbf5a3b22cb09d0dafc4
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - ansible
-  - certifi
-  - cryptography
-  - gmp
-  - libyaml
-  - python@3.14
-  - rpds-py
+    - ansible
+    - certifi
+    - cryptography
+    - gmp
+    - libyaml
+    - python@3.14
+    - rpds-py
+build:
+    configure: []
+    install: []
+service: null

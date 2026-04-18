@@ -3,28 +3,53 @@ version: 4.1.1
 description: Off-The-Record (OTR) messaging library
 homepage: https://otr.cypherpunks.ca/
 license: LGPL-2.1-only AND GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libotr/blobs/sha256:3b60c300a23960e3d70ba6fb0df3326ab6dd1236aecff5417bc55984b9510942
-    sha256: 3b60c300a23960e3d70ba6fb0df3326ab6dd1236aecff5417bc55984b9510942
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libotr/blobs/sha256:26f532517cf1188608a29f8cc51392f3ec82da8708e1ce83cc5b1ef388806506
-    sha256: 26f532517cf1188608a29f8cc51392f3ec82da8708e1ce83cc5b1ef388806506
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libotr/blobs/sha256:9a88f909cde9e876f1f3a9ffe30d2ba483715ba3fc03c188f78bc07758a18491
-    sha256: 9a88f909cde9e876f1f3a9ffe30d2ba483715ba3fc03c188f78bc07758a18491
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libotr/blobs/sha256:62ee96a56e10ffa701daa578015edfd49d6a20b89d1fbbef3530795ccfde6899
-    sha256: 62ee96a56e10ffa701daa578015edfd49d6a20b89d1fbbef3530795ccfde6899
-source:
-  url: https://otr.cypherpunks.ca/libotr-4.1.1.tar.gz
-  sha256: 8b3b182424251067a952fb4e6c7b95a21e644fbb27fbd5f8af2b2ed87ca419f5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgcrypt
-  - libgpg-error
+    - libgcrypt
+    - libgpg-error
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libotr/blobs/sha256:26f532517cf1188608a29f8cc51392f3ec82da8708e1ce83cc5b1ef388806506
+        sha256: 26f532517cf1188608a29f8cc51392f3ec82da8708e1ce83cc5b1ef388806506
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libotr/blobs/sha256:3b60c300a23960e3d70ba6fb0df3326ab6dd1236aecff5417bc55984b9510942
+        sha256: 3b60c300a23960e3d70ba6fb0df3326ab6dd1236aecff5417bc55984b9510942
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libotr/blobs/sha256:9a88f909cde9e876f1f3a9ffe30d2ba483715ba3fc03c188f78bc07758a18491
+        sha256: 9a88f909cde9e876f1f3a9ffe30d2ba483715ba3fc03c188f78bc07758a18491
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libotr/blobs/sha256:62ee96a56e10ffa701daa578015edfd49d6a20b89d1fbbef3530795ccfde6899
+        sha256: 62ee96a56e10ffa701daa578015edfd49d6a20b89d1fbbef3530795ccfde6899
+        sha512: ""
+        signature: ""
+source:
+    url: https://otr.cypherpunks.ca/libotr-4.1.1.tar.gz
+    sha256: 8b3b182424251067a952fb4e6c7b95a21e644fbb27fbd5f8af2b2ed87ca419f5
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - libgcrypt
+    - libgcrypt
+build:
+    configure: []
+    install: []
+service: null

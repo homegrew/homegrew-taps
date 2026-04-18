@@ -3,29 +3,54 @@ version: 3.9.5
 description: Tools for biomedical signal processing and data conversion
 homepage: https://biosig.sourceforge.net/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/biosig/blobs/sha256:8b266ef8a06ab3ad16f5bc5901a3150690e6f697c55e7d9e35d0d48624831210
-    sha256: 8b266ef8a06ab3ad16f5bc5901a3150690e6f697c55e7d9e35d0d48624831210
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/biosig/blobs/sha256:d3daa115222ba7b52440d46c4f93aecdb0b2054b43fb1642863c758704533ec0
-    sha256: d3daa115222ba7b52440d46c4f93aecdb0b2054b43fb1642863c758704533ec0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/biosig/blobs/sha256:df63c310a3deab0d6ba5f2027aab12fbd3370a001476c8980a0f8cbd46cce2b9
-    sha256: df63c310a3deab0d6ba5f2027aab12fbd3370a001476c8980a0f8cbd46cce2b9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/biosig/blobs/sha256:6c91f66bc6ef8a0b955fd0d162d73df2a26fb65761970389aefb5a85900cd8e6
-    sha256: 6c91f66bc6ef8a0b955fd0d162d73df2a26fb65761970389aefb5a85900cd8e6
-source:
-  url: https://downloads.sourceforge.net/project/biosig/BioSig%20for%20C_C%2B%2B/src/biosig-3.9.5.src.tar.xz
-  sha256: dfdb7aec5ac9681f25e3c186a5b356d5ec86cda87cdcb034d38e838f875cc3f1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dcmtk
-  - suite-sparse
+    - dcmtk
+    - suite-sparse
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/biosig/blobs/sha256:d3daa115222ba7b52440d46c4f93aecdb0b2054b43fb1642863c758704533ec0
+        sha256: d3daa115222ba7b52440d46c4f93aecdb0b2054b43fb1642863c758704533ec0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/biosig/blobs/sha256:8b266ef8a06ab3ad16f5bc5901a3150690e6f697c55e7d9e35d0d48624831210
+        sha256: 8b266ef8a06ab3ad16f5bc5901a3150690e6f697c55e7d9e35d0d48624831210
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/biosig/blobs/sha256:df63c310a3deab0d6ba5f2027aab12fbd3370a001476c8980a0f8cbd46cce2b9
+        sha256: df63c310a3deab0d6ba5f2027aab12fbd3370a001476c8980a0f8cbd46cce2b9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/biosig/blobs/sha256:6c91f66bc6ef8a0b955fd0d162d73df2a26fb65761970389aefb5a85900cd8e6
+        sha256: 6c91f66bc6ef8a0b955fd0d162d73df2a26fb65761970389aefb5a85900cd8e6
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/biosig/BioSig%20for%20C_C%2B%2B/src/biosig-3.9.5.src.tar.xz
+    sha256: dfdb7aec5ac9681f25e3c186a5b356d5ec86cda87cdcb034d38e838f875cc3f1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gawk
-  - libb64
+    - gawk
+    - libb64
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

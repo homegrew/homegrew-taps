@@ -3,39 +3,63 @@ version: 2.3.4
 description: Python package management tool
 homepage: https://python-poetry.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/poetry/blobs/sha256:bd9bc1029b73d0131e33608b4d85379e98aab47ca2fbab7b630fce616c35f795
-    sha256: bd9bc1029b73d0131e33608b4d85379e98aab47ca2fbab7b630fce616c35f795
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/poetry/blobs/sha256:0f1db5cbea43ae0f76907708d84cb607cdc41a573186f73ad22d3857f058badf
-    sha256: 0f1db5cbea43ae0f76907708d84cb607cdc41a573186f73ad22d3857f058badf
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/poetry/blobs/sha256:83fab9ac7fd80c3b69a8b23c7bb0d4a96b1a0bc8651280d652f2d397ef8cdc17
-    sha256: 83fab9ac7fd80c3b69a8b23c7bb0d4a96b1a0bc8651280d652f2d397ef8cdc17
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/poetry/blobs/sha256:e3d1358fca5030588f82134b8691f926f02a2d91a2a53cc826e80bdc4dfc6505
-    sha256: e3d1358fca5030588f82134b8691f926f02a2d91a2a53cc826e80bdc4dfc6505
-source:
-  url: https://files.pythonhosted.org/packages/d7/11/34c5b78fd2074f2a62dc76370d6a40cf91f26af9220a5e6725dba9db62b6/poetry-2.3.4.tar.gz
-  sha256: b293572d366569360c79d7caa6980c9b404d2b89530ed451a5b4570d248de3af
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cffi
-  - python@3.14
-  - zstd
+    - certifi
+    - cffi
+    - python@3.14
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/poetry/blobs/sha256:0f1db5cbea43ae0f76907708d84cb607cdc41a573186f73ad22d3857f058badf
+        sha256: 0f1db5cbea43ae0f76907708d84cb607cdc41a573186f73ad22d3857f058badf
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/poetry/blobs/sha256:bd9bc1029b73d0131e33608b4d85379e98aab47ca2fbab7b630fce616c35f795
+        sha256: bd9bc1029b73d0131e33608b4d85379e98aab47ca2fbab7b630fce616c35f795
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/poetry/blobs/sha256:83fab9ac7fd80c3b69a8b23c7bb0d4a96b1a0bc8651280d652f2d397ef8cdc17
+        sha256: 83fab9ac7fd80c3b69a8b23c7bb0d4a96b1a0bc8651280d652f2d397ef8cdc17
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/poetry/blobs/sha256:e3d1358fca5030588f82134b8691f926f02a2d91a2a53cc826e80bdc4dfc6505
+        sha256: e3d1358fca5030588f82134b8691f926f02a2d91a2a53cc826e80bdc4dfc6505
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/d7/11/34c5b78fd2074f2a62dc76370d6a40cf91f26af9220a5e6725dba9db62b6/poetry-2.3.4.tar.gz
+    sha256: b293572d366569360c79d7caa6980c9b404d2b89530ed451a5b4570d248de3af
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - python-setuptools
-  - rust
+    - cmake
+    - ninja
+    - python-setuptools
+    - rust
 linux_dependencies:
-  - certifi
-  - cffi
-  - cryptography
-  - python@3.14
-  - zstd
+    - certifi
+    - cffi
+    - cryptography
+    - python@3.14
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

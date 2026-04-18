@@ -1,48 +1,72 @@
 name: cp2k
-version: 2026.1
+version: "2026.1"
 description: Quantum chemistry and solid state physics software package
 homepage: https://www.cp2k.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cp2k/blobs/sha256:07bc22355e467c9d4e8b65013e9d370b01d099fd011e3758b1371ce1acf9b5a0
-    sha256: 07bc22355e467c9d4e8b65013e9d370b01d099fd011e3758b1371ce1acf9b5a0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cp2k/blobs/sha256:6bff1f36dd36d4a4da5d87625a4869e558d005388268638bb13065f3e58aa9fe
-    sha256: 6bff1f36dd36d4a4da5d87625a4869e558d005388268638bb13065f3e58aa9fe
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cp2k/blobs/sha256:933366a7dfaa3353854c2e803c25bd9c8272a0fcd979e28c34abd230dab052a1
-    sha256: 933366a7dfaa3353854c2e803c25bd9c8272a0fcd979e28c34abd230dab052a1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cp2k/blobs/sha256:2df56fdcdadda4a0f684872a13095d462fa64a9436c0358e2036b318562ed715
-    sha256: 2df56fdcdadda4a0f684872a13095d462fa64a9436c0358e2036b318562ed715
-source:
-  url: https://github.com/cp2k/cp2k/releases/download/v2026.1/cp2k-2026.1.tar.bz2
-  sha256: 4364c74bcffaa474bc234e11686b09550e4d06932acf2147a341e4f7679dd88e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dbcsr
-  - fftw
-  - gcc
-  - libint
-  - libxc
-  - open-mpi
-  - openblas
-  - scalapack
-  - libomp
+    - dbcsr
+    - fftw
+    - gcc
+    - libint
+    - libxc
+    - open-mpi
+    - openblas
+    - scalapack
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cp2k/blobs/sha256:6bff1f36dd36d4a4da5d87625a4869e558d005388268638bb13065f3e58aa9fe
+        sha256: 6bff1f36dd36d4a4da5d87625a4869e558d005388268638bb13065f3e58aa9fe
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cp2k/blobs/sha256:07bc22355e467c9d4e8b65013e9d370b01d099fd011e3758b1371ce1acf9b5a0
+        sha256: 07bc22355e467c9d4e8b65013e9d370b01d099fd011e3758b1371ce1acf9b5a0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cp2k/blobs/sha256:933366a7dfaa3353854c2e803c25bd9c8272a0fcd979e28c34abd230dab052a1
+        sha256: 933366a7dfaa3353854c2e803c25bd9c8272a0fcd979e28c34abd230dab052a1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cp2k/blobs/sha256:2df56fdcdadda4a0f684872a13095d462fa64a9436c0358e2036b318562ed715
+        sha256: 2df56fdcdadda4a0f684872a13095d462fa64a9436c0358e2036b318562ed715
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cp2k/cp2k/releases/download/v2026.1/cp2k-2026.1.tar.bz2
+    sha256: 4364c74bcffaa474bc234e11686b09550e4d06932acf2147a341e4f7679dd88e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - fypp
-  - pkgconf
+    - cmake
+    - fypp
+    - pkgconf
 linux_dependencies:
-  - dbcsr
-  - fftw
-  - gcc
-  - libint
-  - libxc
-  - open-mpi
-  - openblas
-  - scalapack
+    - dbcsr
+    - fftw
+    - gcc
+    - libint
+    - libxc
+    - open-mpi
+    - openblas
+    - scalapack
+build:
+    configure: []
+    install: []
+service: null

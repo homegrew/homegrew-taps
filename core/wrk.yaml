@@ -3,26 +3,52 @@ version: 4.2.0
 description: HTTP benchmarking tool
 homepage: https://github.com/wg/wrk
 license: LicenseRef-Homebrew-cannot-represent
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wrk/blobs/sha256:006efeee8686cc28a2c7a52afc6e1d21593ff274a6c5a206cc7aec60a756a097
-    sha256: 006efeee8686cc28a2c7a52afc6e1d21593ff274a6c5a206cc7aec60a756a097
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wrk/blobs/sha256:11ddc1b8dfc48bd2c8bb3b2b96f4b01b5356f5b8d0702d7ee287bf56a96b3b55
-    sha256: 11ddc1b8dfc48bd2c8bb3b2b96f4b01b5356f5b8d0702d7ee287bf56a96b3b55
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wrk/blobs/sha256:e4295514a73470421b9cadc29d0f2873de383cc7b9d31523028d2310ef6e437b
-    sha256: e4295514a73470421b9cadc29d0f2873de383cc7b9d31523028d2310ef6e437b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wrk/blobs/sha256:09305386a05c3e9f9370c7add8c05415c21593b46366db083464acdaf98a9779
-    sha256: 09305386a05c3e9f9370c7add8c05415c21593b46366db083464acdaf98a9779
-source:
-  url: https://github.com/wg/wrk/archive/refs/tags/4.2.0.tar.gz
-  sha256: e255f696bff6e329f5d19091da6b06164b8d59d62cb9e673625bdcd27fe7bdad
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - luajit
-  - openssl@3
+    - luajit
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wrk/blobs/sha256:11ddc1b8dfc48bd2c8bb3b2b96f4b01b5356f5b8d0702d7ee287bf56a96b3b55
+        sha256: 11ddc1b8dfc48bd2c8bb3b2b96f4b01b5356f5b8d0702d7ee287bf56a96b3b55
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wrk/blobs/sha256:006efeee8686cc28a2c7a52afc6e1d21593ff274a6c5a206cc7aec60a756a097
+        sha256: 006efeee8686cc28a2c7a52afc6e1d21593ff274a6c5a206cc7aec60a756a097
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wrk/blobs/sha256:e4295514a73470421b9cadc29d0f2873de383cc7b9d31523028d2310ef6e437b
+        sha256: e4295514a73470421b9cadc29d0f2873de383cc7b9d31523028d2310ef6e437b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wrk/blobs/sha256:09305386a05c3e9f9370c7add8c05415c21593b46366db083464acdaf98a9779
+        sha256: 09305386a05c3e9f9370c7add8c05415c21593b46366db083464acdaf98a9779
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/wg/wrk/archive/refs/tags/4.2.0.tar.gz
+    sha256: e255f696bff6e329f5d19091da6b06164b8d59d62cb9e673625bdcd27fe7bdad
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

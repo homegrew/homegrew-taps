@@ -3,31 +3,56 @@ version: 1.29.0
 description: Python 3 bindings for the Cairo graphics library
 homepage: https://cairographics.org/pycairo/
 license: LGPL-2.1-only OR MPL-1.1
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/py3cairo/blobs/sha256:5262a6f83c776ac9a3325488dd92216a9865f271d6de30de4b465ec771ee8968
-    sha256: 5262a6f83c776ac9a3325488dd92216a9865f271d6de30de4b465ec771ee8968
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/py3cairo/blobs/sha256:f915d3efc320997a2e05c5948b3eea84f5c7640cc58542fb4d86fe936416a5db
-    sha256: f915d3efc320997a2e05c5948b3eea84f5c7640cc58542fb4d86fe936416a5db
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/py3cairo/blobs/sha256:5692a6792c7aaf933469acc5ff1c51a6b21e11d8f98439f3baf9e525bd2e18b5
-    sha256: 5692a6792c7aaf933469acc5ff1c51a6b21e11d8f98439f3baf9e525bd2e18b5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/py3cairo/blobs/sha256:81629e2f6185689b774840bc69f19b56571f1fa8644545aa645c31fe2e3c61bb
-    sha256: 81629e2f6185689b774840bc69f19b56571f1fa8644545aa645c31fe2e3c61bb
-source:
-  url: https://github.com/pygobject/pycairo/releases/download/v1.29.0/pycairo-1.29.0.tar.gz
-  sha256: f3f7fde97325cae80224c09f12564ef58d0d0f655da0e3b040f5807bd5bd3142
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
+    - cairo
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/py3cairo/blobs/sha256:f915d3efc320997a2e05c5948b3eea84f5c7640cc58542fb4d86fe936416a5db
+        sha256: f915d3efc320997a2e05c5948b3eea84f5c7640cc58542fb4d86fe936416a5db
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/py3cairo/blobs/sha256:5262a6f83c776ac9a3325488dd92216a9865f271d6de30de4b465ec771ee8968
+        sha256: 5262a6f83c776ac9a3325488dd92216a9865f271d6de30de4b465ec771ee8968
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/py3cairo/blobs/sha256:5692a6792c7aaf933469acc5ff1c51a6b21e11d8f98439f3baf9e525bd2e18b5
+        sha256: 5692a6792c7aaf933469acc5ff1c51a6b21e11d8f98439f3baf9e525bd2e18b5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/py3cairo/blobs/sha256:81629e2f6185689b774840bc69f19b56571f1fa8644545aa645c31fe2e3c61bb
+        sha256: 81629e2f6185689b774840bc69f19b56571f1fa8644545aa645c31fe2e3c61bb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pygobject/pycairo/releases/download/v1.29.0/pycairo-1.29.0.tar.gz
+    sha256: f3f7fde97325cae80224c09f12564ef58d0d0f655da0e3b040f5807bd5bd3142
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
-  - python@3.13
-  - python@3.14
+    - meson
+    - ninja
+    - pkgconf
+    - python@3.13
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,44 +3,68 @@ version: 1.20.3
 description: PlayStation Portable emulator
 homepage: https://ppsspp.org/
 license: GPL-2.0-or-later AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:528dccce4420d673cfe8a2d46b744f358c1920af70c2894c2c44e72682b849eb
-    sha256: 528dccce4420d673cfe8a2d46b744f358c1920af70c2894c2c44e72682b849eb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:230849d007a29cb5802e42f83a0d2160f42da181d27c30bd7964d25fcf2a35a5
-    sha256: 230849d007a29cb5802e42f83a0d2160f42da181d27c30bd7964d25fcf2a35a5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:9c27458004d7b61c152744a119e1c11ec1d1cc8ff4472ebaf3bd621529e8099b
-    sha256: 9c27458004d7b61c152744a119e1c11ec1d1cc8ff4472ebaf3bd621529e8099b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:e516f646953e10cc45416c10692c7a432b1dacb7086ea47a56c4eddabd0c24ee
-    sha256: e516f646953e10cc45416c10692c7a432b1dacb7086ea47a56c4eddabd0c24ee
-source:
-  url: https://github.com/hrydgard/ppsspp/releases/download/v1.20.3/ppsspp-1.20.3.tar.xz
-  sha256: 70818b8001aebb624b24aedc64a25c1808e23acc4b4b31f020288a732ce8495b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libzip
-  - miniupnpc
-  - sdl2
-  - snappy
-  - zstd
-  - molten-vk
+    - libzip
+    - miniupnpc
+    - sdl2
+    - snappy
+    - zstd
+    - molten-vk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:230849d007a29cb5802e42f83a0d2160f42da181d27c30bd7964d25fcf2a35a5
+        sha256: 230849d007a29cb5802e42f83a0d2160f42da181d27c30bd7964d25fcf2a35a5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:528dccce4420d673cfe8a2d46b744f358c1920af70c2894c2c44e72682b849eb
+        sha256: 528dccce4420d673cfe8a2d46b744f358c1920af70c2894c2c44e72682b849eb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:9c27458004d7b61c152744a119e1c11ec1d1cc8ff4472ebaf3bd621529e8099b
+        sha256: 9c27458004d7b61c152744a119e1c11ec1d1cc8ff4472ebaf3bd621529e8099b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ppsspp/blobs/sha256:e516f646953e10cc45416c10692c7a432b1dacb7086ea47a56c4eddabd0c24ee
+        sha256: e516f646953e10cc45416c10692c7a432b1dacb7086ea47a56c4eddabd0c24ee
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/hrydgard/ppsspp/releases/download/v1.20.3/ppsspp-1.20.3.tar.xz
+    sha256: 70818b8001aebb624b24aedc64a25c1808e23acc4b4b31f020288a732ce8495b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - yasm
+    - cmake
+    - pkgconf
+    - yasm
 linux_dependencies:
-  - glew
-  - libpng
-  - libzip
-  - mesa
-  - miniupnpc
-  - sdl2
-  - snappy
-  - zlib-ng-compat
-  - zstd
+    - glew
+    - libpng
+    - libzip
+    - mesa
+    - miniupnpc
+    - sdl2
+    - snappy
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

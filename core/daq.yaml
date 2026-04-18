@@ -3,28 +3,54 @@ version: 3.0.27
 description: Network intrusion prevention and detection system
 homepage: https://www.snort.org/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:d7a9c596136102d3a7cd140178b9e30fcb0ba527ba2d58d7795f971c6793a4e8
-    sha256: d7a9c596136102d3a7cd140178b9e30fcb0ba527ba2d58d7795f971c6793a4e8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:1458daa5b057fd3f539cc53e95876c240564bd85a618a020f2b654437eb90f15
-    sha256: 1458daa5b057fd3f539cc53e95876c240564bd85a618a020f2b654437eb90f15
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:fe57804cfdca5b15a86fbe37f4a2733a5c73568d5191e9ed5aa13a93b8a0d17f
-    sha256: fe57804cfdca5b15a86fbe37f4a2733a5c73568d5191e9ed5aa13a93b8a0d17f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:e790783a96e3e08b0c6529bff97f7b531c268beb95fa2ee233887374559335f0
-    sha256: e790783a96e3e08b0c6529bff97f7b531c268beb95fa2ee233887374559335f0
-source:
-  url: https://github.com/snort3/libdaq/archive/refs/tags/v3.0.27.tar.gz
-  sha256: 03fac3da27e3230a7d26262f2480cd65a409cee3596c6758a7f9eacb7f24601c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:1458daa5b057fd3f539cc53e95876c240564bd85a618a020f2b654437eb90f15
+        sha256: 1458daa5b057fd3f539cc53e95876c240564bd85a618a020f2b654437eb90f15
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:d7a9c596136102d3a7cd140178b9e30fcb0ba527ba2d58d7795f971c6793a4e8
+        sha256: d7a9c596136102d3a7cd140178b9e30fcb0ba527ba2d58d7795f971c6793a4e8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:fe57804cfdca5b15a86fbe37f4a2733a5c73568d5191e9ed5aa13a93b8a0d17f
+        sha256: fe57804cfdca5b15a86fbe37f4a2733a5c73568d5191e9ed5aa13a93b8a0d17f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/daq/blobs/sha256:e790783a96e3e08b0c6529bff97f7b531c268beb95fa2ee233887374559335f0
+        sha256: e790783a96e3e08b0c6529bff97f7b531c268beb95fa2ee233887374559335f0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/snort3/libdaq/archive/refs/tags/v3.0.27.tar.gz
+    sha256: 03fac3da27e3230a7d26262f2480cd65a409cee3596c6758a7f9eacb7f24601c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

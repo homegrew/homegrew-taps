@@ -3,25 +3,51 @@ version: 0.8.3
 description: Static analysis tool for Kubernetes YAML files and Helm charts
 homepage: https://github.com/stackrox/kube-linter
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kube-linter/blobs/sha256:4b16ae96700ced1179dc45c0c136a4cfeba5a5651f6e2ea38ac8886f8410b986
-    sha256: 4b16ae96700ced1179dc45c0c136a4cfeba5a5651f6e2ea38ac8886f8410b986
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kube-linter/blobs/sha256:4ed1130dc09dfcebb9b263d146b4b6629b533900e4f206206c659e97ea9d79b5
-    sha256: 4ed1130dc09dfcebb9b263d146b4b6629b533900e4f206206c659e97ea9d79b5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kube-linter/blobs/sha256:743b7bd5e1afb0c95f0626f45bcaecdd4c5f1f48908ece1fdff2cfd094e30421
-    sha256: 743b7bd5e1afb0c95f0626f45bcaecdd4c5f1f48908ece1fdff2cfd094e30421
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kube-linter/blobs/sha256:470534c3ce9782cb5a59df64177e236a7b89e61951230408e80f6ab27000391e
-    sha256: 470534c3ce9782cb5a59df64177e236a7b89e61951230408e80f6ab27000391e
-source:
-  url: https://github.com/stackrox/kube-linter/archive/refs/tags/v0.8.3.tar.gz
-  sha256: e548670732ec47e34308abc96755c2cffeeaa1d942222167669709d612caa7d1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kube-linter/blobs/sha256:4ed1130dc09dfcebb9b263d146b4b6629b533900e4f206206c659e97ea9d79b5
+        sha256: 4ed1130dc09dfcebb9b263d146b4b6629b533900e4f206206c659e97ea9d79b5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kube-linter/blobs/sha256:4b16ae96700ced1179dc45c0c136a4cfeba5a5651f6e2ea38ac8886f8410b986
+        sha256: 4b16ae96700ced1179dc45c0c136a4cfeba5a5651f6e2ea38ac8886f8410b986
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kube-linter/blobs/sha256:743b7bd5e1afb0c95f0626f45bcaecdd4c5f1f48908ece1fdff2cfd094e30421
+        sha256: 743b7bd5e1afb0c95f0626f45bcaecdd4c5f1f48908ece1fdff2cfd094e30421
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kube-linter/blobs/sha256:470534c3ce9782cb5a59df64177e236a7b89e61951230408e80f6ab27000391e
+        sha256: 470534c3ce9782cb5a59df64177e236a7b89e61951230408e80f6ab27000391e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/stackrox/kube-linter/archive/refs/tags/v0.8.3.tar.gz
+    sha256: e548670732ec47e34308abc96755c2cffeeaa1d942222167669709d612caa7d1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

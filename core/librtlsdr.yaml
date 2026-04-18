@@ -3,28 +3,53 @@ version: 2.0.2
 description: Use Realtek DVB-T dongles as a cheap SDR
 homepage: https://osmocom.org/projects/rtl-sdr/wiki
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:7cca49b3b28f7d9e6899474228a7dc2a58735a87699d1c8283fe0a76d83dbd8b
-    sha256: 7cca49b3b28f7d9e6899474228a7dc2a58735a87699d1c8283fe0a76d83dbd8b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:d4060f4b17661ba3b0687dca15ec474989a997c7f45fe4d7e351b62168a04468
-    sha256: d4060f4b17661ba3b0687dca15ec474989a997c7f45fe4d7e351b62168a04468
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:a862647f13e22312396e83c4122e7bd985fdff0982910734ad7e9334809917ba
-    sha256: a862647f13e22312396e83c4122e7bd985fdff0982910734ad7e9334809917ba
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:859c88b6c98327a37922f7e1ffea16ad431121bb814c7c50fb5898df7aeefb0a
-    sha256: 859c88b6c98327a37922f7e1ffea16ad431121bb814c7c50fb5898df7aeefb0a
-source:
-  url: https://github.com/steve-m/librtlsdr/archive/refs/tags/v2.0.2.tar.gz
-  sha256: f407de0b6dce19e81694814e363e8890b6ab2c287c8d64c27a03023e5702fb42
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libusb
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:d4060f4b17661ba3b0687dca15ec474989a997c7f45fe4d7e351b62168a04468
+        sha256: d4060f4b17661ba3b0687dca15ec474989a997c7f45fe4d7e351b62168a04468
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:7cca49b3b28f7d9e6899474228a7dc2a58735a87699d1c8283fe0a76d83dbd8b
+        sha256: 7cca49b3b28f7d9e6899474228a7dc2a58735a87699d1c8283fe0a76d83dbd8b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:a862647f13e22312396e83c4122e7bd985fdff0982910734ad7e9334809917ba
+        sha256: a862647f13e22312396e83c4122e7bd985fdff0982910734ad7e9334809917ba
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:859c88b6c98327a37922f7e1ffea16ad431121bb814c7c50fb5898df7aeefb0a
+        sha256: 859c88b6c98327a37922f7e1ffea16ad431121bb814c7c50fb5898df7aeefb0a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/steve-m/librtlsdr/archive/refs/tags/v2.0.2.tar.gz
+    sha256: f407de0b6dce19e81694814e363e8890b6ab2c287c8d64c27a03023e5702fb42
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

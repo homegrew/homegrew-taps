@@ -3,44 +3,68 @@ version: 0.10.9
 description: Open Lighting Architecture for lighting control information
 homepage: https://github.com/OpenLightingProject/ola
 license: GPL-2.0-or-later AND LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:6074a5dfc02e9b35399c20da37ad2a6a29002f0f7eb99fe26fa8fac750457232
-    sha256: 6074a5dfc02e9b35399c20da37ad2a6a29002f0f7eb99fe26fa8fac750457232
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:8fa7950770478519b25f4f6a76d88a0ae22897e3ba99bb86024cbdaad1dfd945
-    sha256: 8fa7950770478519b25f4f6a76d88a0ae22897e3ba99bb86024cbdaad1dfd945
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:9c5cb14f93b7ce7fa255205b6d56d48064d5d82d6ee233ff726c38eed7eda06f
-    sha256: 9c5cb14f93b7ce7fa255205b6d56d48064d5d82d6ee233ff726c38eed7eda06f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:50475abc4a68d26c3423576e0916abef0b9ac76083295e2fca5d005f7d923deb
-    sha256: 50475abc4a68d26c3423576e0916abef0b9ac76083295e2fca5d005f7d923deb
-source:
-  url: https://github.com/OpenLightingProject/ola/releases/download/0.10.9/ola-0.10.9.tar.gz
-  sha256: 44073698c147fe641507398253c2e52ff8dc7eac8606cbf286c29f37939a4ebf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - liblo
-  - libmicrohttpd
-  - libusb
-  - numpy
-  - protobuf
+    - abseil
+    - liblo
+    - libmicrohttpd
+    - libusb
+    - numpy
+    - protobuf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:8fa7950770478519b25f4f6a76d88a0ae22897e3ba99bb86024cbdaad1dfd945
+        sha256: 8fa7950770478519b25f4f6a76d88a0ae22897e3ba99bb86024cbdaad1dfd945
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:6074a5dfc02e9b35399c20da37ad2a6a29002f0f7eb99fe26fa8fac750457232
+        sha256: 6074a5dfc02e9b35399c20da37ad2a6a29002f0f7eb99fe26fa8fac750457232
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:9c5cb14f93b7ce7fa255205b6d56d48064d5d82d6ee233ff726c38eed7eda06f
+        sha256: 9c5cb14f93b7ce7fa255205b6d56d48064d5d82d6ee233ff726c38eed7eda06f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:50475abc4a68d26c3423576e0916abef0b9ac76083295e2fca5d005f7d923deb
+        sha256: 50475abc4a68d26c3423576e0916abef0b9ac76083295e2fca5d005f7d923deb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/OpenLightingProject/ola/releases/download/0.10.9/ola-0.10.9.tar.gz
+    sha256: 44073698c147fe641507398253c2e52ff8dc7eac8606cbf286c29f37939a4ebf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - cppunit
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - cppunit
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - abseil
-  - liblo
-  - libmicrohttpd
-  - libusb
-  - numpy
-  - protobuf
-  - util-linux
+    - abseil
+    - liblo
+    - libmicrohttpd
+    - libusb
+    - numpy
+    - protobuf
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

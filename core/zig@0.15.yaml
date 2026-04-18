@@ -1,0 +1,58 @@
+name: zig@0.15
+version: 0.15.2
+description: Programming language designed for robustness, optimality, and clarity
+homepage: https://ziglang.org/
+license: MIT
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
+install:
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies:
+    - lld@20
+    - llvm@20
+    - zstd
+keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zig/0.15/blobs/sha256:fbf88162ef3557bbf834f9d2ca329e12ca3d0d383f52e073f48a61a63b650961
+        sha256: fbf88162ef3557bbf834f9d2ca329e12ca3d0d383f52e073f48a61a63b650961
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zig/0.15/blobs/sha256:3376720c6c088ddce7219a4dca4f50d790bcc97087c9a44f66a427d6a6718515
+        sha256: 3376720c6c088ddce7219a4dca4f50d790bcc97087c9a44f66a427d6a6718515
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zig/0.15/blobs/sha256:2a63a3ccb03202319d56571238da8f5bb23dbbd2446217c3724b8b934c24e832
+        sha256: 2a63a3ccb03202319d56571238da8f5bb23dbbd2446217c3724b8b934c24e832
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zig/0.15/blobs/sha256:df1dbd800df23e6abbe082fb4dd6ab3decb6a428c7b8919f25f815ff204fa2bf
+        sha256: df1dbd800df23e6abbe082fb4dd6ab3decb6a428c7b8919f25f815ff204fa2bf
+        sha512: ""
+        signature: ""
+source:
+    url: https://ziglang.org/download/0.15.2/zig-0.15.2.tar.xz
+    sha256: d9b30c7aa983fcff5eed2084d54ae83eaafe7ff3a84d8fb754d854165a6e521c
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - cmake
+linux_dependencies:
+    - lld@20
+    - llvm@20
+build:
+    configure: []
+    install: []
+service: null

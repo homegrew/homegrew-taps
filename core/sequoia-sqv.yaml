@@ -3,29 +3,54 @@ version: 1.3.0
 description: Simple OpenPGP signature verification program
 homepage: https://sequoia-pgp.org/
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sequoia-sqv/blobs/sha256:568055ffe201b99282b0109f992799923d0b7ddb91d07a8b4f316ebeb22f4fc0
-    sha256: 568055ffe201b99282b0109f992799923d0b7ddb91d07a8b4f316ebeb22f4fc0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sequoia-sqv/blobs/sha256:cac0ede5fd6bd2543a994cf67d8a48dfb76de9c1a0ae922655decdd47db2b924
-    sha256: cac0ede5fd6bd2543a994cf67d8a48dfb76de9c1a0ae922655decdd47db2b924
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sequoia-sqv/blobs/sha256:6929e0826397eb7eb9ac89cbb5c431a7b0fb561d968ac9402fe4385831be52b0
-    sha256: 6929e0826397eb7eb9ac89cbb5c431a7b0fb561d968ac9402fe4385831be52b0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sequoia-sqv/blobs/sha256:436baddd5f72daf501ea4c966dac93f4ef811a0af1c6a933fcbab808afd34711
-    sha256: 436baddd5f72daf501ea4c966dac93f4ef811a0af1c6a933fcbab808afd34711
-source:
-  url: https://gitlab.com/sequoia-pgp/sequoia-sqv/-/archive/v1.3.0/sequoia-sqv-v1.3.0.tar.bz2
-  sha256: cfa9159cbeda4e4d0e3c2778374b24004037bb21d5ea6441f0fb80c68cedfce0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - nettle
+    - gmp
+    - nettle
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sequoia-sqv/blobs/sha256:cac0ede5fd6bd2543a994cf67d8a48dfb76de9c1a0ae922655decdd47db2b924
+        sha256: cac0ede5fd6bd2543a994cf67d8a48dfb76de9c1a0ae922655decdd47db2b924
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sequoia-sqv/blobs/sha256:568055ffe201b99282b0109f992799923d0b7ddb91d07a8b4f316ebeb22f4fc0
+        sha256: 568055ffe201b99282b0109f992799923d0b7ddb91d07a8b4f316ebeb22f4fc0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sequoia-sqv/blobs/sha256:6929e0826397eb7eb9ac89cbb5c431a7b0fb561d968ac9402fe4385831be52b0
+        sha256: 6929e0826397eb7eb9ac89cbb5c431a7b0fb561d968ac9402fe4385831be52b0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sequoia-sqv/blobs/sha256:436baddd5f72daf501ea4c966dac93f4ef811a0af1c6a933fcbab808afd34711
+        sha256: 436baddd5f72daf501ea4c966dac93f4ef811a0af1c6a933fcbab808afd34711
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.com/sequoia-pgp/sequoia-sqv/-/archive/v1.3.0/sequoia-sqv-v1.3.0.tar.bz2
+    sha256: cfa9159cbeda4e4d0e3c2778374b24004037bb21d5ea6441f0fb80c68cedfce0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

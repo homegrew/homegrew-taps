@@ -3,66 +3,90 @@ version: 2.1.0-beta1
 description: GUI tool supporting SpatiaLite
 homepage: https://www.gaia-gis.it/fossil/spatialite_gui/index
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/spatialite-gui/blobs/sha256:0575abdec10abefd35c1f3a62fe8037f2dfbd0da69a1da730803d5c2ece3f14c
-    sha256: 0575abdec10abefd35c1f3a62fe8037f2dfbd0da69a1da730803d5c2ece3f14c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/spatialite-gui/blobs/sha256:828feb23aba3c8bffebd7dfc0773f7e9fa02452b99d00abe200e63371c7e5bb4
-    sha256: 828feb23aba3c8bffebd7dfc0773f7e9fa02452b99d00abe200e63371c7e5bb4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/spatialite-gui/blobs/sha256:258ba73a7c8997fb824839620cb3a60ad045f911713bdc6eb1f482e0b69c7828
-    sha256: 258ba73a7c8997fb824839620cb3a60ad045f911713bdc6eb1f482e0b69c7828
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/spatialite-gui/blobs/sha256:90c82be8576e934ad0bef353308cd730e5b485ec0c94aa73b92bf8db132e57ee
-    sha256: 90c82be8576e934ad0bef353308cd730e5b485ec0c94aa73b92bf8db132e57ee
-source:
-  url: https://www.gaia-gis.it/gaia-sins/spatialite-gui-sources/spatialite_gui-2.1.0-beta1.tar.gz
-  sha256: ba48d96df18cebc3ff23f69797207ae1582cce62f4596b69bae300ca3c23db33
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freexl
-  - geos
-  - libpq
-  - librasterlite2
-  - librttopo
-  - libspatialite
-  - libtiff
-  - libxlsxwriter
-  - libxml2
-  - lz4
-  - minizip
-  - openjpeg
-  - proj
-  - sqlite
-  - virtualpg
-  - webp
-  - wxwidgets@3.2
-  - xz
-  - zstd
+    - freexl
+    - geos
+    - libpq
+    - librasterlite2
+    - librttopo
+    - libspatialite
+    - libtiff
+    - libxlsxwriter
+    - libxml2
+    - lz4
+    - minizip
+    - openjpeg
+    - proj
+    - sqlite
+    - virtualpg
+    - webp
+    - wxwidgets@3.2
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/spatialite-gui/blobs/sha256:828feb23aba3c8bffebd7dfc0773f7e9fa02452b99d00abe200e63371c7e5bb4
+        sha256: 828feb23aba3c8bffebd7dfc0773f7e9fa02452b99d00abe200e63371c7e5bb4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/spatialite-gui/blobs/sha256:0575abdec10abefd35c1f3a62fe8037f2dfbd0da69a1da730803d5c2ece3f14c
+        sha256: 0575abdec10abefd35c1f3a62fe8037f2dfbd0da69a1da730803d5c2ece3f14c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/spatialite-gui/blobs/sha256:258ba73a7c8997fb824839620cb3a60ad045f911713bdc6eb1f482e0b69c7828
+        sha256: 258ba73a7c8997fb824839620cb3a60ad045f911713bdc6eb1f482e0b69c7828
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/spatialite-gui/blobs/sha256:90c82be8576e934ad0bef353308cd730e5b485ec0c94aa73b92bf8db132e57ee
+        sha256: 90c82be8576e934ad0bef353308cd730e5b485ec0c94aa73b92bf8db132e57ee
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.gaia-gis.it/gaia-sins/spatialite-gui-sources/spatialite_gui-2.1.0-beta1.tar.gz
+    sha256: ba48d96df18cebc3ff23f69797207ae1582cce62f4596b69bae300ca3c23db33
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - freexl
-  - geos
-  - libpq
-  - librasterlite2
-  - librttopo
-  - libspatialite
-  - libtiff
-  - libxlsxwriter
-  - libxml2
-  - lz4
-  - minizip
-  - openjpeg
-  - proj
-  - sqlite
-  - virtualpg
-  - webp
-  - wxwidgets@3.2
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - freexl
+    - geos
+    - libpq
+    - librasterlite2
+    - librttopo
+    - libspatialite
+    - libtiff
+    - libxlsxwriter
+    - libxml2
+    - lz4
+    - minizip
+    - openjpeg
+    - proj
+    - sqlite
+    - virtualpg
+    - webp
+    - wxwidgets@3.2
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

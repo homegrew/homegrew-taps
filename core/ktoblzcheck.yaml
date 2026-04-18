@@ -1,30 +1,55 @@
 name: ktoblzcheck
-version: 1.59
+version: "1.59"
 description: Library for German banks
 homepage: https://ktoblzcheck.sourceforge.net/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ktoblzcheck/blobs/sha256:fd3b80a2358a2209b506a196e10769ebeed04e5c1f209cd3477ab441e8df9a81
-    sha256: fd3b80a2358a2209b506a196e10769ebeed04e5c1f209cd3477ab441e8df9a81
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ktoblzcheck/blobs/sha256:0b845c7b179e99f6f35fc241922c77a4aefd4adeee544f429ce78c7d79704b48
-    sha256: 0b845c7b179e99f6f35fc241922c77a4aefd4adeee544f429ce78c7d79704b48
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ktoblzcheck/blobs/sha256:5b7681ef9f5b3de8ccb35f9215651650adfe73ba07b69eac0642ad6ba29aa876
-    sha256: 5b7681ef9f5b3de8ccb35f9215651650adfe73ba07b69eac0642ad6ba29aa876
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ktoblzcheck/blobs/sha256:0ba4ead313ea8f1e5c8d56782ab6a359147328c46ac46ce2f41ae9ccd3f07cd0
-    sha256: 0ba4ead313ea8f1e5c8d56782ab6a359147328c46ac46ce2f41ae9ccd3f07cd0
-source:
-  url: https://downloads.sourceforge.net/project/ktoblzcheck/ktoblzcheck-1.59.tar.gz
-  sha256: 3cd33880d2425e8fa3be9918c85485514f53e04b0b986bcf7bd003fc53071fa7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
-  - sqlite
+    - python@3.14
+    - sqlite
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ktoblzcheck/blobs/sha256:0b845c7b179e99f6f35fc241922c77a4aefd4adeee544f429ce78c7d79704b48
+        sha256: 0b845c7b179e99f6f35fc241922c77a4aefd4adeee544f429ce78c7d79704b48
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ktoblzcheck/blobs/sha256:fd3b80a2358a2209b506a196e10769ebeed04e5c1f209cd3477ab441e8df9a81
+        sha256: fd3b80a2358a2209b506a196e10769ebeed04e5c1f209cd3477ab441e8df9a81
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ktoblzcheck/blobs/sha256:5b7681ef9f5b3de8ccb35f9215651650adfe73ba07b69eac0642ad6ba29aa876
+        sha256: 5b7681ef9f5b3de8ccb35f9215651650adfe73ba07b69eac0642ad6ba29aa876
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ktoblzcheck/blobs/sha256:0ba4ead313ea8f1e5c8d56782ab6a359147328c46ac46ce2f41ae9ccd3f07cd0
+        sha256: 0ba4ead313ea8f1e5c8d56782ab6a359147328c46ac46ce2f41ae9ccd3f07cd0
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/ktoblzcheck/ktoblzcheck-1.59.tar.gz
+    sha256: 3cd33880d2425e8fa3be9918c85485514f53e04b0b986bcf7bd003fc53071fa7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

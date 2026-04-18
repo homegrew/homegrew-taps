@@ -1,27 +1,53 @@
 name: texinfo
-version: 7.3
+version: "7.3"
 description: Official documentation format of the GNU project
 homepage: https://www.gnu.org/software/texinfo/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/texinfo/blobs/sha256:af864341784c9958f6ce991fa0e0bc3b5727dfc7c8f53a90cbf2339e080c2232
-    sha256: af864341784c9958f6ce991fa0e0bc3b5727dfc7c8f53a90cbf2339e080c2232
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/texinfo/blobs/sha256:0e80a4ba0a2a3a48eebb8078f1c79fe563e374c3c2ed77642901941fc42e015c
-    sha256: 0e80a4ba0a2a3a48eebb8078f1c79fe563e374c3c2ed77642901941fc42e015c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/texinfo/blobs/sha256:0dd622bb0151013803cdf5977f76cf78622fcb92478062d6ce2612199f7a049f
-    sha256: 0dd622bb0151013803cdf5977f76cf78622fcb92478062d6ce2612199f7a049f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/texinfo/blobs/sha256:ae0c709a08d1e093bddc8c4c4f696592e38faed5c261d020f027dcf195425ddc
-    sha256: ae0c709a08d1e093bddc8c4c4f696592e38faed5c261d020f027dcf195425ddc
-source:
-  url: https://ftpmirror.gnu.org/gnu/texinfo/texinfo-7.3.tar.xz
-  sha256: 51f74eb0f51cfa9873b85264dfdd5d46e8957ec95b88f0fb762f63d9e164c72e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/texinfo/blobs/sha256:0e80a4ba0a2a3a48eebb8078f1c79fe563e374c3c2ed77642901941fc42e015c
+        sha256: 0e80a4ba0a2a3a48eebb8078f1c79fe563e374c3c2ed77642901941fc42e015c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/texinfo/blobs/sha256:af864341784c9958f6ce991fa0e0bc3b5727dfc7c8f53a90cbf2339e080c2232
+        sha256: af864341784c9958f6ce991fa0e0bc3b5727dfc7c8f53a90cbf2339e080c2232
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/texinfo/blobs/sha256:0dd622bb0151013803cdf5977f76cf78622fcb92478062d6ce2612199f7a049f
+        sha256: 0dd622bb0151013803cdf5977f76cf78622fcb92478062d6ce2612199f7a049f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/texinfo/blobs/sha256:ae0c709a08d1e093bddc8c4c4f696592e38faed5c261d020f027dcf195425ddc
+        sha256: ae0c709a08d1e093bddc8c4c4f696592e38faed5c261d020f027dcf195425ddc
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/texinfo/texinfo-7.3.tar.xz
+    sha256: 51f74eb0f51cfa9873b85264dfdd5d46e8957ec95b88f0fb762f63d9e164c72e
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - libunistring
+    - libunistring
+build:
+    configure: []
+    install: []
+service: null

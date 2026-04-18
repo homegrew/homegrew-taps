@@ -3,29 +3,54 @@ version: 9.8.1
 description: Cartographic Projections Library
 homepage: https://proj.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proj/blobs/sha256:c532d0adc3fdc96268bab9406be54069c26476eb5b8cecb8f748d5df4d1978da
-    sha256: c532d0adc3fdc96268bab9406be54069c26476eb5b8cecb8f748d5df4d1978da
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proj/blobs/sha256:9b66a3600a992e790a90dee9baa9e6cd18ddb35caf6460ad4f59a8e105aa0706
-    sha256: 9b66a3600a992e790a90dee9baa9e6cd18ddb35caf6460ad4f59a8e105aa0706
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proj/blobs/sha256:fa40fef6883cfb3b098a98a7630ffe26a131e4b6996291bb8c1b873b4393ea72
-    sha256: fa40fef6883cfb3b098a98a7630ffe26a131e4b6996291bb8c1b873b4393ea72
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proj/blobs/sha256:3774b7278555c3d2d39a73f05d08bea617fc08427f62d3a6231dd48764053f4c
-    sha256: 3774b7278555c3d2d39a73f05d08bea617fc08427f62d3a6231dd48764053f4c
-source:
-  url: https://github.com/OSGeo/PROJ/releases/download/9.8.1/proj-9.8.1.tar.gz
-  sha256: af5b731c145c1d13c4e3b4eeb7d167e94e845e440f71e3496b4ed8dae0291960
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtiff
+    - libtiff
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proj/blobs/sha256:9b66a3600a992e790a90dee9baa9e6cd18ddb35caf6460ad4f59a8e105aa0706
+        sha256: 9b66a3600a992e790a90dee9baa9e6cd18ddb35caf6460ad4f59a8e105aa0706
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proj/blobs/sha256:c532d0adc3fdc96268bab9406be54069c26476eb5b8cecb8f748d5df4d1978da
+        sha256: c532d0adc3fdc96268bab9406be54069c26476eb5b8cecb8f748d5df4d1978da
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proj/blobs/sha256:fa40fef6883cfb3b098a98a7630ffe26a131e4b6996291bb8c1b873b4393ea72
+        sha256: fa40fef6883cfb3b098a98a7630ffe26a131e4b6996291bb8c1b873b4393ea72
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proj/blobs/sha256:3774b7278555c3d2d39a73f05d08bea617fc08427f62d3a6231dd48764053f4c
+        sha256: 3774b7278555c3d2d39a73f05d08bea617fc08427f62d3a6231dd48764053f4c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/OSGeo/PROJ/releases/download/9.8.1/proj-9.8.1.tar.gz
+    sha256: af5b731c145c1d13c4e3b4eeb7d167e94e845e440f71e3496b4ed8dae0291960
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - libtool
-  - pkgconf
+    - cmake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

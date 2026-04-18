@@ -3,28 +3,53 @@ version: 19.7.0
 description: Cross-platform library for audio I/O
 homepage: https://www.portaudio.com
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/portaudio/blobs/sha256:7c24f222a11d112034b8a5e95f01feb4b610022c63bdc85d1ae2fe6abbd712e1
-    sha256: 7c24f222a11d112034b8a5e95f01feb4b610022c63bdc85d1ae2fe6abbd712e1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/portaudio/blobs/sha256:7e89c242dfe4a49421d45416ac28e5b00c9b434664e81fcafb0a192a6f83076e
-    sha256: 7e89c242dfe4a49421d45416ac28e5b00c9b434664e81fcafb0a192a6f83076e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/portaudio/blobs/sha256:01048cd3e5c934f5fb7b7cd11430833c69022a621fcc2d868159e07bbef1e3e4
-    sha256: 01048cd3e5c934f5fb7b7cd11430833c69022a621fcc2d868159e07bbef1e3e4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/portaudio/blobs/sha256:abab20444fd53b2503b0f48172fe84c6503cd6219d00a83b63af96e60d395557
-    sha256: abab20444fd53b2503b0f48172fe84c6503cd6219d00a83b63af96e60d395557
-source:
-  url: https://files.portaudio.com/archives/pa_stable_v190700_20210406.tgz
-  sha256: 47efbf42c77c19a05d22e627d42873e991ec0c1357219c0d74ce6a2948cb2def
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/portaudio/blobs/sha256:7e89c242dfe4a49421d45416ac28e5b00c9b434664e81fcafb0a192a6f83076e
+        sha256: 7e89c242dfe4a49421d45416ac28e5b00c9b434664e81fcafb0a192a6f83076e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/portaudio/blobs/sha256:7c24f222a11d112034b8a5e95f01feb4b610022c63bdc85d1ae2fe6abbd712e1
+        sha256: 7c24f222a11d112034b8a5e95f01feb4b610022c63bdc85d1ae2fe6abbd712e1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/portaudio/blobs/sha256:01048cd3e5c934f5fb7b7cd11430833c69022a621fcc2d868159e07bbef1e3e4
+        sha256: 01048cd3e5c934f5fb7b7cd11430833c69022a621fcc2d868159e07bbef1e3e4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/portaudio/blobs/sha256:abab20444fd53b2503b0f48172fe84c6503cd6219d00a83b63af96e60d395557
+        sha256: abab20444fd53b2503b0f48172fe84c6503cd6219d00a83b63af96e60d395557
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.portaudio.com/archives/pa_stable_v190700_20210406.tgz
+    sha256: 47efbf42c77c19a05d22e627d42873e991ec0c1357219c0d74ce6a2948cb2def
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - jack
+    - alsa-lib
+    - jack
+build:
+    configure: []
+    install: []
+service: null

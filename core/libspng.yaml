@@ -3,29 +3,54 @@ version: 0.7.4
 description: C library for reading and writing PNG format files
 homepage: https://libspng.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libspng/blobs/sha256:b7021367db7d381734cae9e0f63d0306a59ebb9cf2483550882e1c944ffd28ba
-    sha256: b7021367db7d381734cae9e0f63d0306a59ebb9cf2483550882e1c944ffd28ba
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libspng/blobs/sha256:9ebab1a353c99351786e0df0921ddd3fc9ace5394853223a7ce1e8e2efd333c0
-    sha256: 9ebab1a353c99351786e0df0921ddd3fc9ace5394853223a7ce1e8e2efd333c0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libspng/blobs/sha256:1cf4918ffa2127b4ce1a8be69c8710902489fdfed0418acf8b02210a549bba3e
-    sha256: 1cf4918ffa2127b4ce1a8be69c8710902489fdfed0418acf8b02210a549bba3e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libspng/blobs/sha256:beb537b513a5934a9d7a7b45dd73f3a46e4e79ab690b30276fa6e94fea1b0d73
-    sha256: beb537b513a5934a9d7a7b45dd73f3a46e4e79ab690b30276fa6e94fea1b0d73
-source:
-  url: https://github.com/randy408/libspng/archive/refs/tags/v0.7.4.tar.gz
-  sha256: 47ec02be6c0a6323044600a9221b049f63e1953faf816903e7383d4dc4234487
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libspng/blobs/sha256:9ebab1a353c99351786e0df0921ddd3fc9ace5394853223a7ce1e8e2efd333c0
+        sha256: 9ebab1a353c99351786e0df0921ddd3fc9ace5394853223a7ce1e8e2efd333c0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libspng/blobs/sha256:b7021367db7d381734cae9e0f63d0306a59ebb9cf2483550882e1c944ffd28ba
+        sha256: b7021367db7d381734cae9e0f63d0306a59ebb9cf2483550882e1c944ffd28ba
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libspng/blobs/sha256:1cf4918ffa2127b4ce1a8be69c8710902489fdfed0418acf8b02210a549bba3e
+        sha256: 1cf4918ffa2127b4ce1a8be69c8710902489fdfed0418acf8b02210a549bba3e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libspng/blobs/sha256:beb537b513a5934a9d7a7b45dd73f3a46e4e79ab690b30276fa6e94fea1b0d73
+        sha256: beb537b513a5934a9d7a7b45dd73f3a46e4e79ab690b30276fa6e94fea1b0d73
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/randy408/libspng/archive/refs/tags/v0.7.4.tar.gz
+    sha256: 47ec02be6c0a6323044600a9221b049f63e1953faf816903e7383d4dc4234487
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

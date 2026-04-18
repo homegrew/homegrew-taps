@@ -3,27 +3,53 @@ version: 2.8.5
 description: IMAP message processor/filter
 homepage: https://github.com/lefcha/imapfilter/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imapfilter/blobs/sha256:1ffec7b7bf2c3c7f24bfc811025285e07faa6739701b6dfe1576c7713234935c
-    sha256: 1ffec7b7bf2c3c7f24bfc811025285e07faa6739701b6dfe1576c7713234935c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imapfilter/blobs/sha256:edeb5b2c307b63a2dda4361dd61a52f59c29db146dd117c43d0566ec4c72328a
-    sha256: edeb5b2c307b63a2dda4361dd61a52f59c29db146dd117c43d0566ec4c72328a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imapfilter/blobs/sha256:80b95649f62f4f690f8f687bdfe2b14d0bc6e4d9ed4cd127415ae63ac48f43ed
-    sha256: 80b95649f62f4f690f8f687bdfe2b14d0bc6e4d9ed4cd127415ae63ac48f43ed
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imapfilter/blobs/sha256:2aa3b98279fd72f7024ad9815f171fa31111026926248b0a7a1ba0548984b6d5
-    sha256: 2aa3b98279fd72f7024ad9815f171fa31111026926248b0a7a1ba0548984b6d5
-source:
-  url: https://github.com/lefcha/imapfilter/archive/refs/tags/v2.8.5.tar.gz
-  sha256: 81930d83c99a07305554b2fd283422aefb4f069e13cff971377f3f844e601424
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lua
-  - openssl@3
-  - pcre2
+    - lua
+    - openssl@3
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imapfilter/blobs/sha256:edeb5b2c307b63a2dda4361dd61a52f59c29db146dd117c43d0566ec4c72328a
+        sha256: edeb5b2c307b63a2dda4361dd61a52f59c29db146dd117c43d0566ec4c72328a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imapfilter/blobs/sha256:1ffec7b7bf2c3c7f24bfc811025285e07faa6739701b6dfe1576c7713234935c
+        sha256: 1ffec7b7bf2c3c7f24bfc811025285e07faa6739701b6dfe1576c7713234935c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imapfilter/blobs/sha256:80b95649f62f4f690f8f687bdfe2b14d0bc6e4d9ed4cd127415ae63ac48f43ed
+        sha256: 80b95649f62f4f690f8f687bdfe2b14d0bc6e4d9ed4cd127415ae63ac48f43ed
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imapfilter/blobs/sha256:2aa3b98279fd72f7024ad9815f171fa31111026926248b0a7a1ba0548984b6d5
+        sha256: 2aa3b98279fd72f7024ad9815f171fa31111026926248b0a7a1ba0548984b6d5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lefcha/imapfilter/archive/refs/tags/v2.8.5.tar.gz
+    sha256: 81930d83c99a07305554b2fd283422aefb4f069e13cff971377f3f844e601424
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

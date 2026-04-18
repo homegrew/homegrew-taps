@@ -3,43 +3,67 @@ version: 0.4.26
 description: Modern, fast, elegant HTTP + REST C++17 framework with pleasant API
 homepage: https://github.com/pistacheio/pistache
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pistache/blobs/sha256:8c6aceaa9caabb3aa5f359e4b774e682a1a04b8e6d8d2c3387ca2b568490761e
-    sha256: 8c6aceaa9caabb3aa5f359e4b774e682a1a04b8e6d8d2c3387ca2b568490761e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pistache/blobs/sha256:0251e36381a86a7e82f7ea5f905ad9abc20d68ec387876935276e63e91dde120
-    sha256: 0251e36381a86a7e82f7ea5f905ad9abc20d68ec387876935276e63e91dde120
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pistache/blobs/sha256:a18870e8bca2a60e1fe41d00a47dd157273ae689145163b6730982ad0b550f43
-    sha256: a18870e8bca2a60e1fe41d00a47dd157273ae689145163b6730982ad0b550f43
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pistache/blobs/sha256:ab8a26e48f468b791843eb18d69460c70e51e2a0a0cba9e91a649db54bf5e21f
-    sha256: ab8a26e48f468b791843eb18d69460c70e51e2a0a0cba9e91a649db54bf5e21f
-source:
-  url: https://github.com/pistacheio/pistache/archive/refs/tags/v0.4.26.tar.gz
-  sha256: 29af6562547497acf6f49170661786fe8cf1ed3712ad80e69c53da4661c59544
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - brotli
-  - libevent
-  - openssl@3
-  - zstd
+    - brotli
+    - libevent
+    - openssl@3
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pistache/blobs/sha256:0251e36381a86a7e82f7ea5f905ad9abc20d68ec387876935276e63e91dde120
+        sha256: 0251e36381a86a7e82f7ea5f905ad9abc20d68ec387876935276e63e91dde120
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pistache/blobs/sha256:8c6aceaa9caabb3aa5f359e4b774e682a1a04b8e6d8d2c3387ca2b568490761e
+        sha256: 8c6aceaa9caabb3aa5f359e4b774e682a1a04b8e6d8d2c3387ca2b568490761e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pistache/blobs/sha256:a18870e8bca2a60e1fe41d00a47dd157273ae689145163b6730982ad0b550f43
+        sha256: a18870e8bca2a60e1fe41d00a47dd157273ae689145163b6730982ad0b550f43
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pistache/blobs/sha256:ab8a26e48f468b791843eb18d69460c70e51e2a0a0cba9e91a649db54bf5e21f
+        sha256: ab8a26e48f468b791843eb18d69460c70e51e2a0a0cba9e91a649db54bf5e21f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pistacheio/pistache/archive/refs/tags/v0.4.26.tar.gz
+    sha256: 29af6562547497acf6f49170661786fe8cf1ed3712ad80e69c53da4661c59544
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - cpp-httplib
-  - googletest
-  - howard-hinnant-date
-  - meson
-  - ninja
-  - pkgconf
-  - rapidjson
+    - cmake
+    - cpp-httplib
+    - googletest
+    - howard-hinnant-date
+    - meson
+    - ninja
+    - pkgconf
+    - rapidjson
 linux_dependencies:
-  - brotli
-  - libevent
-  - openssl@3
-  - zlib-ng-compat
-  - zstd
+    - brotli
+    - libevent
+    - openssl@3
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

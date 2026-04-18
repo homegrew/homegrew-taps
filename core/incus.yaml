@@ -1,27 +1,53 @@
 name: incus
-version: 6.23
+version: "6.23"
 description: CLI client for interacting with Incus
 homepage: https://linuxcontainers.org/incus
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/incus/blobs/sha256:aaeb3b22fc665ce65f2edc0da2a4762c28c1da1421771842065cdb52c94a8bf4
-    sha256: aaeb3b22fc665ce65f2edc0da2a4762c28c1da1421771842065cdb52c94a8bf4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/incus/blobs/sha256:48c038d55a72beae26dc5870406315b5bf64ee66ce8257d2288461d57b350582
-    sha256: 48c038d55a72beae26dc5870406315b5bf64ee66ce8257d2288461d57b350582
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/incus/blobs/sha256:d777300bb20bc5b0222ae451418340976aed8c0bb41ad6cbfd601e77450d2a85
-    sha256: d777300bb20bc5b0222ae451418340976aed8c0bb41ad6cbfd601e77450d2a85
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/incus/blobs/sha256:d0e75bd67f9e1d691e76a902f071f9f10a238d0c475c15266a39b163f5a04cf6
-    sha256: d0e75bd67f9e1d691e76a902f071f9f10a238d0c475c15266a39b163f5a04cf6
-source:
-  url: https://linuxcontainers.org/downloads/incus/incus-6.23.tar.xz
-  sha256: a84880e138db0e7497bd0ee62806a8c5299566dada5c725e65e86afd7fe71fa6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/incus/blobs/sha256:48c038d55a72beae26dc5870406315b5bf64ee66ce8257d2288461d57b350582
+        sha256: 48c038d55a72beae26dc5870406315b5bf64ee66ce8257d2288461d57b350582
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/incus/blobs/sha256:aaeb3b22fc665ce65f2edc0da2a4762c28c1da1421771842065cdb52c94a8bf4
+        sha256: aaeb3b22fc665ce65f2edc0da2a4762c28c1da1421771842065cdb52c94a8bf4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/incus/blobs/sha256:d777300bb20bc5b0222ae451418340976aed8c0bb41ad6cbfd601e77450d2a85
+        sha256: d777300bb20bc5b0222ae451418340976aed8c0bb41ad6cbfd601e77450d2a85
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/incus/blobs/sha256:d0e75bd67f9e1d691e76a902f071f9f10a238d0c475c15266a39b163f5a04cf6
+        sha256: d0e75bd67f9e1d691e76a902f071f9f10a238d0c475c15266a39b163f5a04cf6
+        sha512: ""
+        signature: ""
+source:
+    url: https://linuxcontainers.org/downloads/incus/incus-6.23.tar.xz
+    sha256: a84880e138db0e7497bd0ee62806a8c5299566dada5c725e65e86afd7fe71fa6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,25 +3,51 @@ version: 0.41.0
 description: Highly available Prometheus setup with long term storage capabilities
 homepage: https://thanos.io
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/thanos/blobs/sha256:af0661c2a78ef3e92faa2fe71e88020af6e5feb8125dd5bd01de714e9960e120
-    sha256: af0661c2a78ef3e92faa2fe71e88020af6e5feb8125dd5bd01de714e9960e120
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/thanos/blobs/sha256:41ad9c6fc6be25934665460fc45f041388c796d20b190dac187b200a6960ac03
-    sha256: 41ad9c6fc6be25934665460fc45f041388c796d20b190dac187b200a6960ac03
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/thanos/blobs/sha256:1f83788c0f27c6634052f2b5bf524510cbecae556d8136b808b2cf1660daf075
-    sha256: 1f83788c0f27c6634052f2b5bf524510cbecae556d8136b808b2cf1660daf075
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/thanos/blobs/sha256:72c8fc644d15d5c0f9bd3ca3037dad7010787db8eff7c24d9d0b5ffb46bf1adb
-    sha256: 72c8fc644d15d5c0f9bd3ca3037dad7010787db8eff7c24d9d0b5ffb46bf1adb
-source:
-  url: https://github.com/thanos-io/thanos/archive/refs/tags/v0.41.0.tar.gz
-  sha256: 7566a654e7ed07f0aed194c4c2fee1f60bddfda0bd8d7458ce735ce2e868ffc8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/thanos/blobs/sha256:41ad9c6fc6be25934665460fc45f041388c796d20b190dac187b200a6960ac03
+        sha256: 41ad9c6fc6be25934665460fc45f041388c796d20b190dac187b200a6960ac03
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/thanos/blobs/sha256:af0661c2a78ef3e92faa2fe71e88020af6e5feb8125dd5bd01de714e9960e120
+        sha256: af0661c2a78ef3e92faa2fe71e88020af6e5feb8125dd5bd01de714e9960e120
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/thanos/blobs/sha256:1f83788c0f27c6634052f2b5bf524510cbecae556d8136b808b2cf1660daf075
+        sha256: 1f83788c0f27c6634052f2b5bf524510cbecae556d8136b808b2cf1660daf075
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/thanos/blobs/sha256:72c8fc644d15d5c0f9bd3ca3037dad7010787db8eff7c24d9d0b5ffb46bf1adb
+        sha256: 72c8fc644d15d5c0f9bd3ca3037dad7010787db8eff7c24d9d0b5ffb46bf1adb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/thanos-io/thanos/archive/refs/tags/v0.41.0.tar.gz
+    sha256: 7566a654e7ed07f0aed194c4c2fee1f60bddfda0bd8d7458ce735ce2e868ffc8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

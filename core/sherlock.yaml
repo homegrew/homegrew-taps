@@ -3,29 +3,54 @@ version: 0.16.0
 description: Hunt down social media accounts by username
 homepage: https://github.com/sherlock-project/sherlock
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sherlock/blobs/sha256:12423f0d1ec6e6db1a2d02f86d7d0edaa1a1ec7a91b7f934e1f58d6d4ea78066
-    sha256: 12423f0d1ec6e6db1a2d02f86d7d0edaa1a1ec7a91b7f934e1f58d6d4ea78066
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sherlock/blobs/sha256:d42970c735c14c0c7b7d38389de99789c02ca0d8dade26372cf8c34e71a85799
-    sha256: d42970c735c14c0c7b7d38389de99789c02ca0d8dade26372cf8c34e71a85799
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sherlock/blobs/sha256:b47be59443aa7a6f22b8d056652c69cc0b89676a6ac9eccff413fb398f9aaca1
-    sha256: b47be59443aa7a6f22b8d056652c69cc0b89676a6ac9eccff413fb398f9aaca1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sherlock/blobs/sha256:4acc88598326baad0f8587696095c920e87a982e48170ddba719fae98e46185e
-    sha256: 4acc88598326baad0f8587696095c920e87a982e48170ddba719fae98e46185e
-source:
-  url: https://files.pythonhosted.org/packages/76/17/d29f35df6ec6424ec15f273a31ad54ad314d1f9056321fb824bed4eda128/sherlock_project-0.16.0.tar.gz
-  sha256: fcc8f05fb6f55de30938cce5727249f70917b226918a71f6ed3f50d8a6467610
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - numpy
-  - python@3.14
+    - certifi
+    - numpy
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sherlock/blobs/sha256:d42970c735c14c0c7b7d38389de99789c02ca0d8dade26372cf8c34e71a85799
+        sha256: d42970c735c14c0c7b7d38389de99789c02ca0d8dade26372cf8c34e71a85799
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sherlock/blobs/sha256:12423f0d1ec6e6db1a2d02f86d7d0edaa1a1ec7a91b7f934e1f58d6d4ea78066
+        sha256: 12423f0d1ec6e6db1a2d02f86d7d0edaa1a1ec7a91b7f934e1f58d6d4ea78066
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sherlock/blobs/sha256:b47be59443aa7a6f22b8d056652c69cc0b89676a6ac9eccff413fb398f9aaca1
+        sha256: b47be59443aa7a6f22b8d056652c69cc0b89676a6ac9eccff413fb398f9aaca1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sherlock/blobs/sha256:4acc88598326baad0f8587696095c920e87a982e48170ddba719fae98e46185e
+        sha256: 4acc88598326baad0f8587696095c920e87a982e48170ddba719fae98e46185e
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/76/17/d29f35df6ec6424ec15f273a31ad54ad314d1f9056321fb824bed4eda128/sherlock_project-0.16.0.tar.gz
+    sha256: fcc8f05fb6f55de30938cce5727249f70917b226918a71f6ed3f50d8a6467610
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

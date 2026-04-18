@@ -3,50 +3,74 @@ version: 6.14.0
 description: Gedit Technology - Text editor product line
 homepage: https://gitlab.gnome.org/World/gedit/libgedit-tepl
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgedit-tepl/blobs/sha256:20148171f340884e2ea8580f1a4870d15c5a8c498b1029f6515aeb4b735f03eb
-    sha256: 20148171f340884e2ea8580f1a4870d15c5a8c498b1029f6515aeb4b735f03eb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgedit-tepl/blobs/sha256:f49ac4935063ff4b08e5cea8959829d7a2f37074a9c69bb6624cd3c9f4a051eb
-    sha256: f49ac4935063ff4b08e5cea8959829d7a2f37074a9c69bb6624cd3c9f4a051eb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgedit-tepl/blobs/sha256:1a8e119f8d5b3f48264f88979bae8b14041665aed64dc3aff5b0a46db32918f8
-    sha256: 1a8e119f8d5b3f48264f88979bae8b14041665aed64dc3aff5b0a46db32918f8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgedit-tepl/blobs/sha256:ee8f02ca17eec111b5dac39e0ee9b4cfe56809638515f656dcee879014c4cccc
-    sha256: ee8f02ca17eec111b5dac39e0ee9b4cfe56809638515f656dcee879014c4cccc
-source:
-  url: https://gitlab.gnome.org/World/gedit/libgedit-tepl/-/archive/6.14.0/libgedit-tepl-6.14.0.tar.bz2
-  sha256: 2b695f41475573aa59f1cd004b5cc3d2021d0444decf26eb8d38864348fb3577
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - glib
-  - gtk+3
-  - icu4c@78
-  - libgedit-amtk
-  - libgedit-gfls
-  - libgedit-gtksourceview
-  - libhandy
-  - pango
-  - gettext
+    - cairo
+    - glib
+    - gtk+3
+    - icu4c@78
+    - libgedit-amtk
+    - libgedit-gfls
+    - libgedit-gtksourceview
+    - libhandy
+    - pango
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgedit-tepl/blobs/sha256:f49ac4935063ff4b08e5cea8959829d7a2f37074a9c69bb6624cd3c9f4a051eb
+        sha256: f49ac4935063ff4b08e5cea8959829d7a2f37074a9c69bb6624cd3c9f4a051eb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgedit-tepl/blobs/sha256:20148171f340884e2ea8580f1a4870d15c5a8c498b1029f6515aeb4b735f03eb
+        sha256: 20148171f340884e2ea8580f1a4870d15c5a8c498b1029f6515aeb4b735f03eb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgedit-tepl/blobs/sha256:1a8e119f8d5b3f48264f88979bae8b14041665aed64dc3aff5b0a46db32918f8
+        sha256: 1a8e119f8d5b3f48264f88979bae8b14041665aed64dc3aff5b0a46db32918f8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgedit-tepl/blobs/sha256:ee8f02ca17eec111b5dac39e0ee9b4cfe56809638515f656dcee879014c4cccc
+        sha256: ee8f02ca17eec111b5dac39e0ee9b4cfe56809638515f656dcee879014c4cccc
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.gnome.org/World/gedit/libgedit-tepl/-/archive/6.14.0/libgedit-tepl-6.14.0.tar.bz2
+    sha256: 2b695f41475573aa59f1cd004b5cc3d2021d0444decf26eb8d38864348fb3577
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
+    - gettext
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - glib
-  - gtk+3
-  - icu4c@78
-  - libgedit-amtk
-  - libgedit-gfls
-  - libgedit-gtksourceview
-  - libhandy
-  - pango
+    - cairo
+    - glib
+    - gtk+3
+    - icu4c@78
+    - libgedit-amtk
+    - libgedit-gfls
+    - libgedit-gtksourceview
+    - libhandy
+    - pango
+build:
+    configure: []
+    install: []
+service: null

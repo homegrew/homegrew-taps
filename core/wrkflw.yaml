@@ -3,28 +3,53 @@ version: 0.7.3
 description: Validate and execute GitHub Actions workflows locally
 homepage: https://github.com/bahdotsh/wrkflw
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wrkflw/blobs/sha256:69a89d22d620589197a0d171fcfd9f43fc051bf5c9327d6d6b30f3cb1ed37e1d
-    sha256: 69a89d22d620589197a0d171fcfd9f43fc051bf5c9327d6d6b30f3cb1ed37e1d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wrkflw/blobs/sha256:534d9bca4bc47cfa794bc3baac97d1dea93bccbf3b2ed9289e2dff07f6f17b25
-    sha256: 534d9bca4bc47cfa794bc3baac97d1dea93bccbf3b2ed9289e2dff07f6f17b25
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wrkflw/blobs/sha256:118191fdc4326752d6e790f341c440199d09e3ae431f58c0d865a1a5c5dc0572
-    sha256: 118191fdc4326752d6e790f341c440199d09e3ae431f58c0d865a1a5c5dc0572
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wrkflw/blobs/sha256:1e2f551f4f916d0435ecea589571f991a0b0a2b0701a39b93cb2fc857b05e54a
-    sha256: 1e2f551f4f916d0435ecea589571f991a0b0a2b0701a39b93cb2fc857b05e54a
-source:
-  url: https://github.com/bahdotsh/wrkflw/archive/refs/tags/v0.7.3.tar.gz
-  sha256: 475acd61bff0b6ee4ec58aa566b442355e88d9efe18267c58c1501f3fb93f4bc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wrkflw/blobs/sha256:534d9bca4bc47cfa794bc3baac97d1dea93bccbf3b2ed9289e2dff07f6f17b25
+        sha256: 534d9bca4bc47cfa794bc3baac97d1dea93bccbf3b2ed9289e2dff07f6f17b25
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wrkflw/blobs/sha256:69a89d22d620589197a0d171fcfd9f43fc051bf5c9327d6d6b30f3cb1ed37e1d
+        sha256: 69a89d22d620589197a0d171fcfd9f43fc051bf5c9327d6d6b30f3cb1ed37e1d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wrkflw/blobs/sha256:118191fdc4326752d6e790f341c440199d09e3ae431f58c0d865a1a5c5dc0572
+        sha256: 118191fdc4326752d6e790f341c440199d09e3ae431f58c0d865a1a5c5dc0572
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wrkflw/blobs/sha256:1e2f551f4f916d0435ecea589571f991a0b0a2b0701a39b93cb2fc857b05e54a
+        sha256: 1e2f551f4f916d0435ecea589571f991a0b0a2b0701a39b93cb2fc857b05e54a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bahdotsh/wrkflw/archive/refs/tags/v0.7.3.tar.gz
+    sha256: 475acd61bff0b6ee4ec58aa566b442355e88d9efe18267c58c1501f3fb93f4bc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

@@ -3,30 +3,55 @@ version: 2.6.5
 description: Threaded, NNTP-, and spool-based UseNet newsreader
 homepage: http://www.tin.org
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tin/blobs/sha256:96069ba7501f4b095fa09d2cb6b60e6e3c613ca546422cf8c5cbac897947d1e4
-    sha256: 96069ba7501f4b095fa09d2cb6b60e6e3c613ca546422cf8c5cbac897947d1e4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tin/blobs/sha256:5240d4c495d46cdcc73409c3ba63bb3a16244defa0cdc24174c2ac2baffe2b6b
-    sha256: 5240d4c495d46cdcc73409c3ba63bb3a16244defa0cdc24174c2ac2baffe2b6b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tin/blobs/sha256:31ab2a4d9691671a8b512319dc59c3cc4112ddb678a5b3079722fdec7cbd601e
-    sha256: 31ab2a4d9691671a8b512319dc59c3cc4112ddb678a5b3079722fdec7cbd601e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tin/blobs/sha256:48098319c7de44f58c85885af2cede333bb309c9f663b86cf59f6635e86b92af
-    sha256: 48098319c7de44f58c85885af2cede333bb309c9f663b86cf59f6635e86b92af
-source:
-  url: https://sunsite.icm.edu.pl/pub/unix/news/tin/v2.6/tin-2.6.5.tar.xz
-  sha256: 91384d133d72671863494dd9742bc622b4089ea8ea760884a5b8c34095d76dc5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - pcre2
-  - gettext
-  - libunistring
+    - pcre2
+    - gettext
+    - libunistring
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tin/blobs/sha256:5240d4c495d46cdcc73409c3ba63bb3a16244defa0cdc24174c2ac2baffe2b6b
+        sha256: 5240d4c495d46cdcc73409c3ba63bb3a16244defa0cdc24174c2ac2baffe2b6b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tin/blobs/sha256:96069ba7501f4b095fa09d2cb6b60e6e3c613ca546422cf8c5cbac897947d1e4
+        sha256: 96069ba7501f4b095fa09d2cb6b60e6e3c613ca546422cf8c5cbac897947d1e4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tin/blobs/sha256:31ab2a4d9691671a8b512319dc59c3cc4112ddb678a5b3079722fdec7cbd601e
+        sha256: 31ab2a4d9691671a8b512319dc59c3cc4112ddb678a5b3079722fdec7cbd601e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tin/blobs/sha256:48098319c7de44f58c85885af2cede333bb309c9f663b86cf59f6635e86b92af
+        sha256: 48098319c7de44f58c85885af2cede333bb309c9f663b86cf59f6635e86b92af
+        sha512: ""
+        signature: ""
+source:
+    url: https://sunsite.icm.edu.pl/pub/unix/news/tin/v2.6/tin-2.6.5.tar.xz
+    sha256: 91384d133d72671863494dd9742bc622b4089ea8ea760884a5b8c34095d76dc5
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - pcre2
-  - zlib-ng-compat
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

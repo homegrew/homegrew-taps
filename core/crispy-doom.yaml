@@ -1,44 +1,68 @@
 name: crispy-doom
-version: 7.1
+version: "7.1"
 description: Limit-removing enhanced-resolution Doom source port based on Chocolate Doom
 homepage: https://github.com/fabiangreffrath/crispy-doom
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/crispy-doom/blobs/sha256:cd4cfaa085f5e29518b82d35f277a6ee28b4829692a835858c40bc8a73ac6d8a
-    sha256: cd4cfaa085f5e29518b82d35f277a6ee28b4829692a835858c40bc8a73ac6d8a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/crispy-doom/blobs/sha256:1b6a55ca5f724065f392001873196c777625872d33572ccf5c6ea8bf2663639b
-    sha256: 1b6a55ca5f724065f392001873196c777625872d33572ccf5c6ea8bf2663639b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/crispy-doom/blobs/sha256:a961d18f9165cc0e96cc09db90784312fec9e482afe2d091c3ed1051ad33b09e
-    sha256: a961d18f9165cc0e96cc09db90784312fec9e482afe2d091c3ed1051ad33b09e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/crispy-doom/blobs/sha256:ff2d4ad766f28347b84cf6917c3f64d5dabf225efb324c6ec741ec48d4abf718
-    sha256: ff2d4ad766f28347b84cf6917c3f64d5dabf225efb324c6ec741ec48d4abf718
-source:
-  url: https://github.com/fabiangreffrath/crispy-doom/archive/refs/tags/crispy-doom-7.1.tar.gz
-  sha256: f0eb02afb81780165ddc81583ed5648cbee8b3205bcc27e181b3f61eb26f8416
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fluid-synth
-  - libpng
-  - libsamplerate
-  - sdl2
-  - sdl2_mixer
-  - sdl2_net
+    - fluid-synth
+    - libpng
+    - libsamplerate
+    - sdl2
+    - sdl2_mixer
+    - sdl2_net
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/crispy-doom/blobs/sha256:1b6a55ca5f724065f392001873196c777625872d33572ccf5c6ea8bf2663639b
+        sha256: 1b6a55ca5f724065f392001873196c777625872d33572ccf5c6ea8bf2663639b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/crispy-doom/blobs/sha256:cd4cfaa085f5e29518b82d35f277a6ee28b4829692a835858c40bc8a73ac6d8a
+        sha256: cd4cfaa085f5e29518b82d35f277a6ee28b4829692a835858c40bc8a73ac6d8a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/crispy-doom/blobs/sha256:a961d18f9165cc0e96cc09db90784312fec9e482afe2d091c3ed1051ad33b09e
+        sha256: a961d18f9165cc0e96cc09db90784312fec9e482afe2d091c3ed1051ad33b09e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/crispy-doom/blobs/sha256:ff2d4ad766f28347b84cf6917c3f64d5dabf225efb324c6ec741ec48d4abf718
+        sha256: ff2d4ad766f28347b84cf6917c3f64d5dabf225efb324c6ec741ec48d4abf718
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fabiangreffrath/crispy-doom/archive/refs/tags/crispy-doom-7.1.tar.gz
+    sha256: f0eb02afb81780165ddc81583ed5648cbee8b3205bcc27e181b3f61eb26f8416
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - pkgconf
+    - autoconf
+    - automake
+    - pkgconf
 linux_dependencies:
-  - fluid-synth
-  - libpng
-  - libsamplerate
-  - sdl2
-  - sdl2_mixer
-  - sdl2_net
-  - zlib-ng-compat
+    - fluid-synth
+    - libpng
+    - libsamplerate
+    - sdl2
+    - sdl2_mixer
+    - sdl2_net
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

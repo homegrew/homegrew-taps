@@ -3,29 +3,54 @@ version: 9.6.7
 description: Glorious Glasgow Haskell Compilation System
 homepage: https://haskell.org/ghc/
 license: BSD-3-Clause AND MIT AND (LGPL-3.0-or-later OR GPL-2.0-or-later)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ghc/9.6/blobs/sha256:dd60a4884f86dfbdaa5c449e491b881d6c2de4ceba80c3945fc153f5606e17b0
-    sha256: dd60a4884f86dfbdaa5c449e491b881d6c2de4ceba80c3945fc153f5606e17b0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ghc/9.6/blobs/sha256:9d2462a0b1d0b49b90c08c7274f0e55a3fa522e203133aceb3aa2bec264e7e23
-    sha256: 9d2462a0b1d0b49b90c08c7274f0e55a3fa522e203133aceb3aa2bec264e7e23
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ghc/9.6/blobs/sha256:6b1a0d894b2236f1cada48a5f48ff3c90b763189b575f2d06d949dd209f5dec5
-    sha256: 6b1a0d894b2236f1cada48a5f48ff3c90b763189b575f2d06d949dd209f5dec5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ghc/9.6/blobs/sha256:34873088d18d1e13e29d62aeb008fc9cafd657aa57c20be13d92a9d5988c958a
-    sha256: 34873088d18d1e13e29d62aeb008fc9cafd657aa57c20be13d92a9d5988c958a
-source:
-  url: https://downloads.haskell.org/~ghc/9.6.7/ghc-9.6.7-src.tar.xz
-  sha256: d053bf6ce1d588a75cfe8c9316269486e9d8fb89dcdf6fd92836fa2e3df61305
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
-build_dependencies:
-  - autoconf
-  - automake
-  - python@3.14
-  - sphinx-doc
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ghc/9.6/blobs/sha256:9d2462a0b1d0b49b90c08c7274f0e55a3fa522e203133aceb3aa2bec264e7e23
+        sha256: 9d2462a0b1d0b49b90c08c7274f0e55a3fa522e203133aceb3aa2bec264e7e23
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ghc/9.6/blobs/sha256:dd60a4884f86dfbdaa5c449e491b881d6c2de4ceba80c3945fc153f5606e17b0
+        sha256: dd60a4884f86dfbdaa5c449e491b881d6c2de4ceba80c3945fc153f5606e17b0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ghc/9.6/blobs/sha256:6b1a0d894b2236f1cada48a5f48ff3c90b763189b575f2d06d949dd209f5dec5
+        sha256: 6b1a0d894b2236f1cada48a5f48ff3c90b763189b575f2d06d949dd209f5dec5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ghc/9.6/blobs/sha256:34873088d18d1e13e29d62aeb008fc9cafd657aa57c20be13d92a9d5988c958a
+        sha256: 34873088d18d1e13e29d62aeb008fc9cafd657aa57c20be13d92a9d5988c958a
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.haskell.org/~ghc/9.6.7/ghc-9.6.7-src.tar.xz
+    sha256: d053bf6ce1d588a75cfe8c9316269486e9d8fb89dcdf6fd92836fa2e3df61305
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - autoconf
+    - automake
+    - python@3.14
+    - sphinx-doc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

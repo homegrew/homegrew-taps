@@ -3,35 +3,59 @@ version: 2.3.0
 description: Redis and Memcache traffic generation and benchmarking tool
 homepage: https://github.com/RedisLabs/memtier_benchmark
 license: (GPL-2.0-or-later WITH cryptsetup-OpenSSL-exception) AND (CC0-1.0 OR BSD-2-Clause)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:03525566fd7229ce01fd67ff0f8e5f44686563f9d065e05c212010decc6f2fb9
-    sha256: 03525566fd7229ce01fd67ff0f8e5f44686563f9d065e05c212010decc6f2fb9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:fd75571a0a7dd119f69ca7db02c881511337fe810ff8243a94910158c47a9390
-    sha256: fd75571a0a7dd119f69ca7db02c881511337fe810ff8243a94910158c47a9390
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:f24d6e70b892c9be1fbdf314fb1489228e0be3a2e9091ff713892f599ff988cf
-    sha256: f24d6e70b892c9be1fbdf314fb1489228e0be3a2e9091ff713892f599ff988cf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:4aba9d3e7070b0c3199a54c31fad19a81ea81b882e3af20c97e82dc98a682537
-    sha256: 4aba9d3e7070b0c3199a54c31fad19a81ea81b882e3af20c97e82dc98a682537
-source:
-  url: https://github.com/RedisLabs/memtier_benchmark/archive/refs/tags/2.3.0.tar.gz
-  sha256: 4c3238e28e63b524e6adf31e3c306af911597c5a73da4957b1dd2498d6ae7c74
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libevent
-  - openssl@3
+    - libevent
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:fd75571a0a7dd119f69ca7db02c881511337fe810ff8243a94910158c47a9390
+        sha256: fd75571a0a7dd119f69ca7db02c881511337fe810ff8243a94910158c47a9390
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:03525566fd7229ce01fd67ff0f8e5f44686563f9d065e05c212010decc6f2fb9
+        sha256: 03525566fd7229ce01fd67ff0f8e5f44686563f9d065e05c212010decc6f2fb9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:f24d6e70b892c9be1fbdf314fb1489228e0be3a2e9091ff713892f599ff988cf
+        sha256: f24d6e70b892c9be1fbdf314fb1489228e0be3a2e9091ff713892f599ff988cf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/memtier_benchmark/blobs/sha256:4aba9d3e7070b0c3199a54c31fad19a81ea81b882e3af20c97e82dc98a682537
+        sha256: 4aba9d3e7070b0c3199a54c31fad19a81ea81b882e3af20c97e82dc98a682537
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/RedisLabs/memtier_benchmark/archive/refs/tags/2.3.0.tar.gz
+    sha256: 4c3238e28e63b524e6adf31e3c306af911597c5a73da4957b1dd2498d6ae7c74
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - libevent
-  - openssl@3
-  - zlib-ng-compat
+    - libevent
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

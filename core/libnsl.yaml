@@ -3,21 +3,42 @@ version: 2.0.1
 description: Public client interface for NIS(YP) and NIS+
 homepage: https://github.com/thkukuk/libnsl
 license: LGPL-2.1-or-later
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libnsl/blobs/sha256:fa7613b30e9bfe15166339d119c19115ec21f13cea259280182e0c083502ff40
-    sha256: fa7613b30e9bfe15166339d119c19115ec21f13cea259280182e0c083502ff40
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libnsl/blobs/sha256:b5f2c97b5782dfde6d350ebe54cacf87db18a1626afcf91998aaa8d6c5930890
-    sha256: b5f2c97b5782dfde6d350ebe54cacf87db18a1626afcf91998aaa8d6c5930890
-source:
-  url: https://github.com/thkukuk/libnsl/releases/download/v2.0.1/libnsl-2.0.1.tar.xz
-  sha256: 5c9e470b232a7acd3433491ac5221b4832f0c71318618dc6aa04dd05ffcd8fd9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtirpc
+    - libtirpc
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libnsl/blobs/sha256:fa7613b30e9bfe15166339d119c19115ec21f13cea259280182e0c083502ff40
+        sha256: fa7613b30e9bfe15166339d119c19115ec21f13cea259280182e0c083502ff40
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libnsl/blobs/sha256:b5f2c97b5782dfde6d350ebe54cacf87db18a1626afcf91998aaa8d6c5930890
+        sha256: b5f2c97b5782dfde6d350ebe54cacf87db18a1626afcf91998aaa8d6c5930890
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/thkukuk/libnsl/releases/download/v2.0.1/libnsl-2.0.1.tar.xz
+    sha256: 5c9e470b232a7acd3433491ac5221b4832f0c71318618dc6aa04dd05ffcd8fd9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

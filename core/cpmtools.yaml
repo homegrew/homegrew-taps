@@ -1,29 +1,54 @@
 name: cpmtools
-version: 2.23
+version: "2.23"
 description: Tools to access CP/M file systems
 homepage: https://www.moria.de/~michael/cpmtools/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cpmtools/blobs/sha256:efe04ea8503804dc1106da71858d617f5daffe04adb89a312aa32116396af00d
-    sha256: efe04ea8503804dc1106da71858d617f5daffe04adb89a312aa32116396af00d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cpmtools/blobs/sha256:bd45e97e460395206b013112e9cf49de6420d1f3c90c317488f32b413245132f
-    sha256: bd45e97e460395206b013112e9cf49de6420d1f3c90c317488f32b413245132f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cpmtools/blobs/sha256:c0808ec1572a5afa52930067fef0ea776df7de12aacd3357e014edfb9e80a3e6
-    sha256: c0808ec1572a5afa52930067fef0ea776df7de12aacd3357e014edfb9e80a3e6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cpmtools/blobs/sha256:0a727fbd579fed896a13912602e3471abef4497d7c3119f8e2b2ab94949912fb
-    sha256: 0a727fbd579fed896a13912602e3471abef4497d7c3119f8e2b2ab94949912fb
-source:
-  url: https://www.moria.de/~michael/cpmtools/files/cpmtools-2.23.tar.gz
-  sha256: 7839b19ac15ba554e1a1fc1dbe898f62cf2fd4db3dcdc126515facc6b929746f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libdsk
+    - libdsk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cpmtools/blobs/sha256:bd45e97e460395206b013112e9cf49de6420d1f3c90c317488f32b413245132f
+        sha256: bd45e97e460395206b013112e9cf49de6420d1f3c90c317488f32b413245132f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cpmtools/blobs/sha256:efe04ea8503804dc1106da71858d617f5daffe04adb89a312aa32116396af00d
+        sha256: efe04ea8503804dc1106da71858d617f5daffe04adb89a312aa32116396af00d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cpmtools/blobs/sha256:c0808ec1572a5afa52930067fef0ea776df7de12aacd3357e014edfb9e80a3e6
+        sha256: c0808ec1572a5afa52930067fef0ea776df7de12aacd3357e014edfb9e80a3e6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cpmtools/blobs/sha256:0a727fbd579fed896a13912602e3471abef4497d7c3119f8e2b2ab94949912fb
+        sha256: 0a727fbd579fed896a13912602e3471abef4497d7c3119f8e2b2ab94949912fb
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.moria.de/~michael/cpmtools/files/cpmtools-2.23.tar.gz
+    sha256: 7839b19ac15ba554e1a1fc1dbe898f62cf2fd4db3dcdc126515facc6b929746f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
+    - autoconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

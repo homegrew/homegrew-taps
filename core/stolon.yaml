@@ -3,27 +3,52 @@ version: 0.17.0
 description: Cloud native PostgreSQL manager for high availability
 homepage: https://github.com/sorintlab/stolon
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stolon/blobs/sha256:b989bb383b1ce5523628d9b310afe7a911ab92f8e9797aaa8ea655ec576ebd05
-    sha256: b989bb383b1ce5523628d9b310afe7a911ab92f8e9797aaa8ea655ec576ebd05
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stolon/blobs/sha256:9c7dcb4122593003e6ced2dc77fada593f90c897a0ff6f23b607d530d554cdcd
-    sha256: 9c7dcb4122593003e6ced2dc77fada593f90c897a0ff6f23b607d530d554cdcd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stolon/blobs/sha256:30ca55abf39725e1760d6610e38ea05f089fd382724da55c170f2cf914ee1050
-    sha256: 30ca55abf39725e1760d6610e38ea05f089fd382724da55c170f2cf914ee1050
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stolon/blobs/sha256:67caae9099da0e3af8994b0eac951f6148883b71cfdee78cd15a911bcf4b7d15
-    sha256: 67caae9099da0e3af8994b0eac951f6148883b71cfdee78cd15a911bcf4b7d15
-source:
-  url: https://github.com/sorintlab/stolon/archive/refs/tags/v0.17.0.tar.gz
-  sha256: dad967378e7d0c5ee1df53a543e4f377af2c4fea37e59f3d518d67274cff5b34
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpq
+    - libpq
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stolon/blobs/sha256:9c7dcb4122593003e6ced2dc77fada593f90c897a0ff6f23b607d530d554cdcd
+        sha256: 9c7dcb4122593003e6ced2dc77fada593f90c897a0ff6f23b607d530d554cdcd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stolon/blobs/sha256:b989bb383b1ce5523628d9b310afe7a911ab92f8e9797aaa8ea655ec576ebd05
+        sha256: b989bb383b1ce5523628d9b310afe7a911ab92f8e9797aaa8ea655ec576ebd05
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stolon/blobs/sha256:30ca55abf39725e1760d6610e38ea05f089fd382724da55c170f2cf914ee1050
+        sha256: 30ca55abf39725e1760d6610e38ea05f089fd382724da55c170f2cf914ee1050
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stolon/blobs/sha256:67caae9099da0e3af8994b0eac951f6148883b71cfdee78cd15a911bcf4b7d15
+        sha256: 67caae9099da0e3af8994b0eac951f6148883b71cfdee78cd15a911bcf4b7d15
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sorintlab/stolon/archive/refs/tags/v0.17.0.tar.gz
+    sha256: dad967378e7d0c5ee1df53a543e4f377af2c4fea37e59f3d518d67274cff5b34
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

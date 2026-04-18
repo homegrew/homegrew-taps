@@ -3,39 +3,63 @@ version: r2083
 description: Library for playing streamed audio formats from video games
 homepage: https://vgmstream.org
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vgmstream/blobs/sha256:47cf5a573445ed7c118cb0845334179d1654073ead9c6de4e9b7a7f9c69b535d
-    sha256: 47cf5a573445ed7c118cb0845334179d1654073ead9c6de4e9b7a7f9c69b535d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vgmstream/blobs/sha256:75160c8ac0aa21de83575798cb142b8de59ef744b3f7b94bcff921cb05e29830
-    sha256: 75160c8ac0aa21de83575798cb142b8de59ef744b3f7b94bcff921cb05e29830
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vgmstream/blobs/sha256:e62e644e31513b5e22ce38bf207cf2b6a7afc49bc0b489b047ed18f91aae75e2
-    sha256: e62e644e31513b5e22ce38bf207cf2b6a7afc49bc0b489b047ed18f91aae75e2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vgmstream/blobs/sha256:5f26317e486d5c7857d83a0bfca2b75d443f603003e7be18faec10abe45c2700
-    sha256: 5f26317e486d5c7857d83a0bfca2b75d443f603003e7be18faec10abe45c2700
-source:
-  url: https://github.com/vgmstream/vgmstream.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - libao
-  - libvorbis
-  - mpg123
-  - speex
-  - libogg
+    - ffmpeg
+    - libao
+    - libvorbis
+    - mpg123
+    - speex
+    - libogg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vgmstream/blobs/sha256:75160c8ac0aa21de83575798cb142b8de59ef744b3f7b94bcff921cb05e29830
+        sha256: 75160c8ac0aa21de83575798cb142b8de59ef744b3f7b94bcff921cb05e29830
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vgmstream/blobs/sha256:47cf5a573445ed7c118cb0845334179d1654073ead9c6de4e9b7a7f9c69b535d
+        sha256: 47cf5a573445ed7c118cb0845334179d1654073ead9c6de4e9b7a7f9c69b535d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vgmstream/blobs/sha256:e62e644e31513b5e22ce38bf207cf2b6a7afc49bc0b489b047ed18f91aae75e2
+        sha256: e62e644e31513b5e22ce38bf207cf2b6a7afc49bc0b489b047ed18f91aae75e2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vgmstream/blobs/sha256:5f26317e486d5c7857d83a0bfca2b75d443f603003e7be18faec10abe45c2700
+        sha256: 5f26317e486d5c7857d83a0bfca2b75d443f603003e7be18faec10abe45c2700
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/vgmstream/vgmstream.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - ffmpeg
-  - libao
-  - libvorbis
-  - mpg123
-  - speex
+    - ffmpeg
+    - libao
+    - libvorbis
+    - mpg123
+    - speex
+build:
+    configure: []
+    install: []
+service: null

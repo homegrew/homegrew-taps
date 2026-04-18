@@ -1,29 +1,55 @@
 name: libxmi
-version: 1.2
+version: "1.2"
 description: C/C++ function library for rasterizing 2D vector graphics
 homepage: https://www.gnu.org/software/libxmi/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxmi/blobs/sha256:97d08e23a85103e733e90fa33b96e59f5f141f6081e5d09f9c8135e0000d221a
-    sha256: 97d08e23a85103e733e90fa33b96e59f5f141f6081e5d09f9c8135e0000d221a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxmi/blobs/sha256:0326bd04964e9707c76d9f532e50e4871d78f519b721f7cc8f502ec7f64e3f6f
-    sha256: 0326bd04964e9707c76d9f532e50e4871d78f519b721f7cc8f502ec7f64e3f6f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxmi/blobs/sha256:a82bdaa8f3c6d1d63dc572bf315c10418d39a0f1e12407dc187f793d8e6e9609
-    sha256: a82bdaa8f3c6d1d63dc572bf315c10418d39a0f1e12407dc187f793d8e6e9609
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxmi/blobs/sha256:ede22f9abf05a18ec44e5009276815c87ce99bbd7c3a2699d58b8ab31ea8d4b0
-    sha256: ede22f9abf05a18ec44e5009276815c87ce99bbd7c3a2699d58b8ab31ea8d4b0
-source:
-  url: https://ftpmirror.gnu.org/gnu/libxmi/libxmi-1.2.tar.gz
-  sha256: 9d56af6d6c41468ca658eb6c4ba33ff7967a388b606dc503cd68d024e08ca40d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxmi/blobs/sha256:0326bd04964e9707c76d9f532e50e4871d78f519b721f7cc8f502ec7f64e3f6f
+        sha256: 0326bd04964e9707c76d9f532e50e4871d78f519b721f7cc8f502ec7f64e3f6f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxmi/blobs/sha256:97d08e23a85103e733e90fa33b96e59f5f141f6081e5d09f9c8135e0000d221a
+        sha256: 97d08e23a85103e733e90fa33b96e59f5f141f6081e5d09f9c8135e0000d221a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxmi/blobs/sha256:a82bdaa8f3c6d1d63dc572bf315c10418d39a0f1e12407dc187f793d8e6e9609
+        sha256: a82bdaa8f3c6d1d63dc572bf315c10418d39a0f1e12407dc187f793d8e6e9609
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxmi/blobs/sha256:ede22f9abf05a18ec44e5009276815c87ce99bbd7c3a2699d58b8ab31ea8d4b0
+        sha256: ede22f9abf05a18ec44e5009276815c87ce99bbd7c3a2699d58b8ab31ea8d4b0
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/libxmi/libxmi-1.2.tar.gz
+    sha256: 9d56af6d6c41468ca658eb6c4ba33ff7967a388b606dc503cd68d024e08ca40d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

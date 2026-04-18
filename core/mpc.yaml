@@ -1,31 +1,56 @@
 name: mpc
-version: 0.35
+version: "0.35"
 description: Command-line music player client for mpd
 homepage: https://www.musicpd.org/clients/mpc/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpc/blobs/sha256:a325c2d6c27f05beb9fda4c43029512fe2c8542793a3773cf27ac4684f794904
-    sha256: a325c2d6c27f05beb9fda4c43029512fe2c8542793a3773cf27ac4684f794904
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpc/blobs/sha256:1dd3c6edc2ac8b09944f66a93a0cd3bad09afda8c0ae03cd6880a4aa62996789
-    sha256: 1dd3c6edc2ac8b09944f66a93a0cd3bad09afda8c0ae03cd6880a4aa62996789
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpc/blobs/sha256:a9195f0deda2f2ec4a6a9863275299136388eccfab23b6d46d682eca7e773591
-    sha256: a9195f0deda2f2ec4a6a9863275299136388eccfab23b6d46d682eca7e773591
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpc/blobs/sha256:0acf954601f5908c4fb4f2488b46f84abbed2759b8189eb237823a80c79adcea
-    sha256: 0acf954601f5908c4fb4f2488b46f84abbed2759b8189eb237823a80c79adcea
-source:
-  url: https://www.musicpd.org/download/mpc/0/mpc-0.35.tar.xz
-  sha256: 382959c3bfa2765b5346232438650491b822a16607ff5699178aa1386e3878d4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libmpdclient
+    - libmpdclient
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpc/blobs/sha256:1dd3c6edc2ac8b09944f66a93a0cd3bad09afda8c0ae03cd6880a4aa62996789
+        sha256: 1dd3c6edc2ac8b09944f66a93a0cd3bad09afda8c0ae03cd6880a4aa62996789
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpc/blobs/sha256:a325c2d6c27f05beb9fda4c43029512fe2c8542793a3773cf27ac4684f794904
+        sha256: a325c2d6c27f05beb9fda4c43029512fe2c8542793a3773cf27ac4684f794904
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpc/blobs/sha256:a9195f0deda2f2ec4a6a9863275299136388eccfab23b6d46d682eca7e773591
+        sha256: a9195f0deda2f2ec4a6a9863275299136388eccfab23b6d46d682eca7e773591
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpc/blobs/sha256:0acf954601f5908c4fb4f2488b46f84abbed2759b8189eb237823a80c79adcea
+        sha256: 0acf954601f5908c4fb4f2488b46f84abbed2759b8189eb237823a80c79adcea
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.musicpd.org/download/mpc/0/mpc-0.35.tar.xz
+    sha256: 382959c3bfa2765b5346232438650491b822a16607ff5699178aa1386e3878d4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

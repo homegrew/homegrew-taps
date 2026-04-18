@@ -1,31 +1,56 @@
 name: libxkbfile
 version: 1.2.0
-description: "X.Org: XKB file handling routines"
+description: 'X.Org: XKB file handling routines'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxkbfile/blobs/sha256:d232816434655702f1c58d0d1039355d200d8285ebcc02b0680942b4747f4015
-    sha256: d232816434655702f1c58d0d1039355d200d8285ebcc02b0680942b4747f4015
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxkbfile/blobs/sha256:d8ef47a92bf49fa2bc0e6e9716b8ffea0bb76d658492a6c9f4ec915780a2b8d6
-    sha256: d8ef47a92bf49fa2bc0e6e9716b8ffea0bb76d658492a6c9f4ec915780a2b8d6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxkbfile/blobs/sha256:72f1360f77a0daced0f3259762db1cc220369f8d7913af25246d8ddee7ef9d8d
-    sha256: 72f1360f77a0daced0f3259762db1cc220369f8d7913af25246d8ddee7ef9d8d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxkbfile/blobs/sha256:f6b64ee60afd0f86b821e1d61d6d8dedfb1f36feca8c95fcfb2f93745c494b57
-    sha256: f6b64ee60afd0f86b821e1d61d6d8dedfb1f36feca8c95fcfb2f93745c494b57
-source:
-  url: https://www.x.org/archive/individual/lib/libxkbfile-1.2.0.tar.xz
-  sha256: 7f71884e5faf56fb0e823f3848599cf9b5a9afce51c90982baeb64f635233ebf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
+    - libx11
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxkbfile/blobs/sha256:d8ef47a92bf49fa2bc0e6e9716b8ffea0bb76d658492a6c9f4ec915780a2b8d6
+        sha256: d8ef47a92bf49fa2bc0e6e9716b8ffea0bb76d658492a6c9f4ec915780a2b8d6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxkbfile/blobs/sha256:d232816434655702f1c58d0d1039355d200d8285ebcc02b0680942b4747f4015
+        sha256: d232816434655702f1c58d0d1039355d200d8285ebcc02b0680942b4747f4015
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxkbfile/blobs/sha256:72f1360f77a0daced0f3259762db1cc220369f8d7913af25246d8ddee7ef9d8d
+        sha256: 72f1360f77a0daced0f3259762db1cc220369f8d7913af25246d8ddee7ef9d8d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxkbfile/blobs/sha256:f6b64ee60afd0f86b821e1d61d6d8dedfb1f36feca8c95fcfb2f93745c494b57
+        sha256: f6b64ee60afd0f86b821e1d61d6d8dedfb1f36feca8c95fcfb2f93745c494b57
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libxkbfile-1.2.0.tar.xz
+    sha256: 7f71884e5faf56fb0e823f3848599cf9b5a9afce51c90982baeb64f635233ebf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

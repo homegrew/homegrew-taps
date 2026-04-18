@@ -3,27 +3,53 @@ version: 2.2.6
 description: Reverse differential backup tool, over a network or locally
 homepage: https://rdiff-backup.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rdiff-backup/blobs/sha256:ebea57ecc6915c0b154d732cc9694f360c77815e98d8b81948e6e52b3bb881b9
-    sha256: ebea57ecc6915c0b154d732cc9694f360c77815e98d8b81948e6e52b3bb881b9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rdiff-backup/blobs/sha256:9136e68895a67828a273cd4930fcbc2dbf8dbf4598c5ba938d4c2825d1f25c2f
-    sha256: 9136e68895a67828a273cd4930fcbc2dbf8dbf4598c5ba938d4c2825d1f25c2f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rdiff-backup/blobs/sha256:384758ed7f5ab60a60993d6c73f2a835a878c00cd6066ede4e054334aafc7731
-    sha256: 384758ed7f5ab60a60993d6c73f2a835a878c00cd6066ede4e054334aafc7731
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rdiff-backup/blobs/sha256:baba91a650c1813d89435bfe1bcc41463e9fa64ff81d79592c70a7219147216b
-    sha256: baba91a650c1813d89435bfe1bcc41463e9fa64ff81d79592c70a7219147216b
-source:
-  url: https://files.pythonhosted.org/packages/e9/9b/487229306904a54c33f485161105bb3f0a6c87951c90a54efdc0fc04a1c9/rdiff-backup-2.2.6.tar.gz
-  sha256: d0778357266bc6513bb7f75a4570b29b24b2760348bbf607babfc3a6f09458cf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - librsync
-  - libyaml
-  - python@3.14
+    - librsync
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rdiff-backup/blobs/sha256:9136e68895a67828a273cd4930fcbc2dbf8dbf4598c5ba938d4c2825d1f25c2f
+        sha256: 9136e68895a67828a273cd4930fcbc2dbf8dbf4598c5ba938d4c2825d1f25c2f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rdiff-backup/blobs/sha256:ebea57ecc6915c0b154d732cc9694f360c77815e98d8b81948e6e52b3bb881b9
+        sha256: ebea57ecc6915c0b154d732cc9694f360c77815e98d8b81948e6e52b3bb881b9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rdiff-backup/blobs/sha256:384758ed7f5ab60a60993d6c73f2a835a878c00cd6066ede4e054334aafc7731
+        sha256: 384758ed7f5ab60a60993d6c73f2a835a878c00cd6066ede4e054334aafc7731
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rdiff-backup/blobs/sha256:baba91a650c1813d89435bfe1bcc41463e9fa64ff81d79592c70a7219147216b
+        sha256: baba91a650c1813d89435bfe1bcc41463e9fa64ff81d79592c70a7219147216b
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/e9/9b/487229306904a54c33f485161105bb3f0a6c87951c90a54efdc0fc04a1c9/rdiff-backup-2.2.6.tar.gz
+    sha256: d0778357266bc6513bb7f75a4570b29b24b2760348bbf607babfc3a6f09458cf
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

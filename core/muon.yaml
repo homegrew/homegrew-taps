@@ -3,30 +3,55 @@ version: 0.5.0
 description: Meson-compatible build system
 homepage: https://muon.build
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:ee83480a39f996d669a98cec8b764ae5411b5ffb22ba81c2576a529a90d45f82
-    sha256: ee83480a39f996d669a98cec8b764ae5411b5ffb22ba81c2576a529a90d45f82
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:7b84b3449e6fab539f2a740c055419775388cf9155711adf63c88f3fe140d0ad
-    sha256: 7b84b3449e6fab539f2a740c055419775388cf9155711adf63c88f3fe140d0ad
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:333c9fadf69b0e182ccca75f781c8017e5a5dbc2f0bde8924f6e59b0b1a47ac5
-    sha256: 333c9fadf69b0e182ccca75f781c8017e5a5dbc2f0bde8924f6e59b0b1a47ac5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:23221d5b0b3fe07ec7510852ed6cd065326204d26b95bd2ac254d07507cdd07b
-    sha256: 23221d5b0b3fe07ec7510852ed6cd065326204d26b95bd2ac254d07507cdd07b
-source:
-  url: https://git.sr.ht/~lattis/muon/archive/0.5.0.tar.gz
-  sha256: 565c1b6e1e58f7e90d8813fda0e2102df69fb493ddab4cf6a84ce3647466bee5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libarchive
-  - ninja
-  - pkgconf
+    - libarchive
+    - ninja
+    - pkgconf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:7b84b3449e6fab539f2a740c055419775388cf9155711adf63c88f3fe140d0ad
+        sha256: 7b84b3449e6fab539f2a740c055419775388cf9155711adf63c88f3fe140d0ad
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:ee83480a39f996d669a98cec8b764ae5411b5ffb22ba81c2576a529a90d45f82
+        sha256: ee83480a39f996d669a98cec8b764ae5411b5ffb22ba81c2576a529a90d45f82
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:333c9fadf69b0e182ccca75f781c8017e5a5dbc2f0bde8924f6e59b0b1a47ac5
+        sha256: 333c9fadf69b0e182ccca75f781c8017e5a5dbc2f0bde8924f6e59b0b1a47ac5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/muon/blobs/sha256:23221d5b0b3fe07ec7510852ed6cd065326204d26b95bd2ac254d07507cdd07b
+        sha256: 23221d5b0b3fe07ec7510852ed6cd065326204d26b95bd2ac254d07507cdd07b
+        sha512: ""
+        signature: ""
+source:
+    url: https://git.sr.ht/~lattis/muon/archive/0.5.0.tar.gz
+    sha256: 565c1b6e1e58f7e90d8813fda0e2102df69fb493ddab4cf6a84ce3647466bee5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - scdoc
+    - meson
+    - scdoc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

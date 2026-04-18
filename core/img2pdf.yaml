@@ -3,27 +3,53 @@ version: 0.6.3
 description: Convert images to PDF via direct JPEG inclusion
 homepage: https://gitlab.mister-muffin.de/josch/img2pdf
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/img2pdf/blobs/sha256:49cb1ad33cd2a254b41237c2ce064bda97dc24f74cfae3b81710ddb7d85be1c9
-    sha256: 49cb1ad33cd2a254b41237c2ce064bda97dc24f74cfae3b81710ddb7d85be1c9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/img2pdf/blobs/sha256:9f7d81616da3c98aaf7ae9821b1790a321bcb6c5b1ddfa93ed35d1cff5f06748
-    sha256: 9f7d81616da3c98aaf7ae9821b1790a321bcb6c5b1ddfa93ed35d1cff5f06748
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/img2pdf/blobs/sha256:2fe8d3cf44d3c9199684b3f457b4aba7397f8c864d57ee60a0b09ac042717c60
-    sha256: 2fe8d3cf44d3c9199684b3f457b4aba7397f8c864d57ee60a0b09ac042717c60
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/img2pdf/blobs/sha256:f8dfa6ee752c5a807e635c0dae1d411f62f0b2be1a7ea63df6367936555eacfb
-    sha256: f8dfa6ee752c5a807e635c0dae1d411f62f0b2be1a7ea63df6367936555eacfb
-source:
-  url: https://files.pythonhosted.org/packages/8e/97/ca44c467131b93fda82d2a2f21b738c8bcf63b5259e3b8250e928b8dd52a/img2pdf-0.6.3.tar.gz
-  sha256: 219518020f5bd242bdc46493941ea3f756f664c2e86f2454721e74353f58cd95
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - pillow
-  - python@3.14
-  - qpdf
+    - pillow
+    - python@3.14
+    - qpdf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/img2pdf/blobs/sha256:9f7d81616da3c98aaf7ae9821b1790a321bcb6c5b1ddfa93ed35d1cff5f06748
+        sha256: 9f7d81616da3c98aaf7ae9821b1790a321bcb6c5b1ddfa93ed35d1cff5f06748
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/img2pdf/blobs/sha256:49cb1ad33cd2a254b41237c2ce064bda97dc24f74cfae3b81710ddb7d85be1c9
+        sha256: 49cb1ad33cd2a254b41237c2ce064bda97dc24f74cfae3b81710ddb7d85be1c9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/img2pdf/blobs/sha256:2fe8d3cf44d3c9199684b3f457b4aba7397f8c864d57ee60a0b09ac042717c60
+        sha256: 2fe8d3cf44d3c9199684b3f457b4aba7397f8c864d57ee60a0b09ac042717c60
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/img2pdf/blobs/sha256:f8dfa6ee752c5a807e635c0dae1d411f62f0b2be1a7ea63df6367936555eacfb
+        sha256: f8dfa6ee752c5a807e635c0dae1d411f62f0b2be1a7ea63df6367936555eacfb
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/8e/97/ca44c467131b93fda82d2a2f21b738c8bcf63b5259e3b8250e928b8dd52a/img2pdf-0.6.3.tar.gz
+    sha256: 219518020f5bd242bdc46493941ea3f756f664c2e86f2454721e74353f58cd95
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

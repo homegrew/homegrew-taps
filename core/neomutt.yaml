@@ -1,56 +1,80 @@
 name: neomutt
-version: 20260406
+version: "20260406"
 description: E-mail reader with support for Notmuch, NNTP and much more
 homepage: https://neomutt.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:5187c6aa23a3639e1a26e40006b9cc3aeabfaacde7a35d946cb7bee1f6bc33f5
-    sha256: 5187c6aa23a3639e1a26e40006b9cc3aeabfaacde7a35d946cb7bee1f6bc33f5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:3eafbe45cf4be3d97c8912aa5f4dde93766400e7a1a0f35c30eb01ed6f538e42
-    sha256: 3eafbe45cf4be3d97c8912aa5f4dde93766400e7a1a0f35c30eb01ed6f538e42
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:b5f634193c40187d5002a7763df29049234c02b4a07c83175f5d762caa55c445
-    sha256: b5f634193c40187d5002a7763df29049234c02b4a07c83175f5d762caa55c445
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:079e1204f13b47d41e2439a00efb6ddef8d75e19ddabd24e006b6c65ea8be7df
-    sha256: 079e1204f13b47d41e2439a00efb6ddef8d75e19ddabd24e006b6c65ea8be7df
-source:
-  url: https://github.com/neomutt/neomutt/archive/refs/tags/20260406.tar.gz
-  sha256: bd6ef5aa0d53ee23ce15b0f8624a6450d119623931708df998c6ebee7e528d17
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
-  - gpgme
-  - libidn2
-  - lmdb
-  - lua
-  - ncurses
-  - notmuch
-  - openssl@3
-  - pcre2
-  - sqlite
-  - tokyo-cabinet
-  - libgpg-error
-  - libiconv
+    - gettext
+    - gpgme
+    - libidn2
+    - lmdb
+    - lua
+    - ncurses
+    - notmuch
+    - openssl@3
+    - pcre2
+    - sqlite
+    - tokyo-cabinet
+    - libgpg-error
+    - libiconv
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:3eafbe45cf4be3d97c8912aa5f4dde93766400e7a1a0f35c30eb01ed6f538e42
+        sha256: 3eafbe45cf4be3d97c8912aa5f4dde93766400e7a1a0f35c30eb01ed6f538e42
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:5187c6aa23a3639e1a26e40006b9cc3aeabfaacde7a35d946cb7bee1f6bc33f5
+        sha256: 5187c6aa23a3639e1a26e40006b9cc3aeabfaacde7a35d946cb7bee1f6bc33f5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:b5f634193c40187d5002a7763df29049234c02b4a07c83175f5d762caa55c445
+        sha256: b5f634193c40187d5002a7763df29049234c02b4a07c83175f5d762caa55c445
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:079e1204f13b47d41e2439a00efb6ddef8d75e19ddabd24e006b6c65ea8be7df
+        sha256: 079e1204f13b47d41e2439a00efb6ddef8d75e19ddabd24e006b6c65ea8be7df
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/neomutt/neomutt/archive/refs/tags/20260406.tar.gz
+    sha256: bd6ef5aa0d53ee23ce15b0f8624a6450d119623931708df998c6ebee7e528d17
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docbook-xsl
-  - pkgconf
-  - tcl-tk
+    - docbook-xsl
+    - pkgconf
+    - tcl-tk
 linux_dependencies:
-  - gettext
-  - gpgme
-  - libidn2
-  - lmdb
-  - lua
-  - ncurses
-  - notmuch
-  - openssl@3
-  - pcre2
-  - sqlite
-  - tokyo-cabinet
-  - zlib-ng-compat
+    - gettext
+    - gpgme
+    - libidn2
+    - lmdb
+    - lua
+    - ncurses
+    - notmuch
+    - openssl@3
+    - pcre2
+    - sqlite
+    - tokyo-cabinet
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

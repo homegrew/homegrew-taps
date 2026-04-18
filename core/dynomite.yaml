@@ -3,29 +3,54 @@ version: 0.6.22
 description: Generic dynamo implementation for different k-v storage engines
 homepage: https://github.com/Netflix/dynomite
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dynomite/blobs/sha256:ec342954369e6726e60c027f71e8e1fb3e6fcc8fba63255ba73149a02fa50043
-    sha256: ec342954369e6726e60c027f71e8e1fb3e6fcc8fba63255ba73149a02fa50043
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dynomite/blobs/sha256:1f189756392ee5476ffd10499b054c0d21a71b5addd75632cd84a37a3a4f25ce
-    sha256: 1f189756392ee5476ffd10499b054c0d21a71b5addd75632cd84a37a3a4f25ce
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dynomite/blobs/sha256:9251d7d3c85de18d648cee8fec1d415a634a820efe26559702a61b01f47c0e52
-    sha256: 9251d7d3c85de18d648cee8fec1d415a634a820efe26559702a61b01f47c0e52
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dynomite/blobs/sha256:2839e6134a007f1e5471394362bef65e4083c1a17c98ec6fe51caac34e349b81
-    sha256: 2839e6134a007f1e5471394362bef65e4083c1a17c98ec6fe51caac34e349b81
-source:
-  url: https://github.com/Netflix/dynomite/archive/refs/tags/v0.6.22.tar.gz
-  sha256: 9c3c60d95b39939f3ce596776febe8aa00ae8614ba85aa767e74d41e302e704a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dynomite/blobs/sha256:1f189756392ee5476ffd10499b054c0d21a71b5addd75632cd84a37a3a4f25ce
+        sha256: 1f189756392ee5476ffd10499b054c0d21a71b5addd75632cd84a37a3a4f25ce
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dynomite/blobs/sha256:ec342954369e6726e60c027f71e8e1fb3e6fcc8fba63255ba73149a02fa50043
+        sha256: ec342954369e6726e60c027f71e8e1fb3e6fcc8fba63255ba73149a02fa50043
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dynomite/blobs/sha256:9251d7d3c85de18d648cee8fec1d415a634a820efe26559702a61b01f47c0e52
+        sha256: 9251d7d3c85de18d648cee8fec1d415a634a820efe26559702a61b01f47c0e52
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dynomite/blobs/sha256:2839e6134a007f1e5471394362bef65e4083c1a17c98ec6fe51caac34e349b81
+        sha256: 2839e6134a007f1e5471394362bef65e4083c1a17c98ec6fe51caac34e349b81
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Netflix/dynomite/archive/refs/tags/v0.6.22.tar.gz
+    sha256: 9c3c60d95b39939f3ce596776febe8aa00ae8614ba85aa767e74d41e302e704a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

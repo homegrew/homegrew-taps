@@ -3,26 +3,52 @@ version: 4.15.4
 description: High-performance theorem prover
 homepage: https://github.com/Z3Prover/z3
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/z3/blobs/sha256:9f57f90f63a0995a9b56b6f4c94a1c29bd8fd9a474e09f78cba7f64aaf25708c
-    sha256: 9f57f90f63a0995a9b56b6f4c94a1c29bd8fd9a474e09f78cba7f64aaf25708c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/z3/blobs/sha256:daa3779a2ee08f218dd714c80ce78e9451b81340c65efee8a1f44f16dee8aa07
-    sha256: daa3779a2ee08f218dd714c80ce78e9451b81340c65efee8a1f44f16dee8aa07
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/z3/blobs/sha256:aecd2a8e5cc6512f5ad5cc3ba78602236642ac02d4471fc9635383976012236d
-    sha256: aecd2a8e5cc6512f5ad5cc3ba78602236642ac02d4471fc9635383976012236d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/z3/blobs/sha256:02148c88d3b6adc67f7cb43fc1eb3f8a1a7317838a567e7de95c60cffc4fd208
-    sha256: 02148c88d3b6adc67f7cb43fc1eb3f8a1a7317838a567e7de95c60cffc4fd208
-source:
-  url: https://github.com/Z3Prover/z3/archive/refs/tags/z3-4.15.4.tar.gz
-  sha256: dae526252cb0585c8c863292ebec84cace4901a014b190a73f14087dd08d252b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/z3/blobs/sha256:daa3779a2ee08f218dd714c80ce78e9451b81340c65efee8a1f44f16dee8aa07
+        sha256: daa3779a2ee08f218dd714c80ce78e9451b81340c65efee8a1f44f16dee8aa07
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/z3/blobs/sha256:9f57f90f63a0995a9b56b6f4c94a1c29bd8fd9a474e09f78cba7f64aaf25708c
+        sha256: 9f57f90f63a0995a9b56b6f4c94a1c29bd8fd9a474e09f78cba7f64aaf25708c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/z3/blobs/sha256:aecd2a8e5cc6512f5ad5cc3ba78602236642ac02d4471fc9635383976012236d
+        sha256: aecd2a8e5cc6512f5ad5cc3ba78602236642ac02d4471fc9635383976012236d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/z3/blobs/sha256:02148c88d3b6adc67f7cb43fc1eb3f8a1a7317838a567e7de95c60cffc4fd208
+        sha256: 02148c88d3b6adc67f7cb43fc1eb3f8a1a7317838a567e7de95c60cffc4fd208
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Z3Prover/z3/archive/refs/tags/z3-4.15.4.tar.gz
+    sha256: dae526252cb0585c8c863292ebec84cace4901a014b190a73f14087dd08d252b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - python@3.14
+    - cmake
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

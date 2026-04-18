@@ -1,29 +1,54 @@
 name: biber
-version: 2.21
+version: "2.21"
 description: Backend processor for BibLaTeX
 homepage: https://sourceforge.net/projects/biblatex-biber/
 license: Artistic-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/biber/blobs/sha256:be75b3c9eaecbe7613ecb84f2f7839971d5ac01d8a9ed7059ee6b28194d438c2
-    sha256: be75b3c9eaecbe7613ecb84f2f7839971d5ac01d8a9ed7059ee6b28194d438c2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/biber/blobs/sha256:20e097be1791299b36d910b2bb55e96330c2d581961aba453a8bc7e570fc877b
-    sha256: 20e097be1791299b36d910b2bb55e96330c2d581961aba453a8bc7e570fc877b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/biber/blobs/sha256:8bb333ed55a8c6d2ee8ccf35b88b876127d2cbd16a591febd666e5aa0527acf6
-    sha256: 8bb333ed55a8c6d2ee8ccf35b88b876127d2cbd16a591febd666e5aa0527acf6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/biber/blobs/sha256:c13171a65288715e776c4b5e7d37081f006cb3ac8b60cf2ad749a409a3fc22e7
-    sha256: c13171a65288715e776c4b5e7d37081f006cb3ac8b60cf2ad749a409a3fc22e7
-source:
-  url: https://github.com/plk/biber/archive/refs/tags/v2.21.tar.gz
-  sha256: 2652cf3ae0abff5fb233aa77f18e70014cc2c70b94a8693c099a3cad9bbb4b20
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/biber/blobs/sha256:20e097be1791299b36d910b2bb55e96330c2d581961aba453a8bc7e570fc877b
+        sha256: 20e097be1791299b36d910b2bb55e96330c2d581961aba453a8bc7e570fc877b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/biber/blobs/sha256:be75b3c9eaecbe7613ecb84f2f7839971d5ac01d8a9ed7059ee6b28194d438c2
+        sha256: be75b3c9eaecbe7613ecb84f2f7839971d5ac01d8a9ed7059ee6b28194d438c2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/biber/blobs/sha256:8bb333ed55a8c6d2ee8ccf35b88b876127d2cbd16a591febd666e5aa0527acf6
+        sha256: 8bb333ed55a8c6d2ee8ccf35b88b876127d2cbd16a591febd666e5aa0527acf6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/biber/blobs/sha256:c13171a65288715e776c4b5e7d37081f006cb3ac8b60cf2ad749a409a3fc22e7
+        sha256: c13171a65288715e776c4b5e7d37081f006cb3ac8b60cf2ad749a409a3fc22e7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/plk/biber/archive/refs/tags/v2.21.tar.gz
+    sha256: 2652cf3ae0abff5fb233aa77f18e70014cc2c70b94a8693c099a3cad9bbb4b20
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

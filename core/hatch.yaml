@@ -3,35 +3,60 @@ version: 1.16.5
 description: Modern, extensible Python project management
 homepage: https://hatch.pypa.io/latest/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hatch/blobs/sha256:7e20cac25362510f5b56206e570636f6fc54b6f12a5ddf25fe4edd4c3e254dad
-    sha256: 7e20cac25362510f5b56206e570636f6fc54b6f12a5ddf25fe4edd4c3e254dad
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hatch/blobs/sha256:db4a3d99a0fd51a227cf25236d55edf362675a5517f17ee4e9a190d13b3d9913
-    sha256: db4a3d99a0fd51a227cf25236d55edf362675a5517f17ee4e9a190d13b3d9913
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hatch/blobs/sha256:cfe5d17cc6364ae9593c1178741b53b06afd69138bb14115cd45bef0d596edc4
-    sha256: cfe5d17cc6364ae9593c1178741b53b06afd69138bb14115cd45bef0d596edc4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hatch/blobs/sha256:cfe5d17cc6364ae9593c1178741b53b06afd69138bb14115cd45bef0d596edc4
-    sha256: cfe5d17cc6364ae9593c1178741b53b06afd69138bb14115cd45bef0d596edc4
-source:
-  url: https://files.pythonhosted.org/packages/d2/02/ce9c4c439fa3f195b21b4b5bb18b44d1076297c86477ef7e3d2de6064ec3/hatch-1.16.5.tar.gz
-  sha256: 57bdeeaa72577859ce37091a5449583875331c06f9cb6af9077947ad40b3a1de
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - python@3.14
-  - uv
+    - certifi
+    - cryptography
+    - python@3.14
+    - uv
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hatch/blobs/sha256:db4a3d99a0fd51a227cf25236d55edf362675a5517f17ee4e9a190d13b3d9913
+        sha256: db4a3d99a0fd51a227cf25236d55edf362675a5517f17ee4e9a190d13b3d9913
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hatch/blobs/sha256:7e20cac25362510f5b56206e570636f6fc54b6f12a5ddf25fe4edd4c3e254dad
+        sha256: 7e20cac25362510f5b56206e570636f6fc54b6f12a5ddf25fe4edd4c3e254dad
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hatch/blobs/sha256:cfe5d17cc6364ae9593c1178741b53b06afd69138bb14115cd45bef0d596edc4
+        sha256: cfe5d17cc6364ae9593c1178741b53b06afd69138bb14115cd45bef0d596edc4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hatch/blobs/sha256:cfe5d17cc6364ae9593c1178741b53b06afd69138bb14115cd45bef0d596edc4
+        sha256: cfe5d17cc6364ae9593c1178741b53b06afd69138bb14115cd45bef0d596edc4
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/d2/02/ce9c4c439fa3f195b21b4b5bb18b44d1076297c86477ef7e3d2de6064ec3/hatch-1.16.5.tar.gz
+    sha256: 57bdeeaa72577859ce37091a5449583875331c06f9cb6af9077947ad40b3a1de
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - certifi
-  - cffi
-  - cryptography
-  - pycparser
-  - python@3.14
-  - uv
+    - certifi
+    - cffi
+    - cryptography
+    - pycparser
+    - python@3.14
+    - uv
+build:
+    configure: []
+    install: []
+service: null

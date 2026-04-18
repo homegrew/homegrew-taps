@@ -3,32 +3,56 @@ version: 2.23.1
 description: Fast, compressed, persistent binary data store library for C
 homepage: https://www.blosc.org
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/c-blosc2/blobs/sha256:91448eaa6c8e16b006c19886acea4ac58264283dbf3ea8fd162ff1d39e6db9f0
-    sha256: 91448eaa6c8e16b006c19886acea4ac58264283dbf3ea8fd162ff1d39e6db9f0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/c-blosc2/blobs/sha256:bf86940c02cd637d88301284e74a606c4d4bffc830d53a48d711a4e744b8fbdf
-    sha256: bf86940c02cd637d88301284e74a606c4d4bffc830d53a48d711a4e744b8fbdf
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/c-blosc2/blobs/sha256:a9905447e2b2599757bebab05c143b0f94f5708d943d1e58b4520553abd1373c
-    sha256: a9905447e2b2599757bebab05c143b0f94f5708d943d1e58b4520553abd1373c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/c-blosc2/blobs/sha256:fc07ddbf6019521e4c51d1207772f53066a4e5edc613b52e46e578bdff046d1e
-    sha256: fc07ddbf6019521e4c51d1207772f53066a4e5edc613b52e46e578bdff046d1e
-source:
-  url: https://github.com/Blosc/c-blosc2/archive/refs/tags/v2.23.1.tar.gz
-  sha256: 3a1a55d1e3794fb2b51a12e722d611b3e577443abb7ff9951666511f576ea3da
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lz4
-  - zstd
+    - lz4
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/c-blosc2/blobs/sha256:bf86940c02cd637d88301284e74a606c4d4bffc830d53a48d711a4e744b8fbdf
+        sha256: bf86940c02cd637d88301284e74a606c4d4bffc830d53a48d711a4e744b8fbdf
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/c-blosc2/blobs/sha256:91448eaa6c8e16b006c19886acea4ac58264283dbf3ea8fd162ff1d39e6db9f0
+        sha256: 91448eaa6c8e16b006c19886acea4ac58264283dbf3ea8fd162ff1d39e6db9f0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/c-blosc2/blobs/sha256:a9905447e2b2599757bebab05c143b0f94f5708d943d1e58b4520553abd1373c
+        sha256: a9905447e2b2599757bebab05c143b0f94f5708d943d1e58b4520553abd1373c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/c-blosc2/blobs/sha256:fc07ddbf6019521e4c51d1207772f53066a4e5edc613b52e46e578bdff046d1e
+        sha256: fc07ddbf6019521e4c51d1207772f53066a4e5edc613b52e46e578bdff046d1e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Blosc/c-blosc2/archive/refs/tags/v2.23.1.tar.gz
+    sha256: 3a1a55d1e3794fb2b51a12e722d611b3e577443abb7ff9951666511f576ea3da
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - lz4
-  - zlib-ng-compat
-  - zstd
+    - lz4
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

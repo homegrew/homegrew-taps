@@ -3,30 +3,55 @@ version: 0.9.15
 description: R7RS Scheme implementation, developed to be a handy script interpreter
 homepage: https://practical-scheme.net/gauche/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gauche/blobs/sha256:4dcc399b09f0db638cb74c51b46a1d289f7d9eb7602e1632f409af0d780d6b70
-    sha256: 4dcc399b09f0db638cb74c51b46a1d289f7d9eb7602e1632f409af0d780d6b70
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gauche/blobs/sha256:53b8b035250f0814c8a2cc90c59e05ca51ef82116a487fc76ceece4cfad07e48
-    sha256: 53b8b035250f0814c8a2cc90c59e05ca51ef82116a487fc76ceece4cfad07e48
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gauche/blobs/sha256:ad6815598d031b43b878c75511c43cee7e1d18bafc3cb1e59781c0fcdd5c560d
-    sha256: ad6815598d031b43b878c75511c43cee7e1d18bafc3cb1e59781c0fcdd5c560d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gauche/blobs/sha256:1b93c768dbd692d811173b3c6b9773165d88060cfca88764493b05f0e9ba05a2
-    sha256: 1b93c768dbd692d811173b3c6b9773165d88060cfca88764493b05f0e9ba05a2
-source:
-  url: https://github.com/shirok/Gauche/releases/download/release0_9_15/Gauche-0.9.15.tgz
-  sha256: 3643e27bc7c8822cfd6fb2892db185f658e8e364938bc2ccfcedb239e35af783
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ca-certificates
-  - mbedtls@3
+    - ca-certificates
+    - mbedtls@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gauche/blobs/sha256:53b8b035250f0814c8a2cc90c59e05ca51ef82116a487fc76ceece4cfad07e48
+        sha256: 53b8b035250f0814c8a2cc90c59e05ca51ef82116a487fc76ceece4cfad07e48
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gauche/blobs/sha256:4dcc399b09f0db638cb74c51b46a1d289f7d9eb7602e1632f409af0d780d6b70
+        sha256: 4dcc399b09f0db638cb74c51b46a1d289f7d9eb7602e1632f409af0d780d6b70
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gauche/blobs/sha256:ad6815598d031b43b878c75511c43cee7e1d18bafc3cb1e59781c0fcdd5c560d
+        sha256: ad6815598d031b43b878c75511c43cee7e1d18bafc3cb1e59781c0fcdd5c560d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gauche/blobs/sha256:1b93c768dbd692d811173b3c6b9773165d88060cfca88764493b05f0e9ba05a2
+        sha256: 1b93c768dbd692d811173b3c6b9773165d88060cfca88764493b05f0e9ba05a2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/shirok/Gauche/releases/download/release0_9_15/Gauche-0.9.15.tgz
+    sha256: 3643e27bc7c8822cfd6fb2892db185f658e8e364938bc2ccfcedb239e35af783
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - ca-certificates
-  - mbedtls@3
-  - zlib-ng-compat
+    - ca-certificates
+    - mbedtls@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,34 +3,58 @@ version: 8.0.2
 description: Optimization package for solving linear programming problems (LPs)
 homepage: https://soplex.zib.de/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/soplex/blobs/sha256:2f59a426fa23a792285e7f5613ed122744a2937b6efad6cf06757313fe333941
-    sha256: 2f59a426fa23a792285e7f5613ed122744a2937b6efad6cf06757313fe333941
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/soplex/blobs/sha256:4772f36ab163178669030ffc9011dae8d0716a1a51c180e48b216dc4500b5202
-    sha256: 4772f36ab163178669030ffc9011dae8d0716a1a51c180e48b216dc4500b5202
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/soplex/blobs/sha256:20906c8b190a3affcf702d3aaec37e3022328febab379273dbb1f60956e5855f
-    sha256: 20906c8b190a3affcf702d3aaec37e3022328febab379273dbb1f60956e5855f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/soplex/blobs/sha256:72da6eb5d410c88e0bac8cb9b87f63d95fbd4d0cf3834baaff93a6bedab49f6e
-    sha256: 72da6eb5d410c88e0bac8cb9b87f63d95fbd4d0cf3834baaff93a6bedab49f6e
-source:
-  url: https://soplex.zib.de/download/release/soplex-8.0.2.tgz
-  sha256: d1634c0494d3b5355b611c3ce0f710dd19b9626f1ea65c822b668dc8abf1bf8c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - gmp
-  - mpfr
+    - boost
+    - gmp
+    - mpfr
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/soplex/blobs/sha256:4772f36ab163178669030ffc9011dae8d0716a1a51c180e48b216dc4500b5202
+        sha256: 4772f36ab163178669030ffc9011dae8d0716a1a51c180e48b216dc4500b5202
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/soplex/blobs/sha256:2f59a426fa23a792285e7f5613ed122744a2937b6efad6cf06757313fe333941
+        sha256: 2f59a426fa23a792285e7f5613ed122744a2937b6efad6cf06757313fe333941
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/soplex/blobs/sha256:20906c8b190a3affcf702d3aaec37e3022328febab379273dbb1f60956e5855f
+        sha256: 20906c8b190a3affcf702d3aaec37e3022328febab379273dbb1f60956e5855f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/soplex/blobs/sha256:72da6eb5d410c88e0bac8cb9b87f63d95fbd4d0cf3834baaff93a6bedab49f6e
+        sha256: 72da6eb5d410c88e0bac8cb9b87f63d95fbd4d0cf3834baaff93a6bedab49f6e
+        sha512: ""
+        signature: ""
+source:
+    url: https://soplex.zib.de/download/release/soplex-8.0.2.tgz
+    sha256: d1634c0494d3b5355b611c3ce0f710dd19b9626f1ea65c822b668dc8abf1bf8c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - boost
-  - gmp
-  - mpfr
-  - zlib-ng-compat
+    - boost
+    - gmp
+    - mpfr
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

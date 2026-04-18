@@ -3,28 +3,53 @@ version: 0.11.0
 description: Your CLI home video recorder
 homepage: https://github.com/charmbracelet/vhs
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vhs/blobs/sha256:0edf44b9c84f56fb39ae8982b9190380cc129c24a489d3fde161ab733d9219b4
-    sha256: 0edf44b9c84f56fb39ae8982b9190380cc129c24a489d3fde161ab733d9219b4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vhs/blobs/sha256:1e57d7d0c7a2e44c65e7db0b344de2ba912362c648060b7ccd9f5de6bcec784d
-    sha256: 1e57d7d0c7a2e44c65e7db0b344de2ba912362c648060b7ccd9f5de6bcec784d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vhs/blobs/sha256:15290cb92528067b54e83f001e151ff66e39b1b94bba44174e442bb803dccc70
-    sha256: 15290cb92528067b54e83f001e151ff66e39b1b94bba44174e442bb803dccc70
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vhs/blobs/sha256:cdc1dcb65b659c63f95e43f6347e2cb290744431c6f0ced771c25326d098155e
-    sha256: cdc1dcb65b659c63f95e43f6347e2cb290744431c6f0ced771c25326d098155e
-source:
-  url: https://github.com/charmbracelet/vhs/archive/refs/tags/v0.11.0.tar.gz
-  sha256: c08b8502989fe7e9626c02938f3fc512c2a4ba21f839f455d20d7eb1da7bc39f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - ttyd
+    - ffmpeg
+    - ttyd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vhs/blobs/sha256:1e57d7d0c7a2e44c65e7db0b344de2ba912362c648060b7ccd9f5de6bcec784d
+        sha256: 1e57d7d0c7a2e44c65e7db0b344de2ba912362c648060b7ccd9f5de6bcec784d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vhs/blobs/sha256:0edf44b9c84f56fb39ae8982b9190380cc129c24a489d3fde161ab733d9219b4
+        sha256: 0edf44b9c84f56fb39ae8982b9190380cc129c24a489d3fde161ab733d9219b4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vhs/blobs/sha256:15290cb92528067b54e83f001e151ff66e39b1b94bba44174e442bb803dccc70
+        sha256: 15290cb92528067b54e83f001e151ff66e39b1b94bba44174e442bb803dccc70
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vhs/blobs/sha256:cdc1dcb65b659c63f95e43f6347e2cb290744431c6f0ced771c25326d098155e
+        sha256: cdc1dcb65b659c63f95e43f6347e2cb290744431c6f0ced771c25326d098155e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/charmbracelet/vhs/archive/refs/tags/v0.11.0.tar.gz
+    sha256: c08b8502989fe7e9626c02938f3fc512c2a4ba21f839f455d20d7eb1da7bc39f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

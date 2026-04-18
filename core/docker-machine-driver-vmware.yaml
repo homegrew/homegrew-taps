@@ -1,29 +1,54 @@
 name: docker-machine-driver-vmware
 version: 0.1.5
-description: "VMware Fusion & Workstation docker-machine driver"
+description: VMware Fusion & Workstation docker-machine driver
 homepage: https://www.vmware.com/products/personal-desktop-virtualization.html
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/docker-machine-driver-vmware/blobs/sha256:01fa7c87d4ba3e58db8cbc31e7b7f89d0a46d500d3e8d88431cd90f31e501ee8
-    sha256: 01fa7c87d4ba3e58db8cbc31e7b7f89d0a46d500d3e8d88431cd90f31e501ee8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/docker-machine-driver-vmware/blobs/sha256:3d14214a8054e0c62a52853e889663be19897ef55d7a3fb9f5e7203ec309f7ce
-    sha256: 3d14214a8054e0c62a52853e889663be19897ef55d7a3fb9f5e7203ec309f7ce
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/docker-machine-driver-vmware/blobs/sha256:c2699119a539f3b9b7c86f900d5510d5b4cdb952ebdc60b7f5c12bf80f5d4932
-    sha256: c2699119a539f3b9b7c86f900d5510d5b4cdb952ebdc60b7f5c12bf80f5d4932
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/docker-machine-driver-vmware/blobs/sha256:5c76b201cac7373f70ffcd396af6f46fb90c49f5a103e9d6e44ddf50ada228e0
-    sha256: 5c76b201cac7373f70ffcd396af6f46fb90c49f5a103e9d6e44ddf50ada228e0
-source:
-  url: https://github.com/machine-drivers/docker-machine-driver-vmware.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - docker-machine
+    - docker-machine
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/docker-machine-driver-vmware/blobs/sha256:3d14214a8054e0c62a52853e889663be19897ef55d7a3fb9f5e7203ec309f7ce
+        sha256: 3d14214a8054e0c62a52853e889663be19897ef55d7a3fb9f5e7203ec309f7ce
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/docker-machine-driver-vmware/blobs/sha256:01fa7c87d4ba3e58db8cbc31e7b7f89d0a46d500d3e8d88431cd90f31e501ee8
+        sha256: 01fa7c87d4ba3e58db8cbc31e7b7f89d0a46d500d3e8d88431cd90f31e501ee8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/docker-machine-driver-vmware/blobs/sha256:c2699119a539f3b9b7c86f900d5510d5b4cdb952ebdc60b7f5c12bf80f5d4932
+        sha256: c2699119a539f3b9b7c86f900d5510d5b4cdb952ebdc60b7f5c12bf80f5d4932
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/docker-machine-driver-vmware/blobs/sha256:5c76b201cac7373f70ffcd396af6f46fb90c49f5a103e9d6e44ddf50ada228e0
+        sha256: 5c76b201cac7373f70ffcd396af6f46fb90c49f5a103e9d6e44ddf50ada228e0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/machine-drivers/docker-machine-driver-vmware.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

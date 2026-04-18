@@ -3,45 +3,69 @@ version: 3.11.1
 description: Low-footprint RDF triple store with SPARQL 1.1 interface
 homepage: https://tinysparql.org/
 license: LGPL-2.1-or-later AND GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tinysparql/blobs/sha256:09243fa8ca6c894e94fe7b6b061cf01894bc041959ef4bf880a95ba2f45b4b2d
-    sha256: 09243fa8ca6c894e94fe7b6b061cf01894bc041959ef4bf880a95ba2f45b4b2d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tinysparql/blobs/sha256:5d71b933c2c672a09c96184a308285dabb9d9c09afd3b8e9258878c6135b6373
-    sha256: 5d71b933c2c672a09c96184a308285dabb9d9c09afd3b8e9258878c6135b6373
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tinysparql/blobs/sha256:03f94a5ec379639b70423314555bee512d5e6a2d69a0a7bb9b1e7154cf5348fe
-    sha256: 03f94a5ec379639b70423314555bee512d5e6a2d69a0a7bb9b1e7154cf5348fe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tinysparql/blobs/sha256:c29b33dbc0392d8dfe2660754ec76292bddccc79d07a943e03111ba4d45a70d8
-    sha256: c29b33dbc0392d8dfe2660754ec76292bddccc79d07a943e03111ba4d45a70d8
-source:
-  url: https://download.gnome.org/sources/tinysparql/3.11/tinysparql-3.11.1.tar.xz
-  sha256: cfd46021ee1514ad435e714f7aa1ec7a787c7f516a94f4c7438897ee3d6eca1e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dbus
-  - glib
-  - icu4c@78
-  - json-glib
-  - libsoup
-  - sqlite
-  - gettext
+    - dbus
+    - glib
+    - icu4c@78
+    - json-glib
+    - libsoup
+    - sqlite
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tinysparql/blobs/sha256:5d71b933c2c672a09c96184a308285dabb9d9c09afd3b8e9258878c6135b6373
+        sha256: 5d71b933c2c672a09c96184a308285dabb9d9c09afd3b8e9258878c6135b6373
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tinysparql/blobs/sha256:09243fa8ca6c894e94fe7b6b061cf01894bc041959ef4bf880a95ba2f45b4b2d
+        sha256: 09243fa8ca6c894e94fe7b6b061cf01894bc041959ef4bf880a95ba2f45b4b2d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tinysparql/blobs/sha256:03f94a5ec379639b70423314555bee512d5e6a2d69a0a7bb9b1e7154cf5348fe
+        sha256: 03f94a5ec379639b70423314555bee512d5e6a2d69a0a7bb9b1e7154cf5348fe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tinysparql/blobs/sha256:c29b33dbc0392d8dfe2660754ec76292bddccc79d07a943e03111ba4d45a70d8
+        sha256: c29b33dbc0392d8dfe2660754ec76292bddccc79d07a943e03111ba4d45a70d8
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/tinysparql/3.11/tinysparql-3.11.1.tar.xz
+    sha256: cfd46021ee1514ad435e714f7aa1ec7a787c7f516a94f4c7438897ee3d6eca1e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - gettext
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
+    - vala
 linux_dependencies:
-  - dbus
-  - glib
-  - icu4c@78
-  - json-glib
-  - libsoup
-  - sqlite
+    - dbus
+    - glib
+    - icu4c@78
+    - json-glib
+    - libsoup
+    - sqlite
+build:
+    configure: []
+    install: []
+service: null

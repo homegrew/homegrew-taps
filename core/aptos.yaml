@@ -3,30 +3,55 @@ version: 9.1.0
 description: Layer 1 blockchain built to support fair access to decentralized assets for all
 homepage: https://aptosfoundation.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:9f63609819066da6a3a2f11e464513c13192cfa61fdd3014cea5ab7a843a253f
-    sha256: 9f63609819066da6a3a2f11e464513c13192cfa61fdd3014cea5ab7a843a253f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:5807bb15bab96ecfa699f87908e7deb89c70612f9cf8950a390e51c93a570fdd
-    sha256: 5807bb15bab96ecfa699f87908e7deb89c70612f9cf8950a390e51c93a570fdd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:80949a756ad0025b5123dc7001975ac4cd500a116809b4b367e72f7d48ab7cde
-    sha256: 80949a756ad0025b5123dc7001975ac4cd500a116809b4b367e72f7d48ab7cde
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:35e6ac7edee51c1f2f20da23357d66c539cb3cce43180b1280a9d041fce819d6
-    sha256: 35e6ac7edee51c1f2f20da23357d66c539cb3cce43180b1280a9d041fce819d6
-source:
-  url: https://github.com/aptos-labs/aptos-core/archive/refs/tags/aptos-cli-v9.1.0.tar.gz
-  sha256: 940db44e50d90386af61ba00495dc7329f6aafa3f5168473c65472c85a3e3c1b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:5807bb15bab96ecfa699f87908e7deb89c70612f9cf8950a390e51c93a570fdd
+        sha256: 5807bb15bab96ecfa699f87908e7deb89c70612f9cf8950a390e51c93a570fdd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:9f63609819066da6a3a2f11e464513c13192cfa61fdd3014cea5ab7a843a253f
+        sha256: 9f63609819066da6a3a2f11e464513c13192cfa61fdd3014cea5ab7a843a253f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:80949a756ad0025b5123dc7001975ac4cd500a116809b4b367e72f7d48ab7cde
+        sha256: 80949a756ad0025b5123dc7001975ac4cd500a116809b4b367e72f7d48ab7cde
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:35e6ac7edee51c1f2f20da23357d66c539cb3cce43180b1280a9d041fce819d6
+        sha256: 35e6ac7edee51c1f2f20da23357d66c539cb3cce43180b1280a9d041fce819d6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/aptos-labs/aptos-core/archive/refs/tags/aptos-cli-v9.1.0.tar.gz
+    sha256: 940db44e50d90386af61ba00495dc7329f6aafa3f5168473c65472c85a3e3c1b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - rust
+    - cmake
+    - rust
 linux_dependencies:
-  - elfutils
-  - openssl@3
-  - systemd
+    - elfutils
+    - openssl@3
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

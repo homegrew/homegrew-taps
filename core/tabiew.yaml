@@ -3,28 +3,53 @@ version: 0.13.0
 description: TUI to view and query tabular files (CSV,TSV, Parquet, etc.)
 homepage: https://github.com/shshemi/tabiew
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tabiew/blobs/sha256:6b61cbc31bd548f18f54b84ef44de05406a346c84438a28a91a7031f21cf4607
-    sha256: 6b61cbc31bd548f18f54b84ef44de05406a346c84438a28a91a7031f21cf4607
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tabiew/blobs/sha256:f06c6a25998b63e4c19b366b3622b092a09e006bac6ace8f187008cf92cc3b7f
-    sha256: f06c6a25998b63e4c19b366b3622b092a09e006bac6ace8f187008cf92cc3b7f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tabiew/blobs/sha256:e3bd0d9aaf6d158e86f77f2076dece818aeacda582f81749f4bef27c605b0dbb
-    sha256: e3bd0d9aaf6d158e86f77f2076dece818aeacda582f81749f4bef27c605b0dbb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tabiew/blobs/sha256:7317a0f171d14e2c8d56d8fc06a2cbfb80c4478fb7ff05e3b68f3433d00ad5ee
-    sha256: 7317a0f171d14e2c8d56d8fc06a2cbfb80c4478fb7ff05e3b68f3433d00ad5ee
-source:
-  url: https://github.com/shshemi/tabiew/archive/refs/tags/v0.13.0.tar.gz
-  sha256: 3f6a4ac06362b8223e738d9b9293b80b1607f1b98b45b44ac70b438106c0f9f5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tabiew/blobs/sha256:f06c6a25998b63e4c19b366b3622b092a09e006bac6ace8f187008cf92cc3b7f
+        sha256: f06c6a25998b63e4c19b366b3622b092a09e006bac6ace8f187008cf92cc3b7f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tabiew/blobs/sha256:6b61cbc31bd548f18f54b84ef44de05406a346c84438a28a91a7031f21cf4607
+        sha256: 6b61cbc31bd548f18f54b84ef44de05406a346c84438a28a91a7031f21cf4607
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tabiew/blobs/sha256:e3bd0d9aaf6d158e86f77f2076dece818aeacda582f81749f4bef27c605b0dbb
+        sha256: e3bd0d9aaf6d158e86f77f2076dece818aeacda582f81749f4bef27c605b0dbb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tabiew/blobs/sha256:7317a0f171d14e2c8d56d8fc06a2cbfb80c4478fb7ff05e3b68f3433d00ad5ee
+        sha256: 7317a0f171d14e2c8d56d8fc06a2cbfb80c4478fb7ff05e3b68f3433d00ad5ee
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/shshemi/tabiew/archive/refs/tags/v0.13.0.tar.gz
+    sha256: 3f6a4ac06362b8223e738d9b9293b80b1607f1b98b45b44ac70b438106c0f9f5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

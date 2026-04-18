@@ -3,31 +3,55 @@ version: 0.22.1
 description: Audit Cargo.lock files for crates with security vulnerabilities
 homepage: https://rustsec.org/
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-audit/blobs/sha256:b863761905e89bd87009f738a06311ff12c071952b249998a3cfa422da221583
-    sha256: b863761905e89bd87009f738a06311ff12c071952b249998a3cfa422da221583
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-audit/blobs/sha256:96c9f3e94687aea1e65ae80ca447e78319125e643019995cec756deec3832244
-    sha256: 96c9f3e94687aea1e65ae80ca447e78319125e643019995cec756deec3832244
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-audit/blobs/sha256:303b9c4ba7517e22b93399a9876b8bd69307165ac9eae534db83852e449bbfb9
-    sha256: 303b9c4ba7517e22b93399a9876b8bd69307165ac9eae534db83852e449bbfb9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-audit/blobs/sha256:bc4d22172c227e91f20053e8bd799969b9e01c8d413d2d9ed0011367622414ac
-    sha256: bc4d22172c227e91f20053e8bd799969b9e01c8d413d2d9ed0011367622414ac
-source:
-  url: https://github.com/rustsec/rustsec/archive/refs/tags/cargo-audit/v0.22.1.tar.gz
-  sha256: 262d42fcca5db8629b6220d84e62e7ffda913846a36089a847ffe276e6b09446
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-audit/blobs/sha256:96c9f3e94687aea1e65ae80ca447e78319125e643019995cec756deec3832244
+        sha256: 96c9f3e94687aea1e65ae80ca447e78319125e643019995cec756deec3832244
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-audit/blobs/sha256:b863761905e89bd87009f738a06311ff12c071952b249998a3cfa422da221583
+        sha256: b863761905e89bd87009f738a06311ff12c071952b249998a3cfa422da221583
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-audit/blobs/sha256:303b9c4ba7517e22b93399a9876b8bd69307165ac9eae534db83852e449bbfb9
+        sha256: 303b9c4ba7517e22b93399a9876b8bd69307165ac9eae534db83852e449bbfb9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-audit/blobs/sha256:bc4d22172c227e91f20053e8bd799969b9e01c8d413d2d9ed0011367622414ac
+        sha256: bc4d22172c227e91f20053e8bd799969b9e01c8d413d2d9ed0011367622414ac
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rustsec/rustsec/archive/refs/tags/cargo-audit/v0.22.1.tar.gz
+    sha256: 262d42fcca5db8629b6220d84e62e7ffda913846a36089a847ffe276e6b09446
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

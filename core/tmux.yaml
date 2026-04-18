@@ -3,29 +3,54 @@ version: 3.6a
 description: Terminal multiplexer
 homepage: https://tmux.github.io/
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tmux/blobs/sha256:36b24a92e268147bca7ef3e5df3a88affa06512d573e75f1cd1da28e724f4afd
-    sha256: 36b24a92e268147bca7ef3e5df3a88affa06512d573e75f1cd1da28e724f4afd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tmux/blobs/sha256:b0ca1f90384e487d2316bdcaef59ba4fdf63cb04fa561d424605f86935599563
-    sha256: b0ca1f90384e487d2316bdcaef59ba4fdf63cb04fa561d424605f86935599563
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tmux/blobs/sha256:b6b495ea4851f445eb947c60eb0fadaf87f872a0959b49b34303297d654bf81c
-    sha256: b6b495ea4851f445eb947c60eb0fadaf87f872a0959b49b34303297d654bf81c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tmux/blobs/sha256:d4d439bc36e2d3814323f14242249fb16b17bef657878ab2d407b3769822f55e
-    sha256: d4d439bc36e2d3814323f14242249fb16b17bef657878ab2d407b3769822f55e
-source:
-  url: https://github.com/tmux/tmux/releases/download/3.6a/tmux-3.6a.tar.gz
-  sha256: b6d8d9c76585db8ef5fa00d4931902fa4b8cbe8166f528f44fc403961a3f3759
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libevent
-  - ncurses
-  - utf8proc
+    - libevent
+    - ncurses
+    - utf8proc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tmux/blobs/sha256:b0ca1f90384e487d2316bdcaef59ba4fdf63cb04fa561d424605f86935599563
+        sha256: b0ca1f90384e487d2316bdcaef59ba4fdf63cb04fa561d424605f86935599563
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tmux/blobs/sha256:36b24a92e268147bca7ef3e5df3a88affa06512d573e75f1cd1da28e724f4afd
+        sha256: 36b24a92e268147bca7ef3e5df3a88affa06512d573e75f1cd1da28e724f4afd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tmux/blobs/sha256:b6b495ea4851f445eb947c60eb0fadaf87f872a0959b49b34303297d654bf81c
+        sha256: b6b495ea4851f445eb947c60eb0fadaf87f872a0959b49b34303297d654bf81c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tmux/blobs/sha256:d4d439bc36e2d3814323f14242249fb16b17bef657878ab2d407b3769822f55e
+        sha256: d4d439bc36e2d3814323f14242249fb16b17bef657878ab2d407b3769822f55e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tmux/tmux/releases/download/3.6a/tmux-3.6a.tar.gz
+    sha256: b6d8d9c76585db8ef5fa00d4931902fa4b8cbe8166f528f44fc403961a3f3759
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

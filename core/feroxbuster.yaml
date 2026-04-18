@@ -3,28 +3,53 @@ version: 2.13.1
 description: Fast, simple, recursive content discovery tool written in Rust
 homepage: https://epi052.github.io/feroxbuster
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/feroxbuster/blobs/sha256:cf3d55e45eb9afabc85f7c67eae77c6709d1fc4a8185778623123a80122c6c28
-    sha256: cf3d55e45eb9afabc85f7c67eae77c6709d1fc4a8185778623123a80122c6c28
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/feroxbuster/blobs/sha256:71c0e2331a9c2181491888c1bc1c76aadd6ee454fea4c872115ae661ea2abd19
-    sha256: 71c0e2331a9c2181491888c1bc1c76aadd6ee454fea4c872115ae661ea2abd19
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/feroxbuster/blobs/sha256:20afd4144eff9917898c9708e1073c071c27a5a8b4dfff6ba65f211b86862c9c
-    sha256: 20afd4144eff9917898c9708e1073c071c27a5a8b4dfff6ba65f211b86862c9c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/feroxbuster/blobs/sha256:2352ef2c7a4f221b5ab323274e35ff40793ec3d787a0daf8744637645b7467f7
-    sha256: 2352ef2c7a4f221b5ab323274e35ff40793ec3d787a0daf8744637645b7467f7
-source:
-  url: https://github.com/epi052/feroxbuster/archive/refs/tags/v2.13.1.tar.gz
-  sha256: 6f1f3466319ea5485b9d6f05000718c6ccbe1210c1cea7b2af83a5343d068a23
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/feroxbuster/blobs/sha256:71c0e2331a9c2181491888c1bc1c76aadd6ee454fea4c872115ae661ea2abd19
+        sha256: 71c0e2331a9c2181491888c1bc1c76aadd6ee454fea4c872115ae661ea2abd19
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/feroxbuster/blobs/sha256:cf3d55e45eb9afabc85f7c67eae77c6709d1fc4a8185778623123a80122c6c28
+        sha256: cf3d55e45eb9afabc85f7c67eae77c6709d1fc4a8185778623123a80122c6c28
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/feroxbuster/blobs/sha256:20afd4144eff9917898c9708e1073c071c27a5a8b4dfff6ba65f211b86862c9c
+        sha256: 20afd4144eff9917898c9708e1073c071c27a5a8b4dfff6ba65f211b86862c9c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/feroxbuster/blobs/sha256:2352ef2c7a4f221b5ab323274e35ff40793ec3d787a0daf8744637645b7467f7
+        sha256: 2352ef2c7a4f221b5ab323274e35ff40793ec3d787a0daf8744637645b7467f7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/epi052/feroxbuster/archive/refs/tags/v2.13.1.tar.gz
+    sha256: 6f1f3466319ea5485b9d6f05000718c6ccbe1210c1cea7b2af83a5343d068a23
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

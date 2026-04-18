@@ -1,31 +1,57 @@
 name: dwm
-version: 6.8
+version: "6.8"
 description: Dynamic window manager
 homepage: https://dwm.suckless.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:c050c0dbe42f70660c8c8a839c1add0e2191813b34bd252edd46d5ee66382196
-    sha256: c050c0dbe42f70660c8c8a839c1add0e2191813b34bd252edd46d5ee66382196
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
-    sha256: 55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:f1f5ff55153d68b2c4ff9318e9a17bb973d1277cd87cf3019a43233d23890ef7
-    sha256: f1f5ff55153d68b2c4ff9318e9a17bb973d1277cd87cf3019a43233d23890ef7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:0ed6c19d7305ea1a748d5274cc7569268b6668cb01df68a9fb03a14329958ad6
-    sha256: 0ed6c19d7305ea1a748d5274cc7569268b6668cb01df68a9fb03a14329958ad6
-source:
-  url: https://dl.suckless.org/dwm/dwm-6.8.tar.gz
-  sha256: bcf540589ad174d4073f4efa658828411e2f5ba63196cfaf6b71363700f590b7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dmenu
-  - fontconfig
-  - libx11
-  - libxft
-  - libxinerama
+    - dmenu
+    - fontconfig
+    - libx11
+    - libxft
+    - libxinerama
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
+        sha256: 55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:c050c0dbe42f70660c8c8a839c1add0e2191813b34bd252edd46d5ee66382196
+        sha256: c050c0dbe42f70660c8c8a839c1add0e2191813b34bd252edd46d5ee66382196
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:f1f5ff55153d68b2c4ff9318e9a17bb973d1277cd87cf3019a43233d23890ef7
+        sha256: f1f5ff55153d68b2c4ff9318e9a17bb973d1277cd87cf3019a43233d23890ef7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:0ed6c19d7305ea1a748d5274cc7569268b6668cb01df68a9fb03a14329958ad6
+        sha256: 0ed6c19d7305ea1a748d5274cc7569268b6668cb01df68a9fb03a14329958ad6
+        sha512: ""
+        signature: ""
+source:
+    url: https://dl.suckless.org/dwm/dwm-6.8.tar.gz
+    sha256: bcf540589ad174d4073f4efa658828411e2f5ba63196cfaf6b71363700f590b7
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

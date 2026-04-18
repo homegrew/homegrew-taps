@@ -3,30 +3,55 @@ version: 2.9.6
 description: De novo assembler for single molecule sequencing reads using repeat graphs
 homepage: https://github.com/mikolmogorov/Flye
 license: BSD-3-Clause AND Apache-2.0 AND BSL-1.0 AND CC-BY-3.0 AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flye/blobs/sha256:da001a71cb1768fa863629df14bbeac7757f83f19cee3efffbf3e45fe84ac972
-    sha256: da001a71cb1768fa863629df14bbeac7757f83f19cee3efffbf3e45fe84ac972
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flye/blobs/sha256:e5769476e56abbcb2450acf418837e5bb80005f7be5dd8922db99acb21b2d77b
-    sha256: e5769476e56abbcb2450acf418837e5bb80005f7be5dd8922db99acb21b2d77b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flye/blobs/sha256:926fdce4a0f64674434d766708ced9310e058ce8ba8f55f7ec2ff2e772b455b1
-    sha256: 926fdce4a0f64674434d766708ced9310e058ce8ba8f55f7ec2ff2e772b455b1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flye/blobs/sha256:ec4658bd46026fa973059b18e83ce0ccda8f183afe9ce6050c9f23fd4c3c0f8e
-    sha256: ec4658bd46026fa973059b18e83ce0ccda8f183afe9ce6050c9f23fd4c3c0f8e
-source:
-  url: https://github.com/mikolmogorov/Flye/archive/refs/tags/2.9.6.tar.gz
-  sha256: f05a3889b1c7aafed4cc0ed1adc1f19c22618c1c7b97ab5f80d388c8192bd32a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
-  - samtools
+    - python@3.14
+    - samtools
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flye/blobs/sha256:e5769476e56abbcb2450acf418837e5bb80005f7be5dd8922db99acb21b2d77b
+        sha256: e5769476e56abbcb2450acf418837e5bb80005f7be5dd8922db99acb21b2d77b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flye/blobs/sha256:da001a71cb1768fa863629df14bbeac7757f83f19cee3efffbf3e45fe84ac972
+        sha256: da001a71cb1768fa863629df14bbeac7757f83f19cee3efffbf3e45fe84ac972
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flye/blobs/sha256:926fdce4a0f64674434d766708ced9310e058ce8ba8f55f7ec2ff2e772b455b1
+        sha256: 926fdce4a0f64674434d766708ced9310e058ce8ba8f55f7ec2ff2e772b455b1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flye/blobs/sha256:ec4658bd46026fa973059b18e83ce0ccda8f183afe9ce6050c9f23fd4c3c0f8e
+        sha256: ec4658bd46026fa973059b18e83ce0ccda8f183afe9ce6050c9f23fd4c3c0f8e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mikolmogorov/Flye/archive/refs/tags/2.9.6.tar.gz
+    sha256: f05a3889b1c7aafed4cc0ed1adc1f19c22618c1c7b97ab5f80d388c8192bd32a
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - python@3.14
-  - samtools
-  - zlib-ng-compat
+    - python@3.14
+    - samtools
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

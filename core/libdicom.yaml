@@ -3,28 +3,53 @@ version: 1.2.0
 description: DICOM WSI read library
 homepage: https://github.com/ImagingDataCommons/libdicom
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libdicom/blobs/sha256:edf1ef90081de45407247c6f2c62dfa5f25ec6e449c77fd817587e4e7947bdd5
-    sha256: edf1ef90081de45407247c6f2c62dfa5f25ec6e449c77fd817587e4e7947bdd5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libdicom/blobs/sha256:070a0a036117b34c98f56cd86327d70572bbb0131df4b2b0c31d3c32d585009e
-    sha256: 070a0a036117b34c98f56cd86327d70572bbb0131df4b2b0c31d3c32d585009e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libdicom/blobs/sha256:a12c2177e7519f1cd98ed1d88e227eeabdee7236532fa270b1a780b16a068020
-    sha256: a12c2177e7519f1cd98ed1d88e227eeabdee7236532fa270b1a780b16a068020
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libdicom/blobs/sha256:c2123321b416caf06cb685ed6307a53ada4d8eace6429595d99a1249caf171f7
-    sha256: c2123321b416caf06cb685ed6307a53ada4d8eace6429595d99a1249caf171f7
-source:
-  url: https://github.com/ImagingDataCommons/libdicom/releases/download/v1.2.0/libdicom-1.2.0.tar.xz
-  sha256: 3b8c05ceb6bf667fed997f23b476dd32c3dc6380eee1998185c211d86a7b4918
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - uthash
+    - uthash
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libdicom/blobs/sha256:070a0a036117b34c98f56cd86327d70572bbb0131df4b2b0c31d3c32d585009e
+        sha256: 070a0a036117b34c98f56cd86327d70572bbb0131df4b2b0c31d3c32d585009e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libdicom/blobs/sha256:edf1ef90081de45407247c6f2c62dfa5f25ec6e449c77fd817587e4e7947bdd5
+        sha256: edf1ef90081de45407247c6f2c62dfa5f25ec6e449c77fd817587e4e7947bdd5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libdicom/blobs/sha256:a12c2177e7519f1cd98ed1d88e227eeabdee7236532fa270b1a780b16a068020
+        sha256: a12c2177e7519f1cd98ed1d88e227eeabdee7236532fa270b1a780b16a068020
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libdicom/blobs/sha256:c2123321b416caf06cb685ed6307a53ada4d8eace6429595d99a1249caf171f7
+        sha256: c2123321b416caf06cb685ed6307a53ada4d8eace6429595d99a1249caf171f7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ImagingDataCommons/libdicom/releases/download/v1.2.0/libdicom-1.2.0.tar.xz
+    sha256: 3b8c05ceb6bf667fed997f23b476dd32c3dc6380eee1998185c211d86a7b4918
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
+    - meson
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

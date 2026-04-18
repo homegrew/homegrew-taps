@@ -3,36 +3,60 @@ version: 5.0.6
 description: LLVM bytecode to JavaScript compiler
 homepage: https://emscripten.org/
 license: Apache-2.0 AND (Apache-2.0 WITH LLVM-exception) AND (MIT OR NCSA)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:2cbc4083492c1582e0a92743b894db4d6ed6dd370c96db08aa459358b9ed7424
-    sha256: 2cbc4083492c1582e0a92743b894db4d6ed6dd370c96db08aa459358b9ed7424
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:596f25a572409657d05e06f053f21227177dae139e1557ce5f0e6b1cad2a618e
-    sha256: 596f25a572409657d05e06f053f21227177dae139e1557ce5f0e6b1cad2a618e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:c11c419646f6fed1fe78786c49499bfeb154975dae0d21be0d020ec7b5a859d9
-    sha256: c11c419646f6fed1fe78786c49499bfeb154975dae0d21be0d020ec7b5a859d9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:73236e290e896d08c348db71427f4fd0cfdd128b09d66438b2f7edc44cb19f35
-    sha256: 73236e290e896d08c348db71427f4fd0cfdd128b09d66438b2f7edc44cb19f35
-source:
-  url: https://github.com/emscripten-core/emscripten/archive/refs/tags/5.0.6.tar.gz
-  sha256: f1d3d5038d712b4f5408ddff25ea52cbab7d600b9d3195d970f38c260ee14bbb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - node
-  - python@3.14
-  - yuicompressor
-  - openjdk
+    - node
+    - python@3.14
+    - yuicompressor
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:596f25a572409657d05e06f053f21227177dae139e1557ce5f0e6b1cad2a618e
+        sha256: 596f25a572409657d05e06f053f21227177dae139e1557ce5f0e6b1cad2a618e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:2cbc4083492c1582e0a92743b894db4d6ed6dd370c96db08aa459358b9ed7424
+        sha256: 2cbc4083492c1582e0a92743b894db4d6ed6dd370c96db08aa459358b9ed7424
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:c11c419646f6fed1fe78786c49499bfeb154975dae0d21be0d020ec7b5a859d9
+        sha256: c11c419646f6fed1fe78786c49499bfeb154975dae0d21be0d020ec7b5a859d9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/emscripten/blobs/sha256:73236e290e896d08c348db71427f4fd0cfdd128b09d66438b2f7edc44cb19f35
+        sha256: 73236e290e896d08c348db71427f4fd0cfdd128b09d66438b2f7edc44cb19f35
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/emscripten-core/emscripten/archive/refs/tags/5.0.6.tar.gz
+    sha256: f1d3d5038d712b4f5408ddff25ea52cbab7d600b9d3195d970f38c260ee14bbb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - node
-  - openjdk
-  - python@3.14
-  - yuicompressor
-  - zlib-ng-compat
+    - node
+    - openjdk
+    - python@3.14
+    - yuicompressor
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

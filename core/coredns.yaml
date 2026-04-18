@@ -3,25 +3,51 @@ version: 1.14.2
 description: DNS server that chains plugins
 homepage: https://coredns.io/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:1da7753a8f94320d1bbb065365ad1a02a0d890094d04cb209f784512434feccb
-    sha256: 1da7753a8f94320d1bbb065365ad1a02a0d890094d04cb209f784512434feccb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:0a0a0142119856959a89f535bf3e7b6d0664f46b19120c3b9a3374e991bb4792
-    sha256: 0a0a0142119856959a89f535bf3e7b6d0664f46b19120c3b9a3374e991bb4792
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:ed0ac795fba0748a088b65d6068b59eb21ad045cc14b3af2b363ee5330eef655
-    sha256: ed0ac795fba0748a088b65d6068b59eb21ad045cc14b3af2b363ee5330eef655
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:b1097610915972b932b1157db5a15c5cd3807cd979f6811d247d6f373e46c4f7
-    sha256: b1097610915972b932b1157db5a15c5cd3807cd979f6811d247d6f373e46c4f7
-source:
-  url: https://github.com/coredns/coredns/archive/refs/tags/v1.14.2.tar.gz
-  sha256: ab933ed4f04de3cf377d0ecc8399fa1a6613cecdd7a1c40d90eb0a7471463fdb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:0a0a0142119856959a89f535bf3e7b6d0664f46b19120c3b9a3374e991bb4792
+        sha256: 0a0a0142119856959a89f535bf3e7b6d0664f46b19120c3b9a3374e991bb4792
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:1da7753a8f94320d1bbb065365ad1a02a0d890094d04cb209f784512434feccb
+        sha256: 1da7753a8f94320d1bbb065365ad1a02a0d890094d04cb209f784512434feccb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:ed0ac795fba0748a088b65d6068b59eb21ad045cc14b3af2b363ee5330eef655
+        sha256: ed0ac795fba0748a088b65d6068b59eb21ad045cc14b3af2b363ee5330eef655
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:b1097610915972b932b1157db5a15c5cd3807cd979f6811d247d6f373e46c4f7
+        sha256: b1097610915972b932b1157db5a15c5cd3807cd979f6811d247d6f373e46c4f7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/coredns/coredns/archive/refs/tags/v1.14.2.tar.gz
+    sha256: ab933ed4f04de3cf377d0ecc8399fa1a6613cecdd7a1c40d90eb0a7471463fdb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,53 @@ version: 0.37.1
 description: Define your dev environment as code. For microservice apps on Kubernetes
 homepage: https://tilt.dev/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tilt/blobs/sha256:fe3a0007b9a71741dc2ecf3a8f385be43bc36ebf94a4ad617546d0172ebfb258
-    sha256: fe3a0007b9a71741dc2ecf3a8f385be43bc36ebf94a4ad617546d0172ebfb258
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tilt/blobs/sha256:c7353638df042c1d1ca95f9e7a9408459ed089626681a4dd8ff27cf7c92ddd7b
-    sha256: c7353638df042c1d1ca95f9e7a9408459ed089626681a4dd8ff27cf7c92ddd7b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tilt/blobs/sha256:3b61a4f68bb59de92cbed2175aaf331f9fe05ffd00f0e0830c9b48ce79eb4cb6
-    sha256: 3b61a4f68bb59de92cbed2175aaf331f9fe05ffd00f0e0830c9b48ce79eb4cb6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tilt/blobs/sha256:8a9e5031bb136a969fcfa95b2fadbef0427d02f36c51e04e10f1cb29cbf3a6d9
-    sha256: 8a9e5031bb136a969fcfa95b2fadbef0427d02f36c51e04e10f1cb29cbf3a6d9
-source:
-  url: https://github.com/tilt-dev/tilt.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tilt/blobs/sha256:c7353638df042c1d1ca95f9e7a9408459ed089626681a4dd8ff27cf7c92ddd7b
+        sha256: c7353638df042c1d1ca95f9e7a9408459ed089626681a4dd8ff27cf7c92ddd7b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tilt/blobs/sha256:fe3a0007b9a71741dc2ecf3a8f385be43bc36ebf94a4ad617546d0172ebfb258
+        sha256: fe3a0007b9a71741dc2ecf3a8f385be43bc36ebf94a4ad617546d0172ebfb258
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tilt/blobs/sha256:3b61a4f68bb59de92cbed2175aaf331f9fe05ffd00f0e0830c9b48ce79eb4cb6
+        sha256: 3b61a4f68bb59de92cbed2175aaf331f9fe05ffd00f0e0830c9b48ce79eb4cb6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tilt/blobs/sha256:8a9e5031bb136a969fcfa95b2fadbef0427d02f36c51e04e10f1cb29cbf3a6d9
+        sha256: 8a9e5031bb136a969fcfa95b2fadbef0427d02f36c51e04e10f1cb29cbf3a6d9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tilt-dev/tilt.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - node
-  - yarn
+    - go
+    - node
+    - yarn
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

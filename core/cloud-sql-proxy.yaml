@@ -3,25 +3,51 @@ version: 2.21.3
 description: Utility for connecting securely to your Cloud SQL instances
 homepage: https://github.com/GoogleCloudPlatform/cloud-sql-proxy
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cloud-sql-proxy/blobs/sha256:1abca7e7a13c44d1aff8d5d80adc9773505f6a1fa320bd3f0be2635bb4bd71bf
-    sha256: 1abca7e7a13c44d1aff8d5d80adc9773505f6a1fa320bd3f0be2635bb4bd71bf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cloud-sql-proxy/blobs/sha256:d1489765034c23f274c5efbdec83e9f771a03fff77bb3a9028707b2ea97e6585
-    sha256: d1489765034c23f274c5efbdec83e9f771a03fff77bb3a9028707b2ea97e6585
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cloud-sql-proxy/blobs/sha256:384e3ba0868fb6a57a521b35a903fab1ef687395bb3ad9674d0510ab17ce5acb
-    sha256: 384e3ba0868fb6a57a521b35a903fab1ef687395bb3ad9674d0510ab17ce5acb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cloud-sql-proxy/blobs/sha256:d843b73360a545cf7eda100d00009a8d441d73cf8663b9cecfee571d7a3c1e39
-    sha256: d843b73360a545cf7eda100d00009a8d441d73cf8663b9cecfee571d7a3c1e39
-source:
-  url: https://github.com/GoogleCloudPlatform/cloud-sql-proxy/archive/refs/tags/v2.21.3.tar.gz
-  sha256: 27d270aa964e9694b7654ae6b575934705d9105df2928d2f99fae02117b7865b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cloud-sql-proxy/blobs/sha256:d1489765034c23f274c5efbdec83e9f771a03fff77bb3a9028707b2ea97e6585
+        sha256: d1489765034c23f274c5efbdec83e9f771a03fff77bb3a9028707b2ea97e6585
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cloud-sql-proxy/blobs/sha256:1abca7e7a13c44d1aff8d5d80adc9773505f6a1fa320bd3f0be2635bb4bd71bf
+        sha256: 1abca7e7a13c44d1aff8d5d80adc9773505f6a1fa320bd3f0be2635bb4bd71bf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cloud-sql-proxy/blobs/sha256:384e3ba0868fb6a57a521b35a903fab1ef687395bb3ad9674d0510ab17ce5acb
+        sha256: 384e3ba0868fb6a57a521b35a903fab1ef687395bb3ad9674d0510ab17ce5acb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cloud-sql-proxy/blobs/sha256:d843b73360a545cf7eda100d00009a8d441d73cf8663b9cecfee571d7a3c1e39
+        sha256: d843b73360a545cf7eda100d00009a8d441d73cf8663b9cecfee571d7a3c1e39
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/GoogleCloudPlatform/cloud-sql-proxy/archive/refs/tags/v2.21.3.tar.gz
+    sha256: 27d270aa964e9694b7654ae6b575934705d9105df2928d2f99fae02117b7865b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

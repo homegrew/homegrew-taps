@@ -3,32 +3,56 @@ version: 2.2.10
 description: Information management system
 homepage: https://www.indexdata.com/resources/software/zebra/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zebra/blobs/sha256:19bbf8d4ccb9a2101ba988660c99f28619faadf473dc5841385cd1946f8327b9
-    sha256: 19bbf8d4ccb9a2101ba988660c99f28619faadf473dc5841385cd1946f8327b9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zebra/blobs/sha256:d5fd63bd6a150619f6ffbe4e314f286eabe3e999423e9cb9f35b71d86e681547
-    sha256: d5fd63bd6a150619f6ffbe4e314f286eabe3e999423e9cb9f35b71d86e681547
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zebra/blobs/sha256:3559c2ea4ab4cea38fc905077c4873dd471586252375aaa2bc744a5037694b29
-    sha256: 3559c2ea4ab4cea38fc905077c4873dd471586252375aaa2bc744a5037694b29
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zebra/blobs/sha256:eb2d58aaffda0097ed21f908680cc33e649366997d5dcafaf89fa08c0b67af5b
-    sha256: eb2d58aaffda0097ed21f908680cc33e649366997d5dcafaf89fa08c0b67af5b
-source:
-  url: https://ftp.indexdata.com/pub/zebra/idzebra-2.2.10.tar.gz
-  sha256: 9ac047f9a4b402722a697062680cdc8fe4a9232da58de0976d7424a79208ad98
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - yaz
+    - icu4c@78
+    - yaz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zebra/blobs/sha256:d5fd63bd6a150619f6ffbe4e314f286eabe3e999423e9cb9f35b71d86e681547
+        sha256: d5fd63bd6a150619f6ffbe4e314f286eabe3e999423e9cb9f35b71d86e681547
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zebra/blobs/sha256:19bbf8d4ccb9a2101ba988660c99f28619faadf473dc5841385cd1946f8327b9
+        sha256: 19bbf8d4ccb9a2101ba988660c99f28619faadf473dc5841385cd1946f8327b9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zebra/blobs/sha256:3559c2ea4ab4cea38fc905077c4873dd471586252375aaa2bc744a5037694b29
+        sha256: 3559c2ea4ab4cea38fc905077c4873dd471586252375aaa2bc744a5037694b29
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zebra/blobs/sha256:eb2d58aaffda0097ed21f908680cc33e649366997d5dcafaf89fa08c0b67af5b
+        sha256: eb2d58aaffda0097ed21f908680cc33e649366997d5dcafaf89fa08c0b67af5b
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.indexdata.com/pub/zebra/idzebra-2.2.10.tar.gz
+    sha256: 9ac047f9a4b402722a697062680cdc8fe4a9232da58de0976d7424a79208ad98
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - icu4c@78
-  - yaz
-  - zlib-ng-compat
+    - icu4c@78
+    - yaz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

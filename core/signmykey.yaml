@@ -3,25 +3,51 @@ version: 0.8.9
 description: Automated SSH Certificate Authority
 homepage: https://signmykey.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/signmykey/blobs/sha256:90a3fa84385d0929c68ee02274431316e4084865eb5ad9dbb7cb060be7a7b354
-    sha256: 90a3fa84385d0929c68ee02274431316e4084865eb5ad9dbb7cb060be7a7b354
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/signmykey/blobs/sha256:7ea74b2812543ca3d79a381359f2412bed177bd86cc3208dd4afad608781fb82
-    sha256: 7ea74b2812543ca3d79a381359f2412bed177bd86cc3208dd4afad608781fb82
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/signmykey/blobs/sha256:c5234e51f91e4299f1792be2cab5ec37bd1c669830851af5488dba303537edf6
-    sha256: c5234e51f91e4299f1792be2cab5ec37bd1c669830851af5488dba303537edf6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/signmykey/blobs/sha256:0fabc7ade5f371c73f57886c343c2aba945fe667eb0b2ee8c6cd21522e4a1fd4
-    sha256: 0fabc7ade5f371c73f57886c343c2aba945fe667eb0b2ee8c6cd21522e4a1fd4
-source:
-  url: https://github.com/signmykeyio/signmykey/archive/refs/tags/v0.8.9.tar.gz
-  sha256: 106a3a3d07aa2841d280ab378ce382a2bfca10101080936e2b02c4cc4e7d7392
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/signmykey/blobs/sha256:7ea74b2812543ca3d79a381359f2412bed177bd86cc3208dd4afad608781fb82
+        sha256: 7ea74b2812543ca3d79a381359f2412bed177bd86cc3208dd4afad608781fb82
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/signmykey/blobs/sha256:90a3fa84385d0929c68ee02274431316e4084865eb5ad9dbb7cb060be7a7b354
+        sha256: 90a3fa84385d0929c68ee02274431316e4084865eb5ad9dbb7cb060be7a7b354
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/signmykey/blobs/sha256:c5234e51f91e4299f1792be2cab5ec37bd1c669830851af5488dba303537edf6
+        sha256: c5234e51f91e4299f1792be2cab5ec37bd1c669830851af5488dba303537edf6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/signmykey/blobs/sha256:0fabc7ade5f371c73f57886c343c2aba945fe667eb0b2ee8c6cd21522e4a1fd4
+        sha256: 0fabc7ade5f371c73f57886c343c2aba945fe667eb0b2ee8c6cd21522e4a1fd4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/signmykeyio/signmykey/archive/refs/tags/v0.8.9.tar.gz
+    sha256: 106a3a3d07aa2841d280ab378ce382a2bfca10101080936e2b02c4cc4e7d7392
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

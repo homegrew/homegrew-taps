@@ -3,34 +3,58 @@ version: 2.7.3
 description: Command-line tool for the YubiKey PIV application
 homepage: https://developers.yubico.com/yubico-piv-tool/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yubico-piv-tool/blobs/sha256:e333d0e9ab4d352ec6e6ceab61be769ef2c75bf2c3d71727b902ff636ae62a45
-    sha256: e333d0e9ab4d352ec6e6ceab61be769ef2c75bf2c3d71727b902ff636ae62a45
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yubico-piv-tool/blobs/sha256:a54fe53dd00eac5705e8bca16907ad020e7616fdc5a180a3f4a9dc1f2755afd9
-    sha256: a54fe53dd00eac5705e8bca16907ad020e7616fdc5a180a3f4a9dc1f2755afd9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yubico-piv-tool/blobs/sha256:6f7c8857568353e8e6429257d68babd45390b03dc9db2b6636a36c2ddec458af
-    sha256: 6f7c8857568353e8e6429257d68babd45390b03dc9db2b6636a36c2ddec458af
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yubico-piv-tool/blobs/sha256:5d26838f59ec2946210ed9a5116fa68ff5dbc32ad909cf9e8faf401392f9beb7
-    sha256: 5d26838f59ec2946210ed9a5116fa68ff5dbc32ad909cf9e8faf401392f9beb7
-source:
-  url: https://developers.yubico.com/yubico-piv-tool/Releases/yubico-piv-tool-2.7.3.tar.gz
-  sha256: fcb25c42f54298ece8b20684fb3c581ed9195a162cbc55180a4161501be93181
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yubico-piv-tool/blobs/sha256:a54fe53dd00eac5705e8bca16907ad020e7616fdc5a180a3f4a9dc1f2755afd9
+        sha256: a54fe53dd00eac5705e8bca16907ad020e7616fdc5a180a3f4a9dc1f2755afd9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yubico-piv-tool/blobs/sha256:e333d0e9ab4d352ec6e6ceab61be769ef2c75bf2c3d71727b902ff636ae62a45
+        sha256: e333d0e9ab4d352ec6e6ceab61be769ef2c75bf2c3d71727b902ff636ae62a45
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yubico-piv-tool/blobs/sha256:6f7c8857568353e8e6429257d68babd45390b03dc9db2b6636a36c2ddec458af
+        sha256: 6f7c8857568353e8e6429257d68babd45390b03dc9db2b6636a36c2ddec458af
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yubico-piv-tool/blobs/sha256:5d26838f59ec2946210ed9a5116fa68ff5dbc32ad909cf9e8faf401392f9beb7
+        sha256: 5d26838f59ec2946210ed9a5116fa68ff5dbc32ad909cf9e8faf401392f9beb7
+        sha512: ""
+        signature: ""
+source:
+    url: https://developers.yubico.com/yubico-piv-tool/Releases/yubico-piv-tool-2.7.3.tar.gz
+    sha256: fcb25c42f54298ece8b20684fb3c581ed9195a162cbc55180a4161501be93181
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - check
-  - cmake
-  - gengetopt
-  - help2man
-  - pkgconf
+    - check
+    - cmake
+    - gengetopt
+    - help2man
+    - pkgconf
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -1,40 +1,64 @@
 name: ldapvi
-version: 1.8
+version: "1.8"
 description: Update LDAP entries with a text editor
 homepage: http://www.lichteblau.com/ldapvi/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ldapvi/blobs/sha256:ad2aec84c8f148541274a0c4ba6842d394422a3fd2a2b4fda522f85d2de04609
-    sha256: ad2aec84c8f148541274a0c4ba6842d394422a3fd2a2b4fda522f85d2de04609
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ldapvi/blobs/sha256:a6d7ee2c1782381ee26aafc8ad37d2d6cb6f36867e0148d2fb6b69c28b41812d
-    sha256: a6d7ee2c1782381ee26aafc8ad37d2d6cb6f36867e0148d2fb6b69c28b41812d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ldapvi/blobs/sha256:3dad790aaa830697230bbfc4e37d8a8ee245d4b066a09679736eed27ab821b43
-    sha256: 3dad790aaa830697230bbfc4e37d8a8ee245d4b066a09679736eed27ab821b43
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ldapvi/blobs/sha256:4dc2d9dc55afa63a8fd1a6a538a28eae84c9251c4f032916e6e0aeeaf941a849
-    sha256: 4dc2d9dc55afa63a8fd1a6a538a28eae84c9251c4f032916e6e0aeeaf941a849
-source:
-  url: https://github.com/ldapvi/ldapvi/releases/download/1.8/ldapvi-1.8.tar.gz
-  sha256: 359c84d61198c4b4b62930e21670c077c380a41a121f299313330907967949db
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libxcrypt
-  - openssl@3
-  - popt
-  - readline
-  - gettext
+    - glib
+    - libxcrypt
+    - openssl@3
+    - popt
+    - readline
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ldapvi/blobs/sha256:a6d7ee2c1782381ee26aafc8ad37d2d6cb6f36867e0148d2fb6b69c28b41812d
+        sha256: a6d7ee2c1782381ee26aafc8ad37d2d6cb6f36867e0148d2fb6b69c28b41812d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ldapvi/blobs/sha256:ad2aec84c8f148541274a0c4ba6842d394422a3fd2a2b4fda522f85d2de04609
+        sha256: ad2aec84c8f148541274a0c4ba6842d394422a3fd2a2b4fda522f85d2de04609
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ldapvi/blobs/sha256:3dad790aaa830697230bbfc4e37d8a8ee245d4b066a09679736eed27ab821b43
+        sha256: 3dad790aaa830697230bbfc4e37d8a8ee245d4b066a09679736eed27ab821b43
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ldapvi/blobs/sha256:4dc2d9dc55afa63a8fd1a6a538a28eae84c9251c4f032916e6e0aeeaf941a849
+        sha256: 4dc2d9dc55afa63a8fd1a6a538a28eae84c9251c4f032916e6e0aeeaf941a849
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ldapvi/ldapvi/releases/download/1.8/ldapvi-1.8.tar.gz
+    sha256: 359c84d61198c4b4b62930e21670c077c380a41a121f299313330907967949db
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - glib
-  - libxcrypt
-  - openssl@3
-  - popt
-  - readline
+    - glib
+    - libxcrypt
+    - openssl@3
+    - popt
+    - readline
+build:
+    configure: []
+    install: []
+service: null

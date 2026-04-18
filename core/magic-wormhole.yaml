@@ -3,27 +3,53 @@ version: 0.23.0
 description: Securely transfers data between computers
 homepage: https://github.com/magic-wormhole/magic-wormhole
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/magic-wormhole/blobs/sha256:09726e4041c243941400752a742312ac0cea1bb4f11f59d0f444ab53a738d595
-    sha256: 09726e4041c243941400752a742312ac0cea1bb4f11f59d0f444ab53a738d595
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/magic-wormhole/blobs/sha256:e0fc969a16f2af79b0889da257cf3b97471c991c59a37f29ef95ed4d61dc1062
-    sha256: e0fc969a16f2af79b0889da257cf3b97471c991c59a37f29ef95ed4d61dc1062
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/magic-wormhole/blobs/sha256:13fc730c52e2a73a1ba8cebefac902756e61d419b6e6bdd8b46a6abcb55ad1d8
-    sha256: 13fc730c52e2a73a1ba8cebefac902756e61d419b6e6bdd8b46a6abcb55ad1d8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/magic-wormhole/blobs/sha256:49aad1600e5fa63a2fc76e9825239f2d3f4884b6d9480912e68752749399526a
-    sha256: 49aad1600e5fa63a2fc76e9825239f2d3f4884b6d9480912e68752749399526a
-source:
-  url: https://files.pythonhosted.org/packages/02/0e/b00b4a0de6d82b25f30a2405e3640c508b18dd3544d0104efe2d6c161719/magic_wormhole-0.23.0.tar.gz
-  sha256: 4cd8f48a5c47f70578be7063f892988177681ab66845f4d6ad2d5eb03ce82acf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cryptography
-  - libsodium
-  - python@3.14
+    - cryptography
+    - libsodium
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/magic-wormhole/blobs/sha256:e0fc969a16f2af79b0889da257cf3b97471c991c59a37f29ef95ed4d61dc1062
+        sha256: e0fc969a16f2af79b0889da257cf3b97471c991c59a37f29ef95ed4d61dc1062
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/magic-wormhole/blobs/sha256:09726e4041c243941400752a742312ac0cea1bb4f11f59d0f444ab53a738d595
+        sha256: 09726e4041c243941400752a742312ac0cea1bb4f11f59d0f444ab53a738d595
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/magic-wormhole/blobs/sha256:13fc730c52e2a73a1ba8cebefac902756e61d419b6e6bdd8b46a6abcb55ad1d8
+        sha256: 13fc730c52e2a73a1ba8cebefac902756e61d419b6e6bdd8b46a6abcb55ad1d8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/magic-wormhole/blobs/sha256:49aad1600e5fa63a2fc76e9825239f2d3f4884b6d9480912e68752749399526a
+        sha256: 49aad1600e5fa63a2fc76e9825239f2d3f4884b6d9480912e68752749399526a
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/02/0e/b00b4a0de6d82b25f30a2405e3640c508b18dd3544d0104efe2d6c161719/magic_wormhole-0.23.0.tar.gz
+    sha256: 4cd8f48a5c47f70578be7063f892988177681ab66845f4d6ad2d5eb03ce82acf
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,35 +3,59 @@ version: 1.9.2
 description: C library of Git core methods that is re-entrant and linkable
 homepage: https://libgit2.org/
 license: GPL-2.0-only WITH GCC-exception-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgit2/blobs/sha256:8a30e6866a9d341a0536d1ee79084d9a38ccefa0070f36defcf7cd7d0c42d968
-    sha256: 8a30e6866a9d341a0536d1ee79084d9a38ccefa0070f36defcf7cd7d0c42d968
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgit2/blobs/sha256:005aea9f682b2dfa3a2606fd953c1fe1bc5e2c10b6b3ad1bda12abe1a61a77af
-    sha256: 005aea9f682b2dfa3a2606fd953c1fe1bc5e2c10b6b3ad1bda12abe1a61a77af
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgit2/blobs/sha256:ef33f5f695d8bbd7e2dd2b6041ed3fb0b018ffb8d547135224dac33653397d13
-    sha256: ef33f5f695d8bbd7e2dd2b6041ed3fb0b018ffb8d547135224dac33653397d13
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgit2/blobs/sha256:05d6d6c13bf3130e180ddb471799e8b5ec5cea5ac8d08f7cbecc8b34951cad0a
-    sha256: 05d6d6c13bf3130e180ddb471799e8b5ec5cea5ac8d08f7cbecc8b34951cad0a
-source:
-  url: https://github.com/libgit2/libgit2/archive/refs/tags/v1.9.2.tar.gz
-  sha256: 6f097c82fc06ece4f40539fb17e9d41baf1a5a2fc26b1b8562d21b89bc355fe6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libssh2
-  - llhttp
+    - libssh2
+    - llhttp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgit2/blobs/sha256:005aea9f682b2dfa3a2606fd953c1fe1bc5e2c10b6b3ad1bda12abe1a61a77af
+        sha256: 005aea9f682b2dfa3a2606fd953c1fe1bc5e2c10b6b3ad1bda12abe1a61a77af
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgit2/blobs/sha256:8a30e6866a9d341a0536d1ee79084d9a38ccefa0070f36defcf7cd7d0c42d968
+        sha256: 8a30e6866a9d341a0536d1ee79084d9a38ccefa0070f36defcf7cd7d0c42d968
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgit2/blobs/sha256:ef33f5f695d8bbd7e2dd2b6041ed3fb0b018ffb8d547135224dac33653397d13
+        sha256: ef33f5f695d8bbd7e2dd2b6041ed3fb0b018ffb8d547135224dac33653397d13
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgit2/blobs/sha256:05d6d6c13bf3130e180ddb471799e8b5ec5cea5ac8d08f7cbecc8b34951cad0a
+        sha256: 05d6d6c13bf3130e180ddb471799e8b5ec5cea5ac8d08f7cbecc8b34951cad0a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libgit2/libgit2/archive/refs/tags/v1.9.2.tar.gz
+    sha256: 6f097c82fc06ece4f40539fb17e9d41baf1a5a2fc26b1b8562d21b89bc355fe6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - libssh2
-  - llhttp
-  - openssl@3
-  - pcre2
-  - zlib-ng-compat
+    - libssh2
+    - llhttp
+    - openssl@3
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

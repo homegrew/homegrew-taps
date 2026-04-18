@@ -1,34 +1,59 @@
 name: yelp-tools
-version: 42.1
+version: "42.1"
 description: Tools that help create and edit Mallard or DocBook documentation
 homepage: https://gitlab.gnome.org/GNOME/yelp-tools
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:b1e968b17741ac5251b5d267e252fb186ac87d51335623d366c064883b60b80b
-    sha256: b1e968b17741ac5251b5d267e252fb186ac87d51335623d366c064883b60b80b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:10c1dd7a18701ef9cfdf745ea02e88402b4ba99200c839e9a9315f0247555c81
-    sha256: 10c1dd7a18701ef9cfdf745ea02e88402b4ba99200c839e9a9315f0247555c81
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:bd0b3f493de1f048bd054a086715d76ec67d01ec1fdf95bb7023c6fcd5ce4b73
-    sha256: bd0b3f493de1f048bd054a086715d76ec67d01ec1fdf95bb7023c6fcd5ce4b73
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:84ee16a1c90b1a7b3dc7a5f65550d91a3cfc1652834bdafc28885ed095b79559
-    sha256: 84ee16a1c90b1a7b3dc7a5f65550d91a3cfc1652834bdafc28885ed095b79559
-source:
-  url: https://download.gnome.org/sources/yelp-tools/42/yelp-tools-42.1.tar.xz
-  sha256: 3e496a4020d4145b99fd508a25fa09336a503a4e8900028421e72c6a4b11f905
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - itstool
-  - libxml2
-  - python@3.14
-  - yelp-xsl
+    - itstool
+    - libxml2
+    - python@3.14
+    - yelp-xsl
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:10c1dd7a18701ef9cfdf745ea02e88402b4ba99200c839e9a9315f0247555c81
+        sha256: 10c1dd7a18701ef9cfdf745ea02e88402b4ba99200c839e9a9315f0247555c81
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:b1e968b17741ac5251b5d267e252fb186ac87d51335623d366c064883b60b80b
+        sha256: b1e968b17741ac5251b5d267e252fb186ac87d51335623d366c064883b60b80b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:bd0b3f493de1f048bd054a086715d76ec67d01ec1fdf95bb7023c6fcd5ce4b73
+        sha256: bd0b3f493de1f048bd054a086715d76ec67d01ec1fdf95bb7023c6fcd5ce4b73
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:84ee16a1c90b1a7b3dc7a5f65550d91a3cfc1652834bdafc28885ed095b79559
+        sha256: 84ee16a1c90b1a7b3dc7a5f65550d91a3cfc1652834bdafc28885ed095b79559
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/yelp-tools/42/yelp-tools-42.1.tar.xz
+    sha256: 3e496a4020d4145b99fd508a25fa09336a503a4e8900028421e72c6a4b11f905
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 4.14.0
 description: SQLite extension providing 256-bit AES encryption
 homepage: https://www.zetetic.net/sqlcipher/
 license: BSD-3-Clause AND blessing
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqlcipher/blobs/sha256:bac5dae45687c1febf9bee4a71aa7607ef4fd41ab28454591cb2023f0a6d2eac
-    sha256: bac5dae45687c1febf9bee4a71aa7607ef4fd41ab28454591cb2023f0a6d2eac
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqlcipher/blobs/sha256:95bedc9128368ad0125e41d7eb2f4ef2d7b29d2dd700e0317f65442a31f8d45d
-    sha256: 95bedc9128368ad0125e41d7eb2f4ef2d7b29d2dd700e0317f65442a31f8d45d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqlcipher/blobs/sha256:02c58fd88765f08711351013792636ac385c0e6dac7ba229cf6ee0aba6b9b50a
-    sha256: 02c58fd88765f08711351013792636ac385c0e6dac7ba229cf6ee0aba6b9b50a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqlcipher/blobs/sha256:6fe18269d80fc03021ad3fc67d563200ea1b3cf18c6dab6b7c08153d9644a3f6
-    sha256: 6fe18269d80fc03021ad3fc67d563200ea1b3cf18c6dab6b7c08153d9644a3f6
-source:
-  url: https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.14.0.tar.gz
-  sha256: 67fb27e967a4a6968c0905691c89c908e7250dddc581b887c19ef981c737e473
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqlcipher/blobs/sha256:95bedc9128368ad0125e41d7eb2f4ef2d7b29d2dd700e0317f65442a31f8d45d
+        sha256: 95bedc9128368ad0125e41d7eb2f4ef2d7b29d2dd700e0317f65442a31f8d45d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqlcipher/blobs/sha256:bac5dae45687c1febf9bee4a71aa7607ef4fd41ab28454591cb2023f0a6d2eac
+        sha256: bac5dae45687c1febf9bee4a71aa7607ef4fd41ab28454591cb2023f0a6d2eac
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqlcipher/blobs/sha256:02c58fd88765f08711351013792636ac385c0e6dac7ba229cf6ee0aba6b9b50a
+        sha256: 02c58fd88765f08711351013792636ac385c0e6dac7ba229cf6ee0aba6b9b50a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqlcipher/blobs/sha256:6fe18269d80fc03021ad3fc67d563200ea1b3cf18c6dab6b7c08153d9644a3f6
+        sha256: 6fe18269d80fc03021ad3fc67d563200ea1b3cf18c6dab6b7c08153d9644a3f6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.14.0.tar.gz
+    sha256: 67fb27e967a4a6968c0905691c89c908e7250dddc581b887c19ef981c737e473
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

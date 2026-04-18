@@ -3,27 +3,52 @@ version: 1.18.7
 description: Pragmatic language for the JVM
 homepage: https://gosu-lang.github.io/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gosu/blobs/sha256:4a9fbc740652f079d012dc919d88e82144a1cd3eea461b4568dbbe91aa5b4aa0
-    sha256: 4a9fbc740652f079d012dc919d88e82144a1cd3eea461b4568dbbe91aa5b4aa0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gosu/blobs/sha256:917a9ae63584e4762ee76fdf7fb35c1ed0ce0342a39a96f6ed32617093f868d5
-    sha256: 917a9ae63584e4762ee76fdf7fb35c1ed0ce0342a39a96f6ed32617093f868d5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gosu/blobs/sha256:277eb63cbd485e59653c4d04a8acda5b734add1ea2a3792692226fd09f425d35
-    sha256: 277eb63cbd485e59653c4d04a8acda5b734add1ea2a3792692226fd09f425d35
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gosu/blobs/sha256:e8ff5d1b2c5b5df671572bb9addf121151ccebbf2562f1a622c016c4b12595a1
-    sha256: e8ff5d1b2c5b5df671572bb9addf121151ccebbf2562f1a622c016c4b12595a1
-source:
-  url: https://github.com/gosu-lang/gosu-lang/archive/refs/tags/v1.18.7.tar.gz
-  sha256: f8cc32aa8a40bdf1c28db52c5198218514b511ba31cdd5e70eb5817a490f0182
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk@11
+    - openjdk@11
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gosu/blobs/sha256:917a9ae63584e4762ee76fdf7fb35c1ed0ce0342a39a96f6ed32617093f868d5
+        sha256: 917a9ae63584e4762ee76fdf7fb35c1ed0ce0342a39a96f6ed32617093f868d5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gosu/blobs/sha256:4a9fbc740652f079d012dc919d88e82144a1cd3eea461b4568dbbe91aa5b4aa0
+        sha256: 4a9fbc740652f079d012dc919d88e82144a1cd3eea461b4568dbbe91aa5b4aa0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gosu/blobs/sha256:277eb63cbd485e59653c4d04a8acda5b734add1ea2a3792692226fd09f425d35
+        sha256: 277eb63cbd485e59653c4d04a8acda5b734add1ea2a3792692226fd09f425d35
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gosu/blobs/sha256:e8ff5d1b2c5b5df671572bb9addf121151ccebbf2562f1a622c016c4b12595a1
+        sha256: e8ff5d1b2c5b5df671572bb9addf121151ccebbf2562f1a622c016c4b12595a1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/gosu-lang/gosu-lang/archive/refs/tags/v1.18.7.tar.gz
+    sha256: f8cc32aa8a40bdf1c28db52c5198218514b511ba31cdd5e70eb5817a490f0182
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - maven
+    - maven
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

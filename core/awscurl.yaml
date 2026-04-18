@@ -1,43 +1,68 @@
 name: awscurl
-version: 0.39
+version: "0.39"
 description: Curl like simplicity to access AWS resources
 homepage: https://github.com/okigan/awscurl
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:a55dccc8b50b28557f4e1e1adc65a6b17cc9e7b50be5a2d809afbb1b06615107
-    sha256: a55dccc8b50b28557f4e1e1adc65a6b17cc9e7b50be5a2d809afbb1b06615107
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:4f1d13fb503aabe0d5d9e21ac79f357ab7cd6b437cfb53d20bf444dd28aa549e
-    sha256: 4f1d13fb503aabe0d5d9e21ac79f357ab7cd6b437cfb53d20bf444dd28aa549e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:a2e8eb9954e34829b4f887504f4fad03aaae8e560803f7b61216442028cfac39
-    sha256: a2e8eb9954e34829b4f887504f4fad03aaae8e560803f7b61216442028cfac39
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:4b9af9aa524199cc5c60960ed772dd1406ea9b0ad377846d17ba756b8865d948
-    sha256: 4b9af9aa524199cc5c60960ed772dd1406ea9b0ad377846d17ba756b8865d948
-source:
-  url: https://files.pythonhosted.org/packages/f2/95/4e08527b8bf4b41ca2c738efc3343ef9e437106527dcf5a57591189a218c/awscurl-0.39.tar.gz
-  sha256: 709b6b6449ea54004588994f04d8ddff282ec71411a9edaf9150a765a183bbc3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - aws-c-auth
-  - aws-c-cal
-  - aws-c-common
-  - aws-c-compression
-  - aws-c-event-stream
-  - aws-c-http
-  - aws-c-io
-  - aws-c-mqtt
-  - aws-c-s3
-  - aws-c-sdkutils
-  - aws-checksums
-  - certifi
-  - cryptography
-  - openssl@3
-  - python@3.14
+    - aws-c-auth
+    - aws-c-cal
+    - aws-c-common
+    - aws-c-compression
+    - aws-c-event-stream
+    - aws-c-http
+    - aws-c-io
+    - aws-c-mqtt
+    - aws-c-s3
+    - aws-c-sdkutils
+    - aws-checksums
+    - certifi
+    - cryptography
+    - openssl@3
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:4f1d13fb503aabe0d5d9e21ac79f357ab7cd6b437cfb53d20bf444dd28aa549e
+        sha256: 4f1d13fb503aabe0d5d9e21ac79f357ab7cd6b437cfb53d20bf444dd28aa549e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:a55dccc8b50b28557f4e1e1adc65a6b17cc9e7b50be5a2d809afbb1b06615107
+        sha256: a55dccc8b50b28557f4e1e1adc65a6b17cc9e7b50be5a2d809afbb1b06615107
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:a2e8eb9954e34829b4f887504f4fad03aaae8e560803f7b61216442028cfac39
+        sha256: a2e8eb9954e34829b4f887504f4fad03aaae8e560803f7b61216442028cfac39
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:4b9af9aa524199cc5c60960ed772dd1406ea9b0ad377846d17ba756b8865d948
+        sha256: 4b9af9aa524199cc5c60960ed772dd1406ea9b0ad377846d17ba756b8865d948
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/f2/95/4e08527b8bf4b41ca2c738efc3343ef9e437106527dcf5a57591189a218c/awscurl-0.39.tar.gz
+    sha256: 709b6b6449ea54004588994f04d8ddff282ec71411a9edaf9150a765a183bbc3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

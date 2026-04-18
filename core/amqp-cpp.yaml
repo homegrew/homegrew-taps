@@ -3,27 +3,52 @@ version: 4.3.27
 description: C++ library for communicating with a RabbitMQ message broker
 homepage: https://github.com/CopernicaMarketingSoftware/AMQP-CPP
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/amqp-cpp/blobs/sha256:f300647f32576320289d224bdf7f4500522765a6c2ed8f10711372547d24114b
-    sha256: f300647f32576320289d224bdf7f4500522765a6c2ed8f10711372547d24114b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/amqp-cpp/blobs/sha256:58aa9b3ed88fa9452bab84e4265c04ff686abb23cfefd9ce1b40066fa50cdacd
-    sha256: 58aa9b3ed88fa9452bab84e4265c04ff686abb23cfefd9ce1b40066fa50cdacd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/amqp-cpp/blobs/sha256:61ccf7cf9045f334afa3df40778602bdf1382d681c0ae5811ac34e6863906fcb
-    sha256: 61ccf7cf9045f334afa3df40778602bdf1382d681c0ae5811ac34e6863906fcb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/amqp-cpp/blobs/sha256:8951f9439fa4acf6c6616b1130c7a2cbffe3ef79e9443865592448baca178ea9
-    sha256: 8951f9439fa4acf6c6616b1130c7a2cbffe3ef79e9443865592448baca178ea9
-source:
-  url: https://github.com/CopernicaMarketingSoftware/AMQP-CPP/archive/refs/tags/v4.3.27.tar.gz
-  sha256: af649ef8b14076325387e0a1d2d16dd8395ff3db75d79cc904eb6c179c1982fe
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/amqp-cpp/blobs/sha256:58aa9b3ed88fa9452bab84e4265c04ff686abb23cfefd9ce1b40066fa50cdacd
+        sha256: 58aa9b3ed88fa9452bab84e4265c04ff686abb23cfefd9ce1b40066fa50cdacd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/amqp-cpp/blobs/sha256:f300647f32576320289d224bdf7f4500522765a6c2ed8f10711372547d24114b
+        sha256: f300647f32576320289d224bdf7f4500522765a6c2ed8f10711372547d24114b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/amqp-cpp/blobs/sha256:61ccf7cf9045f334afa3df40778602bdf1382d681c0ae5811ac34e6863906fcb
+        sha256: 61ccf7cf9045f334afa3df40778602bdf1382d681c0ae5811ac34e6863906fcb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/amqp-cpp/blobs/sha256:8951f9439fa4acf6c6616b1130c7a2cbffe3ef79e9443865592448baca178ea9
+        sha256: 8951f9439fa4acf6c6616b1130c7a2cbffe3ef79e9443865592448baca178ea9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/CopernicaMarketingSoftware/AMQP-CPP/archive/refs/tags/v4.3.27.tar.gz
+    sha256: af649ef8b14076325387e0a1d2d16dd8395ff3db75d79cc904eb6c179c1982fe
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

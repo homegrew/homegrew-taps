@@ -3,36 +3,60 @@ version: 0.1.5
 description: C++ GUI library designed for games
 homepage: https://fifengine.github.io/fifechan/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fifechan/blobs/sha256:1a4e6bb77b1d87e8b0d27ebd76e5c649d6ae8a9cf3b2701e8ccac99586c69540
-    sha256: 1a4e6bb77b1d87e8b0d27ebd76e5c649d6ae8a9cf3b2701e8ccac99586c69540
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fifechan/blobs/sha256:626e48ecf21a329ccdfbf0a0aa86e2b10d9500df48a0ad2353410b11394057c9
-    sha256: 626e48ecf21a329ccdfbf0a0aa86e2b10d9500df48a0ad2353410b11394057c9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fifechan/blobs/sha256:6536748d6cdcc530a53baa0a3fb57ee9cab21225b52026f1c16fd41203585630
-    sha256: 6536748d6cdcc530a53baa0a3fb57ee9cab21225b52026f1c16fd41203585630
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fifechan/blobs/sha256:34fb16feb5a2d79ca14f47b7f1c685b53b260252a2ab61ad8d1a0dadc21a9700
-    sha256: 34fb16feb5a2d79ca14f47b7f1c685b53b260252a2ab61ad8d1a0dadc21a9700
-source:
-  url: https://github.com/fifengine/fifechan/archive/refs/tags/0.1.5.tar.gz
-  sha256: 29be5ff4b379e2fc4f88ef7d8bc172342130dd3e77a3061f64c8a75efe4eba73
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - allegro
-  - sdl2
-  - sdl2_image
-  - sdl2_ttf
+    - allegro
+    - sdl2
+    - sdl2_image
+    - sdl2_ttf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fifechan/blobs/sha256:626e48ecf21a329ccdfbf0a0aa86e2b10d9500df48a0ad2353410b11394057c9
+        sha256: 626e48ecf21a329ccdfbf0a0aa86e2b10d9500df48a0ad2353410b11394057c9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fifechan/blobs/sha256:1a4e6bb77b1d87e8b0d27ebd76e5c649d6ae8a9cf3b2701e8ccac99586c69540
+        sha256: 1a4e6bb77b1d87e8b0d27ebd76e5c649d6ae8a9cf3b2701e8ccac99586c69540
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fifechan/blobs/sha256:6536748d6cdcc530a53baa0a3fb57ee9cab21225b52026f1c16fd41203585630
+        sha256: 6536748d6cdcc530a53baa0a3fb57ee9cab21225b52026f1c16fd41203585630
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fifechan/blobs/sha256:34fb16feb5a2d79ca14f47b7f1c685b53b260252a2ab61ad8d1a0dadc21a9700
+        sha256: 34fb16feb5a2d79ca14f47b7f1c685b53b260252a2ab61ad8d1a0dadc21a9700
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fifengine/fifechan/archive/refs/tags/0.1.5.tar.gz
+    sha256: 29be5ff4b379e2fc4f88ef7d8bc172342130dd3e77a3061f64c8a75efe4eba73
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - allegro
-  - mesa
-  - sdl2
-  - sdl2_image
-  - sdl2_ttf
+    - allegro
+    - mesa
+    - sdl2
+    - sdl2_image
+    - sdl2_ttf
+build:
+    configure: []
+    install: []
+service: null

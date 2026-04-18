@@ -1,30 +1,55 @@
 name: ncrack
-version: 0.7
+version: "0.7"
 description: Network authentication cracking tool
 homepage: https://nmap.org/ncrack/
 license: LicenseRef-Homebrew-cannot-represent
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncrack/blobs/sha256:f73a2674042b2e7cf64f321316d88dd2a9f92fa116b6a77d73f2d2f348c6e742
-    sha256: f73a2674042b2e7cf64f321316d88dd2a9f92fa116b6a77d73f2d2f348c6e742
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncrack/blobs/sha256:52d3c2ce600c1124c6b23231bd23ad9342f20481cb94f3ae8b94856c4dabc427
-    sha256: 52d3c2ce600c1124c6b23231bd23ad9342f20481cb94f3ae8b94856c4dabc427
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncrack/blobs/sha256:9e0c60c65ad23af0cfa59dfa65d970850ae9fab8d270c105ffc1b0672af75d60
-    sha256: 9e0c60c65ad23af0cfa59dfa65d970850ae9fab8d270c105ffc1b0672af75d60
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncrack/blobs/sha256:6fd8f73ef2ee53e70fb6e58641425eb6b4e692fd1b891bf6c53d279539e37eaa
-    sha256: 6fd8f73ef2ee53e70fb6e58641425eb6b4e692fd1b891bf6c53d279539e37eaa
-source:
-  url: https://github.com/nmap/ncrack/archive/refs/tags/0.7.tar.gz
-  sha256: f3f971cd677c4a0c0668cb369002c581d305050b3b0411e18dd3cb9cc270d14a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncrack/blobs/sha256:52d3c2ce600c1124c6b23231bd23ad9342f20481cb94f3ae8b94856c4dabc427
+        sha256: 52d3c2ce600c1124c6b23231bd23ad9342f20481cb94f3ae8b94856c4dabc427
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncrack/blobs/sha256:f73a2674042b2e7cf64f321316d88dd2a9f92fa116b6a77d73f2d2f348c6e742
+        sha256: f73a2674042b2e7cf64f321316d88dd2a9f92fa116b6a77d73f2d2f348c6e742
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncrack/blobs/sha256:9e0c60c65ad23af0cfa59dfa65d970850ae9fab8d270c105ffc1b0672af75d60
+        sha256: 9e0c60c65ad23af0cfa59dfa65d970850ae9fab8d270c105ffc1b0672af75d60
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncrack/blobs/sha256:6fd8f73ef2ee53e70fb6e58641425eb6b4e692fd1b891bf6c53d279539e37eaa
+        sha256: 6fd8f73ef2ee53e70fb6e58641425eb6b4e692fd1b891bf6c53d279539e37eaa
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nmap/ncrack/archive/refs/tags/0.7.tar.gz
+    sha256: f3f971cd677c4a0c0668cb369002c581d305050b3b0411e18dd3cb9cc270d14a
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

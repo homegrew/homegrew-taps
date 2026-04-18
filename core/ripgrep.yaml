@@ -3,29 +3,54 @@ version: 15.1.0
 description: Search tool like grep and The Silver Searcher
 homepage: https://github.com/BurntSushi/ripgrep
 license: Unlicense
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:f4dc761b07edb8e6438b618d22f7e57252903e2f2b973e2c7aa0da518fc374b9
-    sha256: f4dc761b07edb8e6438b618d22f7e57252903e2f2b973e2c7aa0da518fc374b9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:ab382b4ae86aba1b7e6acab3bc50eb64be7bb08cf33a37a32987edb8bc6affe4
-    sha256: ab382b4ae86aba1b7e6acab3bc50eb64be7bb08cf33a37a32987edb8bc6affe4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:349bc55db5ad4b4e8935b889d44c745ae23605c1d57d6eb639dbd5c86d573a88
-    sha256: 349bc55db5ad4b4e8935b889d44c745ae23605c1d57d6eb639dbd5c86d573a88
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:bbdef955d5752e53473be06b698c45ce31682cd47d75e7c706365450bd08ff44
-    sha256: bbdef955d5752e53473be06b698c45ce31682cd47d75e7c706365450bd08ff44
-source:
-  url: https://github.com/BurntSushi/ripgrep/archive/refs/tags/15.1.0.tar.gz
-  sha256: 046fa01a216793b8bd2750f9d68d4ad43986eb9c0d6122600f993906012972e8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - pcre2
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:ab382b4ae86aba1b7e6acab3bc50eb64be7bb08cf33a37a32987edb8bc6affe4
+        sha256: ab382b4ae86aba1b7e6acab3bc50eb64be7bb08cf33a37a32987edb8bc6affe4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:f4dc761b07edb8e6438b618d22f7e57252903e2f2b973e2c7aa0da518fc374b9
+        sha256: f4dc761b07edb8e6438b618d22f7e57252903e2f2b973e2c7aa0da518fc374b9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:349bc55db5ad4b4e8935b889d44c745ae23605c1d57d6eb639dbd5c86d573a88
+        sha256: 349bc55db5ad4b4e8935b889d44c745ae23605c1d57d6eb639dbd5c86d573a88
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:bbdef955d5752e53473be06b698c45ce31682cd47d75e7c706365450bd08ff44
+        sha256: bbdef955d5752e53473be06b698c45ce31682cd47d75e7c706365450bd08ff44
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/BurntSushi/ripgrep/archive/refs/tags/15.1.0.tar.gz
+    sha256: 046fa01a216793b8bd2750f9d68d4ad43986eb9c0d6122600f993906012972e8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoctor
-  - pkgconf
-  - rust
+    - asciidoctor
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

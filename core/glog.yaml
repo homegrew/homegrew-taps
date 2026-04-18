@@ -3,27 +3,52 @@ version: 0.7.1
 description: Application-level logging library
 homepage: https://google.github.io/glog/stable/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glog/blobs/sha256:15bf109a841f9381cd9086d7aecefc7d782670c90a5142bbf9f281604deff968
-    sha256: 15bf109a841f9381cd9086d7aecefc7d782670c90a5142bbf9f281604deff968
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glog/blobs/sha256:9e1493169d73ac812775f431b0f227f45d21504d0eeed8f296f7f2fcb071b919
-    sha256: 9e1493169d73ac812775f431b0f227f45d21504d0eeed8f296f7f2fcb071b919
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glog/blobs/sha256:2c624a10ebd6da940a6f6d1c3ddb4cfe5a025bc588ece4de923aeeebadfeb8a2
-    sha256: 2c624a10ebd6da940a6f6d1c3ddb4cfe5a025bc588ece4de923aeeebadfeb8a2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glog/blobs/sha256:55330f966af37454c000fe47f329a6eba4504393bf0752d35f0c3690bd2155fc
-    sha256: 55330f966af37454c000fe47f329a6eba4504393bf0752d35f0c3690bd2155fc
-source:
-  url: https://github.com/google/glog/archive/refs/tags/v0.7.1.tar.gz
-  sha256: 00e4a87e87b7e7612f519a41e491f16623b12423620006f59f5688bfd8d13b08
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gflags
+    - gflags
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glog/blobs/sha256:9e1493169d73ac812775f431b0f227f45d21504d0eeed8f296f7f2fcb071b919
+        sha256: 9e1493169d73ac812775f431b0f227f45d21504d0eeed8f296f7f2fcb071b919
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glog/blobs/sha256:15bf109a841f9381cd9086d7aecefc7d782670c90a5142bbf9f281604deff968
+        sha256: 15bf109a841f9381cd9086d7aecefc7d782670c90a5142bbf9f281604deff968
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glog/blobs/sha256:2c624a10ebd6da940a6f6d1c3ddb4cfe5a025bc588ece4de923aeeebadfeb8a2
+        sha256: 2c624a10ebd6da940a6f6d1c3ddb4cfe5a025bc588ece4de923aeeebadfeb8a2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glog/blobs/sha256:55330f966af37454c000fe47f329a6eba4504393bf0752d35f0c3690bd2155fc
+        sha256: 55330f966af37454c000fe47f329a6eba4504393bf0752d35f0c3690bd2155fc
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/google/glog/archive/refs/tags/v0.7.1.tar.gz
+    sha256: 00e4a87e87b7e7612f519a41e491f16623b12423620006f59f5688bfd8d13b08
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

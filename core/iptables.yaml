@@ -3,26 +3,47 @@ version: 1.8.13
 description: Linux kernel packet control tool
 homepage: https://www.netfilter.org/projects/iptables/index.html
 license: GPL-2.0-or-later
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/iptables/blobs/sha256:c7f4fb3ad89b0de76e81bf7a80ef81c07065d3824457caf7a150490d7f9bbcb9
-    sha256: c7f4fb3ad89b0de76e81bf7a80ef81c07065d3824457caf7a150490d7f9bbcb9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/iptables/blobs/sha256:ce914706722150dc35332ad3f21c0017b45303cf1c970fb8355061a7c740efd6
-    sha256: ce914706722150dc35332ad3f21c0017b45303cf1c970fb8355061a7c740efd6
-source:
-  url: https://www.netfilter.org/pub/iptables/iptables-1.8.13.tar.xz
-  sha256: 1afcd33da9e8f913ace6a2126788162e207e26f5d5e29c6573c0e581ffc58b99
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libmnl
-  - libnetfilter_conntrack
-  - libnfnetlink
-  - libnftnl
-  - libpcap
-  - nftables
+    - libmnl
+    - libnetfilter_conntrack
+    - libnfnetlink
+    - libnftnl
+    - libpcap
+    - nftables
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/iptables/blobs/sha256:c7f4fb3ad89b0de76e81bf7a80ef81c07065d3824457caf7a150490d7f9bbcb9
+        sha256: c7f4fb3ad89b0de76e81bf7a80ef81c07065d3824457caf7a150490d7f9bbcb9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/iptables/blobs/sha256:ce914706722150dc35332ad3f21c0017b45303cf1c970fb8355061a7c740efd6
+        sha256: ce914706722150dc35332ad3f21c0017b45303cf1c970fb8355061a7c740efd6
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.netfilter.org/pub/iptables/iptables-1.8.13.tar.xz
+    sha256: 1afcd33da9e8f913ace6a2126788162e207e26f5d5e29c6573c0e581ffc58b99
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

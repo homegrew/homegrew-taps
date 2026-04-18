@@ -3,30 +3,55 @@ version: 1.42.2
 description: SDK for building Kubernetes applications
 homepage: https://sdk.operatorframework.io/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/operator-sdk/blobs/sha256:8ac26f6202124cd135687b423d478d65c0ead0ac1178a7bf294db5a0697642f4
-    sha256: 8ac26f6202124cd135687b423d478d65c0ead0ac1178a7bf294db5a0697642f4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/operator-sdk/blobs/sha256:10a7169afc5dadbd985d6d679ffd0c7988691769b3e84bf11a51db8c837ce201
-    sha256: 10a7169afc5dadbd985d6d679ffd0c7988691769b3e84bf11a51db8c837ce201
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/operator-sdk/blobs/sha256:3d713a149a37d45a02d8819c1578ff81f2fab470c58db46bdfa529e2f590dcda
-    sha256: 3d713a149a37d45a02d8819c1578ff81f2fab470c58db46bdfa529e2f590dcda
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/operator-sdk/blobs/sha256:a8da9980171416c190a7f425c8842e983eae4d003827b6f1fa3560fb061952ea
-    sha256: a8da9980171416c190a7f425c8842e983eae4d003827b6f1fa3560fb061952ea
-source:
-  url: https://github.com/operator-framework/operator-sdk.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - go
-  - gpgme
-  - libassuan
-  - libgpg-error
+    - go
+    - gpgme
+    - libassuan
+    - libgpg-error
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/operator-sdk/blobs/sha256:10a7169afc5dadbd985d6d679ffd0c7988691769b3e84bf11a51db8c837ce201
+        sha256: 10a7169afc5dadbd985d6d679ffd0c7988691769b3e84bf11a51db8c837ce201
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/operator-sdk/blobs/sha256:8ac26f6202124cd135687b423d478d65c0ead0ac1178a7bf294db5a0697642f4
+        sha256: 8ac26f6202124cd135687b423d478d65c0ead0ac1178a7bf294db5a0697642f4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/operator-sdk/blobs/sha256:3d713a149a37d45a02d8819c1578ff81f2fab470c58db46bdfa529e2f590dcda
+        sha256: 3d713a149a37d45a02d8819c1578ff81f2fab470c58db46bdfa529e2f590dcda
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/operator-sdk/blobs/sha256:a8da9980171416c190a7f425c8842e983eae4d003827b6f1fa3560fb061952ea
+        sha256: a8da9980171416c190a7f425c8842e983eae4d003827b6f1fa3560fb061952ea
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/operator-framework/operator-sdk.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

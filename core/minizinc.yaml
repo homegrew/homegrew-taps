@@ -3,32 +3,57 @@ version: 2.9.5
 description: Medium-level constraint modeling language
 homepage: https://www.minizinc.org/
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/minizinc/blobs/sha256:b20d88d4fbe436a6438e796a9d0ee37e9b2aab540693516df2d9f29c7966b266
-    sha256: b20d88d4fbe436a6438e796a9d0ee37e9b2aab540693516df2d9f29c7966b266
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/minizinc/blobs/sha256:9d7b55fe7b667e34a595393ad4b1382158f64c20b564b6fa0179ac9de7c07587
-    sha256: 9d7b55fe7b667e34a595393ad4b1382158f64c20b564b6fa0179ac9de7c07587
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/minizinc/blobs/sha256:a33e2a3115c58200db5d825ad5cb3e931614671d8ee82fca01543cade180ccce
-    sha256: a33e2a3115c58200db5d825ad5cb3e931614671d8ee82fca01543cade180ccce
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/minizinc/blobs/sha256:a4e9507690829a4045d363b26d681760fbcc8f92c0e848a87ae31dcd0a3021dc
-    sha256: a4e9507690829a4045d363b26d681760fbcc8f92c0e848a87ae31dcd0a3021dc
-source:
-  url: https://github.com/MiniZinc/libminizinc/archive/refs/tags/2.9.5.tar.gz
-  sha256: 7011b512dad0967c5a7ba880152f4cecdcbe2b96abf5cb078dd676893c1065b3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cbc
-  - cgl
-  - clp
-  - coinutils
-  - gecode
-  - osi
+    - cbc
+    - cgl
+    - clp
+    - coinutils
+    - gecode
+    - osi
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/minizinc/blobs/sha256:9d7b55fe7b667e34a595393ad4b1382158f64c20b564b6fa0179ac9de7c07587
+        sha256: 9d7b55fe7b667e34a595393ad4b1382158f64c20b564b6fa0179ac9de7c07587
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/minizinc/blobs/sha256:b20d88d4fbe436a6438e796a9d0ee37e9b2aab540693516df2d9f29c7966b266
+        sha256: b20d88d4fbe436a6438e796a9d0ee37e9b2aab540693516df2d9f29c7966b266
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/minizinc/blobs/sha256:a33e2a3115c58200db5d825ad5cb3e931614671d8ee82fca01543cade180ccce
+        sha256: a33e2a3115c58200db5d825ad5cb3e931614671d8ee82fca01543cade180ccce
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/minizinc/blobs/sha256:a4e9507690829a4045d363b26d681760fbcc8f92c0e848a87ae31dcd0a3021dc
+        sha256: a4e9507690829a4045d363b26d681760fbcc8f92c0e848a87ae31dcd0a3021dc
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/MiniZinc/libminizinc/archive/refs/tags/2.9.5.tar.gz
+    sha256: 7011b512dad0967c5a7ba880152f4cecdcbe2b96abf5cb078dd676893c1065b3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,30 +3,54 @@ version: 0.3.22
 description: Library for converting legacy Mac document formats
 homepage: https://sourceforge.net/p/libmwaw/wiki/Home/
 license: LGPL-2.1-or-later OR MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmwaw/blobs/sha256:fa0e72719088f76b8996124a739c41c4b34547cf9c4f260e58afd6ddcc870cd4
-    sha256: fa0e72719088f76b8996124a739c41c4b34547cf9c4f260e58afd6ddcc870cd4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmwaw/blobs/sha256:ea299bef81d475c92fcfad1e645938f555c6d84a5079736731c0bbffde56713a
-    sha256: ea299bef81d475c92fcfad1e645938f555c6d84a5079736731c0bbffde56713a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmwaw/blobs/sha256:2e148bc4687e804b19b7b4d6efa771453929595be6bd06d11957c2a91be6960c
-    sha256: 2e148bc4687e804b19b7b4d6efa771453929595be6bd06d11957c2a91be6960c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmwaw/blobs/sha256:798c441a0e2c4381934c01b24f9092f808c3a40bd7535947b9bb16eea05f010c
-    sha256: 798c441a0e2c4381934c01b24f9092f808c3a40bd7535947b9bb16eea05f010c
-source:
-  url: https://downloads.sourceforge.net/project/libmwaw/libmwaw/libmwaw-0.3.22/libmwaw-0.3.22.tar.xz
-  sha256: a1a39ffcea3ff2a7a7aae0c23877ddf4918b554bf82b0de5d7ce8e7f61ea8e32
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - librevenge
+    - librevenge
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmwaw/blobs/sha256:ea299bef81d475c92fcfad1e645938f555c6d84a5079736731c0bbffde56713a
+        sha256: ea299bef81d475c92fcfad1e645938f555c6d84a5079736731c0bbffde56713a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmwaw/blobs/sha256:fa0e72719088f76b8996124a739c41c4b34547cf9c4f260e58afd6ddcc870cd4
+        sha256: fa0e72719088f76b8996124a739c41c4b34547cf9c4f260e58afd6ddcc870cd4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmwaw/blobs/sha256:2e148bc4687e804b19b7b4d6efa771453929595be6bd06d11957c2a91be6960c
+        sha256: 2e148bc4687e804b19b7b4d6efa771453929595be6bd06d11957c2a91be6960c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmwaw/blobs/sha256:798c441a0e2c4381934c01b24f9092f808c3a40bd7535947b9bb16eea05f010c
+        sha256: 798c441a0e2c4381934c01b24f9092f808c3a40bd7535947b9bb16eea05f010c
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/libmwaw/libmwaw/libmwaw-0.3.22/libmwaw-0.3.22.tar.xz
+    sha256: a1a39ffcea3ff2a7a7aae0c23877ddf4918b554bf82b0de5d7ce8e7f61ea8e32
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - librevenge
-  - zlib-ng-compat
+    - librevenge
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

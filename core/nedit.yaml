@@ -1,34 +1,60 @@
 name: nedit
-version: 5.7
+version: "5.7"
 description: Fast, compact Motif/X11 plain text editor
 homepage: https://sourceforge.net/projects/nedit/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nedit/blobs/sha256:63e38eb761dcd2a048f2cb5dcb614fcfb7c5e89b66883316628c95eeec52e35d
-    sha256: 63e38eb761dcd2a048f2cb5dcb614fcfb7c5e89b66883316628c95eeec52e35d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nedit/blobs/sha256:8422e83c7f1428b1188a85db7c86ede8660169ebe97c14728a45a7428908d7a7
-    sha256: 8422e83c7f1428b1188a85db7c86ede8660169ebe97c14728a45a7428908d7a7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nedit/blobs/sha256:cd75a55df6025af2525c13fb2657d74632fac30c2d813eda1d07ae1eea146ffa
-    sha256: cd75a55df6025af2525c13fb2657d74632fac30c2d813eda1d07ae1eea146ffa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nedit/blobs/sha256:55378caed6582cb7f9dc529539d45ec7195c4ef042eca0d152d76663c60af47a
-    sha256: 55378caed6582cb7f9dc529539d45ec7195c4ef042eca0d152d76663c60af47a
-source:
-  url: https://downloads.sourceforge.net/project/nedit/nedit-source/nedit-5.7-src.tar.gz
-  sha256: add9ac79ff973528ad36c86858238bac4f59896c27dbf285cbe6a4d425fca17a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libice
-  - libsm
-  - libx11
-  - libxext
-  - libxp
-  - libxpm
-  - libxt
-  - openmotif
+    - libice
+    - libsm
+    - libx11
+    - libxext
+    - libxp
+    - libxpm
+    - libxt
+    - openmotif
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nedit/blobs/sha256:8422e83c7f1428b1188a85db7c86ede8660169ebe97c14728a45a7428908d7a7
+        sha256: 8422e83c7f1428b1188a85db7c86ede8660169ebe97c14728a45a7428908d7a7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nedit/blobs/sha256:63e38eb761dcd2a048f2cb5dcb614fcfb7c5e89b66883316628c95eeec52e35d
+        sha256: 63e38eb761dcd2a048f2cb5dcb614fcfb7c5e89b66883316628c95eeec52e35d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nedit/blobs/sha256:cd75a55df6025af2525c13fb2657d74632fac30c2d813eda1d07ae1eea146ffa
+        sha256: cd75a55df6025af2525c13fb2657d74632fac30c2d813eda1d07ae1eea146ffa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nedit/blobs/sha256:55378caed6582cb7f9dc529539d45ec7195c4ef042eca0d152d76663c60af47a
+        sha256: 55378caed6582cb7f9dc529539d45ec7195c4ef042eca0d152d76663c60af47a
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/nedit/nedit-source/nedit-5.7-src.tar.gz
+    sha256: add9ac79ff973528ad36c86858238bac4f59896c27dbf285cbe6a4d425fca17a
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,26 +3,52 @@ version: 10.3.0
 description: Implementation of the Chez Scheme language
 homepage: https://cisco.github.io/ChezScheme/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/chezscheme/blobs/sha256:5fd70e9cfb444bc9a5ff5c872e7af6a625b8812455d08af0594550c890f5215d
-    sha256: 5fd70e9cfb444bc9a5ff5c872e7af6a625b8812455d08af0594550c890f5215d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/chezscheme/blobs/sha256:f2e2ccd0bb129de10fe9129a4b0f1eb1b2fb01a4159f9c62678c49346fe3ef93
-    sha256: f2e2ccd0bb129de10fe9129a4b0f1eb1b2fb01a4159f9c62678c49346fe3ef93
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/chezscheme/blobs/sha256:c507bb094a948903427b7a955d0f1ff52a74907b1ffaecff6af5a31686811600
-    sha256: c507bb094a948903427b7a955d0f1ff52a74907b1ffaecff6af5a31686811600
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/chezscheme/blobs/sha256:9b5ab9ca95255ace1bab78af45b899944ee8e3c9e3750965536541acc5c5ef9c
-    sha256: 9b5ab9ca95255ace1bab78af45b899944ee8e3c9e3750965536541acc5c5ef9c
-source:
-  url: https://github.com/cisco/ChezScheme/releases/download/v10.3.0/csv10.3.0.tar.gz
-  sha256: d237d9874c6e8b0ccf7758daa8286a6e825528b13ce3b2bca56eb1f73cddbc2c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/chezscheme/blobs/sha256:f2e2ccd0bb129de10fe9129a4b0f1eb1b2fb01a4159f9c62678c49346fe3ef93
+        sha256: f2e2ccd0bb129de10fe9129a4b0f1eb1b2fb01a4159f9c62678c49346fe3ef93
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/chezscheme/blobs/sha256:5fd70e9cfb444bc9a5ff5c872e7af6a625b8812455d08af0594550c890f5215d
+        sha256: 5fd70e9cfb444bc9a5ff5c872e7af6a625b8812455d08af0594550c890f5215d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/chezscheme/blobs/sha256:c507bb094a948903427b7a955d0f1ff52a74907b1ffaecff6af5a31686811600
+        sha256: c507bb094a948903427b7a955d0f1ff52a74907b1ffaecff6af5a31686811600
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/chezscheme/blobs/sha256:9b5ab9ca95255ace1bab78af45b899944ee8e3c9e3750965536541acc5c5ef9c
+        sha256: 9b5ab9ca95255ace1bab78af45b899944ee8e3c9e3750965536541acc5c5ef9c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cisco/ChezScheme/releases/download/v10.3.0/csv10.3.0.tar.gz
+    sha256: d237d9874c6e8b0ccf7758daa8286a6e825528b13ce3b2bca56eb1f73cddbc2c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - libx11
-  - xterm
+    - libx11
+    - xterm
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

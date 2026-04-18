@@ -3,40 +3,64 @@ version: 1.3.1
 description: GUI for rsync
 homepage: https://www.opbyte.it/grsync/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grsync/blobs/sha256:7986e7f825b1b6c2f31beadad835a38e018b215d50ec918a4c943c1449127127
-    sha256: 7986e7f825b1b6c2f31beadad835a38e018b215d50ec918a4c943c1449127127
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grsync/blobs/sha256:17172832ac98aded38af454786303dc8f9d3b61e90470a4330a7774ae5885dd4
-    sha256: 17172832ac98aded38af454786303dc8f9d3b61e90470a4330a7774ae5885dd4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grsync/blobs/sha256:e69fa72c81515369642531c0e5fc7febe6953d082721eb5b1e839c0f7a72a597
-    sha256: e69fa72c81515369642531c0e5fc7febe6953d082721eb5b1e839c0f7a72a597
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grsync/blobs/sha256:855b9f2180841ac05b112906346852effcaf37d1e0ccdfc11b6561f947da4a85
-    sha256: 855b9f2180841ac05b112906346852effcaf37d1e0ccdfc11b6561f947da4a85
-source:
-  url: https://downloads.sourceforge.net/project/grsync/grsync-1.3.1.tar.gz
-  sha256: 33cc0e25daa62e5ba7091caea3c83a8dc74dc5d7721c4501d349f210c4b3c6d3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gtk+3
-  - pango
-  - at-spi2-core
-  - cairo
-  - gdk-pixbuf
-  - gettext
-  - harfbuzz
+    - glib
+    - gtk+3
+    - pango
+    - at-spi2-core
+    - cairo
+    - gdk-pixbuf
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grsync/blobs/sha256:17172832ac98aded38af454786303dc8f9d3b61e90470a4330a7774ae5885dd4
+        sha256: 17172832ac98aded38af454786303dc8f9d3b61e90470a4330a7774ae5885dd4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grsync/blobs/sha256:7986e7f825b1b6c2f31beadad835a38e018b215d50ec918a4c943c1449127127
+        sha256: 7986e7f825b1b6c2f31beadad835a38e018b215d50ec918a4c943c1449127127
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grsync/blobs/sha256:e69fa72c81515369642531c0e5fc7febe6953d082721eb5b1e839c0f7a72a597
+        sha256: e69fa72c81515369642531c0e5fc7febe6953d082721eb5b1e839c0f7a72a597
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grsync/blobs/sha256:855b9f2180841ac05b112906346852effcaf37d1e0ccdfc11b6561f947da4a85
+        sha256: 855b9f2180841ac05b112906346852effcaf37d1e0ccdfc11b6561f947da4a85
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/grsync/grsync-1.3.1.tar.gz
+    sha256: 33cc0e25daa62e5ba7091caea3c83a8dc74dc5d7721c4501d349f210c4b3c6d3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - intltool
-  - pkgconf
+    - gettext
+    - intltool
+    - pkgconf
 linux_dependencies:
-  - glib
-  - gtk+3
-  - pango
+    - glib
+    - gtk+3
+    - pango
+build:
+    configure: []
+    install: []
+service: null

@@ -3,33 +3,58 @@ version: 0.1.126
 description: Dynamic, any-to-any, pixel format translation library
 homepage: https://www.gegl.org/babl/
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:b4eeeeb41469143b10d49950316a5ed2f23b71dc423c5490e0a668f024dd6234
-    sha256: b4eeeeb41469143b10d49950316a5ed2f23b71dc423c5490e0a668f024dd6234
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:75435a454fb8e06256f1de4a9829d29dc2c0ee073ab52dc3c682afde988239b9
-    sha256: 75435a454fb8e06256f1de4a9829d29dc2c0ee073ab52dc3c682afde988239b9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:a8df7b72aa8292978fc7c7f07b3237c3479c52a63be2cfe6170cf0d9a1dea4fa
-    sha256: a8df7b72aa8292978fc7c7f07b3237c3479c52a63be2cfe6170cf0d9a1dea4fa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:c1fefb9e15036f64d0f2cba345337d3ed576b25243ee44c677645a2d933c81d5
-    sha256: c1fefb9e15036f64d0f2cba345337d3ed576b25243ee44c677645a2d933c81d5
-source:
-  url: https://download.gimp.org/pub/babl/0.1/babl-0.1.126.tar.xz
-  sha256: 3f090f4b2a61fecf7c8dc60a5804bbc77cefd8d778af2ded059f0e367a52930e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - little-cms2
+    - little-cms2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:75435a454fb8e06256f1de4a9829d29dc2c0ee073ab52dc3c682afde988239b9
+        sha256: 75435a454fb8e06256f1de4a9829d29dc2c0ee073ab52dc3c682afde988239b9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:b4eeeeb41469143b10d49950316a5ed2f23b71dc423c5490e0a668f024dd6234
+        sha256: b4eeeeb41469143b10d49950316a5ed2f23b71dc423c5490e0a668f024dd6234
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:a8df7b72aa8292978fc7c7f07b3237c3479c52a63be2cfe6170cf0d9a1dea4fa
+        sha256: a8df7b72aa8292978fc7c7f07b3237c3479c52a63be2cfe6170cf0d9a1dea4fa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:c1fefb9e15036f64d0f2cba345337d3ed576b25243ee44c677645a2d933c81d5
+        sha256: c1fefb9e15036f64d0f2cba345337d3ed576b25243ee44c677645a2d933c81d5
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gimp.org/pub/babl/0.1/babl-0.1.126.tar.xz
+    sha256: 3f090f4b2a61fecf7c8dc60a5804bbc77cefd8d778af2ded059f0e367a52930e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - glib
-  - gobject-introspection
-  - meson
-  - ninja
-  - pcre2
-  - pkgconf
-  - vala
+    - glib
+    - gobject-introspection
+    - meson
+    - ninja
+    - pcre2
+    - pkgconf
+    - vala
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

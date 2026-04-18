@@ -1,27 +1,53 @@
 name: pdsh
-version: 2.36
+version: "2.36"
 description: Efficient rsh-like utility, for using hosts in parallel
 homepage: https://github.com/chaos/pdsh
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pdsh/blobs/sha256:a564810e0a1cb41ec26b36c13c8b2b6c61142b40247a9757c913736f8944229e
-    sha256: a564810e0a1cb41ec26b36c13c8b2b6c61142b40247a9757c913736f8944229e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pdsh/blobs/sha256:532a6d3910c0fe45dc28b62550ae89226fdcb1ac78cb3ea572bd82998a03037e
-    sha256: 532a6d3910c0fe45dc28b62550ae89226fdcb1ac78cb3ea572bd82998a03037e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pdsh/blobs/sha256:abff1ce27177dcf72aa53e438b8934544fc52745301b1e187a1c3c7904b2930f
-    sha256: abff1ce27177dcf72aa53e438b8934544fc52745301b1e187a1c3c7904b2930f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pdsh/blobs/sha256:7b13aaecfc7fdae5d427cb40b6b16fabdb4bcfb254eda223a255a2b595767299
-    sha256: 7b13aaecfc7fdae5d427cb40b6b16fabdb4bcfb254eda223a255a2b595767299
-source:
-  url: https://github.com/chaos/pdsh/releases/download/pdsh-2.36/pdsh-2.36.tar.gz
-  sha256: a661095ce51dd5fb05e398cf5d0e1d63157123958441f6d3512bcf1a7d25c517
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - readline
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pdsh/blobs/sha256:532a6d3910c0fe45dc28b62550ae89226fdcb1ac78cb3ea572bd82998a03037e
+        sha256: 532a6d3910c0fe45dc28b62550ae89226fdcb1ac78cb3ea572bd82998a03037e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pdsh/blobs/sha256:a564810e0a1cb41ec26b36c13c8b2b6c61142b40247a9757c913736f8944229e
+        sha256: a564810e0a1cb41ec26b36c13c8b2b6c61142b40247a9757c913736f8944229e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pdsh/blobs/sha256:abff1ce27177dcf72aa53e438b8934544fc52745301b1e187a1c3c7904b2930f
+        sha256: abff1ce27177dcf72aa53e438b8934544fc52745301b1e187a1c3c7904b2930f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pdsh/blobs/sha256:7b13aaecfc7fdae5d427cb40b6b16fabdb4bcfb254eda223a255a2b595767299
+        sha256: 7b13aaecfc7fdae5d427cb40b6b16fabdb4bcfb254eda223a255a2b595767299
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/chaos/pdsh/releases/download/pdsh-2.36/pdsh-2.36.tar.gz
+    sha256: a661095ce51dd5fb05e398cf5d0e1d63157123958441f6d3512bcf1a7d25c517
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

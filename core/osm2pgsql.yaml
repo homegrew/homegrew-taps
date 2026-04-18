@@ -3,40 +3,64 @@ version: 2.2.0
 description: OpenStreetMap data to PostgreSQL converter
 homepage: https://osm2pgsql.org
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:a5f9ab6a4a201781ae815d913f773583684dca4538e0aff2d992ca8e9b5a177a
-    sha256: a5f9ab6a4a201781ae815d913f773583684dca4538e0aff2d992ca8e9b5a177a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:77ff1260704e17ec3aa45de6bcc3947b3dddf0c31693b266305201ca7f148545
-    sha256: 77ff1260704e17ec3aa45de6bcc3947b3dddf0c31693b266305201ca7f148545
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:719e9ab7dbc8d76cc317006f9492c619bcd79a40b24b76056e04a9d6f9264b11
-    sha256: 719e9ab7dbc8d76cc317006f9492c619bcd79a40b24b76056e04a9d6f9264b11
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:c554b99264e3a52791e14c304dae74e0c37f9d87082752e79169b00b6c1ef231
-    sha256: c554b99264e3a52791e14c304dae74e0c37f9d87082752e79169b00b6c1ef231
-source:
-  url: https://github.com/osm2pgsql-dev/osm2pgsql/archive/refs/tags/2.2.0.tar.gz
-  sha256: 567dad078f8a66d6d706ac1876b5251b688109d16974909d89ce2056d6e9f258
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpq
-  - luajit
-  - proj
+    - libpq
+    - luajit
+    - proj
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:77ff1260704e17ec3aa45de6bcc3947b3dddf0c31693b266305201ca7f148545
+        sha256: 77ff1260704e17ec3aa45de6bcc3947b3dddf0c31693b266305201ca7f148545
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:a5f9ab6a4a201781ae815d913f773583684dca4538e0aff2d992ca8e9b5a177a
+        sha256: a5f9ab6a4a201781ae815d913f773583684dca4538e0aff2d992ca8e9b5a177a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:719e9ab7dbc8d76cc317006f9492c619bcd79a40b24b76056e04a9d6f9264b11
+        sha256: 719e9ab7dbc8d76cc317006f9492c619bcd79a40b24b76056e04a9d6f9264b11
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:c554b99264e3a52791e14c304dae74e0c37f9d87082752e79169b00b6c1ef231
+        sha256: c554b99264e3a52791e14c304dae74e0c37f9d87082752e79169b00b6c1ef231
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/osm2pgsql-dev/osm2pgsql/archive/refs/tags/2.2.0.tar.gz
+    sha256: 567dad078f8a66d6d706ac1876b5251b688109d16974909d89ce2056d6e9f258
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - cli11
-  - cmake
-  - libosmium
-  - lua
-  - nlohmann-json
-  - protozero
+    - boost
+    - cli11
+    - cmake
+    - libosmium
+    - lua
+    - nlohmann-json
+    - protozero
 linux_dependencies:
-  - libpq
-  - luajit
-  - proj
-  - zlib-ng-compat
+    - libpq
+    - luajit
+    - proj
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

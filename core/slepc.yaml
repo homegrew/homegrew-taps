@@ -3,37 +3,62 @@ version: 3.24.3
 description: Scalable Library for Eigenvalue Problem Computations (real)
 homepage: https://slepc.upv.es
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/slepc/blobs/sha256:7893de8828584ba7616d79633afeed53d9ea42e2c3bb4916a573b77cae57987d
-    sha256: 7893de8828584ba7616d79633afeed53d9ea42e2c3bb4916a573b77cae57987d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/slepc/blobs/sha256:b32eb532117fd5f0c53086a2bef510b804d3db2cb17c15f8f2e4a240b0d7948d
-    sha256: b32eb532117fd5f0c53086a2bef510b804d3db2cb17c15f8f2e4a240b0d7948d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/slepc/blobs/sha256:4b60a87c3dc3e8e76307fff0c3969aac315a8659e685cae52e9fdd4dd6861c21
-    sha256: 4b60a87c3dc3e8e76307fff0c3969aac315a8659e685cae52e9fdd4dd6861c21
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/slepc/blobs/sha256:b0825622cf74b8d515667ad61ee02514fe76c91ff8062dbd656e9d3290a02854
-    sha256: b0825622cf74b8d515667ad61ee02514fe76c91ff8062dbd656e9d3290a02854
-source:
-  url: https://slepc.upv.es/download/distrib/slepc-3.24.3.tar.gz
-  sha256: 3f13421f3fcd68fd720a143088506e0f91e24243844703997597eee793225452
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - open-mpi
-  - openblas
-  - petsc
-  - scalapack
-  - fftw
-  - gcc
-  - hdf5-mpi
-  - metis
+    - open-mpi
+    - openblas
+    - petsc
+    - scalapack
+    - fftw
+    - gcc
+    - hdf5-mpi
+    - metis
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/slepc/blobs/sha256:b32eb532117fd5f0c53086a2bef510b804d3db2cb17c15f8f2e4a240b0d7948d
+        sha256: b32eb532117fd5f0c53086a2bef510b804d3db2cb17c15f8f2e4a240b0d7948d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/slepc/blobs/sha256:7893de8828584ba7616d79633afeed53d9ea42e2c3bb4916a573b77cae57987d
+        sha256: 7893de8828584ba7616d79633afeed53d9ea42e2c3bb4916a573b77cae57987d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/slepc/blobs/sha256:4b60a87c3dc3e8e76307fff0c3969aac315a8659e685cae52e9fdd4dd6861c21
+        sha256: 4b60a87c3dc3e8e76307fff0c3969aac315a8659e685cae52e9fdd4dd6861c21
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/slepc/blobs/sha256:b0825622cf74b8d515667ad61ee02514fe76c91ff8062dbd656e9d3290a02854
+        sha256: b0825622cf74b8d515667ad61ee02514fe76c91ff8062dbd656e9d3290a02854
+        sha512: ""
+        signature: ""
+source:
+    url: https://slepc.upv.es/download/distrib/slepc-3.24.3.tar.gz
+    sha256: 3f13421f3fcd68fd720a143088506e0f91e24243844703997597eee793225452
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - open-mpi
-  - openblas
-  - petsc
-  - scalapack
+    - open-mpi
+    - openblas
+    - petsc
+    - scalapack
+build:
+    configure: []
+    install: []
+service: null

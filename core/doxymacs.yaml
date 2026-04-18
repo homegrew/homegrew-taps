@@ -3,26 +3,52 @@ version: 1.8.0
 description: Elisp package for using doxygen under Emacs
 homepage: https://doxymacs.sourceforge.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/doxymacs/blobs/sha256:fe13bd89660f57f1c74c95e0b0ae7def510c8a80d6a9ec1bb05799153d546496
-    sha256: fe13bd89660f57f1c74c95e0b0ae7def510c8a80d6a9ec1bb05799153d546496
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/doxymacs/blobs/sha256:fe9b383131419cf3949ee0f039b501a8d518e6ab92368123d537800d85bc7333
-    sha256: fe9b383131419cf3949ee0f039b501a8d518e6ab92368123d537800d85bc7333
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/doxymacs/blobs/sha256:87d7b48342fe0049e9c50a632c74a0d4fb8abca3928e2875871e69487cd8d387
-    sha256: 87d7b48342fe0049e9c50a632c74a0d4fb8abca3928e2875871e69487cd8d387
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/doxymacs/blobs/sha256:35833ff40dab157ebfaed94448b822bbc044a87ab1e57d09aba41d13c200c1b5
-    sha256: 35833ff40dab157ebfaed94448b822bbc044a87ab1e57d09aba41d13c200c1b5
-source:
-  url: https://downloads.sourceforge.net/project/doxymacs/doxymacs/1.8.0/doxymacs-1.8.0.tar.gz
-  sha256: a23fd833bc3c21ee5387c62597610941e987f9d4372916f996bf6249cc495afa
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - doxygen
-  - emacs
+    - doxygen
+    - emacs
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/doxymacs/blobs/sha256:fe9b383131419cf3949ee0f039b501a8d518e6ab92368123d537800d85bc7333
+        sha256: fe9b383131419cf3949ee0f039b501a8d518e6ab92368123d537800d85bc7333
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/doxymacs/blobs/sha256:fe13bd89660f57f1c74c95e0b0ae7def510c8a80d6a9ec1bb05799153d546496
+        sha256: fe13bd89660f57f1c74c95e0b0ae7def510c8a80d6a9ec1bb05799153d546496
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/doxymacs/blobs/sha256:87d7b48342fe0049e9c50a632c74a0d4fb8abca3928e2875871e69487cd8d387
+        sha256: 87d7b48342fe0049e9c50a632c74a0d4fb8abca3928e2875871e69487cd8d387
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/doxymacs/blobs/sha256:35833ff40dab157ebfaed94448b822bbc044a87ab1e57d09aba41d13c200c1b5
+        sha256: 35833ff40dab157ebfaed94448b822bbc044a87ab1e57d09aba41d13c200c1b5
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/doxymacs/doxymacs/1.8.0/doxymacs-1.8.0.tar.gz
+    sha256: a23fd833bc3c21ee5387c62597610941e987f9d4372916f996bf6249cc495afa
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

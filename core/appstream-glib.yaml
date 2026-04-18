@@ -3,42 +3,66 @@ version: 0.8.3
 description: Helper library for reading and writing AppStream metadata
 homepage: https://github.com/hughsie/appstream-glib
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:2587f394775fa2f8b69be4db40c9bbe66d5b4d961803ac90e8f7b0e67c171259
-    sha256: 2587f394775fa2f8b69be4db40c9bbe66d5b4d961803ac90e8f7b0e67c171259
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:9ee04a0e10295134da81fe789ff2acac90c3d64ffb2d33a5e6700a4bdd5f6a6c
-    sha256: 9ee04a0e10295134da81fe789ff2acac90c3d64ffb2d33a5e6700a4bdd5f6a6c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:e3817d099c3f3d7bcdb0aec2920ff5b92e76454398d4efda5acb72c6d2ac4a1f
-    sha256: e3817d099c3f3d7bcdb0aec2920ff5b92e76454398d4efda5acb72c6d2ac4a1f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:a8eb70a5bc4dcbbe274a1ad1ce81f8aa99738e8db59996f6e6c10c6c3294eb0f
-    sha256: a8eb70a5bc4dcbbe274a1ad1ce81f8aa99738e8db59996f6e6c10c6c3294eb0f
-source:
-  url: https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_0_8_3.tar.gz
-  sha256: 15ad7690b0132d883bd066699a7b55f6cef4c0f266d18d781ce5d8112fb4ee63
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gdk-pixbuf
-  - glib
-  - json-glib
-  - libarchive
-  - gettext
+    - gdk-pixbuf
+    - glib
+    - json-glib
+    - libarchive
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:9ee04a0e10295134da81fe789ff2acac90c3d64ffb2d33a5e6700a4bdd5f6a6c
+        sha256: 9ee04a0e10295134da81fe789ff2acac90c3d64ffb2d33a5e6700a4bdd5f6a6c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:2587f394775fa2f8b69be4db40c9bbe66d5b4d961803ac90e8f7b0e67c171259
+        sha256: 2587f394775fa2f8b69be4db40c9bbe66d5b4d961803ac90e8f7b0e67c171259
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:e3817d099c3f3d7bcdb0aec2920ff5b92e76454398d4efda5acb72c6d2ac4a1f
+        sha256: e3817d099c3f3d7bcdb0aec2920ff5b92e76454398d4efda5acb72c6d2ac4a1f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:a8eb70a5bc4dcbbe274a1ad1ce81f8aa99738e8db59996f6e6c10c6c3294eb0f
+        sha256: a8eb70a5bc4dcbbe274a1ad1ce81f8aa99738e8db59996f6e6c10c6c3294eb0f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_0_8_3.tar.gz
+    sha256: 15ad7690b0132d883bd066699a7b55f6cef4c0f266d18d781ce5d8112fb4ee63
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docbook
-  - docbook-xsl
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
+    - docbook
+    - docbook-xsl
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - gdk-pixbuf
-  - glib
-  - json-glib
-  - libarchive
-  - util-linux
+    - gdk-pixbuf
+    - glib
+    - json-glib
+    - libarchive
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

@@ -1,27 +1,48 @@
 name: bluez
-version: 5.86
+version: "5.86"
 description: Bluetooth protocol stack for Linux
 homepage: https://www.bluez.org
 license: GPL-2.0-or-later
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bluez/blobs/sha256:5d7e0351068a6edd6921f781e6825778085eaf3fec9d55f841741b679ba0df4c
-    sha256: 5d7e0351068a6edd6921f781e6825778085eaf3fec9d55f841741b679ba0df4c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bluez/blobs/sha256:75d23317eadf590b4b45a76966106adae232125433566c95775615e9b7b5d785
-    sha256: 75d23317eadf590b4b45a76966106adae232125433566c95775615e9b7b5d785
-source:
-  url: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
-  sha256: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dbus
-  - glib
-  - libical
-  - readline
-  - systemd
+    - dbus
+    - glib
+    - libical
+    - readline
+    - systemd
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bluez/blobs/sha256:5d7e0351068a6edd6921f781e6825778085eaf3fec9d55f841741b679ba0df4c
+        sha256: 5d7e0351068a6edd6921f781e6825778085eaf3fec9d55f841741b679ba0df4c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bluez/blobs/sha256:75d23317eadf590b4b45a76966106adae232125433566c95775615e9b7b5d785
+        sha256: 75d23317eadf590b4b45a76966106adae232125433566c95775615e9b7b5d785
+        sha512: ""
+        signature: ""
+source:
+    url: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    sha256: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

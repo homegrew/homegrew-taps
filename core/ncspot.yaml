@@ -3,34 +3,58 @@ version: 1.3.3
 description: Cross-platform ncurses Spotify client written in Rust
 homepage: https://github.com/hrkfdn/ncspot
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncspot/blobs/sha256:776c4c58d07000bb93cdce6aaaf28a6fc630376633f37b74e02d910272cfc066
-    sha256: 776c4c58d07000bb93cdce6aaaf28a6fc630376633f37b74e02d910272cfc066
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncspot/blobs/sha256:d95fee3c6dd6a833b19e69f07504b70632c8b67210217a0b09505bd1e92b9508
-    sha256: d95fee3c6dd6a833b19e69f07504b70632c8b67210217a0b09505bd1e92b9508
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncspot/blobs/sha256:3b10d3c534c0c533ddbb48ba9a746da1befcc71b4444ea941641b23176d0738e
-    sha256: 3b10d3c534c0c533ddbb48ba9a746da1befcc71b4444ea941641b23176d0738e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncspot/blobs/sha256:b97eb8a7e13415b3933d3309d886fa13db7252822803a9888a64b674abb4c8b0
-    sha256: b97eb8a7e13415b3933d3309d886fa13db7252822803a9888a64b674abb4c8b0
-source:
-  url: https://github.com/hrkfdn/ncspot/archive/refs/tags/v1.3.3.tar.gz
-  sha256: 26edf6f1861828452355d614349c0a2af49113b392d7cd52290ea7f180f6bfe5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - portaudio
+    - portaudio
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncspot/blobs/sha256:d95fee3c6dd6a833b19e69f07504b70632c8b67210217a0b09505bd1e92b9508
+        sha256: d95fee3c6dd6a833b19e69f07504b70632c8b67210217a0b09505bd1e92b9508
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncspot/blobs/sha256:776c4c58d07000bb93cdce6aaaf28a6fc630376633f37b74e02d910272cfc066
+        sha256: 776c4c58d07000bb93cdce6aaaf28a6fc630376633f37b74e02d910272cfc066
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncspot/blobs/sha256:3b10d3c534c0c533ddbb48ba9a746da1befcc71b4444ea941641b23176d0738e
+        sha256: 3b10d3c534c0c533ddbb48ba9a746da1befcc71b4444ea941641b23176d0738e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncspot/blobs/sha256:b97eb8a7e13415b3933d3309d886fa13db7252822803a9888a64b674abb4c8b0
+        sha256: b97eb8a7e13415b3933d3309d886fa13db7252822803a9888a64b674abb4c8b0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/hrkfdn/ncspot/archive/refs/tags/v1.3.3.tar.gz
+    sha256: 26edf6f1861828452355d614349c0a2af49113b392d7cd52290ea7f180f6bfe5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - alsa-lib
-  - dbus
-  - libxcb
-  - openssl@3
-  - portaudio
+    - alsa-lib
+    - dbus
+    - libxcb
+    - openssl@3
+    - portaudio
+build:
+    configure: []
+    install: []
+service: null

@@ -1,29 +1,54 @@
 name: grep
-version: 3.12
+version: "3.12"
 description: GNU grep, egrep and fgrep
 homepage: https://www.gnu.org/software/grep/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grep/blobs/sha256:f1455dc9ac997c60bfe18c1f147c1fc9f72e7c5096ff59a2c41cd97f0ca99936
-    sha256: f1455dc9ac997c60bfe18c1f147c1fc9f72e7c5096ff59a2c41cd97f0ca99936
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grep/blobs/sha256:742da3d1e04f240f7dc0de96eb1a9d309a36e238af851adc1623d1482c1f6699
-    sha256: 742da3d1e04f240f7dc0de96eb1a9d309a36e238af851adc1623d1482c1f6699
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grep/blobs/sha256:8c50dff022ebab698c92d9accf3534d6e38ae5d5920ffcd172fa1bfbb9017c71
-    sha256: 8c50dff022ebab698c92d9accf3534d6e38ae5d5920ffcd172fa1bfbb9017c71
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grep/blobs/sha256:3c15cf4f4a7a9f24466a59e6b0deb5cc785015adac16f87777ac346a333f0c8c
-    sha256: 3c15cf4f4a7a9f24466a59e6b0deb5cc785015adac16f87777ac346a333f0c8c
-source:
-  url: https://ftpmirror.gnu.org/gnu/grep/grep-3.12.tar.xz
-  sha256: 2649b27c0e90e632eadcd757be06c6e9a4f48d941de51e7c0f83ff76408a07b9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - pcre2
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grep/blobs/sha256:742da3d1e04f240f7dc0de96eb1a9d309a36e238af851adc1623d1482c1f6699
+        sha256: 742da3d1e04f240f7dc0de96eb1a9d309a36e238af851adc1623d1482c1f6699
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grep/blobs/sha256:f1455dc9ac997c60bfe18c1f147c1fc9f72e7c5096ff59a2c41cd97f0ca99936
+        sha256: f1455dc9ac997c60bfe18c1f147c1fc9f72e7c5096ff59a2c41cd97f0ca99936
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grep/blobs/sha256:8c50dff022ebab698c92d9accf3534d6e38ae5d5920ffcd172fa1bfbb9017c71
+        sha256: 8c50dff022ebab698c92d9accf3534d6e38ae5d5920ffcd172fa1bfbb9017c71
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grep/blobs/sha256:3c15cf4f4a7a9f24466a59e6b0deb5cc785015adac16f87777ac346a333f0c8c
+        sha256: 3c15cf4f4a7a9f24466a59e6b0deb5cc785015adac16f87777ac346a333f0c8c
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/grep/grep-3.12.tar.xz
+    sha256: 2649b27c0e90e632eadcd757be06c6e9a4f48d941de51e7c0f83ff76408a07b9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

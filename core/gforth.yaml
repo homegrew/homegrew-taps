@@ -3,27 +3,52 @@ version: 0.7.3
 description: Implementation of the ANS Forth language
 homepage: https://www.gnu.org/software/gforth/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gforth/blobs/sha256:ede972e5e6570b4811d3967dd77c8780142c5bc97884a392c523b4b91b913148
-    sha256: ede972e5e6570b4811d3967dd77c8780142c5bc97884a392c523b4b91b913148
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gforth/blobs/sha256:1ca371987c27190729facb4a43f3fa3e2562cc4efd2bf3759a28ddfa0de38c7f
-    sha256: 1ca371987c27190729facb4a43f3fa3e2562cc4efd2bf3759a28ddfa0de38c7f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gforth/blobs/sha256:187183a4751b63734bccc9021f00f44c118623d4bf8c2bddc1c167c9194e6be3
-    sha256: 187183a4751b63734bccc9021f00f44c118623d4bf8c2bddc1c167c9194e6be3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gforth/blobs/sha256:ffbdc90074b784e4c3d1ce52dced0ce93cbed7c442e2f416e0ca9ee703005562
-    sha256: ffbdc90074b784e4c3d1ce52dced0ce93cbed7c442e2f416e0ca9ee703005562
-source:
-  url: https://ftpmirror.gnu.org/gnu/gforth/gforth-0.7.3.tar.gz
-  sha256: 2f62f2233bf022c23d01c920b1556aa13eab168e3236b13352ac5e9f18542bb0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtool
+    - libtool
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gforth/blobs/sha256:1ca371987c27190729facb4a43f3fa3e2562cc4efd2bf3759a28ddfa0de38c7f
+        sha256: 1ca371987c27190729facb4a43f3fa3e2562cc4efd2bf3759a28ddfa0de38c7f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gforth/blobs/sha256:ede972e5e6570b4811d3967dd77c8780142c5bc97884a392c523b4b91b913148
+        sha256: ede972e5e6570b4811d3967dd77c8780142c5bc97884a392c523b4b91b913148
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gforth/blobs/sha256:187183a4751b63734bccc9021f00f44c118623d4bf8c2bddc1c167c9194e6be3
+        sha256: 187183a4751b63734bccc9021f00f44c118623d4bf8c2bddc1c167c9194e6be3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gforth/blobs/sha256:ffbdc90074b784e4c3d1ce52dced0ce93cbed7c442e2f416e0ca9ee703005562
+        sha256: ffbdc90074b784e4c3d1ce52dced0ce93cbed7c442e2f416e0ca9ee703005562
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/gforth/gforth-0.7.3.tar.gz
+    sha256: 2f62f2233bf022c23d01c920b1556aa13eab168e3236b13352ac5e9f18542bb0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - emacs
+    - emacs
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

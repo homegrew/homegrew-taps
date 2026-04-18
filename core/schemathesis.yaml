@@ -3,30 +3,55 @@ version: 4.15.2
 description: Testing tool for web applications with specs
 homepage: https://schemathesis.readthedocs.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/schemathesis/blobs/sha256:8cfb42165780b683ca776cf50626bddbda2be179a08fa44755023838c6c1aa29
-    sha256: 8cfb42165780b683ca776cf50626bddbda2be179a08fa44755023838c6c1aa29
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/schemathesis/blobs/sha256:76c533ceece3c07fc463f73970fb40a13bc3c9bceb9d2671eec0d560624cebec
-    sha256: 76c533ceece3c07fc463f73970fb40a13bc3c9bceb9d2671eec0d560624cebec
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/schemathesis/blobs/sha256:d23b60566cc0655a7d667ab96e3519ef598c837e2cd2d4ff0225e435eb38da40
-    sha256: d23b60566cc0655a7d667ab96e3519ef598c837e2cd2d4ff0225e435eb38da40
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/schemathesis/blobs/sha256:15f6606b45c8d55fac125f0e1efb2a0364db1051d2022c5caabacb7f593cc385
-    sha256: 15f6606b45c8d55fac125f0e1efb2a0364db1051d2022c5caabacb7f593cc385
-source:
-  url: https://files.pythonhosted.org/packages/ab/a2/cec4166416ff2c08ccf7be71bec708d0b8adacf25f40232992157ff73960/schemathesis-4.15.2.tar.gz
-  sha256: 66f264f270e2222ffc7ab11c23a5dd2277c93c5a1a329d3d82a0b6ddc05263ef
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - python@3.14
-  - rpds-py
+    - certifi
+    - libyaml
+    - python@3.14
+    - rpds-py
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/schemathesis/blobs/sha256:76c533ceece3c07fc463f73970fb40a13bc3c9bceb9d2671eec0d560624cebec
+        sha256: 76c533ceece3c07fc463f73970fb40a13bc3c9bceb9d2671eec0d560624cebec
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/schemathesis/blobs/sha256:8cfb42165780b683ca776cf50626bddbda2be179a08fa44755023838c6c1aa29
+        sha256: 8cfb42165780b683ca776cf50626bddbda2be179a08fa44755023838c6c1aa29
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/schemathesis/blobs/sha256:d23b60566cc0655a7d667ab96e3519ef598c837e2cd2d4ff0225e435eb38da40
+        sha256: d23b60566cc0655a7d667ab96e3519ef598c837e2cd2d4ff0225e435eb38da40
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/schemathesis/blobs/sha256:15f6606b45c8d55fac125f0e1efb2a0364db1051d2022c5caabacb7f593cc385
+        sha256: 15f6606b45c8d55fac125f0e1efb2a0364db1051d2022c5caabacb7f593cc385
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/ab/a2/cec4166416ff2c08ccf7be71bec708d0b8adacf25f40232992157ff73960/schemathesis-4.15.2.tar.gz
+    sha256: 66f264f270e2222ffc7ab11c23a5dd2277c93c5a1a329d3d82a0b6ddc05263ef
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

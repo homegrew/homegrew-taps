@@ -1,31 +1,56 @@
 name: qsoas
-version: 3.3
+version: "3.3"
 description: Versatile software for data analysis
 homepage: https://bip.cnrs.fr/groups/bip06/software/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qsoas/blobs/sha256:7b91bd04e345e0cc279acb813e24a5b55cae526ca6df690095b800407e09e1cb
-    sha256: 7b91bd04e345e0cc279acb813e24a5b55cae526ca6df690095b800407e09e1cb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qsoas/blobs/sha256:8bd41179d0dcd078ac4731c5edc181352cdd6f639d49ee082b0cbab9a9c00f88
-    sha256: 8bd41179d0dcd078ac4731c5edc181352cdd6f639d49ee082b0cbab9a9c00f88
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qsoas/blobs/sha256:3d99b2b0c412e82eb58102d3722c32b5629773334ac81996ee6d4e58f0dffef3
-    sha256: 3d99b2b0c412e82eb58102d3722c32b5629773334ac81996ee6d4e58f0dffef3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qsoas/blobs/sha256:f724e65ae8751e271e8e9c45737d33bc7fca1b9992e904fdf53dd83afb0bd87c
-    sha256: f724e65ae8751e271e8e9c45737d33bc7fca1b9992e904fdf53dd83afb0bd87c
-source:
-  url: https://bip.cnrs.fr/wp-content/uploads/qsoas/qsoas-3.3.tar.gz
-  sha256: c5a701dfed23c682892479b43b92aac79a7db5ceb9ed6b6cd0a41129d2690492
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gsl
-  - mruby
-  - qt@5
+    - gsl
+    - mruby
+    - qt@5
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qsoas/blobs/sha256:8bd41179d0dcd078ac4731c5edc181352cdd6f639d49ee082b0cbab9a9c00f88
+        sha256: 8bd41179d0dcd078ac4731c5edc181352cdd6f639d49ee082b0cbab9a9c00f88
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qsoas/blobs/sha256:7b91bd04e345e0cc279acb813e24a5b55cae526ca6df690095b800407e09e1cb
+        sha256: 7b91bd04e345e0cc279acb813e24a5b55cae526ca6df690095b800407e09e1cb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qsoas/blobs/sha256:3d99b2b0c412e82eb58102d3722c32b5629773334ac81996ee6d4e58f0dffef3
+        sha256: 3d99b2b0c412e82eb58102d3722c32b5629773334ac81996ee6d4e58f0dffef3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qsoas/blobs/sha256:f724e65ae8751e271e8e9c45737d33bc7fca1b9992e904fdf53dd83afb0bd87c
+        sha256: f724e65ae8751e271e8e9c45737d33bc7fca1b9992e904fdf53dd83afb0bd87c
+        sha512: ""
+        signature: ""
+source:
+    url: https://bip.cnrs.fr/wp-content/uploads/qsoas/qsoas-3.3.tar.gz
+    sha256: c5a701dfed23c682892479b43b92aac79a7db5ceb9ed6b6cd0a41129d2690492
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
+    - bison
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,26 +3,52 @@ version: 2.16.10
 description: OCI-based ASDF system distribution and management tool for Common Lisp
 homepage: https://github.com/ocicl/ocicl
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocicl/blobs/sha256:ff251474eea55d182d3a45382fb82775a85dffcf7a2a2bbda87ac8ce373ae909
-    sha256: ff251474eea55d182d3a45382fb82775a85dffcf7a2a2bbda87ac8ce373ae909
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocicl/blobs/sha256:e1d9b1b281bbc4f2493fd0acba32da7c051039d03e42434755d94e6da55df659
-    sha256: e1d9b1b281bbc4f2493fd0acba32da7c051039d03e42434755d94e6da55df659
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocicl/blobs/sha256:8990b2031b4669d628f27315ca748755148cf2a7bbd1ed308900849993002c28
-    sha256: 8990b2031b4669d628f27315ca748755148cf2a7bbd1ed308900849993002c28
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocicl/blobs/sha256:b045150d1f763086c98fc1f2d76a4034af7b225992e0cb35951b7dafd56ed877
-    sha256: b045150d1f763086c98fc1f2d76a4034af7b225992e0cb35951b7dafd56ed877
-source:
-  url: https://github.com/ocicl/ocicl/archive/refs/tags/v2.16.10.tar.gz
-  sha256: 944ee4d885fd016199496e743dcb819333c06f34351e88ad1e2bb9bd12bdd9b7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sbcl
-  - zstd
+    - sbcl
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocicl/blobs/sha256:e1d9b1b281bbc4f2493fd0acba32da7c051039d03e42434755d94e6da55df659
+        sha256: e1d9b1b281bbc4f2493fd0acba32da7c051039d03e42434755d94e6da55df659
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocicl/blobs/sha256:ff251474eea55d182d3a45382fb82775a85dffcf7a2a2bbda87ac8ce373ae909
+        sha256: ff251474eea55d182d3a45382fb82775a85dffcf7a2a2bbda87ac8ce373ae909
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocicl/blobs/sha256:8990b2031b4669d628f27315ca748755148cf2a7bbd1ed308900849993002c28
+        sha256: 8990b2031b4669d628f27315ca748755148cf2a7bbd1ed308900849993002c28
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocicl/blobs/sha256:b045150d1f763086c98fc1f2d76a4034af7b225992e0cb35951b7dafd56ed877
+        sha256: b045150d1f763086c98fc1f2d76a4034af7b225992e0cb35951b7dafd56ed877
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ocicl/ocicl/archive/refs/tags/v2.16.10.tar.gz
+    sha256: 944ee4d885fd016199496e743dcb819333c06f34351e88ad1e2bb9bd12bdd9b7
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

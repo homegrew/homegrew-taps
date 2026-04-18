@@ -3,26 +3,52 @@ version: 9.3.3
 description: Lightweight Shipper for Network Data
 homepage: https://www.elastic.co/products/beats/packetbeat
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:9ce4de9d74c7bc9f05d91aaba43f253077081b1156d7d00bef750ca77e14dfa8
-    sha256: 9ce4de9d74c7bc9f05d91aaba43f253077081b1156d7d00bef750ca77e14dfa8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:9f8f6da50ceaf29a88e2240bb5596a44553c11a8503231a27a6588844fc0ce36
-    sha256: 9f8f6da50ceaf29a88e2240bb5596a44553c11a8503231a27a6588844fc0ce36
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:84cff35396a1c4c1c00d8db3fa655e4a7b2df8286471fdac5b8f4c4e2a266cf9
-    sha256: 84cff35396a1c4c1c00d8db3fa655e4a7b2df8286471fdac5b8f4c4e2a266cf9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:14622c40a2e4e452cbe081925097e46e899f0c6b2641e2b31478d9c15ae54b86
-    sha256: 14622c40a2e4e452cbe081925097e46e899f0c6b2641e2b31478d9c15ae54b86
-source:
-  url: https://github.com/elastic/beats.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:9f8f6da50ceaf29a88e2240bb5596a44553c11a8503231a27a6588844fc0ce36
+        sha256: 9f8f6da50ceaf29a88e2240bb5596a44553c11a8503231a27a6588844fc0ce36
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:9ce4de9d74c7bc9f05d91aaba43f253077081b1156d7d00bef750ca77e14dfa8
+        sha256: 9ce4de9d74c7bc9f05d91aaba43f253077081b1156d7d00bef750ca77e14dfa8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:84cff35396a1c4c1c00d8db3fa655e4a7b2df8286471fdac5b8f4c4e2a266cf9
+        sha256: 84cff35396a1c4c1c00d8db3fa655e4a7b2df8286471fdac5b8f4c4e2a266cf9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:14622c40a2e4e452cbe081925097e46e899f0c6b2641e2b31478d9c15ae54b86
+        sha256: 14622c40a2e4e452cbe081925097e46e899f0c6b2641e2b31478d9c15ae54b86
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/elastic/beats.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - mage
+    - go
+    - mage
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

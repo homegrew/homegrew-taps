@@ -3,27 +3,52 @@ version: 0.2.10
 description: Cross-Platform HW accelerated CRC32c and CRC32 with fallback
 homepage: https://github.com/awslabs/aws-checksums
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aws-checksums/blobs/sha256:6d445735de28c8a10112acf0aef35604333dd1e116178049cb14fac250cc2a8e
-    sha256: 6d445735de28c8a10112acf0aef35604333dd1e116178049cb14fac250cc2a8e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aws-checksums/blobs/sha256:a61857ac1b1680a507dc293eafaec707cb2d9f3b39f4aa8526cf802f22d53b28
-    sha256: a61857ac1b1680a507dc293eafaec707cb2d9f3b39f4aa8526cf802f22d53b28
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aws-checksums/blobs/sha256:36f9b3e8cbcd098bf0ef110583df824360ad86e71dd9265904203872f59c763f
-    sha256: 36f9b3e8cbcd098bf0ef110583df824360ad86e71dd9265904203872f59c763f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aws-checksums/blobs/sha256:c915444ca9fc28a35b3b45d8af248c85af9e23b55d0f40e3dead889bd7f500e5
-    sha256: c915444ca9fc28a35b3b45d8af248c85af9e23b55d0f40e3dead889bd7f500e5
-source:
-  url: https://github.com/awslabs/aws-checksums/archive/refs/tags/v0.2.10.tar.gz
-  sha256: cb6509f75e42ee25c372a6d379e8582ce5179e5335183842e808f7d8abb0c314
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - aws-c-common
+    - aws-c-common
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aws-checksums/blobs/sha256:a61857ac1b1680a507dc293eafaec707cb2d9f3b39f4aa8526cf802f22d53b28
+        sha256: a61857ac1b1680a507dc293eafaec707cb2d9f3b39f4aa8526cf802f22d53b28
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aws-checksums/blobs/sha256:6d445735de28c8a10112acf0aef35604333dd1e116178049cb14fac250cc2a8e
+        sha256: 6d445735de28c8a10112acf0aef35604333dd1e116178049cb14fac250cc2a8e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aws-checksums/blobs/sha256:36f9b3e8cbcd098bf0ef110583df824360ad86e71dd9265904203872f59c763f
+        sha256: 36f9b3e8cbcd098bf0ef110583df824360ad86e71dd9265904203872f59c763f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aws-checksums/blobs/sha256:c915444ca9fc28a35b3b45d8af248c85af9e23b55d0f40e3dead889bd7f500e5
+        sha256: c915444ca9fc28a35b3b45d8af248c85af9e23b55d0f40e3dead889bd7f500e5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/awslabs/aws-checksums/archive/refs/tags/v0.2.10.tar.gz
+    sha256: cb6509f75e42ee25c372a6d379e8582ce5179e5335183842e808f7d8abb0c314
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

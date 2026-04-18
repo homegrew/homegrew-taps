@@ -3,33 +3,57 @@ version: 0.19.2
 description: Syntax-highlighting pager for git and diff output
 homepage: https://github.com/dandavison/delta
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:c35e06abe0161e57beb2d763cb43ce0beccf024613dbcfb92b31a39093b3397d
-    sha256: c35e06abe0161e57beb2d763cb43ce0beccf024613dbcfb92b31a39093b3397d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:f0aba2898cd9d587f33b330905c621c75e9230ba27f0ed249d0860fd3f641e46
-    sha256: f0aba2898cd9d587f33b330905c621c75e9230ba27f0ed249d0860fd3f641e46
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:4ef78e0c387f35781bb09dcbbadee5d2d10c7b21f00e6107962d1843fac73a5a
-    sha256: 4ef78e0c387f35781bb09dcbbadee5d2d10c7b21f00e6107962d1843fac73a5a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:622e704b1cfc9f303fabce8859215b32ce6871e30efbd7da80084709afa0d48c
-    sha256: 622e704b1cfc9f303fabce8859215b32ce6871e30efbd7da80084709afa0d48c
-source:
-  url: https://github.com/dandavison/delta/archive/refs/tags/0.19.2.tar.gz
-  sha256: f59b86f8c8dda4d76a3ba34b8553777a20c3b461646917d8e480fac6531bba9f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
-  - oniguruma
+    - libgit2
+    - oniguruma
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:f0aba2898cd9d587f33b330905c621c75e9230ba27f0ed249d0860fd3f641e46
+        sha256: f0aba2898cd9d587f33b330905c621c75e9230ba27f0ed249d0860fd3f641e46
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:c35e06abe0161e57beb2d763cb43ce0beccf024613dbcfb92b31a39093b3397d
+        sha256: c35e06abe0161e57beb2d763cb43ce0beccf024613dbcfb92b31a39093b3397d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:4ef78e0c387f35781bb09dcbbadee5d2d10c7b21f00e6107962d1843fac73a5a
+        sha256: 4ef78e0c387f35781bb09dcbbadee5d2d10c7b21f00e6107962d1843fac73a5a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:622e704b1cfc9f303fabce8859215b32ce6871e30efbd7da80084709afa0d48c
+        sha256: 622e704b1cfc9f303fabce8859215b32ce6871e30efbd7da80084709afa0d48c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dandavison/delta/archive/refs/tags/0.19.2.tar.gz
+    sha256: f59b86f8c8dda4d76a3ba34b8553777a20c3b461646917d8e480fac6531bba9f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - libgit2
-  - oniguruma
-  - zlib-ng-compat
+    - libgit2
+    - oniguruma
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

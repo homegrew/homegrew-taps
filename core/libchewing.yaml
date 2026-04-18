@@ -3,28 +3,54 @@ version: 0.12.0
 description: Intelligent phonetic input method library
 homepage: https://chewing.im/
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libchewing/blobs/sha256:132a00dc2d430eee97da513f027bbf7538c741a5a906213f24eae75523325dcd
-    sha256: 132a00dc2d430eee97da513f027bbf7538c741a5a906213f24eae75523325dcd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libchewing/blobs/sha256:872ccd2c82e688df4cf89e5b6a59556941131caa45f0bcb3c865847c07994115
-    sha256: 872ccd2c82e688df4cf89e5b6a59556941131caa45f0bcb3c865847c07994115
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libchewing/blobs/sha256:dc33705591f2168afb5d547d1d3eca3657a1ca57d406e0c7e5fb3746b7cb0e8e
-    sha256: dc33705591f2168afb5d547d1d3eca3657a1ca57d406e0c7e5fb3746b7cb0e8e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libchewing/blobs/sha256:f3d54639766d9098ea291fdf8f35772c3c69155c64031155e4bf3a643646702d
-    sha256: f3d54639766d9098ea291fdf8f35772c3c69155c64031155e4bf3a643646702d
-source:
-  url: https://github.com/chewing/libchewing/releases/download/v0.12.0/libchewing-0.12.0.tar.zst
-  sha256: 6a7fae4aaa6e6ce2bd9f70f0016c553585ed5aca1e086476749a03ac5c3f4cb0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libchewing/blobs/sha256:872ccd2c82e688df4cf89e5b6a59556941131caa45f0bcb3c865847c07994115
+        sha256: 872ccd2c82e688df4cf89e5b6a59556941131caa45f0bcb3c865847c07994115
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libchewing/blobs/sha256:132a00dc2d430eee97da513f027bbf7538c741a5a906213f24eae75523325dcd
+        sha256: 132a00dc2d430eee97da513f027bbf7538c741a5a906213f24eae75523325dcd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libchewing/blobs/sha256:dc33705591f2168afb5d547d1d3eca3657a1ca57d406e0c7e5fb3746b7cb0e8e
+        sha256: dc33705591f2168afb5d547d1d3eca3657a1ca57d406e0c7e5fb3746b7cb0e8e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libchewing/blobs/sha256:f3d54639766d9098ea291fdf8f35772c3c69155c64031155e4bf3a643646702d
+        sha256: f3d54639766d9098ea291fdf8f35772c3c69155c64031155e4bf3a643646702d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/chewing/libchewing/releases/download/v0.12.0/libchewing-0.12.0.tar.zst
+    sha256: 6a7fae4aaa6e6ce2bd9f70f0016c553585ed5aca1e086476749a03ac5c3f4cb0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - corrosion
-  - rust
-  - texinfo
+    - cmake
+    - corrosion
+    - rust
+    - texinfo
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

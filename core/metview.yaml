@@ -3,65 +3,89 @@ version: 5.26.2
 description: Meteorological workstation software
 homepage: https://metview.readthedocs.io/en/latest/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/metview/blobs/sha256:8ea0aac6d5efa12195864cd47b2a6c3f2947fb67c08dcd20484776aabc6ee1c8
-    sha256: 8ea0aac6d5efa12195864cd47b2a6c3f2947fb67c08dcd20484776aabc6ee1c8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/metview/blobs/sha256:9967ae04346f24e99ef21b3f8cb173b2bd60adc0282f0f148bff79b7917d6923
-    sha256: 9967ae04346f24e99ef21b3f8cb173b2bd60adc0282f0f148bff79b7917d6923
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/metview/blobs/sha256:81dbd92e9ed28d630b33df5e19c966dde006ce193601edb94713d1a8c7d4636c
-    sha256: 81dbd92e9ed28d630b33df5e19c966dde006ce193601edb94713d1a8c7d4636c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/metview/blobs/sha256:7924342f589a4aa78003c16731d9a13dfdf2ce19cc2c666f214083a263c667fe
-    sha256: 7924342f589a4aa78003c16731d9a13dfdf2ce19cc2c666f214083a263c667fe
-source:
-  url: https://confluence.ecmwf.int/download/attachments/3964985/Metview-5.26.2-Source.tar.gz
-  sha256: 6245b34909ac697f941f92ee1293f14f96c31c3919f41db5dba706de6c9d43e3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - eccodes
-  - eigen
-  - fftw
-  - gdbm
-  - glib
-  - libaec
-  - lz4
-  - magics
-  - netcdf
-  - netcdf-cxx
-  - pango
-  - qt5compat
-  - qtbase
-  - qtsvg
-  - snappy
-  - gcc
-  - gettext
-  - harfbuzz
+    - cairo
+    - eccodes
+    - eigen
+    - fftw
+    - gdbm
+    - glib
+    - libaec
+    - lz4
+    - magics
+    - netcdf
+    - netcdf-cxx
+    - pango
+    - qt5compat
+    - qtbase
+    - qtsvg
+    - snappy
+    - gcc
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/metview/blobs/sha256:9967ae04346f24e99ef21b3f8cb173b2bd60adc0282f0f148bff79b7917d6923
+        sha256: 9967ae04346f24e99ef21b3f8cb173b2bd60adc0282f0f148bff79b7917d6923
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/metview/blobs/sha256:8ea0aac6d5efa12195864cd47b2a6c3f2947fb67c08dcd20484776aabc6ee1c8
+        sha256: 8ea0aac6d5efa12195864cd47b2a6c3f2947fb67c08dcd20484776aabc6ee1c8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/metview/blobs/sha256:81dbd92e9ed28d630b33df5e19c966dde006ce193601edb94713d1a8c7d4636c
+        sha256: 81dbd92e9ed28d630b33df5e19c966dde006ce193601edb94713d1a8c7d4636c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/metview/blobs/sha256:7924342f589a4aa78003c16731d9a13dfdf2ce19cc2c666f214083a263c667fe
+        sha256: 7924342f589a4aa78003c16731d9a13dfdf2ce19cc2c666f214083a263c667fe
+        sha512: ""
+        signature: ""
+source:
+    url: https://confluence.ecmwf.int/download/attachments/3964985/Metview-5.26.2-Source.tar.gz
+    sha256: 6245b34909ac697f941f92ee1293f14f96c31c3919f41db5dba706de6c9d43e3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - eccodes
-  - eigen
-  - fftw
-  - gdbm
-  - glib
-  - libaec
-  - libtirpc
-  - lz4
-  - magics
-  - netcdf
-  - netcdf-cxx
-  - openblas
-  - pango
-  - qt5compat
-  - qtbase
-  - qtsvg
-  - snappy
+    - cairo
+    - eccodes
+    - eigen
+    - fftw
+    - gdbm
+    - glib
+    - libaec
+    - libtirpc
+    - lz4
+    - magics
+    - netcdf
+    - netcdf-cxx
+    - openblas
+    - pango
+    - qt5compat
+    - qtbase
+    - qtsvg
+    - snappy
+build:
+    configure: []
+    install: []
+service: null

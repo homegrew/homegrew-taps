@@ -3,23 +3,44 @@ version: 2.6.1
 description: Encrypted overlay filesystem written in Go
 homepage: https://nuetzlich.net/gocryptfs/
 license: MIT
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gocryptfs/blobs/sha256:689397d13f30daf5630dcb4ee457a6a2ca1d77100a23d9dd4a40c1f31840a2b0
-    sha256: 689397d13f30daf5630dcb4ee457a6a2ca1d77100a23d9dd4a40c1f31840a2b0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gocryptfs/blobs/sha256:0dcfa87911d05b4bcc751d9a15b6aefd1b2876499c7f1f9eed58a9af84b891dd
-    sha256: 0dcfa87911d05b4bcc751d9a15b6aefd1b2876499c7f1f9eed58a9af84b891dd
-source:
-  url: https://github.com/rfjakob/gocryptfs/releases/download/v2.6.1/gocryptfs_v2.6.1_src-deps.tar.gz
-  sha256: 9a966c1340a1a1d92073091643687b1205c46b57017c5da2bf7e97e3f5729a5a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libfuse
-  - openssl@3
+    - libfuse
+    - openssl@3
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gocryptfs/blobs/sha256:689397d13f30daf5630dcb4ee457a6a2ca1d77100a23d9dd4a40c1f31840a2b0
+        sha256: 689397d13f30daf5630dcb4ee457a6a2ca1d77100a23d9dd4a40c1f31840a2b0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gocryptfs/blobs/sha256:0dcfa87911d05b4bcc751d9a15b6aefd1b2876499c7f1f9eed58a9af84b891dd
+        sha256: 0dcfa87911d05b4bcc751d9a15b6aefd1b2876499c7f1f9eed58a9af84b891dd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rfjakob/gocryptfs/releases/download/v2.6.1/gocryptfs_v2.6.1_src-deps.tar.gz
+    sha256: 9a966c1340a1a1d92073091643687b1205c46b57017c5da2bf7e97e3f5729a5a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - pkgconf
+    - go
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

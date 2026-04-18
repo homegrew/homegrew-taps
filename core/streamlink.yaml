@@ -3,29 +3,54 @@ version: 8.3.0
 description: CLI for extracting streams from various websites to a video player
 homepage: https://streamlink.github.io/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/streamlink/blobs/sha256:471cf9d1e3d16b2f16bf014d3705c29d602e8361da558d5c1d22b4119f3d1ed4
-    sha256: 471cf9d1e3d16b2f16bf014d3705c29d602e8361da558d5c1d22b4119f3d1ed4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/streamlink/blobs/sha256:ffae6c5da6a5ea011fe5a8750896150153fbffc327e6fd85bd7ce5916ed7ffe6
-    sha256: ffae6c5da6a5ea011fe5a8750896150153fbffc327e6fd85bd7ce5916ed7ffe6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/streamlink/blobs/sha256:8addcb5c30afda861d4ef34e9355c8b172fe92d6c813dadd9aeb224dc18bebc9
-    sha256: 8addcb5c30afda861d4ef34e9355c8b172fe92d6c813dadd9aeb224dc18bebc9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/streamlink/blobs/sha256:2d23a89acc386f7f543b30d9adcab115eb3d05664d905436b55c2dfd32aace17
-    sha256: 2d23a89acc386f7f543b30d9adcab115eb3d05664d905436b55c2dfd32aace17
-source:
-  url: https://files.pythonhosted.org/packages/84/f3/d47914b26c7401c3695c3c9f81e28cd289cc8996feb22e6682f82b5d91b1/streamlink-8.3.0.tar.gz
-  sha256: 6cffe55b42df3b3c2e6dd1c0cc41fc01477afbc496ba86740ffa5eec5c333d34
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libxml2
-  - python@3.14
+    - certifi
+    - libxml2
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/streamlink/blobs/sha256:ffae6c5da6a5ea011fe5a8750896150153fbffc327e6fd85bd7ce5916ed7ffe6
+        sha256: ffae6c5da6a5ea011fe5a8750896150153fbffc327e6fd85bd7ce5916ed7ffe6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/streamlink/blobs/sha256:471cf9d1e3d16b2f16bf014d3705c29d602e8361da558d5c1d22b4119f3d1ed4
+        sha256: 471cf9d1e3d16b2f16bf014d3705c29d602e8361da558d5c1d22b4119f3d1ed4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/streamlink/blobs/sha256:8addcb5c30afda861d4ef34e9355c8b172fe92d6c813dadd9aeb224dc18bebc9
+        sha256: 8addcb5c30afda861d4ef34e9355c8b172fe92d6c813dadd9aeb224dc18bebc9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/streamlink/blobs/sha256:2d23a89acc386f7f543b30d9adcab115eb3d05664d905436b55c2dfd32aace17
+        sha256: 2d23a89acc386f7f543b30d9adcab115eb3d05664d905436b55c2dfd32aace17
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/84/f3/d47914b26c7401c3695c3c9f81e28cd289cc8996feb22e6682f82b5d91b1/streamlink-8.3.0.tar.gz
+    sha256: 6cffe55b42df3b3c2e6dd1c0cc41fc01477afbc496ba86740ffa5eec5c333d34
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

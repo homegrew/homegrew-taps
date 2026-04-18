@@ -3,33 +3,58 @@ version: 2.17.1
 description: Taxonomic sequence classification system
 homepage: https://github.com/DerrickWood/kraken2
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kraken2/blobs/sha256:e794c89e70f0060b0e02caf5c439b3f8a2300a55cfd9f923aa3e7616d68b9e8b
-    sha256: e794c89e70f0060b0e02caf5c439b3f8a2300a55cfd9f923aa3e7616d68b9e8b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kraken2/blobs/sha256:8b216c4a508c451475740893d10f241c24f7ca5c6b23a78efb753d2f72ac05e0
-    sha256: 8b216c4a508c451475740893d10f241c24f7ca5c6b23a78efb753d2f72ac05e0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kraken2/blobs/sha256:c369951fd44567712e4dacb34d20b6a4ad3b729669ddecea0dca256ca74d4cc8
-    sha256: c369951fd44567712e4dacb34d20b6a4ad3b729669ddecea0dca256ca74d4cc8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kraken2/blobs/sha256:a57001fc63b43ce00a3d8c4f02fd7b6d34123752e6684fdfbac73699660497a3
-    sha256: a57001fc63b43ce00a3d8c4f02fd7b6d34123752e6684fdfbac73699660497a3
-source:
-  url: https://github.com/DerrickWood/kraken2/archive/refs/tags/v2.17.1.tar.gz
-  sha256: 4dc64ead045b5ae9180731c260046aa37b6642244be085a9ba9b15db78ab442d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gperftools
-  - python@3.14
-  - wget
-  - libomp
+    - gperftools
+    - python@3.14
+    - wget
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kraken2/blobs/sha256:8b216c4a508c451475740893d10f241c24f7ca5c6b23a78efb753d2f72ac05e0
+        sha256: 8b216c4a508c451475740893d10f241c24f7ca5c6b23a78efb753d2f72ac05e0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kraken2/blobs/sha256:e794c89e70f0060b0e02caf5c439b3f8a2300a55cfd9f923aa3e7616d68b9e8b
+        sha256: e794c89e70f0060b0e02caf5c439b3f8a2300a55cfd9f923aa3e7616d68b9e8b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kraken2/blobs/sha256:c369951fd44567712e4dacb34d20b6a4ad3b729669ddecea0dca256ca74d4cc8
+        sha256: c369951fd44567712e4dacb34d20b6a4ad3b729669ddecea0dca256ca74d4cc8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kraken2/blobs/sha256:a57001fc63b43ce00a3d8c4f02fd7b6d34123752e6684fdfbac73699660497a3
+        sha256: a57001fc63b43ce00a3d8c4f02fd7b6d34123752e6684fdfbac73699660497a3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/DerrickWood/kraken2/archive/refs/tags/v2.17.1.tar.gz
+    sha256: 4dc64ead045b5ae9180731c260046aa37b6642244be085a9ba9b15db78ab442d
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - gperftools
-  - python@3.14
-  - wget
-  - zlib-ng-compat
+    - gperftools
+    - python@3.14
+    - wget
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

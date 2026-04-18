@@ -1,32 +1,57 @@
 name: pianobar
 version: 2024.12.21
-description: "Command-line player for https://pandora.com"
+description: Command-line player for https://pandora.com
 homepage: https://6xq.net/pianobar/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:384c9d511862df579e9edd7e91367408b01841ec5926c239c04680e4f3dad505
-    sha256: 384c9d511862df579e9edd7e91367408b01841ec5926c239c04680e4f3dad505
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:e9fce5e9ddfe9a904f139db4ebcd03b78700bbeafbc9abe4e7c40a6c7290039a
-    sha256: e9fce5e9ddfe9a904f139db4ebcd03b78700bbeafbc9abe4e7c40a6c7290039a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:6cba151913c6d32be73748df86c72b88eb28769c718d6d7c8f3378aa175145d9
-    sha256: 6cba151913c6d32be73748df86c72b88eb28769c718d6d7c8f3378aa175145d9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:3e44848c2f000bfe6e4974e4bfdd1384fe4acbe2e02e260897cc840980be51c5
-    sha256: 3e44848c2f000bfe6e4974e4bfdd1384fe4acbe2e02e260897cc840980be51c5
-source:
-  url: https://6xq.net/pianobar/pianobar-2024.12.21.tar.bz2
-  sha256: 16f4dd2d64da38690946a9670e59bc72a789cf6a323f792e159bb3a39cf4a7f5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - json-c
-  - libao
-  - libgcrypt
+    - ffmpeg
+    - json-c
+    - libao
+    - libgcrypt
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:e9fce5e9ddfe9a904f139db4ebcd03b78700bbeafbc9abe4e7c40a6c7290039a
+        sha256: e9fce5e9ddfe9a904f139db4ebcd03b78700bbeafbc9abe4e7c40a6c7290039a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:384c9d511862df579e9edd7e91367408b01841ec5926c239c04680e4f3dad505
+        sha256: 384c9d511862df579e9edd7e91367408b01841ec5926c239c04680e4f3dad505
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:6cba151913c6d32be73748df86c72b88eb28769c718d6d7c8f3378aa175145d9
+        sha256: 6cba151913c6d32be73748df86c72b88eb28769c718d6d7c8f3378aa175145d9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pianobar/blobs/sha256:3e44848c2f000bfe6e4974e4bfdd1384fe4acbe2e02e260897cc840980be51c5
+        sha256: 3e44848c2f000bfe6e4974e4bfdd1384fe4acbe2e02e260897cc840980be51c5
+        sha512: ""
+        signature: ""
+source:
+    url: https://6xq.net/pianobar/pianobar-2024.12.21.tar.bz2
+    sha256: 16f4dd2d64da38690946a9670e59bc72a789cf6a323f792e159bb3a39cf4a7f5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

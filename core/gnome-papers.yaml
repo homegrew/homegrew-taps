@@ -1,72 +1,96 @@
 name: gnome-papers
-version: 50.1
+version: "50.1"
 description: Document viewer for PDF and other document formats aimed at the GNOME desktop
 homepage: https://apps.gnome.org/Papers/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:3659f3380dacfc1a46c336400bff4bce5e7cabcc20988de7e941b9362931a627
-    sha256: 3659f3380dacfc1a46c336400bff4bce5e7cabcc20988de7e941b9362931a627
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:3317511c0683e5e89b10cac715429ca58195d6dac3898379efee8539a15edfe0
-    sha256: 3317511c0683e5e89b10cac715429ca58195d6dac3898379efee8539a15edfe0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:ab99e4c548ca9d18bb1c5225bf243ba1c0dfd605529b738c7d500d6602dd9502
-    sha256: ab99e4c548ca9d18bb1c5225bf243ba1c0dfd605529b738c7d500d6602dd9502
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:f70e033eee06cbff7e082076b7dff1ab344a3378531eb81cd3264b4a0daa68ee
-    sha256: f70e033eee06cbff7e082076b7dff1ab344a3378531eb81cd3264b4a0daa68ee
-source:
-  url: https://download.gnome.org/sources/papers/50/papers-50.1.tar.xz
-  sha256: f79ce4b950cf5111dc48e8b7dc1728b1651c80f32f0e24dce55371993ccab270
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - adwaita-icon-theme
-  - cairo
-  - djvulibre
-  - exempi
-  - gdk-pixbuf
-  - glib
-  - graphene
-  - gtk4
-  - gtksourceview5
-  - hicolor-icon-theme
-  - libadwaita
-  - libarchive
-  - libspelling
-  - libtiff
-  - pango
-  - poppler
-  - gettext
-  - harfbuzz
+    - adwaita-icon-theme
+    - cairo
+    - djvulibre
+    - exempi
+    - gdk-pixbuf
+    - glib
+    - graphene
+    - gtk4
+    - gtksourceview5
+    - hicolor-icon-theme
+    - libadwaita
+    - libarchive
+    - libspelling
+    - libtiff
+    - pango
+    - poppler
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:3317511c0683e5e89b10cac715429ca58195d6dac3898379efee8539a15edfe0
+        sha256: 3317511c0683e5e89b10cac715429ca58195d6dac3898379efee8539a15edfe0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:3659f3380dacfc1a46c336400bff4bce5e7cabcc20988de7e941b9362931a627
+        sha256: 3659f3380dacfc1a46c336400bff4bce5e7cabcc20988de7e941b9362931a627
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:ab99e4c548ca9d18bb1c5225bf243ba1c0dfd605529b738c7d500d6602dd9502
+        sha256: ab99e4c548ca9d18bb1c5225bf243ba1c0dfd605529b738c7d500d6602dd9502
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnome-papers/blobs/sha256:f70e033eee06cbff7e082076b7dff1ab344a3378531eb81cd3264b4a0daa68ee
+        sha256: f70e033eee06cbff7e082076b7dff1ab344a3378531eb81cd3264b4a0daa68ee
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/papers/50/papers-50.1.tar.xz
+    sha256: f79ce4b950cf5111dc48e8b7dc1728b1651c80f32f0e24dce55371993ccab270
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - blueprint-compiler
-  - desktop-file-utils
-  - gettext
-  - gobject-introspection
-  - itstool
-  - meson
-  - ninja
-  - pkgconf
-  - python@3.14
-  - rust
+    - blueprint-compiler
+    - desktop-file-utils
+    - gettext
+    - gobject-introspection
+    - itstool
+    - meson
+    - ninja
+    - pkgconf
+    - python@3.14
+    - rust
 linux_dependencies:
-  - adwaita-icon-theme
-  - cairo
-  - djvulibre
-  - exempi
-  - gdk-pixbuf
-  - glib
-  - graphene
-  - gtk4
-  - gtksourceview5
-  - hicolor-icon-theme
-  - libadwaita
-  - libarchive
-  - libspelling
-  - libtiff
-  - pango
-  - poppler
+    - adwaita-icon-theme
+    - cairo
+    - djvulibre
+    - exempi
+    - gdk-pixbuf
+    - glib
+    - graphene
+    - gtk4
+    - gtksourceview5
+    - hicolor-icon-theme
+    - libadwaita
+    - libarchive
+    - libspelling
+    - libtiff
+    - pango
+    - poppler
+build:
+    configure: []
+    install: []
+service: null

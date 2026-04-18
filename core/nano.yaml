@@ -1,33 +1,57 @@
 name: nano
-version: 9.0
+version: "9.0"
 description: Free (GNU) replacement for the Pico text editor
 homepage: https://www.nano-editor.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nano/blobs/sha256:0a983eefbaf98e0b9d1fe9fec31c8e573777a080b86521c2d121a9a0e5831890
-    sha256: 0a983eefbaf98e0b9d1fe9fec31c8e573777a080b86521c2d121a9a0e5831890
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nano/blobs/sha256:f85eabd5621465c91b3e370005d3363ab5738b174b58ebb5123fda6ddc293ab8
-    sha256: f85eabd5621465c91b3e370005d3363ab5738b174b58ebb5123fda6ddc293ab8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nano/blobs/sha256:a3f04be362cea9da1cecebc05035784a8c68cd9224951bdfb6da5953bf15b102
-    sha256: a3f04be362cea9da1cecebc05035784a8c68cd9224951bdfb6da5953bf15b102
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nano/blobs/sha256:2302672047e0fb5c5ab0ff0cdde437ffff60f030a781e848915fce42ebc16638
-    sha256: 2302672047e0fb5c5ab0ff0cdde437ffff60f030a781e848915fce42ebc16638
-source:
-  url: https://www.nano-editor.org/dist/v9/nano-9.0.tar.xz
-  sha256: 9f384374b496110a25b73ad5a5febb384783c6e3188b37063f677ac908013fde
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ncurses
-  - gettext
+    - ncurses
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nano/blobs/sha256:f85eabd5621465c91b3e370005d3363ab5738b174b58ebb5123fda6ddc293ab8
+        sha256: f85eabd5621465c91b3e370005d3363ab5738b174b58ebb5123fda6ddc293ab8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nano/blobs/sha256:0a983eefbaf98e0b9d1fe9fec31c8e573777a080b86521c2d121a9a0e5831890
+        sha256: 0a983eefbaf98e0b9d1fe9fec31c8e573777a080b86521c2d121a9a0e5831890
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nano/blobs/sha256:a3f04be362cea9da1cecebc05035784a8c68cd9224951bdfb6da5953bf15b102
+        sha256: a3f04be362cea9da1cecebc05035784a8c68cd9224951bdfb6da5953bf15b102
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nano/blobs/sha256:2302672047e0fb5c5ab0ff0cdde437ffff60f030a781e848915fce42ebc16638
+        sha256: 2302672047e0fb5c5ab0ff0cdde437ffff60f030a781e848915fce42ebc16638
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.nano-editor.org/dist/v9/nano-9.0.tar.xz
+    sha256: 9f384374b496110a25b73ad5a5febb384783c6e3188b37063f677ac908013fde
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - libmagic
-  - ncurses
+    - libmagic
+    - ncurses
+build:
+    configure: []
+    install: []
+service: null

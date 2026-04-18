@@ -3,25 +3,51 @@ version: 1.40.6
 description: Command-line tool for Stripe
 homepage: https://docs.stripe.com/stripe-cli
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stripe-cli/blobs/sha256:6565f1bfbfc4aa185464288febcbfc562a4b8f4ab4465757b23b56db30a4a45b
-    sha256: 6565f1bfbfc4aa185464288febcbfc562a4b8f4ab4465757b23b56db30a4a45b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stripe-cli/blobs/sha256:ee3a0e442a451146a8c82e6a27694db044b2ce48117bae9ed58513ad352b62ce
-    sha256: ee3a0e442a451146a8c82e6a27694db044b2ce48117bae9ed58513ad352b62ce
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stripe-cli/blobs/sha256:2c12fe33718f0d86fd84827a71af13df7d1a6927eb767b0c117b22327ba06446
-    sha256: 2c12fe33718f0d86fd84827a71af13df7d1a6927eb767b0c117b22327ba06446
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stripe-cli/blobs/sha256:e95333d062e6141e05150fd5bafbb5d20870b3227c2acc35cf8033a1d4851f01
-    sha256: e95333d062e6141e05150fd5bafbb5d20870b3227c2acc35cf8033a1d4851f01
-source:
-  url: https://github.com/stripe/stripe-cli/archive/refs/tags/v1.40.6.tar.gz
-  sha256: 26f72406aefc42b134ca4c908c514c7985ec6a08045a1d0e2cc74c104785a35b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stripe-cli/blobs/sha256:ee3a0e442a451146a8c82e6a27694db044b2ce48117bae9ed58513ad352b62ce
+        sha256: ee3a0e442a451146a8c82e6a27694db044b2ce48117bae9ed58513ad352b62ce
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stripe-cli/blobs/sha256:6565f1bfbfc4aa185464288febcbfc562a4b8f4ab4465757b23b56db30a4a45b
+        sha256: 6565f1bfbfc4aa185464288febcbfc562a4b8f4ab4465757b23b56db30a4a45b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stripe-cli/blobs/sha256:2c12fe33718f0d86fd84827a71af13df7d1a6927eb767b0c117b22327ba06446
+        sha256: 2c12fe33718f0d86fd84827a71af13df7d1a6927eb767b0c117b22327ba06446
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stripe-cli/blobs/sha256:e95333d062e6141e05150fd5bafbb5d20870b3227c2acc35cf8033a1d4851f01
+        sha256: e95333d062e6141e05150fd5bafbb5d20870b3227c2acc35cf8033a1d4851f01
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/stripe/stripe-cli/archive/refs/tags/v1.40.6.tar.gz
+    sha256: 26f72406aefc42b134ca4c908c514c7985ec6a08045a1d0e2cc74c104785a35b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

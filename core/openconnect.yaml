@@ -1,42 +1,66 @@
 name: openconnect
-version: 9.12
+version: "9.12"
 description: Open client for Cisco AnyConnect VPN
 homepage: https://www.infradead.org/openconnect/
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openconnect/blobs/sha256:fbcb589590fc3a10a33601e2dfafabaec8e58000357a655b0976e95a80f42aaf
-    sha256: fbcb589590fc3a10a33601e2dfafabaec8e58000357a655b0976e95a80f42aaf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openconnect/blobs/sha256:968aca8e8f7d13c995ca44e15dbcb98bec6d7449186d47e64fc7cf2f3fcf31d1
-    sha256: 968aca8e8f7d13c995ca44e15dbcb98bec6d7449186d47e64fc7cf2f3fcf31d1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openconnect/blobs/sha256:16f82b8f546ddd8a65a41c40a68e71d90829a928d567cd72f7c41ad5380fd0ed
-    sha256: 16f82b8f546ddd8a65a41c40a68e71d90829a928d567cd72f7c41ad5380fd0ed
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openconnect/blobs/sha256:9edbd927405417ac939217c28428d0e12fef1d3d4cb70e4d5bc5cb629d7fa5d1
-    sha256: 9edbd927405417ac939217c28428d0e12fef1d3d4cb70e4d5bc5cb629d7fa5d1
-source:
-  url: https://www.infradead.org/openconnect/download/openconnect-9.12.tar.gz
-  sha256: a2bedce3aa4dfe75e36e407e48e8e8bc91d46def5335ac9564fbf91bd4b2413e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - gnutls
-  - nettle
-  - p11-kit
-  - stoken
-  - gettext
+    - gmp
+    - gnutls
+    - nettle
+    - p11-kit
+    - stoken
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openconnect/blobs/sha256:968aca8e8f7d13c995ca44e15dbcb98bec6d7449186d47e64fc7cf2f3fcf31d1
+        sha256: 968aca8e8f7d13c995ca44e15dbcb98bec6d7449186d47e64fc7cf2f3fcf31d1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openconnect/blobs/sha256:fbcb589590fc3a10a33601e2dfafabaec8e58000357a655b0976e95a80f42aaf
+        sha256: fbcb589590fc3a10a33601e2dfafabaec8e58000357a655b0976e95a80f42aaf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openconnect/blobs/sha256:16f82b8f546ddd8a65a41c40a68e71d90829a928d567cd72f7c41ad5380fd0ed
+        sha256: 16f82b8f546ddd8a65a41c40a68e71d90829a928d567cd72f7c41ad5380fd0ed
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openconnect/blobs/sha256:9edbd927405417ac939217c28428d0e12fef1d3d4cb70e4d5bc5cb629d7fa5d1
+        sha256: 9edbd927405417ac939217c28428d0e12fef1d3d4cb70e4d5bc5cb629d7fa5d1
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.infradead.org/openconnect/download/openconnect-9.12.tar.gz
+    sha256: a2bedce3aa4dfe75e36e407e48e8e8bc91d46def5335ac9564fbf91bd4b2413e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - pkgconf
+    - gettext
+    - pkgconf
 linux_dependencies:
-  - gmp
-  - gnutls
-  - nettle
-  - p11-kit
-  - stoken
-  - zlib-ng-compat
+    - gmp
+    - gnutls
+    - nettle
+    - p11-kit
+    - stoken
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

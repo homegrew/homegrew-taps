@@ -3,28 +3,53 @@ version: 0.5.0
 description: Adb logcat wrapper
 homepage: https://github.com/flxo/rogcat
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rogcat/blobs/sha256:1dd3b52bb78be0697f011c4b822049cbb3458c442bfaede275a8f2bf601edf35
-    sha256: 1dd3b52bb78be0697f011c4b822049cbb3458c442bfaede275a8f2bf601edf35
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rogcat/blobs/sha256:e379f5d4de1e946270892f79a61530443c059f96e58aa4de9efbc012b909f511
-    sha256: e379f5d4de1e946270892f79a61530443c059f96e58aa4de9efbc012b909f511
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rogcat/blobs/sha256:0bbec1da8e32cf17191a67928887276c14b89863ca3cfa8654741166a19ee5da
-    sha256: 0bbec1da8e32cf17191a67928887276c14b89863ca3cfa8654741166a19ee5da
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rogcat/blobs/sha256:804c7881f8a8cde87ff51033907d9169c8c1b2769900ee1b7aa003dbcbfce62a
-    sha256: 804c7881f8a8cde87ff51033907d9169c8c1b2769900ee1b7aa003dbcbfce62a
-source:
-  url: https://github.com/flxo/rogcat/archive/refs/tags/v0.5.0.tar.gz
-  sha256: 8b4d90dd1254ff82bc01cadcb8a157dc4d66d2e987471ae3c3eaa99f03e34ba3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rogcat/blobs/sha256:e379f5d4de1e946270892f79a61530443c059f96e58aa4de9efbc012b909f511
+        sha256: e379f5d4de1e946270892f79a61530443c059f96e58aa4de9efbc012b909f511
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rogcat/blobs/sha256:1dd3b52bb78be0697f011c4b822049cbb3458c442bfaede275a8f2bf601edf35
+        sha256: 1dd3b52bb78be0697f011c4b822049cbb3458c442bfaede275a8f2bf601edf35
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rogcat/blobs/sha256:0bbec1da8e32cf17191a67928887276c14b89863ca3cfa8654741166a19ee5da
+        sha256: 0bbec1da8e32cf17191a67928887276c14b89863ca3cfa8654741166a19ee5da
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rogcat/blobs/sha256:804c7881f8a8cde87ff51033907d9169c8c1b2769900ee1b7aa003dbcbfce62a
+        sha256: 804c7881f8a8cde87ff51033907d9169c8c1b2769900ee1b7aa003dbcbfce62a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/flxo/rogcat/archive/refs/tags/v0.5.0.tar.gz
+    sha256: 8b4d90dd1254ff82bc01cadcb8a157dc4d66d2e987471ae3c3eaa99f03e34ba3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - systemd
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

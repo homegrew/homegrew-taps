@@ -3,36 +3,60 @@ version: 1.0.4
 description: Manage package updates on remote hosts using SSH
 homepage: https://github.com/DE-IBH/apt-dater
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apt-dater/blobs/sha256:ca8d65020e488e692c5785619fda1d960a49f88b2f80e2213f1d56f39b6f40de
-    sha256: ca8d65020e488e692c5785619fda1d960a49f88b2f80e2213f1d56f39b6f40de
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apt-dater/blobs/sha256:ad40cadf8e75368960e13f510c8e91977ff13908150431a50066bbab0dfd521b
-    sha256: ad40cadf8e75368960e13f510c8e91977ff13908150431a50066bbab0dfd521b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apt-dater/blobs/sha256:b68bb3ff46e775c78d4201392f44d95e8e28aacdce0dd624469f5bfe6a839557
-    sha256: b68bb3ff46e775c78d4201392f44d95e8e28aacdce0dd624469f5bfe6a839557
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apt-dater/blobs/sha256:8aaa2fb5be47e7037a24f2b6bfc14fac79eabf28187a11d5c949db515b34b4a9
-    sha256: 8aaa2fb5be47e7037a24f2b6bfc14fac79eabf28187a11d5c949db515b34b4a9
-source:
-  url: https://github.com/DE-IBH/apt-dater/archive/refs/tags/v1.0.4.tar.gz
-  sha256: a4bd5f70a199b844a34a3b4c4677ea56780c055db7c557ff5bd8f2772378a4d6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - popt
-  - gettext
+    - glib
+    - popt
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apt-dater/blobs/sha256:ad40cadf8e75368960e13f510c8e91977ff13908150431a50066bbab0dfd521b
+        sha256: ad40cadf8e75368960e13f510c8e91977ff13908150431a50066bbab0dfd521b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apt-dater/blobs/sha256:ca8d65020e488e692c5785619fda1d960a49f88b2f80e2213f1d56f39b6f40de
+        sha256: ca8d65020e488e692c5785619fda1d960a49f88b2f80e2213f1d56f39b6f40de
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apt-dater/blobs/sha256:b68bb3ff46e775c78d4201392f44d95e8e28aacdce0dd624469f5bfe6a839557
+        sha256: b68bb3ff46e775c78d4201392f44d95e8e28aacdce0dd624469f5bfe6a839557
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apt-dater/blobs/sha256:8aaa2fb5be47e7037a24f2b6bfc14fac79eabf28187a11d5c949db515b34b4a9
+        sha256: 8aaa2fb5be47e7037a24f2b6bfc14fac79eabf28187a11d5c949db515b34b4a9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/DE-IBH/apt-dater/archive/refs/tags/v1.0.4.tar.gz
+    sha256: a4bd5f70a199b844a34a3b4c4677ea56780c055db7c557ff5bd8f2772378a4d6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - gettext
-  - pkgconf
-  - coreutils
+    - autoconf
+    - automake
+    - gettext
+    - pkgconf
+    - coreutils
 linux_dependencies:
-  - glib
-  - popt
+    - glib
+    - popt
+build:
+    configure: []
+    install: []
+service: null

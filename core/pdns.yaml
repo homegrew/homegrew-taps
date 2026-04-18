@@ -3,30 +3,55 @@ version: 5.0.3
 description: Authoritative nameserver
 homepage: https://www.powerdns.com
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pdns/blobs/sha256:c02252c3db32285b1064a57196868f9642328f4c3652e5cc227a9e6cc8877363
-    sha256: c02252c3db32285b1064a57196868f9642328f4c3652e5cc227a9e6cc8877363
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pdns/blobs/sha256:0889f0d18d424d65b269e0f3e752dbc174db3203af450c84b6734cb0c0ac3aba
-    sha256: 0889f0d18d424d65b269e0f3e752dbc174db3203af450c84b6734cb0c0ac3aba
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pdns/blobs/sha256:eaee7c1c455c7af9875303d0e990cef8de6e0ceaac9c35a2d597a848fbf0bd7a
-    sha256: eaee7c1c455c7af9875303d0e990cef8de6e0ceaac9c35a2d597a848fbf0bd7a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pdns/blobs/sha256:73f5fdc2c1da5b7ce0d3f3871b792192cabbe650f707161b49d8b7a2794238a1
-    sha256: 73f5fdc2c1da5b7ce0d3f3871b792192cabbe650f707161b49d8b7a2794238a1
-source:
-  url: https://downloads.powerdns.com/releases/pdns-5.0.3.tar.bz2
-  sha256: ec3120501950a772c785c600f599e8f4d711f703a02cbd1bec42edc1a05f81cc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - lua
-  - openssl@3
-  - sqlite
+    - boost
+    - lua
+    - openssl@3
+    - sqlite
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pdns/blobs/sha256:0889f0d18d424d65b269e0f3e752dbc174db3203af450c84b6734cb0c0ac3aba
+        sha256: 0889f0d18d424d65b269e0f3e752dbc174db3203af450c84b6734cb0c0ac3aba
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pdns/blobs/sha256:c02252c3db32285b1064a57196868f9642328f4c3652e5cc227a9e6cc8877363
+        sha256: c02252c3db32285b1064a57196868f9642328f4c3652e5cc227a9e6cc8877363
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pdns/blobs/sha256:eaee7c1c455c7af9875303d0e990cef8de6e0ceaac9c35a2d597a848fbf0bd7a
+        sha256: eaee7c1c455c7af9875303d0e990cef8de6e0ceaac9c35a2d597a848fbf0bd7a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pdns/blobs/sha256:73f5fdc2c1da5b7ce0d3f3871b792192cabbe650f707161b49d8b7a2794238a1
+        sha256: 73f5fdc2c1da5b7ce0d3f3871b792192cabbe650f707161b49d8b7a2794238a1
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.powerdns.com/releases/pdns-5.0.3.tar.bz2
+    sha256: ec3120501950a772c785c600f599e8f4d711f703a02cbd1bec42edc1a05f81cc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

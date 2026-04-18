@@ -3,32 +3,57 @@ version: 9.6.0
 description: Reference implementation of the ZIM specification
 homepage: https://github.com/openzim/libzim
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libzim/blobs/sha256:f5fc6189562c702b312da814e7baa8dbedbaf4e9e3aa59f1943aed9c97d43bce
-    sha256: f5fc6189562c702b312da814e7baa8dbedbaf4e9e3aa59f1943aed9c97d43bce
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libzim/blobs/sha256:99d71a24d7b6a817537df12cbc879750225e5728026b18bb514e6a0d9d9e2e65
-    sha256: 99d71a24d7b6a817537df12cbc879750225e5728026b18bb514e6a0d9d9e2e65
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libzim/blobs/sha256:794aba6a2c67ce2ab79181b016c8747ea2731fdb15cf1580038f81df54f7beec
-    sha256: 794aba6a2c67ce2ab79181b016c8747ea2731fdb15cf1580038f81df54f7beec
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libzim/blobs/sha256:2c25bff188af83c9774a609b3ab1e28ec729616de18542cd75977819be555038
-    sha256: 2c25bff188af83c9774a609b3ab1e28ec729616de18542cd75977819be555038
-source:
-  url: https://github.com/openzim/libzim/archive/refs/tags/9.6.0.tar.gz
-  sha256: a4211000de19df0a36dd48180b295be63adfbdaba3ef75545b32087c0bd8189d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - xapian
-  - xz
-  - zstd
+    - icu4c@78
+    - xapian
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libzim/blobs/sha256:99d71a24d7b6a817537df12cbc879750225e5728026b18bb514e6a0d9d9e2e65
+        sha256: 99d71a24d7b6a817537df12cbc879750225e5728026b18bb514e6a0d9d9e2e65
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libzim/blobs/sha256:f5fc6189562c702b312da814e7baa8dbedbaf4e9e3aa59f1943aed9c97d43bce
+        sha256: f5fc6189562c702b312da814e7baa8dbedbaf4e9e3aa59f1943aed9c97d43bce
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libzim/blobs/sha256:794aba6a2c67ce2ab79181b016c8747ea2731fdb15cf1580038f81df54f7beec
+        sha256: 794aba6a2c67ce2ab79181b016c8747ea2731fdb15cf1580038f81df54f7beec
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libzim/blobs/sha256:2c25bff188af83c9774a609b3ab1e28ec729616de18542cd75977819be555038
+        sha256: 2c25bff188af83c9774a609b3ab1e28ec729616de18542cd75977819be555038
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/openzim/libzim/archive/refs/tags/9.6.0.tar.gz
+    sha256: a4211000de19df0a36dd48180b295be63adfbdaba3ef75545b32087c0bd8189d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

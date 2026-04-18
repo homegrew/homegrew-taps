@@ -3,39 +3,63 @@ version: 2.88.0
 description: Core application library for C
 homepage: https://docs.gtk.org/glib/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:5cc0e9470b11e995f3e2a78db6ca6c5d6f5f84fc57e5216ee11ee99cef385c78
-    sha256: 5cc0e9470b11e995f3e2a78db6ca6c5d6f5f84fc57e5216ee11ee99cef385c78
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:e08deb71c82fdb4d1da3719b05cd86c7f168f07b4f21bac63e9a53b7dc93fab2
-    sha256: e08deb71c82fdb4d1da3719b05cd86c7f168f07b4f21bac63e9a53b7dc93fab2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:b4974a368ca1bdfabe7971d0e06b989c7fa2e84334c4e80e2014e22cdb53b4f0
-    sha256: b4974a368ca1bdfabe7971d0e06b989c7fa2e84334c4e80e2014e22cdb53b4f0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:86d88758bcdd42a4c773628d3df8a3e3e728288a303d69fd1b2f8e9b370d0aa1
-    sha256: 86d88758bcdd42a4c773628d3df8a3e3e728288a303d69fd1b2f8e9b370d0aa1
-source:
-  url: https://download.gnome.org/sources/glib/2.88/glib-2.88.0.tar.xz
-  sha256: 3546251ccbb3744d4bc4eb48354540e1f6200846572bab68e3a2b7b2b64dfd07
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - pcre2
-  - gettext
+    - pcre2
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:e08deb71c82fdb4d1da3719b05cd86c7f168f07b4f21bac63e9a53b7dc93fab2
+        sha256: e08deb71c82fdb4d1da3719b05cd86c7f168f07b4f21bac63e9a53b7dc93fab2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:5cc0e9470b11e995f3e2a78db6ca6c5d6f5f84fc57e5216ee11ee99cef385c78
+        sha256: 5cc0e9470b11e995f3e2a78db6ca6c5d6f5f84fc57e5216ee11ee99cef385c78
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:b4974a368ca1bdfabe7971d0e06b989c7fa2e84334c4e80e2014e22cdb53b4f0
+        sha256: b4974a368ca1bdfabe7971d0e06b989c7fa2e84334c4e80e2014e22cdb53b4f0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:86d88758bcdd42a4c773628d3df8a3e3e728288a303d69fd1b2f8e9b370d0aa1
+        sha256: 86d88758bcdd42a4c773628d3df8a3e3e728288a303d69fd1b2f8e9b370d0aa1
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/glib/2.88/glib-2.88.0.tar.xz
+    sha256: 3546251ccbb3744d4bc4eb48354540e1f6200846572bab68e3a2b7b2b64dfd07
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
-  - gettext
-  - meson
-  - ninja
-  - pkgconf
-  - python-setuptools
-  - python@3.14
+    - bison
+    - gettext
+    - meson
+    - ninja
+    - pkgconf
+    - python-setuptools
+    - python@3.14
 linux_dependencies:
-  - dbus
-  - pcre2
-  - util-linux
-  - zlib-ng-compat
+    - dbus
+    - pcre2
+    - util-linux
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,79 +3,103 @@ version: 1.11.1
 description: Open-source video transcoder available for Linux, Mac, and Windows
 homepage: https://handbrake.fr/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/handbrake/blobs/sha256:e4958aeec4f211615cabf05103cc658fd16e41fa94a75ad6534ee3d530f8c9dc
-    sha256: e4958aeec4f211615cabf05103cc658fd16e41fa94a75ad6534ee3d530f8c9dc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/handbrake/blobs/sha256:a5262e08a6c6d774ef9785d642a723b2fccc41e0a4667f820b8836f67c9767ef
-    sha256: a5262e08a6c6d774ef9785d642a723b2fccc41e0a4667f820b8836f67c9767ef
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/handbrake/blobs/sha256:a2d8d8f17070ea586be9a0524af66406fed98d4f781595d7f5310b692d87658e
-    sha256: a2d8d8f17070ea586be9a0524af66406fed98d4f781595d7f5310b692d87658e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/handbrake/blobs/sha256:7ec61958b85a3b15844259f56a2975bf3dd1cf1ab8703ef9d1860eb781929270
-    sha256: 7ec61958b85a3b15844259f56a2975bf3dd1cf1ab8703ef9d1860eb781929270
-source:
-  url: https://github.com/HandBrake/HandBrake/releases/download/1.11.1/HandBrake-1.11.1-source.tar.bz2
-  sha256: 4ff6a8a57c9b1cea51025306e313eee423b0fa1a8b7799aeaa8d4d7c457a7310
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dav1d
-  - freetype
-  - fribidi
-  - harfbuzz
-  - jansson
-  - jpeg-turbo
-  - lame
-  - libass
-  - libbluray
-  - libdvdnav
-  - libdvdread
-  - libogg
-  - libvorbis
-  - libvpx
-  - opus
-  - speex
-  - svt-av1
-  - theora
-  - x264
-  - xz
-  - zimg
-  - libx11
+    - dav1d
+    - freetype
+    - fribidi
+    - harfbuzz
+    - jansson
+    - jpeg-turbo
+    - lame
+    - libass
+    - libbluray
+    - libdvdnav
+    - libdvdread
+    - libogg
+    - libvorbis
+    - libvpx
+    - opus
+    - speex
+    - svt-av1
+    - theora
+    - x264
+    - xz
+    - zimg
+    - libx11
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/handbrake/blobs/sha256:a5262e08a6c6d774ef9785d642a723b2fccc41e0a4667f820b8836f67c9767ef
+        sha256: a5262e08a6c6d774ef9785d642a723b2fccc41e0a4667f820b8836f67c9767ef
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/handbrake/blobs/sha256:e4958aeec4f211615cabf05103cc658fd16e41fa94a75ad6534ee3d530f8c9dc
+        sha256: e4958aeec4f211615cabf05103cc658fd16e41fa94a75ad6534ee3d530f8c9dc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/handbrake/blobs/sha256:a2d8d8f17070ea586be9a0524af66406fed98d4f781595d7f5310b692d87658e
+        sha256: a2d8d8f17070ea586be9a0524af66406fed98d4f781595d7f5310b692d87658e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/handbrake/blobs/sha256:7ec61958b85a3b15844259f56a2975bf3dd1cf1ab8703ef9d1860eb781929270
+        sha256: 7ec61958b85a3b15844259f56a2975bf3dd1cf1ab8703ef9d1860eb781929270
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/HandBrake/HandBrake/releases/download/1.11.1/HandBrake-1.11.1-source.tar.bz2
+    sha256: 4ff6a8a57c9b1cea51025306e313eee423b0fa1a8b7799aeaa8d4d7c457a7310
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - cmake
-  - libtool
-  - meson
-  - nasm
-  - ninja
-  - pkgconf
+    - autoconf
+    - automake
+    - cmake
+    - libtool
+    - meson
+    - nasm
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - dav1d
-  - freetype
-  - fribidi
-  - harfbuzz
-  - jansson
-  - jpeg-turbo
-  - lame
-  - libass
-  - libbluray
-  - libdvdnav
-  - libdvdread
-  - libogg
-  - libvorbis
-  - libvpx
-  - numactl
-  - opus
-  - speex
-  - svt-av1
-  - theora
-  - x264
-  - xz
-  - zimg
-  - zlib-ng-compat
+    - dav1d
+    - freetype
+    - fribidi
+    - harfbuzz
+    - jansson
+    - jpeg-turbo
+    - lame
+    - libass
+    - libbluray
+    - libdvdnav
+    - libdvdread
+    - libogg
+    - libvorbis
+    - libvpx
+    - numactl
+    - opus
+    - speex
+    - svt-av1
+    - theora
+    - x264
+    - xz
+    - zimg
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

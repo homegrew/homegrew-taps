@@ -3,27 +3,53 @@ version: 0.200.0
 description: Lightweight scripting language for querying databases
 homepage: https://www.influxdata.com/products/flux/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flux/blobs/sha256:ae45dfd6ac38b80d0a51f54238e8f30fd083c8788dbef6af6982581e25adf3ce
-    sha256: ae45dfd6ac38b80d0a51f54238e8f30fd083c8788dbef6af6982581e25adf3ce
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flux/blobs/sha256:52d9852ab4ceb510ab4b73d0cfbdf3989d8cc90a19ef1881abf7eb3da4984287
-    sha256: 52d9852ab4ceb510ab4b73d0cfbdf3989d8cc90a19ef1881abf7eb3da4984287
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flux/blobs/sha256:14c58ee6001c00ef501130b2ce2f65b61b96f93d62b143ae4f58de3485f88792
-    sha256: 14c58ee6001c00ef501130b2ce2f65b61b96f93d62b143ae4f58de3485f88792
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flux/blobs/sha256:ea06fb7ce18ad159293ee47f766b863f67484380ef109de4fdadcc680891f114
-    sha256: ea06fb7ce18ad159293ee47f766b863f67484380ef109de4fdadcc680891f114
-source:
-  url: https://github.com/influxdata/flux.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flux/blobs/sha256:52d9852ab4ceb510ab4b73d0cfbdf3989d8cc90a19ef1881abf7eb3da4984287
+        sha256: 52d9852ab4ceb510ab4b73d0cfbdf3989d8cc90a19ef1881abf7eb3da4984287
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flux/blobs/sha256:ae45dfd6ac38b80d0a51f54238e8f30fd083c8788dbef6af6982581e25adf3ce
+        sha256: ae45dfd6ac38b80d0a51f54238e8f30fd083c8788dbef6af6982581e25adf3ce
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flux/blobs/sha256:14c58ee6001c00ef501130b2ce2f65b61b96f93d62b143ae4f58de3485f88792
+        sha256: 14c58ee6001c00ef501130b2ce2f65b61b96f93d62b143ae4f58de3485f88792
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flux/blobs/sha256:ea06fb7ce18ad159293ee47f766b863f67484380ef109de4fdadcc680891f114
+        sha256: ea06fb7ce18ad159293ee47f766b863f67484380ef109de4fdadcc680891f114
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/influxdata/flux.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - pkgconf
-  - rust
+    - go
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

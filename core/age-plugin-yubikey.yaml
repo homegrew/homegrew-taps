@@ -3,26 +3,52 @@ version: 0.5.1
 description: Plugin for encrypting files with age and PIV tokens such as YubiKeys
 homepage: https://github.com/str4d/age-plugin-yubikey
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/age-plugin-yubikey/blobs/sha256:e47f7f3db0a86732348289dba0a3f3f9c2b3a4dbb5a5ab12914fc9f929875656
-    sha256: e47f7f3db0a86732348289dba0a3f3f9c2b3a4dbb5a5ab12914fc9f929875656
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/age-plugin-yubikey/blobs/sha256:926f27f8656e5e7577b490210d6e770d5ae09d79f4e8f2ff11f9ce7cd6a692a8
-    sha256: 926f27f8656e5e7577b490210d6e770d5ae09d79f4e8f2ff11f9ce7cd6a692a8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/age-plugin-yubikey/blobs/sha256:03b4c8d1155ea7d45f93da94e2b76412a1c470c8b9f6e622600fea1f95a9e78c
-    sha256: 03b4c8d1155ea7d45f93da94e2b76412a1c470c8b9f6e622600fea1f95a9e78c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/age-plugin-yubikey/blobs/sha256:692b7894d440b28b7d44d18101a27bc9ef6b867be63c9031b022b6d333daf445
-    sha256: 692b7894d440b28b7d44d18101a27bc9ef6b867be63c9031b022b6d333daf445
-source:
-  url: https://github.com/str4d/age-plugin-yubikey/archive/refs/tags/v0.5.1.tar.gz
-  sha256: 51e4680ad7ad7f56535e4f3018531bd0196815659378709979617d4f17102700
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/age-plugin-yubikey/blobs/sha256:926f27f8656e5e7577b490210d6e770d5ae09d79f4e8f2ff11f9ce7cd6a692a8
+        sha256: 926f27f8656e5e7577b490210d6e770d5ae09d79f4e8f2ff11f9ce7cd6a692a8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/age-plugin-yubikey/blobs/sha256:e47f7f3db0a86732348289dba0a3f3f9c2b3a4dbb5a5ab12914fc9f929875656
+        sha256: e47f7f3db0a86732348289dba0a3f3f9c2b3a4dbb5a5ab12914fc9f929875656
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/age-plugin-yubikey/blobs/sha256:03b4c8d1155ea7d45f93da94e2b76412a1c470c8b9f6e622600fea1f95a9e78c
+        sha256: 03b4c8d1155ea7d45f93da94e2b76412a1c470c8b9f6e622600fea1f95a9e78c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/age-plugin-yubikey/blobs/sha256:692b7894d440b28b7d44d18101a27bc9ef6b867be63c9031b022b6d333daf445
+        sha256: 692b7894d440b28b7d44d18101a27bc9ef6b867be63c9031b022b6d333daf445
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/str4d/age-plugin-yubikey/archive/refs/tags/v0.5.1.tar.gz
+    sha256: 51e4680ad7ad7f56535e4f3018531bd0196815659378709979617d4f17102700
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

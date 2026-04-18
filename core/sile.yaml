@@ -3,45 +3,69 @@ version: 0.15.13
 description: Modern typesetting system inspired by TeX
 homepage: https://sile-typesetter.org
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sile/blobs/sha256:84311a8e0777cad0808ef2e936df25589c908410fdf80f8e59a336c07530eb0d
-    sha256: 84311a8e0777cad0808ef2e936df25589c908410fdf80f8e59a336c07530eb0d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sile/blobs/sha256:1fbd167ab091deeb57811129b2c31446acef25597accf72de9a1bf9efe8c55e6
-    sha256: 1fbd167ab091deeb57811129b2c31446acef25597accf72de9a1bf9efe8c55e6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sile/blobs/sha256:6074cb5bbd1485cbcda34b290269ed29990895d800d9458e7d8c814904b8ad11
-    sha256: 6074cb5bbd1485cbcda34b290269ed29990895d800d9458e7d8c814904b8ad11
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sile/blobs/sha256:4f05214a3fe6b2a84909859ab5484935dcba0045e3aff5bc5104e2a39f56eb4a
-    sha256: 4f05214a3fe6b2a84909859ab5484935dcba0045e3aff5bc5104e2a39f56eb4a
-source:
-  url: https://github.com/sile-typesetter/sile/releases/download/v0.15.13/sile-0.15.13.tar.zst
-  sha256: 5e97c19651aff710687b93292d5361cb411652094bcc8c62c811c19f7a81464b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fontconfig
-  - harfbuzz
-  - icu4c@78
-  - libpng
-  - luajit
-  - luarocks
-  - openssl@3
-  - freetype
+    - fontconfig
+    - harfbuzz
+    - icu4c@78
+    - libpng
+    - luajit
+    - luarocks
+    - openssl@3
+    - freetype
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sile/blobs/sha256:1fbd167ab091deeb57811129b2c31446acef25597accf72de9a1bf9efe8c55e6
+        sha256: 1fbd167ab091deeb57811129b2c31446acef25597accf72de9a1bf9efe8c55e6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sile/blobs/sha256:84311a8e0777cad0808ef2e936df25589c908410fdf80f8e59a336c07530eb0d
+        sha256: 84311a8e0777cad0808ef2e936df25589c908410fdf80f8e59a336c07530eb0d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sile/blobs/sha256:6074cb5bbd1485cbcda34b290269ed29990895d800d9458e7d8c814904b8ad11
+        sha256: 6074cb5bbd1485cbcda34b290269ed29990895d800d9458e7d8c814904b8ad11
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sile/blobs/sha256:4f05214a3fe6b2a84909859ab5484935dcba0045e3aff5bc5104e2a39f56eb4a
+        sha256: 4f05214a3fe6b2a84909859ab5484935dcba0045e3aff5bc5104e2a39f56eb4a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sile-typesetter/sile/releases/download/v0.15.13/sile-0.15.13.tar.zst
+    sha256: 5e97c19651aff710687b93292d5361cb411652094bcc8c62c811c19f7a81464b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - poppler
-  - rust
+    - pkgconf
+    - poppler
+    - rust
 linux_dependencies:
-  - fontconfig
-  - harfbuzz
-  - icu4c@78
-  - libpng
-  - luajit
-  - luarocks
-  - openssl@3
-  - zlib-ng-compat
+    - fontconfig
+    - harfbuzz
+    - icu4c@78
+    - libpng
+    - luajit
+    - luarocks
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

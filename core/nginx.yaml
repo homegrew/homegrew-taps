@@ -3,30 +3,55 @@ version: 1.29.8
 description: HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 homepage: https://nginx.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:966f5226a8d48a5bc7345cd77c5cb8d560d4537738df286ee67183ae9c668355
-    sha256: 966f5226a8d48a5bc7345cd77c5cb8d560d4537738df286ee67183ae9c668355
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
-    sha256: 40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:036ca082d5404721641bb6d1f41687fafcf58e18f568abc42e8902d0659ee674
-    sha256: 036ca082d5404721641bb6d1f41687fafcf58e18f568abc42e8902d0659ee674
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:6e8e039f1de227ddffb83112db744960e197d48824e0e6246d633dbcab69b381
-    sha256: 6e8e039f1de227ddffb83112db744960e197d48824e0e6246d633dbcab69b381
-source:
-  url: https://nginx.org/download/nginx-1.29.8.tar.gz
-  sha256: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - pcre2
+    - openssl@3
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        sha256: 40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:966f5226a8d48a5bc7345cd77c5cb8d560d4537738df286ee67183ae9c668355
+        sha256: 966f5226a8d48a5bc7345cd77c5cb8d560d4537738df286ee67183ae9c668355
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:036ca082d5404721641bb6d1f41687fafcf58e18f568abc42e8902d0659ee674
+        sha256: 036ca082d5404721641bb6d1f41687fafcf58e18f568abc42e8902d0659ee674
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:6e8e039f1de227ddffb83112db744960e197d48824e0e6246d633dbcab69b381
+        sha256: 6e8e039f1de227ddffb83112db744960e197d48824e0e6246d633dbcab69b381
+        sha512: ""
+        signature: ""
+source:
+    url: https://nginx.org/download/nginx-1.29.8.tar.gz
+    sha256: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - openssl@3
-  - pcre2
-  - zlib-ng-compat
+    - openssl@3
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

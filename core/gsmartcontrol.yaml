@@ -3,54 +3,78 @@ version: 2.0.2
 description: Graphical user interface for smartctl
 homepage: https://gsmartcontrol.shaduri.dev/
 license: GPL-2.0-only OR GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gsmartcontrol/blobs/sha256:cfaf1237a9a274431f67a88627cb0a794662c85d083d2e7dd46083422ca821c4
-    sha256: cfaf1237a9a274431f67a88627cb0a794662c85d083d2e7dd46083422ca821c4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gsmartcontrol/blobs/sha256:3c772fa791354268934693ea60962ffbe839ca07219b9a69925e7bd862d0ff61
-    sha256: 3c772fa791354268934693ea60962ffbe839ca07219b9a69925e7bd862d0ff61
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gsmartcontrol/blobs/sha256:6cd4fa97e19fee44f12fe02e4d7edf882c098c80d83472d036d61f8e730c7b81
-    sha256: 6cd4fa97e19fee44f12fe02e4d7edf882c098c80d83472d036d61f8e730c7b81
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gsmartcontrol/blobs/sha256:5213f0cf402797e0e3d08a4ed283272fa701bf0ff1a876b468eedf4489464086
-    sha256: 5213f0cf402797e0e3d08a4ed283272fa701bf0ff1a876b468eedf4489464086
-source:
-  url: https://downloads.sourceforge.net/project/gsmartcontrol/2.0.2/gsmartcontrol-2.0.2.tar.gz
-  sha256: 7cebd83fd34883d51e143389aa88f8173ea7b67c760b12b7de847f3c3c8cee34
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - atkmm@2.28
-  - cairo
-  - cairomm@1.14
-  - glib
-  - glibmm@2.66
-  - gtk+3
-  - gtkmm3
-  - libsigc++@2
-  - pangomm@2.46
-  - smartmontools
-  - at-spi2-core
-  - gdk-pixbuf
-  - gettext
-  - harfbuzz
-  - pango
-  - pcre2
+    - atkmm@2.28
+    - cairo
+    - cairomm@1.14
+    - glib
+    - glibmm@2.66
+    - gtk+3
+    - gtkmm3
+    - libsigc++@2
+    - pangomm@2.46
+    - smartmontools
+    - at-spi2-core
+    - gdk-pixbuf
+    - gettext
+    - harfbuzz
+    - pango
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gsmartcontrol/blobs/sha256:3c772fa791354268934693ea60962ffbe839ca07219b9a69925e7bd862d0ff61
+        sha256: 3c772fa791354268934693ea60962ffbe839ca07219b9a69925e7bd862d0ff61
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gsmartcontrol/blobs/sha256:cfaf1237a9a274431f67a88627cb0a794662c85d083d2e7dd46083422ca821c4
+        sha256: cfaf1237a9a274431f67a88627cb0a794662c85d083d2e7dd46083422ca821c4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gsmartcontrol/blobs/sha256:6cd4fa97e19fee44f12fe02e4d7edf882c098c80d83472d036d61f8e730c7b81
+        sha256: 6cd4fa97e19fee44f12fe02e4d7edf882c098c80d83472d036d61f8e730c7b81
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gsmartcontrol/blobs/sha256:5213f0cf402797e0e3d08a4ed283272fa701bf0ff1a876b468eedf4489464086
+        sha256: 5213f0cf402797e0e3d08a4ed283272fa701bf0ff1a876b468eedf4489464086
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/gsmartcontrol/2.0.2/gsmartcontrol-2.0.2.tar.gz
+    sha256: 7cebd83fd34883d51e143389aa88f8173ea7b67c760b12b7de847f3c3c8cee34
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - atkmm@2.28
-  - cairo
-  - cairomm@1.14
-  - glib
-  - glibmm@2.66
-  - gtk+3
-  - gtkmm3
-  - libsigc++@2
-  - pangomm@2.46
-  - smartmontools
+    - atkmm@2.28
+    - cairo
+    - cairomm@1.14
+    - glib
+    - glibmm@2.66
+    - gtk+3
+    - gtkmm3
+    - libsigc++@2
+    - pangomm@2.46
+    - smartmontools
+build:
+    configure: []
+    install: []
+service: null

@@ -3,33 +3,57 @@ version: 7.0.11
 description: Package for graph partitioning, graph clustering, and sparse matrix ordering
 homepage: https://gitlab.inria.fr/scotch/scotch
 license: CECILL-C
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:d84363ab0cdc3b0a2b0d05347158a30361f2694e441db84e4fdd549ceb39ac31
-    sha256: d84363ab0cdc3b0a2b0d05347158a30361f2694e441db84e4fdd549ceb39ac31
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:70c317924634f70ef971e306832042b778c105ddf4708e9c2f51291c86a92d0c
-    sha256: 70c317924634f70ef971e306832042b778c105ddf4708e9c2f51291c86a92d0c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:df940782b8de2e7b436fc7c64bca5210cec1a38a9e5bb6c679bcb0f3c5d43e8a
-    sha256: df940782b8de2e7b436fc7c64bca5210cec1a38a9e5bb6c679bcb0f3c5d43e8a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:1e676c45f8ddabb75072cf687e37ab3be3ec7bbccb3636488c1bc07f498fd593
-    sha256: 1e676c45f8ddabb75072cf687e37ab3be3ec7bbccb3636488c1bc07f498fd593
-source:
-  url: https://gitlab.inria.fr/scotch/scotch/-/archive/v7.0.11/scotch-v7.0.11.tar.bz2
-  sha256: 82fb468485b153a41031e50a7ca668fccbd3b8561d31dc7535da4210dde01f48
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - open-mpi
-  - xz
+    - open-mpi
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:70c317924634f70ef971e306832042b778c105ddf4708e9c2f51291c86a92d0c
+        sha256: 70c317924634f70ef971e306832042b778c105ddf4708e9c2f51291c86a92d0c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:d84363ab0cdc3b0a2b0d05347158a30361f2694e441db84e4fdd549ceb39ac31
+        sha256: d84363ab0cdc3b0a2b0d05347158a30361f2694e441db84e4fdd549ceb39ac31
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:df940782b8de2e7b436fc7c64bca5210cec1a38a9e5bb6c679bcb0f3c5d43e8a
+        sha256: df940782b8de2e7b436fc7c64bca5210cec1a38a9e5bb6c679bcb0f3c5d43e8a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scotch/blobs/sha256:1e676c45f8ddabb75072cf687e37ab3be3ec7bbccb3636488c1bc07f498fd593
+        sha256: 1e676c45f8ddabb75072cf687e37ab3be3ec7bbccb3636488c1bc07f498fd593
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.inria.fr/scotch/scotch/-/archive/v7.0.11/scotch-v7.0.11.tar.bz2
+    sha256: 82fb468485b153a41031e50a7ca668fccbd3b8561d31dc7535da4210dde01f48
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
-  - cmake
+    - bison
+    - cmake
 linux_dependencies:
-  - open-mpi
-  - xz
-  - zlib-ng-compat
+    - open-mpi
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,53 @@ version: 1.9.9
 description: Send notifications from the command-line to popular notification services
 homepage: https://pypi.org/project/apprise/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:a296ff1323816972ac2e9c9da3042fb5790584d40322306a8d7ea82495cfc8cd
-    sha256: a296ff1323816972ac2e9c9da3042fb5790584d40322306a8d7ea82495cfc8cd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:45511822d5a876c766d45f7238f25c51c933db5abb088c465574148b2901151d
-    sha256: 45511822d5a876c766d45f7238f25c51c933db5abb088c465574148b2901151d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:0c8375b05c36e07e289aaf895a5c29b42ea37415a03bf3a0fa8f577b22ab05fb
-    sha256: 0c8375b05c36e07e289aaf895a5c29b42ea37415a03bf3a0fa8f577b22ab05fb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:7257fad04e5cabddd7a923790f9ee67ed227efe92fff1b494b2fa6160d64b66f
-    sha256: 7257fad04e5cabddd7a923790f9ee67ed227efe92fff1b494b2fa6160d64b66f
-source:
-  url: https://files.pythonhosted.org/packages/20/f4/be5c7e39b83a2285ab62ae7c19bb10704836f59c0a5b4c471730f54c9f98/apprise-1.9.9.tar.gz
-  sha256: fd622c0df16bdc79ed385539735573488cafe2405d25747e87eebd6b09b26012
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - python@3.14
+    - certifi
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:45511822d5a876c766d45f7238f25c51c933db5abb088c465574148b2901151d
+        sha256: 45511822d5a876c766d45f7238f25c51c933db5abb088c465574148b2901151d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:a296ff1323816972ac2e9c9da3042fb5790584d40322306a8d7ea82495cfc8cd
+        sha256: a296ff1323816972ac2e9c9da3042fb5790584d40322306a8d7ea82495cfc8cd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:0c8375b05c36e07e289aaf895a5c29b42ea37415a03bf3a0fa8f577b22ab05fb
+        sha256: 0c8375b05c36e07e289aaf895a5c29b42ea37415a03bf3a0fa8f577b22ab05fb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:7257fad04e5cabddd7a923790f9ee67ed227efe92fff1b494b2fa6160d64b66f
+        sha256: 7257fad04e5cabddd7a923790f9ee67ed227efe92fff1b494b2fa6160d64b66f
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/20/f4/be5c7e39b83a2285ab62ae7c19bb10704836f59c0a5b4c471730f54c9f98/apprise-1.9.9.tar.gz
+    sha256: fd622c0df16bdc79ed385539735573488cafe2405d25747e87eebd6b09b26012
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

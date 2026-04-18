@@ -1,28 +1,54 @@
 name: djbdns
-version: 1.05
-description: "D.J. Bernstein's DNS tools"
+version: "1.05"
+description: D.J. Bernstein's DNS tools
 homepage: https://cr.yp.to/djbdns.html
 license: LicenseRef-Homebrew-public-domain
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/djbdns/blobs/sha256:0be5754ae44ee59873e53f476c3da544b31aabf8107d97817cebb77c75ae14e9
-    sha256: 0be5754ae44ee59873e53f476c3da544b31aabf8107d97817cebb77c75ae14e9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/djbdns/blobs/sha256:362cd5926caa703da34cf8221e86e1019fa197d1762a9531da088642001e806d
-    sha256: 362cd5926caa703da34cf8221e86e1019fa197d1762a9531da088642001e806d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/djbdns/blobs/sha256:02f2234288612b979b6e5947072123ee049558864042839f5c929300d0fbb96f
-    sha256: 02f2234288612b979b6e5947072123ee049558864042839f5c929300d0fbb96f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/djbdns/blobs/sha256:064d2f4f4d5fb2c18488c5dc23d4803da0bba3ca4b4be16de6dc736c8e08bf1b
-    sha256: 064d2f4f4d5fb2c18488c5dc23d4803da0bba3ca4b4be16de6dc736c8e08bf1b
-source:
-  url: https://cr.yp.to/djbdns/djbdns-1.05.tar.gz
-  sha256: 3ccd826a02f3cde39be088e1fc6aed9fd57756b8f970de5dc99fcd2d92536b48
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - daemontools
-  - ucspi-tcp
+    - daemontools
+    - ucspi-tcp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/djbdns/blobs/sha256:362cd5926caa703da34cf8221e86e1019fa197d1762a9531da088642001e806d
+        sha256: 362cd5926caa703da34cf8221e86e1019fa197d1762a9531da088642001e806d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/djbdns/blobs/sha256:0be5754ae44ee59873e53f476c3da544b31aabf8107d97817cebb77c75ae14e9
+        sha256: 0be5754ae44ee59873e53f476c3da544b31aabf8107d97817cebb77c75ae14e9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/djbdns/blobs/sha256:02f2234288612b979b6e5947072123ee049558864042839f5c929300d0fbb96f
+        sha256: 02f2234288612b979b6e5947072123ee049558864042839f5c929300d0fbb96f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/djbdns/blobs/sha256:064d2f4f4d5fb2c18488c5dc23d4803da0bba3ca4b4be16de6dc736c8e08bf1b
+        sha256: 064d2f4f4d5fb2c18488c5dc23d4803da0bba3ca4b4be16de6dc736c8e08bf1b
+        sha512: ""
+        signature: ""
+source:
+    url: https://cr.yp.to/djbdns/djbdns-1.05.tar.gz
+    sha256: 3ccd826a02f3cde39be088e1fc6aed9fd57756b8f970de5dc99fcd2d92536b48
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

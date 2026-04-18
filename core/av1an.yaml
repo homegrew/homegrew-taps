@@ -3,30 +3,55 @@ version: 0.5.2
 description: Cross-platform command-line encoding framework
 homepage: https://github.com/rust-av/Av1an
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/av1an/blobs/sha256:75f1beb607c47cff64d09ffd0eceabeec3e466c34a8e6881ae99982799f4d8b3
-    sha256: 75f1beb607c47cff64d09ffd0eceabeec3e466c34a8e6881ae99982799f4d8b3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/av1an/blobs/sha256:5f24497cd78557437533160947f715b01ba31fd128e890900e957eca999a25ff
-    sha256: 5f24497cd78557437533160947f715b01ba31fd128e890900e957eca999a25ff
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/av1an/blobs/sha256:358e252cb21347a5d92519bcb0eb7ba256a1f22410f8735efff523bc10a6ba05
-    sha256: 358e252cb21347a5d92519bcb0eb7ba256a1f22410f8735efff523bc10a6ba05
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/av1an/blobs/sha256:66278ee1f9af5a00b9cd90245ce9190ac74897f4d964fa58aa9f20ed1aa35b85
-    sha256: 66278ee1f9af5a00b9cd90245ce9190ac74897f4d964fa58aa9f20ed1aa35b85
-source:
-  url: https://github.com/rust-av/Av1an/archive/refs/tags/v0.5.2.tar.gz
-  sha256: 58eba4215ffaf07a58065e78fb4aec8df9ebda48e9d996621d559f3024b3538b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - mkvtoolnix
-  - vapoursynth
+    - ffmpeg
+    - mkvtoolnix
+    - vapoursynth
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/av1an/blobs/sha256:5f24497cd78557437533160947f715b01ba31fd128e890900e957eca999a25ff
+        sha256: 5f24497cd78557437533160947f715b01ba31fd128e890900e957eca999a25ff
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/av1an/blobs/sha256:75f1beb607c47cff64d09ffd0eceabeec3e466c34a8e6881ae99982799f4d8b3
+        sha256: 75f1beb607c47cff64d09ffd0eceabeec3e466c34a8e6881ae99982799f4d8b3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/av1an/blobs/sha256:358e252cb21347a5d92519bcb0eb7ba256a1f22410f8735efff523bc10a6ba05
+        sha256: 358e252cb21347a5d92519bcb0eb7ba256a1f22410f8735efff523bc10a6ba05
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/av1an/blobs/sha256:66278ee1f9af5a00b9cd90245ce9190ac74897f4d964fa58aa9f20ed1aa35b85
+        sha256: 66278ee1f9af5a00b9cd90245ce9190ac74897f4d964fa58aa9f20ed1aa35b85
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rust-av/Av1an/archive/refs/tags/v0.5.2.tar.gz
+    sha256: 58eba4215ffaf07a58065e78fb4aec8df9ebda48e9d996621d559f3024b3538b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - nasm
-  - rust
+    - nasm
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

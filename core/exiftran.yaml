@@ -1,52 +1,76 @@
 name: exiftran
-version: 2.14
+version: "2.14"
 description: Transform digital camera jpegs and their EXIF data
 homepage: https://www.kraxel.org/blog/linux/fbida/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/exiftran/blobs/sha256:47382320dca8114cb256770c2bca548abc28281ed6b90b309d62e6cfcd7cf2f5
-    sha256: 47382320dca8114cb256770c2bca548abc28281ed6b90b309d62e6cfcd7cf2f5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/exiftran/blobs/sha256:4267824506175ba35297c38e433a1ee8ec5118dec80f8763e604c08a8ab8256b
-    sha256: 4267824506175ba35297c38e433a1ee8ec5118dec80f8763e604c08a8ab8256b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/exiftran/blobs/sha256:9d32a9b73cd9ea5dca9d5a34ce6e9b6c9684ae38617045fd87b172d5d9ac6a75
-    sha256: 9d32a9b73cd9ea5dca9d5a34ce6e9b6c9684ae38617045fd87b172d5d9ac6a75
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/exiftran/blobs/sha256:4f296de064b124fe142cf3975b32c59b162325f9dbb177ab13b12e6bd8fecdf8
-    sha256: 4f296de064b124fe142cf3975b32c59b162325f9dbb177ab13b12e6bd8fecdf8
-source:
-  url: https://www.kraxel.org/releases/fbida/fbida-2.14.tar.gz
-  sha256: 95b7c01556cb6ef9819f358b314ddfeb8a4cbe862b521a3ed62f03d163154438
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - libexif
-  - pixman
+    - jpeg-turbo
+    - libexif
+    - pixman
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/exiftran/blobs/sha256:4267824506175ba35297c38e433a1ee8ec5118dec80f8763e604c08a8ab8256b
+        sha256: 4267824506175ba35297c38e433a1ee8ec5118dec80f8763e604c08a8ab8256b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/exiftran/blobs/sha256:47382320dca8114cb256770c2bca548abc28281ed6b90b309d62e6cfcd7cf2f5
+        sha256: 47382320dca8114cb256770c2bca548abc28281ed6b90b309d62e6cfcd7cf2f5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/exiftran/blobs/sha256:9d32a9b73cd9ea5dca9d5a34ce6e9b6c9684ae38617045fd87b172d5d9ac6a75
+        sha256: 9d32a9b73cd9ea5dca9d5a34ce6e9b6c9684ae38617045fd87b172d5d9ac6a75
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/exiftran/blobs/sha256:4f296de064b124fe142cf3975b32c59b162325f9dbb177ab13b12e6bd8fecdf8
+        sha256: 4f296de064b124fe142cf3975b32c59b162325f9dbb177ab13b12e6bd8fecdf8
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.kraxel.org/releases/fbida/fbida-2.14.tar.gz
+    sha256: 95b7c01556cb6ef9819f358b314ddfeb8a4cbe862b521a3ed62f03d163154438
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - fontconfig
-  - freetype
-  - ghostscript
-  - giflib
-  - jpeg-turbo
-  - libdrm
-  - libepoxy
-  - libexif
-  - libpng
-  - libtiff
-  - libx11
-  - libxext
-  - libxpm
-  - libxt
-  - mesa
-  - openmotif
-  - pixman
-  - poppler
-  - webp
+    - cairo
+    - fontconfig
+    - freetype
+    - ghostscript
+    - giflib
+    - jpeg-turbo
+    - libdrm
+    - libepoxy
+    - libexif
+    - libpng
+    - libtiff
+    - libx11
+    - libxext
+    - libxpm
+    - libxt
+    - mesa
+    - openmotif
+    - pixman
+    - poppler
+    - webp
+build:
+    configure: []
+    install: []
+service: null

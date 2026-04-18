@@ -1,29 +1,54 @@
 name: ocaml-num
-version: 1.6
+version: "1.6"
 description: OCaml legacy Num library for arbitrary-precision arithmetic
 homepage: https://github.com/ocaml/num
 license: LGPL-2.1-only WITH OCaml-LGPL-linking-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocaml-num/blobs/sha256:76c722dd8ad6f12ccdda09f952f5f6b0ac5d240c4bbb4ded7d78915cea582c3f
-    sha256: 76c722dd8ad6f12ccdda09f952f5f6b0ac5d240c4bbb4ded7d78915cea582c3f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocaml-num/blobs/sha256:b7eb0c9fbb0d0c9fc3234011c0954abea2c44774aeda331094897ed1363f37d8
-    sha256: b7eb0c9fbb0d0c9fc3234011c0954abea2c44774aeda331094897ed1363f37d8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocaml-num/blobs/sha256:594ea85e889f5063ea86712ffc6930e71597c8b438b5d82663e925fdfdebd47b
-    sha256: 594ea85e889f5063ea86712ffc6930e71597c8b438b5d82663e925fdfdebd47b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocaml-num/blobs/sha256:1582f04ba6900e23021d99ef4450ae945935fde491e4fae1a24f05c22a690417
-    sha256: 1582f04ba6900e23021d99ef4450ae945935fde491e4fae1a24f05c22a690417
-source:
-  url: https://github.com/ocaml/num/archive/refs/tags/v1.6.tar.gz
-  sha256: b5cce325449aac746d5ca963d84688a627cca5b38d41e636cf71c68b60495b3e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ocaml
+    - ocaml
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocaml-num/blobs/sha256:b7eb0c9fbb0d0c9fc3234011c0954abea2c44774aeda331094897ed1363f37d8
+        sha256: b7eb0c9fbb0d0c9fc3234011c0954abea2c44774aeda331094897ed1363f37d8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocaml-num/blobs/sha256:76c722dd8ad6f12ccdda09f952f5f6b0ac5d240c4bbb4ded7d78915cea582c3f
+        sha256: 76c722dd8ad6f12ccdda09f952f5f6b0ac5d240c4bbb4ded7d78915cea582c3f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocaml-num/blobs/sha256:594ea85e889f5063ea86712ffc6930e71597c8b438b5d82663e925fdfdebd47b
+        sha256: 594ea85e889f5063ea86712ffc6930e71597c8b438b5d82663e925fdfdebd47b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocaml-num/blobs/sha256:1582f04ba6900e23021d99ef4450ae945935fde491e4fae1a24f05c22a690417
+        sha256: 1582f04ba6900e23021d99ef4450ae945935fde491e4fae1a24f05c22a690417
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ocaml/num/archive/refs/tags/v1.6.tar.gz
+    sha256: b5cce325449aac746d5ca963d84688a627cca5b38d41e636cf71c68b60495b3e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ocaml-findlib
+    - ocaml-findlib
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

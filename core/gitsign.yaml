@@ -3,25 +3,51 @@ version: 0.14.0
 description: Keyless Git signing using Sigstore
 homepage: https://github.com/sigstore/gitsign
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gitsign/blobs/sha256:3bacb71a978c2b7971220a61f2710d0ee57f242fa5d7c129ee5a8270bd57bd9b
-    sha256: 3bacb71a978c2b7971220a61f2710d0ee57f242fa5d7c129ee5a8270bd57bd9b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gitsign/blobs/sha256:5e9965bfdcd0667a982743cdd836f0ec059f1c9780fac6b75949f224bf308dc8
-    sha256: 5e9965bfdcd0667a982743cdd836f0ec059f1c9780fac6b75949f224bf308dc8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gitsign/blobs/sha256:19b45ca45444552cc4ae6ed18123f1af38b1a7791effe4f259d76890000bb727
-    sha256: 19b45ca45444552cc4ae6ed18123f1af38b1a7791effe4f259d76890000bb727
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gitsign/blobs/sha256:7bbddb53c8cfb0e35656cf3cff189e9d24e7862ecc77fcab61b9b1ab95c948c6
-    sha256: 7bbddb53c8cfb0e35656cf3cff189e9d24e7862ecc77fcab61b9b1ab95c948c6
-source:
-  url: https://github.com/sigstore/gitsign/archive/refs/tags/v0.14.0.tar.gz
-  sha256: 340c806f74fc19a2e9d0443f48239cc3dc40fa5c001355fb355a3f486dccf4f9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitsign/blobs/sha256:5e9965bfdcd0667a982743cdd836f0ec059f1c9780fac6b75949f224bf308dc8
+        sha256: 5e9965bfdcd0667a982743cdd836f0ec059f1c9780fac6b75949f224bf308dc8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitsign/blobs/sha256:3bacb71a978c2b7971220a61f2710d0ee57f242fa5d7c129ee5a8270bd57bd9b
+        sha256: 3bacb71a978c2b7971220a61f2710d0ee57f242fa5d7c129ee5a8270bd57bd9b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitsign/blobs/sha256:19b45ca45444552cc4ae6ed18123f1af38b1a7791effe4f259d76890000bb727
+        sha256: 19b45ca45444552cc4ae6ed18123f1af38b1a7791effe4f259d76890000bb727
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitsign/blobs/sha256:7bbddb53c8cfb0e35656cf3cff189e9d24e7862ecc77fcab61b9b1ab95c948c6
+        sha256: 7bbddb53c8cfb0e35656cf3cff189e9d24e7862ecc77fcab61b9b1ab95c948c6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sigstore/gitsign/archive/refs/tags/v0.14.0.tar.gz
+    sha256: 340c806f74fc19a2e9d0443f48239cc3dc40fa5c001355fb355a3f486dccf4f9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 2.4.42
 description: Set and statistical operations on genomic data of arbitrary scale
 homepage: https://github.com/bedops/bedops
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bedops/blobs/sha256:02db95f7031e865972ba9811475cebf53b0bcd748ae61b0fb067187a5940de88
-    sha256: 02db95f7031e865972ba9811475cebf53b0bcd748ae61b0fb067187a5940de88
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bedops/blobs/sha256:6f996efefbe566889602342fb2d270816c30121dfa1798125010bd59c70c7071
-    sha256: 6f996efefbe566889602342fb2d270816c30121dfa1798125010bd59c70c7071
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bedops/blobs/sha256:8ffc6cb770da1fc79d627c28daa4cf7a6444f3203e1c17f9c78860f70521738f
-    sha256: 8ffc6cb770da1fc79d627c28daa4cf7a6444f3203e1c17f9c78860f70521738f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bedops/blobs/sha256:4e60fd9252b86986cef3dd7adb62756695775f3747f120e44813607532881468
-    sha256: 4e60fd9252b86986cef3dd7adb62756695775f3747f120e44813607532881468
-source:
-  url: https://github.com/bedops/bedops/archive/refs/tags/v2.4.42.tar.gz
-  sha256: 9daa0c098e37490a07f84664d2c61ff8909689995cf7e1673d259ccd4f1c453c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jansson
+    - jansson
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bedops/blobs/sha256:6f996efefbe566889602342fb2d270816c30121dfa1798125010bd59c70c7071
+        sha256: 6f996efefbe566889602342fb2d270816c30121dfa1798125010bd59c70c7071
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bedops/blobs/sha256:02db95f7031e865972ba9811475cebf53b0bcd748ae61b0fb067187a5940de88
+        sha256: 02db95f7031e865972ba9811475cebf53b0bcd748ae61b0fb067187a5940de88
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bedops/blobs/sha256:8ffc6cb770da1fc79d627c28daa4cf7a6444f3203e1c17f9c78860f70521738f
+        sha256: 8ffc6cb770da1fc79d627c28daa4cf7a6444f3203e1c17f9c78860f70521738f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bedops/blobs/sha256:4e60fd9252b86986cef3dd7adb62756695775f3747f120e44813607532881468
+        sha256: 4e60fd9252b86986cef3dd7adb62756695775f3747f120e44813607532881468
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bedops/bedops/archive/refs/tags/v2.4.42.tar.gz
+    sha256: 9daa0c098e37490a07f84664d2c61ff8909689995cf7e1673d259ccd4f1c453c
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - jansson
-  - zlib-ng-compat
+    - jansson
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

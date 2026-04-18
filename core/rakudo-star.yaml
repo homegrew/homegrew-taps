@@ -1,42 +1,66 @@
 name: rakudo-star
-version: 2026.03
+version: "2026.03"
 description: Rakudo compiler and commonly used packages
 homepage: https://rakudo.org/
 license: Artistic-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:8837e4d7da49087c2a3c5d66fba3d3cfa61768333bef3f369cc705a4cc086934
-    sha256: 8837e4d7da49087c2a3c5d66fba3d3cfa61768333bef3f369cc705a4cc086934
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:2e715541a6771fa72c1a46e014b9046ecf1caf50683d724e734bc5ffaf9be20f
-    sha256: 2e715541a6771fa72c1a46e014b9046ecf1caf50683d724e734bc5ffaf9be20f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:0fff45c9f086cfe22bb581101a788be116525eb06cd227c93325c35f243be371
-    sha256: 0fff45c9f086cfe22bb581101a788be116525eb06cd227c93325c35f243be371
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:f0f21555a39118b60750dafb4a2743214b7f7a0180eca932201d9277541d55b8
-    sha256: f0f21555a39118b60750dafb4a2743214b7f7a0180eca932201d9277541d55b8
-source:
-  url: https://github.com/rakudo/star/releases/download/2026.03/rakudo-star-2026.03.tar.gz
-  sha256: e68a7c697c27ada1b9f4f2f8038a9d446fb5b1e32ad8aa290c22c6c85b3ec25e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtommath
-  - mimalloc
-  - openssl@3
-  - readline
-  - zstd
-  - libuv
+    - libtommath
+    - mimalloc
+    - openssl@3
+    - readline
+    - zstd
+    - libuv
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:2e715541a6771fa72c1a46e014b9046ecf1caf50683d724e734bc5ffaf9be20f
+        sha256: 2e715541a6771fa72c1a46e014b9046ecf1caf50683d724e734bc5ffaf9be20f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:8837e4d7da49087c2a3c5d66fba3d3cfa61768333bef3f369cc705a4cc086934
+        sha256: 8837e4d7da49087c2a3c5d66fba3d3cfa61768333bef3f369cc705a4cc086934
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:0fff45c9f086cfe22bb581101a788be116525eb06cd227c93325c35f243be371
+        sha256: 0fff45c9f086cfe22bb581101a788be116525eb06cd227c93325c35f243be371
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:f0f21555a39118b60750dafb4a2743214b7f7a0180eca932201d9277541d55b8
+        sha256: f0f21555a39118b60750dafb4a2743214b7f7a0180eca932201d9277541d55b8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rakudo/star/releases/download/2026.03/rakudo-star-2026.03.tar.gz
+    sha256: e68a7c697c27ada1b9f4f2f8038a9d446fb5b1e32ad8aa290c22c6c85b3ec25e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - sqlite
-  - bash
+    - pkgconf
+    - sqlite
+    - bash
 linux_dependencies:
-  - libtommath
-  - mimalloc
-  - openssl@3
-  - readline
-  - zstd
+    - libtommath
+    - mimalloc
+    - openssl@3
+    - readline
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

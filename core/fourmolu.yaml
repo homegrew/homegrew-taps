@@ -3,28 +3,53 @@ version: 0.19.0.1
 description: Formatter for Haskell source code
 homepage: https://github.com/fourmolu/fourmolu
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fourmolu/blobs/sha256:27d7f072d6628f3d209134278bea538caaed202d84f64179bc0f36b34916489c
-    sha256: 27d7f072d6628f3d209134278bea538caaed202d84f64179bc0f36b34916489c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fourmolu/blobs/sha256:74be792a2b287d7cecd14f6573a015744bc54aa3a90e2932509a3ccf8a8346fb
-    sha256: 74be792a2b287d7cecd14f6573a015744bc54aa3a90e2932509a3ccf8a8346fb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fourmolu/blobs/sha256:6c33d9448da66ef7ef6b2336442fb7b925ea62dbbec8713cd337040f27bc0ba6
-    sha256: 6c33d9448da66ef7ef6b2336442fb7b925ea62dbbec8713cd337040f27bc0ba6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fourmolu/blobs/sha256:7781851b29b380175699e0985fada369c6d693ed5ca576ee39a9f425f60fd913
-    sha256: 7781851b29b380175699e0985fada369c6d693ed5ca576ee39a9f425f60fd913
-source:
-  url: https://hackage.haskell.org/package/fourmolu-0.19.0.1/fourmolu-0.19.0.1.tar.gz
-  sha256: 957b7ff7681411bf4872120fcfef6a9182fe15a6d655a6db6c5a06f726935cf5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fourmolu/blobs/sha256:74be792a2b287d7cecd14f6573a015744bc54aa3a90e2932509a3ccf8a8346fb
+        sha256: 74be792a2b287d7cecd14f6573a015744bc54aa3a90e2932509a3ccf8a8346fb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fourmolu/blobs/sha256:27d7f072d6628f3d209134278bea538caaed202d84f64179bc0f36b34916489c
+        sha256: 27d7f072d6628f3d209134278bea538caaed202d84f64179bc0f36b34916489c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fourmolu/blobs/sha256:6c33d9448da66ef7ef6b2336442fb7b925ea62dbbec8713cd337040f27bc0ba6
+        sha256: 6c33d9448da66ef7ef6b2336442fb7b925ea62dbbec8713cd337040f27bc0ba6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fourmolu/blobs/sha256:7781851b29b380175699e0985fada369c6d693ed5ca576ee39a9f425f60fd913
+        sha256: 7781851b29b380175699e0985fada369c6d693ed5ca576ee39a9f425f60fd913
+        sha512: ""
+        signature: ""
+source:
+    url: https://hackage.haskell.org/package/fourmolu-0.19.0.1/fourmolu-0.19.0.1.tar.gz
+    sha256: 957b7ff7681411bf4872120fcfef6a9182fe15a6d655a6db6c5a06f726935cf5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc@9.12
+    - cabal-install
+    - ghc@9.12
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,30 +1,56 @@
 name: redis-leveldb
-version: 1.4
+version: "1.4"
 description: Redis-protocol compatible frontend to leveldb
 homepage: https://github.com/KDr2/redis-leveldb
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redis-leveldb/blobs/sha256:c271d1f63c3d093c40dfe5b388ff1fb8a16189fd3856af03a03de7b997ceacc6
-    sha256: c271d1f63c3d093c40dfe5b388ff1fb8a16189fd3856af03a03de7b997ceacc6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redis-leveldb/blobs/sha256:edac4282df53a53882efe10586ee1d39c06b3f03f150d128f6acfa115c039cf8
-    sha256: edac4282df53a53882efe10586ee1d39c06b3f03f150d128f6acfa115c039cf8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redis-leveldb/blobs/sha256:6323dd8c468b9cc40d9310fdeb776de380e1c32c622e682713dd98a9cf42e659
-    sha256: 6323dd8c468b9cc40d9310fdeb776de380e1c32c622e682713dd98a9cf42e659
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redis-leveldb/blobs/sha256:13d9141ccb43a5ee14216ff11730d74b63b1ad72ed0e5ecaea73389fd967f442
-    sha256: 13d9141ccb43a5ee14216ff11730d74b63b1ad72ed0e5ecaea73389fd967f442
-source:
-  url: https://github.com/KDr2/redis-leveldb/archive/refs/tags/v1.4.tar.gz
-  sha256: b34365ca5b788c47b116ea8f86a7a409b765440361b6c21a46161a66f631797c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - leveldb
-  - libev
-  - snappy
+    - gmp
+    - leveldb
+    - libev
+    - snappy
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redis-leveldb/blobs/sha256:edac4282df53a53882efe10586ee1d39c06b3f03f150d128f6acfa115c039cf8
+        sha256: edac4282df53a53882efe10586ee1d39c06b3f03f150d128f6acfa115c039cf8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redis-leveldb/blobs/sha256:c271d1f63c3d093c40dfe5b388ff1fb8a16189fd3856af03a03de7b997ceacc6
+        sha256: c271d1f63c3d093c40dfe5b388ff1fb8a16189fd3856af03a03de7b997ceacc6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redis-leveldb/blobs/sha256:6323dd8c468b9cc40d9310fdeb776de380e1c32c622e682713dd98a9cf42e659
+        sha256: 6323dd8c468b9cc40d9310fdeb776de380e1c32c622e682713dd98a9cf42e659
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redis-leveldb/blobs/sha256:13d9141ccb43a5ee14216ff11730d74b63b1ad72ed0e5ecaea73389fd967f442
+        sha256: 13d9141ccb43a5ee14216ff11730d74b63b1ad72ed0e5ecaea73389fd967f442
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/KDr2/redis-leveldb/archive/refs/tags/v1.4.tar.gz
+    sha256: b34365ca5b788c47b116ea8f86a7a409b765440361b6c21a46161a66f631797c
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

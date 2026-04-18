@@ -3,48 +3,72 @@ version: 1.5.0
 description: VNC viewer widget for GTK
 homepage: https://gitlab.gnome.org/GNOME/gtk-vnc
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtk-vnc/blobs/sha256:83712dce18d0595c9f12c0a24ee58c518d944b7ac1d6fa1211dc1c73504cb351
-    sha256: 83712dce18d0595c9f12c0a24ee58c518d944b7ac1d6fa1211dc1c73504cb351
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtk-vnc/blobs/sha256:812a78cc1831522196e0c032173f0ce36878b10270ac165bd7d9bfad1e00c110
-    sha256: 812a78cc1831522196e0c032173f0ce36878b10270ac165bd7d9bfad1e00c110
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtk-vnc/blobs/sha256:2eb555c0acfd1a52c26080031a4938a3107a16a5aea2b531b2e034ece167940d
-    sha256: 2eb555c0acfd1a52c26080031a4938a3107a16a5aea2b531b2e034ece167940d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtk-vnc/blobs/sha256:83ecf718551bcb1caab684ab463cb3a3a2db17babf574aa3238fa3fd175d9124
-    sha256: 83ecf718551bcb1caab684ab463cb3a3a2db17babf574aa3238fa3fd175d9124
-source:
-  url: https://download.gnome.org/sources/gtk-vnc/1.5/gtk-vnc-1.5.0.tar.xz
-  sha256: c0beb4747528ad931da43acc567c6a0190f7fc624465571ed9ccece02c34dd23
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gmp
-  - gnutls
-  - gtk+3
-  - libgcrypt
-  - gettext
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gmp
+    - gnutls
+    - gtk+3
+    - libgcrypt
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtk-vnc/blobs/sha256:812a78cc1831522196e0c032173f0ce36878b10270ac165bd7d9bfad1e00c110
+        sha256: 812a78cc1831522196e0c032173f0ce36878b10270ac165bd7d9bfad1e00c110
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtk-vnc/blobs/sha256:83712dce18d0595c9f12c0a24ee58c518d944b7ac1d6fa1211dc1c73504cb351
+        sha256: 83712dce18d0595c9f12c0a24ee58c518d944b7ac1d6fa1211dc1c73504cb351
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtk-vnc/blobs/sha256:2eb555c0acfd1a52c26080031a4938a3107a16a5aea2b531b2e034ece167940d
+        sha256: 2eb555c0acfd1a52c26080031a4938a3107a16a5aea2b531b2e034ece167940d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtk-vnc/blobs/sha256:83ecf718551bcb1caab684ab463cb3a3a2db17babf574aa3238fa3fd175d9124
+        sha256: 83ecf718551bcb1caab684ab463cb3a3a2db17babf574aa3238fa3fd175d9124
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gtk-vnc/1.5/gtk-vnc-1.5.0.tar.xz
+    sha256: c0beb4747528ad931da43acc567c6a0190f7fc624465571ed9ccece02c34dd23
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
+    - gettext
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gmp
-  - gnutls
-  - gtk+3
-  - libgcrypt
-  - libx11
-  - zlib-ng-compat
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gmp
+    - gnutls
+    - gtk+3
+    - libgcrypt
+    - libx11
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

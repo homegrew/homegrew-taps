@@ -3,32 +3,56 @@ version: 11.2.1
 description: NetworKit is an OS-toolkit for large-scale network analysis
 homepage: https://networkit.github.io
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libnetworkit/blobs/sha256:77c3f853f13a533978f790671a938a0341ae8d77d02698d9d1d89efd51d8c45e
-    sha256: 77c3f853f13a533978f790671a938a0341ae8d77d02698d9d1d89efd51d8c45e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libnetworkit/blobs/sha256:a47488310d81eff3eac5596af4099e3585896d2828f1bdf51524b3d5bc8be76a
-    sha256: a47488310d81eff3eac5596af4099e3585896d2828f1bdf51524b3d5bc8be76a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libnetworkit/blobs/sha256:47b4cb78951b041733d9d8f352e5fb4b7d48ab6747ad41ad05c31e9d25ffa150
-    sha256: 47b4cb78951b041733d9d8f352e5fb4b7d48ab6747ad41ad05c31e9d25ffa150
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libnetworkit/blobs/sha256:7369fce424d18d4e14a1125462f5bd8543fe2bbb1112b1699256f04f54f375d0
-    sha256: 7369fce424d18d4e14a1125462f5bd8543fe2bbb1112b1699256f04f54f375d0
-source:
-  url: https://github.com/networkit/networkit/archive/refs/tags/11.2.1.tar.gz
-  sha256: 969718847465937086728a884b5f143d7f36cfd3f6cdc04ef9ae4f64ba61b60c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - tlx
-  - ttmath
-  - libomp
+    - tlx
+    - ttmath
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libnetworkit/blobs/sha256:a47488310d81eff3eac5596af4099e3585896d2828f1bdf51524b3d5bc8be76a
+        sha256: a47488310d81eff3eac5596af4099e3585896d2828f1bdf51524b3d5bc8be76a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libnetworkit/blobs/sha256:77c3f853f13a533978f790671a938a0341ae8d77d02698d9d1d89efd51d8c45e
+        sha256: 77c3f853f13a533978f790671a938a0341ae8d77d02698d9d1d89efd51d8c45e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libnetworkit/blobs/sha256:47b4cb78951b041733d9d8f352e5fb4b7d48ab6747ad41ad05c31e9d25ffa150
+        sha256: 47b4cb78951b041733d9d8f352e5fb4b7d48ab6747ad41ad05c31e9d25ffa150
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libnetworkit/blobs/sha256:7369fce424d18d4e14a1125462f5bd8543fe2bbb1112b1699256f04f54f375d0
+        sha256: 7369fce424d18d4e14a1125462f5bd8543fe2bbb1112b1699256f04f54f375d0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/networkit/networkit/archive/refs/tags/11.2.1.tar.gz
+    sha256: 969718847465937086728a884b5f143d7f36cfd3f6cdc04ef9ae4f64ba61b60c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - tlx
-  - ttmath
+    - tlx
+    - ttmath
+build:
+    configure: []
+    install: []
+service: null

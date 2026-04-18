@@ -3,32 +3,56 @@ version: 6.2.0
 description: Utilities for interacting with PyPI
 homepage: https://github.com/pypa/twine
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/twine/blobs/sha256:331449e74615ec23f438fee79635a206a7fb4eecb4a44ad719c6f84aa8e43204
-    sha256: 331449e74615ec23f438fee79635a206a7fb4eecb4a44ad719c6f84aa8e43204
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/twine/blobs/sha256:27449a3091b1f9bfe04c4ede9e0655211c840681a66458c0e146c819eda3ef2c
-    sha256: 27449a3091b1f9bfe04c4ede9e0655211c840681a66458c0e146c819eda3ef2c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/twine/blobs/sha256:c85b59698080496d806a772ddc07a0f14c9e516f85cee95aeb734bd406d9ac20
-    sha256: c85b59698080496d806a772ddc07a0f14c9e516f85cee95aeb734bd406d9ac20
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/twine/blobs/sha256:6dd84ba0bf2655f34e04222ab5391c7db0a698c975aa61394a10638c5f7276a4
-    sha256: 6dd84ba0bf2655f34e04222ab5391c7db0a698c975aa61394a10638c5f7276a4
-source:
-  url: https://files.pythonhosted.org/packages/e0/a8/949edebe3a82774c1ec34f637f5dd82d1cf22c25e963b7d63771083bbee5/twine-6.2.0.tar.gz
-  sha256: e5ed0d2fd70c9959770dce51c8f39c8945c574e18173a7b81802dab51b4b75cf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - python@3.14
+    - certifi
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/twine/blobs/sha256:27449a3091b1f9bfe04c4ede9e0655211c840681a66458c0e146c819eda3ef2c
+        sha256: 27449a3091b1f9bfe04c4ede9e0655211c840681a66458c0e146c819eda3ef2c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/twine/blobs/sha256:331449e74615ec23f438fee79635a206a7fb4eecb4a44ad719c6f84aa8e43204
+        sha256: 331449e74615ec23f438fee79635a206a7fb4eecb4a44ad719c6f84aa8e43204
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/twine/blobs/sha256:c85b59698080496d806a772ddc07a0f14c9e516f85cee95aeb734bd406d9ac20
+        sha256: c85b59698080496d806a772ddc07a0f14c9e516f85cee95aeb734bd406d9ac20
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/twine/blobs/sha256:6dd84ba0bf2655f34e04222ab5391c7db0a698c975aa61394a10638c5f7276a4
+        sha256: 6dd84ba0bf2655f34e04222ab5391c7db0a698c975aa61394a10638c5f7276a4
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/e0/a8/949edebe3a82774c1ec34f637f5dd82d1cf22c25e963b7d63771083bbee5/twine-6.2.0.tar.gz
+    sha256: e5ed0d2fd70c9959770dce51c8f39c8945c574e18173a7b81802dab51b4b75cf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
 linux_dependencies:
-  - certifi
-  - cryptography
-  - python@3.14
+    - certifi
+    - cryptography
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

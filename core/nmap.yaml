@@ -1,42 +1,66 @@
 name: nmap
-version: 7.99
+version: "7.99"
 description: Port scanning utility for large networks
 homepage: https://nmap.org/
 license: LicenseRef-Homebrew-cannot-represent
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:610785e4dd545c5f71d3af2d221f8a92951714710cf98ac4ed10f6fd0d0c5153
-    sha256: 610785e4dd545c5f71d3af2d221f8a92951714710cf98ac4ed10f6fd0d0c5153
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:a5c5594350aad5168e64c364c6508b669cd5ea2273ad0f88d005b27de75cd5bd
-    sha256: a5c5594350aad5168e64c364c6508b669cd5ea2273ad0f88d005b27de75cd5bd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:71db30907d6cd22b65e60fbb825cbc394ea291123aba6f9422342026bdddd6ad
-    sha256: 71db30907d6cd22b65e60fbb825cbc394ea291123aba6f9422342026bdddd6ad
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:55edc13eebfb103bdc26cdcb479daf81d709b727d6c6e2e22ae2c447cebc638a
-    sha256: 55edc13eebfb103bdc26cdcb479daf81d709b727d6c6e2e22ae2c447cebc638a
-source:
-  url: https://nmap.org/dist/nmap-7.99.tar.bz2
-  sha256: df512492ffd108e53a27a06f26d8635bbe89e0e569455dc8ffef058c035d51b2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - liblinear
-  - libssh2
-  - lua
-  - openssl@3
-  - pcre2
-  - python@3.14
+    - liblinear
+    - libssh2
+    - lua
+    - openssl@3
+    - pcre2
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:a5c5594350aad5168e64c364c6508b669cd5ea2273ad0f88d005b27de75cd5bd
+        sha256: a5c5594350aad5168e64c364c6508b669cd5ea2273ad0f88d005b27de75cd5bd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:610785e4dd545c5f71d3af2d221f8a92951714710cf98ac4ed10f6fd0d0c5153
+        sha256: 610785e4dd545c5f71d3af2d221f8a92951714710cf98ac4ed10f6fd0d0c5153
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:71db30907d6cd22b65e60fbb825cbc394ea291123aba6f9422342026bdddd6ad
+        sha256: 71db30907d6cd22b65e60fbb825cbc394ea291123aba6f9422342026bdddd6ad
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nmap/blobs/sha256:55edc13eebfb103bdc26cdcb479daf81d709b727d6c6e2e22ae2c447cebc638a
+        sha256: 55edc13eebfb103bdc26cdcb479daf81d709b727d6c6e2e22ae2c447cebc638a
+        sha512: ""
+        signature: ""
+source:
+    url: https://nmap.org/dist/nmap-7.99.tar.bz2
+    sha256: df512492ffd108e53a27a06f26d8635bbe89e0e569455dc8ffef058c035d51b2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - python-setuptools
+    - python-setuptools
 linux_dependencies:
-  - liblinear
-  - libssh2
-  - lua
-  - openssl@3
-  - pcre2
-  - python@3.14
-  - zlib-ng-compat
+    - liblinear
+    - libssh2
+    - lua
+    - openssl@3
+    - pcre2
+    - python@3.14
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

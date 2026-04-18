@@ -3,30 +3,55 @@ version: 1.6.0
 description: Simple entity relation (ER) diagrams generation
 homepage: https://github.com/eralchemy/eralchemy
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/eralchemy/blobs/sha256:49a346cfaa425cda1007f4fc5cccca83546f2297770cb007d63d9f3b0f84e2e6
-    sha256: 49a346cfaa425cda1007f4fc5cccca83546f2297770cb007d63d9f3b0f84e2e6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/eralchemy/blobs/sha256:d8d2db3e30495966876ddd5e78cd9105333ce3d89f88b71515a87eca3997b051
-    sha256: d8d2db3e30495966876ddd5e78cd9105333ce3d89f88b71515a87eca3997b051
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/eralchemy/blobs/sha256:17c170fcb2656f9089d5142b82ca21c6b9b2793cadd458505714b65803b237c9
-    sha256: 17c170fcb2656f9089d5142b82ca21c6b9b2793cadd458505714b65803b237c9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/eralchemy/blobs/sha256:c79fa38699df65ebad7ff99554d7775d9fe5b91a4a5c94e0ceccce3a2663d2d9
-    sha256: c79fa38699df65ebad7ff99554d7775d9fe5b91a4a5c94e0ceccce3a2663d2d9
-source:
-  url: https://files.pythonhosted.org/packages/0e/c0/9c28acf903566a02de43f8fc6c572b8195ab0fa854016825e5690c77b57a/eralchemy-1.6.0.tar.gz
-  sha256: 8f82d329ec0cd9c04469adf36b8889b5ea2583e7e53c0fd2e784e176e1e27c7a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - graphviz
-  - libpq
-  - openssl@3
-  - python@3.14
+    - graphviz
+    - libpq
+    - openssl@3
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/eralchemy/blobs/sha256:d8d2db3e30495966876ddd5e78cd9105333ce3d89f88b71515a87eca3997b051
+        sha256: d8d2db3e30495966876ddd5e78cd9105333ce3d89f88b71515a87eca3997b051
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/eralchemy/blobs/sha256:49a346cfaa425cda1007f4fc5cccca83546f2297770cb007d63d9f3b0f84e2e6
+        sha256: 49a346cfaa425cda1007f4fc5cccca83546f2297770cb007d63d9f3b0f84e2e6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/eralchemy/blobs/sha256:17c170fcb2656f9089d5142b82ca21c6b9b2793cadd458505714b65803b237c9
+        sha256: 17c170fcb2656f9089d5142b82ca21c6b9b2793cadd458505714b65803b237c9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/eralchemy/blobs/sha256:c79fa38699df65ebad7ff99554d7775d9fe5b91a4a5c94e0ceccce3a2663d2d9
+        sha256: c79fa38699df65ebad7ff99554d7775d9fe5b91a4a5c94e0ceccce3a2663d2d9
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/0e/c0/9c28acf903566a02de43f8fc6c572b8195ab0fa854016825e5690c77b57a/eralchemy-1.6.0.tar.gz
+    sha256: 8f82d329ec0cd9c04469adf36b8889b5ea2583e7e53c0fd2e784e176e1e27c7a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

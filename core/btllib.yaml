@@ -3,30 +3,55 @@ version: 1.7.7
 description: Bioinformatics Technology Lab common code library
 homepage: https://github.com/bcgsc/btllib
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/btllib/blobs/sha256:6c80e5b9c4f2998ee7216c2854bceec4f391416569bad982b51692eefa389ebe
-    sha256: 6c80e5b9c4f2998ee7216c2854bceec4f391416569bad982b51692eefa389ebe
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/btllib/blobs/sha256:1f2ccf4565f213d1939870be4752e048c8abba6c1a5833e20093ba628e0a7f3f
-    sha256: 1f2ccf4565f213d1939870be4752e048c8abba6c1a5833e20093ba628e0a7f3f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/btllib/blobs/sha256:16983204f5bc2d14d99d4f43df2482c974bdc39e3a0549d51f1b8d7f150e307b
-    sha256: 16983204f5bc2d14d99d4f43df2482c974bdc39e3a0549d51f1b8d7f150e307b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/btllib/blobs/sha256:688e643a5c17de084209b3a1d26edb5d91067a0f39397df9a4cae8dcbef09d91
-    sha256: 688e643a5c17de084209b3a1d26edb5d91067a0f39397df9a4cae8dcbef09d91
-source:
-  url: https://github.com/bcgsc/btllib/releases/download/v1.7.7/btllib-1.7.7.tar.gz
-  sha256: 9e81a509f60d5bf7f19d5e5d052248a92425fec5809d0d31368537660336247a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libomp
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/btllib/blobs/sha256:1f2ccf4565f213d1939870be4752e048c8abba6c1a5833e20093ba628e0a7f3f
+        sha256: 1f2ccf4565f213d1939870be4752e048c8abba6c1a5833e20093ba628e0a7f3f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/btllib/blobs/sha256:6c80e5b9c4f2998ee7216c2854bceec4f391416569bad982b51692eefa389ebe
+        sha256: 6c80e5b9c4f2998ee7216c2854bceec4f391416569bad982b51692eefa389ebe
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/btllib/blobs/sha256:16983204f5bc2d14d99d4f43df2482c974bdc39e3a0549d51f1b8d7f150e307b
+        sha256: 16983204f5bc2d14d99d4f43df2482c974bdc39e3a0549d51f1b8d7f150e307b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/btllib/blobs/sha256:688e643a5c17de084209b3a1d26edb5d91067a0f39397df9a4cae8dcbef09d91
+        sha256: 688e643a5c17de084209b3a1d26edb5d91067a0f39397df9a4cae8dcbef09d91
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bcgsc/btllib/releases/download/v1.7.7/btllib-1.7.7.tar.gz
+    sha256: 9e81a509f60d5bf7f19d5e5d052248a92425fec5809d0d31368537660336247a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - meson
-  - ninja
-  - python@3.14
+    - cmake
+    - meson
+    - ninja
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

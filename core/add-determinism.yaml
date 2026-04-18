@@ -3,29 +3,54 @@ version: 0.7.3
 description: Build postprocessor to reset metadata fields for build reproducibility
 homepage: https://github.com/keszybz/add-determinism
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/add-determinism/blobs/sha256:a4acaeccbe7f1e8390d00e81f85104468a061865aa885de7bd2c5980583d47ca
-    sha256: a4acaeccbe7f1e8390d00e81f85104468a061865aa885de7bd2c5980583d47ca
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/add-determinism/blobs/sha256:4a6e9027ec99269def2d6823502b933e3290ab59fd64003cb68ce3836d0d65a0
-    sha256: 4a6e9027ec99269def2d6823502b933e3290ab59fd64003cb68ce3836d0d65a0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/add-determinism/blobs/sha256:e38dcf219d4522e98b3b313c830f480c0bc318fa8243b0586e7053cde7691aac
-    sha256: e38dcf219d4522e98b3b313c830f480c0bc318fa8243b0586e7053cde7691aac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/add-determinism/blobs/sha256:f81478dd7b06b5f7d120447e2552aad28a48edb0ac53c77d402137d27ecbc6f2
-    sha256: f81478dd7b06b5f7d120447e2552aad28a48edb0ac53c77d402137d27ecbc6f2
-source:
-  url: https://github.com/keszybz/add-determinism/archive/refs/tags/v0.7.3.tar.gz
-  sha256: d1f5eac303807fa31e25b4f8ccb08fed23d15f4ffdbe3bb4ee35a29504c766b2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/add-determinism/blobs/sha256:4a6e9027ec99269def2d6823502b933e3290ab59fd64003cb68ce3836d0d65a0
+        sha256: 4a6e9027ec99269def2d6823502b933e3290ab59fd64003cb68ce3836d0d65a0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/add-determinism/blobs/sha256:a4acaeccbe7f1e8390d00e81f85104468a061865aa885de7bd2c5980583d47ca
+        sha256: a4acaeccbe7f1e8390d00e81f85104468a061865aa885de7bd2c5980583d47ca
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/add-determinism/blobs/sha256:e38dcf219d4522e98b3b313c830f480c0bc318fa8243b0586e7053cde7691aac
+        sha256: e38dcf219d4522e98b3b313c830f480c0bc318fa8243b0586e7053cde7691aac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/add-determinism/blobs/sha256:f81478dd7b06b5f7d120447e2552aad28a48edb0ac53c77d402137d27ecbc6f2
+        sha256: f81478dd7b06b5f7d120447e2552aad28a48edb0ac53c77d402137d27ecbc6f2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/keszybz/add-determinism/archive/refs/tags/v0.7.3.tar.gz
+    sha256: d1f5eac303807fa31e25b4f8ccb08fed23d15f4ffdbe3bb4ee35a29504c766b2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - libselinux
-  - zlib-ng-compat
+    - libselinux
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

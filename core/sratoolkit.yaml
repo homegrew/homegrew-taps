@@ -3,27 +3,52 @@ version: 3.4.1
 description: Data tools for INSDC Sequence Read Archive
 homepage: https://github.com/ncbi/sra-tools
 license: LicenseRef-Homebrew-public-domain AND GPL-3.0-or-later AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:ea15253c72d8bfbac1caaefac0cf90bc48d6a215af38d5d0b8af0cae50be524d
-    sha256: ea15253c72d8bfbac1caaefac0cf90bc48d6a215af38d5d0b8af0cae50be524d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:df6fe9a10e35c77e8b86c2c27a84e9e05c671b3b3b6e55860c3c65724960715c
-    sha256: df6fe9a10e35c77e8b86c2c27a84e9e05c671b3b3b6e55860c3c65724960715c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:4c32d0758c0d31c4e0af88ec49ef06be34745391f6ad804325c1fd40967e6c7a
-    sha256: 4c32d0758c0d31c4e0af88ec49ef06be34745391f6ad804325c1fd40967e6c7a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:7dc648d79584227003885181424d9b4abd21ffdbce665db892be297b1ef56b4e
-    sha256: 7dc648d79584227003885181424d9b4abd21ffdbce665db892be297b1ef56b4e
-source:
-  url: https://github.com/ncbi/sra-tools/archive/refs/tags/3.4.1.tar.gz
-  sha256: 874dcbb28b7ebffb5554839254e777b1137b0f0430815bab175068decfe96e98
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hdf5
+    - hdf5
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:df6fe9a10e35c77e8b86c2c27a84e9e05c671b3b3b6e55860c3c65724960715c
+        sha256: df6fe9a10e35c77e8b86c2c27a84e9e05c671b3b3b6e55860c3c65724960715c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:ea15253c72d8bfbac1caaefac0cf90bc48d6a215af38d5d0b8af0cae50be524d
+        sha256: ea15253c72d8bfbac1caaefac0cf90bc48d6a215af38d5d0b8af0cae50be524d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:4c32d0758c0d31c4e0af88ec49ef06be34745391f6ad804325c1fd40967e6c7a
+        sha256: 4c32d0758c0d31c4e0af88ec49ef06be34745391f6ad804325c1fd40967e6c7a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:7dc648d79584227003885181424d9b4abd21ffdbce665db892be297b1ef56b4e
+        sha256: 7dc648d79584227003885181424d9b4abd21ffdbce665db892be297b1ef56b4e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ncbi/sra-tools/archive/refs/tags/3.4.1.tar.gz
+    sha256: 874dcbb28b7ebffb5554839254e777b1137b0f0430815bab175068decfe96e98
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

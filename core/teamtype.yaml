@@ -3,27 +3,52 @@ version: 0.9.1
 description: Peer-to-peer, editor-agnostic collaborative editing of local text files
 homepage: https://github.com/teamtype/teamtype
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/teamtype/blobs/sha256:f305fb49649d180299c2cd52a2e24c92088389058c9069cd07e272d237656019
-    sha256: f305fb49649d180299c2cd52a2e24c92088389058c9069cd07e272d237656019
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/teamtype/blobs/sha256:894b2d5c75a01fce4f124476df1cc0438b160a12688749bb355148162c4e20ad
-    sha256: 894b2d5c75a01fce4f124476df1cc0438b160a12688749bb355148162c4e20ad
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/teamtype/blobs/sha256:f13a452a13a112335fece8cb2a97e23414c7164ae7d22eec8a180525ec4553b7
-    sha256: f13a452a13a112335fece8cb2a97e23414c7164ae7d22eec8a180525ec4553b7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/teamtype/blobs/sha256:48431d07b888a42dcac294713e26a88f72e68dc1427f9795db5ae31c9728d348
-    sha256: 48431d07b888a42dcac294713e26a88f72e68dc1427f9795db5ae31c9728d348
-source:
-  url: https://github.com/teamtype/teamtype/archive/refs/tags/v0.9.1.tar.gz
-  sha256: 8503411b340f00456ac6c1d586637de35a35886b7addbf2cec06816e05bc9873
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/teamtype/blobs/sha256:894b2d5c75a01fce4f124476df1cc0438b160a12688749bb355148162c4e20ad
+        sha256: 894b2d5c75a01fce4f124476df1cc0438b160a12688749bb355148162c4e20ad
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/teamtype/blobs/sha256:f305fb49649d180299c2cd52a2e24c92088389058c9069cd07e272d237656019
+        sha256: f305fb49649d180299c2cd52a2e24c92088389058c9069cd07e272d237656019
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/teamtype/blobs/sha256:f13a452a13a112335fece8cb2a97e23414c7164ae7d22eec8a180525ec4553b7
+        sha256: f13a452a13a112335fece8cb2a97e23414c7164ae7d22eec8a180525ec4553b7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/teamtype/blobs/sha256:48431d07b888a42dcac294713e26a88f72e68dc1427f9795db5ae31c9728d348
+        sha256: 48431d07b888a42dcac294713e26a88f72e68dc1427f9795db5ae31c9728d348
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/teamtype/teamtype/archive/refs/tags/v0.9.1.tar.gz
+    sha256: 8503411b340f00456ac6c1d586637de35a35886b7addbf2cec06816e05bc9873
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

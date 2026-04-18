@@ -3,29 +3,54 @@ version: 2.2.8
 description: Project to enhance the manageability of GNU/Linux system
 homepage: https://sourceforge.net/projects/sblim/
 license: EPL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sblim-sfcc/blobs/sha256:91850d84d41509e73588a88dcc741a3ab9367c6e84c366689340cd9b66d00bf6
-    sha256: 91850d84d41509e73588a88dcc741a3ab9367c6e84c366689340cd9b66d00bf6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sblim-sfcc/blobs/sha256:03982c814ee052c41459385167fb7e112c021f01d73cf9e8b370e650ecc946a5
-    sha256: 03982c814ee052c41459385167fb7e112c021f01d73cf9e8b370e650ecc946a5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sblim-sfcc/blobs/sha256:6c029309cfad2b173fe5b26e004b07b94fd295076a88244f3dbc2030c38a47e0
-    sha256: 6c029309cfad2b173fe5b26e004b07b94fd295076a88244f3dbc2030c38a47e0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sblim-sfcc/blobs/sha256:5fd23513981b7f2f47c9f8ce8b0d0fd352cb954045f49d060ffd6f581dc715ad
-    sha256: 5fd23513981b7f2f47c9f8ce8b0d0fd352cb954045f49d060ffd6f581dc715ad
-source:
-  url: https://downloads.sourceforge.net/project/sblim/sblim-sfcc/sblim-sfcc-2.2.8.tar.bz2
-  sha256: 1b8f187583bc6c6b0a63aae0165ca37892a2a3bd4bb0682cd76b56268b42c3d6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sblim-sfcc/blobs/sha256:03982c814ee052c41459385167fb7e112c021f01d73cf9e8b370e650ecc946a5
+        sha256: 03982c814ee052c41459385167fb7e112c021f01d73cf9e8b370e650ecc946a5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sblim-sfcc/blobs/sha256:91850d84d41509e73588a88dcc741a3ab9367c6e84c366689340cd9b66d00bf6
+        sha256: 91850d84d41509e73588a88dcc741a3ab9367c6e84c366689340cd9b66d00bf6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sblim-sfcc/blobs/sha256:6c029309cfad2b173fe5b26e004b07b94fd295076a88244f3dbc2030c38a47e0
+        sha256: 6c029309cfad2b173fe5b26e004b07b94fd295076a88244f3dbc2030c38a47e0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sblim-sfcc/blobs/sha256:5fd23513981b7f2f47c9f8ce8b0d0fd352cb954045f49d060ffd6f581dc715ad
+        sha256: 5fd23513981b7f2f47c9f8ce8b0d0fd352cb954045f49d060ffd6f581dc715ad
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/sblim/sblim-sfcc/sblim-sfcc-2.2.8.tar.bz2
+    sha256: 1b8f187583bc6c6b0a63aae0165ca37892a2a3bd4bb0682cd76b56268b42c3d6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

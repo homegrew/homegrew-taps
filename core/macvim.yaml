@@ -3,25 +3,46 @@ version: 9.2.0321
 description: GUI for vim, made for macOS
 homepage: https://github.com/macvim-dev/macvim
 license: Vim
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:a24c9c958d1549ea630fb4b95d84e1afec46b271c075178bf378633ad36e60cd
-    sha256: a24c9c958d1549ea630fb4b95d84e1afec46b271c075178bf378633ad36e60cd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:4021bac7a55c4de66c04ef3f7d20e6c8e16c33a50d2cd27f0a68b2cf7fa11bd3
-    sha256: 4021bac7a55c4de66c04ef3f7d20e6c8e16c33a50d2cd27f0a68b2cf7fa11bd3
-source:
-  url: https://github.com/macvim-dev/macvim/archive/refs/tags/release-183.tar.gz
-  sha256: 72de6be82087cd4db8d7b5b27ee079fe80d504f12b53065d68d29366fc7025f1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cscope
-  - lua@5.4
-  - python@3.14
-  - ruby
+    - cscope
+    - lua@5.4
+    - python@3.14
+    - ruby
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:4021bac7a55c4de66c04ef3f7d20e6c8e16c33a50d2cd27f0a68b2cf7fa11bd3
+        sha256: 4021bac7a55c4de66c04ef3f7d20e6c8e16c33a50d2cd27f0a68b2cf7fa11bd3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:a24c9c958d1549ea630fb4b95d84e1afec46b271c075178bf378633ad36e60cd
+        sha256: a24c9c958d1549ea630fb4b95d84e1afec46b271c075178bf378633ad36e60cd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/macvim-dev/macvim/archive/refs/tags/release-183.tar.gz
+    sha256: 72de6be82087cd4db8d7b5b27ee079fe80d504f12b53065d68d29366fc7025f1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - libsodium
+    - gettext
+    - libsodium
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

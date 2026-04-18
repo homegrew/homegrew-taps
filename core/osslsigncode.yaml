@@ -1,32 +1,56 @@
 name: osslsigncode
-version: 2.13
+version: "2.13"
 description: OpenSSL based Authenticode signing for PE/MSI/Java CAB files
 homepage: https://github.com/mtrojnar/osslsigncode
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/osslsigncode/blobs/sha256:e5a60ba4972ee5f6bd4652c556fb92a7d93577ecd73ec263d779b409fb939182
-    sha256: e5a60ba4972ee5f6bd4652c556fb92a7d93577ecd73ec263d779b409fb939182
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/osslsigncode/blobs/sha256:f53ca1182dcce1fef94da4b4d3d2210ea23c14a0b5fb07690b35af901f0be035
-    sha256: f53ca1182dcce1fef94da4b4d3d2210ea23c14a0b5fb07690b35af901f0be035
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/osslsigncode/blobs/sha256:177c66a589a8f306468f9e2de500a1295b91d3f3ef5be4aafac1dd4f22ff8abb
-    sha256: 177c66a589a8f306468f9e2de500a1295b91d3f3ef5be4aafac1dd4f22ff8abb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/osslsigncode/blobs/sha256:7e01e10074189e7999e27450a1b0c0b228a0d10be7a49a568c0ba2e4d323b890
-    sha256: 7e01e10074189e7999e27450a1b0c0b228a0d10be7a49a568c0ba2e4d323b890
-source:
-  url: https://github.com/mtrojnar/osslsigncode/archive/refs/tags/2.13.tar.gz
-  sha256: ee95638b8bec0c019ddf28cb14988645abbd180dcd017536338b7d0d5eaaea96
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/osslsigncode/blobs/sha256:f53ca1182dcce1fef94da4b4d3d2210ea23c14a0b5fb07690b35af901f0be035
+        sha256: f53ca1182dcce1fef94da4b4d3d2210ea23c14a0b5fb07690b35af901f0be035
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/osslsigncode/blobs/sha256:e5a60ba4972ee5f6bd4652c556fb92a7d93577ecd73ec263d779b409fb939182
+        sha256: e5a60ba4972ee5f6bd4652c556fb92a7d93577ecd73ec263d779b409fb939182
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/osslsigncode/blobs/sha256:177c66a589a8f306468f9e2de500a1295b91d3f3ef5be4aafac1dd4f22ff8abb
+        sha256: 177c66a589a8f306468f9e2de500a1295b91d3f3ef5be4aafac1dd4f22ff8abb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/osslsigncode/blobs/sha256:7e01e10074189e7999e27450a1b0c0b228a0d10be7a49a568c0ba2e4d323b890
+        sha256: 7e01e10074189e7999e27450a1b0c0b228a0d10be7a49a568c0ba2e4d323b890
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mtrojnar/osslsigncode/archive/refs/tags/2.13.tar.gz
+    sha256: ee95638b8bec0c019ddf28cb14988645abbd180dcd017536338b7d0d5eaaea96
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

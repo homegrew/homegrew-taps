@@ -3,41 +3,65 @@ version: 0.5.0
 description: Fast, intuitive USB 2.0 protocol analysis application for use with Cynthion
 homepage: https://github.com/greatscottgadgets/packetry
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/packetry/blobs/sha256:7b44a327337008bac85d41e08c6c01d443ec193d25671791275bb846fbb49a98
-    sha256: 7b44a327337008bac85d41e08c6c01d443ec193d25671791275bb846fbb49a98
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/packetry/blobs/sha256:4cbed67c2f94db98371ffd4e1c22339461ced6aefcb3e1aed5aa780088a587df
-    sha256: 4cbed67c2f94db98371ffd4e1c22339461ced6aefcb3e1aed5aa780088a587df
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/packetry/blobs/sha256:feb64fb888f5d3e9769b784226363100a57f2b81ff3ede2c8ebceec074d72d8c
-    sha256: feb64fb888f5d3e9769b784226363100a57f2b81ff3ede2c8ebceec074d72d8c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/packetry/blobs/sha256:2069f0fd40e8bb856ffa695b73c5d446b2f4f334413ecc63a1412e185160d162
-    sha256: 2069f0fd40e8bb856ffa695b73c5d446b2f4f334413ecc63a1412e185160d162
-source:
-  url: https://github.com/greatscottgadgets/packetry/archive/refs/tags/v0.5.0.tar.gz
-  sha256: 158cd25536c6d4feab2b9e76fcbb4174fdb2fd6fb1c309775a3b2efbe84db33b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk4
-  - pango
-  - gettext
-  - graphene
-  - harfbuzz
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk4
+    - pango
+    - gettext
+    - graphene
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/packetry/blobs/sha256:4cbed67c2f94db98371ffd4e1c22339461ced6aefcb3e1aed5aa780088a587df
+        sha256: 4cbed67c2f94db98371ffd4e1c22339461ced6aefcb3e1aed5aa780088a587df
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/packetry/blobs/sha256:7b44a327337008bac85d41e08c6c01d443ec193d25671791275bb846fbb49a98
+        sha256: 7b44a327337008bac85d41e08c6c01d443ec193d25671791275bb846fbb49a98
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/packetry/blobs/sha256:feb64fb888f5d3e9769b784226363100a57f2b81ff3ede2c8ebceec074d72d8c
+        sha256: feb64fb888f5d3e9769b784226363100a57f2b81ff3ede2c8ebceec074d72d8c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/packetry/blobs/sha256:2069f0fd40e8bb856ffa695b73c5d446b2f4f334413ecc63a1412e185160d162
+        sha256: 2069f0fd40e8bb856ffa695b73c5d446b2f4f334413ecc63a1412e185160d162
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/greatscottgadgets/packetry/archive/refs/tags/v0.5.0.tar.gz
+    sha256: 158cd25536c6d4feab2b9e76fcbb4174fdb2fd6fb1c309775a3b2efbe84db33b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk4
-  - pango
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk4
+    - pango
+build:
+    configure: []
+    install: []
+service: null

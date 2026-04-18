@@ -3,31 +3,55 @@ version: 2.0.10
 description: Foundational support for signalwire C products
 homepage: https://github.com/signalwire/libks
 license: MIT AND BSD-3-Clause AND HPND AND LicenseRef-Homebrew-public-domain
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libks/blobs/sha256:a4e047c7d6a018d97d15aed23f7898d8f1f4f0f46c7fe9ae790432b082e7cc1c
-    sha256: a4e047c7d6a018d97d15aed23f7898d8f1f4f0f46c7fe9ae790432b082e7cc1c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libks/blobs/sha256:6bfeeb306bea73531d3ce22ee0f92292024cbd1c20e3f1325cb14df1b149145a
-    sha256: 6bfeeb306bea73531d3ce22ee0f92292024cbd1c20e3f1325cb14df1b149145a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libks/blobs/sha256:dfc07b908ad7fdd8b6eab80ff9d607542c225a1ef81f8fb061798ee812a68c18
-    sha256: dfc07b908ad7fdd8b6eab80ff9d607542c225a1ef81f8fb061798ee812a68c18
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libks/blobs/sha256:4cf5d4dd4dfe67a804525da361f14112da1ebae458b30f7a135c1ff9963a51e1
-    sha256: 4cf5d4dd4dfe67a804525da361f14112da1ebae458b30f7a135c1ff9963a51e1
-source:
-  url: https://github.com/signalwire/libks/archive/refs/tags/v2.0.10.tar.gz
-  sha256: cd0d8504870c2e0e1306e55fd27dede976ab9f3a919487bc10b526576d24d568
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libks/blobs/sha256:6bfeeb306bea73531d3ce22ee0f92292024cbd1c20e3f1325cb14df1b149145a
+        sha256: 6bfeeb306bea73531d3ce22ee0f92292024cbd1c20e3f1325cb14df1b149145a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libks/blobs/sha256:a4e047c7d6a018d97d15aed23f7898d8f1f4f0f46c7fe9ae790432b082e7cc1c
+        sha256: a4e047c7d6a018d97d15aed23f7898d8f1f4f0f46c7fe9ae790432b082e7cc1c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libks/blobs/sha256:dfc07b908ad7fdd8b6eab80ff9d607542c225a1ef81f8fb061798ee812a68c18
+        sha256: dfc07b908ad7fdd8b6eab80ff9d607542c225a1ef81f8fb061798ee812a68c18
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libks/blobs/sha256:4cf5d4dd4dfe67a804525da361f14112da1ebae458b30f7a135c1ff9963a51e1
+        sha256: 4cf5d4dd4dfe67a804525da361f14112da1ebae458b30f7a135c1ff9963a51e1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/signalwire/libks/archive/refs/tags/v2.0.10.tar.gz
+    sha256: cd0d8504870c2e0e1306e55fd27dede976ab9f3a919487bc10b526576d24d568
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - openssl@3
-  - util-linux
+    - openssl@3
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

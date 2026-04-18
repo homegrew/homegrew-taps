@@ -3,25 +3,51 @@ version: 0.15.2
 description: C unit testing framework
 homepage: https://libcheck.github.io/check/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/check/blobs/sha256:ce6a229334822ebeb404ea91776ddb2727e76754724dbc6b7dae91cc274748cd
-    sha256: ce6a229334822ebeb404ea91776ddb2727e76754724dbc6b7dae91cc274748cd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/check/blobs/sha256:2a257d478a28129338329e653fd58134afb39e0d863096e0d5a15ee155b0eeef
-    sha256: 2a257d478a28129338329e653fd58134afb39e0d863096e0d5a15ee155b0eeef
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/check/blobs/sha256:d8c8c28c6d8e01000caec0a7705ee896a15be80f27ce3297fe7e2733fb58f6c5
-    sha256: d8c8c28c6d8e01000caec0a7705ee896a15be80f27ce3297fe7e2733fb58f6c5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/check/blobs/sha256:b2fcfa1c29e058586a152276fb76da860bcae0f064cbe67fe9c9fca46928affb
-    sha256: b2fcfa1c29e058586a152276fb76da860bcae0f064cbe67fe9c9fca46928affb
-source:
-  url: https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz
-  sha256: a8de4e0bacfb4d76dd1c618ded263523b53b85d92a146d8835eb1a52932fa20a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/check/blobs/sha256:2a257d478a28129338329e653fd58134afb39e0d863096e0d5a15ee155b0eeef
+        sha256: 2a257d478a28129338329e653fd58134afb39e0d863096e0d5a15ee155b0eeef
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/check/blobs/sha256:ce6a229334822ebeb404ea91776ddb2727e76754724dbc6b7dae91cc274748cd
+        sha256: ce6a229334822ebeb404ea91776ddb2727e76754724dbc6b7dae91cc274748cd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/check/blobs/sha256:d8c8c28c6d8e01000caec0a7705ee896a15be80f27ce3297fe7e2733fb58f6c5
+        sha256: d8c8c28c6d8e01000caec0a7705ee896a15be80f27ce3297fe7e2733fb58f6c5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/check/blobs/sha256:b2fcfa1c29e058586a152276fb76da860bcae0f064cbe67fe9c9fca46928affb
+        sha256: b2fcfa1c29e058586a152276fb76da860bcae0f064cbe67fe9c9fca46928affb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz
+    sha256: a8de4e0bacfb4d76dd1c618ded263523b53b85d92a146d8835eb1a52932fa20a
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - gawk
+    - gawk
+build:
+    configure: []
+    install: []
+service: null

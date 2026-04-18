@@ -3,28 +3,53 @@ version: 1.13.1
 description: Build and publish Rust crates as Python packages
 homepage: https://github.com/PyO3/maturin
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/maturin/blobs/sha256:63997fbb00b7d12457b08260ffca631abba2f7d419147621ff4cbdcb59f16ebd
-    sha256: 63997fbb00b7d12457b08260ffca631abba2f7d419147621ff4cbdcb59f16ebd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/maturin/blobs/sha256:a5d6976cf8883901f3d5bdb2a0d0e40ee8660278aa98b5717113f55386a1e21e
-    sha256: a5d6976cf8883901f3d5bdb2a0d0e40ee8660278aa98b5717113f55386a1e21e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/maturin/blobs/sha256:0e8c66239fecafd5fdf52697489f549858fe02be35bf1ce1d7f861f1b00c499c
-    sha256: 0e8c66239fecafd5fdf52697489f549858fe02be35bf1ce1d7f861f1b00c499c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/maturin/blobs/sha256:95a84c1ee73310e5bc155afeb47b99a78e85dc7c98b82732663bccbcfd6746b6
-    sha256: 95a84c1ee73310e5bc155afeb47b99a78e85dc7c98b82732663bccbcfd6746b6
-source:
-  url: https://github.com/PyO3/maturin/archive/refs/tags/v1.13.1.tar.gz
-  sha256: 2bfb3ec1ef1c15163ac006b09f895d17bd7ce0229416be952cd49065842acfc0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - xz
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/maturin/blobs/sha256:a5d6976cf8883901f3d5bdb2a0d0e40ee8660278aa98b5717113f55386a1e21e
+        sha256: a5d6976cf8883901f3d5bdb2a0d0e40ee8660278aa98b5717113f55386a1e21e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/maturin/blobs/sha256:63997fbb00b7d12457b08260ffca631abba2f7d419147621ff4cbdcb59f16ebd
+        sha256: 63997fbb00b7d12457b08260ffca631abba2f7d419147621ff4cbdcb59f16ebd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/maturin/blobs/sha256:0e8c66239fecafd5fdf52697489f549858fe02be35bf1ce1d7f861f1b00c499c
+        sha256: 0e8c66239fecafd5fdf52697489f549858fe02be35bf1ce1d7f861f1b00c499c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/maturin/blobs/sha256:95a84c1ee73310e5bc155afeb47b99a78e85dc7c98b82732663bccbcfd6746b6
+        sha256: 95a84c1ee73310e5bc155afeb47b99a78e85dc7c98b82732663bccbcfd6746b6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/PyO3/maturin/archive/refs/tags/v1.13.1.tar.gz
+    sha256: 2bfb3ec1ef1c15163ac006b09f895d17bd7ce0229416be952cd49065842acfc0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

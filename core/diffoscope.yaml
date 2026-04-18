@@ -1,29 +1,55 @@
 name: diffoscope
-version: 317
+version: "317"
 description: In-depth comparison of files, archives, and directories
 homepage: https://diffoscope.org
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diffoscope/blobs/sha256:42b90caf9ebb09a322f8ca71c41f697335b8669db9244e010a4203ecb2b719f7
-    sha256: 42b90caf9ebb09a322f8ca71c41f697335b8669db9244e010a4203ecb2b719f7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diffoscope/blobs/sha256:1615098ac2aabbcf98b7b8819acbe7fd170c29d31c497b2f575bdb78769fb274
-    sha256: 1615098ac2aabbcf98b7b8819acbe7fd170c29d31c497b2f575bdb78769fb274
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diffoscope/blobs/sha256:2130d5a687f3972dc29888b14f23e9fba7c49e5f7c5c9e838186b012e62ca050
-    sha256: 2130d5a687f3972dc29888b14f23e9fba7c49e5f7c5c9e838186b012e62ca050
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diffoscope/blobs/sha256:2130d5a687f3972dc29888b14f23e9fba7c49e5f7c5c9e838186b012e62ca050
-    sha256: 2130d5a687f3972dc29888b14f23e9fba7c49e5f7c5c9e838186b012e62ca050
-source:
-  url: https://files.pythonhosted.org/packages/7a/f0/70752112a89e25e5cbec4a58cc597d2369ff7a1ef8c5176a4d7067559305/diffoscope-317.tar.gz
-  sha256: 9c8741f76bcbd1faec59227da31981a524abca63e19d03f3a594c19f326de542
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libarchive
-  - libmagic
-  - python@3.14
+    - libarchive
+    - libmagic
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diffoscope/blobs/sha256:1615098ac2aabbcf98b7b8819acbe7fd170c29d31c497b2f575bdb78769fb274
+        sha256: 1615098ac2aabbcf98b7b8819acbe7fd170c29d31c497b2f575bdb78769fb274
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diffoscope/blobs/sha256:42b90caf9ebb09a322f8ca71c41f697335b8669db9244e010a4203ecb2b719f7
+        sha256: 42b90caf9ebb09a322f8ca71c41f697335b8669db9244e010a4203ecb2b719f7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diffoscope/blobs/sha256:2130d5a687f3972dc29888b14f23e9fba7c49e5f7c5c9e838186b012e62ca050
+        sha256: 2130d5a687f3972dc29888b14f23e9fba7c49e5f7c5c9e838186b012e62ca050
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diffoscope/blobs/sha256:2130d5a687f3972dc29888b14f23e9fba7c49e5f7c5c9e838186b012e62ca050
+        sha256: 2130d5a687f3972dc29888b14f23e9fba7c49e5f7c5c9e838186b012e62ca050
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/7a/f0/70752112a89e25e5cbec4a58cc597d2369ff7a1ef8c5176a4d7067559305/diffoscope-317.tar.gz
+    sha256: 9c8741f76bcbd1faec59227da31981a524abca63e19d03f3a594c19f326de542
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

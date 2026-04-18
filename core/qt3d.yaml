@@ -3,33 +3,58 @@ version: 6.11.0
 description: Provides functionality for near-realtime simulation systems
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND BSD-3-Clause AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt3d/blobs/sha256:4839b58048b383db84b619eef4715a18801f19904979ffca07fe72b0ff47064a
-    sha256: 4839b58048b383db84b619eef4715a18801f19904979ffca07fe72b0ff47064a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt3d/blobs/sha256:829ca7928c24638754008816248cd2c576c3fe83be80ecff3ee4b0ab3fc82f19
-    sha256: 829ca7928c24638754008816248cd2c576c3fe83be80ecff3ee4b0ab3fc82f19
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt3d/blobs/sha256:4d865bec7028bad29c5feba6fe16f6b28336e2f134d6016327081c05f9b30f1f
-    sha256: 4d865bec7028bad29c5feba6fe16f6b28336e2f134d6016327081c05f9b30f1f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt3d/blobs/sha256:e22ed027e384e0be60201f9af18dfed02f5340cb43953a62e6aec5b1f4f12478
-    sha256: e22ed027e384e0be60201f9af18dfed02f5340cb43953a62e6aec5b1f4f12478
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qt3d-everywhere-src-6.11.0.tar.xz
-  sha256: 40cf234d39e6a799ba0807489fc7bd63df79196d03519f43a171c1a875bcdd20
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - assimp
-  - qtbase
-  - qtdeclarative
-  - qtshadertools
+    - assimp
+    - qtbase
+    - qtdeclarative
+    - qtshadertools
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt3d/blobs/sha256:829ca7928c24638754008816248cd2c576c3fe83be80ecff3ee4b0ab3fc82f19
+        sha256: 829ca7928c24638754008816248cd2c576c3fe83be80ecff3ee4b0ab3fc82f19
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt3d/blobs/sha256:4839b58048b383db84b619eef4715a18801f19904979ffca07fe72b0ff47064a
+        sha256: 4839b58048b383db84b619eef4715a18801f19904979ffca07fe72b0ff47064a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt3d/blobs/sha256:4d865bec7028bad29c5feba6fe16f6b28336e2f134d6016327081c05f9b30f1f
+        sha256: 4d865bec7028bad29c5feba6fe16f6b28336e2f134d6016327081c05f9b30f1f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt3d/blobs/sha256:e22ed027e384e0be60201f9af18dfed02f5340cb43953a62e6aec5b1f4f12478
+        sha256: e22ed027e384e0be60201f9af18dfed02f5340cb43953a62e6aec5b1f4f12478
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qt3d-everywhere-src-6.11.0.tar.xz
+    sha256: 40cf234d39e6a799ba0807489fc7bd63df79196d03519f43a171c1a875bcdd20
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - vulkan-headers
-  - vulkan-loader
+    - cmake
+    - ninja
+    - vulkan-headers
+    - vulkan-loader
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

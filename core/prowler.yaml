@@ -3,44 +3,68 @@ version: 5.24.0
 description: Tool for cloud security assessments, audits, incident response, and more
 homepage: https://prowler.com/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/prowler/blobs/sha256:a545101b337eb64e2d81e13e15f11b3799e9bc262f3dbfa7c7264701fdab30b8
-    sha256: a545101b337eb64e2d81e13e15f11b3799e9bc262f3dbfa7c7264701fdab30b8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/prowler/blobs/sha256:0285056d22fc392415c93772f74d1bbecfb56cab83199d24b9d84b3cf79d3dbb
-    sha256: 0285056d22fc392415c93772f74d1bbecfb56cab83199d24b9d84b3cf79d3dbb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/prowler/blobs/sha256:43c5fde984a92ec9289e3dac2b2b8ea5e6b2118f8dc01117f74846dc92660e5c
-    sha256: 43c5fde984a92ec9289e3dac2b2b8ea5e6b2118f8dc01117f74846dc92660e5c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/prowler/blobs/sha256:70aaf217c5909cbff95ec5f5f12f46c44f3130bba98b2f27a5211439b8c53559
-    sha256: 70aaf217c5909cbff95ec5f5f12f46c44f3130bba98b2f27a5211439b8c53559
-source:
-  url: https://files.pythonhosted.org/packages/dd/35/b58e033e56261024213b399163d09f1f0145509f8fdf3bb027314fe82502/prowler-5.24.0.tar.gz
-  sha256: 3504432e4d97fe74834ea63fb5070a9be04dcb7df66559e585a6c3a7d4805dd7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libsodium
-  - libyaml
-  - lz4
-  - openssl@3
-  - python@3.12
+    - certifi
+    - libsodium
+    - libyaml
+    - lz4
+    - openssl@3
+    - python@3.12
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/prowler/blobs/sha256:0285056d22fc392415c93772f74d1bbecfb56cab83199d24b9d84b3cf79d3dbb
+        sha256: 0285056d22fc392415c93772f74d1bbecfb56cab83199d24b9d84b3cf79d3dbb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/prowler/blobs/sha256:a545101b337eb64e2d81e13e15f11b3799e9bc262f3dbfa7c7264701fdab30b8
+        sha256: a545101b337eb64e2d81e13e15f11b3799e9bc262f3dbfa7c7264701fdab30b8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/prowler/blobs/sha256:43c5fde984a92ec9289e3dac2b2b8ea5e6b2118f8dc01117f74846dc92660e5c
+        sha256: 43c5fde984a92ec9289e3dac2b2b8ea5e6b2118f8dc01117f74846dc92660e5c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/prowler/blobs/sha256:70aaf217c5909cbff95ec5f5f12f46c44f3130bba98b2f27a5211439b8c53559
+        sha256: 70aaf217c5909cbff95ec5f5f12f46c44f3130bba98b2f27a5211439b8c53559
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/dd/35/b58e033e56261024213b399163d09f1f0145509f8fdf3bb027314fe82502/prowler-5.24.0.tar.gz
+    sha256: 3504432e4d97fe74834ea63fb5070a9be04dcb7df66559e585a6c3a7d4805dd7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - meson
-  - ninja
-  - pkgconf
-  - rust
+    - cmake
+    - meson
+    - ninja
+    - pkgconf
+    - rust
 linux_dependencies:
-  - certifi
-  - libsodium
-  - libyaml
-  - lz4
-  - openblas
-  - openssl@3
-  - python@3.12
+    - certifi
+    - libsodium
+    - libyaml
+    - lz4
+    - openblas
+    - openssl@3
+    - python@3.12
+build:
+    configure: []
+    install: []
+service: null

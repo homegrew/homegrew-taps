@@ -1,38 +1,62 @@
 name: nut
 version: 2.8.5
-description: "Network UPS Tools: Support for various power devices"
+description: 'Network UPS Tools: Support for various power devices'
 homepage: https://networkupstools.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:3fe4c8bea0483722456da80d1565be5954b382243d0ca7daa19038d0705f1be9
-    sha256: 3fe4c8bea0483722456da80d1565be5954b382243d0ca7daa19038d0705f1be9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b
-    sha256: e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:0648f8942e42afe5625ce26a6653fc263de93d5f8c402649b4af60eba88495f6
-    sha256: 0648f8942e42afe5625ce26a6653fc263de93d5f8c402649b4af60eba88495f6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:8f5ff079a039c0bd20bf1fb9db3286a82ef5f021e470c8ef30464a225c9b4d5c
-    sha256: 8f5ff079a039c0bd20bf1fb9db3286a82ef5f021e470c8ef30464a225c9b4d5c
-source:
-  url: https://github.com/networkupstools/nut/releases/download/v2.8.5/nut-2.8.5.tar.gz
-  sha256: 18bf32e59eb764b13da3c4fa70384926d7fa584cb31d2fe7f137a570633eeec1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libusb
-  - openssl@3
+    - libusb
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b
+        sha256: e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:3fe4c8bea0483722456da80d1565be5954b382243d0ca7daa19038d0705f1be9
+        sha256: 3fe4c8bea0483722456da80d1565be5954b382243d0ca7daa19038d0705f1be9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:0648f8942e42afe5625ce26a6653fc263de93d5f8c402649b4af60eba88495f6
+        sha256: 0648f8942e42afe5625ce26a6653fc263de93d5f8c402649b4af60eba88495f6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:8f5ff079a039c0bd20bf1fb9db3286a82ef5f021e470c8ef30464a225c9b4d5c
+        sha256: 8f5ff079a039c0bd20bf1fb9db3286a82ef5f021e470c8ef30464a225c9b4d5c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/networkupstools/nut/releases/download/v2.8.5/nut-2.8.5.tar.gz
+    sha256: 18bf32e59eb764b13da3c4fa70384926d7fa584cb31d2fe7f137a570633eeec1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - glib
-  - libusb
-  - openssl@3
-  - systemd
+    - glib
+    - libusb
+    - openssl@3
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

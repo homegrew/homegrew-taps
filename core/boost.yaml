@@ -3,32 +3,57 @@ version: 1.90.0
 description: Collection of portable C++ source libraries
 homepage: https://www.boost.org/
 license: BSL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/boost/blobs/sha256:47ceccf6792941c223a6464f974b6ac56e1d3457e6d72e1f71b4fdb742cef1d0
-    sha256: 47ceccf6792941c223a6464f974b6ac56e1d3457e6d72e1f71b4fdb742cef1d0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/boost/blobs/sha256:29e1095cff0cab11964d27ad12ca18556ff9715f2c6b3216f0deb389ffdba653
-    sha256: 29e1095cff0cab11964d27ad12ca18556ff9715f2c6b3216f0deb389ffdba653
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/boost/blobs/sha256:175119f6f95179930c676c24615133249fea40b9bd86e1f37340c1544c18f9bc
-    sha256: 175119f6f95179930c676c24615133249fea40b9bd86e1f37340c1544c18f9bc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/boost/blobs/sha256:533706af6bd0f1e62589e7421f190466451755f4e7bc91937661e3b2a13560c3
-    sha256: 533706af6bd0f1e62589e7421f190466451755f4e7bc91937661e3b2a13560c3
-source:
-  url: https://github.com/boostorg/boost/releases/download/boost-1.90.0/boost-1.90.0-b2-nodocs.tar.xz
-  sha256: 9e6bee9ab529fb2b0733049692d57d10a72202af085e553539a05b4204211a6f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - xz
-  - zstd
+    - icu4c@78
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/boost/blobs/sha256:29e1095cff0cab11964d27ad12ca18556ff9715f2c6b3216f0deb389ffdba653
+        sha256: 29e1095cff0cab11964d27ad12ca18556ff9715f2c6b3216f0deb389ffdba653
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/boost/blobs/sha256:47ceccf6792941c223a6464f974b6ac56e1d3457e6d72e1f71b4fdb742cef1d0
+        sha256: 47ceccf6792941c223a6464f974b6ac56e1d3457e6d72e1f71b4fdb742cef1d0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/boost/blobs/sha256:175119f6f95179930c676c24615133249fea40b9bd86e1f37340c1544c18f9bc
+        sha256: 175119f6f95179930c676c24615133249fea40b9bd86e1f37340c1544c18f9bc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/boost/blobs/sha256:533706af6bd0f1e62589e7421f190466451755f4e7bc91937661e3b2a13560c3
+        sha256: 533706af6bd0f1e62589e7421f190466451755f4e7bc91937661e3b2a13560c3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/boostorg/boost/releases/download/boost-1.90.0/boost-1.90.0-b2-nodocs.tar.xz
+    sha256: 9e6bee9ab529fb2b0733049692d57d10a72202af085e553539a05b4204211a6f
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - icu4c@78
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - icu4c@78
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

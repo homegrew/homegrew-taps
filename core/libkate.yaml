@@ -3,28 +3,53 @@ version: 0.4.3
 description: Overlay codec for multiplexed audio/video in Ogg
 homepage: https://wiki.xiph.org/index.php/OggKate
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libkate/blobs/sha256:a920e83dd38ef5cd401c635c08f65dfe0cd6c4b5b79e5edfb4761a76ca729028
-    sha256: a920e83dd38ef5cd401c635c08f65dfe0cd6c4b5b79e5edfb4761a76ca729028
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libkate/blobs/sha256:3ab7c7cda82f7bbfb515d3b9deaadc1dd09069a9a7f47ada41311dd7fc963eff
-    sha256: 3ab7c7cda82f7bbfb515d3b9deaadc1dd09069a9a7f47ada41311dd7fc963eff
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libkate/blobs/sha256:e8e41a5b6906b6cae6d0bd82030cecfd66f1115f39b1669b99baf5501e424452
-    sha256: e8e41a5b6906b6cae6d0bd82030cecfd66f1115f39b1669b99baf5501e424452
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libkate/blobs/sha256:af8b104ad8cc5105c019c6c809e4b2897f56458a134f61ede9b1617d043ce547
-    sha256: af8b104ad8cc5105c019c6c809e4b2897f56458a134f61ede9b1617d043ce547
-source:
-  url: https://downloads.xiph.org/releases/kate/libkate-0.4.3.tar.gz
-  sha256: 96827ca136ad496b4e34ff3ed2434a8e76ad83b1e6962b5df06ad24cbbfeebaf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libogg
-  - libpng
+    - libogg
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libkate/blobs/sha256:3ab7c7cda82f7bbfb515d3b9deaadc1dd09069a9a7f47ada41311dd7fc963eff
+        sha256: 3ab7c7cda82f7bbfb515d3b9deaadc1dd09069a9a7f47ada41311dd7fc963eff
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libkate/blobs/sha256:a920e83dd38ef5cd401c635c08f65dfe0cd6c4b5b79e5edfb4761a76ca729028
+        sha256: a920e83dd38ef5cd401c635c08f65dfe0cd6c4b5b79e5edfb4761a76ca729028
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libkate/blobs/sha256:e8e41a5b6906b6cae6d0bd82030cecfd66f1115f39b1669b99baf5501e424452
+        sha256: e8e41a5b6906b6cae6d0bd82030cecfd66f1115f39b1669b99baf5501e424452
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libkate/blobs/sha256:af8b104ad8cc5105c019c6c809e4b2897f56458a134f61ede9b1617d043ce547
+        sha256: af8b104ad8cc5105c019c6c809e4b2897f56458a134f61ede9b1617d043ce547
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.xiph.org/releases/kate/libkate-0.4.3.tar.gz
+    sha256: 96827ca136ad496b4e34ff3ed2434a8e76ad83b1e6962b5df06ad24cbbfeebaf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

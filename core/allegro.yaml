@@ -3,58 +3,82 @@ version: 5.2.11.3
 description: C/C++ multimedia library for cross-platform game development
 homepage: https://liballeg.org/
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/allegro/blobs/sha256:e3e3538d2dd7ac9ab3c79343acec0f77a2746a50a6435371dfc35a75715aba9b
-    sha256: e3e3538d2dd7ac9ab3c79343acec0f77a2746a50a6435371dfc35a75715aba9b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/allegro/blobs/sha256:1e0c9fe820bf392ee0707eff299fe523ebbd6e21d1327714f5c3ac36a53f3df7
-    sha256: 1e0c9fe820bf392ee0707eff299fe523ebbd6e21d1327714f5c3ac36a53f3df7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/allegro/blobs/sha256:5ae31e6b786d07b263625a5c9d6ac16e77749a438492d9a8cf69a00e9be4b5ac
-    sha256: 5ae31e6b786d07b263625a5c9d6ac16e77749a438492d9a8cf69a00e9be4b5ac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/allegro/blobs/sha256:70dbfd0353c0655b5a6bfe5520fabe067e17e423a209465b435cc067b1eec6bc
-    sha256: 70dbfd0353c0655b5a6bfe5520fabe067e17e423a209465b435cc067b1eec6bc
-source:
-  url: https://github.com/liballeg/allegro5/releases/download/5.2.11.3/allegro-5.2.11.3.tar.gz
-  sha256: aba4679a5b1f2bf62482eba6e8814a94de7ffc86de5f8587ba199fcc61b4a04f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - flac
-  - freetype
-  - jpeg-turbo
-  - libogg
-  - libopenmpt
-  - libpng
-  - libvorbis
-  - opusfile
-  - physfs
-  - theora
-  - webp
-  - opus
+    - flac
+    - freetype
+    - jpeg-turbo
+    - libogg
+    - libopenmpt
+    - libpng
+    - libvorbis
+    - opusfile
+    - physfs
+    - theora
+    - webp
+    - opus
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/allegro/blobs/sha256:1e0c9fe820bf392ee0707eff299fe523ebbd6e21d1327714f5c3ac36a53f3df7
+        sha256: 1e0c9fe820bf392ee0707eff299fe523ebbd6e21d1327714f5c3ac36a53f3df7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/allegro/blobs/sha256:e3e3538d2dd7ac9ab3c79343acec0f77a2746a50a6435371dfc35a75715aba9b
+        sha256: e3e3538d2dd7ac9ab3c79343acec0f77a2746a50a6435371dfc35a75715aba9b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/allegro/blobs/sha256:5ae31e6b786d07b263625a5c9d6ac16e77749a438492d9a8cf69a00e9be4b5ac
+        sha256: 5ae31e6b786d07b263625a5c9d6ac16e77749a438492d9a8cf69a00e9be4b5ac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/allegro/blobs/sha256:70dbfd0353c0655b5a6bfe5520fabe067e17e423a209465b435cc067b1eec6bc
+        sha256: 70dbfd0353c0655b5a6bfe5520fabe067e17e423a209465b435cc067b1eec6bc
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/liballeg/allegro5/releases/download/5.2.11.3/allegro-5.2.11.3.tar.gz
+    sha256: aba4679a5b1f2bf62482eba6e8814a94de7ffc86de5f8587ba199fcc61b4a04f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - flac
-  - freetype
-  - jpeg-turbo
-  - libogg
-  - libopenmpt
-  - libpng
-  - libvorbis
-  - libx11
-  - libxcursor
-  - libxi
-  - libxinerama
-  - libxrandr
-  - libxscrnsaver
-  - mesa
-  - mesa-glu
-  - opusfile
-  - physfs
-  - theora
-  - webp
+    - flac
+    - freetype
+    - jpeg-turbo
+    - libogg
+    - libopenmpt
+    - libpng
+    - libvorbis
+    - libx11
+    - libxcursor
+    - libxi
+    - libxinerama
+    - libxrandr
+    - libxscrnsaver
+    - mesa
+    - mesa-glu
+    - opusfile
+    - physfs
+    - theora
+    - webp
+build:
+    configure: []
+    install: []
+service: null

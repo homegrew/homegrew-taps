@@ -1,30 +1,55 @@
 name: libxext
 version: 1.3.7
-description: "X.Org: Library for common extensions to the X11 protocol"
+description: 'X.Org: Library for common extensions to the X11 protocol'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxext/blobs/sha256:7cf2c8903d82f28e0e854c8d6d3dff46ea98c5512724e5349af40f1edca88e9c
-    sha256: 7cf2c8903d82f28e0e854c8d6d3dff46ea98c5512724e5349af40f1edca88e9c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxext/blobs/sha256:2674d35eb9596b8d9b6149519e39bf6e43d4959894109fbc22f48f9d5ed85a2f
-    sha256: 2674d35eb9596b8d9b6149519e39bf6e43d4959894109fbc22f48f9d5ed85a2f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxext/blobs/sha256:7bc771ee68f57189ea941e83f2f5ff18ac94878ae35c30aed8868a906834d148
-    sha256: 7bc771ee68f57189ea941e83f2f5ff18ac94878ae35c30aed8868a906834d148
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxext/blobs/sha256:6150f6cdb2ee2195ebf90f1e6a95f4a27d2ee4e1e3c17959807b7c8eb3075d5f
-    sha256: 6150f6cdb2ee2195ebf90f1e6a95f4a27d2ee4e1e3c17959807b7c8eb3075d5f
-source:
-  url: https://www.x.org/archive/individual/lib/libXext-1.3.7.tar.gz
-  sha256: 6564608dc3b816b0cfddf0c7ddc62bc579055dd70b2f28113a618df2acb64189
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - xorgproto
+    - libx11
+    - xorgproto
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxext/blobs/sha256:2674d35eb9596b8d9b6149519e39bf6e43d4959894109fbc22f48f9d5ed85a2f
+        sha256: 2674d35eb9596b8d9b6149519e39bf6e43d4959894109fbc22f48f9d5ed85a2f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxext/blobs/sha256:7cf2c8903d82f28e0e854c8d6d3dff46ea98c5512724e5349af40f1edca88e9c
+        sha256: 7cf2c8903d82f28e0e854c8d6d3dff46ea98c5512724e5349af40f1edca88e9c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxext/blobs/sha256:7bc771ee68f57189ea941e83f2f5ff18ac94878ae35c30aed8868a906834d148
+        sha256: 7bc771ee68f57189ea941e83f2f5ff18ac94878ae35c30aed8868a906834d148
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxext/blobs/sha256:6150f6cdb2ee2195ebf90f1e6a95f4a27d2ee4e1e3c17959807b7c8eb3075d5f
+        sha256: 6150f6cdb2ee2195ebf90f1e6a95f4a27d2ee4e1e3c17959807b7c8eb3075d5f
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libXext-1.3.7.tar.gz
+    sha256: 6564608dc3b816b0cfddf0c7ddc62bc579055dd70b2f28113a618df2acb64189
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

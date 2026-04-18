@@ -3,25 +3,51 @@ version: 3.0.8
 description: Cross-platform build utility based on Lua
 homepage: https://xmake.io/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xmake/blobs/sha256:e74c06ea12e5705f6e5ceacf11d4380d637bceea8d8ddbece7e2d20d588e84a6
-    sha256: e74c06ea12e5705f6e5ceacf11d4380d637bceea8d8ddbece7e2d20d588e84a6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xmake/blobs/sha256:ce88159d8f6a8c82a4f04ecfced3147ac2c7345abd0db650692992226fbca71e
-    sha256: ce88159d8f6a8c82a4f04ecfced3147ac2c7345abd0db650692992226fbca71e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xmake/blobs/sha256:3ac4e9ebd8355816336aff78e5f66f6e38e0315125f1c460fe925d2ba46318e8
-    sha256: 3ac4e9ebd8355816336aff78e5f66f6e38e0315125f1c460fe925d2ba46318e8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xmake/blobs/sha256:d1bd1663b62e79f71882b4fc0e7979a7005ff1c86ea0c6388c5539b06861993b
-    sha256: d1bd1663b62e79f71882b4fc0e7979a7005ff1c86ea0c6388c5539b06861993b
-source:
-  url: https://github.com/xmake-io/xmake/releases/download/v3.0.8/xmake-v3.0.8.tar.gz
-  sha256: 73da077440d1327e24bc74da2888c418e589dc28966e6e6b5bd6e889721b2d07
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xmake/blobs/sha256:ce88159d8f6a8c82a4f04ecfced3147ac2c7345abd0db650692992226fbca71e
+        sha256: ce88159d8f6a8c82a4f04ecfced3147ac2c7345abd0db650692992226fbca71e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xmake/blobs/sha256:e74c06ea12e5705f6e5ceacf11d4380d637bceea8d8ddbece7e2d20d588e84a6
+        sha256: e74c06ea12e5705f6e5ceacf11d4380d637bceea8d8ddbece7e2d20d588e84a6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xmake/blobs/sha256:3ac4e9ebd8355816336aff78e5f66f6e38e0315125f1c460fe925d2ba46318e8
+        sha256: 3ac4e9ebd8355816336aff78e5f66f6e38e0315125f1c460fe925d2ba46318e8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xmake/blobs/sha256:d1bd1663b62e79f71882b4fc0e7979a7005ff1c86ea0c6388c5539b06861993b
+        sha256: d1bd1663b62e79f71882b4fc0e7979a7005ff1c86ea0c6388c5539b06861993b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/xmake-io/xmake/releases/download/v3.0.8/xmake-v3.0.8.tar.gz
+    sha256: 73da077440d1327e24bc74da2888c418e589dc28966e6e6b5bd6e889721b2d07
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - readline
+    - readline
+build:
+    configure: []
+    install: []
+service: null

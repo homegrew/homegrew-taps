@@ -3,27 +3,53 @@ version: 1.0.10
 description: Classified Advertisements (used by HTCondor Central Manager)
 homepage: https://research.cs.wisc.edu/htcondor/classad/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/classads/blobs/sha256:ed590f0506873b6a0335e92654469e50424ca16a916afc92b9f5180906060bfc
-    sha256: ed590f0506873b6a0335e92654469e50424ca16a916afc92b9f5180906060bfc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/classads/blobs/sha256:f1e93502256b06a0fca5214a1df36c5f35b211b14d376f718d2a86088465dfe5
-    sha256: f1e93502256b06a0fca5214a1df36c5f35b211b14d376f718d2a86088465dfe5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/classads/blobs/sha256:0f04a28af4368948ee8ce693f3ab6e30d9d6294d726e2a04ad7ca44e84ffcf07
-    sha256: 0f04a28af4368948ee8ce693f3ab6e30d9d6294d726e2a04ad7ca44e84ffcf07
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/classads/blobs/sha256:8f93a457d340d975d207f60f2b88049fab2ac1fc59f957421bb5e6d71a1817b9
-    sha256: 8f93a457d340d975d207f60f2b88049fab2ac1fc59f957421bb5e6d71a1817b9
-source:
-  url: https://ftp.cs.wisc.edu/condor/classad/c++/classads-1.0.10.tar.gz
-  sha256: cde2fe23962abb6bc99d8fc5a5cbf88f87e449b63c6bca991d783afb4691efb3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/classads/blobs/sha256:f1e93502256b06a0fca5214a1df36c5f35b211b14d376f718d2a86088465dfe5
+        sha256: f1e93502256b06a0fca5214a1df36c5f35b211b14d376f718d2a86088465dfe5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/classads/blobs/sha256:ed590f0506873b6a0335e92654469e50424ca16a916afc92b9f5180906060bfc
+        sha256: ed590f0506873b6a0335e92654469e50424ca16a916afc92b9f5180906060bfc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/classads/blobs/sha256:0f04a28af4368948ee8ce693f3ab6e30d9d6294d726e2a04ad7ca44e84ffcf07
+        sha256: 0f04a28af4368948ee8ce693f3ab6e30d9d6294d726e2a04ad7ca44e84ffcf07
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/classads/blobs/sha256:8f93a457d340d975d207f60f2b88049fab2ac1fc59f957421bb5e6d71a1817b9
+        sha256: 8f93a457d340d975d207f60f2b88049fab2ac1fc59f957421bb5e6d71a1817b9
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.cs.wisc.edu/condor/classad/c++/classads-1.0.10.tar.gz
+    sha256: cde2fe23962abb6bc99d8fc5a5cbf88f87e449b63c6bca991d783afb4691efb3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

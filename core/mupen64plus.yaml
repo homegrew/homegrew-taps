@@ -3,36 +3,60 @@ version: 2.6.0
 description: Cross-platform plugin-based N64 emulator
 homepage: https://www.mupen64plus.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mupen64plus/blobs/sha256:73a594a4179e8c405898e24d23a3de66e3476734fe4d6271229a65ad9d94d143
-    sha256: 73a594a4179e8c405898e24d23a3de66e3476734fe4d6271229a65ad9d94d143
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mupen64plus/blobs/sha256:7af6a82beaa3bcd3f82e86abab6f473836a542f2e6a35daa1795b2ae88e791e4
-    sha256: 7af6a82beaa3bcd3f82e86abab6f473836a542f2e6a35daa1795b2ae88e791e4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mupen64plus/blobs/sha256:53ffc3a9f022ab20a782517db83e4b69cd4722e998cfe4ac41d10c49ab2a513a
-    sha256: 53ffc3a9f022ab20a782517db83e4b69cd4722e998cfe4ac41d10c49ab2a513a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mupen64plus/blobs/sha256:0b6dc156754e78588093434bd7d0a8729704b3425d3241887ce84d59b986131c
-    sha256: 0b6dc156754e78588093434bd7d0a8729704b3425d3241887ce84d59b986131c
-source:
-  url: https://github.com/mupen64plus/mupen64plus-core/releases/download/2.6.0/mupen64plus-bundle-src-2.6.0.tar.gz
-  sha256: 297e17180cd76a7b8ea809d1a1be2c98ed5c7352dc716965a80deb598b21e131
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - libpng
-  - sdl2
+    - freetype
+    - libpng
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mupen64plus/blobs/sha256:7af6a82beaa3bcd3f82e86abab6f473836a542f2e6a35daa1795b2ae88e791e4
+        sha256: 7af6a82beaa3bcd3f82e86abab6f473836a542f2e6a35daa1795b2ae88e791e4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mupen64plus/blobs/sha256:73a594a4179e8c405898e24d23a3de66e3476734fe4d6271229a65ad9d94d143
+        sha256: 73a594a4179e8c405898e24d23a3de66e3476734fe4d6271229a65ad9d94d143
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mupen64plus/blobs/sha256:53ffc3a9f022ab20a782517db83e4b69cd4722e998cfe4ac41d10c49ab2a513a
+        sha256: 53ffc3a9f022ab20a782517db83e4b69cd4722e998cfe4ac41d10c49ab2a513a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mupen64plus/blobs/sha256:0b6dc156754e78588093434bd7d0a8729704b3425d3241887ce84d59b986131c
+        sha256: 0b6dc156754e78588093434bd7d0a8729704b3425d3241887ce84d59b986131c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mupen64plus/mupen64plus-core/releases/download/2.6.0/mupen64plus-bundle-src-2.6.0.tar.gz
+    sha256: 297e17180cd76a7b8ea809d1a1be2c98ed5c7352dc716965a80deb598b21e131
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - freetype
-  - libpng
-  - mesa
-  - sdl2
-  - vulkan-loader
-  - zlib-ng-compat
+    - freetype
+    - libpng
+    - mesa
+    - sdl2
+    - vulkan-loader
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

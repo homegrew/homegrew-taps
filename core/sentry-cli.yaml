@@ -3,31 +3,55 @@ version: 3.3.5
 description: Command-line utility to interact with Sentry
 homepage: https://docs.sentry.io/cli/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sentry-cli/blobs/sha256:46a922f3ba8be8bc5452f8ce1b6910f17e8cc23915604d751fb6e332b9ba43eb
-    sha256: 46a922f3ba8be8bc5452f8ce1b6910f17e8cc23915604d751fb6e332b9ba43eb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sentry-cli/blobs/sha256:3c07e1c10453435ca9a425387211634713d3f1297b56948a9f195cd85f7f0fd3
-    sha256: 3c07e1c10453435ca9a425387211634713d3f1297b56948a9f195cd85f7f0fd3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sentry-cli/blobs/sha256:b4892f7f41e4ba82d1eaecea8b2ec688ff94772e16b9f8ae776d502fa34ed6b5
-    sha256: b4892f7f41e4ba82d1eaecea8b2ec688ff94772e16b9f8ae776d502fa34ed6b5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sentry-cli/blobs/sha256:c48236ecbf784942cdd7e36296a6f7b466b818f1bba8ce797647e025ff6c08db
-    sha256: c48236ecbf784942cdd7e36296a6f7b466b818f1bba8ce797647e025ff6c08db
-source:
-  url: https://github.com/getsentry/sentry-cli/archive/refs/tags/3.3.5.tar.gz
-  sha256: 9ec565db99e85a29ca5ada4605581fa3e8a93e8ac9509ef6a47dc4ca3a269044
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sentry-cli/blobs/sha256:3c07e1c10453435ca9a425387211634713d3f1297b56948a9f195cd85f7f0fd3
+        sha256: 3c07e1c10453435ca9a425387211634713d3f1297b56948a9f195cd85f7f0fd3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sentry-cli/blobs/sha256:46a922f3ba8be8bc5452f8ce1b6910f17e8cc23915604d751fb6e332b9ba43eb
+        sha256: 46a922f3ba8be8bc5452f8ce1b6910f17e8cc23915604d751fb6e332b9ba43eb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sentry-cli/blobs/sha256:b4892f7f41e4ba82d1eaecea8b2ec688ff94772e16b9f8ae776d502fa34ed6b5
+        sha256: b4892f7f41e4ba82d1eaecea8b2ec688ff94772e16b9f8ae776d502fa34ed6b5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sentry-cli/blobs/sha256:c48236ecbf784942cdd7e36296a6f7b466b818f1bba8ce797647e025ff6c08db
+        sha256: c48236ecbf784942cdd7e36296a6f7b466b818f1bba8ce797647e025ff6c08db
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/getsentry/sentry-cli/archive/refs/tags/3.3.5.tar.gz
+    sha256: 9ec565db99e85a29ca5ada4605581fa3e8a93e8ac9509ef6a47dc4ca3a269044
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

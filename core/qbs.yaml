@@ -3,28 +3,53 @@ version: 3.2.0
 description: Build tool for developing projects across multiple platforms
 homepage: https://wiki.qt.io/Qbs
 license: (LGPL-3.0-only OR GPL-2.0-only) AND (LGPL-3.0-only OR (LGPL-2.1-only WITH Qt-LGPL-exception-1.1)) AND (GPL-3.0-only WITH Qt-GPL-exception-1.0)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:5bb7a1ef21c2a4b2b4f6f4b70862b999b592ad501d417b528b4b08ad02bbf182
-    sha256: 5bb7a1ef21c2a4b2b4f6f4b70862b999b592ad501d417b528b4b08ad02bbf182
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:5d8d90c2097f2cbe8b19a7f8f431754c75b90e6b0c8db8e82e2b4cdb18c904aa
-    sha256: 5d8d90c2097f2cbe8b19a7f8f431754c75b90e6b0c8db8e82e2b4cdb18c904aa
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:4b9e0ec528efa0631a93a0de0ea7abf32a18243aaf7d355b6c64171fea7eac4e
-    sha256: 4b9e0ec528efa0631a93a0de0ea7abf32a18243aaf7d355b6c64171fea7eac4e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:a481a69ebf870e36441d4c8f43268dd52f76ed62e0756cbc63a821b23aeedd2b
-    sha256: a481a69ebf870e36441d4c8f43268dd52f76ed62e0756cbc63a821b23aeedd2b
-source:
-  url: https://download.qt.io/official_releases/qbs/3.2.0/qbs-src-3.2.0.tar.gz
-  sha256: 245724231b9e24e79b3f7363358082d5dd33f69e698500514ddd4ac99deb001c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qt5compat
-  - qtbase
+    - qt5compat
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:5d8d90c2097f2cbe8b19a7f8f431754c75b90e6b0c8db8e82e2b4cdb18c904aa
+        sha256: 5d8d90c2097f2cbe8b19a7f8f431754c75b90e6b0c8db8e82e2b4cdb18c904aa
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:5bb7a1ef21c2a4b2b4f6f4b70862b999b592ad501d417b528b4b08ad02bbf182
+        sha256: 5bb7a1ef21c2a4b2b4f6f4b70862b999b592ad501d417b528b4b08ad02bbf182
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:4b9e0ec528efa0631a93a0de0ea7abf32a18243aaf7d355b6c64171fea7eac4e
+        sha256: 4b9e0ec528efa0631a93a0de0ea7abf32a18243aaf7d355b6c64171fea7eac4e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:a481a69ebf870e36441d4c8f43268dd52f76ed62e0756cbc63a821b23aeedd2b
+        sha256: a481a69ebf870e36441d4c8f43268dd52f76ed62e0756cbc63a821b23aeedd2b
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qbs/3.2.0/qbs-src-3.2.0.tar.gz
+    sha256: 245724231b9e24e79b3f7363358082d5dd33f69e698500514ddd4ac99deb001c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

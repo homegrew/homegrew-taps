@@ -3,32 +3,56 @@ version: 4.0.5
 description: Efficient phylogenetic tree inference for massive taxonomic datasets
 homepage: https://github.com/citiususc/veryfasttree
 license: GPL-3.0-only AND BSD-3-Clause AND MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/veryfasttree/blobs/sha256:614e6b99cd1f19ab66d559dd984fbc057bb7dc9db8611529d297e3e7ef2104ca
-    sha256: 614e6b99cd1f19ab66d559dd984fbc057bb7dc9db8611529d297e3e7ef2104ca
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/veryfasttree/blobs/sha256:15976d53506ce1ae580ca361618aad7f5899dadb47140e063e43a9b796678299
-    sha256: 15976d53506ce1ae580ca361618aad7f5899dadb47140e063e43a9b796678299
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/veryfasttree/blobs/sha256:4a43dbe45af62348f2332c78fc858942e51c0a102a5e024e9d9e432f95326f82
-    sha256: 4a43dbe45af62348f2332c78fc858942e51c0a102a5e024e9d9e432f95326f82
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/veryfasttree/blobs/sha256:eeedf67e0395b1b17e2db2f873ff8237e046ff71170a68bd8cafc30c10358416
-    sha256: eeedf67e0395b1b17e2db2f873ff8237e046ff71170a68bd8cafc30c10358416
-source:
-  url: https://github.com/citiususc/veryfasttree/archive/refs/tags/v4.0.5.tar.gz
-  sha256: e753c01555b3363747ea1d51248d691aa1e79d228cac187a6725ea8cd86ad321
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libomp
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/veryfasttree/blobs/sha256:15976d53506ce1ae580ca361618aad7f5899dadb47140e063e43a9b796678299
+        sha256: 15976d53506ce1ae580ca361618aad7f5899dadb47140e063e43a9b796678299
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/veryfasttree/blobs/sha256:614e6b99cd1f19ab66d559dd984fbc057bb7dc9db8611529d297e3e7ef2104ca
+        sha256: 614e6b99cd1f19ab66d559dd984fbc057bb7dc9db8611529d297e3e7ef2104ca
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/veryfasttree/blobs/sha256:4a43dbe45af62348f2332c78fc858942e51c0a102a5e024e9d9e432f95326f82
+        sha256: 4a43dbe45af62348f2332c78fc858942e51c0a102a5e024e9d9e432f95326f82
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/veryfasttree/blobs/sha256:eeedf67e0395b1b17e2db2f873ff8237e046ff71170a68bd8cafc30c10358416
+        sha256: eeedf67e0395b1b17e2db2f873ff8237e046ff71170a68bd8cafc30c10358416
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/citiususc/veryfasttree/archive/refs/tags/v4.0.5.tar.gz
+    sha256: e753c01555b3363747ea1d51248d691aa1e79d228cac187a6725ea8cd86ad321
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - cmake
-  - robin-map
-  - xxhash
+    - boost
+    - cmake
+    - robin-map
+    - xxhash
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

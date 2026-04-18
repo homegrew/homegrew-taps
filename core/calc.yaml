@@ -3,28 +3,53 @@ version: 2.16.1.2
 description: Arbitrary precision calculator
 homepage: http://www.isthe.com/chongo/tech/comp/calc/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/calc/blobs/sha256:f481b5265878ae4d158320b74275baaa57265b3c9e04a546935792f95624ddb8
-    sha256: f481b5265878ae4d158320b74275baaa57265b3c9e04a546935792f95624ddb8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/calc/blobs/sha256:6aa4af49e85b6e11394ead0c9ca3574638809b12c2db96f2886e6379a9b21133
-    sha256: 6aa4af49e85b6e11394ead0c9ca3574638809b12c2db96f2886e6379a9b21133
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/calc/blobs/sha256:d38bf2e1f599b1d351d013276e37ec6d87f8dc999d8b2effaaabe5145fb72392
-    sha256: d38bf2e1f599b1d351d013276e37ec6d87f8dc999d8b2effaaabe5145fb72392
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/calc/blobs/sha256:720d3c2070a317cad9a01e76427644bf9c318b5749444967df4688494b71269c
-    sha256: 720d3c2070a317cad9a01e76427644bf9c318b5749444967df4688494b71269c
-source:
-  url: https://github.com/lcn2/calc/archive/refs/tags/v2.16.1.2.tar.gz
-  sha256: cb5b0576c3d206ed55b6929cc3a1ebc5afedbfdc70d528274cbac8e650c56d77
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - readline
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/calc/blobs/sha256:6aa4af49e85b6e11394ead0c9ca3574638809b12c2db96f2886e6379a9b21133
+        sha256: 6aa4af49e85b6e11394ead0c9ca3574638809b12c2db96f2886e6379a9b21133
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/calc/blobs/sha256:f481b5265878ae4d158320b74275baaa57265b3c9e04a546935792f95624ddb8
+        sha256: f481b5265878ae4d158320b74275baaa57265b3c9e04a546935792f95624ddb8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/calc/blobs/sha256:d38bf2e1f599b1d351d013276e37ec6d87f8dc999d8b2effaaabe5145fb72392
+        sha256: d38bf2e1f599b1d351d013276e37ec6d87f8dc999d8b2effaaabe5145fb72392
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/calc/blobs/sha256:720d3c2070a317cad9a01e76427644bf9c318b5749444967df4688494b71269c
+        sha256: 720d3c2070a317cad9a01e76427644bf9c318b5749444967df4688494b71269c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lcn2/calc/archive/refs/tags/v2.16.1.2.tar.gz
+    sha256: cb5b0576c3d206ed55b6929cc3a1ebc5afedbfdc70d528274cbac8e650c56d77
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - readline
-  - util-linux
+    - readline
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

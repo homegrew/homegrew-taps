@@ -3,32 +3,57 @@ version: 1.3.0
 description: Manage GitHub organizations at scale using an infrastructure as code approach
 homepage: https://otterdog.readthedocs.io/en/latest/
 license: EPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/otterdog/blobs/sha256:27dba193fe409cd457acda272eb925159c0e935755349fc4b2b00d39012ba4e8
-    sha256: 27dba193fe409cd457acda272eb925159c0e935755349fc4b2b00d39012ba4e8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/otterdog/blobs/sha256:3a65096ea2a76279442eeade3120c3e190428b04526df0ad06100c3e4fedde13
-    sha256: 3a65096ea2a76279442eeade3120c3e190428b04526df0ad06100c3e4fedde13
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/otterdog/blobs/sha256:adb181bd06602dfca6d639f09aef72272c8e0b9b3b17dc640eef2c29158b8a4f
-    sha256: adb181bd06602dfca6d639f09aef72272c8e0b9b3b17dc640eef2c29158b8a4f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/otterdog/blobs/sha256:9dc089973468c3fdd2b793b35a54c33ead9e72aa11188dac869dbe0e68d538de
-    sha256: 9dc089973468c3fdd2b793b35a54c33ead9e72aa11188dac869dbe0e68d538de
-source:
-  url: https://files.pythonhosted.org/packages/2a/e4/4249ca1627431e160b74a9b3525731b0eb2e0ab574cb43dfbd4e13f58210/otterdog-1.3.0.tar.gz
-  sha256: 94ba75c5fe11d32869e065b0c074f60b28fec827b87b87ef01707e27e36963b0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - libsodium
-  - node
-  - python@3.14
-  - rpds-py
+    - certifi
+    - cryptography
+    - libsodium
+    - node
+    - python@3.14
+    - rpds-py
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/otterdog/blobs/sha256:3a65096ea2a76279442eeade3120c3e190428b04526df0ad06100c3e4fedde13
+        sha256: 3a65096ea2a76279442eeade3120c3e190428b04526df0ad06100c3e4fedde13
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/otterdog/blobs/sha256:27dba193fe409cd457acda272eb925159c0e935755349fc4b2b00d39012ba4e8
+        sha256: 27dba193fe409cd457acda272eb925159c0e935755349fc4b2b00d39012ba4e8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/otterdog/blobs/sha256:adb181bd06602dfca6d639f09aef72272c8e0b9b3b17dc640eef2c29158b8a4f
+        sha256: adb181bd06602dfca6d639f09aef72272c8e0b9b3b17dc640eef2c29158b8a4f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/otterdog/blobs/sha256:9dc089973468c3fdd2b793b35a54c33ead9e72aa11188dac869dbe0e68d538de
+        sha256: 9dc089973468c3fdd2b793b35a54c33ead9e72aa11188dac869dbe0e68d538de
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/2a/e4/4249ca1627431e160b74a9b3525731b0eb2e0ab574cb43dfbd4e13f58210/otterdog-1.3.0.tar.gz
+    sha256: 94ba75c5fe11d32869e065b0c074f60b28fec827b87b87ef01707e27e36963b0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,33 +3,57 @@ version: 0.4.2
 description: Programs for accessing Microsoft Word documents
 homepage: https://wvware.sourceforge.net/
 license: LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wv2/blobs/sha256:d264df90b7b45b15d1aafa19c346cad1fa08f825411fcb219bd42250be96930b
-    sha256: d264df90b7b45b15d1aafa19c346cad1fa08f825411fcb219bd42250be96930b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wv2/blobs/sha256:88912743304f2a42ecc6d32a1a893596105f379c7c7bb29693c5c1d1beffe368
-    sha256: 88912743304f2a42ecc6d32a1a893596105f379c7c7bb29693c5c1d1beffe368
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wv2/blobs/sha256:3f0ec2558210fb1e81614db1a25319a8bdc6ff2dd3d91dc775bfc1636b462cfe
-    sha256: 3f0ec2558210fb1e81614db1a25319a8bdc6ff2dd3d91dc775bfc1636b462cfe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wv2/blobs/sha256:9dff4c442ccddd4106cf37b90df3919361f2e452bc0e1092187bd10c8f1de42f
-    sha256: 9dff4c442ccddd4106cf37b90df3919361f2e452bc0e1092187bd10c8f1de42f
-source:
-  url: https://downloads.sourceforge.net/project/wvware/wv2-0.4.2.tar.bz2
-  sha256: 9f2b6d3910cb0e29c9ff432f935a594ceec0101bca46ba2fc251aff251ee38dc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libgsf
+    - glib
+    - libgsf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wv2/blobs/sha256:88912743304f2a42ecc6d32a1a893596105f379c7c7bb29693c5c1d1beffe368
+        sha256: 88912743304f2a42ecc6d32a1a893596105f379c7c7bb29693c5c1d1beffe368
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wv2/blobs/sha256:d264df90b7b45b15d1aafa19c346cad1fa08f825411fcb219bd42250be96930b
+        sha256: d264df90b7b45b15d1aafa19c346cad1fa08f825411fcb219bd42250be96930b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wv2/blobs/sha256:3f0ec2558210fb1e81614db1a25319a8bdc6ff2dd3d91dc775bfc1636b462cfe
+        sha256: 3f0ec2558210fb1e81614db1a25319a8bdc6ff2dd3d91dc775bfc1636b462cfe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wv2/blobs/sha256:9dff4c442ccddd4106cf37b90df3919361f2e452bc0e1092187bd10c8f1de42f
+        sha256: 9dff4c442ccddd4106cf37b90df3919361f2e452bc0e1092187bd10c8f1de42f
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/wvware/wv2-0.4.2.tar.bz2
+    sha256: 9f2b6d3910cb0e29c9ff432f935a594ceec0101bca46ba2fc251aff251ee38dc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - glib
-  - libgsf
-  - zlib-ng-compat
+    - glib
+    - libgsf
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

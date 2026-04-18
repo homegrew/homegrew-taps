@@ -3,29 +3,54 @@ version: 1.5.10
 description: Library for handling OpenGL function pointer management
 homepage: https://github.com/anholt/libepoxy
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libepoxy/blobs/sha256:b6b93f3e18a09a60f0a2e7b6f91eef274d0a34840d5141446535f6ef949377b4
-    sha256: b6b93f3e18a09a60f0a2e7b6f91eef274d0a34840d5141446535f6ef949377b4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libepoxy/blobs/sha256:f0a692baa102940ea9ab31daef2dacb0ad2017d6049b4b58080417f900b0aeb9
-    sha256: f0a692baa102940ea9ab31daef2dacb0ad2017d6049b4b58080417f900b0aeb9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libepoxy/blobs/sha256:8798e1682f355df0c5009b8b968ecb2b9bd447f32683ad21f10e68ea60320819
-    sha256: 8798e1682f355df0c5009b8b968ecb2b9bd447f32683ad21f10e68ea60320819
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libepoxy/blobs/sha256:d353d0c6a998998b3563cc16177e88ab316aeab0f4e0cf199d59627248cba27f
-    sha256: d353d0c6a998998b3563cc16177e88ab316aeab0f4e0cf199d59627248cba27f
-source:
-  url: https://download.gnome.org/sources/libepoxy/1.5/libepoxy-1.5.10.tar.xz
-  sha256: 072cda4b59dd098bba8c2363a6247299db1fa89411dc221c8b81b8ee8192e623
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libepoxy/blobs/sha256:f0a692baa102940ea9ab31daef2dacb0ad2017d6049b4b58080417f900b0aeb9
+        sha256: f0a692baa102940ea9ab31daef2dacb0ad2017d6049b4b58080417f900b0aeb9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libepoxy/blobs/sha256:b6b93f3e18a09a60f0a2e7b6f91eef274d0a34840d5141446535f6ef949377b4
+        sha256: b6b93f3e18a09a60f0a2e7b6f91eef274d0a34840d5141446535f6ef949377b4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libepoxy/blobs/sha256:8798e1682f355df0c5009b8b968ecb2b9bd447f32683ad21f10e68ea60320819
+        sha256: 8798e1682f355df0c5009b8b968ecb2b9bd447f32683ad21f10e68ea60320819
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libepoxy/blobs/sha256:d353d0c6a998998b3563cc16177e88ab316aeab0f4e0cf199d59627248cba27f
+        sha256: d353d0c6a998998b3563cc16177e88ab316aeab0f4e0cf199d59627248cba27f
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/libepoxy/1.5/libepoxy-1.5.10.tar.xz
+    sha256: 072cda4b59dd098bba8c2363a6247299db1fa89411dc221c8b81b8ee8192e623
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - freeglut
+    - freeglut
+build:
+    configure: []
+    install: []
+service: null

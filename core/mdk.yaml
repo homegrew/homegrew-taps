@@ -3,54 +3,78 @@ version: 1.3.1
 description: GNU MIX development kit
 homepage: https://www.gnu.org/software/mdk/mdk.html
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mdk/blobs/sha256:7826d050643554b4fd5b996d6d435b817f5afc3d377838c17603134ee397387f
-    sha256: 7826d050643554b4fd5b996d6d435b817f5afc3d377838c17603134ee397387f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mdk/blobs/sha256:be057e6d7aa944047f2e2f1708dddd6bffba1fa6c937264c0a5065e11b1c1bf0
-    sha256: be057e6d7aa944047f2e2f1708dddd6bffba1fa6c937264c0a5065e11b1c1bf0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mdk/blobs/sha256:11178d7f888d4b955959d12ede795d08d2af47aca254caaa3a9769b39056cdab
-    sha256: 11178d7f888d4b955959d12ede795d08d2af47aca254caaa3a9769b39056cdab
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mdk/blobs/sha256:e6ec02348519a896a3cd23987ec812358ede91138da903dcfd6cad75a2cdb1ce
-    sha256: e6ec02348519a896a3cd23987ec812358ede91138da903dcfd6cad75a2cdb1ce
-source:
-  url: https://ftpmirror.gnu.org/gnu/mdk/v1.3.1/mdk-1.3.1.tar.gz
-  sha256: ebb963938c688c150ff6aaedc29f30d09020a1e31d55b30c2101f08773516d19
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - adwaita-icon-theme
-  - at-spi2-core
-  - bdw-gc
-  - cairo
-  - flex
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - guile
-  - harfbuzz
-  - pango
-  - readline
-  - gettext
+    - adwaita-icon-theme
+    - at-spi2-core
+    - bdw-gc
+    - cairo
+    - flex
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - guile
+    - harfbuzz
+    - pango
+    - readline
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mdk/blobs/sha256:be057e6d7aa944047f2e2f1708dddd6bffba1fa6c937264c0a5065e11b1c1bf0
+        sha256: be057e6d7aa944047f2e2f1708dddd6bffba1fa6c937264c0a5065e11b1c1bf0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mdk/blobs/sha256:7826d050643554b4fd5b996d6d435b817f5afc3d377838c17603134ee397387f
+        sha256: 7826d050643554b4fd5b996d6d435b817f5afc3d377838c17603134ee397387f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mdk/blobs/sha256:11178d7f888d4b955959d12ede795d08d2af47aca254caaa3a9769b39056cdab
+        sha256: 11178d7f888d4b955959d12ede795d08d2af47aca254caaa3a9769b39056cdab
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mdk/blobs/sha256:e6ec02348519a896a3cd23987ec812358ede91138da903dcfd6cad75a2cdb1ce
+        sha256: e6ec02348519a896a3cd23987ec812358ede91138da903dcfd6cad75a2cdb1ce
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/mdk/v1.3.1/mdk-1.3.1.tar.gz
+    sha256: ebb963938c688c150ff6aaedc29f30d09020a1e31d55b30c2101f08773516d19
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - intltool
-  - pkgconf
+    - gettext
+    - intltool
+    - pkgconf
 linux_dependencies:
-  - adwaita-icon-theme
-  - at-spi2-core
-  - bdw-gc
-  - cairo
-  - flex
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - guile
-  - harfbuzz
-  - pango
-  - readline
+    - adwaita-icon-theme
+    - at-spi2-core
+    - bdw-gc
+    - cairo
+    - flex
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - guile
+    - harfbuzz
+    - pango
+    - readline
+build:
+    configure: []
+    install: []
+service: null

@@ -1,30 +1,56 @@
 name: weasyprint
-version: 68.1
+version: "68.1"
 description: Convert HTML to PDF
 homepage: https://www.courtbouillon.org/weasyprint
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/weasyprint/blobs/sha256:964785f9c83bb3d485af26c6d2f8fd8ffaf2ebfcd59f2bd1182459278fd7c4dd
-    sha256: 964785f9c83bb3d485af26c6d2f8fd8ffaf2ebfcd59f2bd1182459278fd7c4dd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/weasyprint/blobs/sha256:cc0a758c4587e3585f5981dc08d99083b623b727b165031a128c7e60bf842779
-    sha256: cc0a758c4587e3585f5981dc08d99083b623b727b165031a128c7e60bf842779
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/weasyprint/blobs/sha256:ba97d7603ffa48d3a9b7eeb4f533b1d3dfdefbd216f754dd9329636c4d19ede9
-    sha256: ba97d7603ffa48d3a9b7eeb4f533b1d3dfdefbd216f754dd9329636c4d19ede9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/weasyprint/blobs/sha256:3ec5a3c8494720363e9b8fed28802cd5fd71608a67fe6037717e11a2081a7888
-    sha256: 3ec5a3c8494720363e9b8fed28802cd5fd71608a67fe6037717e11a2081a7888
-source:
-  url: https://files.pythonhosted.org/packages/db/3e/65c0f176e6fb5c2b0a1ac13185b366f727d9723541babfa7fa4309998169/weasyprint-68.1.tar.gz
-  sha256: d3b752049b453a5c95edb27ce78d69e9319af5a34f257fa0f4c738c701b4184e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cffi
-  - pango
-  - pillow
-  - python@3.14
+    - cffi
+    - pango
+    - pillow
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/weasyprint/blobs/sha256:cc0a758c4587e3585f5981dc08d99083b623b727b165031a128c7e60bf842779
+        sha256: cc0a758c4587e3585f5981dc08d99083b623b727b165031a128c7e60bf842779
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/weasyprint/blobs/sha256:964785f9c83bb3d485af26c6d2f8fd8ffaf2ebfcd59f2bd1182459278fd7c4dd
+        sha256: 964785f9c83bb3d485af26c6d2f8fd8ffaf2ebfcd59f2bd1182459278fd7c4dd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/weasyprint/blobs/sha256:ba97d7603ffa48d3a9b7eeb4f533b1d3dfdefbd216f754dd9329636c4d19ede9
+        sha256: ba97d7603ffa48d3a9b7eeb4f533b1d3dfdefbd216f754dd9329636c4d19ede9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/weasyprint/blobs/sha256:3ec5a3c8494720363e9b8fed28802cd5fd71608a67fe6037717e11a2081a7888
+        sha256: 3ec5a3c8494720363e9b8fed28802cd5fd71608a67fe6037717e11a2081a7888
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/db/3e/65c0f176e6fb5c2b0a1ac13185b366f727d9723541babfa7fa4309998169/weasyprint-68.1.tar.gz
+    sha256: d3b752049b453a5c95edb27ce78d69e9319af5a34f257fa0f4c738c701b4184e
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,31 +1,56 @@
 name: libxcomposite
 version: 0.4.7
-description: "X.Org: Client library for the Composite extension"
+description: 'X.Org: Client library for the Composite extension'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxcomposite/blobs/sha256:b9f78b5015dff6cf0f0e3502d5bb1b68554762c5a99c42f42a4df3eb1332993c
-    sha256: b9f78b5015dff6cf0f0e3502d5bb1b68554762c5a99c42f42a4df3eb1332993c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxcomposite/blobs/sha256:bd0f533e1472d808217fe6b8e2eb5e79fcd7304ed0160c18132450aa1dc052f7
-    sha256: bd0f533e1472d808217fe6b8e2eb5e79fcd7304ed0160c18132450aa1dc052f7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxcomposite/blobs/sha256:8315c74c0801195039af20cb91211b9966bdf7541b895794146ec4d50ac55e46
-    sha256: 8315c74c0801195039af20cb91211b9966bdf7541b895794146ec4d50ac55e46
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxcomposite/blobs/sha256:f4abdd9cbed5a4afcadec1d342113f314330492dab6192c68023b2d323d9dde2
-    sha256: f4abdd9cbed5a4afcadec1d342113f314330492dab6192c68023b2d323d9dde2
-source:
-  url: https://www.x.org/archive/individual/lib/libXcomposite-0.4.7.tar.xz
-  sha256: 8bdf310967f484503fa51714cf97bff0723d9b673e0eecbf92b3f97c060c8ccb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - libxfixes
-  - xorgproto
+    - libx11
+    - libxfixes
+    - xorgproto
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxcomposite/blobs/sha256:bd0f533e1472d808217fe6b8e2eb5e79fcd7304ed0160c18132450aa1dc052f7
+        sha256: bd0f533e1472d808217fe6b8e2eb5e79fcd7304ed0160c18132450aa1dc052f7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxcomposite/blobs/sha256:b9f78b5015dff6cf0f0e3502d5bb1b68554762c5a99c42f42a4df3eb1332993c
+        sha256: b9f78b5015dff6cf0f0e3502d5bb1b68554762c5a99c42f42a4df3eb1332993c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxcomposite/blobs/sha256:8315c74c0801195039af20cb91211b9966bdf7541b895794146ec4d50ac55e46
+        sha256: 8315c74c0801195039af20cb91211b9966bdf7541b895794146ec4d50ac55e46
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxcomposite/blobs/sha256:f4abdd9cbed5a4afcadec1d342113f314330492dab6192c68023b2d323d9dde2
+        sha256: f4abdd9cbed5a4afcadec1d342113f314330492dab6192c68023b2d323d9dde2
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libXcomposite-0.4.7.tar.xz
+    sha256: 8bdf310967f484503fa51714cf97bff0723d9b673e0eecbf92b3f97c060c8ccb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,29 +1,54 @@
 name: ropebwt3
-version: 3.10
+version: "3.10"
 description: BWT construction and search
 homepage: https://github.com/lh3/ropebwt3
 license: MIT AND Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ropebwt3/blobs/sha256:ceb1467adeb7b88f75b34df0e9e4d4680428c3d3f470731a54b89654240f0c02
-    sha256: ceb1467adeb7b88f75b34df0e9e4d4680428c3d3f470731a54b89654240f0c02
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ropebwt3/blobs/sha256:c0d44bb1e7c876d6ca2793a8992c8c63155a8748df7874986897d0fcf9540998
-    sha256: c0d44bb1e7c876d6ca2793a8992c8c63155a8748df7874986897d0fcf9540998
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ropebwt3/blobs/sha256:01a4f42c930c3b6bbe46d536c2ed6bba3296c2b932ebd5c793abe4742f7d1f1b
-    sha256: 01a4f42c930c3b6bbe46d536c2ed6bba3296c2b932ebd5c793abe4742f7d1f1b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ropebwt3/blobs/sha256:e61fd03b0a5f96a969c73397d94fb5d1dd7659dd55bc791544accc4c58179777
-    sha256: e61fd03b0a5f96a969c73397d94fb5d1dd7659dd55bc791544accc4c58179777
-source:
-  url: https://github.com/lh3/ropebwt3/archive/refs/tags/v3.10.tar.gz
-  sha256: 072231015c834d7ffcdc621c9ae260dafebf9f22ed9a780fe0026c2e0a845c5a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libomp
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ropebwt3/blobs/sha256:c0d44bb1e7c876d6ca2793a8992c8c63155a8748df7874986897d0fcf9540998
+        sha256: c0d44bb1e7c876d6ca2793a8992c8c63155a8748df7874986897d0fcf9540998
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ropebwt3/blobs/sha256:ceb1467adeb7b88f75b34df0e9e4d4680428c3d3f470731a54b89654240f0c02
+        sha256: ceb1467adeb7b88f75b34df0e9e4d4680428c3d3f470731a54b89654240f0c02
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ropebwt3/blobs/sha256:01a4f42c930c3b6bbe46d536c2ed6bba3296c2b932ebd5c793abe4742f7d1f1b
+        sha256: 01a4f42c930c3b6bbe46d536c2ed6bba3296c2b932ebd5c793abe4742f7d1f1b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ropebwt3/blobs/sha256:e61fd03b0a5f96a969c73397d94fb5d1dd7659dd55bc791544accc4c58179777
+        sha256: e61fd03b0a5f96a969c73397d94fb5d1dd7659dd55bc791544accc4c58179777
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lh3/ropebwt3/archive/refs/tags/v3.10.tar.gz
+    sha256: 072231015c834d7ffcdc621c9ae260dafebf9f22ed9a780fe0026c2e0a845c5a
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

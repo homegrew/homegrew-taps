@@ -3,58 +3,82 @@ version: 0.23.1
 description: Visual and LiDAR SLAM library and standalone application
 homepage: https://introlab.github.io/rtabmap
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rtabmap/blobs/sha256:fb8ac77b86a442fb36bb09a2d95c578f7ae0bfc7c3fa62536aaefabb18c86998
-    sha256: fb8ac77b86a442fb36bb09a2d95c578f7ae0bfc7c3fa62536aaefabb18c86998
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rtabmap/blobs/sha256:0bfcfde8fab19a643afcd9a6937da6dfe46fe4a2acf02135f475990ed25eea4a
-    sha256: 0bfcfde8fab19a643afcd9a6937da6dfe46fe4a2acf02135f475990ed25eea4a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rtabmap/blobs/sha256:d239e486ed15db1b5170667fcf06d8365d39de3c577aafef60bc4a4a4b345fe2
-    sha256: d239e486ed15db1b5170667fcf06d8365d39de3c577aafef60bc4a4a4b345fe2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rtabmap/blobs/sha256:6ae741f4341e2ac209b7766acf95481d814c1c6ee340211b60669a099fb535ed
-    sha256: 6ae741f4341e2ac209b7766acf95481d814c1c6ee340211b60669a099fb535ed
-source:
-  url: https://github.com/introlab/rtabmap/archive/refs/tags/0.23.1.tar.gz
-  sha256: 8f0463d0b46418921da0503d5f991c7d0b8308b4926a069d9fe4ec811113502f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - g2o
-  - librealsense
-  - octomap
-  - opencv
-  - pcl
-  - pdal
-  - qtbase
-  - qtsvg
-  - sqlite
-  - vtk
-  - boost
-  - flann
-  - freetype
-  - glew
-  - libfreenect
-  - libomp
-  - libpcap
-  - libpng
-  - lz4
-  - qhull
+    - g2o
+    - librealsense
+    - octomap
+    - opencv
+    - pcl
+    - pdal
+    - qtbase
+    - qtsvg
+    - sqlite
+    - vtk
+    - boost
+    - flann
+    - freetype
+    - glew
+    - libfreenect
+    - libomp
+    - libpcap
+    - libpng
+    - lz4
+    - qhull
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rtabmap/blobs/sha256:0bfcfde8fab19a643afcd9a6937da6dfe46fe4a2acf02135f475990ed25eea4a
+        sha256: 0bfcfde8fab19a643afcd9a6937da6dfe46fe4a2acf02135f475990ed25eea4a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rtabmap/blobs/sha256:fb8ac77b86a442fb36bb09a2d95c578f7ae0bfc7c3fa62536aaefabb18c86998
+        sha256: fb8ac77b86a442fb36bb09a2d95c578f7ae0bfc7c3fa62536aaefabb18c86998
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rtabmap/blobs/sha256:d239e486ed15db1b5170667fcf06d8365d39de3c577aafef60bc4a4a4b345fe2
+        sha256: d239e486ed15db1b5170667fcf06d8365d39de3c577aafef60bc4a4a4b345fe2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rtabmap/blobs/sha256:6ae741f4341e2ac209b7766acf95481d814c1c6ee340211b60669a099fb535ed
+        sha256: 6ae741f4341e2ac209b7766acf95481d814c1c6ee340211b60669a099fb535ed
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/introlab/rtabmap/archive/refs/tags/0.23.1.tar.gz
+    sha256: 8f0463d0b46418921da0503d5f991c7d0b8308b4926a069d9fe4ec811113502f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - g2o
-  - librealsense
-  - octomap
-  - opencv
-  - pcl
-  - pdal
-  - qtbase
-  - qtsvg
-  - sqlite
-  - vtk
-  - zlib-ng-compat
+    - g2o
+    - librealsense
+    - octomap
+    - opencv
+    - pcl
+    - pdal
+    - qtbase
+    - qtsvg
+    - sqlite
+    - vtk
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,30 +3,55 @@ version: 1.0.11
 description: Build automation system written for X11
 homepage: https://xorg.freedesktop.org
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imake/blobs/sha256:e00d84afa586ef13b9a3839fb78191004c4bb76953057ccda30f602cc274565d
-    sha256: e00d84afa586ef13b9a3839fb78191004c4bb76953057ccda30f602cc274565d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imake/blobs/sha256:63dbde50254d19999a5a6fd43f0107eb3cb7a5e43ef148eb27a725bc32f385e9
-    sha256: 63dbde50254d19999a5a6fd43f0107eb3cb7a5e43ef148eb27a725bc32f385e9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imake/blobs/sha256:a5b7ebc580e66c9f4f72b61e1b6ad51228d41f25620d66e4959334bad6b5c15f
-    sha256: a5b7ebc580e66c9f4f72b61e1b6ad51228d41f25620d66e4959334bad6b5c15f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imake/blobs/sha256:513164454011b2cf9941f92eea4ad738a28b37265b3606838f26bd15223b2493
-    sha256: 513164454011b2cf9941f92eea4ad738a28b37265b3606838f26bd15223b2493
-source:
-  url: https://xorg.freedesktop.org/releases/individual/util/imake-1.0.11.tar.xz
-  sha256: 55955527eaebe94633e4083d4fe5f2160a65fe4c6dafdee48b89fea5f1ca8a78
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - tradcpp
+    - tradcpp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imake/blobs/sha256:63dbde50254d19999a5a6fd43f0107eb3cb7a5e43ef148eb27a725bc32f385e9
+        sha256: 63dbde50254d19999a5a6fd43f0107eb3cb7a5e43ef148eb27a725bc32f385e9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imake/blobs/sha256:e00d84afa586ef13b9a3839fb78191004c4bb76953057ccda30f602cc274565d
+        sha256: e00d84afa586ef13b9a3839fb78191004c4bb76953057ccda30f602cc274565d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imake/blobs/sha256:a5b7ebc580e66c9f4f72b61e1b6ad51228d41f25620d66e4959334bad6b5c15f
+        sha256: a5b7ebc580e66c9f4f72b61e1b6ad51228d41f25620d66e4959334bad6b5c15f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imake/blobs/sha256:513164454011b2cf9941f92eea4ad738a28b37265b3606838f26bd15223b2493
+        sha256: 513164454011b2cf9941f92eea4ad738a28b37265b3606838f26bd15223b2493
+        sha512: ""
+        signature: ""
+source:
+    url: https://xorg.freedesktop.org/releases/individual/util/imake-1.0.11.tar.xz
+    sha256: 55955527eaebe94633e4083d4fe5f2160a65fe4c6dafdee48b89fea5f1ca8a78
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
-  - xorgproto
+    - meson
+    - ninja
+    - pkgconf
+    - xorgproto
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

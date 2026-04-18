@@ -3,49 +3,73 @@ version: 0.31.10
 description: Convert bitmap to vector graphics
 homepage: https://autotrace.sourceforge.net/
 license: GPL-2.0-or-later AND LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:8f46e9bf0a5498be353f53dcfb86707921065ab3b96935e90e270aa98202520c
-    sha256: 8f46e9bf0a5498be353f53dcfb86707921065ab3b96935e90e270aa98202520c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:309ada11b08e9bb6477127ba861acf1ea44e2a9c4e4ef366a614d418d7c8ef55
-    sha256: 309ada11b08e9bb6477127ba861acf1ea44e2a9c4e4ef366a614d418d7c8ef55
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:4aab08802d48a33cc4d89c858fbc7ecc61dddb7a8d1e6ec250cf8b2dda4b9f8f
-    sha256: 4aab08802d48a33cc4d89c858fbc7ecc61dddb7a8d1e6ec250cf8b2dda4b9f8f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:2b49716451cbac5e13837244a3413197cc69e0d5358e519697d104e667f5ac4a
-    sha256: 2b49716451cbac5e13837244a3413197cc69e0d5358e519697d104e667f5ac4a
-source:
-  url: https://github.com/autotrace/autotrace/archive/refs/tags/0.31.10.tar.gz
-  sha256: 14627f93bb02fe14eeda0163434a7cb9b1f316c0f1727f0bdf6323a831ffe80d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - imagemagick
-  - libpng
-  - libtiff
-  - pstoedit
-  - fontconfig
-  - freetype
-  - gettext
-  - liblqr
-  - libomp
-  - libtool
-  - little-cms2
+    - glib
+    - imagemagick
+    - libpng
+    - libtiff
+    - pstoedit
+    - fontconfig
+    - freetype
+    - gettext
+    - liblqr
+    - libomp
+    - libtool
+    - little-cms2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:309ada11b08e9bb6477127ba861acf1ea44e2a9c4e4ef366a614d418d7c8ef55
+        sha256: 309ada11b08e9bb6477127ba861acf1ea44e2a9c4e4ef366a614d418d7c8ef55
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:8f46e9bf0a5498be353f53dcfb86707921065ab3b96935e90e270aa98202520c
+        sha256: 8f46e9bf0a5498be353f53dcfb86707921065ab3b96935e90e270aa98202520c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:4aab08802d48a33cc4d89c858fbc7ecc61dddb7a8d1e6ec250cf8b2dda4b9f8f
+        sha256: 4aab08802d48a33cc4d89c858fbc7ecc61dddb7a8d1e6ec250cf8b2dda4b9f8f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:2b49716451cbac5e13837244a3413197cc69e0d5358e519697d104e667f5ac4a
+        sha256: 2b49716451cbac5e13837244a3413197cc69e0d5358e519697d104e667f5ac4a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/autotrace/autotrace/archive/refs/tags/0.31.10.tar.gz
+    sha256: 14627f93bb02fe14eeda0163434a7cb9b1f316c0f1727f0bdf6323a831ffe80d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - gettext
-  - intltool
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - gettext
+    - intltool
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - glib
-  - imagemagick
-  - libpng
-  - libtiff
-  - pstoedit
+    - glib
+    - imagemagick
+    - libpng
+    - libtiff
+    - pstoedit
+build:
+    configure: []
+    install: []
+service: null

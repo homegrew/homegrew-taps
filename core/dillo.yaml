@@ -3,35 +3,60 @@ version: 3.2.0
 description: Fast and small graphical web browser
 homepage: https://dillo-browser.github.io/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dillo/blobs/sha256:133ccf2cba4d0bd952f33b732c18d55cf734e4cc52cdfe1eec378e77c9a4db24
-    sha256: 133ccf2cba4d0bd952f33b732c18d55cf734e4cc52cdfe1eec378e77c9a4db24
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dillo/blobs/sha256:8e4b78d3b2f1909881dfcf2fbee7924222a055cf6b863d6d77a6346a127cbf50
-    sha256: 8e4b78d3b2f1909881dfcf2fbee7924222a055cf6b863d6d77a6346a127cbf50
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dillo/blobs/sha256:633afe5f018db26138ac0d62cd5d0d55b11fefa78a68bedfc1992718e3ede88b
-    sha256: 633afe5f018db26138ac0d62cd5d0d55b11fefa78a68bedfc1992718e3ede88b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dillo/blobs/sha256:affc8edd131cb4d01285085bb413c678ee6ebc0dbf55aebbee6f1abdab7dbae5
-    sha256: affc8edd131cb4d01285085bb413c678ee6ebc0dbf55aebbee6f1abdab7dbae5
-source:
-  url: https://github.com/dillo-browser/dillo/releases/download/v3.2.0/dillo-3.2.0.tar.bz2
-  sha256: 1066ed42ea7fe0ce19e79becd029c651c15689922de8408e13e70bb5701931bf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fltk@1.3
-  - jpeg-turbo
-  - libpng
-  - openssl@3
+    - fltk@1.3
+    - jpeg-turbo
+    - libpng
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dillo/blobs/sha256:8e4b78d3b2f1909881dfcf2fbee7924222a055cf6b863d6d77a6346a127cbf50
+        sha256: 8e4b78d3b2f1909881dfcf2fbee7924222a055cf6b863d6d77a6346a127cbf50
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dillo/blobs/sha256:133ccf2cba4d0bd952f33b732c18d55cf734e4cc52cdfe1eec378e77c9a4db24
+        sha256: 133ccf2cba4d0bd952f33b732c18d55cf734e4cc52cdfe1eec378e77c9a4db24
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dillo/blobs/sha256:633afe5f018db26138ac0d62cd5d0d55b11fefa78a68bedfc1992718e3ede88b
+        sha256: 633afe5f018db26138ac0d62cd5d0d55b11fefa78a68bedfc1992718e3ede88b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dillo/blobs/sha256:affc8edd131cb4d01285085bb413c678ee6ebc0dbf55aebbee6f1abdab7dbae5
+        sha256: affc8edd131cb4d01285085bb413c678ee6ebc0dbf55aebbee6f1abdab7dbae5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dillo-browser/dillo/releases/download/v3.2.0/dillo-3.2.0.tar.bz2
+    sha256: 1066ed42ea7fe0ce19e79becd029c651c15689922de8408e13e70bb5701931bf
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - fltk@1.3
-  - jpeg-turbo
-  - libpng
-  - libx11
-  - openssl@3
-  - zlib-ng-compat
+    - fltk@1.3
+    - jpeg-turbo
+    - libpng
+    - libx11
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

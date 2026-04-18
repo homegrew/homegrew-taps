@@ -3,31 +3,56 @@ version: 3.3.1
 description: Library for Security Assertion Markup Language
 homepage: https://wiki.shibboleth.net/confluence/display/OpenSAML/Home
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opensaml/blobs/sha256:5805c25d6cbc6a232a11171cbe6b42d4bd5cd79bb58a80eb58fc8897cb95d809
-    sha256: 5805c25d6cbc6a232a11171cbe6b42d4bd5cd79bb58a80eb58fc8897cb95d809
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opensaml/blobs/sha256:11823d44fd8032eb8e3f61827de120b93656107a2e31fbeedc95a78c52e34017
-    sha256: 11823d44fd8032eb8e3f61827de120b93656107a2e31fbeedc95a78c52e34017
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opensaml/blobs/sha256:7113cf3ec71403d5a0c60bb4f6e9c358c60f57cf80e203d9cd34cb19f5d1898e
-    sha256: 7113cf3ec71403d5a0c60bb4f6e9c358c60f57cf80e203d9cd34cb19f5d1898e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opensaml/blobs/sha256:ccf298955ba2cf7cc5c54feaab9baedd5faa1b351ea02525ceeda3d35d76e805
-    sha256: ccf298955ba2cf7cc5c54feaab9baedd5faa1b351ea02525ceeda3d35d76e805
-source:
-  url: https://shibboleth.net/downloads/c++-opensaml/3.3.1/opensaml-3.3.1.tar.bz2
-  sha256: d8e24e070fc6bb80682632ca32c8569a9f3ef170ba57e3b82818322e75b6a37e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - log4shib
-  - openssl@3
-  - xerces-c
-  - xml-security-c
-  - xml-tooling-c
+    - log4shib
+    - openssl@3
+    - xerces-c
+    - xml-security-c
+    - xml-tooling-c
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opensaml/blobs/sha256:11823d44fd8032eb8e3f61827de120b93656107a2e31fbeedc95a78c52e34017
+        sha256: 11823d44fd8032eb8e3f61827de120b93656107a2e31fbeedc95a78c52e34017
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opensaml/blobs/sha256:5805c25d6cbc6a232a11171cbe6b42d4bd5cd79bb58a80eb58fc8897cb95d809
+        sha256: 5805c25d6cbc6a232a11171cbe6b42d4bd5cd79bb58a80eb58fc8897cb95d809
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opensaml/blobs/sha256:7113cf3ec71403d5a0c60bb4f6e9c358c60f57cf80e203d9cd34cb19f5d1898e
+        sha256: 7113cf3ec71403d5a0c60bb4f6e9c358c60f57cf80e203d9cd34cb19f5d1898e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opensaml/blobs/sha256:ccf298955ba2cf7cc5c54feaab9baedd5faa1b351ea02525ceeda3d35d76e805
+        sha256: ccf298955ba2cf7cc5c54feaab9baedd5faa1b351ea02525ceeda3d35d76e805
+        sha512: ""
+        signature: ""
+source:
+    url: https://shibboleth.net/downloads/c++-opensaml/3.3.1/opensaml-3.3.1.tar.bz2
+    sha256: d8e24e070fc6bb80682632ca32c8569a9f3ef170ba57e3b82818322e75b6a37e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

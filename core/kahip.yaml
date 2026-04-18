@@ -1,32 +1,56 @@
 name: kahip
-version: 3.25
+version: "3.25"
 description: Karlsruhe High Quality Partitioning
 homepage: https://algo2.iti.kit.edu/documents/kahip/index.html
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:4e36c7f3ab5780386c19bf7dc68af8ded3b3e3dab99ed92249ea0c0016027a2b
-    sha256: 4e36c7f3ab5780386c19bf7dc68af8ded3b3e3dab99ed92249ea0c0016027a2b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:946fcbeb2f1f282d71daf56bf5060b5c3ddb09d0459183e0f3d294a3d89308ce
-    sha256: 946fcbeb2f1f282d71daf56bf5060b5c3ddb09d0459183e0f3d294a3d89308ce
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:d11325459b8017581d809476311f68dfdc1cef415de405f4f59de49f082d3010
-    sha256: d11325459b8017581d809476311f68dfdc1cef415de405f4f59de49f082d3010
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:56ab7889c908ca241a175d788b1c19569158b939d18346220695c490699e348c
-    sha256: 56ab7889c908ca241a175d788b1c19569158b939d18346220695c490699e348c
-source:
-  url: https://github.com/KaHIP/KaHIP/archive/refs/tags/v3.25.tar.gz
-  sha256: 3abad20158887b585b4d4792c35fa9023b7fd634b2bc4494334a3951b69f4842
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - open-mpi
-  - libomp
+    - open-mpi
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:946fcbeb2f1f282d71daf56bf5060b5c3ddb09d0459183e0f3d294a3d89308ce
+        sha256: 946fcbeb2f1f282d71daf56bf5060b5c3ddb09d0459183e0f3d294a3d89308ce
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:4e36c7f3ab5780386c19bf7dc68af8ded3b3e3dab99ed92249ea0c0016027a2b
+        sha256: 4e36c7f3ab5780386c19bf7dc68af8ded3b3e3dab99ed92249ea0c0016027a2b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:d11325459b8017581d809476311f68dfdc1cef415de405f4f59de49f082d3010
+        sha256: d11325459b8017581d809476311f68dfdc1cef415de405f4f59de49f082d3010
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kahip/blobs/sha256:56ab7889c908ca241a175d788b1c19569158b939d18346220695c490699e348c
+        sha256: 56ab7889c908ca241a175d788b1c19569158b939d18346220695c490699e348c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/KaHIP/KaHIP/archive/refs/tags/v3.25.tar.gz
+    sha256: 3abad20158887b585b4d4792c35fa9023b7fd634b2bc4494334a3951b69f4842
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - open-mpi
+    - open-mpi
+build:
+    configure: []
+    install: []
+service: null

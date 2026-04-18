@@ -3,38 +3,62 @@ version: 7.1.0
 description: Compile and build packages suitable for installation with pacman
 homepage: https://wiki.archlinux.org/index.php/makepkg
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/makepkg/blobs/sha256:437af5d09741dd52b5c010e56ad27ce2f44b9f04d6dad061d45086a5c99602d8
-    sha256: 437af5d09741dd52b5c010e56ad27ce2f44b9f04d6dad061d45086a5c99602d8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/makepkg/blobs/sha256:0b4e76c60d7475c0a11de8bc5aab08be1c88fcc234f5191d0cc159c76b954e15
-    sha256: 0b4e76c60d7475c0a11de8bc5aab08be1c88fcc234f5191d0cc159c76b954e15
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/makepkg/blobs/sha256:997a27e40a380fa9cdc29efabc88cdf021b18c51b81ffe4fcfa4889ba8fea785
-    sha256: 997a27e40a380fa9cdc29efabc88cdf021b18c51b81ffe4fcfa4889ba8fea785
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/makepkg/blobs/sha256:0efea1e4d153388446b13bcb72b22bbb54eea0edecba47e55884e3d452d4e716
-    sha256: 0efea1e4d153388446b13bcb72b22bbb54eea0edecba47e55884e3d452d4e716
-source:
-  url: https://gitlab.archlinux.org/pacman/pacman.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - bash
-  - fakeroot
-  - libarchive
-  - openssl@3
+    - bash
+    - fakeroot
+    - libarchive
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/makepkg/blobs/sha256:0b4e76c60d7475c0a11de8bc5aab08be1c88fcc234f5191d0cc159c76b954e15
+        sha256: 0b4e76c60d7475c0a11de8bc5aab08be1c88fcc234f5191d0cc159c76b954e15
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/makepkg/blobs/sha256:437af5d09741dd52b5c010e56ad27ce2f44b9f04d6dad061d45086a5c99602d8
+        sha256: 437af5d09741dd52b5c010e56ad27ce2f44b9f04d6dad061d45086a5c99602d8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/makepkg/blobs/sha256:997a27e40a380fa9cdc29efabc88cdf021b18c51b81ffe4fcfa4889ba8fea785
+        sha256: 997a27e40a380fa9cdc29efabc88cdf021b18c51b81ffe4fcfa4889ba8fea785
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/makepkg/blobs/sha256:0efea1e4d153388446b13bcb72b22bbb54eea0edecba47e55884e3d452d4e716
+        sha256: 0efea1e4d153388446b13bcb72b22bbb54eea0edecba47e55884e3d452d4e716
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.archlinux.org/pacman/pacman.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - bash
-  - fakeroot
-  - gettext
-  - libarchive
-  - openssl@3
+    - bash
+    - fakeroot
+    - gettext
+    - libarchive
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 1.1.0
 description: Utility to help resolve merge conflicts
 homepage: https://github.com/Peaker/git-mediate
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:42134552e6c948a352c7a2819178ca7fdd34254d5932ac9867635a31813dcebe
-    sha256: 42134552e6c948a352c7a2819178ca7fdd34254d5932ac9867635a31813dcebe
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:f9b46bfa29542509a7fa1b33dadf15a415dbd154066ea58ec7683861a9ab3544
-    sha256: f9b46bfa29542509a7fa1b33dadf15a415dbd154066ea58ec7683861a9ab3544
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:54dd625814a87c231bc8d8fc83ddb4b3366ca87f068a0a6f63e17ace1e842744
-    sha256: 54dd625814a87c231bc8d8fc83ddb4b3366ca87f068a0a6f63e17ace1e842744
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:58caff9b2789c99a435feb86be3fc3f7e6a9b05c4fffba13e8c87b23886eb11a
-    sha256: 58caff9b2789c99a435feb86be3fc3f7e6a9b05c4fffba13e8c87b23886eb11a
-source:
-  url: https://github.com/Peaker/git-mediate/archive/refs/tags/1.1.0.tar.gz
-  sha256: f8bacc2d041d1bef9288bebdb20ab2ee6fbd7d37d4e23c84f8dda27ff5b8ba59
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:f9b46bfa29542509a7fa1b33dadf15a415dbd154066ea58ec7683861a9ab3544
+        sha256: f9b46bfa29542509a7fa1b33dadf15a415dbd154066ea58ec7683861a9ab3544
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:42134552e6c948a352c7a2819178ca7fdd34254d5932ac9867635a31813dcebe
+        sha256: 42134552e6c948a352c7a2819178ca7fdd34254d5932ac9867635a31813dcebe
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:54dd625814a87c231bc8d8fc83ddb4b3366ca87f068a0a6f63e17ace1e842744
+        sha256: 54dd625814a87c231bc8d8fc83ddb4b3366ca87f068a0a6f63e17ace1e842744
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-mediate/blobs/sha256:58caff9b2789c99a435feb86be3fc3f7e6a9b05c4fffba13e8c87b23886eb11a
+        sha256: 58caff9b2789c99a435feb86be3fc3f7e6a9b05c4fffba13e8c87b23886eb11a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Peaker/git-mediate/archive/refs/tags/1.1.0.tar.gz
+    sha256: f8bacc2d041d1bef9288bebdb20ab2ee6fbd7d37d4e23c84f8dda27ff5b8ba59
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
+    - cabal-install
+    - ghc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

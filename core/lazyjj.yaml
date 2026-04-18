@@ -3,27 +3,52 @@ version: 0.6.1
 description: TUI for Jujutsu/jj
 homepage: https://github.com/Cretezy/lazyjj
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lazyjj/blobs/sha256:8c7e851a5bddfbceb3bd566d77745bf5ac11ed2b9d5d46a8818dd0393aa95e8a
-    sha256: 8c7e851a5bddfbceb3bd566d77745bf5ac11ed2b9d5d46a8818dd0393aa95e8a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lazyjj/blobs/sha256:d974fc54a97bc59287f4be8dc743f0bc333a892c51ee2a00a0b267aec6fb123a
-    sha256: d974fc54a97bc59287f4be8dc743f0bc333a892c51ee2a00a0b267aec6fb123a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lazyjj/blobs/sha256:355ec9f7c70a53c3f9b80171821709738cfc7e9bde7f38a5498f537a9d6c6811
-    sha256: 355ec9f7c70a53c3f9b80171821709738cfc7e9bde7f38a5498f537a9d6c6811
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lazyjj/blobs/sha256:adba3877089a9cd7b45dd398b8e16e06d2f62db3d6297d470f9bc13db7541cc5
-    sha256: adba3877089a9cd7b45dd398b8e16e06d2f62db3d6297d470f9bc13db7541cc5
-source:
-  url: https://github.com/Cretezy/lazyjj/archive/refs/tags/v0.6.1.tar.gz
-  sha256: 34a702d55ec4c5d0ca016d4f71f4061ccca347ac88c80018229f6cf50141e208
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jj
+    - jj
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lazyjj/blobs/sha256:d974fc54a97bc59287f4be8dc743f0bc333a892c51ee2a00a0b267aec6fb123a
+        sha256: d974fc54a97bc59287f4be8dc743f0bc333a892c51ee2a00a0b267aec6fb123a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lazyjj/blobs/sha256:8c7e851a5bddfbceb3bd566d77745bf5ac11ed2b9d5d46a8818dd0393aa95e8a
+        sha256: 8c7e851a5bddfbceb3bd566d77745bf5ac11ed2b9d5d46a8818dd0393aa95e8a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lazyjj/blobs/sha256:355ec9f7c70a53c3f9b80171821709738cfc7e9bde7f38a5498f537a9d6c6811
+        sha256: 355ec9f7c70a53c3f9b80171821709738cfc7e9bde7f38a5498f537a9d6c6811
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lazyjj/blobs/sha256:adba3877089a9cd7b45dd398b8e16e06d2f62db3d6297d470f9bc13db7541cc5
+        sha256: adba3877089a9cd7b45dd398b8e16e06d2f62db3d6297d470f9bc13db7541cc5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Cretezy/lazyjj/archive/refs/tags/v0.6.1.tar.gz
+    sha256: 34a702d55ec4c5d0ca016d4f71f4061ccca347ac88c80018229f6cf50141e208
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

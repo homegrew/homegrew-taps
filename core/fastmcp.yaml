@@ -3,33 +3,58 @@ version: 3.2.4
 description: Fast, Pythonic way to build MCP servers and clients
 homepage: https://gofastmcp.com/getting-started/welcome
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fastmcp/blobs/sha256:aea146624ad25bebeb6f93720cddabb539e404d48b5292d7ffe5abce3816f290
-    sha256: aea146624ad25bebeb6f93720cddabb539e404d48b5292d7ffe5abce3816f290
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fastmcp/blobs/sha256:6f67e06bd83825b1d8ce783bdfeb91448e4ed2bab63aa96ba5f33492635a9585
-    sha256: 6f67e06bd83825b1d8ce783bdfeb91448e4ed2bab63aa96ba5f33492635a9585
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fastmcp/blobs/sha256:5f00b1c2fd74683a3676cd411d48ba98f199a1b55ca87a62e7880fc81c5eaa18
-    sha256: 5f00b1c2fd74683a3676cd411d48ba98f199a1b55ca87a62e7880fc81c5eaa18
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fastmcp/blobs/sha256:b7dcfec9fd5b5f3be465b7d376edf3e2fcd714e75c05368c9dc9bd8ebaa03965
-    sha256: b7dcfec9fd5b5f3be465b7d376edf3e2fcd714e75c05368c9dc9bd8ebaa03965
-source:
-  url: https://files.pythonhosted.org/packages/9c/13/29544fbc6dfe45ea38046af0067311e0bad7acc7d1f2ad38bb08f2409fe2/fastmcp-3.2.4.tar.gz
-  sha256: 083ecb75b44a4169e7fc0f632f94b781bdb0ff877c6b35b9877cbb566fd4d4d1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - libyaml
-  - pydantic
-  - python@3.14
-  - rpds-py
-  - uv
+    - certifi
+    - cryptography
+    - libyaml
+    - pydantic
+    - python@3.14
+    - rpds-py
+    - uv
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fastmcp/blobs/sha256:6f67e06bd83825b1d8ce783bdfeb91448e4ed2bab63aa96ba5f33492635a9585
+        sha256: 6f67e06bd83825b1d8ce783bdfeb91448e4ed2bab63aa96ba5f33492635a9585
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fastmcp/blobs/sha256:aea146624ad25bebeb6f93720cddabb539e404d48b5292d7ffe5abce3816f290
+        sha256: aea146624ad25bebeb6f93720cddabb539e404d48b5292d7ffe5abce3816f290
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fastmcp/blobs/sha256:5f00b1c2fd74683a3676cd411d48ba98f199a1b55ca87a62e7880fc81c5eaa18
+        sha256: 5f00b1c2fd74683a3676cd411d48ba98f199a1b55ca87a62e7880fc81c5eaa18
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fastmcp/blobs/sha256:b7dcfec9fd5b5f3be465b7d376edf3e2fcd714e75c05368c9dc9bd8ebaa03965
+        sha256: b7dcfec9fd5b5f3be465b7d376edf3e2fcd714e75c05368c9dc9bd8ebaa03965
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/9c/13/29544fbc6dfe45ea38046af0067311e0bad7acc7d1f2ad38bb08f2409fe2/fastmcp-3.2.4.tar.gz
+    sha256: 083ecb75b44a4169e7fc0f632f94b781bdb0ff877c6b35b9877cbb566fd4d4d1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,31 +3,56 @@ version: 0.24.0
 description: Language Server for Postgres
 homepage: https://pg-language-server.com/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/postgres-language-server/blobs/sha256:5cf8b6caef5a0421f90e047fbe8435819f8d88f63d30e7b5745a069884105c09
-    sha256: 5cf8b6caef5a0421f90e047fbe8435819f8d88f63d30e7b5745a069884105c09
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/postgres-language-server/blobs/sha256:e59610ceb626f61d863539bb4425150e62287c3b12546a4d338a75178d5afa96
-    sha256: e59610ceb626f61d863539bb4425150e62287c3b12546a4d338a75178d5afa96
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/postgres-language-server/blobs/sha256:2291af32c857ea76d95e651a65e52a5fb798e80b376a8535ac6e81dea3688c05
-    sha256: 2291af32c857ea76d95e651a65e52a5fb798e80b376a8535ac6e81dea3688c05
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/postgres-language-server/blobs/sha256:be62ee39ae38e2aa6019ebb29b94c3982a9d81fbbc6a80186159f01a57889ce0
-    sha256: be62ee39ae38e2aa6019ebb29b94c3982a9d81fbbc6a80186159f01a57889ce0
-source:
-  url: https://github.com/supabase-community/postgres-language-server/archive/refs/tags/0.24.0.tar.gz
-  sha256: 6ac763a21162240855cc1695f7aa7ece936db2f5ed3d327ac02266fcff33c491
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpg_query
+    - libpg_query
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/postgres-language-server/blobs/sha256:e59610ceb626f61d863539bb4425150e62287c3b12546a4d338a75178d5afa96
+        sha256: e59610ceb626f61d863539bb4425150e62287c3b12546a4d338a75178d5afa96
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgres-language-server/blobs/sha256:5cf8b6caef5a0421f90e047fbe8435819f8d88f63d30e7b5745a069884105c09
+        sha256: 5cf8b6caef5a0421f90e047fbe8435819f8d88f63d30e7b5745a069884105c09
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/postgres-language-server/blobs/sha256:2291af32c857ea76d95e651a65e52a5fb798e80b376a8535ac6e81dea3688c05
+        sha256: 2291af32c857ea76d95e651a65e52a5fb798e80b376a8535ac6e81dea3688c05
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgres-language-server/blobs/sha256:be62ee39ae38e2aa6019ebb29b94c3982a9d81fbbc6a80186159f01a57889ce0
+        sha256: be62ee39ae38e2aa6019ebb29b94c3982a9d81fbbc6a80186159f01a57889ce0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/supabase-community/postgres-language-server/archive/refs/tags/0.24.0.tar.gz
+    sha256: 6ac763a21162240855cc1695f7aa7ece936db2f5ed3d327ac02266fcff33c491
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - llvm
-  - node
-  - rust
-  - tree-sitter
-  - tree-sitter-cli
+    - llvm
+    - node
+    - rust
+    - tree-sitter
+    - tree-sitter-cli
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,44 +3,68 @@ version: 25.0.3
 description: Client for Bareos (Backup Archiving REcovery Open Sourced)
 homepage: https://www.bareos.com/
 license: AGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:aa4783a6060df41588447d5fdf4c3fceb089a1ed8be1aaf45dfecdba46c0452c
-    sha256: aa4783a6060df41588447d5fdf4c3fceb089a1ed8be1aaf45dfecdba46c0452c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:2018f586d097accce2cdb7c9848facb2d7524174694775b98c500f0013cb2a46
-    sha256: 2018f586d097accce2cdb7c9848facb2d7524174694775b98c500f0013cb2a46
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:47da9a0b939866c852556b1005aac5710edf0eae08c551b835410cbe9294d2f8
-    sha256: 47da9a0b939866c852556b1005aac5710edf0eae08c551b835410cbe9294d2f8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:d44341dbecfc47a9b581f06d03f63b81d8cf6b73128ede5ff304b05405ed84ab
-    sha256: d44341dbecfc47a9b581f06d03f63b81d8cf6b73128ede5ff304b05405ed84ab
-source:
-  url: https://github.com/bareos/bareos/archive/refs/tags/Release/25.0.3.tar.gz
-  sha256: 3c4d942612dde94b0bc36a339049c90650c846837f1c035c96bb71cc7b40d9b2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jansson
-  - lzo
-  - openssl@3
-  - readline
-  - xxhash
-  - gettext
+    - jansson
+    - lzo
+    - openssl@3
+    - readline
+    - xxhash
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:2018f586d097accce2cdb7c9848facb2d7524174694775b98c500f0013cb2a46
+        sha256: 2018f586d097accce2cdb7c9848facb2d7524174694775b98c500f0013cb2a46
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:aa4783a6060df41588447d5fdf4c3fceb089a1ed8be1aaf45dfecdba46c0452c
+        sha256: aa4783a6060df41588447d5fdf4c3fceb089a1ed8be1aaf45dfecdba46c0452c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:47da9a0b939866c852556b1005aac5710edf0eae08c551b835410cbe9294d2f8
+        sha256: 47da9a0b939866c852556b1005aac5710edf0eae08c551b835410cbe9294d2f8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bareos-client/blobs/sha256:d44341dbecfc47a9b581f06d03f63b81d8cf6b73128ede5ff304b05405ed84ab
+        sha256: d44341dbecfc47a9b581f06d03f63b81d8cf6b73128ede5ff304b05405ed84ab
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bareos/bareos/archive/refs/tags/Release/25.0.3.tar.gz
+    sha256: 3c4d942612dde94b0bc36a339049c90650c846837f1c035c96bb71cc7b40d9b2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cli11
-  - cmake
-  - cpp-gsl
-  - fmt
-  - utf8cpp
+    - cli11
+    - cmake
+    - cpp-gsl
+    - fmt
+    - utf8cpp
 linux_dependencies:
-  - acl
-  - jansson
-  - lzo
-  - openssl@3
-  - readline
-  - xxhash
-  - zlib-ng-compat
+    - acl
+    - jansson
+    - lzo
+    - openssl@3
+    - readline
+    - xxhash
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

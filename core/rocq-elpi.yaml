@@ -3,30 +3,55 @@ version: 3.3.1
 description: Elpi extension language for Rocq
 homepage: https://github.com/LPCIC/coq-elpi
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rocq-elpi/blobs/sha256:bf16e11e81aed811ff3370122873ec135f0476d5330b19b23d7739e170bf6713
-    sha256: bf16e11e81aed811ff3370122873ec135f0476d5330b19b23d7739e170bf6713
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rocq-elpi/blobs/sha256:f97723ee6985064bae456a0ac66f9a1aa2a4c6bce468b9c7a9c8f2d43154a390
-    sha256: f97723ee6985064bae456a0ac66f9a1aa2a4c6bce468b9c7a9c8f2d43154a390
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rocq-elpi/blobs/sha256:e43ac552f0e02fc52356122e1069a60266d814aff7082300e4869bbad7d64259
-    sha256: e43ac552f0e02fc52356122e1069a60266d814aff7082300e4869bbad7d64259
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rocq-elpi/blobs/sha256:f41e452874613a8407aa014a926e1d5f9ff9bbfd602f915012f4e4cbf817dd00
-    sha256: f41e452874613a8407aa014a926e1d5f9ff9bbfd602f915012f4e4cbf817dd00
-source:
-  url: https://github.com/LPCIC/coq-elpi/releases/download/v3.3.1/rocq-elpi-3.3.1.tar.gz
-  sha256: 97468eea82299c7276ea5e1047342e8897de5a437a357e595a5728183ea66721
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ocaml-findlib
-  - rocq
+    - ocaml-findlib
+    - rocq
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rocq-elpi/blobs/sha256:f97723ee6985064bae456a0ac66f9a1aa2a4c6bce468b9c7a9c8f2d43154a390
+        sha256: f97723ee6985064bae456a0ac66f9a1aa2a4c6bce468b9c7a9c8f2d43154a390
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rocq-elpi/blobs/sha256:bf16e11e81aed811ff3370122873ec135f0476d5330b19b23d7739e170bf6713
+        sha256: bf16e11e81aed811ff3370122873ec135f0476d5330b19b23d7739e170bf6713
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rocq-elpi/blobs/sha256:e43ac552f0e02fc52356122e1069a60266d814aff7082300e4869bbad7d64259
+        sha256: e43ac552f0e02fc52356122e1069a60266d814aff7082300e4869bbad7d64259
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rocq-elpi/blobs/sha256:f41e452874613a8407aa014a926e1d5f9ff9bbfd602f915012f4e4cbf817dd00
+        sha256: f41e452874613a8407aa014a926e1d5f9ff9bbfd602f915012f4e4cbf817dd00
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/LPCIC/coq-elpi/releases/download/v3.3.1/rocq-elpi-3.3.1.tar.gz
+    sha256: 97468eea82299c7276ea5e1047342e8897de5a437a357e595a5728183ea66721
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - dune
-  - ocaml
-  - opam
+    - dune
+    - ocaml
+    - opam
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

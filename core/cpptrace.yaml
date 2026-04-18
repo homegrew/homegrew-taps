@@ -3,29 +3,54 @@ version: 1.0.4
 description: Simple, portable, and self-contained stacktrace library for C++11 and newer
 homepage: https://github.com/jeremy-rifkin/cpptrace
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cpptrace/blobs/sha256:714c67c234ab6bd2171290fd8d6738e1a79baf2ac93f3fb9ddcba22f510b8492
-    sha256: 714c67c234ab6bd2171290fd8d6738e1a79baf2ac93f3fb9ddcba22f510b8492
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cpptrace/blobs/sha256:6c3fa5f1410a4005238b36afa5c1e444f8e8716b540731dec1092a1a70dad5e3
-    sha256: 6c3fa5f1410a4005238b36afa5c1e444f8e8716b540731dec1092a1a70dad5e3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cpptrace/blobs/sha256:14595a27d917a2b8d41000b814f5db6dfcadec7b7a0b6a6c3ecd5ac020114e3e
-    sha256: 14595a27d917a2b8d41000b814f5db6dfcadec7b7a0b6a6c3ecd5ac020114e3e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cpptrace/blobs/sha256:425e59efde03a6d782b628dda04c279f8d889e77af26cedf375dfb036c860c0f
-    sha256: 425e59efde03a6d782b628dda04c279f8d889e77af26cedf375dfb036c860c0f
-source:
-  url: https://github.com/jeremy-rifkin/cpptrace/archive/refs/tags/v1.0.4.tar.gz
-  sha256: 5c9f5b301e903714a4d01f1057b9543fa540f7bfcc5e3f8bd1748e652e24f9ea
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dwarfutils
-  - zstd
+    - dwarfutils
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cpptrace/blobs/sha256:6c3fa5f1410a4005238b36afa5c1e444f8e8716b540731dec1092a1a70dad5e3
+        sha256: 6c3fa5f1410a4005238b36afa5c1e444f8e8716b540731dec1092a1a70dad5e3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cpptrace/blobs/sha256:714c67c234ab6bd2171290fd8d6738e1a79baf2ac93f3fb9ddcba22f510b8492
+        sha256: 714c67c234ab6bd2171290fd8d6738e1a79baf2ac93f3fb9ddcba22f510b8492
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cpptrace/blobs/sha256:14595a27d917a2b8d41000b814f5db6dfcadec7b7a0b6a6c3ecd5ac020114e3e
+        sha256: 14595a27d917a2b8d41000b814f5db6dfcadec7b7a0b6a6c3ecd5ac020114e3e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cpptrace/blobs/sha256:425e59efde03a6d782b628dda04c279f8d889e77af26cedf375dfb036c860c0f
+        sha256: 425e59efde03a6d782b628dda04c279f8d889e77af26cedf375dfb036c860c0f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jeremy-rifkin/cpptrace/archive/refs/tags/v1.0.4.tar.gz
+    sha256: 5c9f5b301e903714a4d01f1057b9543fa540f7bfcc5e3f8bd1748e652e24f9ea
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

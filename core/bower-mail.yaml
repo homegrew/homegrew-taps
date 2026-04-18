@@ -3,30 +3,55 @@ version: 1.1.1
 description: Curses terminal client for the Notmuch email system
 homepage: https://github.com/wangp/bower
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bower-mail/blobs/sha256:6c529955bcdd18e610441bd154d41cdbb03e164ea51aee9be99db4d4fa388553
-    sha256: 6c529955bcdd18e610441bd154d41cdbb03e164ea51aee9be99db4d4fa388553
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bower-mail/blobs/sha256:5def685cc6179746680820800b1f8d9639c59624b12f2e2f50bbe976fc7171d8
-    sha256: 5def685cc6179746680820800b1f8d9639c59624b12f2e2f50bbe976fc7171d8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bower-mail/blobs/sha256:a66cb33b65d91e09351fbc8b01b884bee0f70737756666cbfd7f93057d746954
-    sha256: a66cb33b65d91e09351fbc8b01b884bee0f70737756666cbfd7f93057d746954
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bower-mail/blobs/sha256:e14703850f860c54de0e5e13c331e6e267bb001e90893d0079f31bc319ce90b8
-    sha256: e14703850f860c54de0e5e13c331e6e267bb001e90893d0079f31bc319ce90b8
-source:
-  url: https://github.com/wangp/bower/archive/refs/tags/1.1.1.tar.gz
-  sha256: 4c041681332d355710aa2f2a935ea56fbb2ba8d614be81dee594c431a1d493d9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gpgme
-  - ncurses
-  - notmuch
+    - gpgme
+    - ncurses
+    - notmuch
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bower-mail/blobs/sha256:5def685cc6179746680820800b1f8d9639c59624b12f2e2f50bbe976fc7171d8
+        sha256: 5def685cc6179746680820800b1f8d9639c59624b12f2e2f50bbe976fc7171d8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bower-mail/blobs/sha256:6c529955bcdd18e610441bd154d41cdbb03e164ea51aee9be99db4d4fa388553
+        sha256: 6c529955bcdd18e610441bd154d41cdbb03e164ea51aee9be99db4d4fa388553
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bower-mail/blobs/sha256:a66cb33b65d91e09351fbc8b01b884bee0f70737756666cbfd7f93057d746954
+        sha256: a66cb33b65d91e09351fbc8b01b884bee0f70737756666cbfd7f93057d746954
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bower-mail/blobs/sha256:e14703850f860c54de0e5e13c331e6e267bb001e90893d0079f31bc319ce90b8
+        sha256: e14703850f860c54de0e5e13c331e6e267bb001e90893d0079f31bc319ce90b8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/wangp/bower/archive/refs/tags/1.1.1.tar.gz
+    sha256: 4c041681332d355710aa2f2a935ea56fbb2ba8d614be81dee594c431a1d493d9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - mercury
-  - pandoc
+    - mercury
+    - pandoc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

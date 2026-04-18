@@ -3,31 +3,56 @@ version: 9.0.28
 description: C++ Phone Number library by Google
 homepage: https://github.com/google/libphonenumber
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libphonenumber/blobs/sha256:b99e9319ddae0b0135e5e3a5185c53ac6b0b8719188079f2faf325b2c3f4ef12
-    sha256: b99e9319ddae0b0135e5e3a5185c53ac6b0b8719188079f2faf325b2c3f4ef12
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libphonenumber/blobs/sha256:8c0211527310fa66e682bf7eaf7314b2ad8bf51d0f96f07562b91aade916f821
-    sha256: 8c0211527310fa66e682bf7eaf7314b2ad8bf51d0f96f07562b91aade916f821
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libphonenumber/blobs/sha256:8beb3047e4103d255c1f4651496431f67b0d2d784a471d3e5d254759d95b0d22
-    sha256: 8beb3047e4103d255c1f4651496431f67b0d2d784a471d3e5d254759d95b0d22
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libphonenumber/blobs/sha256:e29462e1006512949c20edf2a706694463b6d297410abbf199043f0330e55cb5
-    sha256: e29462e1006512949c20edf2a706694463b6d297410abbf199043f0330e55cb5
-source:
-  url: https://github.com/google/libphonenumber/archive/refs/tags/v9.0.28.tar.gz
-  sha256: cad02f401a8acaba5e15da9b1185de1cf9d32e5fab4443aa1d39fd46c58d55ab
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - boost
-  - icu4c@78
-  - protobuf
+    - abseil
+    - boost
+    - icu4c@78
+    - protobuf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libphonenumber/blobs/sha256:8c0211527310fa66e682bf7eaf7314b2ad8bf51d0f96f07562b91aade916f821
+        sha256: 8c0211527310fa66e682bf7eaf7314b2ad8bf51d0f96f07562b91aade916f821
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libphonenumber/blobs/sha256:b99e9319ddae0b0135e5e3a5185c53ac6b0b8719188079f2faf325b2c3f4ef12
+        sha256: b99e9319ddae0b0135e5e3a5185c53ac6b0b8719188079f2faf325b2c3f4ef12
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libphonenumber/blobs/sha256:8beb3047e4103d255c1f4651496431f67b0d2d784a471d3e5d254759d95b0d22
+        sha256: 8beb3047e4103d255c1f4651496431f67b0d2d784a471d3e5d254759d95b0d22
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libphonenumber/blobs/sha256:e29462e1006512949c20edf2a706694463b6d297410abbf199043f0330e55cb5
+        sha256: e29462e1006512949c20edf2a706694463b6d297410abbf199043f0330e55cb5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/google/libphonenumber/archive/refs/tags/v9.0.28.tar.gz
+    sha256: cad02f401a8acaba5e15da9b1185de1cf9d32e5fab4443aa1d39fd46c58d55ab
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - openjdk
+    - cmake
+    - openjdk
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

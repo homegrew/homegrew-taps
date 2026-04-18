@@ -3,28 +3,53 @@ version: 0.2.2
 description: TUI client for bluesky
 homepage: https://github.com/sugyan/tuisky
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tuisky/blobs/sha256:a8b87016d190d22809fa5ad344ba07bb51ab1415daa6c7a5383a975418758f3f
-    sha256: a8b87016d190d22809fa5ad344ba07bb51ab1415daa6c7a5383a975418758f3f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tuisky/blobs/sha256:2df26c17c036d72fd1eb39fc6d05b2b9a3735671e7a803a6c6b973d58dd17afd
-    sha256: 2df26c17c036d72fd1eb39fc6d05b2b9a3735671e7a803a6c6b973d58dd17afd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tuisky/blobs/sha256:55cf2a6eb4e49aeca71cd2b534c71159278a4c0c254075b58eb8cb7e7347f03b
-    sha256: 55cf2a6eb4e49aeca71cd2b534c71159278a4c0c254075b58eb8cb7e7347f03b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tuisky/blobs/sha256:9d923309cc7912539965ab0a69fb053de1d62f8f151db39467eb5188468e177d
-    sha256: 9d923309cc7912539965ab0a69fb053de1d62f8f151db39467eb5188468e177d
-source:
-  url: https://github.com/sugyan/tuisky/archive/refs/tags/v0.2.2.tar.gz
-  sha256: b3db8969aa5152692f7178a17f51d694a2cc4e06bb8ff18e43b0f4c7a5d83fa8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tuisky/blobs/sha256:2df26c17c036d72fd1eb39fc6d05b2b9a3735671e7a803a6c6b973d58dd17afd
+        sha256: 2df26c17c036d72fd1eb39fc6d05b2b9a3735671e7a803a6c6b973d58dd17afd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tuisky/blobs/sha256:a8b87016d190d22809fa5ad344ba07bb51ab1415daa6c7a5383a975418758f3f
+        sha256: a8b87016d190d22809fa5ad344ba07bb51ab1415daa6c7a5383a975418758f3f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tuisky/blobs/sha256:55cf2a6eb4e49aeca71cd2b534c71159278a4c0c254075b58eb8cb7e7347f03b
+        sha256: 55cf2a6eb4e49aeca71cd2b534c71159278a4c0c254075b58eb8cb7e7347f03b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tuisky/blobs/sha256:9d923309cc7912539965ab0a69fb053de1d62f8f151db39467eb5188468e177d
+        sha256: 9d923309cc7912539965ab0a69fb053de1d62f8f151db39467eb5188468e177d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sugyan/tuisky/archive/refs/tags/v0.2.2.tar.gz
+    sha256: b3db8969aa5152692f7178a17f51d694a2cc4e06bb8ff18e43b0f4c7a5d83fa8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,53 @@ version: 2.3.1
 description: Forward connections based on first data packet sent by client
 homepage: https://www.rutschle.net/tech/sslh.shtml
 license: GPL-2.0-or-later AND BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sslh/blobs/sha256:5aa0861161f4e13c703825e23a3c885010d68a0f494c1af257929654dc3af9b6
-    sha256: 5aa0861161f4e13c703825e23a3c885010d68a0f494c1af257929654dc3af9b6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sslh/blobs/sha256:6fa68b12118c439cda8382787c169945c638a70881aa1b4efccb277a9043748d
-    sha256: 6fa68b12118c439cda8382787c169945c638a70881aa1b4efccb277a9043748d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sslh/blobs/sha256:c98c1400165331ac59969b19840ab324097188e3f79d9f0ee904463ea0724aad
-    sha256: c98c1400165331ac59969b19840ab324097188e3f79d9f0ee904463ea0724aad
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sslh/blobs/sha256:0c6921906b1a5168ffb2ebb6bf2ee85bc391510420566cda8646cd778ef2782a
-    sha256: 0c6921906b1a5168ffb2ebb6bf2ee85bc391510420566cda8646cd778ef2782a
-source:
-  url: https://www.rutschle.net/tech/sslh/sslh-v2.3.1.tar.gz
-  sha256: 51a5516ec5cb01823633b4d8cacdeee4efa0c56ef620d1c996d4f52ca51a601b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libconfig
-  - libev
-  - pcre2
+    - libconfig
+    - libev
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sslh/blobs/sha256:6fa68b12118c439cda8382787c169945c638a70881aa1b4efccb277a9043748d
+        sha256: 6fa68b12118c439cda8382787c169945c638a70881aa1b4efccb277a9043748d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sslh/blobs/sha256:5aa0861161f4e13c703825e23a3c885010d68a0f494c1af257929654dc3af9b6
+        sha256: 5aa0861161f4e13c703825e23a3c885010d68a0f494c1af257929654dc3af9b6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sslh/blobs/sha256:c98c1400165331ac59969b19840ab324097188e3f79d9f0ee904463ea0724aad
+        sha256: c98c1400165331ac59969b19840ab324097188e3f79d9f0ee904463ea0724aad
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sslh/blobs/sha256:0c6921906b1a5168ffb2ebb6bf2ee85bc391510420566cda8646cd778ef2782a
+        sha256: 0c6921906b1a5168ffb2ebb6bf2ee85bc391510420566cda8646cd778ef2782a
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.rutschle.net/tech/sslh/sslh-v2.3.1.tar.gz
+    sha256: 51a5516ec5cb01823633b4d8cacdeee4efa0c56ef620d1c996d4f52ca51a601b
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

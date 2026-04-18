@@ -3,36 +3,61 @@ version: 2.6.0
 description: Climate Data Operators
 homepage: https://code.mpimet.mpg.de/projects/cdo
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cdo/blobs/sha256:6ba8a2f9742d13f5aa6a7cff08f8ba6e27df53a3f535762f0fafc432cf72150f
-    sha256: 6ba8a2f9742d13f5aa6a7cff08f8ba6e27df53a3f535762f0fafc432cf72150f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cdo/blobs/sha256:fe86c49e27d75e036471845bbbbf26239fabcd7cd52d0f7df0471bcb9b214add
-    sha256: fe86c49e27d75e036471845bbbbf26239fabcd7cd52d0f7df0471bcb9b214add
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cdo/blobs/sha256:1a73f6c3ce13ff500639aa8905e35415bdc28e5a0161d3518f0f3f33c5e41b04
-    sha256: 1a73f6c3ce13ff500639aa8905e35415bdc28e5a0161d3518f0f3f33c5e41b04
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cdo/blobs/sha256:fe3e3ca55382e51cc4d7ffefbe2cd9a073da639aefa05f289c2293a3de88d8e7
-    sha256: fe3e3ca55382e51cc4d7ffefbe2cd9a073da639aefa05f289c2293a3de88d8e7
-source:
-  url: https://code.mpimet.mpg.de/attachments/download/30182/cdo-2.6.0.tar.gz
-  sha256: 752d5cda6fa3fdb8a04dcea16af5918e5f9f54657d9a5d2e35ae34f5755c31d8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - eccodes
-  - hdf5
-  - libaec
-  - netcdf
-  - proj
+    - eccodes
+    - hdf5
+    - libaec
+    - netcdf
+    - proj
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cdo/blobs/sha256:fe86c49e27d75e036471845bbbbf26239fabcd7cd52d0f7df0471bcb9b214add
+        sha256: fe86c49e27d75e036471845bbbbf26239fabcd7cd52d0f7df0471bcb9b214add
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cdo/blobs/sha256:6ba8a2f9742d13f5aa6a7cff08f8ba6e27df53a3f535762f0fafc432cf72150f
+        sha256: 6ba8a2f9742d13f5aa6a7cff08f8ba6e27df53a3f535762f0fafc432cf72150f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cdo/blobs/sha256:1a73f6c3ce13ff500639aa8905e35415bdc28e5a0161d3518f0f3f33c5e41b04
+        sha256: 1a73f6c3ce13ff500639aa8905e35415bdc28e5a0161d3518f0f3f33c5e41b04
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cdo/blobs/sha256:fe3e3ca55382e51cc4d7ffefbe2cd9a073da639aefa05f289c2293a3de88d8e7
+        sha256: fe3e3ca55382e51cc4d7ffefbe2cd9a073da639aefa05f289c2293a3de88d8e7
+        sha512: ""
+        signature: ""
+source:
+    url: https://code.mpimet.mpg.de/attachments/download/30182/cdo-2.6.0.tar.gz
+    sha256: 752d5cda6fa3fdb8a04dcea16af5918e5f9f54657d9a5d2e35ae34f5755c31d8
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - eccodes
-  - hdf5
-  - libaec
-  - netcdf
-  - proj
-  - util-linux
+    - eccodes
+    - hdf5
+    - libaec
+    - netcdf
+    - proj
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

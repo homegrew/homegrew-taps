@@ -3,31 +3,56 @@ version: 3.3.0
 description: Vector Optimized Library of Kernels
 homepage: https://www.libvolk.org/
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/volk/blobs/sha256:0db5dbe2e6816656f97b2c5503c8639f9cebf3c435cf5d6b1f73630c1ce864e2
-    sha256: 0db5dbe2e6816656f97b2c5503c8639f9cebf3c435cf5d6b1f73630c1ce864e2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/volk/blobs/sha256:4e656b6732ab7764eeb9cbe385f8f69f8be0d05953ab1e45d96f36f566e71d96
-    sha256: 4e656b6732ab7764eeb9cbe385f8f69f8be0d05953ab1e45d96f36f566e71d96
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/volk/blobs/sha256:9da22005602d3dda4775c786a105e3606e98646cdc9af032aa1efb4e647a70dd
-    sha256: 9da22005602d3dda4775c786a105e3606e98646cdc9af032aa1efb4e647a70dd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/volk/blobs/sha256:1e61293762a20d138fc41e4fccaa042bc3882e35c904bb76e793fb81bcc52a0d
-    sha256: 1e61293762a20d138fc41e4fccaa042bc3882e35c904bb76e793fb81bcc52a0d
-source:
-  url: https://github.com/gnuradio/volk/releases/download/v3.3.0/volk-3.3.0.tar.gz
-  sha256: 89d11c8c8d4213b1b780354cfdbda1fed0c0b65c82847e710638eb3e21418628
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cpu_features
-  - fmt
-  - orc
-  - python@3.14
+    - cpu_features
+    - fmt
+    - orc
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/volk/blobs/sha256:4e656b6732ab7764eeb9cbe385f8f69f8be0d05953ab1e45d96f36f566e71d96
+        sha256: 4e656b6732ab7764eeb9cbe385f8f69f8be0d05953ab1e45d96f36f566e71d96
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/volk/blobs/sha256:0db5dbe2e6816656f97b2c5503c8639f9cebf3c435cf5d6b1f73630c1ce864e2
+        sha256: 0db5dbe2e6816656f97b2c5503c8639f9cebf3c435cf5d6b1f73630c1ce864e2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/volk/blobs/sha256:9da22005602d3dda4775c786a105e3606e98646cdc9af032aa1efb4e647a70dd
+        sha256: 9da22005602d3dda4775c786a105e3606e98646cdc9af032aa1efb4e647a70dd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/volk/blobs/sha256:1e61293762a20d138fc41e4fccaa042bc3882e35c904bb76e793fb81bcc52a0d
+        sha256: 1e61293762a20d138fc41e4fccaa042bc3882e35c904bb76e793fb81bcc52a0d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/gnuradio/volk/releases/download/v3.3.0/volk-3.3.0.tar.gz
+    sha256: 89d11c8c8d4213b1b780354cfdbda1fed0c0b65c82847e710638eb3e21418628
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 0.0.7
 description: Cross-platform library for USB video devices
 homepage: https://github.com/libuvc/libuvc
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libuvc/blobs/sha256:f150b5d95ecef260fb7c6c2741fa52d102f8e9bd1712af32ebaf1785ec87dd39
-    sha256: f150b5d95ecef260fb7c6c2741fa52d102f8e9bd1712af32ebaf1785ec87dd39
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libuvc/blobs/sha256:71d65586d7c9129e23704c7ac10b5641c5705f357dd658f9e975865fac47d7a1
-    sha256: 71d65586d7c9129e23704c7ac10b5641c5705f357dd658f9e975865fac47d7a1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libuvc/blobs/sha256:e5adfe4cf8c0151495c6d82c4a1efba89a92a8d43e3d32803d6c88d015e894cf
-    sha256: e5adfe4cf8c0151495c6d82c4a1efba89a92a8d43e3d32803d6c88d015e894cf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libuvc/blobs/sha256:def3a9096bee642658354acfd0d061a84a5d7f5560334c4564a7f0fb608cb35c
-    sha256: def3a9096bee642658354acfd0d061a84a5d7f5560334c4564a7f0fb608cb35c
-source:
-  url: https://github.com/libuvc/libuvc/archive/refs/tags/v0.0.7.tar.gz
-  sha256: 7c6ba79723ad5d0ccdfbe6cadcfbd03f9f75b701d7ba96631eb1fd929a86ee72
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libusb
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libuvc/blobs/sha256:71d65586d7c9129e23704c7ac10b5641c5705f357dd658f9e975865fac47d7a1
+        sha256: 71d65586d7c9129e23704c7ac10b5641c5705f357dd658f9e975865fac47d7a1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libuvc/blobs/sha256:f150b5d95ecef260fb7c6c2741fa52d102f8e9bd1712af32ebaf1785ec87dd39
+        sha256: f150b5d95ecef260fb7c6c2741fa52d102f8e9bd1712af32ebaf1785ec87dd39
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libuvc/blobs/sha256:e5adfe4cf8c0151495c6d82c4a1efba89a92a8d43e3d32803d6c88d015e894cf
+        sha256: e5adfe4cf8c0151495c6d82c4a1efba89a92a8d43e3d32803d6c88d015e894cf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libuvc/blobs/sha256:def3a9096bee642658354acfd0d061a84a5d7f5560334c4564a7f0fb608cb35c
+        sha256: def3a9096bee642658354acfd0d061a84a5d7f5560334c4564a7f0fb608cb35c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libuvc/libuvc/archive/refs/tags/v0.0.7.tar.gz
+    sha256: 7c6ba79723ad5d0ccdfbe6cadcfbd03f9f75b701d7ba96631eb1fd929a86ee72
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

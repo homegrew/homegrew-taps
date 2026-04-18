@@ -3,27 +3,52 @@ version: 0.43.0
 description: Web app builder using SQL queries to create dynamic webapps quickly
 homepage: https://sql-page.com/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqlpage/blobs/sha256:d4118d1134637e6b220b437b71288801f7327c1f32e88e7c140e4ee242e28a67
-    sha256: d4118d1134637e6b220b437b71288801f7327c1f32e88e7c140e4ee242e28a67
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqlpage/blobs/sha256:584294f01ac5dd9d6ce3d1229fa64e397b9ccee45a02342595f1826e2d72cd8a
-    sha256: 584294f01ac5dd9d6ce3d1229fa64e397b9ccee45a02342595f1826e2d72cd8a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqlpage/blobs/sha256:267f860b4746ae4b8ad20aeab7b2922cc7ae3fef092f03a626e4a8e8e4cef25a
-    sha256: 267f860b4746ae4b8ad20aeab7b2922cc7ae3fef092f03a626e4a8e8e4cef25a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqlpage/blobs/sha256:6a61e98009c8735940fb579db97c3f1b746488c674206c2afb1907da12c0eede
-    sha256: 6a61e98009c8735940fb579db97c3f1b746488c674206c2afb1907da12c0eede
-source:
-  url: https://github.com/sqlpage/SQLpage/archive/refs/tags/v0.43.0.tar.gz
-  sha256: ddf3e03d92d4acc90f6e650ba8f500cc5c27b82906b4eea60c7a792bd231c32f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - unixodbc
+    - unixodbc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqlpage/blobs/sha256:584294f01ac5dd9d6ce3d1229fa64e397b9ccee45a02342595f1826e2d72cd8a
+        sha256: 584294f01ac5dd9d6ce3d1229fa64e397b9ccee45a02342595f1826e2d72cd8a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqlpage/blobs/sha256:d4118d1134637e6b220b437b71288801f7327c1f32e88e7c140e4ee242e28a67
+        sha256: d4118d1134637e6b220b437b71288801f7327c1f32e88e7c140e4ee242e28a67
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqlpage/blobs/sha256:267f860b4746ae4b8ad20aeab7b2922cc7ae3fef092f03a626e4a8e8e4cef25a
+        sha256: 267f860b4746ae4b8ad20aeab7b2922cc7ae3fef092f03a626e4a8e8e4cef25a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqlpage/blobs/sha256:6a61e98009c8735940fb579db97c3f1b746488c674206c2afb1907da12c0eede
+        sha256: 6a61e98009c8735940fb579db97c3f1b746488c674206c2afb1907da12c0eede
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sqlpage/SQLpage/archive/refs/tags/v0.43.0.tar.gz
+    sha256: ddf3e03d92d4acc90f6e650ba8f500cc5c27b82906b4eea60c7a792bd231c32f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

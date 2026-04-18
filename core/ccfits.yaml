@@ -1,27 +1,53 @@
 name: ccfits
-version: 2.7
+version: "2.7"
 description: Object oriented interface to the cfitsio library
 homepage: https://heasarc.gsfc.nasa.gov/docs/software/fitsio/CCfits/
 license: CFITSIO
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ccfits/blobs/sha256:e095d123708d4f5c4c57b26c82155a75405f6e19f29c955ac7b52f4121d2df1d
-    sha256: e095d123708d4f5c4c57b26c82155a75405f6e19f29c955ac7b52f4121d2df1d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ccfits/blobs/sha256:a7d684bbb48a13f09a4b8e6d70228d2d06cfcfb975a52070e4e9adcc250f3a88
-    sha256: a7d684bbb48a13f09a4b8e6d70228d2d06cfcfb975a52070e4e9adcc250f3a88
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ccfits/blobs/sha256:4fe8e6f44ecc655e7951eab676f718f070e76e4d00bbfca35c8e42478ae1b0a6
-    sha256: 4fe8e6f44ecc655e7951eab676f718f070e76e4d00bbfca35c8e42478ae1b0a6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ccfits/blobs/sha256:555829bdb3662a54aca6af2aaf711c1c1ca388066e279f6bf725b2013bd23954
-    sha256: 555829bdb3662a54aca6af2aaf711c1c1ca388066e279f6bf725b2013bd23954
-source:
-  url: https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/ccfits/v2.7/CCfits-2.7.tar.gz
-  sha256: f63546d2feecbf732cc08aaaa80a2eb5334ada37fb2530181b7363a5dbdeb01a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cfitsio
+    - cfitsio
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ccfits/blobs/sha256:a7d684bbb48a13f09a4b8e6d70228d2d06cfcfb975a52070e4e9adcc250f3a88
+        sha256: a7d684bbb48a13f09a4b8e6d70228d2d06cfcfb975a52070e4e9adcc250f3a88
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ccfits/blobs/sha256:e095d123708d4f5c4c57b26c82155a75405f6e19f29c955ac7b52f4121d2df1d
+        sha256: e095d123708d4f5c4c57b26c82155a75405f6e19f29c955ac7b52f4121d2df1d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ccfits/blobs/sha256:4fe8e6f44ecc655e7951eab676f718f070e76e4d00bbfca35c8e42478ae1b0a6
+        sha256: 4fe8e6f44ecc655e7951eab676f718f070e76e4d00bbfca35c8e42478ae1b0a6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ccfits/blobs/sha256:555829bdb3662a54aca6af2aaf711c1c1ca388066e279f6bf725b2013bd23954
+        sha256: 555829bdb3662a54aca6af2aaf711c1c1ca388066e279f6bf725b2013bd23954
+        sha512: ""
+        signature: ""
+source:
+    url: https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/ccfits/v2.7/CCfits-2.7.tar.gz
+    sha256: f63546d2feecbf732cc08aaaa80a2eb5334ada37fb2530181b7363a5dbdeb01a
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

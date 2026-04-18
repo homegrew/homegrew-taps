@@ -3,39 +3,63 @@ version: 0.5.3
 description: Visually compare two PDF files
 homepage: https://vslavik.github.io/diff-pdf/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diff-pdf/blobs/sha256:6a01e632da3e4503ad6263b32945640091e38519b0755fd7366ccebe6bad0c68
-    sha256: 6a01e632da3e4503ad6263b32945640091e38519b0755fd7366ccebe6bad0c68
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diff-pdf/blobs/sha256:7eb6849fe6ba6470939f031049d3e69bfb1b10e96157c5e281bad811af019ef0
-    sha256: 7eb6849fe6ba6470939f031049d3e69bfb1b10e96157c5e281bad811af019ef0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diff-pdf/blobs/sha256:ed2a793df250161d395018d397133ee0c6608e4aaa88400079b5037648ba5c84
-    sha256: ed2a793df250161d395018d397133ee0c6608e4aaa88400079b5037648ba5c84
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diff-pdf/blobs/sha256:b6e83d1b6d78a2b87cc79c1e8dcec4f031d9fa8ecce2a7983312806fde32801d
-    sha256: b6e83d1b6d78a2b87cc79c1e8dcec4f031d9fa8ecce2a7983312806fde32801d
-source:
-  url: https://github.com/vslavik/diff-pdf/releases/download/v0.5.3/diff-pdf-0.5.3.tar.gz
-  sha256: dc4004fe1199eebf381b5e0f2a60b6b59ff73434730e4f0aae1e0d02fa171b98
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - glib
-  - poppler
-  - wxwidgets@3.2
-  - gettext
+    - cairo
+    - glib
+    - poppler
+    - wxwidgets@3.2
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diff-pdf/blobs/sha256:7eb6849fe6ba6470939f031049d3e69bfb1b10e96157c5e281bad811af019ef0
+        sha256: 7eb6849fe6ba6470939f031049d3e69bfb1b10e96157c5e281bad811af019ef0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diff-pdf/blobs/sha256:6a01e632da3e4503ad6263b32945640091e38519b0755fd7366ccebe6bad0c68
+        sha256: 6a01e632da3e4503ad6263b32945640091e38519b0755fd7366ccebe6bad0c68
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diff-pdf/blobs/sha256:ed2a793df250161d395018d397133ee0c6608e4aaa88400079b5037648ba5c84
+        sha256: ed2a793df250161d395018d397133ee0c6608e4aaa88400079b5037648ba5c84
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diff-pdf/blobs/sha256:b6e83d1b6d78a2b87cc79c1e8dcec4f031d9fa8ecce2a7983312806fde32801d
+        sha256: b6e83d1b6d78a2b87cc79c1e8dcec4f031d9fa8ecce2a7983312806fde32801d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/vslavik/diff-pdf/releases/download/v0.5.3/diff-pdf-0.5.3.tar.gz
+    sha256: dc4004fe1199eebf381b5e0f2a60b6b59ff73434730e4f0aae1e0d02fa171b98
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - glib
-  - poppler
-  - wxwidgets@3.2
+    - cairo
+    - glib
+    - poppler
+    - wxwidgets@3.2
+build:
+    configure: []
+    install: []
+service: null

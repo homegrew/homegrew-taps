@@ -3,31 +3,56 @@ version: 1.11.0
 description: Generate waveform data and render waveform images from audio files
 homepage: https://codeberg.org/chrisn/audiowaveform
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:1a46708684e47e59c0c97f12730a79568473d70c20b198f17abf3f44e1419fc8
-    sha256: 1a46708684e47e59c0c97f12730a79568473d70c20b198f17abf3f44e1419fc8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:f84ec9bbc74481908f5686ebd04893e15e4d82d39d32b2b7f9f64c068290df07
-    sha256: f84ec9bbc74481908f5686ebd04893e15e4d82d39d32b2b7f9f64c068290df07
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:be445bcb1ddc838feedf1d08780e30274e951596fd52b6979fc3eb033d099d66
-    sha256: be445bcb1ddc838feedf1d08780e30274e951596fd52b6979fc3eb033d099d66
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:4440a2064bf90b55931f98247825e9b1029385ee25b2e1665d0a9719174ecbc5
-    sha256: 4440a2064bf90b55931f98247825e9b1029385ee25b2e1665d0a9719174ecbc5
-source:
-  url: https://codeberg.org/chrisn/audiowaveform/archive/1.11.0.tar.gz
-  sha256: 87f7422b823ccb1621d715010649a9b0c1a0ce9a4e4b26c2784cb7f2b94589f4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - gd
-  - libid3tag
-  - libsndfile
-  - mad
+    - boost
+    - gd
+    - libid3tag
+    - libsndfile
+    - mad
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:f84ec9bbc74481908f5686ebd04893e15e4d82d39d32b2b7f9f64c068290df07
+        sha256: f84ec9bbc74481908f5686ebd04893e15e4d82d39d32b2b7f9f64c068290df07
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:1a46708684e47e59c0c97f12730a79568473d70c20b198f17abf3f44e1419fc8
+        sha256: 1a46708684e47e59c0c97f12730a79568473d70c20b198f17abf3f44e1419fc8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:be445bcb1ddc838feedf1d08780e30274e951596fd52b6979fc3eb033d099d66
+        sha256: be445bcb1ddc838feedf1d08780e30274e951596fd52b6979fc3eb033d099d66
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:4440a2064bf90b55931f98247825e9b1029385ee25b2e1665d0a9719174ecbc5
+        sha256: 4440a2064bf90b55931f98247825e9b1029385ee25b2e1665d0a9719174ecbc5
+        sha512: ""
+        signature: ""
+source:
+    url: https://codeberg.org/chrisn/audiowaveform/archive/1.11.0.tar.gz
+    sha256: 87f7422b823ccb1621d715010649a9b0c1a0ce9a4e4b26c2784cb7f2b94589f4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

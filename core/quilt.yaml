@@ -1,33 +1,58 @@
 name: quilt
-version: 0.69
+version: "0.69"
 description: Work with series of patches
 homepage: https://savannah.nongnu.org/projects/quilt
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/quilt/blobs/sha256:93979fd118d49801525b0d28a8572a055893d3e3169ee9eff1bca64e69d9ccc2
-    sha256: 93979fd118d49801525b0d28a8572a055893d3e3169ee9eff1bca64e69d9ccc2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/quilt/blobs/sha256:93979fd118d49801525b0d28a8572a055893d3e3169ee9eff1bca64e69d9ccc2
-    sha256: 93979fd118d49801525b0d28a8572a055893d3e3169ee9eff1bca64e69d9ccc2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/quilt/blobs/sha256:f0aadd65237093e1356cf63eef91a5ab80f8cba26bc8e034d05de7c3095dd64c
-    sha256: f0aadd65237093e1356cf63eef91a5ab80f8cba26bc8e034d05de7c3095dd64c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/quilt/blobs/sha256:f0aadd65237093e1356cf63eef91a5ab80f8cba26bc8e034d05de7c3095dd64c
-    sha256: f0aadd65237093e1356cf63eef91a5ab80f8cba26bc8e034d05de7c3095dd64c
-source:
-  url: https://download.savannah.gnu.org/releases/quilt/quilt-0.69.tar.gz
-  sha256: 555ddffde22da3c86d1caf5a9c1fb8a152ac2b84730437bd39cc08849c9f4852
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - coreutils
-  - gnu-sed
-  - diffutils
-  - gpatch
+    - coreutils
+    - gnu-sed
+    - diffutils
+    - gpatch
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/quilt/blobs/sha256:93979fd118d49801525b0d28a8572a055893d3e3169ee9eff1bca64e69d9ccc2
+        sha256: 93979fd118d49801525b0d28a8572a055893d3e3169ee9eff1bca64e69d9ccc2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/quilt/blobs/sha256:93979fd118d49801525b0d28a8572a055893d3e3169ee9eff1bca64e69d9ccc2
+        sha256: 93979fd118d49801525b0d28a8572a055893d3e3169ee9eff1bca64e69d9ccc2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/quilt/blobs/sha256:f0aadd65237093e1356cf63eef91a5ab80f8cba26bc8e034d05de7c3095dd64c
+        sha256: f0aadd65237093e1356cf63eef91a5ab80f8cba26bc8e034d05de7c3095dd64c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/quilt/blobs/sha256:f0aadd65237093e1356cf63eef91a5ab80f8cba26bc8e034d05de7c3095dd64c
+        sha256: f0aadd65237093e1356cf63eef91a5ab80f8cba26bc8e034d05de7c3095dd64c
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.savannah.gnu.org/releases/quilt/quilt-0.69.tar.gz
+    sha256: 555ddffde22da3c86d1caf5a9c1fb8a152ac2b84730437bd39cc08849c9f4852
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - coreutils
-  - gnu-sed
+    - coreutils
+    - gnu-sed
+build:
+    configure: []
+    install: []
+service: null

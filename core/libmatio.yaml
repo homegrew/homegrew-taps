@@ -3,28 +3,53 @@ version: 1.5.30
 description: C library for reading and writing MATLAB MAT files
 homepage: https://matio.sourceforge.net/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmatio/blobs/sha256:9ca72d65bf5da29bddfbe606984e69151d6e26744783b2893a34e9318e7ae22c
-    sha256: 9ca72d65bf5da29bddfbe606984e69151d6e26744783b2893a34e9318e7ae22c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmatio/blobs/sha256:83734b9696e4075b6bb93b5759a39f61195f01fa915879912d2622489813d2af
-    sha256: 83734b9696e4075b6bb93b5759a39f61195f01fa915879912d2622489813d2af
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmatio/blobs/sha256:75875bd017f8e01b60e5bf97fc8140440e0dcaa018c4e2d7809f20b31cfd3071
-    sha256: 75875bd017f8e01b60e5bf97fc8140440e0dcaa018c4e2d7809f20b31cfd3071
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmatio/blobs/sha256:96ccac4352f0a05a8b17132ffd0ea5f0d6fa9fc26f0f7512c0e3b85616eaf8d1
-    sha256: 96ccac4352f0a05a8b17132ffd0ea5f0d6fa9fc26f0f7512c0e3b85616eaf8d1
-source:
-  url: https://downloads.sourceforge.net/project/matio/matio/1.5.30/matio-1.5.30.tar.gz
-  sha256: 8bd3b9477042ecc00dd71c04762fa58468e14cccc32fd8c6826c2da1e8bc3107
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hdf5
+    - hdf5
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmatio/blobs/sha256:83734b9696e4075b6bb93b5759a39f61195f01fa915879912d2622489813d2af
+        sha256: 83734b9696e4075b6bb93b5759a39f61195f01fa915879912d2622489813d2af
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmatio/blobs/sha256:9ca72d65bf5da29bddfbe606984e69151d6e26744783b2893a34e9318e7ae22c
+        sha256: 9ca72d65bf5da29bddfbe606984e69151d6e26744783b2893a34e9318e7ae22c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmatio/blobs/sha256:75875bd017f8e01b60e5bf97fc8140440e0dcaa018c4e2d7809f20b31cfd3071
+        sha256: 75875bd017f8e01b60e5bf97fc8140440e0dcaa018c4e2d7809f20b31cfd3071
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmatio/blobs/sha256:96ccac4352f0a05a8b17132ffd0ea5f0d6fa9fc26f0f7512c0e3b85616eaf8d1
+        sha256: 96ccac4352f0a05a8b17132ffd0ea5f0d6fa9fc26f0f7512c0e3b85616eaf8d1
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/matio/matio/1.5.30/matio-1.5.30.tar.gz
+    sha256: 8bd3b9477042ecc00dd71c04762fa58468e14cccc32fd8c6826c2da1e8bc3107
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - hdf5
-  - zlib-ng-compat
+    - hdf5
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

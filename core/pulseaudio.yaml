@@ -1,50 +1,74 @@
 name: pulseaudio
-version: 17.0
+version: "17.0"
 description: Sound system for POSIX OSes
 homepage: https://wiki.freedesktop.org/www/Software/PulseAudio/
 license: GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:73c349f7d337ebb0bdd1169325685e79f4cb4c253dd920339a7bc52c833ea4c7
-    sha256: 73c349f7d337ebb0bdd1169325685e79f4cb4c253dd920339a7bc52c833ea4c7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:07c3d88ac76789dc1c94b6881a11ea02868a3e0023f3fd3e2760b95c5aef2161
-    sha256: 07c3d88ac76789dc1c94b6881a11ea02868a3e0023f3fd3e2760b95c5aef2161
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:3e8c61fa5d337d64747fb305559f1a4821d75cecfd15dc59323450cde1816d29
-    sha256: 3e8c61fa5d337d64747fb305559f1a4821d75cecfd15dc59323450cde1816d29
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:2122e7fdeb6dfbd23c71b1454e5da23792857aa2b0e9a78db172ab6448891675
-    sha256: 2122e7fdeb6dfbd23c71b1454e5da23792857aa2b0e9a78db172ab6448891675
-source:
-  url: https://www.freedesktop.org/software/pulseaudio/releases/pulseaudio-17.0.tar.xz
-  sha256: 053794d6671a3e397d849e478a80b82a63cb9d8ca296bd35b73317bb5ceb87b5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libsndfile
-  - libsoxr
-  - libtool
-  - openssl@3
-  - orc
-  - speexdsp
-  - gettext
+    - glib
+    - libsndfile
+    - libsoxr
+    - libtool
+    - openssl@3
+    - orc
+    - speexdsp
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:07c3d88ac76789dc1c94b6881a11ea02868a3e0023f3fd3e2760b95c5aef2161
+        sha256: 07c3d88ac76789dc1c94b6881a11ea02868a3e0023f3fd3e2760b95c5aef2161
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:73c349f7d337ebb0bdd1169325685e79f4cb4c253dd920339a7bc52c833ea4c7
+        sha256: 73c349f7d337ebb0bdd1169325685e79f4cb4c253dd920339a7bc52c833ea4c7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:3e8c61fa5d337d64747fb305559f1a4821d75cecfd15dc59323450cde1816d29
+        sha256: 3e8c61fa5d337d64747fb305559f1a4821d75cecfd15dc59323450cde1816d29
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:2122e7fdeb6dfbd23c71b1454e5da23792857aa2b0e9a78db172ab6448891675
+        sha256: 2122e7fdeb6dfbd23c71b1454e5da23792857aa2b0e9a78db172ab6448891675
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.freedesktop.org/software/pulseaudio/releases/pulseaudio-17.0.tar.xz
+    sha256: 053794d6671a3e397d849e478a80b82a63cb9d8ca296bd35b73317bb5ceb87b5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - meson
-  - ninja
-  - pkgconf
+    - gettext
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - dbus
-  - glib
-  - libcap
-  - libsndfile
-  - libsoxr
-  - libtool
-  - openssl@3
-  - orc
-  - speexdsp
+    - alsa-lib
+    - dbus
+    - glib
+    - libcap
+    - libsndfile
+    - libsoxr
+    - libtool
+    - openssl@3
+    - orc
+    - speexdsp
+build:
+    configure: []
+    install: []
+service: null

@@ -3,37 +3,61 @@ version: 140.9.1
 description: JavaScript-C Engine
 homepage: https://spidermonkey.dev
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/spidermonkey/blobs/sha256:9082cea8980c696de81f06e22102607ccaedec45e3431671bdc91cb629554372
-    sha256: 9082cea8980c696de81f06e22102607ccaedec45e3431671bdc91cb629554372
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/spidermonkey/blobs/sha256:4b941ac89891f824676e5b549286f22a59296658fdd76ad455c6279c1baa2e29
-    sha256: 4b941ac89891f824676e5b549286f22a59296658fdd76ad455c6279c1baa2e29
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/spidermonkey/blobs/sha256:3736913796237497f26e3ca20d9168a1eae23485d1957c31af1f9e776aba564b
-    sha256: 3736913796237497f26e3ca20d9168a1eae23485d1957c31af1f9e776aba564b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/spidermonkey/blobs/sha256:12869c4cdf6ed295e1cace7064cefff0e584333b456ea3f0db41f33595dd676f
-    sha256: 12869c4cdf6ed295e1cace7064cefff0e584333b456ea3f0db41f33595dd676f
-source:
-  url: https://archive.mozilla.org/pub/firefox/releases/140.9.1esr/source/firefox-140.9.1esr.source.tar.xz
-  sha256: 45d2e6c2b3aa4f52815d1a8a4a93e013d19e86e1b06480f13db9e6fdd7148dc2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - nspr
-  - readline
+    - icu4c@78
+    - nspr
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/spidermonkey/blobs/sha256:4b941ac89891f824676e5b549286f22a59296658fdd76ad455c6279c1baa2e29
+        sha256: 4b941ac89891f824676e5b549286f22a59296658fdd76ad455c6279c1baa2e29
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/spidermonkey/blobs/sha256:9082cea8980c696de81f06e22102607ccaedec45e3431671bdc91cb629554372
+        sha256: 9082cea8980c696de81f06e22102607ccaedec45e3431671bdc91cb629554372
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/spidermonkey/blobs/sha256:3736913796237497f26e3ca20d9168a1eae23485d1957c31af1f9e776aba564b
+        sha256: 3736913796237497f26e3ca20d9168a1eae23485d1957c31af1f9e776aba564b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/spidermonkey/blobs/sha256:12869c4cdf6ed295e1cace7064cefff0e584333b456ea3f0db41f33595dd676f
+        sha256: 12869c4cdf6ed295e1cace7064cefff0e584333b456ea3f0db41f33595dd676f
+        sha512: ""
+        signature: ""
+source:
+    url: https://archive.mozilla.org/pub/firefox/releases/140.9.1esr/source/firefox-140.9.1esr.source.tar.xz
+    sha256: 45d2e6c2b3aa4f52815d1a8a4a93e013d19e86e1b06480f13db9e6fdd7148dc2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cbindgen
-  - pkgconf
-  - python@3.14
-  - rust
+    - cbindgen
+    - pkgconf
+    - python@3.14
+    - rust
 linux_dependencies:
-  - icu4c@78
-  - nspr
-  - readline
-  - zlib-ng-compat
+    - icu4c@78
+    - nspr
+    - readline
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

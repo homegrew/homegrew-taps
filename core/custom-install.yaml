@@ -1,28 +1,54 @@
 name: custom-install
-version: 2.1
+version: "2.1"
 description: Install CIA files directly to Nintendo 3DS SD card
 homepage: https://github.com/ihaveamac/custom-install
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/custom-install/blobs/sha256:61a022ea5b0f415929d32b8cb527f0772b065da9084df4feb3ea606bee39db83
-    sha256: 61a022ea5b0f415929d32b8cb527f0772b065da9084df4feb3ea606bee39db83
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/custom-install/blobs/sha256:74ce576ef08e7769e5f95e2062b928ecdc07b87550426eeb50645738d091105b
-    sha256: 74ce576ef08e7769e5f95e2062b928ecdc07b87550426eeb50645738d091105b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/custom-install/blobs/sha256:a37d6e1c136e15b4627953afc2c8baa93736bb7f170df4a6ba56255e9b9f8eeb
-    sha256: a37d6e1c136e15b4627953afc2c8baa93736bb7f170df4a6ba56255e9b9f8eeb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/custom-install/blobs/sha256:0877be59f541572b6a19f107bbbbf8490cff0ce865e54715cbe22c782ddc1e1d
-    sha256: 0877be59f541572b6a19f107bbbbf8490cff0ce865e54715cbe22c782ddc1e1d
-source:
-  url: https://github.com/ihaveamac/custom-install/archive/refs/tags/v2.1.tar.gz
-  sha256: 35477355c8981d7aa55ace60fc3e43e1f96f762d141cf8773eb22df1ce4c50f8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
-  - save3ds_fuse
+    - python@3.14
+    - save3ds_fuse
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/custom-install/blobs/sha256:74ce576ef08e7769e5f95e2062b928ecdc07b87550426eeb50645738d091105b
+        sha256: 74ce576ef08e7769e5f95e2062b928ecdc07b87550426eeb50645738d091105b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/custom-install/blobs/sha256:61a022ea5b0f415929d32b8cb527f0772b065da9084df4feb3ea606bee39db83
+        sha256: 61a022ea5b0f415929d32b8cb527f0772b065da9084df4feb3ea606bee39db83
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/custom-install/blobs/sha256:a37d6e1c136e15b4627953afc2c8baa93736bb7f170df4a6ba56255e9b9f8eeb
+        sha256: a37d6e1c136e15b4627953afc2c8baa93736bb7f170df4a6ba56255e9b9f8eeb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/custom-install/blobs/sha256:0877be59f541572b6a19f107bbbbf8490cff0ce865e54715cbe22c782ddc1e1d
+        sha256: 0877be59f541572b6a19f107bbbbf8490cff0ce865e54715cbe22c782ddc1e1d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ihaveamac/custom-install/archive/refs/tags/v2.1.tar.gz
+    sha256: 35477355c8981d7aa55ace60fc3e43e1f96f762d141cf8773eb22df1ce4c50f8
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

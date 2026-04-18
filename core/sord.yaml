@@ -3,31 +3,56 @@ version: 0.16.22
 description: C library for storing RDF data in memory
 homepage: https://drobilla.net/software/sord.html
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sord/blobs/sha256:7d601b06900746e2c9cd81dc91701ceb1bae9400e04b24bc1ba0d7006970eaad
-    sha256: 7d601b06900746e2c9cd81dc91701ceb1bae9400e04b24bc1ba0d7006970eaad
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sord/blobs/sha256:ff7a7bc3b353a1dfe56144056aba13239bfda5a1158797cd90648db36a8a4e52
-    sha256: ff7a7bc3b353a1dfe56144056aba13239bfda5a1158797cd90648db36a8a4e52
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sord/blobs/sha256:97a9b803c95513489075f33ec9575553ad37960e74db859606fcef1f48a0662a
-    sha256: 97a9b803c95513489075f33ec9575553ad37960e74db859606fcef1f48a0662a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sord/blobs/sha256:f806b8548ac19ca37c21be5c746ba5619cb02b5369eefa5cbe5b4c5f0a034581
-    sha256: f806b8548ac19ca37c21be5c746ba5619cb02b5369eefa5cbe5b4c5f0a034581
-source:
-  url: https://download.drobilla.net/sord-0.16.22.tar.xz
-  sha256: bb23b34b216579136795d518cffa73d91cf205594ce9accebfd408afb839173f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - pcre2
-  - serd
-  - zix
+    - pcre2
+    - serd
+    - zix
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sord/blobs/sha256:ff7a7bc3b353a1dfe56144056aba13239bfda5a1158797cd90648db36a8a4e52
+        sha256: ff7a7bc3b353a1dfe56144056aba13239bfda5a1158797cd90648db36a8a4e52
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sord/blobs/sha256:7d601b06900746e2c9cd81dc91701ceb1bae9400e04b24bc1ba0d7006970eaad
+        sha256: 7d601b06900746e2c9cd81dc91701ceb1bae9400e04b24bc1ba0d7006970eaad
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sord/blobs/sha256:97a9b803c95513489075f33ec9575553ad37960e74db859606fcef1f48a0662a
+        sha256: 97a9b803c95513489075f33ec9575553ad37960e74db859606fcef1f48a0662a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sord/blobs/sha256:f806b8548ac19ca37c21be5c746ba5619cb02b5369eefa5cbe5b4c5f0a034581
+        sha256: f806b8548ac19ca37c21be5c746ba5619cb02b5369eefa5cbe5b4c5f0a034581
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.drobilla.net/sord-0.16.22.tar.xz
+    sha256: bb23b34b216579136795d518cffa73d91cf205594ce9accebfd408afb839173f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

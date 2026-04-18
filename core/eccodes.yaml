@@ -3,31 +3,56 @@ version: 2.46.0
 description: Decode and encode messages in the GRIB 1/2 and BUFR 3/4 formats
 homepage: https://confluence.ecmwf.int/display/ECC
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/eccodes/blobs/sha256:37b9d6e6e49c04b21a0be3e1351414898a434511a7e52337a12b57cb26fdda57
-    sha256: 37b9d6e6e49c04b21a0be3e1351414898a434511a7e52337a12b57cb26fdda57
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/eccodes/blobs/sha256:e53bc7381039ff4240438f192a72b5d9adee0e606b9b167abede7a6e32c48d36
-    sha256: e53bc7381039ff4240438f192a72b5d9adee0e606b9b167abede7a6e32c48d36
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/eccodes/blobs/sha256:673fbba3fcb90f40306f9db14bf7a0a7a59de6fe9694f5727af38e45cd743826
-    sha256: 673fbba3fcb90f40306f9db14bf7a0a7a59de6fe9694f5727af38e45cd743826
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/eccodes/blobs/sha256:4c8d68302ad80e7a3bf0aafef17954b33bf0be52fff0470ad61834a3d354b9c7
-    sha256: 4c8d68302ad80e7a3bf0aafef17954b33bf0be52fff0470ad61834a3d354b9c7
-source:
-  url: https://confluence.ecmwf.int/download/attachments/45757960/eccodes-2.46.0-Source.tar.gz
-  sha256: 7d959253d5e34aeb16caa14d4889ac06486d19821216743142733a32ee7b4935
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gcc
-  - libaec
-  - libpng
-  - netcdf
-  - openjpeg
+    - gcc
+    - libaec
+    - libpng
+    - netcdf
+    - openjpeg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/eccodes/blobs/sha256:e53bc7381039ff4240438f192a72b5d9adee0e606b9b167abede7a6e32c48d36
+        sha256: e53bc7381039ff4240438f192a72b5d9adee0e606b9b167abede7a6e32c48d36
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/eccodes/blobs/sha256:37b9d6e6e49c04b21a0be3e1351414898a434511a7e52337a12b57cb26fdda57
+        sha256: 37b9d6e6e49c04b21a0be3e1351414898a434511a7e52337a12b57cb26fdda57
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/eccodes/blobs/sha256:673fbba3fcb90f40306f9db14bf7a0a7a59de6fe9694f5727af38e45cd743826
+        sha256: 673fbba3fcb90f40306f9db14bf7a0a7a59de6fe9694f5727af38e45cd743826
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/eccodes/blobs/sha256:4c8d68302ad80e7a3bf0aafef17954b33bf0be52fff0470ad61834a3d354b9c7
+        sha256: 4c8d68302ad80e7a3bf0aafef17954b33bf0be52fff0470ad61834a3d354b9c7
+        sha512: ""
+        signature: ""
+source:
+    url: https://confluence.ecmwf.int/download/attachments/45757960/eccodes-2.46.0-Source.tar.gz
+    sha256: 7d959253d5e34aeb16caa14d4889ac06486d19821216743142733a32ee7b4935
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

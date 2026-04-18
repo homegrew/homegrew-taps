@@ -3,34 +3,58 @@ version: 1.11.5.20250706
 description: Command-line client for Mega.co.nz
 homepage: https://xff.cz/megatools/
 license: GPL-2.0-or-later WITH openvpn-openssl-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/megatools/blobs/sha256:7217cae7f353389333d5f34a1dfbf0d5327372d0a869641a6f38a305a0e2fa42
-    sha256: 7217cae7f353389333d5f34a1dfbf0d5327372d0a869641a6f38a305a0e2fa42
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/megatools/blobs/sha256:c95b1c27bf14bccfb31ea2ea00540910a81b00861176b2facc32ae1d392628ca
-    sha256: c95b1c27bf14bccfb31ea2ea00540910a81b00861176b2facc32ae1d392628ca
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/megatools/blobs/sha256:bb702e9c4d883d99115f1003bac6dc09f0717ee64c9b52ca50b5e91a36d4cbe0
-    sha256: bb702e9c4d883d99115f1003bac6dc09f0717ee64c9b52ca50b5e91a36d4cbe0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/megatools/blobs/sha256:3cf9bf34c4d780c22dcd0aed0d34d5d9f3ee3f1df79fd96c2db62f07f2054147
-    sha256: 3cf9bf34c4d780c22dcd0aed0d34d5d9f3ee3f1df79fd96c2db62f07f2054147
-source:
-  url: https://xff.cz/megatools/builds/megatools-1.11.5.20250706.tar.gz
-  sha256: 51f78a03748a64b1066ce28a2ca75d98dbef5f00fe9789dc894827f9a913b362
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - openssl@3
-  - gettext
+    - glib
+    - openssl@3
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/megatools/blobs/sha256:c95b1c27bf14bccfb31ea2ea00540910a81b00861176b2facc32ae1d392628ca
+        sha256: c95b1c27bf14bccfb31ea2ea00540910a81b00861176b2facc32ae1d392628ca
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/megatools/blobs/sha256:7217cae7f353389333d5f34a1dfbf0d5327372d0a869641a6f38a305a0e2fa42
+        sha256: 7217cae7f353389333d5f34a1dfbf0d5327372d0a869641a6f38a305a0e2fa42
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/megatools/blobs/sha256:bb702e9c4d883d99115f1003bac6dc09f0717ee64c9b52ca50b5e91a36d4cbe0
+        sha256: bb702e9c4d883d99115f1003bac6dc09f0717ee64c9b52ca50b5e91a36d4cbe0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/megatools/blobs/sha256:3cf9bf34c4d780c22dcd0aed0d34d5d9f3ee3f1df79fd96c2db62f07f2054147
+        sha256: 3cf9bf34c4d780c22dcd0aed0d34d5d9f3ee3f1df79fd96c2db62f07f2054147
+        sha512: ""
+        signature: ""
+source:
+    url: https://xff.cz/megatools/builds/megatools-1.11.5.20250706.tar.gz
+    sha256: 51f78a03748a64b1066ce28a2ca75d98dbef5f00fe9789dc894827f9a913b362
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - glib
-  - openssl@3
+    - glib
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

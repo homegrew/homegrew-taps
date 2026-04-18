@@ -1,27 +1,53 @@
 name: k3d
 version: 5.8.3
-description: "Little helper to run CNCF's k3s in Docker"
+description: Little helper to run CNCF's k3s in Docker
 homepage: https://k3d.io
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/k3d/blobs/sha256:061ed00413355c51552cd12f0ed027d4ceb710503b3632a6e2f47d657015801f
-    sha256: 061ed00413355c51552cd12f0ed027d4ceb710503b3632a6e2f47d657015801f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/k3d/blobs/sha256:626f581c808ed6b5d5560637a2d47a5214acfee40caf07ec54a7dc2c3695fcf0
-    sha256: 626f581c808ed6b5d5560637a2d47a5214acfee40caf07ec54a7dc2c3695fcf0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/k3d/blobs/sha256:0ba066d4441eae8a538f73024c93cc4e27ddc224ad24240ea37983d617d37ae5
-    sha256: 0ba066d4441eae8a538f73024c93cc4e27ddc224ad24240ea37983d617d37ae5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/k3d/blobs/sha256:c7f61f211d7beed0e3a590f86881ae37aff69a88bf5cf29c8a7df3718ea473ee
-    sha256: c7f61f211d7beed0e3a590f86881ae37aff69a88bf5cf29c8a7df3718ea473ee
-source:
-  url: https://github.com/k3d-io/k3d/archive/refs/tags/v5.8.3.tar.gz
-  sha256: 2ef51e029f43e70dcda616de98980017ca7de18848265525bf7882d2bd66f9f2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/k3d/blobs/sha256:626f581c808ed6b5d5560637a2d47a5214acfee40caf07ec54a7dc2c3695fcf0
+        sha256: 626f581c808ed6b5d5560637a2d47a5214acfee40caf07ec54a7dc2c3695fcf0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/k3d/blobs/sha256:061ed00413355c51552cd12f0ed027d4ceb710503b3632a6e2f47d657015801f
+        sha256: 061ed00413355c51552cd12f0ed027d4ceb710503b3632a6e2f47d657015801f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/k3d/blobs/sha256:0ba066d4441eae8a538f73024c93cc4e27ddc224ad24240ea37983d617d37ae5
+        sha256: 0ba066d4441eae8a538f73024c93cc4e27ddc224ad24240ea37983d617d37ae5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/k3d/blobs/sha256:c7f61f211d7beed0e3a590f86881ae37aff69a88bf5cf29c8a7df3718ea473ee
+        sha256: c7f61f211d7beed0e3a590f86881ae37aff69a88bf5cf29c8a7df3718ea473ee
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/k3d-io/k3d/archive/refs/tags/v5.8.3.tar.gz
+    sha256: 2ef51e029f43e70dcda616de98980017ca7de18848265525bf7882d2bd66f9f2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

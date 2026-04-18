@@ -3,31 +3,55 @@ version: 0.22.1
 description: Fast static site generator in a single binary with everything built-in
 homepage: https://www.getzola.org/
 license: EUPL-1.2
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zola/blobs/sha256:d0b4f6dcd6f93092e5d6b7c5523d4708542371a56983805abd7c63331ed1eac5
-    sha256: d0b4f6dcd6f93092e5d6b7c5523d4708542371a56983805abd7c63331ed1eac5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zola/blobs/sha256:acdcc9fec950ac9c5a109cbedaf4dd57bd6a5aaaf1ace613f84a35db23740c2c
-    sha256: acdcc9fec950ac9c5a109cbedaf4dd57bd6a5aaaf1ace613f84a35db23740c2c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zola/blobs/sha256:cd1481a6f76baf68adfac5b59d3df2db3027ec32cb0bd526dcd7583e41fe007e
-    sha256: cd1481a6f76baf68adfac5b59d3df2db3027ec32cb0bd526dcd7583e41fe007e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zola/blobs/sha256:85106de0bbb3f42628d011213df85a1ca705d785fe2dfa50bc0d7ad72d23ae23
-    sha256: 85106de0bbb3f42628d011213df85a1ca705d785fe2dfa50bc0d7ad72d23ae23
-source:
-  url: https://github.com/getzola/zola/archive/refs/tags/v0.22.1.tar.gz
-  sha256: 0f59479e05bce79e8d5860dc7e807ea818986094469ed8bf0bb46588ade95982
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - oniguruma
+    - oniguruma
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zola/blobs/sha256:acdcc9fec950ac9c5a109cbedaf4dd57bd6a5aaaf1ace613f84a35db23740c2c
+        sha256: acdcc9fec950ac9c5a109cbedaf4dd57bd6a5aaaf1ace613f84a35db23740c2c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zola/blobs/sha256:d0b4f6dcd6f93092e5d6b7c5523d4708542371a56983805abd7c63331ed1eac5
+        sha256: d0b4f6dcd6f93092e5d6b7c5523d4708542371a56983805abd7c63331ed1eac5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zola/blobs/sha256:cd1481a6f76baf68adfac5b59d3df2db3027ec32cb0bd526dcd7583e41fe007e
+        sha256: cd1481a6f76baf68adfac5b59d3df2db3027ec32cb0bd526dcd7583e41fe007e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zola/blobs/sha256:85106de0bbb3f42628d011213df85a1ca705d785fe2dfa50bc0d7ad72d23ae23
+        sha256: 85106de0bbb3f42628d011213df85a1ca705d785fe2dfa50bc0d7ad72d23ae23
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/getzola/zola/archive/refs/tags/v0.22.1.tar.gz
+    sha256: 0f59479e05bce79e8d5860dc7e807ea818986094469ed8bf0bb46588ade95982
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - oniguruma
-  - openssl@3
+    - oniguruma
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

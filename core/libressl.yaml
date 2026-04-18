@@ -3,26 +3,51 @@ version: 4.2.1
 description: Version of the SSL/TLS protocol forked from OpenSSL
 homepage: https://www.libressl.org/
 license: OpenSSL
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:ba6ef9fa38ea1b994cb15718d4dd77104f8c140b1f2b7561c2ccbbebb77af94b
-    sha256: ba6ef9fa38ea1b994cb15718d4dd77104f8c140b1f2b7561c2ccbbebb77af94b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
-    sha256: 383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:8690dae24ab88821c36d409f6ecf04ba2d85011fc92540d23d97c7ca72873f43
-    sha256: 8690dae24ab88821c36d409f6ecf04ba2d85011fc92540d23d97c7ca72873f43
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:2eddbafa15b069f1abdae1d3df6a74cf5f3b4c30e0db216ee5fb2106e226f9d3
-    sha256: 2eddbafa15b069f1abdae1d3df6a74cf5f3b4c30e0db216ee5fb2106e226f9d3
-source:
-  url: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
-  sha256: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ca-certificates
+    - ca-certificates
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
+        sha256: 383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:ba6ef9fa38ea1b994cb15718d4dd77104f8c140b1f2b7561c2ccbbebb77af94b
+        sha256: ba6ef9fa38ea1b994cb15718d4dd77104f8c140b1f2b7561c2ccbbebb77af94b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:8690dae24ab88821c36d409f6ecf04ba2d85011fc92540d23d97c7ca72873f43
+        sha256: 8690dae24ab88821c36d409f6ecf04ba2d85011fc92540d23d97c7ca72873f43
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:2eddbafa15b069f1abdae1d3df6a74cf5f3b4c30e0db216ee5fb2106e226f9d3
+        sha256: 2eddbafa15b069f1abdae1d3df6a74cf5f3b4c30e0db216ee5fb2106e226f9d3
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    sha256: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,34 +1,58 @@
 name: desktop-file-utils
-version: 0.28
+version: "0.28"
 description: Command-line utilities for working with desktop entries
 homepage: https://wiki.freedesktop.org/www/Software/desktop-file-utils/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/desktop-file-utils/blobs/sha256:58ea38ae424ae85f68fef1140c866a220bee2ade0ec766bc833a23a4b66a554b
-    sha256: 58ea38ae424ae85f68fef1140c866a220bee2ade0ec766bc833a23a4b66a554b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/desktop-file-utils/blobs/sha256:0cc6bbad9d64a2b2edc4c55c06a5417e55c2566b15f3401828d1d64a7ad0953f
-    sha256: 0cc6bbad9d64a2b2edc4c55c06a5417e55c2566b15f3401828d1d64a7ad0953f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/desktop-file-utils/blobs/sha256:ea37203ffdaf572e7da0e0991f31dad7effa361f41ed2eb9b549b1745996f308
-    sha256: ea37203ffdaf572e7da0e0991f31dad7effa361f41ed2eb9b549b1745996f308
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/desktop-file-utils/blobs/sha256:afe8ceef438b1ce5f1199ed7aab6c5ed1e0fe9478bba9b4c230246d11e21f2f7
-    sha256: afe8ceef438b1ce5f1199ed7aab6c5ed1e0fe9478bba9b4c230246d11e21f2f7
-source:
-  url: https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.28.tar.xz
-  sha256: 4401d4e231d842c2de8242395a74a395ca468cd96f5f610d822df33594898a70
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gettext
+    - glib
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/desktop-file-utils/blobs/sha256:0cc6bbad9d64a2b2edc4c55c06a5417e55c2566b15f3401828d1d64a7ad0953f
+        sha256: 0cc6bbad9d64a2b2edc4c55c06a5417e55c2566b15f3401828d1d64a7ad0953f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/desktop-file-utils/blobs/sha256:58ea38ae424ae85f68fef1140c866a220bee2ade0ec766bc833a23a4b66a554b
+        sha256: 58ea38ae424ae85f68fef1140c866a220bee2ade0ec766bc833a23a4b66a554b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/desktop-file-utils/blobs/sha256:ea37203ffdaf572e7da0e0991f31dad7effa361f41ed2eb9b549b1745996f308
+        sha256: ea37203ffdaf572e7da0e0991f31dad7effa361f41ed2eb9b549b1745996f308
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/desktop-file-utils/blobs/sha256:afe8ceef438b1ce5f1199ed7aab6c5ed1e0fe9478bba9b4c230246d11e21f2f7
+        sha256: afe8ceef438b1ce5f1199ed7aab6c5ed1e0fe9478bba9b4c230246d11e21f2f7
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.28.tar.xz
+    sha256: 4401d4e231d842c2de8242395a74a395ca468cd96f5f610d822df33594898a70
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - glib
+    - glib
+build:
+    configure: []
+    install: []
+service: null

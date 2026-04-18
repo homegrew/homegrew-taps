@@ -3,70 +3,94 @@ version: 4.11.0
 description: Log daemon with advanced processing pipeline and a wide range of I/O methods
 homepage: https://www.syslog-ng.com
 license: LGPL-2.1-or-later AND GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/syslog-ng/blobs/sha256:bf8103b3948084c9ee20689d056df70370c0e65609caed961f7d31e8380a8a78
-    sha256: bf8103b3948084c9ee20689d056df70370c0e65609caed961f7d31e8380a8a78
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/syslog-ng/blobs/sha256:992aa131bab9c4b95ad94dfdc769bc2fc92e7aa022967ba1b3143dab9349acee
-    sha256: 992aa131bab9c4b95ad94dfdc769bc2fc92e7aa022967ba1b3143dab9349acee
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/syslog-ng/blobs/sha256:89119f25bb0d0dc80201c0121f5b90a46dacd28d6dd0dc995364a3bb84c2665b
-    sha256: 89119f25bb0d0dc80201c0121f5b90a46dacd28d6dd0dc995364a3bb84c2665b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/syslog-ng/blobs/sha256:f1460fc2a4b3251b23c0685f739d3f0200b0a96a7ee14782d4752021997721c7
-    sha256: f1460fc2a4b3251b23c0685f739d3f0200b0a96a7ee14782d4752021997721c7
-source:
-  url: https://github.com/syslog-ng/syslog-ng/releases/download/syslog-ng-4.11.0/syslog-ng-4.11.0.tar.gz
-  sha256: 37ea0d4588533316de122df4e1b249867b0a0575f646c7478d0cc4d747462943
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - glib
-  - grpc
-  - hiredis
-  - ivykis
-  - json-c
-  - libdbi
-  - libmaxminddb
-  - libnet
-  - libpaho-mqtt
-  - librdkafka
-  - mongo-c-driver
-  - net-snmp
-  - openssl@3
-  - pcre2
-  - protobuf
-  - python@3.14
-  - rabbitmq-c
-  - riemann-client
-  - gettext
+    - abseil
+    - glib
+    - grpc
+    - hiredis
+    - ivykis
+    - json-c
+    - libdbi
+    - libmaxminddb
+    - libnet
+    - libpaho-mqtt
+    - librdkafka
+    - mongo-c-driver
+    - net-snmp
+    - openssl@3
+    - pcre2
+    - protobuf
+    - python@3.14
+    - rabbitmq-c
+    - riemann-client
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/syslog-ng/blobs/sha256:992aa131bab9c4b95ad94dfdc769bc2fc92e7aa022967ba1b3143dab9349acee
+        sha256: 992aa131bab9c4b95ad94dfdc769bc2fc92e7aa022967ba1b3143dab9349acee
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/syslog-ng/blobs/sha256:bf8103b3948084c9ee20689d056df70370c0e65609caed961f7d31e8380a8a78
+        sha256: bf8103b3948084c9ee20689d056df70370c0e65609caed961f7d31e8380a8a78
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/syslog-ng/blobs/sha256:89119f25bb0d0dc80201c0121f5b90a46dacd28d6dd0dc995364a3bb84c2665b
+        sha256: 89119f25bb0d0dc80201c0121f5b90a46dacd28d6dd0dc995364a3bb84c2665b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/syslog-ng/blobs/sha256:f1460fc2a4b3251b23c0685f739d3f0200b0a96a7ee14782d4752021997721c7
+        sha256: f1460fc2a4b3251b23c0685f739d3f0200b0a96a7ee14782d4752021997721c7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/syslog-ng/syslog-ng/releases/download/syslog-ng-4.11.0/syslog-ng-4.11.0.tar.gz
+    sha256: 37ea0d4588533316de122df4e1b249867b0a0575f646c7478d0cc4d747462943
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - autoconf
-  - automake
-  - libtool
+    - pkgconf
+    - autoconf
+    - automake
+    - libtool
 linux_dependencies:
-  - abseil
-  - glib
-  - grpc
-  - hiredis
-  - ivykis
-  - json-c
-  - libdbi
-  - libmaxminddb
-  - libnet
-  - libpaho-mqtt
-  - librdkafka
-  - mongo-c-driver
-  - net-snmp
-  - openssl@3
-  - pcre2
-  - protobuf
-  - python@3.14
-  - rabbitmq-c
-  - riemann-client
-  - zlib-ng-compat
+    - abseil
+    - glib
+    - grpc
+    - hiredis
+    - ivykis
+    - json-c
+    - libdbi
+    - libmaxminddb
+    - libnet
+    - libpaho-mqtt
+    - librdkafka
+    - mongo-c-driver
+    - net-snmp
+    - openssl@3
+    - pcre2
+    - protobuf
+    - python@3.14
+    - rabbitmq-c
+    - riemann-client
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

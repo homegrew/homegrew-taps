@@ -3,35 +3,60 @@ version: 1.8.1
 description: C library for selecting an OpenGL API and window system at runtime
 homepage: https://waffle.freedesktop.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/waffle/blobs/sha256:aac60d0464beecfe42add4b1be34ca27c1eaf49361202afb805df8acec7c024f
-    sha256: aac60d0464beecfe42add4b1be34ca27c1eaf49361202afb805df8acec7c024f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/waffle/blobs/sha256:a59ee0f3ad1c4f4a47c07661e1439f4156dd10b88038115765ef51173282d597
-    sha256: a59ee0f3ad1c4f4a47c07661e1439f4156dd10b88038115765ef51173282d597
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/waffle/blobs/sha256:e66ab6325cd9b5b39752985ee80e3724e9affd46a75d1d2c7b764f6fbbe87b9b
-    sha256: e66ab6325cd9b5b39752985ee80e3724e9affd46a75d1d2c7b764f6fbbe87b9b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/waffle/blobs/sha256:2cdfe7169a64ad8138255aca48128fdc8d23b9885224cddac2a23bcdb3ceabc1
-    sha256: 2cdfe7169a64ad8138255aca48128fdc8d23b9885224cddac2a23bcdb3ceabc1
-source:
-  url: https://waffle.freedesktop.org/files/release/waffle-1.8.1/waffle-1.8.1.tar.xz
-  sha256: f616c0ca6072d36bf81fb79a3695799973a978775e0213744bf0a39be6367425
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/waffle/blobs/sha256:a59ee0f3ad1c4f4a47c07661e1439f4156dd10b88038115765ef51173282d597
+        sha256: a59ee0f3ad1c4f4a47c07661e1439f4156dd10b88038115765ef51173282d597
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/waffle/blobs/sha256:aac60d0464beecfe42add4b1be34ca27c1eaf49361202afb805df8acec7c024f
+        sha256: aac60d0464beecfe42add4b1be34ca27c1eaf49361202afb805df8acec7c024f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/waffle/blobs/sha256:e66ab6325cd9b5b39752985ee80e3724e9affd46a75d1d2c7b764f6fbbe87b9b
+        sha256: e66ab6325cd9b5b39752985ee80e3724e9affd46a75d1d2c7b764f6fbbe87b9b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/waffle/blobs/sha256:2cdfe7169a64ad8138255aca48128fdc8d23b9885224cddac2a23bcdb3ceabc1
+        sha256: 2cdfe7169a64ad8138255aca48128fdc8d23b9885224cddac2a23bcdb3ceabc1
+        sha512: ""
+        signature: ""
+source:
+    url: https://waffle.freedesktop.org/files/release/waffle-1.8.1/waffle-1.8.1.tar.xz
+    sha256: f616c0ca6072d36bf81fb79a3695799973a978775e0213744bf0a39be6367425
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docbook-xsl
-  - meson
-  - ninja
-  - pkgconf
+    - docbook-xsl
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - libx11
-  - libxcb
-  - mesa
-  - mesa-glu
-  - systemd
-  - wayland
+    - libx11
+    - libxcb
+    - mesa
+    - mesa-glu
+    - systemd
+    - wayland
+build:
+    configure: []
+    install: []
+service: null

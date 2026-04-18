@@ -3,29 +3,54 @@ version: 0.7.2
 description: DVD-authoring toolset
 homepage: https://dvdauthor.sourceforge.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dvdauthor/blobs/sha256:ed44deb629315e130b499c9e41a1cdfd789d62ed26e410c10d480a27ea93abec
-    sha256: ed44deb629315e130b499c9e41a1cdfd789d62ed26e410c10d480a27ea93abec
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dvdauthor/blobs/sha256:dcecfc37b18314b6ac3fcd27b1a11785eeedf6d20e0d78d81e0888181250a4b7
-    sha256: dcecfc37b18314b6ac3fcd27b1a11785eeedf6d20e0d78d81e0888181250a4b7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dvdauthor/blobs/sha256:eb347b5f1afad654bd82dbf2158c3e1565b2ebfcf45b0e12828de5c5d3e46439
-    sha256: eb347b5f1afad654bd82dbf2158c3e1565b2ebfcf45b0e12828de5c5d3e46439
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dvdauthor/blobs/sha256:eb55a46434f9c854c8aae0422b4f964c2fedc9ccc3fa01183e93dda87f196f47
-    sha256: eb55a46434f9c854c8aae0422b4f964c2fedc9ccc3fa01183e93dda87f196f47
-source:
-  url: https://downloads.sourceforge.net/project/dvdauthor/dvdauthor-0.7.2.tar.gz
-  sha256: 3020a92de9f78eb36f48b6f22d5a001c47107826634a785a62dfcd080f612eb7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - libdvdread
-  - libpng
+    - freetype
+    - libdvdread
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dvdauthor/blobs/sha256:dcecfc37b18314b6ac3fcd27b1a11785eeedf6d20e0d78d81e0888181250a4b7
+        sha256: dcecfc37b18314b6ac3fcd27b1a11785eeedf6d20e0d78d81e0888181250a4b7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dvdauthor/blobs/sha256:ed44deb629315e130b499c9e41a1cdfd789d62ed26e410c10d480a27ea93abec
+        sha256: ed44deb629315e130b499c9e41a1cdfd789d62ed26e410c10d480a27ea93abec
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dvdauthor/blobs/sha256:eb347b5f1afad654bd82dbf2158c3e1565b2ebfcf45b0e12828de5c5d3e46439
+        sha256: eb347b5f1afad654bd82dbf2158c3e1565b2ebfcf45b0e12828de5c5d3e46439
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dvdauthor/blobs/sha256:eb55a46434f9c854c8aae0422b4f964c2fedc9ccc3fa01183e93dda87f196f47
+        sha256: eb55a46434f9c854c8aae0422b4f964c2fedc9ccc3fa01183e93dda87f196f47
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/dvdauthor/dvdauthor-0.7.2.tar.gz
+    sha256: 3020a92de9f78eb36f48b6f22d5a001c47107826634a785a62dfcd080f612eb7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

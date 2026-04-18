@@ -3,41 +3,66 @@ version: 2.8.4
 description: Backup directory tree and files
 homepage: http://dar.linux.free.fr/doc/index.html
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:07e5000da7c10842c0a4904ee273e9181788a85c4d9f5b1b18523791e35953bc
-    sha256: 07e5000da7c10842c0a4904ee273e9181788a85c4d9f5b1b18523791e35953bc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:8f552ba3c2cd723a484c75d83795c81a2967d20fcf28159a0f22880423e8482b
-    sha256: 8f552ba3c2cd723a484c75d83795c81a2967d20fcf28159a0f22880423e8482b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:b02825d5d9922187d2fc0d619488b43a7804a563215e4dea124630f77e9a5020
-    sha256: b02825d5d9922187d2fc0d619488b43a7804a563215e4dea124630f77e9a5020
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:b9138c84125ec7dd04982d2fbeaac778c69a37aa346e372aa5366cb4119aaa34
-    sha256: b9138c84125ec7dd04982d2fbeaac778c69a37aa346e372aa5366cb4119aaa34
-source:
-  url: https://downloads.sourceforge.net/project/dar/dar/2.8.4/dar-2.8.4.tar.gz
-  sha256: 8e1ba552fd8b0783076d42ac1c2eeda57781c89f9bcc119f9d00ff1326e95e13
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - argon2
-  - libgcrypt
-  - libgpg-error
-  - lz4
-  - lzo
-  - xz
-  - zstd
-  - gettext
+    - argon2
+    - libgcrypt
+    - libgpg-error
+    - lz4
+    - lzo
+    - xz
+    - zstd
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:8f552ba3c2cd723a484c75d83795c81a2967d20fcf28159a0f22880423e8482b
+        sha256: 8f552ba3c2cd723a484c75d83795c81a2967d20fcf28159a0f22880423e8482b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:07e5000da7c10842c0a4904ee273e9181788a85c4d9f5b1b18523791e35953bc
+        sha256: 07e5000da7c10842c0a4904ee273e9181788a85c4d9f5b1b18523791e35953bc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:b02825d5d9922187d2fc0d619488b43a7804a563215e4dea124630f77e9a5020
+        sha256: b02825d5d9922187d2fc0d619488b43a7804a563215e4dea124630f77e9a5020
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dar/blobs/sha256:b9138c84125ec7dd04982d2fbeaac778c69a37aa346e372aa5366cb4119aaa34
+        sha256: b9138c84125ec7dd04982d2fbeaac778c69a37aa346e372aa5366cb4119aaa34
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/dar/dar/2.8.4/dar-2.8.4.tar.gz
+    sha256: 8e1ba552fd8b0783076d42ac1c2eeda57781c89f9bcc119f9d00ff1326e95e13
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - argon2
-  - libgcrypt
-  - libgpg-error
-  - lz4
-  - lzo
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - argon2
+    - libgcrypt
+    - libgpg-error
+    - lz4
+    - lzo
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

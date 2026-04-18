@@ -1,77 +1,101 @@
 name: gnome-builder
-version: 50.0
+version: "50.0"
 description: Develop software for GNOME
 homepage: https://apps.gnome.org/Builder/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnome-builder/blobs/sha256:74032eb53e1d700cc78c2a4998e9cee932218a6f34165f693bdc656eda6e9218
-    sha256: 74032eb53e1d700cc78c2a4998e9cee932218a6f34165f693bdc656eda6e9218
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnome-builder/blobs/sha256:de58867704ec2649ba167364d9754013a1b0a77f7da8d6bfbda3f07afe024398
-    sha256: de58867704ec2649ba167364d9754013a1b0a77f7da8d6bfbda3f07afe024398
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnome-builder/blobs/sha256:48688563a924a20e2e33696e8a47bdf90a6e98822aed449f4a66223258f0d68c
-    sha256: 48688563a924a20e2e33696e8a47bdf90a6e98822aed449f4a66223258f0d68c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnome-builder/blobs/sha256:37242629df0d93a9817706cc2f8f191a7e244467c3e956da22e107c7195b1746
-    sha256: 37242629df0d93a9817706cc2f8f191a7e244467c3e956da22e107c7195b1746
-source:
-  url: https://download.gnome.org/sources/gnome-builder/50/gnome-builder-50.0.tar.xz
-  sha256: 46d54fd13f4f4bdb6eed7d004b499d0b6d9a76a6fafc68ad16c389953fd92f46
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - adwaita-icon-theme
-  - cairo
-  - cmark
-  - editorconfig
-  - glib
-  - gobject-introspection
-  - gtk4
-  - gtksourceview5
-  - json-glib
-  - jsonrpc-glib
-  - libadwaita
-  - libdex
-  - libgit2
-  - libgit2-glib
-  - libpanel
-  - libpeas
-  - libspelling
-  - libyaml
-  - llvm
-  - pango
-  - template-glib
-  - vte3
-  - gettext
+    - adwaita-icon-theme
+    - cairo
+    - cmark
+    - editorconfig
+    - glib
+    - gobject-introspection
+    - gtk4
+    - gtksourceview5
+    - json-glib
+    - jsonrpc-glib
+    - libadwaita
+    - libdex
+    - libgit2
+    - libgit2-glib
+    - libpanel
+    - libpeas
+    - libspelling
+    - libyaml
+    - llvm
+    - pango
+    - template-glib
+    - vte3
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnome-builder/blobs/sha256:de58867704ec2649ba167364d9754013a1b0a77f7da8d6bfbda3f07afe024398
+        sha256: de58867704ec2649ba167364d9754013a1b0a77f7da8d6bfbda3f07afe024398
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnome-builder/blobs/sha256:74032eb53e1d700cc78c2a4998e9cee932218a6f34165f693bdc656eda6e9218
+        sha256: 74032eb53e1d700cc78c2a4998e9cee932218a6f34165f693bdc656eda6e9218
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnome-builder/blobs/sha256:48688563a924a20e2e33696e8a47bdf90a6e98822aed449f4a66223258f0d68c
+        sha256: 48688563a924a20e2e33696e8a47bdf90a6e98822aed449f4a66223258f0d68c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnome-builder/blobs/sha256:37242629df0d93a9817706cc2f8f191a7e244467c3e956da22e107c7195b1746
+        sha256: 37242629df0d93a9817706cc2f8f191a7e244467c3e956da22e107c7195b1746
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gnome-builder/50/gnome-builder-50.0.tar.xz
+    sha256: 46d54fd13f4f4bdb6eed7d004b499d0b6d9a76a6fafc68ad16c389953fd92f46
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - desktop-file-utils
-  - gettext
-  - meson
-  - ninja
+    - desktop-file-utils
+    - gettext
+    - meson
+    - ninja
 linux_dependencies:
-  - adwaita-icon-theme
-  - cairo
-  - cmark
-  - editorconfig
-  - glib
-  - gobject-introspection
-  - gtk4
-  - gtksourceview5
-  - json-glib
-  - jsonrpc-glib
-  - libadwaita
-  - libdex
-  - libgit2
-  - libgit2-glib
-  - libpanel
-  - libpeas
-  - libspelling
-  - libyaml
-  - llvm
-  - pango
-  - template-glib
-  - vte3
+    - adwaita-icon-theme
+    - cairo
+    - cmark
+    - editorconfig
+    - glib
+    - gobject-introspection
+    - gtk4
+    - gtksourceview5
+    - json-glib
+    - jsonrpc-glib
+    - libadwaita
+    - libdex
+    - libgit2
+    - libgit2-glib
+    - libpanel
+    - libpeas
+    - libspelling
+    - libyaml
+    - llvm
+    - pango
+    - template-glib
+    - vte3
+build:
+    configure: []
+    install: []
+service: null

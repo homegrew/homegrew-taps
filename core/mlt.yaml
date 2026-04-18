@@ -3,71 +3,95 @@ version: 7.36.1
 description: Author, manage, and run multitrack audio/video compositions
 homepage: https://www.mltframework.org/
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:81cd06d782ba666f6a319ccd94bf54a61e7278433f721fea45a8aa07f36d386e
-    sha256: 81cd06d782ba666f6a319ccd94bf54a61e7278433f721fea45a8aa07f36d386e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:e5c7487a7d1dc5c58cebdabacdcfa41c3818692aa89453ddc0f09bbcef9cb467
-    sha256: e5c7487a7d1dc5c58cebdabacdcfa41c3818692aa89453ddc0f09bbcef9cb467
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:752b678fe0290dcef506287baae7f4882c674c10f70bf7cd6a5bf96233792ba4
-    sha256: 752b678fe0290dcef506287baae7f4882c674c10f70bf7cd6a5bf96233792ba4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:95761fd2e2174018ba5b50ae8b295d6147317a8a28ffd3155f6f5c84bb2b7de1
-    sha256: 95761fd2e2174018ba5b50ae8b295d6147317a8a28ffd3155f6f5c84bb2b7de1
-source:
-  url: https://github.com/mltframework/mlt/releases/download/v7.36.1/mlt-7.36.1.tar.gz
-  sha256: 0d2b956864ba2ff58bb4e2b2779aa36870bd2a3a835e2dbfda33faa5fc6f4d3a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - fftw
-  - fontconfig
-  - frei0r
-  - gdk-pixbuf
-  - glib
-  - libdv
-  - libexif
-  - libsamplerate
-  - libvidstab
-  - libvorbis
-  - opencv
-  - pango
-  - qt5compat
-  - qtbase
-  - qtsvg
-  - rubberband
-  - sdl2
-  - sox
-  - freetype
-  - gettext
-  - harfbuzz
+    - ffmpeg
+    - fftw
+    - fontconfig
+    - frei0r
+    - gdk-pixbuf
+    - glib
+    - libdv
+    - libexif
+    - libsamplerate
+    - libvidstab
+    - libvorbis
+    - opencv
+    - pango
+    - qt5compat
+    - qtbase
+    - qtsvg
+    - rubberband
+    - sdl2
+    - sox
+    - freetype
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:e5c7487a7d1dc5c58cebdabacdcfa41c3818692aa89453ddc0f09bbcef9cb467
+        sha256: e5c7487a7d1dc5c58cebdabacdcfa41c3818692aa89453ddc0f09bbcef9cb467
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:81cd06d782ba666f6a319ccd94bf54a61e7278433f721fea45a8aa07f36d386e
+        sha256: 81cd06d782ba666f6a319ccd94bf54a61e7278433f721fea45a8aa07f36d386e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:752b678fe0290dcef506287baae7f4882c674c10f70bf7cd6a5bf96233792ba4
+        sha256: 752b678fe0290dcef506287baae7f4882c674c10f70bf7cd6a5bf96233792ba4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:95761fd2e2174018ba5b50ae8b295d6147317a8a28ffd3155f6f5c84bb2b7de1
+        sha256: 95761fd2e2174018ba5b50ae8b295d6147317a8a28ffd3155f6f5c84bb2b7de1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mltframework/mlt/releases/download/v7.36.1/mlt-7.36.1.tar.gz
+    sha256: 0d2b956864ba2ff58bb4e2b2779aa36870bd2a3a835e2dbfda33faa5fc6f4d3a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - ffmpeg
-  - fftw
-  - fontconfig
-  - frei0r
-  - gdk-pixbuf
-  - glib
-  - libdv
-  - libexif
-  - libsamplerate
-  - libvidstab
-  - libvorbis
-  - opencv
-  - pango
-  - pulseaudio
-  - qt5compat
-  - qtbase
-  - qtsvg
-  - rubberband
-  - sdl2
-  - sox
+    - alsa-lib
+    - ffmpeg
+    - fftw
+    - fontconfig
+    - frei0r
+    - gdk-pixbuf
+    - glib
+    - libdv
+    - libexif
+    - libsamplerate
+    - libvidstab
+    - libvorbis
+    - opencv
+    - pango
+    - pulseaudio
+    - qt5compat
+    - qtbase
+    - qtsvg
+    - rubberband
+    - sdl2
+    - sox
+build:
+    configure: []
+    install: []
+service: null

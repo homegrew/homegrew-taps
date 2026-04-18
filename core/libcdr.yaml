@@ -3,35 +3,59 @@ version: 0.1.8
 description: C++ library to parse the file format of CorelDRAW documents
 homepage: https://wiki.documentfoundation.org/DLP/Libraries/libcdr
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libcdr/blobs/sha256:e2428718f47c0d05853f80bc0e4578a223468a269320f8e5ca52c87e99afb96a
-    sha256: e2428718f47c0d05853f80bc0e4578a223468a269320f8e5ca52c87e99afb96a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libcdr/blobs/sha256:60e655184d0b933bb7c985e87d4b179e371421992d9cd68f3db6ca84c2612306
-    sha256: 60e655184d0b933bb7c985e87d4b179e371421992d9cd68f3db6ca84c2612306
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libcdr/blobs/sha256:79639eeb9420eed8e22b2757b6270bc7e5720ed7d8d28aa54a408a9533557b46
-    sha256: 79639eeb9420eed8e22b2757b6270bc7e5720ed7d8d28aa54a408a9533557b46
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libcdr/blobs/sha256:3425841969e05fc71350437f2f13388bc9e67fb3c1fb487f10e78cf227c8439c
-    sha256: 3425841969e05fc71350437f2f13388bc9e67fb3c1fb487f10e78cf227c8439c
-source:
-  url: https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.8.tar.xz
-  sha256: ced677c8300b29c91d3004bb1dddf0b99761bf5544991c26c2ee8f427e87193c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - librevenge
-  - little-cms2
+    - icu4c@78
+    - librevenge
+    - little-cms2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libcdr/blobs/sha256:60e655184d0b933bb7c985e87d4b179e371421992d9cd68f3db6ca84c2612306
+        sha256: 60e655184d0b933bb7c985e87d4b179e371421992d9cd68f3db6ca84c2612306
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libcdr/blobs/sha256:e2428718f47c0d05853f80bc0e4578a223468a269320f8e5ca52c87e99afb96a
+        sha256: e2428718f47c0d05853f80bc0e4578a223468a269320f8e5ca52c87e99afb96a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libcdr/blobs/sha256:79639eeb9420eed8e22b2757b6270bc7e5720ed7d8d28aa54a408a9533557b46
+        sha256: 79639eeb9420eed8e22b2757b6270bc7e5720ed7d8d28aa54a408a9533557b46
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libcdr/blobs/sha256:3425841969e05fc71350437f2f13388bc9e67fb3c1fb487f10e78cf227c8439c
+        sha256: 3425841969e05fc71350437f2f13388bc9e67fb3c1fb487f10e78cf227c8439c
+        sha512: ""
+        signature: ""
+source:
+    url: https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.8.tar.xz
+    sha256: ced677c8300b29c91d3004bb1dddf0b99761bf5544991c26c2ee8f427e87193c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - pkgconf
+    - boost
+    - pkgconf
 linux_dependencies:
-  - icu4c@78
-  - librevenge
-  - little-cms2
-  - zlib-ng-compat
+    - icu4c@78
+    - librevenge
+    - little-cms2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,41 +3,64 @@ version: 1.3.11
 description: Cross-platform C++ GUI toolkit
 homepage: https://www.fltk.org/
 license: LGPL-2.0-only WITH FLTK-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fltk/1.3/blobs/sha256:e5bfa45b6f629465158e069725e1a45f2de382b40158fdb98576b7c65ea462b5
-    sha256: e5bfa45b6f629465158e069725e1a45f2de382b40158fdb98576b7c65ea462b5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fltk/1.3/blobs/sha256:ae4c28c88a1d1b5df4f449ecb68656176de7a847ba9e8b5b04496a9fd2fd76a3
-    sha256: ae4c28c88a1d1b5df4f449ecb68656176de7a847ba9e8b5b04496a9fd2fd76a3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fltk/1.3/blobs/sha256:4ebdfda730ed6638cce196160c79146729505609e7c1a56b135d78dfb5235691
-    sha256: 4ebdfda730ed6638cce196160c79146729505609e7c1a56b135d78dfb5235691
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fltk/1.3/blobs/sha256:91a9242d3b1865e00c589082e2e40204ba9e7a38ac048e8a91d61ceff61cf255
-    sha256: 91a9242d3b1865e00c589082e2e40204ba9e7a38ac048e8a91d61ceff61cf255
-source:
-  url: https://github.com/fltk/fltk/releases/download/release-1.3.11/fltk-1.3.11-source.tar.bz2
-  sha256: ca2e144e5f89173cd094cc273940d56230b1bf613083a0792e6406dc191cd99f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - libpng
-build_dependencies:
-  - pkgconf
-linux_dependencies:
-  - fontconfig
-  - jpeg-turbo
-  - libpng
-  - libx11
-  - libxext
-  - libxfixes
-  - libxft
-  - libxrender
-  - libxt
-  - mesa
-  - mesa-glu
+    - jpeg-turbo
+    - libpng
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fltk/1.3/blobs/sha256:ae4c28c88a1d1b5df4f449ecb68656176de7a847ba9e8b5b04496a9fd2fd76a3
+        sha256: ae4c28c88a1d1b5df4f449ecb68656176de7a847ba9e8b5b04496a9fd2fd76a3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fltk/1.3/blobs/sha256:e5bfa45b6f629465158e069725e1a45f2de382b40158fdb98576b7c65ea462b5
+        sha256: e5bfa45b6f629465158e069725e1a45f2de382b40158fdb98576b7c65ea462b5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fltk/1.3/blobs/sha256:4ebdfda730ed6638cce196160c79146729505609e7c1a56b135d78dfb5235691
+        sha256: 4ebdfda730ed6638cce196160c79146729505609e7c1a56b135d78dfb5235691
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fltk/1.3/blobs/sha256:91a9242d3b1865e00c589082e2e40204ba9e7a38ac048e8a91d61ceff61cf255
+        sha256: 91a9242d3b1865e00c589082e2e40204ba9e7a38ac048e8a91d61ceff61cf255
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fltk/fltk/releases/download/release-1.3.11/fltk-1.3.11-source.tar.bz2
+    sha256: ca2e144e5f89173cd094cc273940d56230b1bf613083a0792e6406dc191cd99f
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+linux_dependencies:
+    - fontconfig
+    - jpeg-turbo
+    - libpng
+    - libx11
+    - libxext
+    - libxfixes
+    - libxft
+    - libxrender
+    - libxt
+    - mesa
+    - mesa-glu
+build:
+    configure: []
+    install: []
+service: null

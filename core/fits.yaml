@@ -3,21 +3,43 @@ version: 1.6.0
 description: File Information Tool Set
 homepage: https://harvard-lts.github.io/fits/
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fits/blobs/sha256:d71b24d9369f9b5737617ae4573432b87c30e8a465f433f6e99af6a78375cc09
-    sha256: d71b24d9369f9b5737617ae4573432b87c30e8a465f433f6e99af6a78375cc09
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fits/blobs/sha256:4c775bd176df5777b6120f68b38684513455679064b96ac07f4c6e02afa8b4bf
-    sha256: 4c775bd176df5777b6120f68b38684513455679064b96ac07f4c6e02afa8b4bf
-source:
-  url: https://github.com/harvard-lts/fits/releases/download/1.6.0/fits-1.6.0.zip
-  sha256: 32e436effe7251c5b067ec3f02321d5baf4944b3f0d1010fb8ec42039d9e3b73
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - exiftool
-  - libmediainfo
-  - openjdk
+    - exiftool
+    - libmediainfo
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fits/blobs/sha256:4c775bd176df5777b6120f68b38684513455679064b96ac07f4c6e02afa8b4bf
+        sha256: 4c775bd176df5777b6120f68b38684513455679064b96ac07f4c6e02afa8b4bf
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fits/blobs/sha256:d71b24d9369f9b5737617ae4573432b87c30e8a465f433f6e99af6a78375cc09
+        sha256: d71b24d9369f9b5737617ae4573432b87c30e8a465f433f6e99af6a78375cc09
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/harvard-lts/fits/releases/download/1.6.0/fits-1.6.0.zip
+    sha256: 32e436effe7251c5b067ec3f02321d5baf4944b3f0d1010fb8ec42039d9e3b73
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

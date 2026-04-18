@@ -3,29 +3,54 @@ version: 3.2.0
 description: Ray-tracing-based rendering engine for high-fidelity visualization
 homepage: https://www.ospray.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ospray/blobs/sha256:37889fb9d563aaffcfd8b7fee60874967a6d4d16e10f5a9947d629f977222c1b
-    sha256: 37889fb9d563aaffcfd8b7fee60874967a6d4d16e10f5a9947d629f977222c1b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ospray/blobs/sha256:46f203d6c6db606e4fe48a8b63da54ece1badb1c4eae09cbcd842e297f6d04c1
-    sha256: 46f203d6c6db606e4fe48a8b63da54ece1badb1c4eae09cbcd842e297f6d04c1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ospray/blobs/sha256:5ce0ebb61c0d3a09ce6e51d886f705e306b881d289fc9bbe62abe892b144532b
-    sha256: 5ce0ebb61c0d3a09ce6e51d886f705e306b881d289fc9bbe62abe892b144532b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ospray/blobs/sha256:3c0dbef40ef62c06ac0d81fdad78b51f2c2f4a1f81dc7a5f605abedf4c75ad57
-    sha256: 3c0dbef40ef62c06ac0d81fdad78b51f2c2f4a1f81dc7a5f605abedf4c75ad57
-source:
-  url: https://github.com/RenderKit/ospray/archive/refs/tags/v3.2.0.tar.gz
-  sha256: 2c8108df2950bc5d1bc2a62f74629233dbe4f36e3f6a8ea032907d4a3fdc6750
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - embree
-  - ispc
-  - tbb
+    - embree
+    - ispc
+    - tbb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ospray/blobs/sha256:46f203d6c6db606e4fe48a8b63da54ece1badb1c4eae09cbcd842e297f6d04c1
+        sha256: 46f203d6c6db606e4fe48a8b63da54ece1badb1c4eae09cbcd842e297f6d04c1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ospray/blobs/sha256:37889fb9d563aaffcfd8b7fee60874967a6d4d16e10f5a9947d629f977222c1b
+        sha256: 37889fb9d563aaffcfd8b7fee60874967a6d4d16e10f5a9947d629f977222c1b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ospray/blobs/sha256:5ce0ebb61c0d3a09ce6e51d886f705e306b881d289fc9bbe62abe892b144532b
+        sha256: 5ce0ebb61c0d3a09ce6e51d886f705e306b881d289fc9bbe62abe892b144532b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ospray/blobs/sha256:3c0dbef40ef62c06ac0d81fdad78b51f2c2f4a1f81dc7a5f605abedf4c75ad57
+        sha256: 3c0dbef40ef62c06ac0d81fdad78b51f2c2f4a1f81dc7a5f605abedf4c75ad57
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/RenderKit/ospray/archive/refs/tags/v3.2.0.tar.gz
+    sha256: 2c8108df2950bc5d1bc2a62f74629233dbe4f36e3f6a8ea032907d4a3fdc6750
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

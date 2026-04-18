@@ -3,27 +3,52 @@ version: 4.0.5
 description: C library to access the binary planetary ephemeris files
 homepage: https://www.imcce.fr/inpop/calceph
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/calceph/blobs/sha256:4a1697db0c615f68049b055034beca20f3ebe94327c9976074176ef65141b89f
-    sha256: 4a1697db0c615f68049b055034beca20f3ebe94327c9976074176ef65141b89f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/calceph/blobs/sha256:17b0aa7869f8977327c1ba0d5838fecc882dd85a3a6a6872806593f375ce0ad7
-    sha256: 17b0aa7869f8977327c1ba0d5838fecc882dd85a3a6a6872806593f375ce0ad7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/calceph/blobs/sha256:7a14165e0bb191f70ea0b083004328096ed866efa64e5b301ddd394c4df12d67
-    sha256: 7a14165e0bb191f70ea0b083004328096ed866efa64e5b301ddd394c4df12d67
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/calceph/blobs/sha256:527d6c7622d8df61721200858ab0e1eb2d538fb3e4742e19e1a7ab3ff3692c77
-    sha256: 527d6c7622d8df61721200858ab0e1eb2d538fb3e4742e19e1a7ab3ff3692c77
-source:
-  url: https://www.imcce.fr/content/medias/recherche/equipes/asd/calceph/calceph-4.0.5.tar.gz
-  sha256: 3460d8a3e10a86e7fe0228d5d9abcda589713b8ed3ee007ce061ae01f8c2e1ea
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gcc
+    - gcc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/calceph/blobs/sha256:17b0aa7869f8977327c1ba0d5838fecc882dd85a3a6a6872806593f375ce0ad7
+        sha256: 17b0aa7869f8977327c1ba0d5838fecc882dd85a3a6a6872806593f375ce0ad7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/calceph/blobs/sha256:4a1697db0c615f68049b055034beca20f3ebe94327c9976074176ef65141b89f
+        sha256: 4a1697db0c615f68049b055034beca20f3ebe94327c9976074176ef65141b89f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/calceph/blobs/sha256:7a14165e0bb191f70ea0b083004328096ed866efa64e5b301ddd394c4df12d67
+        sha256: 7a14165e0bb191f70ea0b083004328096ed866efa64e5b301ddd394c4df12d67
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/calceph/blobs/sha256:527d6c7622d8df61721200858ab0e1eb2d538fb3e4742e19e1a7ab3ff3692c77
+        sha256: 527d6c7622d8df61721200858ab0e1eb2d538fb3e4742e19e1a7ab3ff3692c77
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.imcce.fr/content/medias/recherche/equipes/asd/calceph/calceph-4.0.5.tar.gz
+    sha256: 3460d8a3e10a86e7fe0228d5d9abcda589713b8ed3ee007ce061ae01f8c2e1ea
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

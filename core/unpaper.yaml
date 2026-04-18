@@ -3,30 +3,55 @@ version: 7.0.0
 description: Post-processing for scanned/photocopied books
 homepage: https://www.flameeyes.com/projects/unpaper
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unpaper/blobs/sha256:320c0664be9f441fb7a5f6bc021d37530845fa4ea4da99d3d8d401db90b2681d
-    sha256: 320c0664be9f441fb7a5f6bc021d37530845fa4ea4da99d3d8d401db90b2681d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unpaper/blobs/sha256:6777c3ff2dd38462fa6977af915316a930a157356ce0b9dd95a2fe99c80b54d2
-    sha256: 6777c3ff2dd38462fa6977af915316a930a157356ce0b9dd95a2fe99c80b54d2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unpaper/blobs/sha256:4ee017ffb7c00c3573b669f7b87f17bca1faceb37ae72f43496d612c36700cc7
-    sha256: 4ee017ffb7c00c3573b669f7b87f17bca1faceb37ae72f43496d612c36700cc7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unpaper/blobs/sha256:dd466760c8a54553861474272a465e1a4460d48bd8dc6a0dd885e5cf39a06a63
-    sha256: dd466760c8a54553861474272a465e1a4460d48bd8dc6a0dd885e5cf39a06a63
-source:
-  url: https://www.flameeyes.com/files/unpaper-7.0.0.tar.xz
-  sha256: 2575fbbf26c22719d1cb882b59602c9900c7f747118ac130883f63419be46a80
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
+    - ffmpeg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unpaper/blobs/sha256:6777c3ff2dd38462fa6977af915316a930a157356ce0b9dd95a2fe99c80b54d2
+        sha256: 6777c3ff2dd38462fa6977af915316a930a157356ce0b9dd95a2fe99c80b54d2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unpaper/blobs/sha256:320c0664be9f441fb7a5f6bc021d37530845fa4ea4da99d3d8d401db90b2681d
+        sha256: 320c0664be9f441fb7a5f6bc021d37530845fa4ea4da99d3d8d401db90b2681d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unpaper/blobs/sha256:4ee017ffb7c00c3573b669f7b87f17bca1faceb37ae72f43496d612c36700cc7
+        sha256: 4ee017ffb7c00c3573b669f7b87f17bca1faceb37ae72f43496d612c36700cc7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unpaper/blobs/sha256:dd466760c8a54553861474272a465e1a4460d48bd8dc6a0dd885e5cf39a06a63
+        sha256: dd466760c8a54553861474272a465e1a4460d48bd8dc6a0dd885e5cf39a06a63
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.flameeyes.com/files/unpaper-7.0.0.tar.xz
+    sha256: 2575fbbf26c22719d1cb882b59602c9900c7f747118ac130883f63419be46a80
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
-  - sphinx-doc
+    - meson
+    - ninja
+    - pkgconf
+    - sphinx-doc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

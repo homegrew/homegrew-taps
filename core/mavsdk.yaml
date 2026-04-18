@@ -3,50 +3,74 @@ version: 3.17.1
 description: API and library for MAVLink compatible systems written in C++17
 homepage: https://mavsdk.mavlink.io/main/en/index.html
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mavsdk/blobs/sha256:ca46c9d4ca3506efa7e96bb2514625d6cfbda642db55ac7a8d2b321768501fd6
-    sha256: ca46c9d4ca3506efa7e96bb2514625d6cfbda642db55ac7a8d2b321768501fd6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mavsdk/blobs/sha256:7e3728ae7326fcb335d8ec7a5fc9a86b8b12a504eda767faa972256190a36edb
-    sha256: 7e3728ae7326fcb335d8ec7a5fc9a86b8b12a504eda767faa972256190a36edb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mavsdk/blobs/sha256:821bb8ea37c346b7aaa573cefa8b88f305479e2865a1ae3d7a0ebd4b718b5491
-    sha256: 821bb8ea37c346b7aaa573cefa8b88f305479e2865a1ae3d7a0ebd4b718b5491
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mavsdk/blobs/sha256:15d7602da7b2d0dcc2f8cdb27adcd85315196903cf25c35644485fb8aa58d864
-    sha256: 15d7602da7b2d0dcc2f8cdb27adcd85315196903cf25c35644485fb8aa58d864
-source:
-  url: https://github.com/mavlink/MAVSDK.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - c-ares
-  - curl
-  - grpc
-  - jsoncpp
-  - openssl@3
-  - protobuf
-  - re2
-  - tinyxml2
-  - xz
+    - abseil
+    - c-ares
+    - curl
+    - grpc
+    - jsoncpp
+    - openssl@3
+    - protobuf
+    - re2
+    - tinyxml2
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mavsdk/blobs/sha256:7e3728ae7326fcb335d8ec7a5fc9a86b8b12a504eda767faa972256190a36edb
+        sha256: 7e3728ae7326fcb335d8ec7a5fc9a86b8b12a504eda767faa972256190a36edb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mavsdk/blobs/sha256:ca46c9d4ca3506efa7e96bb2514625d6cfbda642db55ac7a8d2b321768501fd6
+        sha256: ca46c9d4ca3506efa7e96bb2514625d6cfbda642db55ac7a8d2b321768501fd6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mavsdk/blobs/sha256:821bb8ea37c346b7aaa573cefa8b88f305479e2865a1ae3d7a0ebd4b718b5491
+        sha256: 821bb8ea37c346b7aaa573cefa8b88f305479e2865a1ae3d7a0ebd4b718b5491
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mavsdk/blobs/sha256:15d7602da7b2d0dcc2f8cdb27adcd85315196903cf25c35644485fb8aa58d864
+        sha256: 15d7602da7b2d0dcc2f8cdb27adcd85315196903cf25c35644485fb8aa58d864
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mavlink/MAVSDK.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - python@3.14
-  - rust
+    - cmake
+    - python@3.14
+    - rust
 linux_dependencies:
-  - abseil
-  - c-ares
-  - curl
-  - grpc
-  - jsoncpp
-  - openssl@3
-  - protobuf
-  - re2
-  - tinyxml2
-  - xz
-  - zlib-ng-compat
+    - abseil
+    - c-ares
+    - curl
+    - grpc
+    - jsoncpp
+    - openssl@3
+    - protobuf
+    - re2
+    - tinyxml2
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

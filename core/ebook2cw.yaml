@@ -3,32 +3,57 @@ version: 0.8.5
 description: Converts ebooks to morse code
 homepage: https://fkurz.net/ham/ebook2cw.html
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ebook2cw/blobs/sha256:cd48218169f8f598c5bbba765d4f632fd51eb0472e2416856008b0dd79c1c83f
-    sha256: cd48218169f8f598c5bbba765d4f632fd51eb0472e2416856008b0dd79c1c83f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ebook2cw/blobs/sha256:b2e633fc299f13bcfb391665dc4d2693a5a7bbc9dbbb304c14772c22460bb5a5
-    sha256: b2e633fc299f13bcfb391665dc4d2693a5a7bbc9dbbb304c14772c22460bb5a5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ebook2cw/blobs/sha256:269994f635db4fc4570e9d0684051e883bbfba824be06bd8bf420ed8189fdf2b
-    sha256: 269994f635db4fc4570e9d0684051e883bbfba824be06bd8bf420ed8189fdf2b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ebook2cw/blobs/sha256:65bb32893afbbf13664b9cad4885392d89f3129483d274d46b0f690b492c2706
-    sha256: 65bb32893afbbf13664b9cad4885392d89f3129483d274d46b0f690b492c2706
-source:
-  url: https://fkurz.net/ham/ebook2cw/ebook2cw-0.8.5.tar.gz
-  sha256: 571f734f12123b4affbad90b55dd4c9630b254afe343fa621fc5114b9bd25fc3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lame
-  - libogg
-  - libvorbis
-  - gettext
+    - lame
+    - libogg
+    - libvorbis
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ebook2cw/blobs/sha256:b2e633fc299f13bcfb391665dc4d2693a5a7bbc9dbbb304c14772c22460bb5a5
+        sha256: b2e633fc299f13bcfb391665dc4d2693a5a7bbc9dbbb304c14772c22460bb5a5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ebook2cw/blobs/sha256:cd48218169f8f598c5bbba765d4f632fd51eb0472e2416856008b0dd79c1c83f
+        sha256: cd48218169f8f598c5bbba765d4f632fd51eb0472e2416856008b0dd79c1c83f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ebook2cw/blobs/sha256:269994f635db4fc4570e9d0684051e883bbfba824be06bd8bf420ed8189fdf2b
+        sha256: 269994f635db4fc4570e9d0684051e883bbfba824be06bd8bf420ed8189fdf2b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ebook2cw/blobs/sha256:65bb32893afbbf13664b9cad4885392d89f3129483d274d46b0f690b492c2706
+        sha256: 65bb32893afbbf13664b9cad4885392d89f3129483d274d46b0f690b492c2706
+        sha512: ""
+        signature: ""
+source:
+    url: https://fkurz.net/ham/ebook2cw/ebook2cw-0.8.5.tar.gz
+    sha256: 571f734f12123b4affbad90b55dd4c9630b254afe343fa621fc5114b9bd25fc3
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - lame
-  - libogg
-  - libvorbis
+    - lame
+    - libogg
+    - libvorbis
+build:
+    configure: []
+    install: []
+service: null

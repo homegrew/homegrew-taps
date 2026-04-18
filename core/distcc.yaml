@@ -1,29 +1,54 @@
 name: distcc
-version: 3.4
+version: "3.4"
 description: Distributed compiler client and server
 homepage: https://github.com/distcc/distcc/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/distcc/blobs/sha256:09fcd33f368d1daff6716752ee32cf50cbb62f7acb0200a0a07bd676d65cd3f2
-    sha256: 09fcd33f368d1daff6716752ee32cf50cbb62f7acb0200a0a07bd676d65cd3f2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/distcc/blobs/sha256:ab7cc55d6cfae2c77316093229ae3668f7e34d2d80713e4eec5f2c41f69983d2
-    sha256: ab7cc55d6cfae2c77316093229ae3668f7e34d2d80713e4eec5f2c41f69983d2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/distcc/blobs/sha256:d04aa534933e21b7e469f009c76e5bde6e50ecadecbab3d6de4f134db8f7eef2
-    sha256: d04aa534933e21b7e469f009c76e5bde6e50ecadecbab3d6de4f134db8f7eef2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/distcc/blobs/sha256:42071ee608cbbcfcc761fe4a9b18ed90499115dab3108c03ff72a27825a2beef
-    sha256: 42071ee608cbbcfcc761fe4a9b18ed90499115dab3108c03ff72a27825a2beef
-source:
-  url: https://github.com/distcc/distcc/releases/download/v3.4/distcc-3.4.tar.gz
-  sha256: 2b99edda9dad9dbf283933a02eace6de7423fe5650daa4a728c950e5cd37bd7d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/distcc/blobs/sha256:ab7cc55d6cfae2c77316093229ae3668f7e34d2d80713e4eec5f2c41f69983d2
+        sha256: ab7cc55d6cfae2c77316093229ae3668f7e34d2d80713e4eec5f2c41f69983d2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/distcc/blobs/sha256:09fcd33f368d1daff6716752ee32cf50cbb62f7acb0200a0a07bd676d65cd3f2
+        sha256: 09fcd33f368d1daff6716752ee32cf50cbb62f7acb0200a0a07bd676d65cd3f2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/distcc/blobs/sha256:d04aa534933e21b7e469f009c76e5bde6e50ecadecbab3d6de4f134db8f7eef2
+        sha256: d04aa534933e21b7e469f009c76e5bde6e50ecadecbab3d6de4f134db8f7eef2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/distcc/blobs/sha256:42071ee608cbbcfcc761fe4a9b18ed90499115dab3108c03ff72a27825a2beef
+        sha256: 42071ee608cbbcfcc761fe4a9b18ed90499115dab3108c03ff72a27825a2beef
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/distcc/distcc/releases/download/v3.4/distcc-3.4.tar.gz
+    sha256: 2b99edda9dad9dbf283933a02eace6de7423fe5650daa4a728c950e5cd37bd7d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - python-setuptools
+    - python-setuptools
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

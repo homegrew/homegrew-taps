@@ -3,29 +3,54 @@ version: 1.25.1
 description: Lightweight connection pooler for PostgreSQL
 homepage: https://www.pgbouncer.org/
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:f5a3fc3c60b6965b84c3726d7a2ba38abc650ccbe07a57c96de83d9b6fd330d1
-    sha256: f5a3fc3c60b6965b84c3726d7a2ba38abc650ccbe07a57c96de83d9b6fd330d1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:ca92fc4e84e84654b20e3696eedf19fc5ef394cae7ce74ffe111a43317eb90e7
-    sha256: ca92fc4e84e84654b20e3696eedf19fc5ef394cae7ce74ffe111a43317eb90e7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:8f8526ad5bf46f76b9b8821dd240a512452a1502020dee3ad3d0c1a7c5f99e11
-    sha256: 8f8526ad5bf46f76b9b8821dd240a512452a1502020dee3ad3d0c1a7c5f99e11
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:5a4786998a1c81f0a7f5080626e4133800cc8f013431e9c3e350040c15db6f87
-    sha256: 5a4786998a1c81f0a7f5080626e4133800cc8f013431e9c3e350040c15db6f87
-source:
-  url: https://www.pgbouncer.org/downloads/files/1.25.1/pgbouncer-1.25.1.tar.gz
-  sha256: 6e566ae92fe3ef7f6a1b9e26d6049f7d7ca39c40e29e7b38f6d5500ae15d8465
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libevent
-  - openssl@3
+    - libevent
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:ca92fc4e84e84654b20e3696eedf19fc5ef394cae7ce74ffe111a43317eb90e7
+        sha256: ca92fc4e84e84654b20e3696eedf19fc5ef394cae7ce74ffe111a43317eb90e7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:f5a3fc3c60b6965b84c3726d7a2ba38abc650ccbe07a57c96de83d9b6fd330d1
+        sha256: f5a3fc3c60b6965b84c3726d7a2ba38abc650ccbe07a57c96de83d9b6fd330d1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:8f8526ad5bf46f76b9b8821dd240a512452a1502020dee3ad3d0c1a7c5f99e11
+        sha256: 8f8526ad5bf46f76b9b8821dd240a512452a1502020dee3ad3d0c1a7c5f99e11
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:5a4786998a1c81f0a7f5080626e4133800cc8f013431e9c3e350040c15db6f87
+        sha256: 5a4786998a1c81f0a7f5080626e4133800cc8f013431e9c3e350040c15db6f87
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.pgbouncer.org/downloads/files/1.25.1/pgbouncer-1.25.1.tar.gz
+    sha256: 6e566ae92fe3ef7f6a1b9e26d6049f7d7ca39c40e29e7b38f6d5500ae15d8465
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pandoc
-  - pkgconf
+    - pandoc
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

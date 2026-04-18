@@ -1,31 +1,56 @@
 name: minimodem
-version: 0.24
+version: "0.24"
 description: General-purpose software audio FSK modem
 homepage: http://www.whence.com/minimodem/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/minimodem/blobs/sha256:733a179f707e522c3b44c603a5fddfc616d22a4c94dc0a721f76f000c3499a66
-    sha256: 733a179f707e522c3b44c603a5fddfc616d22a4c94dc0a721f76f000c3499a66
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/minimodem/blobs/sha256:ae1f9e5a3adda8bd22e705739a3dd2f76fc1eb2aeb7accf21e0fdfad5164a378
-    sha256: ae1f9e5a3adda8bd22e705739a3dd2f76fc1eb2aeb7accf21e0fdfad5164a378
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/minimodem/blobs/sha256:e160d02015fdfd48ef348ef8f73bb6040e2a66ff9047cf1bc7f720ad94c173a7
-    sha256: e160d02015fdfd48ef348ef8f73bb6040e2a66ff9047cf1bc7f720ad94c173a7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/minimodem/blobs/sha256:fcc897c306d8db37b369010254a87762845eefd5aad185938639b0728250af53
-    sha256: fcc897c306d8db37b369010254a87762845eefd5aad185938639b0728250af53
-source:
-  url: https://deb.debian.org/debian/pool/main/m/minimodem/minimodem_0.24.orig.tar.gz
-  sha256: f8cca4db8e3f284d67f843054d6bb4d88a3db5e77b26192410e41e9a06f4378e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fftw
-  - libsndfile
-  - pulseaudio
+    - fftw
+    - libsndfile
+    - pulseaudio
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/minimodem/blobs/sha256:ae1f9e5a3adda8bd22e705739a3dd2f76fc1eb2aeb7accf21e0fdfad5164a378
+        sha256: ae1f9e5a3adda8bd22e705739a3dd2f76fc1eb2aeb7accf21e0fdfad5164a378
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/minimodem/blobs/sha256:733a179f707e522c3b44c603a5fddfc616d22a4c94dc0a721f76f000c3499a66
+        sha256: 733a179f707e522c3b44c603a5fddfc616d22a4c94dc0a721f76f000c3499a66
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/minimodem/blobs/sha256:e160d02015fdfd48ef348ef8f73bb6040e2a66ff9047cf1bc7f720ad94c173a7
+        sha256: e160d02015fdfd48ef348ef8f73bb6040e2a66ff9047cf1bc7f720ad94c173a7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/minimodem/blobs/sha256:fcc897c306d8db37b369010254a87762845eefd5aad185938639b0728250af53
+        sha256: fcc897c306d8db37b369010254a87762845eefd5aad185938639b0728250af53
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/m/minimodem/minimodem_0.24.orig.tar.gz
+    sha256: f8cca4db8e3f284d67f843054d6bb4d88a3db5e77b26192410e41e9a06f4378e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,24 +1,45 @@
 name: libselinux
-version: 3.10
+version: "3.10"
 description: SELinux library and simple utilities
 homepage: https://github.com/SELinuxProject/selinux
 license: LicenseRef-Homebrew-public-domain
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libselinux/blobs/sha256:c169a95f3fd4e549145c18114f4c0c4f3c9c51886d41b4ae66b6041cf486a156
-    sha256: c169a95f3fd4e549145c18114f4c0c4f3c9c51886d41b4ae66b6041cf486a156
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libselinux/blobs/sha256:7c6593d704ae69111347086fc1737b3b951bcf6d262356c76e7867a5a1be5e2f
-    sha256: 7c6593d704ae69111347086fc1737b3b951bcf6d262356c76e7867a5a1be5e2f
-source:
-  url: https://github.com/SELinuxProject/selinux/releases/download/3.10/libselinux-3.10.tar.gz
-  sha256: 1ef216c5b56fb7e0a51cd2909787a175a17ee391e0467894807873539ebe766b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libsepol
-  - pcre2
+    - libsepol
+    - pcre2
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libselinux/blobs/sha256:c169a95f3fd4e549145c18114f4c0c4f3c9c51886d41b4ae66b6041cf486a156
+        sha256: c169a95f3fd4e549145c18114f4c0c4f3c9c51886d41b4ae66b6041cf486a156
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libselinux/blobs/sha256:7c6593d704ae69111347086fc1737b3b951bcf6d262356c76e7867a5a1be5e2f
+        sha256: 7c6593d704ae69111347086fc1737b3b951bcf6d262356c76e7867a5a1be5e2f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/SELinuxProject/selinux/releases/download/3.10/libselinux-3.10.tar.gz
+    sha256: 1ef216c5b56fb7e0a51cd2909787a175a17ee391e0467894807873539ebe766b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

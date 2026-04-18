@@ -3,26 +3,52 @@ version: 3.14.4
 description: Python interface to Tcl/Tk
 homepage: https://www.python.org/
 license: Python-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/python-tk/3.14/blobs/sha256:4d4a5c6b6f9706d0af9ed335d83af0c48779689c173f33c7845f125e5fc8fc6c
-    sha256: 4d4a5c6b6f9706d0af9ed335d83af0c48779689c173f33c7845f125e5fc8fc6c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/python-tk/3.14/blobs/sha256:6cd825bd2a9d84c7f58e06062dcd3f43007bc24d1cf3695dc5d1a340094bfa2f
-    sha256: 6cd825bd2a9d84c7f58e06062dcd3f43007bc24d1cf3695dc5d1a340094bfa2f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/python-tk/3.14/blobs/sha256:93ba17b7df890864548a602b2820dd7a695dbe0647cc0e75e21953db1850b6eb
-    sha256: 93ba17b7df890864548a602b2820dd7a695dbe0647cc0e75e21953db1850b6eb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/python-tk/3.14/blobs/sha256:1bc075f82122de7d70319d2b2cc8cbf5a67f7758f63e68ae5919908986b1126c
-    sha256: 1bc075f82122de7d70319d2b2cc8cbf5a67f7758f63e68ae5919908986b1126c
-source:
-  url: https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz
-  sha256: b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
-  - tcl-tk
+    - python@3.14
+    - tcl-tk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/python-tk/3.14/blobs/sha256:6cd825bd2a9d84c7f58e06062dcd3f43007bc24d1cf3695dc5d1a340094bfa2f
+        sha256: 6cd825bd2a9d84c7f58e06062dcd3f43007bc24d1cf3695dc5d1a340094bfa2f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/python-tk/3.14/blobs/sha256:4d4a5c6b6f9706d0af9ed335d83af0c48779689c173f33c7845f125e5fc8fc6c
+        sha256: 4d4a5c6b6f9706d0af9ed335d83af0c48779689c173f33c7845f125e5fc8fc6c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/python-tk/3.14/blobs/sha256:93ba17b7df890864548a602b2820dd7a695dbe0647cc0e75e21953db1850b6eb
+        sha256: 93ba17b7df890864548a602b2820dd7a695dbe0647cc0e75e21953db1850b6eb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/python-tk/3.14/blobs/sha256:1bc075f82122de7d70319d2b2cc8cbf5a67f7758f63e68ae5919908986b1126c
+        sha256: 1bc075f82122de7d70319d2b2cc8cbf5a67f7758f63e68ae5919908986b1126c
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz
+    sha256: b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

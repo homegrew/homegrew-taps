@@ -1,28 +1,54 @@
 name: notmuch-mutt
-version: 0.40
+version: "0.40"
 description: Notmuch integration for Mutt
 homepage: https://notmuchmail.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/notmuch-mutt/blobs/sha256:416cbe715372f285c5aefc891c5e262bb8013d7edfd453030d94a24a686c31b6
-    sha256: 416cbe715372f285c5aefc891c5e262bb8013d7edfd453030d94a24a686c31b6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/notmuch-mutt/blobs/sha256:cafa1e87b69bfc80ecb950fad01dedbebd44b9e2f6986d1838667509e6446ed2
-    sha256: cafa1e87b69bfc80ecb950fad01dedbebd44b9e2f6986d1838667509e6446ed2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/notmuch-mutt/blobs/sha256:2e0c078f57da841c53e682927afc5603b81be7099c03676de0c08c18c9f844b4
-    sha256: 2e0c078f57da841c53e682927afc5603b81be7099c03676de0c08c18c9f844b4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/notmuch-mutt/blobs/sha256:4c011d1c128f855ca6ef81f325e31f499cfd821c8e3deb4701ec1e34630cd0c6
-    sha256: 4c011d1c128f855ca6ef81f325e31f499cfd821c8e3deb4701ec1e34630cd0c6
-source:
-  url: https://notmuchmail.org/releases/notmuch-0.40.tar.xz
-  sha256: 4b4314bbf1c2029fdf793637e6c7bb15c1b1730d22be9aa04803c98c5bbc446f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - notmuch
-  - readline
+    - notmuch
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/notmuch-mutt/blobs/sha256:cafa1e87b69bfc80ecb950fad01dedbebd44b9e2f6986d1838667509e6446ed2
+        sha256: cafa1e87b69bfc80ecb950fad01dedbebd44b9e2f6986d1838667509e6446ed2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/notmuch-mutt/blobs/sha256:416cbe715372f285c5aefc891c5e262bb8013d7edfd453030d94a24a686c31b6
+        sha256: 416cbe715372f285c5aefc891c5e262bb8013d7edfd453030d94a24a686c31b6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/notmuch-mutt/blobs/sha256:2e0c078f57da841c53e682927afc5603b81be7099c03676de0c08c18c9f844b4
+        sha256: 2e0c078f57da841c53e682927afc5603b81be7099c03676de0c08c18c9f844b4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/notmuch-mutt/blobs/sha256:4c011d1c128f855ca6ef81f325e31f499cfd821c8e3deb4701ec1e34630cd0c6
+        sha256: 4c011d1c128f855ca6ef81f325e31f499cfd821c8e3deb4701ec1e34630cd0c6
+        sha512: ""
+        signature: ""
+source:
+    url: https://notmuchmail.org/releases/notmuch-0.40.tar.xz
+    sha256: 4b4314bbf1c2029fdf793637e6c7bb15c1b1730d22be9aa04803c98c5bbc446f
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,51 +3,75 @@ version: 3.18.0
 description: C++ bindings for gtksourceview3
 homepage: https://gitlab.gnome.org/GNOME/gtksourceviewmm
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtksourceviewmm3/blobs/sha256:9b6d8f50cc16f92feecf432734adc4837246ba8f3fdb933b126393f6137dadc1
-    sha256: 9b6d8f50cc16f92feecf432734adc4837246ba8f3fdb933b126393f6137dadc1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtksourceviewmm3/blobs/sha256:6d967d0889a430e64312a18afbae33554340938c8fae2a90ddd652cd2beb86cd
-    sha256: 6d967d0889a430e64312a18afbae33554340938c8fae2a90ddd652cd2beb86cd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtksourceviewmm3/blobs/sha256:b6489e67344895dad8ef93a694a47c49fec20dc0735989355b11489cd85fbccd
-    sha256: b6489e67344895dad8ef93a694a47c49fec20dc0735989355b11489cd85fbccd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtksourceviewmm3/blobs/sha256:b71c353cdef6b20cb4b871ad1ec98712271fe7f123d793917ca5738cbe0ce099
-    sha256: b71c353cdef6b20cb4b871ad1ec98712271fe7f123d793917ca5738cbe0ce099
-source:
-  url: https://download.gnome.org/sources/gtksourceviewmm/3.18/gtksourceviewmm-3.18.0.tar.xz
-  sha256: 51081ae3d37975dae33d3f6a40621d85cb68f4b36ae3835eec1513482aacfb39
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - atkmm@2.28
-  - cairomm@1.14
-  - glib
-  - glibmm@2.66
-  - gtk+3
-  - gtkmm3
-  - gtksourceview3
-  - libsigc++@2
-  - pangomm@2.46
-  - at-spi2-core
-  - cairo
-  - gdk-pixbuf
-  - gettext
-  - harfbuzz
-  - pango
+    - atkmm@2.28
+    - cairomm@1.14
+    - glib
+    - glibmm@2.66
+    - gtk+3
+    - gtkmm3
+    - gtksourceview3
+    - libsigc++@2
+    - pangomm@2.46
+    - at-spi2-core
+    - cairo
+    - gdk-pixbuf
+    - gettext
+    - harfbuzz
+    - pango
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtksourceviewmm3/blobs/sha256:6d967d0889a430e64312a18afbae33554340938c8fae2a90ddd652cd2beb86cd
+        sha256: 6d967d0889a430e64312a18afbae33554340938c8fae2a90ddd652cd2beb86cd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtksourceviewmm3/blobs/sha256:9b6d8f50cc16f92feecf432734adc4837246ba8f3fdb933b126393f6137dadc1
+        sha256: 9b6d8f50cc16f92feecf432734adc4837246ba8f3fdb933b126393f6137dadc1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtksourceviewmm3/blobs/sha256:b6489e67344895dad8ef93a694a47c49fec20dc0735989355b11489cd85fbccd
+        sha256: b6489e67344895dad8ef93a694a47c49fec20dc0735989355b11489cd85fbccd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtksourceviewmm3/blobs/sha256:b71c353cdef6b20cb4b871ad1ec98712271fe7f123d793917ca5738cbe0ce099
+        sha256: b71c353cdef6b20cb4b871ad1ec98712271fe7f123d793917ca5738cbe0ce099
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gtksourceviewmm/3.18/gtksourceviewmm-3.18.0.tar.xz
+    sha256: 51081ae3d37975dae33d3f6a40621d85cb68f4b36ae3835eec1513482aacfb39
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - atkmm@2.28
-  - cairomm@1.14
-  - glib
-  - glibmm@2.66
-  - gtk+3
-  - gtkmm3
-  - gtksourceview3
-  - libsigc++@2
-  - pangomm@2.46
+    - atkmm@2.28
+    - cairomm@1.14
+    - glib
+    - glibmm@2.66
+    - gtk+3
+    - gtkmm3
+    - gtksourceview3
+    - libsigc++@2
+    - pangomm@2.46
+build:
+    configure: []
+    install: []
+service: null

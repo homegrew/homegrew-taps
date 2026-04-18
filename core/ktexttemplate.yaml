@@ -3,30 +3,55 @@ version: 6.25.0
 description: Libraries for text templating with Qt
 homepage: https://api.kde.org/ktexttemplate-index.html
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ktexttemplate/blobs/sha256:6efbf1f81e8e0a0a8938c51292a4c95cbf15dd1a5d7aac58a361d57fa8bd52ec
-    sha256: 6efbf1f81e8e0a0a8938c51292a4c95cbf15dd1a5d7aac58a361d57fa8bd52ec
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ktexttemplate/blobs/sha256:f1044aca4d19ec346702e4a741d29268610ad634c7737b1d8c8a3ef926d98102
-    sha256: f1044aca4d19ec346702e4a741d29268610ad634c7737b1d8c8a3ef926d98102
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ktexttemplate/blobs/sha256:032659ae303fd6414c02615ed641279ff187d47e89b03595ee857ca7733aed35
-    sha256: 032659ae303fd6414c02615ed641279ff187d47e89b03595ee857ca7733aed35
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ktexttemplate/blobs/sha256:0788b090069787d80c5bde1f7a0ae6f967ce4f2131e69193467b53a3053d7f6c
-    sha256: 0788b090069787d80c5bde1f7a0ae6f967ce4f2131e69193467b53a3053d7f6c
-source:
-  url: https://download.kde.org/stable/frameworks/6.25/ktexttemplate-6.25.0.tar.xz
-  sha256: 4e9f7583b3dcb37980b99fb2ac2de9e95af8b14fe9a166752bcb83c66ce26e25
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
-  - qtdeclarative
+    - qtbase
+    - qtdeclarative
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ktexttemplate/blobs/sha256:f1044aca4d19ec346702e4a741d29268610ad634c7737b1d8c8a3ef926d98102
+        sha256: f1044aca4d19ec346702e4a741d29268610ad634c7737b1d8c8a3ef926d98102
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ktexttemplate/blobs/sha256:6efbf1f81e8e0a0a8938c51292a4c95cbf15dd1a5d7aac58a361d57fa8bd52ec
+        sha256: 6efbf1f81e8e0a0a8938c51292a4c95cbf15dd1a5d7aac58a361d57fa8bd52ec
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ktexttemplate/blobs/sha256:032659ae303fd6414c02615ed641279ff187d47e89b03595ee857ca7733aed35
+        sha256: 032659ae303fd6414c02615ed641279ff187d47e89b03595ee857ca7733aed35
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ktexttemplate/blobs/sha256:0788b090069787d80c5bde1f7a0ae6f967ce4f2131e69193467b53a3053d7f6c
+        sha256: 0788b090069787d80c5bde1f7a0ae6f967ce4f2131e69193467b53a3053d7f6c
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.kde.org/stable/frameworks/6.25/ktexttemplate-6.25.0.tar.xz
+    sha256: 4e9f7583b3dcb37980b99fb2ac2de9e95af8b14fe9a166752bcb83c66ce26e25
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - extra-cmake-modules
-  - qttools
+    - cmake
+    - extra-cmake-modules
+    - qttools
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,35 +3,59 @@ version: 2.10.3
 description: Library to deal with pinyin
 homepage: https://github.com/libpinyin/libpinyin
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpinyin/blobs/sha256:de407b23ef3deebd69bdda4160591705884a7b45fcf63518867f7218534dce74
-    sha256: de407b23ef3deebd69bdda4160591705884a7b45fcf63518867f7218534dce74
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpinyin/blobs/sha256:c152806d01f00326521a8da08f1e4509d0b19a449e10f2dca16bbe2e08340164
-    sha256: c152806d01f00326521a8da08f1e4509d0b19a449e10f2dca16bbe2e08340164
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpinyin/blobs/sha256:e4bf5113220b57a9691995f825b0171c9bba1c63fd0aee0e9c6eb9c2f8023c44
-    sha256: e4bf5113220b57a9691995f825b0171c9bba1c63fd0aee0e9c6eb9c2f8023c44
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpinyin/blobs/sha256:9a06f3065cfd258fa3e25994e1067d57b2ee59f999f3441ad8b00174b198bf5d
-    sha256: 9a06f3065cfd258fa3e25994e1067d57b2ee59f999f3441ad8b00174b198bf5d
-source:
-  url: https://github.com/libpinyin/libpinyin/archive/refs/tags/2.10.3.tar.gz
-  sha256: a49286721fb2b0234d86c095db9226246b0aa4a0bb6a885d0902da2743c56476
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - berkeley-db
-  - gettext
+    - glib
+    - berkeley-db
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpinyin/blobs/sha256:c152806d01f00326521a8da08f1e4509d0b19a449e10f2dca16bbe2e08340164
+        sha256: c152806d01f00326521a8da08f1e4509d0b19a449e10f2dca16bbe2e08340164
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpinyin/blobs/sha256:de407b23ef3deebd69bdda4160591705884a7b45fcf63518867f7218534dce74
+        sha256: de407b23ef3deebd69bdda4160591705884a7b45fcf63518867f7218534dce74
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpinyin/blobs/sha256:e4bf5113220b57a9691995f825b0171c9bba1c63fd0aee0e9c6eb9c2f8023c44
+        sha256: e4bf5113220b57a9691995f825b0171c9bba1c63fd0aee0e9c6eb9c2f8023c44
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpinyin/blobs/sha256:9a06f3065cfd258fa3e25994e1067d57b2ee59f999f3441ad8b00174b198bf5d
+        sha256: 9a06f3065cfd258fa3e25994e1067d57b2ee59f999f3441ad8b00174b198bf5d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libpinyin/libpinyin/archive/refs/tags/2.10.3.tar.gz
+    sha256: a49286721fb2b0234d86c095db9226246b0aa4a0bb6a885d0902da2743c56476
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - berkeley-db@5
-  - glib
+    - berkeley-db@5
+    - glib
+build:
+    configure: []
+    install: []
+service: null

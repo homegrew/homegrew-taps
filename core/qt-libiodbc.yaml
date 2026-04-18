@@ -3,29 +3,54 @@ version: 6.11.0
 description: Qt SQL Database Driver
 homepage: https://www.qt.io/
 license: GPL-2.0-only OR GPL-3.0-only OR LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt-libiodbc/blobs/sha256:efd29bcdc8425dc15657f0b4aee4a47784a07f6d9dc800ecd5c8fb70f0a84f43
-    sha256: efd29bcdc8425dc15657f0b4aee4a47784a07f6d9dc800ecd5c8fb70f0a84f43
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt-libiodbc/blobs/sha256:03374a8927a1120d00b3b7624906470c0f18438bdd966bb040bb3eca50ac4821
-    sha256: 03374a8927a1120d00b3b7624906470c0f18438bdd966bb040bb3eca50ac4821
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt-libiodbc/blobs/sha256:f50a480f110542fabddb90d97e0c15b85cd08544ef462aa67fbbba52330c3834
-    sha256: f50a480f110542fabddb90d97e0c15b85cd08544ef462aa67fbbba52330c3834
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt-libiodbc/blobs/sha256:6b702ccd0a283b4d34b645fac70bd532db1fdc059d7f5d3d9a52de2554a08346
-    sha256: 6b702ccd0a283b4d34b645fac70bd532db1fdc059d7f5d3d9a52de2554a08346
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
-  sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libiodbc
-  - qtbase
+    - libiodbc
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt-libiodbc/blobs/sha256:03374a8927a1120d00b3b7624906470c0f18438bdd966bb040bb3eca50ac4821
+        sha256: 03374a8927a1120d00b3b7624906470c0f18438bdd966bb040bb3eca50ac4821
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt-libiodbc/blobs/sha256:efd29bcdc8425dc15657f0b4aee4a47784a07f6d9dc800ecd5c8fb70f0a84f43
+        sha256: efd29bcdc8425dc15657f0b4aee4a47784a07f6d9dc800ecd5c8fb70f0a84f43
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt-libiodbc/blobs/sha256:f50a480f110542fabddb90d97e0c15b85cd08544ef462aa67fbbba52330c3834
+        sha256: f50a480f110542fabddb90d97e0c15b85cd08544ef462aa67fbbba52330c3834
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt-libiodbc/blobs/sha256:6b702ccd0a283b4d34b645fac70bd532db1fdc059d7f5d3d9a52de2554a08346
+        sha256: 6b702ccd0a283b4d34b645fac70bd532db1fdc059d7f5d3d9a52de2554a08346
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
+    sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

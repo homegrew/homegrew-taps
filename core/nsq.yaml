@@ -3,25 +3,51 @@ version: 1.3.0
 description: Realtime distributed messaging platform
 homepage: https://nsq.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:5a22f058697307ea3179db86098d939c2a0bab28729af92fc2237fa9ec46b843
-    sha256: 5a22f058697307ea3179db86098d939c2a0bab28729af92fc2237fa9ec46b843
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:353cac603cccbd9e62920f680f8328b17cc02baa391a3665b03345bc90edb1e5
-    sha256: 353cac603cccbd9e62920f680f8328b17cc02baa391a3665b03345bc90edb1e5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:a5066cbc44a03c78e4604cd45f34ba5eefadc51e876f61a7af5814ccc095096d
-    sha256: a5066cbc44a03c78e4604cd45f34ba5eefadc51e876f61a7af5814ccc095096d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:c88ffbec2368aae0d432ebb3cb2b7dbe08b654bbc0d86f842a0034b9afa9a74e
-    sha256: c88ffbec2368aae0d432ebb3cb2b7dbe08b654bbc0d86f842a0034b9afa9a74e
-source:
-  url: https://github.com/nsqio/nsq/archive/refs/tags/v1.3.0.tar.gz
-  sha256: c6289e295aaa40c8d9651de76e66bc9f23e7f5c40b1cc051ea5901965093e1f0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:353cac603cccbd9e62920f680f8328b17cc02baa391a3665b03345bc90edb1e5
+        sha256: 353cac603cccbd9e62920f680f8328b17cc02baa391a3665b03345bc90edb1e5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:5a22f058697307ea3179db86098d939c2a0bab28729af92fc2237fa9ec46b843
+        sha256: 5a22f058697307ea3179db86098d939c2a0bab28729af92fc2237fa9ec46b843
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:a5066cbc44a03c78e4604cd45f34ba5eefadc51e876f61a7af5814ccc095096d
+        sha256: a5066cbc44a03c78e4604cd45f34ba5eefadc51e876f61a7af5814ccc095096d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:c88ffbec2368aae0d432ebb3cb2b7dbe08b654bbc0d86f842a0034b9afa9a74e
+        sha256: c88ffbec2368aae0d432ebb3cb2b7dbe08b654bbc0d86f842a0034b9afa9a74e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nsqio/nsq/archive/refs/tags/v1.3.0.tar.gz
+    sha256: c6289e295aaa40c8d9651de76e66bc9f23e7f5c40b1cc051ea5901965093e1f0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 1.4.2
 description: Console Bonsai is a bonsai tree generator, written in C using ncurses
 homepage: https://gitlab.com/jallbrit/cbonsai
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cbonsai/blobs/sha256:37e1bd7792b0722a35a28ac8e248d711f23ece8fc43fcfacfddcd8fa72db9f94
-    sha256: 37e1bd7792b0722a35a28ac8e248d711f23ece8fc43fcfacfddcd8fa72db9f94
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cbonsai/blobs/sha256:2ec9072aa232ecf1242b783d7db8b61023532e28e1a11789dc9f49fdd185bc9d
-    sha256: 2ec9072aa232ecf1242b783d7db8b61023532e28e1a11789dc9f49fdd185bc9d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cbonsai/blobs/sha256:3b8bee402d858d1ade576595f3e0727f3f65bfab1b9a500c7de7a08fe861c935
-    sha256: 3b8bee402d858d1ade576595f3e0727f3f65bfab1b9a500c7de7a08fe861c935
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cbonsai/blobs/sha256:5607d8b16bcd0d2f736cef0014baeef29eeec6fed5ffa98bbf017728d0d62a92
-    sha256: 5607d8b16bcd0d2f736cef0014baeef29eeec6fed5ffa98bbf017728d0d62a92
-source:
-  url: https://gitlab.com/jallbrit/cbonsai/-/archive/v1.4.2/cbonsai-v1.4.2.tar.gz
-  sha256: 75cf844940e5ef825a74f2d5b1551fe81883551b600fecd00748c6aa325f5ab0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ncurses
+    - ncurses
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cbonsai/blobs/sha256:2ec9072aa232ecf1242b783d7db8b61023532e28e1a11789dc9f49fdd185bc9d
+        sha256: 2ec9072aa232ecf1242b783d7db8b61023532e28e1a11789dc9f49fdd185bc9d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cbonsai/blobs/sha256:37e1bd7792b0722a35a28ac8e248d711f23ece8fc43fcfacfddcd8fa72db9f94
+        sha256: 37e1bd7792b0722a35a28ac8e248d711f23ece8fc43fcfacfddcd8fa72db9f94
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cbonsai/blobs/sha256:3b8bee402d858d1ade576595f3e0727f3f65bfab1b9a500c7de7a08fe861c935
+        sha256: 3b8bee402d858d1ade576595f3e0727f3f65bfab1b9a500c7de7a08fe861c935
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cbonsai/blobs/sha256:5607d8b16bcd0d2f736cef0014baeef29eeec6fed5ffa98bbf017728d0d62a92
+        sha256: 5607d8b16bcd0d2f736cef0014baeef29eeec6fed5ffa98bbf017728d0d62a92
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.com/jallbrit/cbonsai/-/archive/v1.4.2/cbonsai-v1.4.2.tar.gz
+    sha256: 75cf844940e5ef825a74f2d5b1551fe81883551b600fecd00748c6aa325f5ab0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - scdoc
+    - pkgconf
+    - scdoc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

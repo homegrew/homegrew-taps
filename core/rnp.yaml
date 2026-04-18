@@ -3,32 +3,56 @@ version: 0.18.1
 description: High performance C++ OpenPGP library used by Mozilla Thunderbird
 homepage: https://github.com/rnpgp/rnp
 license: MIT AND BSD-2-Clause AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rnp/blobs/sha256:47196b99e7ce95c4321785266f05084c18f935efcab165b7d78612c6556c6332
-    sha256: 47196b99e7ce95c4321785266f05084c18f935efcab165b7d78612c6556c6332
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rnp/blobs/sha256:dc917f41e573c19a3255a8649f24957bbd8717dcd80417ee475214da896e5505
-    sha256: dc917f41e573c19a3255a8649f24957bbd8717dcd80417ee475214da896e5505
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rnp/blobs/sha256:8bdd2d6cae58daf0287d95bbc2ef321976091e628fcfba2b9eff2356e13109a9
-    sha256: 8bdd2d6cae58daf0287d95bbc2ef321976091e628fcfba2b9eff2356e13109a9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rnp/blobs/sha256:64ebe0a2a1390be568fbe20ae76808f1853353af20cf2f63b3687c93b152a8c2
-    sha256: 64ebe0a2a1390be568fbe20ae76808f1853353af20cf2f63b3687c93b152a8c2
-source:
-  url: https://github.com/rnpgp/rnp/releases/download/v0.18.1/rnp-v0.18.1.tar.gz
-  sha256: 423c8e32e1e591462f759adf8441b1c44bca96d9f5daff13b82e81a79f18ecfd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - botan
-  - json-c
+    - botan
+    - json-c
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rnp/blobs/sha256:dc917f41e573c19a3255a8649f24957bbd8717dcd80417ee475214da896e5505
+        sha256: dc917f41e573c19a3255a8649f24957bbd8717dcd80417ee475214da896e5505
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rnp/blobs/sha256:47196b99e7ce95c4321785266f05084c18f935efcab165b7d78612c6556c6332
+        sha256: 47196b99e7ce95c4321785266f05084c18f935efcab165b7d78612c6556c6332
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rnp/blobs/sha256:8bdd2d6cae58daf0287d95bbc2ef321976091e628fcfba2b9eff2356e13109a9
+        sha256: 8bdd2d6cae58daf0287d95bbc2ef321976091e628fcfba2b9eff2356e13109a9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rnp/blobs/sha256:64ebe0a2a1390be568fbe20ae76808f1853353af20cf2f63b3687c93b152a8c2
+        sha256: 64ebe0a2a1390be568fbe20ae76808f1853353af20cf2f63b3687c93b152a8c2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rnpgp/rnp/releases/download/v0.18.1/rnp-v0.18.1.tar.gz
+    sha256: 423c8e32e1e591462f759adf8441b1c44bca96d9f5daff13b82e81a79f18ecfd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - botan
-  - json-c
-  - zlib-ng-compat
+    - botan
+    - json-c
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

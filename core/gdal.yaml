@@ -3,119 +3,143 @@ version: 3.12.3
 description: Geospatial Data Abstraction Library
 homepage: https://gdal.org/en/stable/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gdal/blobs/sha256:da4988d3972da0188f0cd25dc1bae927b094bdb0ec3a9f2fde89504eb0651ab8
-    sha256: da4988d3972da0188f0cd25dc1bae927b094bdb0ec3a9f2fde89504eb0651ab8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gdal/blobs/sha256:be7e148351b10e61d92108a861867a811b68735440966c280fda6217eb0cfc1a
-    sha256: be7e148351b10e61d92108a861867a811b68735440966c280fda6217eb0cfc1a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gdal/blobs/sha256:d4a83643944948a56f8d1ce208a421651e37eb826f663f876ec82c0b7d7f9276
-    sha256: d4a83643944948a56f8d1ce208a421651e37eb826f663f876ec82c0b7d7f9276
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gdal/blobs/sha256:119d5bf7d4dc729af9333d41a69f0977fa9e9c6e10167e2bf137b08d41dfc3c1
-    sha256: 119d5bf7d4dc729af9333d41a69f0977fa9e9c6e10167e2bf137b08d41dfc3c1
-source:
-  url: https://github.com/OSGeo/gdal/releases/download/v3.12.3/gdal-3.12.3.tar.gz
-  sha256: 1fdfe51181d08b9b83037b611da4de4a7cf1fca69e6564945ac99d3f7d0367dd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - apache-arrow
-  - c-blosc
-  - cfitsio
-  - epsilon
-  - freexl
-  - geos
-  - giflib
-  - hdf5
-  - imath
-  - jpeg-turbo
-  - jpeg-xl
-  - json-c
-  - libaec
-  - libarchive
-  - libdeflate
-  - libgeotiff
-  - libheif
-  - libkml
-  - liblerc
-  - libpng
-  - libpq
-  - libspatialite
-  - libtiff
-  - libxml2
-  - lz4
-  - netcdf
-  - numpy
-  - openexr
-  - openjpeg
-  - openssl@3
-  - pcre2
-  - poppler
-  - proj
-  - python@3.14
-  - qhull
-  - sfcgal
-  - sqlite
-  - unixodbc
-  - webp
-  - xerces-c
-  - xz
-  - zstd
-  - minizip
-  - uriparser
+    - apache-arrow
+    - c-blosc
+    - cfitsio
+    - epsilon
+    - freexl
+    - geos
+    - giflib
+    - hdf5
+    - imath
+    - jpeg-turbo
+    - jpeg-xl
+    - json-c
+    - libaec
+    - libarchive
+    - libdeflate
+    - libgeotiff
+    - libheif
+    - libkml
+    - liblerc
+    - libpng
+    - libpq
+    - libspatialite
+    - libtiff
+    - libxml2
+    - lz4
+    - netcdf
+    - numpy
+    - openexr
+    - openjpeg
+    - openssl@3
+    - pcre2
+    - poppler
+    - proj
+    - python@3.14
+    - qhull
+    - sfcgal
+    - sqlite
+    - unixodbc
+    - webp
+    - xerces-c
+    - xz
+    - zstd
+    - minizip
+    - uriparser
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gdal/blobs/sha256:be7e148351b10e61d92108a861867a811b68735440966c280fda6217eb0cfc1a
+        sha256: be7e148351b10e61d92108a861867a811b68735440966c280fda6217eb0cfc1a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gdal/blobs/sha256:da4988d3972da0188f0cd25dc1bae927b094bdb0ec3a9f2fde89504eb0651ab8
+        sha256: da4988d3972da0188f0cd25dc1bae927b094bdb0ec3a9f2fde89504eb0651ab8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gdal/blobs/sha256:d4a83643944948a56f8d1ce208a421651e37eb826f663f876ec82c0b7d7f9276
+        sha256: d4a83643944948a56f8d1ce208a421651e37eb826f663f876ec82c0b7d7f9276
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gdal/blobs/sha256:119d5bf7d4dc729af9333d41a69f0977fa9e9c6e10167e2bf137b08d41dfc3c1
+        sha256: 119d5bf7d4dc729af9333d41a69f0977fa9e9c6e10167e2bf137b08d41dfc3c1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/OSGeo/gdal/releases/download/v3.12.3/gdal-3.12.3.tar.gz
+    sha256: 1fdfe51181d08b9b83037b611da4de4a7cf1fca69e6564945ac99d3f7d0367dd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - cmake
-  - pkgconf
-  - python-setuptools
-  - swig
+    - boost
+    - cmake
+    - pkgconf
+    - python-setuptools
+    - swig
 linux_dependencies:
-  - apache-arrow
-  - c-blosc
-  - cfitsio
-  - epsilon
-  - freexl
-  - geos
-  - giflib
-  - hdf5
-  - imath
-  - jpeg-turbo
-  - jpeg-xl
-  - json-c
-  - libaec
-  - libarchive
-  - libdeflate
-  - libgeotiff
-  - libheif
-  - libkml
-  - liblerc
-  - libpng
-  - libpq
-  - libspatialite
-  - libtiff
-  - libxml2
-  - lz4
-  - netcdf
-  - numpy
-  - openexr
-  - openjpeg
-  - openssl@3
-  - pcre2
-  - poppler
-  - proj
-  - python@3.14
-  - qhull
-  - sfcgal
-  - sqlite
-  - unixodbc
-  - util-linux
-  - webp
-  - xerces-c
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - apache-arrow
+    - c-blosc
+    - cfitsio
+    - epsilon
+    - freexl
+    - geos
+    - giflib
+    - hdf5
+    - imath
+    - jpeg-turbo
+    - jpeg-xl
+    - json-c
+    - libaec
+    - libarchive
+    - libdeflate
+    - libgeotiff
+    - libheif
+    - libkml
+    - liblerc
+    - libpng
+    - libpq
+    - libspatialite
+    - libtiff
+    - libxml2
+    - lz4
+    - netcdf
+    - numpy
+    - openexr
+    - openjpeg
+    - openssl@3
+    - pcre2
+    - poppler
+    - proj
+    - python@3.14
+    - qhull
+    - sfcgal
+    - sqlite
+    - unixodbc
+    - util-linux
+    - webp
+    - xerces-c
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

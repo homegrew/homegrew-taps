@@ -3,19 +3,41 @@ version: 1030.6.3
 description: Mach-O to PE/COFF binary converter
 homepage: https://opensource.apple.com/
 license: APSL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mtoc/blobs/sha256:45bb1943f18afdc68144a47a8b41eb49b6c33ee7e1c2abf849c7cf4430956401
-    sha256: 45bb1943f18afdc68144a47a8b41eb49b6c33ee7e1c2abf849c7cf4430956401
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mtoc/blobs/sha256:cd38d1b84694e03fe9c4abf20746fb42bcd7a38023a681c3e6a1e98a23c10d44
-    sha256: cd38d1b84694e03fe9c4abf20746fb42bcd7a38023a681c3e6a1e98a23c10d44
-source:
-  url: https://github.com/apple-oss-distributions/cctools/archive/refs/tags/cctools-1030.6.3.tar.gz
-  sha256: a43b0f7d5d7d2fb828f96318efb7b335dfbbdd5ee3b96716add1f509755f120a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mtoc/blobs/sha256:cd38d1b84694e03fe9c4abf20746fb42bcd7a38023a681c3e6a1e98a23c10d44
+        sha256: cd38d1b84694e03fe9c4abf20746fb42bcd7a38023a681c3e6a1e98a23c10d44
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mtoc/blobs/sha256:45bb1943f18afdc68144a47a8b41eb49b6c33ee7e1c2abf849c7cf4430956401
+        sha256: 45bb1943f18afdc68144a47a8b41eb49b6c33ee7e1c2abf849c7cf4430956401
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/apple-oss-distributions/cctools/archive/refs/tags/cctools-1030.6.3.tar.gz
+    sha256: a43b0f7d5d7d2fb828f96318efb7b335dfbbdd5ee3b96716add1f509755f120a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - llvm
+    - llvm
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,32 +3,57 @@ version: 2.2.2
 description: C client library for the Riemann monitoring system
 homepage: https://git.madhouse-project.org/algernon/riemann-c-client
 license: EUPL-1.2
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/riemann-client/blobs/sha256:c90018c4763d88af535cdb0bdc4ac02c6f40ed9a26b41105c48bb75714f5cf8e
-    sha256: c90018c4763d88af535cdb0bdc4ac02c6f40ed9a26b41105c48bb75714f5cf8e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/riemann-client/blobs/sha256:426da29c687af12a8f693ad486f02a4fb7a1f6cca60416bb6715a536c5d62ffb
-    sha256: 426da29c687af12a8f693ad486f02a4fb7a1f6cca60416bb6715a536c5d62ffb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/riemann-client/blobs/sha256:fc7736635610401fa99e4911155329f537c997b57d218821538f0e6b8b212111
-    sha256: fc7736635610401fa99e4911155329f537c997b57d218821538f0e6b8b212111
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/riemann-client/blobs/sha256:c15ce11aff7a4925e518713074b6fc53c8746eef3efc5540dc975ca83a026147
-    sha256: c15ce11aff7a4925e518713074b6fc53c8746eef3efc5540dc975ca83a026147
-source:
-  url: https://git.madhouse-project.org/algernon/riemann-c-client/archive/riemann-c-client-2.2.2.tar.gz
-  sha256: 468c2d6cb4095e581927005a1dab13656f5a9355e4c68a3a25fceb5c6798a72f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - json-c
-  - openssl@3
-  - protobuf-c
+    - json-c
+    - openssl@3
+    - protobuf-c
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/riemann-client/blobs/sha256:426da29c687af12a8f693ad486f02a4fb7a1f6cca60416bb6715a536c5d62ffb
+        sha256: 426da29c687af12a8f693ad486f02a4fb7a1f6cca60416bb6715a536c5d62ffb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/riemann-client/blobs/sha256:c90018c4763d88af535cdb0bdc4ac02c6f40ed9a26b41105c48bb75714f5cf8e
+        sha256: c90018c4763d88af535cdb0bdc4ac02c6f40ed9a26b41105c48bb75714f5cf8e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/riemann-client/blobs/sha256:fc7736635610401fa99e4911155329f537c997b57d218821538f0e6b8b212111
+        sha256: fc7736635610401fa99e4911155329f537c997b57d218821538f0e6b8b212111
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/riemann-client/blobs/sha256:c15ce11aff7a4925e518713074b6fc53c8746eef3efc5540dc975ca83a026147
+        sha256: c15ce11aff7a4925e518713074b6fc53c8746eef3efc5540dc975ca83a026147
+        sha512: ""
+        signature: ""
+source:
+    url: https://git.madhouse-project.org/algernon/riemann-c-client/archive/riemann-c-client-2.2.2.tar.gz
+    sha256: 468c2d6cb4095e581927005a1dab13656f5a9355e4c68a3a25fceb5c6798a72f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

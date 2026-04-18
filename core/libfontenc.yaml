@@ -1,32 +1,57 @@
 name: libfontenc
 version: 1.1.9
-description: "X.Org: Font encoding library"
+description: 'X.Org: Font encoding library'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfontenc/blobs/sha256:08ad2bfdfb5d488ee3aef88f8f18c08fcbf93f96eb8e611cee542997ceaf3152
-    sha256: 08ad2bfdfb5d488ee3aef88f8f18c08fcbf93f96eb8e611cee542997ceaf3152
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfontenc/blobs/sha256:1287de8752c34becfa9e8f7c9b485c4009fa182520304cf51c52530878cb7738
-    sha256: 1287de8752c34becfa9e8f7c9b485c4009fa182520304cf51c52530878cb7738
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfontenc/blobs/sha256:4091913f2c2f28015d3f9acc97c008d2563b1cd39c70d2da0267f6a4a7a57dd0
-    sha256: 4091913f2c2f28015d3f9acc97c008d2563b1cd39c70d2da0267f6a4a7a57dd0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfontenc/blobs/sha256:588498decf9879a21330a600ccb23fc22f150b8097ec75b3bacc430911259aa1
-    sha256: 588498decf9879a21330a600ccb23fc22f150b8097ec75b3bacc430911259aa1
-source:
-  url: https://xorg.freedesktop.org/archive/individual/lib/libfontenc-1.1.9.tar.xz
-  sha256: 9d8392705cb10803d5fe1d27d236cbab3f664e26841ce01916bbbe430cf273e2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfontenc/blobs/sha256:1287de8752c34becfa9e8f7c9b485c4009fa182520304cf51c52530878cb7738
+        sha256: 1287de8752c34becfa9e8f7c9b485c4009fa182520304cf51c52530878cb7738
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfontenc/blobs/sha256:08ad2bfdfb5d488ee3aef88f8f18c08fcbf93f96eb8e611cee542997ceaf3152
+        sha256: 08ad2bfdfb5d488ee3aef88f8f18c08fcbf93f96eb8e611cee542997ceaf3152
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfontenc/blobs/sha256:4091913f2c2f28015d3f9acc97c008d2563b1cd39c70d2da0267f6a4a7a57dd0
+        sha256: 4091913f2c2f28015d3f9acc97c008d2563b1cd39c70d2da0267f6a4a7a57dd0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfontenc/blobs/sha256:588498decf9879a21330a600ccb23fc22f150b8097ec75b3bacc430911259aa1
+        sha256: 588498decf9879a21330a600ccb23fc22f150b8097ec75b3bacc430911259aa1
+        sha512: ""
+        signature: ""
+source:
+    url: https://xorg.freedesktop.org/archive/individual/lib/libfontenc-1.1.9.tar.xz
+    sha256: 9d8392705cb10803d5fe1d27d236cbab3f664e26841ce01916bbbe430cf273e2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - font-util
-  - pkgconf
-  - util-macros
-  - xorgproto
+    - font-util
+    - pkgconf
+    - util-macros
+    - xorgproto
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

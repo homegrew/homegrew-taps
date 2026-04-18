@@ -3,28 +3,53 @@ version: 1.0.21
 description: Implementation of IEEE 802.1ab (LLDP)
 homepage: https://lldpd.github.io/
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:32667ecb07946f013f028a50c58fb79c5fa3d50064cf855b06413049c6b4b5cc
-    sha256: 32667ecb07946f013f028a50c58fb79c5fa3d50064cf855b06413049c6b4b5cc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:68d8cf0453620eb9f8822c44e326a5ddfa2e96656e0208271a3b1d86cc6ffe50
-    sha256: 68d8cf0453620eb9f8822c44e326a5ddfa2e96656e0208271a3b1d86cc6ffe50
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:286581069fe7b41e790c6a3f79b732fd388a91e2d93d381ad5ade7b6d53fc43b
-    sha256: 286581069fe7b41e790c6a3f79b732fd388a91e2d93d381ad5ade7b6d53fc43b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:cb61c0fe87c9adb22e961d4c70bdfa102733b7752cc0fcb924a41fd62280528f
-    sha256: cb61c0fe87c9adb22e961d4c70bdfa102733b7752cc0fcb924a41fd62280528f
-source:
-  url: https://media.luffy.cx/files/lldpd/lldpd-1.0.21.tar.gz
-  sha256: 5b1b0106079a0785b55e1be45cec40b66b41779f3ee6f1a8d2dbd75d389df091
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libevent
-  - readline
+    - libevent
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:68d8cf0453620eb9f8822c44e326a5ddfa2e96656e0208271a3b1d86cc6ffe50
+        sha256: 68d8cf0453620eb9f8822c44e326a5ddfa2e96656e0208271a3b1d86cc6ffe50
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:32667ecb07946f013f028a50c58fb79c5fa3d50064cf855b06413049c6b4b5cc
+        sha256: 32667ecb07946f013f028a50c58fb79c5fa3d50064cf855b06413049c6b4b5cc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:286581069fe7b41e790c6a3f79b732fd388a91e2d93d381ad5ade7b6d53fc43b
+        sha256: 286581069fe7b41e790c6a3f79b732fd388a91e2d93d381ad5ade7b6d53fc43b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lldpd/blobs/sha256:cb61c0fe87c9adb22e961d4c70bdfa102733b7752cc0fcb924a41fd62280528f
+        sha256: cb61c0fe87c9adb22e961d4c70bdfa102733b7752cc0fcb924a41fd62280528f
+        sha512: ""
+        signature: ""
+source:
+    url: https://media.luffy.cx/files/lldpd/lldpd-1.0.21.tar.gz
+    sha256: 5b1b0106079a0785b55e1be45cec40b66b41779f3ee6f1a8d2dbd75d389df091
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

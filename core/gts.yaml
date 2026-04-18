@@ -3,35 +3,59 @@ version: 0.7.6
 description: GNU triangulated surface library
 homepage: https://gts.sourceforge.net/
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:1a940ea785d016728373922b4b02ed3d40f3abf4da34cc29c671446eada28d59
-    sha256: 1a940ea785d016728373922b4b02ed3d40f3abf4da34cc29c671446eada28d59
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:63d06518c5c1da686ecf76d612b7717bc021d8c19a6470a21ec1f69020fe1dac
-    sha256: 63d06518c5c1da686ecf76d612b7717bc021d8c19a6470a21ec1f69020fe1dac
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:4c6bb3e3859bee6f8b113a08d7d158a19ef46ec307073fac12c90c4a0113f69e
-    sha256: 4c6bb3e3859bee6f8b113a08d7d158a19ef46ec307073fac12c90c4a0113f69e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:b822bc2eb7de37c9497056021cca4397053d11bfafc980820766bcdced8daff5
-    sha256: b822bc2eb7de37c9497056021cca4397053d11bfafc980820766bcdced8daff5
-source:
-  url: https://downloads.sourceforge.net/project/gts/gts/0.7.6/gts-0.7.6.tar.gz
-  sha256: 059c3e13e3e3b796d775ec9f96abdce8f2b3b5144df8514eda0cc12e13e8b81e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - netpbm
-  - gettext
+    - glib
+    - netpbm
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:63d06518c5c1da686ecf76d612b7717bc021d8c19a6470a21ec1f69020fe1dac
+        sha256: 63d06518c5c1da686ecf76d612b7717bc021d8c19a6470a21ec1f69020fe1dac
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:1a940ea785d016728373922b4b02ed3d40f3abf4da34cc29c671446eada28d59
+        sha256: 1a940ea785d016728373922b4b02ed3d40f3abf4da34cc29c671446eada28d59
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:4c6bb3e3859bee6f8b113a08d7d158a19ef46ec307073fac12c90c4a0113f69e
+        sha256: 4c6bb3e3859bee6f8b113a08d7d158a19ef46ec307073fac12c90c4a0113f69e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:b822bc2eb7de37c9497056021cca4397053d11bfafc980820766bcdced8daff5
+        sha256: b822bc2eb7de37c9497056021cca4397053d11bfafc980820766bcdced8daff5
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/gts/gts/0.7.6/gts-0.7.6.tar.gz
+    sha256: 059c3e13e3e3b796d775ec9f96abdce8f2b3b5144df8514eda0cc12e13e8b81e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - glib
-  - netpbm
+    - glib
+    - netpbm
+build:
+    configure: []
+    install: []
+service: null

@@ -3,52 +3,76 @@ version: 10.07.0
 description: Interpreter for PostScript and PDF
 homepage: https://www.ghostscript.com/
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ghostscript/blobs/sha256:f0ad91f4bc1139f9c68bd1fa4ffdd2d9b9fcc1013df88e54b7850ee994260d9b
-    sha256: f0ad91f4bc1139f9c68bd1fa4ffdd2d9b9fcc1013df88e54b7850ee994260d9b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ghostscript/blobs/sha256:8fa0a33626c3d1223f1fa8bec57d1337f2b9e6e1789080b6eebd7d1839858708
-    sha256: 8fa0a33626c3d1223f1fa8bec57d1337f2b9e6e1789080b6eebd7d1839858708
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ghostscript/blobs/sha256:0a622fa3b8f596c6cc6e5b7d5e88c7f1a453043640138c086e59ec64a48f2002
-    sha256: 0a622fa3b8f596c6cc6e5b7d5e88c7f1a453043640138c086e59ec64a48f2002
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ghostscript/blobs/sha256:70c8e6aa211d92e9469f8dcb4e72aa722a55f04c880abbecf89101d1a15d6bc7
-    sha256: 70c8e6aa211d92e9469f8dcb4e72aa722a55f04c880abbecf89101d1a15d6bc7
-source:
-  url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10070/ghostpdl-10.07.0.tar.xz
-  sha256: ba1366006a93b91e615f74aad9c0905fae503d3f5b04078ce2ddbe360bd2f9df
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fontconfig
-  - freetype
-  - jbig2dec
-  - jpeg-turbo
-  - leptonica
-  - libarchive
-  - libidn
-  - libpng
-  - libtiff
-  - little-cms2
-  - openjpeg
-  - tesseract
+    - fontconfig
+    - freetype
+    - jbig2dec
+    - jpeg-turbo
+    - leptonica
+    - libarchive
+    - libidn
+    - libpng
+    - libtiff
+    - little-cms2
+    - openjpeg
+    - tesseract
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ghostscript/blobs/sha256:8fa0a33626c3d1223f1fa8bec57d1337f2b9e6e1789080b6eebd7d1839858708
+        sha256: 8fa0a33626c3d1223f1fa8bec57d1337f2b9e6e1789080b6eebd7d1839858708
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ghostscript/blobs/sha256:f0ad91f4bc1139f9c68bd1fa4ffdd2d9b9fcc1013df88e54b7850ee994260d9b
+        sha256: f0ad91f4bc1139f9c68bd1fa4ffdd2d9b9fcc1013df88e54b7850ee994260d9b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ghostscript/blobs/sha256:0a622fa3b8f596c6cc6e5b7d5e88c7f1a453043640138c086e59ec64a48f2002
+        sha256: 0a622fa3b8f596c6cc6e5b7d5e88c7f1a453043640138c086e59ec64a48f2002
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ghostscript/blobs/sha256:70c8e6aa211d92e9469f8dcb4e72aa722a55f04c880abbecf89101d1a15d6bc7
+        sha256: 70c8e6aa211d92e9469f8dcb4e72aa722a55f04c880abbecf89101d1a15d6bc7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10070/ghostpdl-10.07.0.tar.xz
+    sha256: ba1366006a93b91e615f74aad9c0905fae503d3f5b04078ce2ddbe360bd2f9df
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - fontconfig
-  - freetype
-  - jbig2dec
-  - jpeg-turbo
-  - leptonica
-  - libarchive
-  - libidn
-  - libpng
-  - libtiff
-  - little-cms2
-  - openjpeg
-  - tesseract
-  - zlib-ng-compat
+    - fontconfig
+    - freetype
+    - jbig2dec
+    - jpeg-turbo
+    - leptonica
+    - libarchive
+    - libidn
+    - libpng
+    - libtiff
+    - little-cms2
+    - openjpeg
+    - tesseract
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

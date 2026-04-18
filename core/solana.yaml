@@ -3,31 +3,56 @@ version: 3.1.13
 description: Web-Scale Blockchain for decentralized apps and marketplaces
 homepage: https://www.anza.xyz/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/solana/blobs/sha256:03122f7c98ed0d8053ef7a71a8dd0b1b4212cfc016da0f3d9fd7cad3990a0128
-    sha256: 03122f7c98ed0d8053ef7a71a8dd0b1b4212cfc016da0f3d9fd7cad3990a0128
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/solana/blobs/sha256:f1e7cd96f7ef78ffac016e45ed2d245f53e08fcaf550045883ec5f0d2debe18f
-    sha256: f1e7cd96f7ef78ffac016e45ed2d245f53e08fcaf550045883ec5f0d2debe18f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/solana/blobs/sha256:5d935cf2a8a7ecafe44df7b6ac9ce5e06cf10fd5d0f7f8ca9f23b9f90dd954a7
-    sha256: 5d935cf2a8a7ecafe44df7b6ac9ce5e06cf10fd5d0f7f8ca9f23b9f90dd954a7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/solana/blobs/sha256:14d2f94f76c0c07cfe295cd035e529e823fcbcca843c8c033c352c94bb786655
-    sha256: 14d2f94f76c0c07cfe295cd035e529e823fcbcca843c8c033c352c94bb786655
-source:
-  url: https://github.com/anza-xyz/agave/archive/refs/tags/v3.1.13.tar.gz
-  sha256: 02cf1eac551e0f04e41eb7f9802a1e4f34012f0ab31b74fa56eaf8df0db6cfac
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - rocksdb
+    - openssl@3
+    - rocksdb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/solana/blobs/sha256:f1e7cd96f7ef78ffac016e45ed2d245f53e08fcaf550045883ec5f0d2debe18f
+        sha256: f1e7cd96f7ef78ffac016e45ed2d245f53e08fcaf550045883ec5f0d2debe18f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/solana/blobs/sha256:03122f7c98ed0d8053ef7a71a8dd0b1b4212cfc016da0f3d9fd7cad3990a0128
+        sha256: 03122f7c98ed0d8053ef7a71a8dd0b1b4212cfc016da0f3d9fd7cad3990a0128
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/solana/blobs/sha256:5d935cf2a8a7ecafe44df7b6ac9ce5e06cf10fd5d0f7f8ca9f23b9f90dd954a7
+        sha256: 5d935cf2a8a7ecafe44df7b6ac9ce5e06cf10fd5d0f7f8ca9f23b9f90dd954a7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/solana/blobs/sha256:14d2f94f76c0c07cfe295cd035e529e823fcbcca843c8c033c352c94bb786655
+        sha256: 14d2f94f76c0c07cfe295cd035e529e823fcbcca843c8c033c352c94bb786655
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/anza-xyz/agave/archive/refs/tags/v3.1.13.tar.gz
+    sha256: 02cf1eac551e0f04e41eb7f9802a1e4f34012f0ab31b74fa56eaf8df0db6cfac
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - llvm
-  - pkgconf
-  - protobuf
-  - rust
+    - llvm
+    - pkgconf
+    - protobuf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

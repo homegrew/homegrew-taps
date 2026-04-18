@@ -3,30 +3,55 @@ version: 6.11.0
 description: Enables access to text-to-speech engines
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtspeech/blobs/sha256:26407ba2f31abc4cc7d8d1527283026fdc4dcaef0950e730ad3bf9b7914c7316
-    sha256: 26407ba2f31abc4cc7d8d1527283026fdc4dcaef0950e730ad3bf9b7914c7316
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtspeech/blobs/sha256:5d2f8bcfdd18c4d0564f9846db5523759a53cd70d7ff80291fd4c82fc73eef47
-    sha256: 5d2f8bcfdd18c4d0564f9846db5523759a53cd70d7ff80291fd4c82fc73eef47
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtspeech/blobs/sha256:ce8cc2e812b4aa6380ca721330035f41dc0d6b76b95738353316a79d1ef63c3e
-    sha256: ce8cc2e812b4aa6380ca721330035f41dc0d6b76b95738353316a79d1ef63c3e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtspeech/blobs/sha256:85142a03abcc2389d6b7e6afcba7433b073700416dff2c98ddda06b80e322843
-    sha256: 85142a03abcc2389d6b7e6afcba7433b073700416dff2c98ddda06b80e322843
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtspeech-everywhere-src-6.11.0.tar.xz
-  sha256: a9c585d1a65a19686dd4d39432fdc8f2b22c9415798a928dba60b39dcd46db21
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
-  - qtdeclarative
-  - qtmultimedia
+    - qtbase
+    - qtdeclarative
+    - qtmultimedia
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtspeech/blobs/sha256:5d2f8bcfdd18c4d0564f9846db5523759a53cd70d7ff80291fd4c82fc73eef47
+        sha256: 5d2f8bcfdd18c4d0564f9846db5523759a53cd70d7ff80291fd4c82fc73eef47
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtspeech/blobs/sha256:26407ba2f31abc4cc7d8d1527283026fdc4dcaef0950e730ad3bf9b7914c7316
+        sha256: 26407ba2f31abc4cc7d8d1527283026fdc4dcaef0950e730ad3bf9b7914c7316
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtspeech/blobs/sha256:ce8cc2e812b4aa6380ca721330035f41dc0d6b76b95738353316a79d1ef63c3e
+        sha256: ce8cc2e812b4aa6380ca721330035f41dc0d6b76b95738353316a79d1ef63c3e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtspeech/blobs/sha256:85142a03abcc2389d6b7e6afcba7433b073700416dff2c98ddda06b80e322843
+        sha256: 85142a03abcc2389d6b7e6afcba7433b073700416dff2c98ddda06b80e322843
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtspeech-everywhere-src-6.11.0.tar.xz
+    sha256: a9c585d1a65a19686dd4d39432fdc8f2b22c9415798a928dba60b39dcd46db21
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

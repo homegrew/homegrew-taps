@@ -3,27 +3,52 @@ version: 6.2.0
 description: Declaratively install and manage multiple Helm chart releases
 homepage: https://github.com/FairwindsOps/reckoner
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/reckoner/blobs/sha256:52f96d24f75c2000278fe7ed91fe73d982683297d158e118e345331d24580804
-    sha256: 52f96d24f75c2000278fe7ed91fe73d982683297d158e118e345331d24580804
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/reckoner/blobs/sha256:d14ba71c34740a9dd2ae9bbf97fd3f118dd1dcfd92bc267ef69d7daca27d8a8a
-    sha256: d14ba71c34740a9dd2ae9bbf97fd3f118dd1dcfd92bc267ef69d7daca27d8a8a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/reckoner/blobs/sha256:d44c9b58fe4752068e76ff69d1201a31434564482c05a7242220e4bf5fe26d98
-    sha256: d44c9b58fe4752068e76ff69d1201a31434564482c05a7242220e4bf5fe26d98
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/reckoner/blobs/sha256:d20750b1c3e9b5c39f9c67970c2dd9295769a9d2fa3a581ce61a9d4a4ae546ec
-    sha256: d20750b1c3e9b5c39f9c67970c2dd9295769a9d2fa3a581ce61a9d4a4ae546ec
-source:
-  url: https://github.com/FairwindsOps/reckoner/archive/refs/tags/v6.2.0.tar.gz
-  sha256: 7d43511db233739f1584c2d0875333c97a9470b4689dd2d65a36d1d591096d7a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - helm
+    - helm
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/reckoner/blobs/sha256:d14ba71c34740a9dd2ae9bbf97fd3f118dd1dcfd92bc267ef69d7daca27d8a8a
+        sha256: d14ba71c34740a9dd2ae9bbf97fd3f118dd1dcfd92bc267ef69d7daca27d8a8a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/reckoner/blobs/sha256:52f96d24f75c2000278fe7ed91fe73d982683297d158e118e345331d24580804
+        sha256: 52f96d24f75c2000278fe7ed91fe73d982683297d158e118e345331d24580804
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/reckoner/blobs/sha256:d44c9b58fe4752068e76ff69d1201a31434564482c05a7242220e4bf5fe26d98
+        sha256: d44c9b58fe4752068e76ff69d1201a31434564482c05a7242220e4bf5fe26d98
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/reckoner/blobs/sha256:d20750b1c3e9b5c39f9c67970c2dd9295769a9d2fa3a581ce61a9d4a4ae546ec
+        sha256: d20750b1c3e9b5c39f9c67970c2dd9295769a9d2fa3a581ce61a9d4a4ae546ec
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/FairwindsOps/reckoner/archive/refs/tags/v6.2.0.tar.gz
+    sha256: 7d43511db233739f1584c2d0875333c97a9470b4689dd2d65a36d1d591096d7a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

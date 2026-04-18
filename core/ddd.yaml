@@ -3,47 +3,71 @@ version: 3.4.1
 description: Graphical front-end for command-line debuggers
 homepage: https://www.gnu.org/software/ddd/
 license: GPL-3.0-or-later AND GFDL-1.1-no-invariants-or-later AND GFDL-1.3-no-invariants-or-later AND HPND-sell-variant AND MIT-open-group
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ddd/blobs/sha256:25083bd2eeac8896b1406a713d5ca294cacb800fee16e0368e434e6715b72644
-    sha256: 25083bd2eeac8896b1406a713d5ca294cacb800fee16e0368e434e6715b72644
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ddd/blobs/sha256:19e15c98f1732a8c5032734ecdab5f4aec373ef3991bc65c7ce4e5f81b526861
-    sha256: 19e15c98f1732a8c5032734ecdab5f4aec373ef3991bc65c7ce4e5f81b526861
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ddd/blobs/sha256:52266be4e6e825db9c2941e2ab44002d1d3707b379e0339d3ddf12af18f81ad6
-    sha256: 52266be4e6e825db9c2941e2ab44002d1d3707b379e0339d3ddf12af18f81ad6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ddd/blobs/sha256:dc505cec52e34353405b1d359a97aa65f7b06a89cbba7be62ce119bd17c6d24d
-    sha256: dc505cec52e34353405b1d359a97aa65f7b06a89cbba7be62ce119bd17c6d24d
-source:
-  url: https://ftpmirror.gnu.org/gnu/ddd/ddd-3.4.1.tar.gz
-  sha256: b87517a6c3f9611566347e283a2cf931fa369919b553536a2235e63402f4ee89
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fontconfig
-  - libx11
-  - libxaw
-  - libxft
-  - libxmu
-  - libxpm
-  - libxt
-  - openmotif
-  - libice
-  - libsm
-  - libxext
-  - libxp
+    - fontconfig
+    - libx11
+    - libxaw
+    - libxft
+    - libxmu
+    - libxpm
+    - libxt
+    - openmotif
+    - libice
+    - libsm
+    - libxext
+    - libxp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ddd/blobs/sha256:19e15c98f1732a8c5032734ecdab5f4aec373ef3991bc65c7ce4e5f81b526861
+        sha256: 19e15c98f1732a8c5032734ecdab5f4aec373ef3991bc65c7ce4e5f81b526861
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ddd/blobs/sha256:25083bd2eeac8896b1406a713d5ca294cacb800fee16e0368e434e6715b72644
+        sha256: 25083bd2eeac8896b1406a713d5ca294cacb800fee16e0368e434e6715b72644
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ddd/blobs/sha256:52266be4e6e825db9c2941e2ab44002d1d3707b379e0339d3ddf12af18f81ad6
+        sha256: 52266be4e6e825db9c2941e2ab44002d1d3707b379e0339d3ddf12af18f81ad6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ddd/blobs/sha256:dc505cec52e34353405b1d359a97aa65f7b06a89cbba7be62ce119bd17c6d24d
+        sha256: dc505cec52e34353405b1d359a97aa65f7b06a89cbba7be62ce119bd17c6d24d
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/ddd/ddd-3.4.1.tar.gz
+    sha256: b87517a6c3f9611566347e283a2cf931fa369919b553536a2235e63402f4ee89
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gnu-sed
+    - gnu-sed
 linux_dependencies:
-  - fontconfig
-  - libx11
-  - libxaw
-  - libxft
-  - libxmu
-  - libxpm
-  - libxt
-  - openmotif
+    - fontconfig
+    - libx11
+    - libxaw
+    - libxft
+    - libxmu
+    - libxpm
+    - libxt
+    - openmotif
+build:
+    configure: []
+    install: []
+service: null

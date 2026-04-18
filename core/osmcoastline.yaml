@@ -3,38 +3,62 @@ version: 2.5.0
 description: Extracts coastline data from OpenStreetMap planet file
 homepage: https://osmcode.org/osmcoastline/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:c594f9f9ef9f7dd27e3decdc3e17f52b040836ba8574901414134d1c94666ac0
-    sha256: c594f9f9ef9f7dd27e3decdc3e17f52b040836ba8574901414134d1c94666ac0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:d3d8c1f5652b522195c764a951abf041b962308757953c45caac2ec79195f15f
-    sha256: d3d8c1f5652b522195c764a951abf041b962308757953c45caac2ec79195f15f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:bc4f8e794f3b8619d5dd0c24c61b75077cb775849cbc1442b9bd9fb07d36f744
-    sha256: bc4f8e794f3b8619d5dd0c24c61b75077cb775849cbc1442b9bd9fb07d36f744
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:c251ca8a96cb5020fa83e406ed3aaccf1ff5c93d43284a86876ef62475cfc1af
-    sha256: c251ca8a96cb5020fa83e406ed3aaccf1ff5c93d43284a86876ef62475cfc1af
-source:
-  url: https://github.com/osmcode/osmcoastline/archive/refs/tags/v2.5.0.tar.gz
-  sha256: 7980c77acbbf460d6de7df1d30b2f2d9da550db1512d0e828623851c687b238a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gdal
-  - geos
-  - libspatialite
-  - lz4
+    - gdal
+    - geos
+    - libspatialite
+    - lz4
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:d3d8c1f5652b522195c764a951abf041b962308757953c45caac2ec79195f15f
+        sha256: d3d8c1f5652b522195c764a951abf041b962308757953c45caac2ec79195f15f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:c594f9f9ef9f7dd27e3decdc3e17f52b040836ba8574901414134d1c94666ac0
+        sha256: c594f9f9ef9f7dd27e3decdc3e17f52b040836ba8574901414134d1c94666ac0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:bc4f8e794f3b8619d5dd0c24c61b75077cb775849cbc1442b9bd9fb07d36f744
+        sha256: bc4f8e794f3b8619d5dd0c24c61b75077cb775849cbc1442b9bd9fb07d36f744
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/osmcoastline/blobs/sha256:c251ca8a96cb5020fa83e406ed3aaccf1ff5c93d43284a86876ef62475cfc1af
+        sha256: c251ca8a96cb5020fa83e406ed3aaccf1ff5c93d43284a86876ef62475cfc1af
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/osmcode/osmcoastline/archive/refs/tags/v2.5.0.tar.gz
+    sha256: 7980c77acbbf460d6de7df1d30b2f2d9da550db1512d0e828623851c687b238a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - libosmium
-  - protozero
+    - cmake
+    - libosmium
+    - protozero
 linux_dependencies:
-  - gdal
-  - geos
-  - libspatialite
-  - lz4
-  - zlib-ng-compat
+    - gdal
+    - geos
+    - libspatialite
+    - lz4
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

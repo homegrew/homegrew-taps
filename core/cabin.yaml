@@ -3,34 +3,59 @@ version: 0.13.0
 description: Package manager and build system for C++
 homepage: https://github.com/cabinpkg/cabin
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cabin/blobs/sha256:ceb0df820b6831bad382ee05ec258c8170c9a4f6ed52faac9e42928bc3e99d10
-    sha256: ceb0df820b6831bad382ee05ec258c8170c9a4f6ed52faac9e42928bc3e99d10
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cabin/blobs/sha256:20944f5509556bde7cfcbcab5829f30b62ea286b675bf06450e2676751dbbd17
-    sha256: 20944f5509556bde7cfcbcab5829f30b62ea286b675bf06450e2676751dbbd17
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cabin/blobs/sha256:3b6308c79867c1290e4929b6e4ebf05b6b8cbd958f37fae619663ad954fb4fd8
-    sha256: 3b6308c79867c1290e4929b6e4ebf05b6b8cbd958f37fae619663ad954fb4fd8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cabin/blobs/sha256:21f009801cb40282ccb9374cffc72a5af2e2b4f7b1d9c204ad952cfffbf5167f
-    sha256: 21f009801cb40282ccb9374cffc72a5af2e2b4f7b1d9c204ad952cfffbf5167f
-source:
-  url: https://github.com/cabinpkg/cabin/archive/refs/tags/0.13.0.tar.gz
-  sha256: f9115bb0566800beedb41106e00f44a7eaf1dea0fa6528281e31de5f80864177
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fmt
-  - libgit2
-  - pkgconf
-  - spdlog
-  - tbb
+    - fmt
+    - libgit2
+    - pkgconf
+    - spdlog
+    - tbb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cabin/blobs/sha256:20944f5509556bde7cfcbcab5829f30b62ea286b675bf06450e2676751dbbd17
+        sha256: 20944f5509556bde7cfcbcab5829f30b62ea286b675bf06450e2676751dbbd17
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cabin/blobs/sha256:ceb0df820b6831bad382ee05ec258c8170c9a4f6ed52faac9e42928bc3e99d10
+        sha256: ceb0df820b6831bad382ee05ec258c8170c9a4f6ed52faac9e42928bc3e99d10
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cabin/blobs/sha256:3b6308c79867c1290e4929b6e4ebf05b6b8cbd958f37fae619663ad954fb4fd8
+        sha256: 3b6308c79867c1290e4929b6e4ebf05b6b8cbd958f37fae619663ad954fb4fd8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cabin/blobs/sha256:21f009801cb40282ccb9374cffc72a5af2e2b4f7b1d9c204ad952cfffbf5167f
+        sha256: 21f009801cb40282ccb9374cffc72a5af2e2b4f7b1d9c204ad952cfffbf5167f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cabinpkg/cabin/archive/refs/tags/0.13.0.tar.gz
+    sha256: f9115bb0566800beedb41106e00f44a7eaf1dea0fa6528281e31de5f80864177
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - mitama-cpp-result
-  - nlohmann-json
-  - pkgconf
-  - toml11
+    - mitama-cpp-result
+    - nlohmann-json
+    - pkgconf
+    - toml11
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,33 +3,57 @@ version: 1.3.3
 description: Header Dictionary Triples (HDT) is a compression format for RDF data
 homepage: https://github.com/rdfhdt/hdt-cpp
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hdt/blobs/sha256:46d5822d2e9fe086b04b5e0f698e8fbbc6235da2f5a95987ac71479b6c2b232a
-    sha256: 46d5822d2e9fe086b04b5e0f698e8fbbc6235da2f5a95987ac71479b6c2b232a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hdt/blobs/sha256:557a38517d6af2dc25f191758a590acae074f7c0d549c49cdf2af3781f6d6ae4
-    sha256: 557a38517d6af2dc25f191758a590acae074f7c0d549c49cdf2af3781f6d6ae4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hdt/blobs/sha256:44f1d786ef6d43ec1e4daca46268d2e57d1855985fd06871bb78c4c0228f5e89
-    sha256: 44f1d786ef6d43ec1e4daca46268d2e57d1855985fd06871bb78c4c0228f5e89
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hdt/blobs/sha256:142304a83cb7d18dab6b9f8b56791f9148d15a9e30641fb21d54553f12e10b28
-    sha256: 142304a83cb7d18dab6b9f8b56791f9148d15a9e30641fb21d54553f12e10b28
-source:
-  url: https://github.com/rdfhdt/hdt-cpp/archive/refs/tags/v1.3.3.tar.gz
-  sha256: 3abc8af7a0b19760654acf149f0ec85d4e9589a32c4331d3bfbe2fcd825173e6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - serd
+    - serd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hdt/blobs/sha256:557a38517d6af2dc25f191758a590acae074f7c0d549c49cdf2af3781f6d6ae4
+        sha256: 557a38517d6af2dc25f191758a590acae074f7c0d549c49cdf2af3781f6d6ae4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hdt/blobs/sha256:46d5822d2e9fe086b04b5e0f698e8fbbc6235da2f5a95987ac71479b6c2b232a
+        sha256: 46d5822d2e9fe086b04b5e0f698e8fbbc6235da2f5a95987ac71479b6c2b232a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hdt/blobs/sha256:44f1d786ef6d43ec1e4daca46268d2e57d1855985fd06871bb78c4c0228f5e89
+        sha256: 44f1d786ef6d43ec1e4daca46268d2e57d1855985fd06871bb78c4c0228f5e89
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hdt/blobs/sha256:142304a83cb7d18dab6b9f8b56791f9148d15a9e30641fb21d54553f12e10b28
+        sha256: 142304a83cb7d18dab6b9f8b56791f9148d15a9e30641fb21d54553f12e10b28
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rdfhdt/hdt-cpp/archive/refs/tags/v1.3.3.tar.gz
+    sha256: 3abc8af7a0b19760654acf149f0ec85d4e9589a32c4331d3bfbe2fcd825173e6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - serd
-  - zlib-ng-compat
+    - serd
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

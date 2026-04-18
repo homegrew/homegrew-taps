@@ -3,32 +3,57 @@ version: 3.4.0
 description: TADS multimedia interpreter
 homepage: https://realnc.github.io/qtads/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:d6549a2b3f706a45c5e6e73bfc1ead1f3cd80eed681a3c713731cf6b9681ea88
-    sha256: d6549a2b3f706a45c5e6e73bfc1ead1f3cd80eed681a3c713731cf6b9681ea88
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:b2e9db9097b1712b7d5fa30f978031048032bd18e71d0157a2ba5deaa0659dcc
-    sha256: b2e9db9097b1712b7d5fa30f978031048032bd18e71d0157a2ba5deaa0659dcc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:251840532a70387d1007ab9a992bb9f6e8d6c543133fc19d5d41b0dd81c822a5
-    sha256: 251840532a70387d1007ab9a992bb9f6e8d6c543133fc19d5d41b0dd81c822a5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:ca269c91add3713169db676f9f70182d210a42bf7b2b4511b8929f48e24ffe99
-    sha256: ca269c91add3713169db676f9f70182d210a42bf7b2b4511b8929f48e24ffe99
-source:
-  url: https://github.com/realnc/qtads/releases/download/v3.4.0/qtads-3.4.0-source.tar.xz
-  sha256: 3c8f1b47ee42d89753d68e7c804ca3677b0c89a5d765d1fd4f80f9cdc29d3473
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fluid-synth
-  - libsndfile
-  - libvorbis
-  - mpg123
-  - qt@5
-  - sdl2
+    - fluid-synth
+    - libsndfile
+    - libvorbis
+    - mpg123
+    - qt@5
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:b2e9db9097b1712b7d5fa30f978031048032bd18e71d0157a2ba5deaa0659dcc
+        sha256: b2e9db9097b1712b7d5fa30f978031048032bd18e71d0157a2ba5deaa0659dcc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:d6549a2b3f706a45c5e6e73bfc1ead1f3cd80eed681a3c713731cf6b9681ea88
+        sha256: d6549a2b3f706a45c5e6e73bfc1ead1f3cd80eed681a3c713731cf6b9681ea88
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:251840532a70387d1007ab9a992bb9f6e8d6c543133fc19d5d41b0dd81c822a5
+        sha256: 251840532a70387d1007ab9a992bb9f6e8d6c543133fc19d5d41b0dd81c822a5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:ca269c91add3713169db676f9f70182d210a42bf7b2b4511b8929f48e24ffe99
+        sha256: ca269c91add3713169db676f9f70182d210a42bf7b2b4511b8929f48e24ffe99
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/realnc/qtads/releases/download/v3.4.0/qtads-3.4.0-source.tar.xz
+    sha256: 3c8f1b47ee42d89753d68e7c804ca3677b0c89a5d765d1fd4f80f9cdc29d3473
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,50 +3,74 @@ version: 3.6.3
 description: Adds support for geographic objects to PostgreSQL
 homepage: https://postgis.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/postgis/blobs/sha256:76e35db280d8cfb48228d1bbbda6836972119098b44dce7daf4a7cf970749804
-    sha256: 76e35db280d8cfb48228d1bbbda6836972119098b44dce7daf4a7cf970749804
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/postgis/blobs/sha256:7b809abd25c7d8e5258aa751bb43b427942ff077a1064a50bb22bbc98a9aebba
-    sha256: 7b809abd25c7d8e5258aa751bb43b427942ff077a1064a50bb22bbc98a9aebba
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/postgis/blobs/sha256:96f7b708864700b7dcbf3893fdbdd697f17d32c018fb3e657acb3f999c50bf0a
-    sha256: 96f7b708864700b7dcbf3893fdbdd697f17d32c018fb3e657acb3f999c50bf0a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/postgis/blobs/sha256:931b9d55c5f4db95e9d127d70a769921f84c4659b45a59bdb32567ada837d5a2
-    sha256: 931b9d55c5f4db95e9d127d70a769921f84c4659b45a59bdb32567ada837d5a2
-source:
-  url: https://download.osgeo.org/postgis/source/postgis-3.6.3.tar.gz
-  sha256: 58ff19ae133e470280efb4949ef92e0364d4c2a66bef8c57e69477348d815ea3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gdal
-  - geos
-  - icu4c@78
-  - json-c
-  - libpq
-  - libxml2
-  - pcre2
-  - proj
-  - protobuf-c
-  - sfcgal
-  - gettext
+    - gdal
+    - geos
+    - icu4c@78
+    - json-c
+    - libpq
+    - libxml2
+    - pcre2
+    - proj
+    - protobuf-c
+    - sfcgal
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/postgis/blobs/sha256:7b809abd25c7d8e5258aa751bb43b427942ff077a1064a50bb22bbc98a9aebba
+        sha256: 7b809abd25c7d8e5258aa751bb43b427942ff077a1064a50bb22bbc98a9aebba
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgis/blobs/sha256:76e35db280d8cfb48228d1bbbda6836972119098b44dce7daf4a7cf970749804
+        sha256: 76e35db280d8cfb48228d1bbbda6836972119098b44dce7daf4a7cf970749804
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/postgis/blobs/sha256:96f7b708864700b7dcbf3893fdbdd697f17d32c018fb3e657acb3f999c50bf0a
+        sha256: 96f7b708864700b7dcbf3893fdbdd697f17d32c018fb3e657acb3f999c50bf0a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgis/blobs/sha256:931b9d55c5f4db95e9d127d70a769921f84c4659b45a59bdb32567ada837d5a2
+        sha256: 931b9d55c5f4db95e9d127d70a769921f84c4659b45a59bdb32567ada837d5a2
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.osgeo.org/postgis/source/postgis-3.6.3.tar.gz
+    sha256: 58ff19ae133e470280efb4949ef92e0364d4c2a66bef8c57e69477348d815ea3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - postgresql@17
-  - postgresql@18
+    - pkgconf
+    - postgresql@17
+    - postgresql@18
 linux_dependencies:
-  - gdal
-  - geos
-  - icu4c@78
-  - json-c
-  - libpq
-  - libxml2
-  - pcre2
-  - proj
-  - protobuf-c
-  - sfcgal
+    - gdal
+    - geos
+    - icu4c@78
+    - json-c
+    - libpq
+    - libxml2
+    - pcre2
+    - proj
+    - protobuf-c
+    - sfcgal
+build:
+    configure: []
+    install: []
+service: null

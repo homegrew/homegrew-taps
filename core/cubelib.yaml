@@ -3,27 +3,52 @@ version: 4.9.1
 description: Performance report explorer for Scalasca and Score-P
 homepage: https://scalasca.org/software/cube-4.x/download.html
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cubelib/blobs/sha256:af8563eab21f130a1c32ffebcbc1808975d166316d8ec5576a83dc2ebbc437c9
-    sha256: af8563eab21f130a1c32ffebcbc1808975d166316d8ec5576a83dc2ebbc437c9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cubelib/blobs/sha256:d4013dbc7bb8da8188a0d17d09c52ebc14f36db09df5516150fe2a39ee2599bd
-    sha256: d4013dbc7bb8da8188a0d17d09c52ebc14f36db09df5516150fe2a39ee2599bd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cubelib/blobs/sha256:09faef23e866883d28efac0afb0d96a72cb574c558ff16ffe1b047b842b50fa5
-    sha256: 09faef23e866883d28efac0afb0d96a72cb574c558ff16ffe1b047b842b50fa5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cubelib/blobs/sha256:d9915686606c3dfa397292fdf87fec0a16af4407344ccacdadd10792a2542e45
-    sha256: d9915686606c3dfa397292fdf87fec0a16af4407344ccacdadd10792a2542e45
-source:
-  url: https://apps.fz-juelich.de/scalasca/releases/cube/4.9/dist/cubelib-4.9.1.tar.gz
-  sha256: d82a899af07ec6c34c88665a0dfddbbc33a760031b1a79f12d168301e8ea1e46
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cubelib/blobs/sha256:d4013dbc7bb8da8188a0d17d09c52ebc14f36db09df5516150fe2a39ee2599bd
+        sha256: d4013dbc7bb8da8188a0d17d09c52ebc14f36db09df5516150fe2a39ee2599bd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cubelib/blobs/sha256:af8563eab21f130a1c32ffebcbc1808975d166316d8ec5576a83dc2ebbc437c9
+        sha256: af8563eab21f130a1c32ffebcbc1808975d166316d8ec5576a83dc2ebbc437c9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cubelib/blobs/sha256:09faef23e866883d28efac0afb0d96a72cb574c558ff16ffe1b047b842b50fa5
+        sha256: 09faef23e866883d28efac0afb0d96a72cb574c558ff16ffe1b047b842b50fa5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cubelib/blobs/sha256:d9915686606c3dfa397292fdf87fec0a16af4407344ccacdadd10792a2542e45
+        sha256: d9915686606c3dfa397292fdf87fec0a16af4407344ccacdadd10792a2542e45
+        sha512: ""
+        signature: ""
+source:
+    url: https://apps.fz-juelich.de/scalasca/releases/cube/4.9/dist/cubelib-4.9.1.tar.gz
+    sha256: d82a899af07ec6c34c88665a0dfddbbc33a760031b1a79f12d168301e8ea1e46
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

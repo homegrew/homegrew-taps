@@ -3,42 +3,66 @@ version: 2.44.6
 description: Toolkit for image loading and pixel buffer manipulation
 homepage: https://gtk.org
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gdk-pixbuf/blobs/sha256:023b480ec88e40ba0b7879663177a7baaa009d93853cf74b313ce1029f8e7c5b
-    sha256: 023b480ec88e40ba0b7879663177a7baaa009d93853cf74b313ce1029f8e7c5b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gdk-pixbuf/blobs/sha256:af601b57fead60ddd3d08af5025d41876d37d6f1cf9348bd79e03611b6d56ff7
-    sha256: af601b57fead60ddd3d08af5025d41876d37d6f1cf9348bd79e03611b6d56ff7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gdk-pixbuf/blobs/sha256:de021570fbdc6b613d5d620620f8ca735371d7fd5f442fbb127eb2e0331a56df
-    sha256: de021570fbdc6b613d5d620620f8ca735371d7fd5f442fbb127eb2e0331a56df
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gdk-pixbuf/blobs/sha256:2cf25e29b84262b52aa087c5ea8d8f113160e1ed107f50410203cd4d3244e7aa
-    sha256: 2cf25e29b84262b52aa087c5ea8d8f113160e1ed107f50410203cd4d3244e7aa
-source:
-  url: https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.6.tar.xz
-  sha256: 140c2d0b899fcf853ee92b26373c9dc228dbcde0820a4246693f4328a27466fa
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - gettext
+    - glib
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gdk-pixbuf/blobs/sha256:af601b57fead60ddd3d08af5025d41876d37d6f1cf9348bd79e03611b6d56ff7
+        sha256: af601b57fead60ddd3d08af5025d41876d37d6f1cf9348bd79e03611b6d56ff7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gdk-pixbuf/blobs/sha256:023b480ec88e40ba0b7879663177a7baaa009d93853cf74b313ce1029f8e7c5b
+        sha256: 023b480ec88e40ba0b7879663177a7baaa009d93853cf74b313ce1029f8e7c5b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gdk-pixbuf/blobs/sha256:de021570fbdc6b613d5d620620f8ca735371d7fd5f442fbb127eb2e0331a56df
+        sha256: de021570fbdc6b613d5d620620f8ca735371d7fd5f442fbb127eb2e0331a56df
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gdk-pixbuf/blobs/sha256:2cf25e29b84262b52aa087c5ea8d8f113160e1ed107f50410203cd4d3244e7aa
+        sha256: 2cf25e29b84262b52aa087c5ea8d8f113160e1ed107f50410203cd4d3244e7aa
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.6.tar.xz
+    sha256: 140c2d0b899fcf853ee92b26373c9dc228dbcde0820a4246693f4328a27466fa
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docutils
-  - gettext
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
+    - docutils
+    - gettext
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - glib
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - shared-mime-info
+    - glib
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - shared-mime-info
+build:
+    configure: []
+    install: []
+service: null

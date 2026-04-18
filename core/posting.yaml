@@ -3,33 +3,58 @@ version: 2.10.0
 description: Modern API client that lives in your terminal
 homepage: https://github.com/darrenburns/posting
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/posting/blobs/sha256:d6f1531d0f2dba63b6b5793b7f73ccface81d54df2ed46664373a5ce5193d35c
-    sha256: d6f1531d0f2dba63b6b5793b7f73ccface81d54df2ed46664373a5ce5193d35c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/posting/blobs/sha256:76993d31ee596716ee96385ae4b8b99954d788f56807e9a64b1540e4d0e71985
-    sha256: 76993d31ee596716ee96385ae4b8b99954d788f56807e9a64b1540e4d0e71985
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/posting/blobs/sha256:d900293ac70d31530853f49743aafb83224e78d324cf587a1c73013c378f039a
-    sha256: d900293ac70d31530853f49743aafb83224e78d324cf587a1c73013c378f039a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/posting/blobs/sha256:8f096abd53ddf7a3ad63d6c598d958044e4da78dce7980e8d2a586eca8bb893b
-    sha256: 8f096abd53ddf7a3ad63d6c598d958044e4da78dce7980e8d2a586eca8bb893b
-source:
-  url: https://files.pythonhosted.org/packages/5e/81/8e3c84cba1f0e83e0e2d0263e6cd2370ec66ebedfd58fa9fd330095965e1/posting-2.10.0.tar.gz
-  sha256: 4563f7c34bb0827a74b097490189f925fab825b1096e787c22171657531147f1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - brotli
-  - certifi
-  - libyaml
-  - pydantic
-  - python@3.14
-  - tree-sitter
+    - brotli
+    - certifi
+    - libyaml
+    - pydantic
+    - python@3.14
+    - tree-sitter
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/posting/blobs/sha256:76993d31ee596716ee96385ae4b8b99954d788f56807e9a64b1540e4d0e71985
+        sha256: 76993d31ee596716ee96385ae4b8b99954d788f56807e9a64b1540e4d0e71985
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/posting/blobs/sha256:d6f1531d0f2dba63b6b5793b7f73ccface81d54df2ed46664373a5ce5193d35c
+        sha256: d6f1531d0f2dba63b6b5793b7f73ccface81d54df2ed46664373a5ce5193d35c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/posting/blobs/sha256:d900293ac70d31530853f49743aafb83224e78d324cf587a1c73013c378f039a
+        sha256: d900293ac70d31530853f49743aafb83224e78d324cf587a1c73013c378f039a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/posting/blobs/sha256:8f096abd53ddf7a3ad63d6c598d958044e4da78dce7980e8d2a586eca8bb893b
+        sha256: 8f096abd53ddf7a3ad63d6c598d958044e4da78dce7980e8d2a586eca8bb893b
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/5e/81/8e3c84cba1f0e83e0e2d0263e6cd2370ec66ebedfd58fa9fd330095965e1/posting-2.10.0.tar.gz
+    sha256: 4563f7c34bb0827a74b097490189f925fab825b1096e787c22171657531147f1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - rust
+    - cmake
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

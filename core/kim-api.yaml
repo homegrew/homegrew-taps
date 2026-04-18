@@ -3,28 +3,53 @@ version: 2.4.2
 description: Knowledgebase of Interatomic Models (KIM) API
 homepage: https://openkim.org
 license: CDDL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kim-api/blobs/sha256:f0d402382a7e3acc25fadf264e845cfd38ce6d90f3655c378131733b12b423ca
-    sha256: f0d402382a7e3acc25fadf264e845cfd38ce6d90f3655c378131733b12b423ca
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kim-api/blobs/sha256:7c2d3a557941e0592e68277f76e7313d3c29587622e5c073fed418c68de78f01
-    sha256: 7c2d3a557941e0592e68277f76e7313d3c29587622e5c073fed418c68de78f01
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kim-api/blobs/sha256:89ab47d448baf6377f979a0c78ba00c1b5b85faa8d14a3a74026ba40df4edfea
-    sha256: 89ab47d448baf6377f979a0c78ba00c1b5b85faa8d14a3a74026ba40df4edfea
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kim-api/blobs/sha256:be9b43027b8e9b74b00523c55967e4473cdf1d8eb0502d30e591b804d76a0512
-    sha256: be9b43027b8e9b74b00523c55967e4473cdf1d8eb0502d30e591b804d76a0512
-source:
-  url: https://s3.openkim.org/kim-api/kim-api-2.4.2.txz
-  sha256: 1710bd6ceaea093062e000d2308719c51cc0a2d2def1bdcb0a03df8ed867b11f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gcc
+    - gcc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kim-api/blobs/sha256:7c2d3a557941e0592e68277f76e7313d3c29587622e5c073fed418c68de78f01
+        sha256: 7c2d3a557941e0592e68277f76e7313d3c29587622e5c073fed418c68de78f01
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kim-api/blobs/sha256:f0d402382a7e3acc25fadf264e845cfd38ce6d90f3655c378131733b12b423ca
+        sha256: f0d402382a7e3acc25fadf264e845cfd38ce6d90f3655c378131733b12b423ca
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kim-api/blobs/sha256:89ab47d448baf6377f979a0c78ba00c1b5b85faa8d14a3a74026ba40df4edfea
+        sha256: 89ab47d448baf6377f979a0c78ba00c1b5b85faa8d14a3a74026ba40df4edfea
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kim-api/blobs/sha256:be9b43027b8e9b74b00523c55967e4473cdf1d8eb0502d30e591b804d76a0512
+        sha256: be9b43027b8e9b74b00523c55967e4473cdf1d8eb0502d30e591b804d76a0512
+        sha512: ""
+        signature: ""
+source:
+    url: https://s3.openkim.org/kim-api/kim-api-2.4.2.txz
+    sha256: 1710bd6ceaea093062e000d2308719c51cc0a2d2def1bdcb0a03df8ed867b11f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
+    - cmake
+    - doxygen
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

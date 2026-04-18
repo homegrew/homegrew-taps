@@ -3,28 +3,53 @@ version: 4.11.0
 description: VPN-adapter that provides location privacy using Tor or I2P
 homepage: https://github.com/rahra/onioncat
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onioncat/blobs/sha256:376be0d8ae8f091f6f6dae5beba524fd5ba07e2606264a73c1b827e187dc3ea2
-    sha256: 376be0d8ae8f091f6f6dae5beba524fd5ba07e2606264a73c1b827e187dc3ea2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onioncat/blobs/sha256:b3f88f8aa7942ec817d17c5d9f6807f3bdaa98c82bdabb281e865b26100df878
-    sha256: b3f88f8aa7942ec817d17c5d9f6807f3bdaa98c82bdabb281e865b26100df878
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onioncat/blobs/sha256:b7909dd65c46856bf1ba00a9253d6b51cd4c1b23b2595a57d0018607ca02bd94
-    sha256: b7909dd65c46856bf1ba00a9253d6b51cd4c1b23b2595a57d0018607ca02bd94
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onioncat/blobs/sha256:33f731f9fc0cb8ede749dd65d70b62581f80f59305a9bef7613ff69e8a2807c4
-    sha256: 33f731f9fc0cb8ede749dd65d70b62581f80f59305a9bef7613ff69e8a2807c4
-source:
-  url: https://github.com/rahra/onioncat/archive/refs/tags/v4.11.0.tar.gz
-  sha256: 75ff9eed332e97a9efb7999bbe48867d00e06ac20601cc72b87897d5b1859f99
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - tor
+    - tor
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onioncat/blobs/sha256:b3f88f8aa7942ec817d17c5d9f6807f3bdaa98c82bdabb281e865b26100df878
+        sha256: b3f88f8aa7942ec817d17c5d9f6807f3bdaa98c82bdabb281e865b26100df878
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onioncat/blobs/sha256:376be0d8ae8f091f6f6dae5beba524fd5ba07e2606264a73c1b827e187dc3ea2
+        sha256: 376be0d8ae8f091f6f6dae5beba524fd5ba07e2606264a73c1b827e187dc3ea2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onioncat/blobs/sha256:b7909dd65c46856bf1ba00a9253d6b51cd4c1b23b2595a57d0018607ca02bd94
+        sha256: b7909dd65c46856bf1ba00a9253d6b51cd4c1b23b2595a57d0018607ca02bd94
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onioncat/blobs/sha256:33f731f9fc0cb8ede749dd65d70b62581f80f59305a9bef7613ff69e8a2807c4
+        sha256: 33f731f9fc0cb8ede749dd65d70b62581f80f59305a9bef7613ff69e8a2807c4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rahra/onioncat/archive/refs/tags/v4.11.0.tar.gz
+    sha256: 75ff9eed332e97a9efb7999bbe48867d00e06ac20601cc72b87897d5b1859f99
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

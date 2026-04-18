@@ -3,30 +3,55 @@ version: 0.4.2
 description: Implementation of the W3C DOM
 homepage: https://www.netsurf-browser.org/projects/libdom/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libdom/blobs/sha256:07e72502e60856ec4307b60f6784aebbc6d59c3fc54da2a46c7416f78162b081
-    sha256: 07e72502e60856ec4307b60f6784aebbc6d59c3fc54da2a46c7416f78162b081
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libdom/blobs/sha256:d71ecaff24c596ef7f918e9f025e95f969d4f4368823106bdb7ab99d7f31ce64
-    sha256: d71ecaff24c596ef7f918e9f025e95f969d4f4368823106bdb7ab99d7f31ce64
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libdom/blobs/sha256:65f04a61a7747e494540603b837878cb887eda1c01e2d744caa9a19a30213204
-    sha256: 65f04a61a7747e494540603b837878cb887eda1c01e2d744caa9a19a30213204
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libdom/blobs/sha256:677af5b19154760fd5048c6acecffdfe1596c60ea79520f9e3e9412f1870af55
-    sha256: 677af5b19154760fd5048c6acecffdfe1596c60ea79520f9e3e9412f1870af55
-source:
-  url: https://download.netsurf-browser.org/libs/releases/libdom-0.4.2-src.tar.gz
-  sha256: d05e45af16547014c2b0a3aecf3670fa13d419f505b3f5fc7ac8a1491fc30f3c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libhubbub
-  - libparserutils
-  - libwapcaplet
+    - libhubbub
+    - libparserutils
+    - libwapcaplet
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libdom/blobs/sha256:d71ecaff24c596ef7f918e9f025e95f969d4f4368823106bdb7ab99d7f31ce64
+        sha256: d71ecaff24c596ef7f918e9f025e95f969d4f4368823106bdb7ab99d7f31ce64
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libdom/blobs/sha256:07e72502e60856ec4307b60f6784aebbc6d59c3fc54da2a46c7416f78162b081
+        sha256: 07e72502e60856ec4307b60f6784aebbc6d59c3fc54da2a46c7416f78162b081
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libdom/blobs/sha256:65f04a61a7747e494540603b837878cb887eda1c01e2d744caa9a19a30213204
+        sha256: 65f04a61a7747e494540603b837878cb887eda1c01e2d744caa9a19a30213204
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libdom/blobs/sha256:677af5b19154760fd5048c6acecffdfe1596c60ea79520f9e3e9412f1870af55
+        sha256: 677af5b19154760fd5048c6acecffdfe1596c60ea79520f9e3e9412f1870af55
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.netsurf-browser.org/libs/releases/libdom-0.4.2-src.tar.gz
+    sha256: d05e45af16547014c2b0a3aecf3670fa13d419f505b3f5fc7ac8a1491fc30f3c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - netsurf-buildsystem
-  - pkgconf
+    - netsurf-buildsystem
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,31 +3,55 @@ version: 2.18.5
 description: Distributed version control system that tracks changes, via Haskell
 homepage: https://darcs.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/darcs/blobs/sha256:b136e4dddca375c9cbbcc9a7dbb428e39d76e5281efd34bf6f8d0242386d9aef
-    sha256: b136e4dddca375c9cbbcc9a7dbb428e39d76e5281efd34bf6f8d0242386d9aef
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/darcs/blobs/sha256:9735bb1d1d9a86199a42b26815311db4f9c1953e1329ffe2ded96a6a14437f38
-    sha256: 9735bb1d1d9a86199a42b26815311db4f9c1953e1329ffe2ded96a6a14437f38
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/darcs/blobs/sha256:d38c3251fefc0ff7e1dfbdf9ed4455eac8b4a001a26a1dc7cfeda90c646f7717
-    sha256: d38c3251fefc0ff7e1dfbdf9ed4455eac8b4a001a26a1dc7cfeda90c646f7717
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/darcs/blobs/sha256:025db6a2cfdc508f1acf571bc802f4d93519b4877a79869b826427d83b2d5b83
-    sha256: 025db6a2cfdc508f1acf571bc802f4d93519b4877a79869b826427d83b2d5b83
-source:
-  url: https://hackage.haskell.org/package/darcs-2.18.5/darcs-2.18.5.tar.gz
-  sha256: e310692989e313191824f532a26c5eae712217444214266503d5eb5867f951ab
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/darcs/blobs/sha256:9735bb1d1d9a86199a42b26815311db4f9c1953e1329ffe2ded96a6a14437f38
+        sha256: 9735bb1d1d9a86199a42b26815311db4f9c1953e1329ffe2ded96a6a14437f38
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/darcs/blobs/sha256:b136e4dddca375c9cbbcc9a7dbb428e39d76e5281efd34bf6f8d0242386d9aef
+        sha256: b136e4dddca375c9cbbcc9a7dbb428e39d76e5281efd34bf6f8d0242386d9aef
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/darcs/blobs/sha256:d38c3251fefc0ff7e1dfbdf9ed4455eac8b4a001a26a1dc7cfeda90c646f7717
+        sha256: d38c3251fefc0ff7e1dfbdf9ed4455eac8b4a001a26a1dc7cfeda90c646f7717
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/darcs/blobs/sha256:025db6a2cfdc508f1acf571bc802f4d93519b4877a79869b826427d83b2d5b83
+        sha256: 025db6a2cfdc508f1acf571bc802f4d93519b4877a79869b826427d83b2d5b83
+        sha512: ""
+        signature: ""
+source:
+    url: https://hackage.haskell.org/package/darcs-2.18.5/darcs-2.18.5.tar.gz
+    sha256: e310692989e313191824f532a26c5eae712217444214266503d5eb5867f951ab
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
+    - cabal-install
+    - ghc
 linux_dependencies:
-  - gmp
-  - zlib-ng-compat
+    - gmp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

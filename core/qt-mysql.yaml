@@ -3,29 +3,54 @@ version: 6.11.0
 description: Qt SQL Database Driver
 homepage: https://www.qt.io/
 license: GPL-2.0-only OR GPL-3.0-only OR LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt-mysql/blobs/sha256:7896886b32b4a0f6d5fb81da1464859416992167a862360898156717ad15e8c8
-    sha256: 7896886b32b4a0f6d5fb81da1464859416992167a862360898156717ad15e8c8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt-mysql/blobs/sha256:13e9f9d105e9c7f225ba155faf2b1f82a8aa4751c5dc055f8da2e881cb44fcc7
-    sha256: 13e9f9d105e9c7f225ba155faf2b1f82a8aa4751c5dc055f8da2e881cb44fcc7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt-mysql/blobs/sha256:8f69a6797b3805cdeff8e556c6b12d6eeabfcda19e58cea516dfdcefc6f3fda9
-    sha256: 8f69a6797b3805cdeff8e556c6b12d6eeabfcda19e58cea516dfdcefc6f3fda9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt-mysql/blobs/sha256:1cc4a582808b962eceb4caa3d7d52731aea8b08cbc01bd4c1cf7a0defd5eb255
-    sha256: 1cc4a582808b962eceb4caa3d7d52731aea8b08cbc01bd4c1cf7a0defd5eb255
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
-  sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - mysql-client
-  - qtbase
+    - mysql-client
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt-mysql/blobs/sha256:13e9f9d105e9c7f225ba155faf2b1f82a8aa4751c5dc055f8da2e881cb44fcc7
+        sha256: 13e9f9d105e9c7f225ba155faf2b1f82a8aa4751c5dc055f8da2e881cb44fcc7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt-mysql/blobs/sha256:7896886b32b4a0f6d5fb81da1464859416992167a862360898156717ad15e8c8
+        sha256: 7896886b32b4a0f6d5fb81da1464859416992167a862360898156717ad15e8c8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt-mysql/blobs/sha256:8f69a6797b3805cdeff8e556c6b12d6eeabfcda19e58cea516dfdcefc6f3fda9
+        sha256: 8f69a6797b3805cdeff8e556c6b12d6eeabfcda19e58cea516dfdcefc6f3fda9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt-mysql/blobs/sha256:1cc4a582808b962eceb4caa3d7d52731aea8b08cbc01bd4c1cf7a0defd5eb255
+        sha256: 1cc4a582808b962eceb4caa3d7d52731aea8b08cbc01bd4c1cf7a0defd5eb255
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
+    sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

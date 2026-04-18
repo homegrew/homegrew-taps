@@ -1,33 +1,57 @@
 name: hledger
-version: 1.52
+version: "1.52"
 description: Easy plain text accounting with command-line, terminal and web UIs
 homepage: https://hledger.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hledger/blobs/sha256:77ab2f1fd71757c8902f2f6e53e2d5c67653e6d31d3fd231216fffd09aebbcd4
-    sha256: 77ab2f1fd71757c8902f2f6e53e2d5c67653e6d31d3fd231216fffd09aebbcd4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hledger/blobs/sha256:5c34c6349ed9b32a0690b02f215d82a9a2f12aebd6e72a9e80cc470f3290b47c
-    sha256: 5c34c6349ed9b32a0690b02f215d82a9a2f12aebd6e72a9e80cc470f3290b47c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hledger/blobs/sha256:f098bd1c127e3475a312eb996b374c80e36e33e1c9c6844522556499ed1ce77f
-    sha256: f098bd1c127e3475a312eb996b374c80e36e33e1c9c6844522556499ed1ce77f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hledger/blobs/sha256:8df4e6f3f40c895abc80dda7c0161c63ebf6e46ea9ea07bb55c6030d3889ebe6
-    sha256: 8df4e6f3f40c895abc80dda7c0161c63ebf6e46ea9ea07bb55c6030d3889ebe6
-source:
-  url: https://github.com/simonmichael/hledger/archive/refs/tags/1.52.tar.gz
-  sha256: 5da2baa4cdb8a391961c66ad2b9d502898f0d7cb534c07703ea05696475ea42b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hledger/blobs/sha256:5c34c6349ed9b32a0690b02f215d82a9a2f12aebd6e72a9e80cc470f3290b47c
+        sha256: 5c34c6349ed9b32a0690b02f215d82a9a2f12aebd6e72a9e80cc470f3290b47c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hledger/blobs/sha256:77ab2f1fd71757c8902f2f6e53e2d5c67653e6d31d3fd231216fffd09aebbcd4
+        sha256: 77ab2f1fd71757c8902f2f6e53e2d5c67653e6d31d3fd231216fffd09aebbcd4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hledger/blobs/sha256:f098bd1c127e3475a312eb996b374c80e36e33e1c9c6844522556499ed1ce77f
+        sha256: f098bd1c127e3475a312eb996b374c80e36e33e1c9c6844522556499ed1ce77f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hledger/blobs/sha256:8df4e6f3f40c895abc80dda7c0161c63ebf6e46ea9ea07bb55c6030d3889ebe6
+        sha256: 8df4e6f3f40c895abc80dda7c0161c63ebf6e46ea9ea07bb55c6030d3889ebe6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/simonmichael/hledger/archive/refs/tags/1.52.tar.gz
+    sha256: 5da2baa4cdb8a391961c66ad2b9d502898f0d7cb534c07703ea05696475ea42b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ghc
-  - haskell-stack
+    - ghc
+    - haskell-stack
 linux_dependencies:
-  - gmp
-  - zlib-ng-compat
+    - gmp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

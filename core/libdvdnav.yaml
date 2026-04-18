@@ -3,29 +3,54 @@ version: 7.0.0
 description: DVD navigation library
 homepage: https://www.videolan.org/developers/libdvdnav.html
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libdvdnav/blobs/sha256:de06e1e44ed91415e861f0bd79e41de8136e9786fc430d4cb81b46be8bdc9643
-    sha256: de06e1e44ed91415e861f0bd79e41de8136e9786fc430d4cb81b46be8bdc9643
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libdvdnav/blobs/sha256:05fc8e61a4945df5d16c96014062b79477a44a271b4371398f5c9f91a526fe71
-    sha256: 05fc8e61a4945df5d16c96014062b79477a44a271b4371398f5c9f91a526fe71
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libdvdnav/blobs/sha256:013483294308424c90b6d2cf46335160df2f5ad9d2a12935d8bb0e12669d28d7
-    sha256: 013483294308424c90b6d2cf46335160df2f5ad9d2a12935d8bb0e12669d28d7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libdvdnav/blobs/sha256:18d641647018fcea9fac4d0bc26bf04aa8a47ef5206de9bdfa91af2d23f9ebd7
-    sha256: 18d641647018fcea9fac4d0bc26bf04aa8a47ef5206de9bdfa91af2d23f9ebd7
-source:
-  url: https://download.videolan.org/pub/videolan/libdvdnav/7.0.0/libdvdnav-7.0.0.tar.xz
-  sha256: a2a18f5ad36d133c74bf9106b6445806fa253b09141a46392550394b647b221e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libdvdread
+    - libdvdread
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libdvdnav/blobs/sha256:05fc8e61a4945df5d16c96014062b79477a44a271b4371398f5c9f91a526fe71
+        sha256: 05fc8e61a4945df5d16c96014062b79477a44a271b4371398f5c9f91a526fe71
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libdvdnav/blobs/sha256:de06e1e44ed91415e861f0bd79e41de8136e9786fc430d4cb81b46be8bdc9643
+        sha256: de06e1e44ed91415e861f0bd79e41de8136e9786fc430d4cb81b46be8bdc9643
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libdvdnav/blobs/sha256:013483294308424c90b6d2cf46335160df2f5ad9d2a12935d8bb0e12669d28d7
+        sha256: 013483294308424c90b6d2cf46335160df2f5ad9d2a12935d8bb0e12669d28d7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libdvdnav/blobs/sha256:18d641647018fcea9fac4d0bc26bf04aa8a47ef5206de9bdfa91af2d23f9ebd7
+        sha256: 18d641647018fcea9fac4d0bc26bf04aa8a47ef5206de9bdfa91af2d23f9ebd7
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.videolan.org/pub/videolan/libdvdnav/7.0.0/libdvdnav-7.0.0.tar.xz
+    sha256: a2a18f5ad36d133c74bf9106b6445806fa253b09141a46392550394b647b221e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

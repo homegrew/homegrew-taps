@@ -3,26 +3,52 @@ version: 0.2.0
 description: Generate passwords and manage encrypted password databases
 homepage: https://github.com/nsd20463/pwsafe
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pwsafe/blobs/sha256:294f8a817d0eee693be29e24ea04c118f50a51d5f5d6c8531e994abf731f9041
-    sha256: 294f8a817d0eee693be29e24ea04c118f50a51d5f5d6c8531e994abf731f9041
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pwsafe/blobs/sha256:eb846550598837551cc50cf973ef55b655d385c25d47b4e7da87664963eff544
-    sha256: eb846550598837551cc50cf973ef55b655d385c25d47b4e7da87664963eff544
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pwsafe/blobs/sha256:8dcacc8d3f09ec672a4130e55695240788145e0159f6a606c67912d8411c2c0d
-    sha256: 8dcacc8d3f09ec672a4130e55695240788145e0159f6a606c67912d8411c2c0d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pwsafe/blobs/sha256:400819e0247e3fd2cafc708b7e53f89760fd7f10ff016ab1bc370002de59899e
-    sha256: 400819e0247e3fd2cafc708b7e53f89760fd7f10ff016ab1bc370002de59899e
-source:
-  url: https://src.fedoraproject.org/repo/pkgs/pwsafe/pwsafe-0.2.0.tar.gz/4bb36538a2772ecbf1a542bc7d4746c0/pwsafe-0.2.0.tar.gz
-  sha256: 61e91dc5114fe014a49afabd574eda5ff49b36c81a6d492c03fcb10ba6af47b7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - readline
+    - openssl@3
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pwsafe/blobs/sha256:eb846550598837551cc50cf973ef55b655d385c25d47b4e7da87664963eff544
+        sha256: eb846550598837551cc50cf973ef55b655d385c25d47b4e7da87664963eff544
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pwsafe/blobs/sha256:294f8a817d0eee693be29e24ea04c118f50a51d5f5d6c8531e994abf731f9041
+        sha256: 294f8a817d0eee693be29e24ea04c118f50a51d5f5d6c8531e994abf731f9041
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pwsafe/blobs/sha256:8dcacc8d3f09ec672a4130e55695240788145e0159f6a606c67912d8411c2c0d
+        sha256: 8dcacc8d3f09ec672a4130e55695240788145e0159f6a606c67912d8411c2c0d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pwsafe/blobs/sha256:400819e0247e3fd2cafc708b7e53f89760fd7f10ff016ab1bc370002de59899e
+        sha256: 400819e0247e3fd2cafc708b7e53f89760fd7f10ff016ab1bc370002de59899e
+        sha512: ""
+        signature: ""
+source:
+    url: https://src.fedoraproject.org/repo/pkgs/pwsafe/pwsafe-0.2.0.tar.gz/4bb36538a2772ecbf1a542bc7d4746c0/pwsafe-0.2.0.tar.gz
+    sha256: 61e91dc5114fe014a49afabd574eda5ff49b36c81a6d492c03fcb10ba6af47b7
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

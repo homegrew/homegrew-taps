@@ -3,19 +3,41 @@ version: 0.2.0
 description: S/MIME signing utility for use with Git
 homepage: https://github.com/github/smimesign
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/smimesign/blobs/sha256:b10ee2fac2f1d8b6e518b4442ee3b59d3f42579c83ec1e8c2fd363ad196d4681
-    sha256: b10ee2fac2f1d8b6e518b4442ee3b59d3f42579c83ec1e8c2fd363ad196d4681
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/smimesign/blobs/sha256:60fb8d6029bb98ff839b6aeeec56c30f94c09da641a593145bf5e9fb6cec9d91
-    sha256: 60fb8d6029bb98ff839b6aeeec56c30f94c09da641a593145bf5e9fb6cec9d91
-source:
-  url: https://github.com/github/smimesign/archive/refs/tags/v0.2.0.tar.gz
-  sha256: b5921dc3f3b446743e130d1ee39ab9ed2e256b001bd52cf410d30a0eb087f54e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/smimesign/blobs/sha256:60fb8d6029bb98ff839b6aeeec56c30f94c09da641a593145bf5e9fb6cec9d91
+        sha256: 60fb8d6029bb98ff839b6aeeec56c30f94c09da641a593145bf5e9fb6cec9d91
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/smimesign/blobs/sha256:b10ee2fac2f1d8b6e518b4442ee3b59d3f42579c83ec1e8c2fd363ad196d4681
+        sha256: b10ee2fac2f1d8b6e518b4442ee3b59d3f42579c83ec1e8c2fd363ad196d4681
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/github/smimesign/archive/refs/tags/v0.2.0.tar.gz
+    sha256: b5921dc3f3b446743e130d1ee39ab9ed2e256b001bd52cf410d30a0eb087f54e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

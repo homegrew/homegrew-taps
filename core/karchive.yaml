@@ -3,40 +3,64 @@ version: 6.25.0
 description: Reading, creating, and manipulating file archives
 homepage: https://api.kde.org/karchive-index.html
 license: BSD-2-Clause AND LGPL-2.0-only AND LGPL-2.0-or-later AND (LGPL-2.0-only OR LGPL-3.0-only)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/karchive/blobs/sha256:19e6ce959e6f93dda1de68d2b47b7f2f6f934130b3b6fc6d22e2f3364406c6a3
-    sha256: 19e6ce959e6f93dda1de68d2b47b7f2f6f934130b3b6fc6d22e2f3364406c6a3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/karchive/blobs/sha256:0fd6458709bbe9d18fb2657ab74b093cac214e67f504a7022febd96dc9cd5d80
-    sha256: 0fd6458709bbe9d18fb2657ab74b093cac214e67f504a7022febd96dc9cd5d80
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/karchive/blobs/sha256:8ec60c2e776246fd36fb587c7162fd365c30e4f299a839e60938ee546e17c263
-    sha256: 8ec60c2e776246fd36fb587c7162fd365c30e4f299a839e60938ee546e17c263
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/karchive/blobs/sha256:69551f4098a2ec0d599092ed38dc5ab3af1e6251e25f4028d16433cd0320eccb
-    sha256: 69551f4098a2ec0d599092ed38dc5ab3af1e6251e25f4028d16433cd0320eccb
-source:
-  url: https://download.kde.org/stable/frameworks/6.25/karchive-6.25.0.tar.xz
-  sha256: 123a268352ab63d548ba5e3c3e8fbf1d737025e4c5189821cf10e3328ab4de15
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - qtbase
-  - xz
-  - zstd
+    - openssl@3
+    - qtbase
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/karchive/blobs/sha256:0fd6458709bbe9d18fb2657ab74b093cac214e67f504a7022febd96dc9cd5d80
+        sha256: 0fd6458709bbe9d18fb2657ab74b093cac214e67f504a7022febd96dc9cd5d80
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/karchive/blobs/sha256:19e6ce959e6f93dda1de68d2b47b7f2f6f934130b3b6fc6d22e2f3364406c6a3
+        sha256: 19e6ce959e6f93dda1de68d2b47b7f2f6f934130b3b6fc6d22e2f3364406c6a3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/karchive/blobs/sha256:8ec60c2e776246fd36fb587c7162fd365c30e4f299a839e60938ee546e17c263
+        sha256: 8ec60c2e776246fd36fb587c7162fd365c30e4f299a839e60938ee546e17c263
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/karchive/blobs/sha256:69551f4098a2ec0d599092ed38dc5ab3af1e6251e25f4028d16433cd0320eccb
+        sha256: 69551f4098a2ec0d599092ed38dc5ab3af1e6251e25f4028d16433cd0320eccb
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.kde.org/stable/frameworks/6.25/karchive-6.25.0.tar.xz
+    sha256: 123a268352ab63d548ba5e3c3e8fbf1d737025e4c5189821cf10e3328ab4de15
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
-  - extra-cmake-modules
-  - pkgconf
-  - qttools
+    - cmake
+    - doxygen
+    - extra-cmake-modules
+    - pkgconf
+    - qttools
 linux_dependencies:
-  - openssl@3
-  - qtbase
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - openssl@3
+    - qtbase
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

@@ -3,34 +3,58 @@ version: 4.3.4
 description: IOR and naming service utilities for omniORB
 homepage: https://omniorb.sourceforge.io/
 license: GPL-2.0-or-later AND LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/omniorb/blobs/sha256:69b171103aff52ec76b37157af9cafc619a8ab5f65daa0676ac03a39f94b3fcd
-    sha256: 69b171103aff52ec76b37157af9cafc619a8ab5f65daa0676ac03a39f94b3fcd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/omniorb/blobs/sha256:4dd41368f4fde967adde35d8839e3e20078e32b13e41baa1fd852c8e3afffe36
-    sha256: 4dd41368f4fde967adde35d8839e3e20078e32b13e41baa1fd852c8e3afffe36
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/omniorb/blobs/sha256:7a82a3a9f22891f7155ca75558b834b0465338da0c4a03875648428527b64dcd
-    sha256: 7a82a3a9f22891f7155ca75558b834b0465338da0c4a03875648428527b64dcd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/omniorb/blobs/sha256:6fb616f204dc7acf360397e4aeea7d145d6c5eb32c27f152de10c771a042ac2b
-    sha256: 6fb616f204dc7acf360397e4aeea7d145d6c5eb32c27f152de10c771a042ac2b
-source:
-  url: https://downloads.sourceforge.net/project/omniorb/omniORB/omniORB-4.3.4/omniORB-4.3.4.tar.bz2
-  sha256: 79720d415d23cd8da99287a4ef4da0aa1bd34d3e4c7b1530715600adc5ed3dc3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - python@3.14
-  - zstd
+    - openssl@3
+    - python@3.14
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/omniorb/blobs/sha256:4dd41368f4fde967adde35d8839e3e20078e32b13e41baa1fd852c8e3afffe36
+        sha256: 4dd41368f4fde967adde35d8839e3e20078e32b13e41baa1fd852c8e3afffe36
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/omniorb/blobs/sha256:69b171103aff52ec76b37157af9cafc619a8ab5f65daa0676ac03a39f94b3fcd
+        sha256: 69b171103aff52ec76b37157af9cafc619a8ab5f65daa0676ac03a39f94b3fcd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/omniorb/blobs/sha256:7a82a3a9f22891f7155ca75558b834b0465338da0c4a03875648428527b64dcd
+        sha256: 7a82a3a9f22891f7155ca75558b834b0465338da0c4a03875648428527b64dcd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/omniorb/blobs/sha256:6fb616f204dc7acf360397e4aeea7d145d6c5eb32c27f152de10c771a042ac2b
+        sha256: 6fb616f204dc7acf360397e4aeea7d145d6c5eb32c27f152de10c771a042ac2b
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/omniorb/omniORB/omniORB-4.3.4/omniORB-4.3.4.tar.bz2
+    sha256: 79720d415d23cd8da99287a4ef4da0aa1bd34d3e4c7b1530715600adc5ed3dc3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - openssl@3
-  - python@3.14
-  - zlib-ng-compat
-  - zstd
+    - openssl@3
+    - python@3.14
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

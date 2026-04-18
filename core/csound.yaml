@@ -3,73 +3,97 @@ version: 6.18.1
 description: Sound and music computing system
 homepage: https://csound.com
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:ab2e032068bcb6eb84a7d800801f07f692e71098c85f07c210f1099a5eb9a2c5
-    sha256: ab2e032068bcb6eb84a7d800801f07f692e71098c85f07c210f1099a5eb9a2c5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:efe809093c9c64f6c6138fdb6a9d798f84ab50608375b98b19e1d023e69c3edc
-    sha256: efe809093c9c64f6c6138fdb6a9d798f84ab50608375b98b19e1d023e69c3edc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:1b214b5db904191d97bed11533e7e1da53528a9ca8f2ac3fb9394da683315cf6
-    sha256: 1b214b5db904191d97bed11533e7e1da53528a9ca8f2ac3fb9394da683315cf6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:842704687c6bac3621aa2982b5c12bb0f8f15196648f6e3d12c2d847fae8307d
-    sha256: 842704687c6bac3621aa2982b5c12bb0f8f15196648f6e3d12c2d847fae8307d
-source:
-  url: https://github.com/csound/csound.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - faust
-  - fltk
-  - fluid-synth
-  - gettext
-  - hdf5
-  - jack
-  - lame
-  - liblo
-  - libpng
-  - libsamplerate
-  - libsndfile
-  - libwebsockets
-  - numpy
-  - openjdk
-  - openssl@3
-  - portaudio
-  - portmidi
-  - python@3.14
-  - stk
-  - wiiuse
+    - faust
+    - fltk
+    - fluid-synth
+    - gettext
+    - hdf5
+    - jack
+    - lame
+    - liblo
+    - libpng
+    - libsamplerate
+    - libsndfile
+    - libwebsockets
+    - numpy
+    - openjdk
+    - openssl@3
+    - portaudio
+    - portmidi
+    - python@3.14
+    - stk
+    - wiiuse
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:efe809093c9c64f6c6138fdb6a9d798f84ab50608375b98b19e1d023e69c3edc
+        sha256: efe809093c9c64f6c6138fdb6a9d798f84ab50608375b98b19e1d023e69c3edc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:ab2e032068bcb6eb84a7d800801f07f692e71098c85f07c210f1099a5eb9a2c5
+        sha256: ab2e032068bcb6eb84a7d800801f07f692e71098c85f07c210f1099a5eb9a2c5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:1b214b5db904191d97bed11533e7e1da53528a9ca8f2ac3fb9394da683315cf6
+        sha256: 1b214b5db904191d97bed11533e7e1da53528a9ca8f2ac3fb9394da683315cf6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:842704687c6bac3621aa2982b5c12bb0f8f15196648f6e3d12c2d847fae8307d
+        sha256: 842704687c6bac3621aa2982b5c12bb0f8f15196648f6e3d12c2d847fae8307d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/csound/csound.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asio
-  - cmake
-  - eigen
-  - swig
+    - asio
+    - cmake
+    - eigen
+    - swig
 linux_dependencies:
-  - alsa-lib
-  - faust
-  - fltk
-  - fluid-synth
-  - gettext
-  - hdf5
-  - jack
-  - lame
-  - liblo
-  - libpng
-  - libsamplerate
-  - libsndfile
-  - libwebsockets
-  - libx11
-  - numpy
-  - openjdk
-  - openssl@3
-  - portaudio
-  - portmidi
-  - python@3.14
-  - stk
-  - wiiuse
-  - zlib-ng-compat
+    - alsa-lib
+    - faust
+    - fltk
+    - fluid-synth
+    - gettext
+    - hdf5
+    - jack
+    - lame
+    - liblo
+    - libpng
+    - libsamplerate
+    - libsndfile
+    - libwebsockets
+    - libx11
+    - numpy
+    - openjdk
+    - openssl@3
+    - portaudio
+    - portmidi
+    - python@3.14
+    - stk
+    - wiiuse
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

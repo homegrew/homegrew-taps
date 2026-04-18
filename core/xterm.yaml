@@ -1,39 +1,64 @@
 name: xterm
-version: 409
+version: "409"
 description: Terminal emulator for the X Window System
 homepage: https://invisible-island.net/xterm/
 license: X11
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xterm/blobs/sha256:bda9163d68ba640926f12d13170799f6433d3b09107e3262c46c34464e1b6fa1
-    sha256: bda9163d68ba640926f12d13170799f6433d3b09107e3262c46c34464e1b6fa1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xterm/blobs/sha256:448fc21617a1badcf23a94f20145feeba4c998ca23a3eb77dcce1d42213de12c
-    sha256: 448fc21617a1badcf23a94f20145feeba4c998ca23a3eb77dcce1d42213de12c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xterm/blobs/sha256:5bf97c93d4360943de598aea32e27c278406d8d605e9254c56391ddcf09723a5
-    sha256: 5bf97c93d4360943de598aea32e27c278406d8d605e9254c56391ddcf09723a5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xterm/blobs/sha256:fed515c0df82ecaf9474dcc3abc77ac6e56f8b5f781d0260819c304ea7a8bf47
-    sha256: fed515c0df82ecaf9474dcc3abc77ac6e56f8b5f781d0260819c304ea7a8bf47
-source:
-  url: https://invisible-mirror.net/archives/xterm/xterm-409.tgz
-  sha256: 349dc755c49299ca4b8e3a90f7201dff41877a1e6ac16129e439d76493246c40
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fontconfig
-  - freetype
-  - libice
-  - libx11
-  - libxaw
-  - libxext
-  - libxft
-  - libxinerama
-  - libxmu
-  - libxpm
-  - libxt
+    - fontconfig
+    - freetype
+    - libice
+    - libx11
+    - libxaw
+    - libxext
+    - libxft
+    - libxinerama
+    - libxmu
+    - libxpm
+    - libxt
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xterm/blobs/sha256:448fc21617a1badcf23a94f20145feeba4c998ca23a3eb77dcce1d42213de12c
+        sha256: 448fc21617a1badcf23a94f20145feeba4c998ca23a3eb77dcce1d42213de12c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xterm/blobs/sha256:bda9163d68ba640926f12d13170799f6433d3b09107e3262c46c34464e1b6fa1
+        sha256: bda9163d68ba640926f12d13170799f6433d3b09107e3262c46c34464e1b6fa1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xterm/blobs/sha256:5bf97c93d4360943de598aea32e27c278406d8d605e9254c56391ddcf09723a5
+        sha256: 5bf97c93d4360943de598aea32e27c278406d8d605e9254c56391ddcf09723a5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xterm/blobs/sha256:fed515c0df82ecaf9474dcc3abc77ac6e56f8b5f781d0260819c304ea7a8bf47
+        sha256: fed515c0df82ecaf9474dcc3abc77ac6e56f8b5f781d0260819c304ea7a8bf47
+        sha512: ""
+        signature: ""
+source:
+    url: https://invisible-mirror.net/archives/xterm/xterm-409.tgz
+    sha256: 349dc755c49299ca4b8e3a90f7201dff41877a1e6ac16129e439d76493246c40
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

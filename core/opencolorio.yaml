@@ -3,36 +3,61 @@ version: 2.5.1
 description: Color management solution geared towards motion picture production
 homepage: https://opencolorio.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opencolorio/blobs/sha256:0ca624f3788e11cefd2b246e8154b85a819c2a40ed83e618abdb93c00dbedc16
-    sha256: 0ca624f3788e11cefd2b246e8154b85a819c2a40ed83e618abdb93c00dbedc16
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opencolorio/blobs/sha256:c1b9c2d7eda1ec4613cd573a4c16414f286155f91f25715f7e0c204053e85fa3
-    sha256: c1b9c2d7eda1ec4613cd573a4c16414f286155f91f25715f7e0c204053e85fa3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opencolorio/blobs/sha256:5d91f280ab35dd2bfb6c30bf2480f9370fb33fd44aec3b542d2fd28ccd4680f2
-    sha256: 5d91f280ab35dd2bfb6c30bf2480f9370fb33fd44aec3b542d2fd28ccd4680f2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opencolorio/blobs/sha256:9169481ded19f10e1b7c82e7c694d34c30dd78e0ab44107149b303208d869fd1
-    sha256: 9169481ded19f10e1b7c82e7c694d34c30dd78e0ab44107149b303208d869fd1
-source:
-  url: https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/refs/tags/v2.5.1.tar.gz
-  sha256: 08cb6213ea4edee550ab050509d38204004bee6742c658166b1cf825d0a9381b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - imath
-  - little-cms2
-  - minizip-ng
-  - openexr
-  - pystring
-  - yaml-cpp
-  - zlib-ng-compat
+    - imath
+    - little-cms2
+    - minizip-ng
+    - openexr
+    - pystring
+    - yaml-cpp
+    - zlib-ng-compat
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opencolorio/blobs/sha256:c1b9c2d7eda1ec4613cd573a4c16414f286155f91f25715f7e0c204053e85fa3
+        sha256: c1b9c2d7eda1ec4613cd573a4c16414f286155f91f25715f7e0c204053e85fa3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opencolorio/blobs/sha256:0ca624f3788e11cefd2b246e8154b85a819c2a40ed83e618abdb93c00dbedc16
+        sha256: 0ca624f3788e11cefd2b246e8154b85a819c2a40ed83e618abdb93c00dbedc16
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opencolorio/blobs/sha256:5d91f280ab35dd2bfb6c30bf2480f9370fb33fd44aec3b542d2fd28ccd4680f2
+        sha256: 5d91f280ab35dd2bfb6c30bf2480f9370fb33fd44aec3b542d2fd28ccd4680f2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opencolorio/blobs/sha256:9169481ded19f10e1b7c82e7c694d34c30dd78e0ab44107149b303208d869fd1
+        sha256: 9169481ded19f10e1b7c82e7c694d34c30dd78e0ab44107149b303208d869fd1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/refs/tags/v2.5.1.tar.gz
+    sha256: 08cb6213ea4edee550ab050509d38204004bee6742c658166b1cf825d0a9381b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pybind11
-  - python@3.14
-  - sse2neon
+    - cmake
+    - pybind11
+    - python@3.14
+    - sse2neon
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

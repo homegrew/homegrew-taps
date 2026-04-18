@@ -3,34 +3,58 @@ version: 0.32.1
 description: Open source neural network based chess engine
 homepage: https://lczero.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lc0/blobs/sha256:9af0c3404413f7d61bdabebed5b36f18cd46d38d67435add1737ea07c0c09849
-    sha256: 9af0c3404413f7d61bdabebed5b36f18cd46d38d67435add1737ea07c0c09849
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lc0/blobs/sha256:0864f484b7eec673ec082e6979c258db9e33243def5d23b9d003ff3d7877a42c
-    sha256: 0864f484b7eec673ec082e6979c258db9e33243def5d23b9d003ff3d7877a42c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lc0/blobs/sha256:a37761e31c707318e6c92cb6b7c11567e3e1e925146270f86ec344fa0b038419
-    sha256: a37761e31c707318e6c92cb6b7c11567e3e1e925146270f86ec344fa0b038419
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lc0/blobs/sha256:01f90bf4ae497e1a3c8de9db65a7a85f3d3366e056eff269d2f6b0497fcda731
-    sha256: 01f90bf4ae497e1a3c8de9db65a7a85f3d3366e056eff269d2f6b0497fcda731
-source:
-  url: https://github.com/LeelaChessZero/lc0.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - eigen
+    - eigen
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lc0/blobs/sha256:0864f484b7eec673ec082e6979c258db9e33243def5d23b9d003ff3d7877a42c
+        sha256: 0864f484b7eec673ec082e6979c258db9e33243def5d23b9d003ff3d7877a42c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lc0/blobs/sha256:9af0c3404413f7d61bdabebed5b36f18cd46d38d67435add1737ea07c0c09849
+        sha256: 9af0c3404413f7d61bdabebed5b36f18cd46d38d67435add1737ea07c0c09849
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lc0/blobs/sha256:a37761e31c707318e6c92cb6b7c11567e3e1e925146270f86ec344fa0b038419
+        sha256: a37761e31c707318e6c92cb6b7c11567e3e1e925146270f86ec344fa0b038419
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lc0/blobs/sha256:01f90bf4ae497e1a3c8de9db65a7a85f3d3366e056eff269d2f6b0497fcda731
+        sha256: 01f90bf4ae497e1a3c8de9db65a7a85f3d3366e056eff269d2f6b0497fcda731
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/LeelaChessZero/lc0.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - meson
-  - ninja
-  - pkgconf
+    - cmake
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - eigen
-  - openblas
-  - zlib-ng-compat
+    - eigen
+    - openblas
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,33 +3,59 @@ version: 1.3.3
 description: Media server software, compliant with DLNA/UPnP-AV clients
 homepage: https://sourceforge.net/projects/minidlna/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:9fc0ed3ac5675b3dbfe74a361c9b43f7d82a29a65a12abc56ac1b9efd30d1258
-    sha256: 9fc0ed3ac5675b3dbfe74a361c9b43f7d82a29a65a12abc56ac1b9efd30d1258
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:ff6b2f6bd3fcad653e0db52c02c40db6edb23d7bfbeb9647ed13c97e7607a9d1
-    sha256: ff6b2f6bd3fcad653e0db52c02c40db6edb23d7bfbeb9647ed13c97e7607a9d1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:12eec6b926c5633f8fd7565e772a4e334f2f61fa0ab9dfd3a2dfd654e594c997
-    sha256: 12eec6b926c5633f8fd7565e772a4e334f2f61fa0ab9dfd3a2dfd654e594c997
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:bb6c7d8e54a0dda78af8f46d94643bcbd11914bf8e6b20b534d4470127e4d492
-    sha256: bb6c7d8e54a0dda78af8f46d94643bcbd11914bf8e6b20b534d4470127e4d492
-source:
-  url: https://downloads.sourceforge.net/project/minidlna/minidlna/1.3.3/minidlna-1.3.3.tar.gz
-  sha256: 39026c6d4a139b9180192d1c37225aa3376fdf4f1a74d7debbdbb693d996afa4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - flac
-  - gettext
-  - jpeg-turbo
-  - libexif
-  - libid3tag
-  - libogg
-  - libvorbis
-  - sqlite
+    - ffmpeg
+    - flac
+    - gettext
+    - jpeg-turbo
+    - libexif
+    - libid3tag
+    - libogg
+    - libvorbis
+    - sqlite
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:ff6b2f6bd3fcad653e0db52c02c40db6edb23d7bfbeb9647ed13c97e7607a9d1
+        sha256: ff6b2f6bd3fcad653e0db52c02c40db6edb23d7bfbeb9647ed13c97e7607a9d1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:9fc0ed3ac5675b3dbfe74a361c9b43f7d82a29a65a12abc56ac1b9efd30d1258
+        sha256: 9fc0ed3ac5675b3dbfe74a361c9b43f7d82a29a65a12abc56ac1b9efd30d1258
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:12eec6b926c5633f8fd7565e772a4e334f2f61fa0ab9dfd3a2dfd654e594c997
+        sha256: 12eec6b926c5633f8fd7565e772a4e334f2f61fa0ab9dfd3a2dfd654e594c997
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:bb6c7d8e54a0dda78af8f46d94643bcbd11914bf8e6b20b534d4470127e4d492
+        sha256: bb6c7d8e54a0dda78af8f46d94643bcbd11914bf8e6b20b534d4470127e4d492
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/minidlna/minidlna/1.3.3/minidlna-1.3.3.tar.gz
+    sha256: 39026c6d4a139b9180192d1c37225aa3376fdf4f1a74d7debbdbb693d996afa4
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

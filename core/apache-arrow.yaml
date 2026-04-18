@@ -3,60 +3,84 @@ version: 23.0.1
 description: Columnar in-memory analytics layer designed to accelerate big data
 homepage: https://arrow.apache.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:e43fc39f51623585ea9c7d7de4dccdafa37152bdbea0a413f6cd5cc6446616e5
-    sha256: e43fc39f51623585ea9c7d7de4dccdafa37152bdbea0a413f6cd5cc6446616e5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:29389a8e980f9ab9ad5a8722a567771b7fdfbce650a43b56f01b3b6e24c1dd2e
-    sha256: 29389a8e980f9ab9ad5a8722a567771b7fdfbce650a43b56f01b3b6e24c1dd2e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:fef8442e49da985c3568aafe3e23ed8d4851cbf02fd7b18fef3e517a7cc20490
-    sha256: fef8442e49da985c3568aafe3e23ed8d4851cbf02fd7b18fef3e517a7cc20490
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:89d97ab20a68a988c6585d4977003d14345c41aabb8e3b4cadfbd78644d00976
-    sha256: 89d97ab20a68a988c6585d4977003d14345c41aabb8e3b4cadfbd78644d00976
-source:
-  url: https://www.apache.org/dyn/closer.lua?path=arrow/arrow-23.0.1/apache-arrow-23.0.1.tar.gz
-  sha256: bd09adb4feac11fe49d1604f296618866702be610c86e2d513b561d877de6b18
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - aws-crt-cpp
-  - aws-sdk-cpp
-  - brotli
-  - grpc
-  - llvm
-  - lz4
-  - openssl@3
-  - protobuf
-  - re2
-  - snappy
-  - thrift
-  - utf8proc
-  - zstd
+    - abseil
+    - aws-crt-cpp
+    - aws-sdk-cpp
+    - brotli
+    - grpc
+    - llvm
+    - lz4
+    - openssl@3
+    - protobuf
+    - re2
+    - snappy
+    - thrift
+    - utf8proc
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:29389a8e980f9ab9ad5a8722a567771b7fdfbce650a43b56f01b3b6e24c1dd2e
+        sha256: 29389a8e980f9ab9ad5a8722a567771b7fdfbce650a43b56f01b3b6e24c1dd2e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:e43fc39f51623585ea9c7d7de4dccdafa37152bdbea0a413f6cd5cc6446616e5
+        sha256: e43fc39f51623585ea9c7d7de4dccdafa37152bdbea0a413f6cd5cc6446616e5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:fef8442e49da985c3568aafe3e23ed8d4851cbf02fd7b18fef3e517a7cc20490
+        sha256: fef8442e49da985c3568aafe3e23ed8d4851cbf02fd7b18fef3e517a7cc20490
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apache-arrow/blobs/sha256:89d97ab20a68a988c6585d4977003d14345c41aabb8e3b4cadfbd78644d00976
+        sha256: 89d97ab20a68a988c6585d4977003d14345c41aabb8e3b4cadfbd78644d00976
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=arrow/arrow-23.0.1/apache-arrow-23.0.1.tar.gz
+    sha256: bd09adb4feac11fe49d1604f296618866702be610c86e2d513b561d877de6b18
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - cmake
-  - gflags
-  - rapidjson
-  - xsimd
+    - boost
+    - cmake
+    - gflags
+    - rapidjson
+    - xsimd
 linux_dependencies:
-  - abseil
-  - aws-crt-cpp
-  - aws-sdk-cpp
-  - brotli
-  - grpc
-  - llvm
-  - lz4
-  - openssl@3
-  - protobuf
-  - re2
-  - snappy
-  - thrift
-  - utf8proc
-  - zlib-ng-compat
-  - zstd
+    - abseil
+    - aws-crt-cpp
+    - aws-sdk-cpp
+    - brotli
+    - grpc
+    - llvm
+    - lz4
+    - openssl@3
+    - protobuf
+    - re2
+    - snappy
+    - thrift
+    - utf8proc
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

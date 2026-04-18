@@ -3,38 +3,62 @@ version: 1.5.2
 description: Anti-virus software
 homepage: https://www.clamav.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:da2ff01e94f58f60ccc44ef66cc0c20c4b05150352789c041617daedc2180d7b
-    sha256: da2ff01e94f58f60ccc44ef66cc0c20c4b05150352789c041617daedc2180d7b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:e93c879894036a2e2ce2992e59dd3a03bac19bd37a6ff10120e1d273f36385c7
-    sha256: e93c879894036a2e2ce2992e59dd3a03bac19bd37a6ff10120e1d273f36385c7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:f57a456f57e5d758a01c7ffc075a661e70cbb35e46eed22f4d17f44982c555fe
-    sha256: f57a456f57e5d758a01c7ffc075a661e70cbb35e46eed22f4d17f44982c555fe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:95a1bedac2b683a30b354406b4ddbe6c465965446fc134d8699ceeab98374f71
-    sha256: 95a1bedac2b683a30b354406b4ddbe6c465965446fc134d8699ceeab98374f71
-source:
-  url: https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.5.2/clamav-1.5.2.tar.gz
-  sha256: f34018cf22f05bdd9d1a1574ca07193e3e030ca52050c3e5c220e23a32314965
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - json-c
-  - openssl@3
-  - pcre2
-  - yara
+    - json-c
+    - openssl@3
+    - pcre2
+    - yara
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:e93c879894036a2e2ce2992e59dd3a03bac19bd37a6ff10120e1d273f36385c7
+        sha256: e93c879894036a2e2ce2992e59dd3a03bac19bd37a6ff10120e1d273f36385c7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:da2ff01e94f58f60ccc44ef66cc0c20c4b05150352789c041617daedc2180d7b
+        sha256: da2ff01e94f58f60ccc44ef66cc0c20c4b05150352789c041617daedc2180d7b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:f57a456f57e5d758a01c7ffc075a661e70cbb35e46eed22f4d17f44982c555fe
+        sha256: f57a456f57e5d758a01c7ffc075a661e70cbb35e46eed22f4d17f44982c555fe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:95a1bedac2b683a30b354406b4ddbe6c465965446fc134d8699ceeab98374f71
+        sha256: 95a1bedac2b683a30b354406b4ddbe6c465965446fc134d8699ceeab98374f71
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.5.2/clamav-1.5.2.tar.gz
+    sha256: f34018cf22f05bdd9d1a1574ca07193e3e030ca52050c3e5c220e23a32314965
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - rust
+    - cmake
+    - pkgconf
+    - rust
 linux_dependencies:
-  - json-c
-  - openssl@3
-  - pcre2
-  - yara
-  - zlib-ng-compat
+    - json-c
+    - openssl@3
+    - pcre2
+    - yara
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

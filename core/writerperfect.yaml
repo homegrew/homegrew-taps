@@ -3,31 +3,56 @@ version: 0.9.6
 description: Library for importing WordPerfect documents
 homepage: https://sourceforge.net/p/libwpd/wiki/writerperfect/
 license: LGPL-2.1-or-later OR MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/writerperfect/blobs/sha256:019f7df6196f57ac72fef8f42879191724bbd71243f5d55df485b5aa7b583eec
-    sha256: 019f7df6196f57ac72fef8f42879191724bbd71243f5d55df485b5aa7b583eec
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/writerperfect/blobs/sha256:7748782d562017ce5a6acaa24d6f9609aec50c65899f5c0bd983e9b997851c48
-    sha256: 7748782d562017ce5a6acaa24d6f9609aec50c65899f5c0bd983e9b997851c48
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/writerperfect/blobs/sha256:8ba99fa8423726871a3437205306e9cec03cc3715ed8630f1e29acd7ae74be14
-    sha256: 8ba99fa8423726871a3437205306e9cec03cc3715ed8630f1e29acd7ae74be14
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/writerperfect/blobs/sha256:1880e89aea024d9aeb907f7aca699b2e6f4f6913ad2aa7c5cd8757e06cb80ec4
-    sha256: 1880e89aea024d9aeb907f7aca699b2e6f4f6913ad2aa7c5cd8757e06cb80ec4
-source:
-  url: https://downloads.sourceforge.net/project/libwpd/writerperfect/writerperfect-0.9.6/writerperfect-0.9.6.tar.xz
-  sha256: 1fe162145013a9786b201cb69724b2d55ff2bf2354c3cd188fd4466e7fc324e6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libodfgen
-  - librevenge
-  - libwpd
-  - libwpg
-  - libwps
+    - libodfgen
+    - librevenge
+    - libwpd
+    - libwpg
+    - libwps
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/writerperfect/blobs/sha256:7748782d562017ce5a6acaa24d6f9609aec50c65899f5c0bd983e9b997851c48
+        sha256: 7748782d562017ce5a6acaa24d6f9609aec50c65899f5c0bd983e9b997851c48
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/writerperfect/blobs/sha256:019f7df6196f57ac72fef8f42879191724bbd71243f5d55df485b5aa7b583eec
+        sha256: 019f7df6196f57ac72fef8f42879191724bbd71243f5d55df485b5aa7b583eec
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/writerperfect/blobs/sha256:8ba99fa8423726871a3437205306e9cec03cc3715ed8630f1e29acd7ae74be14
+        sha256: 8ba99fa8423726871a3437205306e9cec03cc3715ed8630f1e29acd7ae74be14
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/writerperfect/blobs/sha256:1880e89aea024d9aeb907f7aca699b2e6f4f6913ad2aa7c5cd8757e06cb80ec4
+        sha256: 1880e89aea024d9aeb907f7aca699b2e6f4f6913ad2aa7c5cd8757e06cb80ec4
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/libwpd/writerperfect/writerperfect-0.9.6/writerperfect-0.9.6.tar.xz
+    sha256: 1fe162145013a9786b201cb69724b2d55ff2bf2354c3cd188fd4466e7fc324e6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

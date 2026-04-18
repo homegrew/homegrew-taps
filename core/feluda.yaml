@@ -3,31 +3,55 @@ version: 1.12.0
 description: Detect license usage restrictions in your project
 homepage: https://github.com/anistark/feluda
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/feluda/blobs/sha256:769cc7fd5adc675de3135dc05b0d98bd546e73d074df254059e0112370bea5c8
-    sha256: 769cc7fd5adc675de3135dc05b0d98bd546e73d074df254059e0112370bea5c8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/feluda/blobs/sha256:2cc81bb146fda4e4a103797ce3acbd62ab09873f164328095f3b62771e9f1b43
-    sha256: 2cc81bb146fda4e4a103797ce3acbd62ab09873f164328095f3b62771e9f1b43
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/feluda/blobs/sha256:81a4ee5c0855935aebba6cce98214a8aa5cc5128644c492fa1fc6f82368e0b47
-    sha256: 81a4ee5c0855935aebba6cce98214a8aa5cc5128644c492fa1fc6f82368e0b47
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/feluda/blobs/sha256:e7d7c2e37a2734de9e12d011fc29e0a5291253081c880b8256f7cc5da4339856
-    sha256: e7d7c2e37a2734de9e12d011fc29e0a5291253081c880b8256f7cc5da4339856
-source:
-  url: https://github.com/anistark/feluda/archive/refs/tags/v1.12.0.tar.gz
-  sha256: c9305dbbd25b35083d0458e60e538d038d0c646738606e9ba1092b84a8c3471c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/feluda/blobs/sha256:2cc81bb146fda4e4a103797ce3acbd62ab09873f164328095f3b62771e9f1b43
+        sha256: 2cc81bb146fda4e4a103797ce3acbd62ab09873f164328095f3b62771e9f1b43
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/feluda/blobs/sha256:769cc7fd5adc675de3135dc05b0d98bd546e73d074df254059e0112370bea5c8
+        sha256: 769cc7fd5adc675de3135dc05b0d98bd546e73d074df254059e0112370bea5c8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/feluda/blobs/sha256:81a4ee5c0855935aebba6cce98214a8aa5cc5128644c492fa1fc6f82368e0b47
+        sha256: 81a4ee5c0855935aebba6cce98214a8aa5cc5128644c492fa1fc6f82368e0b47
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/feluda/blobs/sha256:e7d7c2e37a2734de9e12d011fc29e0a5291253081c880b8256f7cc5da4339856
+        sha256: e7d7c2e37a2734de9e12d011fc29e0a5291253081c880b8256f7cc5da4339856
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/anistark/feluda/archive/refs/tags/v1.12.0.tar.gz
+    sha256: c9305dbbd25b35083d0458e60e538d038d0c646738606e9ba1092b84a8c3471c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

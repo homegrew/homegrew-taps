@@ -3,27 +3,52 @@ version: 0.7.0
 description: C-family Abstract Syntax Tree XML Output
 homepage: https://github.com/CastXML/CastXML
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/castxml/blobs/sha256:dac8eb2ebe8f34868e8f9e4851507ec1b36d2617be04670149d09df4ba7e8a77
-    sha256: dac8eb2ebe8f34868e8f9e4851507ec1b36d2617be04670149d09df4ba7e8a77
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/castxml/blobs/sha256:196b284a940cb82eeaaef68c69816322d3780fd0ccff403f238064dc08e79073
-    sha256: 196b284a940cb82eeaaef68c69816322d3780fd0ccff403f238064dc08e79073
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/castxml/blobs/sha256:c1746325a50cb2b71178fd06d9759de65091313333efe38bca72faff558deff9
-    sha256: c1746325a50cb2b71178fd06d9759de65091313333efe38bca72faff558deff9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/castxml/blobs/sha256:a3582afd45fd31626602e6e800110bc4433c7aaee98552d590bea3d19b739aff
-    sha256: a3582afd45fd31626602e6e800110bc4433c7aaee98552d590bea3d19b739aff
-source:
-  url: https://github.com/CastXML/CastXML/archive/refs/tags/v0.7.0.tar.gz
-  sha256: e70728229db5444384befcba9681a01497e9a19e35166ce1ffef3b5cbc8eeefe
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - llvm
+    - llvm
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/castxml/blobs/sha256:196b284a940cb82eeaaef68c69816322d3780fd0ccff403f238064dc08e79073
+        sha256: 196b284a940cb82eeaaef68c69816322d3780fd0ccff403f238064dc08e79073
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/castxml/blobs/sha256:dac8eb2ebe8f34868e8f9e4851507ec1b36d2617be04670149d09df4ba7e8a77
+        sha256: dac8eb2ebe8f34868e8f9e4851507ec1b36d2617be04670149d09df4ba7e8a77
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/castxml/blobs/sha256:c1746325a50cb2b71178fd06d9759de65091313333efe38bca72faff558deff9
+        sha256: c1746325a50cb2b71178fd06d9759de65091313333efe38bca72faff558deff9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/castxml/blobs/sha256:a3582afd45fd31626602e6e800110bc4433c7aaee98552d590bea3d19b739aff
+        sha256: a3582afd45fd31626602e6e800110bc4433c7aaee98552d590bea3d19b739aff
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/CastXML/CastXML/archive/refs/tags/v0.7.0.tar.gz
+    sha256: e70728229db5444384befcba9681a01497e9a19e35166ce1ffef3b5cbc8eeefe
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

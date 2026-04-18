@@ -3,34 +3,58 @@ version: 9.4.2
 description: CLI for DiceBear - An avatar library for designers and developers
 homepage: https://github.com/dicebear/dicebear
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:746b99ccd13c7e7e271dc8cb4d0fd806abd8ba89315b23b970b184305042bdf6
-    sha256: 746b99ccd13c7e7e271dc8cb4d0fd806abd8ba89315b23b970b184305042bdf6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:cce0d9241ef66695946ac18f8d5a89c14b235ce7b3a11c38072c1e8f96e8731f
-    sha256: cce0d9241ef66695946ac18f8d5a89c14b235ce7b3a11c38072c1e8f96e8731f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:cfd673e6b9deea9d83584e853aa314debaa87c95d4e34a485ce655e485e0098b
-    sha256: cfd673e6b9deea9d83584e853aa314debaa87c95d4e34a485ce655e485e0098b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:6abfe6c30fadcd89090b8d01a1b0ce36015083efe352a3a8567fdcaf99000a68
-    sha256: 6abfe6c30fadcd89090b8d01a1b0ce36015083efe352a3a8567fdcaf99000a68
-source:
-  url: https://registry.npmjs.org/dicebear/-/dicebear-9.4.2.tgz
-  sha256: 97592b469fe922e6978dd39bcf2c962cd8d45810cea8ca7fc491a60073b58d5e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - node
-  - vips
-  - gettext
+    - glib
+    - node
+    - vips
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:cce0d9241ef66695946ac18f8d5a89c14b235ce7b3a11c38072c1e8f96e8731f
+        sha256: cce0d9241ef66695946ac18f8d5a89c14b235ce7b3a11c38072c1e8f96e8731f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:746b99ccd13c7e7e271dc8cb4d0fd806abd8ba89315b23b970b184305042bdf6
+        sha256: 746b99ccd13c7e7e271dc8cb4d0fd806abd8ba89315b23b970b184305042bdf6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:cfd673e6b9deea9d83584e853aa314debaa87c95d4e34a485ce655e485e0098b
+        sha256: cfd673e6b9deea9d83584e853aa314debaa87c95d4e34a485ce655e485e0098b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dicebear/blobs/sha256:6abfe6c30fadcd89090b8d01a1b0ce36015083efe352a3a8567fdcaf99000a68
+        sha256: 6abfe6c30fadcd89090b8d01a1b0ce36015083efe352a3a8567fdcaf99000a68
+        sha512: ""
+        signature: ""
+source:
+    url: https://registry.npmjs.org/dicebear/-/dicebear-9.4.2.tgz
+    sha256: 97592b469fe922e6978dd39bcf2c962cd8d45810cea8ca7fc491a60073b58d5e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - glib
-  - node
-  - vips
+    - glib
+    - node
+    - vips
+build:
+    configure: []
+    install: []
+service: null

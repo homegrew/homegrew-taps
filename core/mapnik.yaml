@@ -3,63 +3,87 @@ version: 4.2.2
 description: Toolkit for developing mapping applications
 homepage: https://mapnik.org/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mapnik/blobs/sha256:17461daa16a83cc1b68d83bddec019fe70f5ae3b2025dc96e6c452b609150856
-    sha256: 17461daa16a83cc1b68d83bddec019fe70f5ae3b2025dc96e6c452b609150856
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mapnik/blobs/sha256:2d758a5fbfa96cab450ad2f598a7911c9ffd5d675f9a1021545e4c8d89ddd7a8
-    sha256: 2d758a5fbfa96cab450ad2f598a7911c9ffd5d675f9a1021545e4c8d89ddd7a8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mapnik/blobs/sha256:773d9545c7adf7b00cddba30fc78af1ff692debb8e4388fb22f0742cc8e107b0
-    sha256: 773d9545c7adf7b00cddba30fc78af1ff692debb8e4388fb22f0742cc8e107b0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mapnik/blobs/sha256:578349d989d343e7334d1d816620cadf19364e359143034064444b4a50410c73
-    sha256: 578349d989d343e7334d1d816620cadf19364e359143034064444b4a50410c73
-source:
-  url: https://github.com/mapnik/mapnik/releases/download/v4.2.2/mapnik-v4.2.2.tar.bz2
-  sha256: a530f03c2bcf1ea8f9e500a0dab7f8387f1a1eae3040a886c1547b3af86f5911
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - cairo
-  - freetype
-  - gdal
-  - harfbuzz
-  - icu4c@78
-  - jpeg-turbo
-  - libavif
-  - libpng
-  - libpq
-  - libtiff
-  - libxml2
-  - openssl@3
-  - proj
-  - protozero
-  - sqlite
-  - webp
+    - boost
+    - cairo
+    - freetype
+    - gdal
+    - harfbuzz
+    - icu4c@78
+    - jpeg-turbo
+    - libavif
+    - libpng
+    - libpq
+    - libtiff
+    - libxml2
+    - openssl@3
+    - proj
+    - protozero
+    - sqlite
+    - webp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mapnik/blobs/sha256:2d758a5fbfa96cab450ad2f598a7911c9ffd5d675f9a1021545e4c8d89ddd7a8
+        sha256: 2d758a5fbfa96cab450ad2f598a7911c9ffd5d675f9a1021545e4c8d89ddd7a8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mapnik/blobs/sha256:17461daa16a83cc1b68d83bddec019fe70f5ae3b2025dc96e6c452b609150856
+        sha256: 17461daa16a83cc1b68d83bddec019fe70f5ae3b2025dc96e6c452b609150856
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mapnik/blobs/sha256:773d9545c7adf7b00cddba30fc78af1ff692debb8e4388fb22f0742cc8e107b0
+        sha256: 773d9545c7adf7b00cddba30fc78af1ff692debb8e4388fb22f0742cc8e107b0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mapnik/blobs/sha256:578349d989d343e7334d1d816620cadf19364e359143034064444b4a50410c73
+        sha256: 578349d989d343e7334d1d816620cadf19364e359143034064444b4a50410c73
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mapnik/mapnik/releases/download/v4.2.2/mapnik-v4.2.2.tar.bz2
+    sha256: a530f03c2bcf1ea8f9e500a0dab7f8387f1a1eae3040a886c1547b3af86f5911
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - boost
-  - cairo
-  - freetype
-  - gdal
-  - harfbuzz
-  - icu4c@78
-  - jpeg-turbo
-  - libavif
-  - libpng
-  - libpq
-  - libtiff
-  - libxml2
-  - openssl@3
-  - proj
-  - protozero
-  - sqlite
-  - webp
-  - zlib-ng-compat
+    - boost
+    - cairo
+    - freetype
+    - gdal
+    - harfbuzz
+    - icu4c@78
+    - jpeg-turbo
+    - libavif
+    - libpng
+    - libpq
+    - libtiff
+    - libxml2
+    - openssl@3
+    - proj
+    - protozero
+    - sqlite
+    - webp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

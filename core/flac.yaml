@@ -3,27 +3,52 @@ version: 1.5.0
 description: Free lossless audio codec
 homepage: https://xiph.org/flac/
 license: BSD-3-Clause AND GPL-2.0-or-later AND ISC AND LGPL-2.0-or-later AND LGPL-2.1-or-later AND LicenseRef-Homebrew-public-domain AND (GPL-2.0-or-later OR LGPL-2.1-or-later)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flac/blobs/sha256:82b19ded7c732c245a9e325c191de60f7d17bb3370afdc98d159852cf3f9dbd5
-    sha256: 82b19ded7c732c245a9e325c191de60f7d17bb3370afdc98d159852cf3f9dbd5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flac/blobs/sha256:8b3a61d7bedcef1e927057d3d7ef21b1ae69fddfb6a462b98def7f57e306a6a4
-    sha256: 8b3a61d7bedcef1e927057d3d7ef21b1ae69fddfb6a462b98def7f57e306a6a4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flac/blobs/sha256:85f5cec1705ffb8d93fb9abbb0b7b0f197d61633d8e0de2a29de825526790006
-    sha256: 85f5cec1705ffb8d93fb9abbb0b7b0f197d61633d8e0de2a29de825526790006
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flac/blobs/sha256:4e19e26751f4f5c93122102114d7954329b2b1223ada59e8d92afd350a56702b
-    sha256: 4e19e26751f4f5c93122102114d7954329b2b1223ada59e8d92afd350a56702b
-source:
-  url: https://ftp.osuosl.org/pub/xiph/releases/flac/flac-1.5.0.tar.xz
-  sha256: f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libogg
+    - libogg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flac/blobs/sha256:8b3a61d7bedcef1e927057d3d7ef21b1ae69fddfb6a462b98def7f57e306a6a4
+        sha256: 8b3a61d7bedcef1e927057d3d7ef21b1ae69fddfb6a462b98def7f57e306a6a4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flac/blobs/sha256:82b19ded7c732c245a9e325c191de60f7d17bb3370afdc98d159852cf3f9dbd5
+        sha256: 82b19ded7c732c245a9e325c191de60f7d17bb3370afdc98d159852cf3f9dbd5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flac/blobs/sha256:85f5cec1705ffb8d93fb9abbb0b7b0f197d61633d8e0de2a29de825526790006
+        sha256: 85f5cec1705ffb8d93fb9abbb0b7b0f197d61633d8e0de2a29de825526790006
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flac/blobs/sha256:4e19e26751f4f5c93122102114d7954329b2b1223ada59e8d92afd350a56702b
+        sha256: 4e19e26751f4f5c93122102114d7954329b2b1223ada59e8d92afd350a56702b
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.osuosl.org/pub/xiph/releases/flac/flac-1.5.0.tar.xz
+    sha256: f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

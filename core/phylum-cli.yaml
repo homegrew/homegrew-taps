@@ -3,28 +3,53 @@ version: 7.5.0
 description: Command-line interface for the Phylum API
 homepage: https://www.phylum.io
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/phylum-cli/blobs/sha256:a5c41404363af5e2bb318cad8f06e8cd609343c3b4efaeca80516e070c5b26b6
-    sha256: a5c41404363af5e2bb318cad8f06e8cd609343c3b4efaeca80516e070c5b26b6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/phylum-cli/blobs/sha256:3bd8a1e2cb8065e893c93345403ef305ee324629f02269268325899f15101d46
-    sha256: 3bd8a1e2cb8065e893c93345403ef305ee324629f02269268325899f15101d46
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/phylum-cli/blobs/sha256:feac0ee8c27d884b9a2f4a04a1c240878b498abb40b0d050329b42b69a6d5bb0
-    sha256: feac0ee8c27d884b9a2f4a04a1c240878b498abb40b0d050329b42b69a6d5bb0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/phylum-cli/blobs/sha256:b5b7d147df44d98eae7c21b1eb90a6529a81209a11b197068c8da2172da8bd8c
-    sha256: b5b7d147df44d98eae7c21b1eb90a6529a81209a11b197068c8da2172da8bd8c
-source:
-  url: https://github.com/phylum-dev/cli/archive/refs/tags/v7.5.0.tar.gz
-  sha256: a3fe16d9e76872a1dc00c5ba7897806f0e8581a4f4ebb9cc8c4410ae2438d1a7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/phylum-cli/blobs/sha256:3bd8a1e2cb8065e893c93345403ef305ee324629f02269268325899f15101d46
+        sha256: 3bd8a1e2cb8065e893c93345403ef305ee324629f02269268325899f15101d46
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/phylum-cli/blobs/sha256:a5c41404363af5e2bb318cad8f06e8cd609343c3b4efaeca80516e070c5b26b6
+        sha256: a5c41404363af5e2bb318cad8f06e8cd609343c3b4efaeca80516e070c5b26b6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/phylum-cli/blobs/sha256:feac0ee8c27d884b9a2f4a04a1c240878b498abb40b0d050329b42b69a6d5bb0
+        sha256: feac0ee8c27d884b9a2f4a04a1c240878b498abb40b0d050329b42b69a6d5bb0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/phylum-cli/blobs/sha256:b5b7d147df44d98eae7c21b1eb90a6529a81209a11b197068c8da2172da8bd8c
+        sha256: b5b7d147df44d98eae7c21b1eb90a6529a81209a11b197068c8da2172da8bd8c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/phylum-dev/cli/archive/refs/tags/v7.5.0.tar.gz
+    sha256: a3fe16d9e76872a1dc00c5ba7897806f0e8581a4f4ebb9cc8c4410ae2438d1a7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - protobuf
-  - rust
+    - protobuf
+    - rust
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

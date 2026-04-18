@@ -3,31 +3,56 @@ version: 1.0.17
 description: RDF Library
 homepage: https://librdf.org/
 license: LGPL-2.1-or-later OR GPL-2.0-or-later OR Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redland/blobs/sha256:7c7aab000c18d388d284b94060060bdc54990d6aaa29475f702b8c85d9031ecb
-    sha256: 7c7aab000c18d388d284b94060060bdc54990d6aaa29475f702b8c85d9031ecb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redland/blobs/sha256:2c0269bd53d0f3dbd166a44ffb32ccdfb39c2a4408fe68b751e9b9e28b504810
-    sha256: 2c0269bd53d0f3dbd166a44ffb32ccdfb39c2a4408fe68b751e9b9e28b504810
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redland/blobs/sha256:5439aed60715d12f7bce18e9292ce3301fc93b89cdb2eae2bd072a0a59a5fc6b
-    sha256: 5439aed60715d12f7bce18e9292ce3301fc93b89cdb2eae2bd072a0a59a5fc6b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redland/blobs/sha256:40dd4a3c37bd52eb17f97912ab8baaefd3164c84f57ec8d8be6200677af307c8
-    sha256: 40dd4a3c37bd52eb17f97912ab8baaefd3164c84f57ec8d8be6200677af307c8
-source:
-  url: https://download.librdf.org/source/redland-1.0.17.tar.gz
-  sha256: de1847f7b59021c16bdc72abb4d8e2d9187cd6124d69156f3326dd34ee043681
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtool
-  - raptor
-  - rasqal
-  - sqlite
-  - unixodbc
+    - libtool
+    - raptor
+    - rasqal
+    - sqlite
+    - unixodbc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redland/blobs/sha256:2c0269bd53d0f3dbd166a44ffb32ccdfb39c2a4408fe68b751e9b9e28b504810
+        sha256: 2c0269bd53d0f3dbd166a44ffb32ccdfb39c2a4408fe68b751e9b9e28b504810
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redland/blobs/sha256:7c7aab000c18d388d284b94060060bdc54990d6aaa29475f702b8c85d9031ecb
+        sha256: 7c7aab000c18d388d284b94060060bdc54990d6aaa29475f702b8c85d9031ecb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redland/blobs/sha256:5439aed60715d12f7bce18e9292ce3301fc93b89cdb2eae2bd072a0a59a5fc6b
+        sha256: 5439aed60715d12f7bce18e9292ce3301fc93b89cdb2eae2bd072a0a59a5fc6b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redland/blobs/sha256:40dd4a3c37bd52eb17f97912ab8baaefd3164c84f57ec8d8be6200677af307c8
+        sha256: 40dd4a3c37bd52eb17f97912ab8baaefd3164c84f57ec8d8be6200677af307c8
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.librdf.org/source/redland-1.0.17.tar.gz
+    sha256: de1847f7b59021c16bdc72abb4d8e2d9187cd6124d69156f3326dd34ee043681
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

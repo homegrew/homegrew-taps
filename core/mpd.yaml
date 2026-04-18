@@ -3,88 +3,112 @@ version: 0.24.9
 description: Music Player Daemon
 homepage: https://www.musicpd.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:8d0332213c26540e5b26aa2b6603bf123b3650c8a1fc00d1ca5b89200aa7322c
-    sha256: 8d0332213c26540e5b26aa2b6603bf123b3650c8a1fc00d1ca5b89200aa7322c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:c3af6ecf454b0194a244eede1db75fb2fc17e1f05bab36189479ae68b0789f98
-    sha256: c3af6ecf454b0194a244eede1db75fb2fc17e1f05bab36189479ae68b0789f98
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:52180e68ad44aa59725ad53e1401e5db04000d6f5f331101c0a08b8f9e5e9aef
-    sha256: 52180e68ad44aa59725ad53e1401e5db04000d6f5f331101c0a08b8f9e5e9aef
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:8ee5978ec6ae1385d82153344e06e03b30690aa4b7e79cf653aa9e777b592d06
-    sha256: 8ee5978ec6ae1385d82153344e06e03b30690aa4b7e79cf653aa9e777b592d06
-source:
-  url: https://github.com/MusicPlayerDaemon/MPD/archive/refs/tags/v0.24.9.tar.gz
-  sha256: 8a3e7af8e203e561527e07be09aa98b94fb8f6befd7ec4c884e3bbac6bc8c744
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - chromaprint
-  - faad2
-  - ffmpeg
-  - flac
-  - fluid-synth
-  - fmt
-  - game-music-emu
-  - icu4c@78
-  - lame
-  - libao
-  - libid3tag
-  - libmikmod
-  - libmpdclient
-  - libnfs
-  - libnpupnp
-  - libogg
-  - libsamplerate
-  - libshout
-  - libsndfile
-  - libsoxr
-  - libvorbis
-  - mpg123
-  - opus
-  - pcre2
-  - sqlite
-  - wavpack
+    - chromaprint
+    - faad2
+    - ffmpeg
+    - flac
+    - fluid-synth
+    - fmt
+    - game-music-emu
+    - icu4c@78
+    - lame
+    - libao
+    - libid3tag
+    - libmikmod
+    - libmpdclient
+    - libnfs
+    - libnpupnp
+    - libogg
+    - libsamplerate
+    - libshout
+    - libsndfile
+    - libsoxr
+    - libvorbis
+    - mpg123
+    - opus
+    - pcre2
+    - sqlite
+    - wavpack
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:c3af6ecf454b0194a244eede1db75fb2fc17e1f05bab36189479ae68b0789f98
+        sha256: c3af6ecf454b0194a244eede1db75fb2fc17e1f05bab36189479ae68b0789f98
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:8d0332213c26540e5b26aa2b6603bf123b3650c8a1fc00d1ca5b89200aa7322c
+        sha256: 8d0332213c26540e5b26aa2b6603bf123b3650c8a1fc00d1ca5b89200aa7322c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:52180e68ad44aa59725ad53e1401e5db04000d6f5f331101c0a08b8f9e5e9aef
+        sha256: 52180e68ad44aa59725ad53e1401e5db04000d6f5f331101c0a08b8f9e5e9aef
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:8ee5978ec6ae1385d82153344e06e03b30690aa4b7e79cf653aa9e777b592d06
+        sha256: 8ee5978ec6ae1385d82153344e06e03b30690aa4b7e79cf653aa9e777b592d06
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/MusicPlayerDaemon/MPD/archive/refs/tags/v0.24.9.tar.gz
+    sha256: 8a3e7af8e203e561527e07be09aa98b94fb8f6befd7ec4c884e3bbac6bc8c744
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - nlohmann-json
-  - pkgconf
+    - meson
+    - ninja
+    - nlohmann-json
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - chromaprint
-  - dbus
-  - faad2
-  - ffmpeg
-  - flac
-  - fluid-synth
-  - fmt
-  - game-music-emu
-  - icu4c@78
-  - jack
-  - lame
-  - libao
-  - libid3tag
-  - libmikmod
-  - libmpdclient
-  - libnfs
-  - libnpupnp
-  - libogg
-  - libsamplerate
-  - libshout
-  - libsndfile
-  - libsoxr
-  - libvorbis
-  - mpg123
-  - opus
-  - pcre2
-  - pulseaudio
-  - sqlite
-  - systemd
-  - wavpack
-  - zlib-ng-compat
+    - alsa-lib
+    - chromaprint
+    - dbus
+    - faad2
+    - ffmpeg
+    - flac
+    - fluid-synth
+    - fmt
+    - game-music-emu
+    - icu4c@78
+    - jack
+    - lame
+    - libao
+    - libid3tag
+    - libmikmod
+    - libmpdclient
+    - libnfs
+    - libnpupnp
+    - libogg
+    - libsamplerate
+    - libshout
+    - libsndfile
+    - libsoxr
+    - libvorbis
+    - mpg123
+    - opus
+    - pcre2
+    - pulseaudio
+    - sqlite
+    - systemd
+    - wavpack
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

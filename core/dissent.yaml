@@ -3,52 +3,76 @@ version: 0.0.37
 description: GTK4 Discord client in Go
 homepage: https://github.com/diamondburned/dissent
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dissent/blobs/sha256:dd1e49a1cba57126c5863d4a2b677b02fd03fdbaf8a1ce6f81474007b9394661
-    sha256: dd1e49a1cba57126c5863d4a2b677b02fd03fdbaf8a1ce6f81474007b9394661
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dissent/blobs/sha256:ea9319c548bdd84c5a00e110f352299d4c3f586fc9a176005e71dd5fdd18ad07
-    sha256: ea9319c548bdd84c5a00e110f352299d4c3f586fc9a176005e71dd5fdd18ad07
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dissent/blobs/sha256:b7cb6a3cebf7c5fcebeed8c7ee8180e59dc465c4e9c4c1595b40de885392caaa
-    sha256: b7cb6a3cebf7c5fcebeed8c7ee8180e59dc465c4e9c4c1595b40de885392caaa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dissent/blobs/sha256:09d43aa6bfef20752ac31e2b33ad1737a2e40ee0d57bf3ee214833302e2ad81a
-    sha256: 09d43aa6bfef20752ac31e2b33ad1737a2e40ee0d57bf3ee214833302e2ad81a
-source:
-  url: https://github.com/diamondburned/dissent/archive/refs/tags/v0.0.37.tar.gz
-  sha256: b08ae331e5c69759eb7b9511908007fc3e9c7a28208bfa66ffbd84b6f335364a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gobject-introspection
-  - graphene
-  - gtk4
-  - gtksourceview5
-  - libadwaita
-  - libcanberra
-  - libspelling
-  - pango
-  - gettext
-  - harfbuzz
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gobject-introspection
+    - graphene
+    - gtk4
+    - gtksourceview5
+    - libadwaita
+    - libcanberra
+    - libspelling
+    - pango
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dissent/blobs/sha256:ea9319c548bdd84c5a00e110f352299d4c3f586fc9a176005e71dd5fdd18ad07
+        sha256: ea9319c548bdd84c5a00e110f352299d4c3f586fc9a176005e71dd5fdd18ad07
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dissent/blobs/sha256:dd1e49a1cba57126c5863d4a2b677b02fd03fdbaf8a1ce6f81474007b9394661
+        sha256: dd1e49a1cba57126c5863d4a2b677b02fd03fdbaf8a1ce6f81474007b9394661
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dissent/blobs/sha256:b7cb6a3cebf7c5fcebeed8c7ee8180e59dc465c4e9c4c1595b40de885392caaa
+        sha256: b7cb6a3cebf7c5fcebeed8c7ee8180e59dc465c4e9c4c1595b40de885392caaa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dissent/blobs/sha256:09d43aa6bfef20752ac31e2b33ad1737a2e40ee0d57bf3ee214833302e2ad81a
+        sha256: 09d43aa6bfef20752ac31e2b33ad1737a2e40ee0d57bf3ee214833302e2ad81a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/diamondburned/dissent/archive/refs/tags/v0.0.37.tar.gz
+    sha256: b08ae331e5c69759eb7b9511908007fc3e9c7a28208bfa66ffbd84b6f335364a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - pkgconf
+    - go
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gobject-introspection
-  - graphene
-  - gtk4
-  - gtksourceview5
-  - libadwaita
-  - libcanberra
-  - libspelling
-  - pango
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gobject-introspection
+    - graphene
+    - gtk4
+    - gtksourceview5
+    - libadwaita
+    - libcanberra
+    - libspelling
+    - pango
+build:
+    configure: []
+    install: []
+service: null

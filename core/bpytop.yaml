@@ -3,28 +3,53 @@ version: 1.0.68
 description: Linux/OSX/FreeBSD resource monitor
 homepage: https://github.com/aristocratos/bpytop
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bpytop/blobs/sha256:b19bca99c4b0dadd6f0acaab677713cb36e69066d938e40975bb6ec5e1e5e0a5
-    sha256: b19bca99c4b0dadd6f0acaab677713cb36e69066d938e40975bb6ec5e1e5e0a5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bpytop/blobs/sha256:f47e3022d6b8328e32736b7193ac9d3c6678567697ad808252db830ce3b634db
-    sha256: f47e3022d6b8328e32736b7193ac9d3c6678567697ad808252db830ce3b634db
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bpytop/blobs/sha256:f8429d3cbe14ef4215355724446eb5720130c89d596441d7184166f3b4c1f8dd
-    sha256: f8429d3cbe14ef4215355724446eb5720130c89d596441d7184166f3b4c1f8dd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bpytop/blobs/sha256:7c67cef4be215e9374aebee5f4541a7f87b4d3a87dde27c738ce4f9d349ad90c
-    sha256: 7c67cef4be215e9374aebee5f4541a7f87b4d3a87dde27c738ce4f9d349ad90c
-source:
-  url: https://github.com/aristocratos/bpytop/archive/refs/tags/v1.0.68.tar.gz
-  sha256: 3a936f8899efb66246e82bbcab33249bf94aabcefbe410e56f045a1ce3c9949f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
-  - osx-cpu-temp
+    - python@3.14
+    - osx-cpu-temp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bpytop/blobs/sha256:f47e3022d6b8328e32736b7193ac9d3c6678567697ad808252db830ce3b634db
+        sha256: f47e3022d6b8328e32736b7193ac9d3c6678567697ad808252db830ce3b634db
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bpytop/blobs/sha256:b19bca99c4b0dadd6f0acaab677713cb36e69066d938e40975bb6ec5e1e5e0a5
+        sha256: b19bca99c4b0dadd6f0acaab677713cb36e69066d938e40975bb6ec5e1e5e0a5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bpytop/blobs/sha256:f8429d3cbe14ef4215355724446eb5720130c89d596441d7184166f3b4c1f8dd
+        sha256: f8429d3cbe14ef4215355724446eb5720130c89d596441d7184166f3b4c1f8dd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bpytop/blobs/sha256:7c67cef4be215e9374aebee5f4541a7f87b4d3a87dde27c738ce4f9d349ad90c
+        sha256: 7c67cef4be215e9374aebee5f4541a7f87b4d3a87dde27c738ce4f9d349ad90c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/aristocratos/bpytop/archive/refs/tags/v1.0.68.tar.gz
+    sha256: 3a936f8899efb66246e82bbcab33249bf94aabcefbe410e56f045a1ce3c9949f
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - python@3.14
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

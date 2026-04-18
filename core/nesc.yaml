@@ -3,29 +3,54 @@ version: 1.4.0
 description: Programming language for deeply networked systems
 homepage: https://github.com/tinyos/nesc
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nesc/blobs/sha256:8ef4438f308a2fd9e143b70da8b9b53a0ca033c4d5a57182af79a2ad81e4fee3
-    sha256: 8ef4438f308a2fd9e143b70da8b9b53a0ca033c4d5a57182af79a2ad81e4fee3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nesc/blobs/sha256:1d0fdeb5a037662cb3ecafb289e2960ae2497930050654c71e64a3434250d970
-    sha256: 1d0fdeb5a037662cb3ecafb289e2960ae2497930050654c71e64a3434250d970
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nesc/blobs/sha256:09def7e758ed0e91c1557f6ee6994815db45bb14c9f3f3bcba5848f6e1fa2bf3
-    sha256: 09def7e758ed0e91c1557f6ee6994815db45bb14c9f3f3bcba5848f6e1fa2bf3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nesc/blobs/sha256:a1bfde913670c487ed3a9f22f68189d9255b8ba6557f9100243ccdcb5182f83b
-    sha256: a1bfde913670c487ed3a9f22f68189d9255b8ba6557f9100243ccdcb5182f83b
-source:
-  url: https://github.com/tinyos/nesc/archive/refs/tags/v1.4.0.tar.gz
-  sha256: ea9a505d55e122bf413dff404bebfa869a8f0dd76a01a8efc7b4919c375ca000
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - emacs
+    - emacs
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nesc/blobs/sha256:1d0fdeb5a037662cb3ecafb289e2960ae2497930050654c71e64a3434250d970
+        sha256: 1d0fdeb5a037662cb3ecafb289e2960ae2497930050654c71e64a3434250d970
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nesc/blobs/sha256:8ef4438f308a2fd9e143b70da8b9b53a0ca033c4d5a57182af79a2ad81e4fee3
+        sha256: 8ef4438f308a2fd9e143b70da8b9b53a0ca033c4d5a57182af79a2ad81e4fee3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nesc/blobs/sha256:09def7e758ed0e91c1557f6ee6994815db45bb14c9f3f3bcba5848f6e1fa2bf3
+        sha256: 09def7e758ed0e91c1557f6ee6994815db45bb14c9f3f3bcba5848f6e1fa2bf3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nesc/blobs/sha256:a1bfde913670c487ed3a9f22f68189d9255b8ba6557f9100243ccdcb5182f83b
+        sha256: a1bfde913670c487ed3a9f22f68189d9255b8ba6557f9100243ccdcb5182f83b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tinyos/nesc/archive/refs/tags/v1.4.0.tar.gz
+    sha256: ea9a505d55e122bf413dff404bebfa869a8f0dd76a01a8efc7b4919c375ca000
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - openjdk
+    - autoconf
+    - automake
+    - openjdk
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

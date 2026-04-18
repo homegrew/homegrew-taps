@@ -3,35 +3,59 @@ version: 0.3.4
 description: Remove defects from digital images
 homepage: https://lensfun.github.io/
 license: LGPL-3.0-only AND GPL-3.0-only AND CC-BY-3.0 AND LicenseRef-Homebrew-public-domain
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lensfun/blobs/sha256:c04d1179c9ddb6a6c56495d942509d502478de5654631709c5d1cba41fb1d1df
-    sha256: c04d1179c9ddb6a6c56495d942509d502478de5654631709c5d1cba41fb1d1df
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lensfun/blobs/sha256:3cc01d582abd35c7071dc57e600d076c9e7db789793dde489e751f383279140d
-    sha256: 3cc01d582abd35c7071dc57e600d076c9e7db789793dde489e751f383279140d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lensfun/blobs/sha256:85581789aef7eea988ee657559321b555bce95b962a6298156fd6d1ac2453cf1
-    sha256: 85581789aef7eea988ee657559321b555bce95b962a6298156fd6d1ac2453cf1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lensfun/blobs/sha256:8431034a807c782f9b8da3ce8b3c0d482e61ae4557d596cac35b31ddbf2f9c0d
-    sha256: 8431034a807c782f9b8da3ce8b3c0d482e61ae4557d596cac35b31ddbf2f9c0d
-source:
-  url: https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.4.tar.gz
-  sha256: dafb39c08ef24a0e2abd00d05d7341b1bf1f0c38bfcd5a4c69cf5f0ecb6db112
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libpng
-  - python@3.14
-  - gettext
+    - glib
+    - libpng
+    - python@3.14
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lensfun/blobs/sha256:3cc01d582abd35c7071dc57e600d076c9e7db789793dde489e751f383279140d
+        sha256: 3cc01d582abd35c7071dc57e600d076c9e7db789793dde489e751f383279140d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lensfun/blobs/sha256:c04d1179c9ddb6a6c56495d942509d502478de5654631709c5d1cba41fb1d1df
+        sha256: c04d1179c9ddb6a6c56495d942509d502478de5654631709c5d1cba41fb1d1df
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lensfun/blobs/sha256:85581789aef7eea988ee657559321b555bce95b962a6298156fd6d1ac2453cf1
+        sha256: 85581789aef7eea988ee657559321b555bce95b962a6298156fd6d1ac2453cf1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lensfun/blobs/sha256:8431034a807c782f9b8da3ce8b3c0d482e61ae4557d596cac35b31ddbf2f9c0d
+        sha256: 8431034a807c782f9b8da3ce8b3c0d482e61ae4557d596cac35b31ddbf2f9c0d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.4.tar.gz
+    sha256: dafb39c08ef24a0e2abd00d05d7341b1bf1f0c38bfcd5a4c69cf5f0ecb6db112
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - glib
-  - libpng
-  - python@3.14
+    - glib
+    - libpng
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

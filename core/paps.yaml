@@ -3,38 +3,62 @@ version: 0.8.0
 description: Pango to PostScript converter
 homepage: https://github.com/dov/paps
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/paps/blobs/sha256:8d95f99591217a56718331ee68a6996b39f059ca4aecfe5d0921a11566d75735
-    sha256: 8d95f99591217a56718331ee68a6996b39f059ca4aecfe5d0921a11566d75735
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/paps/blobs/sha256:183b02cb1d125fa77ad0320bd003589aa346d9077d530ab85779916c41503547
-    sha256: 183b02cb1d125fa77ad0320bd003589aa346d9077d530ab85779916c41503547
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/paps/blobs/sha256:cf456bd3c1d9da480517bda9f2bf04ca1545c409538e802caba1c11411329029
-    sha256: cf456bd3c1d9da480517bda9f2bf04ca1545c409538e802caba1c11411329029
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/paps/blobs/sha256:f8bff76dd84fc102e71509567f16a62036320efb8d3fb10240cee22ae5b70d19
-    sha256: f8bff76dd84fc102e71509567f16a62036320efb8d3fb10240cee22ae5b70d19
-source:
-  url: https://github.com/dov/paps/archive/refs/tags/v0.8.0.tar.gz
-  sha256: 8fd8db04e6f8c5c164806d2c1b5fea6096daf583f83f06d1e4813ea61edc291f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - fmt
-  - glib
-  - pango
-  - gettext
+    - cairo
+    - fmt
+    - glib
+    - pango
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/paps/blobs/sha256:183b02cb1d125fa77ad0320bd003589aa346d9077d530ab85779916c41503547
+        sha256: 183b02cb1d125fa77ad0320bd003589aa346d9077d530ab85779916c41503547
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/paps/blobs/sha256:8d95f99591217a56718331ee68a6996b39f059ca4aecfe5d0921a11566d75735
+        sha256: 8d95f99591217a56718331ee68a6996b39f059ca4aecfe5d0921a11566d75735
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/paps/blobs/sha256:cf456bd3c1d9da480517bda9f2bf04ca1545c409538e802caba1c11411329029
+        sha256: cf456bd3c1d9da480517bda9f2bf04ca1545c409538e802caba1c11411329029
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/paps/blobs/sha256:f8bff76dd84fc102e71509567f16a62036320efb8d3fb10240cee22ae5b70d19
+        sha256: f8bff76dd84fc102e71509567f16a62036320efb8d3fb10240cee22ae5b70d19
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dov/paps/archive/refs/tags/v0.8.0.tar.gz
+    sha256: 8fd8db04e6f8c5c164806d2c1b5fea6096daf583f83f06d1e4813ea61edc291f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - fmt
-  - glib
-  - pango
+    - cairo
+    - fmt
+    - glib
+    - pango
+build:
+    configure: []
+    install: []
+service: null

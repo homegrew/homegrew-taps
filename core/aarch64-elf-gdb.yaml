@@ -1,45 +1,69 @@
 name: aarch64-elf-gdb
-version: 17.1
+version: "17.1"
 description: GNU debugger for aarch64-elf cross development
 homepage: https://www.gnu.org/software/gdb/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aarch64-elf-gdb/blobs/sha256:bdcf835bdcd3bbb5c88485b7d83b0fc63ec8786ee0a5004d9c30c61c02bdbb54
-    sha256: bdcf835bdcd3bbb5c88485b7d83b0fc63ec8786ee0a5004d9c30c61c02bdbb54
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aarch64-elf-gdb/blobs/sha256:a115255d2121aa6085029bd300ea07d0346fc14ad744b7705826fdd4ef251712
-    sha256: a115255d2121aa6085029bd300ea07d0346fc14ad744b7705826fdd4ef251712
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aarch64-elf-gdb/blobs/sha256:5200015b8cae1913318e034e2ab58934454d1393fcd90da73201fe4fd960fda0
-    sha256: 5200015b8cae1913318e034e2ab58934454d1393fcd90da73201fe4fd960fda0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aarch64-elf-gdb/blobs/sha256:6df608c98860b524069d769d511e65db5fd69e9f23bdc9a9a57c1cb3ed949ff7
-    sha256: 6df608c98860b524069d769d511e65db5fd69e9f23bdc9a9a57c1cb3ed949ff7
-source:
-  url: https://ftpmirror.gnu.org/gnu/gdb/gdb-17.1.tar.xz
-  sha256: 14996f5f74c9f68f5a543fdc45bca7800207f91f92aeea6c2e791822c7c6d876
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - mpfr
-  - ncurses
-  - python@3.14
-  - readline
-  - xz
-  - zstd
+    - gmp
+    - mpfr
+    - ncurses
+    - python@3.14
+    - readline
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aarch64-elf-gdb/blobs/sha256:a115255d2121aa6085029bd300ea07d0346fc14ad744b7705826fdd4ef251712
+        sha256: a115255d2121aa6085029bd300ea07d0346fc14ad744b7705826fdd4ef251712
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aarch64-elf-gdb/blobs/sha256:bdcf835bdcd3bbb5c88485b7d83b0fc63ec8786ee0a5004d9c30c61c02bdbb54
+        sha256: bdcf835bdcd3bbb5c88485b7d83b0fc63ec8786ee0a5004d9c30c61c02bdbb54
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aarch64-elf-gdb/blobs/sha256:5200015b8cae1913318e034e2ab58934454d1393fcd90da73201fe4fd960fda0
+        sha256: 5200015b8cae1913318e034e2ab58934454d1393fcd90da73201fe4fd960fda0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aarch64-elf-gdb/blobs/sha256:6df608c98860b524069d769d511e65db5fd69e9f23bdc9a9a57c1cb3ed949ff7
+        sha256: 6df608c98860b524069d769d511e65db5fd69e9f23bdc9a9a57c1cb3ed949ff7
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/gdb/gdb-17.1.tar.xz
+    sha256: 14996f5f74c9f68f5a543fdc45bca7800207f91f92aeea6c2e791822c7c6d876
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - texinfo
+    - pkgconf
+    - texinfo
 linux_dependencies:
-  - gmp
-  - mpfr
-  - ncurses
-  - python@3.14
-  - readline
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - gmp
+    - mpfr
+    - ncurses
+    - python@3.14
+    - readline
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

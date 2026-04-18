@@ -3,26 +3,52 @@ version: 0.18.0
 description: Containers for machine learning
 homepage: https://cog.run/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cog/blobs/sha256:a9a59f0e636fe320078558678edba2ce7c4e8424e263b2dad7e8740373a78917
-    sha256: a9a59f0e636fe320078558678edba2ce7c4e8424e263b2dad7e8740373a78917
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cog/blobs/sha256:7b0a0987e56475d6b67f42c4c3ff482dae08ac8cba786f1d6f2ebd5ef6ffb0a7
-    sha256: 7b0a0987e56475d6b67f42c4c3ff482dae08ac8cba786f1d6f2ebd5ef6ffb0a7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cog/blobs/sha256:65cbf3a8aba2f6209e3747f23dc209ef7eb252bc9e00bab6ee8bd1c21253d679
-    sha256: 65cbf3a8aba2f6209e3747f23dc209ef7eb252bc9e00bab6ee8bd1c21253d679
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cog/blobs/sha256:d7bf94cd4bf910a95fe297e5f3829c50dbb95f9a58ba5c20ecce714160d21b27
-    sha256: d7bf94cd4bf910a95fe297e5f3829c50dbb95f9a58ba5c20ecce714160d21b27
-source:
-  url: https://github.com/replicate/cog/archive/refs/tags/v0.18.0.tar.gz
-  sha256: 2733dfa0de13b53463ebc13aa4cf1783c9d9e3e3c3fb6ab4f435accb4b39a13f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cog/blobs/sha256:7b0a0987e56475d6b67f42c4c3ff482dae08ac8cba786f1d6f2ebd5ef6ffb0a7
+        sha256: 7b0a0987e56475d6b67f42c4c3ff482dae08ac8cba786f1d6f2ebd5ef6ffb0a7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cog/blobs/sha256:a9a59f0e636fe320078558678edba2ce7c4e8424e263b2dad7e8740373a78917
+        sha256: a9a59f0e636fe320078558678edba2ce7c4e8424e263b2dad7e8740373a78917
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cog/blobs/sha256:65cbf3a8aba2f6209e3747f23dc209ef7eb252bc9e00bab6ee8bd1c21253d679
+        sha256: 65cbf3a8aba2f6209e3747f23dc209ef7eb252bc9e00bab6ee8bd1c21253d679
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cog/blobs/sha256:d7bf94cd4bf910a95fe297e5f3829c50dbb95f9a58ba5c20ecce714160d21b27
+        sha256: d7bf94cd4bf910a95fe297e5f3829c50dbb95f9a58ba5c20ecce714160d21b27
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/replicate/cog/archive/refs/tags/v0.18.0.tar.gz
+    sha256: 2733dfa0de13b53463ebc13aa4cf1783c9d9e3e3c3fb6ab4f435accb4b39a13f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - python@3.14
+    - go
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

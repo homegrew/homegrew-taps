@@ -3,27 +3,53 @@ version: 5.9.1
 description: Embedded SSL Library written in C
 homepage: https://www.wolfssl.com
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wolfssl/blobs/sha256:591870f66e1d140d21a7c001ac99ce06e98b472cdb253535db0e9c5b1ec4b166
-    sha256: 591870f66e1d140d21a7c001ac99ce06e98b472cdb253535db0e9c5b1ec4b166
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wolfssl/blobs/sha256:bed4309d315045e39e46893b34650ba498dc02c1a3693ac94e0fa33aac634325
-    sha256: bed4309d315045e39e46893b34650ba498dc02c1a3693ac94e0fa33aac634325
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wolfssl/blobs/sha256:cf1a91326f6ffe43f48d472974c022cb2e5ea5cd7222688725f1ce5bfcde1434
-    sha256: cf1a91326f6ffe43f48d472974c022cb2e5ea5cd7222688725f1ce5bfcde1434
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wolfssl/blobs/sha256:b297f8c2637957114569dd8e8aff76a2b12732beca5ed1c410ec1aeecf916a2b
-    sha256: b297f8c2637957114569dd8e8aff76a2b12732beca5ed1c410ec1aeecf916a2b
-source:
-  url: https://github.com/wolfSSL/wolfssl.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wolfssl/blobs/sha256:bed4309d315045e39e46893b34650ba498dc02c1a3693ac94e0fa33aac634325
+        sha256: bed4309d315045e39e46893b34650ba498dc02c1a3693ac94e0fa33aac634325
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wolfssl/blobs/sha256:591870f66e1d140d21a7c001ac99ce06e98b472cdb253535db0e9c5b1ec4b166
+        sha256: 591870f66e1d140d21a7c001ac99ce06e98b472cdb253535db0e9c5b1ec4b166
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wolfssl/blobs/sha256:cf1a91326f6ffe43f48d472974c022cb2e5ea5cd7222688725f1ce5bfcde1434
+        sha256: cf1a91326f6ffe43f48d472974c022cb2e5ea5cd7222688725f1ce5bfcde1434
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wolfssl/blobs/sha256:b297f8c2637957114569dd8e8aff76a2b12732beca5ed1c410ec1aeecf916a2b
+        sha256: b297f8c2637957114569dd8e8aff76a2b12732beca5ed1c410ec1aeecf916a2b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/wolfSSL/wolfssl.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,54 @@ version: 0.8.0
 description: C++ wavelet library
 homepage: https://oschulz.github.io/blitzwave/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/blitzwave/blobs/sha256:af9617a5b1ac77f4118d9bed451601510403a32d7e45c1c0b0c67073f36a724b
-    sha256: af9617a5b1ac77f4118d9bed451601510403a32d7e45c1c0b0c67073f36a724b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/blitzwave/blobs/sha256:d691bde9853f4c6d6b2655ba1c85bdbeb3cace6c803c5a7119558a188342a67e
-    sha256: d691bde9853f4c6d6b2655ba1c85bdbeb3cace6c803c5a7119558a188342a67e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/blitzwave/blobs/sha256:353fd7cf26dc62a4441d2a7498a7d947c163dd0994a9bc2d1da6ef8677525b39
-    sha256: 353fd7cf26dc62a4441d2a7498a7d947c163dd0994a9bc2d1da6ef8677525b39
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/blitzwave/blobs/sha256:cb6ebd0241d46c3083fe7c665d80af3a6222e9dc33aad7d23a7b8cd9770541dd
-    sha256: cb6ebd0241d46c3083fe7c665d80af3a6222e9dc33aad7d23a7b8cd9770541dd
-source:
-  url: https://github.com/oschulz/blitzwave/archive/refs/tags/v0.8.0.tar.gz
-  sha256: edb0b708a0587e77b8e0aa3387b44f4e838855c17e896a8277bb80fbe79b9a63
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - blitz
+    - blitz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/blitzwave/blobs/sha256:d691bde9853f4c6d6b2655ba1c85bdbeb3cace6c803c5a7119558a188342a67e
+        sha256: d691bde9853f4c6d6b2655ba1c85bdbeb3cace6c803c5a7119558a188342a67e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/blitzwave/blobs/sha256:af9617a5b1ac77f4118d9bed451601510403a32d7e45c1c0b0c67073f36a724b
+        sha256: af9617a5b1ac77f4118d9bed451601510403a32d7e45c1c0b0c67073f36a724b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/blitzwave/blobs/sha256:353fd7cf26dc62a4441d2a7498a7d947c163dd0994a9bc2d1da6ef8677525b39
+        sha256: 353fd7cf26dc62a4441d2a7498a7d947c163dd0994a9bc2d1da6ef8677525b39
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/blitzwave/blobs/sha256:cb6ebd0241d46c3083fe7c665d80af3a6222e9dc33aad7d23a7b8cd9770541dd
+        sha256: cb6ebd0241d46c3083fe7c665d80af3a6222e9dc33aad7d23a7b8cd9770541dd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/oschulz/blitzwave/archive/refs/tags/v0.8.0.tar.gz
+    sha256: edb0b708a0587e77b8e0aa3387b44f4e838855c17e896a8277bb80fbe79b9a63
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

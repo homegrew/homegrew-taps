@@ -3,55 +3,79 @@ version: 3.0.5
 description: Terminal-based audio engine, library, player and server
 homepage: https://musikcube.com
 license: BSD-3-Clause AND GPL-2.0-or-later AND LGPL-2.1-or-later AND BSL-1.0 AND MIT AND Zlib AND bcrypt-Solar-Designer AND blessing
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/musikcube/blobs/sha256:f079cd99390fa8cfde2954b29c85ec1dbb7463fcda7379d7d65a9728dd70135c
-    sha256: f079cd99390fa8cfde2954b29c85ec1dbb7463fcda7379d7d65a9728dd70135c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/musikcube/blobs/sha256:902d978d1bf5ad4507cb22e6bdbed88d4ce91a40d9978148064ff2cb31afbb4b
-    sha256: 902d978d1bf5ad4507cb22e6bdbed88d4ce91a40d9978148064ff2cb31afbb4b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/musikcube/blobs/sha256:6ce68dae9715ffd29bf3fbf6884ff2797f20fee61bd972dfb4bf63763bba390e
-    sha256: 6ce68dae9715ffd29bf3fbf6884ff2797f20fee61bd972dfb4bf63763bba390e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/musikcube/blobs/sha256:0aca547fb4d9aba99e8a2c85cd7c2c512699c40ab6ff058e5df2c7bf3de62e1f
-    sha256: 0aca547fb4d9aba99e8a2c85cd7c2c512699c40ab6ff058e5df2c7bf3de62e1f
-source:
-  url: https://github.com/clangen/musikcube/archive/refs/tags/3.0.5.tar.gz
-  sha256: 708292a583bb5072a8dbb14e408c2a1f61de9b8c9786d4e53b3e69bef5dad8c5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - game-music-emu
-  - lame
-  - libev
-  - libmicrohttpd
-  - libopenmpt
-  - ncurses
-  - openssl@3
-  - portaudio
-  - taglib
-  - gnutls
-  - mpg123
+    - ffmpeg
+    - game-music-emu
+    - lame
+    - libev
+    - libmicrohttpd
+    - libopenmpt
+    - ncurses
+    - openssl@3
+    - portaudio
+    - taglib
+    - gnutls
+    - mpg123
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/musikcube/blobs/sha256:902d978d1bf5ad4507cb22e6bdbed88d4ce91a40d9978148064ff2cb31afbb4b
+        sha256: 902d978d1bf5ad4507cb22e6bdbed88d4ce91a40d9978148064ff2cb31afbb4b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/musikcube/blobs/sha256:f079cd99390fa8cfde2954b29c85ec1dbb7463fcda7379d7d65a9728dd70135c
+        sha256: f079cd99390fa8cfde2954b29c85ec1dbb7463fcda7379d7d65a9728dd70135c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/musikcube/blobs/sha256:6ce68dae9715ffd29bf3fbf6884ff2797f20fee61bd972dfb4bf63763bba390e
+        sha256: 6ce68dae9715ffd29bf3fbf6884ff2797f20fee61bd972dfb4bf63763bba390e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/musikcube/blobs/sha256:0aca547fb4d9aba99e8a2c85cd7c2c512699c40ab6ff058e5df2c7bf3de62e1f
+        sha256: 0aca547fb4d9aba99e8a2c85cd7c2c512699c40ab6ff058e5df2c7bf3de62e1f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/clangen/musikcube/archive/refs/tags/3.0.5.tar.gz
+    sha256: 708292a583bb5072a8dbb14e408c2a1f61de9b8c9786d4e53b3e69bef5dad8c5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asio
-  - cmake
-  - pkgconf
+    - asio
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - ffmpeg
-  - game-music-emu
-  - lame
-  - libev
-  - libmicrohttpd
-  - libopenmpt
-  - ncurses
-  - openssl@3
-  - portaudio
-  - pulseaudio
-  - systemd
-  - taglib
-  - zlib-ng-compat
+    - alsa-lib
+    - ffmpeg
+    - game-music-emu
+    - lame
+    - libev
+    - libmicrohttpd
+    - libopenmpt
+    - ncurses
+    - openssl@3
+    - portaudio
+    - pulseaudio
+    - systemd
+    - taglib
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

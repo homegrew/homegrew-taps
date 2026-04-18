@@ -3,27 +3,52 @@ version: 0.0.23
 description: WASI syscall API built atop libuv
 homepage: https://github.com/nodejs/uvwasi
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uvwasi/blobs/sha256:c2742f168c40ecdcf97566b4bbca3419dc010995edbd25fd2805c45cccbe11fd
-    sha256: c2742f168c40ecdcf97566b4bbca3419dc010995edbd25fd2805c45cccbe11fd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uvwasi/blobs/sha256:74534d557b0603f0fac5d6b4e98257bee2f372c55e0eabf97b0ac5ccbd10415d
-    sha256: 74534d557b0603f0fac5d6b4e98257bee2f372c55e0eabf97b0ac5ccbd10415d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uvwasi/blobs/sha256:2befd108f0cf4fffab4832dc834e0b7c4b8aec470ad95994435792c6b3ab9bcc
-    sha256: 2befd108f0cf4fffab4832dc834e0b7c4b8aec470ad95994435792c6b3ab9bcc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uvwasi/blobs/sha256:bc607f16b816da2d32a2d8a3eec770c64f8a497524dd1a33d5b6f252db0ac44d
-    sha256: bc607f16b816da2d32a2d8a3eec770c64f8a497524dd1a33d5b6f252db0ac44d
-source:
-  url: https://github.com/nodejs/uvwasi/archive/refs/tags/v0.0.23.tar.gz
-  sha256: cdb148aac298883b51da887657deca910c7c02f35435e24f125cef536fe8d5e1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libuv
+    - libuv
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uvwasi/blobs/sha256:74534d557b0603f0fac5d6b4e98257bee2f372c55e0eabf97b0ac5ccbd10415d
+        sha256: 74534d557b0603f0fac5d6b4e98257bee2f372c55e0eabf97b0ac5ccbd10415d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uvwasi/blobs/sha256:c2742f168c40ecdcf97566b4bbca3419dc010995edbd25fd2805c45cccbe11fd
+        sha256: c2742f168c40ecdcf97566b4bbca3419dc010995edbd25fd2805c45cccbe11fd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uvwasi/blobs/sha256:2befd108f0cf4fffab4832dc834e0b7c4b8aec470ad95994435792c6b3ab9bcc
+        sha256: 2befd108f0cf4fffab4832dc834e0b7c4b8aec470ad95994435792c6b3ab9bcc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uvwasi/blobs/sha256:bc607f16b816da2d32a2d8a3eec770c64f8a497524dd1a33d5b6f252db0ac44d
+        sha256: bc607f16b816da2d32a2d8a3eec770c64f8a497524dd1a33d5b6f252db0ac44d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nodejs/uvwasi/archive/refs/tags/v0.0.23.tar.gz
+    sha256: cdb148aac298883b51da887657deca910c7c02f35435e24f125cef536fe8d5e1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

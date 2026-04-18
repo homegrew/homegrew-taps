@@ -1,27 +1,53 @@
 name: aurora
-version: 2.2
+version: "2.2"
 description: Beanstalkd queue server console
 homepage: https://xuri.me/aurora/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aurora/blobs/sha256:d851326e81898d1d2e48168b6bfdfaa7a9073361543e2fca53be0d0bb28a27ed
-    sha256: d851326e81898d1d2e48168b6bfdfaa7a9073361543e2fca53be0d0bb28a27ed
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aurora/blobs/sha256:6069583d481b3409513c421031a0f57ec2cc32f0c312f65043630e477d683e99
-    sha256: 6069583d481b3409513c421031a0f57ec2cc32f0c312f65043630e477d683e99
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aurora/blobs/sha256:c045ae045444b0e5f6ad993b2d30697908b1925132ea47fe2d25b46e729a760c
-    sha256: c045ae045444b0e5f6ad993b2d30697908b1925132ea47fe2d25b46e729a760c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aurora/blobs/sha256:8077df23766d9926fc9b8948ce0ea1861465dad40c42a3f7576a0599ce5f08b7
-    sha256: 8077df23766d9926fc9b8948ce0ea1861465dad40c42a3f7576a0599ce5f08b7
-source:
-  url: https://github.com/xuri/aurora/archive/refs/tags/2.2.tar.gz
-  sha256: 90ac08b7c960aa24ee0c8e60759e398ef205f5b48c2293dd81d9c2f17b24ca42
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aurora/blobs/sha256:6069583d481b3409513c421031a0f57ec2cc32f0c312f65043630e477d683e99
+        sha256: 6069583d481b3409513c421031a0f57ec2cc32f0c312f65043630e477d683e99
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aurora/blobs/sha256:d851326e81898d1d2e48168b6bfdfaa7a9073361543e2fca53be0d0bb28a27ed
+        sha256: d851326e81898d1d2e48168b6bfdfaa7a9073361543e2fca53be0d0bb28a27ed
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aurora/blobs/sha256:c045ae045444b0e5f6ad993b2d30697908b1925132ea47fe2d25b46e729a760c
+        sha256: c045ae045444b0e5f6ad993b2d30697908b1925132ea47fe2d25b46e729a760c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aurora/blobs/sha256:8077df23766d9926fc9b8948ce0ea1861465dad40c42a3f7576a0599ce5f08b7
+        sha256: 8077df23766d9926fc9b8948ce0ea1861465dad40c42a3f7576a0599ce5f08b7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/xuri/aurora/archive/refs/tags/2.2.tar.gz
+    sha256: 90ac08b7c960aa24ee0c8e60759e398ef205f5b48c2293dd81d9c2f17b24ca42
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

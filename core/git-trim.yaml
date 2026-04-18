@@ -3,31 +3,55 @@ version: 0.4.4
 description: Trim your git remote tracking branches that are merged or gone
 homepage: https://github.com/foriequal0/git-trim
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-trim/blobs/sha256:c1a667c8d8f57a5a98f74f25c31b4a42c3e1a590a828d3bf15fb12610fa6c502
-    sha256: c1a667c8d8f57a5a98f74f25c31b4a42c3e1a590a828d3bf15fb12610fa6c502
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-trim/blobs/sha256:2f46851b510f9951089a9166b0252f9802b0e7274dc493c0a44e296014fd8cee
-    sha256: 2f46851b510f9951089a9166b0252f9802b0e7274dc493c0a44e296014fd8cee
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/git-trim/blobs/sha256:aeeea3f5e9d35984a91e402d8e8c315b1806ab1ebcd5c13832d1a10dbbcdeab1
-    sha256: aeeea3f5e9d35984a91e402d8e8c315b1806ab1ebcd5c13832d1a10dbbcdeab1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/git-trim/blobs/sha256:eb6ad0313b09996c5057fa9d8c14c7ffada62ac91a635cc7eb7407eee01c9d44
-    sha256: eb6ad0313b09996c5057fa9d8c14c7ffada62ac91a635cc7eb7407eee01c9d44
-source:
-  url: https://github.com/foriequal0/git-trim.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-trim/blobs/sha256:2f46851b510f9951089a9166b0252f9802b0e7274dc493c0a44e296014fd8cee
+        sha256: 2f46851b510f9951089a9166b0252f9802b0e7274dc493c0a44e296014fd8cee
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-trim/blobs/sha256:c1a667c8d8f57a5a98f74f25c31b4a42c3e1a590a828d3bf15fb12610fa6c502
+        sha256: c1a667c8d8f57a5a98f74f25c31b4a42c3e1a590a828d3bf15fb12610fa6c502
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/git-trim/blobs/sha256:aeeea3f5e9d35984a91e402d8e8c315b1806ab1ebcd5c13832d1a10dbbcdeab1
+        sha256: aeeea3f5e9d35984a91e402d8e8c315b1806ab1ebcd5c13832d1a10dbbcdeab1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-trim/blobs/sha256:eb6ad0313b09996c5057fa9d8c14c7ffada62ac91a635cc7eb7407eee01c9d44
+        sha256: eb6ad0313b09996c5057fa9d8c14c7ffada62ac91a635cc7eb7407eee01c9d44
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/foriequal0/git-trim.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

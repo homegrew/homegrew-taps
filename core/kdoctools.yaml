@@ -3,34 +3,59 @@ version: 6.25.0
 description: Create documentation from DocBook
 homepage: https://l10n.kde.org/docs/doc-primer/
 license: BSD-3-Clause AND GPL-2.0-or-later AND LGPL-2.1-or-later AND (LGPL-2.1-only OR LGPL-3.0-only)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kdoctools/blobs/sha256:9629bacda36d1df1db24123754d05a8b16431a6209b719ab81942520f7e71078
-    sha256: 9629bacda36d1df1db24123754d05a8b16431a6209b719ab81942520f7e71078
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kdoctools/blobs/sha256:36714f85849d17e08301e636d01d2b6967f5781ce6168833e5bd13f61d6b036a
-    sha256: 36714f85849d17e08301e636d01d2b6967f5781ce6168833e5bd13f61d6b036a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kdoctools/blobs/sha256:fdbbbf36521ef7636643060022578fb98bb8babc19b2c6696ef59503eacdf28f
-    sha256: fdbbbf36521ef7636643060022578fb98bb8babc19b2c6696ef59503eacdf28f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kdoctools/blobs/sha256:d1a23ea10f78fa2a37b734d133e242b5bf5c096bf5b15e586f25e4becc4b5b10
-    sha256: d1a23ea10f78fa2a37b734d133e242b5bf5c096bf5b15e586f25e4becc4b5b10
-source:
-  url: https://download.kde.org/stable/frameworks/6.25/kdoctools-6.25.0.tar.xz
-  sha256: 2c5866257edda20f33c35f64a8bcab08de3dddb4e751bbbc2e09e941df979918
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - docbook-xsl
-  - karchive
-  - qtbase
+    - docbook-xsl
+    - karchive
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kdoctools/blobs/sha256:36714f85849d17e08301e636d01d2b6967f5781ce6168833e5bd13f61d6b036a
+        sha256: 36714f85849d17e08301e636d01d2b6967f5781ce6168833e5bd13f61d6b036a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kdoctools/blobs/sha256:9629bacda36d1df1db24123754d05a8b16431a6209b719ab81942520f7e71078
+        sha256: 9629bacda36d1df1db24123754d05a8b16431a6209b719ab81942520f7e71078
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kdoctools/blobs/sha256:fdbbbf36521ef7636643060022578fb98bb8babc19b2c6696ef59503eacdf28f
+        sha256: fdbbbf36521ef7636643060022578fb98bb8babc19b2c6696ef59503eacdf28f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kdoctools/blobs/sha256:d1a23ea10f78fa2a37b734d133e242b5bf5c096bf5b15e586f25e4becc4b5b10
+        sha256: d1a23ea10f78fa2a37b734d133e242b5bf5c096bf5b15e586f25e4becc4b5b10
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.kde.org/stable/frameworks/6.25/kdoctools-6.25.0.tar.xz
+    sha256: 2c5866257edda20f33c35f64a8bcab08de3dddb4e751bbbc2e09e941df979918
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
-  - extra-cmake-modules
-  - gettext
-  - ki18n
-  - qttools
+    - cmake
+    - doxygen
+    - extra-cmake-modules
+    - gettext
+    - ki18n
+    - qttools
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

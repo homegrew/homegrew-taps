@@ -3,27 +3,52 @@ version: 2.4.1
 description: Modern Day Portscanner
 homepage: https://github.com/bee-san/RustScan
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rustscan/blobs/sha256:920f4b2a297025ca7b330f4366ef530a2ce9b23de84e9a901de47e7cfd59969e
-    sha256: 920f4b2a297025ca7b330f4366ef530a2ce9b23de84e9a901de47e7cfd59969e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rustscan/blobs/sha256:86a8d2a183f5bec85dc8c40acb58fc9931bb4fcf9e63d3f7fc271d490e5a7f34
-    sha256: 86a8d2a183f5bec85dc8c40acb58fc9931bb4fcf9e63d3f7fc271d490e5a7f34
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rustscan/blobs/sha256:045f1455224bee1648c5024d83de72ca209ef19e4784adb2bd5d479bef875bf0
-    sha256: 045f1455224bee1648c5024d83de72ca209ef19e4784adb2bd5d479bef875bf0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rustscan/blobs/sha256:6e51bf6ded5a5d7091c433bc5e6532ed8bc08a1792e7fbc3cf2f9cf7b23ede3e
-    sha256: 6e51bf6ded5a5d7091c433bc5e6532ed8bc08a1792e7fbc3cf2f9cf7b23ede3e
-source:
-  url: https://github.com/bee-san/RustScan/archive/refs/tags/2.4.1.tar.gz
-  sha256: fa99c18a12d4c0939ab69ddb84ef7b85a1ea01d8fc86df227449d89473531765
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - nmap
+    - nmap
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rustscan/blobs/sha256:86a8d2a183f5bec85dc8c40acb58fc9931bb4fcf9e63d3f7fc271d490e5a7f34
+        sha256: 86a8d2a183f5bec85dc8c40acb58fc9931bb4fcf9e63d3f7fc271d490e5a7f34
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rustscan/blobs/sha256:920f4b2a297025ca7b330f4366ef530a2ce9b23de84e9a901de47e7cfd59969e
+        sha256: 920f4b2a297025ca7b330f4366ef530a2ce9b23de84e9a901de47e7cfd59969e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rustscan/blobs/sha256:045f1455224bee1648c5024d83de72ca209ef19e4784adb2bd5d479bef875bf0
+        sha256: 045f1455224bee1648c5024d83de72ca209ef19e4784adb2bd5d479bef875bf0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rustscan/blobs/sha256:6e51bf6ded5a5d7091c433bc5e6532ed8bc08a1792e7fbc3cf2f9cf7b23ede3e
+        sha256: 6e51bf6ded5a5d7091c433bc5e6532ed8bc08a1792e7fbc3cf2f9cf7b23ede3e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bee-san/RustScan/archive/refs/tags/2.4.1.tar.gz
+    sha256: fa99c18a12d4c0939ab69ddb84ef7b85a1ea01d8fc86df227449d89473531765
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

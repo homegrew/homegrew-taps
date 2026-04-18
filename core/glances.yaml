@@ -3,30 +3,55 @@ version: 4.5.3
 description: Alternative to top/htop
 homepage: https://nicolargo.github.io/glances/
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glances/blobs/sha256:2f8b7bfffda5291069183233982fe8ee328f6b652eda8e89731b86522361f7c3
-    sha256: 2f8b7bfffda5291069183233982fe8ee328f6b652eda8e89731b86522361f7c3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glances/blobs/sha256:c24a5577c9a4e8309da4a2d26efbe50b2eec696edba561f1affb347ef4b9b494
-    sha256: c24a5577c9a4e8309da4a2d26efbe50b2eec696edba561f1affb347ef4b9b494
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glances/blobs/sha256:897f450a721c61738cd2e41bc56d17df5b55c6bd6fb1b4eb1ee64456bfad72c2
-    sha256: 897f450a721c61738cd2e41bc56d17df5b55c6bd6fb1b4eb1ee64456bfad72c2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glances/blobs/sha256:7f03ede3da9cd6df8e68b26533543641163e19e635c1d86335522f574382b57f
-    sha256: 7f03ede3da9cd6df8e68b26533543641163e19e635c1d86335522f574382b57f
-source:
-  url: https://files.pythonhosted.org/packages/83/8e/6de18ece0daf847b484af754f5b1d203ed8dff0ffd842e1a43feeb71b15a/glances-4.5.3.tar.gz
-  sha256: 6b95dcca4fa74094c2f0b5eca5ae53493b7833f933b1b49f7636fb39a474f71d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - pydantic
-  - python@3.14
+    - certifi
+    - cryptography
+    - pydantic
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glances/blobs/sha256:c24a5577c9a4e8309da4a2d26efbe50b2eec696edba561f1affb347ef4b9b494
+        sha256: c24a5577c9a4e8309da4a2d26efbe50b2eec696edba561f1affb347ef4b9b494
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glances/blobs/sha256:2f8b7bfffda5291069183233982fe8ee328f6b652eda8e89731b86522361f7c3
+        sha256: 2f8b7bfffda5291069183233982fe8ee328f6b652eda8e89731b86522361f7c3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glances/blobs/sha256:897f450a721c61738cd2e41bc56d17df5b55c6bd6fb1b4eb1ee64456bfad72c2
+        sha256: 897f450a721c61738cd2e41bc56d17df5b55c6bd6fb1b4eb1ee64456bfad72c2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glances/blobs/sha256:7f03ede3da9cd6df8e68b26533543641163e19e635c1d86335522f574382b57f
+        sha256: 7f03ede3da9cd6df8e68b26533543641163e19e635c1d86335522f574382b57f
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/83/8e/6de18ece0daf847b484af754f5b1d203ed8dff0ffd842e1a43feeb71b15a/glances-4.5.3.tar.gz
+    sha256: 6b95dcca4fa74094c2f0b5eca5ae53493b7833f933b1b49f7636fb39a474f71d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

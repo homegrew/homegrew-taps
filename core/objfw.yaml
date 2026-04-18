@@ -3,32 +3,56 @@ version: 1.5.1
 description: Portable, lightweight framework for the Objective-C language
 homepage: https://objfw.nil.im/
 license: LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/objfw/blobs/sha256:4aca22fe35b66db1f2c0b8808520780e46b6a17cf9238262f4c7d8c2aba55396
-    sha256: 4aca22fe35b66db1f2c0b8808520780e46b6a17cf9238262f4c7d8c2aba55396
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/objfw/blobs/sha256:38797298bcdd01e52e7926cdf6523c49ab24ff36eefc72f3523be211ac32ae2a
-    sha256: 38797298bcdd01e52e7926cdf6523c49ab24ff36eefc72f3523be211ac32ae2a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/objfw/blobs/sha256:a68440b6b1f6e5b9aea52a4beb2a5a732e6e9c33c4a7035d4a2d4f26d7b9ad6e
-    sha256: a68440b6b1f6e5b9aea52a4beb2a5a732e6e9c33c4a7035d4a2d4f26d7b9ad6e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/objfw/blobs/sha256:132fde952366c5234483410e288bcc77b99c2d1fdf0e35e679372f4fe1e39004
-    sha256: 132fde952366c5234483410e288bcc77b99c2d1fdf0e35e679372f4fe1e39004
-source:
-  url: https://objfw.nil.im/downloads/objfw-1.5.1.tar.gz
-  sha256: fde83565ad1c6aaea2713770ede8f47f1b1e464c9251dde4801e1c614930cdf6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/objfw/blobs/sha256:38797298bcdd01e52e7926cdf6523c49ab24ff36eefc72f3523be211ac32ae2a
+        sha256: 38797298bcdd01e52e7926cdf6523c49ab24ff36eefc72f3523be211ac32ae2a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/objfw/blobs/sha256:4aca22fe35b66db1f2c0b8808520780e46b6a17cf9238262f4c7d8c2aba55396
+        sha256: 4aca22fe35b66db1f2c0b8808520780e46b6a17cf9238262f4c7d8c2aba55396
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/objfw/blobs/sha256:a68440b6b1f6e5b9aea52a4beb2a5a732e6e9c33c4a7035d4a2d4f26d7b9ad6e
+        sha256: a68440b6b1f6e5b9aea52a4beb2a5a732e6e9c33c4a7035d4a2d4f26d7b9ad6e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/objfw/blobs/sha256:132fde952366c5234483410e288bcc77b99c2d1fdf0e35e679372f4fe1e39004
+        sha256: 132fde952366c5234483410e288bcc77b99c2d1fdf0e35e679372f4fe1e39004
+        sha512: ""
+        signature: ""
+source:
+    url: https://objfw.nil.im/downloads/objfw-1.5.1.tar.gz
+    sha256: fde83565ad1c6aaea2713770ede8f47f1b1e464c9251dde4801e1c614930cdf6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
 linux_dependencies:
-  - llvm
-  - openssl@3
-  - zlib-ng-compat
+    - llvm
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

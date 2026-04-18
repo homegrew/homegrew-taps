@@ -3,30 +3,55 @@ version: 0.3.0
 description: Free and open source API and drivers for immersive technology
 homepage: http://openhmd.net
 license: BSL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openhmd/blobs/sha256:67a5d2f64c142bf6a00d24f1b1e1af1051db91de9af1487980702af8f9d49759
-    sha256: 67a5d2f64c142bf6a00d24f1b1e1af1051db91de9af1487980702af8f9d49759
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openhmd/blobs/sha256:2ecd76892befd509fe79dbf294e309a7ff5ae1333abef885dc984b5a4ef0a486
-    sha256: 2ecd76892befd509fe79dbf294e309a7ff5ae1333abef885dc984b5a4ef0a486
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openhmd/blobs/sha256:c07dcb0b3e3848fe49493fef2323a7f143fb70a695e67738355f3c1f30008d44
-    sha256: c07dcb0b3e3848fe49493fef2323a7f143fb70a695e67738355f3c1f30008d44
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openhmd/blobs/sha256:73a9068341d342a933ae584e67ce2820ab612e05bd3ba35f9c2127102d9f2794
-    sha256: 73a9068341d342a933ae584e67ce2820ab612e05bd3ba35f9c2127102d9f2794
-source:
-  url: https://github.com/OpenHMD/OpenHMD/archive/refs/tags/0.3.0.tar.gz
-  sha256: ec5c97ab456046a8aef3cde6d59e474603af398f1d064a66e364fe3c0b26a0fa
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hidapi
+    - hidapi
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openhmd/blobs/sha256:2ecd76892befd509fe79dbf294e309a7ff5ae1333abef885dc984b5a4ef0a486
+        sha256: 2ecd76892befd509fe79dbf294e309a7ff5ae1333abef885dc984b5a4ef0a486
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openhmd/blobs/sha256:67a5d2f64c142bf6a00d24f1b1e1af1051db91de9af1487980702af8f9d49759
+        sha256: 67a5d2f64c142bf6a00d24f1b1e1af1051db91de9af1487980702af8f9d49759
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openhmd/blobs/sha256:c07dcb0b3e3848fe49493fef2323a7f143fb70a695e67738355f3c1f30008d44
+        sha256: c07dcb0b3e3848fe49493fef2323a7f143fb70a695e67738355f3c1f30008d44
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openhmd/blobs/sha256:73a9068341d342a933ae584e67ce2820ab612e05bd3ba35f9c2127102d9f2794
+        sha256: 73a9068341d342a933ae584e67ce2820ab612e05bd3ba35f9c2127102d9f2794
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/OpenHMD/OpenHMD/archive/refs/tags/0.3.0.tar.gz
+    sha256: ec5c97ab456046a8aef3cde6d59e474603af398f1d064a66e364fe3c0b26a0fa
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

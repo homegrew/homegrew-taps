@@ -3,33 +3,58 @@ version: 1.1.0
 description: CLI app to convert ASCII arts into hand drawn diagrams
 homepage: https://github.com/esimov/diagram
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diagram/blobs/sha256:3a77e7b6637b987d6391891b8810a495e7043b8311b2308acba17be9fb1763e5
-    sha256: 3a77e7b6637b987d6391891b8810a495e7043b8311b2308acba17be9fb1763e5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diagram/blobs/sha256:9fdea25d43a0954d98c691c9b34bde4a0ab10a18e5b5b6d5fdfc1d1286c29e8c
-    sha256: 9fdea25d43a0954d98c691c9b34bde4a0ab10a18e5b5b6d5fdfc1d1286c29e8c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diagram/blobs/sha256:8ba93efdc8407ebd4f76c6f3a78aaf392e8a177035d48d740d4c9e3412bc8746
-    sha256: 8ba93efdc8407ebd4f76c6f3a78aaf392e8a177035d48d740d4c9e3412bc8746
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diagram/blobs/sha256:8d40ae4f041e7e48859c91c4875605960d20ffa8de18b35953e9a783031d524f
-    sha256: 8d40ae4f041e7e48859c91c4875605960d20ffa8de18b35953e9a783031d524f
-source:
-  url: https://github.com/esimov/diagram/archive/refs/tags/v1.1.0.tar.gz
-  sha256: f88bc99975ade753435ecf0e7a6470611f77563eb73b94d56fa6b6bafb4b8561
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diagram/blobs/sha256:9fdea25d43a0954d98c691c9b34bde4a0ab10a18e5b5b6d5fdfc1d1286c29e8c
+        sha256: 9fdea25d43a0954d98c691c9b34bde4a0ab10a18e5b5b6d5fdfc1d1286c29e8c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diagram/blobs/sha256:3a77e7b6637b987d6391891b8810a495e7043b8311b2308acba17be9fb1763e5
+        sha256: 3a77e7b6637b987d6391891b8810a495e7043b8311b2308acba17be9fb1763e5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diagram/blobs/sha256:8ba93efdc8407ebd4f76c6f3a78aaf392e8a177035d48d740d4c9e3412bc8746
+        sha256: 8ba93efdc8407ebd4f76c6f3a78aaf392e8a177035d48d740d4c9e3412bc8746
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diagram/blobs/sha256:8d40ae4f041e7e48859c91c4875605960d20ffa8de18b35953e9a783031d524f
+        sha256: 8d40ae4f041e7e48859c91c4875605960d20ffa8de18b35953e9a783031d524f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/esimov/diagram/archive/refs/tags/v1.1.0.tar.gz
+    sha256: f88bc99975ade753435ecf0e7a6470611f77563eb73b94d56fa6b6bafb4b8561
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - pkgconf
+    - go
+    - pkgconf
 linux_dependencies:
-  - libx11
-  - libxcursor
-  - libxfixes
-  - libxkbcommon
-  - mesa
-  - wayland
+    - libx11
+    - libxcursor
+    - libxfixes
+    - libxkbcommon
+    - mesa
+    - wayland
+build:
+    configure: []
+    install: []
+service: null

@@ -3,47 +3,71 @@ version: 3.0.10
 description: Gtk widget for highlighting and replacing misspelled words
 homepage: https://gtkspell.sourceforge.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtkspell3/blobs/sha256:b64eeabbec9be14150c26d9213d525edb028af2546a0a1d85ea26e55d26d3b9d
-    sha256: b64eeabbec9be14150c26d9213d525edb028af2546a0a1d85ea26e55d26d3b9d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtkspell3/blobs/sha256:0db8568fa754d743a6ee0a2e10804a464575a7cb2981599c4fccb0de4ff6fc10
-    sha256: 0db8568fa754d743a6ee0a2e10804a464575a7cb2981599c4fccb0de4ff6fc10
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtkspell3/blobs/sha256:e59e7ffb60fbef74bbfd6c8191776880cf5b4cb697c5519dfcdf7f1e1a29fccf
-    sha256: e59e7ffb60fbef74bbfd6c8191776880cf5b4cb697c5519dfcdf7f1e1a29fccf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtkspell3/blobs/sha256:2107b9a48ac875459316fe149288cd8d0c48d1069000f009f15b007836a789df
-    sha256: 2107b9a48ac875459316fe149288cd8d0c48d1069000f009f15b007836a789df
-source:
-  url: https://downloads.sourceforge.net/project/gtkspell/3.0.10/gtkspell3-3.0.10.tar.xz
-  sha256: b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - enchant
-  - glib
-  - gtk+3
-  - at-spi2-core
-  - cairo
-  - gdk-pixbuf
-  - gettext
-  - harfbuzz
-  - pango
+    - enchant
+    - glib
+    - gtk+3
+    - at-spi2-core
+    - cairo
+    - gdk-pixbuf
+    - gettext
+    - harfbuzz
+    - pango
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtkspell3/blobs/sha256:0db8568fa754d743a6ee0a2e10804a464575a7cb2981599c4fccb0de4ff6fc10
+        sha256: 0db8568fa754d743a6ee0a2e10804a464575a7cb2981599c4fccb0de4ff6fc10
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtkspell3/blobs/sha256:b64eeabbec9be14150c26d9213d525edb028af2546a0a1d85ea26e55d26d3b9d
+        sha256: b64eeabbec9be14150c26d9213d525edb028af2546a0a1d85ea26e55d26d3b9d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtkspell3/blobs/sha256:e59e7ffb60fbef74bbfd6c8191776880cf5b4cb697c5519dfcdf7f1e1a29fccf
+        sha256: e59e7ffb60fbef74bbfd6c8191776880cf5b4cb697c5519dfcdf7f1e1a29fccf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtkspell3/blobs/sha256:2107b9a48ac875459316fe149288cd8d0c48d1069000f009f15b007836a789df
+        sha256: 2107b9a48ac875459316fe149288cd8d0c48d1069000f009f15b007836a789df
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/gtkspell/3.0.10/gtkspell3-3.0.10.tar.xz
+    sha256: b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - gettext
-  - gobject-introspection
-  - gtk-doc
-  - intltool
-  - libtool
-  - pkgconf
-  - vala
+    - autoconf
+    - automake
+    - gettext
+    - gobject-introspection
+    - gtk-doc
+    - intltool
+    - libtool
+    - pkgconf
+    - vala
 linux_dependencies:
-  - enchant
-  - glib
-  - gtk+3
+    - enchant
+    - glib
+    - gtk+3
+build:
+    configure: []
+    install: []
+service: null

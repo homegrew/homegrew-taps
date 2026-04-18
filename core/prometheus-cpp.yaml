@@ -3,27 +3,52 @@ version: 1.3.0
 description: Prometheus Client Library for Modern C++
 homepage: https://github.com/jupp0r/prometheus-cpp
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/prometheus-cpp/blobs/sha256:3660e1736e0bfcfe5209102c6fec8f01868a26c83fee73ae7cac08b29b25bc98
-    sha256: 3660e1736e0bfcfe5209102c6fec8f01868a26c83fee73ae7cac08b29b25bc98
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/prometheus-cpp/blobs/sha256:ab1d6c1ba08b580de3b4035564a859080e2b9d04b5a86e1be8ff5926c6bb4b22
-    sha256: ab1d6c1ba08b580de3b4035564a859080e2b9d04b5a86e1be8ff5926c6bb4b22
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/prometheus-cpp/blobs/sha256:009eb8e6fad556d9d251da2e45bfc897c74518adbb3dbc9b4d6d7f64a9c8ea04
-    sha256: 009eb8e6fad556d9d251da2e45bfc897c74518adbb3dbc9b4d6d7f64a9c8ea04
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/prometheus-cpp/blobs/sha256:e9a5057a04ba0e13c78670a7dd4a9ab09dbfa1d578b835b00a6a3c91fcda5d1d
-    sha256: e9a5057a04ba0e13c78670a7dd4a9ab09dbfa1d578b835b00a6a3c91fcda5d1d
-source:
-  url: https://github.com/jupp0r/prometheus-cpp/releases/download/v1.3.0/prometheus-cpp-with-submodules.tar.gz
-  sha256: 62bc2cc9772db2314dbaae506ae2a75c8ee897dab053d8729e86a637b018fdb6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/prometheus-cpp/blobs/sha256:ab1d6c1ba08b580de3b4035564a859080e2b9d04b5a86e1be8ff5926c6bb4b22
+        sha256: ab1d6c1ba08b580de3b4035564a859080e2b9d04b5a86e1be8ff5926c6bb4b22
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/prometheus-cpp/blobs/sha256:3660e1736e0bfcfe5209102c6fec8f01868a26c83fee73ae7cac08b29b25bc98
+        sha256: 3660e1736e0bfcfe5209102c6fec8f01868a26c83fee73ae7cac08b29b25bc98
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/prometheus-cpp/blobs/sha256:009eb8e6fad556d9d251da2e45bfc897c74518adbb3dbc9b4d6d7f64a9c8ea04
+        sha256: 009eb8e6fad556d9d251da2e45bfc897c74518adbb3dbc9b4d6d7f64a9c8ea04
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/prometheus-cpp/blobs/sha256:e9a5057a04ba0e13c78670a7dd4a9ab09dbfa1d578b835b00a6a3c91fcda5d1d
+        sha256: e9a5057a04ba0e13c78670a7dd4a9ab09dbfa1d578b835b00a6a3c91fcda5d1d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jupp0r/prometheus-cpp/releases/download/v1.3.0/prometheus-cpp-with-submodules.tar.gz
+    sha256: 62bc2cc9772db2314dbaae506ae2a75c8ee897dab053d8729e86a637b018fdb6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 0.11.1
 description: Implements the Advanced Access Content System specification
 homepage: https://www.videolan.org/developers/libaacs.html
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:bb76e9a99df6cbd2ddafd00b7d2bfec36f1d2340573402d912e25f2602d2a9af
-    sha256: bb76e9a99df6cbd2ddafd00b7d2bfec36f1d2340573402d912e25f2602d2a9af
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:8a98b41aa3b27875fc6bde0468647b2dfa0e5dce93e36539db11e587058e7ba4
-    sha256: 8a98b41aa3b27875fc6bde0468647b2dfa0e5dce93e36539db11e587058e7ba4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:bc5a1b4925f4a25d7714f9ddebdd14478d2c75d7d292153a709a412dbb3ba63d
-    sha256: bc5a1b4925f4a25d7714f9ddebdd14478d2c75d7d292153a709a412dbb3ba63d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:bef6e8371ad31a24f757a5b645cc6ec1c608da65e05a5da1c09a7256cc47af27
-    sha256: bef6e8371ad31a24f757a5b645cc6ec1c608da65e05a5da1c09a7256cc47af27
-source:
-  url: https://get.videolan.org/libaacs/0.11.1/libaacs-0.11.1.tar.bz2
-  sha256: a88aa0ebe4c98a77f7aeffd92ab3ef64ac548c6b822e8248a8b926725bea0a39
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgcrypt
-  - libgpg-error
+    - libgcrypt
+    - libgpg-error
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:8a98b41aa3b27875fc6bde0468647b2dfa0e5dce93e36539db11e587058e7ba4
+        sha256: 8a98b41aa3b27875fc6bde0468647b2dfa0e5dce93e36539db11e587058e7ba4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:bb76e9a99df6cbd2ddafd00b7d2bfec36f1d2340573402d912e25f2602d2a9af
+        sha256: bb76e9a99df6cbd2ddafd00b7d2bfec36f1d2340573402d912e25f2602d2a9af
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:bc5a1b4925f4a25d7714f9ddebdd14478d2c75d7d292153a709a412dbb3ba63d
+        sha256: bc5a1b4925f4a25d7714f9ddebdd14478d2c75d7d292153a709a412dbb3ba63d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:bef6e8371ad31a24f757a5b645cc6ec1c608da65e05a5da1c09a7256cc47af27
+        sha256: bef6e8371ad31a24f757a5b645cc6ec1c608da65e05a5da1c09a7256cc47af27
+        sha512: ""
+        signature: ""
+source:
+    url: https://get.videolan.org/libaacs/0.11.1/libaacs-0.11.1.tar.bz2
+    sha256: a88aa0ebe4c98a77f7aeffd92ab3ef64ac548c6b822e8248a8b926725bea0a39
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
+    - bison
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

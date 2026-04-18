@@ -1,33 +1,58 @@
 name: libxtst
 version: 1.2.5
-description: "X.Org: Client API for the XTEST & RECORD extensions"
+description: 'X.Org: Client API for the XTEST & RECORD extensions'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxtst/blobs/sha256:3695416abec8f1da23fddcc232bdc5e9522f822f67c7a0c69f522f54c8653617
-    sha256: 3695416abec8f1da23fddcc232bdc5e9522f822f67c7a0c69f522f54c8653617
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxtst/blobs/sha256:fac9520eabdd31b4defc300ec39c860da9809c8850415b2c8ba799e1849e5f2f
-    sha256: fac9520eabdd31b4defc300ec39c860da9809c8850415b2c8ba799e1849e5f2f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxtst/blobs/sha256:51cacd4573d0d4e1cc33c83574cf4838d93de28276a9cd3c69496da8a4466771
-    sha256: 51cacd4573d0d4e1cc33c83574cf4838d93de28276a9cd3c69496da8a4466771
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxtst/blobs/sha256:270e406f0aa8cdbd35a39c76ebaea72a79325ac23ee3342d1cc5f7c930a8f337
-    sha256: 270e406f0aa8cdbd35a39c76ebaea72a79325ac23ee3342d1cc5f7c930a8f337
-source:
-  url: https://www.x.org/archive/individual/lib/libXtst-1.2.5.tar.gz
-  sha256: 244ba6e1c5ffa44f1ba251affdfa984d55d99c94bb925a342657e5e7aaf6d39c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - libxext
-  - libxi
-  - xorgproto
+    - libx11
+    - libxext
+    - libxi
+    - xorgproto
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxtst/blobs/sha256:fac9520eabdd31b4defc300ec39c860da9809c8850415b2c8ba799e1849e5f2f
+        sha256: fac9520eabdd31b4defc300ec39c860da9809c8850415b2c8ba799e1849e5f2f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxtst/blobs/sha256:3695416abec8f1da23fddcc232bdc5e9522f822f67c7a0c69f522f54c8653617
+        sha256: 3695416abec8f1da23fddcc232bdc5e9522f822f67c7a0c69f522f54c8653617
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxtst/blobs/sha256:51cacd4573d0d4e1cc33c83574cf4838d93de28276a9cd3c69496da8a4466771
+        sha256: 51cacd4573d0d4e1cc33c83574cf4838d93de28276a9cd3c69496da8a4466771
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxtst/blobs/sha256:270e406f0aa8cdbd35a39c76ebaea72a79325ac23ee3342d1cc5f7c930a8f337
+        sha256: 270e406f0aa8cdbd35a39c76ebaea72a79325ac23ee3342d1cc5f7c930a8f337
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libXtst-1.2.5.tar.gz
+    sha256: 244ba6e1c5ffa44f1ba251affdfa984d55d99c94bb925a342657e5e7aaf6d39c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - util-macros
+    - pkgconf
+    - util-macros
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

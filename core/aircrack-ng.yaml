@@ -1,39 +1,63 @@
 name: aircrack-ng
-version: 1.7
+version: "1.7"
 description: Next-generation aircrack with lots of new features
 homepage: https://aircrack-ng.org/
 license: BSD-3-Clause AND GPL-2.0-or-later AND (GPL-2.0-or-later WITH cryptsetup-OpenSSL-exception)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aircrack-ng/blobs/sha256:c1461024ee7d85a1f0024b7e79aee529a2ffc577b4e7f55df1b93bce01a4a9c0
-    sha256: c1461024ee7d85a1f0024b7e79aee529a2ffc577b4e7f55df1b93bce01a4a9c0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aircrack-ng/blobs/sha256:e5e3a8ae160dcdca43edb6382efc2873748e6a02f537cbcb27003b2321e7c44d
-    sha256: e5e3a8ae160dcdca43edb6382efc2873748e6a02f537cbcb27003b2321e7c44d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aircrack-ng/blobs/sha256:4aa4f09ec6d620ea76c8a799abebea56382ed5c055b4a4aed414a6339a7a3591
-    sha256: 4aa4f09ec6d620ea76c8a799abebea56382ed5c055b4a4aed414a6339a7a3591
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aircrack-ng/blobs/sha256:73fe80cec55d4e7058ed7d3bf9fc5a57e30d39941fd665714ed90d74c63d2ab5
-    sha256: 73fe80cec55d4e7058ed7d3bf9fc5a57e30d39941fd665714ed90d74c63d2ab5
-source:
-  url: https://download.aircrack-ng.org/aircrack-ng-1.7.tar.gz
-  sha256: 05a704e3c8f7792a17315080a21214a4448fd2452c1b0dd5226a3a55f90b58c3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - pcre2
-  - sqlite
+    - openssl@3
+    - pcre2
+    - sqlite
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aircrack-ng/blobs/sha256:e5e3a8ae160dcdca43edb6382efc2873748e6a02f537cbcb27003b2321e7c44d
+        sha256: e5e3a8ae160dcdca43edb6382efc2873748e6a02f537cbcb27003b2321e7c44d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aircrack-ng/blobs/sha256:c1461024ee7d85a1f0024b7e79aee529a2ffc577b4e7f55df1b93bce01a4a9c0
+        sha256: c1461024ee7d85a1f0024b7e79aee529a2ffc577b4e7f55df1b93bce01a4a9c0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aircrack-ng/blobs/sha256:4aa4f09ec6d620ea76c8a799abebea56382ed5c055b4a4aed414a6339a7a3591
+        sha256: 4aa4f09ec6d620ea76c8a799abebea56382ed5c055b4a4aed414a6339a7a3591
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aircrack-ng/blobs/sha256:73fe80cec55d4e7058ed7d3bf9fc5a57e30d39941fd665714ed90d74c63d2ab5
+        sha256: 73fe80cec55d4e7058ed7d3bf9fc5a57e30d39941fd665714ed90d74c63d2ab5
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.aircrack-ng.org/aircrack-ng-1.7.tar.gz
+    sha256: 05a704e3c8f7792a17315080a21214a4448fd2452c1b0dd5226a3a55f90b58c3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - openssl@3
-  - pcre2
-  - sqlite
-  - zlib-ng-compat
+    - openssl@3
+    - pcre2
+    - sqlite
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

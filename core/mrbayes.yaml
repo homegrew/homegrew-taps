@@ -3,28 +3,53 @@ version: 3.2.7a
 description: Bayesian inference of phylogenies and evolutionary models
 homepage: https://nbisweden.github.io/MrBayes/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mrbayes/blobs/sha256:7e0813e7f10eb1abadd4172e54fc18d7fac02f2a2521d3034217ea8ee99ffa04
-    sha256: 7e0813e7f10eb1abadd4172e54fc18d7fac02f2a2521d3034217ea8ee99ffa04
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mrbayes/blobs/sha256:4e22bb908f3d2fabacebe0f1896de5cc05f74b5a1bcd224fb2fa85585db5074c
-    sha256: 4e22bb908f3d2fabacebe0f1896de5cc05f74b5a1bcd224fb2fa85585db5074c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mrbayes/blobs/sha256:5b7379add8dcffcc268785b68f80f88fb0478f10c76ef139b43b0c6983e30675
-    sha256: 5b7379add8dcffcc268785b68f80f88fb0478f10c76ef139b43b0c6983e30675
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mrbayes/blobs/sha256:4b2aaf7489371e64e11bc0dde781218fd8b4a85a41cd7db039f2a8c377f726c1
-    sha256: 4b2aaf7489371e64e11bc0dde781218fd8b4a85a41cd7db039f2a8c377f726c1
-source:
-  url: https://github.com/NBISweden/MrBayes/archive/refs/tags/v3.2.7a.tar.gz
-  sha256: 3eed2e3b1d9e46f265b6067a502a89732b6f430585d258b886e008e846ecc5c6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - beagle
-  - open-mpi
+    - beagle
+    - open-mpi
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mrbayes/blobs/sha256:4e22bb908f3d2fabacebe0f1896de5cc05f74b5a1bcd224fb2fa85585db5074c
+        sha256: 4e22bb908f3d2fabacebe0f1896de5cc05f74b5a1bcd224fb2fa85585db5074c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mrbayes/blobs/sha256:7e0813e7f10eb1abadd4172e54fc18d7fac02f2a2521d3034217ea8ee99ffa04
+        sha256: 7e0813e7f10eb1abadd4172e54fc18d7fac02f2a2521d3034217ea8ee99ffa04
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mrbayes/blobs/sha256:5b7379add8dcffcc268785b68f80f88fb0478f10c76ef139b43b0c6983e30675
+        sha256: 5b7379add8dcffcc268785b68f80f88fb0478f10c76ef139b43b0c6983e30675
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mrbayes/blobs/sha256:4b2aaf7489371e64e11bc0dde781218fd8b4a85a41cd7db039f2a8c377f726c1
+        sha256: 4b2aaf7489371e64e11bc0dde781218fd8b4a85a41cd7db039f2a8c377f726c1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/NBISweden/MrBayes/archive/refs/tags/v3.2.7a.tar.gz
+    sha256: 3eed2e3b1d9e46f265b6067a502a89732b6f430585d258b886e008e846ecc5c6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

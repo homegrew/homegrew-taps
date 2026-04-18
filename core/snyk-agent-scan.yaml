@@ -3,30 +3,56 @@ version: 0.4.16
 description: Constrain, log and scan your MCP connections for security vulnerabilities
 homepage: https://github.com/snyk/agent-scan
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/snyk-agent-scan/blobs/sha256:5f0e1823aee4e27d6d00a7d67b374d13043370b81f6c2652a52221fff6964a97
-    sha256: 5f0e1823aee4e27d6d00a7d67b374d13043370b81f6c2652a52221fff6964a97
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/snyk-agent-scan/blobs/sha256:f5581a5d220d92947c0c00abd9faea2fc2ffb16a535ce1570cb2b571abd9968a
-    sha256: f5581a5d220d92947c0c00abd9faea2fc2ffb16a535ce1570cb2b571abd9968a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/snyk-agent-scan/blobs/sha256:a4a70b24f3e84d905245310d14feec3876dc13bec65e0c6545b26b9f47c40b22
-    sha256: a4a70b24f3e84d905245310d14feec3876dc13bec65e0c6545b26b9f47c40b22
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/snyk-agent-scan/blobs/sha256:035aa8c3bee6a1f8826f80ef029158d890001bee46f517006b60825d2603deba
-    sha256: 035aa8c3bee6a1f8826f80ef029158d890001bee46f517006b60825d2603deba
-source:
-  url: https://files.pythonhosted.org/packages/e3/30/6e8909c95f8c81daf41f604161554091aed2ddfd56ab2351ea0d4857469b/snyk_agent_scan-0.4.16.tar.gz
-  sha256: 0bc23b0b5e685fcd6aa0d8f93db4851ab39185229468b1cc6cd1792b01cb867a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - libyaml
-  - pydantic
-  - python@3.14
-  - rpds-py
+    - certifi
+    - cryptography
+    - libyaml
+    - pydantic
+    - python@3.14
+    - rpds-py
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/snyk-agent-scan/blobs/sha256:f5581a5d220d92947c0c00abd9faea2fc2ffb16a535ce1570cb2b571abd9968a
+        sha256: f5581a5d220d92947c0c00abd9faea2fc2ffb16a535ce1570cb2b571abd9968a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/snyk-agent-scan/blobs/sha256:5f0e1823aee4e27d6d00a7d67b374d13043370b81f6c2652a52221fff6964a97
+        sha256: 5f0e1823aee4e27d6d00a7d67b374d13043370b81f6c2652a52221fff6964a97
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/snyk-agent-scan/blobs/sha256:a4a70b24f3e84d905245310d14feec3876dc13bec65e0c6545b26b9f47c40b22
+        sha256: a4a70b24f3e84d905245310d14feec3876dc13bec65e0c6545b26b9f47c40b22
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/snyk-agent-scan/blobs/sha256:035aa8c3bee6a1f8826f80ef029158d890001bee46f517006b60825d2603deba
+        sha256: 035aa8c3bee6a1f8826f80ef029158d890001bee46f517006b60825d2603deba
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/e3/30/6e8909c95f8c81daf41f604161554091aed2ddfd56ab2351ea0d4857469b/snyk_agent_scan-0.4.16.tar.gz
+    sha256: 0bc23b0b5e685fcd6aa0d8f93db4851ab39185229468b1cc6cd1792b01cb867a
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

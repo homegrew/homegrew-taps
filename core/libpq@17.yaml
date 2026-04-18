@@ -1,40 +1,63 @@
 name: libpq@17
-version: 17.9
+version: "17.9"
 description: Postgres C API library
 homepage: https://www.postgresql.org/docs/17/libpq.html
 license: PostgreSQL
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpq/17/blobs/sha256:18d66cdaf01865d8cd66e0a82314c7d4971ce47339fcd143df25947f66231821
-    sha256: 18d66cdaf01865d8cd66e0a82314c7d4971ce47339fcd143df25947f66231821
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpq/17/blobs/sha256:9805aadf1206a4923691baa104b8819670897ecf5721e82ff8cb6f18a4bd3bed
-    sha256: 9805aadf1206a4923691baa104b8819670897ecf5721e82ff8cb6f18a4bd3bed
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpq/17/blobs/sha256:1d93fd1892634a7edfc9f37c8fa1ba2168b36796c43418207dcfdad843269956
-    sha256: 1d93fd1892634a7edfc9f37c8fa1ba2168b36796c43418207dcfdad843269956
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpq/17/blobs/sha256:d92840086748e86d357146e9491be72def4ca025a2e2b7c0b83374455b8329f7
-    sha256: d92840086748e86d357146e9491be72def4ca025a2e2b7c0b83374455b8329f7
-source:
-  url: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
-  sha256: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - krb5
-  - openssl@3
-build_dependencies:
-  - docbook
-  - docbook-xsl
-  - pkgconf
-linux_dependencies:
-  - icu4c@78
-  - krb5
-  - openssl@3
-  - readline
-  - zlib-ng-compat
+    - icu4c@78
+    - krb5
+    - openssl@3
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpq/17/blobs/sha256:9805aadf1206a4923691baa104b8819670897ecf5721e82ff8cb6f18a4bd3bed
+        sha256: 9805aadf1206a4923691baa104b8819670897ecf5721e82ff8cb6f18a4bd3bed
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpq/17/blobs/sha256:18d66cdaf01865d8cd66e0a82314c7d4971ce47339fcd143df25947f66231821
+        sha256: 18d66cdaf01865d8cd66e0a82314c7d4971ce47339fcd143df25947f66231821
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpq/17/blobs/sha256:1d93fd1892634a7edfc9f37c8fa1ba2168b36796c43418207dcfdad843269956
+        sha256: 1d93fd1892634a7edfc9f37c8fa1ba2168b36796c43418207dcfdad843269956
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpq/17/blobs/sha256:d92840086748e86d357146e9491be72def4ca025a2e2b7c0b83374455b8329f7
+        sha256: d92840086748e86d357146e9491be72def4ca025a2e2b7c0b83374455b8329f7
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    sha256: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - docbook
+    - docbook-xsl
+    - pkgconf
+linux_dependencies:
+    - icu4c@78
+    - krb5
+    - openssl@3
+    - readline
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

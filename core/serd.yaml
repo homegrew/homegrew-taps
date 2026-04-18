@@ -3,26 +3,52 @@ version: 0.32.8
 description: C library for RDF syntax
 homepage: https://drobilla.net/software/serd.html
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/serd/blobs/sha256:f371b9f3301f85f75822da77e75eea6524db3c0305bf943720050cffd1b5ee30
-    sha256: f371b9f3301f85f75822da77e75eea6524db3c0305bf943720050cffd1b5ee30
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/serd/blobs/sha256:fd4e6896bf64f85e2242168edabb9c31de0c96bd5d3c12183365cbd0a4e056ab
-    sha256: fd4e6896bf64f85e2242168edabb9c31de0c96bd5d3c12183365cbd0a4e056ab
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/serd/blobs/sha256:cc7fc642d67f803be7a658dfecc7fa23b1c067b0e2ccec339de9933348bd5580
-    sha256: cc7fc642d67f803be7a658dfecc7fa23b1c067b0e2ccec339de9933348bd5580
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/serd/blobs/sha256:b47e7496192f30328f66c33d63e45bf640ad381cda5eb19a413ee5569db15bf9
-    sha256: b47e7496192f30328f66c33d63e45bf640ad381cda5eb19a413ee5569db15bf9
-source:
-  url: https://download.drobilla.net/serd-0.32.8.tar.xz
-  sha256: f47259bc38ba553b0deb8b6dab6b5b73d3630469a7c9439ccdca80e06d7c1ece
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/serd/blobs/sha256:fd4e6896bf64f85e2242168edabb9c31de0c96bd5d3c12183365cbd0a4e056ab
+        sha256: fd4e6896bf64f85e2242168edabb9c31de0c96bd5d3c12183365cbd0a4e056ab
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/serd/blobs/sha256:f371b9f3301f85f75822da77e75eea6524db3c0305bf943720050cffd1b5ee30
+        sha256: f371b9f3301f85f75822da77e75eea6524db3c0305bf943720050cffd1b5ee30
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/serd/blobs/sha256:cc7fc642d67f803be7a658dfecc7fa23b1c067b0e2ccec339de9933348bd5580
+        sha256: cc7fc642d67f803be7a658dfecc7fa23b1c067b0e2ccec339de9933348bd5580
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/serd/blobs/sha256:b47e7496192f30328f66c33d63e45bf640ad381cda5eb19a413ee5569db15bf9
+        sha256: b47e7496192f30328f66c33d63e45bf640ad381cda5eb19a413ee5569db15bf9
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.drobilla.net/serd-0.32.8.tar.xz
+    sha256: f47259bc38ba553b0deb8b6dab6b5b73d3630469a7c9439ccdca80e06d7c1ece
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
+    - meson
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

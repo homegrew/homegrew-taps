@@ -1,31 +1,56 @@
 name: libxres
 version: 1.2.3
-description: "X.Org: X-Resource extension client library"
+description: 'X.Org: X-Resource extension client library'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxres/blobs/sha256:ee5ef314b15e82ed7df2d475d90f1d899423f25d8a189bd1f59ceef05363c2b2
-    sha256: ee5ef314b15e82ed7df2d475d90f1d899423f25d8a189bd1f59ceef05363c2b2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxres/blobs/sha256:2422ab6e030e4e0b6bd8ab9b79aef44c053f9d8efd44f2da8dfedc2eecc32ebd
-    sha256: 2422ab6e030e4e0b6bd8ab9b79aef44c053f9d8efd44f2da8dfedc2eecc32ebd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxres/blobs/sha256:8682132f7c2d181729a89346cc24cfe9f1dac6133cd197efa17b759775194ecd
-    sha256: 8682132f7c2d181729a89346cc24cfe9f1dac6133cd197efa17b759775194ecd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxres/blobs/sha256:95deabb73d93e6d1db9e9fb6e08d5eeb969caa6e578b082a515c0a55b67658c9
-    sha256: 95deabb73d93e6d1db9e9fb6e08d5eeb969caa6e578b082a515c0a55b67658c9
-source:
-  url: https://www.x.org/archive/individual/lib/libXres-1.2.3.tar.xz
-  sha256: d2de8f5401d6c86a8992791654547eb8def585dfdc0c08cc16e24ef6aeeb69dc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - libxext
+    - libx11
+    - libxext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxres/blobs/sha256:2422ab6e030e4e0b6bd8ab9b79aef44c053f9d8efd44f2da8dfedc2eecc32ebd
+        sha256: 2422ab6e030e4e0b6bd8ab9b79aef44c053f9d8efd44f2da8dfedc2eecc32ebd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxres/blobs/sha256:ee5ef314b15e82ed7df2d475d90f1d899423f25d8a189bd1f59ceef05363c2b2
+        sha256: ee5ef314b15e82ed7df2d475d90f1d899423f25d8a189bd1f59ceef05363c2b2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxres/blobs/sha256:8682132f7c2d181729a89346cc24cfe9f1dac6133cd197efa17b759775194ecd
+        sha256: 8682132f7c2d181729a89346cc24cfe9f1dac6133cd197efa17b759775194ecd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxres/blobs/sha256:95deabb73d93e6d1db9e9fb6e08d5eeb969caa6e578b082a515c0a55b67658c9
+        sha256: 95deabb73d93e6d1db9e9fb6e08d5eeb969caa6e578b082a515c0a55b67658c9
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libXres-1.2.3.tar.xz
+    sha256: d2de8f5401d6c86a8992791654547eb8def585dfdc0c08cc16e24ef6aeeb69dc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - xorgproto
+    - pkgconf
+    - xorgproto
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,30 +1,55 @@
 name: cargo-release
 version: 1.1.2
-description: "Cargo subcommand `release`: everything about releasing a rust crate"
+description: 'Cargo subcommand `release`: everything about releasing a rust crate'
 homepage: https://github.com/crate-ci/cargo-release
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-release/blobs/sha256:c834f40c75a5bb29d2f0abd1ade85f9bf28bef15aadf7a3f38e95404f3f1fe9f
-    sha256: c834f40c75a5bb29d2f0abd1ade85f9bf28bef15aadf7a3f38e95404f3f1fe9f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-release/blobs/sha256:9155960fc4db70389d95227247e5a67bbf9937b3209b78350895a36208b19fe8
-    sha256: 9155960fc4db70389d95227247e5a67bbf9937b3209b78350895a36208b19fe8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-release/blobs/sha256:94364844f0438fc1e0fd8a031780a0f662a79bf4fd1b1ccb52dcfa7fb9c8bd43
-    sha256: 94364844f0438fc1e0fd8a031780a0f662a79bf4fd1b1ccb52dcfa7fb9c8bd43
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-release/blobs/sha256:17a1f513fe5f9c04cc2941ed39e17646458f0a12ba9671f9aa59cd8f04de3710
-    sha256: 17a1f513fe5f9c04cc2941ed39e17646458f0a12ba9671f9aa59cd8f04de3710
-source:
-  url: https://github.com/crate-ci/cargo-release/archive/refs/tags/v1.1.2.tar.gz
-  sha256: 7121921bfd2bb03ef99e70296d672d2d6838b32c7407d50f9915c5d4ee28461a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
+    - libgit2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-release/blobs/sha256:9155960fc4db70389d95227247e5a67bbf9937b3209b78350895a36208b19fe8
+        sha256: 9155960fc4db70389d95227247e5a67bbf9937b3209b78350895a36208b19fe8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-release/blobs/sha256:c834f40c75a5bb29d2f0abd1ade85f9bf28bef15aadf7a3f38e95404f3f1fe9f
+        sha256: c834f40c75a5bb29d2f0abd1ade85f9bf28bef15aadf7a3f38e95404f3f1fe9f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-release/blobs/sha256:94364844f0438fc1e0fd8a031780a0f662a79bf4fd1b1ccb52dcfa7fb9c8bd43
+        sha256: 94364844f0438fc1e0fd8a031780a0f662a79bf4fd1b1ccb52dcfa7fb9c8bd43
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-release/blobs/sha256:17a1f513fe5f9c04cc2941ed39e17646458f0a12ba9671f9aa59cd8f04de3710
+        sha256: 17a1f513fe5f9c04cc2941ed39e17646458f0a12ba9671f9aa59cd8f04de3710
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/crate-ci/cargo-release/archive/refs/tags/v1.1.2.tar.gz
+    sha256: 7121921bfd2bb03ef99e70296d672d2d6838b32c7407d50f9915c5d4ee28461a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

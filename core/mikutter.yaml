@@ -3,50 +3,75 @@ version: 5.1.2
 description: Extensible Twitter client
 homepage: https://mikutter.hachune.net/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:7490c04f633cb2be02befd113c2808f4157c64d8e4916d84c2c8db1f531a4c2e
-    sha256: 7490c04f633cb2be02befd113c2808f4157c64d8e4916d84c2c8db1f531a4c2e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:64d58bcd68598dac0653ba362eb283ac2379cc07ccf4c460971788e679085ecc
-    sha256: 64d58bcd68598dac0653ba362eb283ac2379cc07ccf4c460971788e679085ecc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:4bdc4b967cf1ae1fc24f59b9407a11b36b1cc9c53768015fad2f6625c4a686ed
-    sha256: 4bdc4b967cf1ae1fc24f59b9407a11b36b1cc9c53768015fad2f6625c4a686ed
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:5ff0a19b16293983110f8b9af06464a1aecf6322c185981a72a168e6184cd5fa
-    sha256: 5ff0a19b16293983110f8b9af06464a1aecf6322c185981a72a168e6184cd5fa
-source:
-  url: https://mikutter.hachune.net/bin/mikutter-5.1.2.tar.gz
-  sha256: ac5d5cc386dd03d544d34a2fd2e5c73e38985eb2fcbe98e7137931de04bb6433
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - at-spi2-core
-  - cairo
-  - fontconfig
-  - freetype
-  - gdk-pixbuf
-  - glib
-  - gobject-introspection
-  - gtk+3
-  - harfbuzz
-  - pango
-  - ruby
-  - gettext
-  - terminal-notifier
+    - at-spi2-core
+    - cairo
+    - fontconfig
+    - freetype
+    - gdk-pixbuf
+    - glib
+    - gobject-introspection
+    - gtk+3
+    - harfbuzz
+    - pango
+    - ruby
+    - gettext
+    - terminal-notifier
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:64d58bcd68598dac0653ba362eb283ac2379cc07ccf4c460971788e679085ecc
+        sha256: 64d58bcd68598dac0653ba362eb283ac2379cc07ccf4c460971788e679085ecc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:7490c04f633cb2be02befd113c2808f4157c64d8e4916d84c2c8db1f531a4c2e
+        sha256: 7490c04f633cb2be02befd113c2808f4157c64d8e4916d84c2c8db1f531a4c2e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:4bdc4b967cf1ae1fc24f59b9407a11b36b1cc9c53768015fad2f6625c4a686ed
+        sha256: 4bdc4b967cf1ae1fc24f59b9407a11b36b1cc9c53768015fad2f6625c4a686ed
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mikutter/blobs/sha256:5ff0a19b16293983110f8b9af06464a1aecf6322c185981a72a168e6184cd5fa
+        sha256: 5ff0a19b16293983110f8b9af06464a1aecf6322c185981a72a168e6184cd5fa
+        sha512: ""
+        signature: ""
+source:
+    url: https://mikutter.hachune.net/bin/mikutter-5.1.2.tar.gz
+    sha256: ac5d5cc386dd03d544d34a2fd2e5c73e38985eb2fcbe98e7137931de04bb6433
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - at-spi2-core
-  - cairo
-  - fontconfig
-  - freetype
-  - gdk-pixbuf
-  - glib
-  - gobject-introspection
-  - gtk+3
-  - harfbuzz
-  - pango
-  - ruby
-  - zlib-ng-compat
+    - at-spi2-core
+    - cairo
+    - fontconfig
+    - freetype
+    - gdk-pixbuf
+    - glib
+    - gobject-introspection
+    - gtk+3
+    - harfbuzz
+    - pango
+    - ruby
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

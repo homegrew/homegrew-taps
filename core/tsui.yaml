@@ -3,27 +3,52 @@ version: 0.2.0
 description: TUI for configuring and monitoring Tailscale
 homepage: https://neuralink.com/tsui
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tsui/blobs/sha256:4c5aa985bc23f46808385ac73b79f5ebd81cb5e7281799bb8197e1c3bccd4f2d
-    sha256: 4c5aa985bc23f46808385ac73b79f5ebd81cb5e7281799bb8197e1c3bccd4f2d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tsui/blobs/sha256:0c4f8cafa900e370bd481d335d58726d48065ec40990d55d4b7ceaf100cc8f4f
-    sha256: 0c4f8cafa900e370bd481d335d58726d48065ec40990d55d4b7ceaf100cc8f4f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tsui/blobs/sha256:ca260cc4f6d4e96c9067a627aa3b3018f2cedc2f687a9aee134a4367bd4cbefc
-    sha256: ca260cc4f6d4e96c9067a627aa3b3018f2cedc2f687a9aee134a4367bd4cbefc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tsui/blobs/sha256:a10bf1333fdf6ac408c80c36c6259d1b31f8be73d5600909de9b2708f82ccb03
-    sha256: a10bf1333fdf6ac408c80c36c6259d1b31f8be73d5600909de9b2708f82ccb03
-source:
-  url: https://github.com/neuralinkcorp/tsui/archive/refs/tags/v0.2.0.tar.gz
-  sha256: 1ae87ad281587efbf80ef0bf9cc0b519dd4f08465cb378e34e97230f2f3526f0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tsui/blobs/sha256:0c4f8cafa900e370bd481d335d58726d48065ec40990d55d4b7ceaf100cc8f4f
+        sha256: 0c4f8cafa900e370bd481d335d58726d48065ec40990d55d4b7ceaf100cc8f4f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tsui/blobs/sha256:4c5aa985bc23f46808385ac73b79f5ebd81cb5e7281799bb8197e1c3bccd4f2d
+        sha256: 4c5aa985bc23f46808385ac73b79f5ebd81cb5e7281799bb8197e1c3bccd4f2d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tsui/blobs/sha256:ca260cc4f6d4e96c9067a627aa3b3018f2cedc2f687a9aee134a4367bd4cbefc
+        sha256: ca260cc4f6d4e96c9067a627aa3b3018f2cedc2f687a9aee134a4367bd4cbefc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tsui/blobs/sha256:a10bf1333fdf6ac408c80c36c6259d1b31f8be73d5600909de9b2708f82ccb03
+        sha256: a10bf1333fdf6ac408c80c36c6259d1b31f8be73d5600909de9b2708f82ccb03
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/neuralinkcorp/tsui/archive/refs/tags/v0.2.0.tar.gz
+    sha256: 1ae87ad281587efbf80ef0bf9cc0b519dd4f08465cb378e34e97230f2f3526f0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
 linux_dependencies:
-  - libx11
+    - libx11
+build:
+    configure: []
+    install: []
+service: null

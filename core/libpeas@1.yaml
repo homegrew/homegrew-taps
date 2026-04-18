@@ -3,41 +3,65 @@ version: 1.36.0
 description: GObject plugin library
 homepage: https://wiki.gnome.org/Projects/Libpeas
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpeas/1/blobs/sha256:6ae295b72edb4f0aab90390ee118cd2864f9ef7cb57b3f318341663c0eaad4d6
-    sha256: 6ae295b72edb4f0aab90390ee118cd2864f9ef7cb57b3f318341663c0eaad4d6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpeas/1/blobs/sha256:c7fcf4479a9de9332df0b79885f77439b8bc9d855fb897309ee0de01b4890d3e
-    sha256: c7fcf4479a9de9332df0b79885f77439b8bc9d855fb897309ee0de01b4890d3e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpeas/1/blobs/sha256:bbc312a0e2b0510a2cf0a7fec5ff551f8b845958ad7bcbac1a59c85a5933cefd
-    sha256: bbc312a0e2b0510a2cf0a7fec5ff551f8b845958ad7bcbac1a59c85a5933cefd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpeas/1/blobs/sha256:983fb2f22bcc97d2c814e53251b0fd2027898eeae80ce22a1d04527e507f6459
-    sha256: 983fb2f22bcc97d2c814e53251b0fd2027898eeae80ce22a1d04527e507f6459
-source:
-  url: https://download.gnome.org/sources/libpeas/1.36/libpeas-1.36.0.tar.xz
-  sha256: 297cb9c2cccd8e8617623d1a3e8415b4530b8e5a893e3527bbfd1edd13237b4c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gobject-introspection
-  - gtk+3
-  - pygobject3
-  - python@3.14
-  - gettext
+    - glib
+    - gobject-introspection
+    - gtk+3
+    - pygobject3
+    - python@3.14
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpeas/1/blobs/sha256:c7fcf4479a9de9332df0b79885f77439b8bc9d855fb897309ee0de01b4890d3e
+        sha256: c7fcf4479a9de9332df0b79885f77439b8bc9d855fb897309ee0de01b4890d3e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpeas/1/blobs/sha256:6ae295b72edb4f0aab90390ee118cd2864f9ef7cb57b3f318341663c0eaad4d6
+        sha256: 6ae295b72edb4f0aab90390ee118cd2864f9ef7cb57b3f318341663c0eaad4d6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpeas/1/blobs/sha256:bbc312a0e2b0510a2cf0a7fec5ff551f8b845958ad7bcbac1a59c85a5933cefd
+        sha256: bbc312a0e2b0510a2cf0a7fec5ff551f8b845958ad7bcbac1a59c85a5933cefd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpeas/1/blobs/sha256:983fb2f22bcc97d2c814e53251b0fd2027898eeae80ce22a1d04527e507f6459
+        sha256: 983fb2f22bcc97d2c814e53251b0fd2027898eeae80ce22a1d04527e507f6459
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/libpeas/1.36/libpeas-1.36.0.tar.xz
+    sha256: 297cb9c2cccd8e8617623d1a3e8415b4530b8e5a893e3527bbfd1edd13237b4c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - meson
+    - ninja
+    - pkgconf
+    - vala
 linux_dependencies:
-  - glib
-  - gobject-introspection
-  - gtk+3
-  - pygobject3
-  - python@3.14
+    - glib
+    - gobject-introspection
+    - gtk+3
+    - pygobject3
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

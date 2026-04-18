@@ -3,27 +3,52 @@ version: 2.0.4
 description: Abstract soundfile decoder for SDL
 homepage: https://icculus.org/SDL_sound/
 license: Zlib AND (Artistic-1.0-Perl OR LGPL-2.1-or-later)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_sound/blobs/sha256:e926f2202a49bfb323a9e603e308e44f5eae6d76a5f60dd867e00b03cd0cf6dd
-    sha256: e926f2202a49bfb323a9e603e308e44f5eae6d76a5f60dd867e00b03cd0cf6dd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_sound/blobs/sha256:91a1de8932cf5e4dc446e771044d807f000101c18dcbd5f421d5ac0b3d78160d
-    sha256: 91a1de8932cf5e4dc446e771044d807f000101c18dcbd5f421d5ac0b3d78160d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_sound/blobs/sha256:b2e558d66a31ac41604bab87abc6c42b41c8a7624bcc4c64ecb75c614b4916d3
-    sha256: b2e558d66a31ac41604bab87abc6c42b41c8a7624bcc4c64ecb75c614b4916d3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_sound/blobs/sha256:05781d5093994a57c5634764fda5a783aabb96b4a81bf39c4e1ce91d455eb450
-    sha256: 05781d5093994a57c5634764fda5a783aabb96b4a81bf39c4e1ce91d455eb450
-source:
-  url: https://github.com/icculus/SDL_sound/releases/download/v2.0.4/SDL2_sound-2.0.4.tar.gz
-  sha256: f73f6720dba2e677c0bf70d0c76ca3c96d865d04025e49a8b161711685961931
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sdl2
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_sound/blobs/sha256:91a1de8932cf5e4dc446e771044d807f000101c18dcbd5f421d5ac0b3d78160d
+        sha256: 91a1de8932cf5e4dc446e771044d807f000101c18dcbd5f421d5ac0b3d78160d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_sound/blobs/sha256:e926f2202a49bfb323a9e603e308e44f5eae6d76a5f60dd867e00b03cd0cf6dd
+        sha256: e926f2202a49bfb323a9e603e308e44f5eae6d76a5f60dd867e00b03cd0cf6dd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_sound/blobs/sha256:b2e558d66a31ac41604bab87abc6c42b41c8a7624bcc4c64ecb75c614b4916d3
+        sha256: b2e558d66a31ac41604bab87abc6c42b41c8a7624bcc4c64ecb75c614b4916d3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_sound/blobs/sha256:05781d5093994a57c5634764fda5a783aabb96b4a81bf39c4e1ce91d455eb450
+        sha256: 05781d5093994a57c5634764fda5a783aabb96b4a81bf39c4e1ce91d455eb450
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/icculus/SDL_sound/releases/download/v2.0.4/SDL2_sound-2.0.4.tar.gz
+    sha256: f73f6720dba2e677c0bf70d0c76ca3c96d865d04025e49a8b161711685961931
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

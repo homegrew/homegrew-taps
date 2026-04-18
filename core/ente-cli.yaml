@@ -3,25 +3,51 @@ version: 0.2.3
 description: Utility for exporting data from Ente and decrypt the export from Ente Auth
 homepage: https://github.com/ente-io/
 license: AGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ente-cli/blobs/sha256:02768405fae7635b534b796b20d1ac47d97688d6f9b52b84f2d0d295b85c646b
-    sha256: 02768405fae7635b534b796b20d1ac47d97688d6f9b52b84f2d0d295b85c646b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ente-cli/blobs/sha256:9fa97a816bcae266536982077798393b61a08859cfb455fee6a822640f8837ee
-    sha256: 9fa97a816bcae266536982077798393b61a08859cfb455fee6a822640f8837ee
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ente-cli/blobs/sha256:8fad672f160147e34db13a96d0867946b3cd5ac076d295eef48b4b3b485d8ace
-    sha256: 8fad672f160147e34db13a96d0867946b3cd5ac076d295eef48b4b3b485d8ace
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ente-cli/blobs/sha256:6698caaf273ea5141fec0ad91777d7e85f73f640b186c3332cea1a9513433fc2
-    sha256: 6698caaf273ea5141fec0ad91777d7e85f73f640b186c3332cea1a9513433fc2
-source:
-  url: https://github.com/ente-io/ente/archive/refs/tags/cli-v0.2.3.tar.gz
-  sha256: 6bd4ab7b60bf15dd52fbf531d7fa668660caf85c60ef8c4b4f619b777068b4e3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ente-cli/blobs/sha256:9fa97a816bcae266536982077798393b61a08859cfb455fee6a822640f8837ee
+        sha256: 9fa97a816bcae266536982077798393b61a08859cfb455fee6a822640f8837ee
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ente-cli/blobs/sha256:02768405fae7635b534b796b20d1ac47d97688d6f9b52b84f2d0d295b85c646b
+        sha256: 02768405fae7635b534b796b20d1ac47d97688d6f9b52b84f2d0d295b85c646b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ente-cli/blobs/sha256:8fad672f160147e34db13a96d0867946b3cd5ac076d295eef48b4b3b485d8ace
+        sha256: 8fad672f160147e34db13a96d0867946b3cd5ac076d295eef48b4b3b485d8ace
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ente-cli/blobs/sha256:6698caaf273ea5141fec0ad91777d7e85f73f640b186c3332cea1a9513433fc2
+        sha256: 6698caaf273ea5141fec0ad91777d7e85f73f640b186c3332cea1a9513433fc2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ente-io/ente/archive/refs/tags/cli-v0.2.3.tar.gz
+    sha256: 6bd4ab7b60bf15dd52fbf531d7fa668660caf85c60ef8c4b4f619b777068b4e3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,34 +3,59 @@ version: 3.27.0
 description: Help manage and understand IT infrastructure
 homepage: https://cfengine.com/
 license: BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-only AND LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cfengine/blobs/sha256:88253c85fccbca421d2196a0f5bc2f90156d48fe00f30da27b5f35b2710981da
-    sha256: 88253c85fccbca421d2196a0f5bc2f90156d48fe00f30da27b5f35b2710981da
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cfengine/blobs/sha256:e0e0d90a26cbd07bdf1909a034fb4c928baf2e445a26b22964e1aa8a61ab05d0
-    sha256: e0e0d90a26cbd07bdf1909a034fb4c928baf2e445a26b22964e1aa8a61ab05d0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cfengine/blobs/sha256:2d141b557648c744e4ff619b81d2590e27d1568d2bf6ad9939ce718c55c1832b
-    sha256: 2d141b557648c744e4ff619b81d2590e27d1568d2bf6ad9939ce718c55c1832b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cfengine/blobs/sha256:8903b84dc6823ed93ce4efd43b3c8fb634690dccd7f8011526cf21b91914293b
-    sha256: 8903b84dc6823ed93ce4efd43b3c8fb634690dccd7f8011526cf21b91914293b
-source:
-  url: https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-community-3.27.0.tar.gz
-  sha256: d793e830b02e09843bf8ece1efd538cd65fa0428f249bbf7e371ca52d5f97b43
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - librsync
-  - lmdb
-  - openssl@3
-  - pcre2
+    - librsync
+    - lmdb
+    - openssl@3
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cfengine/blobs/sha256:e0e0d90a26cbd07bdf1909a034fb4c928baf2e445a26b22964e1aa8a61ab05d0
+        sha256: e0e0d90a26cbd07bdf1909a034fb4c928baf2e445a26b22964e1aa8a61ab05d0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cfengine/blobs/sha256:88253c85fccbca421d2196a0f5bc2f90156d48fe00f30da27b5f35b2710981da
+        sha256: 88253c85fccbca421d2196a0f5bc2f90156d48fe00f30da27b5f35b2710981da
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cfengine/blobs/sha256:2d141b557648c744e4ff619b81d2590e27d1568d2bf6ad9939ce718c55c1832b
+        sha256: 2d141b557648c744e4ff619b81d2590e27d1568d2bf6ad9939ce718c55c1832b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cfengine/blobs/sha256:8903b84dc6823ed93ce4efd43b3c8fb634690dccd7f8011526cf21b91914293b
+        sha256: 8903b84dc6823ed93ce4efd43b3c8fb634690dccd7f8011526cf21b91914293b
+        sha512: ""
+        signature: ""
+source:
+    url: https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-community-3.27.0.tar.gz
+    sha256: d793e830b02e09843bf8ece1efd538cd65fa0428f249bbf7e371ca52d5f97b43
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - librsync
-  - linux-pam
-  - lmdb
-  - openssl@3
-  - pcre2
+    - librsync
+    - linux-pam
+    - lmdb
+    - openssl@3
+    - pcre2
+build:
+    configure: []
+    install: []
+service: null

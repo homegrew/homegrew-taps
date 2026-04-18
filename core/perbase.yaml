@@ -3,30 +3,55 @@ version: 1.4.0
 description: Fast and correct perbase BAM/CRAM analysis
 homepage: https://github.com/sstadick/perbase
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/perbase/blobs/sha256:db301d59e5776cf75acdcd7d68d003d8079214e14e0ff919f7762def827a6404
-    sha256: db301d59e5776cf75acdcd7d68d003d8079214e14e0ff919f7762def827a6404
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/perbase/blobs/sha256:e4221dcf8ff76d7104dd2facef196f88ded3ca23240fd7a8ec674c1ca07f2b2a
-    sha256: e4221dcf8ff76d7104dd2facef196f88ded3ca23240fd7a8ec674c1ca07f2b2a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/perbase/blobs/sha256:ad1e22315efecbf08511298c1e24a6b48c489ad3a1ee7006ee287e2d23caffe5
-    sha256: ad1e22315efecbf08511298c1e24a6b48c489ad3a1ee7006ee287e2d23caffe5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/perbase/blobs/sha256:bed582fbd2dac3de2d846a82b1bb543b1a745f2c741709715e84ebbbab1e417b
-    sha256: bed582fbd2dac3de2d846a82b1bb543b1a745f2c741709715e84ebbbab1e417b
-source:
-  url: https://github.com/sstadick/perbase/archive/refs/tags/v1.4.0.tar.gz
-  sha256: fc0d08964950381969a1cf12e1e1e39eb8edde26794b8d653e7d80b08180fc43
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/perbase/blobs/sha256:e4221dcf8ff76d7104dd2facef196f88ded3ca23240fd7a8ec674c1ca07f2b2a
+        sha256: e4221dcf8ff76d7104dd2facef196f88ded3ca23240fd7a8ec674c1ca07f2b2a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/perbase/blobs/sha256:db301d59e5776cf75acdcd7d68d003d8079214e14e0ff919f7762def827a6404
+        sha256: db301d59e5776cf75acdcd7d68d003d8079214e14e0ff919f7762def827a6404
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/perbase/blobs/sha256:ad1e22315efecbf08511298c1e24a6b48c489ad3a1ee7006ee287e2d23caffe5
+        sha256: ad1e22315efecbf08511298c1e24a6b48c489ad3a1ee7006ee287e2d23caffe5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/perbase/blobs/sha256:bed582fbd2dac3de2d846a82b1bb543b1a745f2c741709715e84ebbbab1e417b
+        sha256: bed582fbd2dac3de2d846a82b1bb543b1a745f2c741709715e84ebbbab1e417b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sstadick/perbase/archive/refs/tags/v1.4.0.tar.gz
+    sha256: fc0d08964950381969a1cf12e1e1e39eb8edde26794b8d653e7d80b08180fc43
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - rust
+    - cmake
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -1,32 +1,57 @@
 name: libxft
 version: 2.3.9
-description: "X.Org: X FreeType library"
+description: 'X.Org: X FreeType library'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxft/blobs/sha256:029403b085a933f82ecb960f9d263b5afa7ca397de39c09b4dbd0b60a6918ca7
-    sha256: 029403b085a933f82ecb960f9d263b5afa7ca397de39c09b4dbd0b60a6918ca7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxft/blobs/sha256:266e09f717174e5fdbc01c7a35ceca534d0de45e0eee073938ad3e6b0aaaec78
-    sha256: 266e09f717174e5fdbc01c7a35ceca534d0de45e0eee073938ad3e6b0aaaec78
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxft/blobs/sha256:dadcce8067a08c22dc9ccce62bdaa8d0a3161d2036c74c14925c13d8c1b33c7b
-    sha256: dadcce8067a08c22dc9ccce62bdaa8d0a3161d2036c74c14925c13d8c1b33c7b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxft/blobs/sha256:24ab212aedfbe76096d5d48ae6a27ca7af4146b351df27b96b3136bef762af1b
-    sha256: 24ab212aedfbe76096d5d48ae6a27ca7af4146b351df27b96b3136bef762af1b
-source:
-  url: https://www.x.org/archive/individual/lib/libXft-2.3.9.tar.xz
-  sha256: 60a25b78945ed6932635b3bb1899a517d31df7456e69867ffba27f89ff3976f5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fontconfig
-  - freetype
-  - libx11
-  - libxrender
+    - fontconfig
+    - freetype
+    - libx11
+    - libxrender
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxft/blobs/sha256:266e09f717174e5fdbc01c7a35ceca534d0de45e0eee073938ad3e6b0aaaec78
+        sha256: 266e09f717174e5fdbc01c7a35ceca534d0de45e0eee073938ad3e6b0aaaec78
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxft/blobs/sha256:029403b085a933f82ecb960f9d263b5afa7ca397de39c09b4dbd0b60a6918ca7
+        sha256: 029403b085a933f82ecb960f9d263b5afa7ca397de39c09b4dbd0b60a6918ca7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxft/blobs/sha256:dadcce8067a08c22dc9ccce62bdaa8d0a3161d2036c74c14925c13d8c1b33c7b
+        sha256: dadcce8067a08c22dc9ccce62bdaa8d0a3161d2036c74c14925c13d8c1b33c7b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxft/blobs/sha256:24ab212aedfbe76096d5d48ae6a27ca7af4146b351df27b96b3136bef762af1b
+        sha256: 24ab212aedfbe76096d5d48ae6a27ca7af4146b351df27b96b3136bef762af1b
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libXft-2.3.9.tar.xz
+    sha256: 60a25b78945ed6932635b3bb1899a517d31df7456e69867ffba27f89ff3976f5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

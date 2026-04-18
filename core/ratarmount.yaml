@@ -3,22 +3,44 @@ version: 1.2.2
 description: Mount and efficiently access archives as filesystems
 homepage: https://github.com/mxmlnkn/ratarmount
 license: MIT
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ratarmount/blobs/sha256:59520ffb4fc93a8a0470081a5c97125021dbea5caf59962795063170a8f9225a
-    sha256: 59520ffb4fc93a8a0470081a5c97125021dbea5caf59962795063170a8f9225a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ratarmount/blobs/sha256:d7e1c621794b272e190e7c207c045e44c3da689d4f8f903bd7a067188d35f75c
-    sha256: d7e1c621794b272e190e7c207c045e44c3da689d4f8f903bd7a067188d35f75c
-source:
-  url: https://files.pythonhosted.org/packages/9a/38/b99223940402cc2eba3b6c8586fbbfb9e91cc7fda691fc4e5d4cdbda4c86/ratarmount-1.2.2.tar.gz
-  sha256: 4f0675d4ac4562a413ae4d381829368a02c8f5b518a85254f1ff08dafbe7ab7f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libfuse
-  - python@3.14
-  - zlib-ng-compat
-  - zstd
+    - libfuse
+    - python@3.14
+    - zlib-ng-compat
+    - zstd
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ratarmount/blobs/sha256:59520ffb4fc93a8a0470081a5c97125021dbea5caf59962795063170a8f9225a
+        sha256: 59520ffb4fc93a8a0470081a5c97125021dbea5caf59962795063170a8f9225a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ratarmount/blobs/sha256:d7e1c621794b272e190e7c207c045e44c3da689d4f8f903bd7a067188d35f75c
+        sha256: d7e1c621794b272e190e7c207c045e44c3da689d4f8f903bd7a067188d35f75c
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/9a/38/b99223940402cc2eba3b6c8586fbbfb9e91cc7fda691fc4e5d4cdbda4c86/ratarmount-1.2.2.tar.gz
+    sha256: 4f0675d4ac4562a413ae4d381829368a02c8f5b518a85254f1ff08dafbe7ab7f
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

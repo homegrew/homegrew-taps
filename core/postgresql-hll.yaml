@@ -1,28 +1,54 @@
 name: postgresql-hll
-version: 2.19
+version: "2.19"
 description: PostgreSQL extension adding HyperLogLog data structures as a native data type
 homepage: https://github.com/citusdata/postgresql-hll
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/postgresql-hll/blobs/sha256:17db595caa269ee31d2b540fa9e441019ffac25b4062690824f5f726dcaa992d
-    sha256: 17db595caa269ee31d2b540fa9e441019ffac25b4062690824f5f726dcaa992d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/postgresql-hll/blobs/sha256:214e7844d487ea202d54ebf8ae65677d980b8e371b26d29f067eb5f069a2a6d6
-    sha256: 214e7844d487ea202d54ebf8ae65677d980b8e371b26d29f067eb5f069a2a6d6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/postgresql-hll/blobs/sha256:a5e546957897b0dcb512910e16d9a5667e10f2bb1bc8d672eae77a21d49ee289
-    sha256: a5e546957897b0dcb512910e16d9a5667e10f2bb1bc8d672eae77a21d49ee289
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/postgresql-hll/blobs/sha256:c34d132dd0e9543d3c14e707bf16fc28c36a41c51f81ff9bf8f8f0b6f9ce51c9
-    sha256: c34d132dd0e9543d3c14e707bf16fc28c36a41c51f81ff9bf8f8f0b6f9ce51c9
-source:
-  url: https://github.com/citusdata/postgresql-hll/archive/refs/tags/v2.19.tar.gz
-  sha256: d63d56522145f2d737e0d056c9cfdfe3e8b61008c12ca4c45bde7d9b942f9c46
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql-hll/blobs/sha256:214e7844d487ea202d54ebf8ae65677d980b8e371b26d29f067eb5f069a2a6d6
+        sha256: 214e7844d487ea202d54ebf8ae65677d980b8e371b26d29f067eb5f069a2a6d6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql-hll/blobs/sha256:17db595caa269ee31d2b540fa9e441019ffac25b4062690824f5f726dcaa992d
+        sha256: 17db595caa269ee31d2b540fa9e441019ffac25b4062690824f5f726dcaa992d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql-hll/blobs/sha256:a5e546957897b0dcb512910e16d9a5667e10f2bb1bc8d672eae77a21d49ee289
+        sha256: a5e546957897b0dcb512910e16d9a5667e10f2bb1bc8d672eae77a21d49ee289
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql-hll/blobs/sha256:c34d132dd0e9543d3c14e707bf16fc28c36a41c51f81ff9bf8f8f0b6f9ce51c9
+        sha256: c34d132dd0e9543d3c14e707bf16fc28c36a41c51f81ff9bf8f8f0b6f9ce51c9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/citusdata/postgresql-hll/archive/refs/tags/v2.19.tar.gz
+    sha256: d63d56522145f2d737e0d056c9cfdfe3e8b61008c12ca4c45bde7d9b942f9c46
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - postgresql@17
-  - postgresql@18
+    - postgresql@17
+    - postgresql@18
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,35 +1,59 @@
 name: snownews
-version: 1.11
+version: "1.11"
 description: Text mode RSS newsreader
 homepage: https://sourceforge.net/projects/snownews/
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/snownews/blobs/sha256:fc57fbf60e598146c28686c404f621a386c955ae63a8a5ed0d7376d73ce62076
-    sha256: fc57fbf60e598146c28686c404f621a386c955ae63a8a5ed0d7376d73ce62076
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/snownews/blobs/sha256:5cde70ddd3826d0074e625cb2178bb745ae627a5c4562d9e78b10bc8beb1333f
-    sha256: 5cde70ddd3826d0074e625cb2178bb745ae627a5c4562d9e78b10bc8beb1333f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/snownews/blobs/sha256:65c5beec4e63d9ff40dcb175d0b1afa3d8a994d0519d389bb2f090d03cd5afdc
-    sha256: 65c5beec4e63d9ff40dcb175d0b1afa3d8a994d0519d389bb2f090d03cd5afdc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/snownews/blobs/sha256:f2329c5bd004312a4074b6320072d607045db64766e3393645222b4d92193924
-    sha256: f2329c5bd004312a4074b6320072d607045db64766e3393645222b4d92193924
-source:
-  url: https://downloads.sourceforge.net/project/snownews/snownews-1.11.tar.gz
-  sha256: afd4db7c770f461a49e78bc36e97711f3066097b485319227e313ba253902467
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ncurses
-  - openssl@3
-  - gettext
+    - ncurses
+    - openssl@3
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/snownews/blobs/sha256:5cde70ddd3826d0074e625cb2178bb745ae627a5c4562d9e78b10bc8beb1333f
+        sha256: 5cde70ddd3826d0074e625cb2178bb745ae627a5c4562d9e78b10bc8beb1333f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/snownews/blobs/sha256:fc57fbf60e598146c28686c404f621a386c955ae63a8a5ed0d7376d73ce62076
+        sha256: fc57fbf60e598146c28686c404f621a386c955ae63a8a5ed0d7376d73ce62076
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/snownews/blobs/sha256:65c5beec4e63d9ff40dcb175d0b1afa3d8a994d0519d389bb2f090d03cd5afdc
+        sha256: 65c5beec4e63d9ff40dcb175d0b1afa3d8a994d0519d389bb2f090d03cd5afdc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/snownews/blobs/sha256:f2329c5bd004312a4074b6320072d607045db64766e3393645222b4d92193924
+        sha256: f2329c5bd004312a4074b6320072d607045db64766e3393645222b4d92193924
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/snownews/snownews-1.11.tar.gz
+    sha256: afd4db7c770f461a49e78bc36e97711f3066097b485319227e313ba253902467
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - pkgconf
+    - gettext
+    - pkgconf
 linux_dependencies:
-  - ncurses
-  - openssl@3
+    - ncurses
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

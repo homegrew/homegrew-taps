@@ -3,36 +3,60 @@ version: 3.7.0
 description: OFFIS DICOM toolkit command-line utilities
 homepage: https://dicom.offis.de/dcmtk.php.en
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dcmtk/blobs/sha256:18fdc9d620a8913c66d703dd279c659cfcdf0a0b599d364e545f4513d6578980
-    sha256: 18fdc9d620a8913c66d703dd279c659cfcdf0a0b599d364e545f4513d6578980
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dcmtk/blobs/sha256:4646deaa5d70c8d92620faad87006086369be8fe614eb71c30e39b5604557b46
-    sha256: 4646deaa5d70c8d92620faad87006086369be8fe614eb71c30e39b5604557b46
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dcmtk/blobs/sha256:773d92006e42ea21daecb8138174f768d13050ac78cf32b2ba27f7895f396557
-    sha256: 773d92006e42ea21daecb8138174f768d13050ac78cf32b2ba27f7895f396557
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dcmtk/blobs/sha256:254bb8fa063e79ddcf1800481b89d9dc6c6ee02298981a365cbda4bd144dce32
-    sha256: 254bb8fa063e79ddcf1800481b89d9dc6c6ee02298981a365cbda4bd144dce32
-source:
-  url: https://dicom.offis.de/download/dcmtk/dcmtk370/dcmtk-3.7.0.tar.gz
-  sha256: f103df876040a4f904f01d2464f7868b4feb659d8cd3f46a5f1f61aa440be415
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - openssl@3
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dcmtk/blobs/sha256:4646deaa5d70c8d92620faad87006086369be8fe614eb71c30e39b5604557b46
+        sha256: 4646deaa5d70c8d92620faad87006086369be8fe614eb71c30e39b5604557b46
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dcmtk/blobs/sha256:18fdc9d620a8913c66d703dd279c659cfcdf0a0b599d364e545f4513d6578980
+        sha256: 18fdc9d620a8913c66d703dd279c659cfcdf0a0b599d364e545f4513d6578980
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dcmtk/blobs/sha256:773d92006e42ea21daecb8138174f768d13050ac78cf32b2ba27f7895f396557
+        sha256: 773d92006e42ea21daecb8138174f768d13050ac78cf32b2ba27f7895f396557
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dcmtk/blobs/sha256:254bb8fa063e79ddcf1800481b89d9dc6c6ee02298981a365cbda4bd144dce32
+        sha256: 254bb8fa063e79ddcf1800481b89d9dc6c6ee02298981a365cbda4bd144dce32
+        sha512: ""
+        signature: ""
+source:
+    url: https://dicom.offis.de/download/dcmtk/dcmtk370/dcmtk-3.7.0.tar.gz
+    sha256: f103df876040a4f904f01d2464f7868b4feb659d8cd3f46a5f1f61aa440be415
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - openssl@3
-  - zlib-ng-compat
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

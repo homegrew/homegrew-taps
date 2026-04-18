@@ -1,52 +1,76 @@
 name: baobab
-version: 50.0
+version: "50.0"
 description: Gnome disk usage analyzer
 homepage: https://apps.gnome.org/Baobab/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:201ffa3b00055221be59e714d0b9d550ece6b77a811139346b64b4204107b3a0
-    sha256: 201ffa3b00055221be59e714d0b9d550ece6b77a811139346b64b4204107b3a0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:2fba77061cb9530f9cae2a1a69e7f3bb9b9fdd7ca0d832a9e39554ba17e689e1
-    sha256: 2fba77061cb9530f9cae2a1a69e7f3bb9b9fdd7ca0d832a9e39554ba17e689e1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:a4625726683a287c735411240865f6abcf30b8b4da252476215d63fe9db203c7
-    sha256: a4625726683a287c735411240865f6abcf30b8b4da252476215d63fe9db203c7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:3b646e6805843441709711db33468ea9ddcaab2a1e916244df8e2246a670afc6
-    sha256: 3b646e6805843441709711db33468ea9ddcaab2a1e916244df8e2246a670afc6
-source:
-  url: https://download.gnome.org/sources/baobab/50/baobab-50.0.tar.xz
-  sha256: 573c84f15f5f963a440500f6f43412c928ac2335f6b69dcb58f1a1fe5201024b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - adwaita-icon-theme
-  - cairo
-  - glib
-  - graphene
-  - gtk4
-  - hicolor-icon-theme
-  - libadwaita
-  - pango
-  - gettext
+    - adwaita-icon-theme
+    - cairo
+    - glib
+    - graphene
+    - gtk4
+    - hicolor-icon-theme
+    - libadwaita
+    - pango
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:2fba77061cb9530f9cae2a1a69e7f3bb9b9fdd7ca0d832a9e39554ba17e689e1
+        sha256: 2fba77061cb9530f9cae2a1a69e7f3bb9b9fdd7ca0d832a9e39554ba17e689e1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:201ffa3b00055221be59e714d0b9d550ece6b77a811139346b64b4204107b3a0
+        sha256: 201ffa3b00055221be59e714d0b9d550ece6b77a811139346b64b4204107b3a0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:a4625726683a287c735411240865f6abcf30b8b4da252476215d63fe9db203c7
+        sha256: a4625726683a287c735411240865f6abcf30b8b4da252476215d63fe9db203c7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/baobab/blobs/sha256:3b646e6805843441709711db33468ea9ddcaab2a1e916244df8e2246a670afc6
+        sha256: 3b646e6805843441709711db33468ea9ddcaab2a1e916244df8e2246a670afc6
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/baobab/50/baobab-50.0.tar.xz
+    sha256: 573c84f15f5f963a440500f6f43412c928ac2335f6b69dcb58f1a1fe5201024b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - desktop-file-utils
-  - gettext
-  - itstool
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - desktop-file-utils
+    - gettext
+    - itstool
+    - meson
+    - ninja
+    - pkgconf
+    - vala
 linux_dependencies:
-  - adwaita-icon-theme
-  - cairo
-  - glib
-  - graphene
-  - gtk4
-  - hicolor-icon-theme
-  - libadwaita
-  - pango
+    - adwaita-icon-theme
+    - cairo
+    - glib
+    - graphene
+    - gtk4
+    - hicolor-icon-theme
+    - libadwaita
+    - pango
+build:
+    configure: []
+    install: []
+service: null

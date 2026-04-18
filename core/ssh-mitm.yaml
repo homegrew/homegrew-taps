@@ -3,30 +3,55 @@ version: 5.0.1
 description: SSH server for security audits and malware analysis
 homepage: https://docs.ssh-mitm.at
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:9c47168626264fd7dd4e2a8e8be9f508903b9f11e1d58dd22a17ff5c3d154e47
-    sha256: 9c47168626264fd7dd4e2a8e8be9f508903b9f11e1d58dd22a17ff5c3d154e47
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:1eb64b823f927f57e6fd1451f5fa47b54a90bd1763e27febe8e756944c2b1742
-    sha256: 1eb64b823f927f57e6fd1451f5fa47b54a90bd1763e27febe8e756944c2b1742
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:62568cc83db749cddd48ecb685595c087b73c18cca87e864507654ca2d18252d
-    sha256: 62568cc83db749cddd48ecb685595c087b73c18cca87e864507654ca2d18252d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:04cf23960d1f2c03bc8974c1a861777bf6755056389ffef98f1f8832f39dab0e
-    sha256: 04cf23960d1f2c03bc8974c1a861777bf6755056389ffef98f1f8832f39dab0e
-source:
-  url: https://files.pythonhosted.org/packages/f0/4e/c804d08c336bcff29fd665fdc3ff9d3698d529b1d75462b89bc53527862a/ssh_mitm-5.0.1.tar.gz
-  sha256: 221dafeed602c4cca7a3c7fb2eee55eb9725ea11d19a75fd13c9bc3a1cf274ed
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cryptography
-  - libsodium
-  - libyaml
-  - python@3.14
+    - cryptography
+    - libsodium
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:1eb64b823f927f57e6fd1451f5fa47b54a90bd1763e27febe8e756944c2b1742
+        sha256: 1eb64b823f927f57e6fd1451f5fa47b54a90bd1763e27febe8e756944c2b1742
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:9c47168626264fd7dd4e2a8e8be9f508903b9f11e1d58dd22a17ff5c3d154e47
+        sha256: 9c47168626264fd7dd4e2a8e8be9f508903b9f11e1d58dd22a17ff5c3d154e47
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:62568cc83db749cddd48ecb685595c087b73c18cca87e864507654ca2d18252d
+        sha256: 62568cc83db749cddd48ecb685595c087b73c18cca87e864507654ca2d18252d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ssh-mitm/blobs/sha256:04cf23960d1f2c03bc8974c1a861777bf6755056389ffef98f1f8832f39dab0e
+        sha256: 04cf23960d1f2c03bc8974c1a861777bf6755056389ffef98f1f8832f39dab0e
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/f0/4e/c804d08c336bcff29fd665fdc3ff9d3698d529b1d75462b89bc53527862a/ssh_mitm-5.0.1.tar.gz
+    sha256: 221dafeed602c4cca7a3c7fb2eee55eb9725ea11d19a75fd13c9bc3a1cf274ed
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

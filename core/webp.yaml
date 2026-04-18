@@ -3,30 +3,55 @@ version: 1.6.0
 description: Image format providing lossless and lossy compression for web images
 homepage: https://developers.google.com/speed/webp/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/webp/blobs/sha256:11a19ac5db13a8485d4d6f712d65d48531f99e8d7237407ab42718777eefacb3
-    sha256: 11a19ac5db13a8485d4d6f712d65d48531f99e8d7237407ab42718777eefacb3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/webp/blobs/sha256:ea4e1ab3ff7e848a8b26a6e851e032887c0a5853d4586e77e98ca586b7f96a35
-    sha256: ea4e1ab3ff7e848a8b26a6e851e032887c0a5853d4586e77e98ca586b7f96a35
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/webp/blobs/sha256:5520d52bce6d837491accd768420cb44e9c64b6bcd4063817668fd5245fc9cfc
-    sha256: 5520d52bce6d837491accd768420cb44e9c64b6bcd4063817668fd5245fc9cfc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/webp/blobs/sha256:4d8b90c79d3e912e86136a88e49295f76fe2b67803b299c5fbe7ab12f01f4faf
-    sha256: 4d8b90c79d3e912e86136a88e49295f76fe2b67803b299c5fbe7ab12f01f4faf
-source:
-  url: https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz
-  sha256: e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - giflib
-  - jpeg-turbo
-  - libpng
-  - libtiff
+    - giflib
+    - jpeg-turbo
+    - libpng
+    - libtiff
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/webp/blobs/sha256:ea4e1ab3ff7e848a8b26a6e851e032887c0a5853d4586e77e98ca586b7f96a35
+        sha256: ea4e1ab3ff7e848a8b26a6e851e032887c0a5853d4586e77e98ca586b7f96a35
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/webp/blobs/sha256:11a19ac5db13a8485d4d6f712d65d48531f99e8d7237407ab42718777eefacb3
+        sha256: 11a19ac5db13a8485d4d6f712d65d48531f99e8d7237407ab42718777eefacb3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/webp/blobs/sha256:5520d52bce6d837491accd768420cb44e9c64b6bcd4063817668fd5245fc9cfc
+        sha256: 5520d52bce6d837491accd768420cb44e9c64b6bcd4063817668fd5245fc9cfc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/webp/blobs/sha256:4d8b90c79d3e912e86136a88e49295f76fe2b67803b299c5fbe7ab12f01f4faf
+        sha256: 4d8b90c79d3e912e86136a88e49295f76fe2b67803b299c5fbe7ab12f01f4faf
+        sha512: ""
+        signature: ""
+source:
+    url: https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz
+    sha256: e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

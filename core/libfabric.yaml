@@ -3,27 +3,53 @@ version: 2.5.1
 description: OpenFabrics libfabric
 homepage: https://ofiwg.github.io/libfabric/
 license: BSD-2-Clause OR GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfabric/blobs/sha256:0024a4b494c4e3d9faf169cfaf2b54731e04f5ce55a8437dda4f65ba4708a744
-    sha256: 0024a4b494c4e3d9faf169cfaf2b54731e04f5ce55a8437dda4f65ba4708a744
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfabric/blobs/sha256:f65db186fc2dc198706755b2a7c96ff998756b22f1c9135ab168a47589b9a4a6
-    sha256: f65db186fc2dc198706755b2a7c96ff998756b22f1c9135ab168a47589b9a4a6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfabric/blobs/sha256:d466a23b9207ec21d04354ee3a81b832bd0ccbe7ec38b812ce3606ac03eadb9c
-    sha256: d466a23b9207ec21d04354ee3a81b832bd0ccbe7ec38b812ce3606ac03eadb9c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfabric/blobs/sha256:ae797cfbcc6935530c8e42a7acb3ff4d7f8ff144a71b3554293190fcaf4f3638
-    sha256: ae797cfbcc6935530c8e42a7acb3ff4d7f8ff144a71b3554293190fcaf4f3638
-source:
-  url: https://github.com/ofiwg/libfabric/releases/download/v2.5.1/libfabric-2.5.1.tar.bz2
-  sha256: ac34788a52b3e4a3a1ef712ec29bc4261c63dfbd9e5e4d6e202a0c3687be368d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfabric/blobs/sha256:f65db186fc2dc198706755b2a7c96ff998756b22f1c9135ab168a47589b9a4a6
+        sha256: f65db186fc2dc198706755b2a7c96ff998756b22f1c9135ab168a47589b9a4a6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfabric/blobs/sha256:0024a4b494c4e3d9faf169cfaf2b54731e04f5ce55a8437dda4f65ba4708a744
+        sha256: 0024a4b494c4e3d9faf169cfaf2b54731e04f5ce55a8437dda4f65ba4708a744
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfabric/blobs/sha256:d466a23b9207ec21d04354ee3a81b832bd0ccbe7ec38b812ce3606ac03eadb9c
+        sha256: d466a23b9207ec21d04354ee3a81b832bd0ccbe7ec38b812ce3606ac03eadb9c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfabric/blobs/sha256:ae797cfbcc6935530c8e42a7acb3ff4d7f8ff144a71b3554293190fcaf4f3638
+        sha256: ae797cfbcc6935530c8e42a7acb3ff4d7f8ff144a71b3554293190fcaf4f3638
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ofiwg/libfabric/releases/download/v2.5.1/libfabric-2.5.1.tar.bz2
+    sha256: ac34788a52b3e4a3a1ef712ec29bc4261c63dfbd9e5e4d6e202a0c3687be368d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

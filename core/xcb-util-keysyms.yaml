@@ -3,27 +3,52 @@ version: 0.4.1
 description: Standard X constants and conversion to/from keycodes
 homepage: https://xcb.freedesktop.org
 license: X11
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xcb-util-keysyms/blobs/sha256:53daefbc9047587b5a2f2e41bd1ef7381593ee69e66193d4464041f45fe24429
-    sha256: 53daefbc9047587b5a2f2e41bd1ef7381593ee69e66193d4464041f45fe24429
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xcb-util-keysyms/blobs/sha256:bbbd83881b3b35058415b32a952b4124e11dcfc48e6a6680920efef22c07fd36
-    sha256: bbbd83881b3b35058415b32a952b4124e11dcfc48e6a6680920efef22c07fd36
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xcb-util-keysyms/blobs/sha256:269947922f6128006e0201a6972c1cf622dc93200268c0dfa5801b8899902c35
-    sha256: 269947922f6128006e0201a6972c1cf622dc93200268c0dfa5801b8899902c35
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xcb-util-keysyms/blobs/sha256:2bd06b66ac056a9d7defd40425046fd621bcc86d1b1a7ee73a6f5ada247f17df
-    sha256: 2bd06b66ac056a9d7defd40425046fd621bcc86d1b1a7ee73a6f5ada247f17df
-source:
-  url: https://xcb.freedesktop.org/dist/xcb-util-keysyms-0.4.1.tar.gz
-  sha256: 1fa21c0cea3060caee7612b6577c1730da470b88cbdf846fa4e3e0ff78948e54
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libxcb
+    - libxcb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xcb-util-keysyms/blobs/sha256:bbbd83881b3b35058415b32a952b4124e11dcfc48e6a6680920efef22c07fd36
+        sha256: bbbd83881b3b35058415b32a952b4124e11dcfc48e6a6680920efef22c07fd36
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xcb-util-keysyms/blobs/sha256:53daefbc9047587b5a2f2e41bd1ef7381593ee69e66193d4464041f45fe24429
+        sha256: 53daefbc9047587b5a2f2e41bd1ef7381593ee69e66193d4464041f45fe24429
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xcb-util-keysyms/blobs/sha256:269947922f6128006e0201a6972c1cf622dc93200268c0dfa5801b8899902c35
+        sha256: 269947922f6128006e0201a6972c1cf622dc93200268c0dfa5801b8899902c35
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xcb-util-keysyms/blobs/sha256:2bd06b66ac056a9d7defd40425046fd621bcc86d1b1a7ee73a6f5ada247f17df
+        sha256: 2bd06b66ac056a9d7defd40425046fd621bcc86d1b1a7ee73a6f5ada247f17df
+        sha512: ""
+        signature: ""
+source:
+    url: https://xcb.freedesktop.org/dist/xcb-util-keysyms-0.4.1.tar.gz
+    sha256: 1fa21c0cea3060caee7612b6577c1730da470b88cbdf846fa4e3e0ff78948e54
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

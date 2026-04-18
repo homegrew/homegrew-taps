@@ -3,29 +3,54 @@ version: 5.35.2
 description: Manage and monitor processes, files, directories, and devices
 homepage: https://mmonit.com/monit/
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/monit/blobs/sha256:cf0064df4cbcd02a33f27f4e65336e8d704670dd5756bf286f212fae29c02b12
-    sha256: cf0064df4cbcd02a33f27f4e65336e8d704670dd5756bf286f212fae29c02b12
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/monit/blobs/sha256:5d264f8b1394bf88cac7403a15efe5c7fdfad6960fc95f712cc302f87a5ee849
-    sha256: 5d264f8b1394bf88cac7403a15efe5c7fdfad6960fc95f712cc302f87a5ee849
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/monit/blobs/sha256:4c0ee9fe8d295f5d1b82e750a7c2594361c59842341dbdd1a2acfe86c7714c32
-    sha256: 4c0ee9fe8d295f5d1b82e750a7c2594361c59842341dbdd1a2acfe86c7714c32
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/monit/blobs/sha256:825886321e6fd519a3ace69a1f9bdf518ae0e6800ba310055dc4752e9d908a90
-    sha256: 825886321e6fd519a3ace69a1f9bdf518ae0e6800ba310055dc4752e9d908a90
-source:
-  url: https://mmonit.com/monit/dist/monit-5.35.2.tar.gz
-  sha256: 4dfef54329e63d9772a9e1c36ac99bc41173b79963dc0d8235f2c32f4b9e078f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/monit/blobs/sha256:5d264f8b1394bf88cac7403a15efe5c7fdfad6960fc95f712cc302f87a5ee849
+        sha256: 5d264f8b1394bf88cac7403a15efe5c7fdfad6960fc95f712cc302f87a5ee849
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/monit/blobs/sha256:cf0064df4cbcd02a33f27f4e65336e8d704670dd5756bf286f212fae29c02b12
+        sha256: cf0064df4cbcd02a33f27f4e65336e8d704670dd5756bf286f212fae29c02b12
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/monit/blobs/sha256:4c0ee9fe8d295f5d1b82e750a7c2594361c59842341dbdd1a2acfe86c7714c32
+        sha256: 4c0ee9fe8d295f5d1b82e750a7c2594361c59842341dbdd1a2acfe86c7714c32
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/monit/blobs/sha256:825886321e6fd519a3ace69a1f9bdf518ae0e6800ba310055dc4752e9d908a90
+        sha256: 825886321e6fd519a3ace69a1f9bdf518ae0e6800ba310055dc4752e9d908a90
+        sha512: ""
+        signature: ""
+source:
+    url: https://mmonit.com/monit/dist/monit-5.35.2.tar.gz
+    sha256: 4dfef54329e63d9772a9e1c36ac99bc41173b79963dc0d8235f2c32f4b9e078f
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - linux-pam
-  - openssl@3
-  - zlib-ng-compat
+    - linux-pam
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

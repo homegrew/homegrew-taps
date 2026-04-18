@@ -3,29 +3,54 @@ version: 6.11.0
 description: Provides functionality to create state machines from SCXML files
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtscxml/blobs/sha256:cd590704c903e606974fb9a0a6678db06827e37f10151a693d30cfeacb93be85
-    sha256: cd590704c903e606974fb9a0a6678db06827e37f10151a693d30cfeacb93be85
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtscxml/blobs/sha256:63b2b467900d1dcba2b132651dc34dbae987e36848113aa6f24807d2a6614248
-    sha256: 63b2b467900d1dcba2b132651dc34dbae987e36848113aa6f24807d2a6614248
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtscxml/blobs/sha256:465f85cf1484cdef828c6328fe6a9ecca898f414709d9448b95e86a386046185
-    sha256: 465f85cf1484cdef828c6328fe6a9ecca898f414709d9448b95e86a386046185
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtscxml/blobs/sha256:e99a59e6b6d29f8402ee51c0e8a973fa93845dda8b550ae386ea9146deea7864
-    sha256: e99a59e6b6d29f8402ee51c0e8a973fa93845dda8b550ae386ea9146deea7864
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtscxml-everywhere-src-6.11.0.tar.xz
-  sha256: 6c383a53c0c3668fcc80d89f00193f0e928a784199c591213cbed1bf2f64d4e7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
-  - qtdeclarative
+    - qtbase
+    - qtdeclarative
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtscxml/blobs/sha256:63b2b467900d1dcba2b132651dc34dbae987e36848113aa6f24807d2a6614248
+        sha256: 63b2b467900d1dcba2b132651dc34dbae987e36848113aa6f24807d2a6614248
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtscxml/blobs/sha256:cd590704c903e606974fb9a0a6678db06827e37f10151a693d30cfeacb93be85
+        sha256: cd590704c903e606974fb9a0a6678db06827e37f10151a693d30cfeacb93be85
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtscxml/blobs/sha256:465f85cf1484cdef828c6328fe6a9ecca898f414709d9448b95e86a386046185
+        sha256: 465f85cf1484cdef828c6328fe6a9ecca898f414709d9448b95e86a386046185
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtscxml/blobs/sha256:e99a59e6b6d29f8402ee51c0e8a973fa93845dda8b550ae386ea9146deea7864
+        sha256: e99a59e6b6d29f8402ee51c0e8a973fa93845dda8b550ae386ea9146deea7864
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtscxml-everywhere-src-6.11.0.tar.xz
+    sha256: 6c383a53c0c3668fcc80d89f00193f0e928a784199c591213cbed1bf2f64d4e7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

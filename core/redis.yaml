@@ -3,25 +3,51 @@ version: 8.6.2
 description: Persistent key-value database, with built-in net interface
 homepage: https://redis.io/
 license: AGPL-3.0-only AND BSD-2-Clause AND BSL-1.0 AND MIT AND (CC0-1.0 OR BSD-2-Clause)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:dd5fafe58c19aa8f171d06ec58f7233eeefe3178c4f373401e37f476d2b3cd92
-    sha256: dd5fafe58c19aa8f171d06ec58f7233eeefe3178c4f373401e37f476d2b3cd92
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:954968cfbc5e3fcef534b7cd3fe4bf796b209a49e5d2c2ff37e2e9f892f3ebaf
-    sha256: 954968cfbc5e3fcef534b7cd3fe4bf796b209a49e5d2c2ff37e2e9f892f3ebaf
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:1eef19f0db6a73cfe21402002d42a96ba43de20f9ad2548ea8a7fdd53b8f5ccb
-    sha256: 1eef19f0db6a73cfe21402002d42a96ba43de20f9ad2548ea8a7fdd53b8f5ccb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:03295922ca2029d5164cdcd9906b6e2254649e3a6b2b6a4593ec219ef3e2a71b
-    sha256: 03295922ca2029d5164cdcd9906b6e2254649e3a6b2b6a4593ec219ef3e2a71b
-source:
-  url: https://download.redis.io/releases/redis-8.6.2.tar.gz
-  sha256: cea46526594fe05f05b9ff733179eb1263deccf4269059cf081fdef222634c88
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:954968cfbc5e3fcef534b7cd3fe4bf796b209a49e5d2c2ff37e2e9f892f3ebaf
+        sha256: 954968cfbc5e3fcef534b7cd3fe4bf796b209a49e5d2c2ff37e2e9f892f3ebaf
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:dd5fafe58c19aa8f171d06ec58f7233eeefe3178c4f373401e37f476d2b3cd92
+        sha256: dd5fafe58c19aa8f171d06ec58f7233eeefe3178c4f373401e37f476d2b3cd92
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:1eef19f0db6a73cfe21402002d42a96ba43de20f9ad2548ea8a7fdd53b8f5ccb
+        sha256: 1eef19f0db6a73cfe21402002d42a96ba43de20f9ad2548ea8a7fdd53b8f5ccb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:03295922ca2029d5164cdcd9906b6e2254649e3a6b2b6a4593ec219ef3e2a71b
+        sha256: 03295922ca2029d5164cdcd9906b6e2254649e3a6b2b6a4593ec219ef3e2a71b
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.redis.io/releases/redis-8.6.2.tar.gz
+    sha256: cea46526594fe05f05b9ff733179eb1263deccf4269059cf081fdef222634c88
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

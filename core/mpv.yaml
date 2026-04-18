@@ -3,77 +3,101 @@ version: 0.41.0
 description: Media player based on MPlayer and mplayer2
 homepage: https://mpv.io
 license: GPL-2.0-or-later AND LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpv/blobs/sha256:d82d7d7bd6619371bd9fb273c8387c7c7bb34e3e37bc8b6bb68e0622bde55bcd
-    sha256: d82d7d7bd6619371bd9fb273c8387c7c7bb34e3e37bc8b6bb68e0622bde55bcd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpv/blobs/sha256:b6dd374d5896f71570fa116ab17c448f2d5dd7c7b2e824515fcb120b97c11467
-    sha256: b6dd374d5896f71570fa116ab17c448f2d5dd7c7b2e824515fcb120b97c11467
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpv/blobs/sha256:e6af765e0c6d1ec79da369f749d6439306fbe7e98bf34fa055674e433e08a1a3
-    sha256: e6af765e0c6d1ec79da369f749d6439306fbe7e98bf34fa055674e433e08a1a3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpv/blobs/sha256:fc94e7920c2ec65875c212cdb01259f12e94f88976e990ea2706a9289584240e
-    sha256: fc94e7920c2ec65875c212cdb01259f12e94f88976e990ea2706a9289584240e
-source:
-  url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz
-  sha256: ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - jpeg-turbo
-  - libarchive
-  - libass
-  - libbluray
-  - libplacebo
-  - little-cms2
-  - luajit
-  - mujs
-  - rubberband
-  - uchardet
-  - vapoursynth
-  - vulkan-loader
-  - yt-dlp
-  - zimg
-  - molten-vk
+    - ffmpeg
+    - jpeg-turbo
+    - libarchive
+    - libass
+    - libbluray
+    - libplacebo
+    - little-cms2
+    - luajit
+    - mujs
+    - rubberband
+    - uchardet
+    - vapoursynth
+    - vulkan-loader
+    - yt-dlp
+    - zimg
+    - molten-vk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpv/blobs/sha256:b6dd374d5896f71570fa116ab17c448f2d5dd7c7b2e824515fcb120b97c11467
+        sha256: b6dd374d5896f71570fa116ab17c448f2d5dd7c7b2e824515fcb120b97c11467
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpv/blobs/sha256:d82d7d7bd6619371bd9fb273c8387c7c7bb34e3e37bc8b6bb68e0622bde55bcd
+        sha256: d82d7d7bd6619371bd9fb273c8387c7c7bb34e3e37bc8b6bb68e0622bde55bcd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpv/blobs/sha256:e6af765e0c6d1ec79da369f749d6439306fbe7e98bf34fa055674e433e08a1a3
+        sha256: e6af765e0c6d1ec79da369f749d6439306fbe7e98bf34fa055674e433e08a1a3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpv/blobs/sha256:fc94e7920c2ec65875c212cdb01259f12e94f88976e990ea2706a9289584240e
+        sha256: fc94e7920c2ec65875c212cdb01259f12e94f88976e990ea2706a9289584240e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz
+    sha256: ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docutils
-  - meson
-  - ninja
-  - pkgconf
+    - docutils
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - ffmpeg
-  - jpeg-turbo
-  - libarchive
-  - libass
-  - libbluray
-  - libplacebo
-  - libva
-  - libvdpau
-  - libx11
-  - libxext
-  - libxfixes
-  - libxkbcommon
-  - libxpresent
-  - libxrandr
-  - libxscrnsaver
-  - libxv
-  - little-cms2
-  - luajit
-  - mesa
-  - mujs
-  - pulseaudio
-  - rubberband
-  - uchardet
-  - vapoursynth
-  - vulkan-loader
-  - wayland
-  - wayland-protocols
-  - yt-dlp
-  - zimg
-  - zlib-ng-compat
+    - alsa-lib
+    - ffmpeg
+    - jpeg-turbo
+    - libarchive
+    - libass
+    - libbluray
+    - libplacebo
+    - libva
+    - libvdpau
+    - libx11
+    - libxext
+    - libxfixes
+    - libxkbcommon
+    - libxpresent
+    - libxrandr
+    - libxscrnsaver
+    - libxv
+    - little-cms2
+    - luajit
+    - mesa
+    - mujs
+    - pulseaudio
+    - rubberband
+    - uchardet
+    - vapoursynth
+    - vulkan-loader
+    - wayland
+    - wayland-protocols
+    - yt-dlp
+    - zimg
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

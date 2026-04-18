@@ -3,25 +3,51 @@ version: 1.140.0
 description: Cost-effective and scalable monitoring solution and time series database
 homepage: https://victoriametrics.com/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/victoriametrics/blobs/sha256:7f26288eab3c16cddd87f96ca29adae9132ab426af8fd79be017ab2d9f649fae
-    sha256: 7f26288eab3c16cddd87f96ca29adae9132ab426af8fd79be017ab2d9f649fae
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/victoriametrics/blobs/sha256:6f3d7077c6653ecc3da50f5b8145136ad11f8dd55dab7cfde41da92fe1653b35
-    sha256: 6f3d7077c6653ecc3da50f5b8145136ad11f8dd55dab7cfde41da92fe1653b35
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/victoriametrics/blobs/sha256:8dae2fff30da59a535546ac16d363e5a044dc1fc8ff7629225ea2209fcedf0d5
-    sha256: 8dae2fff30da59a535546ac16d363e5a044dc1fc8ff7629225ea2209fcedf0d5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/victoriametrics/blobs/sha256:e98547b9dd432e8e191072db336f3e35cb1e25ad189c4834d6f3f80f11b37f46
-    sha256: e98547b9dd432e8e191072db336f3e35cb1e25ad189c4834d6f3f80f11b37f46
-source:
-  url: https://github.com/VictoriaMetrics/VictoriaMetrics/archive/refs/tags/v1.140.0.tar.gz
-  sha256: ae77aaee7206fd1474990048baae78812fb36d12434698b93647f029d1a37d61
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/victoriametrics/blobs/sha256:6f3d7077c6653ecc3da50f5b8145136ad11f8dd55dab7cfde41da92fe1653b35
+        sha256: 6f3d7077c6653ecc3da50f5b8145136ad11f8dd55dab7cfde41da92fe1653b35
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/victoriametrics/blobs/sha256:7f26288eab3c16cddd87f96ca29adae9132ab426af8fd79be017ab2d9f649fae
+        sha256: 7f26288eab3c16cddd87f96ca29adae9132ab426af8fd79be017ab2d9f649fae
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/victoriametrics/blobs/sha256:8dae2fff30da59a535546ac16d363e5a044dc1fc8ff7629225ea2209fcedf0d5
+        sha256: 8dae2fff30da59a535546ac16d363e5a044dc1fc8ff7629225ea2209fcedf0d5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/victoriametrics/blobs/sha256:e98547b9dd432e8e191072db336f3e35cb1e25ad189c4834d6f3f80f11b37f46
+        sha256: e98547b9dd432e8e191072db336f3e35cb1e25ad189c4834d6f3f80f11b37f46
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/VictoriaMetrics/VictoriaMetrics/archive/refs/tags/v1.140.0.tar.gz
+    sha256: ae77aaee7206fd1474990048baae78812fb36d12434698b93647f029d1a37d61
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

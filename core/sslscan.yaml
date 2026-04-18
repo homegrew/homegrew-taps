@@ -3,25 +3,51 @@ version: 2.2.2
 description: Test SSL/TLS enabled services to discover supported cipher suites
 homepage: https://github.com/rbsec/sslscan
 license: GPL-3.0-or-later WITH openvpn-openssl-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sslscan/blobs/sha256:abf87030b9052906d11558e3791c9bac39d02345b08b09750b087e426f0a19a4
-    sha256: abf87030b9052906d11558e3791c9bac39d02345b08b09750b087e426f0a19a4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sslscan/blobs/sha256:136412efca3761319012e8993c2af3fa7db0108973ae0bc553a7535dc6412c72
-    sha256: 136412efca3761319012e8993c2af3fa7db0108973ae0bc553a7535dc6412c72
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sslscan/blobs/sha256:e22a261ae4609ce6659cc5213e7d01fb5ca4322d6f8207374e4e29033b55451f
-    sha256: e22a261ae4609ce6659cc5213e7d01fb5ca4322d6f8207374e4e29033b55451f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sslscan/blobs/sha256:9bb7a15753a2b8ef1a098ba0db3dd723ff8610d1b07492085ef57eb65635fa47
-    sha256: 9bb7a15753a2b8ef1a098ba0db3dd723ff8610d1b07492085ef57eb65635fa47
-source:
-  url: https://github.com/rbsec/sslscan/archive/refs/tags/2.2.2.tar.gz
-  sha256: a1b4e4f1a52920089aaade85a7b900c8f2683937f49025c821b9c9f2b25db9a1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sslscan/blobs/sha256:136412efca3761319012e8993c2af3fa7db0108973ae0bc553a7535dc6412c72
+        sha256: 136412efca3761319012e8993c2af3fa7db0108973ae0bc553a7535dc6412c72
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sslscan/blobs/sha256:abf87030b9052906d11558e3791c9bac39d02345b08b09750b087e426f0a19a4
+        sha256: abf87030b9052906d11558e3791c9bac39d02345b08b09750b087e426f0a19a4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sslscan/blobs/sha256:e22a261ae4609ce6659cc5213e7d01fb5ca4322d6f8207374e4e29033b55451f
+        sha256: e22a261ae4609ce6659cc5213e7d01fb5ca4322d6f8207374e4e29033b55451f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sslscan/blobs/sha256:9bb7a15753a2b8ef1a098ba0db3dd723ff8610d1b07492085ef57eb65635fa47
+        sha256: 9bb7a15753a2b8ef1a098ba0db3dd723ff8610d1b07492085ef57eb65635fa47
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rbsec/sslscan/archive/refs/tags/2.2.2.tar.gz
+    sha256: a1b4e4f1a52920089aaade85a7b900c8f2683937f49025c821b9c9f2b25db9a1
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

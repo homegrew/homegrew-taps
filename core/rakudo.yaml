@@ -1,28 +1,54 @@
 name: rakudo
-version: 2026.03
+version: "2026.03"
 description: Mature, production-ready implementation of the Raku language
 homepage: https://rakudo.org
 license: Artistic-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rakudo/blobs/sha256:1537034eb489ba8ebb74ba45c8890da0a0ff9450d149bc6abcf323cd93bbca11
-    sha256: 1537034eb489ba8ebb74ba45c8890da0a0ff9450d149bc6abcf323cd93bbca11
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rakudo/blobs/sha256:59e8f047a57ff54b6c217c30f34737456d9b0ca72a0274b554ccdc42374818f6
-    sha256: 59e8f047a57ff54b6c217c30f34737456d9b0ca72a0274b554ccdc42374818f6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rakudo/blobs/sha256:287e74e237cdfefc3eaca5ec5f45910fba3258e92a5e1372d1532c471bb2a779
-    sha256: 287e74e237cdfefc3eaca5ec5f45910fba3258e92a5e1372d1532c471bb2a779
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rakudo/blobs/sha256:b155b472072ad7eeb2aef3ef728178d51b7581e7aae69d3f684e00ea336fc505
-    sha256: b155b472072ad7eeb2aef3ef728178d51b7581e7aae69d3f684e00ea336fc505
-source:
-  url: https://github.com/rakudo/rakudo/releases/download/2026.03/rakudo-2026.03.tar.gz
-  sha256: c2a015bbe3ad1405b47eb6308b070168613bbfdde596272a828382aa61c409ff
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - moarvm
-  - nqp
+    - moarvm
+    - nqp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rakudo/blobs/sha256:59e8f047a57ff54b6c217c30f34737456d9b0ca72a0274b554ccdc42374818f6
+        sha256: 59e8f047a57ff54b6c217c30f34737456d9b0ca72a0274b554ccdc42374818f6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rakudo/blobs/sha256:1537034eb489ba8ebb74ba45c8890da0a0ff9450d149bc6abcf323cd93bbca11
+        sha256: 1537034eb489ba8ebb74ba45c8890da0a0ff9450d149bc6abcf323cd93bbca11
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rakudo/blobs/sha256:287e74e237cdfefc3eaca5ec5f45910fba3258e92a5e1372d1532c471bb2a779
+        sha256: 287e74e237cdfefc3eaca5ec5f45910fba3258e92a5e1372d1532c471bb2a779
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rakudo/blobs/sha256:b155b472072ad7eeb2aef3ef728178d51b7581e7aae69d3f684e00ea336fc505
+        sha256: b155b472072ad7eeb2aef3ef728178d51b7581e7aae69d3f684e00ea336fc505
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rakudo/rakudo/releases/download/2026.03/rakudo-2026.03.tar.gz
+    sha256: c2a015bbe3ad1405b47eb6308b070168613bbfdde596272a828382aa61c409ff
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

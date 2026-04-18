@@ -1,49 +1,73 @@
 name: darkice
-version: 1.6
+version: "1.6"
 description: Live audio streamer
 homepage: http://www.darkice.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/darkice/blobs/sha256:20fadd1b316d8b747e228c02b325d21329a90591a3aab8b02bcfe02d4898a905
-    sha256: 20fadd1b316d8b747e228c02b325d21329a90591a3aab8b02bcfe02d4898a905
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/darkice/blobs/sha256:ebde2620aa8397e50338a25ba5d370ef82fbe08ed2b4c9fd7da46baef13fac45
-    sha256: ebde2620aa8397e50338a25ba5d370ef82fbe08ed2b4c9fd7da46baef13fac45
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/darkice/blobs/sha256:26e67b2c6571fc9bafab6e97febb01e97e86f9f77a18397b1e08ccb944c4805c
-    sha256: 26e67b2c6571fc9bafab6e97febb01e97e86f9f77a18397b1e08ccb944c4805c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/darkice/blobs/sha256:02aeec8949bff8c5e533dcc7bf3b55793a96f791b3f053ffbf5457da241e0733
-    sha256: 02aeec8949bff8c5e533dcc7bf3b55793a96f791b3f053ffbf5457da241e0733
-source:
-  url: https://github.com/rafael2k/darkice/archive/refs/tags/v1.6.tar.gz
-  sha256: 52807d887d60646776110b63543d3845ebe9ed52d3eea44bed7c4bdd95b6575e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - faac
-  - fdk-aac
-  - jack
-  - lame
-  - libogg
-  - libsamplerate
-  - libvorbis
-  - two-lame
+    - faac
+    - fdk-aac
+    - jack
+    - lame
+    - libogg
+    - libsamplerate
+    - libvorbis
+    - two-lame
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/darkice/blobs/sha256:ebde2620aa8397e50338a25ba5d370ef82fbe08ed2b4c9fd7da46baef13fac45
+        sha256: ebde2620aa8397e50338a25ba5d370ef82fbe08ed2b4c9fd7da46baef13fac45
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/darkice/blobs/sha256:20fadd1b316d8b747e228c02b325d21329a90591a3aab8b02bcfe02d4898a905
+        sha256: 20fadd1b316d8b747e228c02b325d21329a90591a3aab8b02bcfe02d4898a905
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/darkice/blobs/sha256:26e67b2c6571fc9bafab6e97febb01e97e86f9f77a18397b1e08ccb944c4805c
+        sha256: 26e67b2c6571fc9bafab6e97febb01e97e86f9f77a18397b1e08ccb944c4805c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/darkice/blobs/sha256:02aeec8949bff8c5e533dcc7bf3b55793a96f791b3f053ffbf5457da241e0733
+        sha256: 02aeec8949bff8c5e533dcc7bf3b55793a96f791b3f053ffbf5457da241e0733
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rafael2k/darkice/archive/refs/tags/v1.6.tar.gz
+    sha256: 52807d887d60646776110b63543d3845ebe9ed52d3eea44bed7c4bdd95b6575e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - faac
-  - fdk-aac
-  - jack
-  - lame
-  - libogg
-  - libsamplerate
-  - libvorbis
-  - two-lame
+    - alsa-lib
+    - faac
+    - fdk-aac
+    - jack
+    - lame
+    - libogg
+    - libsamplerate
+    - libvorbis
+    - two-lame
+build:
+    configure: []
+    install: []
+service: null

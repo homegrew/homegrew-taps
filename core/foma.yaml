@@ -3,30 +3,55 @@ version: 0.10.0
 description: Finite-state compiler and C library
 homepage: https://github.com/mhulden/foma
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/foma/blobs/sha256:585a4ed242e82fa06b31fffea4747c3dcfb370d15b774ee2c099e89352494185
-    sha256: 585a4ed242e82fa06b31fffea4747c3dcfb370d15b774ee2c099e89352494185
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/foma/blobs/sha256:20e9102b4df0a214b23c3eb5cd1d8b5e8d485b46c77e6e6913086889ac98f0c4
-    sha256: 20e9102b4df0a214b23c3eb5cd1d8b5e8d485b46c77e6e6913086889ac98f0c4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/foma/blobs/sha256:3d226105516d5b70e4981e53bb1fac0d8d7d61ba4fbae352c76c2f2223263f1f
-    sha256: 3d226105516d5b70e4981e53bb1fac0d8d7d61ba4fbae352c76c2f2223263f1f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/foma/blobs/sha256:2fda34fa0f539af95305f663109e71bc25f679d9fa0712298c6b2785bdf94293
-    sha256: 2fda34fa0f539af95305f663109e71bc25f679d9fa0712298c6b2785bdf94293
-source:
-  url: https://github.com/mhulden/foma/archive/refs/tags/v0.10.0.tar.gz
-  sha256: 32fff2bd0a8338716adfee71505277d8562dabd48be9bf15620c38b15c8c404e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/foma/blobs/sha256:20e9102b4df0a214b23c3eb5cd1d8b5e8d485b46c77e6e6913086889ac98f0c4
+        sha256: 20e9102b4df0a214b23c3eb5cd1d8b5e8d485b46c77e6e6913086889ac98f0c4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/foma/blobs/sha256:585a4ed242e82fa06b31fffea4747c3dcfb370d15b774ee2c099e89352494185
+        sha256: 585a4ed242e82fa06b31fffea4747c3dcfb370d15b774ee2c099e89352494185
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/foma/blobs/sha256:3d226105516d5b70e4981e53bb1fac0d8d7d61ba4fbae352c76c2f2223263f1f
+        sha256: 3d226105516d5b70e4981e53bb1fac0d8d7d61ba4fbae352c76c2f2223263f1f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/foma/blobs/sha256:2fda34fa0f539af95305f663109e71bc25f679d9fa0712298c6b2785bdf94293
+        sha256: 2fda34fa0f539af95305f663109e71bc25f679d9fa0712298c6b2785bdf94293
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mhulden/foma/archive/refs/tags/v0.10.0.tar.gz
+    sha256: 32fff2bd0a8338716adfee71505277d8562dabd48be9bf15620c38b15c8c404e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
-  - cmake
-  - pkgconf
+    - bison
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - readline
-  - zlib-ng-compat
+    - readline
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

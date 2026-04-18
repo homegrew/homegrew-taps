@@ -3,36 +3,60 @@ version: 0.23.2
 description: Top-like display of Apache log
 homepage: https://github.com/tessus/apachetop
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:b43b64c9b48fdef15d11d7dcb99d20bf65a31c05b36e7468c3e9e8bbd16f3f5f
-    sha256: b43b64c9b48fdef15d11d7dcb99d20bf65a31c05b36e7468c3e9e8bbd16f3f5f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:6f1bb6b2163f1738b3ab80f3c4a41fb0c73f50a07cc45a8924b31b22ec355334
-    sha256: 6f1bb6b2163f1738b3ab80f3c4a41fb0c73f50a07cc45a8924b31b22ec355334
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:b12e4f730309bb91ee34bb2972ef2004a979c2a608abb93500b859973994abf8
-    sha256: b12e4f730309bb91ee34bb2972ef2004a979c2a608abb93500b859973994abf8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:ee4946ec586338260b8540ae8954f40001f2cd482663f55a9e19f94572756f67
-    sha256: ee4946ec586338260b8540ae8954f40001f2cd482663f55a9e19f94572756f67
-source:
-  url: https://github.com/tessus/apachetop/releases/download/0.23.2/apachetop-0.23.2.tar.gz
-  sha256: f94a34180808c3edb24c1779f72363246dd4143a89f579ef2ac168a45b04443f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - adns
-  - ncurses
-  - pcre2
+    - adns
+    - ncurses
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:6f1bb6b2163f1738b3ab80f3c4a41fb0c73f50a07cc45a8924b31b22ec355334
+        sha256: 6f1bb6b2163f1738b3ab80f3c4a41fb0c73f50a07cc45a8924b31b22ec355334
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:b43b64c9b48fdef15d11d7dcb99d20bf65a31c05b36e7468c3e9e8bbd16f3f5f
+        sha256: b43b64c9b48fdef15d11d7dcb99d20bf65a31c05b36e7468c3e9e8bbd16f3f5f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:b12e4f730309bb91ee34bb2972ef2004a979c2a608abb93500b859973994abf8
+        sha256: b12e4f730309bb91ee34bb2972ef2004a979c2a608abb93500b859973994abf8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:ee4946ec586338260b8540ae8954f40001f2cd482663f55a9e19f94572756f67
+        sha256: ee4946ec586338260b8540ae8954f40001f2cd482663f55a9e19f94572756f67
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tessus/apachetop/releases/download/0.23.2/apachetop-0.23.2.tar.gz
+    sha256: f94a34180808c3edb24c1779f72363246dd4143a89f579ef2ac168a45b04443f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - pkgconf
+    - autoconf
+    - automake
+    - pkgconf
 linux_dependencies:
-  - adns
-  - ncurses
-  - pcre2
-  - readline
+    - adns
+    - ncurses
+    - pcre2
+    - readline
+build:
+    configure: []
+    install: []
+service: null

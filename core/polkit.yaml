@@ -1,40 +1,64 @@
 name: polkit
-version: 127
+version: "127"
 description: Toolkit for defining and handling authorizations
 homepage: https://github.com/polkit-org/polkit
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/polkit/blobs/sha256:cb9f1624d4c79471a0e1b01d11b8c7c1a20f974891f23877fa2a432c62e91aa9
-    sha256: cb9f1624d4c79471a0e1b01d11b8c7c1a20f974891f23877fa2a432c62e91aa9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/polkit/blobs/sha256:292f968c8038ad0cdeeded5f4ff3bf4a01396fbad93a0c0b453530a23f319046
-    sha256: 292f968c8038ad0cdeeded5f4ff3bf4a01396fbad93a0c0b453530a23f319046
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/polkit/blobs/sha256:b701cf5a66a2ea0770f66a3f514820c0679674498e828007242ef412616c4859
-    sha256: b701cf5a66a2ea0770f66a3f514820c0679674498e828007242ef412616c4859
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/polkit/blobs/sha256:af1a6f406501df5cbf78b25665e1430579306b5ea5cf79e1c3fb64d709c64283
-    sha256: af1a6f406501df5cbf78b25665e1430579306b5ea5cf79e1c3fb64d709c64283
-source:
-  url: https://github.com/polkit-org/polkit/archive/refs/tags/127.tar.gz
-  sha256: 9b7bc16f086479dcc626c575976568ba4a85d34297a750d8ab3d2e57f6d8b988
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - duktape
-  - glib
-  - gettext
+    - duktape
+    - glib
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/polkit/blobs/sha256:292f968c8038ad0cdeeded5f4ff3bf4a01396fbad93a0c0b453530a23f319046
+        sha256: 292f968c8038ad0cdeeded5f4ff3bf4a01396fbad93a0c0b453530a23f319046
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/polkit/blobs/sha256:cb9f1624d4c79471a0e1b01d11b8c7c1a20f974891f23877fa2a432c62e91aa9
+        sha256: cb9f1624d4c79471a0e1b01d11b8c7c1a20f974891f23877fa2a432c62e91aa9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/polkit/blobs/sha256:b701cf5a66a2ea0770f66a3f514820c0679674498e828007242ef412616c4859
+        sha256: b701cf5a66a2ea0770f66a3f514820c0679674498e828007242ef412616c4859
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/polkit/blobs/sha256:af1a6f406501df5cbf78b25665e1430579306b5ea5cf79e1c3fb64d709c64283
+        sha256: af1a6f406501df5cbf78b25665e1430579306b5ea5cf79e1c3fb64d709c64283
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/polkit-org/polkit/archive/refs/tags/127.tar.gz
+    sha256: 9b7bc16f086479dcc626c575976568ba4a85d34297a750d8ab3d2e57f6d8b988
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
+    - gettext
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - duktape
-  - glib
-  - linux-pam
-  - systemd
+    - duktape
+    - glib
+    - linux-pam
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

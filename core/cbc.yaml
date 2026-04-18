@@ -3,36 +3,60 @@ version: 2.10.13
 description: Mixed integer linear programming solver
 homepage: https://github.com/coin-or/Cbc
 license: EPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cbc/blobs/sha256:52ccb68fba8383cbf511aa50e4995c895319c8922f21fedbda41e9f620f91736
-    sha256: 52ccb68fba8383cbf511aa50e4995c895319c8922f21fedbda41e9f620f91736
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cbc/blobs/sha256:c67568c5827d8a2d6cae9ccd452844ec85f83d22a430a790be47635003831d6c
-    sha256: c67568c5827d8a2d6cae9ccd452844ec85f83d22a430a790be47635003831d6c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cbc/blobs/sha256:f710f8fde9355103a280120d28c6f1fd75b96fd9f2761d50ffaf7de856276bcf
-    sha256: f710f8fde9355103a280120d28c6f1fd75b96fd9f2761d50ffaf7de856276bcf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cbc/blobs/sha256:bf429b4ca41fbe33f560083c046607aab8bb28aad6e7fd2c300e379c79e73814
-    sha256: bf429b4ca41fbe33f560083c046607aab8bb28aad6e7fd2c300e379c79e73814
-source:
-  url: https://github.com/coin-or/Cbc/archive/refs/tags/releases/2.10.13.tar.gz
-  sha256: 62fde44dcf6f3d05c5cd291d7435cdd1b7e8acd3c78ec481dd39fe49cbc40399
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cgl
-  - clp
-  - coinutils
-  - osi
-  - openblas
+    - cgl
+    - clp
+    - coinutils
+    - osi
+    - openblas
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cbc/blobs/sha256:c67568c5827d8a2d6cae9ccd452844ec85f83d22a430a790be47635003831d6c
+        sha256: c67568c5827d8a2d6cae9ccd452844ec85f83d22a430a790be47635003831d6c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cbc/blobs/sha256:52ccb68fba8383cbf511aa50e4995c895319c8922f21fedbda41e9f620f91736
+        sha256: 52ccb68fba8383cbf511aa50e4995c895319c8922f21fedbda41e9f620f91736
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cbc/blobs/sha256:f710f8fde9355103a280120d28c6f1fd75b96fd9f2761d50ffaf7de856276bcf
+        sha256: f710f8fde9355103a280120d28c6f1fd75b96fd9f2761d50ffaf7de856276bcf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cbc/blobs/sha256:bf429b4ca41fbe33f560083c046607aab8bb28aad6e7fd2c300e379c79e73814
+        sha256: bf429b4ca41fbe33f560083c046607aab8bb28aad6e7fd2c300e379c79e73814
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/coin-or/Cbc/archive/refs/tags/releases/2.10.13.tar.gz
+    sha256: 62fde44dcf6f3d05c5cd291d7435cdd1b7e8acd3c78ec481dd39fe49cbc40399
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - cgl
-  - clp
-  - coinutils
-  - osi
+    - cgl
+    - clp
+    - coinutils
+    - osi
+build:
+    configure: []
+    install: []
+service: null

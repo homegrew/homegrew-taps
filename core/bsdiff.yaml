@@ -1,27 +1,53 @@
 name: bsdiff
-version: 4.3
+version: "4.3"
 description: Generate and apply patches to binary files
 homepage: https://www.daemonology.net/bsdiff/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bsdiff/blobs/sha256:c1b39ac523c9bb26c5b194c20451b28be15bf1a8a5b59bab50a517f7619c472d
-    sha256: c1b39ac523c9bb26c5b194c20451b28be15bf1a8a5b59bab50a517f7619c472d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bsdiff/blobs/sha256:ebe5b95b664031daacd3c13c259b36dacf96b014de8f391ba3c16049764758f0
-    sha256: ebe5b95b664031daacd3c13c259b36dacf96b014de8f391ba3c16049764758f0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bsdiff/blobs/sha256:a48ec4c541d81798cb3ba5706f031a7e71a8da01154eef1df353a729d2614130
-    sha256: a48ec4c541d81798cb3ba5706f031a7e71a8da01154eef1df353a729d2614130
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bsdiff/blobs/sha256:bb201ab0bfbc684057c632420b2a69c2b568ccf547a7c121096806bd6c836d8f
-    sha256: bb201ab0bfbc684057c632420b2a69c2b568ccf547a7c121096806bd6c836d8f
-source:
-  url: https://deb.debian.org/debian/pool/main/b/bsdiff/bsdiff_4.3.orig.tar.gz
-  sha256: 18821588b2dc5bf159aa37d3bcb7b885d85ffd1e19f23a0c57a58723fea85f48
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bsdiff/blobs/sha256:ebe5b95b664031daacd3c13c259b36dacf96b014de8f391ba3c16049764758f0
+        sha256: ebe5b95b664031daacd3c13c259b36dacf96b014de8f391ba3c16049764758f0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bsdiff/blobs/sha256:c1b39ac523c9bb26c5b194c20451b28be15bf1a8a5b59bab50a517f7619c472d
+        sha256: c1b39ac523c9bb26c5b194c20451b28be15bf1a8a5b59bab50a517f7619c472d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bsdiff/blobs/sha256:a48ec4c541d81798cb3ba5706f031a7e71a8da01154eef1df353a729d2614130
+        sha256: a48ec4c541d81798cb3ba5706f031a7e71a8da01154eef1df353a729d2614130
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bsdiff/blobs/sha256:bb201ab0bfbc684057c632420b2a69c2b568ccf547a7c121096806bd6c836d8f
+        sha256: bb201ab0bfbc684057c632420b2a69c2b568ccf547a7c121096806bd6c836d8f
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/b/bsdiff/bsdiff_4.3.orig.tar.gz
+    sha256: 18821588b2dc5bf159aa37d3bcb7b885d85ffd1e19f23a0c57a58723fea85f48
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bmake
+    - bmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

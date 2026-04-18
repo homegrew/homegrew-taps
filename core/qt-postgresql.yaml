@@ -3,29 +3,54 @@ version: 6.11.0
 description: Qt SQL Database Driver
 homepage: https://www.qt.io/
 license: GPL-2.0-only OR GPL-3.0-only OR LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt-postgresql/blobs/sha256:69614c5fecfd71343662758ca842e77c740b246cf33ae17365418630282ffc49
-    sha256: 69614c5fecfd71343662758ca842e77c740b246cf33ae17365418630282ffc49
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt-postgresql/blobs/sha256:d29455560bdc399354fd9f6bd4f058d051a98e82b28d26f8649af068295c582d
-    sha256: d29455560bdc399354fd9f6bd4f058d051a98e82b28d26f8649af068295c582d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt-postgresql/blobs/sha256:8af105418135ee81b1830051276af909322028e70608704bc9144e764c96abc6
-    sha256: 8af105418135ee81b1830051276af909322028e70608704bc9144e764c96abc6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt-postgresql/blobs/sha256:a69d8ed5ddf60f6402fb15242390d937514f4a87cfa7316cb2573e09d4a466a0
-    sha256: a69d8ed5ddf60f6402fb15242390d937514f4a87cfa7316cb2573e09d4a466a0
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
-  sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpq
-  - qtbase
+    - libpq
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt-postgresql/blobs/sha256:d29455560bdc399354fd9f6bd4f058d051a98e82b28d26f8649af068295c582d
+        sha256: d29455560bdc399354fd9f6bd4f058d051a98e82b28d26f8649af068295c582d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt-postgresql/blobs/sha256:69614c5fecfd71343662758ca842e77c740b246cf33ae17365418630282ffc49
+        sha256: 69614c5fecfd71343662758ca842e77c740b246cf33ae17365418630282ffc49
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt-postgresql/blobs/sha256:8af105418135ee81b1830051276af909322028e70608704bc9144e764c96abc6
+        sha256: 8af105418135ee81b1830051276af909322028e70608704bc9144e764c96abc6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt-postgresql/blobs/sha256:a69d8ed5ddf60f6402fb15242390d937514f4a87cfa7316cb2573e09d4a466a0
+        sha256: a69d8ed5ddf60f6402fb15242390d937514f4a87cfa7316cb2573e09d4a466a0
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
+    sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

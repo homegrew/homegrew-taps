@@ -1,30 +1,55 @@
 name: nss
-version: 3.123
+version: "3.123"
 description: Libraries for security-enabled client and server applications
 homepage: https://firefox-source-docs.mozilla.org/security/nss/index.html
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nss/blobs/sha256:5035148c96da339736aa25863f7ae4381ceb0183acbfdb0ead016cfca0728373
-    sha256: 5035148c96da339736aa25863f7ae4381ceb0183acbfdb0ead016cfca0728373
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nss/blobs/sha256:ffbe06add78dd61ed95e7aa07869daf418f2d8c2fbef615176b273ad04aa72f2
-    sha256: ffbe06add78dd61ed95e7aa07869daf418f2d8c2fbef615176b273ad04aa72f2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nss/blobs/sha256:33f2d912c2939e2b6d348abe75304f9a848a3fe0b4b61466885fc5808b90065f
-    sha256: 33f2d912c2939e2b6d348abe75304f9a848a3fe0b4b61466885fc5808b90065f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nss/blobs/sha256:3c6b00fa6503590b1be4184ea6a6c1d24cc3fbe2f0e45b9a3c7b1ac157634132
-    sha256: 3c6b00fa6503590b1be4184ea6a6c1d24cc3fbe2f0e45b9a3c7b1ac157634132
-source:
-  url: https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_123_RTM/src/nss-3.123.tar.gz
-  sha256: 2145113398a269779a7390515a1638800836b130248e33f93243268c026d4e49
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - nspr
+    - nspr
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nss/blobs/sha256:ffbe06add78dd61ed95e7aa07869daf418f2d8c2fbef615176b273ad04aa72f2
+        sha256: ffbe06add78dd61ed95e7aa07869daf418f2d8c2fbef615176b273ad04aa72f2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nss/blobs/sha256:5035148c96da339736aa25863f7ae4381ceb0183acbfdb0ead016cfca0728373
+        sha256: 5035148c96da339736aa25863f7ae4381ceb0183acbfdb0ead016cfca0728373
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nss/blobs/sha256:33f2d912c2939e2b6d348abe75304f9a848a3fe0b4b61466885fc5808b90065f
+        sha256: 33f2d912c2939e2b6d348abe75304f9a848a3fe0b4b61466885fc5808b90065f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nss/blobs/sha256:3c6b00fa6503590b1be4184ea6a6c1d24cc3fbe2f0e45b9a3c7b1ac157634132
+        sha256: 3c6b00fa6503590b1be4184ea6a6c1d24cc3fbe2f0e45b9a3c7b1ac157634132
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_123_RTM/src/nss-3.123.tar.gz
+    sha256: 2145113398a269779a7390515a1638800836b130248e33f93243268c026d4e49
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - nspr
-  - zlib-ng-compat
+    - nspr
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

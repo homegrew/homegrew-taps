@@ -3,88 +3,112 @@ version: 1.4.2
 description: Astronomical image processing tool
 homepage: https://www.siril.org
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:c610d29be00975c40225d0e59e35748a69d7053271e5d88090c89e7955efc96f
-    sha256: c610d29be00975c40225d0e59e35748a69d7053271e5d88090c89e7955efc96f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:91e3e3258787d9e1db9e8e81bdc9cc95af82fa27289f3c05c0b72bf06c090038
-    sha256: 91e3e3258787d9e1db9e8e81bdc9cc95af82fa27289f3c05c0b72bf06c090038
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:85c570a3b5f837e3997bd02dc07cb988effca18b8a832e683e98ad5b2973c2ca
-    sha256: 85c570a3b5f837e3997bd02dc07cb988effca18b8a832e683e98ad5b2973c2ca
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:b1d409fdc38a442e6e524b2994cf6178df93af558537e0703c0df097e8c7bdc4
-    sha256: b1d409fdc38a442e6e524b2994cf6178df93af558537e0703c0df097e8c7bdc4
-source:
-  url: https://free-astro.org/download/siril-1.4.2.tar.bz2
-  sha256: 451915627ae461ef992ac0f83bd3ff1db5102d72ca379eee55b9be4f12b1162b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - cfitsio
-  - exiv2
-  - ffmpeg
-  - ffms2
-  - fftw
-  - gdk-pixbuf
-  - glib
-  - gnuplot
-  - gsl
-  - gtk+3
-  - gtksourceview4
-  - healpix
-  - jpeg-turbo
-  - jpeg-xl
-  - json-glib
-  - libgit2
-  - libheif
-  - libpng
-  - libraw
-  - librsvg
-  - libtiff
-  - little-cms2
-  - netpbm
-  - opencv
-  - pango
-  - wcslib
-  - yyjson
-  - gettext
-  - libomp
+    - cairo
+    - cfitsio
+    - exiv2
+    - ffmpeg
+    - ffms2
+    - fftw
+    - gdk-pixbuf
+    - glib
+    - gnuplot
+    - gsl
+    - gtk+3
+    - gtksourceview4
+    - healpix
+    - jpeg-turbo
+    - jpeg-xl
+    - json-glib
+    - libgit2
+    - libheif
+    - libpng
+    - libraw
+    - librsvg
+    - libtiff
+    - little-cms2
+    - netpbm
+    - opencv
+    - pango
+    - wcslib
+    - yyjson
+    - gettext
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:91e3e3258787d9e1db9e8e81bdc9cc95af82fa27289f3c05c0b72bf06c090038
+        sha256: 91e3e3258787d9e1db9e8e81bdc9cc95af82fa27289f3c05c0b72bf06c090038
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:c610d29be00975c40225d0e59e35748a69d7053271e5d88090c89e7955efc96f
+        sha256: c610d29be00975c40225d0e59e35748a69d7053271e5d88090c89e7955efc96f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:85c570a3b5f837e3997bd02dc07cb988effca18b8a832e683e98ad5b2973c2ca
+        sha256: 85c570a3b5f837e3997bd02dc07cb988effca18b8a832e683e98ad5b2973c2ca
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/siril/blobs/sha256:b1d409fdc38a442e6e524b2994cf6178df93af558537e0703c0df097e8c7bdc4
+        sha256: b1d409fdc38a442e6e524b2994cf6178df93af558537e0703c0df097e8c7bdc4
+        sha512: ""
+        signature: ""
+source:
+    url: https://free-astro.org/download/siril-1.4.2.tar.bz2
+    sha256: 451915627ae461ef992ac0f83bd3ff1db5102d72ca379eee55b9be4f12b1162b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - meson
-  - ninja
-  - pkgconf
+    - cmake
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - cfitsio
-  - exiv2
-  - ffmpeg
-  - ffms2
-  - fftw
-  - gdk-pixbuf
-  - glib
-  - gnuplot
-  - gsl
-  - gtk+3
-  - gtksourceview4
-  - healpix
-  - jpeg-turbo
-  - jpeg-xl
-  - json-glib
-  - libgit2
-  - libheif
-  - libpng
-  - libraw
-  - librsvg
-  - libtiff
-  - little-cms2
-  - netpbm
-  - opencv
-  - pango
-  - wcslib
-  - yyjson
+    - cairo
+    - cfitsio
+    - exiv2
+    - ffmpeg
+    - ffms2
+    - fftw
+    - gdk-pixbuf
+    - glib
+    - gnuplot
+    - gsl
+    - gtk+3
+    - gtksourceview4
+    - healpix
+    - jpeg-turbo
+    - jpeg-xl
+    - json-glib
+    - libgit2
+    - libheif
+    - libpng
+    - libraw
+    - librsvg
+    - libtiff
+    - little-cms2
+    - netpbm
+    - opencv
+    - pango
+    - wcslib
+    - yyjson
+build:
+    configure: []
+    install: []
+service: null

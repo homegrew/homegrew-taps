@@ -3,32 +3,56 @@ version: 4.3.1
 description: C++ libraries and utilities for NetCDF
 homepage: https://www.unidata.ucar.edu/software/netcdf/
 license: NetCDF
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/netcdf-cxx/blobs/sha256:a193f027eaaa1c1586f10397427d5729fe0d653d569226ea02c85990d00bb449
-    sha256: a193f027eaaa1c1586f10397427d5729fe0d653d569226ea02c85990d00bb449
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/netcdf-cxx/blobs/sha256:34da3acc3752fc50b9315b33f90624e2e51eb450af0974d88a3f3895da320d92
-    sha256: 34da3acc3752fc50b9315b33f90624e2e51eb450af0974d88a3f3895da320d92
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/netcdf-cxx/blobs/sha256:4ab172c8268b7d323e568565c3eddaba2596c6990f9465bdeed7823cbfc81354
-    sha256: 4ab172c8268b7d323e568565c3eddaba2596c6990f9465bdeed7823cbfc81354
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/netcdf-cxx/blobs/sha256:fa7a0a059a0a2951e4d07f41a085babd677b0295dd49a02b693e5015ce2a4a29
-    sha256: fa7a0a059a0a2951e4d07f41a085babd677b0295dd49a02b693e5015ce2a4a29
-source:
-  url: https://github.com/Unidata/netcdf-cxx4/archive/refs/tags/v4.3.1.tar.gz
-  sha256: e3fe3d2ec06c1c2772555bf1208d220aab5fee186d04bd265219b0bc7a978edc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hdf5
-  - netcdf
-  - zstd
+    - hdf5
+    - netcdf
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/netcdf-cxx/blobs/sha256:34da3acc3752fc50b9315b33f90624e2e51eb450af0974d88a3f3895da320d92
+        sha256: 34da3acc3752fc50b9315b33f90624e2e51eb450af0974d88a3f3895da320d92
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/netcdf-cxx/blobs/sha256:a193f027eaaa1c1586f10397427d5729fe0d653d569226ea02c85990d00bb449
+        sha256: a193f027eaaa1c1586f10397427d5729fe0d653d569226ea02c85990d00bb449
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/netcdf-cxx/blobs/sha256:4ab172c8268b7d323e568565c3eddaba2596c6990f9465bdeed7823cbfc81354
+        sha256: 4ab172c8268b7d323e568565c3eddaba2596c6990f9465bdeed7823cbfc81354
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/netcdf-cxx/blobs/sha256:fa7a0a059a0a2951e4d07f41a085babd677b0295dd49a02b693e5015ce2a4a29
+        sha256: fa7a0a059a0a2951e4d07f41a085babd677b0295dd49a02b693e5015ce2a4a29
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Unidata/netcdf-cxx4/archive/refs/tags/v4.3.1.tar.gz
+    sha256: e3fe3d2ec06c1c2772555bf1208d220aab5fee186d04bd265219b0bc7a978edc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - hdf5
-  - netcdf
+    - hdf5
+    - netcdf
+build:
+    configure: []
+    install: []
+service: null

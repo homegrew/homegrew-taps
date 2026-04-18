@@ -3,44 +3,68 @@ version: 4.6.0
 description: GNOME library for weather, locations and timezones
 homepage: https://wiki.gnome.org/Projects/LibGWeather
 license: GPL-2.0-or-later AND LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:ac0399364b4299b04ae70b9be4364d5e7ccd08e23f5cc841adceea96cbea463a
-    sha256: ac0399364b4299b04ae70b9be4364d5e7ccd08e23f5cc841adceea96cbea463a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:df230a6fe7d85a3860238afa322703f616e1d7b5d873c20a7ad32c5927315f6e
-    sha256: df230a6fe7d85a3860238afa322703f616e1d7b5d873c20a7ad32c5927315f6e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:b6b4dcb96c53ab71fb3c243a7ed9e804c074a86061cb6e277f4e0228e656cef6
-    sha256: b6b4dcb96c53ab71fb3c243a7ed9e804c074a86061cb6e277f4e0228e656cef6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:6ae4d2326fbcf68ad6b4902dc7315ad87a551a1c4ac0fc2de9487eb40b63cff6
-    sha256: 6ae4d2326fbcf68ad6b4902dc7315ad87a551a1c4ac0fc2de9487eb40b63cff6
-source:
-  url: https://download.gnome.org/sources/libgweather/4.6/libgweather-4.6.0.tar.xz
-  sha256: 7f5d0e8c9685ef2ff46c2f3a57cae48d7bf3540b2d83921f889ef28e6a876788
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - geocode-glib
-  - glib
-  - gtk+3
-  - json-glib
-  - libsoup
-  - gettext
+    - geocode-glib
+    - glib
+    - gtk+3
+    - json-glib
+    - libsoup
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:df230a6fe7d85a3860238afa322703f616e1d7b5d873c20a7ad32c5927315f6e
+        sha256: df230a6fe7d85a3860238afa322703f616e1d7b5d873c20a7ad32c5927315f6e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:ac0399364b4299b04ae70b9be4364d5e7ccd08e23f5cc841adceea96cbea463a
+        sha256: ac0399364b4299b04ae70b9be4364d5e7ccd08e23f5cc841adceea96cbea463a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:b6b4dcb96c53ab71fb3c243a7ed9e804c074a86061cb6e277f4e0228e656cef6
+        sha256: b6b4dcb96c53ab71fb3c243a7ed9e804c074a86061cb6e277f4e0228e656cef6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgweather/blobs/sha256:6ae4d2326fbcf68ad6b4902dc7315ad87a551a1c4ac0fc2de9487eb40b63cff6
+        sha256: 6ae4d2326fbcf68ad6b4902dc7315ad87a551a1c4ac0fc2de9487eb40b63cff6
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/libgweather/4.6/libgweather-4.6.0.tar.xz
+    sha256: 7f5d0e8c9685ef2ff46c2f3a57cae48d7bf3540b2d83921f889ef28e6a876788
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
-  - pygobject3
-  - python@3.14
+    - gettext
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
+    - pygobject3
+    - python@3.14
 linux_dependencies:
-  - geocode-glib
-  - glib
-  - gtk+3
-  - json-glib
-  - libsoup
+    - geocode-glib
+    - glib
+    - gtk+3
+    - json-glib
+    - libsoup
+build:
+    configure: []
+    install: []
+service: null

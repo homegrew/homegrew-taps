@@ -3,27 +3,52 @@ version: 2.6.0
 description: USB hub per-port power control
 homepage: https://github.com/mvp/uhubctl
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uhubctl/blobs/sha256:3d264b405111b616523248b1de4a0998b9c73f0c670a00e20358dcaeeed033cc
-    sha256: 3d264b405111b616523248b1de4a0998b9c73f0c670a00e20358dcaeeed033cc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uhubctl/blobs/sha256:c453944fda7c0a41845021a45cd07f42d870af48a5c893fa016a19f0cd3848f0
-    sha256: c453944fda7c0a41845021a45cd07f42d870af48a5c893fa016a19f0cd3848f0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uhubctl/blobs/sha256:07793f3832ebcec92c9f949974959c0593c777c20f760afbbfb000dd08f41b45
-    sha256: 07793f3832ebcec92c9f949974959c0593c777c20f760afbbfb000dd08f41b45
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uhubctl/blobs/sha256:d79e098adc1e2e6895c3659d146cbc1db5df67699b5e3092e5e85aee775d30c7
-    sha256: d79e098adc1e2e6895c3659d146cbc1db5df67699b5e3092e5e85aee775d30c7
-source:
-  url: https://github.com/mvp/uhubctl/archive/refs/tags/v2.6.0.tar.gz
-  sha256: 56ca15ddf96d39ab0bf8ee12d3daca13cea45af01bcd5a9732ffcc01664fdfa2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libusb
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uhubctl/blobs/sha256:c453944fda7c0a41845021a45cd07f42d870af48a5c893fa016a19f0cd3848f0
+        sha256: c453944fda7c0a41845021a45cd07f42d870af48a5c893fa016a19f0cd3848f0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uhubctl/blobs/sha256:3d264b405111b616523248b1de4a0998b9c73f0c670a00e20358dcaeeed033cc
+        sha256: 3d264b405111b616523248b1de4a0998b9c73f0c670a00e20358dcaeeed033cc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uhubctl/blobs/sha256:07793f3832ebcec92c9f949974959c0593c777c20f760afbbfb000dd08f41b45
+        sha256: 07793f3832ebcec92c9f949974959c0593c777c20f760afbbfb000dd08f41b45
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uhubctl/blobs/sha256:d79e098adc1e2e6895c3659d146cbc1db5df67699b5e3092e5e85aee775d30c7
+        sha256: d79e098adc1e2e6895c3659d146cbc1db5df67699b5e3092e5e85aee775d30c7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mvp/uhubctl/archive/refs/tags/v2.6.0.tar.gz
+    sha256: 56ca15ddf96d39ab0bf8ee12d3daca13cea45af01bcd5a9732ffcc01664fdfa2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

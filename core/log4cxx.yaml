@@ -3,28 +3,53 @@ version: 1.7.0
 description: Library of C++ classes for flexible logging
 homepage: https://logging.apache.org/log4cxx/index.html
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:ca7af69b56bfcf1180b4635715292f3bd9e14ee5599d33a0fd0a4a6beded079d
-    sha256: ca7af69b56bfcf1180b4635715292f3bd9e14ee5599d33a0fd0a4a6beded079d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:5cfb39d4ac5f7f3e22d76493b522c68daae732a54fd7a5f3ed32618282c835b5
-    sha256: 5cfb39d4ac5f7f3e22d76493b522c68daae732a54fd7a5f3ed32618282c835b5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:e51f972640d6cec94b172ffa187e83caa9b10b0ef1ef16922e6e252bc859dcf6
-    sha256: e51f972640d6cec94b172ffa187e83caa9b10b0ef1ef16922e6e252bc859dcf6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:f1357e5d46a023bee08eb9c9ca34fcc3e45804accdd58e3ad05f95be402e331a
-    sha256: f1357e5d46a023bee08eb9c9ca34fcc3e45804accdd58e3ad05f95be402e331a
-source:
-  url: https://www.apache.org/dyn/closer.lua?path=logging/log4cxx/1.7.0/apache-log4cxx-1.7.0.tar.gz
-  sha256: b943ff170393e4ce381ab4c4914396127bf4d44fb8bd1f0e5ef8453f3c4d364c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - apr
-  - apr-util
+    - apr
+    - apr-util
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:5cfb39d4ac5f7f3e22d76493b522c68daae732a54fd7a5f3ed32618282c835b5
+        sha256: 5cfb39d4ac5f7f3e22d76493b522c68daae732a54fd7a5f3ed32618282c835b5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:ca7af69b56bfcf1180b4635715292f3bd9e14ee5599d33a0fd0a4a6beded079d
+        sha256: ca7af69b56bfcf1180b4635715292f3bd9e14ee5599d33a0fd0a4a6beded079d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:e51f972640d6cec94b172ffa187e83caa9b10b0ef1ef16922e6e252bc859dcf6
+        sha256: e51f972640d6cec94b172ffa187e83caa9b10b0ef1ef16922e6e252bc859dcf6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/log4cxx/blobs/sha256:f1357e5d46a023bee08eb9c9ca34fcc3e45804accdd58e3ad05f95be402e331a
+        sha256: f1357e5d46a023bee08eb9c9ca34fcc3e45804accdd58e3ad05f95be402e331a
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=logging/log4cxx/1.7.0/apache-log4cxx-1.7.0.tar.gz
+    sha256: b943ff170393e4ce381ab4c4914396127bf4d44fb8bd1f0e5ef8453f3c4d364c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

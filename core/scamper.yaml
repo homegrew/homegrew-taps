@@ -1,34 +1,58 @@
 name: scamper
-version: 20260331
+version: "20260331"
 description: Advanced traceroute and network measurement utility
 homepage: https://www.caida.org/catalog/software/scamper/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:4b66da6bf575a09129525df875a5801041b8500056ea48628b3de8a019046256
-    sha256: 4b66da6bf575a09129525df875a5801041b8500056ea48628b3de8a019046256
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:a92048aac44d9b09629e3de6bc5e86ce01af75111a6907477ea87ee65f9711e7
-    sha256: a92048aac44d9b09629e3de6bc5e86ce01af75111a6907477ea87ee65f9711e7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:9fa766a6c944e5291c4d3b9b5d908463f0b6db0339b38fb9ab1e0590731ae08e
-    sha256: 9fa766a6c944e5291c4d3b9b5d908463f0b6db0339b38fb9ab1e0590731ae08e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:4238531e2587815a576c810e08c3e6d0eba9586052a13c1176e80a01cb42fd49
-    sha256: 4238531e2587815a576c810e08c3e6d0eba9586052a13c1176e80a01cb42fd49
-source:
-  url: https://www.caida.org/catalog/software/scamper/code/scamper-cvs-20260331.tar.gz
-  sha256: 1bd3a025dc8ded231df2fd72c92c5b85fc1e389af6e9cb020c02067b811a9917
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - xz
+    - openssl@3
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:a92048aac44d9b09629e3de6bc5e86ce01af75111a6907477ea87ee65f9711e7
+        sha256: a92048aac44d9b09629e3de6bc5e86ce01af75111a6907477ea87ee65f9711e7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:4b66da6bf575a09129525df875a5801041b8500056ea48628b3de8a019046256
+        sha256: 4b66da6bf575a09129525df875a5801041b8500056ea48628b3de8a019046256
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:9fa766a6c944e5291c4d3b9b5d908463f0b6db0339b38fb9ab1e0590731ae08e
+        sha256: 9fa766a6c944e5291c4d3b9b5d908463f0b6db0339b38fb9ab1e0590731ae08e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scamper/blobs/sha256:4238531e2587815a576c810e08c3e6d0eba9586052a13c1176e80a01cb42fd49
+        sha256: 4238531e2587815a576c810e08c3e6d0eba9586052a13c1176e80a01cb42fd49
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.caida.org/catalog/software/scamper/code/scamper-cvs-20260331.tar.gz
+    sha256: 1bd3a025dc8ded231df2fd72c92c5b85fc1e389af6e9cb020c02067b811a9917
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - openssl@3
-  - xz
-  - zlib-ng-compat
+    - openssl@3
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

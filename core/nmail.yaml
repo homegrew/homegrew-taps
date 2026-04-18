@@ -3,37 +3,61 @@ version: 5.11.4
 description: Terminal-based email client for Linux and macOS
 homepage: https://github.com/d99kris/nmail
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nmail/blobs/sha256:f3f42a9316052846dde1abf3f11c03d5948dc880143776c56ca34df08c17e4f5
-    sha256: f3f42a9316052846dde1abf3f11c03d5948dc880143776c56ca34df08c17e4f5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nmail/blobs/sha256:90f1406f200984148625141dbf780aaadb34e8d33116834ad9b38d8dd5ee9a9d
-    sha256: 90f1406f200984148625141dbf780aaadb34e8d33116834ad9b38d8dd5ee9a9d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nmail/blobs/sha256:d3c9ecffc598208c6c399d1cd28cbfcb093da8bba5d925e9294afcb304322f3e
-    sha256: d3c9ecffc598208c6c399d1cd28cbfcb093da8bba5d925e9294afcb304322f3e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nmail/blobs/sha256:020412551cd3c47c1fffe064f6dd6419f782160d39aa98436ea9dab68ecb47e7
-    sha256: 020412551cd3c47c1fffe064f6dd6419f782160d39aa98436ea9dab68ecb47e7
-source:
-  url: https://github.com/d99kris/nmail/archive/refs/tags/v5.11.4.tar.gz
-  sha256: 452922112dd19770b06cee61c8bd6fc34899c5b3727a275f8d7c1de6b372fd74
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libmagic
-  - ncurses
-  - openssl@3
-  - xapian
+    - libmagic
+    - ncurses
+    - openssl@3
+    - xapian
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nmail/blobs/sha256:90f1406f200984148625141dbf780aaadb34e8d33116834ad9b38d8dd5ee9a9d
+        sha256: 90f1406f200984148625141dbf780aaadb34e8d33116834ad9b38d8dd5ee9a9d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nmail/blobs/sha256:f3f42a9316052846dde1abf3f11c03d5948dc880143776c56ca34df08c17e4f5
+        sha256: f3f42a9316052846dde1abf3f11c03d5948dc880143776c56ca34df08c17e4f5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nmail/blobs/sha256:d3c9ecffc598208c6c399d1cd28cbfcb093da8bba5d925e9294afcb304322f3e
+        sha256: d3c9ecffc598208c6c399d1cd28cbfcb093da8bba5d925e9294afcb304322f3e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nmail/blobs/sha256:020412551cd3c47c1fffe064f6dd6419f782160d39aa98436ea9dab68ecb47e7
+        sha256: 020412551cd3c47c1fffe064f6dd6419f782160d39aa98436ea9dab68ecb47e7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/d99kris/nmail/archive/refs/tags/v5.11.4.tar.gz
+    sha256: 452922112dd19770b06cee61c8bd6fc34899c5b3727a275f8d7c1de6b372fd74
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - libmagic
-  - ncurses
-  - openssl@3
-  - util-linux
-  - xapian
-  - zlib-ng-compat
+    - libmagic
+    - ncurses
+    - openssl@3
+    - util-linux
+    - xapian
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

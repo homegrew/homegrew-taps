@@ -3,28 +3,53 @@ version: 12.2.0
 description: Libvirt virtualization API python binding
 homepage: https://www.libvirt.org/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt-python/blobs/sha256:8daf700010b02ec2fb9adf96892ee12bcd83dc8f233c3aa1c670a5c8d7640bda
-    sha256: 8daf700010b02ec2fb9adf96892ee12bcd83dc8f233c3aa1c670a5c8d7640bda
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt-python/blobs/sha256:1967cba9a8103f6bd1297dda3c3c70ba3aea49fe08573c9e712373c321e753e8
-    sha256: 1967cba9a8103f6bd1297dda3c3c70ba3aea49fe08573c9e712373c321e753e8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt-python/blobs/sha256:b1abb85c24a65316ba2c05deb46f8be16f30fa7e6c4ca657a691d568f2a61b11
-    sha256: b1abb85c24a65316ba2c05deb46f8be16f30fa7e6c4ca657a691d568f2a61b11
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt-python/blobs/sha256:f8ce28cc823f6bd41f07c444c620b0dc0d2d6eb318c0dabaee94239fda1b8013
-    sha256: f8ce28cc823f6bd41f07c444c620b0dc0d2d6eb318c0dabaee94239fda1b8013
-source:
-  url: https://download.libvirt.org/python/libvirt_python-12.2.0.tar.gz
-  sha256: 742147988bba7d400f6892beeeb7e0a27758f10ff65421b569b7b4b6a2572e44
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libvirt
-  - python@3.14
+    - libvirt
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt-python/blobs/sha256:1967cba9a8103f6bd1297dda3c3c70ba3aea49fe08573c9e712373c321e753e8
+        sha256: 1967cba9a8103f6bd1297dda3c3c70ba3aea49fe08573c9e712373c321e753e8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt-python/blobs/sha256:8daf700010b02ec2fb9adf96892ee12bcd83dc8f233c3aa1c670a5c8d7640bda
+        sha256: 8daf700010b02ec2fb9adf96892ee12bcd83dc8f233c3aa1c670a5c8d7640bda
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt-python/blobs/sha256:b1abb85c24a65316ba2c05deb46f8be16f30fa7e6c4ca657a691d568f2a61b11
+        sha256: b1abb85c24a65316ba2c05deb46f8be16f30fa7e6c4ca657a691d568f2a61b11
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt-python/blobs/sha256:f8ce28cc823f6bd41f07c444c620b0dc0d2d6eb318c0dabaee94239fda1b8013
+        sha256: f8ce28cc823f6bd41f07c444c620b0dc0d2d6eb318c0dabaee94239fda1b8013
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.libvirt.org/python/libvirt_python-12.2.0.tar.gz
+    sha256: 742147988bba7d400f6892beeeb7e0a27758f10ff65421b569b7b4b6a2572e44
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

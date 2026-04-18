@@ -3,28 +3,53 @@ version: 0.6.3
 description: Conventional commits, changelog, versioning, validation
 homepage: https://convco.github.io
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/convco/blobs/sha256:5d02ab94f2d6e468fee2255a72771a89f545c0869e5d0021350c93b8b17f27c0
-    sha256: 5d02ab94f2d6e468fee2255a72771a89f545c0869e5d0021350c93b8b17f27c0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/convco/blobs/sha256:18aad1e5093825a344db20f15e992b149ec3948828008ec673069ae0074a9bf4
-    sha256: 18aad1e5093825a344db20f15e992b149ec3948828008ec673069ae0074a9bf4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/convco/blobs/sha256:6ddde9364a84fcd9acbbb88c1537560d7b01795bd4c9dc7ae6f6ffa6a608a259
-    sha256: 6ddde9364a84fcd9acbbb88c1537560d7b01795bd4c9dc7ae6f6ffa6a608a259
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/convco/blobs/sha256:7f48b217348b2f0ff2118a4cbd0f87d2574d6986fc700266910048655a09fd02
-    sha256: 7f48b217348b2f0ff2118a4cbd0f87d2574d6986fc700266910048655a09fd02
-source:
-  url: https://github.com/convco/convco/archive/refs/tags/v0.6.3.tar.gz
-  sha256: ea178bb268e45d507fd358e391fd6bbb552b8d9f6801f0193b4422e172fc6917
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
+    - libgit2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/convco/blobs/sha256:18aad1e5093825a344db20f15e992b149ec3948828008ec673069ae0074a9bf4
+        sha256: 18aad1e5093825a344db20f15e992b149ec3948828008ec673069ae0074a9bf4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/convco/blobs/sha256:5d02ab94f2d6e468fee2255a72771a89f545c0869e5d0021350c93b8b17f27c0
+        sha256: 5d02ab94f2d6e468fee2255a72771a89f545c0869e5d0021350c93b8b17f27c0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/convco/blobs/sha256:6ddde9364a84fcd9acbbb88c1537560d7b01795bd4c9dc7ae6f6ffa6a608a259
+        sha256: 6ddde9364a84fcd9acbbb88c1537560d7b01795bd4c9dc7ae6f6ffa6a608a259
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/convco/blobs/sha256:7f48b217348b2f0ff2118a4cbd0f87d2574d6986fc700266910048655a09fd02
+        sha256: 7f48b217348b2f0ff2118a4cbd0f87d2574d6986fc700266910048655a09fd02
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/convco/convco/archive/refs/tags/v0.6.3.tar.gz
+    sha256: ea178bb268e45d507fd358e391fd6bbb552b8d9f6801f0193b4422e172fc6917
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

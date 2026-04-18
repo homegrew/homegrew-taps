@@ -1,30 +1,56 @@
 name: wasi-libc
-version: 32
+version: "32"
 description: Libc implementation for WebAssembly
 homepage: https://wasi.dev
 license: Apache-2.0 AND MIT AND (Apache-2.0 WITH LLVM-exception)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wasi-libc/blobs/sha256:3b24835e1e541ddb1cf6688880146174263d79b4e47e29c95bd130a998668bd3
-    sha256: 3b24835e1e541ddb1cf6688880146174263d79b4e47e29c95bd130a998668bd3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wasi-libc/blobs/sha256:3b24835e1e541ddb1cf6688880146174263d79b4e47e29c95bd130a998668bd3
-    sha256: 3b24835e1e541ddb1cf6688880146174263d79b4e47e29c95bd130a998668bd3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wasi-libc/blobs/sha256:d9f2cb6ddd72ace0e1fd9f2ffa5e66e285b961805636296ee9286bc8811ddde8
-    sha256: d9f2cb6ddd72ace0e1fd9f2ffa5e66e285b961805636296ee9286bc8811ddde8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wasi-libc/blobs/sha256:d9f2cb6ddd72ace0e1fd9f2ffa5e66e285b961805636296ee9286bc8811ddde8
-    sha256: d9f2cb6ddd72ace0e1fd9f2ffa5e66e285b961805636296ee9286bc8811ddde8
-source:
-  url: https://github.com/WebAssembly/wasi-libc/archive/refs/tags/wasi-sdk-32.tar.gz
-  sha256: ea9827495c0f35bca3b3d0a953e854cac112c43bea3196b5a4f7f8fc4704b9a4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wasi-libc/blobs/sha256:3b24835e1e541ddb1cf6688880146174263d79b4e47e29c95bd130a998668bd3
+        sha256: 3b24835e1e541ddb1cf6688880146174263d79b4e47e29c95bd130a998668bd3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wasi-libc/blobs/sha256:3b24835e1e541ddb1cf6688880146174263d79b4e47e29c95bd130a998668bd3
+        sha256: 3b24835e1e541ddb1cf6688880146174263d79b4e47e29c95bd130a998668bd3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wasi-libc/blobs/sha256:d9f2cb6ddd72ace0e1fd9f2ffa5e66e285b961805636296ee9286bc8811ddde8
+        sha256: d9f2cb6ddd72ace0e1fd9f2ffa5e66e285b961805636296ee9286bc8811ddde8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wasi-libc/blobs/sha256:d9f2cb6ddd72ace0e1fd9f2ffa5e66e285b961805636296ee9286bc8811ddde8
+        sha256: d9f2cb6ddd72ace0e1fd9f2ffa5e66e285b961805636296ee9286bc8811ddde8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/WebAssembly/wasi-libc/archive/refs/tags/wasi-sdk-32.tar.gz
+    sha256: ea9827495c0f35bca3b3d0a953e854cac112c43bea3196b5a4f7f8fc4704b9a4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - lld
-  - llvm
-  - ninja
+    - cmake
+    - lld
+    - llvm
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,30 +1,55 @@
 name: fossil
-version: 2.28
+version: "2.28"
 description: Distributed software configuration management
 homepage: https://www.fossil-scm.org/home/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:4b4e87850124a9ac1e744a1666dcb130559b2a42211c88fd6638bf4aaf94bedd
-    sha256: 4b4e87850124a9ac1e744a1666dcb130559b2a42211c88fd6638bf4aaf94bedd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:a0b0f4dd1d52c16dfc8c86eef57c54931c3f6a63b8ea823d57a81250f823579d
-    sha256: a0b0f4dd1d52c16dfc8c86eef57c54931c3f6a63b8ea823d57a81250f823579d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:bbd65f925258794188c892a90210dd3c84d48feef1c435c7d432a2f7cfec8f7b
-    sha256: bbd65f925258794188c892a90210dd3c84d48feef1c435c7d432a2f7cfec8f7b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:527bcb7891799919f0b6219d088421a044f5af220ae06c2d1305444014a12701
-    sha256: 527bcb7891799919f0b6219d088421a044f5af220ae06c2d1305444014a12701
-source:
-  url: https://fossil-scm.org/home/tarball/version-2.28/fossil-src-2.28.tar.gz
-  sha256: 84c18824ca227e7602d2408b663c3747f754ad306ed5c73ddab959d6589538a6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:a0b0f4dd1d52c16dfc8c86eef57c54931c3f6a63b8ea823d57a81250f823579d
+        sha256: a0b0f4dd1d52c16dfc8c86eef57c54931c3f6a63b8ea823d57a81250f823579d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:4b4e87850124a9ac1e744a1666dcb130559b2a42211c88fd6638bf4aaf94bedd
+        sha256: 4b4e87850124a9ac1e744a1666dcb130559b2a42211c88fd6638bf4aaf94bedd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:bbd65f925258794188c892a90210dd3c84d48feef1c435c7d432a2f7cfec8f7b
+        sha256: bbd65f925258794188c892a90210dd3c84d48feef1c435c7d432a2f7cfec8f7b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:527bcb7891799919f0b6219d088421a044f5af220ae06c2d1305444014a12701
+        sha256: 527bcb7891799919f0b6219d088421a044f5af220ae06c2d1305444014a12701
+        sha512: ""
+        signature: ""
+source:
+    url: https://fossil-scm.org/home/tarball/version-2.28/fossil-src-2.28.tar.gz
+    sha256: 84c18824ca227e7602d2408b663c3747f754ad306ed5c73ddab959d6589538a6
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -1,21 +1,43 @@
 name: ladspa-sdk
-version: 1.17
-description: "Linux Audio Developer's Simple Plugin"
+version: "1.17"
+description: Linux Audio Developer's Simple Plugin
 homepage: https://www.ladspa.org
 license: LGPL-2.1-only
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ladspa-sdk/blobs/sha256:f05cf54a06c2c0e50295cd52f63f5fc096a5812470e0a3248c790c228cd5db8f
-    sha256: f05cf54a06c2c0e50295cd52f63f5fc096a5812470e0a3248c790c228cd5db8f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ladspa-sdk/blobs/sha256:c040c53ca46e36809ad0b9729b4fc3381d9ffb665bf9deb81726d27bb847170c
-    sha256: c040c53ca46e36809ad0b9729b4fc3381d9ffb665bf9deb81726d27bb847170c
-source:
-  url: https://www.ladspa.org/download/ladspa_sdk_1.17.tgz
-  sha256: 27d24f279e4b81bd17ecbdcc38e4c42991bb388826c0b200067ce0eb59d3da5b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libsndfile
+    - libsndfile
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ladspa-sdk/blobs/sha256:f05cf54a06c2c0e50295cd52f63f5fc096a5812470e0a3248c790c228cd5db8f
+        sha256: f05cf54a06c2c0e50295cd52f63f5fc096a5812470e0a3248c790c228cd5db8f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ladspa-sdk/blobs/sha256:c040c53ca46e36809ad0b9729b4fc3381d9ffb665bf9deb81726d27bb847170c
+        sha256: c040c53ca46e36809ad0b9729b4fc3381d9ffb665bf9deb81726d27bb847170c
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.ladspa.org/download/ladspa_sdk_1.17.tgz
+    sha256: 27d24f279e4b81bd17ecbdcc38e4c42991bb388826c0b200067ce0eb59d3da5b
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

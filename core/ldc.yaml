@@ -3,28 +3,53 @@ version: 1.42.0
 description: Portable D programming language compiler
 homepage: https://wiki.dlang.org/LDC
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ldc/blobs/sha256:d991984a75a3d4e16e768ac1696cc01c65893a07f226b70160900ef280e5f2ae
-    sha256: d991984a75a3d4e16e768ac1696cc01c65893a07f226b70160900ef280e5f2ae
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ldc/blobs/sha256:e89dbaa17a1734c3de7d83c21c9e830db35a2a65316f19dec04f14258359d598
-    sha256: e89dbaa17a1734c3de7d83c21c9e830db35a2a65316f19dec04f14258359d598
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ldc/blobs/sha256:64399cdbbf80a94468e00ab0ea0377b835776da4513307b8e2b3d9f6afaa5a7d
-    sha256: 64399cdbbf80a94468e00ab0ea0377b835776da4513307b8e2b3d9f6afaa5a7d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ldc/blobs/sha256:fcd364ba774b8952ca6e37217a458079a381cf2f3e585eefb73c20afc59e808b
-    sha256: fcd364ba774b8952ca6e37217a458079a381cf2f3e585eefb73c20afc59e808b
-source:
-  url: https://github.com/ldc-developers/ldc/releases/download/v1.42.0/ldc-1.42.0-src.tar.gz
-  sha256: 9bb0f628f869f7fc7b53c381a79742d29c17552c6f1a56b0a02aa289e65a0e3b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - llvm@21
+    - llvm@21
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ldc/blobs/sha256:e89dbaa17a1734c3de7d83c21c9e830db35a2a65316f19dec04f14258359d598
+        sha256: e89dbaa17a1734c3de7d83c21c9e830db35a2a65316f19dec04f14258359d598
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ldc/blobs/sha256:d991984a75a3d4e16e768ac1696cc01c65893a07f226b70160900ef280e5f2ae
+        sha256: d991984a75a3d4e16e768ac1696cc01c65893a07f226b70160900ef280e5f2ae
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ldc/blobs/sha256:64399cdbbf80a94468e00ab0ea0377b835776da4513307b8e2b3d9f6afaa5a7d
+        sha256: 64399cdbbf80a94468e00ab0ea0377b835776da4513307b8e2b3d9f6afaa5a7d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ldc/blobs/sha256:fcd364ba774b8952ca6e37217a458079a381cf2f3e585eefb73c20afc59e808b
+        sha256: fcd364ba774b8952ca6e37217a458079a381cf2f3e585eefb73c20afc59e808b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ldc-developers/ldc/releases/download/v1.42.0/ldc-1.42.0-src.tar.gz
+    sha256: 9bb0f628f869f7fc7b53c381a79742d29c17552c6f1a56b0a02aa289e65a0e3b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

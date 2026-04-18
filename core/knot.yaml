@@ -3,34 +3,59 @@ version: 3.5.4
 description: High-performance authoritative-only DNS server
 homepage: https://www.knot-dns.cz/
 license: GPL-3.0-or-later AND 0BSD AND BSD-3-Clause AND LGPL-2.0-or-later AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:7bc32f8cf88c498e6e5fecf3e98aad5de1515eca1ca57f7542bb80e0bd2e2ccf
-    sha256: 7bc32f8cf88c498e6e5fecf3e98aad5de1515eca1ca57f7542bb80e0bd2e2ccf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:eda53ac8ed0f729172bd5e534df640658a788df4f011a5a9fe4222e2a3e0dce9
-    sha256: eda53ac8ed0f729172bd5e534df640658a788df4f011a5a9fe4222e2a3e0dce9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:64d6323b305e2172e7564cc480b9c944390a6375ff1916a2983b249bbf473110
-    sha256: 64d6323b305e2172e7564cc480b9c944390a6375ff1916a2983b249bbf473110
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:e4a225919de85299b09996facabf482dcd3a7254ff1706cde7acfb9b9b706632
-    sha256: e4a225919de85299b09996facabf482dcd3a7254ff1706cde7acfb9b9b706632
-source:
-  url: https://knot-dns.nic.cz/release/knot-3.5.4.tar.xz
-  sha256: 4a0bc892dfaa5a150ff2855f0a88f2267124bc271818eae9a2b1f6da487c34e4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fstrm
-  - gnutls
-  - libidn2
-  - libnghttp2
-  - lmdb
-  - protobuf-c
-  - userspace-rcu
+    - fstrm
+    - gnutls
+    - libidn2
+    - libnghttp2
+    - lmdb
+    - protobuf-c
+    - userspace-rcu
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:eda53ac8ed0f729172bd5e534df640658a788df4f011a5a9fe4222e2a3e0dce9
+        sha256: eda53ac8ed0f729172bd5e534df640658a788df4f011a5a9fe4222e2a3e0dce9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:7bc32f8cf88c498e6e5fecf3e98aad5de1515eca1ca57f7542bb80e0bd2e2ccf
+        sha256: 7bc32f8cf88c498e6e5fecf3e98aad5de1515eca1ca57f7542bb80e0bd2e2ccf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:64d6323b305e2172e7564cc480b9c944390a6375ff1916a2983b249bbf473110
+        sha256: 64d6323b305e2172e7564cc480b9c944390a6375ff1916a2983b249bbf473110
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:e4a225919de85299b09996facabf482dcd3a7254ff1706cde7acfb9b9b706632
+        sha256: e4a225919de85299b09996facabf482dcd3a7254ff1706cde7acfb9b9b706632
+        sha512: ""
+        signature: ""
+source:
+    url: https://knot-dns.nic.cz/release/knot-3.5.4.tar.xz
+    sha256: 4a0bc892dfaa5a150ff2855f0a88f2267124bc271818eae9a2b1f6da487c34e4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - sphinx-doc
+    - pkgconf
+    - sphinx-doc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

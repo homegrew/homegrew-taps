@@ -3,40 +3,64 @@ version: 5.10.0
 description: Actions, Menus and Toolbars Kit for GTK applications
 homepage: https://gedit-technology.net
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgedit-amtk/blobs/sha256:9a97a6da9b9869ccfc4eeb45c527d579b6a5f646f719aac95a275f94d9d2ff3f
-    sha256: 9a97a6da9b9869ccfc4eeb45c527d579b6a5f646f719aac95a275f94d9d2ff3f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgedit-amtk/blobs/sha256:bec5bc8941347e1bc91a024876beea8ef801a335c0ef4b8aa1aa42f59a0d7942
-    sha256: bec5bc8941347e1bc91a024876beea8ef801a335c0ef4b8aa1aa42f59a0d7942
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgedit-amtk/blobs/sha256:f682994518431437323aeec6e87a29dba13750c68bb291e4f97ba05b574aeabf
-    sha256: f682994518431437323aeec6e87a29dba13750c68bb291e4f97ba05b574aeabf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgedit-amtk/blobs/sha256:ba79ceb4612e7a04b6e4a246e8890eb8d0240d7d3c55601b41fefa26b704002b
-    sha256: ba79ceb4612e7a04b6e4a246e8890eb8d0240d7d3c55601b41fefa26b704002b
-source:
-  url: https://gitlab.gnome.org/World/gedit/libgedit-amtk/-/archive/5.10.0/libgedit-amtk-5.10.0.tar.bz2
-  sha256: 7ee3d0cce3b21f3cc6a51ba644901b467da3b3c3e0b0adf74bd56c9e0e456140
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gtk+3
-  - at-spi2-core
-  - cairo
-  - gdk-pixbuf
-  - gettext
-  - harfbuzz
-  - pango
+    - glib
+    - gtk+3
+    - at-spi2-core
+    - cairo
+    - gdk-pixbuf
+    - gettext
+    - harfbuzz
+    - pango
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgedit-amtk/blobs/sha256:bec5bc8941347e1bc91a024876beea8ef801a335c0ef4b8aa1aa42f59a0d7942
+        sha256: bec5bc8941347e1bc91a024876beea8ef801a335c0ef4b8aa1aa42f59a0d7942
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgedit-amtk/blobs/sha256:9a97a6da9b9869ccfc4eeb45c527d579b6a5f646f719aac95a275f94d9d2ff3f
+        sha256: 9a97a6da9b9869ccfc4eeb45c527d579b6a5f646f719aac95a275f94d9d2ff3f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgedit-amtk/blobs/sha256:f682994518431437323aeec6e87a29dba13750c68bb291e4f97ba05b574aeabf
+        sha256: f682994518431437323aeec6e87a29dba13750c68bb291e4f97ba05b574aeabf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgedit-amtk/blobs/sha256:ba79ceb4612e7a04b6e4a246e8890eb8d0240d7d3c55601b41fefa26b704002b
+        sha256: ba79ceb4612e7a04b6e4a246e8890eb8d0240d7d3c55601b41fefa26b704002b
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.gnome.org/World/gedit/libgedit-amtk/-/archive/5.10.0/libgedit-amtk-5.10.0.tar.bz2
+    sha256: 7ee3d0cce3b21f3cc6a51ba644901b467da3b3c3e0b0adf74bd56c9e0e456140
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - glib
-  - gtk+3
+    - glib
+    - gtk+3
+build:
+    configure: []
+    install: []
+service: null

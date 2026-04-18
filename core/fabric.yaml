@@ -3,29 +3,54 @@ version: 3.2.3
 description: Library and command-line tool for SSH
 homepage: https://www.fabfile.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fabric/blobs/sha256:e9cb8e0cc7a75a650f3dd0ecf8334be67063e6bcca58bf01308f8b63355e554d
-    sha256: e9cb8e0cc7a75a650f3dd0ecf8334be67063e6bcca58bf01308f8b63355e554d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fabric/blobs/sha256:2203604eec4f3c27cb42b581943b021a3509b9ac6412f73fbbf6e6df145f3e86
-    sha256: 2203604eec4f3c27cb42b581943b021a3509b9ac6412f73fbbf6e6df145f3e86
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fabric/blobs/sha256:fdb1381b5b253e567f4dbba55be51ef0d83f14c85ce437f085ad558524fdc421
-    sha256: fdb1381b5b253e567f4dbba55be51ef0d83f14c85ce437f085ad558524fdc421
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fabric/blobs/sha256:6997f1ce970478c673e28a3ab50f489ee6143861b6ddb68c3741cdc8ed45b84f
-    sha256: 6997f1ce970478c673e28a3ab50f489ee6143861b6ddb68c3741cdc8ed45b84f
-source:
-  url: https://files.pythonhosted.org/packages/e3/7e/29cd6237c3b7ce79c3ca945eb99ab5affd101db54b2f7a78dde0cfa19fd4/fabric-3.2.3.tar.gz
-  sha256: dcbd2c47ad87688facaef5cc11aab6d1ec9ed05645fed97a5de7204d5d17cc44
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cryptography
-  - libsodium
-  - python@3.14
+    - cryptography
+    - libsodium
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fabric/blobs/sha256:2203604eec4f3c27cb42b581943b021a3509b9ac6412f73fbbf6e6df145f3e86
+        sha256: 2203604eec4f3c27cb42b581943b021a3509b9ac6412f73fbbf6e6df145f3e86
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fabric/blobs/sha256:e9cb8e0cc7a75a650f3dd0ecf8334be67063e6bcca58bf01308f8b63355e554d
+        sha256: e9cb8e0cc7a75a650f3dd0ecf8334be67063e6bcca58bf01308f8b63355e554d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fabric/blobs/sha256:fdb1381b5b253e567f4dbba55be51ef0d83f14c85ce437f085ad558524fdc421
+        sha256: fdb1381b5b253e567f4dbba55be51ef0d83f14c85ce437f085ad558524fdc421
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fabric/blobs/sha256:6997f1ce970478c673e28a3ab50f489ee6143861b6ddb68c3741cdc8ed45b84f
+        sha256: 6997f1ce970478c673e28a3ab50f489ee6143861b6ddb68c3741cdc8ed45b84f
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/e3/7e/29cd6237c3b7ce79c3ca945eb99ab5affd101db54b2f7a78dde0cfa19fd4/fabric-3.2.3.tar.gz
+    sha256: dcbd2c47ad87688facaef5cc11aab6d1ec9ed05645fed97a5de7204d5d17cc44
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

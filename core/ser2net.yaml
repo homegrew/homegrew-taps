@@ -3,30 +3,55 @@ version: 4.6.7
 description: Allow network connections to serial ports
 homepage: https://ser2net.sourceforge.net/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:826a5c4d76bc78574fbf69dc9fba7c15bcd24efc78a2db3749389b3ba25a662e
-    sha256: 826a5c4d76bc78574fbf69dc9fba7c15bcd24efc78a2db3749389b3ba25a662e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:956a9630a71d18386912c344979746f842c234c05919cd8959a00c70a7c31677
-    sha256: 956a9630a71d18386912c344979746f842c234c05919cd8959a00c70a7c31677
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:e151fb33658fdea88474c879275d6b4fa26caf8f97a12600a00b4ce3fcb71807
-    sha256: e151fb33658fdea88474c879275d6b4fa26caf8f97a12600a00b4ce3fcb71807
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:a6a11cc4e843769d9c58aff84407bbf482443fb8bfcad51f209d178bd9f38847
-    sha256: a6a11cc4e843769d9c58aff84407bbf482443fb8bfcad51f209d178bd9f38847
-source:
-  url: https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.6.7.tar.gz
-  sha256: 6b921bc7efb1b9a8a78268d63332701902cc1c8dbac51842d46ede6ffb5fa2a4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gensio
-  - libyaml
+    - gensio
+    - libyaml
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:956a9630a71d18386912c344979746f842c234c05919cd8959a00c70a7c31677
+        sha256: 956a9630a71d18386912c344979746f842c234c05919cd8959a00c70a7c31677
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:826a5c4d76bc78574fbf69dc9fba7c15bcd24efc78a2db3749389b3ba25a662e
+        sha256: 826a5c4d76bc78574fbf69dc9fba7c15bcd24efc78a2db3749389b3ba25a662e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:e151fb33658fdea88474c879275d6b4fa26caf8f97a12600a00b4ce3fcb71807
+        sha256: e151fb33658fdea88474c879275d6b4fa26caf8f97a12600a00b4ce3fcb71807
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:a6a11cc4e843769d9c58aff84407bbf482443fb8bfcad51f209d178bd9f38847
+        sha256: a6a11cc4e843769d9c58aff84407bbf482443fb8bfcad51f209d178bd9f38847
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.6.7.tar.gz
+    sha256: 6b921bc7efb1b9a8a78268d63332701902cc1c8dbac51842d46ede6ffb5fa2a4
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - gensio
-  - libyaml
-  - linux-pam
+    - gensio
+    - libyaml
+    - linux-pam
+build:
+    configure: []
+    install: []
+service: null

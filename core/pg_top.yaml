@@ -3,29 +3,54 @@ version: 3.7.0
 description: Monitor PostgreSQL processes
 homepage: https://pg_top.gitlab.io
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pg_top/blobs/sha256:9adc494d9d026662d8e072527c22e736fe60bf0153eecdc5d3d4b6271abfc8a9
-    sha256: 9adc494d9d026662d8e072527c22e736fe60bf0153eecdc5d3d4b6271abfc8a9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pg_top/blobs/sha256:59ad81e7e985e9b841a4667a901e94cadac8923be21654c5918326a230424910
-    sha256: 59ad81e7e985e9b841a4667a901e94cadac8923be21654c5918326a230424910
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pg_top/blobs/sha256:65fe3861c5e90a4c9403f4b551892cd8ac85fbbea1cc23f551ee0eda3c9de01d
-    sha256: 65fe3861c5e90a4c9403f4b551892cd8ac85fbbea1cc23f551ee0eda3c9de01d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pg_top/blobs/sha256:fbf1018624db8c4c76d72d83d18a7d079ae6d1fba0d7c65aea8078f9e1c31519
-    sha256: fbf1018624db8c4c76d72d83d18a7d079ae6d1fba0d7c65aea8078f9e1c31519
-source:
-  url: https://ftp.postgresql.org/pub/projects/pgFoundry/ptop/pg_top/3.7.0/pg_top-3.7.0.tar.bz2
-  sha256: c48d726e8cd778712e712373a428086d95e2b29932e545ff2a948d043de5a6a2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpq
+    - libpq
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pg_top/blobs/sha256:59ad81e7e985e9b841a4667a901e94cadac8923be21654c5918326a230424910
+        sha256: 59ad81e7e985e9b841a4667a901e94cadac8923be21654c5918326a230424910
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pg_top/blobs/sha256:9adc494d9d026662d8e072527c22e736fe60bf0153eecdc5d3d4b6271abfc8a9
+        sha256: 9adc494d9d026662d8e072527c22e736fe60bf0153eecdc5d3d4b6271abfc8a9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pg_top/blobs/sha256:65fe3861c5e90a4c9403f4b551892cd8ac85fbbea1cc23f551ee0eda3c9de01d
+        sha256: 65fe3861c5e90a4c9403f4b551892cd8ac85fbbea1cc23f551ee0eda3c9de01d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pg_top/blobs/sha256:fbf1018624db8c4c76d72d83d18a7d079ae6d1fba0d7c65aea8078f9e1c31519
+        sha256: fbf1018624db8c4c76d72d83d18a7d079ae6d1fba0d7c65aea8078f9e1c31519
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.postgresql.org/pub/projects/pgFoundry/ptop/pg_top/3.7.0/pg_top-3.7.0.tar.bz2
+    sha256: c48d726e8cd778712e712373a428086d95e2b29932e545ff2a948d043de5a6a2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

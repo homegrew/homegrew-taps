@@ -3,30 +3,55 @@ version: 1.5.5
 description: Programming language for digital color management
 homepage: https://github.com/ampas/CTL
 license: AMPAS
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ctl/blobs/sha256:ca511a0c2b48007131b0582bb71116f5cc0eac17087434738e6f7a6c50397d91
-    sha256: ca511a0c2b48007131b0582bb71116f5cc0eac17087434738e6f7a6c50397d91
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ctl/blobs/sha256:29d9deebf5250fa3faa927ce5ee71a4488ea49dd00c595c1f6443006e8106899
-    sha256: 29d9deebf5250fa3faa927ce5ee71a4488ea49dd00c595c1f6443006e8106899
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ctl/blobs/sha256:0d035e411659b169fb4d073389599ddb0337c3a5b43cdb088e57496cff47709e
-    sha256: 0d035e411659b169fb4d073389599ddb0337c3a5b43cdb088e57496cff47709e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ctl/blobs/sha256:9ec0a75ad70ea5c05ce1165095a98a1a69cf898cf09eb7206c7885e752fb7045
-    sha256: 9ec0a75ad70ea5c05ce1165095a98a1a69cf898cf09eb7206c7885e752fb7045
-source:
-  url: https://github.com/ampas/CTL/archive/refs/tags/ctl-1.5.5.tar.gz
-  sha256: b6a36ac31e0a79224216e4fc41b56982939cec7a1afd4e80165cec3f1c37d265
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - aces_container
-  - imath
-  - libtiff
-  - openexr
+    - aces_container
+    - imath
+    - libtiff
+    - openexr
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ctl/blobs/sha256:29d9deebf5250fa3faa927ce5ee71a4488ea49dd00c595c1f6443006e8106899
+        sha256: 29d9deebf5250fa3faa927ce5ee71a4488ea49dd00c595c1f6443006e8106899
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ctl/blobs/sha256:ca511a0c2b48007131b0582bb71116f5cc0eac17087434738e6f7a6c50397d91
+        sha256: ca511a0c2b48007131b0582bb71116f5cc0eac17087434738e6f7a6c50397d91
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ctl/blobs/sha256:0d035e411659b169fb4d073389599ddb0337c3a5b43cdb088e57496cff47709e
+        sha256: 0d035e411659b169fb4d073389599ddb0337c3a5b43cdb088e57496cff47709e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ctl/blobs/sha256:9ec0a75ad70ea5c05ce1165095a98a1a69cf898cf09eb7206c7885e752fb7045
+        sha256: 9ec0a75ad70ea5c05ce1165095a98a1a69cf898cf09eb7206c7885e752fb7045
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ampas/CTL/archive/refs/tags/ctl-1.5.5.tar.gz
+    sha256: b6a36ac31e0a79224216e4fc41b56982939cec7a1afd4e80165cec3f1c37d265
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

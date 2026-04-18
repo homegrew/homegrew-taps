@@ -3,28 +3,53 @@ version: 1.8.1
 description: Flexible terminal-based text editor
 homepage: https://github.com/adsr/mle
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mle/blobs/sha256:306e6cdc4f433ef963be6385bfce249743c0ded11def9172985fd6882eb55633
-    sha256: 306e6cdc4f433ef963be6385bfce249743c0ded11def9172985fd6882eb55633
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mle/blobs/sha256:1c7ef3254e6d91bf71a34ea33c1a77678ae8e696044c706dd7fd6037c6a48bfa
-    sha256: 1c7ef3254e6d91bf71a34ea33c1a77678ae8e696044c706dd7fd6037c6a48bfa
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mle/blobs/sha256:9fad439343aa7dd03abf599f9e7cc924d098a4d3d14b8fb430eaf497b930cb7a
-    sha256: 9fad439343aa7dd03abf599f9e7cc924d098a4d3d14b8fb430eaf497b930cb7a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mle/blobs/sha256:3b0dbffe4e55c0849d4938508f6cf86d8efea3bdf6583999467ab0c44611cec5
-    sha256: 3b0dbffe4e55c0849d4938508f6cf86d8efea3bdf6583999467ab0c44611cec5
-source:
-  url: https://github.com/adsr/mle/archive/refs/tags/v1.8.1.tar.gz
-  sha256: 7ee33a695f801024254fc717b64aff6a7a4c274874fc4b83e1a23ccf1a74b9ca
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lua@5.4
-  - pcre2
+    - lua@5.4
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mle/blobs/sha256:1c7ef3254e6d91bf71a34ea33c1a77678ae8e696044c706dd7fd6037c6a48bfa
+        sha256: 1c7ef3254e6d91bf71a34ea33c1a77678ae8e696044c706dd7fd6037c6a48bfa
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mle/blobs/sha256:306e6cdc4f433ef963be6385bfce249743c0ded11def9172985fd6882eb55633
+        sha256: 306e6cdc4f433ef963be6385bfce249743c0ded11def9172985fd6882eb55633
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mle/blobs/sha256:9fad439343aa7dd03abf599f9e7cc924d098a4d3d14b8fb430eaf497b930cb7a
+        sha256: 9fad439343aa7dd03abf599f9e7cc924d098a4d3d14b8fb430eaf497b930cb7a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mle/blobs/sha256:3b0dbffe4e55c0849d4938508f6cf86d8efea3bdf6583999467ab0c44611cec5
+        sha256: 3b0dbffe4e55c0849d4938508f6cf86d8efea3bdf6583999467ab0c44611cec5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/adsr/mle/archive/refs/tags/v1.8.1.tar.gz
+    sha256: 7ee33a695f801024254fc717b64aff6a7a4c274874fc4b83e1a23ccf1a74b9ca
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - uthash
+    - uthash
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

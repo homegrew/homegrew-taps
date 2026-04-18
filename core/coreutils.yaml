@@ -1,31 +1,56 @@
 name: coreutils
-version: 9.10
+version: "9.10"
 description: GNU File, Shell, and Text utilities
 homepage: https://www.gnu.org/software/coreutils/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/coreutils/blobs/sha256:dfb88b3ff6dd4c8aed52209d470dc8f2119d394f883411f4d17ba21972b602e4
-    sha256: dfb88b3ff6dd4c8aed52209d470dc8f2119d394f883411f4d17ba21972b602e4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/coreutils/blobs/sha256:0c7b94b89fa6d8b9e38af1e8cc05bd3d4829a206bb75a9242fd69113b65a36b3
-    sha256: 0c7b94b89fa6d8b9e38af1e8cc05bd3d4829a206bb75a9242fd69113b65a36b3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/coreutils/blobs/sha256:292f082b0ec4adf5342fab822dd7c192fe5bce8160f0272965a38bb26a4f66ac
-    sha256: 292f082b0ec4adf5342fab822dd7c192fe5bce8160f0272965a38bb26a4f66ac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/coreutils/blobs/sha256:2b0acf715c4d544303c35d568d9a62bb4765f971fe9fd1e843db74df281db6d8
-    sha256: 2b0acf715c4d544303c35d568d9a62bb4765f971fe9fd1e843db74df281db6d8
-source:
-  url: https://ftpmirror.gnu.org/gnu/coreutils/coreutils-9.10.tar.xz
-  sha256: 16535a9adf0b10037364e2d612aad3d9f4eca3a344949ced74d12faf4bd51d25
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/coreutils/blobs/sha256:0c7b94b89fa6d8b9e38af1e8cc05bd3d4829a206bb75a9242fd69113b65a36b3
+        sha256: 0c7b94b89fa6d8b9e38af1e8cc05bd3d4829a206bb75a9242fd69113b65a36b3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coreutils/blobs/sha256:dfb88b3ff6dd4c8aed52209d470dc8f2119d394f883411f4d17ba21972b602e4
+        sha256: dfb88b3ff6dd4c8aed52209d470dc8f2119d394f883411f4d17ba21972b602e4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/coreutils/blobs/sha256:292f082b0ec4adf5342fab822dd7c192fe5bce8160f0272965a38bb26a4f66ac
+        sha256: 292f082b0ec4adf5342fab822dd7c192fe5bce8160f0272965a38bb26a4f66ac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coreutils/blobs/sha256:2b0acf715c4d544303c35d568d9a62bb4765f971fe9fd1e843db74df281db6d8
+        sha256: 2b0acf715c4d544303c35d568d9a62bb4765f971fe9fd1e843db74df281db6d8
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/coreutils/coreutils-9.10.tar.xz
+    sha256: 16535a9adf0b10037364e2d612aad3d9f4eca3a344949ced74d12faf4bd51d25
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - acl
-  - attr
-  - gmp
+    - acl
+    - attr
+    - gmp
+build:
+    configure: []
+    install: []
+service: null

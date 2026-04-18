@@ -3,47 +3,71 @@ version: 1.2.8
 description: DDoS detection tool with sFlow, Netflow, IPFIX and port mirror support
 homepage: https://github.com/pavel-odintsov/fastnetmon/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:9ddf7485701a4fea3c2465ea31394b424fca7e3d01c81e48fd31b4d332517a49
-    sha256: 9ddf7485701a4fea3c2465ea31394b424fca7e3d01c81e48fd31b4d332517a49
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:a6fd83d0825ecea60c04a0ca92bc3eb1b63e1ad0f3fa59744fc93dc2c36296eb
-    sha256: a6fd83d0825ecea60c04a0ca92bc3eb1b63e1ad0f3fa59744fc93dc2c36296eb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:f28268984eb355b891f46977e170639c07e9b5c25dbba711f4cb1e8658cac9a3
-    sha256: f28268984eb355b891f46977e170639c07e9b5c25dbba711f4cb1e8658cac9a3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:1e4b1a177b2c7ce6fa39a5c562695c3a0e43bccaa3acb3606a6f8f3108284370
-    sha256: 1e4b1a177b2c7ce6fa39a5c562695c3a0e43bccaa3acb3606a6f8f3108284370
-source:
-  url: https://github.com/pavel-odintsov/fastnetmon/archive/refs/tags/v1.2.8.tar.gz
-  sha256: d16901b00963f395241c818d02ad2751f14e33fd32ed3cb3011641ab680e0d01
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - boost
-  - capnp
-  - grpc
-  - hiredis
-  - log4cpp
-  - mongo-c-driver
-  - openssl@3
-  - protobuf
+    - abseil
+    - boost
+    - capnp
+    - grpc
+    - hiredis
+    - log4cpp
+    - mongo-c-driver
+    - openssl@3
+    - protobuf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:a6fd83d0825ecea60c04a0ca92bc3eb1b63e1ad0f3fa59744fc93dc2c36296eb
+        sha256: a6fd83d0825ecea60c04a0ca92bc3eb1b63e1ad0f3fa59744fc93dc2c36296eb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:9ddf7485701a4fea3c2465ea31394b424fca7e3d01c81e48fd31b4d332517a49
+        sha256: 9ddf7485701a4fea3c2465ea31394b424fca7e3d01c81e48fd31b4d332517a49
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:f28268984eb355b891f46977e170639c07e9b5c25dbba711f4cb1e8658cac9a3
+        sha256: f28268984eb355b891f46977e170639c07e9b5c25dbba711f4cb1e8658cac9a3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:1e4b1a177b2c7ce6fa39a5c562695c3a0e43bccaa3acb3606a6f8f3108284370
+        sha256: 1e4b1a177b2c7ce6fa39a5c562695c3a0e43bccaa3acb3606a6f8f3108284370
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pavel-odintsov/fastnetmon/archive/refs/tags/v1.2.8.tar.gz
+    sha256: d16901b00963f395241c818d02ad2751f14e33fd32ed3cb3011641ab680e0d01
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - abseil
-  - boost
-  - capnp
-  - elfutils
-  - grpc
-  - hiredis
-  - libbpf
-  - log4cpp
-  - mongo-c-driver
-  - openssl@3
-  - protobuf
+    - abseil
+    - boost
+    - capnp
+    - elfutils
+    - grpc
+    - hiredis
+    - libbpf
+    - log4cpp
+    - mongo-c-driver
+    - openssl@3
+    - protobuf
+build:
+    configure: []
+    install: []
+service: null

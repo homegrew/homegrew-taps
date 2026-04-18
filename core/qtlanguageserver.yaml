@@ -3,28 +3,53 @@ version: 6.11.0
 description: Implementation of the Language Server Protocol and JSON-RPC
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtlanguageserver/blobs/sha256:cc92baa54e6b03eadb2014fad7edfb009a3e5a0c96684a0af950635c02203782
-    sha256: cc92baa54e6b03eadb2014fad7edfb009a3e5a0c96684a0af950635c02203782
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtlanguageserver/blobs/sha256:dab033911ef4100a886851f91d8ecf2ea0b02b7e30a131dcfa4f1e35f2a29ec0
-    sha256: dab033911ef4100a886851f91d8ecf2ea0b02b7e30a131dcfa4f1e35f2a29ec0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtlanguageserver/blobs/sha256:88ebec5416237eb722ef566a6c9a9f19da3b1f637e71cabec05ddc04c10d0c2e
-    sha256: 88ebec5416237eb722ef566a6c9a9f19da3b1f637e71cabec05ddc04c10d0c2e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtlanguageserver/blobs/sha256:b9c913cb8a7a0690426edc55760c518b943f8adce10bc4bcde6898e472d89f6b
-    sha256: b9c913cb8a7a0690426edc55760c518b943f8adce10bc4bcde6898e472d89f6b
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtlanguageserver-everywhere-src-6.11.0.tar.xz
-  sha256: 1bc8e443f561f9086d40943e7bd685e9536c4658b3df770d30cf4733b7f405bf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtlanguageserver/blobs/sha256:dab033911ef4100a886851f91d8ecf2ea0b02b7e30a131dcfa4f1e35f2a29ec0
+        sha256: dab033911ef4100a886851f91d8ecf2ea0b02b7e30a131dcfa4f1e35f2a29ec0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtlanguageserver/blobs/sha256:cc92baa54e6b03eadb2014fad7edfb009a3e5a0c96684a0af950635c02203782
+        sha256: cc92baa54e6b03eadb2014fad7edfb009a3e5a0c96684a0af950635c02203782
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtlanguageserver/blobs/sha256:88ebec5416237eb722ef566a6c9a9f19da3b1f637e71cabec05ddc04c10d0c2e
+        sha256: 88ebec5416237eb722ef566a6c9a9f19da3b1f637e71cabec05ddc04c10d0c2e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtlanguageserver/blobs/sha256:b9c913cb8a7a0690426edc55760c518b943f8adce10bc4bcde6898e472d89f6b
+        sha256: b9c913cb8a7a0690426edc55760c518b943f8adce10bc4bcde6898e472d89f6b
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtlanguageserver-everywhere-src-6.11.0.tar.xz
+    sha256: 1bc8e443f561f9086d40943e7bd685e9536c4658b3df770d30cf4733b7f405bf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

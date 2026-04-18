@@ -3,37 +3,61 @@ version: 2.7.12
 description: Secure runtime for JavaScript and TypeScript
 homepage: https://deno.com/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:2e82d1dd2a8953ea0242b2d431ef52920c84803cb30786985a474c5377358d70
-    sha256: 2e82d1dd2a8953ea0242b2d431ef52920c84803cb30786985a474c5377358d70
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:cae2bfa62b72c2749c36a9709ca40b15c52019a3d0d22fddf7d14b59a651479d
-    sha256: cae2bfa62b72c2749c36a9709ca40b15c52019a3d0d22fddf7d14b59a651479d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:b2db2a622703f0d2a431b2fc31c338d7b36172b532219cdc89bde5a510026e05
-    sha256: b2db2a622703f0d2a431b2fc31c338d7b36172b532219cdc89bde5a510026e05
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:e55b64ca9e3aa39bc9636847c74ec022d9222285c30949203d6f831c699937cc
-    sha256: e55b64ca9e3aa39bc9636847c74ec022d9222285c30949203d6f831c699937cc
-source:
-  url: https://github.com/denoland/deno/releases/download/v2.7.12/deno_src.tar.gz
-  sha256: be57e4f92a9b0d3aca4700631b6d6249c9db391e88bf09f0b8c7989d76151e8a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - little-cms2
-  - sqlite
+    - little-cms2
+    - sqlite
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:cae2bfa62b72c2749c36a9709ca40b15c52019a3d0d22fddf7d14b59a651479d
+        sha256: cae2bfa62b72c2749c36a9709ca40b15c52019a3d0d22fddf7d14b59a651479d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:2e82d1dd2a8953ea0242b2d431ef52920c84803cb30786985a474c5377358d70
+        sha256: 2e82d1dd2a8953ea0242b2d431ef52920c84803cb30786985a474c5377358d70
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:b2db2a622703f0d2a431b2fc31c338d7b36172b532219cdc89bde5a510026e05
+        sha256: b2db2a622703f0d2a431b2fc31c338d7b36172b532219cdc89bde5a510026e05
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:e55b64ca9e3aa39bc9636847c74ec022d9222285c30949203d6f831c699937cc
+        sha256: e55b64ca9e3aa39bc9636847c74ec022d9222285c30949203d6f831c699937cc
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/denoland/deno/releases/download/v2.7.12/deno_src.tar.gz
+    sha256: be57e4f92a9b0d3aca4700631b6d6249c9db391e88bf09f0b8c7989d76151e8a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - lld
-  - llvm
-  - ninja
-  - pkgconf
-  - rust
+    - cmake
+    - lld
+    - llvm
+    - ninja
+    - pkgconf
+    - rust
 linux_dependencies:
-  - little-cms2
-  - sqlite
-  - zlib-ng-compat
+    - little-cms2
+    - sqlite
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

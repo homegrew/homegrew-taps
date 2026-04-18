@@ -1,36 +1,61 @@
 name: libheif
 version: 1.21.2
-description: "ISO/IEC 23008-12:2017 HEIF file format decoder and encoder"
+description: ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 homepage: https://www.libde265.org/
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libheif/blobs/sha256:2e879a02aadd09f9136d3c614e0eaa9800bfb12b82c3fc6105819fe7af8075a4
-    sha256: 2e879a02aadd09f9136d3c614e0eaa9800bfb12b82c3fc6105819fe7af8075a4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libheif/blobs/sha256:d42f0f04f44cd8e2d353c0515f2b2621838c36b621b02b4c78d52cf233b63fb3
-    sha256: d42f0f04f44cd8e2d353c0515f2b2621838c36b621b02b4c78d52cf233b63fb3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libheif/blobs/sha256:c140f9b88d5a47a803272ec24ce007e4692a911889ac399fd88fd8ac1c853819
-    sha256: c140f9b88d5a47a803272ec24ce007e4692a911889ac399fd88fd8ac1c853819
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libheif/blobs/sha256:14f4d79e3c3fa91e342649efbf422a33c8fa22c4e0095074b859e861ae1d510f
-    sha256: 14f4d79e3c3fa91e342649efbf422a33c8fa22c4e0095074b859e861ae1d510f
-source:
-  url: https://github.com/strukturag/libheif/releases/download/v1.21.2/libheif-1.21.2.tar.gz
-  sha256: 75f530b7154bc93e7ecf846edfc0416bf5f490612de8c45983c36385aa742b42
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - aom
-  - jpeg-turbo
-  - libde265
-  - libpng
-  - libtiff
-  - webp
-  - x265
+    - aom
+    - jpeg-turbo
+    - libde265
+    - libpng
+    - libtiff
+    - webp
+    - x265
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libheif/blobs/sha256:d42f0f04f44cd8e2d353c0515f2b2621838c36b621b02b4c78d52cf233b63fb3
+        sha256: d42f0f04f44cd8e2d353c0515f2b2621838c36b621b02b4c78d52cf233b63fb3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libheif/blobs/sha256:2e879a02aadd09f9136d3c614e0eaa9800bfb12b82c3fc6105819fe7af8075a4
+        sha256: 2e879a02aadd09f9136d3c614e0eaa9800bfb12b82c3fc6105819fe7af8075a4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libheif/blobs/sha256:c140f9b88d5a47a803272ec24ce007e4692a911889ac399fd88fd8ac1c853819
+        sha256: c140f9b88d5a47a803272ec24ce007e4692a911889ac399fd88fd8ac1c853819
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libheif/blobs/sha256:14f4d79e3c3fa91e342649efbf422a33c8fa22c4e0095074b859e861ae1d510f
+        sha256: 14f4d79e3c3fa91e342649efbf422a33c8fa22c4e0095074b859e861ae1d510f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/strukturag/libheif/releases/download/v1.21.2/libheif-1.21.2.tar.gz
+    sha256: 75f530b7154bc93e7ecf846edfc0416bf5f490612de8c45983c36385aa742b42
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

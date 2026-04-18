@@ -3,28 +3,53 @@ version: 8.2.0
 description: Unicode conversion routines, fast
 homepage: https://simdutf.github.io/simdutf/
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/simdutf/blobs/sha256:56791948a39b8168ee3c09b3edb14c10a74128cb31c5ae657bd06ef3e0bd70e8
-    sha256: 56791948a39b8168ee3c09b3edb14c10a74128cb31c5ae657bd06ef3e0bd70e8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/simdutf/blobs/sha256:93437b4c4704da0b62a8c03d2f002838113c96f785425c13f599d42eb7e81674
-    sha256: 93437b4c4704da0b62a8c03d2f002838113c96f785425c13f599d42eb7e81674
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/simdutf/blobs/sha256:651366aac48dce77419e10aa59b1aee36b79fc866c08a73946e85cb5c398f17d
-    sha256: 651366aac48dce77419e10aa59b1aee36b79fc866c08a73946e85cb5c398f17d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/simdutf/blobs/sha256:2aebe9359204e366fd840260797ca093f1271a316785f6e58b5bb743df3f1ae7
-    sha256: 2aebe9359204e366fd840260797ca093f1271a316785f6e58b5bb743df3f1ae7
-source:
-  url: https://github.com/simdutf/simdutf/archive/refs/tags/v8.2.0.tar.gz
-  sha256: 033a91b1d7d1cb818c1eff49e61faaa1b64a3a530d59ef9efef0195e56bda8b1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
+    - icu4c@78
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/simdutf/blobs/sha256:93437b4c4704da0b62a8c03d2f002838113c96f785425c13f599d42eb7e81674
+        sha256: 93437b4c4704da0b62a8c03d2f002838113c96f785425c13f599d42eb7e81674
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/simdutf/blobs/sha256:56791948a39b8168ee3c09b3edb14c10a74128cb31c5ae657bd06ef3e0bd70e8
+        sha256: 56791948a39b8168ee3c09b3edb14c10a74128cb31c5ae657bd06ef3e0bd70e8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/simdutf/blobs/sha256:651366aac48dce77419e10aa59b1aee36b79fc866c08a73946e85cb5c398f17d
+        sha256: 651366aac48dce77419e10aa59b1aee36b79fc866c08a73946e85cb5c398f17d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/simdutf/blobs/sha256:2aebe9359204e366fd840260797ca093f1271a316785f6e58b5bb743df3f1ae7
+        sha256: 2aebe9359204e366fd840260797ca093f1271a316785f6e58b5bb743df3f1ae7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/simdutf/simdutf/archive/refs/tags/v8.2.0.tar.gz
+    sha256: 033a91b1d7d1cb818c1eff49e61faaa1b64a3a530d59ef9efef0195e56bda8b1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - aklomp-base64
-  - cmake
+    - aklomp-base64
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

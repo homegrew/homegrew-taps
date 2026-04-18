@@ -3,36 +3,62 @@ version: 5.1.25
 description: WYSIWYG 2D plotting tool for X11
 homepage: https://plasma-gate.weizmann.ac.il/Grace/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grace/blobs/sha256:f930e961b7d6dd7d104e8f786247a044113ff0b7e58be16061d5a04ff4365188
-    sha256: f930e961b7d6dd7d104e8f786247a044113ff0b7e58be16061d5a04ff4365188
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grace/blobs/sha256:ba106c9e707cb707da47ecf3183bff8b0a00aae131d82f4a72e60768ac1a5bb7
-    sha256: ba106c9e707cb707da47ecf3183bff8b0a00aae131d82f4a72e60768ac1a5bb7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grace/blobs/sha256:1d60f284e17b5b7b40e51c41070ca4eeacf9bda3c9e75065e53c40921de9472d
-    sha256: 1d60f284e17b5b7b40e51c41070ca4eeacf9bda3c9e75065e53c40921de9472d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grace/blobs/sha256:6490f0fba875ea85cd6ee5006dd7bc75ac2dacf08bb16d7aca56fbf5e46a291f
-    sha256: 6490f0fba875ea85cd6ee5006dd7bc75ac2dacf08bb16d7aca56fbf5e46a291f
-source:
-  url: https://deb.debian.org/debian/pool/main/g/grace/grace_5.1.25.orig.tar.gz
-  sha256: 751ab9917ed0f6232073c193aba74046037e185d73b77bab0f5af3e3ff1da2ac
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fftw
-  - jpeg-turbo
-  - libice
-  - libpng
-  - libsm
-  - libx11
-  - libxext
-  - libxmu
-  - libxp
-  - libxpm
-  - libxt
-  - openmotif
+    - fftw
+    - jpeg-turbo
+    - libice
+    - libpng
+    - libsm
+    - libx11
+    - libxext
+    - libxmu
+    - libxp
+    - libxpm
+    - libxt
+    - openmotif
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grace/blobs/sha256:ba106c9e707cb707da47ecf3183bff8b0a00aae131d82f4a72e60768ac1a5bb7
+        sha256: ba106c9e707cb707da47ecf3183bff8b0a00aae131d82f4a72e60768ac1a5bb7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grace/blobs/sha256:f930e961b7d6dd7d104e8f786247a044113ff0b7e58be16061d5a04ff4365188
+        sha256: f930e961b7d6dd7d104e8f786247a044113ff0b7e58be16061d5a04ff4365188
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grace/blobs/sha256:1d60f284e17b5b7b40e51c41070ca4eeacf9bda3c9e75065e53c40921de9472d
+        sha256: 1d60f284e17b5b7b40e51c41070ca4eeacf9bda3c9e75065e53c40921de9472d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grace/blobs/sha256:6490f0fba875ea85cd6ee5006dd7bc75ac2dacf08bb16d7aca56fbf5e46a291f
+        sha256: 6490f0fba875ea85cd6ee5006dd7bc75ac2dacf08bb16d7aca56fbf5e46a291f
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/g/grace/grace_5.1.25.orig.tar.gz
+    sha256: 751ab9917ed0f6232073c193aba74046037e185d73b77bab0f5af3e3ff1da2ac
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

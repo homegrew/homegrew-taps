@@ -3,27 +3,53 @@ version: 0.15.2
 description: FFI bindings for the rustls TLS library
 homepage: https://github.com/rustls/rustls-ffi
 license: Apache-2.0 OR MIT OR ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rustls-ffi/blobs/sha256:1d7076de4ede55e258d96d0faa2de6fc44c7473f937e0f2927a394e75f30f770
-    sha256: 1d7076de4ede55e258d96d0faa2de6fc44c7473f937e0f2927a394e75f30f770
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rustls-ffi/blobs/sha256:e3d235309a643bdb2e037b072486b48452375341ad4c455cb71e02929d9e7655
-    sha256: e3d235309a643bdb2e037b072486b48452375341ad4c455cb71e02929d9e7655
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rustls-ffi/blobs/sha256:625aa165c3278ac214731b7c7be5bf8a817322ce0a458cc4dc1cc1c6b59fb10c
-    sha256: 625aa165c3278ac214731b7c7be5bf8a817322ce0a458cc4dc1cc1c6b59fb10c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rustls-ffi/blobs/sha256:84f572eff7336acc974c7040e83ab9edf3057df7cbc30bb8a1acc26a6383f91d
-    sha256: 84f572eff7336acc974c7040e83ab9edf3057df7cbc30bb8a1acc26a6383f91d
-source:
-  url: https://github.com/rustls/rustls-ffi/archive/refs/tags/v0.15.2.tar.gz
-  sha256: f7e24d0f8b5a7c960817b9395bdd2688b2056d60c2e364fa116bf46f0ab9ffdb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rustls-ffi/blobs/sha256:e3d235309a643bdb2e037b072486b48452375341ad4c455cb71e02929d9e7655
+        sha256: e3d235309a643bdb2e037b072486b48452375341ad4c455cb71e02929d9e7655
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rustls-ffi/blobs/sha256:1d7076de4ede55e258d96d0faa2de6fc44c7473f937e0f2927a394e75f30f770
+        sha256: 1d7076de4ede55e258d96d0faa2de6fc44c7473f937e0f2927a394e75f30f770
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rustls-ffi/blobs/sha256:625aa165c3278ac214731b7c7be5bf8a817322ce0a458cc4dc1cc1c6b59fb10c
+        sha256: 625aa165c3278ac214731b7c7be5bf8a817322ce0a458cc4dc1cc1c6b59fb10c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rustls-ffi/blobs/sha256:84f572eff7336acc974c7040e83ab9edf3057df7cbc30bb8a1acc26a6383f91d
+        sha256: 84f572eff7336acc974c7040e83ab9edf3057df7cbc30bb8a1acc26a6383f91d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rustls/rustls-ffi/archive/refs/tags/v0.15.2.tar.gz
+    sha256: f7e24d0f8b5a7c960817b9395bdd2688b2056d60c2e364fa116bf46f0ab9ffdb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cargo-c
-  - pkgconf
-  - rust
+    - cargo-c
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,29 +1,54 @@
 name: libopusenc
-version: 0.3
+version: "0.3"
 description: Convenience library for creating .opus files
 homepage: https://www.opus-codec.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libopusenc/blobs/sha256:92b42832d01a85d2be1e22d430d80fe57e02987ebf6b4e77f425891f4c1ae3e0
-    sha256: 92b42832d01a85d2be1e22d430d80fe57e02987ebf6b4e77f425891f4c1ae3e0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libopusenc/blobs/sha256:4c4fd7d3596d74477da965719a66a3684007ae2ba31dc482a8a25ec6f57feb90
-    sha256: 4c4fd7d3596d74477da965719a66a3684007ae2ba31dc482a8a25ec6f57feb90
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libopusenc/blobs/sha256:090f5e5a9c1ff5dc82c371154d4c1394d3e85d4dbbb27759552766734c3f1750
-    sha256: 090f5e5a9c1ff5dc82c371154d4c1394d3e85d4dbbb27759552766734c3f1750
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libopusenc/blobs/sha256:96d744e47f001702d08a26bccbeeda29d1ddfd1b14efd323ab0c9117e6d701c1
-    sha256: 96d744e47f001702d08a26bccbeeda29d1ddfd1b14efd323ab0c9117e6d701c1
-source:
-  url: https://ftp.osuosl.org/pub/xiph/releases/opus/libopusenc-0.3.tar.gz
-  sha256: f616d3aff9b2034547894ccb8ab56c36cf1a4acb0d922c5d7119f97bbe58642c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - opus
+    - opus
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libopusenc/blobs/sha256:4c4fd7d3596d74477da965719a66a3684007ae2ba31dc482a8a25ec6f57feb90
+        sha256: 4c4fd7d3596d74477da965719a66a3684007ae2ba31dc482a8a25ec6f57feb90
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libopusenc/blobs/sha256:92b42832d01a85d2be1e22d430d80fe57e02987ebf6b4e77f425891f4c1ae3e0
+        sha256: 92b42832d01a85d2be1e22d430d80fe57e02987ebf6b4e77f425891f4c1ae3e0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libopusenc/blobs/sha256:090f5e5a9c1ff5dc82c371154d4c1394d3e85d4dbbb27759552766734c3f1750
+        sha256: 090f5e5a9c1ff5dc82c371154d4c1394d3e85d4dbbb27759552766734c3f1750
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libopusenc/blobs/sha256:96d744e47f001702d08a26bccbeeda29d1ddfd1b14efd323ab0c9117e6d701c1
+        sha256: 96d744e47f001702d08a26bccbeeda29d1ddfd1b14efd323ab0c9117e6d701c1
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.osuosl.org/pub/xiph/releases/opus/libopusenc-0.3.tar.gz
+    sha256: f616d3aff9b2034547894ccb8ab56c36cf1a4acb0d922c5d7119f97bbe58642c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

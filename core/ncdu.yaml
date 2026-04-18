@@ -3,29 +3,54 @@ version: 2.9.2
 description: NCurses Disk Usage
 homepage: https://dev.yorhel.nl/ncdu
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncdu/blobs/sha256:9a08dd709b18d87d90b016b8685d56f2de8d537e437ab44cf4ed92203df7a245
-    sha256: 9a08dd709b18d87d90b016b8685d56f2de8d537e437ab44cf4ed92203df7a245
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncdu/blobs/sha256:768ace20bc54c22b86ddce63d51bd8488cb04816e28e330286a2685047d5484e
-    sha256: 768ace20bc54c22b86ddce63d51bd8488cb04816e28e330286a2685047d5484e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncdu/blobs/sha256:762c13f508d0699c363f0a3a0741a19cbd14d1ef8a86fdd1d70aeaaf2f7bd851
-    sha256: 762c13f508d0699c363f0a3a0741a19cbd14d1ef8a86fdd1d70aeaaf2f7bd851
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncdu/blobs/sha256:2a2d143126f866ae7a7f0aeecc2d12282bde98542e1ece1203d821a8d499343b
-    sha256: 2a2d143126f866ae7a7f0aeecc2d12282bde98542e1ece1203d821a8d499343b
-source:
-  url: https://dev.yorhel.nl/download/ncdu-2.9.2.tar.gz
-  sha256: e91135281cb66569f2ca4c0bac277246991e7e52524c0ca8cba3de5c8e81cec9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ncurses
-  - zstd
+    - ncurses
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncdu/blobs/sha256:768ace20bc54c22b86ddce63d51bd8488cb04816e28e330286a2685047d5484e
+        sha256: 768ace20bc54c22b86ddce63d51bd8488cb04816e28e330286a2685047d5484e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncdu/blobs/sha256:9a08dd709b18d87d90b016b8685d56f2de8d537e437ab44cf4ed92203df7a245
+        sha256: 9a08dd709b18d87d90b016b8685d56f2de8d537e437ab44cf4ed92203df7a245
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncdu/blobs/sha256:762c13f508d0699c363f0a3a0741a19cbd14d1ef8a86fdd1d70aeaaf2f7bd851
+        sha256: 762c13f508d0699c363f0a3a0741a19cbd14d1ef8a86fdd1d70aeaaf2f7bd851
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncdu/blobs/sha256:2a2d143126f866ae7a7f0aeecc2d12282bde98542e1ece1203d821a8d499343b
+        sha256: 2a2d143126f866ae7a7f0aeecc2d12282bde98542e1ece1203d821a8d499343b
+        sha512: ""
+        signature: ""
+source:
+    url: https://dev.yorhel.nl/download/ncdu-2.9.2.tar.gz
+    sha256: e91135281cb66569f2ca4c0bac277246991e7e52524c0ca8cba3de5c8e81cec9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - zig@0.15
+    - pkgconf
+    - zig@0.15
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

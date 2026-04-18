@@ -3,48 +3,72 @@ version: 0.8.4.1
 description: Multipurpose sniffer/interceptor/logger for switched LAN
 homepage: https://ettercap.github.io/ettercap/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:683a1e70a4ed420180dc80604f60bc2f1862f0f37db7fd315c6ed0a98c427ea2
-    sha256: 683a1e70a4ed420180dc80604f60bc2f1862f0f37db7fd315c6ed0a98c427ea2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:71e45b355ab2fcd63cfd1d50797908832d2d0a75a6da4b68076eaf8e1b671d0b
-    sha256: 71e45b355ab2fcd63cfd1d50797908832d2d0a75a6da4b68076eaf8e1b671d0b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:5c052b9cfffeb2a6ab032ff9903575894dadefc364b8dcb1090d28d34ec4648c
-    sha256: 5c052b9cfffeb2a6ab032ff9903575894dadefc364b8dcb1090d28d34ec4648c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:8b73234cc878c74b1c948428238c7d5db228d4c445f25bb732b657ca8853e7ff
-    sha256: 8b73234cc878c74b1c948428238c7d5db228d4c445f25bb732b657ca8853e7ff
-source:
-  url: https://github.com/Ettercap/ettercap/archive/refs/tags/v0.8.4.1.tar.gz
-  sha256: 210a535138772ee67f5946ef61efe3bba31413d0f241a11d953fb553cacbbacd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - libmaxminddb
-  - libnet
-  - ncurses
-  - openssl@3
-  - pcre2
-  - at-spi2-core
-  - cairo
-  - freetype
-  - pango
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - libmaxminddb
+    - libnet
+    - ncurses
+    - openssl@3
+    - pcre2
+    - at-spi2-core
+    - cairo
+    - freetype
+    - pango
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:71e45b355ab2fcd63cfd1d50797908832d2d0a75a6da4b68076eaf8e1b671d0b
+        sha256: 71e45b355ab2fcd63cfd1d50797908832d2d0a75a6da4b68076eaf8e1b671d0b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:683a1e70a4ed420180dc80604f60bc2f1862f0f37db7fd315c6ed0a98c427ea2
+        sha256: 683a1e70a4ed420180dc80604f60bc2f1862f0f37db7fd315c6ed0a98c427ea2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:5c052b9cfffeb2a6ab032ff9903575894dadefc364b8dcb1090d28d34ec4648c
+        sha256: 5c052b9cfffeb2a6ab032ff9903575894dadefc364b8dcb1090d28d34ec4648c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:8b73234cc878c74b1c948428238c7d5db228d4c445f25bb732b657ca8853e7ff
+        sha256: 8b73234cc878c74b1c948428238c7d5db228d4c445f25bb732b657ca8853e7ff
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Ettercap/ettercap/archive/refs/tags/v0.8.4.1.tar.gz
+    sha256: 210a535138772ee67f5946ef61efe3bba31413d0f241a11d953fb553cacbbacd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - libmaxminddb
-  - libnet
-  - ncurses
-  - openssl@3
-  - pcre2
-  - zlib-ng-compat
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - libmaxminddb
+    - libnet
+    - ncurses
+    - openssl@3
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

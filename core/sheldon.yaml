@@ -3,30 +3,55 @@ version: 0.8.5
 description: Fast, configurable, shell plugin manager
 homepage: https://sheldon.cli.rs
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sheldon/blobs/sha256:4c847c1f57dab67c08f0b2bc28b2682ec8e82944693c08c9456a61faee416790
-    sha256: 4c847c1f57dab67c08f0b2bc28b2682ec8e82944693c08c9456a61faee416790
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sheldon/blobs/sha256:28e543aab665bd00bb249abdcc40b062f96a8305046136720772ec2d22afc55d
-    sha256: 28e543aab665bd00bb249abdcc40b062f96a8305046136720772ec2d22afc55d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sheldon/blobs/sha256:7f589b7843646d3253cfc607b0169a416a0017125e5b602b5daa82dab7fc8796
-    sha256: 7f589b7843646d3253cfc607b0169a416a0017125e5b602b5daa82dab7fc8796
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sheldon/blobs/sha256:2bb36c6d20e44524167470f658d6bf79dff452c6f2ca3470900d56c545f86724
-    sha256: 2bb36c6d20e44524167470f658d6bf79dff452c6f2ca3470900d56c545f86724
-source:
-  url: https://github.com/rossmacarthur/sheldon/archive/refs/tags/0.8.5.tar.gz
-  sha256: a32e181667ec8bf235f0c50f2671d3c0d78fbdd7502a61e2f88c7deacb534b20
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
-  - libssh2
-  - openssl@3
+    - libgit2
+    - libssh2
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sheldon/blobs/sha256:28e543aab665bd00bb249abdcc40b062f96a8305046136720772ec2d22afc55d
+        sha256: 28e543aab665bd00bb249abdcc40b062f96a8305046136720772ec2d22afc55d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sheldon/blobs/sha256:4c847c1f57dab67c08f0b2bc28b2682ec8e82944693c08c9456a61faee416790
+        sha256: 4c847c1f57dab67c08f0b2bc28b2682ec8e82944693c08c9456a61faee416790
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sheldon/blobs/sha256:7f589b7843646d3253cfc607b0169a416a0017125e5b602b5daa82dab7fc8796
+        sha256: 7f589b7843646d3253cfc607b0169a416a0017125e5b602b5daa82dab7fc8796
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sheldon/blobs/sha256:2bb36c6d20e44524167470f658d6bf79dff452c6f2ca3470900d56c545f86724
+        sha256: 2bb36c6d20e44524167470f658d6bf79dff452c6f2ca3470900d56c545f86724
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rossmacarthur/sheldon/archive/refs/tags/0.8.5.tar.gz
+    sha256: a32e181667ec8bf235f0c50f2671d3c0d78fbdd7502a61e2f88c7deacb534b20
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

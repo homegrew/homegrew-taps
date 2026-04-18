@@ -1,29 +1,54 @@
 name: camlpdf
-version: 2.9
+version: "2.9"
 description: OCaml library for reading, writing and modifying PDF files
 homepage: https://github.com/johnwhitington/camlpdf
 license: LGPL-2.1-only WITH OCaml-LGPL-linking-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/camlpdf/blobs/sha256:2ae180c8730f1552db117b06df7f2abe50abd3eb2eb6d42e3136864c0dd92d31
-    sha256: 2ae180c8730f1552db117b06df7f2abe50abd3eb2eb6d42e3136864c0dd92d31
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/camlpdf/blobs/sha256:2919f746cc7d16eb9603f1e84543f7097672acd73964cc008c1af1006b380cc7
-    sha256: 2919f746cc7d16eb9603f1e84543f7097672acd73964cc008c1af1006b380cc7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/camlpdf/blobs/sha256:fd11b6341f7102de7f52997ae11557fd8c3e95ce86f4ab741c39d839d6cd9b46
-    sha256: fd11b6341f7102de7f52997ae11557fd8c3e95ce86f4ab741c39d839d6cd9b46
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/camlpdf/blobs/sha256:fc2ddfc666ce2a4e7977c2936ffbc4a8f949a828863c1254c2c1669bf525d5e1
-    sha256: fc2ddfc666ce2a4e7977c2936ffbc4a8f949a828863c1254c2c1669bf525d5e1
-source:
-  url: https://github.com/johnwhitington/camlpdf/archive/refs/tags/v2.9.tar.gz
-  sha256: 2bbc222eb6e1be4ef6ec2900a1bba1da652704ff1343e742726689e077d35a27
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ocaml
+    - ocaml
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/camlpdf/blobs/sha256:2919f746cc7d16eb9603f1e84543f7097672acd73964cc008c1af1006b380cc7
+        sha256: 2919f746cc7d16eb9603f1e84543f7097672acd73964cc008c1af1006b380cc7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/camlpdf/blobs/sha256:2ae180c8730f1552db117b06df7f2abe50abd3eb2eb6d42e3136864c0dd92d31
+        sha256: 2ae180c8730f1552db117b06df7f2abe50abd3eb2eb6d42e3136864c0dd92d31
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/camlpdf/blobs/sha256:fd11b6341f7102de7f52997ae11557fd8c3e95ce86f4ab741c39d839d6cd9b46
+        sha256: fd11b6341f7102de7f52997ae11557fd8c3e95ce86f4ab741c39d839d6cd9b46
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/camlpdf/blobs/sha256:fc2ddfc666ce2a4e7977c2936ffbc4a8f949a828863c1254c2c1669bf525d5e1
+        sha256: fc2ddfc666ce2a4e7977c2936ffbc4a8f949a828863c1254c2c1669bf525d5e1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/johnwhitington/camlpdf/archive/refs/tags/v2.9.tar.gz
+    sha256: 2bbc222eb6e1be4ef6ec2900a1bba1da652704ff1343e742726689e077d35a27
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ocaml-findlib
+    - ocaml-findlib
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

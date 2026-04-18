@@ -3,53 +3,78 @@ version: 1.6.59
 description: Toolkit for developing Graphical User Interfaces easily
 homepage: http://fox-toolkit.org/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fox/blobs/sha256:91240fb02b90a3c3efdaa73e6deca2662ec50404014dd405762adcaf17db7ec9
-    sha256: 91240fb02b90a3c3efdaa73e6deca2662ec50404014dd405762adcaf17db7ec9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fox/blobs/sha256:1d251b692e7f74a95c853d492dd1a54714372ee61c4ee8bd94fc5b23feb49d5a
-    sha256: 1d251b692e7f74a95c853d492dd1a54714372ee61c4ee8bd94fc5b23feb49d5a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fox/blobs/sha256:4f7c54833495b786ec99c5cd9b5e40794471d9caf3e531173c63b2d4fc2f28bc
-    sha256: 4f7c54833495b786ec99c5cd9b5e40794471d9caf3e531173c63b2d4fc2f28bc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fox/blobs/sha256:d411539e13366056c6597b528c53bec28e3fdaecfef3fbdb4e410c2f2a500ba6
-    sha256: d411539e13366056c6597b528c53bec28e3fdaecfef3fbdb4e410c2f2a500ba6
-source:
-  url: https://distfiles.macports.org/fox/fox-1.6.59.tar.gz
-  sha256: 48f33d2dd5371c2d48f6518297f0ef5bbf3fcd37719e99f815dc6fc6e0f928ae
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fontconfig
-  - freetype
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - libx11
-  - libxcursor
-  - libxext
-  - libxft
-  - libxrandr
-  - mesa
-  - mesa-glu
-  - libxfixes
-  - libxi
-  - libxrender
+    - fontconfig
+    - freetype
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - libx11
+    - libxcursor
+    - libxext
+    - libxft
+    - libxrandr
+    - mesa
+    - mesa-glu
+    - libxfixes
+    - libxi
+    - libxrender
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fox/blobs/sha256:1d251b692e7f74a95c853d492dd1a54714372ee61c4ee8bd94fc5b23feb49d5a
+        sha256: 1d251b692e7f74a95c853d492dd1a54714372ee61c4ee8bd94fc5b23feb49d5a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fox/blobs/sha256:91240fb02b90a3c3efdaa73e6deca2662ec50404014dd405762adcaf17db7ec9
+        sha256: 91240fb02b90a3c3efdaa73e6deca2662ec50404014dd405762adcaf17db7ec9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fox/blobs/sha256:4f7c54833495b786ec99c5cd9b5e40794471d9caf3e531173c63b2d4fc2f28bc
+        sha256: 4f7c54833495b786ec99c5cd9b5e40794471d9caf3e531173c63b2d4fc2f28bc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fox/blobs/sha256:d411539e13366056c6597b528c53bec28e3fdaecfef3fbdb4e410c2f2a500ba6
+        sha256: d411539e13366056c6597b528c53bec28e3fdaecfef3fbdb4e410c2f2a500ba6
+        sha512: ""
+        signature: ""
+source:
+    url: https://distfiles.macports.org/fox/fox-1.6.59.tar.gz
+    sha256: 48f33d2dd5371c2d48f6518297f0ef5bbf3fcd37719e99f815dc6fc6e0f928ae
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - fontconfig
-  - freetype
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - libx11
-  - libxcursor
-  - libxext
-  - libxft
-  - libxrandr
-  - mesa
-  - mesa-glu
-  - zlib-ng-compat
+    - fontconfig
+    - freetype
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - libx11
+    - libxcursor
+    - libxext
+    - libxft
+    - libxrandr
+    - mesa
+    - mesa-glu
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

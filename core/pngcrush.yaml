@@ -3,28 +3,53 @@ version: 1.8.13
 description: Optimizer for PNG files
 homepage: https://pmt.sourceforge.io/pngcrush/
 license: LicenseRef-Homebrew-cannot-represent
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pngcrush/blobs/sha256:d480e8fcafb2cce34d273a2142d1db3513fb094e2e1c6b638b67d2114b75a91f
-    sha256: d480e8fcafb2cce34d273a2142d1db3513fb094e2e1c6b638b67d2114b75a91f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pngcrush/blobs/sha256:9e118f22662c43c9d1520be4b73645146939660c600e428aa540df8261ea1843
-    sha256: 9e118f22662c43c9d1520be4b73645146939660c600e428aa540df8261ea1843
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pngcrush/blobs/sha256:68503c123cc4886ca3b1e759a7b29e9c9e7abed51d31f78f37f197c4bf66affd
-    sha256: 68503c123cc4886ca3b1e759a7b29e9c9e7abed51d31f78f37f197c4bf66affd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pngcrush/blobs/sha256:b2c169a69b99d3ca7c13d4b8779adfd09568b8b9059c0d510e66008905513f8a
-    sha256: b2c169a69b99d3ca7c13d4b8779adfd09568b8b9059c0d510e66008905513f8a
-source:
-  url: https://downloads.sourceforge.net/project/pmt/pngcrush/1.8.13/pngcrush-1.8.13-nolib.tar.xz
-  sha256: 3b4eac8c5c69fe0894ad63534acedf6375b420f7038f7fc003346dd352618350
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpng
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pngcrush/blobs/sha256:9e118f22662c43c9d1520be4b73645146939660c600e428aa540df8261ea1843
+        sha256: 9e118f22662c43c9d1520be4b73645146939660c600e428aa540df8261ea1843
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pngcrush/blobs/sha256:d480e8fcafb2cce34d273a2142d1db3513fb094e2e1c6b638b67d2114b75a91f
+        sha256: d480e8fcafb2cce34d273a2142d1db3513fb094e2e1c6b638b67d2114b75a91f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pngcrush/blobs/sha256:68503c123cc4886ca3b1e759a7b29e9c9e7abed51d31f78f37f197c4bf66affd
+        sha256: 68503c123cc4886ca3b1e759a7b29e9c9e7abed51d31f78f37f197c4bf66affd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pngcrush/blobs/sha256:b2c169a69b99d3ca7c13d4b8779adfd09568b8b9059c0d510e66008905513f8a
+        sha256: b2c169a69b99d3ca7c13d4b8779adfd09568b8b9059c0d510e66008905513f8a
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/pmt/pngcrush/1.8.13/pngcrush-1.8.13-nolib.tar.xz
+    sha256: 3b4eac8c5c69fe0894ad63534acedf6375b420f7038f7fc003346dd352618350
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - libpng
-  - zlib-ng-compat
+    - libpng
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

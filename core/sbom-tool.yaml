@@ -3,25 +3,48 @@ version: 4.1.5
 description: Scalable and enterprise ready tool to create SBOMs for any variety of artifacts
 homepage: https://github.com/microsoft/sbom-tool
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sbom-tool/blobs/sha256:06b6f4918958ec0e7e70ccbb235644379bd18ff47afe57caf7d8c1c8cbedef67
-    sha256: 06b6f4918958ec0e7e70ccbb235644379bd18ff47afe57caf7d8c1c8cbedef67
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sbom-tool/blobs/sha256:3ee862f5f6b5c288e44ae1be6f39976b76e7a52a3c5c1cbcae09a076822d4ff5
-    sha256: 3ee862f5f6b5c288e44ae1be6f39976b76e7a52a3c5c1cbcae09a076822d4ff5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sbom-tool/blobs/sha256:c6613476c7a9046af605b796661736ce125b23ac0a01cf400920d99d095d9796
-    sha256: c6613476c7a9046af605b796661736ce125b23ac0a01cf400920d99d095d9796
-source:
-  url: https://github.com/microsoft/sbom-tool/archive/refs/tags/v4.1.5.tar.gz
-  sha256: 512d884ce8689026f45b54a1c2a242e66f7d570e7d9a1a590d88733cc3e1a108
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dotnet@8
+    - dotnet@8
+keg_only: false
+bottle:
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sbom-tool/blobs/sha256:06b6f4918958ec0e7e70ccbb235644379bd18ff47afe57caf7d8c1c8cbedef67
+        sha256: 06b6f4918958ec0e7e70ccbb235644379bd18ff47afe57caf7d8c1c8cbedef67
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sbom-tool/blobs/sha256:3ee862f5f6b5c288e44ae1be6f39976b76e7a52a3c5c1cbcae09a076822d4ff5
+        sha256: 3ee862f5f6b5c288e44ae1be6f39976b76e7a52a3c5c1cbcae09a076822d4ff5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sbom-tool/blobs/sha256:c6613476c7a9046af605b796661736ce125b23ac0a01cf400920d99d095d9796
+        sha256: c6613476c7a9046af605b796661736ce125b23ac0a01cf400920d99d095d9796
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/microsoft/sbom-tool/archive/refs/tags/v4.1.5.tar.gz
+    sha256: 512d884ce8689026f45b54a1c2a242e66f7d570e7d9a1a590d88733cc3e1a108
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - dotnet@8
-  - zlib-ng-compat
+    - dotnet@8
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

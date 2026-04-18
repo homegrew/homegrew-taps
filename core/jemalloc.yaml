@@ -3,23 +3,50 @@ version: 5.3.0
 description: Implementation of malloc emphasizing fragmentation avoidance
 homepage: https://jemalloc.net/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jemalloc/blobs/sha256:e4143a4cc719df4053a6f3c77a92afc0c24444d305fe8a5f1be4fafa6771403f
-    sha256: e4143a4cc719df4053a6f3c77a92afc0c24444d305fe8a5f1be4fafa6771403f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jemalloc/blobs/sha256:aad0662c3aa09d15cdff15575506efa347c8ea2d83fbd7b62d18df87c6825175
-    sha256: aad0662c3aa09d15cdff15575506efa347c8ea2d83fbd7b62d18df87c6825175
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jemalloc/blobs/sha256:463bbcc1146e18ce0221638a152c6ee3f4820dc27b48b8cc1a39350778fca22d
-    sha256: 463bbcc1146e18ce0221638a152c6ee3f4820dc27b48b8cc1a39350778fca22d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jemalloc/blobs/sha256:397758abcc63244fc47ab9183027c9817c37d1d84620cb836049440de3a83147
-    sha256: 397758abcc63244fc47ab9183027c9817c37d1d84620cb836049440de3a83147
-source:
-  url: https://github.com/jemalloc/jemalloc/releases/download/5.3.0/jemalloc-5.3.0.tar.bz2
-  sha256: 2db82d1e7119df3e71b7640219b6dfe84789bc0537983c3b7ac4f7189aecfeaa
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jemalloc/blobs/sha256:aad0662c3aa09d15cdff15575506efa347c8ea2d83fbd7b62d18df87c6825175
+        sha256: aad0662c3aa09d15cdff15575506efa347c8ea2d83fbd7b62d18df87c6825175
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jemalloc/blobs/sha256:e4143a4cc719df4053a6f3c77a92afc0c24444d305fe8a5f1be4fafa6771403f
+        sha256: e4143a4cc719df4053a6f3c77a92afc0c24444d305fe8a5f1be4fafa6771403f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jemalloc/blobs/sha256:463bbcc1146e18ce0221638a152c6ee3f4820dc27b48b8cc1a39350778fca22d
+        sha256: 463bbcc1146e18ce0221638a152c6ee3f4820dc27b48b8cc1a39350778fca22d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jemalloc/blobs/sha256:397758abcc63244fc47ab9183027c9817c37d1d84620cb836049440de3a83147
+        sha256: 397758abcc63244fc47ab9183027c9817c37d1d84620cb836049440de3a83147
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jemalloc/jemalloc/releases/download/5.3.0/jemalloc-5.3.0.tar.bz2
+    sha256: 2db82d1e7119df3e71b7640219b6dfe84789bc0537983c3b7ac4f7189aecfeaa
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

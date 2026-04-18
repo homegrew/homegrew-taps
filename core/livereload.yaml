@@ -3,25 +3,51 @@ version: 2.7.1
 description: Local web server in Python
 homepage: https://github.com/lepture/python-livereload
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/livereload/blobs/sha256:116f5fca359f8496313310d42ec7b1dd307d209c463256f7a951d1d0b56294d3
-    sha256: 116f5fca359f8496313310d42ec7b1dd307d209c463256f7a951d1d0b56294d3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/livereload/blobs/sha256:ded998ab1338752e030f905b6806f575a6bb2329741969a837320a582f4c6ca5
-    sha256: ded998ab1338752e030f905b6806f575a6bb2329741969a837320a582f4c6ca5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/livereload/blobs/sha256:31fef9050f7a1e6604ba62e5dc09eaaedae232695864d9e8b7d42543d24a01a3
-    sha256: 31fef9050f7a1e6604ba62e5dc09eaaedae232695864d9e8b7d42543d24a01a3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/livereload/blobs/sha256:c9825e222b28fa8f334b6bbfb90374f1ec5d8b50778fb6641618ad605cffb0dd
-    sha256: c9825e222b28fa8f334b6bbfb90374f1ec5d8b50778fb6641618ad605cffb0dd
-source:
-  url: https://files.pythonhosted.org/packages/43/6e/f2748665839812a9bbe5c75d3f983edbf3ab05fa5cd2f7c2f36fffdf65bd/livereload-2.7.1.tar.gz
-  sha256: 3d9bf7c05673df06e32bea23b494b8d36ca6d10f7d5c3c8a6989608c09c986a9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/livereload/blobs/sha256:ded998ab1338752e030f905b6806f575a6bb2329741969a837320a582f4c6ca5
+        sha256: ded998ab1338752e030f905b6806f575a6bb2329741969a837320a582f4c6ca5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/livereload/blobs/sha256:116f5fca359f8496313310d42ec7b1dd307d209c463256f7a951d1d0b56294d3
+        sha256: 116f5fca359f8496313310d42ec7b1dd307d209c463256f7a951d1d0b56294d3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/livereload/blobs/sha256:31fef9050f7a1e6604ba62e5dc09eaaedae232695864d9e8b7d42543d24a01a3
+        sha256: 31fef9050f7a1e6604ba62e5dc09eaaedae232695864d9e8b7d42543d24a01a3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/livereload/blobs/sha256:c9825e222b28fa8f334b6bbfb90374f1ec5d8b50778fb6641618ad605cffb0dd
+        sha256: c9825e222b28fa8f334b6bbfb90374f1ec5d8b50778fb6641618ad605cffb0dd
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/43/6e/f2748665839812a9bbe5c75d3f983edbf3ab05fa5cd2f7c2f36fffdf65bd/livereload-2.7.1.tar.gz
+    sha256: 3d9bf7c05673df06e32bea23b494b8d36ca6d10f7d5c3c8a6989608c09c986a9
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

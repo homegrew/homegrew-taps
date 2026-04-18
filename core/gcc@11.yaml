@@ -3,37 +3,62 @@ version: 11.5.0
 description: GNU compiler collection
 homepage: https://gcc.gnu.org/
 license: GPL-3.0-or-later WITH GCC-exception-3.1
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gcc/11/blobs/sha256:55ec3e36278e110b74b148fefe5ccacf82223d0fb2fceb3c8230a03bfbc2857f
-    sha256: 55ec3e36278e110b74b148fefe5ccacf82223d0fb2fceb3c8230a03bfbc2857f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gcc/11/blobs/sha256:9c0f839a23e3b7f12c72f3833823ca9cbd9d2b0e3a744e1d436daeeffc77cc82
-    sha256: 9c0f839a23e3b7f12c72f3833823ca9cbd9d2b0e3a744e1d436daeeffc77cc82
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gcc/11/blobs/sha256:c7f02fea0754abb9c33f142cfc8d30bdc16d5d80a27ad2ca72ba562540bb1a44
-    sha256: c7f02fea0754abb9c33f142cfc8d30bdc16d5d80a27ad2ca72ba562540bb1a44
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gcc/11/blobs/sha256:9fa75aed2c4162b36bf22a2cfd19adf582f0e68e7f658bb4d02e07e0ee2d6b06
-    sha256: 9fa75aed2c4162b36bf22a2cfd19adf582f0e68e7f658bb4d02e07e0ee2d6b06
-source:
-  url: https://ftpmirror.gnu.org/gnu/gcc/gcc-11.5.0/gcc-11.5.0.tar.xz
-  sha256: a6e21868ead545cf87f0c01f84276e4b5281d672098591c1c896241f09363478
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - isl
-  - libmpc
-  - mpfr
-  - zstd
+    - gmp
+    - isl
+    - libmpc
+    - mpfr
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gcc/11/blobs/sha256:9c0f839a23e3b7f12c72f3833823ca9cbd9d2b0e3a744e1d436daeeffc77cc82
+        sha256: 9c0f839a23e3b7f12c72f3833823ca9cbd9d2b0e3a744e1d436daeeffc77cc82
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gcc/11/blobs/sha256:55ec3e36278e110b74b148fefe5ccacf82223d0fb2fceb3c8230a03bfbc2857f
+        sha256: 55ec3e36278e110b74b148fefe5ccacf82223d0fb2fceb3c8230a03bfbc2857f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gcc/11/blobs/sha256:c7f02fea0754abb9c33f142cfc8d30bdc16d5d80a27ad2ca72ba562540bb1a44
+        sha256: c7f02fea0754abb9c33f142cfc8d30bdc16d5d80a27ad2ca72ba562540bb1a44
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gcc/11/blobs/sha256:9fa75aed2c4162b36bf22a2cfd19adf582f0e68e7f658bb4d02e07e0ee2d6b06
+        sha256: 9fa75aed2c4162b36bf22a2cfd19adf582f0e68e7f658bb4d02e07e0ee2d6b06
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/gcc/gcc-11.5.0/gcc-11.5.0.tar.xz
+    sha256: a6e21868ead545cf87f0c01f84276e4b5281d672098591c1c896241f09363478
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - binutils
-  - gmp
-  - isl
-  - libmpc
-  - mpfr
-  - zlib-ng-compat
-  - zstd
+    - binutils
+    - gmp
+    - isl
+    - libmpc
+    - mpfr
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

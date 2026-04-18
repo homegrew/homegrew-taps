@@ -3,33 +3,58 @@ version: 3.4.4
 description: Low-level access to audio, keyboard, mouse, joystick, and graphics
 homepage: https://libsdl.org/
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl3/blobs/sha256:e755581de2dc4d285d7408cbdcd028786e86554f6b9ad1a39640a8684947a862
-    sha256: e755581de2dc4d285d7408cbdcd028786e86554f6b9ad1a39640a8684947a862
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl3/blobs/sha256:1d046b4f5c731870ce735c69614c84585753ddd3e0bcf328bff98ec30a7aaaef
-    sha256: 1d046b4f5c731870ce735c69614c84585753ddd3e0bcf328bff98ec30a7aaaef
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl3/blobs/sha256:752ae1ed99c939e1888fc616f0209d3376389d3d27afb62afeb8a081c74a9ed5
-    sha256: 752ae1ed99c939e1888fc616f0209d3376389d3d27afb62afeb8a081c74a9ed5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl3/blobs/sha256:b20d983b09b1f6e065837f9d5d8a746d10c6cd443c6e5442e013a7cec1e1b592
-    sha256: b20d983b09b1f6e065837f9d5d8a746d10c6cd443c6e5442e013a7cec1e1b592
-source:
-  url: https://github.com/libsdl-org/SDL/releases/download/release-3.4.4/SDL3-3.4.4.tar.gz
-  sha256: ee712dbe6a89bb140bbfc2ce72358fb5ee5cc2240abeabd54855012db30b3864
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl3/blobs/sha256:1d046b4f5c731870ce735c69614c84585753ddd3e0bcf328bff98ec30a7aaaef
+        sha256: 1d046b4f5c731870ce735c69614c84585753ddd3e0bcf328bff98ec30a7aaaef
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl3/blobs/sha256:e755581de2dc4d285d7408cbdcd028786e86554f6b9ad1a39640a8684947a862
+        sha256: e755581de2dc4d285d7408cbdcd028786e86554f6b9ad1a39640a8684947a862
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl3/blobs/sha256:752ae1ed99c939e1888fc616f0209d3376389d3d27afb62afeb8a081c74a9ed5
+        sha256: 752ae1ed99c939e1888fc616f0209d3376389d3d27afb62afeb8a081c74a9ed5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl3/blobs/sha256:b20d983b09b1f6e065837f9d5d8a746d10c6cd443c6e5442e013a7cec1e1b592
+        sha256: b20d983b09b1f6e065837f9d5d8a746d10c6cd443c6e5442e013a7cec1e1b592
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libsdl-org/SDL/releases/download/release-3.4.4/SDL3-3.4.4.tar.gz
+    sha256: ee712dbe6a89bb140bbfc2ce72358fb5ee5cc2240abeabd54855012db30b3864
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - libice
-  - libxcursor
-  - libxscrnsaver
-  - libxxf86vm
-  - pulseaudio
-  - xinput
+    - libice
+    - libxcursor
+    - libxscrnsaver
+    - libxxf86vm
+    - pulseaudio
+    - xinput
+build:
+    configure: []
+    install: []
+service: null

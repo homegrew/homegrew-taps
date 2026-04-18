@@ -3,33 +3,56 @@ version: 20.1.8
 description: LLVM Project Linker
 homepage: https://lld.llvm.org/
 license: Apache-2.0 WITH LLVM-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lld/20/blobs/sha256:9be21e008e9d9d2acb2a58596e1ca5b5e507a79e5fb869779113f7df4f3f4a1e
-    sha256: 9be21e008e9d9d2acb2a58596e1ca5b5e507a79e5fb869779113f7df4f3f4a1e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lld/20/blobs/sha256:d4a01c675382bd918542b3a035a8731dd338c94cf1d67769fa2aa5cc84ef4a15
-    sha256: d4a01c675382bd918542b3a035a8731dd338c94cf1d67769fa2aa5cc84ef4a15
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lld/20/blobs/sha256:e555cd84ee93695977e02b993695f5f768dcd6228f3f217c0913f0a1e5c5fd5d
-    sha256: e555cd84ee93695977e02b993695f5f768dcd6228f3f217c0913f0a1e5c5fd5d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lld/20/blobs/sha256:0a0c70753e4a89e9db1ddc391bb53d7f92bf12fb05a78252df0ba3debecc5297
-    sha256: 0a0c70753e4a89e9db1ddc391bb53d7f92bf12fb05a78252df0ba3debecc5297
-source:
-  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/llvm-project-20.1.8.src.tar.xz
-  sha256: 6898f963c8e938981e6c4a302e83ec5beb4630147c7311183cf61069af16333d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - llvm@20
-  - zstd
-build_dependencies:
-  - cmake
-linux_dependencies:
-  - llvm@20
-  - zlib-ng-compat
-  - zstd
+    - llvm@20
+    - zstd
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lld/20/blobs/sha256:d4a01c675382bd918542b3a035a8731dd338c94cf1d67769fa2aa5cc84ef4a15
+        sha256: d4a01c675382bd918542b3a035a8731dd338c94cf1d67769fa2aa5cc84ef4a15
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lld/20/blobs/sha256:9be21e008e9d9d2acb2a58596e1ca5b5e507a79e5fb869779113f7df4f3f4a1e
+        sha256: 9be21e008e9d9d2acb2a58596e1ca5b5e507a79e5fb869779113f7df4f3f4a1e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lld/20/blobs/sha256:e555cd84ee93695977e02b993695f5f768dcd6228f3f217c0913f0a1e5c5fd5d
+        sha256: e555cd84ee93695977e02b993695f5f768dcd6228f3f217c0913f0a1e5c5fd5d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lld/20/blobs/sha256:0a0c70753e4a89e9db1ddc391bb53d7f92bf12fb05a78252df0ba3debecc5297
+        sha256: 0a0c70753e4a89e9db1ddc391bb53d7f92bf12fb05a78252df0ba3debecc5297
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/llvm-project-20.1.8.src.tar.xz
+    sha256: 6898f963c8e938981e6c4a302e83ec5beb4630147c7311183cf61069af16333d
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - cmake
+linux_dependencies:
+    - llvm@20
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

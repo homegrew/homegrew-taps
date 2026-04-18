@@ -3,39 +3,63 @@ version: 3.8.0
 description: Open-source alternative to the OpenGL Utility Toolkit (GLUT) library
 homepage: https://freeglut.sourceforge.net/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:c702ef020f0ee587f8a6c583bd91f0e0ae905aae875b19c9ce91a30918b04c77
-    sha256: c702ef020f0ee587f8a6c583bd91f0e0ae905aae875b19c9ce91a30918b04c77
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:271aaea7bbd3cce73d950c7dfbe2f68d1246e2dc35d3efd7e1e111f921aa870d
-    sha256: 271aaea7bbd3cce73d950c7dfbe2f68d1246e2dc35d3efd7e1e111f921aa870d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:d1a792596562e423cfc3c800166b2347d12b805a70395339bfe175752474d354
-    sha256: d1a792596562e423cfc3c800166b2347d12b805a70395339bfe175752474d354
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:a4028f390685ccdbc27d63e8a13b13ac04eeb38d59ea713a02e0e4cd957cd87e
-    sha256: a4028f390685ccdbc27d63e8a13b13ac04eeb38d59ea713a02e0e4cd957cd87e
-source:
-  url: https://github.com/freeglut/freeglut/releases/download/v3.8.0/freeglut-3.8.0.tar.gz
-  sha256: 674dcaff25010e09e450aec458b8870d9e98c46f99538db457ab659b321d9989
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - libxi
-  - libxrandr
-  - libxxf86vm
-  - mesa
+    - libx11
+    - libxi
+    - libxrandr
+    - libxxf86vm
+    - mesa
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:271aaea7bbd3cce73d950c7dfbe2f68d1246e2dc35d3efd7e1e111f921aa870d
+        sha256: 271aaea7bbd3cce73d950c7dfbe2f68d1246e2dc35d3efd7e1e111f921aa870d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:c702ef020f0ee587f8a6c583bd91f0e0ae905aae875b19c9ce91a30918b04c77
+        sha256: c702ef020f0ee587f8a6c583bd91f0e0ae905aae875b19c9ce91a30918b04c77
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:d1a792596562e423cfc3c800166b2347d12b805a70395339bfe175752474d354
+        sha256: d1a792596562e423cfc3c800166b2347d12b805a70395339bfe175752474d354
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/freeglut/blobs/sha256:a4028f390685ccdbc27d63e8a13b13ac04eeb38d59ea713a02e0e4cd957cd87e
+        sha256: a4028f390685ccdbc27d63e8a13b13ac04eeb38d59ea713a02e0e4cd957cd87e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/freeglut/freeglut/releases/download/v3.8.0/freeglut-3.8.0.tar.gz
+    sha256: 674dcaff25010e09e450aec458b8870d9e98c46f99538db457ab659b321d9989
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - libx11
-  - libxi
-  - libxrandr
-  - libxxf86vm
-  - mesa
-  - mesa-glu
-  - xinput
+    - libx11
+    - libxi
+    - libxrandr
+    - libxxf86vm
+    - mesa
+    - mesa-glu
+    - xinput
+build:
+    configure: []
+    install: []
+service: null

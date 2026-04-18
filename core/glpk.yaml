@@ -1,27 +1,53 @@
 name: glpk
-version: 5.0
+version: "5.0"
 description: Library for Linear and Mixed-Integer Programming
 homepage: https://www.gnu.org/software/glpk/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glpk/blobs/sha256:c60115e0b7c9c13a5e6fc91ceab0aab253c1bd161dae6151e56713a6de6589d5
-    sha256: c60115e0b7c9c13a5e6fc91ceab0aab253c1bd161dae6151e56713a6de6589d5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glpk/blobs/sha256:d3fe2aab018a56aa1d811493e6526063eea45572f995e354d4fd7a120e40c4dd
-    sha256: d3fe2aab018a56aa1d811493e6526063eea45572f995e354d4fd7a120e40c4dd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glpk/blobs/sha256:b2917fa8ab16e56c8f786514f5334598dcc81a939aa7c6c13be41c21d4e1b283
-    sha256: b2917fa8ab16e56c8f786514f5334598dcc81a939aa7c6c13be41c21d4e1b283
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glpk/blobs/sha256:140cfbb13c5618591618a2c3426be507ca93fedcb9447ed784903a7e518fb2e3
-    sha256: 140cfbb13c5618591618a2c3426be507ca93fedcb9447ed784903a7e518fb2e3
-source:
-  url: https://ftpmirror.gnu.org/gnu/glpk/glpk-5.0.tar.gz
-  sha256: 4a1013eebb50f728fc601bdd833b0b2870333c3b3e5a816eeba921d95bec6f15
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glpk/blobs/sha256:d3fe2aab018a56aa1d811493e6526063eea45572f995e354d4fd7a120e40c4dd
+        sha256: d3fe2aab018a56aa1d811493e6526063eea45572f995e354d4fd7a120e40c4dd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glpk/blobs/sha256:c60115e0b7c9c13a5e6fc91ceab0aab253c1bd161dae6151e56713a6de6589d5
+        sha256: c60115e0b7c9c13a5e6fc91ceab0aab253c1bd161dae6151e56713a6de6589d5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glpk/blobs/sha256:b2917fa8ab16e56c8f786514f5334598dcc81a939aa7c6c13be41c21d4e1b283
+        sha256: b2917fa8ab16e56c8f786514f5334598dcc81a939aa7c6c13be41c21d4e1b283
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glpk/blobs/sha256:140cfbb13c5618591618a2c3426be507ca93fedcb9447ed784903a7e518fb2e3
+        sha256: 140cfbb13c5618591618a2c3426be507ca93fedcb9447ed784903a7e518fb2e3
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/glpk/glpk-5.0.tar.gz
+    sha256: 4a1013eebb50f728fc601bdd833b0b2870333c3b3e5a816eeba921d95bec6f15
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

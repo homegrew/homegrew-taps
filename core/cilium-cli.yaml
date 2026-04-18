@@ -1,27 +1,53 @@
 name: cilium-cli
 version: 0.19.2
-description: "CLI to install, manage & troubleshoot Kubernetes clusters running Cilium"
+description: CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 homepage: https://cilium.io
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cilium-cli/blobs/sha256:54eba32d3d61fd60049204b95b7ff9af619c662b509a9c93b5678d499fb95bb6
-    sha256: 54eba32d3d61fd60049204b95b7ff9af619c662b509a9c93b5678d499fb95bb6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cilium-cli/blobs/sha256:d6a2820b9d2f7624108d07036300e28994101eac65c5362cd21855d4a9c41ddc
-    sha256: d6a2820b9d2f7624108d07036300e28994101eac65c5362cd21855d4a9c41ddc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cilium-cli/blobs/sha256:f690811ae700c1272ef28a56c8ccd973b7b163106ebd7ea1ae087b397432ae2d
-    sha256: f690811ae700c1272ef28a56c8ccd973b7b163106ebd7ea1ae087b397432ae2d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cilium-cli/blobs/sha256:4d1b32d342ea69ccfe10e83e9269a939eb38a1bd2ec6b850e08f0f2ec66fc1fb
-    sha256: 4d1b32d342ea69ccfe10e83e9269a939eb38a1bd2ec6b850e08f0f2ec66fc1fb
-source:
-  url: https://github.com/cilium/cilium-cli/archive/refs/tags/v0.19.2.tar.gz
-  sha256: 8bc461a4401a370e646431e336f595fcbb4de67fb1f4421ff62dcb7e65aa0321
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cilium-cli/blobs/sha256:d6a2820b9d2f7624108d07036300e28994101eac65c5362cd21855d4a9c41ddc
+        sha256: d6a2820b9d2f7624108d07036300e28994101eac65c5362cd21855d4a9c41ddc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cilium-cli/blobs/sha256:54eba32d3d61fd60049204b95b7ff9af619c662b509a9c93b5678d499fb95bb6
+        sha256: 54eba32d3d61fd60049204b95b7ff9af619c662b509a9c93b5678d499fb95bb6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cilium-cli/blobs/sha256:f690811ae700c1272ef28a56c8ccd973b7b163106ebd7ea1ae087b397432ae2d
+        sha256: f690811ae700c1272ef28a56c8ccd973b7b163106ebd7ea1ae087b397432ae2d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cilium-cli/blobs/sha256:4d1b32d342ea69ccfe10e83e9269a939eb38a1bd2ec6b850e08f0f2ec66fc1fb
+        sha256: 4d1b32d342ea69ccfe10e83e9269a939eb38a1bd2ec6b850e08f0f2ec66fc1fb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cilium/cilium-cli/archive/refs/tags/v0.19.2.tar.gz
+    sha256: 8bc461a4401a370e646431e336f595fcbb4de67fb1f4421ff62dcb7e65aa0321
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

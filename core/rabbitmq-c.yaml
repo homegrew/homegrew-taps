@@ -3,30 +3,55 @@ version: 0.15.0
 description: C AMQP client library for RabbitMQ
 homepage: https://github.com/alanxz/rabbitmq-c
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rabbitmq-c/blobs/sha256:ed808af191d028a6eff168ded49fb10a38aacfc2f8d92147e78f06b0b7f7742a
-    sha256: ed808af191d028a6eff168ded49fb10a38aacfc2f8d92147e78f06b0b7f7742a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rabbitmq-c/blobs/sha256:3fb725256372918473d3bcfbdbab2f86f90a218f4f67e491f49fa27fe870b209
-    sha256: 3fb725256372918473d3bcfbdbab2f86f90a218f4f67e491f49fa27fe870b209
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rabbitmq-c/blobs/sha256:835505a60c65b2630a70ded7eedd09fa35a48102e5b65509a0af22a26d204a2a
-    sha256: 835505a60c65b2630a70ded7eedd09fa35a48102e5b65509a0af22a26d204a2a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rabbitmq-c/blobs/sha256:02df84684b63e2ea8013274c96df59017f26c5ea45787eae6a7503962e5c5555
-    sha256: 02df84684b63e2ea8013274c96df59017f26c5ea45787eae6a7503962e5c5555
-source:
-  url: https://github.com/alanxz/rabbitmq-c/archive/refs/tags/v0.15.0.tar.gz
-  sha256: 7b652df52c0de4d19ca36c798ed81378cba7a03a0f0c5d498881ae2d79b241c2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - popt
+    - openssl@3
+    - popt
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rabbitmq-c/blobs/sha256:3fb725256372918473d3bcfbdbab2f86f90a218f4f67e491f49fa27fe870b209
+        sha256: 3fb725256372918473d3bcfbdbab2f86f90a218f4f67e491f49fa27fe870b209
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rabbitmq-c/blobs/sha256:ed808af191d028a6eff168ded49fb10a38aacfc2f8d92147e78f06b0b7f7742a
+        sha256: ed808af191d028a6eff168ded49fb10a38aacfc2f8d92147e78f06b0b7f7742a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rabbitmq-c/blobs/sha256:835505a60c65b2630a70ded7eedd09fa35a48102e5b65509a0af22a26d204a2a
+        sha256: 835505a60c65b2630a70ded7eedd09fa35a48102e5b65509a0af22a26d204a2a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rabbitmq-c/blobs/sha256:02df84684b63e2ea8013274c96df59017f26c5ea45787eae6a7503962e5c5555
+        sha256: 02df84684b63e2ea8013274c96df59017f26c5ea45787eae6a7503962e5c5555
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/alanxz/rabbitmq-c/archive/refs/tags/v0.15.0.tar.gz
+    sha256: 7b652df52c0de4d19ca36c798ed81378cba7a03a0f0c5d498881ae2d79b241c2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - xmlto
+    - cmake
+    - pkgconf
+    - xmlto
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

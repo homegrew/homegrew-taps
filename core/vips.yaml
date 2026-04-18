@@ -3,87 +3,111 @@ version: 8.18.2
 description: Image processing library
 homepage: https://github.com/libvips/libvips
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vips/blobs/sha256:e009b71e1fcc9309ba0346a9b1f2dcb6b06b50a0486a61f44d67c2aeef9a806f
-    sha256: e009b71e1fcc9309ba0346a9b1f2dcb6b06b50a0486a61f44d67c2aeef9a806f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vips/blobs/sha256:4f97f1cf8737230dc933aff2217ac9f29a77ced703735d778fe84e608cded4ce
-    sha256: 4f97f1cf8737230dc933aff2217ac9f29a77ced703735d778fe84e608cded4ce
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vips/blobs/sha256:75dfe5c6c9191ddeb732f47b6f8f15eb9d38cdf0aaa2b2e1f772e94c70270fee
-    sha256: 75dfe5c6c9191ddeb732f47b6f8f15eb9d38cdf0aaa2b2e1f772e94c70270fee
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vips/blobs/sha256:7b4a29d60a0c343e352a54829a7fc4ab1cb0d02bd2f5fbea7334ff3b876774a5
-    sha256: 7b4a29d60a0c343e352a54829a7fc4ab1cb0d02bd2f5fbea7334ff3b876774a5
-source:
-  url: https://github.com/libvips/libvips/releases/download/v8.18.2/vips-8.18.2.tar.xz
-  sha256: a30d4aede16f1c2899c1a2241870f8a7409feafa38484bcdcdac113d6d6f8ff5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - cfitsio
-  - cgif
-  - fftw
-  - fontconfig
-  - gettext
-  - glib
-  - highway
-  - imagemagick
-  - jpeg-xl
-  - libarchive
-  - libexif
-  - libheif
-  - libimagequant
-  - libmatio
-  - libpng
-  - libraw
-  - librsvg
-  - libtiff
-  - libultrahdr
-  - little-cms2
-  - mozjpeg
-  - openexr
-  - openjpeg
-  - openslide
-  - pango
-  - poppler
-  - webp
+    - cairo
+    - cfitsio
+    - cgif
+    - fftw
+    - fontconfig
+    - gettext
+    - glib
+    - highway
+    - imagemagick
+    - jpeg-xl
+    - libarchive
+    - libexif
+    - libheif
+    - libimagequant
+    - libmatio
+    - libpng
+    - libraw
+    - librsvg
+    - libtiff
+    - libultrahdr
+    - little-cms2
+    - mozjpeg
+    - openexr
+    - openjpeg
+    - openslide
+    - pango
+    - poppler
+    - webp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vips/blobs/sha256:4f97f1cf8737230dc933aff2217ac9f29a77ced703735d778fe84e608cded4ce
+        sha256: 4f97f1cf8737230dc933aff2217ac9f29a77ced703735d778fe84e608cded4ce
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vips/blobs/sha256:e009b71e1fcc9309ba0346a9b1f2dcb6b06b50a0486a61f44d67c2aeef9a806f
+        sha256: e009b71e1fcc9309ba0346a9b1f2dcb6b06b50a0486a61f44d67c2aeef9a806f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vips/blobs/sha256:75dfe5c6c9191ddeb732f47b6f8f15eb9d38cdf0aaa2b2e1f772e94c70270fee
+        sha256: 75dfe5c6c9191ddeb732f47b6f8f15eb9d38cdf0aaa2b2e1f772e94c70270fee
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vips/blobs/sha256:7b4a29d60a0c343e352a54829a7fc4ab1cb0d02bd2f5fbea7334ff3b876774a5
+        sha256: 7b4a29d60a0c343e352a54829a7fc4ab1cb0d02bd2f5fbea7334ff3b876774a5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libvips/libvips/releases/download/v8.18.2/vips-8.18.2.tar.xz
+    sha256: a30d4aede16f1c2899c1a2241870f8a7409feafa38484bcdcdac113d6d6f8ff5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - cfitsio
-  - cgif
-  - fftw
-  - fontconfig
-  - gettext
-  - glib
-  - highway
-  - imagemagick
-  - jpeg-xl
-  - libarchive
-  - libexif
-  - libheif
-  - libimagequant
-  - libmatio
-  - libpng
-  - libraw
-  - librsvg
-  - libtiff
-  - libultrahdr
-  - little-cms2
-  - mozjpeg
-  - openexr
-  - openjpeg
-  - openslide
-  - pango
-  - poppler
-  - webp
-  - zlib-ng-compat
+    - cairo
+    - cfitsio
+    - cgif
+    - fftw
+    - fontconfig
+    - gettext
+    - glib
+    - highway
+    - imagemagick
+    - jpeg-xl
+    - libarchive
+    - libexif
+    - libheif
+    - libimagequant
+    - libmatio
+    - libpng
+    - libraw
+    - librsvg
+    - libtiff
+    - libultrahdr
+    - little-cms2
+    - mozjpeg
+    - openexr
+    - openjpeg
+    - openslide
+    - pango
+    - poppler
+    - webp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,54 @@ version: 2.18.2
 description: Tool to install, manage and use Progressive Web Apps in Mozilla Firefox
 homepage: https://pwasforfirefox.filips.si/
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:0b6b9242665adc6a44a2da0dbe17f926b7ce8226fadf71fe0b1dc51af4ce4349
-    sha256: 0b6b9242665adc6a44a2da0dbe17f926b7ce8226fadf71fe0b1dc51af4ce4349
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:c3aee9faf6712ebfa4be77443228e2b428749bc854fedd2fb380fca4452b95e9
-    sha256: c3aee9faf6712ebfa4be77443228e2b428749bc854fedd2fb380fca4452b95e9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:b5ae69012de7e629ff5e8413ba71525ff56615d7bfb05715eb493753db2ad466
-    sha256: b5ae69012de7e629ff5e8413ba71525ff56615d7bfb05715eb493753db2ad466
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:a03b4f7d82c1c97eac6cb742419c6ecb8d0efb82b44b4d8f23c635d96660159f
-    sha256: a03b4f7d82c1c97eac6cb742419c6ecb8d0efb82b44b4d8f23c635d96660159f
-source:
-  url: https://github.com/filips123/PWAsForFirefox/archive/refs/tags/v2.18.2.tar.gz
-  sha256: a6956631ba62442d108cddfd8139d69d39f47004e8d36390a042ab8580d08021
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:c3aee9faf6712ebfa4be77443228e2b428749bc854fedd2fb380fca4452b95e9
+        sha256: c3aee9faf6712ebfa4be77443228e2b428749bc854fedd2fb380fca4452b95e9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:0b6b9242665adc6a44a2da0dbe17f926b7ce8226fadf71fe0b1dc51af4ce4349
+        sha256: 0b6b9242665adc6a44a2da0dbe17f926b7ce8226fadf71fe0b1dc51af4ce4349
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:b5ae69012de7e629ff5e8413ba71525ff56615d7bfb05715eb493753db2ad466
+        sha256: b5ae69012de7e629ff5e8413ba71525ff56615d7bfb05715eb493753db2ad466
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:a03b4f7d82c1c97eac6cb742419c6ecb8d0efb82b44b4d8f23c635d96660159f
+        sha256: a03b4f7d82c1c97eac6cb742419c6ecb8d0efb82b44b4d8f23c635d96660159f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/filips123/PWAsForFirefox/archive/refs/tags/v2.18.2.tar.gz
+    sha256: a6956631ba62442d108cddfd8139d69d39f47004e8d36390a042ab8580d08021
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - bzip2
-  - openssl@3
+    - bzip2
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

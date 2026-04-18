@@ -1,27 +1,53 @@
 name: libmobi
-version: 0.12
+version: "0.12"
 description: C library for handling Kindle (MOBI) formats of ebook documents
 homepage: https://github.com/bfabiszewski/libmobi
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmobi/blobs/sha256:2c692dcb58d257bfaeb352c4bf6240d7479ca2fe5ebc2064b2ca1b4d2466e592
-    sha256: 2c692dcb58d257bfaeb352c4bf6240d7479ca2fe5ebc2064b2ca1b4d2466e592
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmobi/blobs/sha256:227cc265d99edfe9ffe1526ad3a64b774cdcf75afc42546f472af1fe5563d209
-    sha256: 227cc265d99edfe9ffe1526ad3a64b774cdcf75afc42546f472af1fe5563d209
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmobi/blobs/sha256:189a28e29037f0925fa470adbcb876f4e07a16c09731ecd9c2ad2db060b49597
-    sha256: 189a28e29037f0925fa470adbcb876f4e07a16c09731ecd9c2ad2db060b49597
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmobi/blobs/sha256:f2a3bc46369f896c9b4211d84bf368829ca6d3bb98411c2675c0696cbf4e9f7e
-    sha256: f2a3bc46369f896c9b4211d84bf368829ca6d3bb98411c2675c0696cbf4e9f7e
-source:
-  url: https://github.com/bfabiszewski/libmobi/releases/download/v0.12/libmobi-0.12.tar.gz
-  sha256: 9a6fb2c56b916f8fa8b15e0c71008d908109508c944ea1d297881d4e277bf7e7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmobi/blobs/sha256:227cc265d99edfe9ffe1526ad3a64b774cdcf75afc42546f472af1fe5563d209
+        sha256: 227cc265d99edfe9ffe1526ad3a64b774cdcf75afc42546f472af1fe5563d209
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmobi/blobs/sha256:2c692dcb58d257bfaeb352c4bf6240d7479ca2fe5ebc2064b2ca1b4d2466e592
+        sha256: 2c692dcb58d257bfaeb352c4bf6240d7479ca2fe5ebc2064b2ca1b4d2466e592
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmobi/blobs/sha256:189a28e29037f0925fa470adbcb876f4e07a16c09731ecd9c2ad2db060b49597
+        sha256: 189a28e29037f0925fa470adbcb876f4e07a16c09731ecd9c2ad2db060b49597
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmobi/blobs/sha256:f2a3bc46369f896c9b4211d84bf368829ca6d3bb98411c2675c0696cbf4e9f7e
+        sha256: f2a3bc46369f896c9b4211d84bf368829ca6d3bb98411c2675c0696cbf4e9f7e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bfabiszewski/libmobi/releases/download/v0.12/libmobi-0.12.tar.gz
+    sha256: 9a6fb2c56b916f8fa8b15e0c71008d908109508c944ea1d297881d4e277bf7e7
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

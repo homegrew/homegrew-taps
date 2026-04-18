@@ -3,37 +3,61 @@ version: 5.0.0
 description: Libvirt API for glib-based programs
 homepage: https://libvirt.org/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt-glib/blobs/sha256:ba34897f21e90fc3c2e580b4b3a736ac40dde9df609b5e8bb650ed65d528bd41
-    sha256: ba34897f21e90fc3c2e580b4b3a736ac40dde9df609b5e8bb650ed65d528bd41
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt-glib/blobs/sha256:c742a2ce49f8827cc5008a74871489df1a814af0672eab3e5d7b16ce78f155c3
-    sha256: c742a2ce49f8827cc5008a74871489df1a814af0672eab3e5d7b16ce78f155c3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt-glib/blobs/sha256:9e5c86856ddc5d3b7cd2589a96289a4d8762095010a59ee6b413e50ca2c28752
-    sha256: 9e5c86856ddc5d3b7cd2589a96289a4d8762095010a59ee6b413e50ca2c28752
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libvirt-glib/blobs/sha256:c89344493f689b1ed360b3fb32cec04f45b02fc5cd1acebee4f689a83a4a167a
-    sha256: c89344493f689b1ed360b3fb32cec04f45b02fc5cd1acebee4f689a83a4a167a
-source:
-  url: https://download.libvirt.org/glib/libvirt-glib-5.0.0.tar.xz
-  sha256: 9bfec346382416a3575d87299bc641b2a464aa519fd9b1287e318aa43a2f3b8b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libvirt
-  - gettext
+    - glib
+    - libvirt
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt-glib/blobs/sha256:c742a2ce49f8827cc5008a74871489df1a814af0672eab3e5d7b16ce78f155c3
+        sha256: c742a2ce49f8827cc5008a74871489df1a814af0672eab3e5d7b16ce78f155c3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt-glib/blobs/sha256:ba34897f21e90fc3c2e580b4b3a736ac40dde9df609b5e8bb650ed65d528bd41
+        sha256: ba34897f21e90fc3c2e580b4b3a736ac40dde9df609b5e8bb650ed65d528bd41
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt-glib/blobs/sha256:9e5c86856ddc5d3b7cd2589a96289a4d8762095010a59ee6b413e50ca2c28752
+        sha256: 9e5c86856ddc5d3b7cd2589a96289a4d8762095010a59ee6b413e50ca2c28752
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt-glib/blobs/sha256:c89344493f689b1ed360b3fb32cec04f45b02fc5cd1acebee4f689a83a4a167a
+        sha256: c89344493f689b1ed360b3fb32cec04f45b02fc5cd1acebee4f689a83a4a167a
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.libvirt.org/glib/libvirt-glib-5.0.0.tar.xz
+    sha256: 9bfec346382416a3575d87299bc641b2a464aa519fd9b1287e318aa43a2f3b8b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - gobject-introspection
-  - intltool
-  - meson
-  - ninja
-  - pkgconf
+    - gettext
+    - gobject-introspection
+    - intltool
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - glib
-  - libvirt
+    - glib
+    - libvirt
+build:
+    configure: []
+    install: []
+service: null

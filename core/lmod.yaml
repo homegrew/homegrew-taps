@@ -1,32 +1,57 @@
 name: lmod
-version: 9.2
+version: "9.2"
 description: Lua-based environment modules system to modify PATH variable
 homepage: https://lmod.readthedocs.io
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lmod/blobs/sha256:b7ac243c5e50f49a38510af724cb080dc4dd7625a0141ddd9dea660ab64bcab6
-    sha256: b7ac243c5e50f49a38510af724cb080dc4dd7625a0141ddd9dea660ab64bcab6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lmod/blobs/sha256:e752079db96330833ad68d050eea6c14b32e8705472275f02152f50b48cb58f6
-    sha256: e752079db96330833ad68d050eea6c14b32e8705472275f02152f50b48cb58f6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lmod/blobs/sha256:2a3f1b3d92f900e484b74da697c69bdb761ce612cf8e7651bb2cc99a890c8ec5
-    sha256: 2a3f1b3d92f900e484b74da697c69bdb761ce612cf8e7651bb2cc99a890c8ec5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lmod/blobs/sha256:c44374f7631116058aab10d7247c16d2628275ae4d165e8416ae15a2e0868535
-    sha256: c44374f7631116058aab10d7247c16d2628275ae4d165e8416ae15a2e0868535
-source:
-  url: https://github.com/TACC/Lmod/archive/refs/tags/9.2.tar.gz
-  sha256: 01a219845e6627204129de93c7692eb84087336173ae178165758df4dd772293
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lua@5.4
-  - tcl-tk
+    - lua@5.4
+    - tcl-tk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lmod/blobs/sha256:e752079db96330833ad68d050eea6c14b32e8705472275f02152f50b48cb58f6
+        sha256: e752079db96330833ad68d050eea6c14b32e8705472275f02152f50b48cb58f6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lmod/blobs/sha256:b7ac243c5e50f49a38510af724cb080dc4dd7625a0141ddd9dea660ab64bcab6
+        sha256: b7ac243c5e50f49a38510af724cb080dc4dd7625a0141ddd9dea660ab64bcab6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lmod/blobs/sha256:2a3f1b3d92f900e484b74da697c69bdb761ce612cf8e7651bb2cc99a890c8ec5
+        sha256: 2a3f1b3d92f900e484b74da697c69bdb761ce612cf8e7651bb2cc99a890c8ec5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lmod/blobs/sha256:c44374f7631116058aab10d7247c16d2628275ae4d165e8416ae15a2e0868535
+        sha256: c44374f7631116058aab10d7247c16d2628275ae4d165e8416ae15a2e0868535
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/TACC/Lmod/archive/refs/tags/9.2.tar.gz
+    sha256: 01a219845e6627204129de93c7692eb84087336173ae178165758df4dd772293
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - luarocks
-  - pkgconf
-  - gnu-sed
+    - luarocks
+    - pkgconf
+    - gnu-sed
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

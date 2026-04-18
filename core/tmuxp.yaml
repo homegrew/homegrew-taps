@@ -3,27 +3,53 @@ version: 1.67.0
 description: Tmux session manager. Built on libtmux
 homepage: https://tmuxp.git-pull.com/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tmuxp/blobs/sha256:440fbe888734beaf3d2432a68d2012b53b6f5d0889c08958c661f925cea71dab
-    sha256: 440fbe888734beaf3d2432a68d2012b53b6f5d0889c08958c661f925cea71dab
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tmuxp/blobs/sha256:fb4668abcf46149e82ddc110852ab2ac50c19e8c5f3e6144430bf14dd790dc9d
-    sha256: fb4668abcf46149e82ddc110852ab2ac50c19e8c5f3e6144430bf14dd790dc9d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tmuxp/blobs/sha256:dcd56bb77e096df7254446408d3a05ec550176fd915c31684615a52e863bdfeb
-    sha256: dcd56bb77e096df7254446408d3a05ec550176fd915c31684615a52e863bdfeb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tmuxp/blobs/sha256:b346469666a047b31b4b1de3fc169f8bcfb2177db44f6786b39ba5a81d1606da
-    sha256: b346469666a047b31b4b1de3fc169f8bcfb2177db44f6786b39ba5a81d1606da
-source:
-  url: https://files.pythonhosted.org/packages/3a/c9/43b63b5f0ddc53c25052de75945dc4adc6b14984a38e1dea72c34cf398d7/tmuxp-1.67.0.tar.gz
-  sha256: 990720d9fa5a6f4758790aecc201d2d29af0ad9ad8c47b58ac20acb0e8a94f12
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - python@3.14
-  - tmux
+    - libyaml
+    - python@3.14
+    - tmux
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tmuxp/blobs/sha256:fb4668abcf46149e82ddc110852ab2ac50c19e8c5f3e6144430bf14dd790dc9d
+        sha256: fb4668abcf46149e82ddc110852ab2ac50c19e8c5f3e6144430bf14dd790dc9d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tmuxp/blobs/sha256:440fbe888734beaf3d2432a68d2012b53b6f5d0889c08958c661f925cea71dab
+        sha256: 440fbe888734beaf3d2432a68d2012b53b6f5d0889c08958c661f925cea71dab
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tmuxp/blobs/sha256:dcd56bb77e096df7254446408d3a05ec550176fd915c31684615a52e863bdfeb
+        sha256: dcd56bb77e096df7254446408d3a05ec550176fd915c31684615a52e863bdfeb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tmuxp/blobs/sha256:b346469666a047b31b4b1de3fc169f8bcfb2177db44f6786b39ba5a81d1606da
+        sha256: b346469666a047b31b4b1de3fc169f8bcfb2177db44f6786b39ba5a81d1606da
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/3a/c9/43b63b5f0ddc53c25052de75945dc4adc6b14984a38e1dea72c34cf398d7/tmuxp-1.67.0.tar.gz
+    sha256: 990720d9fa5a6f4758790aecc201d2d29af0ad9ad8c47b58ac20acb0e8a94f12
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

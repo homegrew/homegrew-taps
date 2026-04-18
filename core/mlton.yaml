@@ -1,30 +1,55 @@
 name: mlton
-version: 20241230
+version: "20241230"
 description: Whole-program, optimizing compiler for Standard ML
 homepage: http://mlton.org
 license: HPND
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mlton/blobs/sha256:6f47a554a7b7d3cdf4a05db0c0c0018ddde8a352d6701834cd009a9afa4ea2d8
-    sha256: 6f47a554a7b7d3cdf4a05db0c0c0018ddde8a352d6701834cd009a9afa4ea2d8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mlton/blobs/sha256:6d43cf4850c6254329c6a4c1ee06f6e860bf133fca2772eac31c9d8f9e1645dd
-    sha256: 6d43cf4850c6254329c6a4c1ee06f6e860bf133fca2772eac31c9d8f9e1645dd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mlton/blobs/sha256:ed7629b2e4edf19250fc7c6311fbf582b2f8b63658b3e8dd37083ceb98c8a801
-    sha256: ed7629b2e4edf19250fc7c6311fbf582b2f8b63658b3e8dd37083ceb98c8a801
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mlton/blobs/sha256:8d7c7205060e030f40a39f4eb83ca2a24a177bba7fddfa929222ec287251eddd
-    sha256: 8d7c7205060e030f40a39f4eb83ca2a24a177bba7fddfa929222ec287251eddd
-source:
-  url: https://downloads.sourceforge.net/project/mlton/mlton/20241230/mlton-20241230.src.tgz
-  sha256: cd170218f67b76c3fcb4d487ba8841518babcebb41e4702074668e61156ca6f6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mlton/blobs/sha256:6d43cf4850c6254329c6a4c1ee06f6e860bf133fca2772eac31c9d8f9e1645dd
+        sha256: 6d43cf4850c6254329c6a4c1ee06f6e860bf133fca2772eac31c9d8f9e1645dd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mlton/blobs/sha256:6f47a554a7b7d3cdf4a05db0c0c0018ddde8a352d6701834cd009a9afa4ea2d8
+        sha256: 6f47a554a7b7d3cdf4a05db0c0c0018ddde8a352d6701834cd009a9afa4ea2d8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mlton/blobs/sha256:ed7629b2e4edf19250fc7c6311fbf582b2f8b63658b3e8dd37083ceb98c8a801
+        sha256: ed7629b2e4edf19250fc7c6311fbf582b2f8b63658b3e8dd37083ceb98c8a801
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mlton/blobs/sha256:8d7c7205060e030f40a39f4eb83ca2a24a177bba7fddfa929222ec287251eddd
+        sha256: 8d7c7205060e030f40a39f4eb83ca2a24a177bba7fddfa929222ec287251eddd
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/mlton/mlton/20241230/mlton-20241230.src.tgz
+    sha256: cd170218f67b76c3fcb4d487ba8841518babcebb41e4702074668e61156ca6f6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

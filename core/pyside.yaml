@@ -3,88 +3,112 @@ version: 6.11.0
 description: Official Python bindings for Qt
 homepage: https://wiki.qt.io/Qt_for_Python
 license: (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:03512803455b2775535c47a6945ae7bcf84f6631f1ca5bfc2aaa95b141770a2e
-    sha256: 03512803455b2775535c47a6945ae7bcf84f6631f1ca5bfc2aaa95b141770a2e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:47c83f6c0174a63f0c1e31e7e81ab1ed92a8ba2d04a89a6cad01175e279110c9
-    sha256: 47c83f6c0174a63f0c1e31e7e81ab1ed92a8ba2d04a89a6cad01175e279110c9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:c8911cfb4c34770f42717b86b5d16ffaf4fc10fd28b61caacbc2474876de8764
-    sha256: c8911cfb4c34770f42717b86b5d16ffaf4fc10fd28b61caacbc2474876de8764
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:e12ac78636758b76581e17da03d61f1fa8ec78c02c5977901cc241ec06cba4c6
-    sha256: e12ac78636758b76581e17da03d61f1fa8ec78c02c5977901cc241ec06cba4c6
-source:
-  url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.0-src/pyside-setup-everywhere-src-6.11.0.tar.xz
-  sha256: 48d5c44d7c3ed861055d5491486e6a220ef5006573cae01a5fae3fb69d786336
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - llvm@21
-  - python@3.14
-  - qt3d
-  - qtbase
-  - qtcanvaspainter
-  - qtcharts
-  - qtconnectivity
-  - qtdatavis3d
-  - qtdeclarative
-  - qtgraphs
-  - qthttpserver
-  - qtlocation
-  - qtmultimedia
-  - qtnetworkauth
-  - qtpositioning
-  - qtquick3d
-  - qtremoteobjects
-  - qtscxml
-  - qtsensors
-  - qtserialbus
-  - qtserialport
-  - qtspeech
-  - qtsvg
-  - qttools
-  - qtwebchannel
-  - qtwebsockets
-  - qtshadertools
-  - qtwebengine
-  - qtwebview
+    - llvm@21
+    - python@3.14
+    - qt3d
+    - qtbase
+    - qtcanvaspainter
+    - qtcharts
+    - qtconnectivity
+    - qtdatavis3d
+    - qtdeclarative
+    - qtgraphs
+    - qthttpserver
+    - qtlocation
+    - qtmultimedia
+    - qtnetworkauth
+    - qtpositioning
+    - qtquick3d
+    - qtremoteobjects
+    - qtscxml
+    - qtsensors
+    - qtserialbus
+    - qtserialport
+    - qtspeech
+    - qtsvg
+    - qttools
+    - qtwebchannel
+    - qtwebsockets
+    - qtshadertools
+    - qtwebengine
+    - qtwebview
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:47c83f6c0174a63f0c1e31e7e81ab1ed92a8ba2d04a89a6cad01175e279110c9
+        sha256: 47c83f6c0174a63f0c1e31e7e81ab1ed92a8ba2d04a89a6cad01175e279110c9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:03512803455b2775535c47a6945ae7bcf84f6631f1ca5bfc2aaa95b141770a2e
+        sha256: 03512803455b2775535c47a6945ae7bcf84f6631f1ca5bfc2aaa95b141770a2e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:c8911cfb4c34770f42717b86b5d16ffaf4fc10fd28b61caacbc2474876de8764
+        sha256: c8911cfb4c34770f42717b86b5d16ffaf4fc10fd28b61caacbc2474876de8764
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pyside/blobs/sha256:e12ac78636758b76581e17da03d61f1fa8ec78c02c5977901cc241ec06cba4c6
+        sha256: e12ac78636758b76581e17da03d61f1fa8ec78c02c5977901cc241ec06cba4c6
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.0-src/pyside-setup-everywhere-src-6.11.0.tar.xz
+    sha256: 48d5c44d7c3ed861055d5491486e6a220ef5006573cae01a5fae3fb69d786336
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - python-setuptools
-  - qtshadertools
+    - cmake
+    - ninja
+    - python-setuptools
+    - qtshadertools
 linux_dependencies:
-  - llvm@21
-  - mesa
-  - python@3.14
-  - qt3d
-  - qtbase
-  - qtcanvaspainter
-  - qtcharts
-  - qtconnectivity
-  - qtdatavis3d
-  - qtdeclarative
-  - qtgraphs
-  - qthttpserver
-  - qtlocation
-  - qtmultimedia
-  - qtnetworkauth
-  - qtpositioning
-  - qtquick3d
-  - qtremoteobjects
-  - qtscxml
-  - qtsensors
-  - qtserialbus
-  - qtserialport
-  - qtspeech
-  - qtsvg
-  - qttools
-  - qtwebchannel
-  - qtwebengine
-  - qtwebsockets
-  - qtwebview
+    - llvm@21
+    - mesa
+    - python@3.14
+    - qt3d
+    - qtbase
+    - qtcanvaspainter
+    - qtcharts
+    - qtconnectivity
+    - qtdatavis3d
+    - qtdeclarative
+    - qtgraphs
+    - qthttpserver
+    - qtlocation
+    - qtmultimedia
+    - qtnetworkauth
+    - qtpositioning
+    - qtquick3d
+    - qtremoteobjects
+    - qtscxml
+    - qtsensors
+    - qtserialbus
+    - qtserialport
+    - qtspeech
+    - qtsvg
+    - qttools
+    - qtwebchannel
+    - qtwebengine
+    - qtwebsockets
+    - qtwebview
+build:
+    configure: []
+    install: []
+service: null

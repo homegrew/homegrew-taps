@@ -3,41 +3,65 @@ version: 1.20.0
 description: Synergy, the keyboard and mouse sharing tool
 homepage: https://symless.com/synergy
 license: GPL-2.0-only WITH openvpn-openssl-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:40929bc35488d7eeed31e9ee9611fa20f00eccf91c0c26e6c49c6f291ff78682
-    sha256: 40929bc35488d7eeed31e9ee9611fa20f00eccf91c0c26e6c49c6f291ff78682
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:1e9c736ae27ad553089cf782f0735b8b7863e5233995e9d66b79e9f940856f62
-    sha256: 1e9c736ae27ad553089cf782f0735b8b7863e5233995e9d66b79e9f940856f62
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:035e1084d5c6172fabb5c6f473f2624fce9db11c0a672feedcfe14775dffb42e
-    sha256: 035e1084d5c6172fabb5c6f473f2624fce9db11c0a672feedcfe14775dffb42e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:3db71fa49a5ccda86826efad51ed3e342a4e597cfaf0209e1eba94036e8a9e32
-    sha256: 3db71fa49a5ccda86826efad51ed3e342a4e597cfaf0209e1eba94036e8a9e32
-source:
-  url: https://github.com/symless/synergy/archive/refs/tags/v1.20.0.tar.gz
-  sha256: c41a25ccc9fa2ea41706170338c5069890503f0de02668551250f89afe8fa012
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - qtbase
+    - openssl@3
+    - qtbase
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:1e9c736ae27ad553089cf782f0735b8b7863e5233995e9d66b79e9f940856f62
+        sha256: 1e9c736ae27ad553089cf782f0735b8b7863e5233995e9d66b79e9f940856f62
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:40929bc35488d7eeed31e9ee9611fa20f00eccf91c0c26e6c49c6f291ff78682
+        sha256: 40929bc35488d7eeed31e9ee9611fa20f00eccf91c0c26e6c49c6f291ff78682
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:035e1084d5c6172fabb5c6f473f2624fce9db11c0a672feedcfe14775dffb42e
+        sha256: 035e1084d5c6172fabb5c6f473f2624fce9db11c0a672feedcfe14775dffb42e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:3db71fa49a5ccda86826efad51ed3e342a4e597cfaf0209e1eba94036e8a9e32
+        sha256: 3db71fa49a5ccda86826efad51ed3e342a4e597cfaf0209e1eba94036e8a9e32
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/symless/synergy/archive/refs/tags/v1.20.0.tar.gz
+    sha256: c41a25ccc9fa2ea41706170338c5069890503f0de02668551250f89afe8fa012
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - gdk-pixbuf
-  - glib
-  - libnotify
-  - libx11
-  - libxext
-  - libxi
-  - libxinerama
-  - libxkbfile
-  - libxrandr
-  - libxtst
-  - openssl@3
-  - qtbase
+    - gdk-pixbuf
+    - glib
+    - libnotify
+    - libx11
+    - libxext
+    - libxi
+    - libxinerama
+    - libxkbfile
+    - libxrandr
+    - libxtst
+    - openssl@3
+    - qtbase
+build:
+    configure: []
+    install: []
+service: null

@@ -3,25 +3,46 @@ version: 2.5.10
 description: Folder synchronization with OneDrive
 homepage: https://github.com/abraunegg/onedrive
 license: GPL-3.0-only
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onedrive-cli/blobs/sha256:a90b93658bb9878d92bdddd2ced2ca4dbc99396379129308a149a7d5a458fb40
-    sha256: a90b93658bb9878d92bdddd2ced2ca4dbc99396379129308a149a7d5a458fb40
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onedrive-cli/blobs/sha256:92182bc0cb84b68979e587d13c54a2fe7255ac3d08ffe14a12cc950c6a35c98b
-    sha256: 92182bc0cb84b68979e587d13c54a2fe7255ac3d08ffe14a12cc950c6a35c98b
-source:
-  url: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
-  sha256: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - curl
-  - dbus
-  - sqlite
-  - systemd
+    - curl
+    - dbus
+    - sqlite
+    - systemd
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onedrive-cli/blobs/sha256:a90b93658bb9878d92bdddd2ced2ca4dbc99396379129308a149a7d5a458fb40
+        sha256: a90b93658bb9878d92bdddd2ced2ca4dbc99396379129308a149a7d5a458fb40
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onedrive-cli/blobs/sha256:92182bc0cb84b68979e587d13c54a2fe7255ac3d08ffe14a12cc950c6a35c98b
+        sha256: 92182bc0cb84b68979e587d13c54a2fe7255ac3d08ffe14a12cc950c6a35c98b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    sha256: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ldc
-  - pkgconf
+    - ldc
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

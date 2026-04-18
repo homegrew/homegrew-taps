@@ -3,30 +3,55 @@ version: 3.14.14
 description: Daemon for controlling APC UPSes
 homepage: http://www.apcupsd.org
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apcupsd/blobs/sha256:b3ee569355dc3304f2efdf334b2b130088427c6cb9001213c73837ec7ef26160
-    sha256: b3ee569355dc3304f2efdf334b2b130088427c6cb9001213c73837ec7ef26160
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apcupsd/blobs/sha256:d38f2c3404c9d08bd7bbe480cd8acf70153bf7486ee01da4b71d31f05acccc71
-    sha256: d38f2c3404c9d08bd7bbe480cd8acf70153bf7486ee01da4b71d31f05acccc71
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apcupsd/blobs/sha256:d393e850548713a383f89d2375fdbd895eae93c063c97b7e16cd767c881d983e
-    sha256: d393e850548713a383f89d2375fdbd895eae93c063c97b7e16cd767c881d983e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apcupsd/blobs/sha256:2e4b840420d4e7b2712118ca0e9d789e0d6c1f44f54ea6bb49eca03b5548aef5
-    sha256: 2e4b840420d4e7b2712118ca0e9d789e0d6c1f44f54ea6bb49eca03b5548aef5
-source:
-  url: https://downloads.sourceforge.net/project/apcupsd/apcupsd%20-%20Stable/3.14.14/apcupsd-3.14.14.tar.gz
-  sha256: db7748559b6b4c3784f9856561ef6ac6199ef7bd019b3edcd7e0a647bf8f9867
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gd
-  - libusb-compat
+    - gd
+    - libusb-compat
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apcupsd/blobs/sha256:d38f2c3404c9d08bd7bbe480cd8acf70153bf7486ee01da4b71d31f05acccc71
+        sha256: d38f2c3404c9d08bd7bbe480cd8acf70153bf7486ee01da4b71d31f05acccc71
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apcupsd/blobs/sha256:b3ee569355dc3304f2efdf334b2b130088427c6cb9001213c73837ec7ef26160
+        sha256: b3ee569355dc3304f2efdf334b2b130088427c6cb9001213c73837ec7ef26160
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apcupsd/blobs/sha256:d393e850548713a383f89d2375fdbd895eae93c063c97b7e16cd767c881d983e
+        sha256: d393e850548713a383f89d2375fdbd895eae93c063c97b7e16cd767c881d983e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apcupsd/blobs/sha256:2e4b840420d4e7b2712118ca0e9d789e0d6c1f44f54ea6bb49eca03b5548aef5
+        sha256: 2e4b840420d4e7b2712118ca0e9d789e0d6c1f44f54ea6bb49eca03b5548aef5
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/apcupsd/apcupsd%20-%20Stable/3.14.14/apcupsd-3.14.14.tar.gz
+    sha256: db7748559b6b4c3784f9856561ef6ac6199ef7bd019b3edcd7e0a647bf8f9867
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - gd
-  - libusb-compat
-  - systemd
+    - gd
+    - libusb-compat
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

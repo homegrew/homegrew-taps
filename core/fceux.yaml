@@ -3,45 +3,69 @@ version: 2.6.6
 description: All-in-one NES/Famicom Emulator
 homepage: https://fceux.com/
 license: GPL-2.0-or-later AND LGPL-2.1-or-later AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fceux/blobs/sha256:9bbe75f88e4ef4f07b66016f279989d0152b3b9b4eda6205116248a8ff493e7f
-    sha256: 9bbe75f88e4ef4f07b66016f279989d0152b3b9b4eda6205116248a8ff493e7f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fceux/blobs/sha256:3b270af853ae3f5485310667683262f23d2420940db6e1eaa0291a01e0d9409d
-    sha256: 3b270af853ae3f5485310667683262f23d2420940db6e1eaa0291a01e0d9409d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fceux/blobs/sha256:6d51564f3c8477453d8b0ea8045237bf8c8c73e770679b3a60518eeda71a3c40
-    sha256: 6d51564f3c8477453d8b0ea8045237bf8c8c73e770679b3a60518eeda71a3c40
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fceux/blobs/sha256:23e56b704f9059aca2ac48e73eeae0c74ada48f58296ac98e58f5a6f69479044
-    sha256: 23e56b704f9059aca2ac48e73eeae0c74ada48f58296ac98e58f5a6f69479044
-source:
-  url: https://github.com/TASEmulators/fceux.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - libarchive
-  - minizip
-  - qtbase
-  - sdl2
-  - x264
-  - x265
+    - ffmpeg
+    - libarchive
+    - minizip
+    - qtbase
+    - sdl2
+    - x264
+    - x265
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fceux/blobs/sha256:3b270af853ae3f5485310667683262f23d2420940db6e1eaa0291a01e0d9409d
+        sha256: 3b270af853ae3f5485310667683262f23d2420940db6e1eaa0291a01e0d9409d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fceux/blobs/sha256:9bbe75f88e4ef4f07b66016f279989d0152b3b9b4eda6205116248a8ff493e7f
+        sha256: 9bbe75f88e4ef4f07b66016f279989d0152b3b9b4eda6205116248a8ff493e7f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fceux/blobs/sha256:6d51564f3c8477453d8b0ea8045237bf8c8c73e770679b3a60518eeda71a3c40
+        sha256: 6d51564f3c8477453d8b0ea8045237bf8c8c73e770679b3a60518eeda71a3c40
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fceux/blobs/sha256:23e56b704f9059aca2ac48e73eeae0c74ada48f58296ac98e58f5a6f69479044
+        sha256: 23e56b704f9059aca2ac48e73eeae0c74ada48f58296ac98e58f5a6f69479044
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/TASEmulators/fceux.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - ffmpeg
-  - libarchive
-  - mesa
-  - mesa-glu
-  - minizip
-  - qtbase
-  - sdl2
-  - x264
-  - x265
-  - zlib-ng-compat
+    - ffmpeg
+    - libarchive
+    - mesa
+    - mesa-glu
+    - minizip
+    - qtbase
+    - sdl2
+    - x264
+    - x265
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

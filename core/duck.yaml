@@ -3,44 +3,68 @@ version: 9.4.1.44384
 description: Command-line interface for Cyberduck (a multi-protocol file transfer tool)
 homepage: https://duck.sh/
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/duck/blobs/sha256:6c7beee978d94549eceb854c2353afae491885e1843ce3c4f21cec0508417e92
-    sha256: 6c7beee978d94549eceb854c2353afae491885e1843ce3c4f21cec0508417e92
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/duck/blobs/sha256:91455b2daf90459c7045654df2038922b9f74a559cf25f06102346a68cdeeac3
-    sha256: 91455b2daf90459c7045654df2038922b9f74a559cf25f06102346a68cdeeac3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/duck/blobs/sha256:d555076a7fd4a2592f13e94e47c3e5d28ac7e99ae368a7af4a5bde52315b848f
-    sha256: d555076a7fd4a2592f13e94e47c3e5d28ac7e99ae368a7af4a5bde52315b848f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/duck/blobs/sha256:176967fccc1caf93661202497e940cfce47b1842192dc9f20a1502775bb7a826
-    sha256: 176967fccc1caf93661202497e940cfce47b1842192dc9f20a1502775bb7a826
-source:
-  url: https://dist.duck.sh/duck-src-9.4.1.44384.tar.gz
-  sha256: cef789cb1900d03b38606eecd8f05e9e2b02cf50d8100680eb74230dd1a3bc60
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/duck/blobs/sha256:91455b2daf90459c7045654df2038922b9f74a559cf25f06102346a68cdeeac3
+        sha256: 91455b2daf90459c7045654df2038922b9f74a559cf25f06102346a68cdeeac3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/duck/blobs/sha256:6c7beee978d94549eceb854c2353afae491885e1843ce3c4f21cec0508417e92
+        sha256: 6c7beee978d94549eceb854c2353afae491885e1843ce3c4f21cec0508417e92
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/duck/blobs/sha256:d555076a7fd4a2592f13e94e47c3e5d28ac7e99ae368a7af4a5bde52315b848f
+        sha256: d555076a7fd4a2592f13e94e47c3e5d28ac7e99ae368a7af4a5bde52315b848f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/duck/blobs/sha256:176967fccc1caf93661202497e940cfce47b1842192dc9f20a1502775bb7a826
+        sha256: 176967fccc1caf93661202497e940cfce47b1842192dc9f20a1502775bb7a826
+        sha512: ""
+        signature: ""
+source:
+    url: https://dist.duck.sh/duck-src-9.4.1.44384.tar.gz
+    sha256: cef789cb1900d03b38606eecd8f05e9e2b02cf50d8100680eb74230dd1a3bc60
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ant
-  - maven
-  - pkgconf
+    - ant
+    - maven
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - freetype
-  - giflib
-  - harfbuzz
-  - jpeg-turbo
-  - libpng
-  - libx11
-  - libxext
-  - libxi
-  - libxrender
-  - libxtst
-  - little-cms2
-  - openjdk
-  - zlib-ng-compat
+    - alsa-lib
+    - freetype
+    - giflib
+    - harfbuzz
+    - jpeg-turbo
+    - libpng
+    - libx11
+    - libxext
+    - libxi
+    - libxrender
+    - libxtst
+    - little-cms2
+    - openjdk
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 1.5.0
 description: XKB keyboard description compiler
 homepage: https://www.x.org
 license: HPND AND MIT-open-group
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xkbcomp/blobs/sha256:94c2d20aea0e61fc141e27bbe54fbf3ccf925c96fd9feea8f7bd6635a320cee3
-    sha256: 94c2d20aea0e61fc141e27bbe54fbf3ccf925c96fd9feea8f7bd6635a320cee3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xkbcomp/blobs/sha256:279212c9fcc8a124cd34fe55a8dc18242bd31e94f3baf634f9c066906433f632
-    sha256: 279212c9fcc8a124cd34fe55a8dc18242bd31e94f3baf634f9c066906433f632
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xkbcomp/blobs/sha256:aa59cc3f15db3ac79bf395bea5937f57957e611da69a05bad79214a19560440a
-    sha256: aa59cc3f15db3ac79bf395bea5937f57957e611da69a05bad79214a19560440a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xkbcomp/blobs/sha256:f81ffd52c4f1e2c651340725196bbb20d7ee9546b5de721273207f64591d5a06
-    sha256: f81ffd52c4f1e2c651340725196bbb20d7ee9546b5de721273207f64591d5a06
-source:
-  url: https://www.x.org/releases/individual/app/xkbcomp-1.5.0.tar.xz
-  sha256: 2ac31f26600776db6d9cd79b3fcd272263faebac7eb85fb2f33c7141b8486060
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - libxkbfile
+    - libx11
+    - libxkbfile
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xkbcomp/blobs/sha256:279212c9fcc8a124cd34fe55a8dc18242bd31e94f3baf634f9c066906433f632
+        sha256: 279212c9fcc8a124cd34fe55a8dc18242bd31e94f3baf634f9c066906433f632
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xkbcomp/blobs/sha256:94c2d20aea0e61fc141e27bbe54fbf3ccf925c96fd9feea8f7bd6635a320cee3
+        sha256: 94c2d20aea0e61fc141e27bbe54fbf3ccf925c96fd9feea8f7bd6635a320cee3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xkbcomp/blobs/sha256:aa59cc3f15db3ac79bf395bea5937f57957e611da69a05bad79214a19560440a
+        sha256: aa59cc3f15db3ac79bf395bea5937f57957e611da69a05bad79214a19560440a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xkbcomp/blobs/sha256:f81ffd52c4f1e2c651340725196bbb20d7ee9546b5de721273207f64591d5a06
+        sha256: f81ffd52c4f1e2c651340725196bbb20d7ee9546b5de721273207f64591d5a06
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/releases/individual/app/xkbcomp-1.5.0.tar.xz
+    sha256: 2ac31f26600776db6d9cd79b3fcd272263faebac7eb85fb2f33c7141b8486060
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

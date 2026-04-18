@@ -1,28 +1,54 @@
 name: activemq
 version: 6.2.4
-description: "Apache ActiveMQ: powerful open source messaging server"
+description: 'Apache ActiveMQ: powerful open source messaging server'
 homepage: https://activemq.apache.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:301a724cef18c2a475641f35293cfdc7cc19ca526811e2c1c1f457d9acbf5afa
-    sha256: 301a724cef18c2a475641f35293cfdc7cc19ca526811e2c1c1f457d9acbf5afa
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:b61c3627c31601411807419ddc7e521560354e213aa85260adda050933294c53
-    sha256: b61c3627c31601411807419ddc7e521560354e213aa85260adda050933294c53
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:ed33653f2273149903a792702865a015a7d447f3d7d20e2fac4f6ea304430d07
-    sha256: ed33653f2273149903a792702865a015a7d447f3d7d20e2fac4f6ea304430d07
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:a0b81bbccfcead36a8bcfe5d3a166c0b1a9c803da803980e5f04bd49a4ba12b6
-    sha256: a0b81bbccfcead36a8bcfe5d3a166c0b1a9c803da803980e5f04bd49a4ba12b6
-source:
-  url: https://www.apache.org/dyn/closer.lua?path=activemq/6.2.4/apache-activemq-6.2.4-bin.tar.gz
-  sha256: fe3bf23bc70343aeba8bc279dd25cf4b95b2066379199c0ae9355a0f15f12613
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - java-service-wrapper
-  - openjdk
+    - java-service-wrapper
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:b61c3627c31601411807419ddc7e521560354e213aa85260adda050933294c53
+        sha256: b61c3627c31601411807419ddc7e521560354e213aa85260adda050933294c53
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:301a724cef18c2a475641f35293cfdc7cc19ca526811e2c1c1f457d9acbf5afa
+        sha256: 301a724cef18c2a475641f35293cfdc7cc19ca526811e2c1c1f457d9acbf5afa
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:ed33653f2273149903a792702865a015a7d447f3d7d20e2fac4f6ea304430d07
+        sha256: ed33653f2273149903a792702865a015a7d447f3d7d20e2fac4f6ea304430d07
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:a0b81bbccfcead36a8bcfe5d3a166c0b1a9c803da803980e5f04bd49a4ba12b6
+        sha256: a0b81bbccfcead36a8bcfe5d3a166c0b1a9c803da803980e5f04bd49a4ba12b6
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=activemq/6.2.4/apache-activemq-6.2.4-bin.tar.gz
+    sha256: fe3bf23bc70343aeba8bc279dd25cf4b95b2066379199c0ae9355a0f15f12613
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

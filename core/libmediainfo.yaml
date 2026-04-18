@@ -1,35 +1,59 @@
 name: libmediainfo
-version: 26.01
+version: "26.01"
 description: Shared library for mediainfo
 homepage: https://mediaarea.net/en/MediaInfo
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmediainfo/blobs/sha256:92de23d9cb0513aafc55d1e860fd2fd5cf59780dda14ca011ff4f836dfff1cb9
-    sha256: 92de23d9cb0513aafc55d1e860fd2fd5cf59780dda14ca011ff4f836dfff1cb9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmediainfo/blobs/sha256:ab9338fd06ee4243ab5b8b6eb71d6377fdd3b99094a31b88a24c7f6158e3ca4d
-    sha256: ab9338fd06ee4243ab5b8b6eb71d6377fdd3b99094a31b88a24c7f6158e3ca4d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmediainfo/blobs/sha256:a7dd457a3095977080d1ae88a78e731641790447d533bc41681d7323c156ca53
-    sha256: a7dd457a3095977080d1ae88a78e731641790447d533bc41681d7323c156ca53
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmediainfo/blobs/sha256:50f3500f3fb67466199cb9e2044e568a940aefdaebcf1f91bdee485c56221bb5
-    sha256: 50f3500f3fb67466199cb9e2044e568a940aefdaebcf1f91bdee485c56221bb5
-source:
-  url: https://mediaarea.net/download/source/libmediainfo/26.01/libmediainfo_26.01.tar.xz
-  sha256: bcd3d2cc12cf108ca0fbad07568b303257e72afd8ff73d05cfe6b7aa0e66a1c5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libmms
-  - libzen
+    - libmms
+    - libzen
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmediainfo/blobs/sha256:ab9338fd06ee4243ab5b8b6eb71d6377fdd3b99094a31b88a24c7f6158e3ca4d
+        sha256: ab9338fd06ee4243ab5b8b6eb71d6377fdd3b99094a31b88a24c7f6158e3ca4d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmediainfo/blobs/sha256:92de23d9cb0513aafc55d1e860fd2fd5cf59780dda14ca011ff4f836dfff1cb9
+        sha256: 92de23d9cb0513aafc55d1e860fd2fd5cf59780dda14ca011ff4f836dfff1cb9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmediainfo/blobs/sha256:a7dd457a3095977080d1ae88a78e731641790447d533bc41681d7323c156ca53
+        sha256: a7dd457a3095977080d1ae88a78e731641790447d533bc41681d7323c156ca53
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmediainfo/blobs/sha256:50f3500f3fb67466199cb9e2044e568a940aefdaebcf1f91bdee485c56221bb5
+        sha256: 50f3500f3fb67466199cb9e2044e568a940aefdaebcf1f91bdee485c56221bb5
+        sha512: ""
+        signature: ""
+source:
+    url: https://mediaarea.net/download/source/libmediainfo/26.01/libmediainfo_26.01.tar.xz
+    sha256: bcd3d2cc12cf108ca0fbad07568b303257e72afd8ff73d05cfe6b7aa0e66a1c5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - libmms
-  - libzen
-  - zlib-ng-compat
+    - libmms
+    - libzen
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

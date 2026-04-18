@@ -3,27 +3,52 @@ version: 2.1.24
 description: Accelerated BLAST compatible local sequence aligner
 homepage: https://github.com/bbuchfink/diamond
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diamond/blobs/sha256:4592cfe55942164d7064b7ba936a4fcdff041f1ac1bc8faf0b745567dd8bcfcf
-    sha256: 4592cfe55942164d7064b7ba936a4fcdff041f1ac1bc8faf0b745567dd8bcfcf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diamond/blobs/sha256:7db2b9a562701e72523da9ef41b7b915d208fafba6b1bae92648429d365db1a2
-    sha256: 7db2b9a562701e72523da9ef41b7b915d208fafba6b1bae92648429d365db1a2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diamond/blobs/sha256:d542bc6abfc347c2f0b2d3dab8baf6b3bcc288c9a8e0a058a237504fd948b73a
-    sha256: d542bc6abfc347c2f0b2d3dab8baf6b3bcc288c9a8e0a058a237504fd948b73a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diamond/blobs/sha256:095fa5e6244146140a6a4f8db2189dfbbe064227c1ffb0159b4b8bc3e24a94f5
-    sha256: 095fa5e6244146140a6a4f8db2189dfbbe064227c1ffb0159b4b8bc3e24a94f5
-source:
-  url: https://github.com/bbuchfink/diamond/archive/refs/tags/v2.1.24.tar.gz
-  sha256: 4879c27a8fc96d84793c3239a314cc3ff78f3b26ee6a3f228cddab6338bc0990
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diamond/blobs/sha256:7db2b9a562701e72523da9ef41b7b915d208fafba6b1bae92648429d365db1a2
+        sha256: 7db2b9a562701e72523da9ef41b7b915d208fafba6b1bae92648429d365db1a2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diamond/blobs/sha256:4592cfe55942164d7064b7ba936a4fcdff041f1ac1bc8faf0b745567dd8bcfcf
+        sha256: 4592cfe55942164d7064b7ba936a4fcdff041f1ac1bc8faf0b745567dd8bcfcf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diamond/blobs/sha256:d542bc6abfc347c2f0b2d3dab8baf6b3bcc288c9a8e0a058a237504fd948b73a
+        sha256: d542bc6abfc347c2f0b2d3dab8baf6b3bcc288c9a8e0a058a237504fd948b73a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diamond/blobs/sha256:095fa5e6244146140a6a4f8db2189dfbbe064227c1ffb0159b4b8bc3e24a94f5
+        sha256: 095fa5e6244146140a6a4f8db2189dfbbe064227c1ffb0159b4b8bc3e24a94f5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bbuchfink/diamond/archive/refs/tags/v2.1.24.tar.gz
+    sha256: 4879c27a8fc96d84793c3239a314cc3ff78f3b26ee6a3f228cddab6338bc0990
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

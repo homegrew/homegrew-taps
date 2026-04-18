@@ -1,32 +1,56 @@
 name: cling
-version: 1.3
+version: "1.3"
 description: C++ interpreter
 homepage: https://root.cern/cling/
 license: (LGPL-2.1-only OR NCSA) AND (Apache-2.0 WITH LLVM-exception)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cling/blobs/sha256:a0e982f092f47c906adcc71ff75b127822ecfab69cc40d353955a007682e4cf1
-    sha256: a0e982f092f47c906adcc71ff75b127822ecfab69cc40d353955a007682e4cf1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cling/blobs/sha256:f0c5153fa13c8f5194047a799cb51f44e66bab25dadfea0486363f72194ee810
-    sha256: f0c5153fa13c8f5194047a799cb51f44e66bab25dadfea0486363f72194ee810
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cling/blobs/sha256:7072596311dacb08ab7bddb2e7d4d12496c6525ba44981f3e9d2973f97c5fdba
-    sha256: 7072596311dacb08ab7bddb2e7d4d12496c6525ba44981f3e9d2973f97c5fdba
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cling/blobs/sha256:4a99d40bb84f2cc6986094d0e9c89e73fe34aa5df810a3408a56dc8ff2d00208
-    sha256: 4a99d40bb84f2cc6986094d0e9c89e73fe34aa5df810a3408a56dc8ff2d00208
-source:
-  url: https://github.com/root-project/cling/archive/refs/tags/v1.3.tar.gz
-  sha256: ca81f3bc952338beffba178633d77f5b3e1f1f180cbe2bb9f2713c06f410fd18
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - zstd
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cling/blobs/sha256:f0c5153fa13c8f5194047a799cb51f44e66bab25dadfea0486363f72194ee810
+        sha256: f0c5153fa13c8f5194047a799cb51f44e66bab25dadfea0486363f72194ee810
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cling/blobs/sha256:a0e982f092f47c906adcc71ff75b127822ecfab69cc40d353955a007682e4cf1
+        sha256: a0e982f092f47c906adcc71ff75b127822ecfab69cc40d353955a007682e4cf1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cling/blobs/sha256:7072596311dacb08ab7bddb2e7d4d12496c6525ba44981f3e9d2973f97c5fdba
+        sha256: 7072596311dacb08ab7bddb2e7d4d12496c6525ba44981f3e9d2973f97c5fdba
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cling/blobs/sha256:4a99d40bb84f2cc6986094d0e9c89e73fe34aa5df810a3408a56dc8ff2d00208
+        sha256: 4a99d40bb84f2cc6986094d0e9c89e73fe34aa5df810a3408a56dc8ff2d00208
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/root-project/cling/archive/refs/tags/v1.3.tar.gz
+    sha256: ca81f3bc952338beffba178633d77f5b3e1f1f180cbe2bb9f2713c06f410fd18
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - zlib-ng-compat
-  - zstd
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

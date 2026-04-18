@@ -3,27 +3,52 @@ version: 1.4.0
 description: Reference codec for the Ultra HDR format
 homepage: https://developer.android.com/media/platform/hdr-image-format
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libultrahdr/blobs/sha256:4fb20ac81780814aa810c0009477f2a2c5a72a3a4be8a085cd62745c1fe87fad
-    sha256: 4fb20ac81780814aa810c0009477f2a2c5a72a3a4be8a085cd62745c1fe87fad
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libultrahdr/blobs/sha256:bcc9eb419fbd3537629dad795cf7aebfa4003054f1ed048938fd921a5dbcf7d6
-    sha256: bcc9eb419fbd3537629dad795cf7aebfa4003054f1ed048938fd921a5dbcf7d6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libultrahdr/blobs/sha256:90793c83c2f180f134f70c76e8e7bb3a72dd1d5959bff6f0add687f792b544ac
-    sha256: 90793c83c2f180f134f70c76e8e7bb3a72dd1d5959bff6f0add687f792b544ac
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libultrahdr/blobs/sha256:57a6cfa364eee5cc9c731bab793e26cecfb58828519daefacdc50e3a4602379a
-    sha256: 57a6cfa364eee5cc9c731bab793e26cecfb58828519daefacdc50e3a4602379a
-source:
-  url: https://github.com/google/libultrahdr/archive/refs/tags/v1.4.0.tar.gz
-  sha256: e7e1252e2c44d8ed6b99ee0f67a3caf2d8a61c43834b13b1c3cd485574c03ab9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
+    - jpeg-turbo
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libultrahdr/blobs/sha256:bcc9eb419fbd3537629dad795cf7aebfa4003054f1ed048938fd921a5dbcf7d6
+        sha256: bcc9eb419fbd3537629dad795cf7aebfa4003054f1ed048938fd921a5dbcf7d6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libultrahdr/blobs/sha256:4fb20ac81780814aa810c0009477f2a2c5a72a3a4be8a085cd62745c1fe87fad
+        sha256: 4fb20ac81780814aa810c0009477f2a2c5a72a3a4be8a085cd62745c1fe87fad
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libultrahdr/blobs/sha256:90793c83c2f180f134f70c76e8e7bb3a72dd1d5959bff6f0add687f792b544ac
+        sha256: 90793c83c2f180f134f70c76e8e7bb3a72dd1d5959bff6f0add687f792b544ac
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libultrahdr/blobs/sha256:57a6cfa364eee5cc9c731bab793e26cecfb58828519daefacdc50e3a4602379a
+        sha256: 57a6cfa364eee5cc9c731bab793e26cecfb58828519daefacdc50e3a4602379a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/google/libultrahdr/archive/refs/tags/v1.4.0.tar.gz
+    sha256: e7e1252e2c44d8ed6b99ee0f67a3caf2d8a61c43834b13b1c3cd485574c03ab9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

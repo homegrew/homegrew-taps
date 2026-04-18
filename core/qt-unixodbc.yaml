@@ -3,29 +3,54 @@ version: 6.11.0
 description: Qt SQL Database Driver
 homepage: https://www.qt.io/
 license: GPL-2.0-only OR GPL-3.0-only OR LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt-unixodbc/blobs/sha256:226b26cda71840f4a5651cfdc70eb54ce23e5b3e6f6845feb3ee678136e8f5f8
-    sha256: 226b26cda71840f4a5651cfdc70eb54ce23e5b3e6f6845feb3ee678136e8f5f8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt-unixodbc/blobs/sha256:e7e83bfd316f2c7aa989d91a33b8f8092253cbd7ec1f930c6321c333606ee219
-    sha256: e7e83bfd316f2c7aa989d91a33b8f8092253cbd7ec1f930c6321c333606ee219
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qt-unixodbc/blobs/sha256:06086701a96eff0c9a997be8b64d1119b21d8bd93ad987ceacf4dde3ca3eac81
-    sha256: 06086701a96eff0c9a997be8b64d1119b21d8bd93ad987ceacf4dde3ca3eac81
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qt-unixodbc/blobs/sha256:efd1e697f79acbfc8c18165b5258a02b06afaa0889d7e68030e3b4184e9dba2d
-    sha256: efd1e697f79acbfc8c18165b5258a02b06afaa0889d7e68030e3b4184e9dba2d
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
-  sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
-  - unixodbc
+    - qtbase
+    - unixodbc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt-unixodbc/blobs/sha256:e7e83bfd316f2c7aa989d91a33b8f8092253cbd7ec1f930c6321c333606ee219
+        sha256: e7e83bfd316f2c7aa989d91a33b8f8092253cbd7ec1f930c6321c333606ee219
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt-unixodbc/blobs/sha256:226b26cda71840f4a5651cfdc70eb54ce23e5b3e6f6845feb3ee678136e8f5f8
+        sha256: 226b26cda71840f4a5651cfdc70eb54ce23e5b3e6f6845feb3ee678136e8f5f8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qt-unixodbc/blobs/sha256:06086701a96eff0c9a997be8b64d1119b21d8bd93ad987ceacf4dde3ca3eac81
+        sha256: 06086701a96eff0c9a997be8b64d1119b21d8bd93ad987ceacf4dde3ca3eac81
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qt-unixodbc/blobs/sha256:efd1e697f79acbfc8c18165b5258a02b06afaa0889d7e68030e3b4184e9dba2d
+        sha256: efd1e697f79acbfc8c18165b5258a02b06afaa0889d7e68030e3b4184e9dba2d
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz
+    sha256: 231ad85979864d914dc9568a1b71c91d6cf20d7b2021d059103bf0eb51cb755e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

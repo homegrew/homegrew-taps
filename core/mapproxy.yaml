@@ -3,35 +3,60 @@ version: 6.0.1
 description: Accelerating web map proxy
 homepage: https://mapproxy.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mapproxy/blobs/sha256:fff1075146f7b05b42e2e62ef7b3b89289ebf5b1a2d252e62988d1a70a2abd67
-    sha256: fff1075146f7b05b42e2e62ef7b3b89289ebf5b1a2d252e62988d1a70a2abd67
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mapproxy/blobs/sha256:2ef17b0c91eb0f771938d6b4d8f865a0c69a7180cf9dddf56f0f082d06cb59d0
-    sha256: 2ef17b0c91eb0f771938d6b4d8f865a0c69a7180cf9dddf56f0f082d06cb59d0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mapproxy/blobs/sha256:14440b9b2be116fe0c01f93874d0c3ed5ccd88c47aa6316b71d7e3cb14a73c56
-    sha256: 14440b9b2be116fe0c01f93874d0c3ed5ccd88c47aa6316b71d7e3cb14a73c56
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mapproxy/blobs/sha256:fe1503a8a7d6478f5c6d0df12fda9163900f0aa49152c2514189f9fce9397f53
-    sha256: fe1503a8a7d6478f5c6d0df12fda9163900f0aa49152c2514189f9fce9397f53
-source:
-  url: https://files.pythonhosted.org/packages/7d/5e/972a52a0b3f646a53dd3e8a552256a649548b8fb84b4fbb1b43b90de86ea/mapproxy-6.0.1.tar.gz
-  sha256: aada98e509b8b0b99eb3f9f97bebf5f284711bd1bfae46e8e6f2b296581bc677
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - geos
-  - libyaml
-  - numpy
-  - pillow
-  - proj
-  - python@3.14
-  - rpds-py
+    - certifi
+    - geos
+    - libyaml
+    - numpy
+    - pillow
+    - proj
+    - python@3.14
+    - rpds-py
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mapproxy/blobs/sha256:2ef17b0c91eb0f771938d6b4d8f865a0c69a7180cf9dddf56f0f082d06cb59d0
+        sha256: 2ef17b0c91eb0f771938d6b4d8f865a0c69a7180cf9dddf56f0f082d06cb59d0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mapproxy/blobs/sha256:fff1075146f7b05b42e2e62ef7b3b89289ebf5b1a2d252e62988d1a70a2abd67
+        sha256: fff1075146f7b05b42e2e62ef7b3b89289ebf5b1a2d252e62988d1a70a2abd67
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mapproxy/blobs/sha256:14440b9b2be116fe0c01f93874d0c3ed5ccd88c47aa6316b71d7e3cb14a73c56
+        sha256: 14440b9b2be116fe0c01f93874d0c3ed5ccd88c47aa6316b71d7e3cb14a73c56
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mapproxy/blobs/sha256:fe1503a8a7d6478f5c6d0df12fda9163900f0aa49152c2514189f9fce9397f53
+        sha256: fe1503a8a7d6478f5c6d0df12fda9163900f0aa49152c2514189f9fce9397f53
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/7d/5e/972a52a0b3f646a53dd3e8a552256a649548b8fb84b4fbb1b43b90de86ea/mapproxy-6.0.1.tar.gz
+    sha256: aada98e509b8b0b99eb3f9f97bebf5f284711bd1bfae46e8e6f2b296581bc677
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

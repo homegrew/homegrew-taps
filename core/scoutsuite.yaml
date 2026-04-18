@@ -3,28 +3,54 @@ version: 5.14.0
 description: Open source multi-cloud security-auditing tool
 homepage: https://github.com/nccgroup/ScoutSuite
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scoutsuite/blobs/sha256:1cad726f5f26306329e64d4c94fd55983a4fc5487446e337c1acd2794f4f58c3
-    sha256: 1cad726f5f26306329e64d4c94fd55983a4fc5487446e337c1acd2794f4f58c3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scoutsuite/blobs/sha256:199a5e9c795744814d43c50364b84fa43a696d569b67b277ff7d29d57e022c8f
-    sha256: 199a5e9c795744814d43c50364b84fa43a696d569b67b277ff7d29d57e022c8f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/scoutsuite/blobs/sha256:a29ca22024f057a00b4393245c071f7adba3e414363775de0ab58ca0fc8828a0
-    sha256: a29ca22024f057a00b4393245c071f7adba3e414363775de0ab58ca0fc8828a0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/scoutsuite/blobs/sha256:562d97616d9b7aa722ada32a915a4779173c950c05382c82a86048747bedc0eb
-    sha256: 562d97616d9b7aa722ada32a915a4779173c950c05382c82a86048747bedc0eb
-source:
-  url: https://files.pythonhosted.org/packages/a9/41/4f375fac81c66e1475c3ae18753a86191f253cdf24c29f28c8861d6bb984/scoutsuite-5.14.0.tar.gz
-  sha256: b021ad340196865093fb5d6e247f2596ec856e24cb39eb6e3e886923befd1208
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - libyaml
-  - python@3.14
+    - certifi
+    - cryptography
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scoutsuite/blobs/sha256:199a5e9c795744814d43c50364b84fa43a696d569b67b277ff7d29d57e022c8f
+        sha256: 199a5e9c795744814d43c50364b84fa43a696d569b67b277ff7d29d57e022c8f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scoutsuite/blobs/sha256:1cad726f5f26306329e64d4c94fd55983a4fc5487446e337c1acd2794f4f58c3
+        sha256: 1cad726f5f26306329e64d4c94fd55983a4fc5487446e337c1acd2794f4f58c3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/scoutsuite/blobs/sha256:a29ca22024f057a00b4393245c071f7adba3e414363775de0ab58ca0fc8828a0
+        sha256: a29ca22024f057a00b4393245c071f7adba3e414363775de0ab58ca0fc8828a0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/scoutsuite/blobs/sha256:562d97616d9b7aa722ada32a915a4779173c950c05382c82a86048747bedc0eb
+        sha256: 562d97616d9b7aa722ada32a915a4779173c950c05382c82a86048747bedc0eb
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/a9/41/4f375fac81c66e1475c3ae18753a86191f253cdf24c29f28c8861d6bb984/scoutsuite-5.14.0.tar.gz
+    sha256: b021ad340196865093fb5d6e247f2596ec856e24cb39eb6e3e886923befd1208
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

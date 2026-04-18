@@ -3,41 +3,65 @@ version: 1.4.341.0
 description: Vulkan utilities and tools
 homepage: https://github.com/KhronosGroup/Vulkan-Tools
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vulkan-tools/blobs/sha256:fe466af64eb0df78741dd5589227b82965852cdb0facdcc6678249b230ae53bf
-    sha256: fe466af64eb0df78741dd5589227b82965852cdb0facdcc6678249b230ae53bf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vulkan-tools/blobs/sha256:351bae3eac14ac1ce4a2e287eab054667447e4f63184491a9a08e490e5876c87
-    sha256: 351bae3eac14ac1ce4a2e287eab054667447e4f63184491a9a08e490e5876c87
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vulkan-tools/blobs/sha256:42cb62a3d420ec2e1eee6c3cba7a8ae54c26a0c6d68871fe7cc580ba96e594e7
-    sha256: 42cb62a3d420ec2e1eee6c3cba7a8ae54c26a0c6d68871fe7cc580ba96e594e7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vulkan-tools/blobs/sha256:ee0b9073a9d84d9f838d4c11a074ed078fa1b9183ed21387028156b04cb6842a
-    sha256: ee0b9073a9d84d9f838d4c11a074ed078fa1b9183ed21387028156b04cb6842a
-source:
-  url: https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/vulkan-sdk-1.4.341.0.tar.gz
-  sha256: dc65f1ea97dd0b2155c2281a79e87d27183c0737fb96377744091a3c8460ae1e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glslang
-  - vulkan-headers
-  - vulkan-loader
-  - molten-vk
+    - glslang
+    - vulkan-headers
+    - vulkan-loader
+    - molten-vk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vulkan-tools/blobs/sha256:351bae3eac14ac1ce4a2e287eab054667447e4f63184491a9a08e490e5876c87
+        sha256: 351bae3eac14ac1ce4a2e287eab054667447e4f63184491a9a08e490e5876c87
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vulkan-tools/blobs/sha256:fe466af64eb0df78741dd5589227b82965852cdb0facdcc6678249b230ae53bf
+        sha256: fe466af64eb0df78741dd5589227b82965852cdb0facdcc6678249b230ae53bf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vulkan-tools/blobs/sha256:42cb62a3d420ec2e1eee6c3cba7a8ae54c26a0c6d68871fe7cc580ba96e594e7
+        sha256: 42cb62a3d420ec2e1eee6c3cba7a8ae54c26a0c6d68871fe7cc580ba96e594e7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vulkan-tools/blobs/sha256:ee0b9073a9d84d9f838d4c11a074ed078fa1b9183ed21387028156b04cb6842a
+        sha256: ee0b9073a9d84d9f838d4c11a074ed078fa1b9183ed21387028156b04cb6842a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/vulkan-sdk-1.4.341.0.tar.gz
+    sha256: dc65f1ea97dd0b2155c2281a79e87d27183c0737fb96377744091a3c8460ae1e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - glslang
-  - libx11
-  - libxcb
-  - libxkbfile
-  - libxrandr
-  - vulkan-headers
-  - vulkan-loader
-  - wayland
-  - wayland-protocols
+    - glslang
+    - libx11
+    - libxcb
+    - libxkbfile
+    - libxrandr
+    - vulkan-headers
+    - vulkan-loader
+    - wayland
+    - wayland-protocols
+build:
+    configure: []
+    install: []
+service: null

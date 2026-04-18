@@ -3,27 +3,52 @@ version: 1.11.2
 description: Java decompiler
 homepage: https://vineflower.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vineflower/blobs/sha256:5e77a21a55ef74e9c8310e0121698f1eb50830d344ff5acb3ced54e2ed54c9fb
-    sha256: 5e77a21a55ef74e9c8310e0121698f1eb50830d344ff5acb3ced54e2ed54c9fb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vineflower/blobs/sha256:cb76ee96aa9cbea200a151bf7a24218dbc0b6994ef75efd4e48459499e86ee72
-    sha256: cb76ee96aa9cbea200a151bf7a24218dbc0b6994ef75efd4e48459499e86ee72
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vineflower/blobs/sha256:cdf0610c249ba909944aec7b19f2b2ab4110a34d745fd9184fdbafd8eaba0138
-    sha256: cdf0610c249ba909944aec7b19f2b2ab4110a34d745fd9184fdbafd8eaba0138
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vineflower/blobs/sha256:24e17ecf2cf39fcb0618d53e2602726052e4a123300f883f97f8a28777113615
-    sha256: 24e17ecf2cf39fcb0618d53e2602726052e4a123300f883f97f8a28777113615
-source:
-  url: https://github.com/Vineflower/vineflower/archive/refs/tags/1.11.2.tar.gz
-  sha256: f37543cd5e99e0f74870dd2a5d2b8e84a03711ab6bf0c89a5377affea8547027
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vineflower/blobs/sha256:cb76ee96aa9cbea200a151bf7a24218dbc0b6994ef75efd4e48459499e86ee72
+        sha256: cb76ee96aa9cbea200a151bf7a24218dbc0b6994ef75efd4e48459499e86ee72
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vineflower/blobs/sha256:5e77a21a55ef74e9c8310e0121698f1eb50830d344ff5acb3ced54e2ed54c9fb
+        sha256: 5e77a21a55ef74e9c8310e0121698f1eb50830d344ff5acb3ced54e2ed54c9fb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vineflower/blobs/sha256:cdf0610c249ba909944aec7b19f2b2ab4110a34d745fd9184fdbafd8eaba0138
+        sha256: cdf0610c249ba909944aec7b19f2b2ab4110a34d745fd9184fdbafd8eaba0138
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vineflower/blobs/sha256:24e17ecf2cf39fcb0618d53e2602726052e4a123300f883f97f8a28777113615
+        sha256: 24e17ecf2cf39fcb0618d53e2602726052e4a123300f883f97f8a28777113615
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Vineflower/vineflower/archive/refs/tags/1.11.2.tar.gz
+    sha256: f37543cd5e99e0f74870dd2a5d2b8e84a03711ab6bf0c89a5377affea8547027
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gradle@8
+    - gradle@8
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

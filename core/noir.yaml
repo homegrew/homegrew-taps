@@ -3,39 +3,63 @@ version: 0.29.1
 description: Attack surface detector that identifies endpoints by static analysis
 homepage: https://owasp.org/www-project-noir/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/noir/blobs/sha256:09deb3040aa035a7c48438f87e94fddd7bf3482f75dba8035214bab221e366f4
-    sha256: 09deb3040aa035a7c48438f87e94fddd7bf3482f75dba8035214bab221e366f4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/noir/blobs/sha256:16c367765a4230a251d182e71fb90eea84d50495463a1306362890df3c9f26b1
-    sha256: 16c367765a4230a251d182e71fb90eea84d50495463a1306362890df3c9f26b1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/noir/blobs/sha256:20f1fc248edbabcf6a7a2df91b1eeb9acd3f2220e01e34bfbd81e52cedc32a44
-    sha256: 20f1fc248edbabcf6a7a2df91b1eeb9acd3f2220e01e34bfbd81e52cedc32a44
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/noir/blobs/sha256:a886eae8cfad285aa9044167d379afeaec0730935009fdaa9cb93649b2fb53c7
-    sha256: a886eae8cfad285aa9044167d379afeaec0730935009fdaa9cb93649b2fb53c7
-source:
-  url: https://github.com/owasp-noir/noir/archive/refs/tags/v0.29.1.tar.gz
-  sha256: a7e3703d71acc0736effe71d3b7ee973ce0f49d03546501bd3e354f2bcf40065
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - bdw-gc
-  - libevent
-  - libyaml
-  - openssl@3
-  - pcre2
+    - bdw-gc
+    - libevent
+    - libyaml
+    - openssl@3
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/noir/blobs/sha256:16c367765a4230a251d182e71fb90eea84d50495463a1306362890df3c9f26b1
+        sha256: 16c367765a4230a251d182e71fb90eea84d50495463a1306362890df3c9f26b1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/noir/blobs/sha256:09deb3040aa035a7c48438f87e94fddd7bf3482f75dba8035214bab221e366f4
+        sha256: 09deb3040aa035a7c48438f87e94fddd7bf3482f75dba8035214bab221e366f4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/noir/blobs/sha256:20f1fc248edbabcf6a7a2df91b1eeb9acd3f2220e01e34bfbd81e52cedc32a44
+        sha256: 20f1fc248edbabcf6a7a2df91b1eeb9acd3f2220e01e34bfbd81e52cedc32a44
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/noir/blobs/sha256:a886eae8cfad285aa9044167d379afeaec0730935009fdaa9cb93649b2fb53c7
+        sha256: a886eae8cfad285aa9044167d379afeaec0730935009fdaa9cb93649b2fb53c7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/owasp-noir/noir/archive/refs/tags/v0.29.1.tar.gz
+    sha256: a7e3703d71acc0736effe71d3b7ee973ce0f49d03546501bd3e354f2bcf40065
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - crystal
-  - pkgconf
+    - crystal
+    - pkgconf
 linux_dependencies:
-  - bdw-gc
-  - libevent
-  - libyaml
-  - openssl@3
-  - pcre2
-  - zlib-ng-compat
+    - bdw-gc
+    - libevent
+    - libyaml
+    - openssl@3
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

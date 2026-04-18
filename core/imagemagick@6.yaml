@@ -3,49 +3,72 @@ version: 6.9.13-44
 description: Tools and libraries to manipulate images in many formats
 homepage: https://legacy.imagemagick.org/
 license: ImageMagick
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:b9da7a6a522b9d5930f82b1bb61ac8aca77f81a169f1c3512e53d9b7f4d96696
-    sha256: b9da7a6a522b9d5930f82b1bb61ac8aca77f81a169f1c3512e53d9b7f4d96696
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:2bbb8920d63acaf2856dcfcfcfaa2bdf7490c23d5d0b2460c70a123d63e69d4b
-    sha256: 2bbb8920d63acaf2856dcfcfcfaa2bdf7490c23d5d0b2460c70a123d63e69d4b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:20ac0d19d26748d0d0c8ef804b0b5bcdf15fb51c77c392de53695057bd0a759f
-    sha256: 20ac0d19d26748d0d0c8ef804b0b5bcdf15fb51c77c392de53695057bd0a759f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:f33c02cb37116f365bcc25eb044581f657ae02c836517463849e2aed2e792160
-    sha256: f33c02cb37116f365bcc25eb044581f657ae02c836517463849e2aed2e792160
-source:
-  url: https://imagemagick.org/archive/releases/ImageMagick-6.9.13-44.tar.xz
-  sha256: c0bd44e4377bd33245634a0cf6c30eb6c02f9960d09c3256833ad29f35e170dd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fontconfig
-  - freetype
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - libtool
-  - little-cms2
-  - openjpeg
-  - webp
-  - xz
-build_dependencies:
-  - pkgconf
-linux_dependencies:
-  - fontconfig
-  - freetype
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - libtool
-  - little-cms2
-  - openjpeg
-  - webp
-  - xz
-  - zlib-ng-compat
+    - fontconfig
+    - freetype
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - libtool
+    - little-cms2
+    - openjpeg
+    - webp
+    - xz
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:2bbb8920d63acaf2856dcfcfcfaa2bdf7490c23d5d0b2460c70a123d63e69d4b
+        sha256: 2bbb8920d63acaf2856dcfcfcfaa2bdf7490c23d5d0b2460c70a123d63e69d4b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:b9da7a6a522b9d5930f82b1bb61ac8aca77f81a169f1c3512e53d9b7f4d96696
+        sha256: b9da7a6a522b9d5930f82b1bb61ac8aca77f81a169f1c3512e53d9b7f4d96696
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:20ac0d19d26748d0d0c8ef804b0b5bcdf15fb51c77c392de53695057bd0a759f
+        sha256: 20ac0d19d26748d0d0c8ef804b0b5bcdf15fb51c77c392de53695057bd0a759f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:f33c02cb37116f365bcc25eb044581f657ae02c836517463849e2aed2e792160
+        sha256: f33c02cb37116f365bcc25eb044581f657ae02c836517463849e2aed2e792160
+        sha512: ""
+        signature: ""
+source:
+    url: https://imagemagick.org/archive/releases/ImageMagick-6.9.13-44.tar.xz
+    sha256: c0bd44e4377bd33245634a0cf6c30eb6c02f9960d09c3256833ad29f35e170dd
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+linux_dependencies:
+    - fontconfig
+    - freetype
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - libtool
+    - little-cms2
+    - openjpeg
+    - webp
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

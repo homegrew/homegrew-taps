@@ -1,31 +1,56 @@
 name: redshift
-version: 1.12
+version: "1.12"
 description: Adjust color temperature of your screen according to your surroundings
 homepage: https://github.com/jonls/redshift
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redshift/blobs/sha256:b3f728c06b42f585bdf50685e7613ee66f639d43f85030942edf712b6ad928ab
-    sha256: b3f728c06b42f585bdf50685e7613ee66f639d43f85030942edf712b6ad928ab
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redshift/blobs/sha256:ecccd726383b2a9fda6f1ce365744e74bd8d1e76b2031fd0f58caeb9daecee15
-    sha256: ecccd726383b2a9fda6f1ce365744e74bd8d1e76b2031fd0f58caeb9daecee15
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redshift/blobs/sha256:12372cb33e04989848070b332096420b45539cd69e31026545543207d7d0cc9a
-    sha256: 12372cb33e04989848070b332096420b45539cd69e31026545543207d7d0cc9a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redshift/blobs/sha256:c21e3b0726216ea136e4f022da78243fd5572e69f9a3fc7507c07831d95551d4
-    sha256: c21e3b0726216ea136e4f022da78243fd5572e69f9a3fc7507c07831d95551d4
-source:
-  url: https://github.com/jonls/redshift/releases/download/v1.12/redshift-1.12.tar.xz
-  sha256: d2f8c5300e3ce2a84fe6584d2f1483aa9eadc668ab1951b2c2b8a03ece3a22ba
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
-  - glib
+    - gettext
+    - glib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redshift/blobs/sha256:ecccd726383b2a9fda6f1ce365744e74bd8d1e76b2031fd0f58caeb9daecee15
+        sha256: ecccd726383b2a9fda6f1ce365744e74bd8d1e76b2031fd0f58caeb9daecee15
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redshift/blobs/sha256:b3f728c06b42f585bdf50685e7613ee66f639d43f85030942edf712b6ad928ab
+        sha256: b3f728c06b42f585bdf50685e7613ee66f639d43f85030942edf712b6ad928ab
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redshift/blobs/sha256:12372cb33e04989848070b332096420b45539cd69e31026545543207d7d0cc9a
+        sha256: 12372cb33e04989848070b332096420b45539cd69e31026545543207d7d0cc9a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redshift/blobs/sha256:c21e3b0726216ea136e4f022da78243fd5572e69f9a3fc7507c07831d95551d4
+        sha256: c21e3b0726216ea136e4f022da78243fd5572e69f9a3fc7507c07831d95551d4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jonls/redshift/releases/download/v1.12/redshift-1.12.tar.xz
+    sha256: d2f8c5300e3ce2a84fe6584d2f1483aa9eadc668ab1951b2c2b8a03ece3a22ba
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - intltool
-  - pkgconf
+    - intltool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

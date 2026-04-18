@@ -3,27 +3,53 @@ version: 0.3.2
 description: Command-line MP3 player
 homepage: https://mpg321.sourceforge.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpg321/blobs/sha256:4582777d133873930312cc1c4314d0997e3219f582b07c771a4f413b5cb0cfc5
-    sha256: 4582777d133873930312cc1c4314d0997e3219f582b07c771a4f413b5cb0cfc5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpg321/blobs/sha256:1a50f4f46de3340e25159744cfe7b8fb1c365f3aded9339ec723516e8bf91925
-    sha256: 1a50f4f46de3340e25159744cfe7b8fb1c365f3aded9339ec723516e8bf91925
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mpg321/blobs/sha256:3b1e0d4c1d736021d7d4ffb1354df112cef5815b4bf5c79669639cd80a9eb401
-    sha256: 3b1e0d4c1d736021d7d4ffb1354df112cef5815b4bf5c79669639cd80a9eb401
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mpg321/blobs/sha256:f3f1ba40fb7ed60d1a13f4b9942c93c319d2f09e95720fd03e34175288679458
-    sha256: f3f1ba40fb7ed60d1a13f4b9942c93c319d2f09e95720fd03e34175288679458
-source:
-  url: https://downloads.sourceforge.net/project/mpg321/mpg321/0.3.2/mpg321_0.3.2.orig.tar.gz
-  sha256: 056fcc03e3f5c5021ec74bb5053d32c4a3b89b4086478dcf81adae650eac284e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libao
-  - libid3tag
-  - mad
+    - libao
+    - libid3tag
+    - mad
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpg321/blobs/sha256:1a50f4f46de3340e25159744cfe7b8fb1c365f3aded9339ec723516e8bf91925
+        sha256: 1a50f4f46de3340e25159744cfe7b8fb1c365f3aded9339ec723516e8bf91925
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpg321/blobs/sha256:4582777d133873930312cc1c4314d0997e3219f582b07c771a4f413b5cb0cfc5
+        sha256: 4582777d133873930312cc1c4314d0997e3219f582b07c771a4f413b5cb0cfc5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mpg321/blobs/sha256:3b1e0d4c1d736021d7d4ffb1354df112cef5815b4bf5c79669639cd80a9eb401
+        sha256: 3b1e0d4c1d736021d7d4ffb1354df112cef5815b4bf5c79669639cd80a9eb401
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpg321/blobs/sha256:f3f1ba40fb7ed60d1a13f4b9942c93c319d2f09e95720fd03e34175288679458
+        sha256: f3f1ba40fb7ed60d1a13f4b9942c93c319d2f09e95720fd03e34175288679458
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/mpg321/mpg321/0.3.2/mpg321_0.3.2.orig.tar.gz
+    sha256: 056fcc03e3f5c5021ec74bb5053d32c4a3b89b4086478dcf81adae650eac284e
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

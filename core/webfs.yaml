@@ -1,29 +1,54 @@
 name: webfs
-version: 1.21
+version: "1.21"
 description: HTTP server for purely static content
 homepage: https://linux.bytesex.org/misc/webfs.html
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/webfs/blobs/sha256:f24eb50960a9e004fa3c769dcf977fc0582134669c439405884ceaad2b7ec18f
-    sha256: f24eb50960a9e004fa3c769dcf977fc0582134669c439405884ceaad2b7ec18f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/webfs/blobs/sha256:13ecbf81676a75692f1c5a4375a7510a42e0445c6f1bed71a750fda9bd286fb6
-    sha256: 13ecbf81676a75692f1c5a4375a7510a42e0445c6f1bed71a750fda9bd286fb6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/webfs/blobs/sha256:3656131d83b5affd389f147cc542fa0c5717aa0cd7aec1b03e05603f3a4ac06e
-    sha256: 3656131d83b5affd389f147cc542fa0c5717aa0cd7aec1b03e05603f3a4ac06e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/webfs/blobs/sha256:b797c9b3bda23e449f53975e905232df8010c9301d3117101167f82701a00d75
-    sha256: b797c9b3bda23e449f53975e905232df8010c9301d3117101167f82701a00d75
-source:
-  url: https://www.kraxel.org/releases/webfs/webfs-1.21.tar.gz
-  sha256: 98c1cb93473df08e166e848e549f86402e94a2f727366925b1c54ab31064a62a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/webfs/blobs/sha256:13ecbf81676a75692f1c5a4375a7510a42e0445c6f1bed71a750fda9bd286fb6
+        sha256: 13ecbf81676a75692f1c5a4375a7510a42e0445c6f1bed71a750fda9bd286fb6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/webfs/blobs/sha256:f24eb50960a9e004fa3c769dcf977fc0582134669c439405884ceaad2b7ec18f
+        sha256: f24eb50960a9e004fa3c769dcf977fc0582134669c439405884ceaad2b7ec18f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/webfs/blobs/sha256:3656131d83b5affd389f147cc542fa0c5717aa0cd7aec1b03e05603f3a4ac06e
+        sha256: 3656131d83b5affd389f147cc542fa0c5717aa0cd7aec1b03e05603f3a4ac06e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/webfs/blobs/sha256:b797c9b3bda23e449f53975e905232df8010c9301d3117101167f82701a00d75
+        sha256: b797c9b3bda23e449f53975e905232df8010c9301d3117101167f82701a00d75
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.kraxel.org/releases/webfs/webfs-1.21.tar.gz
+    sha256: 98c1cb93473df08e166e848e549f86402e94a2f727366925b1c54ab31064a62a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - httpd
+    - httpd
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

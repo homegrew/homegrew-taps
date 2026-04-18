@@ -3,39 +3,63 @@ version: 1.7.0
 description: Static site generator for audio producers
 homepage: https://codeberg.org/simonrepp/faircamp
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/faircamp/blobs/sha256:4194ed50aea3d486e72f7a64b53b467c73dacc876ed2dc93d3ab7d9dbfd4995c
-    sha256: 4194ed50aea3d486e72f7a64b53b467c73dacc876ed2dc93d3ab7d9dbfd4995c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/faircamp/blobs/sha256:3e37398d846b3710c540b6f177943b3486993265282b0342012fc105d633eeea
-    sha256: 3e37398d846b3710c540b6f177943b3486993265282b0342012fc105d633eeea
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/faircamp/blobs/sha256:c1ddaedfd2a098f6f8875c644d3ece063665cb50c73c8e511c8295a359e79915
-    sha256: c1ddaedfd2a098f6f8875c644d3ece063665cb50c73c8e511c8295a359e79915
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/faircamp/blobs/sha256:90b5aaff9681e96c735a215837d73bf8c9f73b0916ae7af46ad0037229655743
-    sha256: 90b5aaff9681e96c735a215837d73bf8c9f73b0916ae7af46ad0037229655743
-source:
-  url: https://codeberg.org/simonrepp/faircamp/archive/1.7.0.tar.gz
-  sha256: 199328a20ad82ffc45f6f96cbd472f72a55dfeee87b2be18559c19e9367d5408
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - glib
-  - opus
-  - vips
-  - xz
-  - gettext
+    - ffmpeg
+    - glib
+    - opus
+    - vips
+    - xz
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/faircamp/blobs/sha256:3e37398d846b3710c540b6f177943b3486993265282b0342012fc105d633eeea
+        sha256: 3e37398d846b3710c540b6f177943b3486993265282b0342012fc105d633eeea
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/faircamp/blobs/sha256:4194ed50aea3d486e72f7a64b53b467c73dacc876ed2dc93d3ab7d9dbfd4995c
+        sha256: 4194ed50aea3d486e72f7a64b53b467c73dacc876ed2dc93d3ab7d9dbfd4995c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/faircamp/blobs/sha256:c1ddaedfd2a098f6f8875c644d3ece063665cb50c73c8e511c8295a359e79915
+        sha256: c1ddaedfd2a098f6f8875c644d3ece063665cb50c73c8e511c8295a359e79915
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/faircamp/blobs/sha256:90b5aaff9681e96c735a215837d73bf8c9f73b0916ae7af46ad0037229655743
+        sha256: 90b5aaff9681e96c735a215837d73bf8c9f73b0916ae7af46ad0037229655743
+        sha512: ""
+        signature: ""
+source:
+    url: https://codeberg.org/simonrepp/faircamp/archive/1.7.0.tar.gz
+    sha256: 199328a20ad82ffc45f6f96cbd472f72a55dfeee87b2be18559c19e9367d5408
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - ffmpeg
-  - glib
-  - opus
-  - vips
-  - xz
+    - ffmpeg
+    - glib
+    - opus
+    - vips
+    - xz
+build:
+    configure: []
+    install: []
+service: null

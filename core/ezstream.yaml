@@ -3,29 +3,54 @@ version: 1.0.2
 description: Client for Icecast streaming servers
 homepage: https://icecast.org/ezstream/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ezstream/blobs/sha256:985d55fee7a55d60c0d2cfa98a71f35e87b1e03272c9ecece67e267e14f53eae
-    sha256: 985d55fee7a55d60c0d2cfa98a71f35e87b1e03272c9ecece67e267e14f53eae
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ezstream/blobs/sha256:9d21015b77c920498b613d65a7467749cb595e76a48358ddd7461cf8c3eb1d13
-    sha256: 9d21015b77c920498b613d65a7467749cb595e76a48358ddd7461cf8c3eb1d13
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ezstream/blobs/sha256:ff747b5e7626436d26008c0c4f328e9817e6bf61b78ec187e2dab279cea25029
-    sha256: ff747b5e7626436d26008c0c4f328e9817e6bf61b78ec187e2dab279cea25029
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ezstream/blobs/sha256:953f775b15e5a138f324c0a65ac9147202c683d4ca3395e3d7718c3c30045772
-    sha256: 953f775b15e5a138f324c0a65ac9147202c683d4ca3395e3d7718c3c30045772
-source:
-  url: https://ftp.osuosl.org/pub/xiph/releases/ezstream/ezstream-1.0.2.tar.gz
-  sha256: 11de897f455a95ba58546bdcd40a95d3bda69866ec5f7879a83b024126c54c2a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libshout
-  - taglib
+    - libshout
+    - taglib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ezstream/blobs/sha256:9d21015b77c920498b613d65a7467749cb595e76a48358ddd7461cf8c3eb1d13
+        sha256: 9d21015b77c920498b613d65a7467749cb595e76a48358ddd7461cf8c3eb1d13
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ezstream/blobs/sha256:985d55fee7a55d60c0d2cfa98a71f35e87b1e03272c9ecece67e267e14f53eae
+        sha256: 985d55fee7a55d60c0d2cfa98a71f35e87b1e03272c9ecece67e267e14f53eae
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ezstream/blobs/sha256:ff747b5e7626436d26008c0c4f328e9817e6bf61b78ec187e2dab279cea25029
+        sha256: ff747b5e7626436d26008c0c4f328e9817e6bf61b78ec187e2dab279cea25029
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ezstream/blobs/sha256:953f775b15e5a138f324c0a65ac9147202c683d4ca3395e3d7718c3c30045772
+        sha256: 953f775b15e5a138f324c0a65ac9147202c683d4ca3395e3d7718c3c30045772
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.osuosl.org/pub/xiph/releases/ezstream/ezstream-1.0.2.tar.gz
+    sha256: 11de897f455a95ba58546bdcd40a95d3bda69866ec5f7879a83b024126c54c2a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - check
-  - pkgconf
+    - check
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

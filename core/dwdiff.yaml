@@ -3,31 +3,55 @@ version: 2.1.4
 description: Diff that operates at the word level
 homepage: https://os.ghalkes.nl/dwdiff.html
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dwdiff/blobs/sha256:72db22b7bee1b3fbb618afb253f77a38a89d8f48dce43a05e4e43f00c33f49a1
-    sha256: 72db22b7bee1b3fbb618afb253f77a38a89d8f48dce43a05e4e43f00c33f49a1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dwdiff/blobs/sha256:430674eaa122cd86c378f0e894868125b0608cac9c2b7e384e09f2334560c36f
-    sha256: 430674eaa122cd86c378f0e894868125b0608cac9c2b7e384e09f2334560c36f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dwdiff/blobs/sha256:c8bdedde5a536590f5ad26a0912ea0ae15f3f0c0bd605c5356193a3e5ef4eace
-    sha256: c8bdedde5a536590f5ad26a0912ea0ae15f3f0c0bd605c5356193a3e5ef4eace
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dwdiff/blobs/sha256:9c01d60e8341d578e959b78c1c65d40a21770e70bbadd696b0ea9253446ea584
-    sha256: 9c01d60e8341d578e959b78c1c65d40a21770e70bbadd696b0ea9253446ea584
-source:
-  url: https://os.ghalkes.nl/dist/dwdiff-2.1.4.tar.bz2
-  sha256: df16fec44dcb467d65a4246a43628f93741996c1773e930b90c6dde22dd58e0a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - gettext
+    - icu4c@78
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dwdiff/blobs/sha256:430674eaa122cd86c378f0e894868125b0608cac9c2b7e384e09f2334560c36f
+        sha256: 430674eaa122cd86c378f0e894868125b0608cac9c2b7e384e09f2334560c36f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dwdiff/blobs/sha256:72db22b7bee1b3fbb618afb253f77a38a89d8f48dce43a05e4e43f00c33f49a1
+        sha256: 72db22b7bee1b3fbb618afb253f77a38a89d8f48dce43a05e4e43f00c33f49a1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dwdiff/blobs/sha256:c8bdedde5a536590f5ad26a0912ea0ae15f3f0c0bd605c5356193a3e5ef4eace
+        sha256: c8bdedde5a536590f5ad26a0912ea0ae15f3f0c0bd605c5356193a3e5ef4eace
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dwdiff/blobs/sha256:9c01d60e8341d578e959b78c1c65d40a21770e70bbadd696b0ea9253446ea584
+        sha256: 9c01d60e8341d578e959b78c1c65d40a21770e70bbadd696b0ea9253446ea584
+        sha512: ""
+        signature: ""
+source:
+    url: https://os.ghalkes.nl/dist/dwdiff-2.1.4.tar.bz2
+    sha256: df16fec44dcb467d65a4246a43628f93741996c1773e930b90c6dde22dd58e0a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - pkgconf
+    - gettext
+    - pkgconf
 linux_dependencies:
-  - icu4c@78
+    - icu4c@78
+build:
+    configure: []
+    install: []
+service: null

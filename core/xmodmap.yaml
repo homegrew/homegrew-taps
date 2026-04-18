@@ -3,28 +3,53 @@ version: 1.0.11
 description: Modify keymaps and pointer button mappings in X
 homepage: https://gitlab.freedesktop.org/xorg/app/xmodmap
 license: MIT-open-group
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xmodmap/blobs/sha256:3729b90bb68b33194e9a4ce31e854ecb2070ba5e5af11953f7c289cca5f17868
-    sha256: 3729b90bb68b33194e9a4ce31e854ecb2070ba5e5af11953f7c289cca5f17868
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xmodmap/blobs/sha256:0a6d9f46dfc724b3e19dd881676f5ef2911aa52c13c2ebf901e3edca3c862667
-    sha256: 0a6d9f46dfc724b3e19dd881676f5ef2911aa52c13c2ebf901e3edca3c862667
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xmodmap/blobs/sha256:b8866422cea1dfecb73e767819e793be7d9f6acf91c1f21611809126c54985c4
-    sha256: b8866422cea1dfecb73e767819e793be7d9f6acf91c1f21611809126c54985c4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xmodmap/blobs/sha256:b49840b06e245234d26698932373881179ff1763e348dfb3dfb22fd993f45371
-    sha256: b49840b06e245234d26698932373881179ff1763e348dfb3dfb22fd993f45371
-source:
-  url: https://www.x.org/releases/individual/app/xmodmap-1.0.11.tar.xz
-  sha256: 9a2f8168f7b0bc382828847403902cb6bf175e17658b36189eac87edda877e81
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
+    - libx11
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xmodmap/blobs/sha256:0a6d9f46dfc724b3e19dd881676f5ef2911aa52c13c2ebf901e3edca3c862667
+        sha256: 0a6d9f46dfc724b3e19dd881676f5ef2911aa52c13c2ebf901e3edca3c862667
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xmodmap/blobs/sha256:3729b90bb68b33194e9a4ce31e854ecb2070ba5e5af11953f7c289cca5f17868
+        sha256: 3729b90bb68b33194e9a4ce31e854ecb2070ba5e5af11953f7c289cca5f17868
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xmodmap/blobs/sha256:b8866422cea1dfecb73e767819e793be7d9f6acf91c1f21611809126c54985c4
+        sha256: b8866422cea1dfecb73e767819e793be7d9f6acf91c1f21611809126c54985c4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xmodmap/blobs/sha256:b49840b06e245234d26698932373881179ff1763e348dfb3dfb22fd993f45371
+        sha256: b49840b06e245234d26698932373881179ff1763e348dfb3dfb22fd993f45371
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/releases/individual/app/xmodmap-1.0.11.tar.xz
+    sha256: 9a2f8168f7b0bc382828847403902cb6bf175e17658b36189eac87edda877e81
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - xorgproto
+    - pkgconf
+    - xorgproto
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

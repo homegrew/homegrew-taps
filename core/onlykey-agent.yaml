@@ -3,33 +3,58 @@ version: 1.1.15
 description: Middleware that lets you use OnlyKey as a hardware SSH/GPG device
 homepage: https://docs.crp.to/onlykey-agent.html
 license: LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:723e5c37777aac7061d64d52e13476b5825e546fea410bdd4965d264ea1be2f7
-    sha256: 723e5c37777aac7061d64d52e13476b5825e546fea410bdd4965d264ea1be2f7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:d8e425336cce8f42a110ae67c6bec8c7f9287c7d0972160e60b66101c0696e6f
-    sha256: d8e425336cce8f42a110ae67c6bec8c7f9287c7d0972160e60b66101c0696e6f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:866463862380b35c1177ff29852ac71a6322567f3b5ed104ab430c08fae628c1
-    sha256: 866463862380b35c1177ff29852ac71a6322567f3b5ed104ab430c08fae628c1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:9e72c8522fc1fd56a0b09f78643ec700a3f3524578711e71354745dee8b8da1a
-    sha256: 9e72c8522fc1fd56a0b09f78643ec700a3f3524578711e71354745dee8b8da1a
-source:
-  url: https://files.pythonhosted.org/packages/68/80/e89b6c3680bedb1e14e99f0539ac805bddc7d8dd87c58805c64484966b7c/onlykey-agent-1.1.15.tar.gz
-  sha256: 49b19bec28dc0fb7053ef01266d8a9e7a078bb146214a641bdbb1feac6fc7ddb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - gnupg
-  - hidapi
-  - libsodium
-  - libusb
-  - python@3.14
+    - certifi
+    - cryptography
+    - gnupg
+    - hidapi
+    - libsodium
+    - libusb
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:d8e425336cce8f42a110ae67c6bec8c7f9287c7d0972160e60b66101c0696e6f
+        sha256: d8e425336cce8f42a110ae67c6bec8c7f9287c7d0972160e60b66101c0696e6f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:723e5c37777aac7061d64d52e13476b5825e546fea410bdd4965d264ea1be2f7
+        sha256: 723e5c37777aac7061d64d52e13476b5825e546fea410bdd4965d264ea1be2f7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:866463862380b35c1177ff29852ac71a6322567f3b5ed104ab430c08fae628c1
+        sha256: 866463862380b35c1177ff29852ac71a6322567f3b5ed104ab430c08fae628c1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onlykey-agent/blobs/sha256:9e72c8522fc1fd56a0b09f78643ec700a3f3524578711e71354745dee8b8da1a
+        sha256: 9e72c8522fc1fd56a0b09f78643ec700a3f3524578711e71354745dee8b8da1a
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/68/80/e89b6c3680bedb1e14e99f0539ac805bddc7d8dd87c58805c64484966b7c/onlykey-agent-1.1.15.tar.gz
+    sha256: 49b19bec28dc0fb7053ef01266d8a9e7a078bb146214a641bdbb1feac6fc7ddb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

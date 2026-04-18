@@ -1,27 +1,53 @@
 name: binaryen
-version: 129
+version: "129"
 description: Compiler infrastructure and toolchain library for WebAssembly
 homepage: https://webassembly.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/binaryen/blobs/sha256:62f236956783f0acb1846eabe1a74fdff6199fe39bcb1168dec4a183f7de0b02
-    sha256: 62f236956783f0acb1846eabe1a74fdff6199fe39bcb1168dec4a183f7de0b02
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/binaryen/blobs/sha256:b58c190f68b72e017bfa64a1c3f997e7b9385be986e3fa2a9b3cd451e9ce2501
-    sha256: b58c190f68b72e017bfa64a1c3f997e7b9385be986e3fa2a9b3cd451e9ce2501
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/binaryen/blobs/sha256:060f1a6e3cfa3d8318782812eeb3bf107ce3598d738df87468fbe515f8026100
-    sha256: 060f1a6e3cfa3d8318782812eeb3bf107ce3598d738df87468fbe515f8026100
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/binaryen/blobs/sha256:0f0aa2afab9f0bd16a5fb44cdc03fdbfd6ba637e1da7978fde2511ef1a81331c
-    sha256: 0f0aa2afab9f0bd16a5fb44cdc03fdbfd6ba637e1da7978fde2511ef1a81331c
-source:
-  url: https://github.com/WebAssembly/binaryen/archive/refs/tags/version_129.tar.gz
-  sha256: 326f03e3a8b9eddc63cd9d6ff943bee86dae6f736c9f217e58530350381b011a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/binaryen/blobs/sha256:b58c190f68b72e017bfa64a1c3f997e7b9385be986e3fa2a9b3cd451e9ce2501
+        sha256: b58c190f68b72e017bfa64a1c3f997e7b9385be986e3fa2a9b3cd451e9ce2501
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/binaryen/blobs/sha256:62f236956783f0acb1846eabe1a74fdff6199fe39bcb1168dec4a183f7de0b02
+        sha256: 62f236956783f0acb1846eabe1a74fdff6199fe39bcb1168dec4a183f7de0b02
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/binaryen/blobs/sha256:060f1a6e3cfa3d8318782812eeb3bf107ce3598d738df87468fbe515f8026100
+        sha256: 060f1a6e3cfa3d8318782812eeb3bf107ce3598d738df87468fbe515f8026100
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/binaryen/blobs/sha256:0f0aa2afab9f0bd16a5fb44cdc03fdbfd6ba637e1da7978fde2511ef1a81331c
+        sha256: 0f0aa2afab9f0bd16a5fb44cdc03fdbfd6ba637e1da7978fde2511ef1a81331c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/WebAssembly/binaryen/archive/refs/tags/version_129.tar.gz
+    sha256: 326f03e3a8b9eddc63cd9d6ff943bee86dae6f736c9f217e58530350381b011a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

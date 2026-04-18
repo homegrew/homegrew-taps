@@ -3,27 +3,52 @@ version: 9.3.3
 description: Tool for managing events and logs
 homepage: https://www.elastic.co/products/logstash
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:6169f4f49fd7240e31249b34d39c3fc7a4170dbb51c90c4f58990133ef656538
-    sha256: 6169f4f49fd7240e31249b34d39c3fc7a4170dbb51c90c4f58990133ef656538
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:1d24cf10b2abc460a8a0004364a64617a1acb7fc31e59cf7b38068a42d27b4b5
-    sha256: 1d24cf10b2abc460a8a0004364a64617a1acb7fc31e59cf7b38068a42d27b4b5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:4bfd6383879c9895974a5bbbcdf8058dc7a6915dbee83ef3e0869c15423c1ffa
-    sha256: 4bfd6383879c9895974a5bbbcdf8058dc7a6915dbee83ef3e0869c15423c1ffa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:4b818a0e5d6b26998431af90ff9a14a45db4e22619aa9de812637faedb904685
-    sha256: 4b818a0e5d6b26998431af90ff9a14a45db4e22619aa9de812637faedb904685
-source:
-  url: https://github.com/elastic/logstash/archive/refs/tags/v9.3.3.tar.gz
-  sha256: e84b0ea2e099e3379d3fe8d219486b748c5a1fbbc4e320d47e25283561c2fab9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk@21
+    - openjdk@21
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:1d24cf10b2abc460a8a0004364a64617a1acb7fc31e59cf7b38068a42d27b4b5
+        sha256: 1d24cf10b2abc460a8a0004364a64617a1acb7fc31e59cf7b38068a42d27b4b5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:6169f4f49fd7240e31249b34d39c3fc7a4170dbb51c90c4f58990133ef656538
+        sha256: 6169f4f49fd7240e31249b34d39c3fc7a4170dbb51c90c4f58990133ef656538
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:4bfd6383879c9895974a5bbbcdf8058dc7a6915dbee83ef3e0869c15423c1ffa
+        sha256: 4bfd6383879c9895974a5bbbcdf8058dc7a6915dbee83ef3e0869c15423c1ffa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:4b818a0e5d6b26998431af90ff9a14a45db4e22619aa9de812637faedb904685
+        sha256: 4b818a0e5d6b26998431af90ff9a14a45db4e22619aa9de812637faedb904685
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/elastic/logstash/archive/refs/tags/v9.3.3.tar.gz
+    sha256: e84b0ea2e099e3379d3fe8d219486b748c5a1fbbc4e320d47e25283561c2fab9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gradle@8
+    - gradle@8
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

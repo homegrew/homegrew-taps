@@ -3,28 +3,53 @@ version: 3.2p4
 description: Monitor and control physical environment using Dallas/Maxim 1-wire system
 homepage: https://owfs.org/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/owfs/blobs/sha256:cfce021f58090c3ca7128b8cd83544f67ee1305486f639e0659f799381b2c0ea
-    sha256: cfce021f58090c3ca7128b8cd83544f67ee1305486f639e0659f799381b2c0ea
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/owfs/blobs/sha256:6ac085fdb22ab9cf973aa439322c83ec6ec01073fe70d2af0e3d9ff42f784c8b
-    sha256: 6ac085fdb22ab9cf973aa439322c83ec6ec01073fe70d2af0e3d9ff42f784c8b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/owfs/blobs/sha256:dc7081d7fe26ec46288fa5bb16f5404e9697f1c567dde4ded5e181f0b54bbb6b
-    sha256: dc7081d7fe26ec46288fa5bb16f5404e9697f1c567dde4ded5e181f0b54bbb6b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/owfs/blobs/sha256:f84aad3b6008729382761e7b772b106b7db195baa4515f99b87810cad4652101
-    sha256: f84aad3b6008729382761e7b772b106b7db195baa4515f99b87810cad4652101
-source:
-  url: https://github.com/owfs/owfs/releases/download/v3.2p4/owfs-3.2p4.tar.gz
-  sha256: af0a5035f3f3df876ca15aea13486bfed6b3ef5409dee016db0be67755c35fcc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libftdi
-  - libusb
+    - libftdi
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/owfs/blobs/sha256:6ac085fdb22ab9cf973aa439322c83ec6ec01073fe70d2af0e3d9ff42f784c8b
+        sha256: 6ac085fdb22ab9cf973aa439322c83ec6ec01073fe70d2af0e3d9ff42f784c8b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/owfs/blobs/sha256:cfce021f58090c3ca7128b8cd83544f67ee1305486f639e0659f799381b2c0ea
+        sha256: cfce021f58090c3ca7128b8cd83544f67ee1305486f639e0659f799381b2c0ea
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/owfs/blobs/sha256:dc7081d7fe26ec46288fa5bb16f5404e9697f1c567dde4ded5e181f0b54bbb6b
+        sha256: dc7081d7fe26ec46288fa5bb16f5404e9697f1c567dde4ded5e181f0b54bbb6b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/owfs/blobs/sha256:f84aad3b6008729382761e7b772b106b7db195baa4515f99b87810cad4652101
+        sha256: f84aad3b6008729382761e7b772b106b7db195baa4515f99b87810cad4652101
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/owfs/owfs/releases/download/v3.2p4/owfs-3.2p4.tar.gz
+    sha256: af0a5035f3f3df876ca15aea13486bfed6b3ef5409dee016db0be67755c35fcc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

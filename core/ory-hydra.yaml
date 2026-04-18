@@ -3,25 +3,51 @@ version: 26.2.0
 description: OpenID Certified OAuth 2.0 Server and OpenID Connect Provider
 homepage: https://www.ory.sh/hydra/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ory-hydra/blobs/sha256:8e6a5cf20f779808294e03f7e8699d40d2c19eb504addeb30c3339807ba499de
-    sha256: 8e6a5cf20f779808294e03f7e8699d40d2c19eb504addeb30c3339807ba499de
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ory-hydra/blobs/sha256:67270e24642d9e52c9c64117cd656067a1ec3c8499fd8aa5ceea52f6ca94dff4
-    sha256: 67270e24642d9e52c9c64117cd656067a1ec3c8499fd8aa5ceea52f6ca94dff4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ory-hydra/blobs/sha256:86e6b0714024572615b390e4940778212e9eaad2623e3c09bb616c6080c86e4f
-    sha256: 86e6b0714024572615b390e4940778212e9eaad2623e3c09bb616c6080c86e4f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ory-hydra/blobs/sha256:df4be22645ba489172eb76c795c3fa43190d9f5ba078b8c563978f3114f3581a
-    sha256: df4be22645ba489172eb76c795c3fa43190d9f5ba078b8c563978f3114f3581a
-source:
-  url: https://github.com/ory/hydra.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ory-hydra/blobs/sha256:67270e24642d9e52c9c64117cd656067a1ec3c8499fd8aa5ceea52f6ca94dff4
+        sha256: 67270e24642d9e52c9c64117cd656067a1ec3c8499fd8aa5ceea52f6ca94dff4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ory-hydra/blobs/sha256:8e6a5cf20f779808294e03f7e8699d40d2c19eb504addeb30c3339807ba499de
+        sha256: 8e6a5cf20f779808294e03f7e8699d40d2c19eb504addeb30c3339807ba499de
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ory-hydra/blobs/sha256:86e6b0714024572615b390e4940778212e9eaad2623e3c09bb616c6080c86e4f
+        sha256: 86e6b0714024572615b390e4940778212e9eaad2623e3c09bb616c6080c86e4f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ory-hydra/blobs/sha256:df4be22645ba489172eb76c795c3fa43190d9f5ba078b8c563978f3114f3581a
+        sha256: df4be22645ba489172eb76c795c3fa43190d9f5ba078b8c563978f3114f3581a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ory/hydra.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

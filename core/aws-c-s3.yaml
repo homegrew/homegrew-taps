@@ -3,32 +3,57 @@ version: 0.12.2
 description: C99 library implementation for communicating with the S3 service
 homepage: https://github.com/awslabs/aws-c-s3
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aws-c-s3/blobs/sha256:e64abfa881d71db89b146d62633cca0ee705308f950c7662d64ff7c66b0b3ac8
-    sha256: e64abfa881d71db89b146d62633cca0ee705308f950c7662d64ff7c66b0b3ac8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aws-c-s3/blobs/sha256:b0056f362cd4f9b767b7528b04863e20435645f25b7126e55a6d1029f653baeb
-    sha256: b0056f362cd4f9b767b7528b04863e20435645f25b7126e55a6d1029f653baeb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aws-c-s3/blobs/sha256:943bc50f01182373473c94e97af0f00323185346ce0e13ea217aba509302115e
-    sha256: 943bc50f01182373473c94e97af0f00323185346ce0e13ea217aba509302115e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aws-c-s3/blobs/sha256:eb4cc97802efa54915da36309a1dce6e89b0b74f270e564a9d8cbb375ea73af1
-    sha256: eb4cc97802efa54915da36309a1dce6e89b0b74f270e564a9d8cbb375ea73af1
-source:
-  url: https://github.com/awslabs/aws-c-s3/archive/refs/tags/v0.12.2.tar.gz
-  sha256: 76348249b4bc305c1a40d089270a5a419f58c03c231b757de0a49a7a234eec76
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - aws-c-auth
-  - aws-c-cal
-  - aws-c-common
-  - aws-c-http
-  - aws-c-io
-  - aws-checksums
+    - aws-c-auth
+    - aws-c-cal
+    - aws-c-common
+    - aws-c-http
+    - aws-c-io
+    - aws-checksums
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aws-c-s3/blobs/sha256:b0056f362cd4f9b767b7528b04863e20435645f25b7126e55a6d1029f653baeb
+        sha256: b0056f362cd4f9b767b7528b04863e20435645f25b7126e55a6d1029f653baeb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aws-c-s3/blobs/sha256:e64abfa881d71db89b146d62633cca0ee705308f950c7662d64ff7c66b0b3ac8
+        sha256: e64abfa881d71db89b146d62633cca0ee705308f950c7662d64ff7c66b0b3ac8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aws-c-s3/blobs/sha256:943bc50f01182373473c94e97af0f00323185346ce0e13ea217aba509302115e
+        sha256: 943bc50f01182373473c94e97af0f00323185346ce0e13ea217aba509302115e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aws-c-s3/blobs/sha256:eb4cc97802efa54915da36309a1dce6e89b0b74f270e564a9d8cbb375ea73af1
+        sha256: eb4cc97802efa54915da36309a1dce6e89b0b74f270e564a9d8cbb375ea73af1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/awslabs/aws-c-s3/archive/refs/tags/v0.12.2.tar.gz
+    sha256: 76348249b4bc305c1a40d089270a5a419f58c03c231b757de0a49a7a234eec76
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

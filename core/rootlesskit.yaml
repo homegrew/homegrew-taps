@@ -1,21 +1,43 @@
 name: rootlesskit
 version: 3.0.0
-description: "Linux-native \"fake root\" for implementing rootless containers"
+description: Linux-native "fake root" for implementing rootless containers
 homepage: https://github.com/rootless-containers/rootlesskit
 license: Apache-2.0
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rootlesskit/blobs/sha256:30fd508c308723027a78a6be6f905f40efad1ad451983326011103852db822be
-    sha256: 30fd508c308723027a78a6be6f905f40efad1ad451983326011103852db822be
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rootlesskit/blobs/sha256:dfd3e89b1af6efef83af4c1fe4a94966bc22d471a73348e56904399c9ba837c7
-    sha256: dfd3e89b1af6efef83af4c1fe4a94966bc22d471a73348e56904399c9ba837c7
-source:
-  url: https://github.com/rootless-containers/rootlesskit/archive/refs/tags/v3.0.0.tar.gz
-  sha256: 2f934f30bcac3f659fd2662518a28e2e3ab6fa0f3362ba09ccc75ff7d504dc99
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rootlesskit/blobs/sha256:30fd508c308723027a78a6be6f905f40efad1ad451983326011103852db822be
+        sha256: 30fd508c308723027a78a6be6f905f40efad1ad451983326011103852db822be
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rootlesskit/blobs/sha256:dfd3e89b1af6efef83af4c1fe4a94966bc22d471a73348e56904399c9ba837c7
+        sha256: dfd3e89b1af6efef83af4c1fe4a94966bc22d471a73348e56904399c9ba837c7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rootless-containers/rootlesskit/archive/refs/tags/v3.0.0.tar.gz
+    sha256: 2f934f30bcac3f659fd2662518a28e2e3ab6fa0f3362ba09ccc75ff7d504dc99
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

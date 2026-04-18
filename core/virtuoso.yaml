@@ -3,31 +3,55 @@ version: 7.2.16.1
 description: High-performance object-relational SQL database
 homepage: https://virtuoso.openlinksw.com
 license: GPL-2.0-only WITH openvpn-openssl-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/virtuoso/blobs/sha256:124db9abc6fb578c856559f376a79ef4c24935256fb8c64cd765b87123365f00
-    sha256: 124db9abc6fb578c856559f376a79ef4c24935256fb8c64cd765b87123365f00
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/virtuoso/blobs/sha256:cb48dfa38804d73c29f23f6a07d022b11bebf62f55cf522f5ae8b7ba93f8ec7e
-    sha256: cb48dfa38804d73c29f23f6a07d022b11bebf62f55cf522f5ae8b7ba93f8ec7e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/virtuoso/blobs/sha256:b252f86f5451180e49ed9329fa33723217618ff199260d8f71e50060cdcc18fe
-    sha256: b252f86f5451180e49ed9329fa33723217618ff199260d8f71e50060cdcc18fe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/virtuoso/blobs/sha256:54033ce5c9971b061dc154ce4c6bfeaab5e55add60176420d61e9410e682a855
-    sha256: 54033ce5c9971b061dc154ce4c6bfeaab5e55add60176420d61e9410e682a855
-source:
-  url: https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.16.1/virtuoso-opensource-7.2.16.tar.gz
-  sha256: 7e1d5842840f0b4d967c6c668187959a62414f39698e6ee53793c24594f7bbe7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/virtuoso/blobs/sha256:cb48dfa38804d73c29f23f6a07d022b11bebf62f55cf522f5ae8b7ba93f8ec7e
+        sha256: cb48dfa38804d73c29f23f6a07d022b11bebf62f55cf522f5ae8b7ba93f8ec7e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/virtuoso/blobs/sha256:124db9abc6fb578c856559f376a79ef4c24935256fb8c64cd765b87123365f00
+        sha256: 124db9abc6fb578c856559f376a79ef4c24935256fb8c64cd765b87123365f00
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/virtuoso/blobs/sha256:b252f86f5451180e49ed9329fa33723217618ff199260d8f71e50060cdcc18fe
+        sha256: b252f86f5451180e49ed9329fa33723217618ff199260d8f71e50060cdcc18fe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/virtuoso/blobs/sha256:54033ce5c9971b061dc154ce4c6bfeaab5e55add60176420d61e9410e682a855
+        sha256: 54033ce5c9971b061dc154ce4c6bfeaab5e55add60176420d61e9410e682a855
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.16.1/virtuoso-opensource-7.2.16.tar.gz
+    sha256: 7e1d5842840f0b4d967c6c668187959a62414f39698e6ee53793c24594f7bbe7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gawk
+    - gawk
 linux_dependencies:
-  - openssl@3
-  - xz
-  - zlib-ng-compat
+    - openssl@3
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

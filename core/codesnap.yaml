@@ -3,28 +3,53 @@ version: 0.13.1
 description: Generates code snapshots in various formats
 homepage: https://github.com/codesnap-rs/codesnap
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/codesnap/blobs/sha256:b09e81e2e477b4766f7131c2c7cce96c0c4f324ed6b536b8c7f620be8925ed8b
-    sha256: b09e81e2e477b4766f7131c2c7cce96c0c4f324ed6b536b8c7f620be8925ed8b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/codesnap/blobs/sha256:5a408a988e5588a6105fe3fda0fc271aaebc86c84f97fbacf8a743f1787b5925
-    sha256: 5a408a988e5588a6105fe3fda0fc271aaebc86c84f97fbacf8a743f1787b5925
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/codesnap/blobs/sha256:82461844e1d7743af3f1ed81053a3478c68161d031b6de6cf6715d0340b50579
-    sha256: 82461844e1d7743af3f1ed81053a3478c68161d031b6de6cf6715d0340b50579
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/codesnap/blobs/sha256:9bd2da94e62d3648e54e1cb6428f6842e500e46c7a04bcb83c7c1147aaee92d2
-    sha256: 9bd2da94e62d3648e54e1cb6428f6842e500e46c7a04bcb83c7c1147aaee92d2
-source:
-  url: https://github.com/codesnap-rs/codesnap/archive/refs/tags/v0.13.1.tar.gz
-  sha256: e1636f08781fdb6e380428bd54f458f59b7764702271a7f2f407ad4432753c33
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/codesnap/blobs/sha256:5a408a988e5588a6105fe3fda0fc271aaebc86c84f97fbacf8a743f1787b5925
+        sha256: 5a408a988e5588a6105fe3fda0fc271aaebc86c84f97fbacf8a743f1787b5925
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/codesnap/blobs/sha256:b09e81e2e477b4766f7131c2c7cce96c0c4f324ed6b536b8c7f620be8925ed8b
+        sha256: b09e81e2e477b4766f7131c2c7cce96c0c4f324ed6b536b8c7f620be8925ed8b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/codesnap/blobs/sha256:82461844e1d7743af3f1ed81053a3478c68161d031b6de6cf6715d0340b50579
+        sha256: 82461844e1d7743af3f1ed81053a3478c68161d031b6de6cf6715d0340b50579
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/codesnap/blobs/sha256:9bd2da94e62d3648e54e1cb6428f6842e500e46c7a04bcb83c7c1147aaee92d2
+        sha256: 9bd2da94e62d3648e54e1cb6428f6842e500e46c7a04bcb83c7c1147aaee92d2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/codesnap-rs/codesnap/archive/refs/tags/v0.13.1.tar.gz
+    sha256: e1636f08781fdb6e380428bd54f458f59b7764702271a7f2f407ad4432753c33
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

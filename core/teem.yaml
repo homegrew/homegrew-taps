@@ -3,30 +3,54 @@ version: 1.11.0
 description: Libraries for scientific raster data
 homepage: https://teem.sourceforge.net/
 license: LicenseRef-Homebrew-cannot-represent
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/teem/blobs/sha256:ef2e584274fd5642063c5d7bf9d7703f53dddff875dda63bec93dd02494adbae
-    sha256: ef2e584274fd5642063c5d7bf9d7703f53dddff875dda63bec93dd02494adbae
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/teem/blobs/sha256:9a590e8d60b1bf8861fe929c3ef8b48d86cd09ad284ca3d18301c953535f40e1
-    sha256: 9a590e8d60b1bf8861fe929c3ef8b48d86cd09ad284ca3d18301c953535f40e1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/teem/blobs/sha256:50798411da1cae2c7cfec2d965db058f705791f3799cf7040baacd45518150ce
-    sha256: 50798411da1cae2c7cfec2d965db058f705791f3799cf7040baacd45518150ce
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/teem/blobs/sha256:4ba0d90b02aaee75c6524eaf32735d5490df9acabb564505dbc830f99a46822b
-    sha256: 4ba0d90b02aaee75c6524eaf32735d5490df9acabb564505dbc830f99a46822b
-source:
-  url: https://downloads.sourceforge.net/project/teem/teem/1.11.0/teem-1.11.0-src.tar.gz
-  sha256: a01386021dfa802b3e7b4defced2f3c8235860d500c1fa2f347483775d4c8def
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpng
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/teem/blobs/sha256:9a590e8d60b1bf8861fe929c3ef8b48d86cd09ad284ca3d18301c953535f40e1
+        sha256: 9a590e8d60b1bf8861fe929c3ef8b48d86cd09ad284ca3d18301c953535f40e1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/teem/blobs/sha256:ef2e584274fd5642063c5d7bf9d7703f53dddff875dda63bec93dd02494adbae
+        sha256: ef2e584274fd5642063c5d7bf9d7703f53dddff875dda63bec93dd02494adbae
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/teem/blobs/sha256:50798411da1cae2c7cfec2d965db058f705791f3799cf7040baacd45518150ce
+        sha256: 50798411da1cae2c7cfec2d965db058f705791f3799cf7040baacd45518150ce
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/teem/blobs/sha256:4ba0d90b02aaee75c6524eaf32735d5490df9acabb564505dbc830f99a46822b
+        sha256: 4ba0d90b02aaee75c6524eaf32735d5490df9acabb564505dbc830f99a46822b
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/teem/teem/1.11.0/teem-1.11.0-src.tar.gz
+    sha256: a01386021dfa802b3e7b4defced2f3c8235860d500c1fa2f347483775d4c8def
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - libpng
-  - zlib-ng-compat
+    - libpng
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

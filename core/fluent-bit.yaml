@@ -3,37 +3,61 @@ version: 5.0.3
 description: Fast and Lightweight Logs and Metrics processor
 homepage: https://github.com/fluent/fluent-bit
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:1dfd5c34a3b31bab0c6950dedf94428d37c8d02c99416f2ff208fdeb2b694ee5
-    sha256: 1dfd5c34a3b31bab0c6950dedf94428d37c8d02c99416f2ff208fdeb2b694ee5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:b85e15a72907c22e2190dde4b8d4459fd6e8c57a809035c8f2b1aaa9a1bb9803
-    sha256: b85e15a72907c22e2190dde4b8d4459fd6e8c57a809035c8f2b1aaa9a1bb9803
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:dc2c445ecad715b201e78376cd6da4a8d4dfa839c99783c5c86a9b5839d1fd1f
-    sha256: dc2c445ecad715b201e78376cd6da4a8d4dfa839c99783c5c86a9b5839d1fd1f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:49a2d763b4837cf02b54f80078e4fc15b05aa4246bd05cf4216de89e1a631aaf
-    sha256: 49a2d763b4837cf02b54f80078e4fc15b05aa4246bd05cf4216de89e1a631aaf
-source:
-  url: https://github.com/fluent/fluent-bit/archive/refs/tags/v5.0.3.tar.gz
-  sha256: 74d5b348a17dffd9550600c59b9887f27638903627fdbfc8ed23878580f57b9b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - luajit
-  - openssl@3
+    - libyaml
+    - luajit
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:b85e15a72907c22e2190dde4b8d4459fd6e8c57a809035c8f2b1aaa9a1bb9803
+        sha256: b85e15a72907c22e2190dde4b8d4459fd6e8c57a809035c8f2b1aaa9a1bb9803
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:1dfd5c34a3b31bab0c6950dedf94428d37c8d02c99416f2ff208fdeb2b694ee5
+        sha256: 1dfd5c34a3b31bab0c6950dedf94428d37c8d02c99416f2ff208fdeb2b694ee5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:dc2c445ecad715b201e78376cd6da4a8d4dfa839c99783c5c86a9b5839d1fd1f
+        sha256: dc2c445ecad715b201e78376cd6da4a8d4dfa839c99783c5c86a9b5839d1fd1f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fluent-bit/blobs/sha256:49a2d763b4837cf02b54f80078e4fc15b05aa4246bd05cf4216de89e1a631aaf
+        sha256: 49a2d763b4837cf02b54f80078e4fc15b05aa4246bd05cf4216de89e1a631aaf
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fluent/fluent-bit/archive/refs/tags/v5.0.3.tar.gz
+    sha256: 74d5b348a17dffd9550600c59b9887f27638903627fdbfc8ed23878580f57b9b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
-  - cmake
-  - flex
-  - pkgconf
+    - bison
+    - cmake
+    - flex
+    - pkgconf
 linux_dependencies:
-  - libyaml
-  - luajit
-  - openssl@3
-  - zlib-ng-compat
+    - libyaml
+    - luajit
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

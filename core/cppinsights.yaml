@@ -1,29 +1,54 @@
 name: cppinsights
-version: 20.1
+version: "20.1"
 description: See your source code with the eyes of a compiler
 homepage: https://cppinsights.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cppinsights/blobs/sha256:d5c9c97206cb629ff2c8cf50b1887e49ef2e0e8609e26be97303e9b207059c4b
-    sha256: d5c9c97206cb629ff2c8cf50b1887e49ef2e0e8609e26be97303e9b207059c4b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cppinsights/blobs/sha256:d76e33b7686ef11f0b351c0a4ef632f5463d7fc38757558ed76a12b39d45b355
-    sha256: d76e33b7686ef11f0b351c0a4ef632f5463d7fc38757558ed76a12b39d45b355
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cppinsights/blobs/sha256:532cca65ef3d681fd80b71e4c0d7140bea31c37916d727357ceb0fdbe23a46cf
-    sha256: 532cca65ef3d681fd80b71e4c0d7140bea31c37916d727357ceb0fdbe23a46cf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cppinsights/blobs/sha256:e66e5256dd17aa4f719f90514fdf2f6be53b55c591e9f1355e64389a72005e03
-    sha256: e66e5256dd17aa4f719f90514fdf2f6be53b55c591e9f1355e64389a72005e03
-source:
-  url: https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_20.1.tar.gz
-  sha256: 672ecc237bc0231510025c9662c0f4880feebb076af46d16840adfb16e8fc4e8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - llvm@20
+    - llvm@20
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cppinsights/blobs/sha256:d76e33b7686ef11f0b351c0a4ef632f5463d7fc38757558ed76a12b39d45b355
+        sha256: d76e33b7686ef11f0b351c0a4ef632f5463d7fc38757558ed76a12b39d45b355
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cppinsights/blobs/sha256:d5c9c97206cb629ff2c8cf50b1887e49ef2e0e8609e26be97303e9b207059c4b
+        sha256: d5c9c97206cb629ff2c8cf50b1887e49ef2e0e8609e26be97303e9b207059c4b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cppinsights/blobs/sha256:532cca65ef3d681fd80b71e4c0d7140bea31c37916d727357ceb0fdbe23a46cf
+        sha256: 532cca65ef3d681fd80b71e4c0d7140bea31c37916d727357ceb0fdbe23a46cf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cppinsights/blobs/sha256:e66e5256dd17aa4f719f90514fdf2f6be53b55c591e9f1355e64389a72005e03
+        sha256: e66e5256dd17aa4f719f90514fdf2f6be53b55c591e9f1355e64389a72005e03
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_20.1.tar.gz
+    sha256: 672ecc237bc0231510025c9662c0f4880feebb076af46d16840adfb16e8fc4e8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

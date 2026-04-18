@@ -3,41 +3,65 @@ version: 6.0.0
 description: High performance, scalable, fault-tolerant access to data
 homepage: https://xrootd.slac.stanford.edu/
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xrootd/blobs/sha256:bea56759270c77ebc33d0e108a570d274a153cad2d593fbc6c06f2cc48de4c8b
-    sha256: bea56759270c77ebc33d0e108a570d274a153cad2d593fbc6c06f2cc48de4c8b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xrootd/blobs/sha256:500ede15a4bbc8aaebf23b7bedc73e1c18e3f06f4c5a5250b2bc606f8259f4aa
-    sha256: 500ede15a4bbc8aaebf23b7bedc73e1c18e3f06f4c5a5250b2bc606f8259f4aa
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xrootd/blobs/sha256:2aa893509ccb40dc14c9ace235c61e615e1ce0c9c85a8bcc0f2cf49fcf778bc6
-    sha256: 2aa893509ccb40dc14c9ace235c61e615e1ce0c9c85a8bcc0f2cf49fcf778bc6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xrootd/blobs/sha256:97c0b41a34676d902b0135a0cea811c12cbb5ae369aa227d7d3a4beb4904917f
-    sha256: 97c0b41a34676d902b0135a0cea811c12cbb5ae369aa227d7d3a4beb4904917f
-source:
-  url: https://github.com/xrootd/xrootd/releases/download/v6.0.0/xrootd-6.0.0.tar.gz
-  sha256: bc8d00b6c0b48f9186e3ad09e8e4e6eedf1067fad68f6d6a4f4e939bcf87007c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - davix
-  - krb5
-  - libzip
-  - openssl@3
-  - readline
+    - davix
+    - krb5
+    - libzip
+    - openssl@3
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xrootd/blobs/sha256:500ede15a4bbc8aaebf23b7bedc73e1c18e3f06f4c5a5250b2bc606f8259f4aa
+        sha256: 500ede15a4bbc8aaebf23b7bedc73e1c18e3f06f4c5a5250b2bc606f8259f4aa
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xrootd/blobs/sha256:bea56759270c77ebc33d0e108a570d274a153cad2d593fbc6c06f2cc48de4c8b
+        sha256: bea56759270c77ebc33d0e108a570d274a153cad2d593fbc6c06f2cc48de4c8b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xrootd/blobs/sha256:2aa893509ccb40dc14c9ace235c61e615e1ce0c9c85a8bcc0f2cf49fcf778bc6
+        sha256: 2aa893509ccb40dc14c9ace235c61e615e1ce0c9c85a8bcc0f2cf49fcf778bc6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xrootd/blobs/sha256:97c0b41a34676d902b0135a0cea811c12cbb5ae369aa227d7d3a4beb4904917f
+        sha256: 97c0b41a34676d902b0135a0cea811c12cbb5ae369aa227d7d3a4beb4904917f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/xrootd/xrootd/releases/download/v6.0.0/xrootd-6.0.0.tar.gz
+    sha256: bc8d00b6c0b48f9186e3ad09e8e4e6eedf1067fad68f6d6a4f4e939bcf87007c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - python@3.14
+    - cmake
+    - pkgconf
+    - python@3.14
 linux_dependencies:
-  - davix
-  - krb5
-  - libzip
-  - openssl@3
-  - readline
-  - util-linux
-  - zlib-ng-compat
+    - davix
+    - krb5
+    - libzip
+    - openssl@3
+    - readline
+    - util-linux
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

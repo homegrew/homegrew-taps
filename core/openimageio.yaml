@@ -3,46 +3,71 @@ version: 3.1.12.0
 description: Library for reading, processing and writing images
 homepage: https://openimageio.readthedocs.io/en/stable/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:1cf99702a293fb46908887b20f8b23042458a6ead54fc9a2d79c4bffd5882ae6
-    sha256: 1cf99702a293fb46908887b20f8b23042458a6ead54fc9a2d79c4bffd5882ae6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:a187eea9a832998aff88e65ae7b643da9ef7e71c4661f765ce87f0f380cf25bc
-    sha256: a187eea9a832998aff88e65ae7b643da9ef7e71c4661f765ce87f0f380cf25bc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:6cfd2fe8588ef38b7e6c3343fc5e48ec9931a87fc5ee9cbfc6aa806845aa8da0
-    sha256: 6cfd2fe8588ef38b7e6c3343fc5e48ec9931a87fc5ee9cbfc6aa806845aa8da0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:8318f4a2867a097d93b730824fb33ac3ad5d658a583a10c5c25411097cf608fa
-    sha256: 8318f4a2867a097d93b730824fb33ac3ad5d658a583a10c5c25411097cf608fa
-source:
-  url: https://github.com/AcademySoftwareFoundation/OpenImageIO/archive/refs/tags/v3.1.12.0.tar.gz
-  sha256: 24aa5a7af5c7a98887a8f495e18079d82ef73913370e906fa5d73016d37964c7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - fmt
-  - freetype
-  - giflib
-  - imath
-  - jpeg-turbo
-  - jpeg-xl
-  - libheif
-  - libpng
-  - libraw
-  - libtiff
-  - opencolorio
-  - openexr
-  - pugixml
-  - python@3.14
-  - tbb
-  - webp
-  - zlib-ng-compat
+    - ffmpeg
+    - fmt
+    - freetype
+    - giflib
+    - imath
+    - jpeg-turbo
+    - jpeg-xl
+    - libheif
+    - libpng
+    - libraw
+    - libtiff
+    - opencolorio
+    - openexr
+    - pugixml
+    - python@3.14
+    - tbb
+    - webp
+    - zlib-ng-compat
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:a187eea9a832998aff88e65ae7b643da9ef7e71c4661f765ce87f0f380cf25bc
+        sha256: a187eea9a832998aff88e65ae7b643da9ef7e71c4661f765ce87f0f380cf25bc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:1cf99702a293fb46908887b20f8b23042458a6ead54fc9a2d79c4bffd5882ae6
+        sha256: 1cf99702a293fb46908887b20f8b23042458a6ead54fc9a2d79c4bffd5882ae6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:6cfd2fe8588ef38b7e6c3343fc5e48ec9931a87fc5ee9cbfc6aa806845aa8da0
+        sha256: 6cfd2fe8588ef38b7e6c3343fc5e48ec9931a87fc5ee9cbfc6aa806845aa8da0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openimageio/blobs/sha256:8318f4a2867a097d93b730824fb33ac3ad5d658a583a10c5c25411097cf608fa
+        sha256: 8318f4a2867a097d93b730824fb33ac3ad5d658a583a10c5c25411097cf608fa
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/AcademySoftwareFoundation/OpenImageIO/archive/refs/tags/v3.1.12.0.tar.gz
+    sha256: 24aa5a7af5c7a98887a8f495e18079d82ef73913370e906fa5d73016d37964c7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - pybind11
+    - cmake
+    - pkgconf
+    - pybind11
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

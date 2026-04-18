@@ -3,32 +3,56 @@ version: 0.20.8
 description: Collection library providing GObject-based interfaces
 homepage: https://wiki.gnome.org/Projects/Libgee
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgee/blobs/sha256:f2b5d2af9aaf72eca39ea04074d26eae49e96fcf2d43e38f659cfd5115443a55
-    sha256: f2b5d2af9aaf72eca39ea04074d26eae49e96fcf2d43e38f659cfd5115443a55
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgee/blobs/sha256:54b304a5bb1c6cd0b4cf4ad92e33497616250375a1d199b056f712059484c8f8
-    sha256: 54b304a5bb1c6cd0b4cf4ad92e33497616250375a1d199b056f712059484c8f8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgee/blobs/sha256:695ca3b94a6452ef5d365da12bcf3b9b12a3e80c298f5c6d032bd873926a9ef4
-    sha256: 695ca3b94a6452ef5d365da12bcf3b9b12a3e80c298f5c6d032bd873926a9ef4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgee/blobs/sha256:e3a4b234964285662e7ae86aba11035910b5b435c74d1d86755b53d803e2ef15
-    sha256: e3a4b234964285662e7ae86aba11035910b5b435c74d1d86755b53d803e2ef15
-source:
-  url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.8.tar.xz
-  sha256: 189815ac143d89867193b0c52b7dc31f3aa108a15f04d6b5dca2b6adfad0b0ee
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gettext
+    - glib
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgee/blobs/sha256:54b304a5bb1c6cd0b4cf4ad92e33497616250375a1d199b056f712059484c8f8
+        sha256: 54b304a5bb1c6cd0b4cf4ad92e33497616250375a1d199b056f712059484c8f8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgee/blobs/sha256:f2b5d2af9aaf72eca39ea04074d26eae49e96fcf2d43e38f659cfd5115443a55
+        sha256: f2b5d2af9aaf72eca39ea04074d26eae49e96fcf2d43e38f659cfd5115443a55
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgee/blobs/sha256:695ca3b94a6452ef5d365da12bcf3b9b12a3e80c298f5c6d032bd873926a9ef4
+        sha256: 695ca3b94a6452ef5d365da12bcf3b9b12a3e80c298f5c6d032bd873926a9ef4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgee/blobs/sha256:e3a4b234964285662e7ae86aba11035910b5b435c74d1d86755b53d803e2ef15
+        sha256: e3a4b234964285662e7ae86aba11035910b5b435c74d1d86755b53d803e2ef15
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.8.tar.xz
+    sha256: 189815ac143d89867193b0c52b7dc31f3aa108a15f04d6b5dca2b6adfad0b0ee
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - pkgconf
-  - vala
+    - gobject-introspection
+    - pkgconf
+    - vala
 linux_dependencies:
-  - glib
+    - glib
+build:
+    configure: []
+    install: []
+service: null

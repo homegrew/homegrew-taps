@@ -1,31 +1,56 @@
 name: gcli
 version: 2.11.0
-description: "Portable Git(hub|lab|tea)/Forgejo/Bugzilla CLI tool"
+description: Portable Git(hub|lab|tea)/Forgejo/Bugzilla CLI tool
 homepage: https://herrhotzenplotz.de/gcli/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gcli/blobs/sha256:fa08502f495b8da28c73595e81a9bfbba39e6b02d6f757a0ebeeeb4c25d10096
-    sha256: fa08502f495b8da28c73595e81a9bfbba39e6b02d6f757a0ebeeeb4c25d10096
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gcli/blobs/sha256:b8b7629660e40871400d712dbef0b0b846dda685fbde24e2ca6101a3cc11efce
-    sha256: b8b7629660e40871400d712dbef0b0b846dda685fbde24e2ca6101a3cc11efce
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gcli/blobs/sha256:31eef2f32ed72556de1717ca1586265344e53758bb5b900b23cdd7d70a7a3799
-    sha256: 31eef2f32ed72556de1717ca1586265344e53758bb5b900b23cdd7d70a7a3799
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gcli/blobs/sha256:27951a21f506fdb8540527197be0d98a2fa6b9d48f27c5cad4bf2bdcd651df2c
-    sha256: 27951a21f506fdb8540527197be0d98a2fa6b9d48f27c5cad4bf2bdcd651df2c
-source:
-  url: https://github.com/herrhotzenplotz/gcli/archive/refs/tags/v2.11.0.tar.gz
-  sha256: ed6c618d9c67fedfca0fb4da79d8a0d9d27efdd82cc74b372d6fe5cd483d6456
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lowdown
-  - openssl@3
+    - lowdown
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gcli/blobs/sha256:b8b7629660e40871400d712dbef0b0b846dda685fbde24e2ca6101a3cc11efce
+        sha256: b8b7629660e40871400d712dbef0b0b846dda685fbde24e2ca6101a3cc11efce
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gcli/blobs/sha256:fa08502f495b8da28c73595e81a9bfbba39e6b02d6f757a0ebeeeb4c25d10096
+        sha256: fa08502f495b8da28c73595e81a9bfbba39e6b02d6f757a0ebeeeb4c25d10096
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gcli/blobs/sha256:31eef2f32ed72556de1717ca1586265344e53758bb5b900b23cdd7d70a7a3799
+        sha256: 31eef2f32ed72556de1717ca1586265344e53758bb5b900b23cdd7d70a7a3799
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gcli/blobs/sha256:27951a21f506fdb8540527197be0d98a2fa6b9d48f27c5cad4bf2bdcd651df2c
+        sha256: 27951a21f506fdb8540527197be0d98a2fa6b9d48f27c5cad4bf2bdcd651df2c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/herrhotzenplotz/gcli/archive/refs/tags/v2.11.0.tar.gz
+    sha256: ed6c618d9c67fedfca0fb4da79d8a0d9d27efdd82cc74b372d6fe5cd483d6456
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - readline
+    - pkgconf
+    - readline
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

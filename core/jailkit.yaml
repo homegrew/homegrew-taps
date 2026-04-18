@@ -1,27 +1,53 @@
 name: jailkit
-version: 2.23
+version: "2.23"
 description: Utilities to create limited user accounts in a chroot jail
 homepage: https://olivier.sessink.nl/jailkit/
 license: BSD-3-Clause AND LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jailkit/blobs/sha256:3beb6a1ce60e6650160ff71cf64d77920834134018551376cad01365291f6be2
-    sha256: 3beb6a1ce60e6650160ff71cf64d77920834134018551376cad01365291f6be2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jailkit/blobs/sha256:692ef1ca0ffbe0e2295d789686a23accefe9cdd29a475118be97c06bdd8697bc
-    sha256: 692ef1ca0ffbe0e2295d789686a23accefe9cdd29a475118be97c06bdd8697bc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jailkit/blobs/sha256:48db655b0b901abb3a6caaedbc6609a3a36fea0601676f23bf3894ddb800626c
-    sha256: 48db655b0b901abb3a6caaedbc6609a3a36fea0601676f23bf3894ddb800626c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jailkit/blobs/sha256:57de95e3030b4885a69a541fddeea9caf1b08eb25ae58549e482ccc245c565e7
-    sha256: 57de95e3030b4885a69a541fddeea9caf1b08eb25ae58549e482ccc245c565e7
-source:
-  url: https://olivier.sessink.nl/jailkit/jailkit-2.23.tar.bz2
-  sha256: aa27dc1b2dbbbfcec2b970731f44ced7079afc973dc066757cea1beb4e8ce59c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jailkit/blobs/sha256:692ef1ca0ffbe0e2295d789686a23accefe9cdd29a475118be97c06bdd8697bc
+        sha256: 692ef1ca0ffbe0e2295d789686a23accefe9cdd29a475118be97c06bdd8697bc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jailkit/blobs/sha256:3beb6a1ce60e6650160ff71cf64d77920834134018551376cad01365291f6be2
+        sha256: 3beb6a1ce60e6650160ff71cf64d77920834134018551376cad01365291f6be2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jailkit/blobs/sha256:48db655b0b901abb3a6caaedbc6609a3a36fea0601676f23bf3894ddb800626c
+        sha256: 48db655b0b901abb3a6caaedbc6609a3a36fea0601676f23bf3894ddb800626c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jailkit/blobs/sha256:57de95e3030b4885a69a541fddeea9caf1b08eb25ae58549e482ccc245c565e7
+        sha256: 57de95e3030b4885a69a541fddeea9caf1b08eb25ae58549e482ccc245c565e7
+        sha512: ""
+        signature: ""
+source:
+    url: https://olivier.sessink.nl/jailkit/jailkit-2.23.tar.bz2
+    sha256: aa27dc1b2dbbbfcec2b970731f44ced7079afc973dc066757cea1beb4e8ce59c
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

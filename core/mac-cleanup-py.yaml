@@ -3,26 +3,52 @@ version: 3.3.0
 description: Python cleanup script for macOS
 homepage: https://github.com/mac-cleanup/mac-cleanup-py
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mac-cleanup-py/blobs/sha256:eec63de40a6249ab2595124edfe094dc03a4211226caabb93898c72cea9966c1
-    sha256: eec63de40a6249ab2595124edfe094dc03a4211226caabb93898c72cea9966c1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mac-cleanup-py/blobs/sha256:64e1e73ebd95814394446ea78b4b681ee72460070ae38a65c5da165aea81dc26
-    sha256: 64e1e73ebd95814394446ea78b4b681ee72460070ae38a65c5da165aea81dc26
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mac-cleanup-py/blobs/sha256:02577be91ae473eea3b27986d2d81e2cb9c3e85838e1d7c1c4512d1e6c1000fd
-    sha256: 02577be91ae473eea3b27986d2d81e2cb9c3e85838e1d7c1c4512d1e6c1000fd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mac-cleanup-py/blobs/sha256:0b3cd0f446f075510ab4dd9e12333840ebfc085bd22e3b24a439fab163df4f4f
-    sha256: 0b3cd0f446f075510ab4dd9e12333840ebfc085bd22e3b24a439fab163df4f4f
-source:
-  url: https://files.pythonhosted.org/packages/be/dc/75d83e78c24d7378dad5d3c0c20b68860c0b8e4d2875d242c5ea51f317eb/mac_cleanup-3.3.0.tar.gz
-  sha256: 6773f059ba2025d8121d0c764afe45d1d10d305df23f604b2a485e1360e526a3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cffi
-  - python@3.14
+    - cffi
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mac-cleanup-py/blobs/sha256:64e1e73ebd95814394446ea78b4b681ee72460070ae38a65c5da165aea81dc26
+        sha256: 64e1e73ebd95814394446ea78b4b681ee72460070ae38a65c5da165aea81dc26
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mac-cleanup-py/blobs/sha256:eec63de40a6249ab2595124edfe094dc03a4211226caabb93898c72cea9966c1
+        sha256: eec63de40a6249ab2595124edfe094dc03a4211226caabb93898c72cea9966c1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mac-cleanup-py/blobs/sha256:02577be91ae473eea3b27986d2d81e2cb9c3e85838e1d7c1c4512d1e6c1000fd
+        sha256: 02577be91ae473eea3b27986d2d81e2cb9c3e85838e1d7c1c4512d1e6c1000fd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mac-cleanup-py/blobs/sha256:0b3cd0f446f075510ab4dd9e12333840ebfc085bd22e3b24a439fab163df4f4f
+        sha256: 0b3cd0f446f075510ab4dd9e12333840ebfc085bd22e3b24a439fab163df4f4f
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/be/dc/75d83e78c24d7378dad5d3c0c20b68860c0b8e4d2875d242c5ea51f317eb/mac_cleanup-3.3.0.tar.gz
+    sha256: 6773f059ba2025d8121d0c764afe45d1d10d305df23f604b2a485e1360e526a3
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

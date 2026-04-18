@@ -3,25 +3,51 @@ version: 5.0.3
 description: Secure, reliable, efficient multicast file transfer program
 homepage: https://uftp-multicast.sourceforge.net/
 license: GPL-3.0-or-later WITH openvpn-openssl-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:fb631c49f47b8e3f94c295c6257e61c7caa441d37f40a8f9ffa8d80a9db30a94
-    sha256: fb631c49f47b8e3f94c295c6257e61c7caa441d37f40a8f9ffa8d80a9db30a94
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:767d6bb0732fc7caf62d2a83cefd46e505ab1f26a1fe37fd74121716bae96945
-    sha256: 767d6bb0732fc7caf62d2a83cefd46e505ab1f26a1fe37fd74121716bae96945
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:dd8ee6610e199b5cd9fbc20357597205bce8d7a9c92937e45ab0287ee11aa3fc
-    sha256: dd8ee6610e199b5cd9fbc20357597205bce8d7a9c92937e45ab0287ee11aa3fc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:4335c5c6de511f66172229cfedec62145ddf1f408b48e14b732c457e861fd746
-    sha256: 4335c5c6de511f66172229cfedec62145ddf1f408b48e14b732c457e861fd746
-source:
-  url: https://downloads.sourceforge.net/project/uftp-multicast/source-tar/uftp-5.0.3.tar.gz
-  sha256: cb8668c19b1f10bc63a16ffa893e205dc3ec86361037d477d8003260ebc40080
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:767d6bb0732fc7caf62d2a83cefd46e505ab1f26a1fe37fd74121716bae96945
+        sha256: 767d6bb0732fc7caf62d2a83cefd46e505ab1f26a1fe37fd74121716bae96945
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:fb631c49f47b8e3f94c295c6257e61c7caa441d37f40a8f9ffa8d80a9db30a94
+        sha256: fb631c49f47b8e3f94c295c6257e61c7caa441d37f40a8f9ffa8d80a9db30a94
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:dd8ee6610e199b5cd9fbc20357597205bce8d7a9c92937e45ab0287ee11aa3fc
+        sha256: dd8ee6610e199b5cd9fbc20357597205bce8d7a9c92937e45ab0287ee11aa3fc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:4335c5c6de511f66172229cfedec62145ddf1f408b48e14b732c457e861fd746
+        sha256: 4335c5c6de511f66172229cfedec62145ddf1f408b48e14b732c457e861fd746
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/uftp-multicast/source-tar/uftp-5.0.3.tar.gz
+    sha256: cb8668c19b1f10bc63a16ffa893e205dc3ec86361037d477d8003260ebc40080
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

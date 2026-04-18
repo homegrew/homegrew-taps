@@ -1,30 +1,55 @@
 name: uhdm
-version: 1.86
+version: "1.86"
 description: Universal Hardware Data Model, modeling of the SystemVerilog Object Model
 homepage: https://github.com/chipsalliance/UHDM
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uhdm/blobs/sha256:05e149b685f8043ada9588fc79c1475347680ea8a609ecf56fc797fdfdb7886d
-    sha256: 05e149b685f8043ada9588fc79c1475347680ea8a609ecf56fc797fdfdb7886d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uhdm/blobs/sha256:ed34d3c6e49fa59a061ba150001448e9a1310e831d324b8c5ea6597ef251eb57
-    sha256: ed34d3c6e49fa59a061ba150001448e9a1310e831d324b8c5ea6597ef251eb57
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uhdm/blobs/sha256:f0c259e0a694b0da6de0e957046f92509ec5fb96ad5e0e5e4fd97a3b8bdcfd82
-    sha256: f0c259e0a694b0da6de0e957046f92509ec5fb96ad5e0e5e4fd97a3b8bdcfd82
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uhdm/blobs/sha256:eb677c854b06800d440384e2725b0b2e2f79ed2c8fdceadd466411cc134e35d7
-    sha256: eb677c854b06800d440384e2725b0b2e2f79ed2c8fdceadd466411cc134e35d7
-source:
-  url: https://github.com/chipsalliance/UHDM/archive/refs/tags/v1.86.tar.gz
-  sha256: 179203b166be5d1be12b901c69c6a569ebebf4fe47bc674b1268bd9319216fce
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - capnp
+    - capnp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uhdm/blobs/sha256:ed34d3c6e49fa59a061ba150001448e9a1310e831d324b8c5ea6597ef251eb57
+        sha256: ed34d3c6e49fa59a061ba150001448e9a1310e831d324b8c5ea6597ef251eb57
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uhdm/blobs/sha256:05e149b685f8043ada9588fc79c1475347680ea8a609ecf56fc797fdfdb7886d
+        sha256: 05e149b685f8043ada9588fc79c1475347680ea8a609ecf56fc797fdfdb7886d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uhdm/blobs/sha256:f0c259e0a694b0da6de0e957046f92509ec5fb96ad5e0e5e4fd97a3b8bdcfd82
+        sha256: f0c259e0a694b0da6de0e957046f92509ec5fb96ad5e0e5e4fd97a3b8bdcfd82
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uhdm/blobs/sha256:eb677c854b06800d440384e2725b0b2e2f79ed2c8fdceadd466411cc134e35d7
+        sha256: eb677c854b06800d440384e2725b0b2e2f79ed2c8fdceadd466411cc134e35d7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/chipsalliance/UHDM/archive/refs/tags/v1.86.tar.gz
+    sha256: 179203b166be5d1be12b901c69c6a569ebebf4fe47bc674b1268bd9319216fce
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - python@3.14
+    - cmake
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

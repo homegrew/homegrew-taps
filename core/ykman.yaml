@@ -3,29 +3,54 @@ version: 5.9.1
 description: Tool for managing your YubiKey configuration
 homepage: https://developers.yubico.com/yubikey-manager/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ykman/blobs/sha256:cf859a30150126d9c89b96b68ea34bf8732038c4e9994dcb839f61bf29bab31a
-    sha256: cf859a30150126d9c89b96b68ea34bf8732038c4e9994dcb839f61bf29bab31a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ykman/blobs/sha256:f2d08316c01d306417e9eda4399a4d05c86a07dd78562416c97bb9a6dee5c92e
-    sha256: f2d08316c01d306417e9eda4399a4d05c86a07dd78562416c97bb9a6dee5c92e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ykman/blobs/sha256:158d7fc5e56b1141ad6ca5b6e27b20e31097ee1875d79175430bd3840ded1728
-    sha256: 158d7fc5e56b1141ad6ca5b6e27b20e31097ee1875d79175430bd3840ded1728
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ykman/blobs/sha256:4d9ed160c7ece658a86c23178af0fad0735aceac2e4b0297a960e8ec83f212b5
-    sha256: 4d9ed160c7ece658a86c23178af0fad0735aceac2e4b0297a960e8ec83f212b5
-source:
-  url: https://files.pythonhosted.org/packages/82/f8/909641e6a9fe3bf315df9032a2875eff5981b95c90df55f269506fadb6c9/yubikey_manager-5.9.1.tar.gz
-  sha256: 83bda2a4bbb6a93bc07e5de73a0f30e5a8b811c85a9116aaca6dd3eed8abb0eb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cryptography
-  - python@3.14
+    - cryptography
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ykman/blobs/sha256:f2d08316c01d306417e9eda4399a4d05c86a07dd78562416c97bb9a6dee5c92e
+        sha256: f2d08316c01d306417e9eda4399a4d05c86a07dd78562416c97bb9a6dee5c92e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ykman/blobs/sha256:cf859a30150126d9c89b96b68ea34bf8732038c4e9994dcb839f61bf29bab31a
+        sha256: cf859a30150126d9c89b96b68ea34bf8732038c4e9994dcb839f61bf29bab31a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ykman/blobs/sha256:158d7fc5e56b1141ad6ca5b6e27b20e31097ee1875d79175430bd3840ded1728
+        sha256: 158d7fc5e56b1141ad6ca5b6e27b20e31097ee1875d79175430bd3840ded1728
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ykman/blobs/sha256:4d9ed160c7ece658a86c23178af0fad0735aceac2e4b0297a960e8ec83f212b5
+        sha256: 4d9ed160c7ece658a86c23178af0fad0735aceac2e4b0297a960e8ec83f212b5
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/82/f8/909641e6a9fe3bf315df9032a2875eff5981b95c90df55f269506fadb6c9/yubikey_manager-5.9.1.tar.gz
+    sha256: 83bda2a4bbb6a93bc07e5de73a0f30e5a8b811c85a9116aaca6dd3eed8abb0eb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - swig
+    - cmake
+    - swig
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

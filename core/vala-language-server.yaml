@@ -1,42 +1,66 @@
 name: vala-language-server
 version: 0.48.7
-description: "Code Intelligence for Vala & Genie"
+description: Code Intelligence for Vala & Genie
 homepage: https://github.com/vala-lang/vala-language-server
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:6de961a16d8c01a87334d3e5f8952bccde9d82e321719c8b7606a173b6a4f79b
-    sha256: 6de961a16d8c01a87334d3e5f8952bccde9d82e321719c8b7606a173b6a4f79b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:2142ed177e269f7b29398f13dab2e234cd788becf8a4220c1a1c7f0b9b24925d
-    sha256: 2142ed177e269f7b29398f13dab2e234cd788becf8a4220c1a1c7f0b9b24925d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:063a6451f6da46ce3112e2de698c723b69867fb4890a97b5ae78b16dc85ef23d
-    sha256: 063a6451f6da46ce3112e2de698c723b69867fb4890a97b5ae78b16dc85ef23d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:f7bde32833468a8a783f9992ed2aad1dda845285a650bb7f1c69e8ad2fc24b8e
-    sha256: f7bde32833468a8a783f9992ed2aad1dda845285a650bb7f1c69e8ad2fc24b8e
-source:
-  url: https://github.com/vala-lang/vala-language-server/releases/download/0.48.7/vala-language-server-0.48.7.tar.xz
-  sha256: a93e09497738144792466d0c5ccb1347583d84a9987b65b08f6aa5d5a1e3f431
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - json-glib
-  - jsonrpc-glib
-  - libgee
-  - vala
-  - gettext
+    - glib
+    - json-glib
+    - jsonrpc-glib
+    - libgee
+    - vala
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:2142ed177e269f7b29398f13dab2e234cd788becf8a4220c1a1c7f0b9b24925d
+        sha256: 2142ed177e269f7b29398f13dab2e234cd788becf8a4220c1a1c7f0b9b24925d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:6de961a16d8c01a87334d3e5f8952bccde9d82e321719c8b7606a173b6a4f79b
+        sha256: 6de961a16d8c01a87334d3e5f8952bccde9d82e321719c8b7606a173b6a4f79b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:063a6451f6da46ce3112e2de698c723b69867fb4890a97b5ae78b16dc85ef23d
+        sha256: 063a6451f6da46ce3112e2de698c723b69867fb4890a97b5ae78b16dc85ef23d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vala-language-server/blobs/sha256:f7bde32833468a8a783f9992ed2aad1dda845285a650bb7f1c69e8ad2fc24b8e
+        sha256: f7bde32833468a8a783f9992ed2aad1dda845285a650bb7f1c69e8ad2fc24b8e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/vala-lang/vala-language-server/releases/download/0.48.7/vala-language-server-0.48.7.tar.xz
+    sha256: a93e09497738144792466d0c5ccb1347583d84a9987b65b08f6aa5d5a1e3f431
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - glib
-  - json-glib
-  - jsonrpc-glib
-  - libgee
-  - vala
+    - glib
+    - json-glib
+    - jsonrpc-glib
+    - libgee
+    - vala
+build:
+    configure: []
+    install: []
+service: null

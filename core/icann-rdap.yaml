@@ -3,28 +3,53 @@ version: 0.0.28
 description: Full-rich client for the Registry Data Access Protocol (RDAP) sponsored by ICANN
 homepage: https://github.com/icann/icann-rdap/wiki
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/icann-rdap/blobs/sha256:34c9b6a21e70a646e7290d1d19486733fae11bdd5aba240ac4923ce1b57427ea
-    sha256: 34c9b6a21e70a646e7290d1d19486733fae11bdd5aba240ac4923ce1b57427ea
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/icann-rdap/blobs/sha256:85d2d8c72ec6a3ac1fc4d416709b45be42e4791b9299c388b50bc3d17d6ab7d9
-    sha256: 85d2d8c72ec6a3ac1fc4d416709b45be42e4791b9299c388b50bc3d17d6ab7d9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/icann-rdap/blobs/sha256:fada26f6ba2ed67ea9caa729f9cdb5e4a75f253cfe3d9ae00addbcf614334a2c
-    sha256: fada26f6ba2ed67ea9caa729f9cdb5e4a75f253cfe3d9ae00addbcf614334a2c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/icann-rdap/blobs/sha256:598e86e5b1bec87ed8de06c60445d4a18b686c78a6d827bf7cbdfe61cd5b0e14
-    sha256: 598e86e5b1bec87ed8de06c60445d4a18b686c78a6d827bf7cbdfe61cd5b0e14
-source:
-  url: https://github.com/icann/icann-rdap/archive/refs/tags/v0.0.28.tar.gz
-  sha256: 9854f31c96086cc54110c7d86e7f4c99a37810aab0a9e2b9331d68918c374ede
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/icann-rdap/blobs/sha256:85d2d8c72ec6a3ac1fc4d416709b45be42e4791b9299c388b50bc3d17d6ab7d9
+        sha256: 85d2d8c72ec6a3ac1fc4d416709b45be42e4791b9299c388b50bc3d17d6ab7d9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/icann-rdap/blobs/sha256:34c9b6a21e70a646e7290d1d19486733fae11bdd5aba240ac4923ce1b57427ea
+        sha256: 34c9b6a21e70a646e7290d1d19486733fae11bdd5aba240ac4923ce1b57427ea
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/icann-rdap/blobs/sha256:fada26f6ba2ed67ea9caa729f9cdb5e4a75f253cfe3d9ae00addbcf614334a2c
+        sha256: fada26f6ba2ed67ea9caa729f9cdb5e4a75f253cfe3d9ae00addbcf614334a2c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/icann-rdap/blobs/sha256:598e86e5b1bec87ed8de06c60445d4a18b686c78a6d827bf7cbdfe61cd5b0e14
+        sha256: 598e86e5b1bec87ed8de06c60445d4a18b686c78a6d827bf7cbdfe61cd5b0e14
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/icann/icann-rdap/archive/refs/tags/v0.0.28.tar.gz
+    sha256: 9854f31c96086cc54110c7d86e7f4c99a37810aab0a9e2b9331d68918c374ede
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

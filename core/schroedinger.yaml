@@ -3,27 +3,52 @@ version: 1.0.11
 description: High-speed implementation of the Dirac codec
 homepage: https://launchpad.net/schroedinger
 license: MPL-1.1 OR LGPL-2.0-only OR GPL-2.0-only OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/schroedinger/blobs/sha256:802187a5994506ae665bb01bb4457ec3a3f7f41241f6d1734f59d28c02c0485d
-    sha256: 802187a5994506ae665bb01bb4457ec3a3f7f41241f6d1734f59d28c02c0485d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/schroedinger/blobs/sha256:a4eeeabcf00b3a73ae1efd28b5f00b3a92d447dce55d92ffc2d6a88d15e330ce
-    sha256: a4eeeabcf00b3a73ae1efd28b5f00b3a92d447dce55d92ffc2d6a88d15e330ce
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/schroedinger/blobs/sha256:32c7db0617f2a2d01b89d446860529fc3520f377e601a460fadc5e3ce2bc0baa
-    sha256: 32c7db0617f2a2d01b89d446860529fc3520f377e601a460fadc5e3ce2bc0baa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/schroedinger/blobs/sha256:2f2674c5ae2910ea63da7347b73cbb12f45f1531babac60af4ef50d82a1f79cb
-    sha256: 2f2674c5ae2910ea63da7347b73cbb12f45f1531babac60af4ef50d82a1f79cb
-source:
-  url: https://launchpad.net/schroedinger/trunk/1.0.11/+download/schroedinger-1.0.11.tar.gz
-  sha256: 1e572a0735b92aca5746c4528f9bebd35aa0ccf8619b22fa2756137a8cc9f912
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - orc
+    - orc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/schroedinger/blobs/sha256:a4eeeabcf00b3a73ae1efd28b5f00b3a92d447dce55d92ffc2d6a88d15e330ce
+        sha256: a4eeeabcf00b3a73ae1efd28b5f00b3a92d447dce55d92ffc2d6a88d15e330ce
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/schroedinger/blobs/sha256:802187a5994506ae665bb01bb4457ec3a3f7f41241f6d1734f59d28c02c0485d
+        sha256: 802187a5994506ae665bb01bb4457ec3a3f7f41241f6d1734f59d28c02c0485d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/schroedinger/blobs/sha256:32c7db0617f2a2d01b89d446860529fc3520f377e601a460fadc5e3ce2bc0baa
+        sha256: 32c7db0617f2a2d01b89d446860529fc3520f377e601a460fadc5e3ce2bc0baa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/schroedinger/blobs/sha256:2f2674c5ae2910ea63da7347b73cbb12f45f1531babac60af4ef50d82a1f79cb
+        sha256: 2f2674c5ae2910ea63da7347b73cbb12f45f1531babac60af4ef50d82a1f79cb
+        sha512: ""
+        signature: ""
+source:
+    url: https://launchpad.net/schroedinger/trunk/1.0.11/+download/schroedinger-1.0.11.tar.gz
+    sha256: 1e572a0735b92aca5746c4528f9bebd35aa0ccf8619b22fa2756137a8cc9f912
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

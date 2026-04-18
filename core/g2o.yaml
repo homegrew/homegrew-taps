@@ -1,29 +1,54 @@
 name: g2o
-version: 20241228
+version: "20241228"
 description: General framework for graph optimization
 homepage: https://openslam-org.github.io/g2o.html
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/g2o/blobs/sha256:5ad0c65eda4765cf3816241e2d0604e2c2853783f6d9e8349843a97524f5fb43
-    sha256: 5ad0c65eda4765cf3816241e2d0604e2c2853783f6d9e8349843a97524f5fb43
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/g2o/blobs/sha256:e5b0c09abb8b30d083725953ccbff1f932572fb130a6b32fb406068e8d16bb40
-    sha256: e5b0c09abb8b30d083725953ccbff1f932572fb130a6b32fb406068e8d16bb40
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/g2o/blobs/sha256:a5ba022e961df0b0629d7b57185a7867ede5c71151bf55720f06cee79fe75f61
-    sha256: a5ba022e961df0b0629d7b57185a7867ede5c71151bf55720f06cee79fe75f61
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/g2o/blobs/sha256:0248efaf0de4f324fcab96dcb21faf224f4064249405f85ef7715bd3a2304001
-    sha256: 0248efaf0de4f324fcab96dcb21faf224f4064249405f85ef7715bd3a2304001
-source:
-  url: https://github.com/RainerKuemmerle/g2o/archive/refs/tags/20241228_git.tar.gz
-  sha256: d691ead69184ebbb8256c9cd9f4121d1a880b169370efc0554dd31a64802a452
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - eigen
+    - eigen
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/g2o/blobs/sha256:e5b0c09abb8b30d083725953ccbff1f932572fb130a6b32fb406068e8d16bb40
+        sha256: e5b0c09abb8b30d083725953ccbff1f932572fb130a6b32fb406068e8d16bb40
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/g2o/blobs/sha256:5ad0c65eda4765cf3816241e2d0604e2c2853783f6d9e8349843a97524f5fb43
+        sha256: 5ad0c65eda4765cf3816241e2d0604e2c2853783f6d9e8349843a97524f5fb43
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/g2o/blobs/sha256:a5ba022e961df0b0629d7b57185a7867ede5c71151bf55720f06cee79fe75f61
+        sha256: a5ba022e961df0b0629d7b57185a7867ede5c71151bf55720f06cee79fe75f61
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/g2o/blobs/sha256:0248efaf0de4f324fcab96dcb21faf224f4064249405f85ef7715bd3a2304001
+        sha256: 0248efaf0de4f324fcab96dcb21faf224f4064249405f85ef7715bd3a2304001
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/RainerKuemmerle/g2o/archive/refs/tags/20241228_git.tar.gz
+    sha256: d691ead69184ebbb8256c9cd9f4121d1a880b169370efc0554dd31a64802a452
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

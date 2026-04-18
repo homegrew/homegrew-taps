@@ -3,27 +3,52 @@ version: 2.1.28
 description: Simple Authentication and Security Layer
 homepage: https://www.cyrusimap.org/sasl/
 license: BSD-3-Clause-Attribution
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cyrus-sasl/blobs/sha256:17e620e6b3ab58620c3b6d2f06eca63d45ed857243b19f67b607ed144a68acd0
-    sha256: 17e620e6b3ab58620c3b6d2f06eca63d45ed857243b19f67b607ed144a68acd0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cyrus-sasl/blobs/sha256:5112a83906ea31b699c5a1ee149729298c160585cdc1c65702a81b6de5318193
-    sha256: 5112a83906ea31b699c5a1ee149729298c160585cdc1c65702a81b6de5318193
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cyrus-sasl/blobs/sha256:f1bc6d528c1c0e53c2eecb599e5127070654a7bdfb9acb0232cfd08bfaf38efd
-    sha256: f1bc6d528c1c0e53c2eecb599e5127070654a7bdfb9acb0232cfd08bfaf38efd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cyrus-sasl/blobs/sha256:66658e5a01892c2952754447404b14f73a888c1cd5b97dbed3c6244dc4d62a2a
-    sha256: 66658e5a01892c2952754447404b14f73a888c1cd5b97dbed3c6244dc4d62a2a
-source:
-  url: https://github.com/cyrusimap/cyrus-sasl/releases/download/cyrus-sasl-2.1.28/cyrus-sasl-2.1.28.tar.gz
-  sha256: 7ccfc6abd01ed67c1a0924b353e526f1b766b21f42d4562ee635a8ebfc5bb38c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - krb5
-  - openssl@3
+    - krb5
+    - openssl@3
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cyrus-sasl/blobs/sha256:5112a83906ea31b699c5a1ee149729298c160585cdc1c65702a81b6de5318193
+        sha256: 5112a83906ea31b699c5a1ee149729298c160585cdc1c65702a81b6de5318193
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cyrus-sasl/blobs/sha256:17e620e6b3ab58620c3b6d2f06eca63d45ed857243b19f67b607ed144a68acd0
+        sha256: 17e620e6b3ab58620c3b6d2f06eca63d45ed857243b19f67b607ed144a68acd0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cyrus-sasl/blobs/sha256:f1bc6d528c1c0e53c2eecb599e5127070654a7bdfb9acb0232cfd08bfaf38efd
+        sha256: f1bc6d528c1c0e53c2eecb599e5127070654a7bdfb9acb0232cfd08bfaf38efd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cyrus-sasl/blobs/sha256:66658e5a01892c2952754447404b14f73a888c1cd5b97dbed3c6244dc4d62a2a
+        sha256: 66658e5a01892c2952754447404b14f73a888c1cd5b97dbed3c6244dc4d62a2a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cyrusimap/cyrus-sasl/releases/download/cyrus-sasl-2.1.28/cyrus-sasl-2.1.28.tar.gz
+    sha256: 7ccfc6abd01ed67c1a0924b353e526f1b766b21f42d4562ee635a8ebfc5bb38c
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

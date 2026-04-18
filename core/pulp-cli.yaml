@@ -3,28 +3,54 @@ version: 0.39.0
 description: Command-line interface for Pulp 3
 homepage: https://github.com/pulp/pulp-cli
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pulp-cli/blobs/sha256:91206470e3d3f290c225279071db526930139c2521347207966f8a719f46fb59
-    sha256: 91206470e3d3f290c225279071db526930139c2521347207966f8a719f46fb59
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pulp-cli/blobs/sha256:873bdf61ea96149998b20dacfe53733715ca67b8192aaffd03b5f4d6f916931b
-    sha256: 873bdf61ea96149998b20dacfe53733715ca67b8192aaffd03b5f4d6f916931b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pulp-cli/blobs/sha256:447beff1689c1db5cf1aff55dbee18474a5e603a016452ce7c861498aeb6ea8d
-    sha256: 447beff1689c1db5cf1aff55dbee18474a5e603a016452ce7c861498aeb6ea8d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pulp-cli/blobs/sha256:3cd2eadb414fc6bf5e148a3571c8674dbd1d8c9ccb9a0020a981a750d589853c
-    sha256: 3cd2eadb414fc6bf5e148a3571c8674dbd1d8c9ccb9a0020a981a750d589853c
-source:
-  url: https://files.pythonhosted.org/packages/dd/df/666041d2c4a303a616d71f8c43e38f5afde35a704ddd63c1632abfd6062e/pulp_cli-0.39.0.tar.gz
-  sha256: 29dcb6bcbabd40d1e293a3d796da875ffd79206163b0f212bfe64dd773a343cc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - pydantic
-  - python@3.14
+    - certifi
+    - libyaml
+    - pydantic
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pulp-cli/blobs/sha256:873bdf61ea96149998b20dacfe53733715ca67b8192aaffd03b5f4d6f916931b
+        sha256: 873bdf61ea96149998b20dacfe53733715ca67b8192aaffd03b5f4d6f916931b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pulp-cli/blobs/sha256:91206470e3d3f290c225279071db526930139c2521347207966f8a719f46fb59
+        sha256: 91206470e3d3f290c225279071db526930139c2521347207966f8a719f46fb59
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pulp-cli/blobs/sha256:447beff1689c1db5cf1aff55dbee18474a5e603a016452ce7c861498aeb6ea8d
+        sha256: 447beff1689c1db5cf1aff55dbee18474a5e603a016452ce7c861498aeb6ea8d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pulp-cli/blobs/sha256:3cd2eadb414fc6bf5e148a3571c8674dbd1d8c9ccb9a0020a981a750d589853c
+        sha256: 3cd2eadb414fc6bf5e148a3571c8674dbd1d8c9ccb9a0020a981a750d589853c
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/dd/df/666041d2c4a303a616d71f8c43e38f5afde35a704ddd63c1632abfd6062e/pulp_cli-0.39.0.tar.gz
+    sha256: 29dcb6bcbabd40d1e293a3d796da875ffd79206163b0f212bfe64dd773a343cc
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,53 +3,77 @@ version: 0.27.0
 description: Framework for distributed, secure and privacy-preserving applications
 homepage: https://gnunet.org/
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:056d46173e490e99d20a9a745bc5aa663f9848cc06131ad6ecfa9b04b6ac6f59
-    sha256: 056d46173e490e99d20a9a745bc5aa663f9848cc06131ad6ecfa9b04b6ac6f59
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:29c2c40b192f09055ce531bdf0959a570739cd0c2b704a4fcc6f6cb5385e92cf
-    sha256: 29c2c40b192f09055ce531bdf0959a570739cd0c2b704a4fcc6f6cb5385e92cf
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:2e09b29bffd50dc8efbb3c5c2a191ca72a6101a99f233c449b049aec20d7af95
-    sha256: 2e09b29bffd50dc8efbb3c5c2a191ca72a6101a99f233c449b049aec20d7af95
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:1af534f987e8bb580f89808a4e273da007d7d69baea284cb64d8ef278ea37273
-    sha256: 1af534f987e8bb580f89808a4e273da007d7d69baea284cb64d8ef278ea37273
-source:
-  url: https://ftpmirror.gnu.org/gnu/gnunet/gnunet-0.27.0.tar.gz
-  sha256: 9dd8feb3f3b8d0993766a49ab618f80bb93017f3bc795b6dda84697397302a07
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
-  - gmp
-  - gnutls
-  - jansson
-  - libextractor
-  - libgcrypt
-  - libidn2
-  - libmicrohttpd
-  - libsodium
-  - libtool
-  - libunistring
-  - libgpg-error
+    - gettext
+    - gmp
+    - gnutls
+    - jansson
+    - libextractor
+    - libgcrypt
+    - libidn2
+    - libmicrohttpd
+    - libsodium
+    - libtool
+    - libunistring
+    - libgpg-error
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:29c2c40b192f09055ce531bdf0959a570739cd0c2b704a4fcc6f6cb5385e92cf
+        sha256: 29c2c40b192f09055ce531bdf0959a570739cd0c2b704a4fcc6f6cb5385e92cf
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:056d46173e490e99d20a9a745bc5aa663f9848cc06131ad6ecfa9b04b6ac6f59
+        sha256: 056d46173e490e99d20a9a745bc5aa663f9848cc06131ad6ecfa9b04b6ac6f59
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:2e09b29bffd50dc8efbb3c5c2a191ca72a6101a99f233c449b049aec20d7af95
+        sha256: 2e09b29bffd50dc8efbb3c5c2a191ca72a6101a99f233c449b049aec20d7af95
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:1af534f987e8bb580f89808a4e273da007d7d69baea284cb64d8ef278ea37273
+        sha256: 1af534f987e8bb580f89808a4e273da007d7d69baea284cb64d8ef278ea37273
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/gnunet/gnunet-0.27.0.tar.gz
+    sha256: 9dd8feb3f3b8d0993766a49ab618f80bb93017f3bc795b6dda84697397302a07
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - gettext
-  - gmp
-  - gnutls
-  - jansson
-  - libextractor
-  - libgcrypt
-  - libidn2
-  - libmicrohttpd
-  - libsodium
-  - libtool
-  - libunistring
-  - zlib-ng-compat
+    - gettext
+    - gmp
+    - gnutls
+    - jansson
+    - libextractor
+    - libgcrypt
+    - libidn2
+    - libmicrohttpd
+    - libsodium
+    - libtool
+    - libunistring
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

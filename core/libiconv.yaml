@@ -1,23 +1,44 @@
 name: libiconv
-version: 1.19
+version: "1.19"
 description: Conversion library
 homepage: https://www.gnu.org/software/libiconv/
 license: GPL-3.0-or-later AND LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:39e4ffdefdebf658be077d84e1dca6840d4df7d364b990ababbc736037312990
-    sha256: 39e4ffdefdebf658be077d84e1dca6840d4df7d364b990ababbc736037312990
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:dc9389c9b302277e146eb4a22bb575df3bdf70d9bf82051904781192e9ef86d9
-    sha256: dc9389c9b302277e146eb4a22bb575df3bdf70d9bf82051904781192e9ef86d9
-source:
-  url: https://ftpmirror.gnu.org/gnu/libiconv/libiconv-1.19.tar.gz
-  sha256: 88dd96a8c0464eca144fc791ae60cd31cd8ee78321e67397e25fc095c4a19aa6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
-build_dependencies:
-  - autoconf
-  - automake
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:dc9389c9b302277e146eb4a22bb575df3bdf70d9bf82051904781192e9ef86d9
+        sha256: dc9389c9b302277e146eb4a22bb575df3bdf70d9bf82051904781192e9ef86d9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:39e4ffdefdebf658be077d84e1dca6840d4df7d364b990ababbc736037312990
+        sha256: 39e4ffdefdebf658be077d84e1dca6840d4df7d364b990ababbc736037312990
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/libiconv/libiconv-1.19.tar.gz
+    sha256: 88dd96a8c0464eca144fc791ae60cd31cd8ee78321e67397e25fc095c4a19aa6
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - autoconf
+    - automake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

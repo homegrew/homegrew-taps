@@ -3,41 +3,65 @@ version: 0.8.6
 description: Software library to decode tracked music files
 homepage: https://lib.openmpt.org/libopenmpt/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libopenmpt/blobs/sha256:3100a44cac42a5301a265ce93e28a5278832b9eae826f0025a811ca6736661c6
-    sha256: 3100a44cac42a5301a265ce93e28a5278832b9eae826f0025a811ca6736661c6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libopenmpt/blobs/sha256:fa4fec4c54ea6203a9a46d4d288a08d69e1d1bac1cd2ec99a03fd2d194fdc943
-    sha256: fa4fec4c54ea6203a9a46d4d288a08d69e1d1bac1cd2ec99a03fd2d194fdc943
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libopenmpt/blobs/sha256:edd7140d0223a7266f3e6019321dc800dff590e47cdfe7b4cd416e5d9d818abd
-    sha256: edd7140d0223a7266f3e6019321dc800dff590e47cdfe7b4cd416e5d9d818abd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libopenmpt/blobs/sha256:b99ca507fe526b56d93681d4681f426a469f21d4d58a89d57347935c98fb75a0
-    sha256: b99ca507fe526b56d93681d4681f426a469f21d4d58a89d57347935c98fb75a0
-source:
-  url: https://lib.openmpt.org/files/libopenmpt/src/libopenmpt-0.8.6+release.autotools.tar.gz
-  sha256: caa2fa959e389f4374d9e2df3af5c633452c12dd80442cba2e89cb7ff2b93c5b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - flac
-  - libogg
-  - libsndfile
-  - libvorbis
-  - mpg123
-  - portaudio
+    - flac
+    - libogg
+    - libsndfile
+    - libvorbis
+    - mpg123
+    - portaudio
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libopenmpt/blobs/sha256:fa4fec4c54ea6203a9a46d4d288a08d69e1d1bac1cd2ec99a03fd2d194fdc943
+        sha256: fa4fec4c54ea6203a9a46d4d288a08d69e1d1bac1cd2ec99a03fd2d194fdc943
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libopenmpt/blobs/sha256:3100a44cac42a5301a265ce93e28a5278832b9eae826f0025a811ca6736661c6
+        sha256: 3100a44cac42a5301a265ce93e28a5278832b9eae826f0025a811ca6736661c6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libopenmpt/blobs/sha256:edd7140d0223a7266f3e6019321dc800dff590e47cdfe7b4cd416e5d9d818abd
+        sha256: edd7140d0223a7266f3e6019321dc800dff590e47cdfe7b4cd416e5d9d818abd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libopenmpt/blobs/sha256:b99ca507fe526b56d93681d4681f426a469f21d4d58a89d57347935c98fb75a0
+        sha256: b99ca507fe526b56d93681d4681f426a469f21d4d58a89d57347935c98fb75a0
+        sha512: ""
+        signature: ""
+source:
+    url: https://lib.openmpt.org/files/libopenmpt/src/libopenmpt-0.8.6+release.autotools.tar.gz
+    sha256: caa2fa959e389f4374d9e2df3af5c633452c12dd80442cba2e89cb7ff2b93c5b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - flac
-  - libogg
-  - libsndfile
-  - libvorbis
-  - mpg123
-  - portaudio
-  - pulseaudio
-  - zlib-ng-compat
+    - flac
+    - libogg
+    - libsndfile
+    - libvorbis
+    - mpg123
+    - portaudio
+    - pulseaudio
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

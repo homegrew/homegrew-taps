@@ -3,35 +3,60 @@ version: 4.1.3
 description: Viewer for large images
 homepage: https://github.com/jcupitt/vipsdisp
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vipsdisp/blobs/sha256:f1d8149ab410b4e98de0609ccc20638687c7301e9ac2d9db74e289ccc89ea455
-    sha256: f1d8149ab410b4e98de0609ccc20638687c7301e9ac2d9db74e289ccc89ea455
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vipsdisp/blobs/sha256:b9e7e86fa6fba8bb99701646e492e315ef20dd6eb850780477509c30025ba64b
-    sha256: b9e7e86fa6fba8bb99701646e492e315ef20dd6eb850780477509c30025ba64b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vipsdisp/blobs/sha256:6135a5be7f7cadf2294843c1a7bbe96a5539366696eac56e37533458e438ffd6
-    sha256: 6135a5be7f7cadf2294843c1a7bbe96a5539366696eac56e37533458e438ffd6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vipsdisp/blobs/sha256:22ed1327cab00506ea09028e5e3b818e23aecb95cca43df09cde10b408af4d82
-    sha256: 22ed1327cab00506ea09028e5e3b818e23aecb95cca43df09cde10b408af4d82
-source:
-  url: https://github.com/jcupitt/vipsdisp/releases/download/v4.1.3/vipsdisp-4.1.3.tar.xz
-  sha256: 4e3dbd72f8f56e0216045ef36b5097d00b3d14f2608cf856f0ecbab3d4c44ba4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - graphene
-  - gtk4
-  - hicolor-icon-theme
-  - vips
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - graphene
+    - gtk4
+    - hicolor-icon-theme
+    - vips
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vipsdisp/blobs/sha256:b9e7e86fa6fba8bb99701646e492e315ef20dd6eb850780477509c30025ba64b
+        sha256: b9e7e86fa6fba8bb99701646e492e315ef20dd6eb850780477509c30025ba64b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vipsdisp/blobs/sha256:f1d8149ab410b4e98de0609ccc20638687c7301e9ac2d9db74e289ccc89ea455
+        sha256: f1d8149ab410b4e98de0609ccc20638687c7301e9ac2d9db74e289ccc89ea455
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vipsdisp/blobs/sha256:6135a5be7f7cadf2294843c1a7bbe96a5539366696eac56e37533458e438ffd6
+        sha256: 6135a5be7f7cadf2294843c1a7bbe96a5539366696eac56e37533458e438ffd6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vipsdisp/blobs/sha256:22ed1327cab00506ea09028e5e3b818e23aecb95cca43df09cde10b408af4d82
+        sha256: 22ed1327cab00506ea09028e5e3b818e23aecb95cca43df09cde10b408af4d82
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jcupitt/vipsdisp/releases/download/v4.1.3/vipsdisp-4.1.3.tar.xz
+    sha256: 4e3dbd72f8f56e0216045ef36b5097d00b3d14f2608cf856f0ecbab3d4c44ba4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

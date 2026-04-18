@@ -3,82 +3,106 @@ version: 3.10.12.0
 description: SDK for signal processing blocks to implement software radios
 homepage: https://www.gnuradio.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnuradio/blobs/sha256:24a3ce5ac2ee5cf1a4084ec68c8b696f4e3dd7e4ac23f2cec286bf8bab24923d
-    sha256: 24a3ce5ac2ee5cf1a4084ec68c8b696f4e3dd7e4ac23f2cec286bf8bab24923d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnuradio/blobs/sha256:6123411ad402e1284622f3b20ea96610b205331e85ba6b788f7cbb5b86a4ddd4
-    sha256: 6123411ad402e1284622f3b20ea96610b205331e85ba6b788f7cbb5b86a4ddd4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnuradio/blobs/sha256:178d7428cb3f0470c696f8f6fe938a18fe29dbd19817bcdaba721d2c48a20019
-    sha256: 178d7428cb3f0470c696f8f6fe938a18fe29dbd19817bcdaba721d2c48a20019
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnuradio/blobs/sha256:b35fc05079687f8edf48fb92bae02a61f270bc3bf1091e114cf4c7e2758e836c
-    sha256: b35fc05079687f8edf48fb92bae02a61f270bc3bf1091e114cf4c7e2758e836c
-source:
-  url: https://github.com/gnuradio/gnuradio/archive/refs/tags/v3.10.12.0.tar.gz
-  sha256: fe78ad9f74c8ebf93d5c8ad6fa2c13236af330f3c67149d91a0647b3dc6f3958
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - adwaita-icon-theme
-  - boost
-  - cppzmq
-  - fftw
-  - fmt
-  - gmp
-  - gsl
-  - gtk+3
-  - jack
-  - libsndfile
-  - libyaml
-  - numpy
-  - portaudio
-  - pygobject3
-  - pyqt@5
-  - python@3.14
-  - qt@5
-  - qwt-qt5
-  - rpds-py
-  - soapyrtlsdr
-  - soapysdr
-  - spdlog
-  - uhd
-  - volk
-  - zeromq
+    - adwaita-icon-theme
+    - boost
+    - cppzmq
+    - fftw
+    - fmt
+    - gmp
+    - gsl
+    - gtk+3
+    - jack
+    - libsndfile
+    - libyaml
+    - numpy
+    - portaudio
+    - pygobject3
+    - pyqt@5
+    - python@3.14
+    - qt@5
+    - qwt-qt5
+    - rpds-py
+    - soapyrtlsdr
+    - soapysdr
+    - spdlog
+    - uhd
+    - volk
+    - zeromq
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnuradio/blobs/sha256:6123411ad402e1284622f3b20ea96610b205331e85ba6b788f7cbb5b86a4ddd4
+        sha256: 6123411ad402e1284622f3b20ea96610b205331e85ba6b788f7cbb5b86a4ddd4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnuradio/blobs/sha256:24a3ce5ac2ee5cf1a4084ec68c8b696f4e3dd7e4ac23f2cec286bf8bab24923d
+        sha256: 24a3ce5ac2ee5cf1a4084ec68c8b696f4e3dd7e4ac23f2cec286bf8bab24923d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnuradio/blobs/sha256:178d7428cb3f0470c696f8f6fe938a18fe29dbd19817bcdaba721d2c48a20019
+        sha256: 178d7428cb3f0470c696f8f6fe938a18fe29dbd19817bcdaba721d2c48a20019
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnuradio/blobs/sha256:b35fc05079687f8edf48fb92bae02a61f270bc3bf1091e114cf4c7e2758e836c
+        sha256: b35fc05079687f8edf48fb92bae02a61f270bc3bf1091e114cf4c7e2758e836c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/gnuradio/gnuradio/archive/refs/tags/v3.10.12.0.tar.gz
+    sha256: fe78ad9f74c8ebf93d5c8ad6fa2c13236af330f3c67149d91a0647b3dc6f3958
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
-  - pkgconf
-  - pybind11
+    - cmake
+    - doxygen
+    - pkgconf
+    - pybind11
 linux_dependencies:
-  - adwaita-icon-theme
-  - alsa-lib
-  - boost
-  - cppzmq
-  - fftw
-  - fmt
-  - gmp
-  - gsl
-  - gtk+3
-  - jack
-  - libsndfile
-  - libyaml
-  - llvm
-  - numpy
-  - portaudio
-  - pygobject3
-  - pyqt@5
-  - python@3.14
-  - qt@5
-  - qwt-qt5
-  - rpds-py
-  - soapyrtlsdr
-  - soapysdr
-  - spdlog
-  - uhd
-  - volk
-  - zeromq
+    - adwaita-icon-theme
+    - alsa-lib
+    - boost
+    - cppzmq
+    - fftw
+    - fmt
+    - gmp
+    - gsl
+    - gtk+3
+    - jack
+    - libsndfile
+    - libyaml
+    - llvm
+    - numpy
+    - portaudio
+    - pygobject3
+    - pyqt@5
+    - python@3.14
+    - qt@5
+    - qwt-qt5
+    - rpds-py
+    - soapyrtlsdr
+    - soapysdr
+    - spdlog
+    - uhd
+    - volk
+    - zeromq
+build:
+    configure: []
+    install: []
+service: null

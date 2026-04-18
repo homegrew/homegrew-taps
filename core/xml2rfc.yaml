@@ -3,32 +3,57 @@ version: 3.33.0
 description: Tool to convert XML RFC7749 to the original ASCII or the new HTML look-and-feel
 homepage: https://xml2rfc.tools.ietf.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xml2rfc/blobs/sha256:52ad1b0f5a2d6a067ce53c079e62862e254c2b8dcdef873c05324edbbefbd623
-    sha256: 52ad1b0f5a2d6a067ce53c079e62862e254c2b8dcdef873c05324edbbefbd623
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xml2rfc/blobs/sha256:5c9962342b926cdc5afb6aad1c7095f52c52299a2200765ed3c7a927fa482b7a
-    sha256: 5c9962342b926cdc5afb6aad1c7095f52c52299a2200765ed3c7a927fa482b7a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xml2rfc/blobs/sha256:28d06a62dad9206357b458276c1468a143cf97992dc0068196e0503455386b57
-    sha256: 28d06a62dad9206357b458276c1468a143cf97992dc0068196e0503455386b57
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xml2rfc/blobs/sha256:83b0dc5bdf029f80cac3fb989aeb9a1c9d50a6d0f1a297b0cbcb849f27cad31e
-    sha256: 83b0dc5bdf029f80cac3fb989aeb9a1c9d50a6d0f1a297b0cbcb849f27cad31e
-source:
-  url: https://files.pythonhosted.org/packages/29/0b/44c69b36f09eb20ba238007b39fa2b0e366156477431b32188fb12413591/xml2rfc-3.33.0.tar.gz
-  sha256: feee8140e394dbc26bc61b1e803f5403a8844aaf4d918703c7f2ab1e850b639c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - python@3.14
+    - certifi
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xml2rfc/blobs/sha256:5c9962342b926cdc5afb6aad1c7095f52c52299a2200765ed3c7a927fa482b7a
+        sha256: 5c9962342b926cdc5afb6aad1c7095f52c52299a2200765ed3c7a927fa482b7a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xml2rfc/blobs/sha256:52ad1b0f5a2d6a067ce53c079e62862e254c2b8dcdef873c05324edbbefbd623
+        sha256: 52ad1b0f5a2d6a067ce53c079e62862e254c2b8dcdef873c05324edbbefbd623
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xml2rfc/blobs/sha256:28d06a62dad9206357b458276c1468a143cf97992dc0068196e0503455386b57
+        sha256: 28d06a62dad9206357b458276c1468a143cf97992dc0068196e0503455386b57
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xml2rfc/blobs/sha256:83b0dc5bdf029f80cac3fb989aeb9a1c9d50a6d0f1a297b0cbcb849f27cad31e
+        sha256: 83b0dc5bdf029f80cac3fb989aeb9a1c9d50a6d0f1a297b0cbcb849f27cad31e
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/29/0b/44c69b36f09eb20ba238007b39fa2b0e366156477431b32188fb12413591/xml2rfc-3.33.0.tar.gz
+    sha256: feee8140e394dbc26bc61b1e803f5403a8844aaf4d918703c7f2ab1e850b639c
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - certifi
-  - libxslt
-  - libyaml
-  - python@3.14
+    - certifi
+    - libxslt
+    - libyaml
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

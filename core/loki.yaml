@@ -3,25 +3,51 @@ version: 3.7.1
 description: Horizontally-scalable, highly-available log aggregation system
 homepage: https://grafana.com/loki
 license: AGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:0721a615a9e6c1f58bf845ff76d59ff7460e85b1b299d64d68ee108169928e04
-    sha256: 0721a615a9e6c1f58bf845ff76d59ff7460e85b1b299d64d68ee108169928e04
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:668547c70181344fe16bc664cc44b1a7bee46f4ed1c57ecb4e63da32e098e7c4
-    sha256: 668547c70181344fe16bc664cc44b1a7bee46f4ed1c57ecb4e63da32e098e7c4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:9e85c71f7aa49abe94ea5c84f864dba40e3ff665aed15d2889adf30a8c375681
-    sha256: 9e85c71f7aa49abe94ea5c84f864dba40e3ff665aed15d2889adf30a8c375681
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:6a920f1f58ecfcbf27beaceb85e7844101dd4fee4ada75a97046aa6646a6f030
-    sha256: 6a920f1f58ecfcbf27beaceb85e7844101dd4fee4ada75a97046aa6646a6f030
-source:
-  url: https://github.com/grafana/loki/archive/refs/tags/v3.7.1.tar.gz
-  sha256: 05c5d23eff751b9c4f4e49918359e35b7ba840a5b504e3eac0befe4ad94ad464
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:668547c70181344fe16bc664cc44b1a7bee46f4ed1c57ecb4e63da32e098e7c4
+        sha256: 668547c70181344fe16bc664cc44b1a7bee46f4ed1c57ecb4e63da32e098e7c4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:0721a615a9e6c1f58bf845ff76d59ff7460e85b1b299d64d68ee108169928e04
+        sha256: 0721a615a9e6c1f58bf845ff76d59ff7460e85b1b299d64d68ee108169928e04
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:9e85c71f7aa49abe94ea5c84f864dba40e3ff665aed15d2889adf30a8c375681
+        sha256: 9e85c71f7aa49abe94ea5c84f864dba40e3ff665aed15d2889adf30a8c375681
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:6a920f1f58ecfcbf27beaceb85e7844101dd4fee4ada75a97046aa6646a6f030
+        sha256: 6a920f1f58ecfcbf27beaceb85e7844101dd4fee4ada75a97046aa6646a6f030
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/grafana/loki/archive/refs/tags/v3.7.1.tar.gz
+    sha256: 05c5d23eff751b9c4f4e49918359e35b7ba840a5b504e3eac0befe4ad94ad464
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

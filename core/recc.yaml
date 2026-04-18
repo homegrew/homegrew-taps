@@ -3,45 +3,69 @@ version: 1.4.3
 description: Remote Execution Caching Compiler
 homepage: https://buildgrid.gitlab.io/recc
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:ecc455fcd43cda17016ccc1080fdd74da82f2975eeba17cb2d19d3437bdb933e
-    sha256: ecc455fcd43cda17016ccc1080fdd74da82f2975eeba17cb2d19d3437bdb933e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:c0c90f3c5ffbf6d8f71ad049b1311729752581332f6e409f29848c916971eb21
-    sha256: c0c90f3c5ffbf6d8f71ad049b1311729752581332f6e409f29848c916971eb21
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:f8e97a70de6bd28f9e0bdbbc75417a5a63b23d6111a0c762df695a1f4099cecb
-    sha256: f8e97a70de6bd28f9e0bdbbc75417a5a63b23d6111a0c762df695a1f4099cecb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:b85f69cd7d58b3f5497133b3a9b8196052b3cc4f5f9899b703ce04a61e26779e
-    sha256: b85f69cd7d58b3f5497133b3a9b8196052b3cc4f5f9899b703ce04a61e26779e
-source:
-  url: https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.3/buildbox-1.4.3.tar.gz
-  sha256: 87ebed00ad061bbc3c4faa1fb3e764222ab9b8b0397c610aebb071eace3aedf4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - c-ares
-  - grpc
-  - openssl@3
-  - protobuf
-  - re2
+    - abseil
+    - c-ares
+    - grpc
+    - openssl@3
+    - protobuf
+    - re2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:c0c90f3c5ffbf6d8f71ad049b1311729752581332f6e409f29848c916971eb21
+        sha256: c0c90f3c5ffbf6d8f71ad049b1311729752581332f6e409f29848c916971eb21
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:ecc455fcd43cda17016ccc1080fdd74da82f2975eeba17cb2d19d3437bdb933e
+        sha256: ecc455fcd43cda17016ccc1080fdd74da82f2975eeba17cb2d19d3437bdb933e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:f8e97a70de6bd28f9e0bdbbc75417a5a63b23d6111a0c762df695a1f4099cecb
+        sha256: f8e97a70de6bd28f9e0bdbbc75417a5a63b23d6111a0c762df695a1f4099cecb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:b85f69cd7d58b3f5497133b3a9b8196052b3cc4f5f9899b703ce04a61e26779e
+        sha256: b85f69cd7d58b3f5497133b3a9b8196052b3cc4f5f9899b703ce04a61e26779e
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.3/buildbox-1.4.3.tar.gz
+    sha256: 87ebed00ad061bbc3c4faa1fb3e764222ab9b8b0397c610aebb071eace3aedf4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - gettext
-  - nlohmann-json
-  - pkgconf
-  - tomlplusplus
+    - cmake
+    - gettext
+    - nlohmann-json
+    - pkgconf
+    - tomlplusplus
 linux_dependencies:
-  - abseil
-  - c-ares
-  - grpc
-  - openssl@3
-  - protobuf
-  - re2
-  - util-linux
-  - zlib-ng-compat
+    - abseil
+    - c-ares
+    - grpc
+    - openssl@3
+    - protobuf
+    - re2
+    - util-linux
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

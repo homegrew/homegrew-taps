@@ -3,27 +3,52 @@ version: 0.4.14
 description: Library to import files in MS Works format
 homepage: https://libwps.sourceforge.net/
 license: LGPL-2.1-or-later OR MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libwps/blobs/sha256:a1a1238d044325d8d266d1d13531ce09f837f8fe7ee2fe1474971456f3b5fe6b
-    sha256: a1a1238d044325d8d266d1d13531ce09f837f8fe7ee2fe1474971456f3b5fe6b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libwps/blobs/sha256:eafcfcc4568c94cb334613505826f62aeee27380acab0ddff6f88c5e832ee128
-    sha256: eafcfcc4568c94cb334613505826f62aeee27380acab0ddff6f88c5e832ee128
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libwps/blobs/sha256:1947ed7197be31c9abf52b092a535de6d3d1416c9fef915661ba81da4cee37b6
-    sha256: 1947ed7197be31c9abf52b092a535de6d3d1416c9fef915661ba81da4cee37b6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libwps/blobs/sha256:66e66c4fe9ca468d38f275f3fafeb4c5fcdabffc65f7f09c4256f10454421a14
-    sha256: 66e66c4fe9ca468d38f275f3fafeb4c5fcdabffc65f7f09c4256f10454421a14
-source:
-  url: https://downloads.sourceforge.net/project/libwps/libwps/libwps-0.4.14/libwps-0.4.14.tar.xz
-  sha256: 365b968e270e85a8469c6b160aa6af5619a4e6c995dbb04c1ecc1b4dd13e80de
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - librevenge
+    - librevenge
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libwps/blobs/sha256:eafcfcc4568c94cb334613505826f62aeee27380acab0ddff6f88c5e832ee128
+        sha256: eafcfcc4568c94cb334613505826f62aeee27380acab0ddff6f88c5e832ee128
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libwps/blobs/sha256:a1a1238d044325d8d266d1d13531ce09f837f8fe7ee2fe1474971456f3b5fe6b
+        sha256: a1a1238d044325d8d266d1d13531ce09f837f8fe7ee2fe1474971456f3b5fe6b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libwps/blobs/sha256:1947ed7197be31c9abf52b092a535de6d3d1416c9fef915661ba81da4cee37b6
+        sha256: 1947ed7197be31c9abf52b092a535de6d3d1416c9fef915661ba81da4cee37b6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libwps/blobs/sha256:66e66c4fe9ca468d38f275f3fafeb4c5fcdabffc65f7f09c4256f10454421a14
+        sha256: 66e66c4fe9ca468d38f275f3fafeb4c5fcdabffc65f7f09c4256f10454421a14
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/libwps/libwps/libwps-0.4.14/libwps-0.4.14.tar.xz
+    sha256: 365b968e270e85a8469c6b160aa6af5619a4e6c995dbb04c1ecc1b4dd13e80de
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

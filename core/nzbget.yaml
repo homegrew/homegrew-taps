@@ -1,36 +1,60 @@
 name: nzbget
-version: 26.1
+version: "26.1"
 description: Binary newsgrabber for nzb files
 homepage: https://nzbget.com
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:f55c4fc0ae84b75887ac649fefbc3ef0fd910a3c60d1428e0901e0d3e47542a5
-    sha256: f55c4fc0ae84b75887ac649fefbc3ef0fd910a3c60d1428e0901e0d3e47542a5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:d715117f346123e181d078e78e0441ccf239f23da3a46b38f7d12ad812de72db
-    sha256: d715117f346123e181d078e78e0441ccf239f23da3a46b38f7d12ad812de72db
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:777066fbced98655c14a0c63194d5dd386a0d4acca3be4b8e2c5bc8a5ec997b3
-    sha256: 777066fbced98655c14a0c63194d5dd386a0d4acca3be4b8e2c5bc8a5ec997b3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:ced80fbc1a1dbf7e63cbeb98eaa036f39a239b542c35ab47136e69e8e2623865
-    sha256: ced80fbc1a1dbf7e63cbeb98eaa036f39a239b542c35ab47136e69e8e2623865
-source:
-  url: https://github.com/nzbgetcom/nzbget/archive/refs/tags/v26.1.tar.gz
-  sha256: 7ed0940f18635986f096d666e5e0b737ef8ae362e4a538b46a507bacb61b09ed
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - openssl@3
-  - sevenzip
+    - boost
+    - openssl@3
+    - sevenzip
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:d715117f346123e181d078e78e0441ccf239f23da3a46b38f7d12ad812de72db
+        sha256: d715117f346123e181d078e78e0441ccf239f23da3a46b38f7d12ad812de72db
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:f55c4fc0ae84b75887ac649fefbc3ef0fd910a3c60d1428e0901e0d3e47542a5
+        sha256: f55c4fc0ae84b75887ac649fefbc3ef0fd910a3c60d1428e0901e0d3e47542a5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:777066fbced98655c14a0c63194d5dd386a0d4acca3be4b8e2c5bc8a5ec997b3
+        sha256: 777066fbced98655c14a0c63194d5dd386a0d4acca3be4b8e2c5bc8a5ec997b3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:ced80fbc1a1dbf7e63cbeb98eaa036f39a239b542c35ab47136e69e8e2623865
+        sha256: ced80fbc1a1dbf7e63cbeb98eaa036f39a239b542c35ab47136e69e8e2623865
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nzbgetcom/nzbget/archive/refs/tags/v26.1.tar.gz
+    sha256: 7ed0940f18635986f096d666e5e0b737ef8ae362e4a538b46a507bacb61b09ed
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - boost
-  - openssl@3
-  - sevenzip
-  - zlib-ng-compat
+    - boost
+    - openssl@3
+    - sevenzip
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

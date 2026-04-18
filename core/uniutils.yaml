@@ -1,31 +1,56 @@
 name: uniutils
-version: 2.28
+version: "2.28"
 description: Manipulate and analyze Unicode text
 homepage: https://billposer.org/Software/unidesc.html
 license: GPL-2.0-or-later AND GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uniutils/blobs/sha256:c8c2a6ab2e7fd876281c9b107d275f17ab9620a3241a664cdd11af7f02d08fc2
-    sha256: c8c2a6ab2e7fd876281c9b107d275f17ab9620a3241a664cdd11af7f02d08fc2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uniutils/blobs/sha256:6cb5418da4466190223532647f17da877e3af7d19fe61fce7f56fc1465e47c25
-    sha256: 6cb5418da4466190223532647f17da877e3af7d19fe61fce7f56fc1465e47c25
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uniutils/blobs/sha256:b35edd0447764ae2524bba5bf3eb9178d70a5a3559b4c896e8ac8bfaf65f2466
-    sha256: b35edd0447764ae2524bba5bf3eb9178d70a5a3559b4c896e8ac8bfaf65f2466
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uniutils/blobs/sha256:2ff9239b9e70ce2c37680c210c047c0b8d7b88b68058550a267b98643c1f358c
-    sha256: 2ff9239b9e70ce2c37680c210c047c0b8d7b88b68058550a267b98643c1f358c
-source:
-  url: https://billposer.org/Software/Downloads/uniutils-2.28.tar.gz
-  sha256: 41c14c0223376f2d96c80c2ba1b1494fc74cd8982d561630e688e2245aaf3364
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uniutils/blobs/sha256:6cb5418da4466190223532647f17da877e3af7d19fe61fce7f56fc1465e47c25
+        sha256: 6cb5418da4466190223532647f17da877e3af7d19fe61fce7f56fc1465e47c25
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uniutils/blobs/sha256:c8c2a6ab2e7fd876281c9b107d275f17ab9620a3241a664cdd11af7f02d08fc2
+        sha256: c8c2a6ab2e7fd876281c9b107d275f17ab9620a3241a664cdd11af7f02d08fc2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uniutils/blobs/sha256:b35edd0447764ae2524bba5bf3eb9178d70a5a3559b4c896e8ac8bfaf65f2466
+        sha256: b35edd0447764ae2524bba5bf3eb9178d70a5a3559b4c896e8ac8bfaf65f2466
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uniutils/blobs/sha256:2ff9239b9e70ce2c37680c210c047c0b8d7b88b68058550a267b98643c1f358c
+        sha256: 2ff9239b9e70ce2c37680c210c047c0b8d7b88b68058550a267b98643c1f358c
+        sha512: ""
+        signature: ""
+source:
+    url: https://billposer.org/Software/Downloads/uniutils-2.28.tar.gz
+    sha256: 41c14c0223376f2d96c80c2ba1b1494fc74cd8982d561630e688e2245aaf3364
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

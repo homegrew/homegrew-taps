@@ -3,30 +3,55 @@ version: 2.3.0
 description: Create thumbnails for your video files
 homepage: https://github.com/dirkvdb/ffmpegthumbnailer
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpegthumbnailer/blobs/sha256:08e319540e8ddc4a09246ef099e1103dc4e8dccb95752448704cabc96d10a886
-    sha256: 08e319540e8ddc4a09246ef099e1103dc4e8dccb95752448704cabc96d10a886
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpegthumbnailer/blobs/sha256:f1fb9f35f2f829e86f25324b42c4a609433429cc64dfe43d2fcee4ebb099d78e
-    sha256: f1fb9f35f2f829e86f25324b42c4a609433429cc64dfe43d2fcee4ebb099d78e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpegthumbnailer/blobs/sha256:2326808fbabc3ae36f25299da82e352d7bae86b629b72de6ca22c4fcbf03d15a
-    sha256: 2326808fbabc3ae36f25299da82e352d7bae86b629b72de6ca22c4fcbf03d15a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpegthumbnailer/blobs/sha256:71eccfa399cddb86492a70bb48cb2c85b7263fa39d640d01a77976a0b8ca8529
-    sha256: 71eccfa399cddb86492a70bb48cb2c85b7263fa39d640d01a77976a0b8ca8529
-source:
-  url: https://github.com/dirkvdb/ffmpegthumbnailer/archive/refs/tags/v2.3.0.tar.gz
-  sha256: ddf561e294385f07d0bd5a28d0aab9de79b8dbaed29b576f206d58f3df79b508
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - jpeg-turbo
-  - libpng
+    - ffmpeg
+    - jpeg-turbo
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpegthumbnailer/blobs/sha256:f1fb9f35f2f829e86f25324b42c4a609433429cc64dfe43d2fcee4ebb099d78e
+        sha256: f1fb9f35f2f829e86f25324b42c4a609433429cc64dfe43d2fcee4ebb099d78e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpegthumbnailer/blobs/sha256:08e319540e8ddc4a09246ef099e1103dc4e8dccb95752448704cabc96d10a886
+        sha256: 08e319540e8ddc4a09246ef099e1103dc4e8dccb95752448704cabc96d10a886
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpegthumbnailer/blobs/sha256:2326808fbabc3ae36f25299da82e352d7bae86b629b72de6ca22c4fcbf03d15a
+        sha256: 2326808fbabc3ae36f25299da82e352d7bae86b629b72de6ca22c4fcbf03d15a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpegthumbnailer/blobs/sha256:71eccfa399cddb86492a70bb48cb2c85b7263fa39d640d01a77976a0b8ca8529
+        sha256: 71eccfa399cddb86492a70bb48cb2c85b7263fa39d640d01a77976a0b8ca8529
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dirkvdb/ffmpegthumbnailer/archive/refs/tags/v2.3.0.tar.gz
+    sha256: ddf561e294385f07d0bd5a28d0aab9de79b8dbaed29b576f206d58f3df79b508
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

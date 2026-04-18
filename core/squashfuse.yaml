@@ -3,27 +3,48 @@ version: 0.6.1
 description: FUSE filesystem to mount squashfs archives
 homepage: https://github.com/vasi/squashfuse
 license: BSD-2-Clause
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/squashfuse/blobs/sha256:a02ea0c2e2ad0d15354c74b6dc3b55dd2f7f839ffd7592730e2049b6e60d0341
-    sha256: a02ea0c2e2ad0d15354c74b6dc3b55dd2f7f839ffd7592730e2049b6e60d0341
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/squashfuse/blobs/sha256:dca859436a32269db6a94a7fd36284a86ad466bff008d7b56a555e72c15d49f6
-    sha256: dca859436a32269db6a94a7fd36284a86ad466bff008d7b56a555e72c15d49f6
-source:
-  url: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
-  sha256: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libfuse
-  - lz4
-  - lzo
-  - squashfs
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - libfuse
+    - lz4
+    - lzo
+    - squashfs
+    - xz
+    - zlib-ng-compat
+    - zstd
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/squashfuse/blobs/sha256:a02ea0c2e2ad0d15354c74b6dc3b55dd2f7f839ffd7592730e2049b6e60d0341
+        sha256: a02ea0c2e2ad0d15354c74b6dc3b55dd2f7f839ffd7592730e2049b6e60d0341
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/squashfuse/blobs/sha256:dca859436a32269db6a94a7fd36284a86ad466bff008d7b56a555e72c15d49f6
+        sha256: dca859436a32269db6a94a7fd36284a86ad466bff008d7b56a555e72c15d49f6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    sha256: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

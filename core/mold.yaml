@@ -3,35 +3,59 @@ version: 2.41.0
 description: Modern Linker
 homepage: https://github.com/rui314/mold
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:35d236bd637fc1d244b9fc57d4813829dfa9013148d7fe0f42a829fcf0e99637
-    sha256: 35d236bd637fc1d244b9fc57d4813829dfa9013148d7fe0f42a829fcf0e99637
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:df2b0b7c591195a19e68244ddee0c6e0d50a51c5fc6ada23d06c51468b8e2531
-    sha256: df2b0b7c591195a19e68244ddee0c6e0d50a51c5fc6ada23d06c51468b8e2531
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:aeffa1693a6e26ffc350c89c46c7e19b60170f691293b35c362be433c0488373
-    sha256: aeffa1693a6e26ffc350c89c46c7e19b60170f691293b35c362be433c0488373
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:23bce5ee171d327c402a9d42937ad6cc682e2bcee3ee658305b552a04d3ea1a6
-    sha256: 23bce5ee171d327c402a9d42937ad6cc682e2bcee3ee658305b552a04d3ea1a6
-source:
-  url: https://github.com/rui314/mold/archive/refs/tags/v2.41.0.tar.gz
-  sha256: 0a61abac85d818437b425df856822e9d6e9982baeae5a93bcb02fe6c0060c61a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - blake3
-  - tbb
-  - zstd
+    - blake3
+    - tbb
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:df2b0b7c591195a19e68244ddee0c6e0d50a51c5fc6ada23d06c51468b8e2531
+        sha256: df2b0b7c591195a19e68244ddee0c6e0d50a51c5fc6ada23d06c51468b8e2531
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:35d236bd637fc1d244b9fc57d4813829dfa9013148d7fe0f42a829fcf0e99637
+        sha256: 35d236bd637fc1d244b9fc57d4813829dfa9013148d7fe0f42a829fcf0e99637
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:aeffa1693a6e26ffc350c89c46c7e19b60170f691293b35c362be433c0488373
+        sha256: aeffa1693a6e26ffc350c89c46c7e19b60170f691293b35c362be433c0488373
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:23bce5ee171d327c402a9d42937ad6cc682e2bcee3ee658305b552a04d3ea1a6
+        sha256: 23bce5ee171d327c402a9d42937ad6cc682e2bcee3ee658305b552a04d3ea1a6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rui314/mold/archive/refs/tags/v2.41.0.tar.gz
+    sha256: 0a61abac85d818437b425df856822e9d6e9982baeae5a93bcb02fe6c0060c61a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - blake3
-  - mimalloc
-  - tbb
-  - zlib-ng-compat
-  - zstd
+    - blake3
+    - mimalloc
+    - tbb
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

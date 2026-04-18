@@ -3,26 +3,52 @@ version: 0.8.2
 description: TCP measurement tool, similar to iperf or netperf
 homepage: https://flowgrind.github.io
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flowgrind/blobs/sha256:dcd288a71292d550079710e54de9a1b51f45749548873121c5b93c876e60509e
-    sha256: dcd288a71292d550079710e54de9a1b51f45749548873121c5b93c876e60509e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flowgrind/blobs/sha256:ffccc45ede3a5189617d45f4174a4651c8268a8d79c20efd9150a593d323612f
-    sha256: ffccc45ede3a5189617d45f4174a4651c8268a8d79c20efd9150a593d323612f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flowgrind/blobs/sha256:f6c4eee0899191de5387f8210f2c3d4ba96313d50d82ee80e453546e60cfd1b7
-    sha256: f6c4eee0899191de5387f8210f2c3d4ba96313d50d82ee80e453546e60cfd1b7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flowgrind/blobs/sha256:8f3e749ef37e3609c899f5d6fc617045c2bc1c46b5f43c83d0b7c9edbf620e1e
-    sha256: 8f3e749ef37e3609c899f5d6fc617045c2bc1c46b5f43c83d0b7c9edbf620e1e
-source:
-  url: https://github.com/flowgrind/flowgrind/releases/download/flowgrind-0.8.2/flowgrind-0.8.2.tar.bz2
-  sha256: 432c4d15cb62d5d8d0b3509034bfb42380a02e3f0b75d16b7619a1ede07ac4f1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gsl
-  - xmlrpc-c
+    - gsl
+    - xmlrpc-c
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flowgrind/blobs/sha256:ffccc45ede3a5189617d45f4174a4651c8268a8d79c20efd9150a593d323612f
+        sha256: ffccc45ede3a5189617d45f4174a4651c8268a8d79c20efd9150a593d323612f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flowgrind/blobs/sha256:dcd288a71292d550079710e54de9a1b51f45749548873121c5b93c876e60509e
+        sha256: dcd288a71292d550079710e54de9a1b51f45749548873121c5b93c876e60509e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flowgrind/blobs/sha256:f6c4eee0899191de5387f8210f2c3d4ba96313d50d82ee80e453546e60cfd1b7
+        sha256: f6c4eee0899191de5387f8210f2c3d4ba96313d50d82ee80e453546e60cfd1b7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flowgrind/blobs/sha256:8f3e749ef37e3609c899f5d6fc617045c2bc1c46b5f43c83d0b7c9edbf620e1e
+        sha256: 8f3e749ef37e3609c899f5d6fc617045c2bc1c46b5f43c83d0b7c9edbf620e1e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/flowgrind/flowgrind/releases/download/flowgrind-0.8.2/flowgrind-0.8.2.tar.bz2
+    sha256: 432c4d15cb62d5d8d0b3509034bfb42380a02e3f0b75d16b7619a1ede07ac4f1
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

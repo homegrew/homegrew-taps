@@ -3,26 +3,52 @@ version: 1.5.6
 description: Creates executables with SBCL
 homepage: https://www.xach.com/lisp/buildapp/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/buildapp/blobs/sha256:41ea69cf949b8ef0f20b9b174f782e0ff539ed9f0fd6de9e75b20870a4464396
-    sha256: 41ea69cf949b8ef0f20b9b174f782e0ff539ed9f0fd6de9e75b20870a4464396
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/buildapp/blobs/sha256:1bcb452e9daa0bf6c79342e5787a27e4d8f4b09d710eb28d67040c08b9fdd4b7
-    sha256: 1bcb452e9daa0bf6c79342e5787a27e4d8f4b09d710eb28d67040c08b9fdd4b7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/buildapp/blobs/sha256:8dccd3fc72893770eda060bd3bba1f13eef10816c5592842f8d6b172d8fed952
-    sha256: 8dccd3fc72893770eda060bd3bba1f13eef10816c5592842f8d6b172d8fed952
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/buildapp/blobs/sha256:012afed152e0cee571cac5c5c8ea20670d0827bf45a04db711019a67a9c081b5
-    sha256: 012afed152e0cee571cac5c5c8ea20670d0827bf45a04db711019a67a9c081b5
-source:
-  url: https://github.com/xach/buildapp/archive/refs/tags/release-1.5.6.tar.gz
-  sha256: d77fb6c151605da660b909af058206f7fe7d9faf972e2c30876d42cb03d6a3ed
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sbcl
-  - zstd
+    - sbcl
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/buildapp/blobs/sha256:1bcb452e9daa0bf6c79342e5787a27e4d8f4b09d710eb28d67040c08b9fdd4b7
+        sha256: 1bcb452e9daa0bf6c79342e5787a27e4d8f4b09d710eb28d67040c08b9fdd4b7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/buildapp/blobs/sha256:41ea69cf949b8ef0f20b9b174f782e0ff539ed9f0fd6de9e75b20870a4464396
+        sha256: 41ea69cf949b8ef0f20b9b174f782e0ff539ed9f0fd6de9e75b20870a4464396
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/buildapp/blobs/sha256:8dccd3fc72893770eda060bd3bba1f13eef10816c5592842f8d6b172d8fed952
+        sha256: 8dccd3fc72893770eda060bd3bba1f13eef10816c5592842f8d6b172d8fed952
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/buildapp/blobs/sha256:012afed152e0cee571cac5c5c8ea20670d0827bf45a04db711019a67a9c081b5
+        sha256: 012afed152e0cee571cac5c5c8ea20670d0827bf45a04db711019a67a9c081b5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/xach/buildapp/archive/refs/tags/release-1.5.6.tar.gz
+    sha256: d77fb6c151605da660b909af058206f7fe7d9faf972e2c30876d42cb03d6a3ed
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,26 +3,52 @@ version: 1.11.3
 description: HTTP/HTTPS proxy for POSIX systems
 homepage: https://tinyproxy.github.io/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tinyproxy/blobs/sha256:ac4cbc5308a528478d5972dbc951c2420abc1049d7061823735b648f9d864fd7
-    sha256: ac4cbc5308a528478d5972dbc951c2420abc1049d7061823735b648f9d864fd7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tinyproxy/blobs/sha256:6173900c0a425c4ed48996d324e1b6ee832e3ef0d5155efc59dd652ffa8907f6
-    sha256: 6173900c0a425c4ed48996d324e1b6ee832e3ef0d5155efc59dd652ffa8907f6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tinyproxy/blobs/sha256:cf643817026c5ef4e5a55611b4e097b258c15899ba1bf62d5a58461bdc9ef60d
-    sha256: cf643817026c5ef4e5a55611b4e097b258c15899ba1bf62d5a58461bdc9ef60d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tinyproxy/blobs/sha256:b1f3a4f99b21d044c93a0101dfbf11cd1a1c6ce86f3a0189c95337b95778a38d
-    sha256: b1f3a4f99b21d044c93a0101dfbf11cd1a1c6ce86f3a0189c95337b95778a38d
-source:
-  url: https://github.com/tinyproxy/tinyproxy/releases/download/1.11.3/tinyproxy-1.11.3.tar.xz
-  sha256: f05644fdf1211ba13754a354bebed909b5b39371b12cce8563c46929a75bedf6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tinyproxy/blobs/sha256:6173900c0a425c4ed48996d324e1b6ee832e3ef0d5155efc59dd652ffa8907f6
+        sha256: 6173900c0a425c4ed48996d324e1b6ee832e3ef0d5155efc59dd652ffa8907f6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tinyproxy/blobs/sha256:ac4cbc5308a528478d5972dbc951c2420abc1049d7061823735b648f9d864fd7
+        sha256: ac4cbc5308a528478d5972dbc951c2420abc1049d7061823735b648f9d864fd7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tinyproxy/blobs/sha256:cf643817026c5ef4e5a55611b4e097b258c15899ba1bf62d5a58461bdc9ef60d
+        sha256: cf643817026c5ef4e5a55611b4e097b258c15899ba1bf62d5a58461bdc9ef60d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tinyproxy/blobs/sha256:b1f3a4f99b21d044c93a0101dfbf11cd1a1c6ce86f3a0189c95337b95778a38d
+        sha256: b1f3a4f99b21d044c93a0101dfbf11cd1a1c6ce86f3a0189c95337b95778a38d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tinyproxy/tinyproxy/releases/download/1.11.3/tinyproxy-1.11.3.tar.xz
+    sha256: f05644fdf1211ba13754a354bebed909b5b39371b12cce8563c46929a75bedf6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoc
-  - docbook-xsl
+    - asciidoc
+    - docbook-xsl
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

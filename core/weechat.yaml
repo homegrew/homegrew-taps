@@ -3,53 +3,77 @@ version: 4.9.0
 description: Extensible IRC client
 homepage: https://weechat.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:78bedbd56f7b14ffddcf68b0545db80fbbee0bfa03a8c80a95e794a40dfd031b
-    sha256: 78bedbd56f7b14ffddcf68b0545db80fbbee0bfa03a8c80a95e794a40dfd031b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:b14b3c9acde090005894849e752843b09a05b6799bfbf52f9d4f8b92188f4f95
-    sha256: b14b3c9acde090005894849e752843b09a05b6799bfbf52f9d4f8b92188f4f95
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:ed4275d7f6ca07851c834919f135618003e9afe24ca2d02ce3b3cd55578d49fe
-    sha256: ed4275d7f6ca07851c834919f135618003e9afe24ca2d02ce3b3cd55578d49fe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:5e4aa951106466bd20f1a56e152609b907bb20a9af5c6072b10a4580ae29f5c4
-    sha256: 5e4aa951106466bd20f1a56e152609b907bb20a9af5c6072b10a4580ae29f5c4
-source:
-  url: https://weechat.org/files/src/weechat-4.9.0.tar.xz
-  sha256: 7cbb9b27f25a7d2f1d8c426a08f8e625eefbc1d3e59bbf775925444f72394b6f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cjson
-  - enchant
-  - gnutls
-  - libgcrypt
-  - lua
-  - ncurses
-  - python@3.14
-  - ruby
-  - tcl-tk
-  - zstd
-  - gettext
-  - libgpg-error
+    - cjson
+    - enchant
+    - gnutls
+    - libgcrypt
+    - lua
+    - ncurses
+    - python@3.14
+    - ruby
+    - tcl-tk
+    - zstd
+    - gettext
+    - libgpg-error
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:b14b3c9acde090005894849e752843b09a05b6799bfbf52f9d4f8b92188f4f95
+        sha256: b14b3c9acde090005894849e752843b09a05b6799bfbf52f9d4f8b92188f4f95
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:78bedbd56f7b14ffddcf68b0545db80fbbee0bfa03a8c80a95e794a40dfd031b
+        sha256: 78bedbd56f7b14ffddcf68b0545db80fbbee0bfa03a8c80a95e794a40dfd031b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:ed4275d7f6ca07851c834919f135618003e9afe24ca2d02ce3b3cd55578d49fe
+        sha256: ed4275d7f6ca07851c834919f135618003e9afe24ca2d02ce3b3cd55578d49fe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/weechat/blobs/sha256:5e4aa951106466bd20f1a56e152609b907bb20a9af5c6072b10a4580ae29f5c4
+        sha256: 5e4aa951106466bd20f1a56e152609b907bb20a9af5c6072b10a4580ae29f5c4
+        sha512: ""
+        signature: ""
+source:
+    url: https://weechat.org/files/src/weechat-4.9.0.tar.xz
+    sha256: 7cbb9b27f25a7d2f1d8c426a08f8e625eefbc1d3e59bbf775925444f72394b6f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoctor
-  - cmake
-  - gettext
-  - pkgconf
+    - asciidoctor
+    - cmake
+    - gettext
+    - pkgconf
 linux_dependencies:
-  - cjson
-  - enchant
-  - gnutls
-  - libgcrypt
-  - lua
-  - ncurses
-  - python@3.14
-  - ruby
-  - tcl-tk
-  - zlib-ng-compat
-  - zstd
+    - cjson
+    - enchant
+    - gnutls
+    - libgcrypt
+    - lua
+    - ncurses
+    - python@3.14
+    - ruby
+    - tcl-tk
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

@@ -3,40 +3,64 @@ version: 5.14.1
 description: Utility library required by aqbanking and related software
 homepage: https://www.aquamaniac.de/rdm/projects/gwenhywfar
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gwenhywfar/blobs/sha256:0064b8768502f583fd8ca6efb644af7b4951e36157f6f88951d7d8d617e98db2
-    sha256: 0064b8768502f583fd8ca6efb644af7b4951e36157f6f88951d7d8d617e98db2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gwenhywfar/blobs/sha256:d248c00aca75c6333b9edfd2d89f0e33f4d49835d53dd1f95ed723741751ff4c
-    sha256: d248c00aca75c6333b9edfd2d89f0e33f4d49835d53dd1f95ed723741751ff4c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gwenhywfar/blobs/sha256:8141ecaa807eefbcc2e17f6989c4025788aae4f3111b8d83b40e04abfb19813f
-    sha256: 8141ecaa807eefbcc2e17f6989c4025788aae4f3111b8d83b40e04abfb19813f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gwenhywfar/blobs/sha256:6f5f7d2f098ca5b058b487c890bb4691921f0d9bed0cc86f74944ac60b02545e
-    sha256: 6f5f7d2f098ca5b058b487c890bb4691921f0d9bed0cc86f74944ac60b02545e
-source:
-  url: https://www.aquamaniac.de/rdm/attachments/download/630/gwenhywfar-5.14.1.tar.gz
-  sha256: 8916feaa99cb954f963f2cba8dd2dffe57cacf7f284daf00eab071aad6fe2ab3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gnutls
-  - libgcrypt
-  - libgpg-error
-  - openssl@3
-  - pkgconf
-  - qtbase
-  - gettext
+    - gnutls
+    - libgcrypt
+    - libgpg-error
+    - openssl@3
+    - pkgconf
+    - qtbase
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gwenhywfar/blobs/sha256:d248c00aca75c6333b9edfd2d89f0e33f4d49835d53dd1f95ed723741751ff4c
+        sha256: d248c00aca75c6333b9edfd2d89f0e33f4d49835d53dd1f95ed723741751ff4c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gwenhywfar/blobs/sha256:0064b8768502f583fd8ca6efb644af7b4951e36157f6f88951d7d8d617e98db2
+        sha256: 0064b8768502f583fd8ca6efb644af7b4951e36157f6f88951d7d8d617e98db2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gwenhywfar/blobs/sha256:8141ecaa807eefbcc2e17f6989c4025788aae4f3111b8d83b40e04abfb19813f
+        sha256: 8141ecaa807eefbcc2e17f6989c4025788aae4f3111b8d83b40e04abfb19813f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gwenhywfar/blobs/sha256:6f5f7d2f098ca5b058b487c890bb4691921f0d9bed0cc86f74944ac60b02545e
+        sha256: 6f5f7d2f098ca5b058b487c890bb4691921f0d9bed0cc86f74944ac60b02545e
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.aquamaniac.de/rdm/attachments/download/630/gwenhywfar-5.14.1.tar.gz
+    sha256: 8916feaa99cb954f963f2cba8dd2dffe57cacf7f284daf00eab071aad6fe2ab3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
+    - gettext
 linux_dependencies:
-  - gnutls
-  - libgcrypt
-  - libgpg-error
-  - openssl@3
-  - pkgconf
-  - qtbase
+    - gnutls
+    - libgcrypt
+    - libgpg-error
+    - openssl@3
+    - pkgconf
+    - qtbase
+build:
+    configure: []
+    install: []
+service: null

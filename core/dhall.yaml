@@ -3,31 +3,55 @@ version: 1.42.3
 description: Interpreter for the Dhall language
 homepage: https://dhall-lang.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dhall/blobs/sha256:8d1cada694c3dfd625aeb86fa339784b3fcc62bf88b561cc845bfb74f36d6f33
-    sha256: 8d1cada694c3dfd625aeb86fa339784b3fcc62bf88b561cc845bfb74f36d6f33
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dhall/blobs/sha256:1684b9448091971b87dc6e1764028f94f891a874056ebc72b24efdeac50eac01
-    sha256: 1684b9448091971b87dc6e1764028f94f891a874056ebc72b24efdeac50eac01
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dhall/blobs/sha256:a4988d54246a5d4db6d2419c51ff3ff53f48be865a35223d86a919a544fcb953
-    sha256: a4988d54246a5d4db6d2419c51ff3ff53f48be865a35223d86a919a544fcb953
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dhall/blobs/sha256:ae7bc8a7b099ffe0baf3d2c64be38d16b59eb193b9dde5dc593d4821a23d8229
-    sha256: ae7bc8a7b099ffe0baf3d2c64be38d16b59eb193b9dde5dc593d4821a23d8229
-source:
-  url: https://hackage.haskell.org/package/dhall-1.42.3/dhall-1.42.3.tar.gz
-  sha256: cbb5612d9c55b9b3fa07ab73b72e6445875a6f53283f29979f164a9b3b067a00
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dhall/blobs/sha256:1684b9448091971b87dc6e1764028f94f891a874056ebc72b24efdeac50eac01
+        sha256: 1684b9448091971b87dc6e1764028f94f891a874056ebc72b24efdeac50eac01
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dhall/blobs/sha256:8d1cada694c3dfd625aeb86fa339784b3fcc62bf88b561cc845bfb74f36d6f33
+        sha256: 8d1cada694c3dfd625aeb86fa339784b3fcc62bf88b561cc845bfb74f36d6f33
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dhall/blobs/sha256:a4988d54246a5d4db6d2419c51ff3ff53f48be865a35223d86a919a544fcb953
+        sha256: a4988d54246a5d4db6d2419c51ff3ff53f48be865a35223d86a919a544fcb953
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dhall/blobs/sha256:ae7bc8a7b099ffe0baf3d2c64be38d16b59eb193b9dde5dc593d4821a23d8229
+        sha256: ae7bc8a7b099ffe0baf3d2c64be38d16b59eb193b9dde5dc593d4821a23d8229
+        sha512: ""
+        signature: ""
+source:
+    url: https://hackage.haskell.org/package/dhall-1.42.3/dhall-1.42.3.tar.gz
+    sha256: cbb5612d9c55b9b3fa07ab73b72e6445875a6f53283f29979f164a9b3b067a00
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
+    - cabal-install
+    - ghc
 linux_dependencies:
-  - gmp
-  - zlib-ng-compat
+    - gmp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

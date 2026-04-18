@@ -3,27 +3,52 @@ version: 1.0.0
 description: C++ snappy stream realization (compatible with snappy)
 homepage: https://github.com/hoxnox/snappystream
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/snappystream/blobs/sha256:1b9bfaec4d6e7207937aa78282ec7fd13860da55f88a518ad7c0804a4b6004fd
-    sha256: 1b9bfaec4d6e7207937aa78282ec7fd13860da55f88a518ad7c0804a4b6004fd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/snappystream/blobs/sha256:6e0352aaa68c6373355d22f3aa92fb056077439b26869bd317076176aea7bcab
-    sha256: 6e0352aaa68c6373355d22f3aa92fb056077439b26869bd317076176aea7bcab
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/snappystream/blobs/sha256:5689e64e2ccf991d92a2adff2eef8b2ac32490467ce64bc09e93cee407b60d8a
-    sha256: 5689e64e2ccf991d92a2adff2eef8b2ac32490467ce64bc09e93cee407b60d8a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/snappystream/blobs/sha256:0c192dcba364b122bbf8428185f24a1ee4e47f7a0dbdac8b3b4cf0edd467823f
-    sha256: 0c192dcba364b122bbf8428185f24a1ee4e47f7a0dbdac8b3b4cf0edd467823f
-source:
-  url: https://github.com/hoxnox/snappystream/archive/refs/tags/1.0.0.tar.gz
-  sha256: a50a1765eac1999bf42d0afd46d8704e8c4040b6e6c05dcfdffae6dcd5c6c6b8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - snappy
+    - snappy
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/snappystream/blobs/sha256:6e0352aaa68c6373355d22f3aa92fb056077439b26869bd317076176aea7bcab
+        sha256: 6e0352aaa68c6373355d22f3aa92fb056077439b26869bd317076176aea7bcab
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/snappystream/blobs/sha256:1b9bfaec4d6e7207937aa78282ec7fd13860da55f88a518ad7c0804a4b6004fd
+        sha256: 1b9bfaec4d6e7207937aa78282ec7fd13860da55f88a518ad7c0804a4b6004fd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/snappystream/blobs/sha256:5689e64e2ccf991d92a2adff2eef8b2ac32490467ce64bc09e93cee407b60d8a
+        sha256: 5689e64e2ccf991d92a2adff2eef8b2ac32490467ce64bc09e93cee407b60d8a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/snappystream/blobs/sha256:0c192dcba364b122bbf8428185f24a1ee4e47f7a0dbdac8b3b4cf0edd467823f
+        sha256: 0c192dcba364b122bbf8428185f24a1ee4e47f7a0dbdac8b3b4cf0edd467823f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/hoxnox/snappystream/archive/refs/tags/1.0.0.tar.gz
+    sha256: a50a1765eac1999bf42d0afd46d8704e8c4040b6e6c05dcfdffae6dcd5c6c6b8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

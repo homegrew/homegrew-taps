@@ -1,29 +1,54 @@
 name: ab-av1
 version: 0.11.2
-description: "AV1 re-encoding using ffmpeg, svt-av1 & vmaf"
+description: AV1 re-encoding using ffmpeg, svt-av1 & vmaf
 homepage: https://github.com/alexheretic/ab-av1
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:800d7dda4433997fa81b9abe19faf274b647fc56ec0da8d901daf6e32fdd6dcf
-    sha256: 800d7dda4433997fa81b9abe19faf274b647fc56ec0da8d901daf6e32fdd6dcf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:8e3e4ff5915bcde7121ff94b77216404b65e08048838bec5f2a812dde93b307f
-    sha256: 8e3e4ff5915bcde7121ff94b77216404b65e08048838bec5f2a812dde93b307f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:208b08dc100a6dd6c2f7b990dc5d620bf984f464e4ef60e793888dabcfd2206c
-    sha256: 208b08dc100a6dd6c2f7b990dc5d620bf984f464e4ef60e793888dabcfd2206c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:030e005f23208da1f8ad43526233b73a0fdec91553146ffa1679d2c3ac95a75a
-    sha256: 030e005f23208da1f8ad43526233b73a0fdec91553146ffa1679d2c3ac95a75a
-source:
-  url: https://github.com/alexheretic/ab-av1/archive/refs/tags/v0.11.2.tar.gz
-  sha256: 795d0ac7f241d22930456eeff9a75e142cef150b7bf3365fb57b298c6557ef0a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
+    - ffmpeg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:8e3e4ff5915bcde7121ff94b77216404b65e08048838bec5f2a812dde93b307f
+        sha256: 8e3e4ff5915bcde7121ff94b77216404b65e08048838bec5f2a812dde93b307f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:800d7dda4433997fa81b9abe19faf274b647fc56ec0da8d901daf6e32fdd6dcf
+        sha256: 800d7dda4433997fa81b9abe19faf274b647fc56ec0da8d901daf6e32fdd6dcf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:208b08dc100a6dd6c2f7b990dc5d620bf984f464e4ef60e793888dabcfd2206c
+        sha256: 208b08dc100a6dd6c2f7b990dc5d620bf984f464e4ef60e793888dabcfd2206c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:030e005f23208da1f8ad43526233b73a0fdec91553146ffa1679d2c3ac95a75a
+        sha256: 030e005f23208da1f8ad43526233b73a0fdec91553146ffa1679d2c3ac95a75a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/alexheretic/ab-av1/archive/refs/tags/v0.11.2.tar.gz
+    sha256: 795d0ac7f241d22930456eeff9a75e142cef150b7bf3365fb57b298c6557ef0a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

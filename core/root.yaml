@@ -3,90 +3,114 @@ version: 6.38.04
 description: Analyzing petabytes of data, scientifically
 homepage: https://root.cern
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:6ceaf02daa812fbc69cbb21b7bb0162cc905a6865bfeb90997aea9dbda1869a1
-    sha256: 6ceaf02daa812fbc69cbb21b7bb0162cc905a6865bfeb90997aea9dbda1869a1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:e60596a2ca193e536d6517a88fa4a288f3e1b0bc63b997ea15ad1da325dd8dd2
-    sha256: e60596a2ca193e536d6517a88fa4a288f3e1b0bc63b997ea15ad1da325dd8dd2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:ee690216a88f9f156c180c068346742f32dd07f2cc42f4ce8f197aefe8dc252a
-    sha256: ee690216a88f9f156c180c068346742f32dd07f2cc42f4ce8f197aefe8dc252a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:535f3dcfdaae5c27d4d9ca501623cf06818552c7f49ca9a160c2e72c1d3e2e67
-    sha256: 535f3dcfdaae5c27d4d9ca501623cf06818552c7f49ca9a160c2e72c1d3e2e67
-source:
-  url: https://root.cern/download/root_v6.38.04.source.tar.gz
-  sha256: 1ca561d03b3addae00cb76af57f8c75d3c229e8bd6939bdd408ec33fda9d3487
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cfitsio
-  - davix
-  - fftw
-  - freetype
-  - ftgl
-  - gcc
-  - giflib
-  - gl2ps
-  - glew
-  - graphviz
-  - gsl
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - lz4
-  - nlohmann-json
-  - numpy
-  - openblas
-  - openssl@3
-  - pcre2
-  - python@3.14
-  - sqlite
-  - tbb
-  - xrootd
-  - xxhash
-  - xz
-  - zstd
+    - cfitsio
+    - davix
+    - fftw
+    - freetype
+    - ftgl
+    - gcc
+    - giflib
+    - gl2ps
+    - glew
+    - graphviz
+    - gsl
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - lz4
+    - nlohmann-json
+    - numpy
+    - openblas
+    - openssl@3
+    - pcre2
+    - python@3.14
+    - sqlite
+    - tbb
+    - xrootd
+    - xxhash
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:e60596a2ca193e536d6517a88fa4a288f3e1b0bc63b997ea15ad1da325dd8dd2
+        sha256: e60596a2ca193e536d6517a88fa4a288f3e1b0bc63b997ea15ad1da325dd8dd2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:6ceaf02daa812fbc69cbb21b7bb0162cc905a6865bfeb90997aea9dbda1869a1
+        sha256: 6ceaf02daa812fbc69cbb21b7bb0162cc905a6865bfeb90997aea9dbda1869a1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:ee690216a88f9f156c180c068346742f32dd07f2cc42f4ce8f197aefe8dc252a
+        sha256: ee690216a88f9f156c180c068346742f32dd07f2cc42f4ce8f197aefe8dc252a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/root/blobs/sha256:535f3dcfdaae5c27d4d9ca501623cf06818552c7f49ca9a160c2e72c1d3e2e67
+        sha256: 535f3dcfdaae5c27d4d9ca501623cf06818552c7f49ca9a160c2e72c1d3e2e67
+        sha512: ""
+        signature: ""
+source:
+    url: https://root.cern/download/root_v6.38.04.source.tar.gz
+    sha256: 1ca561d03b3addae00cb76af57f8c75d3c229e8bd6939bdd408ec33fda9d3487
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - pkgconf
+    - cmake
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - cfitsio
-  - davix
-  - fftw
-  - freetype
-  - ftgl
-  - gcc
-  - giflib
-  - gl2ps
-  - glew
-  - graphviz
-  - gsl
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - libx11
-  - libxext
-  - libxft
-  - libxpm
-  - lz4
-  - mesa
-  - mesa-glu
-  - nlohmann-json
-  - numpy
-  - openblas
-  - openssl@3
-  - pcre2
-  - python@3.14
-  - sqlite
-  - tbb
-  - xrootd
-  - xxhash
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - cfitsio
+    - davix
+    - fftw
+    - freetype
+    - ftgl
+    - gcc
+    - giflib
+    - gl2ps
+    - glew
+    - graphviz
+    - gsl
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - libx11
+    - libxext
+    - libxft
+    - libxpm
+    - lz4
+    - mesa
+    - mesa-glu
+    - nlohmann-json
+    - numpy
+    - openblas
+    - openssl@3
+    - pcre2
+    - python@3.14
+    - sqlite
+    - tbb
+    - xrootd
+    - xxhash
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

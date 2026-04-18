@@ -3,48 +3,72 @@ version: 2.0.4
 description: Action-RPG game engine
 homepage: https://www.solarus-games.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/solarus/blobs/sha256:b76a690587b54d9f03967cc96f2efc195eb394ebbf7daf8b6a8c04ae1136d156
-    sha256: b76a690587b54d9f03967cc96f2efc195eb394ebbf7daf8b6a8c04ae1136d156
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/solarus/blobs/sha256:6fc0fd0b677a699281b508289b6d3ead8d76ae7209b3f3cf5ed81acac0beec48
-    sha256: 6fc0fd0b677a699281b508289b6d3ead8d76ae7209b3f3cf5ed81acac0beec48
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/solarus/blobs/sha256:1ad431b0d53d648f4d1f8e71322b2d2f9b40ead2fbae3721f52392be551b2352
-    sha256: 1ad431b0d53d648f4d1f8e71322b2d2f9b40ead2fbae3721f52392be551b2352
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/solarus/blobs/sha256:2fbcca3c7cf963a0d7e09fdea04e9ea170429750ec8661cb44b8fece0ba255e5
-    sha256: 2fbcca3c7cf963a0d7e09fdea04e9ea170429750ec8661cb44b8fece0ba255e5
-source:
-  url: https://gitlab.com/solarus-games/solarus.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glm
-  - libmodplug
-  - libogg
-  - libvorbis
-  - luajit
-  - openal-soft
-  - physfs
-  - sdl2
-  - sdl2_image
-  - sdl2_ttf
+    - glm
+    - libmodplug
+    - libogg
+    - libvorbis
+    - luajit
+    - openal-soft
+    - physfs
+    - sdl2
+    - sdl2_image
+    - sdl2_ttf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/solarus/blobs/sha256:6fc0fd0b677a699281b508289b6d3ead8d76ae7209b3f3cf5ed81acac0beec48
+        sha256: 6fc0fd0b677a699281b508289b6d3ead8d76ae7209b3f3cf5ed81acac0beec48
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/solarus/blobs/sha256:b76a690587b54d9f03967cc96f2efc195eb394ebbf7daf8b6a8c04ae1136d156
+        sha256: b76a690587b54d9f03967cc96f2efc195eb394ebbf7daf8b6a8c04ae1136d156
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/solarus/blobs/sha256:1ad431b0d53d648f4d1f8e71322b2d2f9b40ead2fbae3721f52392be551b2352
+        sha256: 1ad431b0d53d648f4d1f8e71322b2d2f9b40ead2fbae3721f52392be551b2352
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/solarus/blobs/sha256:2fbcca3c7cf963a0d7e09fdea04e9ea170429750ec8661cb44b8fece0ba255e5
+        sha256: 2fbcca3c7cf963a0d7e09fdea04e9ea170429750ec8661cb44b8fece0ba255e5
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.com/solarus-games/solarus.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - glm
-  - libmodplug
-  - libogg
-  - libvorbis
-  - luajit
-  - mesa
-  - openal-soft
-  - physfs
-  - sdl2
-  - sdl2_image
-  - sdl2_ttf
+    - glm
+    - libmodplug
+    - libogg
+    - libvorbis
+    - luajit
+    - mesa
+    - openal-soft
+    - physfs
+    - sdl2
+    - sdl2_image
+    - sdl2_ttf
+build:
+    configure: []
+    install: []
+service: null

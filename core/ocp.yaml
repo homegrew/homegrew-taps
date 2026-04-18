@@ -3,53 +3,77 @@ version: 3.2.0
 description: UNIX port of the Open Cubic Player
 homepage: https://stian.cubic.org/project-ocp.php
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocp/blobs/sha256:414fcd1dcc5e1a3fc03bcb53c0f3eec4044fd87b8df8bb1273f34540d73e9637
-    sha256: 414fcd1dcc5e1a3fc03bcb53c0f3eec4044fd87b8df8bb1273f34540d73e9637
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocp/blobs/sha256:17c7965a78768c612d9b836dc36904b9fc4b1985ceea69ae4945648a1429e365
-    sha256: 17c7965a78768c612d9b836dc36904b9fc4b1985ceea69ae4945648a1429e365
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ocp/blobs/sha256:7f2e230299f3db23ac72465114fe0f74eb0693227c18a6ef73bcaeaf9c6f93a7
-    sha256: 7f2e230299f3db23ac72465114fe0f74eb0693227c18a6ef73bcaeaf9c6f93a7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ocp/blobs/sha256:94ab3e17dd820d8408243bed7b41d25a27ea6099139c19dfdbcb7b1c40d41fd6
-    sha256: 94ab3e17dd820d8408243bed7b41d25a27ea6099139c19dfdbcb7b1c40d41fd6
-source:
-  url: https://stian.cubic.org/ocp/ocp-3.2.0.tar.xz
-  sha256: c2f6fe7edc89a2625ae22f88628f9bc294621cb49efaacb1cd42a4005920098a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ancient
-  - cjson
-  - flac
-  - freetype
-  - game-music-emu
-  - jpeg-turbo
-  - libdiscid
-  - libpng
-  - libvorbis
-  - mad
-  - sdl3
-  - libogg
+    - ancient
+    - cjson
+    - flac
+    - freetype
+    - game-music-emu
+    - jpeg-turbo
+    - libdiscid
+    - libpng
+    - libvorbis
+    - mad
+    - sdl3
+    - libogg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocp/blobs/sha256:17c7965a78768c612d9b836dc36904b9fc4b1985ceea69ae4945648a1429e365
+        sha256: 17c7965a78768c612d9b836dc36904b9fc4b1985ceea69ae4945648a1429e365
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocp/blobs/sha256:414fcd1dcc5e1a3fc03bcb53c0f3eec4044fd87b8df8bb1273f34540d73e9637
+        sha256: 414fcd1dcc5e1a3fc03bcb53c0f3eec4044fd87b8df8bb1273f34540d73e9637
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ocp/blobs/sha256:7f2e230299f3db23ac72465114fe0f74eb0693227c18a6ef73bcaeaf9c6f93a7
+        sha256: 7f2e230299f3db23ac72465114fe0f74eb0693227c18a6ef73bcaeaf9c6f93a7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ocp/blobs/sha256:94ab3e17dd820d8408243bed7b41d25a27ea6099139c19dfdbcb7b1c40d41fd6
+        sha256: 94ab3e17dd820d8408243bed7b41d25a27ea6099139c19dfdbcb7b1c40d41fd6
+        sha512: ""
+        signature: ""
+source:
+    url: https://stian.cubic.org/ocp/ocp-3.2.0.tar.xz
+    sha256: c2f6fe7edc89a2625ae22f88628f9bc294621cb49efaacb1cd42a4005920098a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - xa
+    - pkgconf
+    - xa
 linux_dependencies:
-  - alsa-lib
-  - ancient
-  - cjson
-  - flac
-  - freetype
-  - game-music-emu
-  - jpeg-turbo
-  - libdiscid
-  - libpng
-  - libvorbis
-  - mad
-  - sdl3
-  - zlib-ng-compat
+    - alsa-lib
+    - ancient
+    - cjson
+    - flac
+    - freetype
+    - game-music-emu
+    - jpeg-turbo
+    - libdiscid
+    - libpng
+    - libvorbis
+    - mad
+    - sdl3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

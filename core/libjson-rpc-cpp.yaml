@@ -3,30 +3,55 @@ version: 1.4.1
 description: C++ framework for json-rpc
 homepage: https://github.com/cinemast/libjson-rpc-cpp
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libjson-rpc-cpp/blobs/sha256:6dc9f12a9b6bf936881daefc66364df558d40e4daa5ef1327313619b91e8ebd1
-    sha256: 6dc9f12a9b6bf936881daefc66364df558d40e4daa5ef1327313619b91e8ebd1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libjson-rpc-cpp/blobs/sha256:1a06d33fb6dfb02a77dff103df8c5dccaf31732f57c5084894a6bb8a990fd40f
-    sha256: 1a06d33fb6dfb02a77dff103df8c5dccaf31732f57c5084894a6bb8a990fd40f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libjson-rpc-cpp/blobs/sha256:3e81e47b0e548b539d9be3449e951c2f8fbdd9274acfef193ca9a89e6255b67e
-    sha256: 3e81e47b0e548b539d9be3449e951c2f8fbdd9274acfef193ca9a89e6255b67e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libjson-rpc-cpp/blobs/sha256:937c9426645552d0f435306f02dc4bea55498e2e6402c53d2bcbb5ab053c067c
-    sha256: 937c9426645552d0f435306f02dc4bea55498e2e6402c53d2bcbb5ab053c067c
-source:
-  url: https://github.com/cinemast/libjson-rpc-cpp/archive/refs/tags/v1.4.1.tar.gz
-  sha256: 7a057e50d6203e4ea0a10ba5e4dbf344c48b177e5a3bf82e850eb3a783c11eb5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - argtable
-  - hiredis
-  - jsoncpp
-  - libmicrohttpd
+    - argtable
+    - hiredis
+    - jsoncpp
+    - libmicrohttpd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libjson-rpc-cpp/blobs/sha256:1a06d33fb6dfb02a77dff103df8c5dccaf31732f57c5084894a6bb8a990fd40f
+        sha256: 1a06d33fb6dfb02a77dff103df8c5dccaf31732f57c5084894a6bb8a990fd40f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libjson-rpc-cpp/blobs/sha256:6dc9f12a9b6bf936881daefc66364df558d40e4daa5ef1327313619b91e8ebd1
+        sha256: 6dc9f12a9b6bf936881daefc66364df558d40e4daa5ef1327313619b91e8ebd1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libjson-rpc-cpp/blobs/sha256:3e81e47b0e548b539d9be3449e951c2f8fbdd9274acfef193ca9a89e6255b67e
+        sha256: 3e81e47b0e548b539d9be3449e951c2f8fbdd9274acfef193ca9a89e6255b67e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libjson-rpc-cpp/blobs/sha256:937c9426645552d0f435306f02dc4bea55498e2e6402c53d2bcbb5ab053c067c
+        sha256: 937c9426645552d0f435306f02dc4bea55498e2e6402c53d2bcbb5ab053c067c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cinemast/libjson-rpc-cpp/archive/refs/tags/v1.4.1.tar.gz
+    sha256: 7a057e50d6203e4ea0a10ba5e4dbf344c48b177e5a3bf82e850eb3a783c11eb5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

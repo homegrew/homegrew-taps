@@ -3,34 +3,59 @@ version: 3.58.1
 description: Single sign-on framework for GNOME - client library
 homepage: https://gitlab.gnome.org/GNOME/gnome-online-accounts
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgoa/blobs/sha256:17106a0d2deae6786612b0c40bcee1d22a156179417314cd8a4d249f1f02bbe3
-    sha256: 17106a0d2deae6786612b0c40bcee1d22a156179417314cd8a4d249f1f02bbe3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgoa/blobs/sha256:dbf3b5e0c2ad4ca481aaf8ca49a0a074fa5441ee670eb7a03c0d77ca26f8ab86
-    sha256: dbf3b5e0c2ad4ca481aaf8ca49a0a074fa5441ee670eb7a03c0d77ca26f8ab86
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgoa/blobs/sha256:60542266cbd51558098b9417a22d093a3909d143b64da8415f2c9e996e5c25c4
-    sha256: 60542266cbd51558098b9417a22d093a3909d143b64da8415f2c9e996e5c25c4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgoa/blobs/sha256:6d40f07d27e14741b7b5e60893278fc3b95f6df93726ecb8074bd351fd8ad05d
-    sha256: 6d40f07d27e14741b7b5e60893278fc3b95f6df93726ecb8074bd351fd8ad05d
-source:
-  url: https://download.gnome.org/sources/gnome-online-accounts/3.58/gnome-online-accounts-3.58.1.tar.xz
-  sha256: 9ec1900cc51409c2067c07c828c10be06fe3bf68d2999bb72d7d5ed325ed9bbc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
+    - glib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgoa/blobs/sha256:dbf3b5e0c2ad4ca481aaf8ca49a0a074fa5441ee670eb7a03c0d77ca26f8ab86
+        sha256: dbf3b5e0c2ad4ca481aaf8ca49a0a074fa5441ee670eb7a03c0d77ca26f8ab86
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgoa/blobs/sha256:17106a0d2deae6786612b0c40bcee1d22a156179417314cd8a4d249f1f02bbe3
+        sha256: 17106a0d2deae6786612b0c40bcee1d22a156179417314cd8a4d249f1f02bbe3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgoa/blobs/sha256:60542266cbd51558098b9417a22d093a3909d143b64da8415f2c9e996e5c25c4
+        sha256: 60542266cbd51558098b9417a22d093a3909d143b64da8415f2c9e996e5c25c4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgoa/blobs/sha256:6d40f07d27e14741b7b5e60893278fc3b95f6df93726ecb8074bd351fd8ad05d
+        sha256: 6d40f07d27e14741b7b5e60893278fc3b95f6df93726ecb8074bd351fd8ad05d
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gnome-online-accounts/3.58/gnome-online-accounts-3.58.1.tar.xz
+    sha256: 9ec1900cc51409c2067c07c828c10be06fe3bf68d2999bb72d7d5ed325ed9bbc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - dbus
-  - docbook-xsl
-  - gobject-introspection
-  - gtk4
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - dbus
+    - docbook-xsl
+    - gobject-introspection
+    - gtk4
+    - meson
+    - ninja
+    - pkgconf
+    - vala
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

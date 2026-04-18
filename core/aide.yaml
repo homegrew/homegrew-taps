@@ -3,34 +3,58 @@ version: 0.19.3
 description: File and directory integrity checker
 homepage: https://aide.github.io/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aide/blobs/sha256:e84fe8e7cdbd88400214740e38b924ff7bdfe449b2ef2de235d4e9751e3e9225
-    sha256: e84fe8e7cdbd88400214740e38b924ff7bdfe449b2ef2de235d4e9751e3e9225
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aide/blobs/sha256:4ea8bb4acbd0926da91bdd8ee2ed6f6adea517aa51a3abce5f62e248425f2a89
-    sha256: 4ea8bb4acbd0926da91bdd8ee2ed6f6adea517aa51a3abce5f62e248425f2a89
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/aide/blobs/sha256:cd4e10567325568eadfb6dcde6da800b5a682212bddc7a878554fccbdb251582
-    sha256: cd4e10567325568eadfb6dcde6da800b5a682212bddc7a878554fccbdb251582
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/aide/blobs/sha256:b2f434138bea735edc207d22050845a60d34b494161a7d2f339bad6c11acba8f
-    sha256: b2f434138bea735edc207d22050845a60d34b494161a7d2f339bad6c11acba8f
-source:
-  url: https://github.com/aide/aide/releases/download/v0.19.3/aide-0.19.3.tar.gz
-  sha256: 6513170bb5b8c22802dd1b72f02d8aa9f432aef2b4470522db03e755212a3f47
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgcrypt
-  - libgpg-error
-  - pcre2
+    - libgcrypt
+    - libgpg-error
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aide/blobs/sha256:4ea8bb4acbd0926da91bdd8ee2ed6f6adea517aa51a3abce5f62e248425f2a89
+        sha256: 4ea8bb4acbd0926da91bdd8ee2ed6f6adea517aa51a3abce5f62e248425f2a89
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aide/blobs/sha256:e84fe8e7cdbd88400214740e38b924ff7bdfe449b2ef2de235d4e9751e3e9225
+        sha256: e84fe8e7cdbd88400214740e38b924ff7bdfe449b2ef2de235d4e9751e3e9225
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/aide/blobs/sha256:cd4e10567325568eadfb6dcde6da800b5a682212bddc7a878554fccbdb251582
+        sha256: cd4e10567325568eadfb6dcde6da800b5a682212bddc7a878554fccbdb251582
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aide/blobs/sha256:b2f434138bea735edc207d22050845a60d34b494161a7d2f339bad6c11acba8f
+        sha256: b2f434138bea735edc207d22050845a60d34b494161a7d2f339bad6c11acba8f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/aide/aide/releases/download/v0.19.3/aide-0.19.3.tar.gz
+    sha256: 6513170bb5b8c22802dd1b72f02d8aa9f432aef2b4470522db03e755212a3f47
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - libgcrypt
-  - libgpg-error
-  - pcre2
-  - zlib-ng-compat
+    - libgcrypt
+    - libgpg-error
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

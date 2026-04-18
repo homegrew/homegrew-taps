@@ -3,83 +3,107 @@ version: 4.13.0
 description: Open source computer vision library
 homepage: https://opencv.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opencv/blobs/sha256:f5ca20940550ae0583e07401f40caefc939f8fe64b279921b48ddc4cb9acf9de
-    sha256: f5ca20940550ae0583e07401f40caefc939f8fe64b279921b48ddc4cb9acf9de
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opencv/blobs/sha256:3296399eb781d8d753d418360eb125f5c655e7282d257b1810c4e8b9e826b4fa
-    sha256: 3296399eb781d8d753d418360eb125f5c655e7282d257b1810c4e8b9e826b4fa
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opencv/blobs/sha256:a148fbaa547d84070ef8537c5da2d55792b472e13d40d13bd4ff7f20babafb25
-    sha256: a148fbaa547d84070ef8537c5da2d55792b472e13d40d13bd4ff7f20babafb25
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opencv/blobs/sha256:0c834d72a0c83f34b8e0f642708304a309c4ab6e30bf544f56dcb6c39945ab19
-    sha256: 0c834d72a0c83f34b8e0f642708304a309c4ab6e30bf544f56dcb6c39945ab19
-source:
-  url: https://github.com/opencv/opencv/archive/refs/tags/4.13.0.tar.gz
-  sha256: 1d40ca017ea51c533cf9fd5cbde5b5fe7ae248291ddf2af99d4c17cf8e13017d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - ceres-solver
-  - eigen
-  - ffmpeg
-  - freetype
-  - gflags
-  - glog
-  - harfbuzz
-  - jpeg-turbo
-  - jsoncpp
-  - libpng
-  - libtiff
-  - numpy
-  - openblas
-  - openexr
-  - openjpeg
-  - openvino
-  - protobuf
-  - python@3.14
-  - tbb
-  - tesseract
-  - vtk
-  - webp
-  - glew
-  - imath
-  - libarchive
+    - abseil
+    - ceres-solver
+    - eigen
+    - ffmpeg
+    - freetype
+    - gflags
+    - glog
+    - harfbuzz
+    - jpeg-turbo
+    - jsoncpp
+    - libpng
+    - libtiff
+    - numpy
+    - openblas
+    - openexr
+    - openjpeg
+    - openvino
+    - protobuf
+    - python@3.14
+    - tbb
+    - tesseract
+    - vtk
+    - webp
+    - glew
+    - imath
+    - libarchive
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opencv/blobs/sha256:3296399eb781d8d753d418360eb125f5c655e7282d257b1810c4e8b9e826b4fa
+        sha256: 3296399eb781d8d753d418360eb125f5c655e7282d257b1810c4e8b9e826b4fa
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opencv/blobs/sha256:f5ca20940550ae0583e07401f40caefc939f8fe64b279921b48ddc4cb9acf9de
+        sha256: f5ca20940550ae0583e07401f40caefc939f8fe64b279921b48ddc4cb9acf9de
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opencv/blobs/sha256:a148fbaa547d84070ef8537c5da2d55792b472e13d40d13bd4ff7f20babafb25
+        sha256: a148fbaa547d84070ef8537c5da2d55792b472e13d40d13bd4ff7f20babafb25
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opencv/blobs/sha256:0c834d72a0c83f34b8e0f642708304a309c4ab6e30bf544f56dcb6c39945ab19
+        sha256: 0c834d72a0c83f34b8e0f642708304a309c4ab6e30bf544f56dcb6c39945ab19
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/opencv/opencv/archive/refs/tags/4.13.0.tar.gz
+    sha256: 1d40ca017ea51c533cf9fd5cbde5b5fe7ae248291ddf2af99d4c17cf8e13017d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - python-setuptools
+    - cmake
+    - pkgconf
+    - python-setuptools
 linux_dependencies:
-  - abseil
-  - cairo
-  - ceres-solver
-  - eigen
-  - ffmpeg
-  - freetype
-  - gdk-pixbuf
-  - gflags
-  - glib
-  - glog
-  - gtk+3
-  - harfbuzz
-  - jpeg-turbo
-  - jsoncpp
-  - libpng
-  - libtiff
-  - numpy
-  - openblas
-  - openexr
-  - openjpeg
-  - openvino
-  - protobuf
-  - python@3.14
-  - tbb
-  - tesseract
-  - vtk
-  - webp
-  - zlib-ng-compat
+    - abseil
+    - cairo
+    - ceres-solver
+    - eigen
+    - ffmpeg
+    - freetype
+    - gdk-pixbuf
+    - gflags
+    - glib
+    - glog
+    - gtk+3
+    - harfbuzz
+    - jpeg-turbo
+    - jsoncpp
+    - libpng
+    - libtiff
+    - numpy
+    - openblas
+    - openexr
+    - openjpeg
+    - openvino
+    - protobuf
+    - python@3.14
+    - tbb
+    - tesseract
+    - vtk
+    - webp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

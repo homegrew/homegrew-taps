@@ -3,25 +3,51 @@ version: 1.18.1
 description: Argo CD plugin to retrieve secrets from Secret Management tools
 homepage: https://argocd-vault-plugin.readthedocs.io
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:c5d4dd6c1a4f16a3c0fd46c1721e996d152df50986c46a1fa43698f6e31ac095
-    sha256: c5d4dd6c1a4f16a3c0fd46c1721e996d152df50986c46a1fa43698f6e31ac095
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:1fc47e2adeb0af27bb1ad84156319b7196a8fabd70ea2712e4c673d55e85f867
-    sha256: 1fc47e2adeb0af27bb1ad84156319b7196a8fabd70ea2712e4c673d55e85f867
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:4cd74305d5e1cac49e5621a88abbfcdd897c07e81ebe27ddc30eeeba1cf40260
-    sha256: 4cd74305d5e1cac49e5621a88abbfcdd897c07e81ebe27ddc30eeeba1cf40260
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:69abd86b96dfd35560cff8ca258da75d78e26fbeb2f2a7139e03cf4749f53c2f
-    sha256: 69abd86b96dfd35560cff8ca258da75d78e26fbeb2f2a7139e03cf4749f53c2f
-source:
-  url: https://github.com/argoproj-labs/argocd-vault-plugin.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:1fc47e2adeb0af27bb1ad84156319b7196a8fabd70ea2712e4c673d55e85f867
+        sha256: 1fc47e2adeb0af27bb1ad84156319b7196a8fabd70ea2712e4c673d55e85f867
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:c5d4dd6c1a4f16a3c0fd46c1721e996d152df50986c46a1fa43698f6e31ac095
+        sha256: c5d4dd6c1a4f16a3c0fd46c1721e996d152df50986c46a1fa43698f6e31ac095
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:4cd74305d5e1cac49e5621a88abbfcdd897c07e81ebe27ddc30eeeba1cf40260
+        sha256: 4cd74305d5e1cac49e5621a88abbfcdd897c07e81ebe27ddc30eeeba1cf40260
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:69abd86b96dfd35560cff8ca258da75d78e26fbeb2f2a7139e03cf4749f53c2f
+        sha256: 69abd86b96dfd35560cff8ca258da75d78e26fbeb2f2a7139e03cf4749f53c2f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/argoproj-labs/argocd-vault-plugin.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,54 @@ version: 0.6.2
 description: Customizable automatic UML diagram generator for C++ based on Clang
 homepage: https://github.com/bkryza/clang-uml
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clang-uml/blobs/sha256:09d6e2f4a448df8604d583726c4bc4fad23804c6cb3cb11bcdb4007ebdf2c71f
-    sha256: 09d6e2f4a448df8604d583726c4bc4fad23804c6cb3cb11bcdb4007ebdf2c71f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clang-uml/blobs/sha256:1ae21e3d38f4ed9136b5ce7f36690306581114f09412127ca984ef082e027668
-    sha256: 1ae21e3d38f4ed9136b5ce7f36690306581114f09412127ca984ef082e027668
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clang-uml/blobs/sha256:053e3c88b09c766f03ff7ce0068399201d1e4c5893f5bf4704f343414365e266
-    sha256: 053e3c88b09c766f03ff7ce0068399201d1e4c5893f5bf4704f343414365e266
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clang-uml/blobs/sha256:ac1e9e7930ab31e993181bc157bca9c3492522181d20aa64e1a76afebe66139d
-    sha256: ac1e9e7930ab31e993181bc157bca9c3492522181d20aa64e1a76afebe66139d
-source:
-  url: https://github.com/bkryza/clang-uml/archive/refs/tags/0.6.2.tar.gz
-  sha256: 004540c328699f81abebceb33a4661b548ab3a5f74096da2c025b9971b2b17ff
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - llvm@21
-  - yaml-cpp
+    - llvm@21
+    - yaml-cpp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clang-uml/blobs/sha256:1ae21e3d38f4ed9136b5ce7f36690306581114f09412127ca984ef082e027668
+        sha256: 1ae21e3d38f4ed9136b5ce7f36690306581114f09412127ca984ef082e027668
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clang-uml/blobs/sha256:09d6e2f4a448df8604d583726c4bc4fad23804c6cb3cb11bcdb4007ebdf2c71f
+        sha256: 09d6e2f4a448df8604d583726c4bc4fad23804c6cb3cb11bcdb4007ebdf2c71f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clang-uml/blobs/sha256:053e3c88b09c766f03ff7ce0068399201d1e4c5893f5bf4704f343414365e266
+        sha256: 053e3c88b09c766f03ff7ce0068399201d1e4c5893f5bf4704f343414365e266
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clang-uml/blobs/sha256:ac1e9e7930ab31e993181bc157bca9c3492522181d20aa64e1a76afebe66139d
+        sha256: ac1e9e7930ab31e993181bc157bca9c3492522181d20aa64e1a76afebe66139d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/bkryza/clang-uml/archive/refs/tags/0.6.2.tar.gz
+    sha256: 004540c328699f81abebceb33a4661b548ab3a5f74096da2c025b9971b2b17ff
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

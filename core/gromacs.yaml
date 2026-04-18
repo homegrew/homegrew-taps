@@ -1,40 +1,64 @@
 name: gromacs
-version: 2026.1
+version: "2026.1"
 description: Versatile package for molecular dynamics calculations
 homepage: https://www.gromacs.org/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gromacs/blobs/sha256:a251cb841fbf8a2f3b67f236c310d9533512945b0fbeeec2ac1510e6b638a4c5
-    sha256: a251cb841fbf8a2f3b67f236c310d9533512945b0fbeeec2ac1510e6b638a4c5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gromacs/blobs/sha256:ac0c6d551978b96551339ecb78cf4d34886030cb69b1fcdcee694493b7ab611f
-    sha256: ac0c6d551978b96551339ecb78cf4d34886030cb69b1fcdcee694493b7ab611f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gromacs/blobs/sha256:2c3e5871f11f53468331f0d77d1c17bee72d75d7e495e2a0811ffa0b4d172daf
-    sha256: 2c3e5871f11f53468331f0d77d1c17bee72d75d7e495e2a0811ffa0b4d172daf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gromacs/blobs/sha256:c6d9150209e24005c68959723ee18d56680dd97bd1d9a9ff59abb87151d961de
-    sha256: c6d9150209e24005c68959723ee18d56680dd97bd1d9a9ff59abb87151d961de
-source:
-  url: https://ftp.gromacs.org/pub/gromacs/gromacs-2026.1.tar.gz
-  sha256: d95a313f56db7e05ee3a21e50f582fdee5176c2f60b900bab2461fd95c5e81be
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fftw
-  - lmfit
-  - muparser
-  - openblas
-  - libomp
+    - fftw
+    - lmfit
+    - muparser
+    - openblas
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gromacs/blobs/sha256:ac0c6d551978b96551339ecb78cf4d34886030cb69b1fcdcee694493b7ab611f
+        sha256: ac0c6d551978b96551339ecb78cf4d34886030cb69b1fcdcee694493b7ab611f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gromacs/blobs/sha256:a251cb841fbf8a2f3b67f236c310d9533512945b0fbeeec2ac1510e6b638a4c5
+        sha256: a251cb841fbf8a2f3b67f236c310d9533512945b0fbeeec2ac1510e6b638a4c5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gromacs/blobs/sha256:2c3e5871f11f53468331f0d77d1c17bee72d75d7e495e2a0811ffa0b4d172daf
+        sha256: 2c3e5871f11f53468331f0d77d1c17bee72d75d7e495e2a0811ffa0b4d172daf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gromacs/blobs/sha256:c6d9150209e24005c68959723ee18d56680dd97bd1d9a9ff59abb87151d961de
+        sha256: c6d9150209e24005c68959723ee18d56680dd97bd1d9a9ff59abb87151d961de
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.gromacs.org/pub/gromacs/gromacs-2026.1.tar.gz
+    sha256: d95a313f56db7e05ee3a21e50f582fdee5176c2f60b900bab2461fd95c5e81be
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - fftw
-  - lmfit
-  - muparser
-  - openblas
-  - zlib-ng-compat
+    - fftw
+    - lmfit
+    - muparser
+    - openblas
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

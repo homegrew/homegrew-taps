@@ -3,29 +3,54 @@ version: 0.5.1
 description: Library to decode mpeg-2 and mpeg-1 video streams
 homepage: https://libmpeg2.sourceforge.io/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmpeg2/blobs/sha256:774f58a1e39f846fdcb40c1b05446f9867836cc95e66fe25d2d829f8e98c88a4
-    sha256: 774f58a1e39f846fdcb40c1b05446f9867836cc95e66fe25d2d829f8e98c88a4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmpeg2/blobs/sha256:ed0fe49e971640418eb765c153ab7c846dc6e93911140534b0a0a0f7e026b4cd
-    sha256: ed0fe49e971640418eb765c153ab7c846dc6e93911140534b0a0a0f7e026b4cd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmpeg2/blobs/sha256:04a7bbf5129d11b695a6a57eff6091f6519e3b4554dc77f84bca351a4f17acaa
-    sha256: 04a7bbf5129d11b695a6a57eff6091f6519e3b4554dc77f84bca351a4f17acaa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmpeg2/blobs/sha256:2fabce057d7c15bb18b7320230edb8a748206664185c4c0a00e174615ec0094f
-    sha256: 2fabce057d7c15bb18b7320230edb8a748206664185c4c0a00e174615ec0094f
-source:
-  url: https://download.videolan.org/contrib/libmpeg2/libmpeg2-0.5.1.tar.gz
-  sha256: dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - sdl12-compat
+    - sdl12-compat
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmpeg2/blobs/sha256:ed0fe49e971640418eb765c153ab7c846dc6e93911140534b0a0a0f7e026b4cd
+        sha256: ed0fe49e971640418eb765c153ab7c846dc6e93911140534b0a0a0f7e026b4cd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmpeg2/blobs/sha256:774f58a1e39f846fdcb40c1b05446f9867836cc95e66fe25d2d829f8e98c88a4
+        sha256: 774f58a1e39f846fdcb40c1b05446f9867836cc95e66fe25d2d829f8e98c88a4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmpeg2/blobs/sha256:04a7bbf5129d11b695a6a57eff6091f6519e3b4554dc77f84bca351a4f17acaa
+        sha256: 04a7bbf5129d11b695a6a57eff6091f6519e3b4554dc77f84bca351a4f17acaa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmpeg2/blobs/sha256:2fabce057d7c15bb18b7320230edb8a748206664185c4c0a00e174615ec0094f
+        sha256: 2fabce057d7c15bb18b7320230edb8a748206664185c4c0a00e174615ec0094f
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.videolan.org/contrib/libmpeg2/libmpeg2-0.5.1.tar.gz
+    sha256: dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

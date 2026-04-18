@@ -3,42 +3,67 @@ version: 2.1.11
 description: Visual browser for netCDF format files
 homepage: https://cirrus.ucsd.edu/ncview/
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncview/blobs/sha256:e3346928e2612dabba4b6798e8f9cb497ff302f1972344cd5271dbb2034ad2ae
-    sha256: e3346928e2612dabba4b6798e8f9cb497ff302f1972344cd5271dbb2034ad2ae
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncview/blobs/sha256:2936bd01d289bc341a2a52e604692c7baa1611f8a2f7aa33d2a2c8e0fef22081
-    sha256: 2936bd01d289bc341a2a52e604692c7baa1611f8a2f7aa33d2a2c8e0fef22081
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncview/blobs/sha256:ed6715afe50ab90f472bcdd31e4b51f047b0705796cc1e103162f74d113a4f44
-    sha256: ed6715afe50ab90f472bcdd31e4b51f047b0705796cc1e103162f74d113a4f44
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncview/blobs/sha256:29d0391497116f259d6adbe90d555e92bc49a78fc040e0ba3636354f0cf8284d
-    sha256: 29d0391497116f259d6adbe90d555e92bc49a78fc040e0ba3636354f0cf8284d
-source:
-  url: https://cirrus.ucsd.edu/~pierce/ncview/ncview-2.1.11.tar.gz
-  sha256: 597cfddf9c2d7993e9b0b86bca1b73839567ee9116ee33f6d750a449b5033d91
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libice
-  - libpng
-  - libsm
-  - libx11
-  - libxaw
-  - libxt
-  - netcdf
-  - udunits
+    - libice
+    - libpng
+    - libsm
+    - libx11
+    - libxaw
+    - libxt
+    - netcdf
+    - udunits
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncview/blobs/sha256:2936bd01d289bc341a2a52e604692c7baa1611f8a2f7aa33d2a2c8e0fef22081
+        sha256: 2936bd01d289bc341a2a52e604692c7baa1611f8a2f7aa33d2a2c8e0fef22081
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncview/blobs/sha256:e3346928e2612dabba4b6798e8f9cb497ff302f1972344cd5271dbb2034ad2ae
+        sha256: e3346928e2612dabba4b6798e8f9cb497ff302f1972344cd5271dbb2034ad2ae
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncview/blobs/sha256:ed6715afe50ab90f472bcdd31e4b51f047b0705796cc1e103162f74d113a4f44
+        sha256: ed6715afe50ab90f472bcdd31e4b51f047b0705796cc1e103162f74d113a4f44
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncview/blobs/sha256:29d0391497116f259d6adbe90d555e92bc49a78fc040e0ba3636354f0cf8284d
+        sha256: 29d0391497116f259d6adbe90d555e92bc49a78fc040e0ba3636354f0cf8284d
+        sha512: ""
+        signature: ""
+source:
+    url: https://cirrus.ucsd.edu/~pierce/ncview/ncview-2.1.11.tar.gz
+    sha256: 597cfddf9c2d7993e9b0b86bca1b73839567ee9116ee33f6d750a449b5033d91
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - libice
-  - libpng
-  - libsm
-  - libx11
-  - libxaw
-  - libxext
-  - libxt
-  - netcdf
-  - udunits
+    - libice
+    - libpng
+    - libsm
+    - libx11
+    - libxaw
+    - libxext
+    - libxt
+    - netcdf
+    - udunits
+build:
+    configure: []
+    install: []
+service: null

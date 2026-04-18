@@ -3,26 +3,52 @@ version: 0.11.7
 description: Extremely fast Python package installer and resolver, written in Rust
 homepage: https://docs.astral.sh/uv/
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uv/blobs/sha256:b29f679fa6ebb2641401c8ede68aec7e69b4aa5ffc0633b494ada7731565a3b2
-    sha256: b29f679fa6ebb2641401c8ede68aec7e69b4aa5ffc0633b494ada7731565a3b2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uv/blobs/sha256:60c78e4f7a0907abbc8fc3774aec2433b321128c7755c8c09c19a378f29cd87c
-    sha256: 60c78e4f7a0907abbc8fc3774aec2433b321128c7755c8c09c19a378f29cd87c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/uv/blobs/sha256:e40f8f6e06bb4f915df91f436205a16800d49b6c9278682638003e30457127cb
-    sha256: e40f8f6e06bb4f915df91f436205a16800d49b6c9278682638003e30457127cb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/uv/blobs/sha256:97ff5a4e5aa0c1dc1d317e76d02aa7d6c6ed0d0aa4573cbf35653ba865b7411f
-    sha256: 97ff5a4e5aa0c1dc1d317e76d02aa7d6c6ed0d0aa4573cbf35653ba865b7411f
-source:
-  url: https://github.com/astral-sh/uv/archive/refs/tags/0.11.7.tar.gz
-  sha256: a121f7a169dcbc6b5c2b0d724632bb7e680b1f92adc71aa4e1e47d14b9a04474
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uv/blobs/sha256:60c78e4f7a0907abbc8fc3774aec2433b321128c7755c8c09c19a378f29cd87c
+        sha256: 60c78e4f7a0907abbc8fc3774aec2433b321128c7755c8c09c19a378f29cd87c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uv/blobs/sha256:b29f679fa6ebb2641401c8ede68aec7e69b4aa5ffc0633b494ada7731565a3b2
+        sha256: b29f679fa6ebb2641401c8ede68aec7e69b4aa5ffc0633b494ada7731565a3b2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uv/blobs/sha256:e40f8f6e06bb4f915df91f436205a16800d49b6c9278682638003e30457127cb
+        sha256: e40f8f6e06bb4f915df91f436205a16800d49b6c9278682638003e30457127cb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uv/blobs/sha256:97ff5a4e5aa0c1dc1d317e76d02aa7d6c6ed0d0aa4573cbf35653ba865b7411f
+        sha256: 97ff5a4e5aa0c1dc1d317e76d02aa7d6c6ed0d0aa4573cbf35653ba865b7411f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/astral-sh/uv/archive/refs/tags/0.11.7.tar.gz
+    sha256: a121f7a169dcbc6b5c2b0d724632bb7e680b1f92adc71aa4e1e47d14b9a04474
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

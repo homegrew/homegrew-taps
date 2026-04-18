@@ -3,30 +3,54 @@ version: 1.17.1
 description: Qt oriented static code analyzer
 homepage: https://www.kdab.com/
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clazy/blobs/sha256:53ab754b46351e9ec36adfa911ea40766080d3fbc031ec9c193713f49dc412ef
-    sha256: 53ab754b46351e9ec36adfa911ea40766080d3fbc031ec9c193713f49dc412ef
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clazy/blobs/sha256:8f1450d3bc4d9ce5ef3b89e076bcc301ed215bb6631ad32e5b9be0c2926371af
-    sha256: 8f1450d3bc4d9ce5ef3b89e076bcc301ed215bb6631ad32e5b9be0c2926371af
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clazy/blobs/sha256:e0cfd169bb2e3bd13585cbbe46c65d3375638164f10e0d924eaf51bc46698412
-    sha256: e0cfd169bb2e3bd13585cbbe46c65d3375638164f10e0d924eaf51bc46698412
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clazy/blobs/sha256:e6cd0dbf3f2a3e853f7859710e8908e36b87657a956d113c9bb809ec550bc18a
-    sha256: e6cd0dbf3f2a3e853f7859710e8908e36b87657a956d113c9bb809ec550bc18a
-source:
-  url: https://invent.kde.org/sdk/clazy/-/archive/v1.17.1/clazy-v1.17.1.tar.gz
-  sha256: d67a930833cdfef446a3db2e3c39a966876f09358bca31cd1e67aace0773bc31
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - llvm
-  - coreutils
+    - llvm
+    - coreutils
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clazy/blobs/sha256:8f1450d3bc4d9ce5ef3b89e076bcc301ed215bb6631ad32e5b9be0c2926371af
+        sha256: 8f1450d3bc4d9ce5ef3b89e076bcc301ed215bb6631ad32e5b9be0c2926371af
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clazy/blobs/sha256:53ab754b46351e9ec36adfa911ea40766080d3fbc031ec9c193713f49dc412ef
+        sha256: 53ab754b46351e9ec36adfa911ea40766080d3fbc031ec9c193713f49dc412ef
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clazy/blobs/sha256:e0cfd169bb2e3bd13585cbbe46c65d3375638164f10e0d924eaf51bc46698412
+        sha256: e0cfd169bb2e3bd13585cbbe46c65d3375638164f10e0d924eaf51bc46698412
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clazy/blobs/sha256:e6cd0dbf3f2a3e853f7859710e8908e36b87657a956d113c9bb809ec550bc18a
+        sha256: e6cd0dbf3f2a3e853f7859710e8908e36b87657a956d113c9bb809ec550bc18a
+        sha512: ""
+        signature: ""
+source:
+    url: https://invent.kde.org/sdk/clazy/-/archive/v1.17.1/clazy-v1.17.1.tar.gz
+    sha256: d67a930833cdfef446a3db2e3c39a966876f09358bca31cd1e67aace0773bc31
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - llvm
+    - llvm
+build:
+    configure: []
+    install: []
+service: null

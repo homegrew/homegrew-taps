@@ -3,30 +3,55 @@ version: 3.14.19
 description: Interior point optimizer
 homepage: https://coin-or.github.io/Ipopt/
 license: EPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ipopt/blobs/sha256:94e96fc9b70faed386353442a5dbd7eb65cbca7d2eedb0d114d81781c3346702
-    sha256: 94e96fc9b70faed386353442a5dbd7eb65cbca7d2eedb0d114d81781c3346702
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ipopt/blobs/sha256:df6a8e87d831c760a26ea98ca037c2c6d4bb37d7520ce62e68e2aa1aa53b616e
-    sha256: df6a8e87d831c760a26ea98ca037c2c6d4bb37d7520ce62e68e2aa1aa53b616e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ipopt/blobs/sha256:546246a14d77bcd0401489732f9d8a43ce62b74aaede0bc88ac502f79d3c6f3c
-    sha256: 546246a14d77bcd0401489732f9d8a43ce62b74aaede0bc88ac502f79d3c6f3c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ipopt/blobs/sha256:51378444ce9b3c3dc91f94b3744f8a287a41ad62f0c12b51e728d94a1eaf2c00
-    sha256: 51378444ce9b3c3dc91f94b3744f8a287a41ad62f0c12b51e728d94a1eaf2c00
-source:
-  url: https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.19.tar.gz
-  sha256: b3eb84a23812b53a3325bcd2c599de2b0f5df45a18ed251f9e3c1cd893136287
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ampl-asl
-  - gcc
-  - openblas
+    - ampl-asl
+    - gcc
+    - openblas
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ipopt/blobs/sha256:df6a8e87d831c760a26ea98ca037c2c6d4bb37d7520ce62e68e2aa1aa53b616e
+        sha256: df6a8e87d831c760a26ea98ca037c2c6d4bb37d7520ce62e68e2aa1aa53b616e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ipopt/blobs/sha256:94e96fc9b70faed386353442a5dbd7eb65cbca7d2eedb0d114d81781c3346702
+        sha256: 94e96fc9b70faed386353442a5dbd7eb65cbca7d2eedb0d114d81781c3346702
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ipopt/blobs/sha256:546246a14d77bcd0401489732f9d8a43ce62b74aaede0bc88ac502f79d3c6f3c
+        sha256: 546246a14d77bcd0401489732f9d8a43ce62b74aaede0bc88ac502f79d3c6f3c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ipopt/blobs/sha256:51378444ce9b3c3dc91f94b3744f8a287a41ad62f0c12b51e728d94a1eaf2c00
+        sha256: 51378444ce9b3c3dc91f94b3744f8a287a41ad62f0c12b51e728d94a1eaf2c00
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.19.tar.gz
+    sha256: b3eb84a23812b53a3325bcd2c599de2b0f5df45a18ed251f9e3c1cd893136287
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - openjdk
-  - pkgconf
+    - openjdk
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

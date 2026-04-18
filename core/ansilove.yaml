@@ -3,27 +3,52 @@ version: 4.2.1
 description: ANSI/ASCII art to PNG converter
 homepage: https://www.ansilove.org
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:aa355a28549b83c25a3a8253d2310839916f36fdb297bb0b9501b8de0d976f74
-    sha256: aa355a28549b83c25a3a8253d2310839916f36fdb297bb0b9501b8de0d976f74
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:0c4afe55030fe391aee91079e6a914a4bc989176d1e6cda14c571447de1ce8c4
-    sha256: 0c4afe55030fe391aee91079e6a914a4bc989176d1e6cda14c571447de1ce8c4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:4bd6f63f8bfdd6b56e2ce0cb6cff1cbb54c0fb34c36e96d71d9104a5d2ef0ae3
-    sha256: 4bd6f63f8bfdd6b56e2ce0cb6cff1cbb54c0fb34c36e96d71d9104a5d2ef0ae3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:d1ae03d326bb2fa1250f8bf6d86a790d997ab6c5e9a05a211d9dc7583c3e9d5c
-    sha256: d1ae03d326bb2fa1250f8bf6d86a790d997ab6c5e9a05a211d9dc7583c3e9d5c
-source:
-  url: https://github.com/ansilove/ansilove/releases/download/4.2.1/ansilove-4.2.1.tar.gz
-  sha256: 60b1f1b6e4a5be287bb19310ea526c631a0bea5f4cb550f33c301a4b1ec30abf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libansilove
+    - libansilove
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:0c4afe55030fe391aee91079e6a914a4bc989176d1e6cda14c571447de1ce8c4
+        sha256: 0c4afe55030fe391aee91079e6a914a4bc989176d1e6cda14c571447de1ce8c4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:aa355a28549b83c25a3a8253d2310839916f36fdb297bb0b9501b8de0d976f74
+        sha256: aa355a28549b83c25a3a8253d2310839916f36fdb297bb0b9501b8de0d976f74
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:4bd6f63f8bfdd6b56e2ce0cb6cff1cbb54c0fb34c36e96d71d9104a5d2ef0ae3
+        sha256: 4bd6f63f8bfdd6b56e2ce0cb6cff1cbb54c0fb34c36e96d71d9104a5d2ef0ae3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:d1ae03d326bb2fa1250f8bf6d86a790d997ab6c5e9a05a211d9dc7583c3e9d5c
+        sha256: d1ae03d326bb2fa1250f8bf6d86a790d997ab6c5e9a05a211d9dc7583c3e9d5c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ansilove/ansilove/releases/download/4.2.1/ansilove-4.2.1.tar.gz
+    sha256: 60b1f1b6e4a5be287bb19310ea526c631a0bea5f4cb550f33c301a4b1ec30abf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

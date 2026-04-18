@@ -3,42 +3,66 @@ version: 0.16.9
 description: Modernized, complete, self-contained TeX/LaTeX engine
 homepage: https://tectonic-typesetting.github.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tectonic/blobs/sha256:4bf0bc26d2c17b8f634de7950a210a8bbd5cc2f7567c4adfa20649b6731c90cb
-    sha256: 4bf0bc26d2c17b8f634de7950a210a8bbd5cc2f7567c4adfa20649b6731c90cb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tectonic/blobs/sha256:f59976400ce7c94f3b40a14dc1cc152f148848a53bad00301bc0f1d5b9a3007a
-    sha256: f59976400ce7c94f3b40a14dc1cc152f148848a53bad00301bc0f1d5b9a3007a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tectonic/blobs/sha256:e76fde85d4a89ad25e04159555dad0c1afa3112a97df58148edd8383adbba09a
-    sha256: e76fde85d4a89ad25e04159555dad0c1afa3112a97df58148edd8383adbba09a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tectonic/blobs/sha256:d3a08fa8228b9c146a9ea5145835f6231a18bd71f6b528593738649a7f7826dd
-    sha256: d3a08fa8228b9c146a9ea5145835f6231a18bd71f6b528593738649a7f7826dd
-source:
-  url: https://github.com/tectonic-typesetting/tectonic/archive/refs/tags/tectonic@0.16.9.tar.gz
-  sha256: 9861d4d4230b987d8560f1b84fe6c8a550738401be65b9425b0c7d0466178f2b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - graphite2
-  - harfbuzz
-  - icu4c@78
-  - libpng
-  - openssl@3
+    - freetype
+    - graphite2
+    - harfbuzz
+    - icu4c@78
+    - libpng
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tectonic/blobs/sha256:f59976400ce7c94f3b40a14dc1cc152f148848a53bad00301bc0f1d5b9a3007a
+        sha256: f59976400ce7c94f3b40a14dc1cc152f148848a53bad00301bc0f1d5b9a3007a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tectonic/blobs/sha256:4bf0bc26d2c17b8f634de7950a210a8bbd5cc2f7567c4adfa20649b6731c90cb
+        sha256: 4bf0bc26d2c17b8f634de7950a210a8bbd5cc2f7567c4adfa20649b6731c90cb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tectonic/blobs/sha256:e76fde85d4a89ad25e04159555dad0c1afa3112a97df58148edd8383adbba09a
+        sha256: e76fde85d4a89ad25e04159555dad0c1afa3112a97df58148edd8383adbba09a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tectonic/blobs/sha256:d3a08fa8228b9c146a9ea5145835f6231a18bd71f6b528593738649a7f7826dd
+        sha256: d3a08fa8228b9c146a9ea5145835f6231a18bd71f6b528593738649a7f7826dd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tectonic-typesetting/tectonic/archive/refs/tags/tectonic@0.16.9.tar.gz
+    sha256: 9861d4d4230b987d8560f1b84fe6c8a550738401be65b9425b0c7d0466178f2b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - fontconfig
-  - freetype
-  - graphite2
-  - harfbuzz
-  - icu4c@78
-  - libpng
-  - openssl@3
-  - zlib-ng-compat
+    - fontconfig
+    - freetype
+    - graphite2
+    - harfbuzz
+    - icu4c@78
+    - libpng
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

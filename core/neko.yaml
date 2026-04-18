@@ -3,40 +3,64 @@ version: 2.4.1
 description: High-level, dynamically typed programming language
 homepage: https://nekovm.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:89c971ad4c60726ebc84ce4a6b5ebb675cd65a5dc400d4cc152cba7b40e52f07
-    sha256: 89c971ad4c60726ebc84ce4a6b5ebb675cd65a5dc400d4cc152cba7b40e52f07
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:37b217ca868281d49936bb213ac8e27838254a04931b7f9f93493a6f40bc2f0a
-    sha256: 37b217ca868281d49936bb213ac8e27838254a04931b7f9f93493a6f40bc2f0a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:452562632f23c92792771f4df762168e34f51f1143ff7dc467e755c34594982c
-    sha256: 452562632f23c92792771f4df762168e34f51f1143ff7dc467e755c34594982c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:5c036ca3b850ae905d89e474af893486017fdbfc9aa7a8e696c62c4bfd59fddb
-    sha256: 5c036ca3b850ae905d89e474af893486017fdbfc9aa7a8e696c62c4bfd59fddb
-source:
-  url: https://github.com/HaxeFoundation/neko/archive/refs/tags/v2-4-1.tar.gz
-  sha256: 702282028190dffa2078b00cca515b8e2ba889186a221df2226d2b6deb3ffaca
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - bdw-gc
-  - mariadb-connector-c
-  - mbedtls@3
-  - pcre2
+    - bdw-gc
+    - mariadb-connector-c
+    - mbedtls@3
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:37b217ca868281d49936bb213ac8e27838254a04931b7f9f93493a6f40bc2f0a
+        sha256: 37b217ca868281d49936bb213ac8e27838254a04931b7f9f93493a6f40bc2f0a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:89c971ad4c60726ebc84ce4a6b5ebb675cd65a5dc400d4cc152cba7b40e52f07
+        sha256: 89c971ad4c60726ebc84ce4a6b5ebb675cd65a5dc400d4cc152cba7b40e52f07
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:452562632f23c92792771f4df762168e34f51f1143ff7dc467e755c34594982c
+        sha256: 452562632f23c92792771f4df762168e34f51f1143ff7dc467e755c34594982c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/neko/blobs/sha256:5c036ca3b850ae905d89e474af893486017fdbfc9aa7a8e696c62c4bfd59fddb
+        sha256: 5c036ca3b850ae905d89e474af893486017fdbfc9aa7a8e696c62c4bfd59fddb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/HaxeFoundation/neko/archive/refs/tags/v2-4-1.tar.gz
+    sha256: 702282028190dffa2078b00cca515b8e2ba889186a221df2226d2b6deb3ffaca
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - apr-util
-  - bdw-gc
-  - gtk+3
-  - httpd
-  - mariadb-connector-c
-  - mbedtls@3
-  - pcre2
-  - zlib-ng-compat
+    - apr-util
+    - bdw-gc
+    - gtk+3
+    - httpd
+    - mariadb-connector-c
+    - mbedtls@3
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -1,38 +1,62 @@
 name: vis
-version: 0.9
+version: "0.9"
 description: Vim-like text editor
 homepage: https://github.com/martanne/vis
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vis/blobs/sha256:48f1f7959be85ddf700d6a18f71e5f1597a490e2679f81038aac4506c3f33472
-    sha256: 48f1f7959be85ddf700d6a18f71e5f1597a490e2679f81038aac4506c3f33472
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vis/blobs/sha256:a7460f4c478624d321fcbf3c5eb60d323481d485e5448b295893ece018c17fef
-    sha256: a7460f4c478624d321fcbf3c5eb60d323481d485e5448b295893ece018c17fef
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vis/blobs/sha256:9e56addec38aa4ab41947607ed671c38dfa96e4eb0323890579d87ee4aeae839
-    sha256: 9e56addec38aa4ab41947607ed671c38dfa96e4eb0323890579d87ee4aeae839
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vis/blobs/sha256:21494a89af0e59a06cdd78d618c4de6dbe67b2d38421efc88f7500320dfe7b8f
-    sha256: 21494a89af0e59a06cdd78d618c4de6dbe67b2d38421efc88f7500320dfe7b8f
-source:
-  url: https://github.com/martanne/vis/archive/refs/tags/v0.9.tar.gz
-  sha256: bd37ffba5535e665c1e883c25ba5f4e3307569b6d392c60f3c7d5dedd2efcfca
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtermkey
-  - lpeg
-  - lua@5.4
-  - tre
+    - libtermkey
+    - lpeg
+    - lua@5.4
+    - tre
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vis/blobs/sha256:a7460f4c478624d321fcbf3c5eb60d323481d485e5448b295893ece018c17fef
+        sha256: a7460f4c478624d321fcbf3c5eb60d323481d485e5448b295893ece018c17fef
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vis/blobs/sha256:48f1f7959be85ddf700d6a18f71e5f1597a490e2679f81038aac4506c3f33472
+        sha256: 48f1f7959be85ddf700d6a18f71e5f1597a490e2679f81038aac4506c3f33472
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vis/blobs/sha256:9e56addec38aa4ab41947607ed671c38dfa96e4eb0323890579d87ee4aeae839
+        sha256: 9e56addec38aa4ab41947607ed671c38dfa96e4eb0323890579d87ee4aeae839
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vis/blobs/sha256:21494a89af0e59a06cdd78d618c4de6dbe67b2d38421efc88f7500320dfe7b8f
+        sha256: 21494a89af0e59a06cdd78d618c4de6dbe67b2d38421efc88f7500320dfe7b8f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/martanne/vis/archive/refs/tags/v0.9.tar.gz
+    sha256: bd37ffba5535e665c1e883c25ba5f4e3307569b6d392c60f3c7d5dedd2efcfca
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - acl
-  - libtermkey
-  - lpeg
-  - lua@5.4
-  - tre
+    - acl
+    - libtermkey
+    - lpeg
+    - lua@5.4
+    - tre
+build:
+    configure: []
+    install: []
+service: null

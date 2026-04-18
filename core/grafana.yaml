@@ -3,31 +3,56 @@ version: 12.4.2
 description: Gorgeous metric visualizations and dashboards for timeseries databases
 homepage: https://grafana.com
 license: AGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grafana/blobs/sha256:f05020704fcaff9e3bfc95eee37486c59c454f81eae17d5df0fa1b2b8abd5441
-    sha256: f05020704fcaff9e3bfc95eee37486c59c454f81eae17d5df0fa1b2b8abd5441
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grafana/blobs/sha256:ff3f577f1fb4493ab662de17bedbda2ac3215359d2d6c04fab57aa0f9192df04
-    sha256: ff3f577f1fb4493ab662de17bedbda2ac3215359d2d6c04fab57aa0f9192df04
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grafana/blobs/sha256:03a67a093c65b714e01fd5268cb088f2a9253e545d1a3b7f10c7caa5fefb361c
-    sha256: 03a67a093c65b714e01fd5268cb088f2a9253e545d1a3b7f10c7caa5fefb361c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grafana/blobs/sha256:1a3096ceb6d2b1f01425c1d227222b7db86afc85b7a0954b818734a5ed1fb759
-    sha256: 1a3096ceb6d2b1f01425c1d227222b7db86afc85b7a0954b818734a5ed1fb759
-source:
-  url: https://github.com/grafana/grafana/archive/refs/tags/v12.4.2.tar.gz
-  sha256: f3b5dbc39da14ba072dea00c2b2ec40743f753851e4ad8bd133a7a1441adeb76
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grafana/blobs/sha256:ff3f577f1fb4493ab662de17bedbda2ac3215359d2d6c04fab57aa0f9192df04
+        sha256: ff3f577f1fb4493ab662de17bedbda2ac3215359d2d6c04fab57aa0f9192df04
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grafana/blobs/sha256:f05020704fcaff9e3bfc95eee37486c59c454f81eae17d5df0fa1b2b8abd5441
+        sha256: f05020704fcaff9e3bfc95eee37486c59c454f81eae17d5df0fa1b2b8abd5441
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grafana/blobs/sha256:03a67a093c65b714e01fd5268cb088f2a9253e545d1a3b7f10c7caa5fefb361c
+        sha256: 03a67a093c65b714e01fd5268cb088f2a9253e545d1a3b7f10c7caa5fefb361c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grafana/blobs/sha256:1a3096ceb6d2b1f01425c1d227222b7db86afc85b7a0954b818734a5ed1fb759
+        sha256: 1a3096ceb6d2b1f01425c1d227222b7db86afc85b7a0954b818734a5ed1fb759
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/grafana/grafana/archive/refs/tags/v12.4.2.tar.gz
+    sha256: f3b5dbc39da14ba072dea00c2b2ec40743f753851e4ad8bd133a7a1441adeb76
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - node
-  - yarn
+    - go
+    - node
+    - yarn
 linux_dependencies:
-  - fontconfig
-  - freetype
-  - zlib-ng-compat
+    - fontconfig
+    - freetype
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

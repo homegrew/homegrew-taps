@@ -3,37 +3,61 @@ version: 0.5.12
 description: Library that provides automatic proxy configuration management
 homepage: https://libproxy.github.io/libproxy/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libproxy/blobs/sha256:8bca46e33f84587a37f8a37a665f4672231ee8020b1b247e5c42550a64b1047c
-    sha256: 8bca46e33f84587a37f8a37a665f4672231ee8020b1b247e5c42550a64b1047c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libproxy/blobs/sha256:341f794e4ee6b4dafe8abae0e40ae482235044afbd7748d77c52325db1e13a6b
-    sha256: 341f794e4ee6b4dafe8abae0e40ae482235044afbd7748d77c52325db1e13a6b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libproxy/blobs/sha256:32d70bc35f44a3db4bb2f34f30cc6a19c313f137caf41840a0443442c0ba661d
-    sha256: 32d70bc35f44a3db4bb2f34f30cc6a19c313f137caf41840a0443442c0ba661d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libproxy/blobs/sha256:8d61bdca52b59c72a01cd3ef69bbe054a1c638e45a04a9849e33902632ca25f3
-    sha256: 8d61bdca52b59c72a01cd3ef69bbe054a1c638e45a04a9849e33902632ca25f3
-source:
-  url: https://github.com/libproxy/libproxy/archive/refs/tags/0.5.12.tar.gz
-  sha256: a1fa55991998b80a567450a9e84382421a7176a84446c95caaa8b72cf09fa86f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - duktape
-  - glib
+    - duktape
+    - glib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libproxy/blobs/sha256:341f794e4ee6b4dafe8abae0e40ae482235044afbd7748d77c52325db1e13a6b
+        sha256: 341f794e4ee6b4dafe8abae0e40ae482235044afbd7748d77c52325db1e13a6b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libproxy/blobs/sha256:8bca46e33f84587a37f8a37a665f4672231ee8020b1b247e5c42550a64b1047c
+        sha256: 8bca46e33f84587a37f8a37a665f4672231ee8020b1b247e5c42550a64b1047c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libproxy/blobs/sha256:32d70bc35f44a3db4bb2f34f30cc6a19c313f137caf41840a0443442c0ba661d
+        sha256: 32d70bc35f44a3db4bb2f34f30cc6a19c313f137caf41840a0443442c0ba661d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libproxy/blobs/sha256:8d61bdca52b59c72a01cd3ef69bbe054a1c638e45a04a9849e33902632ca25f3
+        sha256: 8d61bdca52b59c72a01cd3ef69bbe054a1c638e45a04a9849e33902632ca25f3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libproxy/libproxy/archive/refs/tags/0.5.12.tar.gz
+    sha256: a1fa55991998b80a567450a9e84382421a7176a84446c95caaa8b72cf09fa86f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - gsettings-desktop-schemas
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - gobject-introspection
+    - gsettings-desktop-schemas
+    - meson
+    - ninja
+    - pkgconf
+    - vala
 linux_dependencies:
-  - dbus
-  - duktape
-  - glib
+    - dbus
+    - duktape
+    - glib
+build:
+    configure: []
+    install: []
+service: null

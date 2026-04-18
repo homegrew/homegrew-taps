@@ -1,40 +1,64 @@
 name: mediaconch
-version: 25.04
+version: "25.04"
 description: Conformance checker and technical metadata reporter
 homepage: https://mediaarea.net/MediaConch
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mediaconch/blobs/sha256:8364c862db65aa723612eea3215ea4399c074701e4321b4f1a6a705b8cf6c925
-    sha256: 8364c862db65aa723612eea3215ea4399c074701e4321b4f1a6a705b8cf6c925
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mediaconch/blobs/sha256:5168de6b8b71887d861dab17f49e835d8467de0f765018b0b7cdc9380f10080e
-    sha256: 5168de6b8b71887d861dab17f49e835d8467de0f765018b0b7cdc9380f10080e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mediaconch/blobs/sha256:75fa4fbd9aaebac202c91e5966d8054cb80ac5da0251e6954dd050649d4ed888
-    sha256: 75fa4fbd9aaebac202c91e5966d8054cb80ac5da0251e6954dd050649d4ed888
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mediaconch/blobs/sha256:f14fccda9ccb8ec1d160149e1a2c6ecb8cecdb62d615a7af0c622397a4232520
-    sha256: f14fccda9ccb8ec1d160149e1a2c6ecb8cecdb62d615a7af0c622397a4232520
-source:
-  url: https://mediaarea.net/download/binary/mediaconch/25.04/MediaConch_CLI_25.04_GNU_FromSource.tar.bz2
-  sha256: 800d076ca374a0c954c928f471761fb000b36b7df9d8e1d1bb03b233edff8857
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jansson
-  - libevent
-  - libmediainfo
-  - libzen
-  - sqlite
+    - jansson
+    - libevent
+    - libmediainfo
+    - libzen
+    - sqlite
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mediaconch/blobs/sha256:5168de6b8b71887d861dab17f49e835d8467de0f765018b0b7cdc9380f10080e
+        sha256: 5168de6b8b71887d861dab17f49e835d8467de0f765018b0b7cdc9380f10080e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mediaconch/blobs/sha256:8364c862db65aa723612eea3215ea4399c074701e4321b4f1a6a705b8cf6c925
+        sha256: 8364c862db65aa723612eea3215ea4399c074701e4321b4f1a6a705b8cf6c925
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mediaconch/blobs/sha256:75fa4fbd9aaebac202c91e5966d8054cb80ac5da0251e6954dd050649d4ed888
+        sha256: 75fa4fbd9aaebac202c91e5966d8054cb80ac5da0251e6954dd050649d4ed888
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mediaconch/blobs/sha256:f14fccda9ccb8ec1d160149e1a2c6ecb8cecdb62d615a7af0c622397a4232520
+        sha256: f14fccda9ccb8ec1d160149e1a2c6ecb8cecdb62d615a7af0c622397a4232520
+        sha512: ""
+        signature: ""
+source:
+    url: https://mediaarea.net/download/binary/mediaconch/25.04/MediaConch_CLI_25.04_GNU_FromSource.tar.bz2
+    sha256: 800d076ca374a0c954c928f471761fb000b36b7df9d8e1d1bb03b233edff8857
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - jansson
-  - libevent
-  - libmediainfo
-  - libzen
-  - sqlite
-  - zlib-ng-compat
+    - jansson
+    - libevent
+    - libmediainfo
+    - libzen
+    - sqlite
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

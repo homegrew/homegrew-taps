@@ -3,29 +3,54 @@ version: 2.1.3-rc5
 description: Freetype / OpenGL bridge
 homepage: https://sourceforge.net/projects/ftgl/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ftgl/blobs/sha256:12ddf881165473de8bdeaecb87995c36f753ca51a5be48404e5ffcf2c1571205
-    sha256: 12ddf881165473de8bdeaecb87995c36f753ca51a5be48404e5ffcf2c1571205
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ftgl/blobs/sha256:8d04c4e2fedf981269b941a69634b3fe4bcc0a3f54730c58c186823b0c7c5958
-    sha256: 8d04c4e2fedf981269b941a69634b3fe4bcc0a3f54730c58c186823b0c7c5958
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ftgl/blobs/sha256:a53d8292298b4c6974e04fd8ab744860aec65b58149a704d9e2dad61aba0c4f6
-    sha256: a53d8292298b4c6974e04fd8ab744860aec65b58149a704d9e2dad61aba0c4f6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ftgl/blobs/sha256:4b6add1f77c741b0d4cf01aba4fc3a7613b66d38d0f74ce06fcc571629270b11
-    sha256: 4b6add1f77c741b0d4cf01aba4fc3a7613b66d38d0f74ce06fcc571629270b11
-source:
-  url: https://downloads.sourceforge.net/project/ftgl/FTGL%20Source/2.1.3~rc5/ftgl-2.1.3-rc5.tar.gz
-  sha256: 5458d62122454869572d39f8aa85745fc05d5518001bcefa63bd6cbb8d26565b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
+    - freetype
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ftgl/blobs/sha256:8d04c4e2fedf981269b941a69634b3fe4bcc0a3f54730c58c186823b0c7c5958
+        sha256: 8d04c4e2fedf981269b941a69634b3fe4bcc0a3f54730c58c186823b0c7c5958
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ftgl/blobs/sha256:12ddf881165473de8bdeaecb87995c36f753ca51a5be48404e5ffcf2c1571205
+        sha256: 12ddf881165473de8bdeaecb87995c36f753ca51a5be48404e5ffcf2c1571205
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ftgl/blobs/sha256:a53d8292298b4c6974e04fd8ab744860aec65b58149a704d9e2dad61aba0c4f6
+        sha256: a53d8292298b4c6974e04fd8ab744860aec65b58149a704d9e2dad61aba0c4f6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ftgl/blobs/sha256:4b6add1f77c741b0d4cf01aba4fc3a7613b66d38d0f74ce06fcc571629270b11
+        sha256: 4b6add1f77c741b0d4cf01aba4fc3a7613b66d38d0f74ce06fcc571629270b11
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/ftgl/FTGL%20Source/2.1.3~rc5/ftgl-2.1.3-rc5.tar.gz
+    sha256: 5458d62122454869572d39f8aa85745fc05d5518001bcefa63bd6cbb8d26565b
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - freetype
-  - mesa
-  - mesa-glu
+    - freetype
+    - mesa
+    - mesa-glu
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,53 @@ version: 1.8.4
 description: Open source time series data processor
 homepage: https://github.com/influxdata/kapacitor
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:588e9c13ff71e0ffc2a49701ffc49d3a025617cee765f7fdf497f86392dacff0
-    sha256: 588e9c13ff71e0ffc2a49701ffc49d3a025617cee765f7fdf497f86392dacff0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:2f8c1d939a4f9a6e532e1ad388a26fb7e7656447a62aded63b3b2aaf453a869b
-    sha256: 2f8c1d939a4f9a6e532e1ad388a26fb7e7656447a62aded63b3b2aaf453a869b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:fe9d8fd4d93ddf586b22f7ac319c479b597ffe2a6782d661031aacbd02917fd3
-    sha256: fe9d8fd4d93ddf586b22f7ac319c479b597ffe2a6782d661031aacbd02917fd3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:8dfcb888e380d9d4d1cb25b994d53d8ece4036e68090dd2f8b48bc417dc5bcfb
-    sha256: 8dfcb888e380d9d4d1cb25b994d53d8ece4036e68090dd2f8b48bc417dc5bcfb
-source:
-  url: https://github.com/influxdata/kapacitor.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:2f8c1d939a4f9a6e532e1ad388a26fb7e7656447a62aded63b3b2aaf453a869b
+        sha256: 2f8c1d939a4f9a6e532e1ad388a26fb7e7656447a62aded63b3b2aaf453a869b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:588e9c13ff71e0ffc2a49701ffc49d3a025617cee765f7fdf497f86392dacff0
+        sha256: 588e9c13ff71e0ffc2a49701ffc49d3a025617cee765f7fdf497f86392dacff0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:fe9d8fd4d93ddf586b22f7ac319c479b597ffe2a6782d661031aacbd02917fd3
+        sha256: fe9d8fd4d93ddf586b22f7ac319c479b597ffe2a6782d661031aacbd02917fd3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:8dfcb888e380d9d4d1cb25b994d53d8ece4036e68090dd2f8b48bc417dc5bcfb
+        sha256: 8dfcb888e380d9d4d1cb25b994d53d8ece4036e68090dd2f8b48bc417dc5bcfb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/influxdata/kapacitor.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - pkgconf
-  - rust
+    - go
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

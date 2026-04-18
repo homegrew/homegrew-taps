@@ -3,27 +3,52 @@ version: 0.3.0
 description: Standard ML compiler that produces Lua/JavaScript
 homepage: https://github.com/minoki/LunarML
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lunarml/blobs/sha256:2df11728ca3fb49958d60145918c3dba582f0d87c1491bcfd9c2f8407cf241f8
-    sha256: 2df11728ca3fb49958d60145918c3dba582f0d87c1491bcfd9c2f8407cf241f8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lunarml/blobs/sha256:030100cb16de338080fd919a41f4048e90ef9d692209950feefe052ccdab0972
-    sha256: 030100cb16de338080fd919a41f4048e90ef9d692209950feefe052ccdab0972
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lunarml/blobs/sha256:afc712f980e20f4c0d9ddc3222ad101737c55c0baae2d394564510349c4bbf11
-    sha256: afc712f980e20f4c0d9ddc3222ad101737c55c0baae2d394564510349c4bbf11
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lunarml/blobs/sha256:b0dbe810a70d79fb20e22676a8ca6112e83f46755704d38e3ca6c1d720490faf
-    sha256: b0dbe810a70d79fb20e22676a8ca6112e83f46755704d38e3ca6c1d720490faf
-source:
-  url: https://github.com/minoki/LunarML/archive/refs/tags/v0.3.0.tar.gz
-  sha256: 459719f7b462ae3bb1485d2055fe9a62bdd1bc91f569cfd0480757c48054d8ee
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lunarml/blobs/sha256:030100cb16de338080fd919a41f4048e90ef9d692209950feefe052ccdab0972
+        sha256: 030100cb16de338080fd919a41f4048e90ef9d692209950feefe052ccdab0972
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lunarml/blobs/sha256:2df11728ca3fb49958d60145918c3dba582f0d87c1491bcfd9c2f8407cf241f8
+        sha256: 2df11728ca3fb49958d60145918c3dba582f0d87c1491bcfd9c2f8407cf241f8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lunarml/blobs/sha256:afc712f980e20f4c0d9ddc3222ad101737c55c0baae2d394564510349c4bbf11
+        sha256: afc712f980e20f4c0d9ddc3222ad101737c55c0baae2d394564510349c4bbf11
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lunarml/blobs/sha256:b0dbe810a70d79fb20e22676a8ca6112e83f46755704d38e3ca6c1d720490faf
+        sha256: b0dbe810a70d79fb20e22676a8ca6112e83f46755704d38e3ca6c1d720490faf
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/minoki/LunarML/archive/refs/tags/v0.3.0.tar.gz
+    sha256: 459719f7b462ae3bb1485d2055fe9a62bdd1bc91f569cfd0480757c48054d8ee
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - mlton
+    - mlton
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

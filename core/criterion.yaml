@@ -3,32 +3,57 @@ version: 2.4.3
 description: Cross-platform C and C++ unit testing framework for the 21st century
 homepage: https://github.com/Snaipe/Criterion
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/criterion/blobs/sha256:a9672d4007899f8d5441fafd3738863c93829abce3bc43031981c82b5c11f17c
-    sha256: a9672d4007899f8d5441fafd3738863c93829abce3bc43031981c82b5c11f17c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/criterion/blobs/sha256:262cc7f448b90131c51d7bf5bbc82d49707551f73fbfa53d7a0d917e077c80f3
-    sha256: 262cc7f448b90131c51d7bf5bbc82d49707551f73fbfa53d7a0d917e077c80f3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/criterion/blobs/sha256:6c9a32199fe0c88d3bfd6b9f4d40f17e573147152190cebb00fb72e58f287c16
-    sha256: 6c9a32199fe0c88d3bfd6b9f4d40f17e573147152190cebb00fb72e58f287c16
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/criterion/blobs/sha256:554c2d54bc12923dfe181c740f6a82af803485926fded8afa8daf3508239a341
-    sha256: 554c2d54bc12923dfe181c740f6a82af803485926fded8afa8daf3508239a341
-source:
-  url: https://github.com/Snaipe/Criterion/releases/download/v2.4.3/criterion-2.4.3.tar.xz
-  sha256: 8ec64e482a70b3bfc1836ace0988b3316e6c3cfeac883fb5a674dcea5083ea16
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
-  - nanomsg
-  - nanopb
+    - libgit2
+    - nanomsg
+    - nanopb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/criterion/blobs/sha256:262cc7f448b90131c51d7bf5bbc82d49707551f73fbfa53d7a0d917e077c80f3
+        sha256: 262cc7f448b90131c51d7bf5bbc82d49707551f73fbfa53d7a0d917e077c80f3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/criterion/blobs/sha256:a9672d4007899f8d5441fafd3738863c93829abce3bc43031981c82b5c11f17c
+        sha256: a9672d4007899f8d5441fafd3738863c93829abce3bc43031981c82b5c11f17c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/criterion/blobs/sha256:6c9a32199fe0c88d3bfd6b9f4d40f17e573147152190cebb00fb72e58f287c16
+        sha256: 6c9a32199fe0c88d3bfd6b9f4d40f17e573147152190cebb00fb72e58f287c16
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/criterion/blobs/sha256:554c2d54bc12923dfe181c740f6a82af803485926fded8afa8daf3508239a341
+        sha256: 554c2d54bc12923dfe181c740f6a82af803485926fded8afa8daf3508239a341
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Snaipe/Criterion/releases/download/v2.4.3/criterion-2.4.3.tar.xz
+    sha256: 8ec64e482a70b3bfc1836ace0988b3316e6c3cfeac883fb5a674dcea5083ea16
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - meson
-  - ninja
-  - pkgconf
+    - cmake
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,34 +3,58 @@ version: 1.1.1
 description: Universal utility for programming FPGA
 homepage: https://github.com/trabucayre/openFPGALoader
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openfpgaloader/blobs/sha256:5fcb0ca1f40b157a892db1b780e1b10f24d9d082e45465ff03c5fabf034681b6
-    sha256: 5fcb0ca1f40b157a892db1b780e1b10f24d9d082e45465ff03c5fabf034681b6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openfpgaloader/blobs/sha256:34caa66947e3bc29f8cd47266d2cbac8ec12ee1fd8090c55eda4663f87e57439
-    sha256: 34caa66947e3bc29f8cd47266d2cbac8ec12ee1fd8090c55eda4663f87e57439
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openfpgaloader/blobs/sha256:89ec85a2ce8460887a33d687fe685f9d2e7c3500a7c3710dbfa6b80cbe347e93
-    sha256: 89ec85a2ce8460887a33d687fe685f9d2e7c3500a7c3710dbfa6b80cbe347e93
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openfpgaloader/blobs/sha256:c779c9691fc3917e44f149774edd4ae4573cebe4fa75d4fbf009719b295f1bc8
-    sha256: c779c9691fc3917e44f149774edd4ae4573cebe4fa75d4fbf009719b295f1bc8
-source:
-  url: https://github.com/trabucayre/openFPGALoader/archive/refs/tags/v1.1.1.tar.gz
-  sha256: ca965f933c52a2a9dbb318df4d4de70fac5f095a8e64523f81036ab467a4b567
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libftdi
-  - libusb
+    - libftdi
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openfpgaloader/blobs/sha256:34caa66947e3bc29f8cd47266d2cbac8ec12ee1fd8090c55eda4663f87e57439
+        sha256: 34caa66947e3bc29f8cd47266d2cbac8ec12ee1fd8090c55eda4663f87e57439
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openfpgaloader/blobs/sha256:5fcb0ca1f40b157a892db1b780e1b10f24d9d082e45465ff03c5fabf034681b6
+        sha256: 5fcb0ca1f40b157a892db1b780e1b10f24d9d082e45465ff03c5fabf034681b6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openfpgaloader/blobs/sha256:89ec85a2ce8460887a33d687fe685f9d2e7c3500a7c3710dbfa6b80cbe347e93
+        sha256: 89ec85a2ce8460887a33d687fe685f9d2e7c3500a7c3710dbfa6b80cbe347e93
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openfpgaloader/blobs/sha256:c779c9691fc3917e44f149774edd4ae4573cebe4fa75d4fbf009719b295f1bc8
+        sha256: c779c9691fc3917e44f149774edd4ae4573cebe4fa75d4fbf009719b295f1bc8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/trabucayre/openFPGALoader/archive/refs/tags/v1.1.1.tar.gz
+    sha256: ca965f933c52a2a9dbb318df4d4de70fac5f095a8e64523f81036ab467a4b567
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - libftdi
-  - libusb
-  - systemd
-  - zlib-ng-compat
+    - libftdi
+    - libusb
+    - systemd
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,38 +3,62 @@ version: 3.6.2
 description: In-memory database and Lua application server
 homepage: https://tarantool.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:1c2347f82df86f84d570b975d2d5ad55160a1840583b70019f69211361a6d4bc
-    sha256: 1c2347f82df86f84d570b975d2d5ad55160a1840583b70019f69211361a6d4bc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:805fc0af3f0df03cab242970d3933136f0514dc22dfe7156e09018178a7d66e5
-    sha256: 805fc0af3f0df03cab242970d3933136f0514dc22dfe7156e09018178a7d66e5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:63b6a3b25c08ad62a323bf867183d10d5bc985ac1ce5dd58683139e4993ab3c0
-    sha256: 63b6a3b25c08ad62a323bf867183d10d5bc985ac1ce5dd58683139e4993ab3c0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:c244bc5235b092aab6a807de1fe7d32c9b0f81b86a95897314eafcf7a624118b
-    sha256: c244bc5235b092aab6a807de1fe7d32c9b0f81b86a95897314eafcf7a624118b
-source:
-  url: https://download.tarantool.org/tarantool/src/tarantool-3.6.2.tar.gz
-  sha256: 20759ba83cb635532ace908313d418daaa9161fa8bf5836545dc9c9a41759a59
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - libyaml
-  - openssl@3
-  - readline
-  - zstd
+    - icu4c@78
+    - libyaml
+    - openssl@3
+    - readline
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:805fc0af3f0df03cab242970d3933136f0514dc22dfe7156e09018178a7d66e5
+        sha256: 805fc0af3f0df03cab242970d3933136f0514dc22dfe7156e09018178a7d66e5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:1c2347f82df86f84d570b975d2d5ad55160a1840583b70019f69211361a6d4bc
+        sha256: 1c2347f82df86f84d570b975d2d5ad55160a1840583b70019f69211361a6d4bc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:63b6a3b25c08ad62a323bf867183d10d5bc985ac1ce5dd58683139e4993ab3c0
+        sha256: 63b6a3b25c08ad62a323bf867183d10d5bc985ac1ce5dd58683139e4993ab3c0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:c244bc5235b092aab6a807de1fe7d32c9b0f81b86a95897314eafcf7a624118b
+        sha256: c244bc5235b092aab6a807de1fe7d32c9b0f81b86a95897314eafcf7a624118b
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.tarantool.org/tarantool/src/tarantool-3.6.2.tar.gz
+    sha256: 20759ba83cb635532ace908313d418daaa9161fa8bf5836545dc9c9a41759a59
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - icu4c@78
-  - libunwind
-  - libyaml
-  - openssl@3
-  - readline
-  - zstd
+    - icu4c@78
+    - libunwind
+    - libyaml
+    - openssl@3
+    - readline
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

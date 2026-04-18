@@ -3,33 +3,57 @@ version: 7.0.1
 description: GNU C++ runtime library for threads, sockets, and parsing
 homepage: https://www.gnu.org/software/commoncpp/
 license: LGPL-3.0-or-later AND (GPL-2.0-or-later WITH mif-exception)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ucommon/blobs/sha256:47d6c23a79119bb4b597cb141c4054018cec80e5dabd11b5379a15cd406d96b9
-    sha256: 47d6c23a79119bb4b597cb141c4054018cec80e5dabd11b5379a15cd406d96b9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ucommon/blobs/sha256:d9e52557eb8da88b69857f8ada8e310ece430553c7ac5c1b1769fa4b354cc497
-    sha256: d9e52557eb8da88b69857f8ada8e310ece430553c7ac5c1b1769fa4b354cc497
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ucommon/blobs/sha256:3cb9863a696fdced7013b30774bea48fced75770d6e2c7a85d4dda337f1ee271
-    sha256: 3cb9863a696fdced7013b30774bea48fced75770d6e2c7a85d4dda337f1ee271
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ucommon/blobs/sha256:44f61ccf52f496b65a2225aad7bd15381c4a8f881a6a13ccdc25d76dbadd2948
-    sha256: 44f61ccf52f496b65a2225aad7bd15381c4a8f881a6a13ccdc25d76dbadd2948
-source:
-  url: https://ftp.debian.org/debian/pool/main/u/ucommon/ucommon_7.0.1.orig.tar.gz
-  sha256: 99fd0e2c69f24e4ca93d01a14bc3fc4e40d69576f235f80f7a8ab37c16951f3e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gnutls
-  - gettext
+    - gnutls
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ucommon/blobs/sha256:d9e52557eb8da88b69857f8ada8e310ece430553c7ac5c1b1769fa4b354cc497
+        sha256: d9e52557eb8da88b69857f8ada8e310ece430553c7ac5c1b1769fa4b354cc497
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ucommon/blobs/sha256:47d6c23a79119bb4b597cb141c4054018cec80e5dabd11b5379a15cd406d96b9
+        sha256: 47d6c23a79119bb4b597cb141c4054018cec80e5dabd11b5379a15cd406d96b9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ucommon/blobs/sha256:3cb9863a696fdced7013b30774bea48fced75770d6e2c7a85d4dda337f1ee271
+        sha256: 3cb9863a696fdced7013b30774bea48fced75770d6e2c7a85d4dda337f1ee271
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ucommon/blobs/sha256:44f61ccf52f496b65a2225aad7bd15381c4a8f881a6a13ccdc25d76dbadd2948
+        sha256: 44f61ccf52f496b65a2225aad7bd15381c4a8f881a6a13ccdc25d76dbadd2948
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.debian.org/debian/pool/main/u/ucommon/ucommon_7.0.1.orig.tar.gz
+    sha256: 99fd0e2c69f24e4ca93d01a14bc3fc4e40d69576f235f80f7a8ab37c16951f3e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - gnutls
+    - gnutls
+build:
+    configure: []
+    install: []
+service: null

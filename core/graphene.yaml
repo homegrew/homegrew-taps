@@ -3,33 +3,57 @@ version: 1.10.8
 description: Thin layer of graphic data types
 homepage: https://ebassi.github.io/graphene/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/graphene/blobs/sha256:b6625af7453d52f016d1218f609bc2044066b81331b90a1536522441b7919816
-    sha256: b6625af7453d52f016d1218f609bc2044066b81331b90a1536522441b7919816
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/graphene/blobs/sha256:021ca247560b884ece3425e9983b6dea68cc6b87b54ab3cdb2e79e3395597392
-    sha256: 021ca247560b884ece3425e9983b6dea68cc6b87b54ab3cdb2e79e3395597392
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/graphene/blobs/sha256:978a8d282c1d1715f11bc6e701441b843a99c8520ac8108016b224932c6c03a5
-    sha256: 978a8d282c1d1715f11bc6e701441b843a99c8520ac8108016b224932c6c03a5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/graphene/blobs/sha256:52e0d23dec6fe643e39b1c080895943d6b253eeb84727928ce249cdda221747e
-    sha256: 52e0d23dec6fe643e39b1c080895943d6b253eeb84727928ce249cdda221747e
-source:
-  url: https://github.com/ebassi/graphene/archive/refs/tags/1.10.8.tar.gz
-  sha256: 922dc109d2dc5dc56617a29bd716c79dd84db31721a8493a13a5f79109a4a4ed
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gettext
+    - glib
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/graphene/blobs/sha256:021ca247560b884ece3425e9983b6dea68cc6b87b54ab3cdb2e79e3395597392
+        sha256: 021ca247560b884ece3425e9983b6dea68cc6b87b54ab3cdb2e79e3395597392
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/graphene/blobs/sha256:b6625af7453d52f016d1218f609bc2044066b81331b90a1536522441b7919816
+        sha256: b6625af7453d52f016d1218f609bc2044066b81331b90a1536522441b7919816
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/graphene/blobs/sha256:978a8d282c1d1715f11bc6e701441b843a99c8520ac8108016b224932c6c03a5
+        sha256: 978a8d282c1d1715f11bc6e701441b843a99c8520ac8108016b224932c6c03a5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/graphene/blobs/sha256:52e0d23dec6fe643e39b1c080895943d6b253eeb84727928ce249cdda221747e
+        sha256: 52e0d23dec6fe643e39b1c080895943d6b253eeb84727928ce249cdda221747e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ebassi/graphene/archive/refs/tags/1.10.8.tar.gz
+    sha256: 922dc109d2dc5dc56617a29bd716c79dd84db31721a8493a13a5f79109a4a4ed
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - glib
+    - glib
+build:
+    configure: []
+    install: []
+service: null

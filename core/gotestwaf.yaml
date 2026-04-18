@@ -3,25 +3,51 @@ version: 0.5.8
 description: Tool for API and OWASP attack simulation
 homepage: https://lab.wallarm.com/test-your-waf-before-hackers/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gotestwaf/blobs/sha256:fc87754a9989cda5d3ae5bc5c08b286956f457395b37b09d5523213060e84fcf
-    sha256: fc87754a9989cda5d3ae5bc5c08b286956f457395b37b09d5523213060e84fcf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gotestwaf/blobs/sha256:d9ba660878866bb9683bc9088c8d1b4dff7e8bc6e63a244b4197a02f214dc3e6
-    sha256: d9ba660878866bb9683bc9088c8d1b4dff7e8bc6e63a244b4197a02f214dc3e6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gotestwaf/blobs/sha256:ea85ed53e64ccd081738ee8b3e80b311128ffdd9ad44d284b956cfd1df8ce86f
-    sha256: ea85ed53e64ccd081738ee8b3e80b311128ffdd9ad44d284b956cfd1df8ce86f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gotestwaf/blobs/sha256:2d70cda56e9eb2065923ad47c7598c87b01c5d18f46e69df22b59eff89fd76c2
-    sha256: 2d70cda56e9eb2065923ad47c7598c87b01c5d18f46e69df22b59eff89fd76c2
-source:
-  url: https://github.com/wallarm/gotestwaf/archive/refs/tags/v0.5.8.tar.gz
-  sha256: 46e6cf3f07957aa58683447572cb9bd68c51aa684b3a5f84439f0f1cbd83621c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gotestwaf/blobs/sha256:d9ba660878866bb9683bc9088c8d1b4dff7e8bc6e63a244b4197a02f214dc3e6
+        sha256: d9ba660878866bb9683bc9088c8d1b4dff7e8bc6e63a244b4197a02f214dc3e6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gotestwaf/blobs/sha256:fc87754a9989cda5d3ae5bc5c08b286956f457395b37b09d5523213060e84fcf
+        sha256: fc87754a9989cda5d3ae5bc5c08b286956f457395b37b09d5523213060e84fcf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gotestwaf/blobs/sha256:ea85ed53e64ccd081738ee8b3e80b311128ffdd9ad44d284b956cfd1df8ce86f
+        sha256: ea85ed53e64ccd081738ee8b3e80b311128ffdd9ad44d284b956cfd1df8ce86f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gotestwaf/blobs/sha256:2d70cda56e9eb2065923ad47c7598c87b01c5d18f46e69df22b59eff89fd76c2
+        sha256: 2d70cda56e9eb2065923ad47c7598c87b01c5d18f46e69df22b59eff89fd76c2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/wallarm/gotestwaf/archive/refs/tags/v0.5.8.tar.gz
+    sha256: 46e6cf3f07957aa58683447572cb9bd68c51aa684b3a5f84439f0f1cbd83621c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

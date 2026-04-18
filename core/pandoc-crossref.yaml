@@ -3,33 +3,57 @@ version: 0.3.23a
 description: Pandoc filter for numbering and cross-referencing
 homepage: https://github.com/lierdakil/pandoc-crossref
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pandoc-crossref/blobs/sha256:b9b183c44cac850fb1b9fed061f569e237aa661897ebde73b25fab4dcc680a2a
-    sha256: b9b183c44cac850fb1b9fed061f569e237aa661897ebde73b25fab4dcc680a2a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pandoc-crossref/blobs/sha256:d372123947b5b6ba2e2855d54698d05cca6834c79d05aa02e93948a973dbc3a6
-    sha256: d372123947b5b6ba2e2855d54698d05cca6834c79d05aa02e93948a973dbc3a6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pandoc-crossref/blobs/sha256:c968d8b3f4e2fea0abf4d45e88de701b529de113e77527fd155313712faeb505
-    sha256: c968d8b3f4e2fea0abf4d45e88de701b529de113e77527fd155313712faeb505
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pandoc-crossref/blobs/sha256:e2d364ba6b6b1ed44f8420fa662a609c156e111b13940842fe445dbe8c61f214
-    sha256: e2d364ba6b6b1ed44f8420fa662a609c156e111b13940842fe445dbe8c61f214
-source:
-  url: https://github.com/lierdakil/pandoc-crossref/archive/refs/tags/v0.3.23a.tar.gz
-  sha256: 7b3638c8b8d416f28e950cf650c52d3e961f53ce6cc640133caf8ee99b2efade
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - pandoc
+    - gmp
+    - pandoc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pandoc-crossref/blobs/sha256:d372123947b5b6ba2e2855d54698d05cca6834c79d05aa02e93948a973dbc3a6
+        sha256: d372123947b5b6ba2e2855d54698d05cca6834c79d05aa02e93948a973dbc3a6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pandoc-crossref/blobs/sha256:b9b183c44cac850fb1b9fed061f569e237aa661897ebde73b25fab4dcc680a2a
+        sha256: b9b183c44cac850fb1b9fed061f569e237aa661897ebde73b25fab4dcc680a2a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pandoc-crossref/blobs/sha256:c968d8b3f4e2fea0abf4d45e88de701b529de113e77527fd155313712faeb505
+        sha256: c968d8b3f4e2fea0abf4d45e88de701b529de113e77527fd155313712faeb505
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pandoc-crossref/blobs/sha256:e2d364ba6b6b1ed44f8420fa662a609c156e111b13940842fe445dbe8c61f214
+        sha256: e2d364ba6b6b1ed44f8420fa662a609c156e111b13940842fe445dbe8c61f214
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lierdakil/pandoc-crossref/archive/refs/tags/v0.3.23a.tar.gz
+    sha256: 7b3638c8b8d416f28e950cf650c52d3e961f53ce6cc640133caf8ee99b2efade
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
+    - cabal-install
+    - ghc
 linux_dependencies:
-  - gmp
-  - pandoc
-  - zlib-ng-compat
+    - gmp
+    - pandoc
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

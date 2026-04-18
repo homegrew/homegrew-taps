@@ -3,29 +3,54 @@ version: 1.5.8.pl01
 description: Library to create an ISO-9660 filesystem with various extensions
 homepage: https://dev.lovelyhq.com/libburnia/libisofs
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libisofs/blobs/sha256:51499f11405e131d706495a2e55f0f6e36ce0a898111e34918bccc1e659b4154
-    sha256: 51499f11405e131d706495a2e55f0f6e36ce0a898111e34918bccc1e659b4154
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libisofs/blobs/sha256:cbb251eac3d3a0acf7b787c94be00265984ecdc84dd39fedddacdf90232d27be
-    sha256: cbb251eac3d3a0acf7b787c94be00265984ecdc84dd39fedddacdf90232d27be
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libisofs/blobs/sha256:ba7c5e53415464406c2bd683ef2ed9291b16b5b132fbfff3dc1f9fd1effae2bb
-    sha256: ba7c5e53415464406c2bd683ef2ed9291b16b5b132fbfff3dc1f9fd1effae2bb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libisofs/blobs/sha256:03c49a76ae9abc78236c6caa06e60c7108e7236d2b5b49a7ecc54b9a24819144
-    sha256: 03c49a76ae9abc78236c6caa06e60c7108e7236d2b5b49a7ecc54b9a24819144
-source:
-  url: https://files.libburnia-project.org/releases/libisofs-1.5.8.pl01.tar.gz
-  sha256: ccbc3e7f43a0929691973539cef45f6468a3f3d72612af0b001a659957a045c7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libzip
+    - libzip
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libisofs/blobs/sha256:cbb251eac3d3a0acf7b787c94be00265984ecdc84dd39fedddacdf90232d27be
+        sha256: cbb251eac3d3a0acf7b787c94be00265984ecdc84dd39fedddacdf90232d27be
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libisofs/blobs/sha256:51499f11405e131d706495a2e55f0f6e36ce0a898111e34918bccc1e659b4154
+        sha256: 51499f11405e131d706495a2e55f0f6e36ce0a898111e34918bccc1e659b4154
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libisofs/blobs/sha256:ba7c5e53415464406c2bd683ef2ed9291b16b5b132fbfff3dc1f9fd1effae2bb
+        sha256: ba7c5e53415464406c2bd683ef2ed9291b16b5b132fbfff3dc1f9fd1effae2bb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libisofs/blobs/sha256:03c49a76ae9abc78236c6caa06e60c7108e7236d2b5b49a7ecc54b9a24819144
+        sha256: 03c49a76ae9abc78236c6caa06e60c7108e7236d2b5b49a7ecc54b9a24819144
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.libburnia-project.org/releases/libisofs-1.5.8.pl01.tar.gz
+    sha256: ccbc3e7f43a0929691973539cef45f6468a3f3d72612af0b001a659957a045c7
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - acl
-  - libzip
-  - zlib-ng-compat
+    - acl
+    - libzip
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

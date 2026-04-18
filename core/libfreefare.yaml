@@ -3,32 +3,56 @@ version: 0.4.0
 description: API for MIFARE card manipulations
 homepage: https://github.com/nfc-tools/libfreefare
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfreefare/blobs/sha256:9db2e4002368c2b87fb707952d9272b740078176b456920a5d5181019617b2dd
-    sha256: 9db2e4002368c2b87fb707952d9272b740078176b456920a5d5181019617b2dd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfreefare/blobs/sha256:cf47d28d3d12d295a911f266dcc2f1b124d333200214b835e41ae8d19f22c28a
-    sha256: cf47d28d3d12d295a911f266dcc2f1b124d333200214b835e41ae8d19f22c28a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libfreefare/blobs/sha256:d3837eb7894980557e16a097e05bc2fa8d42429177f30359166820cca640cc52
-    sha256: d3837eb7894980557e16a097e05bc2fa8d42429177f30359166820cca640cc52
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libfreefare/blobs/sha256:7d7bc10990f7f8f1e0a2d2ff7888f98176bfcc2ef4f19aee6c9465a46947dfb9
-    sha256: 7d7bc10990f7f8f1e0a2d2ff7888f98176bfcc2ef4f19aee6c9465a46947dfb9
-source:
-  url: https://github.com/nfc-tools/libfreefare/releases/download/libfreefare-0.4.0/libfreefare-0.4.0.tar.bz2
-  sha256: bfa31d14a99a1247f5ed49195d6373de512e3eb75bf1627658b40cf7f876bc64
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libnfc
-  - openssl@3
-  - libusb-compat
+    - libnfc
+    - openssl@3
+    - libusb-compat
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfreefare/blobs/sha256:cf47d28d3d12d295a911f266dcc2f1b124d333200214b835e41ae8d19f22c28a
+        sha256: cf47d28d3d12d295a911f266dcc2f1b124d333200214b835e41ae8d19f22c28a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfreefare/blobs/sha256:9db2e4002368c2b87fb707952d9272b740078176b456920a5d5181019617b2dd
+        sha256: 9db2e4002368c2b87fb707952d9272b740078176b456920a5d5181019617b2dd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libfreefare/blobs/sha256:d3837eb7894980557e16a097e05bc2fa8d42429177f30359166820cca640cc52
+        sha256: d3837eb7894980557e16a097e05bc2fa8d42429177f30359166820cca640cc52
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libfreefare/blobs/sha256:7d7bc10990f7f8f1e0a2d2ff7888f98176bfcc2ef4f19aee6c9465a46947dfb9
+        sha256: 7d7bc10990f7f8f1e0a2d2ff7888f98176bfcc2ef4f19aee6c9465a46947dfb9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nfc-tools/libfreefare/releases/download/libfreefare-0.4.0/libfreefare-0.4.0.tar.bz2
+    sha256: bfa31d14a99a1247f5ed49195d6373de512e3eb75bf1627658b40cf7f876bc64
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - libnfc
-  - openssl@3
+    - libnfc
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

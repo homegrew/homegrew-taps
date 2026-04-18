@@ -3,35 +3,59 @@ version: 0.21.0
 description: Mailing list style code reviews for github
 homepage: https://github.com/danobi/prr
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/prr/blobs/sha256:9c3bcf26ee3499cc61c3f13ab5f4c72d35bf9780eef19fab281886d2b9e183c5
-    sha256: 9c3bcf26ee3499cc61c3f13ab5f4c72d35bf9780eef19fab281886d2b9e183c5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/prr/blobs/sha256:8349897e19839be43735a7f95e7437d2892f655aa35b7aec58bf29d80127fc49
-    sha256: 8349897e19839be43735a7f95e7437d2892f655aa35b7aec58bf29d80127fc49
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/prr/blobs/sha256:0b427337f5afde43310564971d2e70f3f683f0f7347de5e9f3f59edf8dd0f2fd
-    sha256: 0b427337f5afde43310564971d2e70f3f683f0f7347de5e9f3f59edf8dd0f2fd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/prr/blobs/sha256:721d5359cc5e2b68b5951ad89e783c96bd300111c2eaa1a71d89b15147e98b42
-    sha256: 721d5359cc5e2b68b5951ad89e783c96bd300111c2eaa1a71d89b15147e98b42
-source:
-  url: https://github.com/danobi/prr/archive/refs/tags/v0.21.0.tar.gz
-  sha256: 891d8b2bc0397027e909750ac7891ca3d6e215acab59a48d5b2da35e60b45b8c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libgit2
-  - libssh2
-  - openssl@3
+    - libgit2
+    - libssh2
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/prr/blobs/sha256:8349897e19839be43735a7f95e7437d2892f655aa35b7aec58bf29d80127fc49
+        sha256: 8349897e19839be43735a7f95e7437d2892f655aa35b7aec58bf29d80127fc49
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/prr/blobs/sha256:9c3bcf26ee3499cc61c3f13ab5f4c72d35bf9780eef19fab281886d2b9e183c5
+        sha256: 9c3bcf26ee3499cc61c3f13ab5f4c72d35bf9780eef19fab281886d2b9e183c5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/prr/blobs/sha256:0b427337f5afde43310564971d2e70f3f683f0f7347de5e9f3f59edf8dd0f2fd
+        sha256: 0b427337f5afde43310564971d2e70f3f683f0f7347de5e9f3f59edf8dd0f2fd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/prr/blobs/sha256:721d5359cc5e2b68b5951ad89e783c96bd300111c2eaa1a71d89b15147e98b42
+        sha256: 721d5359cc5e2b68b5951ad89e783c96bd300111c2eaa1a71d89b15147e98b42
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/danobi/prr/archive/refs/tags/v0.21.0.tar.gz
+    sha256: 891d8b2bc0397027e909750ac7891ca3d6e215acab59a48d5b2da35e60b45b8c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - libgit2
-  - libssh2
-  - openssl@3
-  - zlib-ng-compat
+    - libgit2
+    - libssh2
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

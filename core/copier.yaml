@@ -3,27 +3,53 @@ version: 9.14.3
 description: Utility for rendering projects templates
 homepage: https://copier.readthedocs.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/copier/blobs/sha256:e7b1c0de88dd217d738c2360c13f92765b09af80b4ac668b82ff66f657ed49cc
-    sha256: e7b1c0de88dd217d738c2360c13f92765b09af80b4ac668b82ff66f657ed49cc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/copier/blobs/sha256:f11e7afdeec8d3df6bed0de737368b1a61ec324808e129a41414911491e5da8c
-    sha256: f11e7afdeec8d3df6bed0de737368b1a61ec324808e129a41414911491e5da8c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/copier/blobs/sha256:7ffeb0978dc5b7210e24f28085d7e69a129550afc132e78b50b42fae45e66c36
-    sha256: 7ffeb0978dc5b7210e24f28085d7e69a129550afc132e78b50b42fae45e66c36
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/copier/blobs/sha256:ad32bc02929a7984648dcaf259e4b9ed366b971e846e1a478850b0f9fa2ff492
-    sha256: ad32bc02929a7984648dcaf259e4b9ed366b971e846e1a478850b0f9fa2ff492
-source:
-  url: https://files.pythonhosted.org/packages/9e/0f/9762830def619c9aa2cb7cf2ab59ade60bfd8a83325767ad3edca597d29f/copier-9.14.3.tar.gz
-  sha256: 8737a14af1540ad19d6a6d59a05ff07bb0a81b286cca9ee79163572352df6e5e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libyaml
-  - pydantic
-  - python@3.14
+    - libyaml
+    - pydantic
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/copier/blobs/sha256:f11e7afdeec8d3df6bed0de737368b1a61ec324808e129a41414911491e5da8c
+        sha256: f11e7afdeec8d3df6bed0de737368b1a61ec324808e129a41414911491e5da8c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/copier/blobs/sha256:e7b1c0de88dd217d738c2360c13f92765b09af80b4ac668b82ff66f657ed49cc
+        sha256: e7b1c0de88dd217d738c2360c13f92765b09af80b4ac668b82ff66f657ed49cc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/copier/blobs/sha256:7ffeb0978dc5b7210e24f28085d7e69a129550afc132e78b50b42fae45e66c36
+        sha256: 7ffeb0978dc5b7210e24f28085d7e69a129550afc132e78b50b42fae45e66c36
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/copier/blobs/sha256:ad32bc02929a7984648dcaf259e4b9ed366b971e846e1a478850b0f9fa2ff492
+        sha256: ad32bc02929a7984648dcaf259e4b9ed366b971e846e1a478850b0f9fa2ff492
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/9e/0f/9762830def619c9aa2cb7cf2ab59ade60bfd8a83325767ad3edca597d29f/copier-9.14.3.tar.gz
+    sha256: 8737a14af1540ad19d6a6d59a05ff07bb0a81b286cca9ee79163572352df6e5e
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

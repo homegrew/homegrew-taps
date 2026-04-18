@@ -3,28 +3,53 @@ version: 0.9.0
 description: Universal Binary Installer
 homepage: https://github.com/houseabsolute/ubi
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ubi/blobs/sha256:760699c2377dc0f5624ab15da20ae3e2283cc497a5ed9ac57b1b85a2df80954c
-    sha256: 760699c2377dc0f5624ab15da20ae3e2283cc497a5ed9ac57b1b85a2df80954c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ubi/blobs/sha256:cc544dc0a7eed7f1b239caefabca618d6217d6f0954939ab350a6a809587de3d
-    sha256: cc544dc0a7eed7f1b239caefabca618d6217d6f0954939ab350a6a809587de3d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ubi/blobs/sha256:c9a99c46d9f23a0ff48f46dfbc524f63066b52981b88af55d76ce009a3718f20
-    sha256: c9a99c46d9f23a0ff48f46dfbc524f63066b52981b88af55d76ce009a3718f20
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ubi/blobs/sha256:582fe47be0a3bf56cc2696c21de8cc69ca636a92e3eb7bbd338be4f9c74cc0de
-    sha256: 582fe47be0a3bf56cc2696c21de8cc69ca636a92e3eb7bbd338be4f9c74cc0de
-source:
-  url: https://github.com/houseabsolute/ubi/archive/refs/tags/v0.9.0.tar.gz
-  sha256: 81f04e80b246dbac7371da822ea22afa2411ec0bde0fd04fa575c9c1a52f8471
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - xz
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ubi/blobs/sha256:cc544dc0a7eed7f1b239caefabca618d6217d6f0954939ab350a6a809587de3d
+        sha256: cc544dc0a7eed7f1b239caefabca618d6217d6f0954939ab350a6a809587de3d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ubi/blobs/sha256:760699c2377dc0f5624ab15da20ae3e2283cc497a5ed9ac57b1b85a2df80954c
+        sha256: 760699c2377dc0f5624ab15da20ae3e2283cc497a5ed9ac57b1b85a2df80954c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ubi/blobs/sha256:c9a99c46d9f23a0ff48f46dfbc524f63066b52981b88af55d76ce009a3718f20
+        sha256: c9a99c46d9f23a0ff48f46dfbc524f63066b52981b88af55d76ce009a3718f20
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ubi/blobs/sha256:582fe47be0a3bf56cc2696c21de8cc69ca636a92e3eb7bbd338be4f9c74cc0de
+        sha256: 582fe47be0a3bf56cc2696c21de8cc69ca636a92e3eb7bbd338be4f9c74cc0de
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/houseabsolute/ubi/archive/refs/tags/v0.9.0.tar.gz
+    sha256: 81f04e80b246dbac7371da822ea22afa2411ec0bde0fd04fa575c9c1a52f8471
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

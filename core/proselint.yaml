@@ -3,29 +3,54 @@ version: 0.16.0
 description: Linter for prose
 homepage: https://github.com/amperser/proselint
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proselint/blobs/sha256:70add61cf2da1bde43078ae2bbc702350bb795783ab4bc021a38ede477e51521
-    sha256: 70add61cf2da1bde43078ae2bbc702350bb795783ab4bc021a38ede477e51521
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proselint/blobs/sha256:5e7b5f1a467e8181896b1dfafa12250c01611b74476cd06374bca1ef1098f468
-    sha256: 5e7b5f1a467e8181896b1dfafa12250c01611b74476cd06374bca1ef1098f468
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proselint/blobs/sha256:d2c95d910b7eabf8d86dfb836a295c7d260a497da9ac3568362da22d553c6d52
-    sha256: d2c95d910b7eabf8d86dfb836a295c7d260a497da9ac3568362da22d553c6d52
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proselint/blobs/sha256:4fe140e4c71afe17846fff6bd68be0bfbd1dcbce43c4517a0e5fc4c58690b856
-    sha256: 4fe140e4c71afe17846fff6bd68be0bfbd1dcbce43c4517a0e5fc4c58690b856
-source:
-  url: https://files.pythonhosted.org/packages/1f/95/0cec6b32b3031613468df80c94fbced8f3c3e38ff7f0101645c0acde6bd6/proselint-0.16.0.tar.gz
-  sha256: 2568db94db227ea3aa011f88ddb6f554707b99b2c7447666bf00d71c5d7167cb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
-  - re2
+    - python@3.14
+    - re2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proselint/blobs/sha256:5e7b5f1a467e8181896b1dfafa12250c01611b74476cd06374bca1ef1098f468
+        sha256: 5e7b5f1a467e8181896b1dfafa12250c01611b74476cd06374bca1ef1098f468
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proselint/blobs/sha256:70add61cf2da1bde43078ae2bbc702350bb795783ab4bc021a38ede477e51521
+        sha256: 70add61cf2da1bde43078ae2bbc702350bb795783ab4bc021a38ede477e51521
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proselint/blobs/sha256:d2c95d910b7eabf8d86dfb836a295c7d260a497da9ac3568362da22d553c6d52
+        sha256: d2c95d910b7eabf8d86dfb836a295c7d260a497da9ac3568362da22d553c6d52
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proselint/blobs/sha256:4fe140e4c71afe17846fff6bd68be0bfbd1dcbce43c4517a0e5fc4c58690b856
+        sha256: 4fe140e4c71afe17846fff6bd68be0bfbd1dcbce43c4517a0e5fc4c58690b856
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/1f/95/0cec6b32b3031613468df80c94fbced8f3c3e38ff7f0101645c0acde6bd6/proselint-0.16.0.tar.gz
+    sha256: 2568db94db227ea3aa011f88ddb6f554707b99b2c7447666bf00d71c5d7167cb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pybind11
-  - rust
+    - pybind11
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,54 @@ version: 1.6.18
 description: Clean up files in directories based on their age
 homepage: https://packages.debian.org/sid/tmpreaper
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tmpreaper/blobs/sha256:30aab94f88a07061601a3333b691fc941c683b7936e955bac83de7c48f97c482
-    sha256: 30aab94f88a07061601a3333b691fc941c683b7936e955bac83de7c48f97c482
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tmpreaper/blobs/sha256:a0e097e2544698d880b83f4a8284105917b8f09628484ead21888bd31b5051cb
-    sha256: a0e097e2544698d880b83f4a8284105917b8f09628484ead21888bd31b5051cb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tmpreaper/blobs/sha256:2c0688fa5f46502a1b12339adaf4d7af1a746046dea9f400729968265944f1fe
-    sha256: 2c0688fa5f46502a1b12339adaf4d7af1a746046dea9f400729968265944f1fe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tmpreaper/blobs/sha256:8d4eb5e686f3ec01a8fec3b07930dc37c0353d816bf9ce845f3131bd9ef87ff5
-    sha256: 8d4eb5e686f3ec01a8fec3b07930dc37c0353d816bf9ce845f3131bd9ef87ff5
-source:
-  url: https://ftp.debian.org/debian/pool/main/t/tmpreaper/tmpreaper_1.6.18.tar.xz
-  sha256: 2ae7de0775b49abd222d09ad71360d795b40aa7c31253363e64c182966a37c00
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tmpreaper/blobs/sha256:a0e097e2544698d880b83f4a8284105917b8f09628484ead21888bd31b5051cb
+        sha256: a0e097e2544698d880b83f4a8284105917b8f09628484ead21888bd31b5051cb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tmpreaper/blobs/sha256:30aab94f88a07061601a3333b691fc941c683b7936e955bac83de7c48f97c482
+        sha256: 30aab94f88a07061601a3333b691fc941c683b7936e955bac83de7c48f97c482
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tmpreaper/blobs/sha256:2c0688fa5f46502a1b12339adaf4d7af1a746046dea9f400729968265944f1fe
+        sha256: 2c0688fa5f46502a1b12339adaf4d7af1a746046dea9f400729968265944f1fe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tmpreaper/blobs/sha256:8d4eb5e686f3ec01a8fec3b07930dc37c0353d816bf9ce845f3131bd9ef87ff5
+        sha256: 8d4eb5e686f3ec01a8fec3b07930dc37c0353d816bf9ce845f3131bd9ef87ff5
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftp.debian.org/debian/pool/main/t/tmpreaper/tmpreaper_1.6.18.tar.xz
+    sha256: 2ae7de0775b49abd222d09ad71360d795b40aa7c31253363e64c182966a37c00
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
 linux_dependencies:
-  - e2fsprogs
-  - util-linux
+    - e2fsprogs
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

@@ -1,0 +1,74 @@
+name: graalvm
+version: 25.0.2
+description: JDK distribution with Graal compiler and Native Image
+homepage: https://www.graalvm.org/
+license: GPL-2.0-only WITH Classpath-exception-2.0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
+install:
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies:
+    - freetype
+    - giflib
+    - harfbuzz
+    - jpeg-turbo
+    - libpng
+    - little-cms2
+keg_only: true
+bottle:
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/graalvm/blobs/sha256:24913577cbc92f27f5594bfc6f816e3e3843179d5b330240fc17ea1561e9a094
+        sha256: 24913577cbc92f27f5594bfc6f816e3e3843179d5b330240fc17ea1561e9a094
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/graalvm/blobs/sha256:28fad873c9b0099708c9a92ecbd0fee6a9ab6606bef36d0c5519e0dda00cbf2d
+        sha256: 28fad873c9b0099708c9a92ecbd0fee6a9ab6606bef36d0c5519e0dda00cbf2d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/graalvm/blobs/sha256:2e8c285bb3d885127838b23c0cc88011e5c90a9ae0b8249dc8f3d946311f4b55
+        sha256: 2e8c285bb3d885127838b23c0cc88011e5c90a9ae0b8249dc8f3d946311f4b55
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/oracle/graal/archive/refs/tags/graal-25.0.2.tar.gz
+    sha256: c191206404d4cc706a9b1e2242f0f4b90df7c776a748bcfd8fa1da47d8314839
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - autoconf
+    - mx
+    - ninja
+    - openjdk
+    - pkgconf
+linux_dependencies:
+    - alsa-lib
+    - fontconfig
+    - freetype
+    - giflib
+    - harfbuzz
+    - jpeg-turbo
+    - libpng
+    - libx11
+    - libxext
+    - libxi
+    - libxrandr
+    - libxrender
+    - libxt
+    - libxtst
+    - little-cms2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

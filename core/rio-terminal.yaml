@@ -3,19 +3,41 @@ version: 0.3.11
 description: Hardware-accelerated GPU terminal emulator powered by WebGPU
 homepage: https://rioterm.com/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rio-terminal/blobs/sha256:b406c96331032a4b131973733e3db6192984e43c32653fb13a6b337d3eeac0a5
-    sha256: b406c96331032a4b131973733e3db6192984e43c32653fb13a6b337d3eeac0a5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rio-terminal/blobs/sha256:c285ff68d00f3a331a5cac0728add011b3f66695474163ab917bc756548c8860
-    sha256: c285ff68d00f3a331a5cac0728add011b3f66695474163ab917bc756548c8860
-source:
-  url: https://github.com/raphamorim/rio/archive/refs/tags/v0.3.11.tar.gz
-  sha256: f59abcfb501bb4e98dd13d471ba4ceba9b7dd25bcd2c45865b2aef3d8dce9a19
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rio-terminal/blobs/sha256:c285ff68d00f3a331a5cac0728add011b3f66695474163ab917bc756548c8860
+        sha256: c285ff68d00f3a331a5cac0728add011b3f66695474163ab917bc756548c8860
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rio-terminal/blobs/sha256:b406c96331032a4b131973733e3db6192984e43c32653fb13a6b337d3eeac0a5
+        sha256: b406c96331032a4b131973733e3db6192984e43c32653fb13a6b337d3eeac0a5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/raphamorim/rio/archive/refs/tags/v0.3.11.tar.gz
+    sha256: f59abcfb501bb4e98dd13d471ba4ceba9b7dd25bcd2c45865b2aef3d8dce9a19
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

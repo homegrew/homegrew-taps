@@ -3,27 +3,52 @@ version: 1.3.16
 description: Eclipse Paho C client library for MQTT
 homepage: https://eclipse-paho.github.io/paho.mqtt.c/MQTTClient/html/
 license: EPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpaho-mqtt/blobs/sha256:eeeb71c665576f02cc774b84e777eddda3969b2e63ccae7f66f7c5dc1638f999
-    sha256: eeeb71c665576f02cc774b84e777eddda3969b2e63ccae7f66f7c5dc1638f999
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpaho-mqtt/blobs/sha256:8a3054d689f09b17faa7392f37ecd140fe2e0358b18b472db84f74f7c7556c50
-    sha256: 8a3054d689f09b17faa7392f37ecd140fe2e0358b18b472db84f74f7c7556c50
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpaho-mqtt/blobs/sha256:71be99abeb74ab2fada683b2b0fcae74c3ec65c062d3b273ac033697f08342e5
-    sha256: 71be99abeb74ab2fada683b2b0fcae74c3ec65c062d3b273ac033697f08342e5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpaho-mqtt/blobs/sha256:4f091e548e02bf60eee30c26f4451aeda7fa77a3f54452349cc98f5568404aed
-    sha256: 4f091e548e02bf60eee30c26f4451aeda7fa77a3f54452349cc98f5568404aed
-source:
-  url: https://github.com/eclipse-paho/paho.mqtt.c/archive/refs/tags/v1.3.16.tar.gz
-  sha256: 8b960f51edc7e03507637d987882bc486d8f4be6e79431bf99e2763344fd14c5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpaho-mqtt/blobs/sha256:8a3054d689f09b17faa7392f37ecd140fe2e0358b18b472db84f74f7c7556c50
+        sha256: 8a3054d689f09b17faa7392f37ecd140fe2e0358b18b472db84f74f7c7556c50
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpaho-mqtt/blobs/sha256:eeeb71c665576f02cc774b84e777eddda3969b2e63ccae7f66f7c5dc1638f999
+        sha256: eeeb71c665576f02cc774b84e777eddda3969b2e63ccae7f66f7c5dc1638f999
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpaho-mqtt/blobs/sha256:71be99abeb74ab2fada683b2b0fcae74c3ec65c062d3b273ac033697f08342e5
+        sha256: 71be99abeb74ab2fada683b2b0fcae74c3ec65c062d3b273ac033697f08342e5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpaho-mqtt/blobs/sha256:4f091e548e02bf60eee30c26f4451aeda7fa77a3f54452349cc98f5568404aed
+        sha256: 4f091e548e02bf60eee30c26f4451aeda7fa77a3f54452349cc98f5568404aed
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/eclipse-paho/paho.mqtt.c/archive/refs/tags/v1.3.16.tar.gz
+    sha256: 8b960f51edc7e03507637d987882bc486d8f4be6e79431bf99e2763344fd14c5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

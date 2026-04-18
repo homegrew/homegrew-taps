@@ -3,33 +3,58 @@ version: 2026.03.30.00
 description: QUIC transport protocol implementation
 homepage: https://github.com/facebook/mvfst
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mvfst/blobs/sha256:86ed07969a81dc1bc0cbe451524709fdcd941a612beb03322df521e588a86892
-    sha256: 86ed07969a81dc1bc0cbe451524709fdcd941a612beb03322df521e588a86892
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mvfst/blobs/sha256:3b54ca106fb2ddc2c14263a19fbc75cae707155d8ea9b7e4d47c73ef7db06d99
-    sha256: 3b54ca106fb2ddc2c14263a19fbc75cae707155d8ea9b7e4d47c73ef7db06d99
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mvfst/blobs/sha256:d7c6a824bd15fa5b6a7c2f2e056734ebd3c21b5b0bd7c0aab7056c3de4a38f93
-    sha256: d7c6a824bd15fa5b6a7c2f2e056734ebd3c21b5b0bd7c0aab7056c3de4a38f93
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mvfst/blobs/sha256:7501131a6b775de0dd0b3fe4de23d35cb68352268e6a1bd60e21f5c45b84be55
-    sha256: 7501131a6b775de0dd0b3fe4de23d35cb68352268e6a1bd60e21f5c45b84be55
-source:
-  url: https://github.com/facebook/mvfst/archive/refs/tags/v2026.03.30.00.tar.gz
-  sha256: b287c7c5b317430aa890c5e952dde020fa212044d218756fe50caadd592c5780
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - double-conversion
-  - fizz
-  - fmt
-  - folly
-  - gflags
-  - glog
-  - openssl@3
+    - double-conversion
+    - fizz
+    - fmt
+    - folly
+    - gflags
+    - glog
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mvfst/blobs/sha256:3b54ca106fb2ddc2c14263a19fbc75cae707155d8ea9b7e4d47c73ef7db06d99
+        sha256: 3b54ca106fb2ddc2c14263a19fbc75cae707155d8ea9b7e4d47c73ef7db06d99
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mvfst/blobs/sha256:86ed07969a81dc1bc0cbe451524709fdcd941a612beb03322df521e588a86892
+        sha256: 86ed07969a81dc1bc0cbe451524709fdcd941a612beb03322df521e588a86892
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mvfst/blobs/sha256:d7c6a824bd15fa5b6a7c2f2e056734ebd3c21b5b0bd7c0aab7056c3de4a38f93
+        sha256: d7c6a824bd15fa5b6a7c2f2e056734ebd3c21b5b0bd7c0aab7056c3de4a38f93
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mvfst/blobs/sha256:7501131a6b775de0dd0b3fe4de23d35cb68352268e6a1bd60e21f5c45b84be55
+        sha256: 7501131a6b775de0dd0b3fe4de23d35cb68352268e6a1bd60e21f5c45b84be55
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/facebook/mvfst/archive/refs/tags/v2026.03.30.00.tar.gz
+    sha256: b287c7c5b317430aa890c5e952dde020fa212044d218756fe50caadd592c5780
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

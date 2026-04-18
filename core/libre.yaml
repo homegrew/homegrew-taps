@@ -3,30 +3,54 @@ version: 4.7.0
 description: Toolkit library for asynchronous network I/O with protocol stacks
 homepage: https://github.com/baresip/re
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libre/blobs/sha256:c4849b9398137a10a5ba3ffab29c7a1a6223b84c62defb5443cf2a308082abe9
-    sha256: c4849b9398137a10a5ba3ffab29c7a1a6223b84c62defb5443cf2a308082abe9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libre/blobs/sha256:4220322ee8a3a529a3087ea818db393a3ea0e164a02b6848f998a10fea1a0271
-    sha256: 4220322ee8a3a529a3087ea818db393a3ea0e164a02b6848f998a10fea1a0271
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libre/blobs/sha256:dbb565a5be6533757165374d5172aa8cdc168a7a6bfbd31464dafe5117700432
-    sha256: dbb565a5be6533757165374d5172aa8cdc168a7a6bfbd31464dafe5117700432
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libre/blobs/sha256:07efd22a55d3ab0502375dec2d1e4c634d71b45a09e154a0015e1419111ddac7
-    sha256: 07efd22a55d3ab0502375dec2d1e4c634d71b45a09e154a0015e1419111ddac7
-source:
-  url: https://github.com/baresip/re/archive/refs/tags/v4.7.0.tar.gz
-  sha256: b9fd286e30df103b3e06be2f821503d6f21551002737c4b8f47cf8db30dd5e19
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libre/blobs/sha256:4220322ee8a3a529a3087ea818db393a3ea0e164a02b6848f998a10fea1a0271
+        sha256: 4220322ee8a3a529a3087ea818db393a3ea0e164a02b6848f998a10fea1a0271
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libre/blobs/sha256:c4849b9398137a10a5ba3ffab29c7a1a6223b84c62defb5443cf2a308082abe9
+        sha256: c4849b9398137a10a5ba3ffab29c7a1a6223b84c62defb5443cf2a308082abe9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libre/blobs/sha256:dbb565a5be6533757165374d5172aa8cdc168a7a6bfbd31464dafe5117700432
+        sha256: dbb565a5be6533757165374d5172aa8cdc168a7a6bfbd31464dafe5117700432
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libre/blobs/sha256:07efd22a55d3ab0502375dec2d1e4c634d71b45a09e154a0015e1419111ddac7
+        sha256: 07efd22a55d3ab0502375dec2d1e4c634d71b45a09e154a0015e1419111ddac7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/baresip/re/archive/refs/tags/v4.7.0.tar.gz
+    sha256: b9fd286e30df103b3e06be2f821503d6f21551002737c4b8f47cf8db30dd5e19
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

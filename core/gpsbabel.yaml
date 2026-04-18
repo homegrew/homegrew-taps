@@ -3,38 +3,62 @@ version: 1.10.0
 description: Converts/uploads GPS waypoints, tracks, and routes
 homepage: https://www.gpsbabel.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gpsbabel/blobs/sha256:f5a6e165e7d310ead14a3f4eba01ea1d7367fe5feb7e0736cdbe1291e25cf9f1
-    sha256: f5a6e165e7d310ead14a3f4eba01ea1d7367fe5feb7e0736cdbe1291e25cf9f1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gpsbabel/blobs/sha256:5ccb88102bb1902e6ab6f9ff5cd275fc966be2f2b2082b0aa94ab83419f0ef9c
-    sha256: 5ccb88102bb1902e6ab6f9ff5cd275fc966be2f2b2082b0aa94ab83419f0ef9c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gpsbabel/blobs/sha256:b5008e8faffe2128519d5fdd5ebfc432f74f021a3b2937763b3a0b6cb54f68ff
-    sha256: b5008e8faffe2128519d5fdd5ebfc432f74f021a3b2937763b3a0b6cb54f68ff
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gpsbabel/blobs/sha256:3d9644f2f53d57333345dc3b75d93d05443072654d5600d92e87cc7732b3fd3a
-    sha256: 3d9644f2f53d57333345dc3b75d93d05443072654d5600d92e87cc7732b3fd3a
-source:
-  url: https://github.com/GPSBabel/gpsbabel/archive/refs/tags/gpsbabel_1_10_0.tar.gz
-  sha256: a89756fb988a54f5c5f371413845b9aecb66628a594cd83bd529c0f18382c968
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libusb
-  - qt5compat
-  - qtbase
-  - shapelib
+    - libusb
+    - qt5compat
+    - qtbase
+    - shapelib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gpsbabel/blobs/sha256:5ccb88102bb1902e6ab6f9ff5cd275fc966be2f2b2082b0aa94ab83419f0ef9c
+        sha256: 5ccb88102bb1902e6ab6f9ff5cd275fc966be2f2b2082b0aa94ab83419f0ef9c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gpsbabel/blobs/sha256:f5a6e165e7d310ead14a3f4eba01ea1d7367fe5feb7e0736cdbe1291e25cf9f1
+        sha256: f5a6e165e7d310ead14a3f4eba01ea1d7367fe5feb7e0736cdbe1291e25cf9f1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gpsbabel/blobs/sha256:b5008e8faffe2128519d5fdd5ebfc432f74f021a3b2937763b3a0b6cb54f68ff
+        sha256: b5008e8faffe2128519d5fdd5ebfc432f74f021a3b2937763b3a0b6cb54f68ff
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gpsbabel/blobs/sha256:3d9644f2f53d57333345dc3b75d93d05443072654d5600d92e87cc7732b3fd3a
+        sha256: 3d9644f2f53d57333345dc3b75d93d05443072654d5600d92e87cc7732b3fd3a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/GPSBabel/gpsbabel/archive/refs/tags/gpsbabel_1_10_0.tar.gz
+    sha256: a89756fb988a54f5c5f371413845b9aecb66628a594cd83bd529c0f18382c968
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - qtserialport
+    - cmake
+    - pkgconf
+    - qtserialport
 linux_dependencies:
-  - libusb
-  - qt5compat
-  - qtbase
-  - shapelib
-  - zlib-ng-compat
+    - libusb
+    - qt5compat
+    - qtbase
+    - shapelib
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

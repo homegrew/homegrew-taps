@@ -3,32 +3,56 @@ version: 2.12.0
 description: Command-line utility to manage Tarantool applications
 homepage: https://github.com/tarantool/tt
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tt/blobs/sha256:d53aa207f7ca4a6e51f9f820693f38fe9b2c4b8d69dedb74aff1d5cf02f05ebe
-    sha256: d53aa207f7ca4a6e51f9f820693f38fe9b2c4b8d69dedb74aff1d5cf02f05ebe
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tt/blobs/sha256:fdc2c8401579792eaa291bd25fb650053c3af2ebf5f402b361e2e7aad06049b9
-    sha256: fdc2c8401579792eaa291bd25fb650053c3af2ebf5f402b361e2e7aad06049b9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tt/blobs/sha256:159de42264f042cbffb7032e01c7427c5d6f81361d929b811e9fd139404cfbc8
-    sha256: 159de42264f042cbffb7032e01c7427c5d6f81361d929b811e9fd139404cfbc8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tt/blobs/sha256:b2746cbecabd336b05302fb3d97b583cc96d874b4c0891818dbd293107df3025
-    sha256: b2746cbecabd336b05302fb3d97b583cc96d874b4c0891818dbd293107df3025
-source:
-  url: https://github.com/tarantool/tt/releases/download/v2.12.0/tt-2.12.0-complete.tar.gz
-  sha256: 6f1faff3b915dfa218da3604e9fb64bcefd0458f4bd481e185466c9fd2fffd29
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - bash-completion
+    - openssl@3
+    - bash-completion
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tt/blobs/sha256:fdc2c8401579792eaa291bd25fb650053c3af2ebf5f402b361e2e7aad06049b9
+        sha256: fdc2c8401579792eaa291bd25fb650053c3af2ebf5f402b361e2e7aad06049b9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tt/blobs/sha256:d53aa207f7ca4a6e51f9f820693f38fe9b2c4b8d69dedb74aff1d5cf02f05ebe
+        sha256: d53aa207f7ca4a6e51f9f820693f38fe9b2c4b8d69dedb74aff1d5cf02f05ebe
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tt/blobs/sha256:159de42264f042cbffb7032e01c7427c5d6f81361d929b811e9fd139404cfbc8
+        sha256: 159de42264f042cbffb7032e01c7427c5d6f81361d929b811e9fd139404cfbc8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tt/blobs/sha256:b2746cbecabd336b05302fb3d97b583cc96d874b4c0891818dbd293107df3025
+        sha256: b2746cbecabd336b05302fb3d97b583cc96d874b4c0891818dbd293107df3025
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tarantool/tt/releases/download/v2.12.0/tt-2.12.0-complete.tar.gz
+    sha256: 6f1faff3b915dfa218da3604e9fb64bcefd0458f4bd481e185466c9fd2fffd29
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - mage
-  - pkgconf
+    - go
+    - mage
+    - pkgconf
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

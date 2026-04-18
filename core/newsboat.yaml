@@ -1,38 +1,62 @@
 name: newsboat
-version: 2.43
+version: "2.43"
 description: RSS/Atom feed reader for text terminals
 homepage: https://newsboat.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:ef48a73e59ab3c06b54c4063501506606b3cecb4b7f8f5d354e8e4b0cca58b0d
-    sha256: ef48a73e59ab3c06b54c4063501506606b3cecb4b7f8f5d354e8e4b0cca58b0d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:ae11cdb00f37c022256ffcd61dfb6ea5de7fa72845d241818fc205733549918d
-    sha256: ae11cdb00f37c022256ffcd61dfb6ea5de7fa72845d241818fc205733549918d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:27d7b98c647c4b3cb031f1b99e2aa8bfed729f3be8d2d174eabde91d0a776d7e
-    sha256: 27d7b98c647c4b3cb031f1b99e2aa8bfed729f3be8d2d174eabde91d0a776d7e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:a70571c961459ca088be3e9b3be7694fc1b3ac6418614f8eb0948487d2d13231
-    sha256: a70571c961459ca088be3e9b3be7694fc1b3ac6418614f8eb0948487d2d13231
-source:
-  url: https://newsboat.org/releases/2.43/newsboat-2.43.tar.xz
-  sha256: 325107b8a5fa4c432c9f85490dbf4fe61699d239fec161e34b3383345f7d37f5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - json-c
-  - gettext
+    - json-c
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:ae11cdb00f37c022256ffcd61dfb6ea5de7fa72845d241818fc205733549918d
+        sha256: ae11cdb00f37c022256ffcd61dfb6ea5de7fa72845d241818fc205733549918d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:ef48a73e59ab3c06b54c4063501506606b3cecb4b7f8f5d354e8e4b0cca58b0d
+        sha256: ef48a73e59ab3c06b54c4063501506606b3cecb4b7f8f5d354e8e4b0cca58b0d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:27d7b98c647c4b3cb031f1b99e2aa8bfed729f3be8d2d174eabde91d0a776d7e
+        sha256: 27d7b98c647c4b3cb031f1b99e2aa8bfed729f3be8d2d174eabde91d0a776d7e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:a70571c961459ca088be3e9b3be7694fc1b3ac6418614f8eb0948487d2d13231
+        sha256: a70571c961459ca088be3e9b3be7694fc1b3ac6418614f8eb0948487d2d13231
+        sha512: ""
+        signature: ""
+source:
+    url: https://newsboat.org/releases/2.43/newsboat-2.43.tar.xz
+    sha256: 325107b8a5fa4c432c9f85490dbf4fe61699d239fec161e34b3383345f7d37f5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoctor
-  - gettext
-  - pkgconf
-  - rust
-  - xz
-  - make
-  - llvm
+    - asciidoctor
+    - gettext
+    - pkgconf
+    - rust
+    - xz
+    - make
+    - llvm
 linux_dependencies:
-  - json-c
+    - json-c
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 2.20.0
 description: Static analysis of C and C++ code
 homepage: https://sourceforge.net/projects/cppcheck/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cppcheck/blobs/sha256:518523694d41423a85550fde51b3599dbe612a3489961b0b9103780b336bec2d
-    sha256: 518523694d41423a85550fde51b3599dbe612a3489961b0b9103780b336bec2d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cppcheck/blobs/sha256:a87f5f73792a9c8b76daeb39c3327f6fb0ca2fa851edff328d67eba555cfc46d
-    sha256: a87f5f73792a9c8b76daeb39c3327f6fb0ca2fa851edff328d67eba555cfc46d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cppcheck/blobs/sha256:164b387841e454ba37f7521c9034fc6543221577e1a4df17a23f142410fb30cd
-    sha256: 164b387841e454ba37f7521c9034fc6543221577e1a4df17a23f142410fb30cd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cppcheck/blobs/sha256:a3811cd45325bb8d14fe93f42f2c7753c3f31415f4878e39d570d00b4f2e123c
-    sha256: a3811cd45325bb8d14fe93f42f2c7753c3f31415f4878e39d570d00b4f2e123c
-source:
-  url: https://github.com/danmar/cppcheck/archive/refs/tags/2.20.0.tar.gz
-  sha256: 7be7992439339017edb551d8e7d2315f9bb57c402da50c2cee9cd0e2724600a1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - tinyxml2
+    - tinyxml2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cppcheck/blobs/sha256:a87f5f73792a9c8b76daeb39c3327f6fb0ca2fa851edff328d67eba555cfc46d
+        sha256: a87f5f73792a9c8b76daeb39c3327f6fb0ca2fa851edff328d67eba555cfc46d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cppcheck/blobs/sha256:518523694d41423a85550fde51b3599dbe612a3489961b0b9103780b336bec2d
+        sha256: 518523694d41423a85550fde51b3599dbe612a3489961b0b9103780b336bec2d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cppcheck/blobs/sha256:164b387841e454ba37f7521c9034fc6543221577e1a4df17a23f142410fb30cd
+        sha256: 164b387841e454ba37f7521c9034fc6543221577e1a4df17a23f142410fb30cd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cppcheck/blobs/sha256:a3811cd45325bb8d14fe93f42f2c7753c3f31415f4878e39d570d00b4f2e123c
+        sha256: a3811cd45325bb8d14fe93f42f2c7753c3f31415f4878e39d570d00b4f2e123c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/danmar/cppcheck/archive/refs/tags/2.20.0.tar.gz
+    sha256: 7be7992439339017edb551d8e7d2315f9bb57c402da50c2cee9cd0e2724600a1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - python@3.14
+    - cmake
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

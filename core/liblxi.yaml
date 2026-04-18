@@ -1,31 +1,56 @@
 name: liblxi
-version: 1.22
+version: "1.22"
 description: Simple C API for communicating with LXI compatible instruments
 homepage: https://github.com/lxi-tools/liblxi
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/liblxi/blobs/sha256:90b99e8ef648703285fa24caf9d05f63402da9cc0d9c64860ca2559ed3c0fa7b
-    sha256: 90b99e8ef648703285fa24caf9d05f63402da9cc0d9c64860ca2559ed3c0fa7b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/liblxi/blobs/sha256:d16e24e3272e1036851c6ec820e9a328dadb3c79dbf35e8fc81e4fc97660344e
-    sha256: d16e24e3272e1036851c6ec820e9a328dadb3c79dbf35e8fc81e4fc97660344e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/liblxi/blobs/sha256:3a3ea1867af1936c3d441d4799fd7b448701e984679be728dffdee1cd24f8728
-    sha256: 3a3ea1867af1936c3d441d4799fd7b448701e984679be728dffdee1cd24f8728
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/liblxi/blobs/sha256:7c962e15081bbdd29b93a4714f8a3f3b27225fbf209ffa3d39415d6fd5c63911
-    sha256: 7c962e15081bbdd29b93a4714f8a3f3b27225fbf209ffa3d39415d6fd5c63911
-source:
-  url: https://github.com/lxi-tools/liblxi/archive/refs/tags/v1.22.tar.gz
-  sha256: d33ca3990513223880ec238eb2e5aa1cc93aff51c470ef0db9df3e0c332493d5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/liblxi/blobs/sha256:d16e24e3272e1036851c6ec820e9a328dadb3c79dbf35e8fc81e4fc97660344e
+        sha256: d16e24e3272e1036851c6ec820e9a328dadb3c79dbf35e8fc81e4fc97660344e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/liblxi/blobs/sha256:90b99e8ef648703285fa24caf9d05f63402da9cc0d9c64860ca2559ed3c0fa7b
+        sha256: 90b99e8ef648703285fa24caf9d05f63402da9cc0d9c64860ca2559ed3c0fa7b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/liblxi/blobs/sha256:3a3ea1867af1936c3d441d4799fd7b448701e984679be728dffdee1cd24f8728
+        sha256: 3a3ea1867af1936c3d441d4799fd7b448701e984679be728dffdee1cd24f8728
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/liblxi/blobs/sha256:7c962e15081bbdd29b93a4714f8a3f3b27225fbf209ffa3d39415d6fd5c63911
+        sha256: 7c962e15081bbdd29b93a4714f8a3f3b27225fbf209ffa3d39415d6fd5c63911
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lxi-tools/liblxi/archive/refs/tags/v1.22.tar.gz
+    sha256: d33ca3990513223880ec238eb2e5aa1cc93aff51c470ef0db9df3e0c332493d5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - libtirpc
+    - libtirpc
+build:
+    configure: []
+    install: []
+service: null

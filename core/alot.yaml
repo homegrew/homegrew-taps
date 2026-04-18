@@ -1,33 +1,58 @@
 name: alot
-version: 0.12
+version: "0.12"
 description: Text mode MUA using notmuch mail
 homepage: https://github.com/pazz/alot
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:4e86a0ce97d6cc8a8304488d2effccc54c982a8af7ec914166b63869b9c5f973
-    sha256: 4e86a0ce97d6cc8a8304488d2effccc54c982a8af7ec914166b63869b9c5f973
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:0146d2771d5a6ba5bbe478f357bed586a45742432e1ac1cc76b6a5d3ea18ad62
-    sha256: 0146d2771d5a6ba5bbe478f357bed586a45742432e1ac1cc76b6a5d3ea18ad62
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:840419a87627aa0cf71ddf62fc064883b133623a7b8a1eb0a5c8f1f368c7ba3f
-    sha256: 840419a87627aa0cf71ddf62fc064883b133623a7b8a1eb0a5c8f1f368c7ba3f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:3b7c69764ff639df46ddf9005590910f67f456da7a693de2d6b89052ff87838d
-    sha256: 3b7c69764ff639df46ddf9005590910f67f456da7a693de2d6b89052ff87838d
-source:
-  url: https://github.com/pazz/alot.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gpgmepy
-  - libmagic
-  - notmuch
-  - python@3.14
+    - gpgmepy
+    - libmagic
+    - notmuch
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:0146d2771d5a6ba5bbe478f357bed586a45742432e1ac1cc76b6a5d3ea18ad62
+        sha256: 0146d2771d5a6ba5bbe478f357bed586a45742432e1ac1cc76b6a5d3ea18ad62
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:4e86a0ce97d6cc8a8304488d2effccc54c982a8af7ec914166b63869b9c5f973
+        sha256: 4e86a0ce97d6cc8a8304488d2effccc54c982a8af7ec914166b63869b9c5f973
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:840419a87627aa0cf71ddf62fc064883b133623a7b8a1eb0a5c8f1f368c7ba3f
+        sha256: 840419a87627aa0cf71ddf62fc064883b133623a7b8a1eb0a5c8f1f368c7ba3f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:3b7c69764ff639df46ddf9005590910f67f456da7a693de2d6b89052ff87838d
+        sha256: 3b7c69764ff639df46ddf9005590910f67f456da7a693de2d6b89052ff87838d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pazz/alot.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - sphinx-doc
-  - swig
+    - sphinx-doc
+    - swig
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

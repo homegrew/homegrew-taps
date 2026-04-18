@@ -3,28 +3,53 @@ version: 1.22.1
 description: Supply Chain Attack Detection, via context differential analysis and YARA
 homepage: https://github.com/chainguard-dev/malcontent
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/malcontent/blobs/sha256:08831fa8566786b304e3f8f492126da4abc1bdda10cf66470cfc5e2b12bcfebf
-    sha256: 08831fa8566786b304e3f8f492126da4abc1bdda10cf66470cfc5e2b12bcfebf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/malcontent/blobs/sha256:b994dbb0b8531048af7daf44329cf32bc25304b857963bfdcdc4699311187e46
-    sha256: b994dbb0b8531048af7daf44329cf32bc25304b857963bfdcdc4699311187e46
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/malcontent/blobs/sha256:5eaec359fcb24c36e4aa0db1616f11938b3c00f97879fc472a82c7e7c85b0e72
-    sha256: 5eaec359fcb24c36e4aa0db1616f11938b3c00f97879fc472a82c7e7c85b0e72
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/malcontent/blobs/sha256:5c045cc652135452b90de87f68b579fe98e41833be852f18d1e7609650b528fc
-    sha256: 5c045cc652135452b90de87f68b579fe98e41833be852f18d1e7609650b528fc
-source:
-  url: https://github.com/chainguard-dev/malcontent/archive/refs/tags/v1.22.1.tar.gz
-  sha256: bceaa411a255d3211bfe7c8d8c0e6fcb910663db52dfbe47e82a1f89bfbd73f1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - yara-x
+    - yara-x
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/malcontent/blobs/sha256:b994dbb0b8531048af7daf44329cf32bc25304b857963bfdcdc4699311187e46
+        sha256: b994dbb0b8531048af7daf44329cf32bc25304b857963bfdcdc4699311187e46
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/malcontent/blobs/sha256:08831fa8566786b304e3f8f492126da4abc1bdda10cf66470cfc5e2b12bcfebf
+        sha256: 08831fa8566786b304e3f8f492126da4abc1bdda10cf66470cfc5e2b12bcfebf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/malcontent/blobs/sha256:5eaec359fcb24c36e4aa0db1616f11938b3c00f97879fc472a82c7e7c85b0e72
+        sha256: 5eaec359fcb24c36e4aa0db1616f11938b3c00f97879fc472a82c7e7c85b0e72
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/malcontent/blobs/sha256:5c045cc652135452b90de87f68b579fe98e41833be852f18d1e7609650b528fc
+        sha256: 5c045cc652135452b90de87f68b579fe98e41833be852f18d1e7609650b528fc
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/chainguard-dev/malcontent/archive/refs/tags/v1.22.1.tar.gz
+    sha256: bceaa411a255d3211bfe7c8d8c0e6fcb910663db52dfbe47e82a1f89bfbd73f1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - pkgconf
+    - go
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,54 @@ version: 15.2.5
 description: C++ linear algebra library
 homepage: https://arma.sourceforge.net/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/armadillo/blobs/sha256:9722d55d6f314331cd0d6855fce44baab121a34f015b4894d5dab4d66717cf0b
-    sha256: 9722d55d6f314331cd0d6855fce44baab121a34f015b4894d5dab4d66717cf0b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/armadillo/blobs/sha256:8101b870c985d1d88cfb225cb20681430cad047530e8c731d545cbd978f79e98
-    sha256: 8101b870c985d1d88cfb225cb20681430cad047530e8c731d545cbd978f79e98
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/armadillo/blobs/sha256:efac403d2af23c04b352d8148d949eb22bde9ce22ae67c766ef49b245d0ae426
-    sha256: efac403d2af23c04b352d8148d949eb22bde9ce22ae67c766ef49b245d0ae426
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/armadillo/blobs/sha256:85db5b405a570ce63b906c74d3e6a681ea7e376830d03a88d744d5394227d201
-    sha256: 85db5b405a570ce63b906c74d3e6a681ea7e376830d03a88d744d5394227d201
-source:
-  url: https://downloads.sourceforge.net/project/arma/armadillo-15.2.5.tar.xz
-  sha256: 5b5f505acef9bfd8ca78b698378a206b12abe8981851b61ae8964fb92b100f36
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - arpack
-  - openblas
+    - arpack
+    - openblas
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/armadillo/blobs/sha256:8101b870c985d1d88cfb225cb20681430cad047530e8c731d545cbd978f79e98
+        sha256: 8101b870c985d1d88cfb225cb20681430cad047530e8c731d545cbd978f79e98
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/armadillo/blobs/sha256:9722d55d6f314331cd0d6855fce44baab121a34f015b4894d5dab4d66717cf0b
+        sha256: 9722d55d6f314331cd0d6855fce44baab121a34f015b4894d5dab4d66717cf0b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/armadillo/blobs/sha256:efac403d2af23c04b352d8148d949eb22bde9ce22ae67c766ef49b245d0ae426
+        sha256: efac403d2af23c04b352d8148d949eb22bde9ce22ae67c766ef49b245d0ae426
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/armadillo/blobs/sha256:85db5b405a570ce63b906c74d3e6a681ea7e376830d03a88d744d5394227d201
+        sha256: 85db5b405a570ce63b906c74d3e6a681ea7e376830d03a88d744d5394227d201
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/arma/armadillo-15.2.5.tar.xz
+    sha256: 5b5f505acef9bfd8ca78b698378a206b12abe8981851b61ae8964fb92b100f36
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,30 +3,56 @@ version: 3.12.1
 description: X11 image viewer
 homepage: https://feh.finalrewind.org/
 license: MIT-feh
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/feh/blobs/sha256:d125fcc727286d6f936a304c25b9aaea87190a9c1610a5ea61d4b69600db57d9
-    sha256: d125fcc727286d6f936a304c25b9aaea87190a9c1610a5ea61d4b69600db57d9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/feh/blobs/sha256:e439ec50cecd61bf2f5fbdd8ff52116b3f6ba70ea17dddd0eb1005ac7d7d1a94
-    sha256: e439ec50cecd61bf2f5fbdd8ff52116b3f6ba70ea17dddd0eb1005ac7d7d1a94
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/feh/blobs/sha256:979d35e8be0131e6b7cbd508a91692ccfbc93f555921204fba4a178294f75bd9
-    sha256: 979d35e8be0131e6b7cbd508a91692ccfbc93f555921204fba4a178294f75bd9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/feh/blobs/sha256:3a45c29c3294ef9e5a0046ddbaed2d10b8763ed7e24cf2672a8f538a3ed44823
-    sha256: 3a45c29c3294ef9e5a0046ddbaed2d10b8763ed7e24cf2672a8f538a3ed44823
-source:
-  url: https://feh.finalrewind.org/feh-3.12.1.tar.bz2
-  sha256: 6772f48e7956a16736e4c165a8367f357efc413b895f5b04133366e01438f95d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - imlib2
-  - libexif
-  - libpng
-  - libx11
-  - libxinerama
-  - libxt
+    - imlib2
+    - libexif
+    - libpng
+    - libx11
+    - libxinerama
+    - libxt
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/feh/blobs/sha256:e439ec50cecd61bf2f5fbdd8ff52116b3f6ba70ea17dddd0eb1005ac7d7d1a94
+        sha256: e439ec50cecd61bf2f5fbdd8ff52116b3f6ba70ea17dddd0eb1005ac7d7d1a94
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/feh/blobs/sha256:d125fcc727286d6f936a304c25b9aaea87190a9c1610a5ea61d4b69600db57d9
+        sha256: d125fcc727286d6f936a304c25b9aaea87190a9c1610a5ea61d4b69600db57d9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/feh/blobs/sha256:979d35e8be0131e6b7cbd508a91692ccfbc93f555921204fba4a178294f75bd9
+        sha256: 979d35e8be0131e6b7cbd508a91692ccfbc93f555921204fba4a178294f75bd9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/feh/blobs/sha256:3a45c29c3294ef9e5a0046ddbaed2d10b8763ed7e24cf2672a8f538a3ed44823
+        sha256: 3a45c29c3294ef9e5a0046ddbaed2d10b8763ed7e24cf2672a8f538a3ed44823
+        sha512: ""
+        signature: ""
+source:
+    url: https://feh.finalrewind.org/feh-3.12.1.tar.bz2
+    sha256: 6772f48e7956a16736e4c165a8367f357efc413b895f5b04133366e01438f95d
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

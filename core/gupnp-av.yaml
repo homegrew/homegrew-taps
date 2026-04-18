@@ -3,33 +3,58 @@ version: 0.14.4
 description: Library to help implement UPnP A/V profiles
 homepage: https://wiki.gnome.org/GUPnP/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gupnp-av/blobs/sha256:f06e97478af782faa70bedf35dd2413377774f378aaa3ba60acf34546f402473
-    sha256: f06e97478af782faa70bedf35dd2413377774f378aaa3ba60acf34546f402473
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gupnp-av/blobs/sha256:2081869e1ec9e06dc5476636f27ad48bede7e7307a9dead6aae43a0ce2c1f687
-    sha256: 2081869e1ec9e06dc5476636f27ad48bede7e7307a9dead6aae43a0ce2c1f687
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gupnp-av/blobs/sha256:cc49eb0fec7bd6b617c2c264fdec75d440d315b97849d5e2c92ae5f8eb4ae042
-    sha256: cc49eb0fec7bd6b617c2c264fdec75d440d315b97849d5e2c92ae5f8eb4ae042
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gupnp-av/blobs/sha256:06135313292f8568506ac9a026adfbce37567c4fc0b1d9cca8b1ca8a693ef3ef
-    sha256: 06135313292f8568506ac9a026adfbce37567c4fc0b1d9cca8b1ca8a693ef3ef
-source:
-  url: https://download.gnome.org/sources/gupnp-av/0.14/gupnp-av-0.14.4.tar.xz
-  sha256: 21d974b3275cb5dcf5b8aa1d9a3fc80e7edca706935f6fbd004c79787138f8c7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
-  - glib
+    - gettext
+    - glib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gupnp-av/blobs/sha256:2081869e1ec9e06dc5476636f27ad48bede7e7307a9dead6aae43a0ce2c1f687
+        sha256: 2081869e1ec9e06dc5476636f27ad48bede7e7307a9dead6aae43a0ce2c1f687
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gupnp-av/blobs/sha256:f06e97478af782faa70bedf35dd2413377774f378aaa3ba60acf34546f402473
+        sha256: f06e97478af782faa70bedf35dd2413377774f378aaa3ba60acf34546f402473
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gupnp-av/blobs/sha256:cc49eb0fec7bd6b617c2c264fdec75d440d315b97849d5e2c92ae5f8eb4ae042
+        sha256: cc49eb0fec7bd6b617c2c264fdec75d440d315b97849d5e2c92ae5f8eb4ae042
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gupnp-av/blobs/sha256:06135313292f8568506ac9a026adfbce37567c4fc0b1d9cca8b1ca8a693ef3ef
+        sha256: 06135313292f8568506ac9a026adfbce37567c4fc0b1d9cca8b1ca8a693ef3ef
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gupnp-av/0.14/gupnp-av-0.14.4.tar.xz
+    sha256: 21d974b3275cb5dcf5b8aa1d9a3fc80e7edca706935f6fbd004c79787138f8c7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - intltool
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - gobject-introspection
+    - intltool
+    - meson
+    - ninja
+    - pkgconf
+    - vala
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

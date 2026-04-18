@@ -1,33 +1,58 @@
 name: vapoursynth-sub
-version: 6
+version: "6"
 description: VapourSynth filters - Subtitling filter
 homepage: https://www.vapoursynth.com
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:1dd9d606c3dc95220bd01768d3915b93ab012db6948741cf7eec09bdbe3e4a85
-    sha256: 1dd9d606c3dc95220bd01768d3915b93ab012db6948741cf7eec09bdbe3e4a85
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:6431bf13a69ca6b48151dd5acbf301d969f7dba02710f6db9afd502dce711eb9
-    sha256: 6431bf13a69ca6b48151dd5acbf301d969f7dba02710f6db9afd502dce711eb9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:d1b277613210ac4fcd61d6f09ef9c5a81feb45001c7569bfef090e3cfd580b49
-    sha256: d1b277613210ac4fcd61d6f09ef9c5a81feb45001c7569bfef090e3cfd580b49
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:6cba3bd1647da2fe3c4784b57a79dd0392f23aba641567ce64f4543ab62f1369
-    sha256: 6cba3bd1647da2fe3c4784b57a79dd0392f23aba641567ce64f4543ab62f1369
-source:
-  url: https://github.com/vapoursynth/subtext/archive/refs/tags/R6.tar.gz
-  sha256: 536e2f056c7b318b0104b8b9050bb17c00d8ca60b0e5fdecf1ee92879c5f9165
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - libass
-  - vapoursynth
+    - ffmpeg
+    - libass
+    - vapoursynth
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:6431bf13a69ca6b48151dd5acbf301d969f7dba02710f6db9afd502dce711eb9
+        sha256: 6431bf13a69ca6b48151dd5acbf301d969f7dba02710f6db9afd502dce711eb9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:1dd9d606c3dc95220bd01768d3915b93ab012db6948741cf7eec09bdbe3e4a85
+        sha256: 1dd9d606c3dc95220bd01768d3915b93ab012db6948741cf7eec09bdbe3e4a85
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:d1b277613210ac4fcd61d6f09ef9c5a81feb45001c7569bfef090e3cfd580b49
+        sha256: d1b277613210ac4fcd61d6f09ef9c5a81feb45001c7569bfef090e3cfd580b49
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:6cba3bd1647da2fe3c4784b57a79dd0392f23aba641567ce64f4543ab62f1369
+        sha256: 6cba3bd1647da2fe3c4784b57a79dd0392f23aba641567ce64f4543ab62f1369
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/vapoursynth/subtext/archive/refs/tags/R6.tar.gz
+    sha256: 536e2f056c7b318b0104b8b9050bb17c00d8ca60b0e5fdecf1ee92879c5f9165
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

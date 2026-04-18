@@ -3,25 +3,51 @@ version: 2.7.1
 description: Fully featured SFTP server with optional HTTP/S, FTP/S and WebDAV support
 homepage: https://sftpgo.com/
 license: AGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:8d98f362b37df0acbc523923af4320a1136d57ca77aa2d2526b6a7d178a0924d
-    sha256: 8d98f362b37df0acbc523923af4320a1136d57ca77aa2d2526b6a7d178a0924d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:05a3572d8e94c070455946552f955ead37d9467df9cf750763f7a6504b1b417b
-    sha256: 05a3572d8e94c070455946552f955ead37d9467df9cf750763f7a6504b1b417b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:c1e16106a7dd7e094b43a4974faa49f481a3efb88701e801e973d8951bd5b489
-    sha256: c1e16106a7dd7e094b43a4974faa49f481a3efb88701e801e973d8951bd5b489
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:85f878fb4ecf7de332ca588309015ced3dd1bf582a6631aecaaf5ebf9c7cf15d
-    sha256: 85f878fb4ecf7de332ca588309015ced3dd1bf582a6631aecaaf5ebf9c7cf15d
-source:
-  url: https://github.com/drakkan/sftpgo/releases/download/v2.7.1/sftpgo_v2.7.1_src_with_deps.tar.xz
-  sha256: 64b2826af512eb8ce8cd880ce4b9a23897b45515130ea8cc4490fd70a80c812a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:05a3572d8e94c070455946552f955ead37d9467df9cf750763f7a6504b1b417b
+        sha256: 05a3572d8e94c070455946552f955ead37d9467df9cf750763f7a6504b1b417b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:8d98f362b37df0acbc523923af4320a1136d57ca77aa2d2526b6a7d178a0924d
+        sha256: 8d98f362b37df0acbc523923af4320a1136d57ca77aa2d2526b6a7d178a0924d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:c1e16106a7dd7e094b43a4974faa49f481a3efb88701e801e973d8951bd5b489
+        sha256: c1e16106a7dd7e094b43a4974faa49f481a3efb88701e801e973d8951bd5b489
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:85f878fb4ecf7de332ca588309015ced3dd1bf582a6631aecaaf5ebf9c7cf15d
+        sha256: 85f878fb4ecf7de332ca588309015ced3dd1bf582a6631aecaaf5ebf9c7cf15d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/drakkan/sftpgo/releases/download/v2.7.1/sftpgo_v2.7.1_src_with_deps.tar.xz
+    sha256: 64b2826af512eb8ce8cd880ce4b9a23897b45515130ea8cc4490fd70a80c812a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -1,29 +1,54 @@
 name: re2
-version: 2025-11-05
+version: "2025-11-05"
 description: Alternative to backtracking PCRE-style regular expression engines
 homepage: https://github.com/google/re2
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/re2/blobs/sha256:c3d8133e1af82433fd8491050aafc3cdf81e2728c1d171818e187001f5c5efb1
-    sha256: c3d8133e1af82433fd8491050aafc3cdf81e2728c1d171818e187001f5c5efb1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/re2/blobs/sha256:336269669bfd8cab867b5ea69d99706e2b73dc0fa796ac987f5ad665010735cf
-    sha256: 336269669bfd8cab867b5ea69d99706e2b73dc0fa796ac987f5ad665010735cf
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/re2/blobs/sha256:5d2b0fa3b0b1954bd06ca343641936d0d0833d0a80a7aa543eaca0a95332c055
-    sha256: 5d2b0fa3b0b1954bd06ca343641936d0d0833d0a80a7aa543eaca0a95332c055
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/re2/blobs/sha256:74f2417e6840a1af5020085db3513cdc047e5dbe24bf9213871eb388b2af6bcc
-    sha256: 74f2417e6840a1af5020085db3513cdc047e5dbe24bf9213871eb388b2af6bcc
-source:
-  url: https://github.com/google/re2/releases/download/2025-11-05/re2-2025-11-05.tar.gz
-  sha256: 87f6029d2f6de8aa023654240a03ada90e876ce9a4676e258dd01ea4c26ffd67
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
+    - abseil
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/re2/blobs/sha256:336269669bfd8cab867b5ea69d99706e2b73dc0fa796ac987f5ad665010735cf
+        sha256: 336269669bfd8cab867b5ea69d99706e2b73dc0fa796ac987f5ad665010735cf
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/re2/blobs/sha256:c3d8133e1af82433fd8491050aafc3cdf81e2728c1d171818e187001f5c5efb1
+        sha256: c3d8133e1af82433fd8491050aafc3cdf81e2728c1d171818e187001f5c5efb1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/re2/blobs/sha256:5d2b0fa3b0b1954bd06ca343641936d0d0833d0a80a7aa543eaca0a95332c055
+        sha256: 5d2b0fa3b0b1954bd06ca343641936d0d0833d0a80a7aa543eaca0a95332c055
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/re2/blobs/sha256:74f2417e6840a1af5020085db3513cdc047e5dbe24bf9213871eb388b2af6bcc
+        sha256: 74f2417e6840a1af5020085db3513cdc047e5dbe24bf9213871eb388b2af6bcc
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/google/re2/releases/download/2025-11-05/re2-2025-11-05.tar.gz
+    sha256: 87f6029d2f6de8aa023654240a03ada90e876ce9a4676e258dd01ea4c26ffd67
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,37 +3,61 @@ version: 1.4.1
 description: Library for encoding and decoding .avif files
 homepage: https://github.com/AOMediaCodec/libavif
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libavif/blobs/sha256:44d57589d5dcaedb19f883c8e4e1d328c9041494d0380c60d97272854a13f749
-    sha256: 44d57589d5dcaedb19f883c8e4e1d328c9041494d0380c60d97272854a13f749
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libavif/blobs/sha256:12d4cc2b73516496876a3e93f821858bad28e47a76fadd3b15c7dcefdc495734
-    sha256: 12d4cc2b73516496876a3e93f821858bad28e47a76fadd3b15c7dcefdc495734
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libavif/blobs/sha256:8631446bdda8ac7f2dfe1142369d91b9d09b317806c2d15263adad5ef67b4ae5
-    sha256: 8631446bdda8ac7f2dfe1142369d91b9d09b317806c2d15263adad5ef67b4ae5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libavif/blobs/sha256:6806097bffeb1f1635b3545c8e35c24eecf9a7d89ab7a04b6ff7620f65e1e8c7
-    sha256: 6806097bffeb1f1635b3545c8e35c24eecf9a7d89ab7a04b6ff7620f65e1e8c7
-source:
-  url: https://github.com/AOMediaCodec/libavif/archive/refs/tags/v1.4.1.tar.gz
-  sha256: d4aea31a4becb3273ba7968221be2e48148ba05eb8a68d14e671963e17785648
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - aom
-  - dav1d
-  - jpeg-turbo
-  - libpng
+    - aom
+    - dav1d
+    - jpeg-turbo
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libavif/blobs/sha256:12d4cc2b73516496876a3e93f821858bad28e47a76fadd3b15c7dcefdc495734
+        sha256: 12d4cc2b73516496876a3e93f821858bad28e47a76fadd3b15c7dcefdc495734
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libavif/blobs/sha256:44d57589d5dcaedb19f883c8e4e1d328c9041494d0380c60d97272854a13f749
+        sha256: 44d57589d5dcaedb19f883c8e4e1d328c9041494d0380c60d97272854a13f749
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libavif/blobs/sha256:8631446bdda8ac7f2dfe1142369d91b9d09b317806c2d15263adad5ef67b4ae5
+        sha256: 8631446bdda8ac7f2dfe1142369d91b9d09b317806c2d15263adad5ef67b4ae5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libavif/blobs/sha256:6806097bffeb1f1635b3545c8e35c24eecf9a7d89ab7a04b6ff7620f65e1e8c7
+        sha256: 6806097bffeb1f1635b3545c8e35c24eecf9a7d89ab7a04b6ff7620f65e1e8c7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/AOMediaCodec/libavif/archive/refs/tags/v1.4.1.tar.gz
+    sha256: d4aea31a4becb3273ba7968221be2e48148ba05eb8a68d14e671963e17785648
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - nasm
+    - cmake
+    - nasm
 linux_dependencies:
-  - aom
-  - dav1d
-  - jpeg-turbo
-  - libpng
-  - zlib-ng-compat
+    - aom
+    - dav1d
+    - jpeg-turbo
+    - libpng
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

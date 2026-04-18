@@ -3,43 +3,67 @@ version: 1.3.1
 description: Share files in a peer-to-peer (P2P) network
 homepage: https://gtk-gnutella.sourceforge.io
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtk-gnutella/blobs/sha256:f492432b6563cffe018b22d40bc67ac10df71218191bcb3d01bdb44439c4fd90
-    sha256: f492432b6563cffe018b22d40bc67ac10df71218191bcb3d01bdb44439c4fd90
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtk-gnutella/blobs/sha256:577e742af6e7e062a2b18bfb59d3081bea7d0bcfe316792d48c899547e21f239
-    sha256: 577e742af6e7e062a2b18bfb59d3081bea7d0bcfe316792d48c899547e21f239
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtk-gnutella/blobs/sha256:42da940ea4d5b4e15fc07d033f986b119de287944b136cea7f4ff02319214f24
-    sha256: 42da940ea4d5b4e15fc07d033f986b119de287944b136cea7f4ff02319214f24
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtk-gnutella/blobs/sha256:ff989c183f80b230b847617fd63810b60acb3eddd3b003510d414fcebbb215a1
-    sha256: ff989c183f80b230b847617fd63810b60acb3eddd3b003510d414fcebbb215a1
-source:
-  url: https://downloads.sourceforge.net/project/gtk-gnutella/gtk-gnutella/1.3.1/gtk-gnutella-1.3.1.tar.xz
-  sha256: 9631c82b8c975485b9927a8fa48ef10172d1224e7b3b2049462d37ca33d71f08
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - at-spi2-core
-  - dbus
-  - gdk-pixbuf
-  - glib
-  - gtk+
-  - pango
-  - gettext
-  - harfbuzz
-  - pcre2
+    - at-spi2-core
+    - dbus
+    - gdk-pixbuf
+    - glib
+    - gtk+
+    - pango
+    - gettext
+    - harfbuzz
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtk-gnutella/blobs/sha256:577e742af6e7e062a2b18bfb59d3081bea7d0bcfe316792d48c899547e21f239
+        sha256: 577e742af6e7e062a2b18bfb59d3081bea7d0bcfe316792d48c899547e21f239
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtk-gnutella/blobs/sha256:f492432b6563cffe018b22d40bc67ac10df71218191bcb3d01bdb44439c4fd90
+        sha256: f492432b6563cffe018b22d40bc67ac10df71218191bcb3d01bdb44439c4fd90
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtk-gnutella/blobs/sha256:42da940ea4d5b4e15fc07d033f986b119de287944b136cea7f4ff02319214f24
+        sha256: 42da940ea4d5b4e15fc07d033f986b119de287944b136cea7f4ff02319214f24
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtk-gnutella/blobs/sha256:ff989c183f80b230b847617fd63810b60acb3eddd3b003510d414fcebbb215a1
+        sha256: ff989c183f80b230b847617fd63810b60acb3eddd3b003510d414fcebbb215a1
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/gtk-gnutella/gtk-gnutella/1.3.1/gtk-gnutella-1.3.1.tar.xz
+    sha256: 9631c82b8c975485b9927a8fa48ef10172d1224e7b3b2049462d37ca33d71f08
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - at-spi2-core
-  - dbus
-  - gdk-pixbuf
-  - glib
-  - gtk+
-  - pango
-  - zlib-ng-compat
+    - at-spi2-core
+    - dbus
+    - gdk-pixbuf
+    - glib
+    - gtk+
+    - pango
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,54 @@ version: 0.15.2
 description: Tool to work with public-inbox and patch archives
 homepage: https://b4.docs.kernel.org/en/latest/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/b4/blobs/sha256:b610c19404ca0994ab1be3e72ab9000bb2869de053c14d2d088eed4c0be2338a
-    sha256: b610c19404ca0994ab1be3e72ab9000bb2869de053c14d2d088eed4c0be2338a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/b4/blobs/sha256:4aeb3d3cb753fb6778e767eaedad8077ef4ca9ea9f3d85c0c3eba788e63445b3
-    sha256: 4aeb3d3cb753fb6778e767eaedad8077ef4ca9ea9f3d85c0c3eba788e63445b3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/b4/blobs/sha256:47a2fa4fc144c67ef0a50fbd7d440895afd29ec7c4d9c19a2992a374c77fe454
-    sha256: 47a2fa4fc144c67ef0a50fbd7d440895afd29ec7c4d9c19a2992a374c77fe454
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/b4/blobs/sha256:73c7cf518dbe6dd659b0f5e5e2d7e532b367191edb14a2bd2d76e542b8475730
-    sha256: 73c7cf518dbe6dd659b0f5e5e2d7e532b367191edb14a2bd2d76e542b8475730
-source:
-  url: https://files.pythonhosted.org/packages/c3/34/7f17fce52acb992d7b70aaa956e6dec4dc432ce8d195a176f232fcd6315c/b4-0.15.2.tar.gz
-  sha256: b815f2aed2288718cfe2a14c76421a00bc4f0918ea32b45dd1645c999fdda69d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cffi
-  - libsodium
-  - python@3.14
+    - certifi
+    - cffi
+    - libsodium
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/b4/blobs/sha256:4aeb3d3cb753fb6778e767eaedad8077ef4ca9ea9f3d85c0c3eba788e63445b3
+        sha256: 4aeb3d3cb753fb6778e767eaedad8077ef4ca9ea9f3d85c0c3eba788e63445b3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/b4/blobs/sha256:b610c19404ca0994ab1be3e72ab9000bb2869de053c14d2d088eed4c0be2338a
+        sha256: b610c19404ca0994ab1be3e72ab9000bb2869de053c14d2d088eed4c0be2338a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/b4/blobs/sha256:47a2fa4fc144c67ef0a50fbd7d440895afd29ec7c4d9c19a2992a374c77fe454
+        sha256: 47a2fa4fc144c67ef0a50fbd7d440895afd29ec7c4d9c19a2992a374c77fe454
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/b4/blobs/sha256:73c7cf518dbe6dd659b0f5e5e2d7e532b367191edb14a2bd2d76e542b8475730
+        sha256: 73c7cf518dbe6dd659b0f5e5e2d7e532b367191edb14a2bd2d76e542b8475730
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/c3/34/7f17fce52acb992d7b70aaa956e6dec4dc432ce8d195a176f232fcd6315c/b4-0.15.2.tar.gz
+    sha256: b815f2aed2288718cfe2a14c76421a00bc4f0918ea32b45dd1645c999fdda69d
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

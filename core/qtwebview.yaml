@@ -3,33 +3,55 @@ version: 6.11.0
 description: Displays web content in a QML application
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebview/blobs/sha256:41052efd041cb2e013ee13a5dc5f51a6be4394d5e7dcbe8e8de4e8ba9b4faabd
-    sha256: 41052efd041cb2e013ee13a5dc5f51a6be4394d5e7dcbe8e8de4e8ba9b4faabd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebview/blobs/sha256:7e893151bbb90939bf14f7aaeea5a7f5386f8ad2d089d421c03577d30a86284a
-    sha256: 7e893151bbb90939bf14f7aaeea5a7f5386f8ad2d089d421c03577d30a86284a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebview/blobs/sha256:38ee0420ddc45b43263fa2a7f9eadf5c0f734358af15c3a9ce4a170889def5b1
-    sha256: 38ee0420ddc45b43263fa2a7f9eadf5c0f734358af15c3a9ce4a170889def5b1
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtwebview-everywhere-src-6.11.0.tar.xz
-  sha256: cb0eaed94a12d5f650863d346c423e9f4383dbce1d05866869c40118c6e8c4b3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
-  - qtdeclarative
-  - qtwebengine
-  - qtpositioning
-  - qtwebchannel
+    - qtbase
+    - qtdeclarative
+    - qtwebengine
+    - qtpositioning
+    - qtwebchannel
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebview/blobs/sha256:7e893151bbb90939bf14f7aaeea5a7f5386f8ad2d089d421c03577d30a86284a
+        sha256: 7e893151bbb90939bf14f7aaeea5a7f5386f8ad2d089d421c03577d30a86284a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebview/blobs/sha256:41052efd041cb2e013ee13a5dc5f51a6be4394d5e7dcbe8e8de4e8ba9b4faabd
+        sha256: 41052efd041cb2e013ee13a5dc5f51a6be4394d5e7dcbe8e8de4e8ba9b4faabd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebview/blobs/sha256:38ee0420ddc45b43263fa2a7f9eadf5c0f734358af15c3a9ce4a170889def5b1
+        sha256: 38ee0420ddc45b43263fa2a7f9eadf5c0f734358af15c3a9ce4a170889def5b1
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtwebview-everywhere-src-6.11.0.tar.xz
+    sha256: cb0eaed94a12d5f650863d346c423e9f4383dbce1d05866869c40118c6e8c4b3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
 linux_dependencies:
-  - qtbase
-  - qtdeclarative
-  - qtwebengine
+    - qtbase
+    - qtdeclarative
+    - qtwebengine
+build:
+    configure: []
+    install: []
+service: null

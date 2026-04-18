@@ -3,28 +3,53 @@ version: 4.9.7
 description: Implementation of the Scheme Language
 homepage: https://gambitscheme.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gambit-scheme/blobs/sha256:67a5f5bde73e525d2c488db0630747dd973391c70dca31856706a9406f63e9d2
-    sha256: 67a5f5bde73e525d2c488db0630747dd973391c70dca31856706a9406f63e9d2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gambit-scheme/blobs/sha256:8a424288530b11d1e79006f4958683db02cb9070646697394ed3f12cc025a94f
-    sha256: 8a424288530b11d1e79006f4958683db02cb9070646697394ed3f12cc025a94f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gambit-scheme/blobs/sha256:32b5fa130a244ff8cc9dc13a27bfb30bd844ab21a3ec0f8f663f01a063d8351e
-    sha256: 32b5fa130a244ff8cc9dc13a27bfb30bd844ab21a3ec0f8f663f01a063d8351e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gambit-scheme/blobs/sha256:ecc701336f5dcd9619ce82abfc1ebac667a79c80ba9e9af5de2361f97befc613
-    sha256: ecc701336f5dcd9619ce82abfc1ebac667a79c80ba9e9af5de2361f97befc613
-source:
-  url: https://github.com/gambit/gambit/archive/refs/tags/v4.9.7.tar.gz
-  sha256: 0da7c9772a2186dab1fba6bf6c777afe7424f40beacadf1b117d5cc825fe2db3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - gcc
+    - openssl@3
+    - gcc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gambit-scheme/blobs/sha256:8a424288530b11d1e79006f4958683db02cb9070646697394ed3f12cc025a94f
+        sha256: 8a424288530b11d1e79006f4958683db02cb9070646697394ed3f12cc025a94f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gambit-scheme/blobs/sha256:67a5f5bde73e525d2c488db0630747dd973391c70dca31856706a9406f63e9d2
+        sha256: 67a5f5bde73e525d2c488db0630747dd973391c70dca31856706a9406f63e9d2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gambit-scheme/blobs/sha256:32b5fa130a244ff8cc9dc13a27bfb30bd844ab21a3ec0f8f663f01a063d8351e
+        sha256: 32b5fa130a244ff8cc9dc13a27bfb30bd844ab21a3ec0f8f663f01a063d8351e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gambit-scheme/blobs/sha256:ecc701336f5dcd9619ce82abfc1ebac667a79c80ba9e9af5de2361f97befc613
+        sha256: ecc701336f5dcd9619ce82abfc1ebac667a79c80ba9e9af5de2361f97befc613
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/gambit/gambit/archive/refs/tags/v4.9.7.tar.gz
+    sha256: 0da7c9772a2186dab1fba6bf6c777afe7424f40beacadf1b117d5cc825fe2db3
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

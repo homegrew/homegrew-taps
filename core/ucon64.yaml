@@ -1,27 +1,53 @@
 name: ucon64
 version: 2.2.2
-description: "ROM backup tool and emulator's Swiss Army knife program"
+description: ROM backup tool and emulator's Swiss Army knife program
 homepage: https://ucon64.sourceforge.io/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ucon64/blobs/sha256:5f3fb969676e2ae50d11401a3b4da71df0a5e99adc037ba0f04fca6c9def11d7
-    sha256: 5f3fb969676e2ae50d11401a3b4da71df0a5e99adc037ba0f04fca6c9def11d7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ucon64/blobs/sha256:9ca84df8b500fbee8ca081cfd47baf5b3f3f90cdf30fa3e208ec265b093b02c9
-    sha256: 9ca84df8b500fbee8ca081cfd47baf5b3f3f90cdf30fa3e208ec265b093b02c9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ucon64/blobs/sha256:469604929938639dcb7d0f9e5e246c4a817cbaecdbd18ae797bd6ea32394b4f6
-    sha256: 469604929938639dcb7d0f9e5e246c4a817cbaecdbd18ae797bd6ea32394b4f6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ucon64/blobs/sha256:68ab6314679f0e61da877eebbeb975f14395a331897ae1c5422e8b28b1ad8682
-    sha256: 68ab6314679f0e61da877eebbeb975f14395a331897ae1c5422e8b28b1ad8682
-source:
-  url: https://downloads.sourceforge.net/project/ucon64/ucon64/ucon64-2.2.2/ucon64-2.2.2-src.tar.gz
-  sha256: e100ad4a30f6c19abde98e361c6a0ecac4e40477f54cfb75498c5ccd21fb3a18
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ucon64/blobs/sha256:9ca84df8b500fbee8ca081cfd47baf5b3f3f90cdf30fa3e208ec265b093b02c9
+        sha256: 9ca84df8b500fbee8ca081cfd47baf5b3f3f90cdf30fa3e208ec265b093b02c9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ucon64/blobs/sha256:5f3fb969676e2ae50d11401a3b4da71df0a5e99adc037ba0f04fca6c9def11d7
+        sha256: 5f3fb969676e2ae50d11401a3b4da71df0a5e99adc037ba0f04fca6c9def11d7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ucon64/blobs/sha256:469604929938639dcb7d0f9e5e246c4a817cbaecdbd18ae797bd6ea32394b4f6
+        sha256: 469604929938639dcb7d0f9e5e246c4a817cbaecdbd18ae797bd6ea32394b4f6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ucon64/blobs/sha256:68ab6314679f0e61da877eebbeb975f14395a331897ae1c5422e8b28b1ad8682
+        sha256: 68ab6314679f0e61da877eebbeb975f14395a331897ae1c5422e8b28b1ad8682
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/ucon64/ucon64/ucon64-2.2.2/ucon64-2.2.2-src.tar.gz
+    sha256: e100ad4a30f6c19abde98e361c6a0ecac4e40477f54cfb75498c5ccd21fb3a18
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -3,30 +3,55 @@ version: 2.9.2
 description: Text-based web browser
 homepage: https://invisible-island.net/lynx/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lynx/blobs/sha256:dbadf2d9dcbb3567e809071dc8d240fbb4d6c229d44fd4a9fed0c98e14fbb818
-    sha256: dbadf2d9dcbb3567e809071dc8d240fbb4d6c229d44fd4a9fed0c98e14fbb818
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lynx/blobs/sha256:82690721857094cf83bc59cdbf0c4feedada05ea7b902c5abeb7771273c74476
-    sha256: 82690721857094cf83bc59cdbf0c4feedada05ea7b902c5abeb7771273c74476
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/lynx/blobs/sha256:090af405647a09276b97bf5e3f4ef22a216950563ae19749c57e16142f09749f
-    sha256: 090af405647a09276b97bf5e3f4ef22a216950563ae19749c57e16142f09749f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/lynx/blobs/sha256:837b50b6330b76cf666e0c6134a1e4f3fc79ea03197c59059bcf0f5db6244576
-    sha256: 837b50b6330b76cf666e0c6134a1e4f3fc79ea03197c59059bcf0f5db6244576
-source:
-  url: https://invisible-mirror.net/archives/lynx/tarballs/lynx2.9.2.tar.bz2
-  sha256: 7374b89936d991669e101f4e97f2c9592036e1e8cdaa7bafc259a77ab6fb07ce
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ncurses
-  - openssl@3
+    - ncurses
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lynx/blobs/sha256:82690721857094cf83bc59cdbf0c4feedada05ea7b902c5abeb7771273c74476
+        sha256: 82690721857094cf83bc59cdbf0c4feedada05ea7b902c5abeb7771273c74476
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lynx/blobs/sha256:dbadf2d9dcbb3567e809071dc8d240fbb4d6c229d44fd4a9fed0c98e14fbb818
+        sha256: dbadf2d9dcbb3567e809071dc8d240fbb4d6c229d44fd4a9fed0c98e14fbb818
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lynx/blobs/sha256:090af405647a09276b97bf5e3f4ef22a216950563ae19749c57e16142f09749f
+        sha256: 090af405647a09276b97bf5e3f4ef22a216950563ae19749c57e16142f09749f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lynx/blobs/sha256:837b50b6330b76cf666e0c6134a1e4f3fc79ea03197c59059bcf0f5db6244576
+        sha256: 837b50b6330b76cf666e0c6134a1e4f3fc79ea03197c59059bcf0f5db6244576
+        sha512: ""
+        signature: ""
+source:
+    url: https://invisible-mirror.net/archives/lynx/tarballs/lynx2.9.2.tar.bz2
+    sha256: 7374b89936d991669e101f4e97f2c9592036e1e8cdaa7bafc259a77ab6fb07ce
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - ncurses
-  - openssl@3
-  - zlib-ng-compat
+    - ncurses
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

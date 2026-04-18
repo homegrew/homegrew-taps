@@ -1,29 +1,55 @@
 name: nng
-version: 1.11
+version: "1.11"
 description: Nanomsg-next-generation -- light-weight brokerless messaging
 homepage: https://nng.nanomsg.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:d1c5d69e4cd6874e9fc3a6c7d95e8444c730d7b9d4bddcb74092bf5c53a7b0c4
-    sha256: d1c5d69e4cd6874e9fc3a6c7d95e8444c730d7b9d4bddcb74092bf5c53a7b0c4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:f21583c80dc1ccd84cde614cb8ea7a8b7e7586ecd39aae010583a038e562580d
-    sha256: f21583c80dc1ccd84cde614cb8ea7a8b7e7586ecd39aae010583a038e562580d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:25761374c9d2ca6fedff91630fb23e7fe10ae9f68369f7eaaddc1fa5ffc35e6b
-    sha256: 25761374c9d2ca6fedff91630fb23e7fe10ae9f68369f7eaaddc1fa5ffc35e6b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:7df32fb58d3135bbeb0b9046534a0fb901dacfddc215546855146b3102c52eeb
-    sha256: 7df32fb58d3135bbeb0b9046534a0fb901dacfddc215546855146b3102c52eeb
-source:
-  url: https://github.com/nanomsg/nng/archive/refs/tags/v1.11.tar.gz
-  sha256: 12aaff6f8f183ba0fec378af8620c47cf4be6da975d016ec6cdec2fbac0d3534
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:f21583c80dc1ccd84cde614cb8ea7a8b7e7586ecd39aae010583a038e562580d
+        sha256: f21583c80dc1ccd84cde614cb8ea7a8b7e7586ecd39aae010583a038e562580d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:d1c5d69e4cd6874e9fc3a6c7d95e8444c730d7b9d4bddcb74092bf5c53a7b0c4
+        sha256: d1c5d69e4cd6874e9fc3a6c7d95e8444c730d7b9d4bddcb74092bf5c53a7b0c4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:25761374c9d2ca6fedff91630fb23e7fe10ae9f68369f7eaaddc1fa5ffc35e6b
+        sha256: 25761374c9d2ca6fedff91630fb23e7fe10ae9f68369f7eaaddc1fa5ffc35e6b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nng/blobs/sha256:7df32fb58d3135bbeb0b9046534a0fb901dacfddc215546855146b3102c52eeb
+        sha256: 7df32fb58d3135bbeb0b9046534a0fb901dacfddc215546855146b3102c52eeb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nanomsg/nng/archive/refs/tags/v1.11.tar.gz
+    sha256: 12aaff6f8f183ba0fec378af8620c47cf4be6da975d016ec6cdec2fbac0d3534
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoctor
-  - cmake
-  - ninja
+    - asciidoctor
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

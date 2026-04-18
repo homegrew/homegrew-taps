@@ -3,25 +3,51 @@ version: 1.3.9
 description: Embeddable Javascript interpreter
 homepage: https://www.mujs.com/
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mujs/blobs/sha256:2814b3eab41c69484ac739e66bfeaf6bb2f61b7df974c5866e3934844d8acc0b
-    sha256: 2814b3eab41c69484ac739e66bfeaf6bb2f61b7df974c5866e3934844d8acc0b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mujs/blobs/sha256:d3658e31032b05342d35990a7a4829922ddf5e40bfecd8c39669003bc50b154f
-    sha256: d3658e31032b05342d35990a7a4829922ddf5e40bfecd8c39669003bc50b154f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mujs/blobs/sha256:6d65afabe2832997c8b0bac97b58f05a429b4404f726c089476fef68130df1da
-    sha256: 6d65afabe2832997c8b0bac97b58f05a429b4404f726c089476fef68130df1da
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mujs/blobs/sha256:62a937838c05b66d72f159d3bbd0a5f16a9b4132de069cbb07a2f75a610ce202
-    sha256: 62a937838c05b66d72f159d3bbd0a5f16a9b4132de069cbb07a2f75a610ce202
-source:
-  url: https://mujs.com/downloads/mujs-1.3.9.tar.gz
-  sha256: 956d5a20dd4efe5aa58673558787b9e2539255f9bf62585e90e1921fa040d89d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mujs/blobs/sha256:d3658e31032b05342d35990a7a4829922ddf5e40bfecd8c39669003bc50b154f
+        sha256: d3658e31032b05342d35990a7a4829922ddf5e40bfecd8c39669003bc50b154f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mujs/blobs/sha256:2814b3eab41c69484ac739e66bfeaf6bb2f61b7df974c5866e3934844d8acc0b
+        sha256: 2814b3eab41c69484ac739e66bfeaf6bb2f61b7df974c5866e3934844d8acc0b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mujs/blobs/sha256:6d65afabe2832997c8b0bac97b58f05a429b4404f726c089476fef68130df1da
+        sha256: 6d65afabe2832997c8b0bac97b58f05a429b4404f726c089476fef68130df1da
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mujs/blobs/sha256:62a937838c05b66d72f159d3bbd0a5f16a9b4132de069cbb07a2f75a610ce202
+        sha256: 62a937838c05b66d72f159d3bbd0a5f16a9b4132de069cbb07a2f75a610ce202
+        sha512: ""
+        signature: ""
+source:
+    url: https://mujs.com/downloads/mujs-1.3.9.tar.gz
+    sha256: 956d5a20dd4efe5aa58673558787b9e2539255f9bf62585e90e1921fa040d89d
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - readline
+    - readline
+build:
+    configure: []
+    install: []
+service: null

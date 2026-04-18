@@ -3,29 +3,54 @@ version: 2.27.1
 description: Distributed, open source, package manager for C/C++
 homepage: https://conan.io
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:66fac1019c7ace559734172f0af016ce0da08fb5e79cd7f650ad74eeb12dcb73
-    sha256: 66fac1019c7ace559734172f0af016ce0da08fb5e79cd7f650ad74eeb12dcb73
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:1257392da9ec9cd1ac05c5a6972801c97cadca4776a266aa11a5d9193ccb65c5
-    sha256: 1257392da9ec9cd1ac05c5a6972801c97cadca4776a266aa11a5d9193ccb65c5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:ab9f569c8f99a58b0aaf40d559e8b85ca7d230a07578cdc1976afcd2229d92c8
-    sha256: ab9f569c8f99a58b0aaf40d559e8b85ca7d230a07578cdc1976afcd2229d92c8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:8e4272cf21b490bc27d6c488dd6f71598bd9842d8246701aa3add3c9ebb16d02
-    sha256: 8e4272cf21b490bc27d6c488dd6f71598bd9842d8246701aa3add3c9ebb16d02
-source:
-  url: https://files.pythonhosted.org/packages/f9/65/5be3cb2f2657c11f02e0a3a2d27a3014c8c025ed963442e580aea4269089/conan-2.27.1.tar.gz
-  sha256: 64814e66995bc341057cd051693ce13606dc3027b984a133202bc796892af967
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - python@3.14
+    - certifi
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:1257392da9ec9cd1ac05c5a6972801c97cadca4776a266aa11a5d9193ccb65c5
+        sha256: 1257392da9ec9cd1ac05c5a6972801c97cadca4776a266aa11a5d9193ccb65c5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:66fac1019c7ace559734172f0af016ce0da08fb5e79cd7f650ad74eeb12dcb73
+        sha256: 66fac1019c7ace559734172f0af016ce0da08fb5e79cd7f650ad74eeb12dcb73
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:ab9f569c8f99a58b0aaf40d559e8b85ca7d230a07578cdc1976afcd2229d92c8
+        sha256: ab9f569c8f99a58b0aaf40d559e8b85ca7d230a07578cdc1976afcd2229d92c8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:8e4272cf21b490bc27d6c488dd6f71598bd9842d8246701aa3add3c9ebb16d02
+        sha256: 8e4272cf21b490bc27d6c488dd6f71598bd9842d8246701aa3add3c9ebb16d02
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/f9/65/5be3cb2f2657c11f02e0a3a2d27a3014c8c025ed963442e580aea4269089/conan-2.27.1.tar.gz
+    sha256: 64814e66995bc341057cd051693ce13606dc3027b984a133202bc796892af967
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

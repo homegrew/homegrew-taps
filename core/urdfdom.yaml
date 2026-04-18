@@ -3,29 +3,54 @@ version: 5.1.1
 description: Unified Robot Description Format (URDF) parser
 homepage: https://wiki.ros.org/urdf/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:52634920d1ba7da30c76be54b5df0bec3baa8affddbfb3e6911100d2c0637f48
-    sha256: 52634920d1ba7da30c76be54b5df0bec3baa8affddbfb3e6911100d2c0637f48
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:21f407749aff91dbde5a62202db619f751e71b6aef0637c81f552087f384e10a
-    sha256: 21f407749aff91dbde5a62202db619f751e71b6aef0637c81f552087f384e10a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:83041c578255ccff4c5b211aaabe49a9166265d2c878170665005f3401cfa4d7
-    sha256: 83041c578255ccff4c5b211aaabe49a9166265d2c878170665005f3401cfa4d7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:ff8e8b2ffe4fd723783535b2cce9c67cbed5433a72012c0ace9783c3df08820c
-    sha256: ff8e8b2ffe4fd723783535b2cce9c67cbed5433a72012c0ace9783c3df08820c
-source:
-  url: https://github.com/ros/urdfdom/archive/refs/tags/5.1.1.tar.gz
-  sha256: e71c0249f61b184b5e157b7b406fbb354371e9bb79cd9c43431bed5ede470b46
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - console_bridge
-  - tinyxml2
-  - urdfdom_headers
+    - console_bridge
+    - tinyxml2
+    - urdfdom_headers
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:21f407749aff91dbde5a62202db619f751e71b6aef0637c81f552087f384e10a
+        sha256: 21f407749aff91dbde5a62202db619f751e71b6aef0637c81f552087f384e10a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:52634920d1ba7da30c76be54b5df0bec3baa8affddbfb3e6911100d2c0637f48
+        sha256: 52634920d1ba7da30c76be54b5df0bec3baa8affddbfb3e6911100d2c0637f48
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:83041c578255ccff4c5b211aaabe49a9166265d2c878170665005f3401cfa4d7
+        sha256: 83041c578255ccff4c5b211aaabe49a9166265d2c878170665005f3401cfa4d7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/urdfdom/blobs/sha256:ff8e8b2ffe4fd723783535b2cce9c67cbed5433a72012c0ace9783c3df08820c
+        sha256: ff8e8b2ffe4fd723783535b2cce9c67cbed5433a72012c0ace9783c3df08820c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ros/urdfdom/archive/refs/tags/5.1.1.tar.gz
+    sha256: e71c0249f61b184b5e157b7b406fbb354371e9bb79cd9c43431bed5ede470b46
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

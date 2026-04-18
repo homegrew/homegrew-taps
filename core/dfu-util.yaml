@@ -1,29 +1,54 @@
 name: dfu-util
-version: 0.11
+version: "0.11"
 description: USB programmer
 homepage: https://dfu-util.sourceforge.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dfu-util/blobs/sha256:53e343420fcab5133dd295cf75d8a74b5933fabfbb53c90c3ef798735b5f9445
-    sha256: 53e343420fcab5133dd295cf75d8a74b5933fabfbb53c90c3ef798735b5f9445
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dfu-util/blobs/sha256:ec1b2eb46336cab4cac68f413d2e0dd9b1af2fd63182598ca40f4dd61595efb9
-    sha256: ec1b2eb46336cab4cac68f413d2e0dd9b1af2fd63182598ca40f4dd61595efb9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dfu-util/blobs/sha256:13c26d1ebc67dd60446845d51e3ff92bcded0ae223852dc104e897c8c3423f71
-    sha256: 13c26d1ebc67dd60446845d51e3ff92bcded0ae223852dc104e897c8c3423f71
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dfu-util/blobs/sha256:228012ba20956504016ab24f43cec35ce3a6ca2d5da694072ef1f64b33b8203f
-    sha256: 228012ba20956504016ab24f43cec35ce3a6ca2d5da694072ef1f64b33b8203f
-source:
-  url: https://downloads.sourceforge.net/project/dfu-util/dfu-util-0.11.tar.gz
-  sha256: b4b53ba21a82ef7e3d4c47df2952adf5fa494f499b6b0b57c58c5d04ae8ff19e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libusb
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dfu-util/blobs/sha256:ec1b2eb46336cab4cac68f413d2e0dd9b1af2fd63182598ca40f4dd61595efb9
+        sha256: ec1b2eb46336cab4cac68f413d2e0dd9b1af2fd63182598ca40f4dd61595efb9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dfu-util/blobs/sha256:53e343420fcab5133dd295cf75d8a74b5933fabfbb53c90c3ef798735b5f9445
+        sha256: 53e343420fcab5133dd295cf75d8a74b5933fabfbb53c90c3ef798735b5f9445
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dfu-util/blobs/sha256:13c26d1ebc67dd60446845d51e3ff92bcded0ae223852dc104e897c8c3423f71
+        sha256: 13c26d1ebc67dd60446845d51e3ff92bcded0ae223852dc104e897c8c3423f71
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dfu-util/blobs/sha256:228012ba20956504016ab24f43cec35ce3a6ca2d5da694072ef1f64b33b8203f
+        sha256: 228012ba20956504016ab24f43cec35ce3a6ca2d5da694072ef1f64b33b8203f
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/dfu-util/dfu-util-0.11.tar.gz
+    sha256: b4b53ba21a82ef7e3d4c47df2952adf5fa494f499b6b0b57c58c5d04ae8ff19e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

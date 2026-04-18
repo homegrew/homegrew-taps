@@ -3,47 +3,71 @@ version: 0.10.60
 description: Gnumeric spreadsheet program
 homepage: https://gitlab.gnome.org/GNOME/goffice
 license: GPL-3.0-only OR GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/goffice/blobs/sha256:bac138cd3f363ebd627fc6de468106df6fe5e5c55b64b4846e0fe66267077714
-    sha256: bac138cd3f363ebd627fc6de468106df6fe5e5c55b64b4846e0fe66267077714
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/goffice/blobs/sha256:80f44565bc28f967973d4288c75b8d7752be8c3fc65a849dfcd425b11bc5e903
-    sha256: 80f44565bc28f967973d4288c75b8d7752be8c3fc65a849dfcd425b11bc5e903
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/goffice/blobs/sha256:4e6f8ab8d12f8d7b7b0cbdadafd7bd5f0404c63d7d4e67d4bd4fd7f16055c672
-    sha256: 4e6f8ab8d12f8d7b7b0cbdadafd7bd5f0404c63d7d4e67d4bd4fd7f16055c672
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/goffice/blobs/sha256:9f1421d8076912d40ba9aaefaa93dca043041500352231f354eef946299ad742
-    sha256: 9f1421d8076912d40ba9aaefaa93dca043041500352231f354eef946299ad742
-source:
-  url: https://download.gnome.org/sources/goffice/0.10/goffice-0.10.60.tar.xz
-  sha256: 01154338cbffac172fc53338ebb9d527c821ffc21985a2ccfa84923ee6b761c5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - at-spi2-core
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - libgsf
-  - librsvg
-  - pango
-  - gettext
-  - harfbuzz
+    - at-spi2-core
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - libgsf
+    - librsvg
+    - pango
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/goffice/blobs/sha256:80f44565bc28f967973d4288c75b8d7752be8c3fc65a849dfcd425b11bc5e903
+        sha256: 80f44565bc28f967973d4288c75b8d7752be8c3fc65a849dfcd425b11bc5e903
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/goffice/blobs/sha256:bac138cd3f363ebd627fc6de468106df6fe5e5c55b64b4846e0fe66267077714
+        sha256: bac138cd3f363ebd627fc6de468106df6fe5e5c55b64b4846e0fe66267077714
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/goffice/blobs/sha256:4e6f8ab8d12f8d7b7b0cbdadafd7bd5f0404c63d7d4e67d4bd4fd7f16055c672
+        sha256: 4e6f8ab8d12f8d7b7b0cbdadafd7bd5f0404c63d7d4e67d4bd4fd7f16055c672
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/goffice/blobs/sha256:9f1421d8076912d40ba9aaefaa93dca043041500352231f354eef946299ad742
+        sha256: 9f1421d8076912d40ba9aaefaa93dca043041500352231f354eef946299ad742
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/goffice/0.10/goffice-0.10.60.tar.xz
+    sha256: 01154338cbffac172fc53338ebb9d527c821ffc21985a2ccfa84923ee6b761c5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - intltool
-  - pkgconf
+    - gettext
+    - intltool
+    - pkgconf
 linux_dependencies:
-  - at-spi2-core
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - libgsf
-  - librsvg
-  - pango
+    - at-spi2-core
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - libgsf
+    - librsvg
+    - pango
+build:
+    configure: []
+    install: []
+service: null

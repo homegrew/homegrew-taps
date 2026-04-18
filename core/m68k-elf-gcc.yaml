@@ -3,38 +3,63 @@ version: 15.2.0
 description: GNU compiler collection m68k-elf
 homepage: https://gcc.gnu.org
 license: GPL-3.0-or-later WITH GCC-exception-3.1
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/m68k-elf-gcc/blobs/sha256:8b29b6480ea952ca41137d137d330722f096c7fd15bc93e51bbd150344d31e56
-    sha256: 8b29b6480ea952ca41137d137d330722f096c7fd15bc93e51bbd150344d31e56
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/m68k-elf-gcc/blobs/sha256:5a5f49d2e038b914738c7c6ba145e6ca0a4123ba6a79b851014f0d3a47153424
-    sha256: 5a5f49d2e038b914738c7c6ba145e6ca0a4123ba6a79b851014f0d3a47153424
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/m68k-elf-gcc/blobs/sha256:a9b1cf9ab4afae9f6c63b7730b0364c305d57f28599cd585523179a492565315
-    sha256: a9b1cf9ab4afae9f6c63b7730b0364c305d57f28599cd585523179a492565315
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/m68k-elf-gcc/blobs/sha256:92608229d9d171fdc6ab30fe4c8d137d427a460204c5938bfb33651d08b465da
-    sha256: 92608229d9d171fdc6ab30fe4c8d137d427a460204c5938bfb33651d08b465da
-source:
-  url: https://ftpmirror.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz
-  sha256: 438fd996826b0c82485a29da03a72d71d6e3541a83ec702df4271f6fe025d24e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - isl
-  - libmpc
-  - m68k-elf-binutils
-  - mpfr
-  - zstd
+    - gmp
+    - isl
+    - libmpc
+    - m68k-elf-binutils
+    - mpfr
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/m68k-elf-gcc/blobs/sha256:5a5f49d2e038b914738c7c6ba145e6ca0a4123ba6a79b851014f0d3a47153424
+        sha256: 5a5f49d2e038b914738c7c6ba145e6ca0a4123ba6a79b851014f0d3a47153424
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/m68k-elf-gcc/blobs/sha256:8b29b6480ea952ca41137d137d330722f096c7fd15bc93e51bbd150344d31e56
+        sha256: 8b29b6480ea952ca41137d137d330722f096c7fd15bc93e51bbd150344d31e56
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/m68k-elf-gcc/blobs/sha256:a9b1cf9ab4afae9f6c63b7730b0364c305d57f28599cd585523179a492565315
+        sha256: a9b1cf9ab4afae9f6c63b7730b0364c305d57f28599cd585523179a492565315
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/m68k-elf-gcc/blobs/sha256:92608229d9d171fdc6ab30fe4c8d137d427a460204c5938bfb33651d08b465da
+        sha256: 92608229d9d171fdc6ab30fe4c8d137d427a460204c5938bfb33651d08b465da
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz
+    sha256: 438fd996826b0c82485a29da03a72d71d6e3541a83ec702df4271f6fe025d24e
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - gmp
-  - isl
-  - libmpc
-  - m68k-elf-binutils
-  - mpfr
-  - zlib-ng-compat
-  - zstd
+    - gmp
+    - isl
+    - libmpc
+    - m68k-elf-binutils
+    - mpfr
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

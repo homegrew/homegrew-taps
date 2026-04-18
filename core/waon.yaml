@@ -1,30 +1,55 @@
 name: waon
-version: 0.11
+version: "0.11"
 description: Wave-to-notes transcriber
 homepage: https://kichiki.github.io/WaoN/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/waon/blobs/sha256:ba4c8874a6eeda9339d900073289cd829ab0bb0ca156509b141e3ff20fa9d432
-    sha256: ba4c8874a6eeda9339d900073289cd829ab0bb0ca156509b141e3ff20fa9d432
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/waon/blobs/sha256:40676016b9dc97fd7e1af31a12d79e6bd59608f1751a3a1df31b8e07843f4d71
-    sha256: 40676016b9dc97fd7e1af31a12d79e6bd59608f1751a3a1df31b8e07843f4d71
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/waon/blobs/sha256:f91b56d77254441ef842600da7b63b3ec7f84046cad6d89c64314aafa82af1e2
-    sha256: f91b56d77254441ef842600da7b63b3ec7f84046cad6d89c64314aafa82af1e2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/waon/blobs/sha256:da0153186a47b6bbf4df39692da5552c67d68f455c1fe36fb2c13dd811106571
-    sha256: da0153186a47b6bbf4df39692da5552c67d68f455c1fe36fb2c13dd811106571
-source:
-  url: https://github.com/kichiki/WaoN/archive/refs/tags/v0.11.tar.gz
-  sha256: 75d5c1721632afee55a54bcbba1a444e53b03f4224b03da29317e98aa223c30b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fftw
-  - libsndfile
+    - fftw
+    - libsndfile
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/waon/blobs/sha256:40676016b9dc97fd7e1af31a12d79e6bd59608f1751a3a1df31b8e07843f4d71
+        sha256: 40676016b9dc97fd7e1af31a12d79e6bd59608f1751a3a1df31b8e07843f4d71
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/waon/blobs/sha256:ba4c8874a6eeda9339d900073289cd829ab0bb0ca156509b141e3ff20fa9d432
+        sha256: ba4c8874a6eeda9339d900073289cd829ab0bb0ca156509b141e3ff20fa9d432
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/waon/blobs/sha256:f91b56d77254441ef842600da7b63b3ec7f84046cad6d89c64314aafa82af1e2
+        sha256: f91b56d77254441ef842600da7b63b3ec7f84046cad6d89c64314aafa82af1e2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/waon/blobs/sha256:da0153186a47b6bbf4df39692da5552c67d68f455c1fe36fb2c13dd811106571
+        sha256: da0153186a47b6bbf4df39692da5552c67d68f455c1fe36fb2c13dd811106571
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/kichiki/WaoN/archive/refs/tags/v0.11.tar.gz
+    sha256: 75d5c1721632afee55a54bcbba1a444e53b03f4224b03da29317e98aa223c30b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

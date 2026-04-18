@@ -3,53 +3,77 @@ version: 12.2.0
 description: Friendly PIL fork (Python Imaging Library)
 homepage: https://python-pillow.github.io/
 license: HPND
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pillow/blobs/sha256:6a1496db5f50e49e8b58127a4bbfdac444d7309ac18f51b4cd18301b48de3433
-    sha256: 6a1496db5f50e49e8b58127a4bbfdac444d7309ac18f51b4cd18301b48de3433
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pillow/blobs/sha256:96237b57b45f02bcf8ca12873f171c4d3f57fee7061af6324336b801cd82a0da
-    sha256: 96237b57b45f02bcf8ca12873f171c4d3f57fee7061af6324336b801cd82a0da
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pillow/blobs/sha256:fbc5cd28a3d00b3c107eaed67c20e2b4d934b5e4ba8da15a9789f31f3cfee022
-    sha256: fbc5cd28a3d00b3c107eaed67c20e2b4d934b5e4ba8da15a9789f31f3cfee022
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pillow/blobs/sha256:7a656e113d98b8d928ad8bc41c95a1b568b41bd77b4ea54f04a28bc950bf856a
-    sha256: 7a656e113d98b8d928ad8bc41c95a1b568b41bd77b4ea54f04a28bc950bf856a
-source:
-  url: https://files.pythonhosted.org/packages/8c/21/c2bcdd5906101a30244eaffc1b6e6ce71a31bd0742a01eb89e660ebfac2d/pillow-12.2.0.tar.gz
-  sha256: a830b1a40919539d07806aa58e1b114df53ddd43213d9c8b75847eee6c0182b5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - jpeg-turbo
-  - libavif
-  - libimagequant
-  - libraqm
-  - libtiff
-  - libxcb
-  - little-cms2
-  - openjpeg
-  - webp
+    - freetype
+    - jpeg-turbo
+    - libavif
+    - libimagequant
+    - libraqm
+    - libtiff
+    - libxcb
+    - little-cms2
+    - openjpeg
+    - webp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pillow/blobs/sha256:96237b57b45f02bcf8ca12873f171c4d3f57fee7061af6324336b801cd82a0da
+        sha256: 96237b57b45f02bcf8ca12873f171c4d3f57fee7061af6324336b801cd82a0da
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pillow/blobs/sha256:6a1496db5f50e49e8b58127a4bbfdac444d7309ac18f51b4cd18301b48de3433
+        sha256: 6a1496db5f50e49e8b58127a4bbfdac444d7309ac18f51b4cd18301b48de3433
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pillow/blobs/sha256:fbc5cd28a3d00b3c107eaed67c20e2b4d934b5e4ba8da15a9789f31f3cfee022
+        sha256: fbc5cd28a3d00b3c107eaed67c20e2b4d934b5e4ba8da15a9789f31f3cfee022
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pillow/blobs/sha256:7a656e113d98b8d928ad8bc41c95a1b568b41bd77b4ea54f04a28bc950bf856a
+        sha256: 7a656e113d98b8d928ad8bc41c95a1b568b41bd77b4ea54f04a28bc950bf856a
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/8c/21/c2bcdd5906101a30244eaffc1b6e6ce71a31bd0742a01eb89e660ebfac2d/pillow-12.2.0.tar.gz
+    sha256: a830b1a40919539d07806aa58e1b114df53ddd43213d9c8b75847eee6c0182b5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - pkgconf
-  - pybind11
-  - python@3.13
-  - python@3.14
+    - cmake
+    - ninja
+    - pkgconf
+    - pybind11
+    - python@3.13
+    - python@3.14
 linux_dependencies:
-  - freetype
-  - jpeg-turbo
-  - libavif
-  - libimagequant
-  - libraqm
-  - libtiff
-  - libxcb
-  - little-cms2
-  - openjpeg
-  - webp
-  - zlib-ng-compat
+    - freetype
+    - jpeg-turbo
+    - libavif
+    - libimagequant
+    - libraqm
+    - libtiff
+    - libxcb
+    - little-cms2
+    - openjpeg
+    - webp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

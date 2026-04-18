@@ -3,31 +3,55 @@ version: 2.5.3
 description: C++ API and command-line toolkit for BAM data
 homepage: https://github.com/pezmaster31/bamtools
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bamtools/blobs/sha256:7f678e35ee8bbd84f50d0bc33a6ebeb840754b2581599be380d6bbd823f9b70e
-    sha256: 7f678e35ee8bbd84f50d0bc33a6ebeb840754b2581599be380d6bbd823f9b70e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bamtools/blobs/sha256:83b46fc21dd8d03010235b022abe2d98bff4219707b5ff6fbad3c7735609286f
-    sha256: 83b46fc21dd8d03010235b022abe2d98bff4219707b5ff6fbad3c7735609286f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bamtools/blobs/sha256:464bbce0fe1f5f7e302f4274e4e5bfb1153083f95b7e5d754b70690b8cc0748a
-    sha256: 464bbce0fe1f5f7e302f4274e4e5bfb1153083f95b7e5d754b70690b8cc0748a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bamtools/blobs/sha256:0575567ce67f57826e323b0f26aa06f5b0d4f23db128c45b659bd4f1243fd903
-    sha256: 0575567ce67f57826e323b0f26aa06f5b0d4f23db128c45b659bd4f1243fd903
-source:
-  url: https://github.com/pezmaster31/bamtools/archive/refs/tags/v2.5.3.tar.gz
-  sha256: 7d4e59bac7c03bde488fe43e533692f78b5325a097328785ec31373ffac08344
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jsoncpp
+    - jsoncpp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bamtools/blobs/sha256:83b46fc21dd8d03010235b022abe2d98bff4219707b5ff6fbad3c7735609286f
+        sha256: 83b46fc21dd8d03010235b022abe2d98bff4219707b5ff6fbad3c7735609286f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bamtools/blobs/sha256:7f678e35ee8bbd84f50d0bc33a6ebeb840754b2581599be380d6bbd823f9b70e
+        sha256: 7f678e35ee8bbd84f50d0bc33a6ebeb840754b2581599be380d6bbd823f9b70e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bamtools/blobs/sha256:464bbce0fe1f5f7e302f4274e4e5bfb1153083f95b7e5d754b70690b8cc0748a
+        sha256: 464bbce0fe1f5f7e302f4274e4e5bfb1153083f95b7e5d754b70690b8cc0748a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bamtools/blobs/sha256:0575567ce67f57826e323b0f26aa06f5b0d4f23db128c45b659bd4f1243fd903
+        sha256: 0575567ce67f57826e323b0f26aa06f5b0d4f23db128c45b659bd4f1243fd903
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pezmaster31/bamtools/archive/refs/tags/v2.5.3.tar.gz
+    sha256: 7d4e59bac7c03bde488fe43e533692f78b5325a097328785ec31373ffac08344
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - jsoncpp
-  - zlib-ng-compat
+    - jsoncpp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

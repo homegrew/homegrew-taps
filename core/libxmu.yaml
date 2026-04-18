@@ -1,31 +1,56 @@
 name: libxmu
 version: 1.3.1
-description: "X.Org: X miscellaneous utility routines library"
+description: 'X.Org: X miscellaneous utility routines library'
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxmu/blobs/sha256:f3119cf62a6b19cb301339f6611ad94df20c57f1d1f7cf508284f38baf9688bc
-    sha256: f3119cf62a6b19cb301339f6611ad94df20c57f1d1f7cf508284f38baf9688bc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxmu/blobs/sha256:ae23ca0f5401937f9d17c94c13b0b34b1f4e514da51333974fd1da20dcd59cb5
-    sha256: ae23ca0f5401937f9d17c94c13b0b34b1f4e514da51333974fd1da20dcd59cb5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxmu/blobs/sha256:9563085140d7172e3e0365803b529a62a211a55611907b58e6fdb3ce726ae19b
-    sha256: 9563085140d7172e3e0365803b529a62a211a55611907b58e6fdb3ce726ae19b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxmu/blobs/sha256:89de2ef3c3cd5817dff3f0967e7a737fe5a1d3fc26a2bc5b77c52da24f1a4ac9
-    sha256: 89de2ef3c3cd5817dff3f0967e7a737fe5a1d3fc26a2bc5b77c52da24f1a4ac9
-source:
-  url: https://www.x.org/archive/individual/lib/libXmu-1.3.1.tar.xz
-  sha256: 81a99e94c4501e81c427cbaa4a11748b584933e94b7a156830c3621256857bc4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - libxext
-  - libxt
+    - libx11
+    - libxext
+    - libxt
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxmu/blobs/sha256:ae23ca0f5401937f9d17c94c13b0b34b1f4e514da51333974fd1da20dcd59cb5
+        sha256: ae23ca0f5401937f9d17c94c13b0b34b1f4e514da51333974fd1da20dcd59cb5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxmu/blobs/sha256:f3119cf62a6b19cb301339f6611ad94df20c57f1d1f7cf508284f38baf9688bc
+        sha256: f3119cf62a6b19cb301339f6611ad94df20c57f1d1f7cf508284f38baf9688bc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxmu/blobs/sha256:9563085140d7172e3e0365803b529a62a211a55611907b58e6fdb3ce726ae19b
+        sha256: 9563085140d7172e3e0365803b529a62a211a55611907b58e6fdb3ce726ae19b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxmu/blobs/sha256:89de2ef3c3cd5817dff3f0967e7a737fe5a1d3fc26a2bc5b77c52da24f1a4ac9
+        sha256: 89de2ef3c3cd5817dff3f0967e7a737fe5a1d3fc26a2bc5b77c52da24f1a4ac9
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/archive/individual/lib/libXmu-1.3.1.tar.xz
+    sha256: 81a99e94c4501e81c427cbaa4a11748b584933e94b7a156830c3621256857bc4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

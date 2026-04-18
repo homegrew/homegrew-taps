@@ -3,25 +3,51 @@ version: 2.3.8
 description: Command-line interface for interacting with the IoTeX blockchain
 homepage: https://docs.iotex.io/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ioctl/blobs/sha256:83bd38d0e5a579c1ebd497083b513c9baf763ea3d866c3350c1275e195c09529
-    sha256: 83bd38d0e5a579c1ebd497083b513c9baf763ea3d866c3350c1275e195c09529
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ioctl/blobs/sha256:8a2927f7b63abca16082557b9daabf41832fad490d90872b989aacd2e165a8f9
-    sha256: 8a2927f7b63abca16082557b9daabf41832fad490d90872b989aacd2e165a8f9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ioctl/blobs/sha256:8fee6acb62f0fcf259beb939662c4b5c1f72ebf17fee7177fa74a2303c3e21ff
-    sha256: 8fee6acb62f0fcf259beb939662c4b5c1f72ebf17fee7177fa74a2303c3e21ff
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ioctl/blobs/sha256:531600fcccb7e8c8be9d281bd259762d66571109ae5fbc07a91898884194c699
-    sha256: 531600fcccb7e8c8be9d281bd259762d66571109ae5fbc07a91898884194c699
-source:
-  url: https://github.com/iotexproject/iotex-core/archive/refs/tags/v2.3.8.tar.gz
-  sha256: a49ce532d3b6e7041c8a636991766e4babe5d43c77f20dbce93f136a289f6b7e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ioctl/blobs/sha256:8a2927f7b63abca16082557b9daabf41832fad490d90872b989aacd2e165a8f9
+        sha256: 8a2927f7b63abca16082557b9daabf41832fad490d90872b989aacd2e165a8f9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ioctl/blobs/sha256:83bd38d0e5a579c1ebd497083b513c9baf763ea3d866c3350c1275e195c09529
+        sha256: 83bd38d0e5a579c1ebd497083b513c9baf763ea3d866c3350c1275e195c09529
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ioctl/blobs/sha256:8fee6acb62f0fcf259beb939662c4b5c1f72ebf17fee7177fa74a2303c3e21ff
+        sha256: 8fee6acb62f0fcf259beb939662c4b5c1f72ebf17fee7177fa74a2303c3e21ff
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ioctl/blobs/sha256:531600fcccb7e8c8be9d281bd259762d66571109ae5fbc07a91898884194c699
+        sha256: 531600fcccb7e8c8be9d281bd259762d66571109ae5fbc07a91898884194c699
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/iotexproject/iotex-core/archive/refs/tags/v2.3.8.tar.gz
+    sha256: a49ce532d3b6e7041c8a636991766e4babe5d43c77f20dbce93f136a289f6b7e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

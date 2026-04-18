@@ -3,29 +3,54 @@ version: 3.2.5
 description: C++ wrapper for libxml
 homepage: https://libxmlplusplus.github.io/libxmlplusplus/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxmlxx/3/blobs/sha256:54ba6ed6a67f9b5c7d41eff654c3aae571203f7c655df54e40cafffa44b1210d
-    sha256: 54ba6ed6a67f9b5c7d41eff654c3aae571203f7c655df54e40cafffa44b1210d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxmlxx/3/blobs/sha256:21e9caba9dfc62295dc93ccbdefec27b10a82454039ac8205b61cf26bc508c84
-    sha256: 21e9caba9dfc62295dc93ccbdefec27b10a82454039ac8205b61cf26bc508c84
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libxmlxx/3/blobs/sha256:9d986b3cbb2382d7379e001598db8c6229e2624213c21e4f50c372ed053a644e
-    sha256: 9d986b3cbb2382d7379e001598db8c6229e2624213c21e4f50c372ed053a644e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libxmlxx/3/blobs/sha256:12f145b95b67afec328ace9aff3581308ad4782d4978d1c0c00c1350db51cf65
-    sha256: 12f145b95b67afec328ace9aff3581308ad4782d4978d1c0c00c1350db51cf65
-source:
-  url: https://github.com/libxmlplusplus/libxmlplusplus/releases/download/3.2.5/libxml++-3.2.5.tar.xz
-  sha256: 0c9b381b5a83d6b3ab4b0b865d7256dab27d575981b63be2f859edcb94da59c7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glibmm@2.66
+    - glibmm@2.66
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxmlxx/3/blobs/sha256:21e9caba9dfc62295dc93ccbdefec27b10a82454039ac8205b61cf26bc508c84
+        sha256: 21e9caba9dfc62295dc93ccbdefec27b10a82454039ac8205b61cf26bc508c84
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxmlxx/3/blobs/sha256:54ba6ed6a67f9b5c7d41eff654c3aae571203f7c655df54e40cafffa44b1210d
+        sha256: 54ba6ed6a67f9b5c7d41eff654c3aae571203f7c655df54e40cafffa44b1210d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libxmlxx/3/blobs/sha256:9d986b3cbb2382d7379e001598db8c6229e2624213c21e4f50c372ed053a644e
+        sha256: 9d986b3cbb2382d7379e001598db8c6229e2624213c21e4f50c372ed053a644e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libxmlxx/3/blobs/sha256:12f145b95b67afec328ace9aff3581308ad4782d4978d1c0c00c1350db51cf65
+        sha256: 12f145b95b67afec328ace9aff3581308ad4782d4978d1c0c00c1350db51cf65
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libxmlplusplus/libxmlplusplus/releases/download/3.2.5/libxml++-3.2.5.tar.xz
+    sha256: 0c9b381b5a83d6b3ab4b0b865d7256dab27d575981b63be2f859edcb94da59c7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

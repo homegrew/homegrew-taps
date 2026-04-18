@@ -3,45 +3,69 @@ version: 9.20.22
 description: Implementation of the DNS protocols
 homepage: https://www.isc.org/bind/
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:fb375ac33749724b2c9be2b869f0a20c5a3c10ebcc970f5dbd05ad55df4a723d
-    sha256: fb375ac33749724b2c9be2b869f0a20c5a3c10ebcc970f5dbd05ad55df4a723d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:4e539dcb32fc26442a7ea9b537c99201a78d992bd6d001a34f5c0992aff157b3
-    sha256: 4e539dcb32fc26442a7ea9b537c99201a78d992bd6d001a34f5c0992aff157b3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:d016b1f6e728a085e613a7c14af6b4ffdaddc6c3cb7bb10cff4f0a4af3e45619
-    sha256: d016b1f6e728a085e613a7c14af6b4ffdaddc6c3cb7bb10cff4f0a4af3e45619
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:2c3f7cbe44fdcbbfa12a7b94659718d80e0b2ceb9dc216f16898d62d0cc968da
-    sha256: 2c3f7cbe44fdcbbfa12a7b94659718d80e0b2ceb9dc216f16898d62d0cc968da
-source:
-  url: https://downloads.isc.org/isc/bind9/9.20.22/bind-9.20.22.tar.xz
-  sha256: cba92ff631b949655f475fe4b54290f6860fd0070d399f2279f6437c0d383ec6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - readline
-  - jemalloc
-  - json-c
-  - libidn2
-  - libnghttp2
-  - libuv
-  - openssl@3
-  - userspace-rcu
+    - readline
+    - jemalloc
+    - json-c
+    - libidn2
+    - libnghttp2
+    - libuv
+    - openssl@3
+    - userspace-rcu
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:4e539dcb32fc26442a7ea9b537c99201a78d992bd6d001a34f5c0992aff157b3
+        sha256: 4e539dcb32fc26442a7ea9b537c99201a78d992bd6d001a34f5c0992aff157b3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:fb375ac33749724b2c9be2b869f0a20c5a3c10ebcc970f5dbd05ad55df4a723d
+        sha256: fb375ac33749724b2c9be2b869f0a20c5a3c10ebcc970f5dbd05ad55df4a723d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:d016b1f6e728a085e613a7c14af6b4ffdaddc6c3cb7bb10cff4f0a4af3e45619
+        sha256: d016b1f6e728a085e613a7c14af6b4ffdaddc6c3cb7bb10cff4f0a4af3e45619
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:2c3f7cbe44fdcbbfa12a7b94659718d80e0b2ceb9dc216f16898d62d0cc968da
+        sha256: 2c3f7cbe44fdcbbfa12a7b94659718d80e0b2ceb9dc216f16898d62d0cc968da
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.isc.org/isc/bind9/9.20.22/bind-9.20.22.tar.xz
+    sha256: cba92ff631b949655f475fe4b54290f6860fd0070d399f2279f6437c0d383ec6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - jemalloc
-  - json-c
-  - libcap
-  - libidn2
-  - libnghttp2
-  - libuv
-  - openssl@3
-  - readline
-  - userspace-rcu
-  - zlib-ng-compat
+    - jemalloc
+    - json-c
+    - libcap
+    - libidn2
+    - libnghttp2
+    - libuv
+    - openssl@3
+    - readline
+    - userspace-rcu
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

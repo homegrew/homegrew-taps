@@ -1,29 +1,54 @@
 name: htmlcleaner
-version: 2.29
+version: "2.29"
 description: HTML parser written in Java
 homepage: https://htmlcleaner.sourceforge.net/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/htmlcleaner/blobs/sha256:481e7ce48a7dc9bddaa359cd8b30412f993266133f606e0970031feb20a3e924
-    sha256: 481e7ce48a7dc9bddaa359cd8b30412f993266133f606e0970031feb20a3e924
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/htmlcleaner/blobs/sha256:5e7f1b1c468d1a5ead2ed450fed70e621ee5b429486da31ac05474d9871473ed
-    sha256: 5e7f1b1c468d1a5ead2ed450fed70e621ee5b429486da31ac05474d9871473ed
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/htmlcleaner/blobs/sha256:49d3b92068ee5e037f6efe9232227d6b49069c0f6e0a09a1abd34467290755b1
-    sha256: 49d3b92068ee5e037f6efe9232227d6b49069c0f6e0a09a1abd34467290755b1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/htmlcleaner/blobs/sha256:0cdd1dd6b3a16f874d8980cc78f599dddc97713c322b5e8f962a7cf88810efd9
-    sha256: 0cdd1dd6b3a16f874d8980cc78f599dddc97713c322b5e8f962a7cf88810efd9
-source:
-  url: https://downloads.sourceforge.net/project/htmlcleaner/htmlcleaner/htmlcleaner%20v2.29/htmlcleaner-src-2.29.zip
-  sha256: 9fc68d7161be6f34f781e109bf63894d260428f186d88f315b1d2e3a33495350
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/htmlcleaner/blobs/sha256:5e7f1b1c468d1a5ead2ed450fed70e621ee5b429486da31ac05474d9871473ed
+        sha256: 5e7f1b1c468d1a5ead2ed450fed70e621ee5b429486da31ac05474d9871473ed
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/htmlcleaner/blobs/sha256:481e7ce48a7dc9bddaa359cd8b30412f993266133f606e0970031feb20a3e924
+        sha256: 481e7ce48a7dc9bddaa359cd8b30412f993266133f606e0970031feb20a3e924
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/htmlcleaner/blobs/sha256:49d3b92068ee5e037f6efe9232227d6b49069c0f6e0a09a1abd34467290755b1
+        sha256: 49d3b92068ee5e037f6efe9232227d6b49069c0f6e0a09a1abd34467290755b1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/htmlcleaner/blobs/sha256:0cdd1dd6b3a16f874d8980cc78f599dddc97713c322b5e8f962a7cf88810efd9
+        sha256: 0cdd1dd6b3a16f874d8980cc78f599dddc97713c322b5e8f962a7cf88810efd9
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/htmlcleaner/htmlcleaner/htmlcleaner%20v2.29/htmlcleaner-src-2.29.zip
+    sha256: 9fc68d7161be6f34f781e109bf63894d260428f186d88f315b1d2e3a33495350
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - maven
+    - maven
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

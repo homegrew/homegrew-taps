@@ -3,32 +3,57 @@ version: 2017.10.31
 description: Bytecode optimizer for Android apps
 homepage: https://fbredex.com/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:4290ded870843ef5a0f59274fe9242982c77542a1cbb367408151473849b21a1
-    sha256: 4290ded870843ef5a0f59274fe9242982c77542a1cbb367408151473849b21a1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:c2eca79d391a44a6645c4d0cd17982c07316a49f20a4f3ff0b3bf5190936014b
-    sha256: c2eca79d391a44a6645c4d0cd17982c07316a49f20a4f3ff0b3bf5190936014b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff
-    sha256: 40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:576c939a85047bae7e36eb7821407eb2046eb746069b4b8e5a13635837338799
-    sha256: 576c939a85047bae7e36eb7821407eb2046eb746069b4b8e5a13635837338799
-source:
-  url: https://github.com/facebook/redex/archive/refs/tags/v2017.10.31.tar.gz
-  sha256: 18a840e4db0fc51f79e17dfd749b2ffcce65a28e7ef9c2b3c255c5ad89f6fd6f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - jsoncpp
-  - python@3.14
+    - boost
+    - jsoncpp
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:c2eca79d391a44a6645c4d0cd17982c07316a49f20a4f3ff0b3bf5190936014b
+        sha256: c2eca79d391a44a6645c4d0cd17982c07316a49f20a4f3ff0b3bf5190936014b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:4290ded870843ef5a0f59274fe9242982c77542a1cbb367408151473849b21a1
+        sha256: 4290ded870843ef5a0f59274fe9242982c77542a1cbb367408151473849b21a1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff
+        sha256: 40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redex/blobs/sha256:576c939a85047bae7e36eb7821407eb2046eb746069b4b8e5a13635837338799
+        sha256: 576c939a85047bae7e36eb7821407eb2046eb746069b4b8e5a13635837338799
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/facebook/redex/archive/refs/tags/v2017.10.31.tar.gz
+    sha256: 18a840e4db0fc51f79e17dfd749b2ffcce65a28e7ef9c2b3c255c5ad89f6fd6f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libevent
-  - libtool
+    - autoconf
+    - automake
+    - libevent
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

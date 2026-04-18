@@ -3,28 +3,53 @@ version: 0.5.3
 description: Render hierarchical git repositories into HTML
 homepage: https://github.com/bennorth/literate-git
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/literate-git/blobs/sha256:7b6925bcc4d2cd98ca66c9718c64bba3e9ce9e33ac52dcab9071393f29048e07
-    sha256: 7b6925bcc4d2cd98ca66c9718c64bba3e9ce9e33ac52dcab9071393f29048e07
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/literate-git/blobs/sha256:24ed1b94875f33458ec2e45542878931124892c57ae25a92a62647a719c07ce1
-    sha256: 24ed1b94875f33458ec2e45542878931124892c57ae25a92a62647a719c07ce1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/literate-git/blobs/sha256:7c1c7daf0837e9b7b13cda7e128e01a950a073c55093e94a6dbf31ce286493b4
-    sha256: 7c1c7daf0837e9b7b13cda7e128e01a950a073c55093e94a6dbf31ce286493b4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/literate-git/blobs/sha256:1e790764cf320e398f5ed43ccdfb58281ef18c75dde3e9a4f48fe988cf054613
-    sha256: 1e790764cf320e398f5ed43ccdfb58281ef18c75dde3e9a4f48fe988cf054613
-source:
-  url: https://files.pythonhosted.org/packages/61/ef/443d7a7db6d72b4f905fe43ea34b3f7f6ca5b2edc0ad241290671ef6c454/literategit-0.5.3.tar.gz
-  sha256: bd634cb4305d1e99f9f994c07aac2d68492f939598f776e9abb7376488378b47
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - pygit2
-  - python@3.14
+    - pygit2
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/literate-git/blobs/sha256:24ed1b94875f33458ec2e45542878931124892c57ae25a92a62647a719c07ce1
+        sha256: 24ed1b94875f33458ec2e45542878931124892c57ae25a92a62647a719c07ce1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/literate-git/blobs/sha256:7b6925bcc4d2cd98ca66c9718c64bba3e9ce9e33ac52dcab9071393f29048e07
+        sha256: 7b6925bcc4d2cd98ca66c9718c64bba3e9ce9e33ac52dcab9071393f29048e07
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/literate-git/blobs/sha256:7c1c7daf0837e9b7b13cda7e128e01a950a073c55093e94a6dbf31ce286493b4
+        sha256: 7c1c7daf0837e9b7b13cda7e128e01a950a073c55093e94a6dbf31ce286493b4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/literate-git/blobs/sha256:1e790764cf320e398f5ed43ccdfb58281ef18c75dde3e9a4f48fe988cf054613
+        sha256: 1e790764cf320e398f5ed43ccdfb58281ef18c75dde3e9a4f48fe988cf054613
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/61/ef/443d7a7db6d72b4f905fe43ea34b3f7f6ca5b2edc0ad241290671ef6c454/literategit-0.5.3.tar.gz
+    sha256: bd634cb4305d1e99f9f994c07aac2d68492f939598f776e9abb7376488378b47
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

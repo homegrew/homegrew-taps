@@ -3,25 +3,51 @@ version: 1.24.0
 description: Developer CLI that provides commands for working with Azure resources
 homepage: https://aka.ms/azd
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/azure-dev/blobs/sha256:012c685620906ea38026b3d5c27fb858ef0e8d403e58e7deba24f62b3982b2da
-    sha256: 012c685620906ea38026b3d5c27fb858ef0e8d403e58e7deba24f62b3982b2da
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/azure-dev/blobs/sha256:d66c835e077f6dde1b082cf6bc2a6d70be9806f938abeaaa147944ec2abfc119
-    sha256: d66c835e077f6dde1b082cf6bc2a6d70be9806f938abeaaa147944ec2abfc119
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/azure-dev/blobs/sha256:58265d256442278688d126d0c64e6e464e0723f5d33ad578d260a60d25562c6f
-    sha256: 58265d256442278688d126d0c64e6e464e0723f5d33ad578d260a60d25562c6f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/azure-dev/blobs/sha256:d377525985a49452260e1724e4f48170213e98c97206bdfeb49683991b3a20b4
-    sha256: d377525985a49452260e1724e4f48170213e98c97206bdfeb49683991b3a20b4
-source:
-  url: https://github.com/Azure/azure-dev/archive/refs/tags/azure-dev-cli_1.24.0.tar.gz
-  sha256: 2715250f87697e1bdf92919e2f69682251f5469aa07d1ad8a08e5709f6228cd2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/azure-dev/blobs/sha256:d66c835e077f6dde1b082cf6bc2a6d70be9806f938abeaaa147944ec2abfc119
+        sha256: d66c835e077f6dde1b082cf6bc2a6d70be9806f938abeaaa147944ec2abfc119
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/azure-dev/blobs/sha256:012c685620906ea38026b3d5c27fb858ef0e8d403e58e7deba24f62b3982b2da
+        sha256: 012c685620906ea38026b3d5c27fb858ef0e8d403e58e7deba24f62b3982b2da
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/azure-dev/blobs/sha256:58265d256442278688d126d0c64e6e464e0723f5d33ad578d260a60d25562c6f
+        sha256: 58265d256442278688d126d0c64e6e464e0723f5d33ad578d260a60d25562c6f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/azure-dev/blobs/sha256:d377525985a49452260e1724e4f48170213e98c97206bdfeb49683991b3a20b4
+        sha256: d377525985a49452260e1724e4f48170213e98c97206bdfeb49683991b3a20b4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Azure/azure-dev/archive/refs/tags/azure-dev-cli_1.24.0.tar.gz
+    sha256: 2715250f87697e1bdf92919e2f69682251f5469aa07d1ad8a08e5709f6228cd2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

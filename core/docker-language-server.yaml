@@ -3,25 +3,51 @@ version: 0.20.1
 description: Language server for Dockerfiles, Compose files, and Bake files
 homepage: https://www.docker.com
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/docker-language-server/blobs/sha256:f35fa22edae4c8555d7604dcce4846ad24cd2a6400938fd9ff396042fc9ab748
-    sha256: f35fa22edae4c8555d7604dcce4846ad24cd2a6400938fd9ff396042fc9ab748
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/docker-language-server/blobs/sha256:d7a008395ecac3b130dc18c332b53acddcfc6ef0375cebe9e9ff8170c0f61f0a
-    sha256: d7a008395ecac3b130dc18c332b53acddcfc6ef0375cebe9e9ff8170c0f61f0a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/docker-language-server/blobs/sha256:72b4ae8d0d220708c044e47d66d819d99cef0b2ed82743827643320fb9ac400b
-    sha256: 72b4ae8d0d220708c044e47d66d819d99cef0b2ed82743827643320fb9ac400b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/docker-language-server/blobs/sha256:7f2eac8a43c55f2a94541d50cca86e38b469e8715faf61e5747f37470b6e1fca
-    sha256: 7f2eac8a43c55f2a94541d50cca86e38b469e8715faf61e5747f37470b6e1fca
-source:
-  url: https://github.com/docker/docker-language-server/archive/refs/tags/v0.20.1.tar.gz
-  sha256: df94194ce63f0a1217944c72b941a842101aee7b7dd16018d71818d070d146a8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/docker-language-server/blobs/sha256:d7a008395ecac3b130dc18c332b53acddcfc6ef0375cebe9e9ff8170c0f61f0a
+        sha256: d7a008395ecac3b130dc18c332b53acddcfc6ef0375cebe9e9ff8170c0f61f0a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/docker-language-server/blobs/sha256:f35fa22edae4c8555d7604dcce4846ad24cd2a6400938fd9ff396042fc9ab748
+        sha256: f35fa22edae4c8555d7604dcce4846ad24cd2a6400938fd9ff396042fc9ab748
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/docker-language-server/blobs/sha256:72b4ae8d0d220708c044e47d66d819d99cef0b2ed82743827643320fb9ac400b
+        sha256: 72b4ae8d0d220708c044e47d66d819d99cef0b2ed82743827643320fb9ac400b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/docker-language-server/blobs/sha256:7f2eac8a43c55f2a94541d50cca86e38b469e8715faf61e5747f37470b6e1fca
+        sha256: 7f2eac8a43c55f2a94541d50cca86e38b469e8715faf61e5747f37470b6e1fca
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/docker/docker-language-server/archive/refs/tags/v0.20.1.tar.gz
+    sha256: df94194ce63f0a1217944c72b941a842101aee7b7dd16018d71818d070d146a8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,54 @@ version: 0.3.0
 description: DynamoDB CLI
 homepage: https://github.com/awslabs/dynein
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dynein/blobs/sha256:5ea2e5e239b05f06c0f84efe21f05f2d34a4ef382971d8c3246a2a612c186607
-    sha256: 5ea2e5e239b05f06c0f84efe21f05f2d34a4ef382971d8c3246a2a612c186607
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dynein/blobs/sha256:d1782320d190d2fb194376ef10d4a6e9a96cbabf9050deb4e6c106aff8abfde8
-    sha256: d1782320d190d2fb194376ef10d4a6e9a96cbabf9050deb4e6c106aff8abfde8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dynein/blobs/sha256:c5842684aeeca93f1a9869327cb4f41a75c708ab354c47a2e124063cd8108ea8
-    sha256: c5842684aeeca93f1a9869327cb4f41a75c708ab354c47a2e124063cd8108ea8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dynein/blobs/sha256:548a00844b2c9da5358bd2d719d58fd045d9cc0d3fbb3b2306185f8449e4cbb7
-    sha256: 548a00844b2c9da5358bd2d719d58fd045d9cc0d3fbb3b2306185f8449e4cbb7
-source:
-  url: https://github.com/awslabs/dynein/archive/refs/tags/v0.3.0.tar.gz
-  sha256: 40be5866288f565ac00494910d5dbb266ca0c34d56d50d839bc2c2aad34dc470
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dynein/blobs/sha256:d1782320d190d2fb194376ef10d4a6e9a96cbabf9050deb4e6c106aff8abfde8
+        sha256: d1782320d190d2fb194376ef10d4a6e9a96cbabf9050deb4e6c106aff8abfde8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dynein/blobs/sha256:5ea2e5e239b05f06c0f84efe21f05f2d34a4ef382971d8c3246a2a612c186607
+        sha256: 5ea2e5e239b05f06c0f84efe21f05f2d34a4ef382971d8c3246a2a612c186607
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dynein/blobs/sha256:c5842684aeeca93f1a9869327cb4f41a75c708ab354c47a2e124063cd8108ea8
+        sha256: c5842684aeeca93f1a9869327cb4f41a75c708ab354c47a2e124063cd8108ea8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dynein/blobs/sha256:548a00844b2c9da5358bd2d719d58fd045d9cc0d3fbb3b2306185f8449e4cbb7
+        sha256: 548a00844b2c9da5358bd2d719d58fd045d9cc0d3fbb3b2306185f8449e4cbb7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/awslabs/dynein/archive/refs/tags/v0.3.0.tar.gz
+    sha256: 40be5866288f565ac00494910d5dbb266ca0c34d56d50d839bc2c2aad34dc470
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - rust
+    - cmake
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

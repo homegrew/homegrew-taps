@@ -3,28 +3,53 @@ version: 1.12.3
 description: Create TCP tunnels through HTTPS proxies
 homepage: https://github.com/proxytunnel/proxytunnel
 license: GPL-2.0-or-later WITH openvpn-openssl-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proxytunnel/blobs/sha256:b6003b5468d9eb16d028cfac02ad7700bb173650fbcb7b4c1be87cf3267a636f
-    sha256: b6003b5468d9eb16d028cfac02ad7700bb173650fbcb7b4c1be87cf3267a636f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proxytunnel/blobs/sha256:20b05437c58f9ac5e129dbfd9da88d6c57338deb994ad88af6ee2a558a430304
-    sha256: 20b05437c58f9ac5e129dbfd9da88d6c57338deb994ad88af6ee2a558a430304
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/proxytunnel/blobs/sha256:68f0a86ab22a1406b3215b1f48abd7bb1cd686a2eab4cd707f989a9bee830a4c
-    sha256: 68f0a86ab22a1406b3215b1f48abd7bb1cd686a2eab4cd707f989a9bee830a4c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/proxytunnel/blobs/sha256:1054f31d72acfeb8d3e4b925620f5d8140349158552c6288db753af40097b72c
-    sha256: 1054f31d72acfeb8d3e4b925620f5d8140349158552c6288db753af40097b72c
-source:
-  url: https://github.com/proxytunnel/proxytunnel/archive/refs/tags/v1.12.3.tar.gz
-  sha256: 106cfba7aba91faccb158e1c12a4a7c4c65adc95aa1f81b76b987882a68c5afb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proxytunnel/blobs/sha256:20b05437c58f9ac5e129dbfd9da88d6c57338deb994ad88af6ee2a558a430304
+        sha256: 20b05437c58f9ac5e129dbfd9da88d6c57338deb994ad88af6ee2a558a430304
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proxytunnel/blobs/sha256:b6003b5468d9eb16d028cfac02ad7700bb173650fbcb7b4c1be87cf3267a636f
+        sha256: b6003b5468d9eb16d028cfac02ad7700bb173650fbcb7b4c1be87cf3267a636f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/proxytunnel/blobs/sha256:68f0a86ab22a1406b3215b1f48abd7bb1cd686a2eab4cd707f989a9bee830a4c
+        sha256: 68f0a86ab22a1406b3215b1f48abd7bb1cd686a2eab4cd707f989a9bee830a4c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proxytunnel/blobs/sha256:1054f31d72acfeb8d3e4b925620f5d8140349158552c6288db753af40097b72c
+        sha256: 1054f31d72acfeb8d3e4b925620f5d8140349158552c6288db753af40097b72c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/proxytunnel/proxytunnel/archive/refs/tags/v1.12.3.tar.gz
+    sha256: 106cfba7aba91faccb158e1c12a4a7c4c65adc95aa1f81b76b987882a68c5afb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoc
-  - xmlto
+    - asciidoc
+    - xmlto
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,31 +3,56 @@ version: 1.2.0
 description: Modern and fun shell for Couchbase Server and Capella
 homepage: https://couchbase.sh
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/couchbase-shell/blobs/sha256:f594c38db7ee6a0a853ea4b07df60ff6d11f21550bbd0f3cf7567393789aedb8
-    sha256: f594c38db7ee6a0a853ea4b07df60ff6d11f21550bbd0f3cf7567393789aedb8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/couchbase-shell/blobs/sha256:10c55838e8d6cbc2c24c167a2b12bd506f76423d2be2dcc81fca15cd3b913de3
-    sha256: 10c55838e8d6cbc2c24c167a2b12bd506f76423d2be2dcc81fca15cd3b913de3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/couchbase-shell/blobs/sha256:134d0876c3c49d7b5263d167f66dd3fcd5dcbd017f611b303e6774bd46ebc646
-    sha256: 134d0876c3c49d7b5263d167f66dd3fcd5dcbd017f611b303e6774bd46ebc646
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/couchbase-shell/blobs/sha256:2b73249abaa65a897832a3533057d118a70c2cf44801d7d3bf974a7b977458ab
-    sha256: 2b73249abaa65a897832a3533057d118a70c2cf44801d7d3bf974a7b977458ab
-source:
-  url: https://github.com/couchbaselabs/couchbase-shell/archive/refs/tags/v1.2.0.tar.gz
-  sha256: d6799eaa9d3e5130163df52ef49f7f588a78bac63b1e78731eb52fa0bd29eb8f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/couchbase-shell/blobs/sha256:10c55838e8d6cbc2c24c167a2b12bd506f76423d2be2dcc81fca15cd3b913de3
+        sha256: 10c55838e8d6cbc2c24c167a2b12bd506f76423d2be2dcc81fca15cd3b913de3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/couchbase-shell/blobs/sha256:f594c38db7ee6a0a853ea4b07df60ff6d11f21550bbd0f3cf7567393789aedb8
+        sha256: f594c38db7ee6a0a853ea4b07df60ff6d11f21550bbd0f3cf7567393789aedb8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/couchbase-shell/blobs/sha256:134d0876c3c49d7b5263d167f66dd3fcd5dcbd017f611b303e6774bd46ebc646
+        sha256: 134d0876c3c49d7b5263d167f66dd3fcd5dcbd017f611b303e6774bd46ebc646
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/couchbase-shell/blobs/sha256:2b73249abaa65a897832a3533057d118a70c2cf44801d7d3bf974a7b977458ab
+        sha256: 2b73249abaa65a897832a3533057d118a70c2cf44801d7d3bf974a7b977458ab
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/couchbaselabs/couchbase-shell/archive/refs/tags/v1.2.0.tar.gz
+    sha256: d6799eaa9d3e5130163df52ef49f7f588a78bac63b1e78731eb52fa0bd29eb8f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - libx11
-  - libxcb
-  - openssl@3
-  - zlib-ng-compat
+    - libx11
+    - libxcb
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

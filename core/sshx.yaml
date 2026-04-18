@@ -3,26 +3,52 @@ version: 0.4.1
 description: Fast, collaborative live terminal sharing over the web
 homepage: https://sshx.io
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sshx/blobs/sha256:b9d50ad7a068ac3520358e2219172c137bddd2b1c6b415d7dff20c21a10896d5
-    sha256: b9d50ad7a068ac3520358e2219172c137bddd2b1c6b415d7dff20c21a10896d5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sshx/blobs/sha256:acb77c27444b26c774e81104783ae34f10773a454f43116ae97d368ddf26fc5a
-    sha256: acb77c27444b26c774e81104783ae34f10773a454f43116ae97d368ddf26fc5a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sshx/blobs/sha256:71d9f3653dbfd7c5b4699821fa328d4681686bea5a21a6dea4f832f4efa45333
-    sha256: 71d9f3653dbfd7c5b4699821fa328d4681686bea5a21a6dea4f832f4efa45333
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sshx/blobs/sha256:9055d91e23321fa85ab586a83204ad383caaeec4b1af12bf13bd5b901fc03461
-    sha256: 9055d91e23321fa85ab586a83204ad383caaeec4b1af12bf13bd5b901fc03461
-source:
-  url: https://github.com/ekzhang/sshx/archive/refs/tags/v0.4.1.tar.gz
-  sha256: ab6de41546b849726faa3b964466c1f8bb558bd27ee2452a9758405ff013108f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sshx/blobs/sha256:acb77c27444b26c774e81104783ae34f10773a454f43116ae97d368ddf26fc5a
+        sha256: acb77c27444b26c774e81104783ae34f10773a454f43116ae97d368ddf26fc5a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sshx/blobs/sha256:b9d50ad7a068ac3520358e2219172c137bddd2b1c6b415d7dff20c21a10896d5
+        sha256: b9d50ad7a068ac3520358e2219172c137bddd2b1c6b415d7dff20c21a10896d5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sshx/blobs/sha256:71d9f3653dbfd7c5b4699821fa328d4681686bea5a21a6dea4f832f4efa45333
+        sha256: 71d9f3653dbfd7c5b4699821fa328d4681686bea5a21a6dea4f832f4efa45333
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sshx/blobs/sha256:9055d91e23321fa85ab586a83204ad383caaeec4b1af12bf13bd5b901fc03461
+        sha256: 9055d91e23321fa85ab586a83204ad383caaeec4b1af12bf13bd5b901fc03461
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ekzhang/sshx/archive/refs/tags/v0.4.1.tar.gz
+    sha256: ab6de41546b849726faa3b964466c1f8bb558bd27ee2452a9758405ff013108f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - protobuf
-  - rust
+    - protobuf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

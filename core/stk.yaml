@@ -3,28 +3,53 @@ version: 5.0.1
 description: Sound Synthesis Toolkit
 homepage: https://ccrma.stanford.edu/software/stk/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stk/blobs/sha256:33c29e2a776f2b13912844ce37fd744fc1b4f0866f134b2a3ec62bd7d5333fc3
-    sha256: 33c29e2a776f2b13912844ce37fd744fc1b4f0866f134b2a3ec62bd7d5333fc3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stk/blobs/sha256:68cf2df4d1e9ba32def2c769a1a82933b4b4a93c609b42531a2fcb4874cbd577
-    sha256: 68cf2df4d1e9ba32def2c769a1a82933b4b4a93c609b42531a2fcb4874cbd577
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/stk/blobs/sha256:64cfa5d539dc990021c45a9848fc8d34252138791ffb7f3a1bba0dd13d76489c
-    sha256: 64cfa5d539dc990021c45a9848fc8d34252138791ffb7f3a1bba0dd13d76489c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/stk/blobs/sha256:d940bdd5baa984fa5773f4e3a88fbadc294cbbad08cb13cd802fcfae2c93fba4
-    sha256: d940bdd5baa984fa5773f4e3a88fbadc294cbbad08cb13cd802fcfae2c93fba4
-source:
-  url: https://ccrma.stanford.edu/software/stk/release/stk-5.0.1.tar.gz
-  sha256: afc35faea3bb8baacacb8d9db3fa745e4f7d8dd46f36aac5436ca377d565a184
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stk/blobs/sha256:68cf2df4d1e9ba32def2c769a1a82933b4b4a93c609b42531a2fcb4874cbd577
+        sha256: 68cf2df4d1e9ba32def2c769a1a82933b4b4a93c609b42531a2fcb4874cbd577
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stk/blobs/sha256:33c29e2a776f2b13912844ce37fd744fc1b4f0866f134b2a3ec62bd7d5333fc3
+        sha256: 33c29e2a776f2b13912844ce37fd744fc1b4f0866f134b2a3ec62bd7d5333fc3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stk/blobs/sha256:64cfa5d539dc990021c45a9848fc8d34252138791ffb7f3a1bba0dd13d76489c
+        sha256: 64cfa5d539dc990021c45a9848fc8d34252138791ffb7f3a1bba0dd13d76489c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stk/blobs/sha256:d940bdd5baa984fa5773f4e3a88fbadc294cbbad08cb13cd802fcfae2c93fba4
+        sha256: d940bdd5baa984fa5773f4e3a88fbadc294cbbad08cb13cd802fcfae2c93fba4
+        sha512: ""
+        signature: ""
+source:
+    url: https://ccrma.stanford.edu/software/stk/release/stk-5.0.1.tar.gz
+    sha256: afc35faea3bb8baacacb8d9db3fa745e4f7d8dd46f36aac5436ca377d565a184
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
 linux_dependencies:
-  - alsa-lib
+    - alsa-lib
+build:
+    configure: []
+    install: []
+service: null

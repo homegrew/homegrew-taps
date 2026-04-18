@@ -3,28 +3,53 @@ version: 4.4.1
 description: Generate scripting interfaces to C/C++ code
 homepage: https://www.swig.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/swig/blobs/sha256:296e06c126d3bc5ce67eae4496e4fb15f53b1147fd727e59744449d118ddf3c4
-    sha256: 296e06c126d3bc5ce67eae4496e4fb15f53b1147fd727e59744449d118ddf3c4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/swig/blobs/sha256:7101266ed6af8753601bfa9e161f69b2293bf21c20d85a0215a33afadc8e2bfd
-    sha256: 7101266ed6af8753601bfa9e161f69b2293bf21c20d85a0215a33afadc8e2bfd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/swig/blobs/sha256:a225dfc60e2cf8404edf0275411d60d831b4fbcc707a5019e9246aef10915d98
-    sha256: a225dfc60e2cf8404edf0275411d60d831b4fbcc707a5019e9246aef10915d98
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/swig/blobs/sha256:da35dceea818eca91178d1d69b9ebf15ba68ac343e47fec99c4a3edf889c023e
-    sha256: da35dceea818eca91178d1d69b9ebf15ba68ac343e47fec99c4a3edf889c023e
-source:
-  url: https://downloads.sourceforge.net/project/swig/swig/swig-4.4.1/swig-4.4.1.tar.gz
-  sha256: 40162a706c56f7592d08fd52ef5511cb7ac191f3593cf07306a0a554c6281fcf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - pcre2
+    - pcre2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/swig/blobs/sha256:7101266ed6af8753601bfa9e161f69b2293bf21c20d85a0215a33afadc8e2bfd
+        sha256: 7101266ed6af8753601bfa9e161f69b2293bf21c20d85a0215a33afadc8e2bfd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/swig/blobs/sha256:296e06c126d3bc5ce67eae4496e4fb15f53b1147fd727e59744449d118ddf3c4
+        sha256: 296e06c126d3bc5ce67eae4496e4fb15f53b1147fd727e59744449d118ddf3c4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/swig/blobs/sha256:a225dfc60e2cf8404edf0275411d60d831b4fbcc707a5019e9246aef10915d98
+        sha256: a225dfc60e2cf8404edf0275411d60d831b4fbcc707a5019e9246aef10915d98
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/swig/blobs/sha256:da35dceea818eca91178d1d69b9ebf15ba68ac343e47fec99c4a3edf889c023e
+        sha256: da35dceea818eca91178d1d69b9ebf15ba68ac343e47fec99c4a3edf889c023e
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/swig/swig/swig-4.4.1/swig-4.4.1.tar.gz
+    sha256: 40162a706c56f7592d08fd52ef5511cb7ac191f3593cf07306a0a554c6281fcf
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - pcre2
-  - zlib-ng-compat
+    - pcre2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

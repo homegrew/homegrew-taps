@@ -3,31 +3,55 @@ version: 0.18.2
 description: Opinionated dialect of Scheme designed for Systems Programming
 homepage: https://cons.io
 license: LGPL-2.1-or-later OR Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gerbil-scheme/blobs/sha256:5d5b0c0983acb6e54a5b980bafd5966d0a56a565ad5629a70f6664652cfab2b5
-    sha256: 5d5b0c0983acb6e54a5b980bafd5966d0a56a565ad5629a70f6664652cfab2b5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gerbil-scheme/blobs/sha256:5004a6b5a26614f190c4fc4e5d3e353cbb35b4f56c01498a7d278a6494f065b0
-    sha256: 5004a6b5a26614f190c4fc4e5d3e353cbb35b4f56c01498a7d278a6494f065b0
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gerbil-scheme/blobs/sha256:9e1c6732baed62c845e8fe0169f5e3eb5998773fd12aaa3700a47c1d21fe6403
-    sha256: 9e1c6732baed62c845e8fe0169f5e3eb5998773fd12aaa3700a47c1d21fe6403
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gerbil-scheme/blobs/sha256:b329cfd3d24ed07d56b6a6558e051f970083f29c02b43689db0b575d6077a376
-    sha256: b329cfd3d24ed07d56b6a6558e051f970083f29c02b43689db0b575d6077a376
-source:
-  url: https://github.com/mighty-gerbils/gerbil/archive/refs/tags/v0.18.2.tar.gz
-  sha256: 8e4cdefea8d75feea4d5df33cc90b37dc5e8d6ab03b7b4b7eb749ae7d9ff739e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - gcc
+    - openssl@3
+    - gcc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gerbil-scheme/blobs/sha256:5004a6b5a26614f190c4fc4e5d3e353cbb35b4f56c01498a7d278a6494f065b0
+        sha256: 5004a6b5a26614f190c4fc4e5d3e353cbb35b4f56c01498a7d278a6494f065b0
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gerbil-scheme/blobs/sha256:5d5b0c0983acb6e54a5b980bafd5966d0a56a565ad5629a70f6664652cfab2b5
+        sha256: 5d5b0c0983acb6e54a5b980bafd5966d0a56a565ad5629a70f6664652cfab2b5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gerbil-scheme/blobs/sha256:9e1c6732baed62c845e8fe0169f5e3eb5998773fd12aaa3700a47c1d21fe6403
+        sha256: 9e1c6732baed62c845e8fe0169f5e3eb5998773fd12aaa3700a47c1d21fe6403
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gerbil-scheme/blobs/sha256:b329cfd3d24ed07d56b6a6558e051f970083f29c02b43689db0b575d6077a376
+        sha256: b329cfd3d24ed07d56b6a6558e051f970083f29c02b43689db0b575d6077a376
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mighty-gerbils/gerbil/archive/refs/tags/v0.18.2.tar.gz
+    sha256: 8e4cdefea8d75feea4d5df33cc90b37dc5e8d6ab03b7b4b7eb749ae7d9ff739e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

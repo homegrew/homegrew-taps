@@ -3,28 +3,53 @@ version: 0.1.12
 description: Command-line editor
 homepage: https://id3v2.sourceforge.net/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:33aafe768f00f1a37dcc4a02ea2ebca5a06fe9548ee98fdab3b3f598ba641512
-    sha256: 33aafe768f00f1a37dcc4a02ea2ebca5a06fe9548ee98fdab3b3f598ba641512
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:052436ce24f1730dc280abc7ee4c1ddecffef5d780d641e31c5cef5d9ceade1b
-    sha256: 052436ce24f1730dc280abc7ee4c1ddecffef5d780d641e31c5cef5d9ceade1b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:1efae20c92b93c07d496412dea715097678914a077a2a52823a291687c3a3a2e
-    sha256: 1efae20c92b93c07d496412dea715097678914a077a2a52823a291687c3a3a2e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:07dfc1ddaa81bbfceb227d1394828d778d01e7348c579a40a939661cc0472b82
-    sha256: 07dfc1ddaa81bbfceb227d1394828d778d01e7348c579a40a939661cc0472b82
-source:
-  url: https://downloads.sourceforge.net/project/id3v2/id3v2/0.1.12/id3v2-0.1.12.tar.gz
-  sha256: 8105fad3189dbb0e4cb381862b4fa18744233c3bbe6def6f81ff64f5101722bf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - id3lib
+    - id3lib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:052436ce24f1730dc280abc7ee4c1ddecffef5d780d641e31c5cef5d9ceade1b
+        sha256: 052436ce24f1730dc280abc7ee4c1ddecffef5d780d641e31c5cef5d9ceade1b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:33aafe768f00f1a37dcc4a02ea2ebca5a06fe9548ee98fdab3b3f598ba641512
+        sha256: 33aafe768f00f1a37dcc4a02ea2ebca5a06fe9548ee98fdab3b3f598ba641512
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:1efae20c92b93c07d496412dea715097678914a077a2a52823a291687c3a3a2e
+        sha256: 1efae20c92b93c07d496412dea715097678914a077a2a52823a291687c3a3a2e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:07dfc1ddaa81bbfceb227d1394828d778d01e7348c579a40a939661cc0472b82
+        sha256: 07dfc1ddaa81bbfceb227d1394828d778d01e7348c579a40a939661cc0472b82
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/id3v2/id3v2/0.1.12/id3v2-0.1.12.tar.gz
+    sha256: 8105fad3189dbb0e4cb381862b4fa18744233c3bbe6def6f81ff64f5101722bf
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - id3lib
-  - zlib-ng-compat
+    - id3lib
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

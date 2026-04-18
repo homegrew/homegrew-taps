@@ -3,27 +3,52 @@ version: 0.27.0
 description: Open-source implementation of JPEG2000 Part-15 (or JPH or HTJ2K)
 homepage: https://github.com/aous72/OpenJPH
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openjph/blobs/sha256:5d3a100f87988d065af89b8b1c41f3686dfb1ac968f9443eba987df977670c65
-    sha256: 5d3a100f87988d065af89b8b1c41f3686dfb1ac968f9443eba987df977670c65
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openjph/blobs/sha256:f214b0fe0180d81ae507d1697ea76c390b65b2dba85e05df68f85d3ba46ff8e3
-    sha256: f214b0fe0180d81ae507d1697ea76c390b65b2dba85e05df68f85d3ba46ff8e3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/openjph/blobs/sha256:44bd792d2f05cb7c8ce6462795c235f1460abc90f8b548bad9223a9689ae620e
-    sha256: 44bd792d2f05cb7c8ce6462795c235f1460abc90f8b548bad9223a9689ae620e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/openjph/blobs/sha256:9b2a842bdf4993c958cd0acda26bbd9ca71de2a1dc047b17e6d88802e720f18d
-    sha256: 9b2a842bdf4993c958cd0acda26bbd9ca71de2a1dc047b17e6d88802e720f18d
-source:
-  url: https://github.com/aous72/OpenJPH/archive/refs/tags/0.27.0.tar.gz
-  sha256: f6768e927d8e4e4884a2efcf500a88d1b6714a48d69516332a9256803a3c8343
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtiff
+    - libtiff
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openjph/blobs/sha256:f214b0fe0180d81ae507d1697ea76c390b65b2dba85e05df68f85d3ba46ff8e3
+        sha256: f214b0fe0180d81ae507d1697ea76c390b65b2dba85e05df68f85d3ba46ff8e3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openjph/blobs/sha256:5d3a100f87988d065af89b8b1c41f3686dfb1ac968f9443eba987df977670c65
+        sha256: 5d3a100f87988d065af89b8b1c41f3686dfb1ac968f9443eba987df977670c65
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openjph/blobs/sha256:44bd792d2f05cb7c8ce6462795c235f1460abc90f8b548bad9223a9689ae620e
+        sha256: 44bd792d2f05cb7c8ce6462795c235f1460abc90f8b548bad9223a9689ae620e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openjph/blobs/sha256:9b2a842bdf4993c958cd0acda26bbd9ca71de2a1dc047b17e6d88802e720f18d
+        sha256: 9b2a842bdf4993c958cd0acda26bbd9ca71de2a1dc047b17e6d88802e720f18d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/aous72/OpenJPH/archive/refs/tags/0.27.0.tar.gz
+    sha256: f6768e927d8e4e4884a2efcf500a88d1b6714a48d69516332a9256803a3c8343
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

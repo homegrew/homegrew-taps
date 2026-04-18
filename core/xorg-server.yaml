@@ -3,78 +3,102 @@ version: 21.1.22
 description: X Window System display server
 homepage: https://www.x.org
 license: MIT AND APSL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:4a437746fbb931ee7095fa41d537b8a5d8e0d9db060d0bff09358fedc14bb80f
-    sha256: 4a437746fbb931ee7095fa41d537b8a5d8e0d9db060d0bff09358fedc14bb80f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
-    sha256: b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:26a1aadf41f19be76ae3ffb0703ae6b21cfed150f35bd5dabd9d585af8c280ec
-    sha256: 26a1aadf41f19be76ae3ffb0703ae6b21cfed150f35bd5dabd9d585af8c280ec
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:eac9b9823f8dba050ffeb490eb0fb28807f8bd6880d6bb96009e12d67fefc73f
-    sha256: eac9b9823f8dba050ffeb490eb0fb28807f8bd6880d6bb96009e12d67fefc73f
-source:
-  url: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
-  sha256: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libx11
-  - libxau
-  - libxcb
-  - libxdmcp
-  - libxext
-  - libxfixes
-  - libxfont2
-  - mesa
-  - pixman
-  - xauth
-  - xcb-util
-  - xcb-util-image
-  - xcb-util-keysyms
-  - xcb-util-renderutil
-  - xcb-util-wm
-  - xkbcomp
-  - xkeyboard-config
-  - libapplewm
+    - libx11
+    - libxau
+    - libxcb
+    - libxdmcp
+    - libxext
+    - libxfixes
+    - libxfont2
+    - mesa
+    - pixman
+    - xauth
+    - xcb-util
+    - xcb-util-image
+    - xcb-util-keysyms
+    - xcb-util-renderutil
+    - xcb-util-wm
+    - xkbcomp
+    - xkeyboard-config
+    - libapplewm
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
+        sha256: b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:4a437746fbb931ee7095fa41d537b8a5d8e0d9db060d0bff09358fedc14bb80f
+        sha256: 4a437746fbb931ee7095fa41d537b8a5d8e0d9db060d0bff09358fedc14bb80f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:26a1aadf41f19be76ae3ffb0703ae6b21cfed150f35bd5dabd9d585af8c280ec
+        sha256: 26a1aadf41f19be76ae3ffb0703ae6b21cfed150f35bd5dabd9d585af8c280ec
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:eac9b9823f8dba050ffeb490eb0fb28807f8bd6880d6bb96009e12d67fefc73f
+        sha256: eac9b9823f8dba050ffeb490eb0fb28807f8bd6880d6bb96009e12d67fefc73f
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    sha256: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - font-util
-  - libxkbfile
-  - meson
-  - ninja
-  - pkgconf
-  - util-macros
-  - xorgproto
-  - xtrans
+    - font-util
+    - libxkbfile
+    - meson
+    - ninja
+    - pkgconf
+    - util-macros
+    - xorgproto
+    - xtrans
 linux_dependencies:
-  - dbus
-  - libdrm
-  - libepoxy
-  - libpciaccess
-  - libtirpc
-  - libx11
-  - libxau
-  - libxcb
-  - libxcvt
-  - libxdmcp
-  - libxext
-  - libxfixes
-  - libxfont2
-  - libxshmfence
-  - mesa
-  - nettle
-  - pixman
-  - systemd
-  - xauth
-  - xcb-util
-  - xcb-util-image
-  - xcb-util-keysyms
-  - xcb-util-renderutil
-  - xcb-util-wm
-  - xkbcomp
-  - xkeyboard-config
+    - dbus
+    - libdrm
+    - libepoxy
+    - libpciaccess
+    - libtirpc
+    - libx11
+    - libxau
+    - libxcb
+    - libxcvt
+    - libxdmcp
+    - libxext
+    - libxfixes
+    - libxfont2
+    - libxshmfence
+    - mesa
+    - nettle
+    - pixman
+    - systemd
+    - xauth
+    - xcb-util
+    - xcb-util-image
+    - xcb-util-keysyms
+    - xcb-util-renderutil
+    - xcb-util-wm
+    - xkbcomp
+    - xkeyboard-config
+build:
+    configure: []
+    install: []
+service: null

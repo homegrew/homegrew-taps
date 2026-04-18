@@ -3,29 +3,54 @@ version: 1.52.1-0
 description: Bare libuv bindings for lua
 homepage: https://github.com/luvit/luv
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/luv/blobs/sha256:749819a8255ec6cb1ae287fc3aba617eb990301df4dc89211ce0d8b639f62c0e
-    sha256: 749819a8255ec6cb1ae287fc3aba617eb990301df4dc89211ce0d8b639f62c0e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/luv/blobs/sha256:a643e41957c33342174f7cf205d47b3c1ed10d433b423823f87414cd4eb4d807
-    sha256: a643e41957c33342174f7cf205d47b3c1ed10d433b423823f87414cd4eb4d807
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/luv/blobs/sha256:ece75e8ec4e4de53025c4a2047ad3768e73a6aaa1fb093796158b69db1a9d82c
-    sha256: ece75e8ec4e4de53025c4a2047ad3768e73a6aaa1fb093796158b69db1a9d82c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/luv/blobs/sha256:fa89efaaf09f951f575767cb079b4da38566e39af1b94fdeee0b9c81b13dc6a8
-    sha256: fa89efaaf09f951f575767cb079b4da38566e39af1b94fdeee0b9c81b13dc6a8
-source:
-  url: https://github.com/luvit/luv/archive/refs/tags/1.52.1-0.tar.gz
-  sha256: e8b8774b31d24be4fcf2b021b90599ecccc8e476c61efcc59c3c10cab813a885
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libuv
+    - libuv
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/luv/blobs/sha256:a643e41957c33342174f7cf205d47b3c1ed10d433b423823f87414cd4eb4d807
+        sha256: a643e41957c33342174f7cf205d47b3c1ed10d433b423823f87414cd4eb4d807
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/luv/blobs/sha256:749819a8255ec6cb1ae287fc3aba617eb990301df4dc89211ce0d8b639f62c0e
+        sha256: 749819a8255ec6cb1ae287fc3aba617eb990301df4dc89211ce0d8b639f62c0e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/luv/blobs/sha256:ece75e8ec4e4de53025c4a2047ad3768e73a6aaa1fb093796158b69db1a9d82c
+        sha256: ece75e8ec4e4de53025c4a2047ad3768e73a6aaa1fb093796158b69db1a9d82c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/luv/blobs/sha256:fa89efaaf09f951f575767cb079b4da38566e39af1b94fdeee0b9c81b13dc6a8
+        sha256: fa89efaaf09f951f575767cb079b4da38566e39af1b94fdeee0b9c81b13dc6a8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/luvit/luv/archive/refs/tags/1.52.1-0.tar.gz
+    sha256: e8b8774b31d24be4fcf2b021b90599ecccc8e476c61efcc59c3c10cab813a885
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - lua
-  - luajit
+    - cmake
+    - lua
+    - luajit
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

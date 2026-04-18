@@ -1,27 +1,53 @@
 name: pgrok
 version: 1.5.0
-description: "Poor man's ngrok, multi-tenant HTTP/TCP reverse tunnel solution"
+description: Poor man's ngrok, multi-tenant HTTP/TCP reverse tunnel solution
 homepage: https://github.com/pgrok/pgrok
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgrok/blobs/sha256:cf15fcb2cdcc2f5be2f04781be608941f86663e90d3ee1ff48d970281263aa8c
-    sha256: cf15fcb2cdcc2f5be2f04781be608941f86663e90d3ee1ff48d970281263aa8c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgrok/blobs/sha256:68efbbd93c7aae98d6cc6a0c15f8cd4dce013eac925aa8d482eb2276e878ad32
-    sha256: 68efbbd93c7aae98d6cc6a0c15f8cd4dce013eac925aa8d482eb2276e878ad32
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgrok/blobs/sha256:2e303842681daf112dc720aaa3d091096b5e5cb0bd6771a42ad9d84ea631487e
-    sha256: 2e303842681daf112dc720aaa3d091096b5e5cb0bd6771a42ad9d84ea631487e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgrok/blobs/sha256:419e8c45a8430f1b6c793a8e7ad3e5dff7d539e3ff19b6abb8ffacdaca86fb45
-    sha256: 419e8c45a8430f1b6c793a8e7ad3e5dff7d539e3ff19b6abb8ffacdaca86fb45
-source:
-  url: https://github.com/pgrok/pgrok/archive/refs/tags/v1.5.0.tar.gz
-  sha256: e0dac3df791e9727c850a18874c7888544b548345b27a1a94914fcfc10f05e9c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgrok/blobs/sha256:68efbbd93c7aae98d6cc6a0c15f8cd4dce013eac925aa8d482eb2276e878ad32
+        sha256: 68efbbd93c7aae98d6cc6a0c15f8cd4dce013eac925aa8d482eb2276e878ad32
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgrok/blobs/sha256:cf15fcb2cdcc2f5be2f04781be608941f86663e90d3ee1ff48d970281263aa8c
+        sha256: cf15fcb2cdcc2f5be2f04781be608941f86663e90d3ee1ff48d970281263aa8c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgrok/blobs/sha256:2e303842681daf112dc720aaa3d091096b5e5cb0bd6771a42ad9d84ea631487e
+        sha256: 2e303842681daf112dc720aaa3d091096b5e5cb0bd6771a42ad9d84ea631487e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgrok/blobs/sha256:419e8c45a8430f1b6c793a8e7ad3e5dff7d539e3ff19b6abb8ffacdaca86fb45
+        sha256: 419e8c45a8430f1b6c793a8e7ad3e5dff7d539e3ff19b6abb8ffacdaca86fb45
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pgrok/pgrok/archive/refs/tags/v1.5.0.tar.gz
+    sha256: e0dac3df791e9727c850a18874c7888544b548345b27a1a94914fcfc10f05e9c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

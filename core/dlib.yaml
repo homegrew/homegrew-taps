@@ -3,29 +3,54 @@ version: 20.0.1
 description: C++ library for machine learning
 homepage: https://dlib.net/
 license: BSL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dlib/blobs/sha256:4f4d8d0c1c9c9f4d3d14efebb75b32d4cc826bc4eb78bf8325e45197b4db38cf
-    sha256: 4f4d8d0c1c9c9f4d3d14efebb75b32d4cc826bc4eb78bf8325e45197b4db38cf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dlib/blobs/sha256:44dc2983b9544e2ba43cece99e7cb410d3e3ff605df6946f49ae4120f3df62d8
-    sha256: 44dc2983b9544e2ba43cece99e7cb410d3e3ff605df6946f49ae4120f3df62d8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dlib/blobs/sha256:83a6c33227e47dfa2207a9d9125e76c3ae689955f7d33e1e51b9e2bd45495fcc
-    sha256: 83a6c33227e47dfa2207a9d9125e76c3ae689955f7d33e1e51b9e2bd45495fcc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dlib/blobs/sha256:6fad7734cdad16a072ad4134a8c5ee14c031627a89fde3d6f51e866b589f32df
-    sha256: 6fad7734cdad16a072ad4134a8c5ee14c031627a89fde3d6f51e866b589f32df
-source:
-  url: https://github.com/davisking/dlib/archive/refs/tags/v20.0.1.tar.gz
-  sha256: dab5b4ec4b68bd7dc128a1fb7900723f89d2da107e44cd5def7d38fc57252a9d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - libpng
-  - openblas
+    - jpeg-turbo
+    - libpng
+    - openblas
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dlib/blobs/sha256:44dc2983b9544e2ba43cece99e7cb410d3e3ff605df6946f49ae4120f3df62d8
+        sha256: 44dc2983b9544e2ba43cece99e7cb410d3e3ff605df6946f49ae4120f3df62d8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dlib/blobs/sha256:4f4d8d0c1c9c9f4d3d14efebb75b32d4cc826bc4eb78bf8325e45197b4db38cf
+        sha256: 4f4d8d0c1c9c9f4d3d14efebb75b32d4cc826bc4eb78bf8325e45197b4db38cf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dlib/blobs/sha256:83a6c33227e47dfa2207a9d9125e76c3ae689955f7d33e1e51b9e2bd45495fcc
+        sha256: 83a6c33227e47dfa2207a9d9125e76c3ae689955f7d33e1e51b9e2bd45495fcc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dlib/blobs/sha256:6fad7734cdad16a072ad4134a8c5ee14c031627a89fde3d6f51e866b589f32df
+        sha256: 6fad7734cdad16a072ad4134a8c5ee14c031627a89fde3d6f51e866b589f32df
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/davisking/dlib/archive/refs/tags/v20.0.1.tar.gz
+    sha256: dab5b4ec4b68bd7dc128a1fb7900723f89d2da107e44cd5def7d38fc57252a9d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

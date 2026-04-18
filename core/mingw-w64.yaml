@@ -3,39 +3,63 @@ version: 14.0.0
 description: Minimalist GNU for Windows and GCC cross-compilers
 homepage: https://sourceforge.net/projects/mingw-w64/
 license: ZPL-2.1 AND (GPL-2.0-or-later AND GPL-3.0-or-later AND LGPL-2.0-or-later AND LGPL-3.0-only) AND (GPL-3.0-or-later WITH GCC-exception-3.1)
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mingw-w64/blobs/sha256:298d5ca67d497f70b61351ff954b3b3a6384d10d7e23fc35948f227821d730c2
-    sha256: 298d5ca67d497f70b61351ff954b3b3a6384d10d7e23fc35948f227821d730c2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mingw-w64/blobs/sha256:fb9719a502355193cf828cb626131890c9e148d3985099d3b0abe6815876a0df
-    sha256: fb9719a502355193cf828cb626131890c9e148d3985099d3b0abe6815876a0df
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mingw-w64/blobs/sha256:27bc6a705a7b8ac8e82b83746dd330d98917bf6741ec3dff8a343558f41f2572
-    sha256: 27bc6a705a7b8ac8e82b83746dd330d98917bf6741ec3dff8a343558f41f2572
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mingw-w64/blobs/sha256:26f0d10101da67e975b32656345e0bd63affcca8f33f088dd8f3078d66046217
-    sha256: 26f0d10101da67e975b32656345e0bd63affcca8f33f088dd8f3078d66046217
-source:
-  url: https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v14.0.0.tar.bz2
-  sha256: 6eaf921d9eb987d3820b364ea9775bc19b965ec81490b6fdd716526c28e1995c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - isl
-  - libmpc
-  - mpfr
-  - zstd
+    - gmp
+    - isl
+    - libmpc
+    - mpfr
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mingw-w64/blobs/sha256:fb9719a502355193cf828cb626131890c9e148d3985099d3b0abe6815876a0df
+        sha256: fb9719a502355193cf828cb626131890c9e148d3985099d3b0abe6815876a0df
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mingw-w64/blobs/sha256:298d5ca67d497f70b61351ff954b3b3a6384d10d7e23fc35948f227821d730c2
+        sha256: 298d5ca67d497f70b61351ff954b3b3a6384d10d7e23fc35948f227821d730c2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mingw-w64/blobs/sha256:27bc6a705a7b8ac8e82b83746dd330d98917bf6741ec3dff8a343558f41f2572
+        sha256: 27bc6a705a7b8ac8e82b83746dd330d98917bf6741ec3dff8a343558f41f2572
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mingw-w64/blobs/sha256:26f0d10101da67e975b32656345e0bd63affcca8f33f088dd8f3078d66046217
+        sha256: 26f0d10101da67e975b32656345e0bd63affcca8f33f088dd8f3078d66046217
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v14.0.0.tar.bz2
+    sha256: 6eaf921d9eb987d3820b364ea9775bc19b965ec81490b6fdd716526c28e1995c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - texinfo
+    - pkgconf
+    - texinfo
 linux_dependencies:
-  - gmp
-  - isl
-  - libmpc
-  - mpfr
-  - zlib-ng-compat
-  - zstd
+    - gmp
+    - isl
+    - libmpc
+    - mpfr
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

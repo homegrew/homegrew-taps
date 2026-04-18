@@ -1,30 +1,55 @@
 name: fuego
-version: 1.1
+version: "1.1"
 description: Collection of C++ libraries for the game of Go
 homepage: https://fuego.sourceforge.net/
 license: GPL-3.0-only OR LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fuego/blobs/sha256:3985560eb7b1c53182f39df987972bbcd06bd8bcd6c16eb609623a43eb19de2f
-    sha256: 3985560eb7b1c53182f39df987972bbcd06bd8bcd6c16eb609623a43eb19de2f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fuego/blobs/sha256:edb923e3b530b4a3c54c92ef05cc4166747173fdf04495e7d1ee6583e09dbf0e
-    sha256: edb923e3b530b4a3c54c92ef05cc4166747173fdf04495e7d1ee6583e09dbf0e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fuego/blobs/sha256:af8c62d00784576b78a9dd73f796cde7bfc29ffde66cd17c437eb3759630d013
-    sha256: af8c62d00784576b78a9dd73f796cde7bfc29ffde66cd17c437eb3759630d013
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fuego/blobs/sha256:7608d687864d3edb733ad68725d273f05da35477398bbcd4ada9d468e669be0c
-    sha256: 7608d687864d3edb733ad68725d273f05da35477398bbcd4ada9d468e669be0c
-source:
-  url: https://svn.code.sf.net/p/fuego/code/trunk
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
+    - boost
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fuego/blobs/sha256:edb923e3b530b4a3c54c92ef05cc4166747173fdf04495e7d1ee6583e09dbf0e
+        sha256: edb923e3b530b4a3c54c92ef05cc4166747173fdf04495e7d1ee6583e09dbf0e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fuego/blobs/sha256:3985560eb7b1c53182f39df987972bbcd06bd8bcd6c16eb609623a43eb19de2f
+        sha256: 3985560eb7b1c53182f39df987972bbcd06bd8bcd6c16eb609623a43eb19de2f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fuego/blobs/sha256:af8c62d00784576b78a9dd73f796cde7bfc29ffde66cd17c437eb3759630d013
+        sha256: af8c62d00784576b78a9dd73f796cde7bfc29ffde66cd17c437eb3759630d013
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fuego/blobs/sha256:7608d687864d3edb733ad68725d273f05da35477398bbcd4ada9d468e669be0c
+        sha256: 7608d687864d3edb733ad68725d273f05da35477398bbcd4ada9d468e669be0c
+        sha512: ""
+        signature: ""
+source:
+    url: https://svn.code.sf.net/p/fuego/code/trunk
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

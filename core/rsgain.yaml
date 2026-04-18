@@ -1,34 +1,59 @@
 name: rsgain
-version: 3.7
+version: "3.7"
 description: ReplayGain 2.0 tagging utility
 homepage: https://github.com/complexlogic/rsgain
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rsgain/blobs/sha256:d7dd8c1b32ed33a19ad72eca9c4165d9ad178271c838410f3e04c954dbe6976c
-    sha256: d7dd8c1b32ed33a19ad72eca9c4165d9ad178271c838410f3e04c954dbe6976c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rsgain/blobs/sha256:12f667a741ea136b0317971f90de1ef5f51f7a3a9f02711441b86365d2605793
-    sha256: 12f667a741ea136b0317971f90de1ef5f51f7a3a9f02711441b86365d2605793
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rsgain/blobs/sha256:c79cdae683537f6cc24fb7d42d391c69356164732cf8e2004e2924114adeaa8e
-    sha256: c79cdae683537f6cc24fb7d42d391c69356164732cf8e2004e2924114adeaa8e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rsgain/blobs/sha256:c31ef468ac95b1de16149fead85fedb0876036eaf449b746abc6b7d6cd897fe3
-    sha256: c31ef468ac95b1de16149fead85fedb0876036eaf449b746abc6b7d6cd897fe3
-source:
-  url: https://github.com/complexlogic/rsgain/archive/refs/tags/v3.7.tar.gz
-  sha256: ef383af1adbc01a6e858b45b67b632168ef7c1ee8c2f8267630cbd0f9bf8498e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
-  - fmt
-  - inih
-  - libebur128
-  - taglib
+    - ffmpeg
+    - fmt
+    - inih
+    - libebur128
+    - taglib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rsgain/blobs/sha256:12f667a741ea136b0317971f90de1ef5f51f7a3a9f02711441b86365d2605793
+        sha256: 12f667a741ea136b0317971f90de1ef5f51f7a3a9f02711441b86365d2605793
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rsgain/blobs/sha256:d7dd8c1b32ed33a19ad72eca9c4165d9ad178271c838410f3e04c954dbe6976c
+        sha256: d7dd8c1b32ed33a19ad72eca9c4165d9ad178271c838410f3e04c954dbe6976c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rsgain/blobs/sha256:c79cdae683537f6cc24fb7d42d391c69356164732cf8e2004e2924114adeaa8e
+        sha256: c79cdae683537f6cc24fb7d42d391c69356164732cf8e2004e2924114adeaa8e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rsgain/blobs/sha256:c31ef468ac95b1de16149fead85fedb0876036eaf449b746abc6b7d6cd897fe3
+        sha256: c31ef468ac95b1de16149fead85fedb0876036eaf449b746abc6b7d6cd897fe3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/complexlogic/rsgain/archive/refs/tags/v3.7.tar.gz
+    sha256: ef383af1adbc01a6e858b45b67b632168ef7c1ee8c2f8267630cbd0f9bf8498e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

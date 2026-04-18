@@ -3,34 +3,58 @@ version: 3.1.0
 description: Searches a binary image for embedded files and executable code
 homepage: https://github.com/ReFirmLabs/binwalk
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/binwalk/blobs/sha256:11b3d0c518f81eaba097392205c002a136e25b73a81ec35551b9ca1e3858c700
-    sha256: 11b3d0c518f81eaba097392205c002a136e25b73a81ec35551b9ca1e3858c700
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/binwalk/blobs/sha256:3666d1ed2f81484d360d03bba8eb74a5175dd5a0461175c20bf1aa559e6add6f
-    sha256: 3666d1ed2f81484d360d03bba8eb74a5175dd5a0461175c20bf1aa559e6add6f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/binwalk/blobs/sha256:9bad450fef7ba5832e71804dc11fcb87d817fabbbf735c2b1dc9fa6c508a1090
-    sha256: 9bad450fef7ba5832e71804dc11fcb87d817fabbbf735c2b1dc9fa6c508a1090
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/binwalk/blobs/sha256:c28f00bf24601ddcb037e1822dbea082dceda5f26ac9a152e11d78532a488b5b
-    sha256: c28f00bf24601ddcb037e1822dbea082dceda5f26ac9a152e11d78532a488b5b
-source:
-  url: https://github.com/ReFirmLabs/binwalk/archive/refs/tags/v3.1.0.tar.gz
-  sha256: 06f595719417b70a592580258ed980237892eadc198e02363201abe6ca59e49a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - p7zip
-  - xz
+    - p7zip
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/binwalk/blobs/sha256:3666d1ed2f81484d360d03bba8eb74a5175dd5a0461175c20bf1aa559e6add6f
+        sha256: 3666d1ed2f81484d360d03bba8eb74a5175dd5a0461175c20bf1aa559e6add6f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/binwalk/blobs/sha256:11b3d0c518f81eaba097392205c002a136e25b73a81ec35551b9ca1e3858c700
+        sha256: 11b3d0c518f81eaba097392205c002a136e25b73a81ec35551b9ca1e3858c700
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/binwalk/blobs/sha256:9bad450fef7ba5832e71804dc11fcb87d817fabbbf735c2b1dc9fa6c508a1090
+        sha256: 9bad450fef7ba5832e71804dc11fcb87d817fabbbf735c2b1dc9fa6c508a1090
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/binwalk/blobs/sha256:c28f00bf24601ddcb037e1822dbea082dceda5f26ac9a152e11d78532a488b5b
+        sha256: c28f00bf24601ddcb037e1822dbea082dceda5f26ac9a152e11d78532a488b5b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ReFirmLabs/binwalk/archive/refs/tags/v3.1.0.tar.gz
+    sha256: 06f595719417b70a592580258ed980237892eadc198e02363201abe6ca59e49a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - fontconfig
-  - freetype
-  - p7zip
-  - xz
+    - fontconfig
+    - freetype
+    - p7zip
+    - xz
+build:
+    configure: []
+    install: []
+service: null

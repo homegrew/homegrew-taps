@@ -3,28 +3,53 @@ version: r475
 description: Audio compression format and tools
 homepage: https://www.musepack.net/
 license: BSD-3-Clause AND LGPL-2.1-or-later AND GPL-2.0-or-later AND Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/musepack/blobs/sha256:545fb3f5f74e2fc5acbbbfbad61b0dfb6c261cd7dbd26f998c1931c939086bd0
-    sha256: 545fb3f5f74e2fc5acbbbfbad61b0dfb6c261cd7dbd26f998c1931c939086bd0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/musepack/blobs/sha256:6a7652681b271cbcffdd9ac69f7394ee9c51460bc2efaca5ed684913b1b22199
-    sha256: 6a7652681b271cbcffdd9ac69f7394ee9c51460bc2efaca5ed684913b1b22199
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/musepack/blobs/sha256:a0d6143e42529aa943d6bd1ecebf0e1d0c85576eaab847692c9588a37a0ce1f7
-    sha256: a0d6143e42529aa943d6bd1ecebf0e1d0c85576eaab847692c9588a37a0ce1f7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/musepack/blobs/sha256:0e70b9117f455bbd6f17bd6d2467c18f55067b51933a71b15b07b713c30687ac
-    sha256: 0e70b9117f455bbd6f17bd6d2467c18f55067b51933a71b15b07b713c30687ac
-source:
-  url: https://files.musepack.net/source/musepack_src_r475.tar.gz
-  sha256: a4b1742f997f83e1056142d556a8c20845ba764b70365ff9ccf2e3f81c427b2b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libcuefile
-  - libreplaygain
+    - libcuefile
+    - libreplaygain
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/musepack/blobs/sha256:6a7652681b271cbcffdd9ac69f7394ee9c51460bc2efaca5ed684913b1b22199
+        sha256: 6a7652681b271cbcffdd9ac69f7394ee9c51460bc2efaca5ed684913b1b22199
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/musepack/blobs/sha256:545fb3f5f74e2fc5acbbbfbad61b0dfb6c261cd7dbd26f998c1931c939086bd0
+        sha256: 545fb3f5f74e2fc5acbbbfbad61b0dfb6c261cd7dbd26f998c1931c939086bd0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/musepack/blobs/sha256:a0d6143e42529aa943d6bd1ecebf0e1d0c85576eaab847692c9588a37a0ce1f7
+        sha256: a0d6143e42529aa943d6bd1ecebf0e1d0c85576eaab847692c9588a37a0ce1f7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/musepack/blobs/sha256:0e70b9117f455bbd6f17bd6d2467c18f55067b51933a71b15b07b713c30687ac
+        sha256: 0e70b9117f455bbd6f17bd6d2467c18f55067b51933a71b15b07b713c30687ac
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.musepack.net/source/musepack_src_r475.tar.gz
+    sha256: a4b1742f997f83e1056142d556a8c20845ba764b70365ff9ccf2e3f81c427b2b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

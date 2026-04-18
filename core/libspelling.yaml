@@ -3,49 +3,73 @@ version: 0.4.10
 description: Spellcheck library for GTK 4
 homepage: https://gitlab.gnome.org/GNOME/libspelling
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:11153634aad81e3844d252f6d844a3959243360ff7a825594109d096512f6f97
-    sha256: 11153634aad81e3844d252f6d844a3959243360ff7a825594109d096512f6f97
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:b2f39ab29923d2773c74bc2065abf8cfbb517a7c5eb4f52057e21f141f194882
-    sha256: b2f39ab29923d2773c74bc2065abf8cfbb517a7c5eb4f52057e21f141f194882
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:547925f26bc3a232e3774dd75c229b3b155691982c3db5a3e9082dc88791ed74
-    sha256: 547925f26bc3a232e3774dd75c229b3b155691982c3db5a3e9082dc88791ed74
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:6f9877ad8aa58cce8bfeb6c6cd4c7e7d0753afefcf3d428bd2a8d019f9c5180e
-    sha256: 6f9877ad8aa58cce8bfeb6c6cd4c7e7d0753afefcf3d428bd2a8d019f9c5180e
-source:
-  url: https://gitlab.gnome.org/GNOME/libspelling/-/archive/0.4.10/libspelling-0.4.10.tar.bz2
-  sha256: d6388f3dc207269743ec920b14bb3be55ab4bd97a18e167b52a09cec0554dc2b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - enchant
-  - glib
-  - gtk4
-  - gtksourceview5
-  - icu4c@78
-  - pango
-  - cairo
-  - gdk-pixbuf
-  - gettext
-  - graphene
-  - harfbuzz
+    - enchant
+    - glib
+    - gtk4
+    - gtksourceview5
+    - icu4c@78
+    - pango
+    - cairo
+    - gdk-pixbuf
+    - gettext
+    - graphene
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:b2f39ab29923d2773c74bc2065abf8cfbb517a7c5eb4f52057e21f141f194882
+        sha256: b2f39ab29923d2773c74bc2065abf8cfbb517a7c5eb4f52057e21f141f194882
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:11153634aad81e3844d252f6d844a3959243360ff7a825594109d096512f6f97
+        sha256: 11153634aad81e3844d252f6d844a3959243360ff7a825594109d096512f6f97
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:547925f26bc3a232e3774dd75c229b3b155691982c3db5a3e9082dc88791ed74
+        sha256: 547925f26bc3a232e3774dd75c229b3b155691982c3db5a3e9082dc88791ed74
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libspelling/blobs/sha256:6f9877ad8aa58cce8bfeb6c6cd4c7e7d0753afefcf3d428bd2a8d019f9c5180e
+        sha256: 6f9877ad8aa58cce8bfeb6c6cd4c7e7d0753afefcf3d428bd2a8d019f9c5180e
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.gnome.org/GNOME/libspelling/-/archive/0.4.10/libspelling-0.4.10.tar.bz2
+    sha256: d6388f3dc207269743ec920b14bb3be55ab4bd97a18e167b52a09cec0554dc2b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
+    - vala
 linux_dependencies:
-  - enchant
-  - glib
-  - gtk4
-  - gtksourceview5
-  - icu4c@78
-  - pango
-  - sysprof
+    - enchant
+    - glib
+    - gtk4
+    - gtksourceview5
+    - icu4c@78
+    - pango
+    - sysprof
+build:
+    configure: []
+    install: []
+service: null

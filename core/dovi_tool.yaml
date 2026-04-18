@@ -3,30 +3,55 @@ version: 2.3.2
 description: CLI tool for Dolby Vision metadata on video streams
 homepage: https://github.com/quietvoid/dovi_tool/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dovi_tool/blobs/sha256:81c1c94dd315789c85def55bb8fcb7f297be401239e9132f2f4c22baf7009532
-    sha256: 81c1c94dd315789c85def55bb8fcb7f297be401239e9132f2f4c22baf7009532
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dovi_tool/blobs/sha256:39f780763832297e81d97b3d729e4b8505876f10c2892974fc7e45ba2c26eff7
-    sha256: 39f780763832297e81d97b3d729e4b8505876f10c2892974fc7e45ba2c26eff7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dovi_tool/blobs/sha256:97d80749c54d45aa4d0ec45a54ecdb421dd3005b106f86a4412ac23ec9c47bb4
-    sha256: 97d80749c54d45aa4d0ec45a54ecdb421dd3005b106f86a4412ac23ec9c47bb4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dovi_tool/blobs/sha256:c986986476ecea0de572803691294ef2607bd8a963000f088f23ebf7a173fb05
-    sha256: c986986476ecea0de572803691294ef2607bd8a963000f088f23ebf7a173fb05
-source:
-  url: https://github.com/quietvoid/dovi_tool/archive/refs/tags/2.3.2.tar.gz
-  sha256: 8e1ca50219a68ba27a200ea1dd4210a6ef232b5f66d1b6ffc4a8303c87fe16bf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dovi_tool/blobs/sha256:39f780763832297e81d97b3d729e4b8505876f10c2892974fc7e45ba2c26eff7
+        sha256: 39f780763832297e81d97b3d729e4b8505876f10c2892974fc7e45ba2c26eff7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dovi_tool/blobs/sha256:81c1c94dd315789c85def55bb8fcb7f297be401239e9132f2f4c22baf7009532
+        sha256: 81c1c94dd315789c85def55bb8fcb7f297be401239e9132f2f4c22baf7009532
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dovi_tool/blobs/sha256:97d80749c54d45aa4d0ec45a54ecdb421dd3005b106f86a4412ac23ec9c47bb4
+        sha256: 97d80749c54d45aa4d0ec45a54ecdb421dd3005b106f86a4412ac23ec9c47bb4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dovi_tool/blobs/sha256:c986986476ecea0de572803691294ef2607bd8a963000f088f23ebf7a173fb05
+        sha256: c986986476ecea0de572803691294ef2607bd8a963000f088f23ebf7a173fb05
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/quietvoid/dovi_tool/archive/refs/tags/2.3.2.tar.gz
+    sha256: 8e1ca50219a68ba27a200ea1dd4210a6ef232b5f66d1b6ffc4a8303c87fe16bf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cargo-c
-  - pkgconf
-  - rust
+    - cargo-c
+    - pkgconf
+    - rust
 linux_dependencies:
-  - fontconfig
-  - freetype
+    - fontconfig
+    - freetype
+build:
+    configure: []
+    install: []
+service: null

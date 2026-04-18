@@ -3,41 +3,65 @@ version: 3.4.1
 description: Command-line, double-entry accounting tool
 homepage: https://ledger-cli.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:afa0ba3d1ce8b6b36853e2f440429535dbdb0ca7c8a87802ebb4b43238291dc7
-    sha256: afa0ba3d1ce8b6b36853e2f440429535dbdb0ca7c8a87802ebb4b43238291dc7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:2fea951eeccff3bc8ecde0a05f8583bab5d33fbfabf88040476cad0fe940465f
-    sha256: 2fea951eeccff3bc8ecde0a05f8583bab5d33fbfabf88040476cad0fe940465f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:5520b6e7dec3bbb30c4962b507962dc0c0ea3fae89141d4e74497a169b0cf100
-    sha256: 5520b6e7dec3bbb30c4962b507962dc0c0ea3fae89141d4e74497a169b0cf100
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:128c7d8d7ad3481d4f56dba950236df2433e2d07582fa1f0a0ac8e79dcd88543
-    sha256: 128c7d8d7ad3481d4f56dba950236df2433e2d07582fa1f0a0ac8e79dcd88543
-source:
-  url: https://github.com/ledger/ledger/archive/refs/tags/v3.4.1.tar.gz
-  sha256: 1cf012cdc8445cab0efc445064ef9b2d3f46ed0165dae803c40fe3d2b23fdaad
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - gmp
-  - gpgme
-  - gpgmepp
-  - mpfr
-  - python@3.14
-  - libassuan
+    - boost
+    - gmp
+    - gpgme
+    - gpgmepp
+    - mpfr
+    - python@3.14
+    - libassuan
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:2fea951eeccff3bc8ecde0a05f8583bab5d33fbfabf88040476cad0fe940465f
+        sha256: 2fea951eeccff3bc8ecde0a05f8583bab5d33fbfabf88040476cad0fe940465f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:afa0ba3d1ce8b6b36853e2f440429535dbdb0ca7c8a87802ebb4b43238291dc7
+        sha256: afa0ba3d1ce8b6b36853e2f440429535dbdb0ca7c8a87802ebb4b43238291dc7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:5520b6e7dec3bbb30c4962b507962dc0c0ea3fae89141d4e74497a169b0cf100
+        sha256: 5520b6e7dec3bbb30c4962b507962dc0c0ea3fae89141d4e74497a169b0cf100
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:128c7d8d7ad3481d4f56dba950236df2433e2d07582fa1f0a0ac8e79dcd88543
+        sha256: 128c7d8d7ad3481d4f56dba950236df2433e2d07582fa1f0a0ac8e79dcd88543
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ledger/ledger/archive/refs/tags/v3.4.1.tar.gz
+    sha256: 1cf012cdc8445cab0efc445064ef9b2d3f46ed0165dae803c40fe3d2b23fdaad
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - texinfo
+    - cmake
+    - texinfo
 linux_dependencies:
-  - boost
-  - gmp
-  - gpgme
-  - gpgmepp
-  - mpfr
-  - python@3.14
+    - boost
+    - gmp
+    - gpgme
+    - gpgmepp
+    - mpfr
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

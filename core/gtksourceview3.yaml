@@ -3,47 +3,71 @@ version: 3.24.11
 description: Text view with syntax, undo/redo, and text marks
 homepage: https://projects.gnome.org/gtksourceview/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:72ddfb15569484b9703111b8e49c012ef5b58ef5e13c528d7b69773e1033826e
-    sha256: 72ddfb15569484b9703111b8e49c012ef5b58ef5e13c528d7b69773e1033826e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:0f7bc2f472cdfcc84b6010bf32748e1244e695b899d946d8b49513fac2907c7b
-    sha256: 0f7bc2f472cdfcc84b6010bf32748e1244e695b899d946d8b49513fac2907c7b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:c7614f41dcc75bd7ecd2b004547af214c35199b55d9aa0e1040f57239938f03c
-    sha256: c7614f41dcc75bd7ecd2b004547af214c35199b55d9aa0e1040f57239938f03c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:e2c6ba8b631090fdd53be054401f3446d36c4efeb4c5032e40304c92cad14dee
-    sha256: e2c6ba8b631090fdd53be054401f3446d36c4efeb4c5032e40304c92cad14dee
-source:
-  url: https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz
-  sha256: 691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - at-spi2-core
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - pango
-  - gettext
-  - harfbuzz
+    - at-spi2-core
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - pango
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:0f7bc2f472cdfcc84b6010bf32748e1244e695b899d946d8b49513fac2907c7b
+        sha256: 0f7bc2f472cdfcc84b6010bf32748e1244e695b899d946d8b49513fac2907c7b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:72ddfb15569484b9703111b8e49c012ef5b58ef5e13c528d7b69773e1033826e
+        sha256: 72ddfb15569484b9703111b8e49c012ef5b58ef5e13c528d7b69773e1033826e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:c7614f41dcc75bd7ecd2b004547af214c35199b55d9aa0e1040f57239938f03c
+        sha256: c7614f41dcc75bd7ecd2b004547af214c35199b55d9aa0e1040f57239938f03c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:e2c6ba8b631090fdd53be054401f3446d36c4efeb4c5032e40304c92cad14dee
+        sha256: e2c6ba8b631090fdd53be054401f3446d36c4efeb4c5032e40304c92cad14dee
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz
+    sha256: 691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - pkgconf
-  - vala
-  - autoconf
-  - automake
-  - gtk-doc
-  - libtool
+    - gobject-introspection
+    - pkgconf
+    - vala
+    - autoconf
+    - automake
+    - gtk-doc
+    - libtool
 linux_dependencies:
-  - at-spi2-core
-  - cairo
-  - gdk-pixbuf
-  - glib
-  - gtk+3
-  - pango
+    - at-spi2-core
+    - cairo
+    - gdk-pixbuf
+    - glib
+    - gtk+3
+    - pango
+build:
+    configure: []
+    install: []
+service: null

@@ -1,30 +1,55 @@
 name: osmfilter
-version: 0.9
+version: "0.9"
 description: Command-line tool to filter OpenStreetMap files for specific tags
 homepage: https://wiki.openstreetmap.org/wiki/Osmfilter
 license: AGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/osmfilter/blobs/sha256:64388c3368efe673234fd5d7990c0f791df04fb1622c27f347332e56d3fc44ea
-    sha256: 64388c3368efe673234fd5d7990c0f791df04fb1622c27f347332e56d3fc44ea
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/osmfilter/blobs/sha256:ce176d1a39ea1d4ef3807e937f6ade079256b6925db43c1474f0a3cedf3c917c
-    sha256: ce176d1a39ea1d4ef3807e937f6ade079256b6925db43c1474f0a3cedf3c917c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/osmfilter/blobs/sha256:aa55d22946aab558581f444b82e9695ce06f3fe7e550da005447ccf1de942078
-    sha256: aa55d22946aab558581f444b82e9695ce06f3fe7e550da005447ccf1de942078
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/osmfilter/blobs/sha256:22da060bca2c2eb0dacadf143c8152c9722b1b2f15418483e51c8f48390fa85d
-    sha256: 22da060bca2c2eb0dacadf143c8152c9722b1b2f15418483e51c8f48390fa85d
-source:
-  url: https://gitlab.com/osm-c-tools/osmctools.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/osmfilter/blobs/sha256:ce176d1a39ea1d4ef3807e937f6ade079256b6925db43c1474f0a3cedf3c917c
+        sha256: ce176d1a39ea1d4ef3807e937f6ade079256b6925db43c1474f0a3cedf3c917c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/osmfilter/blobs/sha256:64388c3368efe673234fd5d7990c0f791df04fb1622c27f347332e56d3fc44ea
+        sha256: 64388c3368efe673234fd5d7990c0f791df04fb1622c27f347332e56d3fc44ea
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/osmfilter/blobs/sha256:aa55d22946aab558581f444b82e9695ce06f3fe7e550da005447ccf1de942078
+        sha256: aa55d22946aab558581f444b82e9695ce06f3fe7e550da005447ccf1de942078
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/osmfilter/blobs/sha256:22da060bca2c2eb0dacadf143c8152c9722b1b2f15418483e51c8f48390fa85d
+        sha256: 22da060bca2c2eb0dacadf143c8152c9722b1b2f15418483e51c8f48390fa85d
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.com/osm-c-tools/osmctools.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -1,37 +1,62 @@
 name: xroar
-version: 1.10
+version: "1.10"
 description: Dragon and Tandy 8-bit computer emulator
 homepage: https://www.6809.org.uk/xroar/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xroar/blobs/sha256:52681ca01fcb75069b25d62f754db55d9c1968ba97302d808aa0819077b24091
-    sha256: 52681ca01fcb75069b25d62f754db55d9c1968ba97302d808aa0819077b24091
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xroar/blobs/sha256:d1f01e6bbabcb9330824fb1c5a002d4bd9ec806b3a95b4d58e64ddd52ea94860
-    sha256: d1f01e6bbabcb9330824fb1c5a002d4bd9ec806b3a95b4d58e64ddd52ea94860
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xroar/blobs/sha256:e47407779ad729169ce38b140396558791b16ff01f6e2f1b32f37f70720c26ba
-    sha256: e47407779ad729169ce38b140396558791b16ff01f6e2f1b32f37f70720c26ba
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xroar/blobs/sha256:f0c1417b6d9167ea76ca199b4b29a041d964180753e51c42a2450af222d445be
-    sha256: f0c1417b6d9167ea76ca199b4b29a041d964180753e51c42a2450af222d445be
-source:
-  url: https://www.6809.org.uk/xroar/dl/xroar-1.10.tar.gz
-  sha256: b16b83f75a55e685658155e13ca393d5bc9553d120dd78a76febdd4a54ff9d58
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpng
-  - libsndfile
-  - sdl2
+    - libpng
+    - libsndfile
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xroar/blobs/sha256:d1f01e6bbabcb9330824fb1c5a002d4bd9ec806b3a95b4d58e64ddd52ea94860
+        sha256: d1f01e6bbabcb9330824fb1c5a002d4bd9ec806b3a95b4d58e64ddd52ea94860
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xroar/blobs/sha256:52681ca01fcb75069b25d62f754db55d9c1968ba97302d808aa0819077b24091
+        sha256: 52681ca01fcb75069b25d62f754db55d9c1968ba97302d808aa0819077b24091
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xroar/blobs/sha256:e47407779ad729169ce38b140396558791b16ff01f6e2f1b32f37f70720c26ba
+        sha256: e47407779ad729169ce38b140396558791b16ff01f6e2f1b32f37f70720c26ba
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xroar/blobs/sha256:f0c1417b6d9167ea76ca199b4b29a041d964180753e51c42a2450af222d445be
+        sha256: f0c1417b6d9167ea76ca199b4b29a041d964180753e51c42a2450af222d445be
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.6809.org.uk/xroar/dl/xroar-1.10.tar.gz
+    sha256: b16b83f75a55e685658155e13ca393d5bc9553d120dd78a76febdd4a54ff9d58
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - alsa-lib
-  - libpng
-  - libsndfile
-  - mesa
-  - pulseaudio
-  - sdl2
-  - zlib-ng-compat
+    - alsa-lib
+    - libpng
+    - libsndfile
+    - mesa
+    - pulseaudio
+    - sdl2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

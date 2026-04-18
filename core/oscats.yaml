@@ -1,34 +1,58 @@
 name: oscats
-version: 0.6
+version: "0.6"
 description: Computerized adaptive testing system
 homepage: https://code.google.com/archive/p/oscats/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/oscats/blobs/sha256:35dc1e697fe94c6ceab3be777ef3aa53ec83df8451739125105a4fa5e24e5fd7
-    sha256: 35dc1e697fe94c6ceab3be777ef3aa53ec83df8451739125105a4fa5e24e5fd7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/oscats/blobs/sha256:13bd95cd190928092251cd826497867f03f36d6a3f4f1deee6e00577c2bb4c23
-    sha256: 13bd95cd190928092251cd826497867f03f36d6a3f4f1deee6e00577c2bb4c23
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/oscats/blobs/sha256:cea14d82ea0d9f7fea63cbd5364ccd2a85d0d8b8e02a498904b3f1bec140712c
-    sha256: cea14d82ea0d9f7fea63cbd5364ccd2a85d0d8b8e02a498904b3f1bec140712c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/oscats/blobs/sha256:5455564ddd14e3caddfc1af6a1f7440daf719e7446c51a0f3beefab3088ce053
-    sha256: 5455564ddd14e3caddfc1af6a1f7440daf719e7446c51a0f3beefab3088ce053
-source:
-  url: https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/oscats/oscats-0.6.tar.gz
-  sha256: 2f7c88cdab6a2106085f7a3e5b1073c74f7d633728c76bd73efba5dc5657a604
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gsl
-  - gettext
+    - glib
+    - gsl
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/oscats/blobs/sha256:13bd95cd190928092251cd826497867f03f36d6a3f4f1deee6e00577c2bb4c23
+        sha256: 13bd95cd190928092251cd826497867f03f36d6a3f4f1deee6e00577c2bb4c23
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/oscats/blobs/sha256:35dc1e697fe94c6ceab3be777ef3aa53ec83df8451739125105a4fa5e24e5fd7
+        sha256: 35dc1e697fe94c6ceab3be777ef3aa53ec83df8451739125105a4fa5e24e5fd7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/oscats/blobs/sha256:cea14d82ea0d9f7fea63cbd5364ccd2a85d0d8b8e02a498904b3f1bec140712c
+        sha256: cea14d82ea0d9f7fea63cbd5364ccd2a85d0d8b8e02a498904b3f1bec140712c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/oscats/blobs/sha256:5455564ddd14e3caddfc1af6a1f7440daf719e7446c51a0f3beefab3088ce053
+        sha256: 5455564ddd14e3caddfc1af6a1f7440daf719e7446c51a0f3beefab3088ce053
+        sha512: ""
+        signature: ""
+source:
+    url: https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/oscats/oscats-0.6.tar.gz
+    sha256: 2f7c88cdab6a2106085f7a3e5b1073c74f7d633728c76bd73efba5dc5657a604
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - glib
-  - gsl
+    - glib
+    - gsl
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,52 @@ version: 3.0.77
 description: Generate clients, server stubs, and docs from an OpenAPI spec
 homepage: https://swagger.io/tools/swagger-codegen/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/swagger-codegen/blobs/sha256:e7494d145a4cfd809b2e0ea179e8a096f8677f69dc15c783b4cec42d63ee23ea
-    sha256: e7494d145a4cfd809b2e0ea179e8a096f8677f69dc15c783b4cec42d63ee23ea
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/swagger-codegen/blobs/sha256:54a512516e1b285952b5fca3fcc519f217d992593422f1d7ff8fb76040dc57fd
-    sha256: 54a512516e1b285952b5fca3fcc519f217d992593422f1d7ff8fb76040dc57fd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/swagger-codegen/blobs/sha256:554ce515903dee75a1b28d9180993b60f20d555466a986d3c706a43090d7d8af
-    sha256: 554ce515903dee75a1b28d9180993b60f20d555466a986d3c706a43090d7d8af
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/swagger-codegen/blobs/sha256:88989b571e7712f32b3adc8e9e3518933393225184f870e663a4660075a91213
-    sha256: 88989b571e7712f32b3adc8e9e3518933393225184f870e663a4660075a91213
-source:
-  url: https://github.com/swagger-api/swagger-codegen/archive/refs/tags/v3.0.77.tar.gz
-  sha256: 0bfe29217773f4b64f516867ff421e11ec427b93d5506967751a948cddb73ac4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openjdk
+    - openjdk
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/swagger-codegen/blobs/sha256:54a512516e1b285952b5fca3fcc519f217d992593422f1d7ff8fb76040dc57fd
+        sha256: 54a512516e1b285952b5fca3fcc519f217d992593422f1d7ff8fb76040dc57fd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/swagger-codegen/blobs/sha256:e7494d145a4cfd809b2e0ea179e8a096f8677f69dc15c783b4cec42d63ee23ea
+        sha256: e7494d145a4cfd809b2e0ea179e8a096f8677f69dc15c783b4cec42d63ee23ea
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/swagger-codegen/blobs/sha256:554ce515903dee75a1b28d9180993b60f20d555466a986d3c706a43090d7d8af
+        sha256: 554ce515903dee75a1b28d9180993b60f20d555466a986d3c706a43090d7d8af
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/swagger-codegen/blobs/sha256:88989b571e7712f32b3adc8e9e3518933393225184f870e663a4660075a91213
+        sha256: 88989b571e7712f32b3adc8e9e3518933393225184f870e663a4660075a91213
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/swagger-api/swagger-codegen/archive/refs/tags/v3.0.77.tar.gz
+    sha256: 0bfe29217773f4b64f516867ff421e11ec427b93d5506967751a948cddb73ac4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - maven
+    - maven
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

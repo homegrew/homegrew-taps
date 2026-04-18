@@ -3,35 +3,59 @@ version: 0.9.14
 description: Free Scheme implementation supporting R6RS and R7RS
 homepage: https://github.com/ktakashi/sagittarius-scheme
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sagittarius-scheme/blobs/sha256:d503f7f4a9bf5d88253b78a4acca89481bdd7ba73532fb3773b64df7fe60c692
-    sha256: d503f7f4a9bf5d88253b78a4acca89481bdd7ba73532fb3773b64df7fe60c692
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sagittarius-scheme/blobs/sha256:22f6d67387b47bbf00765825ec7712299badd39c15158e6136b305055066e142
-    sha256: 22f6d67387b47bbf00765825ec7712299badd39c15158e6136b305055066e142
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sagittarius-scheme/blobs/sha256:582e0af6f35a245bb4357f06908eb06913f1a1252e0e62980ba43bcd4669a1b5
-    sha256: 582e0af6f35a245bb4357f06908eb06913f1a1252e0e62980ba43bcd4669a1b5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sagittarius-scheme/blobs/sha256:94a20ad75bb3787ac9b9c9244956d13379ce57be536cb35d76a6c6a1a2329a60
-    sha256: 94a20ad75bb3787ac9b9c9244956d13379ce57be536cb35d76a6c6a1a2329a60
-source:
-  url: https://github.com/ktakashi/sagittarius-scheme/releases/download/v0.9.14/sagittarius-0.9.14.tar.gz
-  sha256: 2f464a0a249b9de59ed7e7338fcdf1f9b0873d9c35bae612749c0a1e9e2a4e79
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - bdw-gc
-  - openssl@3
-  - unixodbc
+    - bdw-gc
+    - openssl@3
+    - unixodbc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sagittarius-scheme/blobs/sha256:22f6d67387b47bbf00765825ec7712299badd39c15158e6136b305055066e142
+        sha256: 22f6d67387b47bbf00765825ec7712299badd39c15158e6136b305055066e142
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sagittarius-scheme/blobs/sha256:d503f7f4a9bf5d88253b78a4acca89481bdd7ba73532fb3773b64df7fe60c692
+        sha256: d503f7f4a9bf5d88253b78a4acca89481bdd7ba73532fb3773b64df7fe60c692
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sagittarius-scheme/blobs/sha256:582e0af6f35a245bb4357f06908eb06913f1a1252e0e62980ba43bcd4669a1b5
+        sha256: 582e0af6f35a245bb4357f06908eb06913f1a1252e0e62980ba43bcd4669a1b5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sagittarius-scheme/blobs/sha256:94a20ad75bb3787ac9b9c9244956d13379ce57be536cb35d76a6c6a1a2329a60
+        sha256: 94a20ad75bb3787ac9b9c9244956d13379ce57be536cb35d76a6c6a1a2329a60
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ktakashi/sagittarius-scheme/releases/download/v0.9.14/sagittarius-0.9.14.tar.gz
+    sha256: 2f464a0a249b9de59ed7e7338fcdf1f9b0873d9c35bae612749c0a1e9e2a4e79
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - bdw-gc
-  - openssl@3
-  - unixodbc
-  - zlib-ng-compat
+    - bdw-gc
+    - openssl@3
+    - unixodbc
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

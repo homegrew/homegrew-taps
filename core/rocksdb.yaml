@@ -3,36 +3,60 @@ version: 11.0.4
 description: Embeddable, persistent key-value store for fast storage
 homepage: https://rocksdb.org/
 license: GPL-2.0-only OR Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rocksdb/blobs/sha256:27c6911b0c57747c2766d314d766d60235587b051f75b21659eab6d554e0837a
-    sha256: 27c6911b0c57747c2766d314d766d60235587b051f75b21659eab6d554e0837a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rocksdb/blobs/sha256:9175d6da82a52771d6c1d96b33321ef81f772a4274a676fe16a98f2b6d046224
-    sha256: 9175d6da82a52771d6c1d96b33321ef81f772a4274a676fe16a98f2b6d046224
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rocksdb/blobs/sha256:26a074fcd71e498da0669ce78ffa0ebbfaa09fe7433e93ded39223fa825fdce2
-    sha256: 26a074fcd71e498da0669ce78ffa0ebbfaa09fe7433e93ded39223fa825fdce2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rocksdb/blobs/sha256:89022b4cacebf33bb83bf5ffb1383eecf9b981102d915e659d8ab86b88cd9935
-    sha256: 89022b4cacebf33bb83bf5ffb1383eecf9b981102d915e659d8ab86b88cd9935
-source:
-  url: https://github.com/facebook/rocksdb/archive/refs/tags/v11.0.4.tar.gz
-  sha256: b4dfd75199f385ec76056f81d33cde8f4cb446ea2ed1821feec7b996b3409f67
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gflags
-  - lz4
-  - snappy
-  - zstd
+    - gflags
+    - lz4
+    - snappy
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rocksdb/blobs/sha256:9175d6da82a52771d6c1d96b33321ef81f772a4274a676fe16a98f2b6d046224
+        sha256: 9175d6da82a52771d6c1d96b33321ef81f772a4274a676fe16a98f2b6d046224
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rocksdb/blobs/sha256:27c6911b0c57747c2766d314d766d60235587b051f75b21659eab6d554e0837a
+        sha256: 27c6911b0c57747c2766d314d766d60235587b051f75b21659eab6d554e0837a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rocksdb/blobs/sha256:26a074fcd71e498da0669ce78ffa0ebbfaa09fe7433e93ded39223fa825fdce2
+        sha256: 26a074fcd71e498da0669ce78ffa0ebbfaa09fe7433e93ded39223fa825fdce2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rocksdb/blobs/sha256:89022b4cacebf33bb83bf5ffb1383eecf9b981102d915e659d8ab86b88cd9935
+        sha256: 89022b4cacebf33bb83bf5ffb1383eecf9b981102d915e659d8ab86b88cd9935
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/facebook/rocksdb/archive/refs/tags/v11.0.4.tar.gz
+    sha256: b4dfd75199f385ec76056f81d33cde8f4cb446ea2ed1821feec7b996b3409f67
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - gflags
-  - lz4
-  - snappy
-  - zlib-ng-compat
-  - zstd
+    - gflags
+    - lz4
+    - snappy
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

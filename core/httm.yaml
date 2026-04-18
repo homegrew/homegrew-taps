@@ -3,27 +3,52 @@ version: 0.49.9
 description: Interactive, file-level Time Machine-like tool for ZFS/btrfs
 homepage: https://github.com/kimono-koans/httm
 license: MPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/httm/blobs/sha256:08a10782768d68b15eef56e3818fe93920c79c1730388c641d2b9a52c417d407
-    sha256: 08a10782768d68b15eef56e3818fe93920c79c1730388c641d2b9a52c417d407
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/httm/blobs/sha256:24eab643a38917fa113c2f2936ae34545ae6a177052beff6c228b2a91d371172
-    sha256: 24eab643a38917fa113c2f2936ae34545ae6a177052beff6c228b2a91d371172
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/httm/blobs/sha256:e4e254e917848d604518a8a4a7302b331e938a31944755f95ff2afa2114b75dc
-    sha256: e4e254e917848d604518a8a4a7302b331e938a31944755f95ff2afa2114b75dc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/httm/blobs/sha256:755cb3101755824614938e4163569c460a63f7e742e06dec7941f88ac1a390ba
-    sha256: 755cb3101755824614938e4163569c460a63f7e742e06dec7941f88ac1a390ba
-source:
-  url: https://github.com/kimono-koans/httm/archive/refs/tags/0.49.9.tar.gz
-  sha256: c9d24d296942569408fe5a625a0fbb8d833ffd7d43d56532396d7dfad3033f80
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/httm/blobs/sha256:24eab643a38917fa113c2f2936ae34545ae6a177052beff6c228b2a91d371172
+        sha256: 24eab643a38917fa113c2f2936ae34545ae6a177052beff6c228b2a91d371172
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/httm/blobs/sha256:08a10782768d68b15eef56e3818fe93920c79c1730388c641d2b9a52c417d407
+        sha256: 08a10782768d68b15eef56e3818fe93920c79c1730388c641d2b9a52c417d407
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/httm/blobs/sha256:e4e254e917848d604518a8a4a7302b331e938a31944755f95ff2afa2114b75dc
+        sha256: e4e254e917848d604518a8a4a7302b331e938a31944755f95ff2afa2114b75dc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/httm/blobs/sha256:755cb3101755824614938e4163569c460a63f7e742e06dec7941f88ac1a390ba
+        sha256: 755cb3101755824614938e4163569c460a63f7e742e06dec7941f88ac1a390ba
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/kimono-koans/httm/archive/refs/tags/0.49.9.tar.gz
+    sha256: c9d24d296942569408fe5a625a0fbb8d833ffd7d43d56532396d7dfad3033f80
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
 linux_dependencies:
-  - acl
+    - acl
+build:
+    configure: []
+    install: []
+service: null

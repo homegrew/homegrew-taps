@@ -3,28 +3,53 @@ version: 2.31.1
 description: Tools for genome arithmetic (set theory on the genome)
 homepage: https://github.com/arq5x/bedtools2
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bedtools/blobs/sha256:1e609e7589f355b608db522a0ea0f645093f68d2b103919fe0a45dc155b305a5
-    sha256: 1e609e7589f355b608db522a0ea0f645093f68d2b103919fe0a45dc155b305a5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bedtools/blobs/sha256:f3f23539a6d31e0c7d0576084965996aaeecfd61a6c055163fc0214fc9869ca6
-    sha256: f3f23539a6d31e0c7d0576084965996aaeecfd61a6c055163fc0214fc9869ca6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/bedtools/blobs/sha256:55200ba7e7f92b5491db32eb807a08718ccd330bbc5d3fbc702e561bc5abc89a
-    sha256: 55200ba7e7f92b5491db32eb807a08718ccd330bbc5d3fbc702e561bc5abc89a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/bedtools/blobs/sha256:cd4c766589bc8b4f73d33846a7b895536071694917d559e551776e6ba48c5d0e
-    sha256: cd4c766589bc8b4f73d33846a7b895536071694917d559e551776e6ba48c5d0e
-source:
-  url: https://github.com/arq5x/bedtools2/archive/refs/tags/v2.31.1.tar.gz
-  sha256: 79a1ba318d309f4e74bfa74258b73ef578dccb1045e270998d7fe9da9f43a50e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - xz
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bedtools/blobs/sha256:f3f23539a6d31e0c7d0576084965996aaeecfd61a6c055163fc0214fc9869ca6
+        sha256: f3f23539a6d31e0c7d0576084965996aaeecfd61a6c055163fc0214fc9869ca6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bedtools/blobs/sha256:1e609e7589f355b608db522a0ea0f645093f68d2b103919fe0a45dc155b305a5
+        sha256: 1e609e7589f355b608db522a0ea0f645093f68d2b103919fe0a45dc155b305a5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bedtools/blobs/sha256:55200ba7e7f92b5491db32eb807a08718ccd330bbc5d3fbc702e561bc5abc89a
+        sha256: 55200ba7e7f92b5491db32eb807a08718ccd330bbc5d3fbc702e561bc5abc89a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bedtools/blobs/sha256:cd4c766589bc8b4f73d33846a7b895536071694917d559e551776e6ba48c5d0e
+        sha256: cd4c766589bc8b4f73d33846a7b895536071694917d559e551776e6ba48c5d0e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/arq5x/bedtools2/archive/refs/tags/v2.31.1.tar.gz
+    sha256: 79a1ba318d309f4e74bfa74258b73ef578dccb1045e270998d7fe9da9f43a50e
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - xz
-  - zlib-ng-compat
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

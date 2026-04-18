@@ -3,28 +3,53 @@ version: 0.14.0
 description: Used as a compiler wrapper and avoids compilation when possible
 homepage: https://github.com/mozilla/sccache
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sccache/blobs/sha256:1d78493b2b4aa6442d30d215533bf5fdc40335e2a441f5528b72bac5a02ce41a
-    sha256: 1d78493b2b4aa6442d30d215533bf5fdc40335e2a441f5528b72bac5a02ce41a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sccache/blobs/sha256:f8423405b506fc8ac1b78060e9cce47ff74f8ef5228ba53682375ccffb69c8be
-    sha256: f8423405b506fc8ac1b78060e9cce47ff74f8ef5228ba53682375ccffb69c8be
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sccache/blobs/sha256:045e12f0c8a7ac055585962e6f9978339d84862c200bca4bd9545d8a07a8fdbf
-    sha256: 045e12f0c8a7ac055585962e6f9978339d84862c200bca4bd9545d8a07a8fdbf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sccache/blobs/sha256:e04a9be07ddd5016f6597255e03cb892d9ca9e45d40715c55203c324420d5de9
-    sha256: e04a9be07ddd5016f6597255e03cb892d9ca9e45d40715c55203c324420d5de9
-source:
-  url: https://github.com/mozilla/sccache/archive/refs/tags/v0.14.0.tar.gz
-  sha256: f2f194874e6b435896201655432f623d749f5583256f773743c376a6d06cede5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sccache/blobs/sha256:f8423405b506fc8ac1b78060e9cce47ff74f8ef5228ba53682375ccffb69c8be
+        sha256: f8423405b506fc8ac1b78060e9cce47ff74f8ef5228ba53682375ccffb69c8be
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sccache/blobs/sha256:1d78493b2b4aa6442d30d215533bf5fdc40335e2a441f5528b72bac5a02ce41a
+        sha256: 1d78493b2b4aa6442d30d215533bf5fdc40335e2a441f5528b72bac5a02ce41a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sccache/blobs/sha256:045e12f0c8a7ac055585962e6f9978339d84862c200bca4bd9545d8a07a8fdbf
+        sha256: 045e12f0c8a7ac055585962e6f9978339d84862c200bca4bd9545d8a07a8fdbf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sccache/blobs/sha256:e04a9be07ddd5016f6597255e03cb892d9ca9e45d40715c55203c324420d5de9
+        sha256: e04a9be07ddd5016f6597255e03cb892d9ca9e45d40715c55203c324420d5de9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mozilla/sccache/archive/refs/tags/v0.14.0.tar.gz
+    sha256: f2f194874e6b435896201655432f623d749f5583256f773743c376a6d06cede5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

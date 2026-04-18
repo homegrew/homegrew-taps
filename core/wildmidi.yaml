@@ -3,27 +3,52 @@ version: 0.4.6
 description: Simple software midi player
 homepage: https://github.com/Mindwerks/wildmidi
 license: GPL-3.0-only AND LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wildmidi/blobs/sha256:fec3c0e1391b9ddce5df2c213ace4a11edf804189f70699e4f333fcd1e642abb
-    sha256: fec3c0e1391b9ddce5df2c213ace4a11edf804189f70699e4f333fcd1e642abb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wildmidi/blobs/sha256:42a524ea0a68475608e63e99e3d2c975f17c5d79d680fadafd17b371acba84ed
-    sha256: 42a524ea0a68475608e63e99e3d2c975f17c5d79d680fadafd17b371acba84ed
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wildmidi/blobs/sha256:440af3c41c5ff0b321a6508dc0e531e2518cd78bad6b8ba5467ff65c25d5eb73
-    sha256: 440af3c41c5ff0b321a6508dc0e531e2518cd78bad6b8ba5467ff65c25d5eb73
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wildmidi/blobs/sha256:c0e66dee3078f0f1c1fa2c727d2af4194da035eb0fb80e9b8be240fd8665a30a
-    sha256: c0e66dee3078f0f1c1fa2c727d2af4194da035eb0fb80e9b8be240fd8665a30a
-source:
-  url: https://github.com/Mindwerks/wildmidi/archive/refs/tags/wildmidi-0.4.6.tar.gz
-  sha256: 051b8c51699af594ddd3e4e3b06bad3564e9499c3c6b9e6f880cb2f92bcfa9c8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wildmidi/blobs/sha256:42a524ea0a68475608e63e99e3d2c975f17c5d79d680fadafd17b371acba84ed
+        sha256: 42a524ea0a68475608e63e99e3d2c975f17c5d79d680fadafd17b371acba84ed
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wildmidi/blobs/sha256:fec3c0e1391b9ddce5df2c213ace4a11edf804189f70699e4f333fcd1e642abb
+        sha256: fec3c0e1391b9ddce5df2c213ace4a11edf804189f70699e4f333fcd1e642abb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wildmidi/blobs/sha256:440af3c41c5ff0b321a6508dc0e531e2518cd78bad6b8ba5467ff65c25d5eb73
+        sha256: 440af3c41c5ff0b321a6508dc0e531e2518cd78bad6b8ba5467ff65c25d5eb73
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wildmidi/blobs/sha256:c0e66dee3078f0f1c1fa2c727d2af4194da035eb0fb80e9b8be240fd8665a30a
+        sha256: c0e66dee3078f0f1c1fa2c727d2af4194da035eb0fb80e9b8be240fd8665a30a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Mindwerks/wildmidi/archive/refs/tags/wildmidi-0.4.6.tar.gz
+    sha256: 051b8c51699af594ddd3e4e3b06bad3564e9499c3c6b9e6f880cb2f92bcfa9c8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - alsa-lib
+    - alsa-lib
+build:
+    configure: []
+    install: []
+service: null

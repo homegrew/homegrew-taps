@@ -3,34 +3,58 @@ version: 0.23.11
 description: Command-line tools for OpenPGP-related operations
 homepage: https://hackage.haskell.org/package/hopenpgp-tools
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hopenpgp-tools/blobs/sha256:6e1b1eccc7a834a587e44a3d72443034942527f06b6b871a9c44698c1cb21e58
-    sha256: 6e1b1eccc7a834a587e44a3d72443034942527f06b6b871a9c44698c1cb21e58
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hopenpgp-tools/blobs/sha256:4556fef4e991d2e8dd07835f16b92f18d8c8151c1fb9043fa903a7ce0acc90c9
-    sha256: 4556fef4e991d2e8dd07835f16b92f18d8c8151c1fb9043fa903a7ce0acc90c9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hopenpgp-tools/blobs/sha256:a783536238023b381f195e111f0430f9d7931bea24fd9d31849675e00c29f639
-    sha256: a783536238023b381f195e111f0430f9d7931bea24fd9d31849675e00c29f639
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hopenpgp-tools/blobs/sha256:10da1dd06cad90211489d231be6b4ddec80304bea1e57aa342c9c4cd2258fc91
-    sha256: 10da1dd06cad90211489d231be6b4ddec80304bea1e57aa342c9c4cd2258fc91
-source:
-  url: https://hackage.haskell.org/package/hopenpgp-tools-0.23.11/hopenpgp-tools-0.23.11.tar.gz
-  sha256: 2a056bd320caafe0f7ac3c95d56819f9fef02ddafe11b59802ea5a678d88a54f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - nettle
+    - gmp
+    - nettle
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hopenpgp-tools/blobs/sha256:4556fef4e991d2e8dd07835f16b92f18d8c8151c1fb9043fa903a7ce0acc90c9
+        sha256: 4556fef4e991d2e8dd07835f16b92f18d8c8151c1fb9043fa903a7ce0acc90c9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hopenpgp-tools/blobs/sha256:6e1b1eccc7a834a587e44a3d72443034942527f06b6b871a9c44698c1cb21e58
+        sha256: 6e1b1eccc7a834a587e44a3d72443034942527f06b6b871a9c44698c1cb21e58
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hopenpgp-tools/blobs/sha256:a783536238023b381f195e111f0430f9d7931bea24fd9d31849675e00c29f639
+        sha256: a783536238023b381f195e111f0430f9d7931bea24fd9d31849675e00c29f639
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hopenpgp-tools/blobs/sha256:10da1dd06cad90211489d231be6b4ddec80304bea1e57aa342c9c4cd2258fc91
+        sha256: 10da1dd06cad90211489d231be6b4ddec80304bea1e57aa342c9c4cd2258fc91
+        sha512: ""
+        signature: ""
+source:
+    url: https://hackage.haskell.org/package/hopenpgp-tools-0.23.11/hopenpgp-tools-0.23.11.tar.gz
+    sha256: 2a056bd320caafe0f7ac3c95d56819f9fef02ddafe11b59802ea5a678d88a54f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
-  - pkgconf
+    - cabal-install
+    - ghc
+    - pkgconf
 linux_dependencies:
-  - gmp
-  - nettle
-  - zlib-ng-compat
+    - gmp
+    - nettle
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

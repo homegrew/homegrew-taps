@@ -3,30 +3,55 @@ version: 0.7.0
 description: Flexible Collision Library
 homepage: https://flexible-collision-library.github.io/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fcl/blobs/sha256:520b5eb150c605c3d52439c344b97fc921978a7b766141f0deeb000d52a2be6c
-    sha256: 520b5eb150c605c3d52439c344b97fc921978a7b766141f0deeb000d52a2be6c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fcl/blobs/sha256:c940f7e641313fc86f737a53cdee88816a34e0d89b67f626df78144c9d932147
-    sha256: c940f7e641313fc86f737a53cdee88816a34e0d89b67f626df78144c9d932147
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fcl/blobs/sha256:5213117e4717273be6ea9baf0bccda5ad8ec98a258be6e125b41d151b0cc5e32
-    sha256: 5213117e4717273be6ea9baf0bccda5ad8ec98a258be6e125b41d151b0cc5e32
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fcl/blobs/sha256:8a6759eb4c1576b674bdf4528dc205df0e1ded7d98701282abc1b5868084767b
-    sha256: 8a6759eb4c1576b674bdf4528dc205df0e1ded7d98701282abc1b5868084767b
-source:
-  url: https://github.com/flexible-collision-library/fcl/archive/refs/tags/0.7.0.tar.gz
-  sha256: 90409e940b24045987506a6b239424a4222e2daf648c86dd146cbcb692ebdcbc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - eigen
-  - libccd
-  - octomap
+    - eigen
+    - libccd
+    - octomap
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fcl/blobs/sha256:c940f7e641313fc86f737a53cdee88816a34e0d89b67f626df78144c9d932147
+        sha256: c940f7e641313fc86f737a53cdee88816a34e0d89b67f626df78144c9d932147
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fcl/blobs/sha256:520b5eb150c605c3d52439c344b97fc921978a7b766141f0deeb000d52a2be6c
+        sha256: 520b5eb150c605c3d52439c344b97fc921978a7b766141f0deeb000d52a2be6c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fcl/blobs/sha256:5213117e4717273be6ea9baf0bccda5ad8ec98a258be6e125b41d151b0cc5e32
+        sha256: 5213117e4717273be6ea9baf0bccda5ad8ec98a258be6e125b41d151b0cc5e32
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fcl/blobs/sha256:8a6759eb4c1576b674bdf4528dc205df0e1ded7d98701282abc1b5868084767b
+        sha256: 8a6759eb4c1576b674bdf4528dc205df0e1ded7d98701282abc1b5868084767b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/flexible-collision-library/fcl/archive/refs/tags/0.7.0.tar.gz
+    sha256: 90409e940b24045987506a6b239424a4222e2daf648c86dd146cbcb692ebdcbc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 0.3.1
 description: Terminal for Kubernetes
 homepage: https://kty.dev
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kty/blobs/sha256:41ffc85a1afa73590d563262abbe3c3037cd0ea6ce1b2a4e315b789de481c709
-    sha256: 41ffc85a1afa73590d563262abbe3c3037cd0ea6ce1b2a4e315b789de481c709
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kty/blobs/sha256:d5dbd72cf1840b254b2ac815e8dad173883c8cb83140634976e29a14fcf8b65d
-    sha256: d5dbd72cf1840b254b2ac815e8dad173883c8cb83140634976e29a14fcf8b65d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/kty/blobs/sha256:bdd2bbe08fcd0a77a2402d91f009d13d4c9ddd5b51d533d4810e26aee40fccb9
-    sha256: bdd2bbe08fcd0a77a2402d91f009d13d4c9ddd5b51d533d4810e26aee40fccb9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/kty/blobs/sha256:12eaaeecb6106661c66894aca09a5f73eb77d9be2ba51419f1d78eed9872aed0
-    sha256: 12eaaeecb6106661c66894aca09a5f73eb77d9be2ba51419f1d78eed9872aed0
-source:
-  url: https://github.com/grampelberg/kty/archive/refs/tags/v0.3.1.tar.gz
-  sha256: 050c8b0df88f65e1a06863bea99495b77bf2045829825e7e130756f1828c6aa6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kty/blobs/sha256:d5dbd72cf1840b254b2ac815e8dad173883c8cb83140634976e29a14fcf8b65d
+        sha256: d5dbd72cf1840b254b2ac815e8dad173883c8cb83140634976e29a14fcf8b65d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kty/blobs/sha256:41ffc85a1afa73590d563262abbe3c3037cd0ea6ce1b2a4e315b789de481c709
+        sha256: 41ffc85a1afa73590d563262abbe3c3037cd0ea6ce1b2a4e315b789de481c709
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/kty/blobs/sha256:bdd2bbe08fcd0a77a2402d91f009d13d4c9ddd5b51d533d4810e26aee40fccb9
+        sha256: bdd2bbe08fcd0a77a2402d91f009d13d4c9ddd5b51d533d4810e26aee40fccb9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kty/blobs/sha256:12eaaeecb6106661c66894aca09a5f73eb77d9be2ba51419f1d78eed9872aed0
+        sha256: 12eaaeecb6106661c66894aca09a5f73eb77d9be2ba51419f1d78eed9872aed0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/grampelberg/kty/archive/refs/tags/v0.3.1.tar.gz
+    sha256: 050c8b0df88f65e1a06863bea99495b77bf2045829825e7e130756f1828c6aa6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

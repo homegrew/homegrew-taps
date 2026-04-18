@@ -3,32 +3,56 @@ version: 0.28.1
 description: Blazing fast terminal-ui for git written in rust
 homepage: https://github.com/gitui-org/gitui
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gitui/blobs/sha256:8d680002eec562dc3e551b65df13870ed7c76f12137a47bd797b50bdcd2487d1
-    sha256: 8d680002eec562dc3e551b65df13870ed7c76f12137a47bd797b50bdcd2487d1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gitui/blobs/sha256:a257d6363277574277a79ac33ec5ce1c9d97531b5137d4ef00d3fac4dd7793f9
-    sha256: a257d6363277574277a79ac33ec5ce1c9d97531b5137d4ef00d3fac4dd7793f9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gitui/blobs/sha256:c3776e0418c6233796021596efb33de72343bfd36f67c562c347642598d52253
-    sha256: c3776e0418c6233796021596efb33de72343bfd36f67c562c347642598d52253
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gitui/blobs/sha256:b81e6514a38501028d2e54c7d245ac376f2f5f6039e0f1b96ca1bafd5cc9fc01
-    sha256: b81e6514a38501028d2e54c7d245ac376f2f5f6039e0f1b96ca1bafd5cc9fc01
-source:
-  url: https://github.com/gitui-org/gitui/archive/refs/tags/v0.28.1.tar.gz
-  sha256: 0400cbf59605490b5fb8779f9af41fa4d7a1bb748093ca0e13156a5dff31c7aa
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitui/blobs/sha256:a257d6363277574277a79ac33ec5ce1c9d97531b5137d4ef00d3fac4dd7793f9
+        sha256: a257d6363277574277a79ac33ec5ce1c9d97531b5137d4ef00d3fac4dd7793f9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitui/blobs/sha256:8d680002eec562dc3e551b65df13870ed7c76f12137a47bd797b50bdcd2487d1
+        sha256: 8d680002eec562dc3e551b65df13870ed7c76f12137a47bd797b50bdcd2487d1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitui/blobs/sha256:c3776e0418c6233796021596efb33de72343bfd36f67c562c347642598d52253
+        sha256: c3776e0418c6233796021596efb33de72343bfd36f67c562c347642598d52253
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitui/blobs/sha256:b81e6514a38501028d2e54c7d245ac376f2f5f6039e0f1b96ca1bafd5cc9fc01
+        sha256: b81e6514a38501028d2e54c7d245ac376f2f5f6039e0f1b96ca1bafd5cc9fc01
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/gitui-org/gitui/archive/refs/tags/v0.28.1.tar.gz
+    sha256: 0400cbf59605490b5fb8779f9af41fa4d7a1bb748093ca0e13156a5dff31c7aa
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - rust
+    - cmake
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

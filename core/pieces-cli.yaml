@@ -3,29 +3,55 @@ version: 1.20.1
 description: Command-line tool for Pieces.app
 homepage: https://docs.pieces.app/products/cli
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pieces-cli/blobs/sha256:8d4134c0ec6bdef85984c0b486b9bdcc988f6b9328310fa842d27aac71b07a4d
-    sha256: 8d4134c0ec6bdef85984c0b486b9bdcc988f6b9328310fa842d27aac71b07a4d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pieces-cli/blobs/sha256:0e6619bbf65aa0a23388cca69c666263fd33fefe44704efdce1b5efeaffdf19f
-    sha256: 0e6619bbf65aa0a23388cca69c666263fd33fefe44704efdce1b5efeaffdf19f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pieces-cli/blobs/sha256:ada1d273d80cc2d3668e9b050bae32937dedbd392a0f6126f72ad3085caeafe4
-    sha256: ada1d273d80cc2d3668e9b050bae32937dedbd392a0f6126f72ad3085caeafe4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pieces-cli/blobs/sha256:cc1d3ce32391b42384934db70e3a58f62021076c93bc489ba11003cc1a6456f2
-    sha256: cc1d3ce32391b42384934db70e3a58f62021076c93bc489ba11003cc1a6456f2
-source:
-  url: https://files.pythonhosted.org/packages/d4/28/e5c3d511e6a81b06f0c293909dfb138fd10d28979968e4a4ad12cf671f73/pieces_cli-1.20.1.tar.gz
-  sha256: 303f04e847bb122e6638e592d1ad0645fd9c1ed5f6494637bf203089d4f0164c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - pydantic
-  - python@3.14
-  - rpds-py
+    - certifi
+    - libyaml
+    - pydantic
+    - python@3.14
+    - rpds-py
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pieces-cli/blobs/sha256:0e6619bbf65aa0a23388cca69c666263fd33fefe44704efdce1b5efeaffdf19f
+        sha256: 0e6619bbf65aa0a23388cca69c666263fd33fefe44704efdce1b5efeaffdf19f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pieces-cli/blobs/sha256:8d4134c0ec6bdef85984c0b486b9bdcc988f6b9328310fa842d27aac71b07a4d
+        sha256: 8d4134c0ec6bdef85984c0b486b9bdcc988f6b9328310fa842d27aac71b07a4d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pieces-cli/blobs/sha256:ada1d273d80cc2d3668e9b050bae32937dedbd392a0f6126f72ad3085caeafe4
+        sha256: ada1d273d80cc2d3668e9b050bae32937dedbd392a0f6126f72ad3085caeafe4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pieces-cli/blobs/sha256:cc1d3ce32391b42384934db70e3a58f62021076c93bc489ba11003cc1a6456f2
+        sha256: cc1d3ce32391b42384934db70e3a58f62021076c93bc489ba11003cc1a6456f2
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/d4/28/e5c3d511e6a81b06f0c293909dfb138fd10d28979968e4a4ad12cf671f73/pieces_cli-1.20.1.tar.gz
+    sha256: 303f04e847bb122e6638e592d1ad0645fd9c1ed5f6494637bf203089d4f0164c
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

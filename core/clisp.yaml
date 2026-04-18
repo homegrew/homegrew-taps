@@ -3,27 +3,53 @@ version: 2.49.92
 description: GNU CLISP, a Common Lisp implementation
 homepage: https://clisp.sourceforge.io/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clisp/blobs/sha256:7c6012970cf0b4c270ea9144deb1aa018a820f333dd0a23c98116a6da81cdccd
-    sha256: 7c6012970cf0b4c270ea9144deb1aa018a820f333dd0a23c98116a6da81cdccd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clisp/blobs/sha256:a4225bd790a152ba74e307d69ff945b69aa0c04fc43b1c98b67298085300c129
-    sha256: a4225bd790a152ba74e307d69ff945b69aa0c04fc43b1c98b67298085300c129
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clisp/blobs/sha256:ac69bd943aac71e7e7d782747b3e3369923e13cb8de3990c3afe6adf90e42ba2
-    sha256: ac69bd943aac71e7e7d782747b3e3369923e13cb8de3990c3afe6adf90e42ba2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clisp/blobs/sha256:21dbffbe262f2cd831a5b80be895bb1747d5e58091f28d5067be710cab22d832
-    sha256: 21dbffbe262f2cd831a5b80be895bb1747d5e58091f28d5067be710cab22d832
-source:
-  url: https://alpha.gnu.org/gnu/clisp/clisp-2.49.92.tar.bz2
-  sha256: bd443a94aa9b02da4c4abbcecfc04ffff1919c0a8b0e7e35649b86198cd6bb89
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libffcall
-  - libsigsegv
-  - readline
+    - libffcall
+    - libsigsegv
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clisp/blobs/sha256:a4225bd790a152ba74e307d69ff945b69aa0c04fc43b1c98b67298085300c129
+        sha256: a4225bd790a152ba74e307d69ff945b69aa0c04fc43b1c98b67298085300c129
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clisp/blobs/sha256:7c6012970cf0b4c270ea9144deb1aa018a820f333dd0a23c98116a6da81cdccd
+        sha256: 7c6012970cf0b4c270ea9144deb1aa018a820f333dd0a23c98116a6da81cdccd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clisp/blobs/sha256:ac69bd943aac71e7e7d782747b3e3369923e13cb8de3990c3afe6adf90e42ba2
+        sha256: ac69bd943aac71e7e7d782747b3e3369923e13cb8de3990c3afe6adf90e42ba2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clisp/blobs/sha256:21dbffbe262f2cd831a5b80be895bb1747d5e58091f28d5067be710cab22d832
+        sha256: 21dbffbe262f2cd831a5b80be895bb1747d5e58091f28d5067be710cab22d832
+        sha512: ""
+        signature: ""
+source:
+    url: https://alpha.gnu.org/gnu/clisp/clisp-2.49.92.tar.bz2
+    sha256: bd443a94aa9b02da4c4abbcecfc04ffff1919c0a8b0e7e35649b86198cd6bb89
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

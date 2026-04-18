@@ -3,28 +3,53 @@ version: 1.7.0
 description: Tuned OpenCL BLAS library
 homepage: https://github.com/CNugteren/CLBlast
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clblast/blobs/sha256:6419de6a1707a9f92213abcdbb0c4e4488d5ff3418bcbe963baa4d5e72216f89
-    sha256: 6419de6a1707a9f92213abcdbb0c4e4488d5ff3418bcbe963baa4d5e72216f89
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clblast/blobs/sha256:9a3c4d995812d34bb57bd5711a844a57da1fe8a2e10b350bd2b9ac835766443d
-    sha256: 9a3c4d995812d34bb57bd5711a844a57da1fe8a2e10b350bd2b9ac835766443d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clblast/blobs/sha256:7d5aad3b2483aafef5d30926805f7add78e9438687d52aa7972e89ad28aecd2a
-    sha256: 7d5aad3b2483aafef5d30926805f7add78e9438687d52aa7972e89ad28aecd2a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clblast/blobs/sha256:5350ca100c8aa37c957be25c450fbde3404feb82732b6aab364058279ce7120b
-    sha256: 5350ca100c8aa37c957be25c450fbde3404feb82732b6aab364058279ce7120b
-source:
-  url: https://github.com/CNugteren/CLBlast/archive/refs/tags/1.7.0.tar.gz
-  sha256: cac83330a6110214f2b7efc8e46062536f40ba96122f3b2a074a51497d8ca9e7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clblast/blobs/sha256:9a3c4d995812d34bb57bd5711a844a57da1fe8a2e10b350bd2b9ac835766443d
+        sha256: 9a3c4d995812d34bb57bd5711a844a57da1fe8a2e10b350bd2b9ac835766443d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clblast/blobs/sha256:6419de6a1707a9f92213abcdbb0c4e4488d5ff3418bcbe963baa4d5e72216f89
+        sha256: 6419de6a1707a9f92213abcdbb0c4e4488d5ff3418bcbe963baa4d5e72216f89
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clblast/blobs/sha256:7d5aad3b2483aafef5d30926805f7add78e9438687d52aa7972e89ad28aecd2a
+        sha256: 7d5aad3b2483aafef5d30926805f7add78e9438687d52aa7972e89ad28aecd2a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clblast/blobs/sha256:5350ca100c8aa37c957be25c450fbde3404feb82732b6aab364058279ce7120b
+        sha256: 5350ca100c8aa37c957be25c450fbde3404feb82732b6aab364058279ce7120b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/CNugteren/CLBlast/archive/refs/tags/1.7.0.tar.gz
+    sha256: cac83330a6110214f2b7efc8e46062536f40ba96122f3b2a074a51497d8ca9e7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
 linux_dependencies:
-  - opencl-icd-loader
-  - pocl
+    - opencl-icd-loader
+    - pocl
+build:
+    configure: []
+    install: []
+service: null

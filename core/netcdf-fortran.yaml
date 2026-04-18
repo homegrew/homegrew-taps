@@ -3,29 +3,54 @@ version: 4.6.2
 description: Fortran libraries and utilities for NetCDF
 homepage: https://www.unidata.ucar.edu/software/netcdf/
 license: NetCDF
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/netcdf-fortran/blobs/sha256:7201bd78c6bdf89900c295717ec925c1a29e98d86c568efe09fab3cab906ad96
-    sha256: 7201bd78c6bdf89900c295717ec925c1a29e98d86c568efe09fab3cab906ad96
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/netcdf-fortran/blobs/sha256:e6fd6c9ef98bd9a1598007909f3ce4b2d0d7fc0c36157146924197ab722d7426
-    sha256: e6fd6c9ef98bd9a1598007909f3ce4b2d0d7fc0c36157146924197ab722d7426
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/netcdf-fortran/blobs/sha256:c43bc1f9b6084692f9dec942860261facb88aa2fff0d5c9989843d8297e6dbdd
-    sha256: c43bc1f9b6084692f9dec942860261facb88aa2fff0d5c9989843d8297e6dbdd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/netcdf-fortran/blobs/sha256:6e64fc9a9d7cdeecd02e16f6d5ecf60e6244f99ce9cdda0e49f17e4028c9f8cd
-    sha256: 6e64fc9a9d7cdeecd02e16f6d5ecf60e6244f99ce9cdda0e49f17e4028c9f8cd
-source:
-  url: https://github.com/Unidata/netcdf-fortran/archive/refs/tags/v4.6.2.tar.gz
-  sha256: 44cc7b5626b0b054a8503b8fe7c1b0ac4e0a79a69dad792c212454906a9224ca
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gcc
-  - netcdf
+    - gcc
+    - netcdf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/netcdf-fortran/blobs/sha256:e6fd6c9ef98bd9a1598007909f3ce4b2d0d7fc0c36157146924197ab722d7426
+        sha256: e6fd6c9ef98bd9a1598007909f3ce4b2d0d7fc0c36157146924197ab722d7426
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/netcdf-fortran/blobs/sha256:7201bd78c6bdf89900c295717ec925c1a29e98d86c568efe09fab3cab906ad96
+        sha256: 7201bd78c6bdf89900c295717ec925c1a29e98d86c568efe09fab3cab906ad96
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/netcdf-fortran/blobs/sha256:c43bc1f9b6084692f9dec942860261facb88aa2fff0d5c9989843d8297e6dbdd
+        sha256: c43bc1f9b6084692f9dec942860261facb88aa2fff0d5c9989843d8297e6dbdd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/netcdf-fortran/blobs/sha256:6e64fc9a9d7cdeecd02e16f6d5ecf60e6244f99ce9cdda0e49f17e4028c9f8cd
+        sha256: 6e64fc9a9d7cdeecd02e16f6d5ecf60e6244f99ce9cdda0e49f17e4028c9f8cd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Unidata/netcdf-fortran/archive/refs/tags/v4.6.2.tar.gz
+    sha256: 44cc7b5626b0b054a8503b8fe7c1b0ac4e0a79a69dad792c212454906a9224ca
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - hdf5
+    - cmake
+    - hdf5
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

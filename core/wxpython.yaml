@@ -3,39 +3,63 @@ version: 4.2.5
 description: Python bindings for wxWidgets
 homepage: https://www.wxpython.org/
 license: LGPL-2.0-or-later WITH WxWindows-exception-3.1
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:f386143a6e4461fde98aaa60c28f8dc1c87270ad53aaef1fc3b059753ca7d04b
-    sha256: f386143a6e4461fde98aaa60c28f8dc1c87270ad53aaef1fc3b059753ca7d04b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:fb2da74fde2f55b27d36418a776ed1a3a3f884319d406618d022f8e409450ba6
-    sha256: fb2da74fde2f55b27d36418a776ed1a3a3f884319d406618d022f8e409450ba6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:8b3b5bea2efe6ccac67b575e3d308d9d5688120e9da07693be91c47ff5f6f0c5
-    sha256: 8b3b5bea2efe6ccac67b575e3d308d9d5688120e9da07693be91c47ff5f6f0c5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:4321aecdd3168f3f2bb0ae102d2f93da7449c0f4968f5c746f18e2e25feabf39
-    sha256: 4321aecdd3168f3f2bb0ae102d2f93da7449c0f4968f5c746f18e2e25feabf39
-source:
-  url: https://files.pythonhosted.org/packages/22/43/81657a6b126ffc19163500a8184d683cec08eb4e1d06905cd0c371c702d0/wxpython-4.2.5.tar.gz
-  sha256: 44e836d1bccd99c38790bb034b6ecf70d9060f6734320560f7c4b0d006144793
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - numpy
-  - pillow
-  - python@3.14
-  - wxwidgets@3.2
+    - numpy
+    - pillow
+    - python@3.14
+    - wxwidgets@3.2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:fb2da74fde2f55b27d36418a776ed1a3a3f884319d406618d022f8e409450ba6
+        sha256: fb2da74fde2f55b27d36418a776ed1a3a3f884319d406618d022f8e409450ba6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:f386143a6e4461fde98aaa60c28f8dc1c87270ad53aaef1fc3b059753ca7d04b
+        sha256: f386143a6e4461fde98aaa60c28f8dc1c87270ad53aaef1fc3b059753ca7d04b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:8b3b5bea2efe6ccac67b575e3d308d9d5688120e9da07693be91c47ff5f6f0c5
+        sha256: 8b3b5bea2efe6ccac67b575e3d308d9d5688120e9da07693be91c47ff5f6f0c5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:4321aecdd3168f3f2bb0ae102d2f93da7449c0f4968f5c746f18e2e25feabf39
+        sha256: 4321aecdd3168f3f2bb0ae102d2f93da7449c0f4968f5c746f18e2e25feabf39
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/22/43/81657a6b126ffc19163500a8184d683cec08eb4e1d06905cd0c371c702d0/wxpython-4.2.5.tar.gz
+    sha256: 44e836d1bccd99c38790bb034b6ecf70d9060f6734320560f7c4b0d006144793
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cython
-  - doxygen
-  - python-setuptools
-  - sip
+    - cython
+    - doxygen
+    - python-setuptools
+    - sip
 linux_dependencies:
-  - gtk+3
-  - numpy
-  - pillow
-  - python@3.14
-  - wxwidgets@3.2
+    - gtk+3
+    - numpy
+    - pillow
+    - python@3.14
+    - wxwidgets@3.2
+build:
+    configure: []
+    install: []
+service: null

@@ -3,27 +3,52 @@ version: 1.1.0
 description: Implementation of the Actor Model for C++
 homepage: https://www.actor-framework.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/caf/blobs/sha256:faa09c3ddebe8332936b1cc01028494b75a7b80763b045256840983be78f3785
-    sha256: faa09c3ddebe8332936b1cc01028494b75a7b80763b045256840983be78f3785
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/caf/blobs/sha256:aa3ca3370d07b8ed67d9e319eccf4412e8b7cd8a654eadd8df8fbf1f2c2feff3
-    sha256: aa3ca3370d07b8ed67d9e319eccf4412e8b7cd8a654eadd8df8fbf1f2c2feff3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/caf/blobs/sha256:18dd86732ab832bc6b035af48f3fcc8d05c6ec4dca5ec068d09f43fc3b724335
-    sha256: 18dd86732ab832bc6b035af48f3fcc8d05c6ec4dca5ec068d09f43fc3b724335
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/caf/blobs/sha256:980f1e6bf7b3462f90c1251a2fc22ca9cdee8f81e1ae631fd34cdd48469aad7c
-    sha256: 980f1e6bf7b3462f90c1251a2fc22ca9cdee8f81e1ae631fd34cdd48469aad7c
-source:
-  url: https://github.com/actor-framework/actor-framework/archive/refs/tags/1.1.0.tar.gz
-  sha256: 9febd85d3a4f50dac760592043028a36bea62bba50c3ee2fc1eace954dd8ae27
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/caf/blobs/sha256:aa3ca3370d07b8ed67d9e319eccf4412e8b7cd8a654eadd8df8fbf1f2c2feff3
+        sha256: aa3ca3370d07b8ed67d9e319eccf4412e8b7cd8a654eadd8df8fbf1f2c2feff3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/caf/blobs/sha256:faa09c3ddebe8332936b1cc01028494b75a7b80763b045256840983be78f3785
+        sha256: faa09c3ddebe8332936b1cc01028494b75a7b80763b045256840983be78f3785
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/caf/blobs/sha256:18dd86732ab832bc6b035af48f3fcc8d05c6ec4dca5ec068d09f43fc3b724335
+        sha256: 18dd86732ab832bc6b035af48f3fcc8d05c6ec4dca5ec068d09f43fc3b724335
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/caf/blobs/sha256:980f1e6bf7b3462f90c1251a2fc22ca9cdee8f81e1ae631fd34cdd48469aad7c
+        sha256: 980f1e6bf7b3462f90c1251a2fc22ca9cdee8f81e1ae631fd34cdd48469aad7c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/actor-framework/actor-framework/archive/refs/tags/1.1.0.tar.gz
+    sha256: 9febd85d3a4f50dac760592043028a36bea62bba50c3ee2fc1eace954dd8ae27
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,53 @@ version: 3.53.0
 description: Command-line interface for SQLite
 homepage: https://sqlite.org/index.html
 license: blessing
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:eb0597f2fc461458b99d9988915a1ec6c55f9a503a63d30cd8f55db661160f34
-    sha256: eb0597f2fc461458b99d9988915a1ec6c55f9a503a63d30cd8f55db661160f34
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:109b479dafa7d3170606a3d13795478031baf2b60d2bf77bc1045c4a6a6578f6
-    sha256: 109b479dafa7d3170606a3d13795478031baf2b60d2bf77bc1045c4a6a6578f6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:b1a29a99fae0bbd1e20ffc396aa6b4e9f47c0dcc11dd88c3d4c18f1de2fa904a
-    sha256: b1a29a99fae0bbd1e20ffc396aa6b4e9f47c0dcc11dd88c3d4c18f1de2fa904a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:4f854d0fde3e8a2e8321476fd488f273e69833c672d7d672d3e0b13e3a3c5475
-    sha256: 4f854d0fde3e8a2e8321476fd488f273e69833c672d7d672d3e0b13e3a3c5475
-source:
-  url: https://sqlite.org/2026/sqlite-autoconf-3530000.tar.gz
-  sha256: 851e9b38192fe2ceaa65e0baa665e7fa06230c3d9bd1a6a9662d02380d73365a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - readline
-linux_dependencies:
-  - readline
-  - zlib-ng-compat
+    - readline
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:109b479dafa7d3170606a3d13795478031baf2b60d2bf77bc1045c4a6a6578f6
+        sha256: 109b479dafa7d3170606a3d13795478031baf2b60d2bf77bc1045c4a6a6578f6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:eb0597f2fc461458b99d9988915a1ec6c55f9a503a63d30cd8f55db661160f34
+        sha256: eb0597f2fc461458b99d9988915a1ec6c55f9a503a63d30cd8f55db661160f34
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:b1a29a99fae0bbd1e20ffc396aa6b4e9f47c0dcc11dd88c3d4c18f1de2fa904a
+        sha256: b1a29a99fae0bbd1e20ffc396aa6b4e9f47c0dcc11dd88c3d4c18f1de2fa904a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:4f854d0fde3e8a2e8321476fd488f273e69833c672d7d672d3e0b13e3a3c5475
+        sha256: 4f854d0fde3e8a2e8321476fd488f273e69833c672d7d672d3e0b13e3a3c5475
+        sha512: ""
+        signature: ""
+source:
+    url: https://sqlite.org/2026/sqlite-autoconf-3530000.tar.gz
+    sha256: 851e9b38192fe2ceaa65e0baa665e7fa06230c3d9bd1a6a9662d02380d73365a
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies:
+    - readline
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

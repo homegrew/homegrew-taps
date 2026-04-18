@@ -3,31 +3,55 @@ version: 0.15.15
 description: Strongly typed programming language that compiles to JavaScript
 homepage: https://www.purescript.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/purescript/blobs/sha256:6816c04335a5db15f75e148c2c5a32bda26768b80d0b5ff76162a50c568adf6d
-    sha256: 6816c04335a5db15f75e148c2c5a32bda26768b80d0b5ff76162a50c568adf6d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/purescript/blobs/sha256:307a30f58a38fe6991b6362d5f36d8b22094d595aefce3b4630566ee0e03180f
-    sha256: 307a30f58a38fe6991b6362d5f36d8b22094d595aefce3b4630566ee0e03180f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/purescript/blobs/sha256:7ab1488698c461b43eb948dc0dcd752ea4cdad6216ce45ef809b5d49209bf0c7
-    sha256: 7ab1488698c461b43eb948dc0dcd752ea4cdad6216ce45ef809b5d49209bf0c7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/purescript/blobs/sha256:71a6893562316ed81a0b374eb74754435d0f512b727d3430952232d24e8ba397
-    sha256: 71a6893562316ed81a0b374eb74754435d0f512b727d3430952232d24e8ba397
-source:
-  url: https://github.com/purescript/purescript/archive/refs/tags/v0.15.15.tar.gz
-  sha256: 7f6c5b1025f1dfa3b74f6fd11133d8472cb5297038619ce2bd00dea99af8127a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/purescript/blobs/sha256:307a30f58a38fe6991b6362d5f36d8b22094d595aefce3b4630566ee0e03180f
+        sha256: 307a30f58a38fe6991b6362d5f36d8b22094d595aefce3b4630566ee0e03180f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/purescript/blobs/sha256:6816c04335a5db15f75e148c2c5a32bda26768b80d0b5ff76162a50c568adf6d
+        sha256: 6816c04335a5db15f75e148c2c5a32bda26768b80d0b5ff76162a50c568adf6d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/purescript/blobs/sha256:7ab1488698c461b43eb948dc0dcd752ea4cdad6216ce45ef809b5d49209bf0c7
+        sha256: 7ab1488698c461b43eb948dc0dcd752ea4cdad6216ce45ef809b5d49209bf0c7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/purescript/blobs/sha256:71a6893562316ed81a0b374eb74754435d0f512b727d3430952232d24e8ba397
+        sha256: 71a6893562316ed81a0b374eb74754435d0f512b727d3430952232d24e8ba397
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/purescript/purescript/archive/refs/tags/v0.15.15.tar.gz
+    sha256: 7f6c5b1025f1dfa3b74f6fd11133d8472cb5297038619ce2bd00dea99af8127a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
+    - cabal-install
+    - ghc
 linux_dependencies:
-  - gmp
-  - zlib-ng-compat
+    - gmp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

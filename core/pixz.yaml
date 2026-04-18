@@ -3,30 +3,55 @@ version: 1.0.7
 description: Parallel, indexed, xz compressor
 homepage: https://github.com/vasi/pixz
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pixz/blobs/sha256:b760a3d166ab9febb997a2e8b0b295fbbc8d5d4b50ecbc068a38e61a09ba5977
-    sha256: b760a3d166ab9febb997a2e8b0b295fbbc8d5d4b50ecbc068a38e61a09ba5977
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pixz/blobs/sha256:b584017019900bd6e4e8d1040b74b54095c2d17e3ade4b08dbd963a03ce44917
-    sha256: b584017019900bd6e4e8d1040b74b54095c2d17e3ade4b08dbd963a03ce44917
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pixz/blobs/sha256:4a110294724b79c7a130b3705c91d25fa52e01f7cf6655d486a0901ada6d6b24
-    sha256: 4a110294724b79c7a130b3705c91d25fa52e01f7cf6655d486a0901ada6d6b24
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pixz/blobs/sha256:87cb676de2f355d9918910e4649f45f4a1b1b474cb91479bc21ad19c0bddf2c8
-    sha256: 87cb676de2f355d9918910e4649f45f4a1b1b474cb91479bc21ad19c0bddf2c8
-source:
-  url: https://github.com/vasi/pixz/releases/download/v1.0.7/pixz-1.0.7.tar.gz
-  sha256: d1b6de1c0399e54cbd18321b8091bbffef6d209ec136d4466f398689f62c3b5f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libarchive
-  - xz
+    - libarchive
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pixz/blobs/sha256:b584017019900bd6e4e8d1040b74b54095c2d17e3ade4b08dbd963a03ce44917
+        sha256: b584017019900bd6e4e8d1040b74b54095c2d17e3ade4b08dbd963a03ce44917
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pixz/blobs/sha256:b760a3d166ab9febb997a2e8b0b295fbbc8d5d4b50ecbc068a38e61a09ba5977
+        sha256: b760a3d166ab9febb997a2e8b0b295fbbc8d5d4b50ecbc068a38e61a09ba5977
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pixz/blobs/sha256:4a110294724b79c7a130b3705c91d25fa52e01f7cf6655d486a0901ada6d6b24
+        sha256: 4a110294724b79c7a130b3705c91d25fa52e01f7cf6655d486a0901ada6d6b24
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pixz/blobs/sha256:87cb676de2f355d9918910e4649f45f4a1b1b474cb91479bc21ad19c0bddf2c8
+        sha256: 87cb676de2f355d9918910e4649f45f4a1b1b474cb91479bc21ad19c0bddf2c8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/vasi/pixz/releases/download/v1.0.7/pixz-1.0.7.tar.gz
+    sha256: d1b6de1c0399e54cbd18321b8091bbffef6d209ec136d4466f398689f62c3b5f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoc
-  - docbook-xsl
-  - pkgconf
+    - asciidoc
+    - docbook-xsl
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

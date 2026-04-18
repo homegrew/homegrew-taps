@@ -1,27 +1,53 @@
 name: vnstat
-version: 2.13
+version: "2.13"
 description: Console-based network traffic monitor
 homepage: https://humdi.net/vnstat/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:af145bbd1da554febe818a33724a04fd13316d589279f3e7c7dd44178556f1ae
-    sha256: af145bbd1da554febe818a33724a04fd13316d589279f3e7c7dd44178556f1ae
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:edeb08c785444734a8d1c2952fb88959b058406792628f3b99e10f744f207057
-    sha256: edeb08c785444734a8d1c2952fb88959b058406792628f3b99e10f744f207057
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:41fb94bbbdbb6533741c6cd5b0cdf6e1713ce55b499ef80950cf31a94a25015e
-    sha256: 41fb94bbbdbb6533741c6cd5b0cdf6e1713ce55b499ef80950cf31a94a25015e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:c390b99feadced13f30746c1f6caa889592001edb5a001cde6a40bed344728e7
-    sha256: c390b99feadced13f30746c1f6caa889592001edb5a001cde6a40bed344728e7
-source:
-  url: https://humdi.net/vnstat/vnstat-2.13.tar.gz
-  sha256: c9fe19312d1ec3ddfbc4672aa951cf9e61ca98dc14cad3d3565f7d9803a6b187
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gd
+    - gd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:edeb08c785444734a8d1c2952fb88959b058406792628f3b99e10f744f207057
+        sha256: edeb08c785444734a8d1c2952fb88959b058406792628f3b99e10f744f207057
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:af145bbd1da554febe818a33724a04fd13316d589279f3e7c7dd44178556f1ae
+        sha256: af145bbd1da554febe818a33724a04fd13316d589279f3e7c7dd44178556f1ae
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:41fb94bbbdbb6533741c6cd5b0cdf6e1713ce55b499ef80950cf31a94a25015e
+        sha256: 41fb94bbbdbb6533741c6cd5b0cdf6e1713ce55b499ef80950cf31a94a25015e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:c390b99feadced13f30746c1f6caa889592001edb5a001cde6a40bed344728e7
+        sha256: c390b99feadced13f30746c1f6caa889592001edb5a001cde6a40bed344728e7
+        sha512: ""
+        signature: ""
+source:
+    url: https://humdi.net/vnstat/vnstat-2.13.tar.gz
+    sha256: c9fe19312d1ec3ddfbc4672aa951cf9e61ca98dc14cad3d3565f7d9803a6b187
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

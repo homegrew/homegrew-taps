@@ -3,26 +3,52 @@ version: 3.11.5
 description: Dart Language SDK, including the VM, dart2js, core libraries, and more
 homepage: https://dart.dev
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dart-sdk/blobs/sha256:cec92f51ea1ad125d6c7d71243a19a329d972668033867347518ac6983dbe8ad
-    sha256: cec92f51ea1ad125d6c7d71243a19a329d972668033867347518ac6983dbe8ad
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dart-sdk/blobs/sha256:2832b913d71cc14c2c63cea01292fec45b7f270e4bf94223d485cc97a91179a3
-    sha256: 2832b913d71cc14c2c63cea01292fec45b7f270e4bf94223d485cc97a91179a3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dart-sdk/blobs/sha256:c1ea971433e619dc9fc19e84428b7b4813d895da6890b69817815ec7fa9e817b
-    sha256: c1ea971433e619dc9fc19e84428b7b4813d895da6890b69817815ec7fa9e817b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dart-sdk/blobs/sha256:e25bd1bbe2ca739f75ff6bb53765cbdc58c10245b9bab31def9ece1cd94f1829
-    sha256: e25bd1bbe2ca739f75ff6bb53765cbdc58c10245b9bab31def9ece1cd94f1829
-source:
-  url: https://github.com/dart-lang/sdk/archive/refs/tags/3.11.5.tar.gz
-  sha256: 0e7029c6ba63c45a43357f5f3e8890f6798827c1433a14b92962f8a688afdf6f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dart-sdk/blobs/sha256:2832b913d71cc14c2c63cea01292fec45b7f270e4bf94223d485cc97a91179a3
+        sha256: 2832b913d71cc14c2c63cea01292fec45b7f270e4bf94223d485cc97a91179a3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dart-sdk/blobs/sha256:cec92f51ea1ad125d6c7d71243a19a329d972668033867347518ac6983dbe8ad
+        sha256: cec92f51ea1ad125d6c7d71243a19a329d972668033867347518ac6983dbe8ad
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dart-sdk/blobs/sha256:c1ea971433e619dc9fc19e84428b7b4813d895da6890b69817815ec7fa9e817b
+        sha256: c1ea971433e619dc9fc19e84428b7b4813d895da6890b69817815ec7fa9e817b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dart-sdk/blobs/sha256:e25bd1bbe2ca739f75ff6bb53765cbdc58c10245b9bab31def9ece1cd94f1829
+        sha256: e25bd1bbe2ca739f75ff6bb53765cbdc58c10245b9bab31def9ece1cd94f1829
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dart-lang/sdk/archive/refs/tags/3.11.5.tar.gz
+    sha256: 0e7029c6ba63c45a43357f5f3e8890f6798827c1433a14b92962f8a688afdf6f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ninja
-  - rust
+    - ninja
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

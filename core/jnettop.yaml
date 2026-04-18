@@ -3,31 +3,55 @@ version: 0.13.0
 description: View hosts/ports taking up the most network traffic
 homepage: https://sourceforge.net/projects/jnettop/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:94be630d1e700e5da48e52eb85019003f81295f9afd49c846296943881962a17
-    sha256: 94be630d1e700e5da48e52eb85019003f81295f9afd49c846296943881962a17
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:9cd2a14ec9e61fff8a91107b290aa603066f3f613cd3a95c9c7311eb3355e307
-    sha256: 9cd2a14ec9e61fff8a91107b290aa603066f3f613cd3a95c9c7311eb3355e307
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:2e3617c2641b35e01517e783554157ece0999367fccf494fc9824618277464eb
-    sha256: 2e3617c2641b35e01517e783554157ece0999367fccf494fc9824618277464eb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:a06d489b070670f237da6659aa5c1803bd5ec72b8b07540b00b14d392879402c
-    sha256: a06d489b070670f237da6659aa5c1803bd5ec72b8b07540b00b14d392879402c
-source:
-  url: https://downloads.sourceforge.net/project/jnettop/jnettop/0.13/jnettop-0.13.0.tar.gz
-  sha256: a005d6fa775a85ff9ee91386e25505d8bdd93bc65033f1928327c98f5e099a62
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - gettext
+    - glib
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:9cd2a14ec9e61fff8a91107b290aa603066f3f613cd3a95c9c7311eb3355e307
+        sha256: 9cd2a14ec9e61fff8a91107b290aa603066f3f613cd3a95c9c7311eb3355e307
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:94be630d1e700e5da48e52eb85019003f81295f9afd49c846296943881962a17
+        sha256: 94be630d1e700e5da48e52eb85019003f81295f9afd49c846296943881962a17
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:2e3617c2641b35e01517e783554157ece0999367fccf494fc9824618277464eb
+        sha256: 2e3617c2641b35e01517e783554157ece0999367fccf494fc9824618277464eb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:a06d489b070670f237da6659aa5c1803bd5ec72b8b07540b00b14d392879402c
+        sha256: a06d489b070670f237da6659aa5c1803bd5ec72b8b07540b00b14d392879402c
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/jnettop/jnettop/0.13/jnettop-0.13.0.tar.gz
+    sha256: a005d6fa775a85ff9ee91386e25505d8bdd93bc65033f1928327c98f5e099a62
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - berkeley-db@5
-  - glib
+    - berkeley-db@5
+    - glib
+build:
+    configure: []
+    install: []
+service: null

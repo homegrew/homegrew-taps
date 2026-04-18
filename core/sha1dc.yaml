@@ -3,26 +3,52 @@ version: 1.0.3
 description: Tool to detect SHA-1 collisions in files, including SHAttered
 homepage: https://github.com/cr-marcstevens/sha1collisiondetection
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sha1dc/blobs/sha256:1c950f58012467621593e85886219563b034c7967bc8fb6d5af0b3f2be4bd2ca
-    sha256: 1c950f58012467621593e85886219563b034c7967bc8fb6d5af0b3f2be4bd2ca
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sha1dc/blobs/sha256:278844956e65f88d768cc841e8c39059738bc406683b96ca92b9ba2871075f5f
-    sha256: 278844956e65f88d768cc841e8c39059738bc406683b96ca92b9ba2871075f5f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sha1dc/blobs/sha256:981db3d0b2fcf5e914e1506a746dfb2bd14d83a191f268d8cdf5cb57401c0475
-    sha256: 981db3d0b2fcf5e914e1506a746dfb2bd14d83a191f268d8cdf5cb57401c0475
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sha1dc/blobs/sha256:e70a02cce5e9c673cd751665e913a54e3db1e67530aa702b86c3452e5d45db90
-    sha256: e70a02cce5e9c673cd751665e913a54e3db1e67530aa702b86c3452e5d45db90
-source:
-  url: https://github.com/cr-marcstevens/sha1collisiondetection/archive/refs/tags/stable-v1.0.3.tar.gz
-  sha256: 77a1c2b2a4fbe4f78de288fa4831ca63938c3cb84a73a92c79f436238bd9ac07
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sha1dc/blobs/sha256:278844956e65f88d768cc841e8c39059738bc406683b96ca92b9ba2871075f5f
+        sha256: 278844956e65f88d768cc841e8c39059738bc406683b96ca92b9ba2871075f5f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sha1dc/blobs/sha256:1c950f58012467621593e85886219563b034c7967bc8fb6d5af0b3f2be4bd2ca
+        sha256: 1c950f58012467621593e85886219563b034c7967bc8fb6d5af0b3f2be4bd2ca
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sha1dc/blobs/sha256:981db3d0b2fcf5e914e1506a746dfb2bd14d83a191f268d8cdf5cb57401c0475
+        sha256: 981db3d0b2fcf5e914e1506a746dfb2bd14d83a191f268d8cdf5cb57401c0475
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sha1dc/blobs/sha256:e70a02cce5e9c673cd751665e913a54e3db1e67530aa702b86c3452e5d45db90
+        sha256: e70a02cce5e9c673cd751665e913a54e3db1e67530aa702b86c3452e5d45db90
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cr-marcstevens/sha1collisiondetection/archive/refs/tags/stable-v1.0.3.tar.gz
+    sha256: 77a1c2b2a4fbe4f78de288fa4831ca63938c3cb84a73a92c79f436238bd9ac07
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - coreutils
-  - libtool
+    - coreutils
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

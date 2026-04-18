@@ -3,25 +3,51 @@ version: 1.5.1
 description: CLI for interacting with Rekor
 homepage: https://docs.sigstore.dev/logging/overview/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rekor-cli/blobs/sha256:c3015d97b694bd2a14db852c57c9d53a029e77f29b45125d906d3d9fb3715c58
-    sha256: c3015d97b694bd2a14db852c57c9d53a029e77f29b45125d906d3d9fb3715c58
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rekor-cli/blobs/sha256:8f356be3d43bf51680eaa4aeb76b6ecffd90b0c3db969dd1260c1a7420c9a0b8
-    sha256: 8f356be3d43bf51680eaa4aeb76b6ecffd90b0c3db969dd1260c1a7420c9a0b8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rekor-cli/blobs/sha256:a3767a5534fe576d29b472e5b59053b3d833e3dd400fc6bf72bffe5b5a0a0941
-    sha256: a3767a5534fe576d29b472e5b59053b3d833e3dd400fc6bf72bffe5b5a0a0941
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rekor-cli/blobs/sha256:69b766112dae48f1c329b5550617a7192e2e0514aa752c8818d14c69e981fb29
-    sha256: 69b766112dae48f1c329b5550617a7192e2e0514aa752c8818d14c69e981fb29
-source:
-  url: https://github.com/sigstore/rekor/archive/refs/tags/v1.5.1.tar.gz
-  sha256: 3b6e0c202ed4e387a095852e680b6503d46d7a26ce8060daf223fe6657450983
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rekor-cli/blobs/sha256:8f356be3d43bf51680eaa4aeb76b6ecffd90b0c3db969dd1260c1a7420c9a0b8
+        sha256: 8f356be3d43bf51680eaa4aeb76b6ecffd90b0c3db969dd1260c1a7420c9a0b8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rekor-cli/blobs/sha256:c3015d97b694bd2a14db852c57c9d53a029e77f29b45125d906d3d9fb3715c58
+        sha256: c3015d97b694bd2a14db852c57c9d53a029e77f29b45125d906d3d9fb3715c58
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rekor-cli/blobs/sha256:a3767a5534fe576d29b472e5b59053b3d833e3dd400fc6bf72bffe5b5a0a0941
+        sha256: a3767a5534fe576d29b472e5b59053b3d833e3dd400fc6bf72bffe5b5a0a0941
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rekor-cli/blobs/sha256:69b766112dae48f1c329b5550617a7192e2e0514aa752c8818d14c69e981fb29
+        sha256: 69b766112dae48f1c329b5550617a7192e2e0514aa752c8818d14c69e981fb29
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sigstore/rekor/archive/refs/tags/v1.5.1.tar.gz
+    sha256: 3b6e0c202ed4e387a095852e680b6503d46d7a26ce8060daf223fe6657450983
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

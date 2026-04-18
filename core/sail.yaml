@@ -3,31 +3,56 @@ version: 0.10.9
 description: CLI toolkit to provision and deploy WordPress applications to DigitalOcean
 homepage: https://sailed.io
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sail/blobs/sha256:2383f54fd4b8de14976127547fefe0c7d975e69c95ef2a9b2ecd05467af2a58c
-    sha256: 2383f54fd4b8de14976127547fefe0c7d975e69c95ef2a9b2ecd05467af2a58c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sail/blobs/sha256:6e94b89478f2ce9b73a5916d921bfe5e026b84dfcc22b310da9fcd9bf7b984b2
-    sha256: 6e94b89478f2ce9b73a5916d921bfe5e026b84dfcc22b310da9fcd9bf7b984b2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sail/blobs/sha256:0949b302bcdcc51a96ec2f2882cd0bd2ce63634414dc9cf3f77e3369e37346f5
-    sha256: 0949b302bcdcc51a96ec2f2882cd0bd2ce63634414dc9cf3f77e3369e37346f5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sail/blobs/sha256:f667f9c3882a0b31f02298a71d658ddbab4334436bba68822c868c0b0c71c4c7
-    sha256: f667f9c3882a0b31f02298a71d658ddbab4334436bba68822c868c0b0c71c4c7
-source:
-  url: https://files.pythonhosted.org/packages/1c/64/2af3a1a9dfa005dc91a22535a29071e9255efeacf7e61dbefee920d01571/sailed_io-0.10.9.tar.gz
-  sha256: cae38b97fada34a7681872661342c82b317d877eab882830c59610734eb53bdf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - libsodium
-  - libyaml
-  - python@3.14
+    - certifi
+    - cryptography
+    - libsodium
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sail/blobs/sha256:6e94b89478f2ce9b73a5916d921bfe5e026b84dfcc22b310da9fcd9bf7b984b2
+        sha256: 6e94b89478f2ce9b73a5916d921bfe5e026b84dfcc22b310da9fcd9bf7b984b2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sail/blobs/sha256:2383f54fd4b8de14976127547fefe0c7d975e69c95ef2a9b2ecd05467af2a58c
+        sha256: 2383f54fd4b8de14976127547fefe0c7d975e69c95ef2a9b2ecd05467af2a58c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sail/blobs/sha256:0949b302bcdcc51a96ec2f2882cd0bd2ce63634414dc9cf3f77e3369e37346f5
+        sha256: 0949b302bcdcc51a96ec2f2882cd0bd2ce63634414dc9cf3f77e3369e37346f5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sail/blobs/sha256:f667f9c3882a0b31f02298a71d658ddbab4334436bba68822c868c0b0c71c4c7
+        sha256: f667f9c3882a0b31f02298a71d658ddbab4334436bba68822c868c0b0c71c4c7
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/1c/64/2af3a1a9dfa005dc91a22535a29071e9255efeacf7e61dbefee920d01571/sailed_io-0.10.9.tar.gz
+    sha256: cae38b97fada34a7681872661342c82b317d877eab882830c59610734eb53bdf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

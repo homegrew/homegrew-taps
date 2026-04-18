@@ -3,27 +3,52 @@ version: 3.27.0
 description: Erlang build tool
 homepage: https://rebar3.org
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rebar3/blobs/sha256:94b3bd9f293d74e1dc1b73bfc720da505e1231e47a37dc16dcc0692a42841361
-    sha256: 94b3bd9f293d74e1dc1b73bfc720da505e1231e47a37dc16dcc0692a42841361
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rebar3/blobs/sha256:0530db6336388349156d54bd48dc901762e9e2400f3451672c06e5760fd6a79d
-    sha256: 0530db6336388349156d54bd48dc901762e9e2400f3451672c06e5760fd6a79d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rebar3/blobs/sha256:959e9d042c97cb228e137556169daa64f8c8823a8127a0f0123db68f876eabfe
-    sha256: 959e9d042c97cb228e137556169daa64f8c8823a8127a0f0123db68f876eabfe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rebar3/blobs/sha256:085765e94871855b1b5234c97cf96deadb21fe3b34635e32f1310e40c0d70fc7
-    sha256: 085765e94871855b1b5234c97cf96deadb21fe3b34635e32f1310e40c0d70fc7
-source:
-  url: https://github.com/erlang/rebar3/archive/refs/tags/3.27.0.tar.gz
-  sha256: 985cae6e957334cfa549190b9f5efb9185c184a18fc181c87b8dde096ba79f38
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - erlang
+    - erlang
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rebar3/blobs/sha256:0530db6336388349156d54bd48dc901762e9e2400f3451672c06e5760fd6a79d
+        sha256: 0530db6336388349156d54bd48dc901762e9e2400f3451672c06e5760fd6a79d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rebar3/blobs/sha256:94b3bd9f293d74e1dc1b73bfc720da505e1231e47a37dc16dcc0692a42841361
+        sha256: 94b3bd9f293d74e1dc1b73bfc720da505e1231e47a37dc16dcc0692a42841361
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rebar3/blobs/sha256:959e9d042c97cb228e137556169daa64f8c8823a8127a0f0123db68f876eabfe
+        sha256: 959e9d042c97cb228e137556169daa64f8c8823a8127a0f0123db68f876eabfe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rebar3/blobs/sha256:085765e94871855b1b5234c97cf96deadb21fe3b34635e32f1310e40c0d70fc7
+        sha256: 085765e94871855b1b5234c97cf96deadb21fe3b34635e32f1310e40c0d70fc7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/erlang/rebar3/archive/refs/tags/3.27.0.tar.gz
+    sha256: 985cae6e957334cfa549190b9f5efb9185c184a18fc181c87b8dde096ba79f38
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - erlang@26
+    - erlang@26
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,30 +3,53 @@ version: 1.47.4
 description: Utilities for the ext2, ext3, and ext4 file systems
 homepage: https://e2fsprogs.sourceforge.net/
 license: GPL-2.0-or-later AND LGPL-2.0-or-later AND LGPL-2.0-only AND BSD-3-Clause AND MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/e2fsprogs/blobs/sha256:f8024861ae8b5a645374d7960a5b5e3c41576c792712925d55deb186a74a1d06
-    sha256: f8024861ae8b5a645374d7960a5b5e3c41576c792712925d55deb186a74a1d06
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/e2fsprogs/blobs/sha256:5985432543778c6ebd6358ecaa2f9fb508c1a9cc6393117597d505b489d8a7a3
-    sha256: 5985432543778c6ebd6358ecaa2f9fb508c1a9cc6393117597d505b489d8a7a3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/e2fsprogs/blobs/sha256:28c57ec49ba06d7c371755737e6ab04a23fa733ef82a83b05a9da2871e8f8215
-    sha256: 28c57ec49ba06d7c371755737e6ab04a23fa733ef82a83b05a9da2871e8f8215
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/e2fsprogs/blobs/sha256:7dc8e4683b77882347b8dcd2cc2b82f2943fca8c30db51795bf33d2f260fd7f5
-    sha256: 7dc8e4683b77882347b8dcd2cc2b82f2943fca8c30db51795bf33d2f260fd7f5
-source:
-  url: https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.4/e2fsprogs-1.47.4.tar.gz
-  sha256: 2cec05f39c20ee621f14926195664e66e6017190ac8e4bbdb16d86082e43c5da
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
-build_dependencies:
-  - pkgconf
-linux_dependencies:
-  - util-linux
+    - gettext
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/e2fsprogs/blobs/sha256:5985432543778c6ebd6358ecaa2f9fb508c1a9cc6393117597d505b489d8a7a3
+        sha256: 5985432543778c6ebd6358ecaa2f9fb508c1a9cc6393117597d505b489d8a7a3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/e2fsprogs/blobs/sha256:f8024861ae8b5a645374d7960a5b5e3c41576c792712925d55deb186a74a1d06
+        sha256: f8024861ae8b5a645374d7960a5b5e3c41576c792712925d55deb186a74a1d06
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/e2fsprogs/blobs/sha256:28c57ec49ba06d7c371755737e6ab04a23fa733ef82a83b05a9da2871e8f8215
+        sha256: 28c57ec49ba06d7c371755737e6ab04a23fa733ef82a83b05a9da2871e8f8215
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/e2fsprogs/blobs/sha256:7dc8e4683b77882347b8dcd2cc2b82f2943fca8c30db51795bf33d2f260fd7f5
+        sha256: 7dc8e4683b77882347b8dcd2cc2b82f2943fca8c30db51795bf33d2f260fd7f5
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.4/e2fsprogs-1.47.4.tar.gz
+    sha256: 2cec05f39c20ee621f14926195664e66e6017190ac8e4bbdb16d86082e43c5da
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+linux_dependencies:
+    - util-linux
+build:
+    configure: []
+    install: []
+service: null

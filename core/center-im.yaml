@@ -3,38 +3,62 @@ version: 5.0.1
 description: Text-mode multi-protocol instant messaging client
 homepage: https://github.com/petrpavlu/centerim5
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/center-im/blobs/sha256:0144e5a04086b115b6c21b4c9dd9448ec8a43f965737aaa7ca21213d5d78a1dd
-    sha256: 0144e5a04086b115b6c21b4c9dd9448ec8a43f965737aaa7ca21213d5d78a1dd
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/center-im/blobs/sha256:02f27aa633b15c66529bd3d7c9d11f382b4998816fad2f048b1efd11be44cc2b
-    sha256: 02f27aa633b15c66529bd3d7c9d11f382b4998816fad2f048b1efd11be44cc2b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/center-im/blobs/sha256:7148aa25f016c25825f9ed5fb6526d14737ba38208779727937801f2c7dbc42f
-    sha256: 7148aa25f016c25825f9ed5fb6526d14737ba38208779727937801f2c7dbc42f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/center-im/blobs/sha256:2a1f98a1195968b86f0fd44b1c115daeb2a54d38161b85339641223ab121fd37
-    sha256: 2a1f98a1195968b86f0fd44b1c115daeb2a54d38161b85339641223ab121fd37
-source:
-  url: https://github.com/petrpavlu/centerim5/releases/download/v5.0.1/centerim5-5.0.1.tar.gz
-  sha256: b80b999e0174b81206255556cf00de6548ea29fa6f3ea9deb1f9ab59d8318313
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libsigc++@2
-  - ncurses
-  - pidgin
-  - gettext
+    - glib
+    - libsigc++@2
+    - ncurses
+    - pidgin
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/center-im/blobs/sha256:02f27aa633b15c66529bd3d7c9d11f382b4998816fad2f048b1efd11be44cc2b
+        sha256: 02f27aa633b15c66529bd3d7c9d11f382b4998816fad2f048b1efd11be44cc2b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/center-im/blobs/sha256:0144e5a04086b115b6c21b4c9dd9448ec8a43f965737aaa7ca21213d5d78a1dd
+        sha256: 0144e5a04086b115b6c21b4c9dd9448ec8a43f965737aaa7ca21213d5d78a1dd
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/center-im/blobs/sha256:7148aa25f016c25825f9ed5fb6526d14737ba38208779727937801f2c7dbc42f
+        sha256: 7148aa25f016c25825f9ed5fb6526d14737ba38208779727937801f2c7dbc42f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/center-im/blobs/sha256:2a1f98a1195968b86f0fd44b1c115daeb2a54d38161b85339641223ab121fd37
+        sha256: 2a1f98a1195968b86f0fd44b1c115daeb2a54d38161b85339641223ab121fd37
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/petrpavlu/centerim5/releases/download/v5.0.1/centerim5-5.0.1.tar.gz
+    sha256: b80b999e0174b81206255556cf00de6548ea29fa6f3ea9deb1f9ab59d8318313
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - gettext
-  - pkgconf
+    - cmake
+    - gettext
+    - pkgconf
 linux_dependencies:
-  - glib
-  - libsigc++@2
-  - ncurses
-  - pidgin
+    - glib
+    - libsigc++@2
+    - ncurses
+    - pidgin
+build:
+    configure: []
+    install: []
+service: null

@@ -1,30 +1,55 @@
 name: gnu-complexity
-version: 1.13
+version: "1.13"
 description: Measures complexity of C source
 homepage: https://www.gnu.org/software/complexity/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnu-complexity/blobs/sha256:edf8e7fe3a3c8d707ff63dbd5d5ef0226653cd76bf7c6d5faf077f09f1fb2b31
-    sha256: edf8e7fe3a3c8d707ff63dbd5d5ef0226653cd76bf7c6d5faf077f09f1fb2b31
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnu-complexity/blobs/sha256:0b3ec86fc33aa631f44dd91525ff27e9b2c992e43acbf0ef1a1e71b4a78763be
-    sha256: 0b3ec86fc33aa631f44dd91525ff27e9b2c992e43acbf0ef1a1e71b4a78763be
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gnu-complexity/blobs/sha256:623e40ffaa4b67fb049c25a3cb3a781366fa19b316207b5f50d68ecccbb839dd
-    sha256: 623e40ffaa4b67fb049c25a3cb3a781366fa19b316207b5f50d68ecccbb839dd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gnu-complexity/blobs/sha256:412f37fba031fc1b45d13fb61d9a025af47633ffc64852bd2f450d08be3dadde
-    sha256: 412f37fba031fc1b45d13fb61d9a025af47633ffc64852bd2f450d08be3dadde
-source:
-  url: https://ftpmirror.gnu.org/gnu/complexity/complexity-1.13.tar.xz
-  sha256: 80a625a87ee7c17fed02fb39482a7946fc757f10d8a4ffddc5372b4c4b739e67
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - autogen
+    - autogen
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnu-complexity/blobs/sha256:0b3ec86fc33aa631f44dd91525ff27e9b2c992e43acbf0ef1a1e71b4a78763be
+        sha256: 0b3ec86fc33aa631f44dd91525ff27e9b2c992e43acbf0ef1a1e71b4a78763be
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnu-complexity/blobs/sha256:edf8e7fe3a3c8d707ff63dbd5d5ef0226653cd76bf7c6d5faf077f09f1fb2b31
+        sha256: edf8e7fe3a3c8d707ff63dbd5d5ef0226653cd76bf7c6d5faf077f09f1fb2b31
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gnu-complexity/blobs/sha256:623e40ffaa4b67fb049c25a3cb3a781366fa19b316207b5f50d68ecccbb839dd
+        sha256: 623e40ffaa4b67fb049c25a3cb3a781366fa19b316207b5f50d68ecccbb839dd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gnu-complexity/blobs/sha256:412f37fba031fc1b45d13fb61d9a025af47633ffc64852bd2f450d08be3dadde
+        sha256: 412f37fba031fc1b45d13fb61d9a025af47633ffc64852bd2f450d08be3dadde
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/complexity/complexity-1.13.tar.xz
+    sha256: 80a625a87ee7c17fed02fb39482a7946fc757f10d8a4ffddc5372b4c4b739e67
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
+    - autoconf
+    - automake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

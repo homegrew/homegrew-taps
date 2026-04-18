@@ -3,30 +3,55 @@ version: 9.6.0
 description: DMARC report analyzer and visualizer
 homepage: https://domainaware.github.io/parsedmarc/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/parsedmarc/blobs/sha256:26533c293db3d26a299d0235ba22f6b8d364f4ac8bcef8d0a809240471224670
-    sha256: 26533c293db3d26a299d0235ba22f6b8d364f4ac8bcef8d0a809240471224670
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/parsedmarc/blobs/sha256:999c8293bbdf4f6cf7abfdab53b0b4ffa3de35ee32e1b4542602a995125589ab
-    sha256: 999c8293bbdf4f6cf7abfdab53b0b4ffa3de35ee32e1b4542602a995125589ab
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/parsedmarc/blobs/sha256:16e8a0a833a461c1137f142f0511083762623774f383c08bb5a87d1c395ff548
-    sha256: 16e8a0a833a461c1137f142f0511083762623774f383c08bb5a87d1c395ff548
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/parsedmarc/blobs/sha256:467a86612f230efc577f5a48a4da6b73b4f354d399b66dd75791a23faf4b5f81
-    sha256: 467a86612f230efc577f5a48a4da6b73b4f354d399b66dd75791a23faf4b5f81
-source:
-  url: https://files.pythonhosted.org/packages/f8/6c/585fab681841a352e5086cae7034d496fb263a904905c53cfd572c4f8edc/parsedmarc-9.6.0.tar.gz
-  sha256: aa622379d69e47cf3f0cf798898e3cae2dd62854e4f0f1da06ad25bb67a5d2b6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - libyaml
-  - python@3.14
+    - certifi
+    - cryptography
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/parsedmarc/blobs/sha256:999c8293bbdf4f6cf7abfdab53b0b4ffa3de35ee32e1b4542602a995125589ab
+        sha256: 999c8293bbdf4f6cf7abfdab53b0b4ffa3de35ee32e1b4542602a995125589ab
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/parsedmarc/blobs/sha256:26533c293db3d26a299d0235ba22f6b8d364f4ac8bcef8d0a809240471224670
+        sha256: 26533c293db3d26a299d0235ba22f6b8d364f4ac8bcef8d0a809240471224670
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/parsedmarc/blobs/sha256:16e8a0a833a461c1137f142f0511083762623774f383c08bb5a87d1c395ff548
+        sha256: 16e8a0a833a461c1137f142f0511083762623774f383c08bb5a87d1c395ff548
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/parsedmarc/blobs/sha256:467a86612f230efc577f5a48a4da6b73b4f354d399b66dd75791a23faf4b5f81
+        sha256: 467a86612f230efc577f5a48a4da6b73b4f354d399b66dd75791a23faf4b5f81
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/f8/6c/585fab681841a352e5086cae7034d496fb263a904905c53cfd572c4f8edc/parsedmarc-9.6.0.tar.gz
+    sha256: aa622379d69e47cf3f0cf798898e3cae2dd62854e4f0f1da06ad25bb67a5d2b6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

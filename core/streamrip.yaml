@@ -3,29 +3,55 @@ version: 2.1.0
 description: Scriptable music downloader for Qobuz, Tidal, SoundCloud, and Deezer
 homepage: https://github.com/nathom/streamrip
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/streamrip/blobs/sha256:77efc60b80cde8f456d96df38c58563b5911a07c1aa0432aacdb4377c7c24cf5
-    sha256: 77efc60b80cde8f456d96df38c58563b5911a07c1aa0432aacdb4377c7c24cf5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/streamrip/blobs/sha256:e961d15fa261bff114f9048e9e645990218691dca90078eba8d39f428ae79280
-    sha256: e961d15fa261bff114f9048e9e645990218691dca90078eba8d39f428ae79280
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/streamrip/blobs/sha256:40e4196fd9cfa1645aac4b6d58749511fc521b524be47c3b4b9d513b862be578
-    sha256: 40e4196fd9cfa1645aac4b6d58749511fc521b524be47c3b4b9d513b862be578
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/streamrip/blobs/sha256:50c7f2e9584037d6879eb8a30a6c0643ac5a6e401bf5c8d927920f93c0f44e0c
-    sha256: 50c7f2e9584037d6879eb8a30a6c0643ac5a6e401bf5c8d927920f93c0f44e0c
-source:
-  url: https://files.pythonhosted.org/packages/b8/c9/6997772e0217f3081e4e692c7b8b104aaa564c008f2593341e81bbbd2396/streamrip-2.1.0.tar.gz
-  sha256: e59b4b406f9ac77eb59c927a1a082644e0902152ffeb6212b6b24af7fbef5540
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cffi
-  - ffmpeg
-  - pillow
-  - python@3.14
+    - certifi
+    - cffi
+    - ffmpeg
+    - pillow
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/streamrip/blobs/sha256:e961d15fa261bff114f9048e9e645990218691dca90078eba8d39f428ae79280
+        sha256: e961d15fa261bff114f9048e9e645990218691dca90078eba8d39f428ae79280
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/streamrip/blobs/sha256:77efc60b80cde8f456d96df38c58563b5911a07c1aa0432aacdb4377c7c24cf5
+        sha256: 77efc60b80cde8f456d96df38c58563b5911a07c1aa0432aacdb4377c7c24cf5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/streamrip/blobs/sha256:40e4196fd9cfa1645aac4b6d58749511fc521b524be47c3b4b9d513b862be578
+        sha256: 40e4196fd9cfa1645aac4b6d58749511fc521b524be47c3b4b9d513b862be578
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/streamrip/blobs/sha256:50c7f2e9584037d6879eb8a30a6c0643ac5a6e401bf5c8d927920f93c0f44e0c
+        sha256: 50c7f2e9584037d6879eb8a30a6c0643ac5a6e401bf5c8d927920f93c0f44e0c
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/b8/c9/6997772e0217f3081e4e692c7b8b104aaa564c008f2593341e81bbbd2396/streamrip-2.1.0.tar.gz
+    sha256: e59b4b406f9ac77eb59c927a1a082644e0902152ffeb6212b6b24af7fbef5540
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

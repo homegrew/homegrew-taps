@@ -3,31 +3,55 @@ version: 0.7.9
 description: Static analysis tool for code quality and security
 homepage: https://docs.datadoghq.com/security/code_security/static_analysis/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/datadog-static-analyzer/blobs/sha256:cada71c9a09d11e16f6cf2173adcaf9a6688043d1362ab5af97ccf95959a6709
-    sha256: cada71c9a09d11e16f6cf2173adcaf9a6688043d1362ab5af97ccf95959a6709
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/datadog-static-analyzer/blobs/sha256:bb595af72d4266a4ee526e4fcd82e9076807243438dbaef7c95ce007d9da8951
-    sha256: bb595af72d4266a4ee526e4fcd82e9076807243438dbaef7c95ce007d9da8951
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/datadog-static-analyzer/blobs/sha256:df76e303b8332d0b6efee7df7a1b430607f357fb908867aeb40bd8c674d84e23
-    sha256: df76e303b8332d0b6efee7df7a1b430607f357fb908867aeb40bd8c674d84e23
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/datadog-static-analyzer/blobs/sha256:f450c7ded456dde2fb662dd781d5f58a903a2829249664633acf5cbb12fda0de
-    sha256: f450c7ded456dde2fb662dd781d5f58a903a2829249664633acf5cbb12fda0de
-source:
-  url: https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.7.9.tar.gz
-  sha256: 8847ae9f4e20378d015755f1a6408f5da42f18c244dca3e149083db15800e190
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/datadog-static-analyzer/blobs/sha256:bb595af72d4266a4ee526e4fcd82e9076807243438dbaef7c95ce007d9da8951
+        sha256: bb595af72d4266a4ee526e4fcd82e9076807243438dbaef7c95ce007d9da8951
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/datadog-static-analyzer/blobs/sha256:cada71c9a09d11e16f6cf2173adcaf9a6688043d1362ab5af97ccf95959a6709
+        sha256: cada71c9a09d11e16f6cf2173adcaf9a6688043d1362ab5af97ccf95959a6709
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/datadog-static-analyzer/blobs/sha256:df76e303b8332d0b6efee7df7a1b430607f357fb908867aeb40bd8c674d84e23
+        sha256: df76e303b8332d0b6efee7df7a1b430607f357fb908867aeb40bd8c674d84e23
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/datadog-static-analyzer/blobs/sha256:f450c7ded456dde2fb662dd781d5f58a903a2829249664633acf5cbb12fda0de
+        sha256: f450c7ded456dde2fb662dd781d5f58a903a2829249664633acf5cbb12fda0de
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.7.9.tar.gz
+    sha256: 8847ae9f4e20378d015755f1a6408f5da42f18c244dca3e149083db15800e190
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

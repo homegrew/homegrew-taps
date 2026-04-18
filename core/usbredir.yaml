@@ -3,30 +3,55 @@ version: 0.15.0
 description: USB traffic redirection library
 homepage: https://www.spice-space.org
 license: GPL-2.0-or-later AND LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/usbredir/blobs/sha256:abc432af08f1f179d62c85fc6f683e597fab22d36e41d3f63e30013391892157
-    sha256: abc432af08f1f179d62c85fc6f683e597fab22d36e41d3f63e30013391892157
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/usbredir/blobs/sha256:b30c9161cd179a576749dcf9a00ef50030fbdfe7fb6c93a05338dfc9b5bcf736
-    sha256: b30c9161cd179a576749dcf9a00ef50030fbdfe7fb6c93a05338dfc9b5bcf736
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/usbredir/blobs/sha256:a2e5043bd22e186e35537b39c64aa4c6360535a1cde629212b6c0ccf2c9a99b8
-    sha256: a2e5043bd22e186e35537b39c64aa4c6360535a1cde629212b6c0ccf2c9a99b8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/usbredir/blobs/sha256:cba9904ac1855514dd4ebefd97d38975e6ab19b5ad919a3e7be447a794b2f408
-    sha256: cba9904ac1855514dd4ebefd97d38975e6ab19b5ad919a3e7be447a794b2f408
-source:
-  url: https://www.spice-space.org/download/usbredir/usbredir-0.15.0.tar.xz
-  sha256: 6dc2a380277688a068191245dac2ab7063a552999d8ac3ad8e841c10ff050961
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libusb
+    - glib
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/usbredir/blobs/sha256:b30c9161cd179a576749dcf9a00ef50030fbdfe7fb6c93a05338dfc9b5bcf736
+        sha256: b30c9161cd179a576749dcf9a00ef50030fbdfe7fb6c93a05338dfc9b5bcf736
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/usbredir/blobs/sha256:abc432af08f1f179d62c85fc6f683e597fab22d36e41d3f63e30013391892157
+        sha256: abc432af08f1f179d62c85fc6f683e597fab22d36e41d3f63e30013391892157
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/usbredir/blobs/sha256:a2e5043bd22e186e35537b39c64aa4c6360535a1cde629212b6c0ccf2c9a99b8
+        sha256: a2e5043bd22e186e35537b39c64aa4c6360535a1cde629212b6c0ccf2c9a99b8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/usbredir/blobs/sha256:cba9904ac1855514dd4ebefd97d38975e6ab19b5ad919a3e7be447a794b2f408
+        sha256: cba9904ac1855514dd4ebefd97d38975e6ab19b5ad919a3e7be447a794b2f408
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.spice-space.org/download/usbredir/usbredir-0.15.0.tar.xz
+    sha256: 6dc2a380277688a068191245dac2ab7063a552999d8ac3ad8e841c10ff050961
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

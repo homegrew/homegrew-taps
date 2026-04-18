@@ -3,28 +3,53 @@ version: 1.7.12
 description: Static checker for GitHub Actions workflow files
 homepage: https://rhysd.github.io/actionlint/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:26f21384f90e1fe7e5848ccbbac509e0cba82ba74c69646cd4851710fadc5af2
-    sha256: 26f21384f90e1fe7e5848ccbbac509e0cba82ba74c69646cd4851710fadc5af2
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:797ec6a88750f7a59e9c2505de5a6a1da1ac4e91d7637420b90eb105693c9992
-    sha256: 797ec6a88750f7a59e9c2505de5a6a1da1ac4e91d7637420b90eb105693c9992
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:facbd39a3a2cc99217cd995b80b9fc2970b8f41f589ca7622be272acafb6495a
-    sha256: facbd39a3a2cc99217cd995b80b9fc2970b8f41f589ca7622be272acafb6495a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:ec7c45d83bbd0b7b62cb934893f04c15ff3e77d07f97bb519448f65e3da0abdf
-    sha256: ec7c45d83bbd0b7b62cb934893f04c15ff3e77d07f97bb519448f65e3da0abdf
-source:
-  url: https://github.com/rhysd/actionlint/archive/refs/tags/v1.7.12.tar.gz
-  sha256: 454800bd4f854592bcfe79b161f71d56e35940eb7016e48a26dd356adc9d400a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - shellcheck
+    - shellcheck
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:797ec6a88750f7a59e9c2505de5a6a1da1ac4e91d7637420b90eb105693c9992
+        sha256: 797ec6a88750f7a59e9c2505de5a6a1da1ac4e91d7637420b90eb105693c9992
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:26f21384f90e1fe7e5848ccbbac509e0cba82ba74c69646cd4851710fadc5af2
+        sha256: 26f21384f90e1fe7e5848ccbbac509e0cba82ba74c69646cd4851710fadc5af2
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:facbd39a3a2cc99217cd995b80b9fc2970b8f41f589ca7622be272acafb6495a
+        sha256: facbd39a3a2cc99217cd995b80b9fc2970b8f41f589ca7622be272acafb6495a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:ec7c45d83bbd0b7b62cb934893f04c15ff3e77d07f97bb519448f65e3da0abdf
+        sha256: ec7c45d83bbd0b7b62cb934893f04c15ff3e77d07f97bb519448f65e3da0abdf
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rhysd/actionlint/archive/refs/tags/v1.7.12.tar.gz
+    sha256: 454800bd4f854592bcfe79b161f71d56e35940eb7016e48a26dd356adc9d400a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - ronn
+    - go
+    - ronn
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

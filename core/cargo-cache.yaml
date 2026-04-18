@@ -3,27 +3,52 @@ version: 0.8.3
 description: Display information on the cargo cache, plus optional cache pruning
 homepage: https://github.com/matthiaskrgr/cargo-cache
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-cache/blobs/sha256:8ae58970c1cad67cab7d1c1ed0b354989d34eccfcdaaead753754d12eca1aa2b
-    sha256: 8ae58970c1cad67cab7d1c1ed0b354989d34eccfcdaaead753754d12eca1aa2b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-cache/blobs/sha256:32cc1e6a496f5a5668f098b86af3d456412a7c8066a739aa62e9cb1c80c9d47f
-    sha256: 32cc1e6a496f5a5668f098b86af3d456412a7c8066a739aa62e9cb1c80c9d47f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-cache/blobs/sha256:66ba80fe970d805ce31c1df5a8847af3d515d0bc81df6d142c5d287e7b923549
-    sha256: 66ba80fe970d805ce31c1df5a8847af3d515d0bc81df6d142c5d287e7b923549
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-cache/blobs/sha256:64d31e9da185cca1ee9d2ce9f27bf9a0339d00abb25f3e7fb0bbc7b79a4b0eae
-    sha256: 64d31e9da185cca1ee9d2ce9f27bf9a0339d00abb25f3e7fb0bbc7b79a4b0eae
-source:
-  url: https://github.com/matthiaskrgr/cargo-cache/archive/refs/tags/0.8.3.tar.gz
-  sha256: d0f71214d17657a27e26aef6acf491bc9e760432a9bc15f2571338fcc24800e4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-cache/blobs/sha256:32cc1e6a496f5a5668f098b86af3d456412a7c8066a739aa62e9cb1c80c9d47f
+        sha256: 32cc1e6a496f5a5668f098b86af3d456412a7c8066a739aa62e9cb1c80c9d47f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-cache/blobs/sha256:8ae58970c1cad67cab7d1c1ed0b354989d34eccfcdaaead753754d12eca1aa2b
+        sha256: 8ae58970c1cad67cab7d1c1ed0b354989d34eccfcdaaead753754d12eca1aa2b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-cache/blobs/sha256:66ba80fe970d805ce31c1df5a8847af3d515d0bc81df6d142c5d287e7b923549
+        sha256: 66ba80fe970d805ce31c1df5a8847af3d515d0bc81df6d142c5d287e7b923549
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-cache/blobs/sha256:64d31e9da185cca1ee9d2ce9f27bf9a0339d00abb25f3e7fb0bbc7b79a4b0eae
+        sha256: 64d31e9da185cca1ee9d2ce9f27bf9a0339d00abb25f3e7fb0bbc7b79a4b0eae
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/matthiaskrgr/cargo-cache/archive/refs/tags/0.8.3.tar.gz
+    sha256: d0f71214d17657a27e26aef6acf491bc9e760432a9bc15f2571338fcc24800e4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

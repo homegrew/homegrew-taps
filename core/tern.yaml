@@ -3,32 +3,57 @@ version: 2.12.1
 description: Software Bill of Materials (SBOM) tool
 homepage: https://github.com/tern-tools/tern
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tern/blobs/sha256:e46ade560dae11e2b9648e11376b4c52deea6dbd1bfe81be681d99dd62eeb4a5
-    sha256: e46ade560dae11e2b9648e11376b4c52deea6dbd1bfe81be681d99dd62eeb4a5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tern/blobs/sha256:d46ed204d49b0670c2de94063662bda2fd7d9e20e07bd24625053bbdcc3f8dd5
-    sha256: d46ed204d49b0670c2de94063662bda2fd7d9e20e07bd24625053bbdcc3f8dd5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tern/blobs/sha256:89d5aaf7868a4a9149f232f8bb253252dad574563fb983b98343527ac4fd9762
-    sha256: 89d5aaf7868a4a9149f232f8bb253252dad574563fb983b98343527ac4fd9762
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tern/blobs/sha256:9428d38d4d3b50c4f3ee0e9fc5799235f3a9215e5eec66b2c32716c1cfb5c0a3
-    sha256: 9428d38d4d3b50c4f3ee0e9fc5799235f3a9215e5eec66b2c32716c1cfb5c0a3
-source:
-  url: https://files.pythonhosted.org/packages/f8/4b/123b2ca469126b45e61853acf028fe1d466f4fe1d5e7afd1d4972c151b4d/tern-2.12.1.tar.gz
-  sha256: c8c22f162962107adb64caaf5f764044e59caa28b9566079e101181c6449a1c0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - python@3.14
+    - certifi
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tern/blobs/sha256:d46ed204d49b0670c2de94063662bda2fd7d9e20e07bd24625053bbdcc3f8dd5
+        sha256: d46ed204d49b0670c2de94063662bda2fd7d9e20e07bd24625053bbdcc3f8dd5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tern/blobs/sha256:e46ade560dae11e2b9648e11376b4c52deea6dbd1bfe81be681d99dd62eeb4a5
+        sha256: e46ade560dae11e2b9648e11376b4c52deea6dbd1bfe81be681d99dd62eeb4a5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tern/blobs/sha256:89d5aaf7868a4a9149f232f8bb253252dad574563fb983b98343527ac4fd9762
+        sha256: 89d5aaf7868a4a9149f232f8bb253252dad574563fb983b98343527ac4fd9762
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tern/blobs/sha256:9428d38d4d3b50c4f3ee0e9fc5799235f3a9215e5eec66b2c32716c1cfb5c0a3
+        sha256: 9428d38d4d3b50c4f3ee0e9fc5799235f3a9215e5eec66b2c32716c1cfb5c0a3
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/f8/4b/123b2ca469126b45e61853acf028fe1d466f4fe1d5e7afd1d4972c151b4d/tern-2.12.1.tar.gz
+    sha256: c8c22f162962107adb64caaf5f764044e59caa28b9566079e101181c6449a1c0
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - attr
-  - certifi
-  - libyaml
-  - python@3.14
+    - attr
+    - certifi
+    - libyaml
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

@@ -3,34 +3,59 @@ version: 3.4.2
 description: Library for loading images as SDL surfaces and textures
 homepage: https://github.com/libsdl-org/SDL_image
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl3_image/blobs/sha256:b9883391401d35d5471b07e31623879871329e8c08e81bfbdd8869ffc008c75d
-    sha256: b9883391401d35d5471b07e31623879871329e8c08e81bfbdd8869ffc008c75d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl3_image/blobs/sha256:0589ddd15e5c615aab40ac2001f25d4142777a2e20aba8a2970b4e21f3a06f02
-    sha256: 0589ddd15e5c615aab40ac2001f25d4142777a2e20aba8a2970b4e21f3a06f02
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl3_image/blobs/sha256:e40ce6571044b5653f735f7c5615e2b8233b8499c9d7f7f09a884a1c136fff42
-    sha256: e40ce6571044b5653f735f7c5615e2b8233b8499c9d7f7f09a884a1c136fff42
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl3_image/blobs/sha256:08f158a53fa035fdc318f519739654b79668f3638754ee1b51501274579d2cd5
-    sha256: 08f158a53fa035fdc318f519739654b79668f3638754ee1b51501274579d2cd5
-source:
-  url: https://github.com/libsdl-org/SDL_image/releases/download/release-3.4.2/SDL3_image-3.4.2.tar.gz
-  sha256: 82fdb88cf1a9cbdc1c77797aaa3292e6d22ce12586be718c8ea43530df1536b4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - jpeg-xl
-  - libavif
-  - libpng
-  - libtiff
-  - sdl3
-  - webp
+    - jpeg-turbo
+    - jpeg-xl
+    - libavif
+    - libpng
+    - libtiff
+    - sdl3
+    - webp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl3_image/blobs/sha256:0589ddd15e5c615aab40ac2001f25d4142777a2e20aba8a2970b4e21f3a06f02
+        sha256: 0589ddd15e5c615aab40ac2001f25d4142777a2e20aba8a2970b4e21f3a06f02
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl3_image/blobs/sha256:b9883391401d35d5471b07e31623879871329e8c08e81bfbdd8869ffc008c75d
+        sha256: b9883391401d35d5471b07e31623879871329e8c08e81bfbdd8869ffc008c75d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl3_image/blobs/sha256:e40ce6571044b5653f735f7c5615e2b8233b8499c9d7f7f09a884a1c136fff42
+        sha256: e40ce6571044b5653f735f7c5615e2b8233b8499c9d7f7f09a884a1c136fff42
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl3_image/blobs/sha256:08f158a53fa035fdc318f519739654b79668f3638754ee1b51501274579d2cd5
+        sha256: 08f158a53fa035fdc318f519739654b79668f3638754ee1b51501274579d2cd5
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libsdl-org/SDL_image/releases/download/release-3.4.2/SDL3_image-3.4.2.tar.gz
+    sha256: 82fdb88cf1a9cbdc1c77797aaa3292e6d22ce12586be718c8ea43530df1536b4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

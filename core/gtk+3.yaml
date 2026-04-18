@@ -3,67 +3,91 @@ version: 3.24.52
 description: Toolkit for creating graphical user interfaces
 homepage: https://gtk.org/
 license: LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:b046772c72f62ad336ae0161e00a09af17b70c8568e8769c532f6345c9fbf87e
-    sha256: b046772c72f62ad336ae0161e00a09af17b70c8568e8769c532f6345c9fbf87e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:42a24aa1fcabbcebaf230cd4a49d749c819677121b7caa03e92d4c0ce0059ef2
-    sha256: 42a24aa1fcabbcebaf230cd4a49d749c819677121b7caa03e92d4c0ce0059ef2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:1e3c5923f46e1642e1d9ead7d89b1ba08517b532738f8a19903ad0e3d94500f6
-    sha256: 1e3c5923f46e1642e1d9ead7d89b1ba08517b532738f8a19903ad0e3d94500f6
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:aa7ec780724c27b7746d2227a304918a09f19864a7f2f57d553ed8b10d569359
-    sha256: aa7ec780724c27b7746d2227a304918a09f19864a7f2f57d553ed8b10d569359
-source:
-  url: https://download.gnome.org/sources/gtk/3.24/gtk-3.24.52.tar.xz
-  sha256: 80931fa472a77b9a164f6740e3c0b444fac6770054632d35a7ff9d679e5e7b9f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - at-spi2-core
-  - cairo
-  - fribidi
-  - gdk-pixbuf
-  - glib
-  - gsettings-desktop-schemas
-  - harfbuzz
-  - hicolor-icon-theme
-  - libepoxy
-  - pango
-  - gettext
+    - at-spi2-core
+    - cairo
+    - fribidi
+    - gdk-pixbuf
+    - glib
+    - gsettings-desktop-schemas
+    - harfbuzz
+    - hicolor-icon-theme
+    - libepoxy
+    - pango
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:42a24aa1fcabbcebaf230cd4a49d749c819677121b7caa03e92d4c0ce0059ef2
+        sha256: 42a24aa1fcabbcebaf230cd4a49d749c819677121b7caa03e92d4c0ce0059ef2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:b046772c72f62ad336ae0161e00a09af17b70c8568e8769c532f6345c9fbf87e
+        sha256: b046772c72f62ad336ae0161e00a09af17b70c8568e8769c532f6345c9fbf87e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:1e3c5923f46e1642e1d9ead7d89b1ba08517b532738f8a19903ad0e3d94500f6
+        sha256: 1e3c5923f46e1642e1d9ead7d89b1ba08517b532738f8a19903ad0e3d94500f6
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:aa7ec780724c27b7746d2227a304918a09f19864a7f2f57d553ed8b10d569359
+        sha256: aa7ec780724c27b7746d2227a304918a09f19864a7f2f57d553ed8b10d569359
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gtk/3.24/gtk-3.24.52.tar.xz
+    sha256: 80931fa472a77b9a164f6740e3c0b444fac6770054632d35a7ff9d679e5e7b9f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docbook
-  - docbook-xsl
-  - gettext
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
+    - docbook
+    - docbook-xsl
+    - gettext
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - at-spi2-core
-  - cairo
-  - fontconfig
-  - fribidi
-  - gdk-pixbuf
-  - glib
-  - gsettings-desktop-schemas
-  - harfbuzz
-  - hicolor-icon-theme
-  - iso-codes
-  - libepoxy
-  - libx11
-  - libxdamage
-  - libxext
-  - libxfixes
-  - libxi
-  - libxinerama
-  - libxkbcommon
-  - libxrandr
-  - pango
-  - wayland
-  - wayland-protocols
-  - xorgproto
+    - at-spi2-core
+    - cairo
+    - fontconfig
+    - fribidi
+    - gdk-pixbuf
+    - glib
+    - gsettings-desktop-schemas
+    - harfbuzz
+    - hicolor-icon-theme
+    - iso-codes
+    - libepoxy
+    - libx11
+    - libxdamage
+    - libxext
+    - libxfixes
+    - libxi
+    - libxinerama
+    - libxkbcommon
+    - libxrandr
+    - pango
+    - wayland
+    - wayland-protocols
+    - xorgproto
+build:
+    configure: []
+    install: []
+service: null

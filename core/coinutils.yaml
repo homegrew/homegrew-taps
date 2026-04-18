@@ -3,30 +3,54 @@ version: 2.11.13
 description: COIN-OR utilities
 homepage: https://github.com/coin-or/CoinUtils
 license: EPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/coinutils/blobs/sha256:ad87df5a27c8e124b3260c1e983fa5da10ed53d7163b57c73019cb86149ed093
-    sha256: ad87df5a27c8e124b3260c1e983fa5da10ed53d7163b57c73019cb86149ed093
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/coinutils/blobs/sha256:b7c552ecc7d2953871f7ed4f0d7a4b38d5bd1cf7d7616597479944df06762817
-    sha256: b7c552ecc7d2953871f7ed4f0d7a4b38d5bd1cf7d7616597479944df06762817
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/coinutils/blobs/sha256:ce972d87938a492c24644cecc6a5f91cacfd09acd7f2a2b873c1650f30e3b892
-    sha256: ce972d87938a492c24644cecc6a5f91cacfd09acd7f2a2b873c1650f30e3b892
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/coinutils/blobs/sha256:3c99bd8b45aefa801e5c7f942da9e533a0eaf2fab3d071afb05bddac7f468886
-    sha256: 3c99bd8b45aefa801e5c7f942da9e533a0eaf2fab3d071afb05bddac7f468886
-source:
-  url: https://github.com/coin-or/CoinUtils/archive/refs/tags/releases/2.11.13.tar.gz
-  sha256: ddfea48e10209215748bc9f90a8c04abbb912b662c1aefaf280018d0a181ef79
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openblas
+    - openblas
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/coinutils/blobs/sha256:b7c552ecc7d2953871f7ed4f0d7a4b38d5bd1cf7d7616597479944df06762817
+        sha256: b7c552ecc7d2953871f7ed4f0d7a4b38d5bd1cf7d7616597479944df06762817
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coinutils/blobs/sha256:ad87df5a27c8e124b3260c1e983fa5da10ed53d7163b57c73019cb86149ed093
+        sha256: ad87df5a27c8e124b3260c1e983fa5da10ed53d7163b57c73019cb86149ed093
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/coinutils/blobs/sha256:ce972d87938a492c24644cecc6a5f91cacfd09acd7f2a2b873c1650f30e3b892
+        sha256: ce972d87938a492c24644cecc6a5f91cacfd09acd7f2a2b873c1650f30e3b892
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coinutils/blobs/sha256:3c99bd8b45aefa801e5c7f942da9e533a0eaf2fab3d071afb05bddac7f468886
+        sha256: 3c99bd8b45aefa801e5c7f942da9e533a0eaf2fab3d071afb05bddac7f468886
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/coin-or/CoinUtils/archive/refs/tags/releases/2.11.13.tar.gz
+    sha256: ddfea48e10209215748bc9f90a8c04abbb912b662c1aefaf280018d0a181ef79
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - openblas
-  - zlib-ng-compat
+    - openblas
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

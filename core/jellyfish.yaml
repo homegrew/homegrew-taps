@@ -3,27 +3,52 @@ version: 2.3.1
 description: Fast, memory-efficient counting of DNA k-mers
 homepage: https://github.com/gmarcais/Jellyfish
 license: BSD-3-Clause OR GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jellyfish/blobs/sha256:7fcaa4101e6f6b41b3223d25c59adb132e856ea2f3068fa18acfcf1ea837092e
-    sha256: 7fcaa4101e6f6b41b3223d25c59adb132e856ea2f3068fa18acfcf1ea837092e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jellyfish/blobs/sha256:5cea64914e0780caa84ed59a40def3e32711715e5459f4a49b29e9bdcdf374c4
-    sha256: 5cea64914e0780caa84ed59a40def3e32711715e5459f4a49b29e9bdcdf374c4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jellyfish/blobs/sha256:105fae95b5a56dea674d9e6f97e6dadde81372f86b3c3dc8303548460dfb376e
-    sha256: 105fae95b5a56dea674d9e6f97e6dadde81372f86b3c3dc8303548460dfb376e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jellyfish/blobs/sha256:a85634ad3dd7342122d1298e2ff0971e6a0807da1b36c46997a01d25a39bae19
-    sha256: a85634ad3dd7342122d1298e2ff0971e6a0807da1b36c46997a01d25a39bae19
-source:
-  url: https://github.com/gmarcais/Jellyfish/releases/download/v2.3.1/jellyfish-2.3.1.tar.gz
-  sha256: ee032b57257948ca0f0610883099267572c91a635eecbd88ae5d8974c2430fcd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - htslib
+    - htslib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jellyfish/blobs/sha256:5cea64914e0780caa84ed59a40def3e32711715e5459f4a49b29e9bdcdf374c4
+        sha256: 5cea64914e0780caa84ed59a40def3e32711715e5459f4a49b29e9bdcdf374c4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jellyfish/blobs/sha256:7fcaa4101e6f6b41b3223d25c59adb132e856ea2f3068fa18acfcf1ea837092e
+        sha256: 7fcaa4101e6f6b41b3223d25c59adb132e856ea2f3068fa18acfcf1ea837092e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jellyfish/blobs/sha256:105fae95b5a56dea674d9e6f97e6dadde81372f86b3c3dc8303548460dfb376e
+        sha256: 105fae95b5a56dea674d9e6f97e6dadde81372f86b3c3dc8303548460dfb376e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jellyfish/blobs/sha256:a85634ad3dd7342122d1298e2ff0971e6a0807da1b36c46997a01d25a39bae19
+        sha256: a85634ad3dd7342122d1298e2ff0971e6a0807da1b36c46997a01d25a39bae19
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/gmarcais/Jellyfish/releases/download/v2.3.1/jellyfish-2.3.1.tar.gz
+    sha256: ee032b57257948ca0f0610883099267572c91a635eecbd88ae5d8974c2430fcd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

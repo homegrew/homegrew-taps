@@ -3,30 +3,55 @@ version: 0.3.3
 description: TUI web browser with CSS, inline image and JavaScript support
 homepage: https://sr.ht/~bptato/chawan/
 license: Unlicense
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/chawan/blobs/sha256:90360e8b7da49b4271a5b0e6cfc783fa0c74828cc9f13192642f2814b173e187
-    sha256: 90360e8b7da49b4271a5b0e6cfc783fa0c74828cc9f13192642f2814b173e187
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/chawan/blobs/sha256:d74463206c96e4fed9e95878d3cde9a748a181c40b526a608a747218cbb0e129
-    sha256: d74463206c96e4fed9e95878d3cde9a748a181c40b526a608a747218cbb0e129
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/chawan/blobs/sha256:f746919e0b1b5957d148061e859fc8267fd700b0c989b8d719ac23f20ca7b26f
-    sha256: f746919e0b1b5957d148061e859fc8267fd700b0c989b8d719ac23f20ca7b26f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/chawan/blobs/sha256:0034327f3c9aa289cb2bcb96df0aea048f5b32ffc3e4c87ce5cbffdda2dffd89
-    sha256: 0034327f3c9aa289cb2bcb96df0aea048f5b32ffc3e4c87ce5cbffdda2dffd89
-source:
-  url: https://git.sr.ht/~bptato/chawan/archive/v0.3.3.tar.gz
-  sha256: 3ebcd653e90684ba2e871968b19af77ced082f224cd084e70998db7e1512d1c5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - brotli
-  - libssh2
-  - openssl@3
+    - brotli
+    - libssh2
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/chawan/blobs/sha256:d74463206c96e4fed9e95878d3cde9a748a181c40b526a608a747218cbb0e129
+        sha256: d74463206c96e4fed9e95878d3cde9a748a181c40b526a608a747218cbb0e129
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/chawan/blobs/sha256:90360e8b7da49b4271a5b0e6cfc783fa0c74828cc9f13192642f2814b173e187
+        sha256: 90360e8b7da49b4271a5b0e6cfc783fa0c74828cc9f13192642f2814b173e187
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/chawan/blobs/sha256:f746919e0b1b5957d148061e859fc8267fd700b0c989b8d719ac23f20ca7b26f
+        sha256: f746919e0b1b5957d148061e859fc8267fd700b0c989b8d719ac23f20ca7b26f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/chawan/blobs/sha256:0034327f3c9aa289cb2bcb96df0aea048f5b32ffc3e4c87ce5cbffdda2dffd89
+        sha256: 0034327f3c9aa289cb2bcb96df0aea048f5b32ffc3e4c87ce5cbffdda2dffd89
+        sha512: ""
+        signature: ""
+source:
+    url: https://git.sr.ht/~bptato/chawan/archive/v0.3.3.tar.gz
+    sha256: 3ebcd653e90684ba2e871968b19af77ced082f224cd084e70998db7e1512d1c5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - nim
-  - pkgconf
+    - nim
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

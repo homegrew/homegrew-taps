@@ -1,27 +1,53 @@
 name: pjproject
-version: 2.16
+version: "2.16"
 description: C library for multimedia protocols such as SIP, SDP, RTP and more
 homepage: https://www.pjsip.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pjproject/blobs/sha256:a4f4759b98ee06a57828e8856cff7b36aa4b0e0652fd55d9eb78767ca9ec5c2b
-    sha256: a4f4759b98ee06a57828e8856cff7b36aa4b0e0652fd55d9eb78767ca9ec5c2b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pjproject/blobs/sha256:249cc452f8cb427f81dd8061bd197cc8c4ffd2cd13e68d603341c73140f1f5c3
-    sha256: 249cc452f8cb427f81dd8061bd197cc8c4ffd2cd13e68d603341c73140f1f5c3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pjproject/blobs/sha256:1196e71656f577d3126a134beb06b1b6bbecff6806238165773a295c95fb5385
-    sha256: 1196e71656f577d3126a134beb06b1b6bbecff6806238165773a295c95fb5385
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pjproject/blobs/sha256:3fa832c7c13f2c63052af9cff12041dd64f1bdb881fe8fdaee7af3a7e1962512
-    sha256: 3fa832c7c13f2c63052af9cff12041dd64f1bdb881fe8fdaee7af3a7e1962512
-source:
-  url: https://github.com/pjsip/pjproject/archive/refs/tags/2.16.tar.gz
-  sha256: 3af2e481d51aaa095897820fa2ee26c30e530590c6ca56d23e4133bbdad369eb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pjproject/blobs/sha256:249cc452f8cb427f81dd8061bd197cc8c4ffd2cd13e68d603341c73140f1f5c3
+        sha256: 249cc452f8cb427f81dd8061bd197cc8c4ffd2cd13e68d603341c73140f1f5c3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pjproject/blobs/sha256:a4f4759b98ee06a57828e8856cff7b36aa4b0e0652fd55d9eb78767ca9ec5c2b
+        sha256: a4f4759b98ee06a57828e8856cff7b36aa4b0e0652fd55d9eb78767ca9ec5c2b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pjproject/blobs/sha256:1196e71656f577d3126a134beb06b1b6bbecff6806238165773a295c95fb5385
+        sha256: 1196e71656f577d3126a134beb06b1b6bbecff6806238165773a295c95fb5385
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pjproject/blobs/sha256:3fa832c7c13f2c63052af9cff12041dd64f1bdb881fe8fdaee7af3a7e1962512
+        sha256: 3fa832c7c13f2c63052af9cff12041dd64f1bdb881fe8fdaee7af3a7e1962512
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pjsip/pjproject/archive/refs/tags/2.16.tar.gz
+    sha256: 3af2e481d51aaa095897820fa2ee26c30e530590c6ca56d23e4133bbdad369eb
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

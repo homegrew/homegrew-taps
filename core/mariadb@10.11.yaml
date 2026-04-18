@@ -3,48 +3,71 @@ version: 10.11.16
 description: Drop-in replacement for MySQL
 homepage: https://mariadb.org/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mariadb/10.11/blobs/sha256:56514623ce42b6c09dfe376443ee5e13f1190c36560f6f1d8e512e8e32cad780
-    sha256: 56514623ce42b6c09dfe376443ee5e13f1190c36560f6f1d8e512e8e32cad780
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mariadb/10.11/blobs/sha256:ef13f089920228ae931c3cf1718e59768eaa3d2f016879ece266de8d67c6920e
-    sha256: ef13f089920228ae931c3cf1718e59768eaa3d2f016879ece266de8d67c6920e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mariadb/10.11/blobs/sha256:549869067344719d58eeae7b5110d229d6405f73ef27212c16528013298ddba0
-    sha256: 549869067344719d58eeae7b5110d229d6405f73ef27212c16528013298ddba0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mariadb/10.11/blobs/sha256:1c316c1e7a400972e3c65362a66141591c03059710db2f4b81add552fa3e3b05
-    sha256: 1c316c1e7a400972e3c65362a66141591c03059710db2f4b81add552fa3e3b05
-source:
-  url: https://archive.mariadb.org/mariadb-10.11.16/source/mariadb-10.11.16.tar.gz
-  sha256: e4f9f2035d38345464ae8abaeaf68380d1ceadbafb4e84744ed2ed5b7aab64e7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - groonga
-  - lz4
-  - lzo
-  - openssl@3
-  - pcre2
-  - xz
-  - zstd
-build_dependencies:
-  - bison
-  - cmake
-  - fmt
-  - openjdk
-  - pkgconf
-linux_dependencies:
-  - groonga
-  - linux-pam
-  - lz4
-  - lzo
-  - openssl@3
-  - pcre2
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - groonga
+    - lz4
+    - lzo
+    - openssl@3
+    - pcre2
+    - xz
+    - zstd
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/10.11/blobs/sha256:ef13f089920228ae931c3cf1718e59768eaa3d2f016879ece266de8d67c6920e
+        sha256: ef13f089920228ae931c3cf1718e59768eaa3d2f016879ece266de8d67c6920e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/10.11/blobs/sha256:56514623ce42b6c09dfe376443ee5e13f1190c36560f6f1d8e512e8e32cad780
+        sha256: 56514623ce42b6c09dfe376443ee5e13f1190c36560f6f1d8e512e8e32cad780
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/10.11/blobs/sha256:549869067344719d58eeae7b5110d229d6405f73ef27212c16528013298ddba0
+        sha256: 549869067344719d58eeae7b5110d229d6405f73ef27212c16528013298ddba0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/10.11/blobs/sha256:1c316c1e7a400972e3c65362a66141591c03059710db2f4b81add552fa3e3b05
+        sha256: 1c316c1e7a400972e3c65362a66141591c03059710db2f4b81add552fa3e3b05
+        sha512: ""
+        signature: ""
+source:
+    url: https://archive.mariadb.org/mariadb-10.11.16/source/mariadb-10.11.16.tar.gz
+    sha256: e4f9f2035d38345464ae8abaeaf68380d1ceadbafb4e84744ed2ed5b7aab64e7
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - bison
+    - cmake
+    - fmt
+    - openjdk
+    - pkgconf
+linux_dependencies:
+    - groonga
+    - linux-pam
+    - lz4
+    - lzo
+    - openssl@3
+    - pcre2
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

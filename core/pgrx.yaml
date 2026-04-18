@@ -3,31 +3,55 @@ version: 0.18.0
 description: Build Postgres Extensions with Rust
 homepage: https://github.com/pgcentralfoundation/pgrx
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgrx/blobs/sha256:93ef1e628ad8ca6a9eb7174dbc949d2465b9324f92a979a7bf1dab2f4c5cab29
-    sha256: 93ef1e628ad8ca6a9eb7174dbc949d2465b9324f92a979a7bf1dab2f4c5cab29
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgrx/blobs/sha256:de4ad7d75687f82d59862f5b9d75d01333cf51492975da6118bba10f4388a502
-    sha256: de4ad7d75687f82d59862f5b9d75d01333cf51492975da6118bba10f4388a502
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pgrx/blobs/sha256:58aac8c85d6f4a68f7c3e1891ea59703d2481590cd0603194368968470281196
-    sha256: 58aac8c85d6f4a68f7c3e1891ea59703d2481590cd0603194368968470281196
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pgrx/blobs/sha256:7557d8fc1b6fd4968c12a88942419ae526085f454b409b793b471c2ee9842f71
-    sha256: 7557d8fc1b6fd4968c12a88942419ae526085f454b409b793b471c2ee9842f71
-source:
-  url: https://github.com/pgcentralfoundation/pgrx/archive/refs/tags/v0.18.0.tar.gz
-  sha256: fc39703527b34f916fef9fb0e44e8aab3f5691e1f15f7e89030d96050c322afe
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgrx/blobs/sha256:de4ad7d75687f82d59862f5b9d75d01333cf51492975da6118bba10f4388a502
+        sha256: de4ad7d75687f82d59862f5b9d75d01333cf51492975da6118bba10f4388a502
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgrx/blobs/sha256:93ef1e628ad8ca6a9eb7174dbc949d2465b9324f92a979a7bf1dab2f4c5cab29
+        sha256: 93ef1e628ad8ca6a9eb7174dbc949d2465b9324f92a979a7bf1dab2f4c5cab29
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pgrx/blobs/sha256:58aac8c85d6f4a68f7c3e1891ea59703d2481590cd0603194368968470281196
+        sha256: 58aac8c85d6f4a68f7c3e1891ea59703d2481590cd0603194368968470281196
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgrx/blobs/sha256:7557d8fc1b6fd4968c12a88942419ae526085f454b409b793b471c2ee9842f71
+        sha256: 7557d8fc1b6fd4968c12a88942419ae526085f454b409b793b471c2ee9842f71
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pgcentralfoundation/pgrx/archive/refs/tags/v0.18.0.tar.gz
+    sha256: fc39703527b34f916fef9fb0e44e8aab3f5691e1f15f7e89030d96050c322afe
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

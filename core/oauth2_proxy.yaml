@@ -3,25 +3,51 @@ version: 7.15.2
 description: Reverse proxy for authenticating users via OAuth 2 providers
 homepage: https://oauth2-proxy.github.io/oauth2-proxy/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:26d651e47b752ceb4b6411376d6a322a04f10be3bc94701b76f5f2aef5fe338b
-    sha256: 26d651e47b752ceb4b6411376d6a322a04f10be3bc94701b76f5f2aef5fe338b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:d1f56fac995536a7b3ecb5f3942f5a18da8d4288bbd343a9af55fe7fcd5cd16b
-    sha256: d1f56fac995536a7b3ecb5f3942f5a18da8d4288bbd343a9af55fe7fcd5cd16b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:bba55f0f2d6a2a646968f78673c7417aa03ac2b7ae516246512b6ffa2cc7dfb8
-    sha256: bba55f0f2d6a2a646968f78673c7417aa03ac2b7ae516246512b6ffa2cc7dfb8
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:e24e2d572886af4ba6edbd07f78fcc449d62c7214bbb0cb97128138bd336dbcb
-    sha256: e24e2d572886af4ba6edbd07f78fcc449d62c7214bbb0cb97128138bd336dbcb
-source:
-  url: https://github.com/oauth2-proxy/oauth2-proxy/archive/refs/tags/v7.15.2.tar.gz
-  sha256: 1c5687373ac84126ab506c505377c9486e0d1aba2ebc80fafb4e8f6717337a21
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:d1f56fac995536a7b3ecb5f3942f5a18da8d4288bbd343a9af55fe7fcd5cd16b
+        sha256: d1f56fac995536a7b3ecb5f3942f5a18da8d4288bbd343a9af55fe7fcd5cd16b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:26d651e47b752ceb4b6411376d6a322a04f10be3bc94701b76f5f2aef5fe338b
+        sha256: 26d651e47b752ceb4b6411376d6a322a04f10be3bc94701b76f5f2aef5fe338b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:bba55f0f2d6a2a646968f78673c7417aa03ac2b7ae516246512b6ffa2cc7dfb8
+        sha256: bba55f0f2d6a2a646968f78673c7417aa03ac2b7ae516246512b6ffa2cc7dfb8
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:e24e2d572886af4ba6edbd07f78fcc449d62c7214bbb0cb97128138bd336dbcb
+        sha256: e24e2d572886af4ba6edbd07f78fcc449d62c7214bbb0cb97128138bd336dbcb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/oauth2-proxy/oauth2-proxy/archive/refs/tags/v7.15.2.tar.gz
+    sha256: 1c5687373ac84126ab506c505377c9486e0d1aba2ebc80fafb4e8f6717337a21
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

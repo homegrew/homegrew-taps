@@ -1,27 +1,53 @@
 name: qthreads
-version: 1.23
+version: "1.23"
 description: Lightweight locality-aware user-level threading runtime
 homepage: https://www.sandia.gov/qthreads/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qthreads/blobs/sha256:f455a5b42d23a1151bfcff2b905895f1a0c3e3fff9bd7c6db3f3c7532edb580b
-    sha256: f455a5b42d23a1151bfcff2b905895f1a0c3e3fff9bd7c6db3f3c7532edb580b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qthreads/blobs/sha256:8fe16a4de2fb44ea1adaf8dae0786e46ba7199fdb57e4ef5584384bb76dd660e
-    sha256: 8fe16a4de2fb44ea1adaf8dae0786e46ba7199fdb57e4ef5584384bb76dd660e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qthreads/blobs/sha256:d1a54569cf1e22ecf35bceb1043fca31c97b86651c0782d00f856f1a31dc518c
-    sha256: d1a54569cf1e22ecf35bceb1043fca31c97b86651c0782d00f856f1a31dc518c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qthreads/blobs/sha256:40ef0b72f54ac93aa7a7f0798d0d1e55ae5df9ce3a2329aa280ad76db0ecb482
-    sha256: 40ef0b72f54ac93aa7a7f0798d0d1e55ae5df9ce3a2329aa280ad76db0ecb482
-source:
-  url: https://github.com/sandialabs/qthreads/archive/refs/tags/1.23.tar.gz
-  sha256: fb5c3efc022231245f7b1894a82eac1fd020c5f90000bb4770e64e2c1ad77913
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qthreads/blobs/sha256:8fe16a4de2fb44ea1adaf8dae0786e46ba7199fdb57e4ef5584384bb76dd660e
+        sha256: 8fe16a4de2fb44ea1adaf8dae0786e46ba7199fdb57e4ef5584384bb76dd660e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qthreads/blobs/sha256:f455a5b42d23a1151bfcff2b905895f1a0c3e3fff9bd7c6db3f3c7532edb580b
+        sha256: f455a5b42d23a1151bfcff2b905895f1a0c3e3fff9bd7c6db3f3c7532edb580b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qthreads/blobs/sha256:d1a54569cf1e22ecf35bceb1043fca31c97b86651c0782d00f856f1a31dc518c
+        sha256: d1a54569cf1e22ecf35bceb1043fca31c97b86651c0782d00f856f1a31dc518c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qthreads/blobs/sha256:40ef0b72f54ac93aa7a7f0798d0d1e55ae5df9ce3a2329aa280ad76db0ecb482
+        sha256: 40ef0b72f54ac93aa7a7f0798d0d1e55ae5df9ce3a2329aa280ad76db0ecb482
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sandialabs/qthreads/archive/refs/tags/1.23.tar.gz
+    sha256: fb5c3efc022231245f7b1894a82eac1fd020c5f90000bb4770e64e2c1ad77913
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

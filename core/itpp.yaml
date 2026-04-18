@@ -3,27 +3,52 @@ version: 4.3.1
 description: Library of math, signal, and communication classes and functions
 homepage: https://itpp.sourceforge.net/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/itpp/blobs/sha256:81d0b47a818e674b72ddec4f61ab65989c8ed629d9804d58afb01a1d615a8c09
-    sha256: 81d0b47a818e674b72ddec4f61ab65989c8ed629d9804d58afb01a1d615a8c09
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/itpp/blobs/sha256:72a33b48a02269658ea8ac820b621d6c4c3a6e3192a739ab816cac68dfd5d746
-    sha256: 72a33b48a02269658ea8ac820b621d6c4c3a6e3192a739ab816cac68dfd5d746
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/itpp/blobs/sha256:804cfd8e327183c284a6018f22613896b1876aa2b5fffe99e7ecd594d6f4b006
-    sha256: 804cfd8e327183c284a6018f22613896b1876aa2b5fffe99e7ecd594d6f4b006
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/itpp/blobs/sha256:9537b4762ac42062b61e93b08eca2bbd875fcbf1a5defe17a6a83b192ce409e7
-    sha256: 9537b4762ac42062b61e93b08eca2bbd875fcbf1a5defe17a6a83b192ce409e7
-source:
-  url: https://downloads.sourceforge.net/project/itpp/itpp/4.3.1/itpp-4.3.1.tar.bz2
-  sha256: 50717621c5dfb5ed22f8492f8af32b17776e6e06641dfe3a3a8f82c8d353b877
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fftw
+    - fftw
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/itpp/blobs/sha256:72a33b48a02269658ea8ac820b621d6c4c3a6e3192a739ab816cac68dfd5d746
+        sha256: 72a33b48a02269658ea8ac820b621d6c4c3a6e3192a739ab816cac68dfd5d746
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/itpp/blobs/sha256:81d0b47a818e674b72ddec4f61ab65989c8ed629d9804d58afb01a1d615a8c09
+        sha256: 81d0b47a818e674b72ddec4f61ab65989c8ed629d9804d58afb01a1d615a8c09
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/itpp/blobs/sha256:804cfd8e327183c284a6018f22613896b1876aa2b5fffe99e7ecd594d6f4b006
+        sha256: 804cfd8e327183c284a6018f22613896b1876aa2b5fffe99e7ecd594d6f4b006
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/itpp/blobs/sha256:9537b4762ac42062b61e93b08eca2bbd875fcbf1a5defe17a6a83b192ce409e7
+        sha256: 9537b4762ac42062b61e93b08eca2bbd875fcbf1a5defe17a6a83b192ce409e7
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/itpp/itpp/4.3.1/itpp-4.3.1.tar.bz2
+    sha256: 50717621c5dfb5ed22f8492f8af32b17776e6e06641dfe3a3a8f82c8d353b877
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

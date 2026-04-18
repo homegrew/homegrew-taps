@@ -3,29 +3,54 @@ version: 0.31.0
 description: Backup tool for PC game saves
 homepage: https://github.com/mtkennerly/ludusavi
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ludusavi/blobs/sha256:fa571ed70c1b44b91c431bfb5da7f2e507096a4da3b94172cfb675b407edbb2d
-    sha256: fa571ed70c1b44b91c431bfb5da7f2e507096a4da3b94172cfb675b407edbb2d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ludusavi/blobs/sha256:492a312b84ed50da4ffa5eb20a1d7f898f6cd1d29d358601b60be29db7da8058
-    sha256: 492a312b84ed50da4ffa5eb20a1d7f898f6cd1d29d358601b60be29db7da8058
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ludusavi/blobs/sha256:49d0fb16e4ef81c9beb1449930043e2b69ff8c69893ce94c5cb5a12a8ad29c64
-    sha256: 49d0fb16e4ef81c9beb1449930043e2b69ff8c69893ce94c5cb5a12a8ad29c64
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ludusavi/blobs/sha256:6ed88e163856b0af1b5a92724308d3d965f613945b625733ea6b741b8922e272
-    sha256: 6ed88e163856b0af1b5a92724308d3d965f613945b625733ea6b741b8922e272
-source:
-  url: https://github.com/mtkennerly/ludusavi/archive/refs/tags/v0.31.0.tar.gz
-  sha256: e7dcfa4fb17fcd2be9ef34d55fe0ca0d3f79fdf570107aeaa5b4e76910e2f8a1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ludusavi/blobs/sha256:492a312b84ed50da4ffa5eb20a1d7f898f6cd1d29d358601b60be29db7da8058
+        sha256: 492a312b84ed50da4ffa5eb20a1d7f898f6cd1d29d358601b60be29db7da8058
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ludusavi/blobs/sha256:fa571ed70c1b44b91c431bfb5da7f2e507096a4da3b94172cfb675b407edbb2d
+        sha256: fa571ed70c1b44b91c431bfb5da7f2e507096a4da3b94172cfb675b407edbb2d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ludusavi/blobs/sha256:49d0fb16e4ef81c9beb1449930043e2b69ff8c69893ce94c5cb5a12a8ad29c64
+        sha256: 49d0fb16e4ef81c9beb1449930043e2b69ff8c69893ce94c5cb5a12a8ad29c64
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ludusavi/blobs/sha256:6ed88e163856b0af1b5a92724308d3d965f613945b625733ea6b741b8922e272
+        sha256: 6ed88e163856b0af1b5a92724308d3d965f613945b625733ea6b741b8922e272
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mtkennerly/ludusavi/archive/refs/tags/v0.31.0.tar.gz
+    sha256: e7dcfa4fb17fcd2be9ef34d55fe0ca0d3f79fdf570107aeaa5b4e76910e2f8a1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - glib
-  - gtk+3
+    - glib
+    - gtk+3
+build:
+    configure: []
+    install: []
+service: null

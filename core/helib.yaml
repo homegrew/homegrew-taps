@@ -3,28 +3,53 @@ version: 2.3.0
 description: Implementation of homomorphic encryption
 homepage: https://github.com/homenc/HElib
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/helib/blobs/sha256:803815f7a62fe41c3af529f91c0c5dec64562c76a9ed3c3af559f666e554a0a3
-    sha256: 803815f7a62fe41c3af529f91c0c5dec64562c76a9ed3c3af559f666e554a0a3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/helib/blobs/sha256:9da3101e6e55c978f00a9fc877a13ba5289ea18857ac5fe8fba073003ae61601
-    sha256: 9da3101e6e55c978f00a9fc877a13ba5289ea18857ac5fe8fba073003ae61601
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/helib/blobs/sha256:e2f2e649e6834f35404942593f0ad42da062d8bbadd314f05570d72a14b0dc3a
-    sha256: e2f2e649e6834f35404942593f0ad42da062d8bbadd314f05570d72a14b0dc3a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/helib/blobs/sha256:8c6145938664a747795370be1a28c3a06f586c02faf893053bd89c8507e47242
-    sha256: 8c6145938664a747795370be1a28c3a06f586c02faf893053bd89c8507e47242
-source:
-  url: https://github.com/homenc/HElib/archive/refs/tags/v2.3.0.tar.gz
-  sha256: 05c87f2b50d4774e16868ba61a7271930dd67f4ad137f30eb0f310969377bc20
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - ntl
+    - gmp
+    - ntl
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/helib/blobs/sha256:9da3101e6e55c978f00a9fc877a13ba5289ea18857ac5fe8fba073003ae61601
+        sha256: 9da3101e6e55c978f00a9fc877a13ba5289ea18857ac5fe8fba073003ae61601
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/helib/blobs/sha256:803815f7a62fe41c3af529f91c0c5dec64562c76a9ed3c3af559f666e554a0a3
+        sha256: 803815f7a62fe41c3af529f91c0c5dec64562c76a9ed3c3af559f666e554a0a3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/helib/blobs/sha256:e2f2e649e6834f35404942593f0ad42da062d8bbadd314f05570d72a14b0dc3a
+        sha256: e2f2e649e6834f35404942593f0ad42da062d8bbadd314f05570d72a14b0dc3a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/helib/blobs/sha256:8c6145938664a747795370be1a28c3a06f586c02faf893053bd89c8507e47242
+        sha256: 8c6145938664a747795370be1a28c3a06f586c02faf893053bd89c8507e47242
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/homenc/HElib/archive/refs/tags/v2.3.0.tar.gz
+    sha256: 05c87f2b50d4774e16868ba61a7271930dd67f4ad137f30eb0f310969377bc20
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

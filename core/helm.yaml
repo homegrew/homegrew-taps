@@ -3,25 +3,51 @@ version: 4.1.4
 description: Kubernetes package manager
 homepage: https://helm.sh/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/helm/blobs/sha256:36f04ffbbdfd6ab2a148543cbb6f18e226cbc94bc0148598335a5ca8fe33be88
-    sha256: 36f04ffbbdfd6ab2a148543cbb6f18e226cbc94bc0148598335a5ca8fe33be88
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/helm/blobs/sha256:b98cc2cccb8d065e8b408bb4caaea575710012de96f8bd852caa4d2730a984fb
-    sha256: b98cc2cccb8d065e8b408bb4caaea575710012de96f8bd852caa4d2730a984fb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/helm/blobs/sha256:9d73dbe4c18a12df4316b0cf5e6f6cd649d125110ed53bc74289322346006de9
-    sha256: 9d73dbe4c18a12df4316b0cf5e6f6cd649d125110ed53bc74289322346006de9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/helm/blobs/sha256:6ed00978b0c220ff4c77a02169d0833da4bbdf591b8afdb4ee611cabe6e971d2
-    sha256: 6ed00978b0c220ff4c77a02169d0833da4bbdf591b8afdb4ee611cabe6e971d2
-source:
-  url: https://github.com/helm/helm.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/helm/blobs/sha256:b98cc2cccb8d065e8b408bb4caaea575710012de96f8bd852caa4d2730a984fb
+        sha256: b98cc2cccb8d065e8b408bb4caaea575710012de96f8bd852caa4d2730a984fb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/helm/blobs/sha256:36f04ffbbdfd6ab2a148543cbb6f18e226cbc94bc0148598335a5ca8fe33be88
+        sha256: 36f04ffbbdfd6ab2a148543cbb6f18e226cbc94bc0148598335a5ca8fe33be88
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/helm/blobs/sha256:9d73dbe4c18a12df4316b0cf5e6f6cd649d125110ed53bc74289322346006de9
+        sha256: 9d73dbe4c18a12df4316b0cf5e6f6cd649d125110ed53bc74289322346006de9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/helm/blobs/sha256:6ed00978b0c220ff4c77a02169d0833da4bbdf591b8afdb4ee611cabe6e971d2
+        sha256: 6ed00978b0c220ff4c77a02169d0833da4bbdf591b8afdb4ee611cabe6e971d2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/helm/helm.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

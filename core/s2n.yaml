@@ -3,27 +3,52 @@ version: 1.7.2
 description: Implementation of the TLS/SSL protocols
 homepage: https://github.com/aws/s2n-tls
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/s2n/blobs/sha256:bda1015c8f5a962250b5afa5028d369a84ab36550db6e5ecc258f4a1121ab2e7
-    sha256: bda1015c8f5a962250b5afa5028d369a84ab36550db6e5ecc258f4a1121ab2e7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/s2n/blobs/sha256:9ca264364cf92994378a3b26ee38e939523e5c54f9e4253cac2df7053a96f93a
-    sha256: 9ca264364cf92994378a3b26ee38e939523e5c54f9e4253cac2df7053a96f93a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/s2n/blobs/sha256:68a49c44117a72ce8b6e7aad8abb5f7ccf518b1b48033adfc7562f25dea5429a
-    sha256: 68a49c44117a72ce8b6e7aad8abb5f7ccf518b1b48033adfc7562f25dea5429a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/s2n/blobs/sha256:7d3db02f51cb8d2c4e9696bc00fc71aa6dd1d1cec60478ec980edf94b020aa85
-    sha256: 7d3db02f51cb8d2c4e9696bc00fc71aa6dd1d1cec60478ec980edf94b020aa85
-source:
-  url: https://github.com/aws/s2n-tls/archive/refs/tags/v1.7.2.tar.gz
-  sha256: 3ca5361dabd2b041ba6d8c3fe73d1bc5a721dc5f62bbf71838010d1eddaa0cfd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/s2n/blobs/sha256:9ca264364cf92994378a3b26ee38e939523e5c54f9e4253cac2df7053a96f93a
+        sha256: 9ca264364cf92994378a3b26ee38e939523e5c54f9e4253cac2df7053a96f93a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/s2n/blobs/sha256:bda1015c8f5a962250b5afa5028d369a84ab36550db6e5ecc258f4a1121ab2e7
+        sha256: bda1015c8f5a962250b5afa5028d369a84ab36550db6e5ecc258f4a1121ab2e7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/s2n/blobs/sha256:68a49c44117a72ce8b6e7aad8abb5f7ccf518b1b48033adfc7562f25dea5429a
+        sha256: 68a49c44117a72ce8b6e7aad8abb5f7ccf518b1b48033adfc7562f25dea5429a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/s2n/blobs/sha256:7d3db02f51cb8d2c4e9696bc00fc71aa6dd1d1cec60478ec980edf94b020aa85
+        sha256: 7d3db02f51cb8d2c4e9696bc00fc71aa6dd1d1cec60478ec980edf94b020aa85
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/aws/s2n-tls/archive/refs/tags/v1.7.2.tar.gz
+    sha256: 3ca5361dabd2b041ba6d8c3fe73d1bc5a721dc5f62bbf71838010d1eddaa0cfd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

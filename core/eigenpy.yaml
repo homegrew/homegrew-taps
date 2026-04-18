@@ -3,34 +3,59 @@ version: 3.12.0
 description: Python bindings of Eigen library with Numpy support
 homepage: https://github.com/stack-of-tasks/eigenpy
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/eigenpy/blobs/sha256:dbf30d75e91d68fe9d424aeef98f1f0a2cf77369b3ee1402c9ea3e3f0be96cc7
-    sha256: dbf30d75e91d68fe9d424aeef98f1f0a2cf77369b3ee1402c9ea3e3f0be96cc7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/eigenpy/blobs/sha256:b7146ccacf5e01b1317fef259dbff644e622ef5b855b9f9012234fb755dec420
-    sha256: b7146ccacf5e01b1317fef259dbff644e622ef5b855b9f9012234fb755dec420
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/eigenpy/blobs/sha256:c539fb28ab1b1a98001186451376435b43cd5b2f101b1d72ddc32cc2ecab08a0
-    sha256: c539fb28ab1b1a98001186451376435b43cd5b2f101b1d72ddc32cc2ecab08a0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/eigenpy/blobs/sha256:548952eaae7925a876664c039586a4f915cb05daadc958ea959ee9f1043fce58
-    sha256: 548952eaae7925a876664c039586a4f915cb05daadc958ea959ee9f1043fce58
-source:
-  url: https://github.com/stack-of-tasks/eigenpy/releases/download/v3.12.0/eigenpy-3.12.0.tar.gz
-  sha256: e6b7f17e1b7fb61e52447ceee8f47c3fc2c8f9cc4d19317e0467dc71babdb350
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost-python3
-  - eigen
-  - numpy
-  - python@3.14
-  - scipy
+    - boost-python3
+    - eigen
+    - numpy
+    - python@3.14
+    - scipy
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/eigenpy/blobs/sha256:b7146ccacf5e01b1317fef259dbff644e622ef5b855b9f9012234fb755dec420
+        sha256: b7146ccacf5e01b1317fef259dbff644e622ef5b855b9f9012234fb755dec420
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/eigenpy/blobs/sha256:dbf30d75e91d68fe9d424aeef98f1f0a2cf77369b3ee1402c9ea3e3f0be96cc7
+        sha256: dbf30d75e91d68fe9d424aeef98f1f0a2cf77369b3ee1402c9ea3e3f0be96cc7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/eigenpy/blobs/sha256:c539fb28ab1b1a98001186451376435b43cd5b2f101b1d72ddc32cc2ecab08a0
+        sha256: c539fb28ab1b1a98001186451376435b43cd5b2f101b1d72ddc32cc2ecab08a0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/eigenpy/blobs/sha256:548952eaae7925a876664c039586a4f915cb05daadc958ea959ee9f1043fce58
+        sha256: 548952eaae7925a876664c039586a4f915cb05daadc958ea959ee9f1043fce58
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/stack-of-tasks/eigenpy/releases/download/v3.12.0/eigenpy-3.12.0.tar.gz
+    sha256: e6b7f17e1b7fb61e52447ceee8f47c3fc2c8f9cc4d19317e0467dc71babdb350
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - cmake
-  - doxygen
-  - pkgconf
+    - boost
+    - cmake
+    - doxygen
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

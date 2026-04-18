@@ -1,30 +1,55 @@
 name: pms
-version: 0.42
+version: "0.42"
 description: Practical Music Search, an ncurses-based MPD client
 homepage: https://kimtore.github.io/pms/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pms/blobs/sha256:9ea144b1cf1481050e378149ef8731963f537878c38d74faa182a687e85d64a0
-    sha256: 9ea144b1cf1481050e378149ef8731963f537878c38d74faa182a687e85d64a0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pms/blobs/sha256:a931529745300c09aa3f2b9a9b0099927a8d268904771ae80adc6e1cb31df1f3
-    sha256: a931529745300c09aa3f2b9a9b0099927a8d268904771ae80adc6e1cb31df1f3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pms/blobs/sha256:6c3d1cf4ac839cd2c6ae549d4c303dfeed70951bf0473b4919bcbe62a2530961
-    sha256: 6c3d1cf4ac839cd2c6ae549d4c303dfeed70951bf0473b4919bcbe62a2530961
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pms/blobs/sha256:49c08001404ac52846502ef4173d8df4907aa2f3ce45bd55c48faf3c672100da
-    sha256: 49c08001404ac52846502ef4173d8df4907aa2f3ce45bd55c48faf3c672100da
-source:
-  url: https://downloads.sourceforge.net/project/pms/pms/0.42/pms-0.42.tar.bz2
-  sha256: 96bf942b08cba10ee891a63eeccad307fd082ef3bd20be879f189e1959e775a6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
-  - glib
+    - gettext
+    - glib
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pms/blobs/sha256:a931529745300c09aa3f2b9a9b0099927a8d268904771ae80adc6e1cb31df1f3
+        sha256: a931529745300c09aa3f2b9a9b0099927a8d268904771ae80adc6e1cb31df1f3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pms/blobs/sha256:9ea144b1cf1481050e378149ef8731963f537878c38d74faa182a687e85d64a0
+        sha256: 9ea144b1cf1481050e378149ef8731963f537878c38d74faa182a687e85d64a0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pms/blobs/sha256:6c3d1cf4ac839cd2c6ae549d4c303dfeed70951bf0473b4919bcbe62a2530961
+        sha256: 6c3d1cf4ac839cd2c6ae549d4c303dfeed70951bf0473b4919bcbe62a2530961
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pms/blobs/sha256:49c08001404ac52846502ef4173d8df4907aa2f3ce45bd55c48faf3c672100da
+        sha256: 49c08001404ac52846502ef4173d8df4907aa2f3ce45bd55c48faf3c672100da
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/pms/pms/0.42/pms-0.42.tar.bz2
+    sha256: 96bf942b08cba10ee891a63eeccad307fd082ef3bd20be879f189e1959e775a6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 4.5.1
 description: CFD General Notation System
 homepage: https://cgns.github.io/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cgns/blobs/sha256:274b220aacb028fec11a4f272d7b24461431a7b7b00b19b4446a3cb097044b6a
-    sha256: 274b220aacb028fec11a4f272d7b24461431a7b7b00b19b4446a3cb097044b6a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cgns/blobs/sha256:b5608db10d3e167bbecb376532a8ce96d1a5e5d3dcff72f0dab2a74ac1b1e01f
-    sha256: b5608db10d3e167bbecb376532a8ce96d1a5e5d3dcff72f0dab2a74ac1b1e01f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cgns/blobs/sha256:a5447f14d57dcd51381c2db73025529bb7eab9ac74c210b5ee6e45bf9a44f18a
-    sha256: a5447f14d57dcd51381c2db73025529bb7eab9ac74c210b5ee6e45bf9a44f18a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cgns/blobs/sha256:9d6f73711962658578e623e3eb4351027eee086086aebec4e2232875d12f04af
-    sha256: 9d6f73711962658578e623e3eb4351027eee086086aebec4e2232875d12f04af
-source:
-  url: https://github.com/CGNS/CGNS/archive/refs/tags/v4.5.1.tar.gz
-  sha256: ae63b0098764803dd42b7b2a6487cbfb3c0ae7b22eb01a2570dbce49316ad279
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gcc
-  - hdf5
+    - gcc
+    - hdf5
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cgns/blobs/sha256:b5608db10d3e167bbecb376532a8ce96d1a5e5d3dcff72f0dab2a74ac1b1e01f
+        sha256: b5608db10d3e167bbecb376532a8ce96d1a5e5d3dcff72f0dab2a74ac1b1e01f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cgns/blobs/sha256:274b220aacb028fec11a4f272d7b24461431a7b7b00b19b4446a3cb097044b6a
+        sha256: 274b220aacb028fec11a4f272d7b24461431a7b7b00b19b4446a3cb097044b6a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cgns/blobs/sha256:a5447f14d57dcd51381c2db73025529bb7eab9ac74c210b5ee6e45bf9a44f18a
+        sha256: a5447f14d57dcd51381c2db73025529bb7eab9ac74c210b5ee6e45bf9a44f18a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cgns/blobs/sha256:9d6f73711962658578e623e3eb4351027eee086086aebec4e2232875d12f04af
+        sha256: 9d6f73711962658578e623e3eb4351027eee086086aebec4e2232875d12f04af
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/CGNS/CGNS/archive/refs/tags/v4.5.1.tar.gz
+    sha256: ae63b0098764803dd42b7b2a6487cbfb3c0ae7b22eb01a2570dbce49316ad279
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

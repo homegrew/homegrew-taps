@@ -3,27 +3,52 @@ version: 4.0.6
 description: Executes a program periodically, showing output fullscreen
 homepage: https://gitlab.com/procps-ng/procps
 license: GPL-2.0-or-later AND LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/watch/blobs/sha256:e18cef797bea2fae7d4fb254c5e04f671f245aa8cf13f6dde6e8e73e8dc9b2f5
-    sha256: e18cef797bea2fae7d4fb254c5e04f671f245aa8cf13f6dde6e8e73e8dc9b2f5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/watch/blobs/sha256:df9d846e7d79ae58e6324eef960c20d8dd6d6f4e6daeba0d87ffbd84481ae6cc
-    sha256: df9d846e7d79ae58e6324eef960c20d8dd6d6f4e6daeba0d87ffbd84481ae6cc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/watch/blobs/sha256:01316c06ebb730cadb23fc62031039fda7d59cbacea80b41b021b28aa4ecd676
-    sha256: 01316c06ebb730cadb23fc62031039fda7d59cbacea80b41b021b28aa4ecd676
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/watch/blobs/sha256:1967de3c71371a3d0d2062d3a86e5724e8db863a6d13242a52980f1584c4ab41
-    sha256: 1967de3c71371a3d0d2062d3a86e5724e8db863a6d13242a52980f1584c4ab41
-source:
-  url: https://downloads.sourceforge.net/project/procps-ng/Production/procps-ng-4.0.6.tar.xz
-  sha256: 67bea6fbc3a42a535a0230c9e891e5ddfb4d9d39422d46565a2990d1ace15216
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ncurses
+    - ncurses
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/watch/blobs/sha256:df9d846e7d79ae58e6324eef960c20d8dd6d6f4e6daeba0d87ffbd84481ae6cc
+        sha256: df9d846e7d79ae58e6324eef960c20d8dd6d6f4e6daeba0d87ffbd84481ae6cc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/watch/blobs/sha256:e18cef797bea2fae7d4fb254c5e04f671f245aa8cf13f6dde6e8e73e8dc9b2f5
+        sha256: e18cef797bea2fae7d4fb254c5e04f671f245aa8cf13f6dde6e8e73e8dc9b2f5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/watch/blobs/sha256:01316c06ebb730cadb23fc62031039fda7d59cbacea80b41b021b28aa4ecd676
+        sha256: 01316c06ebb730cadb23fc62031039fda7d59cbacea80b41b021b28aa4ecd676
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/watch/blobs/sha256:1967de3c71371a3d0d2062d3a86e5724e8db863a6d13242a52980f1584c4ab41
+        sha256: 1967de3c71371a3d0d2062d3a86e5724e8db863a6d13242a52980f1584c4ab41
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/procps-ng/Production/procps-ng-4.0.6.tar.xz
+    sha256: 67bea6fbc3a42a535a0230c9e891e5ddfb4d9d39422d46565a2990d1ace15216
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

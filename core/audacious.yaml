@@ -3,92 +3,116 @@ version: 4.5.1
 description: Lightweight and versatile audio player
 homepage: https://audacious-media-player.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:2a9bed2f6fa8f367145efa89c3c7e001d7269f291a136351fe13195ddc684d87
-    sha256: 2a9bed2f6fa8f367145efa89c3c7e001d7269f291a136351fe13195ddc684d87
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:795d2a596cbab91cbfc18c7ed0132d94063dad3b1752e351f57d47d10b1e2469
-    sha256: 795d2a596cbab91cbfc18c7ed0132d94063dad3b1752e351f57d47d10b1e2469
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:c8b1e35da03f33d6aaea389e5c72e2e0240dcd5621ac04c8d32efaa51b26d804
-    sha256: c8b1e35da03f33d6aaea389e5c72e2e0240dcd5621ac04c8d32efaa51b26d804
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:fc1ab8c829c3c57689dd2bcbacedec1da1942ee3563a4185667b3f249f5272f1
-    sha256: fc1ab8c829c3c57689dd2bcbacedec1da1942ee3563a4185667b3f249f5272f1
-source:
-  url: https://distfiles.audacious-media-player.org/audacious-4.5.1.tar.bz2
-  sha256: 7194743a0a41b1d8f582c071488b77f7b917be47ca5e142dd76af5d81d36f9cd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - faad2
-  - ffmpeg
-  - flac
-  - fluid-synth
-  - gdk-pixbuf
-  - glib
-  - lame
-  - libbs2b
-  - libcue
-  - libmodplug
-  - libnotify
-  - libogg
-  - libopenmpt
-  - libsamplerate
-  - libsidplayfp
-  - libsndfile
-  - libsoxr
-  - libvorbis
-  - mpg123
-  - neon
-  - opusfile
-  - qtbase
-  - qtimageformats
-  - qtmultimedia
-  - qtsvg
-  - sdl2
-  - wavpack
-  - gettext
+    - faad2
+    - ffmpeg
+    - flac
+    - fluid-synth
+    - gdk-pixbuf
+    - glib
+    - lame
+    - libbs2b
+    - libcue
+    - libmodplug
+    - libnotify
+    - libogg
+    - libopenmpt
+    - libsamplerate
+    - libsidplayfp
+    - libsndfile
+    - libsoxr
+    - libvorbis
+    - mpg123
+    - neon
+    - opusfile
+    - qtbase
+    - qtimageformats
+    - qtmultimedia
+    - qtsvg
+    - sdl2
+    - wavpack
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:795d2a596cbab91cbfc18c7ed0132d94063dad3b1752e351f57d47d10b1e2469
+        sha256: 795d2a596cbab91cbfc18c7ed0132d94063dad3b1752e351f57d47d10b1e2469
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:2a9bed2f6fa8f367145efa89c3c7e001d7269f291a136351fe13195ddc684d87
+        sha256: 2a9bed2f6fa8f367145efa89c3c7e001d7269f291a136351fe13195ddc684d87
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:c8b1e35da03f33d6aaea389e5c72e2e0240dcd5621ac04c8d32efaa51b26d804
+        sha256: c8b1e35da03f33d6aaea389e5c72e2e0240dcd5621ac04c8d32efaa51b26d804
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:fc1ab8c829c3c57689dd2bcbacedec1da1942ee3563a4185667b3f249f5272f1
+        sha256: fc1ab8c829c3c57689dd2bcbacedec1da1942ee3563a4185667b3f249f5272f1
+        sha512: ""
+        signature: ""
+source:
+    url: https://distfiles.audacious-media-player.org/audacious-4.5.1.tar.bz2
+    sha256: 7194743a0a41b1d8f582c071488b77f7b917be47ca5e142dd76af5d81d36f9cd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - meson
-  - ninja
-  - pkgconf
-  - qttools
+    - gettext
+    - meson
+    - ninja
+    - pkgconf
+    - qttools
 linux_dependencies:
-  - alsa-lib
-  - faad2
-  - ffmpeg
-  - flac
-  - fluid-synth
-  - gdk-pixbuf
-  - glib
-  - jack
-  - lame
-  - libbs2b
-  - libcue
-  - libmodplug
-  - libnotify
-  - libogg
-  - libopenmpt
-  - libsamplerate
-  - libsidplayfp
-  - libsndfile
-  - libsoxr
-  - libvorbis
-  - libx11
-  - libxml2
-  - mpg123
-  - neon
-  - opusfile
-  - pulseaudio
-  - qtbase
-  - qtimageformats
-  - qtmultimedia
-  - qtsvg
-  - sdl2
-  - wavpack
-  - zlib-ng-compat
+    - alsa-lib
+    - faad2
+    - ffmpeg
+    - flac
+    - fluid-synth
+    - gdk-pixbuf
+    - glib
+    - jack
+    - lame
+    - libbs2b
+    - libcue
+    - libmodplug
+    - libnotify
+    - libogg
+    - libopenmpt
+    - libsamplerate
+    - libsidplayfp
+    - libsndfile
+    - libsoxr
+    - libvorbis
+    - libx11
+    - libxml2
+    - mpg123
+    - neon
+    - opusfile
+    - pulseaudio
+    - qtbase
+    - qtimageformats
+    - qtmultimedia
+    - qtsvg
+    - sdl2
+    - wavpack
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

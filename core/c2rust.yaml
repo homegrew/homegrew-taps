@@ -3,28 +3,53 @@ version: 0.22.1
 description: Migrate C code to Rust
 homepage: https://c2rust.com/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/c2rust/blobs/sha256:df88c851f1831af9a3e630295ffa9e798d2c0ab97b9b8cf6c24e7b35ee432aa3
-    sha256: df88c851f1831af9a3e630295ffa9e798d2c0ab97b9b8cf6c24e7b35ee432aa3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/c2rust/blobs/sha256:c542f2ebe2d58181c143b71a6931fc143dd861792db988a6c5c446158b36e6a1
-    sha256: c542f2ebe2d58181c143b71a6931fc143dd861792db988a6c5c446158b36e6a1
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/c2rust/blobs/sha256:a3e5ca318401131f2e847996218bcbf7e2797f7e4c5cf893233bdfd8772750fe
-    sha256: a3e5ca318401131f2e847996218bcbf7e2797f7e4c5cf893233bdfd8772750fe
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/c2rust/blobs/sha256:9274c9595424047d95fae4ebba0178c55f427612cdd9fc93863a8d91189e83f3
-    sha256: 9274c9595424047d95fae4ebba0178c55f427612cdd9fc93863a8d91189e83f3
-source:
-  url: https://github.com/immunant/c2rust/archive/refs/tags/v0.22.1.tar.gz
-  sha256: a8fa6a88a5f40f35b1e63c086e981e8e03e0b887b769ddcd07ba46b0304c931b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - llvm@21
+    - llvm@21
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/c2rust/blobs/sha256:c542f2ebe2d58181c143b71a6931fc143dd861792db988a6c5c446158b36e6a1
+        sha256: c542f2ebe2d58181c143b71a6931fc143dd861792db988a6c5c446158b36e6a1
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/c2rust/blobs/sha256:df88c851f1831af9a3e630295ffa9e798d2c0ab97b9b8cf6c24e7b35ee432aa3
+        sha256: df88c851f1831af9a3e630295ffa9e798d2c0ab97b9b8cf6c24e7b35ee432aa3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/c2rust/blobs/sha256:a3e5ca318401131f2e847996218bcbf7e2797f7e4c5cf893233bdfd8772750fe
+        sha256: a3e5ca318401131f2e847996218bcbf7e2797f7e4c5cf893233bdfd8772750fe
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/c2rust/blobs/sha256:9274c9595424047d95fae4ebba0178c55f427612cdd9fc93863a8d91189e83f3
+        sha256: 9274c9595424047d95fae4ebba0178c55f427612cdd9fc93863a8d91189e83f3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/immunant/c2rust/archive/refs/tags/v0.22.1.tar.gz
+    sha256: a8fa6a88a5f40f35b1e63c086e981e8e03e0b887b769ddcd07ba46b0304c931b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - rust
+    - cmake
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

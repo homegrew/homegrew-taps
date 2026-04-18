@@ -3,55 +3,79 @@ version: 0.82.2
 description: Modernized DOSBox soft-fork
 homepage: https://dosbox-staging.github.io/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:88db4c380c543140ebfbd668033e1a8ca44e528a3acb1d1c9028be36f0373b30
-    sha256: 88db4c380c543140ebfbd668033e1a8ca44e528a3acb1d1c9028be36f0373b30
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:3feabb1aecd2f540708f685c837a4c4c633bf941a783b44115388d1a2fb19531
-    sha256: 3feabb1aecd2f540708f685c837a4c4c633bf941a783b44115388d1a2fb19531
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:86a154ce4e2d98e228d8fae799c47ec6f5c1a19d50bb439759a27bee4e6de011
-    sha256: 86a154ce4e2d98e228d8fae799c47ec6f5c1a19d50bb439759a27bee4e6de011
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:e69923a5122d7e81660e996d7222b8a6af8de0f3d3211c47048af92bc4ffa93b
-    sha256: e69923a5122d7e81660e996d7222b8a6af8de0f3d3211c47048af92bc4ffa93b
-source:
-  url: https://github.com/dosbox-staging/dosbox-staging/archive/refs/tags/v0.82.2.tar.gz
-  sha256: 387c97b373c3164ab5abbbc2b210bf94b5567057abe44ee1e8b4d4e725bd422c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fluid-synth
-  - glib
-  - iir1
-  - libpng
-  - libslirp
-  - mt32emu
-  - opusfile
-  - sdl2
-  - sdl2_image
-  - sdl2_net
-  - speexdsp
+    - fluid-synth
+    - glib
+    - iir1
+    - libpng
+    - libslirp
+    - mt32emu
+    - opusfile
+    - sdl2
+    - sdl2_image
+    - sdl2_net
+    - speexdsp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:3feabb1aecd2f540708f685c837a4c4c633bf941a783b44115388d1a2fb19531
+        sha256: 3feabb1aecd2f540708f685c837a4c4c633bf941a783b44115388d1a2fb19531
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:88db4c380c543140ebfbd668033e1a8ca44e528a3acb1d1c9028be36f0373b30
+        sha256: 88db4c380c543140ebfbd668033e1a8ca44e528a3acb1d1c9028be36f0373b30
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:86a154ce4e2d98e228d8fae799c47ec6f5c1a19d50bb439759a27bee4e6de011
+        sha256: 86a154ce4e2d98e228d8fae799c47ec6f5c1a19d50bb439759a27bee4e6de011
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:e69923a5122d7e81660e996d7222b8a6af8de0f3d3211c47048af92bc4ffa93b
+        sha256: e69923a5122d7e81660e996d7222b8a6af8de0f3d3211c47048af92bc4ffa93b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dosbox-staging/dosbox-staging/archive/refs/tags/v0.82.2.tar.gz
+    sha256: 387c97b373c3164ab5abbbc2b210bf94b5567057abe44ee1e8b4d4e725bd422c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - fluid-synth
-  - glib
-  - iir1
-  - libpng
-  - libslirp
-  - mesa
-  - mesa-glu
-  - mt32emu
-  - opusfile
-  - sdl2
-  - sdl2_image
-  - sdl2_net
-  - speexdsp
-  - zlib-ng-compat
+    - alsa-lib
+    - fluid-synth
+    - glib
+    - iir1
+    - libpng
+    - libslirp
+    - mesa
+    - mesa-glu
+    - mt32emu
+    - opusfile
+    - sdl2
+    - sdl2_image
+    - sdl2_net
+    - speexdsp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

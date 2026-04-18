@@ -3,28 +3,53 @@ version: 0.21.1
 description: Embeddable and experimental Javascript engine written in Rust
 homepage: https://github.com/boa-dev/boa
 license: MIT OR Unlicense
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/boa/blobs/sha256:3e17114c6147b4911e8dce508ea3f9001be39690e0ee52547043caae40bb1a47
-    sha256: 3e17114c6147b4911e8dce508ea3f9001be39690e0ee52547043caae40bb1a47
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/boa/blobs/sha256:4f7ec93e805d5b4fc75ff6e466e80fc4590efcfe7cd69f7f0a0bcd726fdf76a7
-    sha256: 4f7ec93e805d5b4fc75ff6e466e80fc4590efcfe7cd69f7f0a0bcd726fdf76a7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/boa/blobs/sha256:c083f6db35bd00c0ac4cf40a1fa6b29af35795853ad738cb30394856a57baa70
-    sha256: c083f6db35bd00c0ac4cf40a1fa6b29af35795853ad738cb30394856a57baa70
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/boa/blobs/sha256:7479bb490fae1e207d92bce71e2af2e5ecfb4d5ff3a405fdd5c38a453b15fc5a
-    sha256: 7479bb490fae1e207d92bce71e2af2e5ecfb4d5ff3a405fdd5c38a453b15fc5a
-source:
-  url: https://github.com/boa-dev/boa/archive/refs/tags/v0.21.1.tar.gz
-  sha256: fd0a45ff94673120f010d19dc44c411bc8fc5dcd3e5986e6f1dd5f005f918f22
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/boa/blobs/sha256:4f7ec93e805d5b4fc75ff6e466e80fc4590efcfe7cd69f7f0a0bcd726fdf76a7
+        sha256: 4f7ec93e805d5b4fc75ff6e466e80fc4590efcfe7cd69f7f0a0bcd726fdf76a7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/boa/blobs/sha256:3e17114c6147b4911e8dce508ea3f9001be39690e0ee52547043caae40bb1a47
+        sha256: 3e17114c6147b4911e8dce508ea3f9001be39690e0ee52547043caae40bb1a47
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/boa/blobs/sha256:c083f6db35bd00c0ac4cf40a1fa6b29af35795853ad738cb30394856a57baa70
+        sha256: c083f6db35bd00c0ac4cf40a1fa6b29af35795853ad738cb30394856a57baa70
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/boa/blobs/sha256:7479bb490fae1e207d92bce71e2af2e5ecfb4d5ff3a405fdd5c38a453b15fc5a
+        sha256: 7479bb490fae1e207d92bce71e2af2e5ecfb4d5ff3a405fdd5c38a453b15fc5a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/boa-dev/boa/archive/refs/tags/v0.21.1.tar.gz
+    sha256: fd0a45ff94673120f010d19dc44c411bc8fc5dcd3e5986e6f1dd5f005f918f22
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

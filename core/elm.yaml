@@ -3,31 +3,55 @@ version: 0.19.1
 description: Functional programming language for building browser-based GUIs
 homepage: https://elm-lang.org
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/elm/blobs/sha256:ec3ce79abe4bb3959d399450deb363f9b5923d9095f4004c242fc9cc82360fbc
-    sha256: ec3ce79abe4bb3959d399450deb363f9b5923d9095f4004c242fc9cc82360fbc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/elm/blobs/sha256:6c99fb8f3afbeaf136cda6f45534add032113307ec48aa15ca918b192b46eba4
-    sha256: 6c99fb8f3afbeaf136cda6f45534add032113307ec48aa15ca918b192b46eba4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/elm/blobs/sha256:5aedc01216943882eec74e6a2e303e1ecae098cd7270deebe10b4748eecea59b
-    sha256: 5aedc01216943882eec74e6a2e303e1ecae098cd7270deebe10b4748eecea59b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/elm/blobs/sha256:cc5513922a45366dc5f46202bed2e6870cc319a9b666f49b31485b08efdfb26c
-    sha256: cc5513922a45366dc5f46202bed2e6870cc319a9b666f49b31485b08efdfb26c
-source:
-  url: https://github.com/elm/compiler/archive/refs/tags/0.19.1.tar.gz
-  sha256: aa161caca775cef1bbb04bcdeb4471d3aabcf87b6d9d9d5b0d62d3052e8250b1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/elm/blobs/sha256:6c99fb8f3afbeaf136cda6f45534add032113307ec48aa15ca918b192b46eba4
+        sha256: 6c99fb8f3afbeaf136cda6f45534add032113307ec48aa15ca918b192b46eba4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/elm/blobs/sha256:ec3ce79abe4bb3959d399450deb363f9b5923d9095f4004c242fc9cc82360fbc
+        sha256: ec3ce79abe4bb3959d399450deb363f9b5923d9095f4004c242fc9cc82360fbc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/elm/blobs/sha256:5aedc01216943882eec74e6a2e303e1ecae098cd7270deebe10b4748eecea59b
+        sha256: 5aedc01216943882eec74e6a2e303e1ecae098cd7270deebe10b4748eecea59b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/elm/blobs/sha256:cc5513922a45366dc5f46202bed2e6870cc319a9b666f49b31485b08efdfb26c
+        sha256: cc5513922a45366dc5f46202bed2e6870cc319a9b666f49b31485b08efdfb26c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/elm/compiler/archive/refs/tags/0.19.1.tar.gz
+    sha256: aa161caca775cef1bbb04bcdeb4471d3aabcf87b6d9d9d5b0d62d3052e8250b1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
+    - cabal-install
+    - ghc
 linux_dependencies:
-  - gmp
-  - zlib-ng-compat
+    - gmp
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

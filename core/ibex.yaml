@@ -3,27 +3,50 @@ version: 2.9.1
 description: C++ library for constraint processing over real numbers
 homepage: https://ibex-team.github.io/ibex-lib/
 license: LGPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ibex/blobs/sha256:747a401be0719a9769ff455db67125bdb0d964b6652d92a14b5472f1dbe4464e
-    sha256: 747a401be0719a9769ff455db67125bdb0d964b6652d92a14b5472f1dbe4464e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ibex/blobs/sha256:67ee5538f5514def4be02292b9907a2cf5085c87fcdcc6ba4394de3cb3339809
-    sha256: 67ee5538f5514def4be02292b9907a2cf5085c87fcdcc6ba4394de3cb3339809
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ibex/blobs/sha256:07caba7293ca4475838b8a5b89e0d5acda1d5bfcce10ee17ee06f8b7027272d0
-    sha256: 07caba7293ca4475838b8a5b89e0d5acda1d5bfcce10ee17ee06f8b7027272d0
-source:
-  url: https://github.com/ibex-team/ibex-lib/archive/refs/tags/ibex-2.9.1.tar.gz
-  sha256: b3cd09c3be137fd2ff0f2570c3bcbdfcd9ea62fcf04d45d058db3b0dbb1d8872
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ibex/blobs/sha256:67ee5538f5514def4be02292b9907a2cf5085c87fcdcc6ba4394de3cb3339809
+        sha256: 67ee5538f5514def4be02292b9907a2cf5085c87fcdcc6ba4394de3cb3339809
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ibex/blobs/sha256:747a401be0719a9769ff455db67125bdb0d964b6652d92a14b5472f1dbe4464e
+        sha256: 747a401be0719a9769ff455db67125bdb0d964b6652d92a14b5472f1dbe4464e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ibex/blobs/sha256:07caba7293ca4475838b8a5b89e0d5acda1d5bfcce10ee17ee06f8b7027272d0
+        sha256: 07caba7293ca4475838b8a5b89e0d5acda1d5bfcce10ee17ee06f8b7027272d0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ibex-team/ibex-lib/archive/refs/tags/ibex-2.9.1.tar.gz
+    sha256: b3cd09c3be137fd2ff0f2570c3bcbdfcd9ea62fcf04d45d058db3b0dbb1d8872
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - bison
-  - cmake
-  - flex
-  - pkgconf
+    - bison
+    - cmake
+    - flex
+    - pkgconf
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

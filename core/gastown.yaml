@@ -3,28 +3,53 @@ version: 1.0.0
 description: Multi-agent workspace manager
 homepage: https://github.com/steveyegge/gastown
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gastown/blobs/sha256:6ca034db6ccaf764da65f1d6df5318e4192b1c5014dd158a1aeaa2f38dd07220
-    sha256: 6ca034db6ccaf764da65f1d6df5318e4192b1c5014dd158a1aeaa2f38dd07220
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gastown/blobs/sha256:bb57da4744bb4b5a95ffac47cfdc95c60449e7ad6a69a585790269c9ad25011e
-    sha256: bb57da4744bb4b5a95ffac47cfdc95c60449e7ad6a69a585790269c9ad25011e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gastown/blobs/sha256:f10db030fe964aaa6fe1aaf27d009dc71e8a44e855459f34a4ff746629cb0cfb
-    sha256: f10db030fe964aaa6fe1aaf27d009dc71e8a44e855459f34a4ff746629cb0cfb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gastown/blobs/sha256:a55182592a822fa5862235cdabda3d8c6fc0f86df1d7ae46f654d209830d5f26
-    sha256: a55182592a822fa5862235cdabda3d8c6fc0f86df1d7ae46f654d209830d5f26
-source:
-  url: https://github.com/steveyegge/gastown/archive/refs/tags/v1.0.0.tar.gz
-  sha256: 6fccaa887e93a84bfe7daba6cac276ff1e2c0f786a8d12254160e15c7fe8bd4b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - beads
-  - icu4c@78
+    - beads
+    - icu4c@78
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gastown/blobs/sha256:bb57da4744bb4b5a95ffac47cfdc95c60449e7ad6a69a585790269c9ad25011e
+        sha256: bb57da4744bb4b5a95ffac47cfdc95c60449e7ad6a69a585790269c9ad25011e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gastown/blobs/sha256:6ca034db6ccaf764da65f1d6df5318e4192b1c5014dd158a1aeaa2f38dd07220
+        sha256: 6ca034db6ccaf764da65f1d6df5318e4192b1c5014dd158a1aeaa2f38dd07220
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gastown/blobs/sha256:f10db030fe964aaa6fe1aaf27d009dc71e8a44e855459f34a4ff746629cb0cfb
+        sha256: f10db030fe964aaa6fe1aaf27d009dc71e8a44e855459f34a4ff746629cb0cfb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gastown/blobs/sha256:a55182592a822fa5862235cdabda3d8c6fc0f86df1d7ae46f654d209830d5f26
+        sha256: a55182592a822fa5862235cdabda3d8c6fc0f86df1d7ae46f654d209830d5f26
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/steveyegge/gastown/archive/refs/tags/v1.0.0.tar.gz
+    sha256: 6fccaa887e93a84bfe7daba6cac276ff1e2c0f786a8d12254160e15c7fe8bd4b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

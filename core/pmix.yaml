@@ -3,30 +3,55 @@ version: 5.0.10
 description: Process Management Interface for HPC environments
 homepage: https://openpmix.github.io/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pmix/blobs/sha256:5ae502e52b0701368cd61fd43b12f67df1c074bd2a6027bf5f1cbe1ef213817d
-    sha256: 5ae502e52b0701368cd61fd43b12f67df1c074bd2a6027bf5f1cbe1ef213817d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pmix/blobs/sha256:d93205b42ae1181cbfd0b84ee6fe6697cb60f8c6472cfffddc16c6af10f4a174
-    sha256: d93205b42ae1181cbfd0b84ee6fe6697cb60f8c6472cfffddc16c6af10f4a174
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pmix/blobs/sha256:93fd3b3e99b624b63f07fb8580d22684387aaacbcf8c3bf9a89536253b32ce09
-    sha256: 93fd3b3e99b624b63f07fb8580d22684387aaacbcf8c3bf9a89536253b32ce09
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pmix/blobs/sha256:d5c71a20e25fd1ad9d512dd40c882eef16c980a387a601e2617195913175c2b1
-    sha256: d5c71a20e25fd1ad9d512dd40c882eef16c980a387a601e2617195913175c2b1
-source:
-  url: https://github.com/openpmix/openpmix/releases/download/v5.0.10/pmix-5.0.10.tar.bz2
-  sha256: 78663f6b932589d68e24feaf7f8a948d60be68d91965f3effbacb4cd88cf9a95
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hwloc
-  - libevent
+    - hwloc
+    - libevent
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pmix/blobs/sha256:d93205b42ae1181cbfd0b84ee6fe6697cb60f8c6472cfffddc16c6af10f4a174
+        sha256: d93205b42ae1181cbfd0b84ee6fe6697cb60f8c6472cfffddc16c6af10f4a174
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pmix/blobs/sha256:5ae502e52b0701368cd61fd43b12f67df1c074bd2a6027bf5f1cbe1ef213817d
+        sha256: 5ae502e52b0701368cd61fd43b12f67df1c074bd2a6027bf5f1cbe1ef213817d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pmix/blobs/sha256:93fd3b3e99b624b63f07fb8580d22684387aaacbcf8c3bf9a89536253b32ce09
+        sha256: 93fd3b3e99b624b63f07fb8580d22684387aaacbcf8c3bf9a89536253b32ce09
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pmix/blobs/sha256:d5c71a20e25fd1ad9d512dd40c882eef16c980a387a601e2617195913175c2b1
+        sha256: d5c71a20e25fd1ad9d512dd40c882eef16c980a387a601e2617195913175c2b1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/openpmix/openpmix/releases/download/v5.0.10/pmix-5.0.10.tar.bz2
+    sha256: 78663f6b932589d68e24feaf7f8a948d60be68d91965f3effbacb4cd88cf9a95
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - hwloc
-  - libevent
-  - zlib-ng-compat
+    - hwloc
+    - libevent
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

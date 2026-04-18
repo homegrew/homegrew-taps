@@ -1,30 +1,55 @@
 name: trunk
 version: 0.21.14
-description: "Build, bundle & ship your Rust WASM application to the web"
+description: Build, bundle & ship your Rust WASM application to the web
 homepage: https://trunkrs.dev/
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/trunk/blobs/sha256:93022640040f9f21249a52ac60776e812e0aed4a02b9e0b61676eb8b51ac6f96
-    sha256: 93022640040f9f21249a52ac60776e812e0aed4a02b9e0b61676eb8b51ac6f96
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/trunk/blobs/sha256:327a4675ef5bbe597bb701f9bf8fae1f5c0a5158a9b6e6b995e0beadd480adf6
-    sha256: 327a4675ef5bbe597bb701f9bf8fae1f5c0a5158a9b6e6b995e0beadd480adf6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/trunk/blobs/sha256:75d36fb9a7d305547ce7580004d3da051ddd6089a8338fff63e2a033efb17578
-    sha256: 75d36fb9a7d305547ce7580004d3da051ddd6089a8338fff63e2a033efb17578
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/trunk/blobs/sha256:4f03d00804c927fda2616c5ac7ad5a145bf84e361d6b36369a6fc4383562006d
-    sha256: 4f03d00804c927fda2616c5ac7ad5a145bf84e361d6b36369a6fc4383562006d
-source:
-  url: https://github.com/trunk-rs/trunk/archive/refs/tags/v0.21.14.tar.gz
-  sha256: 8687bcf96bdc4decee88458745bbb760ad31dfd109e955cf455c2b64caeeae2f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/trunk/blobs/sha256:327a4675ef5bbe597bb701f9bf8fae1f5c0a5158a9b6e6b995e0beadd480adf6
+        sha256: 327a4675ef5bbe597bb701f9bf8fae1f5c0a5158a9b6e6b995e0beadd480adf6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/trunk/blobs/sha256:93022640040f9f21249a52ac60776e812e0aed4a02b9e0b61676eb8b51ac6f96
+        sha256: 93022640040f9f21249a52ac60776e812e0aed4a02b9e0b61676eb8b51ac6f96
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/trunk/blobs/sha256:75d36fb9a7d305547ce7580004d3da051ddd6089a8338fff63e2a033efb17578
+        sha256: 75d36fb9a7d305547ce7580004d3da051ddd6089a8338fff63e2a033efb17578
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/trunk/blobs/sha256:4f03d00804c927fda2616c5ac7ad5a145bf84e361d6b36369a6fc4383562006d
+        sha256: 4f03d00804c927fda2616c5ac7ad5a145bf84e361d6b36369a6fc4383562006d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/trunk-rs/trunk/archive/refs/tags/v0.21.14.tar.gz
+    sha256: 8687bcf96bdc4decee88458745bbb760ad31dfd109e955cf455c2b64caeeae2f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

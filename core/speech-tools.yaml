@@ -3,25 +3,51 @@ version: 2.5.0
 description: C++ speech software library from the University of Edinburgh
 homepage: http://festvox.org/docs/speech_tools-2.4.0/
 license: MIT-Festival
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/speech-tools/blobs/sha256:676603f0e048211c64eef17bb9b6992b7fec2825469d4dae53a0a265e5b84dc4
-    sha256: 676603f0e048211c64eef17bb9b6992b7fec2825469d4dae53a0a265e5b84dc4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/speech-tools/blobs/sha256:c24eb60d09a9aab6fa296b7a54a147b709e6f408b5f0c45270e0c1a338b1a909
-    sha256: c24eb60d09a9aab6fa296b7a54a147b709e6f408b5f0c45270e0c1a338b1a909
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/speech-tools/blobs/sha256:05b33f6bd508503c40c67baaa4d8766e3d3b58853b18c9f356d0e650a2ecad13
-    sha256: 05b33f6bd508503c40c67baaa4d8766e3d3b58853b18c9f356d0e650a2ecad13
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/speech-tools/blobs/sha256:1e482ece1583a25e8e5b78f5089af87629eee73d505c8013fad0fe33e085157f
-    sha256: 1e482ece1583a25e8e5b78f5089af87629eee73d505c8013fad0fe33e085157f
-source:
-  url: https://deb.debian.org/debian/pool/main/s/speech-tools/speech-tools_2.5.0.orig.tar.gz
-  sha256: e4fd97ed78f14464358d09f36dfe91bc1721b7c0fa6503e04364fb5847805dcc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libomp
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/speech-tools/blobs/sha256:c24eb60d09a9aab6fa296b7a54a147b709e6f408b5f0c45270e0c1a338b1a909
+        sha256: c24eb60d09a9aab6fa296b7a54a147b709e6f408b5f0c45270e0c1a338b1a909
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/speech-tools/blobs/sha256:676603f0e048211c64eef17bb9b6992b7fec2825469d4dae53a0a265e5b84dc4
+        sha256: 676603f0e048211c64eef17bb9b6992b7fec2825469d4dae53a0a265e5b84dc4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/speech-tools/blobs/sha256:05b33f6bd508503c40c67baaa4d8766e3d3b58853b18c9f356d0e650a2ecad13
+        sha256: 05b33f6bd508503c40c67baaa4d8766e3d3b58853b18c9f356d0e650a2ecad13
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/speech-tools/blobs/sha256:1e482ece1583a25e8e5b78f5089af87629eee73d505c8013fad0fe33e085157f
+        sha256: 1e482ece1583a25e8e5b78f5089af87629eee73d505c8013fad0fe33e085157f
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/s/speech-tools/speech-tools_2.5.0.orig.tar.gz
+    sha256: e4fd97ed78f14464358d09f36dfe91bc1721b7c0fa6503e04364fb5847805dcc
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

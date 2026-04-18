@@ -3,36 +3,60 @@ version: 2.57.7
 description: Intel RealSense D400 series and SR300 capture
 homepage: https://github.com/IntelRealSense/librealsense
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librealsense/blobs/sha256:ba740c06638228e96a74553a83e9ab3b861ed5dce1c869befeabc0c05b956f18
-    sha256: ba740c06638228e96a74553a83e9ab3b861ed5dce1c869befeabc0c05b956f18
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librealsense/blobs/sha256:7fb045dc094cae4e538727955c725c950257b39ab721f856914b791d306c17dd
-    sha256: 7fb045dc094cae4e538727955c725c950257b39ab721f856914b791d306c17dd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/librealsense/blobs/sha256:b894ff145cb546fa7904714bf115039ad373397e081d6e23daa07480c13837c1
-    sha256: b894ff145cb546fa7904714bf115039ad373397e081d6e23daa07480c13837c1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/librealsense/blobs/sha256:cc6cb411e5b83e2546f995da168cc081c5ad7dedaa1431a928520853b1019e4e
-    sha256: cc6cb411e5b83e2546f995da168cc081c5ad7dedaa1431a928520853b1019e4e
-source:
-  url: https://github.com/IntelRealSense/librealsense/archive/refs/tags/v2.57.7.tar.gz
-  sha256: 02eae8aa49d52d39ea5483836116fee2596e1146254274db6b76d7a62092d9e8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glfw
-  - libusb
+    - glfw
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librealsense/blobs/sha256:7fb045dc094cae4e538727955c725c950257b39ab721f856914b791d306c17dd
+        sha256: 7fb045dc094cae4e538727955c725c950257b39ab721f856914b791d306c17dd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librealsense/blobs/sha256:ba740c06638228e96a74553a83e9ab3b861ed5dce1c869befeabc0c05b956f18
+        sha256: ba740c06638228e96a74553a83e9ab3b861ed5dce1c869befeabc0c05b956f18
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/librealsense/blobs/sha256:b894ff145cb546fa7904714bf115039ad373397e081d6e23daa07480c13837c1
+        sha256: b894ff145cb546fa7904714bf115039ad373397e081d6e23daa07480c13837c1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/librealsense/blobs/sha256:cc6cb411e5b83e2546f995da168cc081c5ad7dedaa1431a928520853b1019e4e
+        sha256: cc6cb411e5b83e2546f995da168cc081c5ad7dedaa1431a928520853b1019e4e
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/IntelRealSense/librealsense/archive/refs/tags/v2.57.7.tar.gz
+    sha256: 02eae8aa49d52d39ea5483836116fee2596e1146254274db6b76d7a62092d9e8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - glfw
-  - libusb
-  - mesa
-  - mesa-glu
-  - openssl@3
-  - systemd
+    - glfw
+    - libusb
+    - mesa
+    - mesa-glu
+    - openssl@3
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

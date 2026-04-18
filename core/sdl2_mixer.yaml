@@ -3,35 +3,60 @@ version: 2.8.1
 description: Sample multi-channel audio mixer library
 homepage: https://github.com/libsdl-org/SDL_mixer
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_mixer/blobs/sha256:29131b712fd63e8085fd10d1e158e8c4eff11ee363b0b3768ab8f0ab9d26c5cc
-    sha256: 29131b712fd63e8085fd10d1e158e8c4eff11ee363b0b3768ab8f0ab9d26c5cc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_mixer/blobs/sha256:2a0833b4e5b3d6b5e650e6260ea32fe5f07a9fa4ed66a8f4343d5d9c65c26f9e
-    sha256: 2a0833b4e5b3d6b5e650e6260ea32fe5f07a9fa4ed66a8f4343d5d9c65c26f9e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_mixer/blobs/sha256:e7022d2cdf02890e277cf56cfa6e15e5940a000886b92991027b8efbf8332927
-    sha256: e7022d2cdf02890e277cf56cfa6e15e5940a000886b92991027b8efbf8332927
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_mixer/blobs/sha256:1179824f595c247ae0bd213a9af93d973f17b068fdcac3017ec2431196eba023
-    sha256: 1179824f595c247ae0bd213a9af93d973f17b068fdcac3017ec2431196eba023
-source:
-  url: https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.1/SDL2_mixer-2.8.1.tar.gz
-  sha256: cb760211b056bfe44f4a1e180cc7cb201137e4d1572f2002cc1be728efd22660
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - flac
-  - fluid-synth
-  - game-music-emu
-  - libvorbis
-  - libxmp
-  - mpg123
-  - opusfile
-  - sdl2
-  - wavpack
+    - flac
+    - fluid-synth
+    - game-music-emu
+    - libvorbis
+    - libxmp
+    - mpg123
+    - opusfile
+    - sdl2
+    - wavpack
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_mixer/blobs/sha256:2a0833b4e5b3d6b5e650e6260ea32fe5f07a9fa4ed66a8f4343d5d9c65c26f9e
+        sha256: 2a0833b4e5b3d6b5e650e6260ea32fe5f07a9fa4ed66a8f4343d5d9c65c26f9e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_mixer/blobs/sha256:29131b712fd63e8085fd10d1e158e8c4eff11ee363b0b3768ab8f0ab9d26c5cc
+        sha256: 29131b712fd63e8085fd10d1e158e8c4eff11ee363b0b3768ab8f0ab9d26c5cc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_mixer/blobs/sha256:e7022d2cdf02890e277cf56cfa6e15e5940a000886b92991027b8efbf8332927
+        sha256: e7022d2cdf02890e277cf56cfa6e15e5940a000886b92991027b8efbf8332927
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_mixer/blobs/sha256:1179824f595c247ae0bd213a9af93d973f17b068fdcac3017ec2431196eba023
+        sha256: 1179824f595c247ae0bd213a9af93d973f17b068fdcac3017ec2431196eba023
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.1/SDL2_mixer-2.8.1.tar.gz
+    sha256: cb760211b056bfe44f4a1e180cc7cb201137e4d1572f2002cc1be728efd22660
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

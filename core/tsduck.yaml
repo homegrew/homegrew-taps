@@ -3,41 +3,65 @@ version: 3.43-4549
 description: MPEG Transport Stream Toolkit
 homepage: https://tsduck.io/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tsduck/blobs/sha256:9689e7dc782eb2d4ba6a37c4892785031972c51a06f299221ad7a354b1273c77
-    sha256: 9689e7dc782eb2d4ba6a37c4892785031972c51a06f299221ad7a354b1273c77
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tsduck/blobs/sha256:d91a66cdad84c2a14af8e36c40d63544e965fb37869684b8c9745cf00589b732
-    sha256: d91a66cdad84c2a14af8e36c40d63544e965fb37869684b8c9745cf00589b732
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/tsduck/blobs/sha256:a0c3336e614147bf079ce1c5feb71c03a3757488d0b43dd3e675f9f23ee972a5
-    sha256: a0c3336e614147bf079ce1c5feb71c03a3757488d0b43dd3e675f9f23ee972a5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/tsduck/blobs/sha256:af4c880922c1767a187fda85b0f620aa98fb64d7652183df5ad52ab93cc7fe3f
-    sha256: af4c880922c1767a187fda85b0f620aa98fb64d7652183df5ad52ab93cc7fe3f
-source:
-  url: https://github.com/tsduck/tsduck/archive/refs/tags/v3.43-4549.tar.gz
-  sha256: a3399661d21e0d965dfef3750d4af7da61eb2924e7b48ee3edaae194ffa5203c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - librist
-  - libvatek
-  - openssl@3
-  - srt
+    - librist
+    - libvatek
+    - openssl@3
+    - srt
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tsduck/blobs/sha256:d91a66cdad84c2a14af8e36c40d63544e965fb37869684b8c9745cf00589b732
+        sha256: d91a66cdad84c2a14af8e36c40d63544e965fb37869684b8c9745cf00589b732
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tsduck/blobs/sha256:9689e7dc782eb2d4ba6a37c4892785031972c51a06f299221ad7a354b1273c77
+        sha256: 9689e7dc782eb2d4ba6a37c4892785031972c51a06f299221ad7a354b1273c77
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tsduck/blobs/sha256:a0c3336e614147bf079ce1c5feb71c03a3757488d0b43dd3e675f9f23ee972a5
+        sha256: a0c3336e614147bf079ce1c5feb71c03a3757488d0b43dd3e675f9f23ee972a5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tsduck/blobs/sha256:af4c880922c1767a187fda85b0f620aa98fb64d7652183df5ad52ab93cc7fe3f
+        sha256: af4c880922c1767a187fda85b0f620aa98fb64d7652183df5ad52ab93cc7fe3f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/tsduck/tsduck/archive/refs/tags/v3.43-4549.tar.gz
+    sha256: a3399661d21e0d965dfef3750d4af7da61eb2924e7b48ee3edaae194ffa5203c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoctor
-  - dos2unix
-  - openjdk
-  - qpdf
-  - gnu-sed
-  - make
+    - asciidoctor
+    - dos2unix
+    - openjdk
+    - qpdf
+    - gnu-sed
+    - make
 linux_dependencies:
-  - librist
-  - libvatek
-  - openssl@3
-  - srt
-  - zlib-ng-compat
+    - librist
+    - libvatek
+    - openssl@3
+    - srt
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

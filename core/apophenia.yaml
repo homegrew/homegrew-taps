@@ -1,31 +1,56 @@
 name: apophenia
-version: 1.0
+version: "1.0"
 description: C library for statistical and scientific computing
 homepage: https://github.com/b-k/apophenia
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apophenia/blobs/sha256:44c30149c9a30ba1c3eabfde55df2aa654127cd2788bddef59c67dc61b79531d
-    sha256: 44c30149c9a30ba1c3eabfde55df2aa654127cd2788bddef59c67dc61b79531d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apophenia/blobs/sha256:cde422f8be856275c3fb3d2092929101bafcbbee62cb9486d1b59378b02b004a
-    sha256: cde422f8be856275c3fb3d2092929101bafcbbee62cb9486d1b59378b02b004a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/apophenia/blobs/sha256:2980951404674b5fc9a6957d6fe7ebb8ae0ded37f3c0c444c732115f5b3f6638
-    sha256: 2980951404674b5fc9a6957d6fe7ebb8ae0ded37f3c0c444c732115f5b3f6638
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/apophenia/blobs/sha256:d28856a30a244da835dc65df83285e22c654e7e449e56d0cf2a7748bc9ede283
-    sha256: d28856a30a244da835dc65df83285e22c654e7e449e56d0cf2a7748bc9ede283
-source:
-  url: https://github.com/b-k/apophenia/archive/refs/tags/v1.0.tar.gz
-  sha256: c753047a9230f9d9e105541f671c4961dc7998f4402972424e591404f33b82ca
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gsl
+    - gsl
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apophenia/blobs/sha256:cde422f8be856275c3fb3d2092929101bafcbbee62cb9486d1b59378b02b004a
+        sha256: cde422f8be856275c3fb3d2092929101bafcbbee62cb9486d1b59378b02b004a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apophenia/blobs/sha256:44c30149c9a30ba1c3eabfde55df2aa654127cd2788bddef59c67dc61b79531d
+        sha256: 44c30149c9a30ba1c3eabfde55df2aa654127cd2788bddef59c67dc61b79531d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apophenia/blobs/sha256:2980951404674b5fc9a6957d6fe7ebb8ae0ded37f3c0c444c732115f5b3f6638
+        sha256: 2980951404674b5fc9a6957d6fe7ebb8ae0ded37f3c0c444c732115f5b3f6638
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apophenia/blobs/sha256:d28856a30a244da835dc65df83285e22c654e7e449e56d0cf2a7748bc9ede283
+        sha256: d28856a30a244da835dc65df83285e22c654e7e449e56d0cf2a7748bc9ede283
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/b-k/apophenia/archive/refs/tags/v1.0.tar.gz
+    sha256: c753047a9230f9d9e105541f671c4961dc7998f4402972424e591404f33b82ca
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

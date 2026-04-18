@@ -3,42 +3,66 @@ version: 20.3.0
 description: JPEG 2000 Library
 homepage: https://github.com/GrokImageCompression/grok
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grokj2k/blobs/sha256:fbbf92c6d01809dd16642067e63bab38a68d79eb2181838a00ff72e7375706cf
-    sha256: fbbf92c6d01809dd16642067e63bab38a68d79eb2181838a00ff72e7375706cf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grokj2k/blobs/sha256:aedfbe91e2c4120b9b2564ed5e7edeedb076c96b9825aa2d6747e2c4ea3ada5e
-    sha256: aedfbe91e2c4120b9b2564ed5e7edeedb076c96b9825aa2d6747e2c4ea3ada5e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/grokj2k/blobs/sha256:c59eab6fdcafb2994bea7228567b0d25f83eddd2b5c727edccad1fda590bffc7
-    sha256: c59eab6fdcafb2994bea7228567b0d25f83eddd2b5c727edccad1fda590bffc7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/grokj2k/blobs/sha256:4094a52ce3ff99841ad8cee6043638e5903ed28fda4d132c8abfe152d8f2e4fd
-    sha256: 4094a52ce3ff99841ad8cee6043638e5903ed28fda4d132c8abfe152d8f2e4fd
-source:
-  url: https://github.com/GrokImageCompression/grok/releases/download/v20.3.0/source-full.tar.gz
-  sha256: 291965752e932684cf9c9b197efa15639b290a93099115a0111f37ed6c2308c6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fmt
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - little-cms2
-  - xz
-  - zstd
+    - fmt
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - little-cms2
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grokj2k/blobs/sha256:aedfbe91e2c4120b9b2564ed5e7edeedb076c96b9825aa2d6747e2c4ea3ada5e
+        sha256: aedfbe91e2c4120b9b2564ed5e7edeedb076c96b9825aa2d6747e2c4ea3ada5e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grokj2k/blobs/sha256:fbbf92c6d01809dd16642067e63bab38a68d79eb2181838a00ff72e7375706cf
+        sha256: fbbf92c6d01809dd16642067e63bab38a68d79eb2181838a00ff72e7375706cf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/grokj2k/blobs/sha256:c59eab6fdcafb2994bea7228567b0d25f83eddd2b5c727edccad1fda590bffc7
+        sha256: c59eab6fdcafb2994bea7228567b0d25f83eddd2b5c727edccad1fda590bffc7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grokj2k/blobs/sha256:4094a52ce3ff99841ad8cee6043638e5903ed28fda4d132c8abfe152d8f2e4fd
+        sha256: 4094a52ce3ff99841ad8cee6043638e5903ed28fda4d132c8abfe152d8f2e4fd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/GrokImageCompression/grok/releases/download/v20.3.0/source-full.tar.gz
+    sha256: 291965752e932684cf9c9b197efa15639b290a93099115a0111f37ed6c2308c6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
-  - pkgconf
+    - cmake
+    - doxygen
+    - pkgconf
 linux_dependencies:
-  - fmt
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - little-cms2
-  - zlib-ng-compat
+    - fmt
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - little-cms2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

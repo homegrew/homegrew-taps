@@ -1,52 +1,76 @@
 name: frotz
-version: 2.55
+version: "2.55"
 description: Infocom-style interactive fiction player
 homepage: https://661.org/proj/if/frotz/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/frotz/blobs/sha256:13e6781a5e0e185bb4bb73634f55d01ae38a55127b20f0f6eb0e88ff13bef27a
-    sha256: 13e6781a5e0e185bb4bb73634f55d01ae38a55127b20f0f6eb0e88ff13bef27a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/frotz/blobs/sha256:7a026e6bed92668413cc87b1f258bcae2b5148eb0047870213888297321a4c9c
-    sha256: 7a026e6bed92668413cc87b1f258bcae2b5148eb0047870213888297321a4c9c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/frotz/blobs/sha256:40aecc84a29e2a331e298a2d1a1640c6b5efc63a56960799b04c75ddcf7c169a
-    sha256: 40aecc84a29e2a331e298a2d1a1640c6b5efc63a56960799b04c75ddcf7c169a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/frotz/blobs/sha256:aa9a5806184fe47d3fefec645caf64db935ff3f85bb4254e2b8ed9ebfb9c4c4a
-    sha256: aa9a5806184fe47d3fefec645caf64db935ff3f85bb4254e2b8ed9ebfb9c4c4a
-source:
-  url: https://gitlab.com/DavidGriffith/frotz/-/archive/2.55/frotz-2.55.tar.bz2
-  sha256: 235a8606aa1e654aa5a5a41b5c7b5ae1e934aab30fb2e2b18e2e35a4eafcd745
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - jpeg-turbo
-  - libao
-  - libmodplug
-  - libpng
-  - libsamplerate
-  - libsndfile
-  - libvorbis
-  - ncurses
-  - sdl2
-  - sdl2_mixer
+    - freetype
+    - jpeg-turbo
+    - libao
+    - libmodplug
+    - libpng
+    - libsamplerate
+    - libsndfile
+    - libvorbis
+    - ncurses
+    - sdl2
+    - sdl2_mixer
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/frotz/blobs/sha256:7a026e6bed92668413cc87b1f258bcae2b5148eb0047870213888297321a4c9c
+        sha256: 7a026e6bed92668413cc87b1f258bcae2b5148eb0047870213888297321a4c9c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/frotz/blobs/sha256:13e6781a5e0e185bb4bb73634f55d01ae38a55127b20f0f6eb0e88ff13bef27a
+        sha256: 13e6781a5e0e185bb4bb73634f55d01ae38a55127b20f0f6eb0e88ff13bef27a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/frotz/blobs/sha256:40aecc84a29e2a331e298a2d1a1640c6b5efc63a56960799b04c75ddcf7c169a
+        sha256: 40aecc84a29e2a331e298a2d1a1640c6b5efc63a56960799b04c75ddcf7c169a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/frotz/blobs/sha256:aa9a5806184fe47d3fefec645caf64db935ff3f85bb4254e2b8ed9ebfb9c4c4a
+        sha256: aa9a5806184fe47d3fefec645caf64db935ff3f85bb4254e2b8ed9ebfb9c4c4a
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.com/DavidGriffith/frotz/-/archive/2.55/frotz-2.55.tar.bz2
+    sha256: 235a8606aa1e654aa5a5a41b5c7b5ae1e934aab30fb2e2b18e2e35a4eafcd745
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - freetype
-  - jpeg-turbo
-  - libao
-  - libmodplug
-  - libpng
-  - libsamplerate
-  - libsndfile
-  - libvorbis
-  - ncurses
-  - sdl2
-  - sdl2_mixer
-  - zlib-ng-compat
+    - freetype
+    - jpeg-turbo
+    - libao
+    - libmodplug
+    - libpng
+    - libsamplerate
+    - libsndfile
+    - libvorbis
+    - ncurses
+    - sdl2
+    - sdl2_mixer
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

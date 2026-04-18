@@ -1,30 +1,56 @@
 name: open-adventure
-version: 1.20
+version: "1.20"
 description: Colossal Cave Adventure, the 1995 430-point version
 homepage: http://www.catb.org/~esr/open-adventure/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:a5cd8f69998d91913b55151dd6d546ad6ae558913b5691a446313bb7c479abd4
-    sha256: a5cd8f69998d91913b55151dd6d546ad6ae558913b5691a446313bb7c479abd4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:703624eecbc0d021d1ea47e49738a074fb7f0f973d5b1b013c7532dd8da2ec75
-    sha256: 703624eecbc0d021d1ea47e49738a074fb7f0f973d5b1b013c7532dd8da2ec75
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:e0aa4f90ca96e69a747ffa5e90d2f8388248c077f0c5f9154322f8df690bf048
-    sha256: e0aa4f90ca96e69a747ffa5e90d2f8388248c077f0c5f9154322f8df690bf048
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:11986ede6b55b722c796c6e80f3eed1ac1fa3d4757b3dbc7a04a1df37f509e08
-    sha256: 11986ede6b55b722c796c6e80f3eed1ac1fa3d4757b3dbc7a04a1df37f509e08
-source:
-  url: https://gitlab.com/esr/open-adventure/-/archive/1.20/open-adventure-1.20.tar.bz2
-  sha256: d976df7b90d9b5cb3c93f3ac99b12392e60852557b2651e7c4dc15f51a74a5ad
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:703624eecbc0d021d1ea47e49738a074fb7f0f973d5b1b013c7532dd8da2ec75
+        sha256: 703624eecbc0d021d1ea47e49738a074fb7f0f973d5b1b013c7532dd8da2ec75
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:a5cd8f69998d91913b55151dd6d546ad6ae558913b5691a446313bb7c479abd4
+        sha256: a5cd8f69998d91913b55151dd6d546ad6ae558913b5691a446313bb7c479abd4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:e0aa4f90ca96e69a747ffa5e90d2f8388248c077f0c5f9154322f8df690bf048
+        sha256: e0aa4f90ca96e69a747ffa5e90d2f8388248c077f0c5f9154322f8df690bf048
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:11986ede6b55b722c796c6e80f3eed1ac1fa3d4757b3dbc7a04a1df37f509e08
+        sha256: 11986ede6b55b722c796c6e80f3eed1ac1fa3d4757b3dbc7a04a1df37f509e08
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.com/esr/open-adventure/-/archive/1.20/open-adventure-1.20.tar.bz2
+    sha256: d976df7b90d9b5cb3c93f3ac99b12392e60852557b2651e7c4dc15f51a74a5ad
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - asciidoctor
-  - libyaml
-  - pkgconf
-  - python@3.14
+    - asciidoctor
+    - libyaml
+    - pkgconf
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

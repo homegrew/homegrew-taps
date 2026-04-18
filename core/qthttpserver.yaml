@@ -3,29 +3,54 @@ version: 6.11.0
 description: Framework for embedding an HTTP server into a Qt application
 homepage: https://www.qt.io/
 license: GPL-3.0-only AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qthttpserver/blobs/sha256:6069014a8adf1b780fd4c1f116c7a666a8acd01ddd41ab8fa933b644ed204f10
-    sha256: 6069014a8adf1b780fd4c1f116c7a666a8acd01ddd41ab8fa933b644ed204f10
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qthttpserver/blobs/sha256:c1391767249f5118bb9fa2d2b08d743d108f50acf1e127001938b2f8cbd4dbe2
-    sha256: c1391767249f5118bb9fa2d2b08d743d108f50acf1e127001938b2f8cbd4dbe2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qthttpserver/blobs/sha256:4d908f421fd057aaa3fb639a59e4577398ded4d7d2efa6a19f5ca61b67f5b15c
-    sha256: 4d908f421fd057aaa3fb639a59e4577398ded4d7d2efa6a19f5ca61b67f5b15c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qthttpserver/blobs/sha256:d38e3acec785e280abf4d5981ff6456d7ef253aaa7a64629d997c3f3c6d1b723
-    sha256: d38e3acec785e280abf4d5981ff6456d7ef253aaa7a64629d997c3f3c6d1b723
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qthttpserver-everywhere-src-6.11.0.tar.xz
-  sha256: 2b9095a327ede86be111dc4978fe848b3fbf48f23d99138fc6c3688e2a7d989b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
-  - qtwebsockets
+    - qtbase
+    - qtwebsockets
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qthttpserver/blobs/sha256:c1391767249f5118bb9fa2d2b08d743d108f50acf1e127001938b2f8cbd4dbe2
+        sha256: c1391767249f5118bb9fa2d2b08d743d108f50acf1e127001938b2f8cbd4dbe2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qthttpserver/blobs/sha256:6069014a8adf1b780fd4c1f116c7a666a8acd01ddd41ab8fa933b644ed204f10
+        sha256: 6069014a8adf1b780fd4c1f116c7a666a8acd01ddd41ab8fa933b644ed204f10
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qthttpserver/blobs/sha256:4d908f421fd057aaa3fb639a59e4577398ded4d7d2efa6a19f5ca61b67f5b15c
+        sha256: 4d908f421fd057aaa3fb639a59e4577398ded4d7d2efa6a19f5ca61b67f5b15c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qthttpserver/blobs/sha256:d38e3acec785e280abf4d5981ff6456d7ef253aaa7a64629d997c3f3c6d1b723
+        sha256: d38e3acec785e280abf4d5981ff6456d7ef253aaa7a64629d997c3f3c6d1b723
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qthttpserver-everywhere-src-6.11.0.tar.xz
+    sha256: 2b9095a327ede86be111dc4978fe848b3fbf48f23d99138fc6c3688e2a7d989b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

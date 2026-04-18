@@ -3,33 +3,58 @@ version: 6.11.0
 description: Provides an input framework and reference keyboard frontend
 homepage: https://www.qt.io/
 license: GPL-3.0-only AND Apache-2.0 AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtvirtualkeyboard/blobs/sha256:85d54ee498d6a1dccd74b7c621e59be0e1b96b390f5d2f4c276512da5f9f2555
-    sha256: 85d54ee498d6a1dccd74b7c621e59be0e1b96b390f5d2f4c276512da5f9f2555
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtvirtualkeyboard/blobs/sha256:a60c2edaebe98b7d096aa9328457228bb07465af9c6dba605afc0e711be22236
-    sha256: a60c2edaebe98b7d096aa9328457228bb07465af9c6dba605afc0e711be22236
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtvirtualkeyboard/blobs/sha256:40a48084da7320176855e46781716c6cec3cecf60af60f28d37814f47ce1e938
-    sha256: 40a48084da7320176855e46781716c6cec3cecf60af60f28d37814f47ce1e938
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtvirtualkeyboard/blobs/sha256:3f28d48c5d031753769766edb997cdc27b46cdca78813d94abc807beb2e3ec80
-    sha256: 3f28d48c5d031753769766edb997cdc27b46cdca78813d94abc807beb2e3ec80
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtvirtualkeyboard-everywhere-src-6.11.0.tar.xz
-  sha256: d88a4b1713a313e3ac06c32837b5d00724d1dcf7b44c2594f1029f7c74a8e686
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hunspell
-  - qtbase
-  - qtdeclarative
-  - qtmultimedia
-  - qtsvg
+    - hunspell
+    - qtbase
+    - qtdeclarative
+    - qtmultimedia
+    - qtsvg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtvirtualkeyboard/blobs/sha256:a60c2edaebe98b7d096aa9328457228bb07465af9c6dba605afc0e711be22236
+        sha256: a60c2edaebe98b7d096aa9328457228bb07465af9c6dba605afc0e711be22236
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtvirtualkeyboard/blobs/sha256:85d54ee498d6a1dccd74b7c621e59be0e1b96b390f5d2f4c276512da5f9f2555
+        sha256: 85d54ee498d6a1dccd74b7c621e59be0e1b96b390f5d2f4c276512da5f9f2555
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtvirtualkeyboard/blobs/sha256:40a48084da7320176855e46781716c6cec3cecf60af60f28d37814f47ce1e938
+        sha256: 40a48084da7320176855e46781716c6cec3cecf60af60f28d37814f47ce1e938
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtvirtualkeyboard/blobs/sha256:3f28d48c5d031753769766edb997cdc27b46cdca78813d94abc807beb2e3ec80
+        sha256: 3f28d48c5d031753769766edb997cdc27b46cdca78813d94abc807beb2e3ec80
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtvirtualkeyboard-everywhere-src-6.11.0.tar.xz
+    sha256: d88a4b1713a313e3ac06c32837b5d00724d1dcf7b44c2594f1029f7c74a8e686
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
-  - pkgconf
+    - cmake
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

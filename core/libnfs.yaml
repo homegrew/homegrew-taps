@@ -3,27 +3,53 @@ version: 6.0.2
 description: C client library for NFS
 homepage: https://github.com/sahlberg/libnfs
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libnfs/blobs/sha256:49434cf4624dd2870f29010e9732abf65b3fac22346ebdc1fab0fc6c76b89a59
-    sha256: 49434cf4624dd2870f29010e9732abf65b3fac22346ebdc1fab0fc6c76b89a59
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libnfs/blobs/sha256:4509c2de7ad0dc7583d3d4ad6f17719eaf306adf33dcc5e8b272a69c153aa276
-    sha256: 4509c2de7ad0dc7583d3d4ad6f17719eaf306adf33dcc5e8b272a69c153aa276
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libnfs/blobs/sha256:0477428f6b57eb2ebc18e86a9c62951d42623dfb516b6f8e6b409625f943a233
-    sha256: 0477428f6b57eb2ebc18e86a9c62951d42623dfb516b6f8e6b409625f943a233
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libnfs/blobs/sha256:d4e709afbb129aa4d910765a61d1c6ad522a793d864d2fc23b42300573a933cf
-    sha256: d4e709afbb129aa4d910765a61d1c6ad522a793d864d2fc23b42300573a933cf
-source:
-  url: https://github.com/sahlberg/libnfs/archive/refs/tags/libnfs-6.0.2.tar.gz
-  sha256: 4e5459cc3e0242447879004e9ad28286d4d27daa42cbdcde423248fad911e747
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libnfs/blobs/sha256:4509c2de7ad0dc7583d3d4ad6f17719eaf306adf33dcc5e8b272a69c153aa276
+        sha256: 4509c2de7ad0dc7583d3d4ad6f17719eaf306adf33dcc5e8b272a69c153aa276
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libnfs/blobs/sha256:49434cf4624dd2870f29010e9732abf65b3fac22346ebdc1fab0fc6c76b89a59
+        sha256: 49434cf4624dd2870f29010e9732abf65b3fac22346ebdc1fab0fc6c76b89a59
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libnfs/blobs/sha256:0477428f6b57eb2ebc18e86a9c62951d42623dfb516b6f8e6b409625f943a233
+        sha256: 0477428f6b57eb2ebc18e86a9c62951d42623dfb516b6f8e6b409625f943a233
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libnfs/blobs/sha256:d4e709afbb129aa4d910765a61d1c6ad522a793d864d2fc23b42300573a933cf
+        sha256: d4e709afbb129aa4d910765a61d1c6ad522a793d864d2fc23b42300573a933cf
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/sahlberg/libnfs/archive/refs/tags/libnfs-6.0.2.tar.gz
+    sha256: 4e5459cc3e0242447879004e9ad28286d4d27daa42cbdcde423248fad911e747
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - docbook
-  - docbook-xsl
+    - cmake
+    - docbook
+    - docbook-xsl
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

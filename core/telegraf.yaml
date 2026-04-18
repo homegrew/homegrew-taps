@@ -1,27 +1,53 @@
 name: telegraf
 version: 1.38.2
-description: "Plugin-driven server agent for collecting & reporting metrics"
+description: Plugin-driven server agent for collecting & reporting metrics
 homepage: https://www.influxdata.com/time-series-platform/telegraf/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:9cae292d3a28a8cd38d15a2c887db85b655c9a2c5575d042089788e22ce2c091
-    sha256: 9cae292d3a28a8cd38d15a2c887db85b655c9a2c5575d042089788e22ce2c091
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:b7b82dc1f31f03eb41d1fae0a88ee1c2e1152e37e840eda12cf3719cdce82de9
-    sha256: b7b82dc1f31f03eb41d1fae0a88ee1c2e1152e37e840eda12cf3719cdce82de9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:5f590a048a17ba447f3c67c54f6e405d5fa88658f5572a12d7d28af2fdd1a6eb
-    sha256: 5f590a048a17ba447f3c67c54f6e405d5fa88658f5572a12d7d28af2fdd1a6eb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:5cfe47784a27d9f45daf10f303c7e02a93f6945df36863ca616b02702b45a81d
-    sha256: 5cfe47784a27d9f45daf10f303c7e02a93f6945df36863ca616b02702b45a81d
-source:
-  url: https://github.com/influxdata/telegraf/archive/refs/tags/v1.38.2.tar.gz
-  sha256: 8f67651b9ff690593b57a8ff7703dbf9764bb1a356433503a4d9a27a69d26321
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:b7b82dc1f31f03eb41d1fae0a88ee1c2e1152e37e840eda12cf3719cdce82de9
+        sha256: b7b82dc1f31f03eb41d1fae0a88ee1c2e1152e37e840eda12cf3719cdce82de9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:9cae292d3a28a8cd38d15a2c887db85b655c9a2c5575d042089788e22ce2c091
+        sha256: 9cae292d3a28a8cd38d15a2c887db85b655c9a2c5575d042089788e22ce2c091
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:5f590a048a17ba447f3c67c54f6e405d5fa88658f5572a12d7d28af2fdd1a6eb
+        sha256: 5f590a048a17ba447f3c67c54f6e405d5fa88658f5572a12d7d28af2fdd1a6eb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:5cfe47784a27d9f45daf10f303c7e02a93f6945df36863ca616b02702b45a81d
+        sha256: 5cfe47784a27d9f45daf10f303c7e02a93f6945df36863ca616b02702b45a81d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/influxdata/telegraf/archive/refs/tags/v1.38.2.tar.gz
+    sha256: 8f67651b9ff690593b57a8ff7703dbf9764bb1a356433503a4d9a27a69d26321
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

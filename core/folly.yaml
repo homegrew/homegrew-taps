@@ -3,54 +3,78 @@ version: 2026.03.30.00
 description: Collection of reusable C++ library artifacts developed at Facebook
 homepage: https://github.com/facebook/folly
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:2a383c0d8f56df890169a3f80797ca861d4bc118b7ccf2d005d5473b961805d9
-    sha256: 2a383c0d8f56df890169a3f80797ca861d4bc118b7ccf2d005d5473b961805d9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:9b98ea6f5130a2a0428ea3d0ea49de8a330fff887335b1390b8b369223fe631e
-    sha256: 9b98ea6f5130a2a0428ea3d0ea49de8a330fff887335b1390b8b369223fe631e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:c978892c5e6348cc0300f5160335fe39fc60365a71581a8134da9dc1fa55b90c
-    sha256: c978892c5e6348cc0300f5160335fe39fc60365a71581a8134da9dc1fa55b90c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:cd866909d98e696cc912205fdb2d2b6947c9d71566317246441d87cb228fec7b
-    sha256: cd866909d98e696cc912205fdb2d2b6947c9d71566317246441d87cb228fec7b
-source:
-  url: https://github.com/facebook/folly/archive/refs/tags/v2026.03.30.00.tar.gz
-  sha256: 8806a4574e5b26c12fcef4c938ecfbce5338907982200a2e85b5871ed7f43723
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - double-conversion
-  - fmt
-  - gflags
-  - glog
-  - libevent
-  - libsodium
-  - lz4
-  - openssl@3
-  - snappy
-  - xz
-  - zstd
+    - boost
+    - double-conversion
+    - fmt
+    - gflags
+    - glog
+    - libevent
+    - libsodium
+    - lz4
+    - openssl@3
+    - snappy
+    - xz
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:9b98ea6f5130a2a0428ea3d0ea49de8a330fff887335b1390b8b369223fe631e
+        sha256: 9b98ea6f5130a2a0428ea3d0ea49de8a330fff887335b1390b8b369223fe631e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:2a383c0d8f56df890169a3f80797ca861d4bc118b7ccf2d005d5473b961805d9
+        sha256: 2a383c0d8f56df890169a3f80797ca861d4bc118b7ccf2d005d5473b961805d9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:c978892c5e6348cc0300f5160335fe39fc60365a71581a8134da9dc1fa55b90c
+        sha256: c978892c5e6348cc0300f5160335fe39fc60365a71581a8134da9dc1fa55b90c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/folly/blobs/sha256:cd866909d98e696cc912205fdb2d2b6947c9d71566317246441d87cb228fec7b
+        sha256: cd866909d98e696cc912205fdb2d2b6947c9d71566317246441d87cb228fec7b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/facebook/folly/archive/refs/tags/v2026.03.30.00.tar.gz
+    sha256: 8806a4574e5b26c12fcef4c938ecfbce5338907982200a2e85b5871ed7f43723
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - fast_float
-  - pkgconf
+    - cmake
+    - fast_float
+    - pkgconf
 linux_dependencies:
-  - boost
-  - double-conversion
-  - fmt
-  - gflags
-  - glog
-  - libevent
-  - libsodium
-  - lz4
-  - openssl@3
-  - snappy
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - boost
+    - double-conversion
+    - fmt
+    - gflags
+    - glog
+    - libevent
+    - libsodium
+    - lz4
+    - openssl@3
+    - snappy
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

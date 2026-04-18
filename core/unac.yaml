@@ -3,28 +3,54 @@ version: 1.8.0
 description: C library and command that removes accents from a string
 homepage: https://savannah.nongnu.org/projects/unac
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unac/blobs/sha256:5e3436d86661dae0bcfda2b5064f3978fb4d5a2573ce656dc146c762e42161e8
-    sha256: 5e3436d86661dae0bcfda2b5064f3978fb4d5a2573ce656dc146c762e42161e8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unac/blobs/sha256:98f6c4c1cdaef704abb8111989b7ab0bc8cf215164a6c8f175c1e6ef5b3ccda4
-    sha256: 98f6c4c1cdaef704abb8111989b7ab0bc8cf215164a6c8f175c1e6ef5b3ccda4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unac/blobs/sha256:ee6f3909a8a3f44657dc39813bee9cd551475eb835973cb34be6cbd23fe7eb0f
-    sha256: ee6f3909a8a3f44657dc39813bee9cd551475eb835973cb34be6cbd23fe7eb0f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unac/blobs/sha256:7bcb9bedf0de026241c6f1de1bcffe69c67c1cfdfd5c8e590ffb7a5d09ce8c40
-    sha256: 7bcb9bedf0de026241c6f1de1bcffe69c67c1cfdfd5c8e590ffb7a5d09ce8c40
-source:
-  url: https://deb.debian.org/debian/pool/main/u/unac/unac_1.8.0.orig.tar.gz
-  sha256: 29d316e5b74615d49237556929e95e0d68c4b77a0a0cfc346dc61cf0684b90bf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unac/blobs/sha256:98f6c4c1cdaef704abb8111989b7ab0bc8cf215164a6c8f175c1e6ef5b3ccda4
+        sha256: 98f6c4c1cdaef704abb8111989b7ab0bc8cf215164a6c8f175c1e6ef5b3ccda4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unac/blobs/sha256:5e3436d86661dae0bcfda2b5064f3978fb4d5a2573ce656dc146c762e42161e8
+        sha256: 5e3436d86661dae0bcfda2b5064f3978fb4d5a2573ce656dc146c762e42161e8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unac/blobs/sha256:ee6f3909a8a3f44657dc39813bee9cd551475eb835973cb34be6cbd23fe7eb0f
+        sha256: ee6f3909a8a3f44657dc39813bee9cd551475eb835973cb34be6cbd23fe7eb0f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unac/blobs/sha256:7bcb9bedf0de026241c6f1de1bcffe69c67c1cfdfd5c8e590ffb7a5d09ce8c40
+        sha256: 7bcb9bedf0de026241c6f1de1bcffe69c67c1cfdfd5c8e590ffb7a5d09ce8c40
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/u/unac/unac_1.8.0.orig.tar.gz
+    sha256: 29d316e5b74615d49237556929e95e0d68c4b77a0a0cfc346dc61cf0684b90bf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - gettext
-  - libtool
+    - autoconf
+    - automake
+    - gettext
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

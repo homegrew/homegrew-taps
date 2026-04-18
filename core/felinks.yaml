@@ -3,46 +3,70 @@ version: 0.19.1
 description: Text mode browser and Gemini, NNTP, FTP, Gopher, Finger, and BitTorrent client
 homepage: https://github.com/rkd77/elinks
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:1bb748fa85a2021054ecfbc078da2ed3201320744a218d340732298fd90536d8
-    sha256: 1bb748fa85a2021054ecfbc078da2ed3201320744a218d340732298fd90536d8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:25835e28f28a67984128bdeafe0ad342be1a5a4b649a4d4176ba227ee7cce737
-    sha256: 25835e28f28a67984128bdeafe0ad342be1a5a4b649a4d4176ba227ee7cce737
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:2bbd226d828e84ea9ea36a907498ff54712896f49f3a407a8709c904e567c02a
-    sha256: 2bbd226d828e84ea9ea36a907498ff54712896f49f3a407a8709c904e567c02a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:5b6fa5b978fe374293f29e46dd8870c7533d67ba94170285e8dc9f261340f159
-    sha256: 5b6fa5b978fe374293f29e46dd8870c7533d67ba94170285e8dc9f261340f159
-source:
-  url: https://github.com/rkd77/elinks/releases/download/v0.19.1/elinks-0.19.1.tar.xz
-  sha256: 31960cd471246692b84008bffec89182f25818472f86ee1a41a09bf0dad09eeb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - brotli
-  - libcss
-  - libdom
-  - libidn2
-  - libwapcaplet
-  - openssl@3
-  - tre
-  - zstd
+    - brotli
+    - libcss
+    - libdom
+    - libidn2
+    - libwapcaplet
+    - openssl@3
+    - tre
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:25835e28f28a67984128bdeafe0ad342be1a5a4b649a4d4176ba227ee7cce737
+        sha256: 25835e28f28a67984128bdeafe0ad342be1a5a4b649a4d4176ba227ee7cce737
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:1bb748fa85a2021054ecfbc078da2ed3201320744a218d340732298fd90536d8
+        sha256: 1bb748fa85a2021054ecfbc078da2ed3201320744a218d340732298fd90536d8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:2bbd226d828e84ea9ea36a907498ff54712896f49f3a407a8709c904e567c02a
+        sha256: 2bbd226d828e84ea9ea36a907498ff54712896f49f3a407a8709c904e567c02a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:5b6fa5b978fe374293f29e46dd8870c7533d67ba94170285e8dc9f261340f159
+        sha256: 5b6fa5b978fe374293f29e46dd8870c7533d67ba94170285e8dc9f261340f159
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rkd77/elinks/releases/download/v0.19.1/elinks-0.19.1.tar.xz
+    sha256: 31960cd471246692b84008bffec89182f25818472f86ee1a41a09bf0dad09eeb
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - brotli
-  - libcss
-  - libdom
-  - libidn2
-  - libwapcaplet
-  - openssl@3
-  - tre
-  - zlib-ng-compat
-  - zstd
+    - brotli
+    - libcss
+    - libdom
+    - libidn2
+    - libwapcaplet
+    - openssl@3
+    - tre
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

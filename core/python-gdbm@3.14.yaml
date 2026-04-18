@@ -3,26 +3,52 @@ version: 3.14.4
 description: Python interface to gdbm
 homepage: https://www.python.org/
 license: Python-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/python-gdbm/3.14/blobs/sha256:1bef27f3b0d3a83a41e0ff854052b560848f21c0ae08d19221fee8ceb7322511
-    sha256: 1bef27f3b0d3a83a41e0ff854052b560848f21c0ae08d19221fee8ceb7322511
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/python-gdbm/3.14/blobs/sha256:999aa26f8f53dba6ca07e765f7516dd5ef3b68d31c1c630508d6b30b176f564c
-    sha256: 999aa26f8f53dba6ca07e765f7516dd5ef3b68d31c1c630508d6b30b176f564c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/python-gdbm/3.14/blobs/sha256:08f842f1f18d922ee49c49ddae728e9659b34fa5b3284a0f060375e7212496ca
-    sha256: 08f842f1f18d922ee49c49ddae728e9659b34fa5b3284a0f060375e7212496ca
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/python-gdbm/3.14/blobs/sha256:3030dc120dee0c17373bdf8024cfdf17dba4e459443d03fb0addaf56a5c9bf49
-    sha256: 3030dc120dee0c17373bdf8024cfdf17dba4e459443d03fb0addaf56a5c9bf49
-source:
-  url: https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz
-  sha256: b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gdbm
-  - python@3.14
+    - gdbm
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/python-gdbm/3.14/blobs/sha256:999aa26f8f53dba6ca07e765f7516dd5ef3b68d31c1c630508d6b30b176f564c
+        sha256: 999aa26f8f53dba6ca07e765f7516dd5ef3b68d31c1c630508d6b30b176f564c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/python-gdbm/3.14/blobs/sha256:1bef27f3b0d3a83a41e0ff854052b560848f21c0ae08d19221fee8ceb7322511
+        sha256: 1bef27f3b0d3a83a41e0ff854052b560848f21c0ae08d19221fee8ceb7322511
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/python-gdbm/3.14/blobs/sha256:08f842f1f18d922ee49c49ddae728e9659b34fa5b3284a0f060375e7212496ca
+        sha256: 08f842f1f18d922ee49c49ddae728e9659b34fa5b3284a0f060375e7212496ca
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/python-gdbm/3.14/blobs/sha256:3030dc120dee0c17373bdf8024cfdf17dba4e459443d03fb0addaf56a5c9bf49
+        sha256: 3030dc120dee0c17373bdf8024cfdf17dba4e459443d03fb0addaf56a5c9bf49
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz
+    sha256: b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

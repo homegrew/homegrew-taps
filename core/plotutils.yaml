@@ -1,33 +1,58 @@
 name: plotutils
-version: 2.6
+version: "2.6"
 description: C/C++ function library for exporting 2-D vector graphics
 homepage: https://www.gnu.org/software/plotutils/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/plotutils/blobs/sha256:d0c2f1bd4307fc85da7079c7e215075d8440c8bb92c44e47d7b449d76afb6055
-    sha256: d0c2f1bd4307fc85da7079c7e215075d8440c8bb92c44e47d7b449d76afb6055
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/plotutils/blobs/sha256:cf4be8e3f730ac440f962c7b586b5265933121ed6d94c4dc675e9a355b8909ba
-    sha256: cf4be8e3f730ac440f962c7b586b5265933121ed6d94c4dc675e9a355b8909ba
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/plotutils/blobs/sha256:74b0edefd4bc7eb703cf1579159b7d746502c77538f58b981405c1cf9ba6d042
-    sha256: 74b0edefd4bc7eb703cf1579159b7d746502c77538f58b981405c1cf9ba6d042
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/plotutils/blobs/sha256:7f042f52c72e85c663689b220172d739a64e95948fc2c3b6175696c513fca1cc
-    sha256: 7f042f52c72e85c663689b220172d739a64e95948fc2c3b6175696c513fca1cc
-source:
-  url: https://ftpmirror.gnu.org/gnu/plotutils/plotutils-2.6.tar.gz
-  sha256: 4f4222820f97ca08c7ea707e4c53e5a3556af4d8f1ab51e0da6ff1627ff433ab
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libpng
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/plotutils/blobs/sha256:cf4be8e3f730ac440f962c7b586b5265933121ed6d94c4dc675e9a355b8909ba
+        sha256: cf4be8e3f730ac440f962c7b586b5265933121ed6d94c4dc675e9a355b8909ba
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/plotutils/blobs/sha256:d0c2f1bd4307fc85da7079c7e215075d8440c8bb92c44e47d7b449d76afb6055
+        sha256: d0c2f1bd4307fc85da7079c7e215075d8440c8bb92c44e47d7b449d76afb6055
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/plotutils/blobs/sha256:74b0edefd4bc7eb703cf1579159b7d746502c77538f58b981405c1cf9ba6d042
+        sha256: 74b0edefd4bc7eb703cf1579159b7d746502c77538f58b981405c1cf9ba6d042
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/plotutils/blobs/sha256:7f042f52c72e85c663689b220172d739a64e95948fc2c3b6175696c513fca1cc
+        sha256: 7f042f52c72e85c663689b220172d739a64e95948fc2c3b6175696c513fca1cc
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/plotutils/plotutils-2.6.tar.gz
+    sha256: 4f4222820f97ca08c7ea707e4c53e5a3556af4d8f1ab51e0da6ff1627ff433ab
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - libpng
-  - libx11
-  - libxaw
-  - libxext
-  - libxt
+    - libpng
+    - libx11
+    - libxaw
+    - libxext
+    - libxt
+build:
+    configure: []
+    install: []
+service: null

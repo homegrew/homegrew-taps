@@ -1,64 +1,88 @@
 name: graph-tool
-version: 2.98
+version: "2.98"
 description: Efficient network analysis for Python 3
 homepage: https://graph-tool.skewed.de/
 license: LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:4f29bcc01c4eff82e4bad1ff01b17f512c53fe032939130c501984ffb225eae5
-    sha256: 4f29bcc01c4eff82e4bad1ff01b17f512c53fe032939130c501984ffb225eae5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:9586b5dd993162ca9f75d43bf9a4332767d7ff3f3913fb055b519eca96d8c06e
-    sha256: 9586b5dd993162ca9f75d43bf9a4332767d7ff3f3913fb055b519eca96d8c06e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:9fec27dacb1c465b41f64a08336c45dc1e8320521068b4ac0990bf54b4ef806a
-    sha256: 9fec27dacb1c465b41f64a08336c45dc1e8320521068b4ac0990bf54b4ef806a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:18b2deaf9d659b762afcc9dd52742f0b6ee6ccde95ac3ccc491476b8b2683074
-    sha256: 18b2deaf9d659b762afcc9dd52742f0b6ee6ccde95ac3ccc491476b8b2683074
-source:
-  url: https://downloads.skewed.de/graph-tool/graph-tool-2.98.tar.bz2
-  sha256: eef1948b937f5f043749eee75fe0c6d7e8f036551d945e9d55e37870b06cc527
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - boost-python3
-  - cairomm@1.14
-  - cgal
-  - freetype
-  - gmp
-  - gtk+3
-  - numpy
-  - pillow
-  - py3cairo
-  - pygobject3
-  - python@3.14
-  - qhull
-  - scipy
-  - zstd
-  - cairo
-  - libomp
-  - libsigc++@2
+    - boost
+    - boost-python3
+    - cairomm@1.14
+    - cgal
+    - freetype
+    - gmp
+    - gtk+3
+    - numpy
+    - pillow
+    - py3cairo
+    - pygobject3
+    - python@3.14
+    - qhull
+    - scipy
+    - zstd
+    - cairo
+    - libomp
+    - libsigc++@2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:9586b5dd993162ca9f75d43bf9a4332767d7ff3f3913fb055b519eca96d8c06e
+        sha256: 9586b5dd993162ca9f75d43bf9a4332767d7ff3f3913fb055b519eca96d8c06e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:4f29bcc01c4eff82e4bad1ff01b17f512c53fe032939130c501984ffb225eae5
+        sha256: 4f29bcc01c4eff82e4bad1ff01b17f512c53fe032939130c501984ffb225eae5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:9fec27dacb1c465b41f64a08336c45dc1e8320521068b4ac0990bf54b4ef806a
+        sha256: 9fec27dacb1c465b41f64a08336c45dc1e8320521068b4ac0990bf54b4ef806a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:18b2deaf9d659b762afcc9dd52742f0b6ee6ccde95ac3ccc491476b8b2683074
+        sha256: 18b2deaf9d659b762afcc9dd52742f0b6ee6ccde95ac3ccc491476b8b2683074
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.skewed.de/graph-tool/graph-tool-2.98.tar.bz2
+    sha256: eef1948b937f5f043749eee75fe0c6d7e8f036551d945e9d55e37870b06cc527
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - google-sparsehash
-  - ninja
-  - pkgconf
+    - google-sparsehash
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - boost
-  - boost-python3
-  - cairomm@1.14
-  - cgal
-  - freetype
-  - gmp
-  - gtk+3
-  - numpy
-  - pillow
-  - py3cairo
-  - pygobject3
-  - python@3.14
-  - qhull
-  - scipy
-  - zstd
+    - boost
+    - boost-python3
+    - cairomm@1.14
+    - cgal
+    - freetype
+    - gmp
+    - gtk+3
+    - numpy
+    - pillow
+    - py3cairo
+    - pygobject3
+    - python@3.14
+    - qhull
+    - scipy
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

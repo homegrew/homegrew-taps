@@ -3,29 +3,54 @@ version: 3.1.0
 description: Binary diff, differential compression tools
 homepage: https://github.com/jmacd/xdelta
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xdelta/blobs/sha256:ee37900b3dc66de43cbffbd9fc486d9532f519cf36a10c66a198c64ae7a94e07
-    sha256: ee37900b3dc66de43cbffbd9fc486d9532f519cf36a10c66a198c64ae7a94e07
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xdelta/blobs/sha256:cab53d9abbfb5e25e8401c04b68402f5678f0dbd731cee77aa089203768adbc2
-    sha256: cab53d9abbfb5e25e8401c04b68402f5678f0dbd731cee77aa089203768adbc2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/xdelta/blobs/sha256:4015bbc1061c1ac1ba9b56e9465b2b18bd22f1557e79651f1cf9feaf5e37c486
-    sha256: 4015bbc1061c1ac1ba9b56e9465b2b18bd22f1557e79651f1cf9feaf5e37c486
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/xdelta/blobs/sha256:07505153f0433a184f123e5f0d9468511854f2fc10b811bc45cf9628b9da14d4
-    sha256: 07505153f0433a184f123e5f0d9468511854f2fc10b811bc45cf9628b9da14d4
-source:
-  url: https://github.com/jmacd/xdelta/archive/refs/tags/v3.1.0.tar.gz
-  sha256: 7515cf5378fca287a57f4e2fee1094aabc79569cfe60d91e06021a8fd7bae29d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - xz
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xdelta/blobs/sha256:cab53d9abbfb5e25e8401c04b68402f5678f0dbd731cee77aa089203768adbc2
+        sha256: cab53d9abbfb5e25e8401c04b68402f5678f0dbd731cee77aa089203768adbc2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xdelta/blobs/sha256:ee37900b3dc66de43cbffbd9fc486d9532f519cf36a10c66a198c64ae7a94e07
+        sha256: ee37900b3dc66de43cbffbd9fc486d9532f519cf36a10c66a198c64ae7a94e07
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xdelta/blobs/sha256:4015bbc1061c1ac1ba9b56e9465b2b18bd22f1557e79651f1cf9feaf5e37c486
+        sha256: 4015bbc1061c1ac1ba9b56e9465b2b18bd22f1557e79651f1cf9feaf5e37c486
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xdelta/blobs/sha256:07505153f0433a184f123e5f0d9468511854f2fc10b811bc45cf9628b9da14d4
+        sha256: 07505153f0433a184f123e5f0d9468511854f2fc10b811bc45cf9628b9da14d4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jmacd/xdelta/archive/refs/tags/v3.1.0.tar.gz
+    sha256: 7515cf5378fca287a57f4e2fee1094aabc79569cfe60d91e06021a8fd7bae29d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

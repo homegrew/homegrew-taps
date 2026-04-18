@@ -3,27 +3,52 @@ version: 4.6.3
 description: Use Neovim as pager
 homepage: https://github.com/I60R/page
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/page/blobs/sha256:f685622827fa6bec5a9dae5fc611899eb1d1348564285a34374018e9ef870115
-    sha256: f685622827fa6bec5a9dae5fc611899eb1d1348564285a34374018e9ef870115
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/page/blobs/sha256:4aa4ad4cf24f0551fe3cf2164631833364c239d895fa53fe18c864cf31725dc3
-    sha256: 4aa4ad4cf24f0551fe3cf2164631833364c239d895fa53fe18c864cf31725dc3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/page/blobs/sha256:e9cac68f8653a7f517a1cbe7429e98743e94379bf96564c11e6b81c964cb279d
-    sha256: e9cac68f8653a7f517a1cbe7429e98743e94379bf96564c11e6b81c964cb279d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/page/blobs/sha256:83b220ed10b10826229798222e1ffe69d65fafd026c46dc36599ed8fff4b8c6f
-    sha256: 83b220ed10b10826229798222e1ffe69d65fafd026c46dc36599ed8fff4b8c6f
-source:
-  url: https://github.com/I60R/page/archive/refs/tags/v4.6.3.tar.gz
-  sha256: 51cf01933180499b27027fcdbda067f0cf80cebaa06d62400b655419f1806d46
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - neovim
+    - neovim
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/page/blobs/sha256:4aa4ad4cf24f0551fe3cf2164631833364c239d895fa53fe18c864cf31725dc3
+        sha256: 4aa4ad4cf24f0551fe3cf2164631833364c239d895fa53fe18c864cf31725dc3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/page/blobs/sha256:f685622827fa6bec5a9dae5fc611899eb1d1348564285a34374018e9ef870115
+        sha256: f685622827fa6bec5a9dae5fc611899eb1d1348564285a34374018e9ef870115
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/page/blobs/sha256:e9cac68f8653a7f517a1cbe7429e98743e94379bf96564c11e6b81c964cb279d
+        sha256: e9cac68f8653a7f517a1cbe7429e98743e94379bf96564c11e6b81c964cb279d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/page/blobs/sha256:83b220ed10b10826229798222e1ffe69d65fafd026c46dc36599ed8fff4b8c6f
+        sha256: 83b220ed10b10826229798222e1ffe69d65fafd026c46dc36599ed8fff4b8c6f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/I60R/page/archive/refs/tags/v4.6.3.tar.gz
+    sha256: 51cf01933180499b27027fcdbda067f0cf80cebaa06d62400b655419f1806d46
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

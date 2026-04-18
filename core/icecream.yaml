@@ -1,40 +1,64 @@
 name: icecream
-version: 1.4
+version: "1.4"
 description: Distributed compiler with a central scheduler to share build load
 homepage: https://en.opensuse.org/Icecream
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:13a9005297bac5939d73c7cb06837620691588609ff902db613ed9bbb12cd139
-    sha256: 13a9005297bac5939d73c7cb06837620691588609ff902db613ed9bbb12cd139
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:52b41894ec8d21e972bdbe27965b0c3113870a50f7d9a334e8bfb8a244585087
-    sha256: 52b41894ec8d21e972bdbe27965b0c3113870a50f7d9a334e8bfb8a244585087
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:9eef6bec6b3f10bb768c84872285e4ffe45e45ffcd4e05c4e7727c702875d044
-    sha256: 9eef6bec6b3f10bb768c84872285e4ffe45e45ffcd4e05c4e7727c702875d044
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:de2b7ebbe426439abbbeb9a93d329d802b7ac1c58cabe4fa47e9954ec0332ecd
-    sha256: de2b7ebbe426439abbbeb9a93d329d802b7ac1c58cabe4fa47e9954ec0332ecd
-source:
-  url: https://github.com/icecc/icecream/archive/refs/tags/1.4.tar.gz
-  sha256: 249dcf74f0fc477ff9735ff0bdcdfaa4c257a864c4db5255d8b25c9f4fd20b6b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libarchive
-  - lzo
-  - zstd
+    - libarchive
+    - lzo
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:52b41894ec8d21e972bdbe27965b0c3113870a50f7d9a334e8bfb8a244585087
+        sha256: 52b41894ec8d21e972bdbe27965b0c3113870a50f7d9a334e8bfb8a244585087
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:13a9005297bac5939d73c7cb06837620691588609ff902db613ed9bbb12cd139
+        sha256: 13a9005297bac5939d73c7cb06837620691588609ff902db613ed9bbb12cd139
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:9eef6bec6b3f10bb768c84872285e4ffe45e45ffcd4e05c4e7727c702875d044
+        sha256: 9eef6bec6b3f10bb768c84872285e4ffe45e45ffcd4e05c4e7727c702875d044
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:de2b7ebbe426439abbbeb9a93d329d802b7ac1c58cabe4fa47e9954ec0332ecd
+        sha256: de2b7ebbe426439abbbeb9a93d329d802b7ac1c58cabe4fa47e9954ec0332ecd
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/icecc/icecream/archive/refs/tags/1.4.tar.gz
+    sha256: 249dcf74f0fc477ff9735ff0bdcdfaa4c257a864c4db5255d8b25c9f4fd20b6b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - docbook2x
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - docbook2x
+    - libtool
+    - pkgconf
 linux_dependencies:
-  - libarchive
-  - libcap-ng
-  - lzo
-  - zstd
+    - libarchive
+    - libcap-ng
+    - lzo
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

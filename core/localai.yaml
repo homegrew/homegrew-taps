@@ -3,29 +3,55 @@ version: 4.1.3
 description: OpenAI alternative
 homepage: https://localai.io
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/localai/blobs/sha256:33ceb9b23f4d13a8ee39c9357d30fe71c20346cb4b84bea559a984fb6b2c0108
-    sha256: 33ceb9b23f4d13a8ee39c9357d30fe71c20346cb4b84bea559a984fb6b2c0108
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/localai/blobs/sha256:c7c32765fe73114537f5873eb6451616b97b58f2a81c24f2f43fa524317f294f
-    sha256: c7c32765fe73114537f5873eb6451616b97b58f2a81c24f2f43fa524317f294f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/localai/blobs/sha256:3c0e8bdd091afedee86ed0032d4cf703075338c96883f9b751e0d56f15a5dc4e
-    sha256: 3c0e8bdd091afedee86ed0032d4cf703075338c96883f9b751e0d56f15a5dc4e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/localai/blobs/sha256:32f65bb86a88d72cf4530ac5962b0883e1c0fa9d0c42bab05a6f975949f57b95
-    sha256: 32f65bb86a88d72cf4530ac5962b0883e1c0fa9d0c42bab05a6f975949f57b95
-source:
-  url: https://github.com/mudler/LocalAI/archive/refs/tags/v4.1.3.tar.gz
-  sha256: 349765fa3f01539fc98e0d14bea90a05f2dffbc96afde4ec3afc979ea48d5dd2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/localai/blobs/sha256:c7c32765fe73114537f5873eb6451616b97b58f2a81c24f2f43fa524317f294f
+        sha256: c7c32765fe73114537f5873eb6451616b97b58f2a81c24f2f43fa524317f294f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/localai/blobs/sha256:33ceb9b23f4d13a8ee39c9357d30fe71c20346cb4b84bea559a984fb6b2c0108
+        sha256: 33ceb9b23f4d13a8ee39c9357d30fe71c20346cb4b84bea559a984fb6b2c0108
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/localai/blobs/sha256:3c0e8bdd091afedee86ed0032d4cf703075338c96883f9b751e0d56f15a5dc4e
+        sha256: 3c0e8bdd091afedee86ed0032d4cf703075338c96883f9b751e0d56f15a5dc4e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/localai/blobs/sha256:32f65bb86a88d72cf4530ac5962b0883e1c0fa9d0c42bab05a6f975949f57b95
+        sha256: 32f65bb86a88d72cf4530ac5962b0883e1c0fa9d0c42bab05a6f975949f57b95
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mudler/LocalAI/archive/refs/tags/v4.1.3.tar.gz
+    sha256: 349765fa3f01539fc98e0d14bea90a05f2dffbc96afde4ec3afc979ea48d5dd2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - node
-  - protobuf
-  - protoc-gen-go
-  - protoc-gen-go-grpc
+    - go
+    - node
+    - protobuf
+    - protoc-gen-go
+    - protoc-gen-go-grpc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

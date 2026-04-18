@@ -3,28 +3,53 @@ version: 3.5.0
 description: BLAS and LAPACK wrapper library with runtime exchangable backends
 homepage: https://www.mpi-magdeburg.mpg.de/projects/flexiblas
 license: LGPL-3.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause-Open-MPI
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flexiblas/blobs/sha256:05bba3927380ff8a265da10c84f569fff2cd132e187afded0faeb69059f04fd3
-    sha256: 05bba3927380ff8a265da10c84f569fff2cd132e187afded0faeb69059f04fd3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flexiblas/blobs/sha256:9c533f075296f83a0206f08691730068aea716c7c7eadce83b8b620c5889be04
-    sha256: 9c533f075296f83a0206f08691730068aea716c7c7eadce83b8b620c5889be04
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/flexiblas/blobs/sha256:b1d9f77c9b2c2a2bff3c464d43eadae6e156e435edb14bfda308b13df042ecdf
-    sha256: b1d9f77c9b2c2a2bff3c464d43eadae6e156e435edb14bfda308b13df042ecdf
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/flexiblas/blobs/sha256:8cc351182c7d5553aedb9b2f7f2863cab2a063af8a76fbc4f1f0a1c5cd29e5db
-    sha256: 8cc351182c7d5553aedb9b2f7f2863cab2a063af8a76fbc4f1f0a1c5cd29e5db
-source:
-  url: https://csc.mpi-magdeburg.mpg.de/mpcsc/software/flexiblas/flexiblas-3.5.0.tar.xz
-  sha256: 504c0eeac09dca98e4bc930757f44bc409cb770f8fa7578ddb18c0d6accba072
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gcc
-  - openblas
+    - gcc
+    - openblas
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flexiblas/blobs/sha256:9c533f075296f83a0206f08691730068aea716c7c7eadce83b8b620c5889be04
+        sha256: 9c533f075296f83a0206f08691730068aea716c7c7eadce83b8b620c5889be04
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flexiblas/blobs/sha256:05bba3927380ff8a265da10c84f569fff2cd132e187afded0faeb69059f04fd3
+        sha256: 05bba3927380ff8a265da10c84f569fff2cd132e187afded0faeb69059f04fd3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/flexiblas/blobs/sha256:b1d9f77c9b2c2a2bff3c464d43eadae6e156e435edb14bfda308b13df042ecdf
+        sha256: b1d9f77c9b2c2a2bff3c464d43eadae6e156e435edb14bfda308b13df042ecdf
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flexiblas/blobs/sha256:8cc351182c7d5553aedb9b2f7f2863cab2a063af8a76fbc4f1f0a1c5cd29e5db
+        sha256: 8cc351182c7d5553aedb9b2f7f2863cab2a063af8a76fbc4f1f0a1c5cd29e5db
+        sha512: ""
+        signature: ""
+source:
+    url: https://csc.mpi-magdeburg.mpg.de/mpcsc/software/flexiblas/flexiblas-3.5.0.tar.xz
+    sha256: 504c0eeac09dca98e4bc930757f44bc409cb770f8fa7578ddb18c0d6accba072
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

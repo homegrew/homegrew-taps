@@ -3,38 +3,62 @@ version: 2.36.3
 description: Official C++ interface for the ATK accessibility toolkit library
 homepage: https://www.gtkmm.org/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:a0084966800d7cf115466eb824f41e5c4c8fa269437abdc7d874f1ba5d52c04d
-    sha256: a0084966800d7cf115466eb824f41e5c4c8fa269437abdc7d874f1ba5d52c04d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:6454c0225d51922b4ad717b04dade8bf93b92aa26c836d77b41a55fbc41a0a14
-    sha256: 6454c0225d51922b4ad717b04dade8bf93b92aa26c836d77b41a55fbc41a0a14
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:cec181c4ae3a4be7b814e82d909f1128e5279592ff3a4ea6e7e85baebe27dbb0
-    sha256: cec181c4ae3a4be7b814e82d909f1128e5279592ff3a4ea6e7e85baebe27dbb0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:05e534d8d4d01ae147b7e2102e041262aea114c33ed580fb4000037a7ca41694
-    sha256: 05e534d8d4d01ae147b7e2102e041262aea114c33ed580fb4000037a7ca41694
-source:
-  url: https://download.gnome.org/sources/atkmm/2.36/atkmm-2.36.3.tar.xz
-  sha256: 6ec264eaa0c4de0adb7202c600170bde9a7fbe4d466bfbe940eaf7faaa6c5974
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - at-spi2-core
-  - glib
-  - glibmm
-  - libsigc++
-  - gettext
+    - at-spi2-core
+    - glib
+    - glibmm
+    - libsigc++
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:6454c0225d51922b4ad717b04dade8bf93b92aa26c836d77b41a55fbc41a0a14
+        sha256: 6454c0225d51922b4ad717b04dade8bf93b92aa26c836d77b41a55fbc41a0a14
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:a0084966800d7cf115466eb824f41e5c4c8fa269437abdc7d874f1ba5d52c04d
+        sha256: a0084966800d7cf115466eb824f41e5c4c8fa269437abdc7d874f1ba5d52c04d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:cec181c4ae3a4be7b814e82d909f1128e5279592ff3a4ea6e7e85baebe27dbb0
+        sha256: cec181c4ae3a4be7b814e82d909f1128e5279592ff3a4ea6e7e85baebe27dbb0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:05e534d8d4d01ae147b7e2102e041262aea114c33ed580fb4000037a7ca41694
+        sha256: 05e534d8d4d01ae147b7e2102e041262aea114c33ed580fb4000037a7ca41694
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/atkmm/2.36/atkmm-2.36.3.tar.xz
+    sha256: 6ec264eaa0c4de0adb7202c600170bde9a7fbe4d466bfbe940eaf7faaa6c5974
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - at-spi2-core
-  - glib
-  - glibmm
-  - libsigc++
+    - at-spi2-core
+    - glib
+    - glibmm
+    - libsigc++
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,54 @@ version: 0.37.1
 description: JSON Schema CLI
 homepage: https://github.com/python-jsonschema/check-jsonschema
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:d619bcb29c5b57e3b81481667e570ec313d25bf80ee09469c69394dbe2f75a5d
-    sha256: d619bcb29c5b57e3b81481667e570ec313d25bf80ee09469c69394dbe2f75a5d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:efc94dd734b05b09ff917a241d519c827c8422c9f7756462a8e68071a2cc1f6b
-    sha256: efc94dd734b05b09ff917a241d519c827c8422c9f7756462a8e68071a2cc1f6b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:b6063d5b82ce932fc406727999815c2033ab34a4f023e4c384f478250e0c1777
-    sha256: b6063d5b82ce932fc406727999815c2033ab34a4f023e4c384f478250e0c1777
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:748b763acf8dadcbe361c3a53d2b0c29b5370162e53868ba6f4b5db34e66d781
-    sha256: 748b763acf8dadcbe361c3a53d2b0c29b5370162e53868ba6f4b5db34e66d781
-source:
-  url: https://files.pythonhosted.org/packages/db/d4/46468808fcda2bdb824e1f5617095a14cac60f9bcefc954fbfee55712d1b/check_jsonschema-0.37.1.tar.gz
-  sha256: 00a2ba5cdc95006e0d07e3743f4f23d80b7f30a690706c018c83578610c2e0a0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - python@3.14
-  - rpds-py
+    - certifi
+    - python@3.14
+    - rpds-py
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:efc94dd734b05b09ff917a241d519c827c8422c9f7756462a8e68071a2cc1f6b
+        sha256: efc94dd734b05b09ff917a241d519c827c8422c9f7756462a8e68071a2cc1f6b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:d619bcb29c5b57e3b81481667e570ec313d25bf80ee09469c69394dbe2f75a5d
+        sha256: d619bcb29c5b57e3b81481667e570ec313d25bf80ee09469c69394dbe2f75a5d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:b6063d5b82ce932fc406727999815c2033ab34a4f023e4c384f478250e0c1777
+        sha256: b6063d5b82ce932fc406727999815c2033ab34a4f023e4c384f478250e0c1777
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/check-jsonschema/blobs/sha256:748b763acf8dadcbe361c3a53d2b0c29b5370162e53868ba6f4b5db34e66d781
+        sha256: 748b763acf8dadcbe361c3a53d2b0c29b5370162e53868ba6f4b5db34e66d781
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/db/d4/46468808fcda2bdb824e1f5617095a14cac60f9bcefc954fbfee55712d1b/check_jsonschema-0.37.1.tar.gz
+    sha256: 00a2ba5cdc95006e0d07e3743f4f23d80b7f30a690706c018c83578610c2e0a0
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

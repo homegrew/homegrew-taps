@@ -3,29 +3,55 @@ version: 5.23.2
 description: Miscellaneous utilities specific to Debian
 homepage: https://tracker.debian.org/pkg/debianutils
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/debianutils/blobs/sha256:329887b6a8522b5f303b0787af83a7b26ae386d7feb87c069c4ce2387a9ab785
-    sha256: 329887b6a8522b5f303b0787af83a7b26ae386d7feb87c069c4ce2387a9ab785
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/debianutils/blobs/sha256:08d55d96cb4eae2950159943ba4f0e010adfeb01c8541a2d14edce96a4bcb945
-    sha256: 08d55d96cb4eae2950159943ba4f0e010adfeb01c8541a2d14edce96a4bcb945
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/debianutils/blobs/sha256:3425081c6784a3a440bad62d02f8d0111decbf747bcf7df94676bd4b74e36e76
-    sha256: 3425081c6784a3a440bad62d02f8d0111decbf747bcf7df94676bd4b74e36e76
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/debianutils/blobs/sha256:8f255a4df75b8734c998aa1ba8215d945bc542ad7c119854f48cefbaa6ab8909
-    sha256: 8f255a4df75b8734c998aa1ba8215d945bc542ad7c119854f48cefbaa6ab8909
-source:
-  url: https://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.23.2.tar.xz
-  sha256: 79e524b7526dba2ec5c409d0ee52ebec135815cf5b2907375d444122e0594b69
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/debianutils/blobs/sha256:08d55d96cb4eae2950159943ba4f0e010adfeb01c8541a2d14edce96a4bcb945
+        sha256: 08d55d96cb4eae2950159943ba4f0e010adfeb01c8541a2d14edce96a4bcb945
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/debianutils/blobs/sha256:329887b6a8522b5f303b0787af83a7b26ae386d7feb87c069c4ce2387a9ab785
+        sha256: 329887b6a8522b5f303b0787af83a7b26ae386d7feb87c069c4ce2387a9ab785
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/debianutils/blobs/sha256:3425081c6784a3a440bad62d02f8d0111decbf747bcf7df94676bd4b74e36e76
+        sha256: 3425081c6784a3a440bad62d02f8d0111decbf747bcf7df94676bd4b74e36e76
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/debianutils/blobs/sha256:8f255a4df75b8734c998aa1ba8215d945bc542ad7c119854f48cefbaa6ab8909
+        sha256: 8f255a4df75b8734c998aa1ba8215d945bc542ad7c119854f48cefbaa6ab8909
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.23.2.tar.xz
+    sha256: 79e524b7526dba2ec5c409d0ee52ebec135815cf5b2907375d444122e0594b69
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - gettext
-  - libtool
-  - po4a
+    - autoconf
+    - automake
+    - gettext
+    - libtool
+    - po4a
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

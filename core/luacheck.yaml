@@ -3,27 +3,52 @@ version: 1.2.0
 description: Tool for linting and static analysis of Lua code
 homepage: https://luacheck.readthedocs.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/luacheck/blobs/sha256:8e93fc65e7bb98c16badb77b3522aed6a606f0f125b7f2099c0c584560e14404
-    sha256: 8e93fc65e7bb98c16badb77b3522aed6a606f0f125b7f2099c0c584560e14404
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/luacheck/blobs/sha256:b76cf3029832d0264fd142ac4abaf34db5138f7e06ac3f43f00a16a0f6c78967
-    sha256: b76cf3029832d0264fd142ac4abaf34db5138f7e06ac3f43f00a16a0f6c78967
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/luacheck/blobs/sha256:66b3ca9857d49e8b51863bc47d95e58b6ed801e46880375c539160e0bfb2af2f
-    sha256: 66b3ca9857d49e8b51863bc47d95e58b6ed801e46880375c539160e0bfb2af2f
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/luacheck/blobs/sha256:62ef7a9c5ca645b8a28717296653c402520acb73ef9fbd3af40d84dbb7bc2d63
-    sha256: 62ef7a9c5ca645b8a28717296653c402520acb73ef9fbd3af40d84dbb7bc2d63
-source:
-  url: https://github.com/lunarmodules/luacheck/archive/refs/tags/v1.2.0.tar.gz
-  sha256: 8efe62a7da4fdb32c0c22ec1f7c9306cbc397d7d40493c29988221a059636e25
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lua@5.4
+    - lua@5.4
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/luacheck/blobs/sha256:b76cf3029832d0264fd142ac4abaf34db5138f7e06ac3f43f00a16a0f6c78967
+        sha256: b76cf3029832d0264fd142ac4abaf34db5138f7e06ac3f43f00a16a0f6c78967
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/luacheck/blobs/sha256:8e93fc65e7bb98c16badb77b3522aed6a606f0f125b7f2099c0c584560e14404
+        sha256: 8e93fc65e7bb98c16badb77b3522aed6a606f0f125b7f2099c0c584560e14404
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/luacheck/blobs/sha256:66b3ca9857d49e8b51863bc47d95e58b6ed801e46880375c539160e0bfb2af2f
+        sha256: 66b3ca9857d49e8b51863bc47d95e58b6ed801e46880375c539160e0bfb2af2f
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/luacheck/blobs/sha256:62ef7a9c5ca645b8a28717296653c402520acb73ef9fbd3af40d84dbb7bc2d63
+        sha256: 62ef7a9c5ca645b8a28717296653c402520acb73ef9fbd3af40d84dbb7bc2d63
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lunarmodules/luacheck/archive/refs/tags/v1.2.0.tar.gz
+    sha256: 8efe62a7da4fdb32c0c22ec1f7c9306cbc397d7d40493c29988221a059636e25
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - luarocks
+    - luarocks
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

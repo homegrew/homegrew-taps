@@ -3,45 +3,69 @@ version: 3.1.0
 description: Molecular visualization system
 homepage: https://pymol.org/
 license: LicenseRef-Homebrew-cannot-represent
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pymol/blobs/sha256:79544fccc4d17bd20141025aae92f35b17f88a5c1758ab78c89fcccf5615c14e
-    sha256: 79544fccc4d17bd20141025aae92f35b17f88a5c1758ab78c89fcccf5615c14e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pymol/blobs/sha256:3c6324e63327d59aab594c97b560404d65808239706184dc5e06acdd703f82d4
-    sha256: 3c6324e63327d59aab594c97b560404d65808239706184dc5e06acdd703f82d4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pymol/blobs/sha256:c886c77fa66a6563c17e0f049af5528e269df4315b794b4b8951f6350135a525
-    sha256: c886c77fa66a6563c17e0f049af5528e269df4315b794b4b8951f6350135a525
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pymol/blobs/sha256:a338973b21416583937072cd7061b4aa3b6e08e68fe779dd8a3b4c9a598384a7
-    sha256: a338973b21416583937072cd7061b4aa3b6e08e68fe779dd8a3b4c9a598384a7
-source:
-  url: https://github.com/schrodinger/pymol-open-source/archive/refs/tags/v3.1.0.tar.gz
-  sha256: 54306d65060bd58ed8b3dab1a8af521aeb4fd417871f15f463ff05ccb4e121fe
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - glew
-  - libpng
-  - netcdf
-  - numpy
-  - pyqt
-  - python@3.14
+    - freetype
+    - glew
+    - libpng
+    - netcdf
+    - numpy
+    - pyqt
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pymol/blobs/sha256:3c6324e63327d59aab594c97b560404d65808239706184dc5e06acdd703f82d4
+        sha256: 3c6324e63327d59aab594c97b560404d65808239706184dc5e06acdd703f82d4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pymol/blobs/sha256:79544fccc4d17bd20141025aae92f35b17f88a5c1758ab78c89fcccf5615c14e
+        sha256: 79544fccc4d17bd20141025aae92f35b17f88a5c1758ab78c89fcccf5615c14e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pymol/blobs/sha256:c886c77fa66a6563c17e0f049af5528e269df4315b794b4b8951f6350135a525
+        sha256: c886c77fa66a6563c17e0f049af5528e269df4315b794b4b8951f6350135a525
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pymol/blobs/sha256:a338973b21416583937072cd7061b4aa3b6e08e68fe779dd8a3b4c9a598384a7
+        sha256: a338973b21416583937072cd7061b4aa3b6e08e68fe779dd8a3b4c9a598384a7
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/schrodinger/pymol-open-source/archive/refs/tags/v3.1.0.tar.gz
+    sha256: 54306d65060bd58ed8b3dab1a8af521aeb4fd417871f15f463ff05ccb4e121fe
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - glm
-  - msgpack-cxx
-  - python-setuptools
+    - cmake
+    - glm
+    - msgpack-cxx
+    - python-setuptools
 linux_dependencies:
-  - freetype
-  - glew
-  - libpng
-  - mesa
-  - netcdf
-  - numpy
-  - pyqt
-  - python@3.14
+    - freetype
+    - glew
+    - libpng
+    - mesa
+    - netcdf
+    - numpy
+    - pyqt
+    - python@3.14
+build:
+    configure: []
+    install: []
+service: null

@@ -3,28 +3,53 @@ version: 2.0.0
 description: Read wired or wireless mbus protocol to acquire utility meter readings
 homepage: https://github.com/wmbusmeters/wmbusmeters
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:48ed2b6256fd4de5aae0ba88f168edff789455ebeddb45ec2c0b02dcf023ef50
-    sha256: 48ed2b6256fd4de5aae0ba88f168edff789455ebeddb45ec2c0b02dcf023ef50
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:d6d9021668bcf95ff563644a53219ada239edea1f9b7985f4869855cf74f5f82
-    sha256: d6d9021668bcf95ff563644a53219ada239edea1f9b7985f4869855cf74f5f82
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:a8eb65c9637ca3517a45909a2ba750ea4c9c6bd3e11d41a90f9edcc818f971bd
-    sha256: a8eb65c9637ca3517a45909a2ba750ea4c9c6bd3e11d41a90f9edcc818f971bd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:5418013076180919d6d8beae685569da60970b1006ddb28d9c6304bd35156a3a
-    sha256: 5418013076180919d6d8beae685569da60970b1006ddb28d9c6304bd35156a3a
-source:
-  url: https://github.com/wmbusmeters/wmbusmeters/archive/refs/tags/2.0.0.tar.gz
-  sha256: 600beb099bc1ac1d4fd7a78dde89bb753b033cfd9de54ed6f25d3fc705c38042
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - librtlsdr
-  - libusb
+    - librtlsdr
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:d6d9021668bcf95ff563644a53219ada239edea1f9b7985f4869855cf74f5f82
+        sha256: d6d9021668bcf95ff563644a53219ada239edea1f9b7985f4869855cf74f5f82
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:48ed2b6256fd4de5aae0ba88f168edff789455ebeddb45ec2c0b02dcf023ef50
+        sha256: 48ed2b6256fd4de5aae0ba88f168edff789455ebeddb45ec2c0b02dcf023ef50
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:a8eb65c9637ca3517a45909a2ba750ea4c9c6bd3e11d41a90f9edcc818f971bd
+        sha256: a8eb65c9637ca3517a45909a2ba750ea4c9c6bd3e11d41a90f9edcc818f971bd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:5418013076180919d6d8beae685569da60970b1006ddb28d9c6304bd35156a3a
+        sha256: 5418013076180919d6d8beae685569da60970b1006ddb28d9c6304bd35156a3a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/wmbusmeters/wmbusmeters/archive/refs/tags/2.0.0.tar.gz
+    sha256: 600beb099bc1ac1d4fd7a78dde89bb753b033cfd9de54ed6f25d3fc705c38042
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

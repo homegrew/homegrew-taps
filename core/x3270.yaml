@@ -3,27 +3,53 @@ version: 4.5ga5
 description: IBM 3270 terminal emulator for the X Window System and Windows
 homepage: https://x3270.bgp.nu/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/x3270/blobs/sha256:5eaa66210bd1a24f0aaa2636301f0a6886a31b96a244708861383d00b4ec0d48
-    sha256: 5eaa66210bd1a24f0aaa2636301f0a6886a31b96a244708861383d00b4ec0d48
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/x3270/blobs/sha256:a8484001d4dc7017037da1946adfe25d79a59aa62e955d268f8142baa65a0453
-    sha256: a8484001d4dc7017037da1946adfe25d79a59aa62e955d268f8142baa65a0453
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/x3270/blobs/sha256:b339cd5bc13a6ae5c4f5567e700d1b1fa8b65f52c2218170553b6983cc523ad2
-    sha256: b339cd5bc13a6ae5c4f5567e700d1b1fa8b65f52c2218170553b6983cc523ad2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/x3270/blobs/sha256:7e3bb3c8cdf506cc4256a6b32526c2bf8757dab5bdfbc4e2b2409d36bb1a3644
-    sha256: 7e3bb3c8cdf506cc4256a6b32526c2bf8757dab5bdfbc4e2b2409d36bb1a3644
-source:
-  url: https://downloads.sourceforge.net/project/x3270/x3270/4.5ga5/suite3270-4.5ga5-src.tgz
-  sha256: 01576fa58598ccdd3d366febfaef61e3d1de93eb60a93f9ac6ba5faf84144c6f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - readline
-  - tcl-tk@8
+    - openssl@3
+    - readline
+    - tcl-tk@8
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/x3270/blobs/sha256:a8484001d4dc7017037da1946adfe25d79a59aa62e955d268f8142baa65a0453
+        sha256: a8484001d4dc7017037da1946adfe25d79a59aa62e955d268f8142baa65a0453
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/x3270/blobs/sha256:5eaa66210bd1a24f0aaa2636301f0a6886a31b96a244708861383d00b4ec0d48
+        sha256: 5eaa66210bd1a24f0aaa2636301f0a6886a31b96a244708861383d00b4ec0d48
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/x3270/blobs/sha256:b339cd5bc13a6ae5c4f5567e700d1b1fa8b65f52c2218170553b6983cc523ad2
+        sha256: b339cd5bc13a6ae5c4f5567e700d1b1fa8b65f52c2218170553b6983cc523ad2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/x3270/blobs/sha256:7e3bb3c8cdf506cc4256a6b32526c2bf8757dab5bdfbc4e2b2409d36bb1a3644
+        sha256: 7e3bb3c8cdf506cc4256a6b32526c2bf8757dab5bdfbc4e2b2409d36bb1a3644
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/x3270/x3270/4.5ga5/suite3270-4.5ga5-src.tgz
+    sha256: 01576fa58598ccdd3d366febfaef61e3d1de93eb60a93f9ac6ba5faf84144c6f
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

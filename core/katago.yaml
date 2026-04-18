@@ -3,31 +3,55 @@ version: 1.16.4
 description: Neural Network Go engine with no human-provided knowledge
 homepage: https://github.com/lightvector/KataGo
 license: MIT AND CC0-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/katago/blobs/sha256:9a745eb869cb6483a6874ef3461d1783182d1baed31516306165658f8d93f4bf
-    sha256: 9a745eb869cb6483a6874ef3461d1783182d1baed31516306165658f8d93f4bf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/katago/blobs/sha256:77c6344b5729fe74169718809c61a81aa241e9dd8810035a18f5126f1b53a922
-    sha256: 77c6344b5729fe74169718809c61a81aa241e9dd8810035a18f5126f1b53a922
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/katago/blobs/sha256:6e3f0a950c6729864b6fc2c91e2930d53c2691ce05fccb60eedd5671c71c0f64
-    sha256: 6e3f0a950c6729864b6fc2c91e2930d53c2691ce05fccb60eedd5671c71c0f64
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/katago/blobs/sha256:505e647b8eb34d86230447b9a6099247c2688451c7eb7477c746eed34d70e4fa
-    sha256: 505e647b8eb34d86230447b9a6099247c2688451c7eb7477c746eed34d70e4fa
-source:
-  url: https://github.com/lightvector/KataGo/archive/refs/tags/v1.16.4.tar.gz
-  sha256: 51b1a9b48053b0de910f44abf2cc95160de7b6d43bb22300e0b80ea0b3ed0ca8
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libzip
+    - libzip
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/katago/blobs/sha256:77c6344b5729fe74169718809c61a81aa241e9dd8810035a18f5126f1b53a922
+        sha256: 77c6344b5729fe74169718809c61a81aa241e9dd8810035a18f5126f1b53a922
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/katago/blobs/sha256:9a745eb869cb6483a6874ef3461d1783182d1baed31516306165658f8d93f4bf
+        sha256: 9a745eb869cb6483a6874ef3461d1783182d1baed31516306165658f8d93f4bf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/katago/blobs/sha256:6e3f0a950c6729864b6fc2c91e2930d53c2691ce05fccb60eedd5671c71c0f64
+        sha256: 6e3f0a950c6729864b6fc2c91e2930d53c2691ce05fccb60eedd5671c71c0f64
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/katago/blobs/sha256:505e647b8eb34d86230447b9a6099247c2688451c7eb7477c746eed34d70e4fa
+        sha256: 505e647b8eb34d86230447b9a6099247c2688451c7eb7477c746eed34d70e4fa
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/lightvector/KataGo/archive/refs/tags/v1.16.4.tar.gz
+    sha256: 51b1a9b48053b0de910f44abf2cc95160de7b6d43bb22300e0b80ea0b3ed0ca8
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
 linux_dependencies:
-  - libzip
-  - zlib-ng-compat
+    - libzip
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

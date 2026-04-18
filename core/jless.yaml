@@ -3,27 +3,52 @@ version: 0.9.0
 description: Command-line pager for JSON data
 homepage: https://jless.io/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jless/blobs/sha256:4b17c0b4b3fc59321e8ec683fb7811aac39c4e928191f18a48a6c5ebe0ef5cef
-    sha256: 4b17c0b4b3fc59321e8ec683fb7811aac39c4e928191f18a48a6c5ebe0ef5cef
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jless/blobs/sha256:4ec22c222b62c7e7439eff8d357a841aff831c1e544c58de3bf0c8d56ba32f45
-    sha256: 4ec22c222b62c7e7439eff8d357a841aff831c1e544c58de3bf0c8d56ba32f45
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jless/blobs/sha256:d0502fb07b111d0bd0b5bb2983225e8f2e313329fd7dad6287aac989dac9f8e1
-    sha256: d0502fb07b111d0bd0b5bb2983225e8f2e313329fd7dad6287aac989dac9f8e1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jless/blobs/sha256:5dd5790c437fc0b474aaf0e9e2add485ebc5867d64955e99d72aa0920aaf0e05
-    sha256: 5dd5790c437fc0b474aaf0e9e2add485ebc5867d64955e99d72aa0920aaf0e05
-source:
-  url: https://github.com/PaulJuliusMartinez/jless/archive/refs/tags/v0.9.0.tar.gz
-  sha256: 43527a78ba2e5e43a7ebd8d0da8b5af17a72455c5f88b4d1134f34908a594239
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jless/blobs/sha256:4ec22c222b62c7e7439eff8d357a841aff831c1e544c58de3bf0c8d56ba32f45
+        sha256: 4ec22c222b62c7e7439eff8d357a841aff831c1e544c58de3bf0c8d56ba32f45
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jless/blobs/sha256:4b17c0b4b3fc59321e8ec683fb7811aac39c4e928191f18a48a6c5ebe0ef5cef
+        sha256: 4b17c0b4b3fc59321e8ec683fb7811aac39c4e928191f18a48a6c5ebe0ef5cef
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jless/blobs/sha256:d0502fb07b111d0bd0b5bb2983225e8f2e313329fd7dad6287aac989dac9f8e1
+        sha256: d0502fb07b111d0bd0b5bb2983225e8f2e313329fd7dad6287aac989dac9f8e1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jless/blobs/sha256:5dd5790c437fc0b474aaf0e9e2add485ebc5867d64955e99d72aa0920aaf0e05
+        sha256: 5dd5790c437fc0b474aaf0e9e2add485ebc5867d64955e99d72aa0920aaf0e05
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/PaulJuliusMartinez/jless/archive/refs/tags/v0.9.0.tar.gz
+    sha256: 43527a78ba2e5e43a7ebd8d0da8b5af17a72455c5f88b4d1134f34908a594239
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
 linux_dependencies:
-  - libxcb
+    - libxcb
+build:
+    configure: []
+    install: []
+service: null

@@ -1,29 +1,54 @@
 name: zigmod
-version: 99
+version: "99"
 description: Package manager for the Zig programming language
 homepage: https://nektro.github.io/zigmod/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zigmod/blobs/sha256:fcd2ad3392aae6c20b201de6a0ae1885d1d05e6ab2fb1c9166a3c258d92dd1c3
-    sha256: fcd2ad3392aae6c20b201de6a0ae1885d1d05e6ab2fb1c9166a3c258d92dd1c3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zigmod/blobs/sha256:ae568a5381dbba1ca1dd0e8864cf4cd3d098d5e1b65bdc507706e7bb99e653ab
-    sha256: ae568a5381dbba1ca1dd0e8864cf4cd3d098d5e1b65bdc507706e7bb99e653ab
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/zigmod/blobs/sha256:404076d214fae1b64dcc4f17ec37606fc303fa18f475342933cfd93331817323
-    sha256: 404076d214fae1b64dcc4f17ec37606fc303fa18f475342933cfd93331817323
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/zigmod/blobs/sha256:c6667190a84c317f48674c5ea1c9d67c7f0c2267d1c407ffc24acafae5c241e0
-    sha256: c6667190a84c317f48674c5ea1c9d67c7f0c2267d1c407ffc24acafae5c241e0
-source:
-  url: https://github.com/nektro/zigmod/archive/refs/tags/r99.tar.gz
-  sha256: b2bb91cfae4cb470c6b5e461f6a8bc33b0d4df8a8b0ddf35505ac9bf42b76072
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - zig@0.14
+    - zig@0.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zigmod/blobs/sha256:ae568a5381dbba1ca1dd0e8864cf4cd3d098d5e1b65bdc507706e7bb99e653ab
+        sha256: ae568a5381dbba1ca1dd0e8864cf4cd3d098d5e1b65bdc507706e7bb99e653ab
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zigmod/blobs/sha256:fcd2ad3392aae6c20b201de6a0ae1885d1d05e6ab2fb1c9166a3c258d92dd1c3
+        sha256: fcd2ad3392aae6c20b201de6a0ae1885d1d05e6ab2fb1c9166a3c258d92dd1c3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/zigmod/blobs/sha256:404076d214fae1b64dcc4f17ec37606fc303fa18f475342933cfd93331817323
+        sha256: 404076d214fae1b64dcc4f17ec37606fc303fa18f475342933cfd93331817323
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zigmod/blobs/sha256:c6667190a84c317f48674c5ea1c9d67c7f0c2267d1c407ffc24acafae5c241e0
+        sha256: c6667190a84c317f48674c5ea1c9d67c7f0c2267d1c407ffc24acafae5c241e0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/nektro/zigmod/archive/refs/tags/r99.tar.gz
+    sha256: b2bb91cfae4cb470c6b5e461f6a8bc33b0d4df8a8b0ddf35505ac9bf42b76072
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

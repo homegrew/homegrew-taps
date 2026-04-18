@@ -3,30 +3,55 @@ version: 1.3.5
 description: Utility and library for image scaling and processing
 homepage: https://entropymine.com/imageworsener/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imageworsener/blobs/sha256:2ea02018611e3a89bd678dc6e1daa778ed958dc03d69bdc4a447cd6c43502ff7
-    sha256: 2ea02018611e3a89bd678dc6e1daa778ed958dc03d69bdc4a447cd6c43502ff7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imageworsener/blobs/sha256:f3207ea97421c3105dda00945d0382f71fc3c2345b9171c28325cb032094878d
-    sha256: f3207ea97421c3105dda00945d0382f71fc3c2345b9171c28325cb032094878d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/imageworsener/blobs/sha256:b929b424d3049ee109d5974d83589f92d3f7303b35a597a429334f62bb4e8e4e
-    sha256: b929b424d3049ee109d5974d83589f92d3f7303b35a597a429334f62bb4e8e4e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/imageworsener/blobs/sha256:0211d900e4e2ec8d216be3435a9146a811c259add289e0b92e53deca7596f83a
-    sha256: 0211d900e4e2ec8d216be3435a9146a811c259add289e0b92e53deca7596f83a
-source:
-  url: https://entropymine.com/imageworsener/imageworsener-1.3.5.tar.gz
-  sha256: a7fbb65c5ade67d9ebc32e52c58988a4f986bacc008c9021fe36b598466d5c8d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - libpng
+    - jpeg-turbo
+    - libpng
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imageworsener/blobs/sha256:f3207ea97421c3105dda00945d0382f71fc3c2345b9171c28325cb032094878d
+        sha256: f3207ea97421c3105dda00945d0382f71fc3c2345b9171c28325cb032094878d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imageworsener/blobs/sha256:2ea02018611e3a89bd678dc6e1daa778ed958dc03d69bdc4a447cd6c43502ff7
+        sha256: 2ea02018611e3a89bd678dc6e1daa778ed958dc03d69bdc4a447cd6c43502ff7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/imageworsener/blobs/sha256:b929b424d3049ee109d5974d83589f92d3f7303b35a597a429334f62bb4e8e4e
+        sha256: b929b424d3049ee109d5974d83589f92d3f7303b35a597a429334f62bb4e8e4e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/imageworsener/blobs/sha256:0211d900e4e2ec8d216be3435a9146a811c259add289e0b92e53deca7596f83a
+        sha256: 0211d900e4e2ec8d216be3435a9146a811c259add289e0b92e53deca7596f83a
+        sha512: ""
+        signature: ""
+source:
+    url: https://entropymine.com/imageworsener/imageworsener-1.3.5.tar.gz
+    sha256: a7fbb65c5ade67d9ebc32e52c58988a4f986bacc008c9021fe36b598466d5c8d
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - jpeg-turbo
-  - libpng
-  - zlib-ng-compat
+    - jpeg-turbo
+    - libpng
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

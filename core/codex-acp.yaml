@@ -1,34 +1,58 @@
 name: codex-acp
 version: 0.11.1
-description: "Use Codex from ACP-compatible clients such as Zed!"
+description: Use Codex from ACP-compatible clients such as Zed!
 homepage: https://github.com/zed-industries/codex-acp
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/codex-acp/blobs/sha256:bdb0926b605c0f8c05be807ab9a4811e2f8531a82b992726b294de10982e4f76
-    sha256: bdb0926b605c0f8c05be807ab9a4811e2f8531a82b992726b294de10982e4f76
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/codex-acp/blobs/sha256:088003095fbb45a9e6da4c3f60619e4f9a50d4c238d888d5833c73493cdfa67e
-    sha256: 088003095fbb45a9e6da4c3f60619e4f9a50d4c238d888d5833c73493cdfa67e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/codex-acp/blobs/sha256:513ed77534857522d0d480f977223779e895f0d8b1c7257d27d3b16bd49b34e1
-    sha256: 513ed77534857522d0d480f977223779e895f0d8b1c7257d27d3b16bd49b34e1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/codex-acp/blobs/sha256:f34f68803bda2a3ba988a180ce8678a31edd848bf0e0d7e33404ac7a4e5aa91f
-    sha256: f34f68803bda2a3ba988a180ce8678a31edd848bf0e0d7e33404ac7a4e5aa91f
-source:
-  url: https://github.com/zed-industries/codex-acp/archive/refs/tags/v0.11.1.tar.gz
-  sha256: 21b7ffed68e817df638c8e939c376e0ccd2f6f91b420730b71d3ba418c3b1205
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/codex-acp/blobs/sha256:088003095fbb45a9e6da4c3f60619e4f9a50d4c238d888d5833c73493cdfa67e
+        sha256: 088003095fbb45a9e6da4c3f60619e4f9a50d4c238d888d5833c73493cdfa67e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/codex-acp/blobs/sha256:bdb0926b605c0f8c05be807ab9a4811e2f8531a82b992726b294de10982e4f76
+        sha256: bdb0926b605c0f8c05be807ab9a4811e2f8531a82b992726b294de10982e4f76
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/codex-acp/blobs/sha256:513ed77534857522d0d480f977223779e895f0d8b1c7257d27d3b16bd49b34e1
+        sha256: 513ed77534857522d0d480f977223779e895f0d8b1c7257d27d3b16bd49b34e1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/codex-acp/blobs/sha256:f34f68803bda2a3ba988a180ce8678a31edd848bf0e0d7e33404ac7a4e5aa91f
+        sha256: f34f68803bda2a3ba988a180ce8678a31edd848bf0e0d7e33404ac7a4e5aa91f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/zed-industries/codex-acp/archive/refs/tags/v0.11.1.tar.gz
+    sha256: 21b7ffed68e817df638c8e939c376e0ccd2f6f91b420730b71d3ba418c3b1205
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - libcap
-  - openssl@3
-  - zlib-ng-compat
+    - libcap
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

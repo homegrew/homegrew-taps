@@ -3,25 +3,51 @@ version: 0.13.12
 description: Utility to create k3s clusters on any local or remote VM
 homepage: https://k3sup.dev
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/k3sup/blobs/sha256:28a9ee3f378c4c3d7779394f1874f928c4cf5998e5872b6cedc81b368e632a6c
-    sha256: 28a9ee3f378c4c3d7779394f1874f928c4cf5998e5872b6cedc81b368e632a6c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/k3sup/blobs/sha256:ccfabb4d5060daf24b3be3459208a056ea73a7e2dd05d6bfb4dbcf7c050e180d
-    sha256: ccfabb4d5060daf24b3be3459208a056ea73a7e2dd05d6bfb4dbcf7c050e180d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/k3sup/blobs/sha256:f0a1700b591de02276fcb18db949915000da6612f72a954c127fc49a1344e5a7
-    sha256: f0a1700b591de02276fcb18db949915000da6612f72a954c127fc49a1344e5a7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/k3sup/blobs/sha256:ca5bcf145ad386bf836f92cfdd57aeae600d146bf6b9de7b57d7be4a4d5b900a
-    sha256: ca5bcf145ad386bf836f92cfdd57aeae600d146bf6b9de7b57d7be4a4d5b900a
-source:
-  url: https://github.com/alexellis/k3sup.git
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/k3sup/blobs/sha256:ccfabb4d5060daf24b3be3459208a056ea73a7e2dd05d6bfb4dbcf7c050e180d
+        sha256: ccfabb4d5060daf24b3be3459208a056ea73a7e2dd05d6bfb4dbcf7c050e180d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/k3sup/blobs/sha256:28a9ee3f378c4c3d7779394f1874f928c4cf5998e5872b6cedc81b368e632a6c
+        sha256: 28a9ee3f378c4c3d7779394f1874f928c4cf5998e5872b6cedc81b368e632a6c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/k3sup/blobs/sha256:f0a1700b591de02276fcb18db949915000da6612f72a954c127fc49a1344e5a7
+        sha256: f0a1700b591de02276fcb18db949915000da6612f72a954c127fc49a1344e5a7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/k3sup/blobs/sha256:ca5bcf145ad386bf836f92cfdd57aeae600d146bf6b9de7b57d7be4a4d5b900a
+        sha256: ca5bcf145ad386bf836f92cfdd57aeae600d146bf6b9de7b57d7be4a4d5b900a
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/alexellis/k3sup.git
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

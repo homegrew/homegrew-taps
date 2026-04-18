@@ -3,36 +3,61 @@ version: 15.2.0
 description: GNU compiler collection for i686-elf
 homepage: https://gcc.gnu.org
 license: GPL-3.0-or-later WITH GCC-exception-3.1
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/i686-elf-gcc/blobs/sha256:dc1192f46f2f58ad2d4d72e774114a707ff15e0bbac8f02f6868fa5b0f58387e
-    sha256: dc1192f46f2f58ad2d4d72e774114a707ff15e0bbac8f02f6868fa5b0f58387e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/i686-elf-gcc/blobs/sha256:abbfb1ae2d570c345fc35aa00e30ae1f63e0f55e04e1e4beb1216d8536499c60
-    sha256: abbfb1ae2d570c345fc35aa00e30ae1f63e0f55e04e1e4beb1216d8536499c60
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/i686-elf-gcc/blobs/sha256:40dc3970e637b82e36c47783c9956ca24d3ccd15e69ce077867bd84ca0c488fa
-    sha256: 40dc3970e637b82e36c47783c9956ca24d3ccd15e69ce077867bd84ca0c488fa
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/i686-elf-gcc/blobs/sha256:75c212bc07d5432ac8d8d0cba1159946e5be4a4272e8c34a0693d2052ac1c11c
-    sha256: 75c212bc07d5432ac8d8d0cba1159946e5be4a4272e8c34a0693d2052ac1c11c
-source:
-  url: https://ftpmirror.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz
-  sha256: 438fd996826b0c82485a29da03a72d71d6e3541a83ec702df4271f6fe025d24e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - i686-elf-binutils
-  - libmpc
-  - mpfr
-  - zstd
+    - gmp
+    - i686-elf-binutils
+    - libmpc
+    - mpfr
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/i686-elf-gcc/blobs/sha256:abbfb1ae2d570c345fc35aa00e30ae1f63e0f55e04e1e4beb1216d8536499c60
+        sha256: abbfb1ae2d570c345fc35aa00e30ae1f63e0f55e04e1e4beb1216d8536499c60
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/i686-elf-gcc/blobs/sha256:dc1192f46f2f58ad2d4d72e774114a707ff15e0bbac8f02f6868fa5b0f58387e
+        sha256: dc1192f46f2f58ad2d4d72e774114a707ff15e0bbac8f02f6868fa5b0f58387e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/i686-elf-gcc/blobs/sha256:40dc3970e637b82e36c47783c9956ca24d3ccd15e69ce077867bd84ca0c488fa
+        sha256: 40dc3970e637b82e36c47783c9956ca24d3ccd15e69ce077867bd84ca0c488fa
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/i686-elf-gcc/blobs/sha256:75c212bc07d5432ac8d8d0cba1159946e5be4a4272e8c34a0693d2052ac1c11c
+        sha256: 75c212bc07d5432ac8d8d0cba1159946e5be4a4272e8c34a0693d2052ac1c11c
+        sha512: ""
+        signature: ""
+source:
+    url: https://ftpmirror.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz
+    sha256: 438fd996826b0c82485a29da03a72d71d6e3541a83ec702df4271f6fe025d24e
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - gmp
-  - i686-elf-binutils
-  - libmpc
-  - mpfr
-  - zlib-ng-compat
-  - zstd
+    - gmp
+    - i686-elf-binutils
+    - libmpc
+    - mpfr
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

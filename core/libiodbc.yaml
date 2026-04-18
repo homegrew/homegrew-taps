@@ -3,28 +3,53 @@ version: 3.52.16
 description: Database connectivity layer based on ODBC. (alternative to unixodbc)
 homepage: https://www.iodbc.org/
 license: BSD-3-Clause OR LGPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libiodbc/blobs/sha256:ab0c5ad41cb17f93a5d9b29ad4d64f6e1be2fb6f1c76bcd7db04b8ded60549e4
-    sha256: ab0c5ad41cb17f93a5d9b29ad4d64f6e1be2fb6f1c76bcd7db04b8ded60549e4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libiodbc/blobs/sha256:51d457af2187861576522c3a4bf4d9dcd092bd6626b1e9f838a2f717330ed32e
-    sha256: 51d457af2187861576522c3a4bf4d9dcd092bd6626b1e9f838a2f717330ed32e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libiodbc/blobs/sha256:6a55f7da0eb9e5afb600e861bb089d7f7a74d393b4c29c9d7d9383c75a717883
-    sha256: 6a55f7da0eb9e5afb600e861bb089d7f7a74d393b4c29c9d7d9383c75a717883
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libiodbc/blobs/sha256:2fed59ad000ff8d08665d2ea43a4b4d997fca1fadccc470c58290d72bdc9259d
-    sha256: 2fed59ad000ff8d08665d2ea43a4b4d997fca1fadccc470c58290d72bdc9259d
-source:
-  url: https://github.com/openlink/iODBC/archive/refs/tags/v3.52.16.tar.gz
-  sha256: a0cf0375b462f98c0081c2ceae5ef78276003e57cdf1eb86bd04508fb62a0660
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
-build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libiodbc/blobs/sha256:51d457af2187861576522c3a4bf4d9dcd092bd6626b1e9f838a2f717330ed32e
+        sha256: 51d457af2187861576522c3a4bf4d9dcd092bd6626b1e9f838a2f717330ed32e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libiodbc/blobs/sha256:ab0c5ad41cb17f93a5d9b29ad4d64f6e1be2fb6f1c76bcd7db04b8ded60549e4
+        sha256: ab0c5ad41cb17f93a5d9b29ad4d64f6e1be2fb6f1c76bcd7db04b8ded60549e4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libiodbc/blobs/sha256:6a55f7da0eb9e5afb600e861bb089d7f7a74d393b4c29c9d7d9383c75a717883
+        sha256: 6a55f7da0eb9e5afb600e861bb089d7f7a74d393b4c29c9d7d9383c75a717883
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libiodbc/blobs/sha256:2fed59ad000ff8d08665d2ea43a4b4d997fca1fadccc470c58290d72bdc9259d
+        sha256: 2fed59ad000ff8d08665d2ea43a4b4d997fca1fadccc470c58290d72bdc9259d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/openlink/iODBC/archive/refs/tags/v3.52.16.tar.gz
+    sha256: a0cf0375b462f98c0081c2ceae5ef78276003e57cdf1eb86bd04508fb62a0660
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - autoconf
+    - automake
+    - libtool
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

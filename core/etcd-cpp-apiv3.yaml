@@ -1,35 +1,60 @@
 name: etcd-cpp-apiv3
 version: 0.15.4
-description: "C++ implementation for etcd's v3 client API, i.e., ETCDCTL_API=3"
+description: C++ implementation for etcd's v3 client API, i.e., ETCDCTL_API=3
 homepage: https://github.com/etcd-cpp-apiv3/etcd-cpp-apiv3
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/etcd-cpp-apiv3/blobs/sha256:bf69a21c97148bc0cf6b4f3df53d42b9cc38e572214a6c355fd93bddc8bd7112
-    sha256: bf69a21c97148bc0cf6b4f3df53d42b9cc38e572214a6c355fd93bddc8bd7112
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/etcd-cpp-apiv3/blobs/sha256:6e7bce0b4f600b6eda6b5fc5841106aa68a8ac2e142157b5dd582eeca394e49f
-    sha256: 6e7bce0b4f600b6eda6b5fc5841106aa68a8ac2e142157b5dd582eeca394e49f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/etcd-cpp-apiv3/blobs/sha256:d6ef31a79b7cd6354358073d20ec41cb2b7f0a07389af19787bebd715ed4fbe2
-    sha256: d6ef31a79b7cd6354358073d20ec41cb2b7f0a07389af19787bebd715ed4fbe2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/etcd-cpp-apiv3/blobs/sha256:193805dd7ffbffab1488fbf1f4b6f44252046d036214308e3f726b2e8fc6e503
-    sha256: 193805dd7ffbffab1488fbf1f4b6f44252046d036214308e3f726b2e8fc6e503
-source:
-  url: https://github.com/etcd-cpp-apiv3/etcd-cpp-apiv3/archive/refs/tags/v0.15.4.tar.gz
-  sha256: 4516ecfa420826088c187efd42dad249367ca94ea6cdfc24e3030c3cf47af7b4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - c-ares
-  - cpprestsdk
-  - grpc
-  - openssl@3
-  - protobuf
-  - re2
+    - abseil
+    - c-ares
+    - cpprestsdk
+    - grpc
+    - openssl@3
+    - protobuf
+    - re2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/etcd-cpp-apiv3/blobs/sha256:6e7bce0b4f600b6eda6b5fc5841106aa68a8ac2e142157b5dd582eeca394e49f
+        sha256: 6e7bce0b4f600b6eda6b5fc5841106aa68a8ac2e142157b5dd582eeca394e49f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/etcd-cpp-apiv3/blobs/sha256:bf69a21c97148bc0cf6b4f3df53d42b9cc38e572214a6c355fd93bddc8bd7112
+        sha256: bf69a21c97148bc0cf6b4f3df53d42b9cc38e572214a6c355fd93bddc8bd7112
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/etcd-cpp-apiv3/blobs/sha256:d6ef31a79b7cd6354358073d20ec41cb2b7f0a07389af19787bebd715ed4fbe2
+        sha256: d6ef31a79b7cd6354358073d20ec41cb2b7f0a07389af19787bebd715ed4fbe2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/etcd-cpp-apiv3/blobs/sha256:193805dd7ffbffab1488fbf1f4b6f44252046d036214308e3f726b2e8fc6e503
+        sha256: 193805dd7ffbffab1488fbf1f4b6f44252046d036214308e3f726b2e8fc6e503
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/etcd-cpp-apiv3/etcd-cpp-apiv3/archive/refs/tags/v0.15.4.tar.gz
+    sha256: 4516ecfa420826088c187efd42dad249367ca94ea6cdfc24e3030c3cf47af7b4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

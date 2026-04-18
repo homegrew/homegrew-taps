@@ -3,27 +3,52 @@ version: 0.11.0
 description: Git diff pager based on delta but with a file tree
 homepage: https://github.com/dlvhdr/diffnav
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diffnav/blobs/sha256:2fab53e6a649edf1434ee108d81cf4d8810713ef5fd14c7cbe6b05059f22c850
-    sha256: 2fab53e6a649edf1434ee108d81cf4d8810713ef5fd14c7cbe6b05059f22c850
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diffnav/blobs/sha256:4d11a088fb274bda33190e0acdc786157ae32d4b303ddb42a1442a903df1e4dd
-    sha256: 4d11a088fb274bda33190e0acdc786157ae32d4b303ddb42a1442a903df1e4dd
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/diffnav/blobs/sha256:42d4a4b37e195334e09191b9186ed35d26e9b152ec46850594f66cd494d6b545
-    sha256: 42d4a4b37e195334e09191b9186ed35d26e9b152ec46850594f66cd494d6b545
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/diffnav/blobs/sha256:3e777d7c97922dda39af604506d950694fa8c3bf4fb2d6110210bc49eda676ad
-    sha256: 3e777d7c97922dda39af604506d950694fa8c3bf4fb2d6110210bc49eda676ad
-source:
-  url: https://github.com/dlvhdr/diffnav/archive/refs/tags/v0.11.0.tar.gz
-  sha256: df3879b12275bed16065ad9c08107c874445d265aa1fdc51d5f66a1f2fb7f392
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - git-delta
+    - git-delta
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diffnav/blobs/sha256:4d11a088fb274bda33190e0acdc786157ae32d4b303ddb42a1442a903df1e4dd
+        sha256: 4d11a088fb274bda33190e0acdc786157ae32d4b303ddb42a1442a903df1e4dd
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diffnav/blobs/sha256:2fab53e6a649edf1434ee108d81cf4d8810713ef5fd14c7cbe6b05059f22c850
+        sha256: 2fab53e6a649edf1434ee108d81cf4d8810713ef5fd14c7cbe6b05059f22c850
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/diffnav/blobs/sha256:42d4a4b37e195334e09191b9186ed35d26e9b152ec46850594f66cd494d6b545
+        sha256: 42d4a4b37e195334e09191b9186ed35d26e9b152ec46850594f66cd494d6b545
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/diffnav/blobs/sha256:3e777d7c97922dda39af604506d950694fa8c3bf4fb2d6110210bc49eda676ad
+        sha256: 3e777d7c97922dda39af604506d950694fa8c3bf4fb2d6110210bc49eda676ad
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dlvhdr/diffnav/archive/refs/tags/v0.11.0.tar.gz
+    sha256: df3879b12275bed16065ad9c08107c874445d265aa1fdc51d5f66a1f2fb7f392
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

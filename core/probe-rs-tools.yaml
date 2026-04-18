@@ -3,29 +3,54 @@ version: 0.31.0
 description: Collection of on chip debugging tools to communicate with microchips
 homepage: https://probe.rs
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/probe-rs-tools/blobs/sha256:f8504d65b58632718d04633f2fa4e7a8071911a51c1a3d35e01d5c658c0add46
-    sha256: f8504d65b58632718d04633f2fa4e7a8071911a51c1a3d35e01d5c658c0add46
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/probe-rs-tools/blobs/sha256:069e5194da136493154b590703e424390984c67f0704479576e2a584789f7334
-    sha256: 069e5194da136493154b590703e424390984c67f0704479576e2a584789f7334
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/probe-rs-tools/blobs/sha256:ff012f42ad627145f6b19023b0f6dd75c82efcca65509911f285b3c68715b7c9
-    sha256: ff012f42ad627145f6b19023b0f6dd75c82efcca65509911f285b3c68715b7c9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/probe-rs-tools/blobs/sha256:016c7c2ea0f71f6079af477f649c989d3dc1a9a5bdb9cf76a2b781281efe9de6
-    sha256: 016c7c2ea0f71f6079af477f649c989d3dc1a9a5bdb9cf76a2b781281efe9de6
-source:
-  url: https://github.com/probe-rs/probe-rs/archive/refs/tags/v0.31.0.tar.gz
-  sha256: 7a5022d6956daaa8dba96bb3aedf2ace0b5a76a60729d93971c9dab439ac045e
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/probe-rs-tools/blobs/sha256:069e5194da136493154b590703e424390984c67f0704479576e2a584789f7334
+        sha256: 069e5194da136493154b590703e424390984c67f0704479576e2a584789f7334
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/probe-rs-tools/blobs/sha256:f8504d65b58632718d04633f2fa4e7a8071911a51c1a3d35e01d5c658c0add46
+        sha256: f8504d65b58632718d04633f2fa4e7a8071911a51c1a3d35e01d5c658c0add46
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/probe-rs-tools/blobs/sha256:ff012f42ad627145f6b19023b0f6dd75c82efcca65509911f285b3c68715b7c9
+        sha256: ff012f42ad627145f6b19023b0f6dd75c82efcca65509911f285b3c68715b7c9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/probe-rs-tools/blobs/sha256:016c7c2ea0f71f6079af477f649c989d3dc1a9a5bdb9cf76a2b781281efe9de6
+        sha256: 016c7c2ea0f71f6079af477f649c989d3dc1a9a5bdb9cf76a2b781281efe9de6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/probe-rs/probe-rs/archive/refs/tags/v0.31.0.tar.gz
+    sha256: 7a5022d6956daaa8dba96bb3aedf2ace0b5a76a60729d93971c9dab439ac045e
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - rust
+    - cmake
+    - pkgconf
+    - rust
 linux_dependencies:
-  - systemd
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

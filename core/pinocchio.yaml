@@ -3,46 +3,70 @@ version: 3.9.0
 description: Efficient and fast C++ library implementing Rigid Body Dynamics algorithms
 homepage: https://stack-of-tasks.github.io/pinocchio
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pinocchio/blobs/sha256:86760207b0a7782de6ca11d04726d572890eb3cba376d18bdd5d7c443daf3556
-    sha256: 86760207b0a7782de6ca11d04726d572890eb3cba376d18bdd5d7c443daf3556
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pinocchio/blobs/sha256:88cccbcb3217a83fb2460ae41b38afd9d99edef7e3e311e25d84bfc56d48b765
-    sha256: 88cccbcb3217a83fb2460ae41b38afd9d99edef7e3e311e25d84bfc56d48b765
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pinocchio/blobs/sha256:3b2477eb36d42baeef8bfcd2456bfc1b02ac161297a880ad5a301785e2993732
-    sha256: 3b2477eb36d42baeef8bfcd2456bfc1b02ac161297a880ad5a301785e2993732
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pinocchio/blobs/sha256:63d9387d9e37e929257b1e50f02ae50607d4ffa600082a6783fc1cdec975dc11
-    sha256: 63d9387d9e37e929257b1e50f02ae50607d4ffa600082a6783fc1cdec975dc11
-source:
-  url: https://github.com/stack-of-tasks/pinocchio/releases/download/v3.9.0/pinocchio-3.9.0.tar.gz
-  sha256: 60553630d83de492bc0cf1126add2acc591c87f1bc8ea7f70693e7563fc103a3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - boost-python3
-  - coal
-  - console_bridge
-  - eigen
-  - eigenpy
-  - python@3.14
-  - urdfdom
-  - octomap
+    - boost
+    - boost-python3
+    - coal
+    - console_bridge
+    - eigen
+    - eigenpy
+    - python@3.14
+    - urdfdom
+    - octomap
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pinocchio/blobs/sha256:88cccbcb3217a83fb2460ae41b38afd9d99edef7e3e311e25d84bfc56d48b765
+        sha256: 88cccbcb3217a83fb2460ae41b38afd9d99edef7e3e311e25d84bfc56d48b765
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pinocchio/blobs/sha256:86760207b0a7782de6ca11d04726d572890eb3cba376d18bdd5d7c443daf3556
+        sha256: 86760207b0a7782de6ca11d04726d572890eb3cba376d18bdd5d7c443daf3556
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pinocchio/blobs/sha256:3b2477eb36d42baeef8bfcd2456bfc1b02ac161297a880ad5a301785e2993732
+        sha256: 3b2477eb36d42baeef8bfcd2456bfc1b02ac161297a880ad5a301785e2993732
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pinocchio/blobs/sha256:63d9387d9e37e929257b1e50f02ae50607d4ffa600082a6783fc1cdec975dc11
+        sha256: 63d9387d9e37e929257b1e50f02ae50607d4ffa600082a6783fc1cdec975dc11
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/stack-of-tasks/pinocchio/releases/download/v3.9.0/pinocchio-3.9.0.tar.gz
+    sha256: 60553630d83de492bc0cf1126add2acc591c87f1bc8ea7f70693e7563fc103a3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
-  - pkgconf
+    - cmake
+    - doxygen
+    - pkgconf
 linux_dependencies:
-  - boost
-  - boost-python3
-  - coal
-  - console_bridge
-  - eigen
-  - eigenpy
-  - python@3.14
-  - urdfdom
+    - boost
+    - boost-python3
+    - coal
+    - console_bridge
+    - eigen
+    - eigenpy
+    - python@3.14
+    - urdfdom
+build:
+    configure: []
+    install: []
+service: null

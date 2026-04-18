@@ -3,28 +3,53 @@ version: 0.9.0
 description: Wrap rust executables in OS-specific app bundles
 homepage: https://github.com/burtonageo/cargo-bundle
 license: Apache-2.0 OR MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-bundle/blobs/sha256:4314c3eafa5f0f536d922ddfb69008be6c35a47193f1a9eb224d8f0fad787c28
-    sha256: 4314c3eafa5f0f536d922ddfb69008be6c35a47193f1a9eb224d8f0fad787c28
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-bundle/blobs/sha256:6a18a9459c1c400d12e5ee3c4f151bac8c933c123434bed9db7d5bf98d44b5f6
-    sha256: 6a18a9459c1c400d12e5ee3c4f151bac8c933c123434bed9db7d5bf98d44b5f6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-bundle/blobs/sha256:4d1a6bb6315ed444543895c018728a36dd13ac589bdd38a33feb0778f9eda2bb
-    sha256: 4d1a6bb6315ed444543895c018728a36dd13ac589bdd38a33feb0778f9eda2bb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cargo-bundle/blobs/sha256:cd9635077c69ed673b0eb30fc744faea59571b0778aaeffb2a3aec9bc95ac5f3
-    sha256: cd9635077c69ed673b0eb30fc744faea59571b0778aaeffb2a3aec9bc95ac5f3
-source:
-  url: https://github.com/burtonageo/cargo-bundle/archive/refs/tags/v0.9.0.tar.gz
-  sha256: 8777ddbfaadf4def5f261d37c3b0b04a6ee27cdbd4e18569827ad0dee7e35b34
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-bundle/blobs/sha256:6a18a9459c1c400d12e5ee3c4f151bac8c933c123434bed9db7d5bf98d44b5f6
+        sha256: 6a18a9459c1c400d12e5ee3c4f151bac8c933c123434bed9db7d5bf98d44b5f6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-bundle/blobs/sha256:4314c3eafa5f0f536d922ddfb69008be6c35a47193f1a9eb224d8f0fad787c28
+        sha256: 4314c3eafa5f0f536d922ddfb69008be6c35a47193f1a9eb224d8f0fad787c28
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-bundle/blobs/sha256:4d1a6bb6315ed444543895c018728a36dd13ac589bdd38a33feb0778f9eda2bb
+        sha256: 4d1a6bb6315ed444543895c018728a36dd13ac589bdd38a33feb0778f9eda2bb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cargo-bundle/blobs/sha256:cd9635077c69ed673b0eb30fc744faea59571b0778aaeffb2a3aec9bc95ac5f3
+        sha256: cd9635077c69ed673b0eb30fc744faea59571b0778aaeffb2a3aec9bc95ac5f3
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/burtonageo/cargo-bundle/archive/refs/tags/v0.9.0.tar.gz
+    sha256: 8777ddbfaadf4def5f261d37c3b0b04a6ee27cdbd4e18569827ad0dee7e35b34
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
 linux_dependencies:
-  - openssl@3
+    - openssl@3
+build:
+    configure: []
+    install: []
+service: null

@@ -1,27 +1,53 @@
 name: sshportal
 version: 1.19.5
-description: "SSH & Telnet bastion server"
+description: SSH & Telnet bastion server
 homepage: https://v1.manfred.life/sshportal/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sshportal/blobs/sha256:abcd2ec2450e2535d5cb8536a5098fc61acdcc34b75c02ce84be5ea958689bfb
-    sha256: abcd2ec2450e2535d5cb8536a5098fc61acdcc34b75c02ce84be5ea958689bfb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sshportal/blobs/sha256:d4a1076a63578d51bb79f4d6f7c35432771c479d6baf00d2d96556436da6dfd8
-    sha256: d4a1076a63578d51bb79f4d6f7c35432771c479d6baf00d2d96556436da6dfd8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sshportal/blobs/sha256:5184e0795bf5e6e3c1d785919a77d4473c9edbb12bc1e3fc4714c48887b2d178
-    sha256: 5184e0795bf5e6e3c1d785919a77d4473c9edbb12bc1e3fc4714c48887b2d178
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sshportal/blobs/sha256:dcaa3b282c7d701cc33799bb3d7c754b545d1278367a08421e366e8e330ba374
-    sha256: dcaa3b282c7d701cc33799bb3d7c754b545d1278367a08421e366e8e330ba374
-source:
-  url: https://github.com/moul/sshportal/archive/refs/tags/v1.19.5.tar.gz
-  sha256: 713be8542c93d91811f9643a8a2954ebc15130099e300fedb5ea4785b5337b52
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sshportal/blobs/sha256:d4a1076a63578d51bb79f4d6f7c35432771c479d6baf00d2d96556436da6dfd8
+        sha256: d4a1076a63578d51bb79f4d6f7c35432771c479d6baf00d2d96556436da6dfd8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sshportal/blobs/sha256:abcd2ec2450e2535d5cb8536a5098fc61acdcc34b75c02ce84be5ea958689bfb
+        sha256: abcd2ec2450e2535d5cb8536a5098fc61acdcc34b75c02ce84be5ea958689bfb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sshportal/blobs/sha256:5184e0795bf5e6e3c1d785919a77d4473c9edbb12bc1e3fc4714c48887b2d178
+        sha256: 5184e0795bf5e6e3c1d785919a77d4473c9edbb12bc1e3fc4714c48887b2d178
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sshportal/blobs/sha256:dcaa3b282c7d701cc33799bb3d7c754b545d1278367a08421e366e8e330ba374
+        sha256: dcaa3b282c7d701cc33799bb3d7c754b545d1278367a08421e366e8e330ba374
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/moul/sshportal/archive/refs/tags/v1.19.5.tar.gz
+    sha256: 713be8542c93d91811f9643a8a2954ebc15130099e300fedb5ea4785b5337b52
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

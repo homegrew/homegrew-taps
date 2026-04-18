@@ -3,27 +3,52 @@ version: 1.1.0
 description: Scan log files and ban IPs showing malicious signs
 homepage: https://www.fail2ban.org/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
-    sha256: 677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:cf820863820ce92f23210ed7a2a390ab1cbe86f67db6f68c911e1d11670dad3e
-    sha256: cf820863820ce92f23210ed7a2a390ab1cbe86f67db6f68c911e1d11670dad3e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:5684265cee6688d49e34a7bc00c529bad87825df415a613b300cf91735e6e53c
-    sha256: 5684265cee6688d49e34a7bc00c529bad87825df415a613b300cf91735e6e53c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:5684265cee6688d49e34a7bc00c529bad87825df415a613b300cf91735e6e53c
-    sha256: 5684265cee6688d49e34a7bc00c529bad87825df415a613b300cf91735e6e53c
-source:
-  url: https://github.com/fail2ban/fail2ban/archive/refs/tags/1.1.0.tar.gz
-  sha256: 474fcc25afdaf929c74329d1e4d24420caabeea1ef2e041a267ce19269570bae
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - python@3.14
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:cf820863820ce92f23210ed7a2a390ab1cbe86f67db6f68c911e1d11670dad3e
+        sha256: cf820863820ce92f23210ed7a2a390ab1cbe86f67db6f68c911e1d11670dad3e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
+        sha256: 677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:5684265cee6688d49e34a7bc00c529bad87825df415a613b300cf91735e6e53c
+        sha256: 5684265cee6688d49e34a7bc00c529bad87825df415a613b300cf91735e6e53c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:5684265cee6688d49e34a7bc00c529bad87825df415a613b300cf91735e6e53c
+        sha256: 5684265cee6688d49e34a7bc00c529bad87825df415a613b300cf91735e6e53c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fail2ban/fail2ban/archive/refs/tags/1.1.0.tar.gz
+    sha256: 474fcc25afdaf929c74329d1e4d24420caabeea1ef2e041a267ce19269570bae
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - sphinx-doc
+    - sphinx-doc
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,54 @@ version: 1.19.2
 description: Bindings to the libgit2 shared library
 homepage: https://github.com/libgit2/pygit2
 license: GPL-2.0-only WITH GCC-exception-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pygit2/blobs/sha256:bfdc0abcc0ccc4e69789f3dc14e728db7b3184e11fbebb305d9a05ad1bc7e4d6
-    sha256: bfdc0abcc0ccc4e69789f3dc14e728db7b3184e11fbebb305d9a05ad1bc7e4d6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pygit2/blobs/sha256:0b94b6108da12f11f0ac5c4acc8ccf7734a3adf879996d437ca1d1951cfaf9c4
-    sha256: 0b94b6108da12f11f0ac5c4acc8ccf7734a3adf879996d437ca1d1951cfaf9c4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pygit2/blobs/sha256:188d7b172fe47d0cef2bd4ce113d14b8269d9482c8195fba68b8a12903e0fbbc
-    sha256: 188d7b172fe47d0cef2bd4ce113d14b8269d9482c8195fba68b8a12903e0fbbc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pygit2/blobs/sha256:f03c9fc5a888a0054368674d740ee1b5d087c1ade0f4cd8c6408e26a237ccea6
-    sha256: f03c9fc5a888a0054368674d740ee1b5d087c1ade0f4cd8c6408e26a237ccea6
-source:
-  url: https://files.pythonhosted.org/packages/3a/a4/10ce00feef5c43eddacab19ae6610c4d4ef3ab77e544e9ee938772cd1c17/pygit2-1.19.2.tar.gz
-  sha256: cbeb3dbca9ca6ee3d5ea5d02f5e844c2d6084a2d5d6621e3e06aa2b11c645bfd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cffi
-  - libgit2
+    - cffi
+    - libgit2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pygit2/blobs/sha256:0b94b6108da12f11f0ac5c4acc8ccf7734a3adf879996d437ca1d1951cfaf9c4
+        sha256: 0b94b6108da12f11f0ac5c4acc8ccf7734a3adf879996d437ca1d1951cfaf9c4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pygit2/blobs/sha256:bfdc0abcc0ccc4e69789f3dc14e728db7b3184e11fbebb305d9a05ad1bc7e4d6
+        sha256: bfdc0abcc0ccc4e69789f3dc14e728db7b3184e11fbebb305d9a05ad1bc7e4d6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pygit2/blobs/sha256:188d7b172fe47d0cef2bd4ce113d14b8269d9482c8195fba68b8a12903e0fbbc
+        sha256: 188d7b172fe47d0cef2bd4ce113d14b8269d9482c8195fba68b8a12903e0fbbc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pygit2/blobs/sha256:f03c9fc5a888a0054368674d740ee1b5d087c1ade0f4cd8c6408e26a237ccea6
+        sha256: f03c9fc5a888a0054368674d740ee1b5d087c1ade0f4cd8c6408e26a237ccea6
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/3a/a4/10ce00feef5c43eddacab19ae6610c4d4ef3ab77e544e9ee938772cd1c17/pygit2-1.19.2.tar.gz
+    sha256: cbeb3dbca9ca6ee3d5ea5d02f5e844c2d6084a2d5d6621e3e06aa2b11c645bfd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - python@3.13
-  - python@3.14
+    - python@3.13
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

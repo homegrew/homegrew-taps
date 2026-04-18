@@ -1,33 +1,58 @@
 name: libftdi
-version: 1.5
+version: "1.5"
 description: Library to talk to FTDI chips
 homepage: https://www.intra2net.com/en/developer/libftdi
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libftdi/blobs/sha256:09132f1d347fe01a17da39c406e4311ad5af9609c5306afdfe912132df89f74f
-    sha256: 09132f1d347fe01a17da39c406e4311ad5af9609c5306afdfe912132df89f74f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libftdi/blobs/sha256:e558ddf5285fce63e1b722341f646989c095481c19f780c915041d65b58b1e14
-    sha256: e558ddf5285fce63e1b722341f646989c095481c19f780c915041d65b58b1e14
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libftdi/blobs/sha256:9cd40f6f49dc081c4cc7e3ea4b159b428d1e611dbc708c1d06bcb3c10f1f3fea
-    sha256: 9cd40f6f49dc081c4cc7e3ea4b159b428d1e611dbc708c1d06bcb3c10f1f3fea
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libftdi/blobs/sha256:f46b81927052090bf7c2c756414545f1af98e48ec10e0bd8a697abb7253a72ab
-    sha256: f46b81927052090bf7c2c756414545f1af98e48ec10e0bd8a697abb7253a72ab
-source:
-  url: https://www.intra2net.com/en/developer/libftdi/download/libftdi1-1.5.tar.bz2
-  sha256: 7c7091e9c86196148bd41177b4590dccb1510bfe6cea5bf7407ff194482eb049
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - confuse
-  - libusb
+    - boost
+    - confuse
+    - libusb
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libftdi/blobs/sha256:e558ddf5285fce63e1b722341f646989c095481c19f780c915041d65b58b1e14
+        sha256: e558ddf5285fce63e1b722341f646989c095481c19f780c915041d65b58b1e14
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libftdi/blobs/sha256:09132f1d347fe01a17da39c406e4311ad5af9609c5306afdfe912132df89f74f
+        sha256: 09132f1d347fe01a17da39c406e4311ad5af9609c5306afdfe912132df89f74f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libftdi/blobs/sha256:9cd40f6f49dc081c4cc7e3ea4b159b428d1e611dbc708c1d06bcb3c10f1f3fea
+        sha256: 9cd40f6f49dc081c4cc7e3ea4b159b428d1e611dbc708c1d06bcb3c10f1f3fea
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libftdi/blobs/sha256:f46b81927052090bf7c2c756414545f1af98e48ec10e0bd8a697abb7253a72ab
+        sha256: f46b81927052090bf7c2c756414545f1af98e48ec10e0bd8a697abb7253a72ab
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.intra2net.com/en/developer/libftdi/download/libftdi1-1.5.tar.bz2
+    sha256: 7c7091e9c86196148bd41177b4590dccb1510bfe6cea5bf7407ff194482eb049
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
-  - swig
+    - cmake
+    - pkgconf
+    - swig
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

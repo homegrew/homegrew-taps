@@ -3,29 +3,54 @@ version: 0.8.2
 description: AWS IAM Security Assessment tool
 homepage: https://cloudsplaining.readthedocs.io/en/latest/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cloudsplaining/blobs/sha256:f5461a61672f2d8bacd6c4ed387e770536f3564dc81db90708a785610f89c54e
-    sha256: f5461a61672f2d8bacd6c4ed387e770536f3564dc81db90708a785610f89c54e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cloudsplaining/blobs/sha256:3e6036da1272eb1be90eb2ac2910562a7c21c826cea06957eec99e5284c0bfc6
-    sha256: 3e6036da1272eb1be90eb2ac2910562a7c21c826cea06957eec99e5284c0bfc6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cloudsplaining/blobs/sha256:1a182f71dc57641be0f5dc00ae15e38098fa3742a5c47c5dca3f75013c351ab1
-    sha256: 1a182f71dc57641be0f5dc00ae15e38098fa3742a5c47c5dca3f75013c351ab1
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cloudsplaining/blobs/sha256:f907531148dc62d1e552002badf94422b976b46808c2e9aa32b1bd8c13ef47d1
-    sha256: f907531148dc62d1e552002badf94422b976b46808c2e9aa32b1bd8c13ef47d1
-source:
-  url: https://files.pythonhosted.org/packages/d1/64/ba28b9b1854a40bcaae318da0e0fe147bd25999e496a8382a5a67c463db1/cloudsplaining-0.8.2.tar.gz
-  sha256: 733085a7648e45714a24e629d05d3dfd592d2925b21fe001c19f55a6d6c1581a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - python@3.14
+    - certifi
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cloudsplaining/blobs/sha256:3e6036da1272eb1be90eb2ac2910562a7c21c826cea06957eec99e5284c0bfc6
+        sha256: 3e6036da1272eb1be90eb2ac2910562a7c21c826cea06957eec99e5284c0bfc6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cloudsplaining/blobs/sha256:f5461a61672f2d8bacd6c4ed387e770536f3564dc81db90708a785610f89c54e
+        sha256: f5461a61672f2d8bacd6c4ed387e770536f3564dc81db90708a785610f89c54e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cloudsplaining/blobs/sha256:1a182f71dc57641be0f5dc00ae15e38098fa3742a5c47c5dca3f75013c351ab1
+        sha256: 1a182f71dc57641be0f5dc00ae15e38098fa3742a5c47c5dca3f75013c351ab1
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cloudsplaining/blobs/sha256:f907531148dc62d1e552002badf94422b976b46808c2e9aa32b1bd8c13ef47d1
+        sha256: f907531148dc62d1e552002badf94422b976b46808c2e9aa32b1bd8c13ef47d1
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/d1/64/ba28b9b1854a40bcaae318da0e0fe147bd25999e496a8382a5a67c463db1/cloudsplaining-0.8.2.tar.gz
+    sha256: 733085a7648e45714a24e629d05d3dfd592d2925b21fe001c19f55a6d6c1581a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

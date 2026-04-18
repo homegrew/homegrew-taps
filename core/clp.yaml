@@ -3,29 +3,54 @@ version: 1.17.11
 description: Linear programming solver
 homepage: https://github.com/coin-or/Clp
 license: EPL-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clp/blobs/sha256:79af2ec608ace169745abb6b7ddbc526e83dfd71ff8d82f29e6967d1fa901608
-    sha256: 79af2ec608ace169745abb6b7ddbc526e83dfd71ff8d82f29e6967d1fa901608
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clp/blobs/sha256:0abb7f3e110503e1b6c5aff68b560c63f05e35197bcbc1cd444e4df6562e93bb
-    sha256: 0abb7f3e110503e1b6c5aff68b560c63f05e35197bcbc1cd444e4df6562e93bb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clp/blobs/sha256:bb90dd6fff07c7726f13e3e5c1549ed5db0a3852c22430663ab2cc089b942259
-    sha256: bb90dd6fff07c7726f13e3e5c1549ed5db0a3852c22430663ab2cc089b942259
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clp/blobs/sha256:39ce002138ea1154a4ba77ef7f6af8f8f02a17cb2dc9e57660850eeba4707010
-    sha256: 39ce002138ea1154a4ba77ef7f6af8f8f02a17cb2dc9e57660850eeba4707010
-source:
-  url: https://github.com/coin-or/Clp/archive/refs/tags/releases/1.17.11.tar.gz
-  sha256: 2c078e174dc1a7a308e091b6256fb34b4017897fc140ea707ba207b2913ea46d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - coinutils
-  - openblas
-  - osi
+    - coinutils
+    - openblas
+    - osi
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clp/blobs/sha256:0abb7f3e110503e1b6c5aff68b560c63f05e35197bcbc1cd444e4df6562e93bb
+        sha256: 0abb7f3e110503e1b6c5aff68b560c63f05e35197bcbc1cd444e4df6562e93bb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clp/blobs/sha256:79af2ec608ace169745abb6b7ddbc526e83dfd71ff8d82f29e6967d1fa901608
+        sha256: 79af2ec608ace169745abb6b7ddbc526e83dfd71ff8d82f29e6967d1fa901608
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clp/blobs/sha256:bb90dd6fff07c7726f13e3e5c1549ed5db0a3852c22430663ab2cc089b942259
+        sha256: bb90dd6fff07c7726f13e3e5c1549ed5db0a3852c22430663ab2cc089b942259
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clp/blobs/sha256:39ce002138ea1154a4ba77ef7f6af8f8f02a17cb2dc9e57660850eeba4707010
+        sha256: 39ce002138ea1154a4ba77ef7f6af8f8f02a17cb2dc9e57660850eeba4707010
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/coin-or/Clp/archive/refs/tags/releases/1.17.11.tar.gz
+    sha256: 2c078e174dc1a7a308e091b6256fb34b4017897fc140ea707ba207b2913ea46d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

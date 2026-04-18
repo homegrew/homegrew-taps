@@ -3,20 +3,42 @@ version: 1.13.6
 description: Wrapper library for evdev devices
 homepage: https://www.freedesktop.org/wiki/Software/libevdev/
 license: MIT
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libevdev/blobs/sha256:70e3e3f2f3524ac16d9380aefe34e1f47d33a06a76a9f460d1bcfcd83df245f7
-    sha256: 70e3e3f2f3524ac16d9380aefe34e1f47d33a06a76a9f460d1bcfcd83df245f7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libevdev/blobs/sha256:b1e035ed8ce1a581d5d9c317f04a158fc22a80ca48b8686971935424a3302311
-    sha256: b1e035ed8ce1a581d5d9c317f04a158fc22a80ca48b8686971935424a3302311
-source:
-  url: https://www.freedesktop.org/software/libevdev/libevdev-1.13.6.tar.xz
-  sha256: 73f215eccbd8233f414737ac06bca2687e67c44b97d2d7576091aa9718551110
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libevdev/blobs/sha256:70e3e3f2f3524ac16d9380aefe34e1f47d33a06a76a9f460d1bcfcd83df245f7
+        sha256: 70e3e3f2f3524ac16d9380aefe34e1f47d33a06a76a9f460d1bcfcd83df245f7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libevdev/blobs/sha256:b1e035ed8ce1a581d5d9c317f04a158fc22a80ca48b8686971935424a3302311
+        sha256: b1e035ed8ce1a581d5d9c317f04a158fc22a80ca48b8686971935424a3302311
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.freedesktop.org/software/libevdev/libevdev-1.13.6.tar.xz
+    sha256: 73f215eccbd8233f414737ac06bca2687e67c44b97d2d7576091aa9718551110
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - python@3.14
+    - pkgconf
+    - python@3.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

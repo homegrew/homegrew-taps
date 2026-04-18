@@ -1,31 +1,56 @@
 name: simgrid
-version: 4.1
+version: "4.1"
 description: Studies behavior of large-scale distributed systems
 homepage: https://simgrid.org/
 license: LGPL-2.1-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/simgrid/blobs/sha256:034c76ebb8ad1d5afe856a54ff4cdd3fdeb60dba91ba0273d6008a20b360ca2b
-    sha256: 034c76ebb8ad1d5afe856a54ff4cdd3fdeb60dba91ba0273d6008a20b360ca2b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/simgrid/blobs/sha256:13c3d84855a6e9788c77ba476525669d4873291eca0b5b8cd93866782879dee3
-    sha256: 13c3d84855a6e9788c77ba476525669d4873291eca0b5b8cd93866782879dee3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/simgrid/blobs/sha256:20872441e0def64e91fe941260e2a627af91e1ac4e8808bb6ebd50a59a852093
-    sha256: 20872441e0def64e91fe941260e2a627af91e1ac4e8808bb6ebd50a59a852093
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/simgrid/blobs/sha256:dcea28cc28e8c118a7f2ae3c49ffa92a82df38b0feebbd4b9176d2915f6ebe5b
-    sha256: dcea28cc28e8c118a7f2ae3c49ffa92a82df38b0feebbd4b9176d2915f6ebe5b
-source:
-  url: https://gitlab.inria.fr/simgrid/simgrid/-/archive/v4.1/simgrid-v4.1.tar.bz2
-  sha256: a3d02f52cfb9c2e341c380cd8e3b43da4b4885161d8e96f4b033e0d3cc8af611
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - graphviz
+    - boost
+    - graphviz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/simgrid/blobs/sha256:13c3d84855a6e9788c77ba476525669d4873291eca0b5b8cd93866782879dee3
+        sha256: 13c3d84855a6e9788c77ba476525669d4873291eca0b5b8cd93866782879dee3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/simgrid/blobs/sha256:034c76ebb8ad1d5afe856a54ff4cdd3fdeb60dba91ba0273d6008a20b360ca2b
+        sha256: 034c76ebb8ad1d5afe856a54ff4cdd3fdeb60dba91ba0273d6008a20b360ca2b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/simgrid/blobs/sha256:20872441e0def64e91fe941260e2a627af91e1ac4e8808bb6ebd50a59a852093
+        sha256: 20872441e0def64e91fe941260e2a627af91e1ac4e8808bb6ebd50a59a852093
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/simgrid/blobs/sha256:dcea28cc28e8c118a7f2ae3c49ffa92a82df38b0feebbd4b9176d2915f6ebe5b
+        sha256: dcea28cc28e8c118a7f2ae3c49ffa92a82df38b0feebbd4b9176d2915f6ebe5b
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.inria.fr/simgrid/simgrid/-/archive/v4.1/simgrid-v4.1.tar.bz2
+    sha256: a3d02f52cfb9c2e341c380cd8e3b43da4b4885161d8e96f4b033e0d3cc8af611
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
+    - cmake
+    - doxygen
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

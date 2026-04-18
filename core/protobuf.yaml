@@ -1,33 +1,57 @@
 name: protobuf
-version: 34.1
-description: "Protocol buffers (Google's data interchange format)"
+version: "34.1"
+description: Protocol buffers (Google's data interchange format)
 homepage: https://protobuf.dev/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:052999e2596cd873392cfc3e9b351892d5dc839776dfb8a115eddf638c6baf04
-    sha256: 052999e2596cd873392cfc3e9b351892d5dc839776dfb8a115eddf638c6baf04
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:06892ef0f54c26fbbca4a01e8620079b1b83bcce53a82ffe04f19290f7df35a2
-    sha256: 06892ef0f54c26fbbca4a01e8620079b1b83bcce53a82ffe04f19290f7df35a2
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:c439d6602fb48906ddd0f1adc80a49b51f71c23b03815de740fdf8b7e13934d4
-    sha256: c439d6602fb48906ddd0f1adc80a49b51f71c23b03815de740fdf8b7e13934d4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:ed890928c4ce477d2ea2ac38e44a253d161882ac2545eab91b974fde89592336
-    sha256: ed890928c4ce477d2ea2ac38e44a253d161882ac2545eab91b974fde89592336
-source:
-  url: https://github.com/protocolbuffers/protobuf/releases/download/v34.1/protobuf-34.1.tar.gz
-  sha256: e4e6ff10760cf747a2decd1867741f561b216bd60cc4038c87564713a6da1848
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
+    - abseil
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:06892ef0f54c26fbbca4a01e8620079b1b83bcce53a82ffe04f19290f7df35a2
+        sha256: 06892ef0f54c26fbbca4a01e8620079b1b83bcce53a82ffe04f19290f7df35a2
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:052999e2596cd873392cfc3e9b351892d5dc839776dfb8a115eddf638c6baf04
+        sha256: 052999e2596cd873392cfc3e9b351892d5dc839776dfb8a115eddf638c6baf04
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:c439d6602fb48906ddd0f1adc80a49b51f71c23b03815de740fdf8b7e13934d4
+        sha256: c439d6602fb48906ddd0f1adc80a49b51f71c23b03815de740fdf8b7e13934d4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:ed890928c4ce477d2ea2ac38e44a253d161882ac2545eab91b974fde89592336
+        sha256: ed890928c4ce477d2ea2ac38e44a253d161882ac2545eab91b974fde89592336
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/protocolbuffers/protobuf/releases/download/v34.1/protobuf-34.1.tar.gz
+    sha256: e4e6ff10760cf747a2decd1867741f561b216bd60cc4038c87564713a6da1848
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - googletest
+    - cmake
+    - googletest
 linux_dependencies:
-  - abseil
-  - zlib-ng-compat
+    - abseil
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

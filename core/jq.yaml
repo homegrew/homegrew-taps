@@ -3,25 +3,51 @@ version: 1.8.1
 description: Lightweight and flexible command-line JSON processor
 homepage: https://jqlang.github.io/jq/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jq/blobs/sha256:90b0fe4ad51959380f16fe8d84c5be8ab525478c32f1f7034c72d99de2442c9b
-    sha256: 90b0fe4ad51959380f16fe8d84c5be8ab525478c32f1f7034c72d99de2442c9b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jq/blobs/sha256:a1a5f487f1840d9a18abdecdf1c6c5a5385917725c6ba88f7f819ac5f4cfa801
-    sha256: a1a5f487f1840d9a18abdecdf1c6c5a5385917725c6ba88f7f819ac5f4cfa801
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/jq/blobs/sha256:82883e1f3b674759d0e3d0c37e6805c0f91e3886f3e40c7ebc57f1e0174dfbe7
-    sha256: 82883e1f3b674759d0e3d0c37e6805c0f91e3886f3e40c7ebc57f1e0174dfbe7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/jq/blobs/sha256:274b391020473ad15697b0eaf0dc7e44a57312e7eaa7642e1bc8426ca9c0a54d
-    sha256: 274b391020473ad15697b0eaf0dc7e44a57312e7eaa7642e1bc8426ca9c0a54d
-source:
-  url: https://github.com/jqlang/jq/releases/download/jq-1.8.1/jq-1.8.1.tar.gz
-  sha256: 2be64e7129cecb11d5906290eba10af694fb9e3e7f9fc208a311dc33ca837eb0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - oniguruma
+    - oniguruma
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jq/blobs/sha256:a1a5f487f1840d9a18abdecdf1c6c5a5385917725c6ba88f7f819ac5f4cfa801
+        sha256: a1a5f487f1840d9a18abdecdf1c6c5a5385917725c6ba88f7f819ac5f4cfa801
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jq/blobs/sha256:90b0fe4ad51959380f16fe8d84c5be8ab525478c32f1f7034c72d99de2442c9b
+        sha256: 90b0fe4ad51959380f16fe8d84c5be8ab525478c32f1f7034c72d99de2442c9b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/jq/blobs/sha256:82883e1f3b674759d0e3d0c37e6805c0f91e3886f3e40c7ebc57f1e0174dfbe7
+        sha256: 82883e1f3b674759d0e3d0c37e6805c0f91e3886f3e40c7ebc57f1e0174dfbe7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jq/blobs/sha256:274b391020473ad15697b0eaf0dc7e44a57312e7eaa7642e1bc8426ca9c0a54d
+        sha256: 274b391020473ad15697b0eaf0dc7e44a57312e7eaa7642e1bc8426ca9c0a54d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/jqlang/jq/releases/download/jq-1.8.1/jq-1.8.1.tar.gz
+    sha256: 2be64e7129cecb11d5906290eba10af694fb9e3e7f9fc208a311dc33ca837eb0
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

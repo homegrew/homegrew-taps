@@ -1,27 +1,53 @@
 name: hashcash
-version: 1.22
+version: "1.22"
 description: Proof-of-work algorithm to counter denial-of-service (DoS) attacks
 homepage: http://hashcash.org
 license: LicenseRef-Homebrew-public-domain OR BSD-3-Clause OR LGPL-2.1-only OR GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hashcash/blobs/sha256:4f0504fa7b4b3ae51ffb3163090b4b4309557b5327cac38f203fdf11dfb8e026
-    sha256: 4f0504fa7b4b3ae51ffb3163090b4b4309557b5327cac38f203fdf11dfb8e026
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hashcash/blobs/sha256:79b371fdc35215fc8e1c9eb83bca3d2ce1fdcfd5d4b998e186f6f4bf6d01a7eb
-    sha256: 79b371fdc35215fc8e1c9eb83bca3d2ce1fdcfd5d4b998e186f6f4bf6d01a7eb
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hashcash/blobs/sha256:2b099580ee6cd7ac69d1c63064049ce5ebb922272245be3f3aeac34943d59274
-    sha256: 2b099580ee6cd7ac69d1c63064049ce5ebb922272245be3f3aeac34943d59274
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hashcash/blobs/sha256:635ea819bef9b8f88bfb4b027258804db1e092f4ea235cd34e09261af318cf31
-    sha256: 635ea819bef9b8f88bfb4b027258804db1e092f4ea235cd34e09261af318cf31
-source:
-  url: https://deb.debian.org/debian/pool/main/h/hashcash/hashcash_1.22.orig.tar.gz
-  sha256: 0192f12d41ce4848e60384398c5ff83579b55710601c7bffe6c88bc56b547896
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hashcash/blobs/sha256:79b371fdc35215fc8e1c9eb83bca3d2ce1fdcfd5d4b998e186f6f4bf6d01a7eb
+        sha256: 79b371fdc35215fc8e1c9eb83bca3d2ce1fdcfd5d4b998e186f6f4bf6d01a7eb
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hashcash/blobs/sha256:4f0504fa7b4b3ae51ffb3163090b4b4309557b5327cac38f203fdf11dfb8e026
+        sha256: 4f0504fa7b4b3ae51ffb3163090b4b4309557b5327cac38f203fdf11dfb8e026
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hashcash/blobs/sha256:2b099580ee6cd7ac69d1c63064049ce5ebb922272245be3f3aeac34943d59274
+        sha256: 2b099580ee6cd7ac69d1c63064049ce5ebb922272245be3f3aeac34943d59274
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hashcash/blobs/sha256:635ea819bef9b8f88bfb4b027258804db1e092f4ea235cd34e09261af318cf31
+        sha256: 635ea819bef9b8f88bfb4b027258804db1e092f4ea235cd34e09261af318cf31
+        sha512: ""
+        signature: ""
+source:
+    url: https://deb.debian.org/debian/pool/main/h/hashcash/hashcash_1.22.orig.tar.gz
+    sha256: 0192f12d41ce4848e60384398c5ff83579b55710601c7bffe6c88bc56b547896
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

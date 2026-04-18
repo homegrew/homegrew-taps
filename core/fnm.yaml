@@ -3,27 +3,52 @@ version: 1.39.0
 description: Fast and simple Node.js version manager
 homepage: https://github.com/Schniz/fnm
 license: GPL-3.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fnm/blobs/sha256:504d89f4004b37c19fdbffd786c99982451c54d9112357f1f8bab27d85336ffc
-    sha256: 504d89f4004b37c19fdbffd786c99982451c54d9112357f1f8bab27d85336ffc
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fnm/blobs/sha256:4733aee6c9507e4100bbdb83ab062e421893ac53538dde7809d17ff619d3bd99
-    sha256: 4733aee6c9507e4100bbdb83ab062e421893ac53538dde7809d17ff619d3bd99
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fnm/blobs/sha256:05e590e196d8cda53779aa9e9dd0aeb8eab19bfa1fcc699b3f11c15c70ea6b94
-    sha256: 05e590e196d8cda53779aa9e9dd0aeb8eab19bfa1fcc699b3f11c15c70ea6b94
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fnm/blobs/sha256:00c561bcdf8ad5c79b0be0dcc46ffcc3aae48fe5ac587530c9411de6ba1c6ed8
-    sha256: 00c561bcdf8ad5c79b0be0dcc46ffcc3aae48fe5ac587530c9411de6ba1c6ed8
-source:
-  url: https://github.com/Schniz/fnm/archive/refs/tags/v1.39.0.tar.gz
-  sha256: 224081a677a02acd9f972885e824a98fa3843f5b778b28400ad5af97752f6127
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fnm/blobs/sha256:4733aee6c9507e4100bbdb83ab062e421893ac53538dde7809d17ff619d3bd99
+        sha256: 4733aee6c9507e4100bbdb83ab062e421893ac53538dde7809d17ff619d3bd99
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fnm/blobs/sha256:504d89f4004b37c19fdbffd786c99982451c54d9112357f1f8bab27d85336ffc
+        sha256: 504d89f4004b37c19fdbffd786c99982451c54d9112357f1f8bab27d85336ffc
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fnm/blobs/sha256:05e590e196d8cda53779aa9e9dd0aeb8eab19bfa1fcc699b3f11c15c70ea6b94
+        sha256: 05e590e196d8cda53779aa9e9dd0aeb8eab19bfa1fcc699b3f11c15c70ea6b94
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fnm/blobs/sha256:00c561bcdf8ad5c79b0be0dcc46ffcc3aae48fe5ac587530c9411de6ba1c6ed8
+        sha256: 00c561bcdf8ad5c79b0be0dcc46ffcc3aae48fe5ac587530c9411de6ba1c6ed8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Schniz/fnm/archive/refs/tags/v1.39.0.tar.gz
+    sha256: 224081a677a02acd9f972885e824a98fa3843f5b778b28400ad5af97752f6127
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

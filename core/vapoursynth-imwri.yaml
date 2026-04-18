@@ -1,39 +1,63 @@
 name: vapoursynth-imwri
-version: 2
+version: "2"
 description: VapourSynth filters - ImageMagick HDRI writer/reader
 homepage: https://github.com/vapoursynth/vs-imwri
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:7a8829c333c4d82d927f3cfc9c88a5d162b230924f17003b44b86f8b61966ff8
-    sha256: 7a8829c333c4d82d927f3cfc9c88a5d162b230924f17003b44b86f8b61966ff8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:11435523067bbf5c1cfd7c9597b1340afe4f34c94c64f8d0667e3d580c84ebe5
-    sha256: 11435523067bbf5c1cfd7c9597b1340afe4f34c94c64f8d0667e3d580c84ebe5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:21b4c595a5528b6d61eaba2d223e2f51bdf2b69ff50d623a915fc55a98263513
-    sha256: 21b4c595a5528b6d61eaba2d223e2f51bdf2b69ff50d623a915fc55a98263513
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:b72bf4ebcdaade6cb9e1ac993c2334fda6aa69b54dab5c5deb58b804fd193d5d
-    sha256: b72bf4ebcdaade6cb9e1ac993c2334fda6aa69b54dab5c5deb58b804fd193d5d
-source:
-  url: https://github.com/vapoursynth/vs-imwri/archive/refs/tags/R2.tar.gz
-  sha256: f4d2965d32877005d0709bd8339828f951885a0cb51e0c006d123ede0b74307b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - imagemagick
-  - libheif
-  - vapoursynth
-  - jpeg-xl
-  - libtiff
+    - imagemagick
+    - libheif
+    - vapoursynth
+    - jpeg-xl
+    - libtiff
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:11435523067bbf5c1cfd7c9597b1340afe4f34c94c64f8d0667e3d580c84ebe5
+        sha256: 11435523067bbf5c1cfd7c9597b1340afe4f34c94c64f8d0667e3d580c84ebe5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:7a8829c333c4d82d927f3cfc9c88a5d162b230924f17003b44b86f8b61966ff8
+        sha256: 7a8829c333c4d82d927f3cfc9c88a5d162b230924f17003b44b86f8b61966ff8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:21b4c595a5528b6d61eaba2d223e2f51bdf2b69ff50d623a915fc55a98263513
+        sha256: 21b4c595a5528b6d61eaba2d223e2f51bdf2b69ff50d623a915fc55a98263513
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:b72bf4ebcdaade6cb9e1ac993c2334fda6aa69b54dab5c5deb58b804fd193d5d
+        sha256: b72bf4ebcdaade6cb9e1ac993c2334fda6aa69b54dab5c5deb58b804fd193d5d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/vapoursynth/vs-imwri/archive/refs/tags/R2.tar.gz
+    sha256: f4d2965d32877005d0709bd8339828f951885a0cb51e0c006d123ede0b74307b
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - imagemagick
-  - libheif
-  - vapoursynth
+    - imagemagick
+    - libheif
+    - vapoursynth
+build:
+    configure: []
+    install: []
+service: null

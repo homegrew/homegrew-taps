@@ -3,25 +3,51 @@ version: 1.36.0
 description: Cross-platform C++ Library for asynchronous programming
 homepage: https://think-async.com/Asio/
 license: BSL-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:c270edee8c7f97079ae4f4cf2c6ea3f072a02e3966354fa233a72df2dff6834b
-    sha256: c270edee8c7f97079ae4f4cf2c6ea3f072a02e3966354fa233a72df2dff6834b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:6a4f0422454474b28955a8d9bb203d703bdbb7c857096dc32bd6c191fb8a0ba5
-    sha256: 6a4f0422454474b28955a8d9bb203d703bdbb7c857096dc32bd6c191fb8a0ba5
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:7b3a5307039ebc24abeba8e99bf96fdff91577b4d2a413715c3e83ff755c4ed4
-    sha256: 7b3a5307039ebc24abeba8e99bf96fdff91577b4d2a413715c3e83ff755c4ed4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:8d1cda2230726d6339c1233ea2a126525d9044aacac103fb6da0fd195698a68b
-    sha256: 8d1cda2230726d6339c1233ea2a126525d9044aacac103fb6da0fd195698a68b
-source:
-  url: https://downloads.sourceforge.net/project/asio/asio/1.36.0%20%28Stable%29/asio-1.36.0.tar.bz2
-  sha256: 7bf4dbe3c1ccd9cc4c94e6e6be026dcc2110f9201d286bb9500dc85d69825524
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:6a4f0422454474b28955a8d9bb203d703bdbb7c857096dc32bd6c191fb8a0ba5
+        sha256: 6a4f0422454474b28955a8d9bb203d703bdbb7c857096dc32bd6c191fb8a0ba5
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:c270edee8c7f97079ae4f4cf2c6ea3f072a02e3966354fa233a72df2dff6834b
+        sha256: c270edee8c7f97079ae4f4cf2c6ea3f072a02e3966354fa233a72df2dff6834b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:7b3a5307039ebc24abeba8e99bf96fdff91577b4d2a413715c3e83ff755c4ed4
+        sha256: 7b3a5307039ebc24abeba8e99bf96fdff91577b4d2a413715c3e83ff755c4ed4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:8d1cda2230726d6339c1233ea2a126525d9044aacac103fb6da0fd195698a68b
+        sha256: 8d1cda2230726d6339c1233ea2a126525d9044aacac103fb6da0fd195698a68b
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/asio/asio/1.36.0%20%28Stable%29/asio-1.36.0.tar.bz2
+    sha256: 7bf4dbe3c1ccd9cc4c94e6e6be026dcc2110f9201d286bb9500dc85d69825524
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

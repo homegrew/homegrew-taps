@@ -3,33 +3,57 @@ version: 0.27.1
 description: Tools and libraries for smart cards
 homepage: https://github.com/OpenSC/OpenSC/wiki
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opensc/blobs/sha256:a0fc8a7cfee8eb808f3dd85158c0cd45d53b6862166943c4c78b32ba0a00a6a5
-    sha256: a0fc8a7cfee8eb808f3dd85158c0cd45d53b6862166943c4c78b32ba0a00a6a5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opensc/blobs/sha256:8b550f5d6a6dc75cf9d04b7275d183a774ac527ef18992a78da86b2361e2ea5c
-    sha256: 8b550f5d6a6dc75cf9d04b7275d183a774ac527ef18992a78da86b2361e2ea5c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/opensc/blobs/sha256:dbd088f9f5696f2469be2b0ca5e89d4dbc90575c5fa7fb79b56f20680546f8f4
-    sha256: dbd088f9f5696f2469be2b0ca5e89d4dbc90575c5fa7fb79b56f20680546f8f4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/opensc/blobs/sha256:6425b5a29fa9a7552449200f4fd125d9b90a2d2db4db5f6f7d5465dae07b12de
-    sha256: 6425b5a29fa9a7552449200f4fd125d9b90a2d2db4db5f6f7d5465dae07b12de
-source:
-  url: https://github.com/OpenSC/OpenSC/releases/download/0.27.1/opensc-0.27.1.tar.gz
-  sha256: 976f4a23eaf3397a1a2c3a7aac80bf971a8c3d829c9a79f06145bfaeeae5eca7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opensc/blobs/sha256:8b550f5d6a6dc75cf9d04b7275d183a774ac527ef18992a78da86b2361e2ea5c
+        sha256: 8b550f5d6a6dc75cf9d04b7275d183a774ac527ef18992a78da86b2361e2ea5c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opensc/blobs/sha256:a0fc8a7cfee8eb808f3dd85158c0cd45d53b6862166943c4c78b32ba0a00a6a5
+        sha256: a0fc8a7cfee8eb808f3dd85158c0cd45d53b6862166943c4c78b32ba0a00a6a5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opensc/blobs/sha256:dbd088f9f5696f2469be2b0ca5e89d4dbc90575c5fa7fb79b56f20680546f8f4
+        sha256: dbd088f9f5696f2469be2b0ca5e89d4dbc90575c5fa7fb79b56f20680546f8f4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opensc/blobs/sha256:6425b5a29fa9a7552449200f4fd125d9b90a2d2db4db5f6f7d5465dae07b12de
+        sha256: 6425b5a29fa9a7552449200f4fd125d9b90a2d2db4db5f6f7d5465dae07b12de
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/OpenSC/OpenSC/releases/download/0.27.1/opensc-0.27.1.tar.gz
+    sha256: 976f4a23eaf3397a1a2c3a7aac80bf971a8c3d829c9a79f06145bfaeeae5eca7
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - docbook-xsl
-  - pkgconf
+    - docbook-xsl
+    - pkgconf
 linux_dependencies:
-  - glib
-  - openssl@3
-  - readline
-  - zlib-ng-compat
+    - glib
+    - openssl@3
+    - readline
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

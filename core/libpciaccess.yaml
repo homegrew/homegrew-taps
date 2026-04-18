@@ -1,26 +1,47 @@
 name: libpciaccess
-version: 0.19
+version: "0.19"
 description: Generic PCI access library
 homepage: https://www.x.org/
 license: MIT
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpciaccess/blobs/sha256:0cce5ea337da65fd2e78188adbfaf895ed72fbef1efe0e3a62680777980ef592
-    sha256: 0cce5ea337da65fd2e78188adbfaf895ed72fbef1efe0e3a62680777980ef592
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpciaccess/blobs/sha256:1700b1d65d3a49ac94b93387a02771c27f6b799fdf1dced68a9440bb7731d995
-    sha256: 1700b1d65d3a49ac94b93387a02771c27f6b799fdf1dced68a9440bb7731d995
-source:
-  url: https://www.x.org/pub/individual/lib/libpciaccess-0.19.tar.xz
-  sha256: 3c55aa86c82e54a4e3109786f0463530d53b36b6d1cfd14616454f985dd2aa43
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpciaccess/blobs/sha256:0cce5ea337da65fd2e78188adbfaf895ed72fbef1efe0e3a62680777980ef592
+        sha256: 0cce5ea337da65fd2e78188adbfaf895ed72fbef1efe0e3a62680777980ef592
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpciaccess/blobs/sha256:1700b1d65d3a49ac94b93387a02771c27f6b799fdf1dced68a9440bb7731d995
+        sha256: 1700b1d65d3a49ac94b93387a02771c27f6b799fdf1dced68a9440bb7731d995
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.x.org/pub/individual/lib/libpciaccess-0.19.tar.xz
+    sha256: 3c55aa86c82e54a4e3109786f0463530d53b36b6d1cfd14616454f985dd2aa43
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
-  - util-macros
+    - meson
+    - ninja
+    - pkgconf
+    - util-macros
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

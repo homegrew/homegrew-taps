@@ -3,29 +3,54 @@ version: 6.11.0
 description: Provides WebSocket communication compliant with RFC 6455
 homepage: https://www.qt.io/
 license: (LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only) AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebsockets/blobs/sha256:c335888dcd57434b71a673ffac8d828c08a1162604b09820ba813aa1fc9ae11d
-    sha256: c335888dcd57434b71a673ffac8d828c08a1162604b09820ba813aa1fc9ae11d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebsockets/blobs/sha256:3e5cafd2c41a9f33eb157d50de1c5cf332d6999797f94bcb1ea24285dee6309e
-    sha256: 3e5cafd2c41a9f33eb157d50de1c5cf332d6999797f94bcb1ea24285dee6309e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebsockets/blobs/sha256:3f74cf8fd0d1a598d9cd1059671d5b9b1664c623a3dc9adabfa7712ecfe77281
-    sha256: 3f74cf8fd0d1a598d9cd1059671d5b9b1664c623a3dc9adabfa7712ecfe77281
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtwebsockets/blobs/sha256:bd1131927a0fa02aefb3daf25bf4ab01cbd4f39d18fe61b30d9552521d525621
-    sha256: bd1131927a0fa02aefb3daf25bf4ab01cbd4f39d18fe61b30d9552521d525621
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtwebsockets-everywhere-src-6.11.0.tar.xz
-  sha256: 569f10d1fb35195869576004f5b5ff09735d2f0319e2e8f0dd0f40c7ec31d032
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
-  - qtdeclarative
+    - qtbase
+    - qtdeclarative
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebsockets/blobs/sha256:3e5cafd2c41a9f33eb157d50de1c5cf332d6999797f94bcb1ea24285dee6309e
+        sha256: 3e5cafd2c41a9f33eb157d50de1c5cf332d6999797f94bcb1ea24285dee6309e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebsockets/blobs/sha256:c335888dcd57434b71a673ffac8d828c08a1162604b09820ba813aa1fc9ae11d
+        sha256: c335888dcd57434b71a673ffac8d828c08a1162604b09820ba813aa1fc9ae11d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebsockets/blobs/sha256:3f74cf8fd0d1a598d9cd1059671d5b9b1664c623a3dc9adabfa7712ecfe77281
+        sha256: 3f74cf8fd0d1a598d9cd1059671d5b9b1664c623a3dc9adabfa7712ecfe77281
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtwebsockets/blobs/sha256:bd1131927a0fa02aefb3daf25bf4ab01cbd4f39d18fe61b30d9552521d525621
+        sha256: bd1131927a0fa02aefb3daf25bf4ab01cbd4f39d18fe61b30d9552521d525621
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtwebsockets-everywhere-src-6.11.0.tar.xz
+    sha256: 569f10d1fb35195869576004f5b5ff09735d2f0319e2e8f0dd0f40c7ec31d032
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

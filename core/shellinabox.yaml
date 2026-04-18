@@ -1,34 +1,58 @@
 name: shellinabox
-version: 2.21
+version: "2.21"
 description: Export command-line tools to web based terminal emulator
 homepage: https://github.com/shellinabox/shellinabox
 license: GPL-2.0-only WITH GPL-3.0-linking-source-exception
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/shellinabox/blobs/sha256:7d44a97956451b5823ac5d47639cafe695be2866bcb2d9328c52fc4e6755f621
-    sha256: 7d44a97956451b5823ac5d47639cafe695be2866bcb2d9328c52fc4e6755f621
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/shellinabox/blobs/sha256:7dba06f482a5bc45a102db5beb1fddd0e19bcfa715a9be908d04fb006e86c5c6
-    sha256: 7dba06f482a5bc45a102db5beb1fddd0e19bcfa715a9be908d04fb006e86c5c6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/shellinabox/blobs/sha256:c64cf382e610886021ffa6d53b10353798293afd68b9ac286930e429df6da58a
-    sha256: c64cf382e610886021ffa6d53b10353798293afd68b9ac286930e429df6da58a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/shellinabox/blobs/sha256:aaca8addc19bbac943421d2f17fff428722a7cd47607c42932acf57088ebd9bb
-    sha256: aaca8addc19bbac943421d2f17fff428722a7cd47607c42932acf57088ebd9bb
-source:
-  url: https://github.com/shellinabox/shellinabox/archive/refs/tags/v2.21.tar.gz
-  sha256: 2a8f94beb286d0851bb146f7a7c480a8740f59b959cbd274e21a8fcbf0a7f307
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/shellinabox/blobs/sha256:7dba06f482a5bc45a102db5beb1fddd0e19bcfa715a9be908d04fb006e86c5c6
+        sha256: 7dba06f482a5bc45a102db5beb1fddd0e19bcfa715a9be908d04fb006e86c5c6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shellinabox/blobs/sha256:7d44a97956451b5823ac5d47639cafe695be2866bcb2d9328c52fc4e6755f621
+        sha256: 7d44a97956451b5823ac5d47639cafe695be2866bcb2d9328c52fc4e6755f621
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/shellinabox/blobs/sha256:c64cf382e610886021ffa6d53b10353798293afd68b9ac286930e429df6da58a
+        sha256: c64cf382e610886021ffa6d53b10353798293afd68b9ac286930e429df6da58a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shellinabox/blobs/sha256:aaca8addc19bbac943421d2f17fff428722a7cd47607c42932acf57088ebd9bb
+        sha256: aaca8addc19bbac943421d2f17fff428722a7cd47607c42932acf57088ebd9bb
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/shellinabox/shellinabox/archive/refs/tags/v2.21.tar.gz
+    sha256: 2a8f94beb286d0851bb146f7a7c480a8740f59b959cbd274e21a8fcbf0a7f307
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
+    - autoconf
+    - automake
+    - libtool
 linux_dependencies:
-  - openssl@3
-  - zlib-ng-compat
+    - openssl@3
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

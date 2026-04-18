@@ -3,39 +3,63 @@ version: 0.4.2
 description: Audio Visualization tool and library
 homepage: https://github.com/Libvisual/libvisual
 license: GPL-2.0-or-later AND GPL-3.0-or-later AND LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libvisual-plugins/blobs/sha256:a9b39959db7f36a26c8ab16323abf734c9f9778ccc3bfd6e07ebef6c2287f39d
-    sha256: a9b39959db7f36a26c8ab16323abf734c9f9778ccc3bfd6e07ebef6c2287f39d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libvisual-plugins/blobs/sha256:6b7d4460b4809101e65b924665b3f864d413fb38d083017108b30a80028b34d6
-    sha256: 6b7d4460b4809101e65b924665b3f864d413fb38d083017108b30a80028b34d6
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libvisual-plugins/blobs/sha256:dfb02d238ee8abe6fa95c0a0d1d9f4fdc77e5d1946ef670b4bfdae9f481f95b3
-    sha256: dfb02d238ee8abe6fa95c0a0d1d9f4fdc77e5d1946ef670b4bfdae9f481f95b3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libvisual-plugins/blobs/sha256:1a8aa255c27a5600d66d0eba73ac39aa0708439481d577482008523119914708
-    sha256: 1a8aa255c27a5600d66d0eba73ac39aa0708439481d577482008523119914708
-source:
-  url: https://github.com/Libvisual/libvisual/releases/download/libvisual-plugins-0.4.2/libvisual-plugins-0.4.2.tar.gz
-  sha256: 55988403682b180d0de5e6082f804f3cf066d9a08e887b10eb6a315eb40d9f87
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jack
-  - libvisual
-  - portaudio
-  - sdl12-compat
+    - jack
+    - libvisual
+    - portaudio
+    - sdl12-compat
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libvisual-plugins/blobs/sha256:6b7d4460b4809101e65b924665b3f864d413fb38d083017108b30a80028b34d6
+        sha256: 6b7d4460b4809101e65b924665b3f864d413fb38d083017108b30a80028b34d6
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libvisual-plugins/blobs/sha256:a9b39959db7f36a26c8ab16323abf734c9f9778ccc3bfd6e07ebef6c2287f39d
+        sha256: a9b39959db7f36a26c8ab16323abf734c9f9778ccc3bfd6e07ebef6c2287f39d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libvisual-plugins/blobs/sha256:dfb02d238ee8abe6fa95c0a0d1d9f4fdc77e5d1946ef670b4bfdae9f481f95b3
+        sha256: dfb02d238ee8abe6fa95c0a0d1d9f4fdc77e5d1946ef670b4bfdae9f481f95b3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libvisual-plugins/blobs/sha256:1a8aa255c27a5600d66d0eba73ac39aa0708439481d577482008523119914708
+        sha256: 1a8aa255c27a5600d66d0eba73ac39aa0708439481d577482008523119914708
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/Libvisual/libvisual/releases/download/libvisual-plugins-0.4.2/libvisual-plugins-0.4.2.tar.gz
+    sha256: 55988403682b180d0de5e6082f804f3cf066d9a08e887b10eb6a315eb40d9f87
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - jack
-  - libvisual
-  - mesa
-  - mesa-glu
-  - portaudio
-  - pulseaudio
-  - sdl12-compat
+    - alsa-lib
+    - jack
+    - libvisual
+    - mesa
+    - mesa-glu
+    - portaudio
+    - pulseaudio
+    - sdl12-compat
+build:
+    configure: []
+    install: []
+service: null

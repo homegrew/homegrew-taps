@@ -3,56 +3,80 @@ version: 4.20.1
 description: Standard unix software packaging tool
 homepage: https://rpm.org/
 license: GPL-2.0-only AND LGPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:9c214ce074bddb955970b60106ebc155f0783a04e2af65080268ccecf7bd499b
-    sha256: 9c214ce074bddb955970b60106ebc155f0783a04e2af65080268ccecf7bd499b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
-    sha256: 862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:936bb8258a1b95397a71270123f6298891fab5b9829c80447721693aa7e45a56
-    sha256: 936bb8258a1b95397a71270123f6298891fab5b9829c80447721693aa7e45a56
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:c8a0598905a3f1eb1c6ca3ea74e9e1313434a6055b9a45ff7c2500facfed373b
-    sha256: c8a0598905a3f1eb1c6ca3ea74e9e1313434a6055b9a45ff7c2500facfed373b
-source:
-  url: https://github.com/rpm-software-management/rpm/releases/download/rpm-4.20.1-release/rpm-4.20.1.tar.bz2
-  sha256: 52647e12638364533ab671cbc8e485c96f9f08889d93fe0ed104a6632661124f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - libarchive
-  - libmagic
-  - lua
-  - nettle
-  - pkgconf
-  - popt
-  - readline
-  - sqlite
-  - xz
-  - zstd
-  - gettext
-  - libomp
+    - gmp
+    - libarchive
+    - libmagic
+    - lua
+    - nettle
+    - pkgconf
+    - popt
+    - readline
+    - sqlite
+    - xz
+    - zstd
+    - gettext
+    - libomp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
+        sha256: 862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:9c214ce074bddb955970b60106ebc155f0783a04e2af65080268ccecf7bd499b
+        sha256: 9c214ce074bddb955970b60106ebc155f0783a04e2af65080268ccecf7bd499b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:936bb8258a1b95397a71270123f6298891fab5b9829c80447721693aa7e45a56
+        sha256: 936bb8258a1b95397a71270123f6298891fab5b9829c80447721693aa7e45a56
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:c8a0598905a3f1eb1c6ca3ea74e9e1313434a6055b9a45ff7c2500facfed373b
+        sha256: c8a0598905a3f1eb1c6ca3ea74e9e1313434a6055b9a45ff7c2500facfed373b
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/rpm-software-management/rpm/releases/download/rpm-4.20.1-release/rpm-4.20.1.tar.bz2
+    sha256: 52647e12638364533ab671cbc8e485c96f9f08889d93fe0ed104a6632661124f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - gettext
-  - python@3.14
-  - rust
+    - cmake
+    - gettext
+    - python@3.14
+    - rust
 linux_dependencies:
-  - elfutils
-  - gmp
-  - libarchive
-  - libmagic
-  - lua
-  - nettle
-  - pkgconf
-  - popt
-  - readline
-  - sqlite
-  - xz
-  - zlib-ng-compat
-  - zstd
+    - elfutils
+    - gmp
+    - libarchive
+    - libmagic
+    - lua
+    - nettle
+    - pkgconf
+    - popt
+    - readline
+    - sqlite
+    - xz
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

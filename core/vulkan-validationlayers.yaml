@@ -3,32 +3,57 @@ version: 1.4.341.0
 description: Vulkan layers that enable developers to verify correct use of the Vulkan API
 homepage: https://github.com/KhronosGroup/Vulkan-ValidationLayers
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vulkan-validationlayers/blobs/sha256:d587e63d697495df391155967d4961abefcc7fbae00f7b0cffbf316ef6267982
-    sha256: d587e63d697495df391155967d4961abefcc7fbae00f7b0cffbf316ef6267982
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vulkan-validationlayers/blobs/sha256:c46930e660bc6ce4ae5604c60f9789af631483bd43f948eca3389ee9a893b650
-    sha256: c46930e660bc6ce4ae5604c60f9789af631483bd43f948eca3389ee9a893b650
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vulkan-validationlayers/blobs/sha256:caf1177297cec627adeba9594320e093f6838173dc8862f982d59ee5a85f6cda
-    sha256: caf1177297cec627adeba9594320e093f6838173dc8862f982d59ee5a85f6cda
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vulkan-validationlayers/blobs/sha256:53f930a8eabb0c0e813813f2ff9f4ca33a61c6f8e1fd6a30b39346e79e3e22b8
-    sha256: 53f930a8eabb0c0e813813f2ff9f4ca33a61c6f8e1fd6a30b39346e79e3e22b8
-source:
-  url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/vulkan-sdk-1.4.341.0.tar.gz
-  sha256: 7f521490495e43561f70fe8b6317fd5cc13d4083413f1abf891f50cbabe12238
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glslang
-  - spirv-tools
-  - vulkan-headers
-  - vulkan-loader
-  - vulkan-utility-libraries
+    - glslang
+    - spirv-tools
+    - vulkan-headers
+    - vulkan-loader
+    - vulkan-utility-libraries
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vulkan-validationlayers/blobs/sha256:c46930e660bc6ce4ae5604c60f9789af631483bd43f948eca3389ee9a893b650
+        sha256: c46930e660bc6ce4ae5604c60f9789af631483bd43f948eca3389ee9a893b650
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vulkan-validationlayers/blobs/sha256:d587e63d697495df391155967d4961abefcc7fbae00f7b0cffbf316ef6267982
+        sha256: d587e63d697495df391155967d4961abefcc7fbae00f7b0cffbf316ef6267982
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vulkan-validationlayers/blobs/sha256:caf1177297cec627adeba9594320e093f6838173dc8862f982d59ee5a85f6cda
+        sha256: caf1177297cec627adeba9594320e093f6838173dc8862f982d59ee5a85f6cda
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vulkan-validationlayers/blobs/sha256:53f930a8eabb0c0e813813f2ff9f4ca33a61c6f8e1fd6a30b39346e79e3e22b8
+        sha256: 53f930a8eabb0c0e813813f2ff9f4ca33a61c6f8e1fd6a30b39346e79e3e22b8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/vulkan-sdk-1.4.341.0.tar.gz
+    sha256: 7f521490495e43561f70fe8b6317fd5cc13d4083413f1abf891f50cbabe12238
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - spirv-headers
+    - cmake
+    - spirv-headers
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

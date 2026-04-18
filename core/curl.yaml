@@ -3,44 +3,67 @@ version: 8.19.0
 description: Get a file from an HTTP, HTTPS or FTP server
 homepage: https://curl.se
 license: curl
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:22a5da2b96dba56d222c6003d7b3add442b7da85b5fd6c4fe95299d3a4568b3f
-    sha256: 22a5da2b96dba56d222c6003d7b3add442b7da85b5fd6c4fe95299d3a4568b3f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:e93bbb5c8a803427c63f9842d42e4d6cda82b51c4d3af345574c15f77541250e
-    sha256: e93bbb5c8a803427c63f9842d42e4d6cda82b51c4d3af345574c15f77541250e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:29ef3f57ed1a8cba8c2689cc8a8ca097908c40d17d4c899e16acfa95ab899b93
-    sha256: 29ef3f57ed1a8cba8c2689cc8a8ca097908c40d17d4c899e16acfa95ab899b93
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:13b26e6b4e2a6df75c7d427fb4149683514772e37064fcdbede143372ab24852
-    sha256: 13b26e6b4e2a6df75c7d427fb4149683514772e37064fcdbede143372ab24852
-source:
-  url: https://curl.se/download/curl-8.19.0.tar.bz2
-  sha256: eba3230c1b659211a7afa0fbf475978cbf99c412e4d72d9aa92d020c460742d4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - brotli
-  - libnghttp2
-  - libnghttp3
-  - libngtcp2
-  - libssh2
-  - openssl@3
-  - zstd
-build_dependencies:
-  - pkgconf
-linux_dependencies:
-  - brotli
-  - libidn2
-  - libnghttp2
-  - libnghttp3
-  - libngtcp2
-  - libssh2
-  - openssl@3
-  - zlib-ng-compat
-  - zstd
+    - brotli
+    - libnghttp2
+    - libnghttp3
+    - libngtcp2
+    - libssh2
+    - openssl@3
+    - zstd
 keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:e93bbb5c8a803427c63f9842d42e4d6cda82b51c4d3af345574c15f77541250e
+        sha256: e93bbb5c8a803427c63f9842d42e4d6cda82b51c4d3af345574c15f77541250e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:22a5da2b96dba56d222c6003d7b3add442b7da85b5fd6c4fe95299d3a4568b3f
+        sha256: 22a5da2b96dba56d222c6003d7b3add442b7da85b5fd6c4fe95299d3a4568b3f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:29ef3f57ed1a8cba8c2689cc8a8ca097908c40d17d4c899e16acfa95ab899b93
+        sha256: 29ef3f57ed1a8cba8c2689cc8a8ca097908c40d17d4c899e16acfa95ab899b93
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:13b26e6b4e2a6df75c7d427fb4149683514772e37064fcdbede143372ab24852
+        sha256: 13b26e6b4e2a6df75c7d427fb4149683514772e37064fcdbede143372ab24852
+        sha512: ""
+        signature: ""
+source:
+    url: https://curl.se/download/curl-8.19.0.tar.bz2
+    sha256: eba3230c1b659211a7afa0fbf475978cbf99c412e4d72d9aa92d020c460742d4
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+linux_dependencies:
+    - brotli
+    - libidn2
+    - libnghttp2
+    - libnghttp3
+    - libngtcp2
+    - libssh2
+    - openssl@3
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

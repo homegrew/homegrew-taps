@@ -3,28 +3,53 @@ version: 0.3.4
 description: SoapySDR HackRF module
 homepage: https://github.com/pothosware/SoapyHackRF/wiki
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/soapyhackrf/blobs/sha256:9c90ca14cff4f27d529309b308ab277e65d808dc90500641162c395784efbb9e
-    sha256: 9c90ca14cff4f27d529309b308ab277e65d808dc90500641162c395784efbb9e
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/soapyhackrf/blobs/sha256:0e13b5a64f3a5038879c929a4108ac9d5d9c2804b7e949816a4645d9edfbcdef
-    sha256: 0e13b5a64f3a5038879c929a4108ac9d5d9c2804b7e949816a4645d9edfbcdef
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/soapyhackrf/blobs/sha256:f8112b3fa519d4f5c319c0dfc36fff70131a54e39616bdf9378ed4625f142374
-    sha256: f8112b3fa519d4f5c319c0dfc36fff70131a54e39616bdf9378ed4625f142374
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/soapyhackrf/blobs/sha256:aac2cfd5a931da22b6fa5bff2e99982da69875261ff6f2b5106f45b233294dbf
-    sha256: aac2cfd5a931da22b6fa5bff2e99982da69875261ff6f2b5106f45b233294dbf
-source:
-  url: https://github.com/pothosware/SoapyHackRF/archive/refs/tags/soapy-hackrf-0.3.4.tar.gz
-  sha256: c7a1b8aee7af9d9e11e42aa436eae8508f19775cdc8bc52e565a5d7f2e2e43ed
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hackrf
-  - soapysdr
+    - hackrf
+    - soapysdr
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/soapyhackrf/blobs/sha256:0e13b5a64f3a5038879c929a4108ac9d5d9c2804b7e949816a4645d9edfbcdef
+        sha256: 0e13b5a64f3a5038879c929a4108ac9d5d9c2804b7e949816a4645d9edfbcdef
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/soapyhackrf/blobs/sha256:9c90ca14cff4f27d529309b308ab277e65d808dc90500641162c395784efbb9e
+        sha256: 9c90ca14cff4f27d529309b308ab277e65d808dc90500641162c395784efbb9e
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/soapyhackrf/blobs/sha256:f8112b3fa519d4f5c319c0dfc36fff70131a54e39616bdf9378ed4625f142374
+        sha256: f8112b3fa519d4f5c319c0dfc36fff70131a54e39616bdf9378ed4625f142374
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/soapyhackrf/blobs/sha256:aac2cfd5a931da22b6fa5bff2e99982da69875261ff6f2b5106f45b233294dbf
+        sha256: aac2cfd5a931da22b6fa5bff2e99982da69875261ff6f2b5106f45b233294dbf
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/pothosware/SoapyHackRF/archive/refs/tags/soapy-hackrf-0.3.4.tar.gz
+    sha256: c7a1b8aee7af9d9e11e42aa436eae8508f19775cdc8bc52e565a5d7f2e2e43ed
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

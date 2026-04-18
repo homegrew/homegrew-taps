@@ -1,27 +1,53 @@
 name: staticcheck
-version: 2026.1
+version: "2026.1"
 description: State of the art linter for the Go programming language
 homepage: https://staticcheck.dev/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/staticcheck/blobs/sha256:af7ccb283942ed2d5d9e664ff9fe4cabafb3fd6b92235880cb91788f56d68839
-    sha256: af7ccb283942ed2d5d9e664ff9fe4cabafb3fd6b92235880cb91788f56d68839
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/staticcheck/blobs/sha256:6e3560acd6d6ea08702e94582dcad31c674c6e79ac86075688726b716b253804
-    sha256: 6e3560acd6d6ea08702e94582dcad31c674c6e79ac86075688726b716b253804
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/staticcheck/blobs/sha256:0d9a570c1ab08a540fb88d525a79e1d7ef8b849e63f79d712e841d0441b23cc5
-    sha256: 0d9a570c1ab08a540fb88d525a79e1d7ef8b849e63f79d712e841d0441b23cc5
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/staticcheck/blobs/sha256:14d83c4c46a35170f2296f911981bd09dc005cf79dbe117bd92b4e9ab95a081d
-    sha256: 14d83c4c46a35170f2296f911981bd09dc005cf79dbe117bd92b4e9ab95a081d
-source:
-  url: https://github.com/dominikh/go-tools/archive/refs/tags/2026.1.tar.gz
-  sha256: 4b20d65194e5462264c784f2968de65fcd7aba8e9efa37aa9b1fadc13b29699b
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - go
+    - go
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/staticcheck/blobs/sha256:6e3560acd6d6ea08702e94582dcad31c674c6e79ac86075688726b716b253804
+        sha256: 6e3560acd6d6ea08702e94582dcad31c674c6e79ac86075688726b716b253804
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/staticcheck/blobs/sha256:af7ccb283942ed2d5d9e664ff9fe4cabafb3fd6b92235880cb91788f56d68839
+        sha256: af7ccb283942ed2d5d9e664ff9fe4cabafb3fd6b92235880cb91788f56d68839
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/staticcheck/blobs/sha256:0d9a570c1ab08a540fb88d525a79e1d7ef8b849e63f79d712e841d0441b23cc5
+        sha256: 0d9a570c1ab08a540fb88d525a79e1d7ef8b849e63f79d712e841d0441b23cc5
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/staticcheck/blobs/sha256:14d83c4c46a35170f2296f911981bd09dc005cf79dbe117bd92b4e9ab95a081d
+        sha256: 14d83c4c46a35170f2296f911981bd09dc005cf79dbe117bd92b4e9ab95a081d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dominikh/go-tools/archive/refs/tags/2026.1.tar.gz
+    sha256: 4b20d65194e5462264c784f2968de65fcd7aba8e9efa37aa9b1fadc13b29699b
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

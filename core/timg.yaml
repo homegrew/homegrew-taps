@@ -3,56 +3,80 @@ version: 1.6.3
 description: Terminal image and video viewer
 homepage: https://timg.sh/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/timg/blobs/sha256:29d6beebc4277ef79f9d14c083fa370a7b929b03a769d676ac9b2bb87964ed68
-    sha256: 29d6beebc4277ef79f9d14c083fa370a7b929b03a769d676ac9b2bb87964ed68
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/timg/blobs/sha256:2bdef3af0e1ae32d4e893d6f8d5984bb1568b9f36e3d91276dbf87d40d7abe3e
-    sha256: 2bdef3af0e1ae32d4e893d6f8d5984bb1568b9f36e3d91276dbf87d40d7abe3e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/timg/blobs/sha256:83740c7f5cc8839d160a8c269e5c4a483e50c0869213a73dd82abecd0ab389bc
-    sha256: 83740c7f5cc8839d160a8c269e5c4a483e50c0869213a73dd82abecd0ab389bc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/timg/blobs/sha256:318dbf7ec1b15f1e72f684b4d8b749ad81e777e3149d5f86a27956f46c79205f
-    sha256: 318dbf7ec1b15f1e72f684b4d8b749ad81e777e3149d5f86a27956f46c79205f
-source:
-  url: https://github.com/hzeller/timg/archive/refs/tags/v1.6.3.tar.gz
-  sha256: 59c908867f18c81106385a43065c232e63236e120d5b2596b179ce56340d7b01
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - ffmpeg
-  - glib
-  - graphicsmagick
-  - jpeg-turbo
-  - libdeflate
-  - libexif
-  - libpng
-  - librsvg
-  - libsixel
-  - openslide
-  - poppler
-  - webp
-  - gdk-pixbuf
-  - gettext
+    - cairo
+    - ffmpeg
+    - glib
+    - graphicsmagick
+    - jpeg-turbo
+    - libdeflate
+    - libexif
+    - libpng
+    - librsvg
+    - libsixel
+    - openslide
+    - poppler
+    - webp
+    - gdk-pixbuf
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/timg/blobs/sha256:2bdef3af0e1ae32d4e893d6f8d5984bb1568b9f36e3d91276dbf87d40d7abe3e
+        sha256: 2bdef3af0e1ae32d4e893d6f8d5984bb1568b9f36e3d91276dbf87d40d7abe3e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/timg/blobs/sha256:29d6beebc4277ef79f9d14c083fa370a7b929b03a769d676ac9b2bb87964ed68
+        sha256: 29d6beebc4277ef79f9d14c083fa370a7b929b03a769d676ac9b2bb87964ed68
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/timg/blobs/sha256:83740c7f5cc8839d160a8c269e5c4a483e50c0869213a73dd82abecd0ab389bc
+        sha256: 83740c7f5cc8839d160a8c269e5c4a483e50c0869213a73dd82abecd0ab389bc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/timg/blobs/sha256:318dbf7ec1b15f1e72f684b4d8b749ad81e777e3149d5f86a27956f46c79205f
+        sha256: 318dbf7ec1b15f1e72f684b4d8b749ad81e777e3149d5f86a27956f46c79205f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/hzeller/timg/archive/refs/tags/v1.6.3.tar.gz
+    sha256: 59c908867f18c81106385a43065c232e63236e120d5b2596b179ce56340d7b01
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - ffmpeg
-  - glib
-  - graphicsmagick
-  - jpeg-turbo
-  - libdeflate
-  - libexif
-  - libpng
-  - librsvg
-  - libsixel
-  - openslide
-  - poppler
-  - webp
+    - cairo
+    - ffmpeg
+    - glib
+    - graphicsmagick
+    - jpeg-turbo
+    - libdeflate
+    - libexif
+    - libpng
+    - librsvg
+    - libsixel
+    - openslide
+    - poppler
+    - webp
+build:
+    configure: []
+    install: []
+service: null

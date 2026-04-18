@@ -3,28 +3,53 @@ version: 0.8.1
 description: Library for RPG Maker 2000/2003 games data
 homepage: https://easyrpg.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:c70e1c25f43bd1afb5cded83eeea2c881255af73ea1fcbc9b997d598418b455f
-    sha256: c70e1c25f43bd1afb5cded83eeea2c881255af73ea1fcbc9b997d598418b455f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:b5f3a2a51b789a81455b7619889327260a3b7c3a624a6d39ff72df566e6a1089
-    sha256: b5f3a2a51b789a81455b7619889327260a3b7c3a624a6d39ff72df566e6a1089
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:e17a85a805ff92cbd72063eb5a5d724f894938fcdf8a0ccbf996016c4f926715
-    sha256: e17a85a805ff92cbd72063eb5a5d724f894938fcdf8a0ccbf996016c4f926715
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:12c761ee5225d3f19c5b16dc98851daa031eb0f554d297866879ab9415b276a6
-    sha256: 12c761ee5225d3f19c5b16dc98851daa031eb0f554d297866879ab9415b276a6
-source:
-  url: https://easyrpg.org/downloads/player/0.8.1/liblcf-0.8.1.tar.xz
-  sha256: e827b265702cf7d9f4af24b8c10df2c608ac70754ef7468e34836201ff172273
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - inih
+    - icu4c@78
+    - inih
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:b5f3a2a51b789a81455b7619889327260a3b7c3a624a6d39ff72df566e6a1089
+        sha256: b5f3a2a51b789a81455b7619889327260a3b7c3a624a6d39ff72df566e6a1089
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:c70e1c25f43bd1afb5cded83eeea2c881255af73ea1fcbc9b997d598418b455f
+        sha256: c70e1c25f43bd1afb5cded83eeea2c881255af73ea1fcbc9b997d598418b455f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:e17a85a805ff92cbd72063eb5a5d724f894938fcdf8a0ccbf996016c4f926715
+        sha256: e17a85a805ff92cbd72063eb5a5d724f894938fcdf8a0ccbf996016c4f926715
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:12c761ee5225d3f19c5b16dc98851daa031eb0f554d297866879ab9415b276a6
+        sha256: 12c761ee5225d3f19c5b16dc98851daa031eb0f554d297866879ab9415b276a6
+        sha512: ""
+        signature: ""
+source:
+    url: https://easyrpg.org/downloads/player/0.8.1/liblcf-0.8.1.tar.xz
+    sha256: e827b265702cf7d9f4af24b8c10df2c608ac70754ef7468e34836201ff172273
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

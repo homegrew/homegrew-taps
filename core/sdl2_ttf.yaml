@@ -3,29 +3,54 @@ version: 2.24.0
 description: Library for using TrueType fonts in SDL applications
 homepage: https://github.com/libsdl-org/SDL_ttf
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_ttf/blobs/sha256:7464ed639413ddbf1b581564c07bab5d3a45325ab44619ac810af3361f3f7ab8
-    sha256: 7464ed639413ddbf1b581564c07bab5d3a45325ab44619ac810af3361f3f7ab8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_ttf/blobs/sha256:601eca4a716530bd0758865775581bb82f581c5a728df398231a0e4ba9b3071f
-    sha256: 601eca4a716530bd0758865775581bb82f581c5a728df398231a0e4ba9b3071f
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_ttf/blobs/sha256:482786481f8a3f5a8f6f147156f5af9cd192e43e2d5b6adf3a5914bcc53bc1cc
-    sha256: 482786481f8a3f5a8f6f147156f5af9cd192e43e2d5b6adf3a5914bcc53bc1cc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/sdl2_ttf/blobs/sha256:548921f9bab6e4907a934102c2b31492a8fd488aac72ad7b35c2010c64978c8d
-    sha256: 548921f9bab6e4907a934102c2b31492a8fd488aac72ad7b35c2010c64978c8d
-source:
-  url: https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.24.0/SDL2_ttf-2.24.0.tar.gz
-  sha256: 0b2bf1e7b6568adbdbc9bb924643f79d9dedafe061fa1ed687d1d9ac4e453bfd
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - harfbuzz
-  - sdl2
+    - freetype
+    - harfbuzz
+    - sdl2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_ttf/blobs/sha256:601eca4a716530bd0758865775581bb82f581c5a728df398231a0e4ba9b3071f
+        sha256: 601eca4a716530bd0758865775581bb82f581c5a728df398231a0e4ba9b3071f
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_ttf/blobs/sha256:7464ed639413ddbf1b581564c07bab5d3a45325ab44619ac810af3361f3f7ab8
+        sha256: 7464ed639413ddbf1b581564c07bab5d3a45325ab44619ac810af3361f3f7ab8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_ttf/blobs/sha256:482786481f8a3f5a8f6f147156f5af9cd192e43e2d5b6adf3a5914bcc53bc1cc
+        sha256: 482786481f8a3f5a8f6f147156f5af9cd192e43e2d5b6adf3a5914bcc53bc1cc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sdl2_ttf/blobs/sha256:548921f9bab6e4907a934102c2b31492a8fd488aac72ad7b35c2010c64978c8d
+        sha256: 548921f9bab6e4907a934102c2b31492a8fd488aac72ad7b35c2010c64978c8d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.24.0/SDL2_ttf-2.24.0.tar.gz
+    sha256: 0b2bf1e7b6568adbdbc9bb924643f79d9dedafe061fa1ed687d1d9ac4e453bfd
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

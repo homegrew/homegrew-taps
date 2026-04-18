@@ -3,30 +3,55 @@ version: 1.5.4
 description: Lightweight C library for the Jabber protocol
 homepage: https://mcabber.com
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/loudmouth/blobs/sha256:6b102ebfa05ec64bba31c02b27a116e39020b136df40c25ddb1509d5fed1bef6
-    sha256: 6b102ebfa05ec64bba31c02b27a116e39020b136df40c25ddb1509d5fed1bef6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/loudmouth/blobs/sha256:923446f9175c19b756f93a709597f676dc328b754899fecabf0ae7a4835dc02e
-    sha256: 923446f9175c19b756f93a709597f676dc328b754899fecabf0ae7a4835dc02e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/loudmouth/blobs/sha256:6052693231034f7a87a85eb4e56755786089171b9ce5ad1e0babe0a891af55d9
-    sha256: 6052693231034f7a87a85eb4e56755786089171b9ce5ad1e0babe0a891af55d9
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/loudmouth/blobs/sha256:c68d8c7b9f5a4437ceb7697484a3609635d8b93fd24a37e1e7a5b973b8c2c9dd
-    sha256: c68d8c7b9f5a4437ceb7697484a3609635d8b93fd24a37e1e7a5b973b8c2c9dd
-source:
-  url: https://mcabber.com/files/loudmouth/loudmouth-1.5.4.tar.bz2
-  sha256: 31cbc91c1fddcc5346b3373b8fb45594e9ea9cc7fe36d0595e8912c47ad94d0d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
-  - glib
-  - gnutls
-  - libidn
+    - gettext
+    - glib
+    - gnutls
+    - libidn
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/loudmouth/blobs/sha256:923446f9175c19b756f93a709597f676dc328b754899fecabf0ae7a4835dc02e
+        sha256: 923446f9175c19b756f93a709597f676dc328b754899fecabf0ae7a4835dc02e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/loudmouth/blobs/sha256:6b102ebfa05ec64bba31c02b27a116e39020b136df40c25ddb1509d5fed1bef6
+        sha256: 6b102ebfa05ec64bba31c02b27a116e39020b136df40c25ddb1509d5fed1bef6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/loudmouth/blobs/sha256:6052693231034f7a87a85eb4e56755786089171b9ce5ad1e0babe0a891af55d9
+        sha256: 6052693231034f7a87a85eb4e56755786089171b9ce5ad1e0babe0a891af55d9
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/loudmouth/blobs/sha256:c68d8c7b9f5a4437ceb7697484a3609635d8b93fd24a37e1e7a5b973b8c2c9dd
+        sha256: c68d8c7b9f5a4437ceb7697484a3609635d8b93fd24a37e1e7a5b973b8c2c9dd
+        sha512: ""
+        signature: ""
+source:
+    url: https://mcabber.com/files/loudmouth/loudmouth-1.5.4.tar.bz2
+    sha256: 31cbc91c1fddcc5346b3373b8fb45594e9ea9cc7fe36d0595e8912c47ad94d0d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

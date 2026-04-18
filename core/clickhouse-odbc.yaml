@@ -3,31 +3,56 @@ version: 1.5.3.20260311
 description: Official ODBC driver implementation for accessing ClickHouse as a data source
 homepage: https://github.com/ClickHouse/clickhouse-odbc
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clickhouse-odbc/blobs/sha256:90eda86018d1c211b87860e180defafae0b0e7ade05aa4efe025df51cf9630d9
-    sha256: 90eda86018d1c211b87860e180defafae0b0e7ade05aa4efe025df51cf9630d9
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clickhouse-odbc/blobs/sha256:039b6b33f07640cd7021638d92e7d9510e16b004852d1cdc22f4890d6cf8e053
-    sha256: 039b6b33f07640cd7021638d92e7d9510e16b004852d1cdc22f4890d6cf8e053
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/clickhouse-odbc/blobs/sha256:ff745d4609f6029eb77599327ee0183d68cac4a22ada376d0bfff2ec89bb9331
-    sha256: ff745d4609f6029eb77599327ee0183d68cac4a22ada376d0bfff2ec89bb9331
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/clickhouse-odbc/blobs/sha256:1f306f9790ec065cedb0ab885bfd55c77368c1ab0976ad98e8572be6029c648f
-    sha256: 1f306f9790ec065cedb0ab885bfd55c77368c1ab0976ad98e8572be6029c648f
-source:
-  url: https://github.com/ClickHouse/clickhouse-odbc/archive/refs/tags/v1.5.3.20260311.tar.gz
-  sha256: bb9311b48ddcd499ed2222a72a07f168f3d4909bd77ec69a78c665784b81c1c1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - icu4c@78
-  - openssl@3
-  - poco
-  - unixodbc
+    - icu4c@78
+    - openssl@3
+    - poco
+    - unixodbc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clickhouse-odbc/blobs/sha256:039b6b33f07640cd7021638d92e7d9510e16b004852d1cdc22f4890d6cf8e053
+        sha256: 039b6b33f07640cd7021638d92e7d9510e16b004852d1cdc22f4890d6cf8e053
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clickhouse-odbc/blobs/sha256:90eda86018d1c211b87860e180defafae0b0e7ade05aa4efe025df51cf9630d9
+        sha256: 90eda86018d1c211b87860e180defafae0b0e7ade05aa4efe025df51cf9630d9
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/clickhouse-odbc/blobs/sha256:ff745d4609f6029eb77599327ee0183d68cac4a22ada376d0bfff2ec89bb9331
+        sha256: ff745d4609f6029eb77599327ee0183d68cac4a22ada376d0bfff2ec89bb9331
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clickhouse-odbc/blobs/sha256:1f306f9790ec065cedb0ab885bfd55c77368c1ab0976ad98e8572be6029c648f
+        sha256: 1f306f9790ec065cedb0ab885bfd55c77368c1ab0976ad98e8572be6029c648f
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/ClickHouse/clickhouse-odbc/archive/refs/tags/v1.5.3.20260311.tar.gz
+    sha256: bb9311b48ddcd499ed2222a72a07f168f3d4909bd77ec69a78c665784b81c1c1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - folly
+    - cmake
+    - folly
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

@@ -3,29 +3,55 @@ version: 0.7.1
 description: Kafka traffic simulator for observability and chaos engineering
 homepage: https://github.com/aleksandarskrbic/khaos
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/khaos/blobs/sha256:d05a0512180e37f5298814523851c12a6c71845bb8372c704373cb279c16beb0
-    sha256: d05a0512180e37f5298814523851c12a6c71845bb8372c704373cb279c16beb0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/khaos/blobs/sha256:a0679960d107e0e16efd237184584848e76baeaa42bfb7945e0ee1689f11ba4c
-    sha256: a0679960d107e0e16efd237184584848e76baeaa42bfb7945e0ee1689f11ba4c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/khaos/blobs/sha256:d4cf0faf45913674252668baecc7d83902e7de9c2c02fa31f4aeb5c9792e45c7
-    sha256: d4cf0faf45913674252668baecc7d83902e7de9c2c02fa31f4aeb5c9792e45c7
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/khaos/blobs/sha256:e4256a92eb706fa8dd7de0a2b4fea99d62c8972106195931a107c2557b5c4c08
-    sha256: e4256a92eb706fa8dd7de0a2b4fea99d62c8972106195931a107c2557b5c4c08
-source:
-  url: https://files.pythonhosted.org/packages/7f/0c/932228842cb6c0357fa4f41c5e68afaf3b41b7698f0794af300533594432/khaos_cli-0.7.1.tar.gz
-  sha256: f5eb232f427dab15bbaa7ff8200a17d04c036a695c1c614e862bf87d93917b20
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - cryptography
-  - librdkafka
-  - libyaml
-  - python@3.14
+    - certifi
+    - cryptography
+    - librdkafka
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/khaos/blobs/sha256:a0679960d107e0e16efd237184584848e76baeaa42bfb7945e0ee1689f11ba4c
+        sha256: a0679960d107e0e16efd237184584848e76baeaa42bfb7945e0ee1689f11ba4c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/khaos/blobs/sha256:d05a0512180e37f5298814523851c12a6c71845bb8372c704373cb279c16beb0
+        sha256: d05a0512180e37f5298814523851c12a6c71845bb8372c704373cb279c16beb0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/khaos/blobs/sha256:d4cf0faf45913674252668baecc7d83902e7de9c2c02fa31f4aeb5c9792e45c7
+        sha256: d4cf0faf45913674252668baecc7d83902e7de9c2c02fa31f4aeb5c9792e45c7
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/khaos/blobs/sha256:e4256a92eb706fa8dd7de0a2b4fea99d62c8972106195931a107c2557b5c4c08
+        sha256: e4256a92eb706fa8dd7de0a2b4fea99d62c8972106195931a107c2557b5c4c08
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/7f/0c/932228842cb6c0357fa4f41c5e68afaf3b41b7698f0794af300533594432/khaos_cli-0.7.1.tar.gz
+    sha256: f5eb232f427dab15bbaa7ff8200a17d04c036a695c1c614e862bf87d93917b20
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

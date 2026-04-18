@@ -1,53 +1,77 @@
 name: ffmpeg
-version: 8.1
+version: "8.1"
 description: Play, record, convert, and stream select audio and video codecs
 homepage: https://ffmpeg.org/
 license: GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:024e65624fd6c45be22c5584824a58f9d1574f011de2ab8663deb24859d7c270
-    sha256: 024e65624fd6c45be22c5584824a58f9d1574f011de2ab8663deb24859d7c270
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:a8436e19dbac435e356681824c94cd67d7382409241a0b748333568cbc85a972
-    sha256: a8436e19dbac435e356681824c94cd67d7382409241a0b748333568cbc85a972
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:f6e9a913d33d319cc4c47876c71d06b91ef6e37df94555052d2674b7fed159e2
-    sha256: f6e9a913d33d319cc4c47876c71d06b91ef6e37df94555052d2674b7fed159e2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:b35368cffecc23ce31d656f0d1e27b594562de8398e7685e7dca3b293ffc2676
-    sha256: b35368cffecc23ce31d656f0d1e27b594562de8398e7685e7dca3b293ffc2676
-source:
-  url: https://ffmpeg.org/releases/ffmpeg-8.1.tar.xz
-  sha256: b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - dav1d
-  - lame
-  - libvmaf
-  - libvpx
-  - openssl@3
-  - opus
-  - sdl2
-  - svt-av1
-  - x264
-  - x265
+    - dav1d
+    - lame
+    - libvmaf
+    - libvpx
+    - openssl@3
+    - opus
+    - sdl2
+    - svt-av1
+    - x264
+    - x265
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:a8436e19dbac435e356681824c94cd67d7382409241a0b748333568cbc85a972
+        sha256: a8436e19dbac435e356681824c94cd67d7382409241a0b748333568cbc85a972
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:024e65624fd6c45be22c5584824a58f9d1574f011de2ab8663deb24859d7c270
+        sha256: 024e65624fd6c45be22c5584824a58f9d1574f011de2ab8663deb24859d7c270
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:f6e9a913d33d319cc4c47876c71d06b91ef6e37df94555052d2674b7fed159e2
+        sha256: f6e9a913d33d319cc4c47876c71d06b91ef6e37df94555052d2674b7fed159e2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:b35368cffecc23ce31d656f0d1e27b594562de8398e7685e7dca3b293ffc2676
+        sha256: b35368cffecc23ce31d656f0d1e27b594562de8398e7685e7dca3b293ffc2676
+        sha512: ""
+        signature: ""
+source:
+    url: https://ffmpeg.org/releases/ffmpeg-8.1.tar.xz
+    sha256: b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - alsa-lib
-  - dav1d
-  - lame
-  - libvmaf
-  - libvpx
-  - libxcb
-  - openssl@3
-  - opus
-  - sdl2
-  - svt-av1
-  - x264
-  - x265
-  - xz
-  - zlib-ng-compat
+    - alsa-lib
+    - dav1d
+    - lame
+    - libvmaf
+    - libvpx
+    - libxcb
+    - openssl@3
+    - opus
+    - sdl2
+    - svt-av1
+    - x264
+    - x265
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

@@ -1,31 +1,56 @@
 name: nickle
-version: 2.108
+version: "2.108"
 description: Desk calculator language
 homepage: https://www.nickle.org/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:0b0cbbfd7d0e29a4d35cbb8324c7858298314c4204281f7f3789ebf5150d8275
-    sha256: 0b0cbbfd7d0e29a4d35cbb8324c7858298314c4204281f7f3789ebf5150d8275
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:cb2833fdb38bf1bee8a5410ccf5d5a9826c788ba2e4d42b84c682a7f05a89d6e
-    sha256: cb2833fdb38bf1bee8a5410ccf5d5a9826c788ba2e4d42b84c682a7f05a89d6e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:57f71c8ef976c7f3be7f27897b7a7cb3b9292e6f8ea5f804182088a035908d5b
-    sha256: 57f71c8ef976c7f3be7f27897b7a7cb3b9292e6f8ea5f804182088a035908d5b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:481fbbf107f27a96f0af9f4210eb517625186398fd78f5bb04ce13278764133a
-    sha256: 481fbbf107f27a96f0af9f4210eb517625186398fd78f5bb04ce13278764133a
-source:
-  url: https://nickle.org/release/nickle-2.108.tar.xz
-  sha256: 0b68a2f3e123f27c32b971029658abaae00b4c3ae6e79c3f2c18c5dbbfe554d3
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
+    - gmp
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:cb2833fdb38bf1bee8a5410ccf5d5a9826c788ba2e4d42b84c682a7f05a89d6e
+        sha256: cb2833fdb38bf1bee8a5410ccf5d5a9826c788ba2e4d42b84c682a7f05a89d6e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:0b0cbbfd7d0e29a4d35cbb8324c7858298314c4204281f7f3789ebf5150d8275
+        sha256: 0b0cbbfd7d0e29a4d35cbb8324c7858298314c4204281f7f3789ebf5150d8275
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:57f71c8ef976c7f3be7f27897b7a7cb3b9292e6f8ea5f804182088a035908d5b
+        sha256: 57f71c8ef976c7f3be7f27897b7a7cb3b9292e6f8ea5f804182088a035908d5b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:481fbbf107f27a96f0af9f4210eb517625186398fd78f5bb04ce13278764133a
+        sha256: 481fbbf107f27a96f0af9f4210eb517625186398fd78f5bb04ce13278764133a
+        sha512: ""
+        signature: ""
+source:
+    url: https://nickle.org/release/nickle-2.108.tar.xz
+    sha256: 0b68a2f3e123f27c32b971029658abaae00b4c3ae6e79c3f2c18c5dbbfe554d3
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - meson
-  - ninja
-  - pkgconf
+    - meson
+    - ninja
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

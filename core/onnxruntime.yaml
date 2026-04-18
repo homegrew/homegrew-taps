@@ -3,38 +3,63 @@ version: 1.24.4
 description: Cross-platform, high performance scoring engine for ML models
 homepage: https://github.com/microsoft/onnxruntime
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:1e6c19f92971fd3b181d432199f9b9f6a60c69ba3bdee811bc960f01da5c7acb
-    sha256: 1e6c19f92971fd3b181d432199f9b9f6a60c69ba3bdee811bc960f01da5c7acb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:1b060f94c8a7f06f2d5abc47f08e3f0638963ccc76d041028d45d056699f5965
-    sha256: 1b060f94c8a7f06f2d5abc47f08e3f0638963ccc76d041028d45d056699f5965
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:f32f75f0ff82bf6d27478d521b4c566c006389f3930d3cc963f1136cd6aae694
-    sha256: f32f75f0ff82bf6d27478d521b4c566c006389f3930d3cc963f1136cd6aae694
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:e708455ac9d0298be30985858b747ad44c30c0a2cc142369909a49c6198d2cd9
-    sha256: e708455ac9d0298be30985858b747ad44c30c0a2cc142369909a49c6198d2cd9
-source:
-  url: https://github.com/microsoft/onnxruntime/archive/refs/tags/v1.24.4.tar.gz
-  sha256: 0cf4d2ee4392fbb8aedaabc6b2ba11b4a680d1071fa4f75546c2289ca5b404cf
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - abseil
-  - onnx
-  - protobuf
-  - re2
+    - abseil
+    - onnx
+    - protobuf
+    - re2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:1b060f94c8a7f06f2d5abc47f08e3f0638963ccc76d041028d45d056699f5965
+        sha256: 1b060f94c8a7f06f2d5abc47f08e3f0638963ccc76d041028d45d056699f5965
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:1e6c19f92971fd3b181d432199f9b9f6a60c69ba3bdee811bc960f01da5c7acb
+        sha256: 1e6c19f92971fd3b181d432199f9b9f6a60c69ba3bdee811bc960f01da5c7acb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:f32f75f0ff82bf6d27478d521b4c566c006389f3930d3cc963f1136cd6aae694
+        sha256: f32f75f0ff82bf6d27478d521b4c566c006389f3930d3cc963f1136cd6aae694
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:e708455ac9d0298be30985858b747ad44c30c0a2cc142369909a49c6198d2cd9
+        sha256: e708455ac9d0298be30985858b747ad44c30c0a2cc142369909a49c6198d2cd9
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/microsoft/onnxruntime/archive/refs/tags/v1.24.4.tar.gz
+    sha256: 0cf4d2ee4392fbb8aedaabc6b2ba11b4a680d1071fa4f75546c2289ca5b404cf
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - cmake
-  - cpp-gsl
-  - eigen
-  - flatbuffers
-  - howard-hinnant-date
-  - nlohmann-json
-  - python@3.14
-  - safeint
+    - boost
+    - cmake
+    - cpp-gsl
+    - eigen
+    - flatbuffers
+    - howard-hinnant-date
+    - nlohmann-json
+    - python@3.14
+    - safeint
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

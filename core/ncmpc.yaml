@@ -1,40 +1,64 @@
 name: ncmpc
-version: 0.52
+version: "0.52"
 description: Curses Music Player Daemon (MPD) client
 homepage: https://www.musicpd.org/clients/ncmpc/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncmpc/blobs/sha256:79925b06f7a4619e7e1e062db3ce4cac42646b6e3152de52554cad995969cbe1
-    sha256: 79925b06f7a4619e7e1e062db3ce4cac42646b6e3152de52554cad995969cbe1
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncmpc/blobs/sha256:57f3acdb57163d256a7470b702b6630cf79585c84822cfc6b1d10784c18a8fcc
-    sha256: 57f3acdb57163d256a7470b702b6630cf79585c84822cfc6b1d10784c18a8fcc
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/ncmpc/blobs/sha256:8244e48ef47afc6f03c012409429e6fd1c2c8631a53a197d31b0df9ac88a7628
-    sha256: 8244e48ef47afc6f03c012409429e6fd1c2c8631a53a197d31b0df9ac88a7628
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/ncmpc/blobs/sha256:40bc8c01c1dfcd01f160e9ee0286225a681ebcf2962a47d820137d54a5bc50c8
-    sha256: 40bc8c01c1dfcd01f160e9ee0286225a681ebcf2962a47d820137d54a5bc50c8
-source:
-  url: https://www.musicpd.org/download/ncmpc/0/ncmpc-0.52.tar.xz
-  sha256: 3af225496fe363a8534a9780fb46ae1bd17baefd80cf4ba7430a19cddd73eb1a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fmt
-  - libmpdclient
-  - pcre2
-  - gettext
+    - fmt
+    - libmpdclient
+    - pcre2
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncmpc/blobs/sha256:57f3acdb57163d256a7470b702b6630cf79585c84822cfc6b1d10784c18a8fcc
+        sha256: 57f3acdb57163d256a7470b702b6630cf79585c84822cfc6b1d10784c18a8fcc
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncmpc/blobs/sha256:79925b06f7a4619e7e1e062db3ce4cac42646b6e3152de52554cad995969cbe1
+        sha256: 79925b06f7a4619e7e1e062db3ce4cac42646b6e3152de52554cad995969cbe1
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ncmpc/blobs/sha256:8244e48ef47afc6f03c012409429e6fd1c2c8631a53a197d31b0df9ac88a7628
+        sha256: 8244e48ef47afc6f03c012409429e6fd1c2c8631a53a197d31b0df9ac88a7628
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ncmpc/blobs/sha256:40bc8c01c1dfcd01f160e9ee0286225a681ebcf2962a47d820137d54a5bc50c8
+        sha256: 40bc8c01c1dfcd01f160e9ee0286225a681ebcf2962a47d820137d54a5bc50c8
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.musicpd.org/download/ncmpc/0/ncmpc-0.52.tar.xz
+    sha256: 3af225496fe363a8534a9780fb46ae1bd17baefd80cf4ba7430a19cddd73eb1a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - gettext
-  - meson
-  - ninja
-  - pkgconf
+    - boost
+    - gettext
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - fmt
-  - libmpdclient
-  - pcre2
+    - fmt
+    - libmpdclient
+    - pcre2
+build:
+    configure: []
+    install: []
+service: null

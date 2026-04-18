@@ -3,35 +3,59 @@ version: 6.11.0
 description: High-level QML module adding physical simulation capabilities to Qt Quick 3D
 homepage: https://www.qt.io/
 license: GPL-3.0-only AND (GPL-3.0-only WITH Qt-GPL-exception-1.0) AND BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtquick3dphysics/blobs/sha256:bdd01655a87e807054bb402cfd36923367ebd0c52da00c7c8e7fd4ca0690d1fb
-    sha256: bdd01655a87e807054bb402cfd36923367ebd0c52da00c7c8e7fd4ca0690d1fb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtquick3dphysics/blobs/sha256:9aaa38fb517611a3a05ce4df3ea606af679df83e62680818ce0f1a859b5de19e
-    sha256: 9aaa38fb517611a3a05ce4df3ea606af679df83e62680818ce0f1a859b5de19e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/qtquick3dphysics/blobs/sha256:c618502d7064597cc40a53ddf2cbe9b84d6ea64677db9430c8a4b2c333019564
-    sha256: c618502d7064597cc40a53ddf2cbe9b84d6ea64677db9430c8a4b2c333019564
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/qtquick3dphysics/blobs/sha256:02757b61382db100708b8d71642f9e5434a34059808df9378de708c9498f6703
-    sha256: 02757b61382db100708b8d71642f9e5434a34059808df9378de708c9498f6703
-source:
-  url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtquick3dphysics-everywhere-src-6.11.0.tar.xz
-  sha256: a57a6c8ef631a6ed1fe8390d66a2c3c658bd27fbab7419591944eb3e424a9d35
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - qtbase
-  - qtdeclarative
-  - qtquick3d
-  - qtshadertools
+    - qtbase
+    - qtdeclarative
+    - qtquick3d
+    - qtshadertools
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtquick3dphysics/blobs/sha256:9aaa38fb517611a3a05ce4df3ea606af679df83e62680818ce0f1a859b5de19e
+        sha256: 9aaa38fb517611a3a05ce4df3ea606af679df83e62680818ce0f1a859b5de19e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtquick3dphysics/blobs/sha256:bdd01655a87e807054bb402cfd36923367ebd0c52da00c7c8e7fd4ca0690d1fb
+        sha256: bdd01655a87e807054bb402cfd36923367ebd0c52da00c7c8e7fd4ca0690d1fb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/qtquick3dphysics/blobs/sha256:c618502d7064597cc40a53ddf2cbe9b84d6ea64677db9430c8a4b2c333019564
+        sha256: c618502d7064597cc40a53ddf2cbe9b84d6ea64677db9430c8a4b2c333019564
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/qtquick3dphysics/blobs/sha256:02757b61382db100708b8d71642f9e5434a34059808df9378de708c9498f6703
+        sha256: 02757b61382db100708b8d71642f9e5434a34059808df9378de708c9498f6703
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtquick3dphysics-everywhere-src-6.11.0.tar.xz
+    sha256: a57a6c8ef631a6ed1fe8390d66a2c3c658bd27fbab7419591944eb3e424a9d35
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - ninja
+    - cmake
+    - ninja
 linux_dependencies:
-  - qtbase
-  - qtdeclarative
-  - qtquick3d
+    - qtbase
+    - qtdeclarative
+    - qtquick3d
+build:
+    configure: []
+    install: []
+service: null

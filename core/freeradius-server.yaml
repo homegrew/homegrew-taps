@@ -3,40 +3,65 @@ version: 3.2.8
 description: High-performance and highly configurable RADIUS server
 homepage: https://freeradius.org/
 license: GPL-2.0-or-later AND LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:d3f0e7b7ab81d4933f413d642e00cd0792699e31fc0c2d623a3b3107c0bf887d
-    sha256: d3f0e7b7ab81d4933f413d642e00cd0792699e31fc0c2d623a3b3107c0bf887d
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:a5c62d00dbebc8f37c318af0389da842d670dd09c470c3a2d0c7c86a1d5acdf8
-    sha256: a5c62d00dbebc8f37c318af0389da842d670dd09c470c3a2d0c7c86a1d5acdf8
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:e316f4497fe6c34a4a7ead7cc8b538e89de27041f9e4df8b784e1b794cf5b347
-    sha256: e316f4497fe6c34a4a7ead7cc8b538e89de27041f9e4df8b784e1b794cf5b347
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:d163e136724def827bb368e19d417465fa264d7171db9d6ac4d6381d9a410dc1
-    sha256: d163e136724def827bb368e19d417465fa264d7171db9d6ac4d6381d9a410dc1
-source:
-  url: https://github.com/FreeRADIUS/freeradius-server/archive/refs/tags/release_3_2_8.tar.gz
-  sha256: 7a42562d4c1b0dfd67783b995b33df6ea0983573b2a3b2b99c368dda647e562c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - collectd
-  - json-c
-  - openssl@3
-  - python@3.14
-  - talloc
-  - readline
-  - sqlite
+    - collectd
+    - json-c
+    - openssl@3
+    - python@3.14
+    - talloc
+    - readline
+    - sqlite
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:a5c62d00dbebc8f37c318af0389da842d670dd09c470c3a2d0c7c86a1d5acdf8
+        sha256: a5c62d00dbebc8f37c318af0389da842d670dd09c470c3a2d0c7c86a1d5acdf8
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:d3f0e7b7ab81d4933f413d642e00cd0792699e31fc0c2d623a3b3107c0bf887d
+        sha256: d3f0e7b7ab81d4933f413d642e00cd0792699e31fc0c2d623a3b3107c0bf887d
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:e316f4497fe6c34a4a7ead7cc8b538e89de27041f9e4df8b784e1b794cf5b347
+        sha256: e316f4497fe6c34a4a7ead7cc8b538e89de27041f9e4df8b784e1b794cf5b347
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:d163e136724def827bb368e19d417465fa264d7171db9d6ac4d6381d9a410dc1
+        sha256: d163e136724def827bb368e19d417465fa264d7171db9d6ac4d6381d9a410dc1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/FreeRADIUS/freeradius-server/archive/refs/tags/release_3_2_8.tar.gz
+    sha256: 7a42562d4c1b0dfd67783b995b33df6ea0983573b2a3b2b99c368dda647e562c
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - collectd
-  - gdbm
-  - json-c
-  - openssl@3
-  - python@3.14
-  - readline
-  - sqlite
-  - talloc
+    - collectd
+    - gdbm
+    - json-c
+    - openssl@3
+    - python@3.14
+    - readline
+    - sqlite
+    - talloc
+build:
+    configure: []
+    install: []
+service: null

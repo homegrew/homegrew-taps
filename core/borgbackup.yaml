@@ -3,40 +3,64 @@ version: 1.4.4
 description: Deduplicating archiver with compression and authenticated encryption
 homepage: https://www.borgbackup.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/borgbackup/blobs/sha256:cef0d0124fdb140060100f61ea57c1bdf7d72d80d9cf25e3bd22f42e7947cbea
-    sha256: cef0d0124fdb140060100f61ea57c1bdf7d72d80d9cf25e3bd22f42e7947cbea
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/borgbackup/blobs/sha256:a2a8796545d9be4e01d4d13b717cafce8ffaa1d40fff5d9d4b6457333aa3221e
-    sha256: a2a8796545d9be4e01d4d13b717cafce8ffaa1d40fff5d9d4b6457333aa3221e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/borgbackup/blobs/sha256:e655e9ba03ae174b79acfb4bd8de8deb6408c77430b58a84ce252d9dbcdf5656
-    sha256: e655e9ba03ae174b79acfb4bd8de8deb6408c77430b58a84ce252d9dbcdf5656
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/borgbackup/blobs/sha256:8799c68b83b8490a5aba4b30839b81a3962e95d8e11a440765c9f58174b70d23
-    sha256: 8799c68b83b8490a5aba4b30839b81a3962e95d8e11a440765c9f58174b70d23
-source:
-  url: https://files.pythonhosted.org/packages/eb/38/7fc8c8c7d9dba455f0e29f2ab5b77109313f4e58fe5014d0e1b7855de3cd/borgbackup-1.4.4.tar.gz
-  sha256: 2716bc124a24908efcac9436df31b716d1f0bbd828ad39b18f73bfdd772a651a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libb2
-  - lz4
-  - openssl@3
-  - python@3.14
-  - xxhash
-  - zstd
+    - libb2
+    - lz4
+    - openssl@3
+    - python@3.14
+    - xxhash
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/borgbackup/blobs/sha256:a2a8796545d9be4e01d4d13b717cafce8ffaa1d40fff5d9d4b6457333aa3221e
+        sha256: a2a8796545d9be4e01d4d13b717cafce8ffaa1d40fff5d9d4b6457333aa3221e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/borgbackup/blobs/sha256:cef0d0124fdb140060100f61ea57c1bdf7d72d80d9cf25e3bd22f42e7947cbea
+        sha256: cef0d0124fdb140060100f61ea57c1bdf7d72d80d9cf25e3bd22f42e7947cbea
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/borgbackup/blobs/sha256:e655e9ba03ae174b79acfb4bd8de8deb6408c77430b58a84ce252d9dbcdf5656
+        sha256: e655e9ba03ae174b79acfb4bd8de8deb6408c77430b58a84ce252d9dbcdf5656
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/borgbackup/blobs/sha256:8799c68b83b8490a5aba4b30839b81a3962e95d8e11a440765c9f58174b70d23
+        sha256: 8799c68b83b8490a5aba4b30839b81a3962e95d8e11a440765c9f58174b70d23
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/eb/38/7fc8c8c7d9dba455f0e29f2ab5b77109313f4e58fe5014d0e1b7855de3cd/borgbackup-1.4.4.tar.gz
+    sha256: 2716bc124a24908efcac9436df31b716d1f0bbd828ad39b18f73bfdd772a651a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
 linux_dependencies:
-  - acl
-  - libb2
-  - lz4
-  - openssl@3
-  - python@3.14
-  - xxhash
-  - zstd
+    - acl
+    - libb2
+    - lz4
+    - openssl@3
+    - python@3.14
+    - xxhash
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

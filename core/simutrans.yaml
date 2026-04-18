@@ -3,43 +3,67 @@ version: 124.3.1
 description: Transport simulator
 homepage: https://www.simutrans.com/
 license: Artistic-1.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/simutrans/blobs/sha256:1fd7de0f2f6d759224c301571e17f5057755b13ad09ead31dbc2589c6ea0c4f8
-    sha256: 1fd7de0f2f6d759224c301571e17f5057755b13ad09ead31dbc2589c6ea0c4f8
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/simutrans/blobs/sha256:54bcf8151b603d18cdb4b2c50d627289797bc65b21d58282e41567a601c0bce9
-    sha256: 54bcf8151b603d18cdb4b2c50d627289797bc65b21d58282e41567a601c0bce9
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/simutrans/blobs/sha256:ba5871955287bcbe8520ed25d63be1c4ce7c9b797caab0c2cac970676f9b4c44
-    sha256: ba5871955287bcbe8520ed25d63be1c4ce7c9b797caab0c2cac970676f9b4c44
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/simutrans/blobs/sha256:365b26012ec707690ec42834ab7ac2753d8547246fde48f13bf8e66274f328ff
-    sha256: 365b26012ec707690ec42834ab7ac2753d8547246fde48f13bf8e66274f328ff
-source:
-  url: svn://servers.simutrans.org/simutrans/trunk/
-  sha256: 
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fluid-synth
-  - fontconfig
-  - freetype
-  - libpng
-  - miniupnpc
-  - sdl2
-  - zstd
+    - fluid-synth
+    - fontconfig
+    - freetype
+    - libpng
+    - miniupnpc
+    - sdl2
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/simutrans/blobs/sha256:54bcf8151b603d18cdb4b2c50d627289797bc65b21d58282e41567a601c0bce9
+        sha256: 54bcf8151b603d18cdb4b2c50d627289797bc65b21d58282e41567a601c0bce9
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/simutrans/blobs/sha256:1fd7de0f2f6d759224c301571e17f5057755b13ad09ead31dbc2589c6ea0c4f8
+        sha256: 1fd7de0f2f6d759224c301571e17f5057755b13ad09ead31dbc2589c6ea0c4f8
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/simutrans/blobs/sha256:ba5871955287bcbe8520ed25d63be1c4ce7c9b797caab0c2cac970676f9b4c44
+        sha256: ba5871955287bcbe8520ed25d63be1c4ce7c9b797caab0c2cac970676f9b4c44
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/simutrans/blobs/sha256:365b26012ec707690ec42834ab7ac2753d8547246fde48f13bf8e66274f328ff
+        sha256: 365b26012ec707690ec42834ab7ac2753d8547246fde48f13bf8e66274f328ff
+        sha512: ""
+        signature: ""
+source:
+    url: svn://servers.simutrans.org/simutrans/trunk/
+    sha256: ""
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - fluid-synth
-  - fontconfig
-  - freetype
-  - libpng
-  - miniupnpc
-  - sdl2
-  - zlib-ng-compat
-  - zstd
+    - fluid-synth
+    - fontconfig
+    - freetype
+    - libpng
+    - miniupnpc
+    - sdl2
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

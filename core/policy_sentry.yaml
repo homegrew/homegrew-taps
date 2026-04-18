@@ -3,29 +3,54 @@ version: 0.15.2
 description: Generate locked-down AWS IAM Policies
 homepage: https://policy-sentry.readthedocs.io/en/latest/
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/policy_sentry/blobs/sha256:6a5d74584f70833e1aeab2047f0744e0d23c22dadf091456ff5397c4909b5e3a
-    sha256: 6a5d74584f70833e1aeab2047f0744e0d23c22dadf091456ff5397c4909b5e3a
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/policy_sentry/blobs/sha256:9b0018fa368df731255b732f63081740a73c455d5fb2fd976b3c564256e5181b
-    sha256: 9b0018fa368df731255b732f63081740a73c455d5fb2fd976b3c564256e5181b
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/policy_sentry/blobs/sha256:33b80e36f08b6634aad9d6795940e21fda67d97a9042777cbef21dad9212317a
-    sha256: 33b80e36f08b6634aad9d6795940e21fda67d97a9042777cbef21dad9212317a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/policy_sentry/blobs/sha256:ee5fd5189391f3cd433e2148c49dda0602c27409b94b33d0f7e077b5082fca4f
-    sha256: ee5fd5189391f3cd433e2148c49dda0602c27409b94b33d0f7e077b5082fca4f
-source:
-  url: https://files.pythonhosted.org/packages/87/fb/1d8cd9672d757481f6ffbdb18ca92d628d8d2b08cbf1829a1c4d700bc1ab/policy_sentry-0.15.2.tar.gz
-  sha256: 6e16f059dde400c856815be9368052102993499e66754207f9a9a1cdcf996dd2
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - python@3.14
+    - certifi
+    - libyaml
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/policy_sentry/blobs/sha256:9b0018fa368df731255b732f63081740a73c455d5fb2fd976b3c564256e5181b
+        sha256: 9b0018fa368df731255b732f63081740a73c455d5fb2fd976b3c564256e5181b
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/policy_sentry/blobs/sha256:6a5d74584f70833e1aeab2047f0744e0d23c22dadf091456ff5397c4909b5e3a
+        sha256: 6a5d74584f70833e1aeab2047f0744e0d23c22dadf091456ff5397c4909b5e3a
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/policy_sentry/blobs/sha256:33b80e36f08b6634aad9d6795940e21fda67d97a9042777cbef21dad9212317a
+        sha256: 33b80e36f08b6634aad9d6795940e21fda67d97a9042777cbef21dad9212317a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/policy_sentry/blobs/sha256:ee5fd5189391f3cd433e2148c49dda0602c27409b94b33d0f7e077b5082fca4f
+        sha256: ee5fd5189391f3cd433e2148c49dda0602c27409b94b33d0f7e077b5082fca4f
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/87/fb/1d8cd9672d757481f6ffbdb18ca92d628d8d2b08cbf1829a1c4d700bc1ab/policy_sentry-0.15.2.tar.gz
+    sha256: 6e16f059dde400c856815be9368052102993499e66754207f9a9a1cdcf996dd2
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

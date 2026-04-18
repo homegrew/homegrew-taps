@@ -1,69 +1,93 @@
 name: vice
-version: 3.10
+version: "3.10"
 description: Versatile Commodore Emulator
 homepage: https://sourceforge.net/projects/vice-emu/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vice/blobs/sha256:6418080055eb645bc56525d0d902c9df649addb24ff8cef9756c149e6cfdbb29
-    sha256: 6418080055eb645bc56525d0d902c9df649addb24ff8cef9756c149e6cfdbb29
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vice/blobs/sha256:58fd2917eb22933c25ee8584e29972b2f6cf7b79f1a8acf050db0a570f6875f3
-    sha256: 58fd2917eb22933c25ee8584e29972b2f6cf7b79f1a8acf050db0a570f6875f3
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/vice/blobs/sha256:76eb6cfb7a1b879a8c6ee4fa2fdcfd72312d646b574262d8a48a1742fbb5c8b0
-    sha256: 76eb6cfb7a1b879a8c6ee4fa2fdcfd72312d646b574262d8a48a1742fbb5c8b0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/vice/blobs/sha256:1e99deba75899f6d0dfe9e4f0a85f3a8b1fecb983f6a4048c0c47f4aea7d82e3
-    sha256: 1e99deba75899f6d0dfe9e4f0a85f3a8b1fecb983f6a4048c0c47f4aea7d82e3
-source:
-  url: https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.10.tar.gz
-  sha256: 8e5bac18cbcb9f192380ad3ef881f8790f5b75c41d7b3da65d831985d864d6d1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - adwaita-icon-theme
-  - at-spi2-core
-  - cairo
-  - flac
-  - gdk-pixbuf
-  - giflib
-  - glew
-  - glib
-  - gtk+3
-  - libogg
-  - libpng
-  - libvorbis
-  - pango
-  - gettext
-  - harfbuzz
+    - adwaita-icon-theme
+    - at-spi2-core
+    - cairo
+    - flac
+    - gdk-pixbuf
+    - giflib
+    - glew
+    - glib
+    - gtk+3
+    - libogg
+    - libpng
+    - libvorbis
+    - pango
+    - gettext
+    - harfbuzz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vice/blobs/sha256:58fd2917eb22933c25ee8584e29972b2f6cf7b79f1a8acf050db0a570f6875f3
+        sha256: 58fd2917eb22933c25ee8584e29972b2f6cf7b79f1a8acf050db0a570f6875f3
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vice/blobs/sha256:6418080055eb645bc56525d0d902c9df649addb24ff8cef9756c149e6cfdbb29
+        sha256: 6418080055eb645bc56525d0d902c9df649addb24ff8cef9756c149e6cfdbb29
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vice/blobs/sha256:76eb6cfb7a1b879a8c6ee4fa2fdcfd72312d646b574262d8a48a1742fbb5c8b0
+        sha256: 76eb6cfb7a1b879a8c6ee4fa2fdcfd72312d646b574262d8a48a1742fbb5c8b0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vice/blobs/sha256:1e99deba75899f6d0dfe9e4f0a85f3a8b1fecb983f6a4048c0c47f4aea7d82e3
+        sha256: 1e99deba75899f6d0dfe9e4f0a85f3a8b1fecb983f6a4048c0c47f4aea7d82e3
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.10.tar.gz
+    sha256: 8e5bac18cbcb9f192380ad3ef881f8790f5b75c41d7b3da65d831985d864d6d1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - dos2unix
-  - pkgconf
-  - texinfo
-  - xa
+    - autoconf
+    - automake
+    - dos2unix
+    - pkgconf
+    - texinfo
+    - xa
 linux_dependencies:
-  - adwaita-icon-theme
-  - alsa-lib
-  - at-spi2-core
-  - cairo
-  - flac
-  - fontconfig
-  - gdk-pixbuf
-  - giflib
-  - glew
-  - glib
-  - gtk+3
-  - libevdev
-  - libogg
-  - libpng
-  - libvorbis
-  - libx11
-  - mesa
-  - pango
-  - pulseaudio
-  - zlib-ng-compat
+    - adwaita-icon-theme
+    - alsa-lib
+    - at-spi2-core
+    - cairo
+    - flac
+    - fontconfig
+    - gdk-pixbuf
+    - giflib
+    - glew
+    - glib
+    - gtk+3
+    - libevdev
+    - libogg
+    - libpng
+    - libvorbis
+    - libx11
+    - mesa
+    - pango
+    - pulseaudio
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

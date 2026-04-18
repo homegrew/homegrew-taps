@@ -3,28 +3,53 @@ version: 1.0.11
 description: Converts images/video to ASCII art
 homepage: https://github.com/seatedro/glyph
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glyph/blobs/sha256:fcddc6c86d264cdd659ebbfedc657e38928226f4d5aa4bf287093e063c545c0f
-    sha256: fcddc6c86d264cdd659ebbfedc657e38928226f4d5aa4bf287093e063c545c0f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glyph/blobs/sha256:595e69055e97fcc3f70b3f6f4cfa5debf4bc5656c4848432a5a018b8f980c90a
-    sha256: 595e69055e97fcc3f70b3f6f4cfa5debf4bc5656c4848432a5a018b8f980c90a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/glyph/blobs/sha256:ca9382a91b01f87a5d3cf815c5ad87345fb2ac18e4fd698d224f194ea420b9ee
-    sha256: ca9382a91b01f87a5d3cf815c5ad87345fb2ac18e4fd698d224f194ea420b9ee
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/glyph/blobs/sha256:ee2ef8a524e652aa28de614334a435e07092b963451557b327a2921ac41239b1
-    sha256: ee2ef8a524e652aa28de614334a435e07092b963451557b327a2921ac41239b1
-source:
-  url: https://github.com/seatedro/glyph/archive/refs/tags/v1.0.11.tar.gz
-  sha256: 7de7936a13b92b18240134bef64c006ab73988850a8776a1b276e22b73377f15
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - ffmpeg
+    - ffmpeg
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glyph/blobs/sha256:595e69055e97fcc3f70b3f6f4cfa5debf4bc5656c4848432a5a018b8f980c90a
+        sha256: 595e69055e97fcc3f70b3f6f4cfa5debf4bc5656c4848432a5a018b8f980c90a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glyph/blobs/sha256:fcddc6c86d264cdd659ebbfedc657e38928226f4d5aa4bf287093e063c545c0f
+        sha256: fcddc6c86d264cdd659ebbfedc657e38928226f4d5aa4bf287093e063c545c0f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/glyph/blobs/sha256:ca9382a91b01f87a5d3cf815c5ad87345fb2ac18e4fd698d224f194ea420b9ee
+        sha256: ca9382a91b01f87a5d3cf815c5ad87345fb2ac18e4fd698d224f194ea420b9ee
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/glyph/blobs/sha256:ee2ef8a524e652aa28de614334a435e07092b963451557b327a2921ac41239b1
+        sha256: ee2ef8a524e652aa28de614334a435e07092b963451557b327a2921ac41239b1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/seatedro/glyph/archive/refs/tags/v1.0.11.tar.gz
+    sha256: 7de7936a13b92b18240134bef64c006ab73988850a8776a1b276e22b73377f15
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - zig@0.14
+    - pkgconf
+    - zig@0.14
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

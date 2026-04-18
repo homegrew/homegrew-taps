@@ -3,31 +3,56 @@ version: 2.40.0
 description: Library for portably obtaining information about processes
 homepage: https://gitlab.gnome.org/GNOME/libgtop
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgtop/blobs/sha256:382e8b7e104d1ce90d94d855cf90d2fc04526ed66699aff6225088850d8ca8a5
-    sha256: 382e8b7e104d1ce90d94d855cf90d2fc04526ed66699aff6225088850d8ca8a5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgtop/blobs/sha256:337d36977c59d423acfbf3fd0bc258069f50b80eb4a3f537ae006e5cc42cf948
-    sha256: 337d36977c59d423acfbf3fd0bc258069f50b80eb4a3f537ae006e5cc42cf948
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libgtop/blobs/sha256:e397a31d868662a5cdc37e9c4f6dba1557a0f6d07d76c212f7ccf5775b7a70a3
-    sha256: e397a31d868662a5cdc37e9c4f6dba1557a0f6d07d76c212f7ccf5775b7a70a3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libgtop/blobs/sha256:43bbad6856591e1a58262e9abfc56ae5bb28f3bc0b5e727d2ce547a4bc0b92db
-    sha256: 43bbad6856591e1a58262e9abfc56ae5bb28f3bc0b5e727d2ce547a4bc0b92db
-source:
-  url: https://download.gnome.org/sources/libgtop/2.40/libgtop-2.40.0.tar.xz
-  sha256: 78f3274c0c79c434c03655c1b35edf7b95ec0421430897fb1345a98a265ed2d4
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gettext
-  - glib
-  - libxau
+    - gettext
+    - glib
+    - libxau
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgtop/blobs/sha256:337d36977c59d423acfbf3fd0bc258069f50b80eb4a3f537ae006e5cc42cf948
+        sha256: 337d36977c59d423acfbf3fd0bc258069f50b80eb4a3f537ae006e5cc42cf948
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgtop/blobs/sha256:382e8b7e104d1ce90d94d855cf90d2fc04526ed66699aff6225088850d8ca8a5
+        sha256: 382e8b7e104d1ce90d94d855cf90d2fc04526ed66699aff6225088850d8ca8a5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libgtop/blobs/sha256:e397a31d868662a5cdc37e9c4f6dba1557a0f6d07d76c212f7ccf5775b7a70a3
+        sha256: e397a31d868662a5cdc37e9c4f6dba1557a0f6d07d76c212f7ccf5775b7a70a3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libgtop/blobs/sha256:43bbad6856591e1a58262e9abfc56ae5bb28f3bc0b5e727d2ce547a4bc0b92db
+        sha256: 43bbad6856591e1a58262e9abfc56ae5bb28f3bc0b5e727d2ce547a4bc0b92db
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/libgtop/2.40/libgtop-2.40.0.tar.xz
+    sha256: 78f3274c0c79c434c03655c1b35edf7b95ec0421430897fb1345a98a265ed2d4
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - intltool
-  - pkgconf
+    - gobject-introspection
+    - intltool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

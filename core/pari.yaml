@@ -3,26 +3,52 @@ version: 2.17.3
 description: Computer algebra system designed for fast computations in number theory
 homepage: https://pari.math.u-bordeaux.fr/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pari/blobs/sha256:687e5d1d2fa3ef5d2833933b52b3137c4894bdb3d56a1b4e04dcd045b271abc3
-    sha256: 687e5d1d2fa3ef5d2833933b52b3137c4894bdb3d56a1b4e04dcd045b271abc3
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pari/blobs/sha256:edecfbb507dc4abb0779a15e664d3ab0a292e88bd847f49c18dd41133d17f951
-    sha256: edecfbb507dc4abb0779a15e664d3ab0a292e88bd847f49c18dd41133d17f951
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pari/blobs/sha256:91b8c8184e5bc18e90a54da5f87bc5ba678a40b7cbb6338a14558162f0bb5f31
-    sha256: 91b8c8184e5bc18e90a54da5f87bc5ba678a40b7cbb6338a14558162f0bb5f31
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pari/blobs/sha256:1be7e33bcdf15fdddc9e4344ecc2fa87526aa2028b99ff15a9383de2056af163
-    sha256: 1be7e33bcdf15fdddc9e4344ecc2fa87526aa2028b99ff15a9383de2056af163
-source:
-  url: https://pari.math.u-bordeaux.fr/pub/pari/unix/pari-2.17.3.tar.gz
-  sha256: 8d9c4fcd584c468d27e0f23c36836587284452094c4b1c404c20c4b810462dcb
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - readline
+    - gmp
+    - readline
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pari/blobs/sha256:edecfbb507dc4abb0779a15e664d3ab0a292e88bd847f49c18dd41133d17f951
+        sha256: edecfbb507dc4abb0779a15e664d3ab0a292e88bd847f49c18dd41133d17f951
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pari/blobs/sha256:687e5d1d2fa3ef5d2833933b52b3137c4894bdb3d56a1b4e04dcd045b271abc3
+        sha256: 687e5d1d2fa3ef5d2833933b52b3137c4894bdb3d56a1b4e04dcd045b271abc3
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pari/blobs/sha256:91b8c8184e5bc18e90a54da5f87bc5ba678a40b7cbb6338a14558162f0bb5f31
+        sha256: 91b8c8184e5bc18e90a54da5f87bc5ba678a40b7cbb6338a14558162f0bb5f31
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pari/blobs/sha256:1be7e33bcdf15fdddc9e4344ecc2fa87526aa2028b99ff15a9383de2056af163
+        sha256: 1be7e33bcdf15fdddc9e4344ecc2fa87526aa2028b99ff15a9383de2056af163
+        sha512: ""
+        signature: ""
+source:
+    url: https://pari.math.u-bordeaux.fr/pub/pari/unix/pari-2.17.3.tar.gz
+    sha256: 8d9c4fcd584c468d27e0f23c36836587284452094c4b1c404c20c4b810462dcb
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

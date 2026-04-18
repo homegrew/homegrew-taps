@@ -3,38 +3,62 @@ version: 4.1.0
 description: Apache Pulsar C++ library
 homepage: https://pulsar.apache.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpulsar/blobs/sha256:387e10820be107d05aa3f298bcc0256131749798d2ddc7eb36f4954ba4afa3eb
-    sha256: 387e10820be107d05aa3f298bcc0256131749798d2ddc7eb36f4954ba4afa3eb
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpulsar/blobs/sha256:40886840fb331d76ddb1a2378761dac94ddeb8cd214124ec33ab701feec70eab
-    sha256: 40886840fb331d76ddb1a2378761dac94ddeb8cd214124ec33ab701feec70eab
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libpulsar/blobs/sha256:9a57367f1e2d370f75789fc01ed31e5c60a888672eee4f09c9b4b451352f991e
-    sha256: 9a57367f1e2d370f75789fc01ed31e5c60a888672eee4f09c9b4b451352f991e
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libpulsar/blobs/sha256:468ecfb427e717c18cf142f9c77d1baa38815e2f183e0ba18b5951d07dd00aa8
-    sha256: 468ecfb427e717c18cf142f9c77d1baa38815e2f183e0ba18b5951d07dd00aa8
-source:
-  url: https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-client-cpp-4.1.0/apache-pulsar-client-cpp-4.1.0.tar.gz
-  sha256: e06120720dc40dd9daf05ad9c8aa1b27c1cf28f952a2905fed2641e749f33857
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - protobuf
-  - snappy
-  - zstd
+    - openssl@3
+    - protobuf
+    - snappy
+    - zstd
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpulsar/blobs/sha256:40886840fb331d76ddb1a2378761dac94ddeb8cd214124ec33ab701feec70eab
+        sha256: 40886840fb331d76ddb1a2378761dac94ddeb8cd214124ec33ab701feec70eab
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpulsar/blobs/sha256:387e10820be107d05aa3f298bcc0256131749798d2ddc7eb36f4954ba4afa3eb
+        sha256: 387e10820be107d05aa3f298bcc0256131749798d2ddc7eb36f4954ba4afa3eb
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libpulsar/blobs/sha256:9a57367f1e2d370f75789fc01ed31e5c60a888672eee4f09c9b4b451352f991e
+        sha256: 9a57367f1e2d370f75789fc01ed31e5c60a888672eee4f09c9b4b451352f991e
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libpulsar/blobs/sha256:468ecfb427e717c18cf142f9c77d1baa38815e2f183e0ba18b5951d07dd00aa8
+        sha256: 468ecfb427e717c18cf142f9c77d1baa38815e2f183e0ba18b5951d07dd00aa8
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-client-cpp-4.1.0/apache-pulsar-client-cpp-4.1.0.tar.gz
+    sha256: e06120720dc40dd9daf05ad9c8aa1b27c1cf28f952a2905fed2641e749f33857
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - cmake
-  - pkgconf
+    - boost
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - openssl@3
-  - protobuf
-  - snappy
-  - zlib-ng-compat
-  - zstd
+    - openssl@3
+    - protobuf
+    - snappy
+    - zlib-ng-compat
+    - zstd
+build:
+    configure: []
+    install: []
+service: null

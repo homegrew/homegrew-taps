@@ -3,37 +3,62 @@ version: 5.8.2
 description: Tool for managing OCI containers and pods
 homepage: https://podman.io/
 license: Apache-2.0 AND GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/podman/blobs/sha256:b62bbdd4c2f19120417bf50edc62b982de281c11aa89b34ff5f1b91b4f25ae01
-    sha256: b62bbdd4c2f19120417bf50edc62b982de281c11aa89b34ff5f1b91b4f25ae01
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/podman/blobs/sha256:2eb5403847dfdac39b60dc67c371c5af5d2d2564c979135fe97bc194491becc7
-    sha256: 2eb5403847dfdac39b60dc67c371c5af5d2d2564c979135fe97bc194491becc7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/podman/blobs/sha256:ce105d18cafc0d27170452bf08fe754a5bf292465ee7755c66eeea8f12819997
-    sha256: ce105d18cafc0d27170452bf08fe754a5bf292465ee7755c66eeea8f12819997
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/podman/blobs/sha256:b2d1c63af3d6f9a6eac08ace4aa8157bb98be430a3818a09949a5b4eb8504948
-    sha256: b2d1c63af3d6f9a6eac08ace4aa8157bb98be430a3818a09949a5b4eb8504948
-source:
-  url: https://github.com/containers/podman/archive/refs/tags/v5.8.2.tar.gz
-  sha256: b20ea65afc5a58ea1cea019bd51a5d84eb9042d25d3eb82c55010c8815732d84
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/podman/blobs/sha256:2eb5403847dfdac39b60dc67c371c5af5d2d2564c979135fe97bc194491becc7
+        sha256: 2eb5403847dfdac39b60dc67c371c5af5d2d2564c979135fe97bc194491becc7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/podman/blobs/sha256:b62bbdd4c2f19120417bf50edc62b982de281c11aa89b34ff5f1b91b4f25ae01
+        sha256: b62bbdd4c2f19120417bf50edc62b982de281c11aa89b34ff5f1b91b4f25ae01
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/podman/blobs/sha256:ce105d18cafc0d27170452bf08fe754a5bf292465ee7755c66eeea8f12819997
+        sha256: ce105d18cafc0d27170452bf08fe754a5bf292465ee7755c66eeea8f12819997
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/podman/blobs/sha256:b2d1c63af3d6f9a6eac08ace4aa8157bb98be430a3818a09949a5b4eb8504948
+        sha256: b2d1c63af3d6f9a6eac08ace4aa8157bb98be430a3818a09949a5b4eb8504948
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/containers/podman/archive/refs/tags/v5.8.2.tar.gz
+    sha256: b20ea65afc5a58ea1cea019bd51a5d84eb9042d25d3eb82c55010c8815732d84
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
-  - go-md2man
-  - make
+    - go
+    - go-md2man
+    - make
 linux_dependencies:
-  - conmon
-  - crun
-  - fuse-overlayfs
-  - gpgme
-  - libseccomp
-  - passt
-  - slirp4netns
-  - sqlite
-  - systemd
+    - conmon
+    - crun
+    - fuse-overlayfs
+    - gpgme
+    - libseccomp
+    - passt
+    - slirp4netns
+    - sqlite
+    - systemd
+build:
+    configure: []
+    install: []
+service: null

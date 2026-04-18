@@ -3,30 +3,55 @@ version: 0.10.3
 description: General purpose library for reading WordPerfect files
 homepage: https://libwpd.sourceforge.net/
 license: MPL-2.0 OR LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libwpd/blobs/sha256:1bf99b7a478fd8c861781c680257297389a1d6e1cd43930e0e6ae40a3caaac23
-    sha256: 1bf99b7a478fd8c861781c680257297389a1d6e1cd43930e0e6ae40a3caaac23
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libwpd/blobs/sha256:2b25a9f4f6a55fcc60a533eb12531a394761f19d5701e8ba5512f654c04d2c11
-    sha256: 2b25a9f4f6a55fcc60a533eb12531a394761f19d5701e8ba5512f654c04d2c11
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libwpd/blobs/sha256:589effab1c398690ba5ee3b616d3ab9667260d013ac3ebb93aef4a69dc1ebe9b
-    sha256: 589effab1c398690ba5ee3b616d3ab9667260d013ac3ebb93aef4a69dc1ebe9b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libwpd/blobs/sha256:81464149ac1791ff235b62e286bff669440c36793e92b039b648b96c42d9e73f
-    sha256: 81464149ac1791ff235b62e286bff669440c36793e92b039b648b96c42d9e73f
-source:
-  url: https://dev-www.libreoffice.org/src/libwpd-0.10.3.tar.xz
-  sha256: 2465b0b662fdc5d4e3bebcdc9a79027713fb629ca2bff04a3c9251fdec42dd09
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libgsf
-  - librevenge
+    - glib
+    - libgsf
+    - librevenge
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libwpd/blobs/sha256:2b25a9f4f6a55fcc60a533eb12531a394761f19d5701e8ba5512f654c04d2c11
+        sha256: 2b25a9f4f6a55fcc60a533eb12531a394761f19d5701e8ba5512f654c04d2c11
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libwpd/blobs/sha256:1bf99b7a478fd8c861781c680257297389a1d6e1cd43930e0e6ae40a3caaac23
+        sha256: 1bf99b7a478fd8c861781c680257297389a1d6e1cd43930e0e6ae40a3caaac23
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libwpd/blobs/sha256:589effab1c398690ba5ee3b616d3ab9667260d013ac3ebb93aef4a69dc1ebe9b
+        sha256: 589effab1c398690ba5ee3b616d3ab9667260d013ac3ebb93aef4a69dc1ebe9b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libwpd/blobs/sha256:81464149ac1791ff235b62e286bff669440c36793e92b039b648b96c42d9e73f
+        sha256: 81464149ac1791ff235b62e286bff669440c36793e92b039b648b96c42d9e73f
+        sha512: ""
+        signature: ""
+source:
+    url: https://dev-www.libreoffice.org/src/libwpd-0.10.3.tar.xz
+    sha256: 2465b0b662fdc5d4e3bebcdc9a79027713fb629ca2bff04a3c9251fdec42dd09
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - boost
-  - pkgconf
+    - boost
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

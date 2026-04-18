@@ -3,58 +3,82 @@ version: 26.04.0
 description: PDF rendering library (based on the xpdf-3.0 code base)
 homepage: https://poppler.freedesktop.org/
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:fbdf4c7b2b192b74b94c1c6bc32c7ab62c2985d6af6e9ff0bb256a504c011861
-    sha256: fbdf4c7b2b192b74b94c1c6bc32c7ab62c2985d6af6e9ff0bb256a504c011861
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:485f75afc3df14da17ed619c3b98193875ee12bee861d749e136c9e4fe9d8986
-    sha256: 485f75afc3df14da17ed619c3b98193875ee12bee861d749e136c9e4fe9d8986
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:949e46fcdedfa1844535f62e012f1fe1db9a0afece4b4a0cfeb73db34c63a2b0
-    sha256: 949e46fcdedfa1844535f62e012f1fe1db9a0afece4b4a0cfeb73db34c63a2b0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:2e1e4fda5ec5aafa7e6d97e79199268135535a80a695af99b54eeacd0a617bd9
-    sha256: 2e1e4fda5ec5aafa7e6d97e79199268135535a80a695af99b54eeacd0a617bd9
-source:
-  url: https://poppler.freedesktop.org/poppler-26.04.0.tar.xz
-  sha256: b0955163114af96bc0106f68cb24daf973a629462453d8b82775f81b0d4e0693
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - cairo
-  - fontconfig
-  - freetype
-  - glib
-  - gpgmepp
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - little-cms2
-  - nspr
-  - nss
-  - openjpeg
-  - gettext
-  - gpgme
-  - libassuan
+    - cairo
+    - fontconfig
+    - freetype
+    - glib
+    - gpgmepp
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - little-cms2
+    - nspr
+    - nss
+    - openjpeg
+    - gettext
+    - gpgme
+    - libassuan
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:485f75afc3df14da17ed619c3b98193875ee12bee861d749e136c9e4fe9d8986
+        sha256: 485f75afc3df14da17ed619c3b98193875ee12bee861d749e136c9e4fe9d8986
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:fbdf4c7b2b192b74b94c1c6bc32c7ab62c2985d6af6e9ff0bb256a504c011861
+        sha256: fbdf4c7b2b192b74b94c1c6bc32c7ab62c2985d6af6e9ff0bb256a504c011861
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:949e46fcdedfa1844535f62e012f1fe1db9a0afece4b4a0cfeb73db34c63a2b0
+        sha256: 949e46fcdedfa1844535f62e012f1fe1db9a0afece4b4a0cfeb73db34c63a2b0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/poppler/blobs/sha256:2e1e4fda5ec5aafa7e6d97e79199268135535a80a695af99b54eeacd0a617bd9
+        sha256: 2e1e4fda5ec5aafa7e6d97e79199268135535a80a695af99b54eeacd0a617bd9
+        sha512: ""
+        signature: ""
+source:
+    url: https://poppler.freedesktop.org/poppler-26.04.0.tar.xz
+    sha256: b0955163114af96bc0106f68cb24daf973a629462453d8b82775f81b0d4e0693
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - gettext
-  - gobject-introspection
-  - pkgconf
+    - cmake
+    - gettext
+    - gobject-introspection
+    - pkgconf
 linux_dependencies:
-  - cairo
-  - fontconfig
-  - freetype
-  - glib
-  - gpgmepp
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - little-cms2
-  - nspr
-  - nss
-  - openjpeg
-  - zlib-ng-compat
+    - cairo
+    - fontconfig
+    - freetype
+    - glib
+    - gpgmepp
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - little-cms2
+    - nspr
+    - nss
+    - openjpeg
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

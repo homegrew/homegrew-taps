@@ -3,33 +3,57 @@ version: 2.17.1
 description: XML-based font configuration API for X Windows
 homepage: https://wiki.freedesktop.org/www/Software/fontconfig/
 license: HPND-sell-variant AND Unicode-3.0 AND MIT-Modern-Variant AND MIT AND LicenseRef-Homebrew-public-domain
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:20f30c771e40a924e423a9652080c7097e16782ffb236344c368721c001b78a0
-    sha256: 20f30c771e40a924e423a9652080c7097e16782ffb236344c368721c001b78a0
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:ca0deb10e43960476c8c417e78f14e81bc2d0674c7860db8efb842d206093137
-    sha256: ca0deb10e43960476c8c417e78f14e81bc2d0674c7860db8efb842d206093137
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:2c1073429bebddfa34e272928799517b246e6a44722ac567a1be66692750d99b
-    sha256: 2c1073429bebddfa34e272928799517b246e6a44722ac567a1be66692750d99b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:e85111ea1b81f0bf5505a3319187b3b2ede73aad67b9142ceb86132bdece1a61
-    sha256: e85111ea1b81f0bf5505a3319187b3b2ede73aad67b9142ceb86132bdece1a61
-source:
-  url: https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.17.1/fontconfig-2.17.1.tar.gz
-  sha256: 82e73b26adad651b236e5f5d4b3074daf8ff0910188808496326bd3449e5261d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - freetype
-  - gettext
+    - freetype
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:ca0deb10e43960476c8c417e78f14e81bc2d0674c7860db8efb842d206093137
+        sha256: ca0deb10e43960476c8c417e78f14e81bc2d0674c7860db8efb842d206093137
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:20f30c771e40a924e423a9652080c7097e16782ffb236344c368721c001b78a0
+        sha256: 20f30c771e40a924e423a9652080c7097e16782ffb236344c368721c001b78a0
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:2c1073429bebddfa34e272928799517b246e6a44722ac567a1be66692750d99b
+        sha256: 2c1073429bebddfa34e272928799517b246e6a44722ac567a1be66692750d99b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:e85111ea1b81f0bf5505a3319187b3b2ede73aad67b9142ceb86132bdece1a61
+        sha256: e85111ea1b81f0bf5505a3319187b3b2ede73aad67b9142ceb86132bdece1a61
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.17.1/fontconfig-2.17.1.tar.gz
+    sha256: 82e73b26adad651b236e5f5d4b3074daf8ff0910188808496326bd3449e5261d
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gettext
-  - meson
-  - ninja
-  - pkgconf
+    - gettext
+    - meson
+    - ninja
+    - pkgconf
 linux_dependencies:
-  - freetype
+    - freetype
+build:
+    configure: []
+    install: []
+service: null

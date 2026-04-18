@@ -3,31 +3,56 @@ version: 4.0.30
 description: Library for trace processing supporting multiple inputs
 homepage: https://github.com/LibtraceTeam/libtrace
 license: GPL-2.0-or-later AND LGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libtrace/blobs/sha256:cfe9ddfb74e19626fec9725c20436cef6515f7875e72190f55e78acb8db587f4
-    sha256: cfe9ddfb74e19626fec9725c20436cef6515f7875e72190f55e78acb8db587f4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libtrace/blobs/sha256:9da327786a615a8428364e987422206d23422904cf4e1a6aca211e6525b2e9da
-    sha256: 9da327786a615a8428364e987422206d23422904cf4e1a6aca211e6525b2e9da
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libtrace/blobs/sha256:386ff1e7ccd8bd1f3327842a56bc059c5fcb31ad45751a938e076af18c279316
-    sha256: 386ff1e7ccd8bd1f3327842a56bc059c5fcb31ad45751a938e076af18c279316
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libtrace/blobs/sha256:eadb255c3c9fd7996493baa19fcf4ac182de1f672f882e68d37b607773ea61a6
-    sha256: eadb255c3c9fd7996493baa19fcf4ac182de1f672f882e68d37b607773ea61a6
-source:
-  url: https://github.com/LibtraceTeam/libtrace/archive/refs/tags/4.0.30-1.tar.gz
-  sha256: 2e83c5cfb3cf6eb98ee9d928f3b04f4aa8c0b9ec8060e74c27f0e213b83818d9
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
-  - wandio
+    - openssl@3
+    - wandio
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libtrace/blobs/sha256:9da327786a615a8428364e987422206d23422904cf4e1a6aca211e6525b2e9da
+        sha256: 9da327786a615a8428364e987422206d23422904cf4e1a6aca211e6525b2e9da
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libtrace/blobs/sha256:cfe9ddfb74e19626fec9725c20436cef6515f7875e72190f55e78acb8db587f4
+        sha256: cfe9ddfb74e19626fec9725c20436cef6515f7875e72190f55e78acb8db587f4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libtrace/blobs/sha256:386ff1e7ccd8bd1f3327842a56bc059c5fcb31ad45751a938e076af18c279316
+        sha256: 386ff1e7ccd8bd1f3327842a56bc059c5fcb31ad45751a938e076af18c279316
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libtrace/blobs/sha256:eadb255c3c9fd7996493baa19fcf4ac182de1f672f882e68d37b607773ea61a6
+        sha256: eadb255c3c9fd7996493baa19fcf4ac182de1f672f882e68d37b607773ea61a6
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/LibtraceTeam/libtrace/archive/refs/tags/4.0.30-1.tar.gz
+    sha256: 2e83c5cfb3cf6eb98ee9d928f3b04f4aa8c0b9ec8060e74c27f0e213b83818d9
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

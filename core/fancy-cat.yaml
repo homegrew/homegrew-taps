@@ -3,28 +3,53 @@ version: 0.5.0
 description: PDF reader for terminal emulators using the Kitty image protocol
 homepage: https://github.com/freref/fancy-cat
 license: AGPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fancy-cat/blobs/sha256:fcc2aba1bcfa939b6714837a17bb06db78a66a0c80f30369fd88b8df3bf49939
-    sha256: fcc2aba1bcfa939b6714837a17bb06db78a66a0c80f30369fd88b8df3bf49939
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fancy-cat/blobs/sha256:f283332082fdba66dd6c1faec52841e9cef4e12611f392c32c59caa49a35ed62
-    sha256: f283332082fdba66dd6c1faec52841e9cef4e12611f392c32c59caa49a35ed62
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fancy-cat/blobs/sha256:16d2018532c3849119a0d66c7ba11df7ad69aef5e194de2d3d271e853706ce37
-    sha256: 16d2018532c3849119a0d66c7ba11df7ad69aef5e194de2d3d271e853706ce37
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fancy-cat/blobs/sha256:8a7827e7014c9e3aefd337503312cfaae8060adc43d1317a37c518fbc3a5a037
-    sha256: 8a7827e7014c9e3aefd337503312cfaae8060adc43d1317a37c518fbc3a5a037
-source:
-  url: https://github.com/freref/fancy-cat/archive/refs/tags/v0.5.0.tar.gz
-  sha256: 7191c8b6259f8124d2bef4c38ab0bcb7f13923dd84a6ec5cb5512f729765f5b5
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - mujs
-  - mupdf
+    - mujs
+    - mupdf
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fancy-cat/blobs/sha256:f283332082fdba66dd6c1faec52841e9cef4e12611f392c32c59caa49a35ed62
+        sha256: f283332082fdba66dd6c1faec52841e9cef4e12611f392c32c59caa49a35ed62
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fancy-cat/blobs/sha256:fcc2aba1bcfa939b6714837a17bb06db78a66a0c80f30369fd88b8df3bf49939
+        sha256: fcc2aba1bcfa939b6714837a17bb06db78a66a0c80f30369fd88b8df3bf49939
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fancy-cat/blobs/sha256:16d2018532c3849119a0d66c7ba11df7ad69aef5e194de2d3d271e853706ce37
+        sha256: 16d2018532c3849119a0d66c7ba11df7ad69aef5e194de2d3d271e853706ce37
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fancy-cat/blobs/sha256:8a7827e7014c9e3aefd337503312cfaae8060adc43d1317a37c518fbc3a5a037
+        sha256: 8a7827e7014c9e3aefd337503312cfaae8060adc43d1317a37c518fbc3a5a037
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/freref/fancy-cat/archive/refs/tags/v0.5.0.tar.gz
+    sha256: 7191c8b6259f8124d2bef4c38ab0bcb7f13923dd84a6ec5cb5512f729765f5b5
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - zig@0.15
+    - zig@0.15
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

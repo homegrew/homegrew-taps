@@ -3,26 +3,47 @@ version: 1.18.5
 description: Embeddable, replicated and fault-tolerant SQLite-powered engine
 homepage: https://dqlite.io
 license: LGPL-3.0-only
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dqlite/blobs/sha256:5c5961a37d4bb0127ac28d0d94445deb15737164321f5f2bc5621a37f1a029ae
-    sha256: 5c5961a37d4bb0127ac28d0d94445deb15737164321f5f2bc5621a37f1a029ae
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dqlite/blobs/sha256:e9364da2df2f613b1fb2fbfca0c78faab1578b9085b8128ebc32bc7c22934fe1
-    sha256: e9364da2df2f613b1fb2fbfca0c78faab1578b9085b8128ebc32bc7c22934fe1
-source:
-  url: https://github.com/canonical/dqlite/archive/refs/tags/v1.18.5.tar.gz
-  sha256: 491a460ba61282447faeba75238c9d0e461cbd743a84f122417ae6507c455868
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libuv
-  - lz4
-  - sqlite
+    - libuv
+    - lz4
+    - sqlite
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dqlite/blobs/sha256:5c5961a37d4bb0127ac28d0d94445deb15737164321f5f2bc5621a37f1a029ae
+        sha256: 5c5961a37d4bb0127ac28d0d94445deb15737164321f5f2bc5621a37f1a029ae
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dqlite/blobs/sha256:e9364da2df2f613b1fb2fbfca0c78faab1578b9085b8128ebc32bc7c22934fe1
+        sha256: e9364da2df2f613b1fb2fbfca0c78faab1578b9085b8128ebc32bc7c22934fe1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/canonical/dqlite/archive/refs/tags/v1.18.5.tar.gz
+    sha256: 491a460ba61282447faeba75238c9d0e461cbd743a84f122417ae6507c455868
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - autoconf
-  - automake
-  - libtool
-  - pkgconf
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

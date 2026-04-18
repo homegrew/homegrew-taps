@@ -1,32 +1,57 @@
 name: llm
-version: 0.30
+version: "0.30"
 description: Access large language models from the command-line
 homepage: https://llm.datasette.io/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:ea39173e5c6d8d7cec671d228a2b861a9acc9fd1ef4f1bd1e1df8beefbb70407
-    sha256: ea39173e5c6d8d7cec671d228a2b861a9acc9fd1ef4f1bd1e1df8beefbb70407
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:20bc254c71e0b57d8ced1750f2e13afe7bfbaec77bb473fe187a6dc2841e1af4
-    sha256: 20bc254c71e0b57d8ced1750f2e13afe7bfbaec77bb473fe187a6dc2841e1af4
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:ece5bbf9562f8ee1c60e6ffb1a7b42c12062f2e4caa27f9105c894c9fc38a01a
-    sha256: ece5bbf9562f8ee1c60e6ffb1a7b42c12062f2e4caa27f9105c894c9fc38a01a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:d9ea1057a7b5c0280ed590ffb16e449d15ac753e654be4a39aae927d4aebb28a
-    sha256: d9ea1057a7b5c0280ed590ffb16e449d15ac753e654be4a39aae927d4aebb28a
-source:
-  url: https://files.pythonhosted.org/packages/5c/eb/96e051501bc3ca624f402595601942d792f333bef14405eab61fa690861e/llm-0.30.tar.gz
-  sha256: 77801e45bf00908c6e62c747e2ca251af1cf4d90f67ba629307022fad2ef89cc
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - certifi
-  - libyaml
-  - pydantic
-  - python@3.14
+    - certifi
+    - libyaml
+    - pydantic
+    - python@3.14
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:20bc254c71e0b57d8ced1750f2e13afe7bfbaec77bb473fe187a6dc2841e1af4
+        sha256: 20bc254c71e0b57d8ced1750f2e13afe7bfbaec77bb473fe187a6dc2841e1af4
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:ea39173e5c6d8d7cec671d228a2b861a9acc9fd1ef4f1bd1e1df8beefbb70407
+        sha256: ea39173e5c6d8d7cec671d228a2b861a9acc9fd1ef4f1bd1e1df8beefbb70407
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:ece5bbf9562f8ee1c60e6ffb1a7b42c12062f2e4caa27f9105c894c9fc38a01a
+        sha256: ece5bbf9562f8ee1c60e6ffb1a7b42c12062f2e4caa27f9105c894c9fc38a01a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/llm/blobs/sha256:d9ea1057a7b5c0280ed590ffb16e449d15ac753e654be4a39aae927d4aebb28a
+        sha256: d9ea1057a7b5c0280ed590ffb16e449d15ac753e654be4a39aae927d4aebb28a
+        sha512: ""
+        signature: ""
+source:
+    url: https://files.pythonhosted.org/packages/5c/eb/96e051501bc3ca624f402595601942d792f333bef14405eab61fa690861e/llm-0.30.tar.gz
+    sha256: 77801e45bf00908c6e62c747e2ca251af1cf4d90f67ba629307022fad2ef89cc
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - rust
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

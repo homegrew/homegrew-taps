@@ -3,33 +3,57 @@ version: 1.9.1
 description: Render and include figures in Pandoc documents using many plotting toolkits
 homepage: https://github.com/LaurentRDC/pandoc-plot
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pandoc-plot/blobs/sha256:2f4b7184bb86193122734de1913d2d31056b99c8c7fa981397b3f276f62ee9aa
-    sha256: 2f4b7184bb86193122734de1913d2d31056b99c8c7fa981397b3f276f62ee9aa
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pandoc-plot/blobs/sha256:3ab7fd029b2f04f9f5ac7c37f659b3134cc589b7ff018e637889a869a7ea0b1e
-    sha256: 3ab7fd029b2f04f9f5ac7c37f659b3134cc589b7ff018e637889a869a7ea0b1e
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pandoc-plot/blobs/sha256:25be6dd6c818cae1074655c956e2d1643d4a143025c3a61fbb01e0c787763cb0
-    sha256: 25be6dd6c818cae1074655c956e2d1643d4a143025c3a61fbb01e0c787763cb0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pandoc-plot/blobs/sha256:824d73e31ddaa745a587e66165f12aed3505a896b93db23837dd5aab07965260
-    sha256: 824d73e31ddaa745a587e66165f12aed3505a896b93db23837dd5aab07965260
-source:
-  url: https://hackage.haskell.org/package/pandoc-plot-1.9.1/pandoc-plot-1.9.1.tar.gz
-  sha256: a34a08faf483ed7c9c5e7c439ac275077b9262bb3384d1f551e47d6aa59dd434
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - gmp
-  - pandoc
+    - gmp
+    - pandoc
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pandoc-plot/blobs/sha256:3ab7fd029b2f04f9f5ac7c37f659b3134cc589b7ff018e637889a869a7ea0b1e
+        sha256: 3ab7fd029b2f04f9f5ac7c37f659b3134cc589b7ff018e637889a869a7ea0b1e
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pandoc-plot/blobs/sha256:2f4b7184bb86193122734de1913d2d31056b99c8c7fa981397b3f276f62ee9aa
+        sha256: 2f4b7184bb86193122734de1913d2d31056b99c8c7fa981397b3f276f62ee9aa
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pandoc-plot/blobs/sha256:25be6dd6c818cae1074655c956e2d1643d4a143025c3a61fbb01e0c787763cb0
+        sha256: 25be6dd6c818cae1074655c956e2d1643d4a143025c3a61fbb01e0c787763cb0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pandoc-plot/blobs/sha256:824d73e31ddaa745a587e66165f12aed3505a896b93db23837dd5aab07965260
+        sha256: 824d73e31ddaa745a587e66165f12aed3505a896b93db23837dd5aab07965260
+        sha512: ""
+        signature: ""
+source:
+    url: https://hackage.haskell.org/package/pandoc-plot-1.9.1/pandoc-plot-1.9.1.tar.gz
+    sha256: a34a08faf483ed7c9c5e7c439ac275077b9262bb3384d1f551e47d6aa59dd434
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cabal-install
-  - ghc
+    - cabal-install
+    - ghc
 linux_dependencies:
-  - gmp
-  - pandoc
-  - zlib-ng-compat
+    - gmp
+    - pandoc
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

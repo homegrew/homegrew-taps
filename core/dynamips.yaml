@@ -3,28 +3,53 @@ version: 0.2.23
 description: Cisco 7200/3600/3725/3745/2600/1700 Router Emulator
 homepage: https://github.com/GNS3/dynamips
 license: GPL-2.0-only
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dynamips/blobs/sha256:aad0f86002ca962368935cb17bd171e427569af71ba29399d6b7f079b23a0be4
-    sha256: aad0f86002ca962368935cb17bd171e427569af71ba29399d6b7f079b23a0be4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dynamips/blobs/sha256:6be2e4c5d8e2aa875a346df429bd6b513d5c0c8d49f84c4fe29615226fb75d71
-    sha256: 6be2e4c5d8e2aa875a346df429bd6b513d5c0c8d49f84c4fe29615226fb75d71
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dynamips/blobs/sha256:43b17aecf4adaa4164f12a3ce012cb288a812d75e2f28cf55b48d87c8b000dc2
-    sha256: 43b17aecf4adaa4164f12a3ce012cb288a812d75e2f28cf55b48d87c8b000dc2
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dynamips/blobs/sha256:0a799bf4755db29172a339280a49b3e560c0762090c4b53e06b68fb24e169800
-    sha256: 0a799bf4755db29172a339280a49b3e560c0762090c4b53e06b68fb24e169800
-source:
-  url: https://github.com/GNS3/dynamips/archive/refs/tags/v0.2.23.tar.gz
-  sha256: 503bbb52c03f91900ea8dbe8bd0b804b76e2e28d0b7242624e0d3c52dda441a1
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dynamips/blobs/sha256:6be2e4c5d8e2aa875a346df429bd6b513d5c0c8d49f84c4fe29615226fb75d71
+        sha256: 6be2e4c5d8e2aa875a346df429bd6b513d5c0c8d49f84c4fe29615226fb75d71
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dynamips/blobs/sha256:aad0f86002ca962368935cb17bd171e427569af71ba29399d6b7f079b23a0be4
+        sha256: aad0f86002ca962368935cb17bd171e427569af71ba29399d6b7f079b23a0be4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dynamips/blobs/sha256:43b17aecf4adaa4164f12a3ce012cb288a812d75e2f28cf55b48d87c8b000dc2
+        sha256: 43b17aecf4adaa4164f12a3ce012cb288a812d75e2f28cf55b48d87c8b000dc2
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dynamips/blobs/sha256:0a799bf4755db29172a339280a49b3e560c0762090c4b53e06b68fb24e169800
+        sha256: 0a799bf4755db29172a339280a49b3e560c0762090c4b53e06b68fb24e169800
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/GNS3/dynamips/archive/refs/tags/v0.2.23.tar.gz
+    sha256: 503bbb52c03f91900ea8dbe8bd0b804b76e2e28d0b7242624e0d3c52dda441a1
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - libelf
+    - cmake
+    - libelf
 linux_dependencies:
-  - elfutils
+    - elfutils
+build:
+    configure: []
+    install: []
+service: null

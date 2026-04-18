@@ -1,33 +1,58 @@
 name: mfem
-version: 4.9
+version: "4.9"
 description: Free, lightweight, scalable C++ library for FEM
 homepage: https://mfem.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mfem/blobs/sha256:8974f38b6753c04fcea78d3cea7e8f09e9d00200c7c20f3c04aef3f7af64afc4
-    sha256: 8974f38b6753c04fcea78d3cea7e8f09e9d00200c7c20f3c04aef3f7af64afc4
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mfem/blobs/sha256:e3fb59206a0af49d8b6d518b921b62533f38ac8f69c7e6d3615f147e75bb5560
-    sha256: e3fb59206a0af49d8b6d518b921b62533f38ac8f69c7e6d3615f147e75bb5560
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mfem/blobs/sha256:dec7c79abbe13b993334d214016e5284f433424bc9bb21f4bdfbcf50b37a22cd
-    sha256: dec7c79abbe13b993334d214016e5284f433424bc9bb21f4bdfbcf50b37a22cd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mfem/blobs/sha256:80164924078003ac86b7197f2e6b077dec14c55e2b4cf1511fddd5af2bd0addc
-    sha256: 80164924078003ac86b7197f2e6b077dec14c55e2b4cf1511fddd5af2bd0addc
-source:
-  url: https://github.com/mfem/mfem/archive/refs/tags/v4.9.tar.gz
-  sha256: ea3ac13e182c09f05b414b03a9bef7a4da99d45d67ee409112b8f11058447a7c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - hypre
-  - metis
-  - open-mpi
-  - openblas
-  - suite-sparse
+    - hypre
+    - metis
+    - open-mpi
+    - openblas
+    - suite-sparse
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mfem/blobs/sha256:e3fb59206a0af49d8b6d518b921b62533f38ac8f69c7e6d3615f147e75bb5560
+        sha256: e3fb59206a0af49d8b6d518b921b62533f38ac8f69c7e6d3615f147e75bb5560
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mfem/blobs/sha256:8974f38b6753c04fcea78d3cea7e8f09e9d00200c7c20f3c04aef3f7af64afc4
+        sha256: 8974f38b6753c04fcea78d3cea7e8f09e9d00200c7c20f3c04aef3f7af64afc4
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mfem/blobs/sha256:dec7c79abbe13b993334d214016e5284f433424bc9bb21f4bdfbcf50b37a22cd
+        sha256: dec7c79abbe13b993334d214016e5284f433424bc9bb21f4bdfbcf50b37a22cd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mfem/blobs/sha256:80164924078003ac86b7197f2e6b077dec14c55e2b4cf1511fddd5af2bd0addc
+        sha256: 80164924078003ac86b7197f2e6b077dec14c55e2b4cf1511fddd5af2bd0addc
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/mfem/mfem/archive/refs/tags/v4.9.tar.gz
+    sha256: ea3ac13e182c09f05b414b03a9bef7a4da99d45d67ee409112b8f11058447a7c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
+    - cmake
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

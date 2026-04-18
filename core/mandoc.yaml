@@ -3,25 +3,51 @@ version: 1.14.6
 description: UNIX manpage compiler toolset
 homepage: https://mandoc.bsd.lv/
 license: ISC
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mandoc/blobs/sha256:025ae8796e204d45e8fee68828ec019cbab0e8e91f34b2fd08b3a6520622f840
-    sha256: 025ae8796e204d45e8fee68828ec019cbab0e8e91f34b2fd08b3a6520622f840
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mandoc/blobs/sha256:69da4a405b25fdd41e53b14db916b83b22546bc83f9531cb50223f72c649b36a
-    sha256: 69da4a405b25fdd41e53b14db916b83b22546bc83f9531cb50223f72c649b36a
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mandoc/blobs/sha256:00e953d4aff486cf7042ec8adb5cea2069458d739681b0383568b1c8346db23c
-    sha256: 00e953d4aff486cf7042ec8adb5cea2069458d739681b0383568b1c8346db23c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mandoc/blobs/sha256:f6bee14a821f1b72189e1428d1fde1507e4eae4ade75247fa16b15ba48adbef7
-    sha256: f6bee14a821f1b72189e1428d1fde1507e4eae4ade75247fa16b15ba48adbef7
-source:
-  url: https://mandoc.bsd.lv/snapshots/mandoc-1.14.6.tar.gz
-  sha256: 8bf0d570f01e70a6e124884088870cbed7537f36328d512909eb10cd53179d9c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mandoc/blobs/sha256:69da4a405b25fdd41e53b14db916b83b22546bc83f9531cb50223f72c649b36a
+        sha256: 69da4a405b25fdd41e53b14db916b83b22546bc83f9531cb50223f72c649b36a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mandoc/blobs/sha256:025ae8796e204d45e8fee68828ec019cbab0e8e91f34b2fd08b3a6520622f840
+        sha256: 025ae8796e204d45e8fee68828ec019cbab0e8e91f34b2fd08b3a6520622f840
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mandoc/blobs/sha256:00e953d4aff486cf7042ec8adb5cea2069458d739681b0383568b1c8346db23c
+        sha256: 00e953d4aff486cf7042ec8adb5cea2069458d739681b0383568b1c8346db23c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mandoc/blobs/sha256:f6bee14a821f1b72189e1428d1fde1507e4eae4ade75247fa16b15ba48adbef7
+        sha256: f6bee14a821f1b72189e1428d1fde1507e4eae4ade75247fa16b15ba48adbef7
+        sha512: ""
+        signature: ""
+source:
+    url: https://mandoc.bsd.lv/snapshots/mandoc-1.14.6.tar.gz
+    sha256: 8bf0d570f01e70a6e124884088870cbed7537f36328d512909eb10cd53179d9c
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

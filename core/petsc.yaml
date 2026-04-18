@@ -3,33 +3,59 @@ version: 3.24.6
 description: Portable, Extensible Toolkit for Scientific Computation (real)
 homepage: https://petsc.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/petsc/blobs/sha256:495f0bb1560fb9c3e5bb71f0577b9d196ce43ef6bf99b4e0ba397af190da14bf
-    sha256: 495f0bb1560fb9c3e5bb71f0577b9d196ce43ef6bf99b4e0ba397af190da14bf
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/petsc/blobs/sha256:fb56a619dd9ed7e357ac42ff46513cc2f636e76b01cfcefdfcb4ef0dcb259f25
-    sha256: fb56a619dd9ed7e357ac42ff46513cc2f636e76b01cfcefdfcb4ef0dcb259f25
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/petsc/blobs/sha256:e0d04eef422ed2f983da9dbc5400b5f1a8bad882278d363daae1c6afc2ea4f3a
-    sha256: e0d04eef422ed2f983da9dbc5400b5f1a8bad882278d363daae1c6afc2ea4f3a
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/petsc/blobs/sha256:d04532794fa4c64d5515b77fc664ec82f737c9cb891a374b52141db7716b0b8e
-    sha256: d04532794fa4c64d5515b77fc664ec82f737c9cb891a374b52141db7716b0b8e
-source:
-  url: https://web.cels.anl.gov/projects/petsc/download/release-snapshots/petsc-3.24.6.tar.gz
-  sha256: d6ad14652996b0e0d3da51068eec902118057f275de867e8cf258ffd64d90a7d
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - fftw
-  - gcc
-  - hdf5-mpi
-  - hwloc
-  - metis
-  - open-mpi
-  - openblas
-  - scalapack
-  - suite-sparse
+    - fftw
+    - gcc
+    - hdf5-mpi
+    - hwloc
+    - metis
+    - open-mpi
+    - openblas
+    - scalapack
+    - suite-sparse
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/petsc/blobs/sha256:fb56a619dd9ed7e357ac42ff46513cc2f636e76b01cfcefdfcb4ef0dcb259f25
+        sha256: fb56a619dd9ed7e357ac42ff46513cc2f636e76b01cfcefdfcb4ef0dcb259f25
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/petsc/blobs/sha256:495f0bb1560fb9c3e5bb71f0577b9d196ce43ef6bf99b4e0ba397af190da14bf
+        sha256: 495f0bb1560fb9c3e5bb71f0577b9d196ce43ef6bf99b4e0ba397af190da14bf
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/petsc/blobs/sha256:e0d04eef422ed2f983da9dbc5400b5f1a8bad882278d363daae1c6afc2ea4f3a
+        sha256: e0d04eef422ed2f983da9dbc5400b5f1a8bad882278d363daae1c6afc2ea4f3a
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/petsc/blobs/sha256:d04532794fa4c64d5515b77fc664ec82f737c9cb891a374b52141db7716b0b8e
+        sha256: d04532794fa4c64d5515b77fc664ec82f737c9cb891a374b52141db7716b0b8e
+        sha512: ""
+        signature: ""
+source:
+    url: https://web.cels.anl.gov/projects/petsc/download/release-snapshots/petsc-3.24.6.tar.gz
+    sha256: d6ad14652996b0e0d3da51068eec902118057f275de867e8cf258ffd64d90a7d
+    sha512: ""
+    signature: ""
+build_dependencies: []
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

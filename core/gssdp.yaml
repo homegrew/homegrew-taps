@@ -3,37 +3,61 @@ version: 1.6.4
 description: GUPnP library for resource discovery and announcement over SSDP
 homepage: https://wiki.gnome.org/GUPnP/
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gssdp/blobs/sha256:757813a4572ec251ec2b0b5d08fac402448d7eb07e798f4ddae34beafb4dd786
-    sha256: 757813a4572ec251ec2b0b5d08fac402448d7eb07e798f4ddae34beafb4dd786
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gssdp/blobs/sha256:bc05bf33af411e1488903ff6cd774eef71232b4ac8da91bbcab9089ccbef0c16
-    sha256: bc05bf33af411e1488903ff6cd774eef71232b4ac8da91bbcab9089ccbef0c16
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gssdp/blobs/sha256:912c3889c750253f08a991711db1d2cf6cfa44e99933d733c7441d42665251c3
-    sha256: 912c3889c750253f08a991711db1d2cf6cfa44e99933d733c7441d42665251c3
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gssdp/blobs/sha256:30d8f9d8c169ad2f144275e2d20a6594aed7532e8050f236dd0ccf208e6a1392
-    sha256: 30d8f9d8c169ad2f144275e2d20a6594aed7532e8050f236dd0ccf208e6a1392
-source:
-  url: https://download.gnome.org/sources/gssdp/1.6/gssdp-1.6.4.tar.xz
-  sha256: ff97fdfb7f561d3e6813b4f6a2145259e7c2eff43cc0e63f3fd031d0b6266032
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libsoup
-  - gettext
+    - glib
+    - libsoup
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gssdp/blobs/sha256:bc05bf33af411e1488903ff6cd774eef71232b4ac8da91bbcab9089ccbef0c16
+        sha256: bc05bf33af411e1488903ff6cd774eef71232b4ac8da91bbcab9089ccbef0c16
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gssdp/blobs/sha256:757813a4572ec251ec2b0b5d08fac402448d7eb07e798f4ddae34beafb4dd786
+        sha256: 757813a4572ec251ec2b0b5d08fac402448d7eb07e798f4ddae34beafb4dd786
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gssdp/blobs/sha256:912c3889c750253f08a991711db1d2cf6cfa44e99933d733c7441d42665251c3
+        sha256: 912c3889c750253f08a991711db1d2cf6cfa44e99933d733c7441d42665251c3
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gssdp/blobs/sha256:30d8f9d8c169ad2f144275e2d20a6594aed7532e8050f236dd0ccf208e6a1392
+        sha256: 30d8f9d8c169ad2f144275e2d20a6594aed7532e8050f236dd0ccf208e6a1392
+        sha512: ""
+        signature: ""
+source:
+    url: https://download.gnome.org/sources/gssdp/1.6/gssdp-1.6.4.tar.xz
+    sha256: ff97fdfb7f561d3e6813b4f6a2145259e7c2eff43cc0e63f3fd031d0b6266032
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - meson
-  - ninja
-  - pandoc
-  - pkgconf
-  - vala
+    - gobject-introspection
+    - meson
+    - ninja
+    - pandoc
+    - pkgconf
+    - vala
 linux_dependencies:
-  - glib
-  - libsoup
+    - glib
+    - libsoup
+build:
+    configure: []
+    install: []
+service: null

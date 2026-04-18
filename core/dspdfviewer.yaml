@@ -3,52 +3,76 @@ version: 1.15.1
 description: Dual-Screen PDF Viewer for latex-beamer
 homepage: https://dspdfviewer.danny-edel.de/
 license: GPL-2.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dspdfviewer/blobs/sha256:6ad754c8cc8521b9b1d0bc4b70539654a85d21825f8d7f9b3da942b3fe792e1b
-    sha256: 6ad754c8cc8521b9b1d0bc4b70539654a85d21825f8d7f9b3da942b3fe792e1b
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dspdfviewer/blobs/sha256:9cf13da6a32b08051b614bfe1ca5c46a44c4f8082461bb717f0c8df12621cd98
-    sha256: 9cf13da6a32b08051b614bfe1ca5c46a44c4f8082461bb717f0c8df12621cd98
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dspdfviewer/blobs/sha256:634605018de8fd7ec5995d15f25fe2a622b1e78d89b74e77fba6f00a2e32b533
-    sha256: 634605018de8fd7ec5995d15f25fe2a622b1e78d89b74e77fba6f00a2e32b533
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dspdfviewer/blobs/sha256:6916efa94ae9dde44f132bccaf1a7ba400e68c73f3975ed403719275dff24d23
-    sha256: 6916efa94ae9dde44f132bccaf1a7ba400e68c73f3975ed403719275dff24d23
-source:
-  url: https://github.com/dannyedel/dspdfviewer/archive/refs/tags/v1.15.1.tar.gz
-  sha256: c5b6f8c93d732e65a27810286d49a4b1c6f777d725e26a207b14f6b792307b03
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - boost
-  - cairo
-  - fontconfig
-  - freetype
-  - glib
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - openjpeg
-  - poppler-qt5
-  - qt@5
-  - gettext
+    - boost
+    - cairo
+    - fontconfig
+    - freetype
+    - glib
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - openjpeg
+    - poppler-qt5
+    - qt@5
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dspdfviewer/blobs/sha256:9cf13da6a32b08051b614bfe1ca5c46a44c4f8082461bb717f0c8df12621cd98
+        sha256: 9cf13da6a32b08051b614bfe1ca5c46a44c4f8082461bb717f0c8df12621cd98
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dspdfviewer/blobs/sha256:6ad754c8cc8521b9b1d0bc4b70539654a85d21825f8d7f9b3da942b3fe792e1b
+        sha256: 6ad754c8cc8521b9b1d0bc4b70539654a85d21825f8d7f9b3da942b3fe792e1b
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dspdfviewer/blobs/sha256:634605018de8fd7ec5995d15f25fe2a622b1e78d89b74e77fba6f00a2e32b533
+        sha256: 634605018de8fd7ec5995d15f25fe2a622b1e78d89b74e77fba6f00a2e32b533
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dspdfviewer/blobs/sha256:6916efa94ae9dde44f132bccaf1a7ba400e68c73f3975ed403719275dff24d23
+        sha256: 6916efa94ae9dde44f132bccaf1a7ba400e68c73f3975ed403719275dff24d23
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/dannyedel/dspdfviewer/archive/refs/tags/v1.15.1.tar.gz
+    sha256: c5b6f8c93d732e65a27810286d49a4b1c6f777d725e26a207b14f6b792307b03
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - gobject-introspection
-  - pkgconf
+    - cmake
+    - gobject-introspection
+    - pkgconf
 linux_dependencies:
-  - boost
-  - cairo
-  - fontconfig
-  - freetype
-  - glib
-  - jpeg-turbo
-  - libpng
-  - libtiff
-  - openjpeg
-  - poppler-qt5
-  - qt@5
+    - boost
+    - cairo
+    - fontconfig
+    - freetype
+    - glib
+    - jpeg-turbo
+    - libpng
+    - libtiff
+    - openjpeg
+    - poppler-qt5
+    - qt@5
+build:
+    configure: []
+    install: []
+service: null

@@ -1,27 +1,53 @@
 name: pcre2
-version: 10.47
+version: "10.47"
 description: Perl compatible regular expressions library with a new API
 homepage: https://www.pcre.org/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:948b00bdaf75a842341f08a949ca3d414ae5333df2c305a7e371be31a2c30963
-    sha256: 948b00bdaf75a842341f08a949ca3d414ae5333df2c305a7e371be31a2c30963
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:7503247c5411d7a67b2d29ef5a7464a14f114c0953a541bb61bf668454fae667
-    sha256: 7503247c5411d7a67b2d29ef5a7464a14f114c0953a541bb61bf668454fae667
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:70d6e7a6d4257227d3b6c8e3b0bbcb244852eff6fc7a30fba6b6474316a4ea1d
-    sha256: 70d6e7a6d4257227d3b6c8e3b0bbcb244852eff6fc7a30fba6b6474316a4ea1d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:1fb733022376752008209b8cd9235456eb11aab159114c562c2e845f9f4a34b0
-    sha256: 1fb733022376752008209b8cd9235456eb11aab159114c562c2e845f9f4a34b0
-source:
-  url: https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.47/pcre2-10.47.tar.bz2
-  sha256: 47fe8c99461250d42f89e6e8fdaeba9da057855d06eb7fc08d9ca03fd08d7bc7
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:7503247c5411d7a67b2d29ef5a7464a14f114c0953a541bb61bf668454fae667
+        sha256: 7503247c5411d7a67b2d29ef5a7464a14f114c0953a541bb61bf668454fae667
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:948b00bdaf75a842341f08a949ca3d414ae5333df2c305a7e371be31a2c30963
+        sha256: 948b00bdaf75a842341f08a949ca3d414ae5333df2c305a7e371be31a2c30963
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:70d6e7a6d4257227d3b6c8e3b0bbcb244852eff6fc7a30fba6b6474316a4ea1d
+        sha256: 70d6e7a6d4257227d3b6c8e3b0bbcb244852eff6fc7a30fba6b6474316a4ea1d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:1fb733022376752008209b8cd9235456eb11aab159114c562c2e845f9f4a34b0
+        sha256: 1fb733022376752008209b8cd9235456eb11aab159114c562c2e845f9f4a34b0
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.47/pcre2-10.47.tar.bz2
+    sha256: 47fe8c99461250d42f89e6e8fdaeba9da057855d06eb7fc08d9ca03fd08d7bc7
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - zlib-ng-compat
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

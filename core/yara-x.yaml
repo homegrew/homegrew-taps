@@ -3,26 +3,52 @@ version: 1.15.0
 description: Tool to do pattern matching for malware research
 homepage: https://virustotal.github.io/yara-x/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yara-x/blobs/sha256:2e7adeb21ffde1514d2180df99ab8c800962bce1ebc8c4e1b010d8d7e37bf701
-    sha256: 2e7adeb21ffde1514d2180df99ab8c800962bce1ebc8c4e1b010d8d7e37bf701
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yara-x/blobs/sha256:fc08da36e777bee99891547722ade8511d105b202438f80531d0ae2dc2b8094c
-    sha256: fc08da36e777bee99891547722ade8511d105b202438f80531d0ae2dc2b8094c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/yara-x/blobs/sha256:080dbb0606df0ebb30526bc544e00e722500a1586df5e12bfe46acbe41484889
-    sha256: 080dbb0606df0ebb30526bc544e00e722500a1586df5e12bfe46acbe41484889
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/yara-x/blobs/sha256:f2c49acb4b5f0b73da835afe4782c5a4b0605c75779dba421e2cc5b2fbee67b8
-    sha256: f2c49acb4b5f0b73da835afe4782c5a4b0605c75779dba421e2cc5b2fbee67b8
-source:
-  url: https://github.com/VirusTotal/yara-x/archive/refs/tags/v1.15.0.tar.gz
-  sha256: c335bbf41f483b4bbaf12b5c573055ba8ae5d4747357e1451ae5e656bc95f672
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yara-x/blobs/sha256:fc08da36e777bee99891547722ade8511d105b202438f80531d0ae2dc2b8094c
+        sha256: fc08da36e777bee99891547722ade8511d105b202438f80531d0ae2dc2b8094c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yara-x/blobs/sha256:2e7adeb21ffde1514d2180df99ab8c800962bce1ebc8c4e1b010d8d7e37bf701
+        sha256: 2e7adeb21ffde1514d2180df99ab8c800962bce1ebc8c4e1b010d8d7e37bf701
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/yara-x/blobs/sha256:080dbb0606df0ebb30526bc544e00e722500a1586df5e12bfe46acbe41484889
+        sha256: 080dbb0606df0ebb30526bc544e00e722500a1586df5e12bfe46acbe41484889
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yara-x/blobs/sha256:f2c49acb4b5f0b73da835afe4782c5a4b0605c75779dba421e2cc5b2fbee67b8
+        sha256: f2c49acb4b5f0b73da835afe4782c5a4b0605c75779dba421e2cc5b2fbee67b8
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/VirusTotal/yara-x/archive/refs/tags/v1.15.0.tar.gz
+    sha256: c335bbf41f483b4bbaf12b5c573055ba8ae5d4747357e1451ae5e656bc95f672
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cargo-c
-  - rust
+    - cargo-c
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

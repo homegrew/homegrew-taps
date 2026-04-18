@@ -1,27 +1,48 @@
 name: mp3fs
 version: 1.1.1
-description: "Read-only FUSE file system: transcodes audio formats to MP3"
+description: 'Read-only FUSE file system: transcodes audio formats to MP3'
 homepage: https://khenriks.github.io/mp3fs/
 license: GPL-3.0-or-later
-bottle:
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/mp3fs/blobs/sha256:db1aaedbc1b394893b7b3344b0861aeb573f22009c72559c3e2e7cf8037cc986
-    sha256: db1aaedbc1b394893b7b3344b0861aeb573f22009c72559c3e2e7cf8037cc986
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/mp3fs/blobs/sha256:bf3512ee2e43d7727ef0bc31739bb4b8d4f1a124041aca64b6eac50a922dbeb2
-    sha256: bf3512ee2e43d7727ef0bc31739bb4b8d4f1a124041aca64b6eac50a922dbeb2
-source:
-  url: https://github.com/khenriks/mp3fs/releases/download/v1.1.1/mp3fs-1.1.1.tar.gz
-  sha256: 942b588fb623ea58ce8cac8844e6ff2829ad4bc9b4c163bba58e3fa9ebc15608
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - flac
-  - lame
-  - libfuse@2
-  - libid3tag
-  - libvorbis
+    - flac
+    - lame
+    - libfuse@2
+    - libid3tag
+    - libvorbis
+keg_only: false
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mp3fs/blobs/sha256:db1aaedbc1b394893b7b3344b0861aeb573f22009c72559c3e2e7cf8037cc986
+        sha256: db1aaedbc1b394893b7b3344b0861aeb573f22009c72559c3e2e7cf8037cc986
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mp3fs/blobs/sha256:bf3512ee2e43d7727ef0bc31739bb4b8d4f1a124041aca64b6eac50a922dbeb2
+        sha256: bf3512ee2e43d7727ef0bc31739bb4b8d4f1a124041aca64b6eac50a922dbeb2
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/khenriks/mp3fs/releases/download/v1.1.1/mp3fs-1.1.1.tar.gz
+    sha256: 942b588fb623ea58ce8cac8844e6ff2829ad4bc9b4c163bba58e3fa9ebc15608
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

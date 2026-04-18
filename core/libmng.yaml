@@ -3,30 +3,55 @@ version: 2.0.3
 description: MNG/JNG reference library
 homepage: https://sourceforge.net/projects/libmng/
 license: Zlib
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmng/blobs/sha256:c1e187e0cbf4b730d8116e16edab09cc0b774101d4af55605239de0afe858d8f
-    sha256: c1e187e0cbf4b730d8116e16edab09cc0b774101d4af55605239de0afe858d8f
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmng/blobs/sha256:9bc364469479667acd2f770cc23c08214a0ed8df7cb807d0aad931c69e93b003
-    sha256: 9bc364469479667acd2f770cc23c08214a0ed8df7cb807d0aad931c69e93b003
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/libmng/blobs/sha256:0f91c91262cde7078e9bd6c31810e1fd3e338b85e03ca6467ce6deb1451edf3b
-    sha256: 0f91c91262cde7078e9bd6c31810e1fd3e338b85e03ca6467ce6deb1451edf3b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/libmng/blobs/sha256:7fcc2b1c40ef908b1106fc6823a44071ec282337683fe27dbdb80d3d7bf1bd52
-    sha256: 7fcc2b1c40ef908b1106fc6823a44071ec282337683fe27dbdb80d3d7bf1bd52
-source:
-  url: https://downloads.sourceforge.net/project/libmng/libmng-devel/2.0.3/libmng-2.0.3.tar.gz
-  sha256: cf112a1fb02f5b1c0fce5cab11ea8243852c139e669c44014125874b14b7dfaa
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jpeg-turbo
-  - little-cms2
+    - jpeg-turbo
+    - little-cms2
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmng/blobs/sha256:9bc364469479667acd2f770cc23c08214a0ed8df7cb807d0aad931c69e93b003
+        sha256: 9bc364469479667acd2f770cc23c08214a0ed8df7cb807d0aad931c69e93b003
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmng/blobs/sha256:c1e187e0cbf4b730d8116e16edab09cc0b774101d4af55605239de0afe858d8f
+        sha256: c1e187e0cbf4b730d8116e16edab09cc0b774101d4af55605239de0afe858d8f
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libmng/blobs/sha256:0f91c91262cde7078e9bd6c31810e1fd3e338b85e03ca6467ce6deb1451edf3b
+        sha256: 0f91c91262cde7078e9bd6c31810e1fd3e338b85e03ca6467ce6deb1451edf3b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libmng/blobs/sha256:7fcc2b1c40ef908b1106fc6823a44071ec282337683fe27dbdb80d3d7bf1bd52
+        sha256: 7fcc2b1c40ef908b1106fc6823a44071ec282337683fe27dbdb80d3d7bf1bd52
+        sha512: ""
+        signature: ""
+source:
+    url: https://downloads.sourceforge.net/project/libmng/libmng-devel/2.0.3/libmng-2.0.3.tar.gz
+    sha256: cf112a1fb02f5b1c0fce5cab11ea8243852c139e669c44014125874b14b7dfaa
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - jpeg-turbo
-  - little-cms2
-  - zlib-ng-compat
+    - jpeg-turbo
+    - little-cms2
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

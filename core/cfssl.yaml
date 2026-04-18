@@ -1,29 +1,54 @@
 name: cfssl
 version: 1.6.5
-description: "CloudFlare's PKI toolkit"
+description: CloudFlare's PKI toolkit
 homepage: https://cfssl.org/
 license: BSD-2-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cfssl/blobs/sha256:601f2a0f658414311595bde5f9ac2c35b557ba0c4d5383fb73a9ae36743be9a5
-    sha256: 601f2a0f658414311595bde5f9ac2c35b557ba0c4d5383fb73a9ae36743be9a5
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cfssl/blobs/sha256:7343337bf340f001683abb5f00711d3d1e504ec77cdac8dd8f1905368fb312a7
-    sha256: 7343337bf340f001683abb5f00711d3d1e504ec77cdac8dd8f1905368fb312a7
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/cfssl/blobs/sha256:46934407006530d046e2171da9988fdc1cf8cc5e519924d7ba050ee6dee8f0fb
-    sha256: 46934407006530d046e2171da9988fdc1cf8cc5e519924d7ba050ee6dee8f0fb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/cfssl/blobs/sha256:74ef31d5f9c24be580f7ca74e48173640cc28a381eba8463bf56c6a0c81d2e9d
-    sha256: 74ef31d5f9c24be580f7ca74e48173640cc28a381eba8463bf56c6a0c81d2e9d
-source:
-  url: https://github.com/cloudflare/cfssl/archive/refs/tags/v1.6.5.tar.gz
-  sha256: b682452402f403b6ee668bb042bd9b753fe48df84fa7a18a1c32606ffd4918af
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libtool
+    - libtool
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cfssl/blobs/sha256:7343337bf340f001683abb5f00711d3d1e504ec77cdac8dd8f1905368fb312a7
+        sha256: 7343337bf340f001683abb5f00711d3d1e504ec77cdac8dd8f1905368fb312a7
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cfssl/blobs/sha256:601f2a0f658414311595bde5f9ac2c35b557ba0c4d5383fb73a9ae36743be9a5
+        sha256: 601f2a0f658414311595bde5f9ac2c35b557ba0c4d5383fb73a9ae36743be9a5
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cfssl/blobs/sha256:46934407006530d046e2171da9988fdc1cf8cc5e519924d7ba050ee6dee8f0fb
+        sha256: 46934407006530d046e2171da9988fdc1cf8cc5e519924d7ba050ee6dee8f0fb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cfssl/blobs/sha256:74ef31d5f9c24be580f7ca74e48173640cc28a381eba8463bf56c6a0c81d2e9d
+        sha256: 74ef31d5f9c24be580f7ca74e48173640cc28a381eba8463bf56c6a0c81d2e9d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/cloudflare/cfssl/archive/refs/tags/v1.6.5.tar.gz
+    sha256: b682452402f403b6ee668bb042bd9b753fe48df84fa7a18a1c32606ffd4918af
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

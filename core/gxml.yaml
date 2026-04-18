@@ -3,38 +3,62 @@ version: 0.20.4
 description: GObject-based XML DOM API
 homepage: https://wiki.gnome.org/GXml
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gxml/blobs/sha256:a3da5e42590fe64560597a9dd87d4ef7b99a7fab333a8ce2b1b307709892eab6
-    sha256: a3da5e42590fe64560597a9dd87d4ef7b99a7fab333a8ce2b1b307709892eab6
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gxml/blobs/sha256:f26bdae2e98a12878bf0266f81ead6d0d35049aac22f6d7e998dec91f4cbe1ab
-    sha256: f26bdae2e98a12878bf0266f81ead6d0d35049aac22f6d7e998dec91f4cbe1ab
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gxml/blobs/sha256:34f65c1d4ae3dedf814cf963ac7bcc5619bd80285d22f151a679cc1eb24e6e4b
-    sha256: 34f65c1d4ae3dedf814cf963ac7bcc5619bd80285d22f151a679cc1eb24e6e4b
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gxml/blobs/sha256:a005ed52b097ee095f4ec60799afa0428ddc924a84715522d5787e5430f50448
-    sha256: a005ed52b097ee095f4ec60799afa0428ddc924a84715522d5787e5430f50448
-source:
-  url: https://gitlab.gnome.org/GNOME/gxml/-/archive/0.20.4/gxml-0.20.4.tar.bz2
-  sha256: d8d8b16ff701d0c5ff04b337b246880ec4523abfe897a1f77acdf7d73fb14b84
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - glib
-  - libgee
-  - libxml2
-  - gettext
+    - glib
+    - libgee
+    - libxml2
+    - gettext
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gxml/blobs/sha256:f26bdae2e98a12878bf0266f81ead6d0d35049aac22f6d7e998dec91f4cbe1ab
+        sha256: f26bdae2e98a12878bf0266f81ead6d0d35049aac22f6d7e998dec91f4cbe1ab
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gxml/blobs/sha256:a3da5e42590fe64560597a9dd87d4ef7b99a7fab333a8ce2b1b307709892eab6
+        sha256: a3da5e42590fe64560597a9dd87d4ef7b99a7fab333a8ce2b1b307709892eab6
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gxml/blobs/sha256:34f65c1d4ae3dedf814cf963ac7bcc5619bd80285d22f151a679cc1eb24e6e4b
+        sha256: 34f65c1d4ae3dedf814cf963ac7bcc5619bd80285d22f151a679cc1eb24e6e4b
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gxml/blobs/sha256:a005ed52b097ee095f4ec60799afa0428ddc924a84715522d5787e5430f50448
+        sha256: a005ed52b097ee095f4ec60799afa0428ddc924a84715522d5787e5430f50448
+        sha512: ""
+        signature: ""
+source:
+    url: https://gitlab.gnome.org/GNOME/gxml/-/archive/0.20.4/gxml-0.20.4.tar.bz2
+    sha256: d8d8b16ff701d0c5ff04b337b246880ec4523abfe897a1f77acdf7d73fb14b84
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - gobject-introspection
-  - meson
-  - ninja
-  - pkgconf
-  - vala
+    - gobject-introspection
+    - meson
+    - ninja
+    - pkgconf
+    - vala
 linux_dependencies:
-  - glib
-  - libgee
-  - libxml2
+    - glib
+    - libgee
+    - libxml2
+build:
+    configure: []
+    install: []
+service: null

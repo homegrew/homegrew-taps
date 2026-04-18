@@ -3,26 +3,52 @@ version: 3.11.3
 description: Basic building blocks for deep learning applications
 homepage: https://www.oneapi.io/open-source/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onednn/blobs/sha256:900a1d5fd061d901265ad222c3c22053b623d602ce7755dce3facafff672f66c
-    sha256: 900a1d5fd061d901265ad222c3c22053b623d602ce7755dce3facafff672f66c
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onednn/blobs/sha256:da00a288e8ed6fe78bf366cdee8915e39fad4930566ec3766c91b636c5786e10
-    sha256: da00a288e8ed6fe78bf366cdee8915e39fad4930566ec3766c91b636c5786e10
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/onednn/blobs/sha256:ccff3a90526d8cf8946e06a2503d99b990844bd56f0d37e01d7817c395ac14b4
-    sha256: ccff3a90526d8cf8946e06a2503d99b990844bd56f0d37e01d7817c395ac14b4
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/onednn/blobs/sha256:48653dc497ffe12a5a540ebb43ec48f9f464b5fe2939a439ff001024c9223ad4
-    sha256: 48653dc497ffe12a5a540ebb43ec48f9f464b5fe2939a439ff001024c9223ad4
-source:
-  url: https://github.com/uxlfoundation/oneDNN/archive/refs/tags/v3.11.3.tar.gz
-  sha256: 7293a85e146c2710dcf4f7257fdebb91020004cf1627c8de684b814c2498c81a
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onednn/blobs/sha256:da00a288e8ed6fe78bf366cdee8915e39fad4930566ec3766c91b636c5786e10
+        sha256: da00a288e8ed6fe78bf366cdee8915e39fad4930566ec3766c91b636c5786e10
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onednn/blobs/sha256:900a1d5fd061d901265ad222c3c22053b623d602ce7755dce3facafff672f66c
+        sha256: 900a1d5fd061d901265ad222c3c22053b623d602ce7755dce3facafff672f66c
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onednn/blobs/sha256:ccff3a90526d8cf8946e06a2503d99b990844bd56f0d37e01d7817c395ac14b4
+        sha256: ccff3a90526d8cf8946e06a2503d99b990844bd56f0d37e01d7817c395ac14b4
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onednn/blobs/sha256:48653dc497ffe12a5a540ebb43ec48f9f464b5fe2939a439ff001024c9223ad4
+        sha256: 48653dc497ffe12a5a540ebb43ec48f9f464b5fe2939a439ff001024c9223ad4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/uxlfoundation/oneDNN/archive/refs/tags/v3.11.3.tar.gz
+    sha256: 7293a85e146c2710dcf4f7257fdebb91020004cf1627c8de684b814c2498c81a
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - doxygen
+    - cmake
+    - doxygen
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

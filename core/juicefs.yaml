@@ -3,25 +3,51 @@ version: 1.3.1
 description: Cloud-based, distributed POSIX file system built on top of Redis and S3
 homepage: https://juicefs.com
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/juicefs/blobs/sha256:f5cd25c0034180ab9338373a5e278dfc5400fac7257cabf06b288899c602d960
-    sha256: f5cd25c0034180ab9338373a5e278dfc5400fac7257cabf06b288899c602d960
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/juicefs/blobs/sha256:3196e0bf833ae3ddfebc56def67968b4a0fa0f8b0f84b09d84d703ba168961df
-    sha256: 3196e0bf833ae3ddfebc56def67968b4a0fa0f8b0f84b09d84d703ba168961df
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/juicefs/blobs/sha256:f7b195c808d249265774b78dac00fa69cbd6fcac11e6ce4d40ab9d0c9e26d4e0
-    sha256: f7b195c808d249265774b78dac00fa69cbd6fcac11e6ce4d40ab9d0c9e26d4e0
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/juicefs/blobs/sha256:0ae9b27e1c37cbb2d71cb49d30735728f6ef2a2d4cd3effc6a348d5eeb7ee7fa
-    sha256: 0ae9b27e1c37cbb2d71cb49d30735728f6ef2a2d4cd3effc6a348d5eeb7ee7fa
-source:
-  url: https://github.com/juicedata/juicefs/archive/refs/tags/v1.3.1.tar.gz
-  sha256: 37404fb9693a39d1e2ba8ec6323c1e3e1502852fd7eb04e10657f6cffe9ef110
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/juicefs/blobs/sha256:3196e0bf833ae3ddfebc56def67968b4a0fa0f8b0f84b09d84d703ba168961df
+        sha256: 3196e0bf833ae3ddfebc56def67968b4a0fa0f8b0f84b09d84d703ba168961df
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/juicefs/blobs/sha256:f5cd25c0034180ab9338373a5e278dfc5400fac7257cabf06b288899c602d960
+        sha256: f5cd25c0034180ab9338373a5e278dfc5400fac7257cabf06b288899c602d960
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/juicefs/blobs/sha256:f7b195c808d249265774b78dac00fa69cbd6fcac11e6ce4d40ab9d0c9e26d4e0
+        sha256: f7b195c808d249265774b78dac00fa69cbd6fcac11e6ce4d40ab9d0c9e26d4e0
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/juicefs/blobs/sha256:0ae9b27e1c37cbb2d71cb49d30735728f6ef2a2d4cd3effc6a348d5eeb7ee7fa
+        sha256: 0ae9b27e1c37cbb2d71cb49d30735728f6ef2a2d4cd3effc6a348d5eeb7ee7fa
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/juicedata/juicefs/archive/refs/tags/v1.3.1.tar.gz
+    sha256: 37404fb9693a39d1e2ba8ec6323c1e3e1502852fd7eb04e10657f6cffe9ef110
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

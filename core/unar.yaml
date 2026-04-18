@@ -3,29 +3,55 @@ version: 1.10.8
 description: Command-line unarchiving tools supporting multiple formats
 homepage: https://theunarchiver.com/command-line
 license: LGPL-2.1-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unar/blobs/sha256:0ef068932336d86ad68784341497223c5d17d6e56ed564a698d6686031ff97fa
-    sha256: 0ef068932336d86ad68784341497223c5d17d6e56ed564a698d6686031ff97fa
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unar/blobs/sha256:0d686d8ad4563aab687d8a48578ccafde6bec7681939c280357ef02f14829f5d
-    sha256: 0d686d8ad4563aab687d8a48578ccafde6bec7681939c280357ef02f14829f5d
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/unar/blobs/sha256:128ef931a133a2dba46f9bfacfe00d28830ec81adcea315d026159321fd1a79d
-    sha256: 128ef931a133a2dba46f9bfacfe00d28830ec81adcea315d026159321fd1a79d
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/unar/blobs/sha256:85565efda882c47c9abf8d29ad7da951ab88459bf5cabb179a21fecaeb46158c
-    sha256: 85565efda882c47c9abf8d29ad7da951ab88459bf5cabb179a21fecaeb46158c
-source:
-  url: https://github.com/MacPaw/XADMaster/archive/refs/tags/v1.10.8.tar.gz
-  sha256: 652953d7988b3c33f4f52b61c357afd1a7c2fc170e5e6e2219f4432b0c4cd39f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unar/blobs/sha256:0d686d8ad4563aab687d8a48578ccafde6bec7681939c280357ef02f14829f5d
+        sha256: 0d686d8ad4563aab687d8a48578ccafde6bec7681939c280357ef02f14829f5d
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unar/blobs/sha256:0ef068932336d86ad68784341497223c5d17d6e56ed564a698d6686031ff97fa
+        sha256: 0ef068932336d86ad68784341497223c5d17d6e56ed564a698d6686031ff97fa
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/unar/blobs/sha256:128ef931a133a2dba46f9bfacfe00d28830ec81adcea315d026159321fd1a79d
+        sha256: 128ef931a133a2dba46f9bfacfe00d28830ec81adcea315d026159321fd1a79d
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unar/blobs/sha256:85565efda882c47c9abf8d29ad7da951ab88459bf5cabb179a21fecaeb46158c
+        sha256: 85565efda882c47c9abf8d29ad7da951ab88459bf5cabb179a21fecaeb46158c
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/MacPaw/XADMaster/archive/refs/tags/v1.10.8.tar.gz
+    sha256: 652953d7988b3c33f4f52b61c357afd1a7c2fc170e5e6e2219f4432b0c4cd39f
+    sha512: ""
+    signature: ""
+build_dependencies: []
 linux_dependencies:
-  - gnustep-base
-  - icu4c@78
-  - libobjc2
-  - wavpack
-  - zlib-ng-compat
+    - gnustep-base
+    - icu4c@78
+    - libobjc2
+    - wavpack
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

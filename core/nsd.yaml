@@ -3,28 +3,53 @@ version: 4.14.2
 description: Name server daemon
 homepage: https://www.nlnetlabs.nl/projects/nsd/
 license: BSD-3-Clause
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nsd/blobs/sha256:a4394782121330129516d8754a1afc60fcf65021a825f5bb7299b29e19471f46
-    sha256: a4394782121330129516d8754a1afc60fcf65021a825f5bb7299b29e19471f46
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nsd/blobs/sha256:84be842d16cf6d959917750f4519bae976aba6e3bae3ecd1f7ce865b0b212376
-    sha256: 84be842d16cf6d959917750f4519bae976aba6e3bae3ecd1f7ce865b0b212376
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/nsd/blobs/sha256:ba65dde178817e42ce9436607b1cb60857dd8848c7ce00e94be9a0e80cd86dfd
-    sha256: ba65dde178817e42ce9436607b1cb60857dd8848c7ce00e94be9a0e80cd86dfd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/nsd/blobs/sha256:24005bb47835c5d7df0fcf7cd12671f29c7b807f529b6822f958a64b71366e7f
-    sha256: 24005bb47835c5d7df0fcf7cd12671f29c7b807f529b6822f958a64b71366e7f
-source:
-  url: https://www.nlnetlabs.nl/downloads/nsd/nsd-4.14.2.tar.gz
-  sha256: 2bff57349841844d7560e76d7bd70b6bd6f4c462cdaa6d57b8e83d1e14dd22d6
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - libevent
-  - openssl@3
+    - libevent
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nsd/blobs/sha256:84be842d16cf6d959917750f4519bae976aba6e3bae3ecd1f7ce865b0b212376
+        sha256: 84be842d16cf6d959917750f4519bae976aba6e3bae3ecd1f7ce865b0b212376
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nsd/blobs/sha256:a4394782121330129516d8754a1afc60fcf65021a825f5bb7299b29e19471f46
+        sha256: a4394782121330129516d8754a1afc60fcf65021a825f5bb7299b29e19471f46
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nsd/blobs/sha256:ba65dde178817e42ce9436607b1cb60857dd8848c7ce00e94be9a0e80cd86dfd
+        sha256: ba65dde178817e42ce9436607b1cb60857dd8848c7ce00e94be9a0e80cd86dfd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nsd/blobs/sha256:24005bb47835c5d7df0fcf7cd12671f29c7b807f529b6822f958a64b71366e7f
+        sha256: 24005bb47835c5d7df0fcf7cd12671f29c7b807f529b6822f958a64b71366e7f
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.nlnetlabs.nl/downloads/nsd/nsd-4.14.2.tar.gz
+    sha256: 2bff57349841844d7560e76d7bd70b6bd6f4c462cdaa6d57b8e83d1e14dd22d6
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
+    - pkgconf
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

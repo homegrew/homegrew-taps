@@ -1,30 +1,55 @@
 name: hbase
 version: 2.6.5
-description: "Hadoop database: a distributed, scalable, big data store"
+description: 'Hadoop database: a distributed, scalable, big data store'
 homepage: https://hbase.apache.org
 license: Apache-2.0 AND GPL-3.0-or-later
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:add59c179ca1a52eda188727acbad545289cb0b7279d5667f205a745432bd395
-    sha256: add59c179ca1a52eda188727acbad545289cb0b7279d5667f205a745432bd395
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:246ede87a8ca8b624da273d08de57400a72b989c84c92d0b44553cb1bd61c5ef
-    sha256: 246ede87a8ca8b624da273d08de57400a72b989c84c92d0b44553cb1bd61c5ef
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:ca2ccf74243eb40d117b1ec7209c0089b1f9824b3f2dde1a5f0347ac926aba9c
-    sha256: ca2ccf74243eb40d117b1ec7209c0089b1f9824b3f2dde1a5f0347ac926aba9c
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:c0e4e633a550eceac6fd8f0aa86a79789519208b57cf7f87eee2e79b30da8077
-    sha256: c0e4e633a550eceac6fd8f0aa86a79789519208b57cf7f87eee2e79b30da8077
-source:
-  url: https://www.apache.org/dyn/closer.lua?path=hbase/2.6.5/hbase-2.6.5-bin.tar.gz
-  sha256: f9aa75ca683ddb942f33a5032ab7397509fe4a8bb851f5078176a66a5832fc21
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - lzo
-  - openjdk@11
+    - lzo
+    - openjdk@11
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:246ede87a8ca8b624da273d08de57400a72b989c84c92d0b44553cb1bd61c5ef
+        sha256: 246ede87a8ca8b624da273d08de57400a72b989c84c92d0b44553cb1bd61c5ef
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:add59c179ca1a52eda188727acbad545289cb0b7279d5667f205a745432bd395
+        sha256: add59c179ca1a52eda188727acbad545289cb0b7279d5667f205a745432bd395
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:ca2ccf74243eb40d117b1ec7209c0089b1f9824b3f2dde1a5f0347ac926aba9c
+        sha256: ca2ccf74243eb40d117b1ec7209c0089b1f9824b3f2dde1a5f0347ac926aba9c
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:c0e4e633a550eceac6fd8f0aa86a79789519208b57cf7f87eee2e79b30da8077
+        sha256: c0e4e633a550eceac6fd8f0aa86a79789519208b57cf7f87eee2e79b30da8077
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=hbase/2.6.5/hbase-2.6.5-bin.tar.gz
+    sha256: f9aa75ca683ddb942f33a5032ab7397509fe4a8bb851f5078176a66a5832fc21
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - ant
+    - ant
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

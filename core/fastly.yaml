@@ -3,25 +3,51 @@ version: 14.3.1
 description: Build, deploy and configure Fastly services
 homepage: https://www.fastly.com/documentation/reference/cli/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fastly/blobs/sha256:3e70927a68725a7ce43e6793220a25fc17ee0afe047e954784cddca1fa1d3d75
-    sha256: 3e70927a68725a7ce43e6793220a25fc17ee0afe047e954784cddca1fa1d3d75
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fastly/blobs/sha256:a1bab98bf19514744f379fcc5eadbb47ad5e92f46b8a4ef81279189911395a59
-    sha256: a1bab98bf19514744f379fcc5eadbb47ad5e92f46b8a4ef81279189911395a59
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/fastly/blobs/sha256:ae66ccbb3d03adf21444143589e6aa3df98fb7dc8a404b9a96919021b8131cdb
-    sha256: ae66ccbb3d03adf21444143589e6aa3df98fb7dc8a404b9a96919021b8131cdb
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/fastly/blobs/sha256:7b85600692b99076266e8eb95e52d8b107e9ddb1c384bc1ab66bdb308f7a08f4
-    sha256: 7b85600692b99076266e8eb95e52d8b107e9ddb1c384bc1ab66bdb308f7a08f4
-source:
-  url: https://github.com/fastly/cli/archive/refs/tags/v14.3.1.tar.gz
-  sha256: b91f25494d3c773854388013078b9e3efde30ed661a6257708e105c4f6bc1368
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fastly/blobs/sha256:a1bab98bf19514744f379fcc5eadbb47ad5e92f46b8a4ef81279189911395a59
+        sha256: a1bab98bf19514744f379fcc5eadbb47ad5e92f46b8a4ef81279189911395a59
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fastly/blobs/sha256:3e70927a68725a7ce43e6793220a25fc17ee0afe047e954784cddca1fa1d3d75
+        sha256: 3e70927a68725a7ce43e6793220a25fc17ee0afe047e954784cddca1fa1d3d75
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/fastly/blobs/sha256:ae66ccbb3d03adf21444143589e6aa3df98fb7dc8a404b9a96919021b8131cdb
+        sha256: ae66ccbb3d03adf21444143589e6aa3df98fb7dc8a404b9a96919021b8131cdb
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fastly/blobs/sha256:7b85600692b99076266e8eb95e52d8b107e9ddb1c384bc1ab66bdb308f7a08f4
+        sha256: 7b85600692b99076266e8eb95e52d8b107e9ddb1c384bc1ab66bdb308f7a08f4
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/fastly/cli/archive/refs/tags/v14.3.1.tar.gz
+    sha256: b91f25494d3c773854388013078b9e3efde30ed661a6257708e105c4f6bc1368
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

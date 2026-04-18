@@ -3,27 +3,52 @@ version: 0.21.0
 description: Visualize your multi-stage Dockerfiles
 homepage: https://github.com/patrickhoefler/dockerfilegraph
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dockerfilegraph/blobs/sha256:7ffb6f777419e29eaaa18813927f69177c44783ab45883fc1580f6e62d2a4db7
-    sha256: 7ffb6f777419e29eaaa18813927f69177c44783ab45883fc1580f6e62d2a4db7
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dockerfilegraph/blobs/sha256:b26d495598088cb22b7149734a9f5714d22da02edc921dc0d57c4d4a7ef85b31
-    sha256: b26d495598088cb22b7149734a9f5714d22da02edc921dc0d57c4d4a7ef85b31
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/dockerfilegraph/blobs/sha256:693ecc915aec2a80cb833d2ee5d0975f302e147bdbf2dcafcc7a11c85df9e5cd
-    sha256: 693ecc915aec2a80cb833d2ee5d0975f302e147bdbf2dcafcc7a11c85df9e5cd
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/dockerfilegraph/blobs/sha256:56434b1d10e42f97edbe1cd176786fd86f91307f8a468d2c46425f16a688ba58
-    sha256: 56434b1d10e42f97edbe1cd176786fd86f91307f8a468d2c46425f16a688ba58
-source:
-  url: https://github.com/patrickhoefler/dockerfilegraph/archive/refs/tags/v0.21.0.tar.gz
-  sha256: 7593483acf26aefb42b2bc9eeea1d42d2262732d4c88298d1dff78c52278c48f
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - graphviz
+    - graphviz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dockerfilegraph/blobs/sha256:b26d495598088cb22b7149734a9f5714d22da02edc921dc0d57c4d4a7ef85b31
+        sha256: b26d495598088cb22b7149734a9f5714d22da02edc921dc0d57c4d4a7ef85b31
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dockerfilegraph/blobs/sha256:7ffb6f777419e29eaaa18813927f69177c44783ab45883fc1580f6e62d2a4db7
+        sha256: 7ffb6f777419e29eaaa18813927f69177c44783ab45883fc1580f6e62d2a4db7
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dockerfilegraph/blobs/sha256:693ecc915aec2a80cb833d2ee5d0975f302e147bdbf2dcafcc7a11c85df9e5cd
+        sha256: 693ecc915aec2a80cb833d2ee5d0975f302e147bdbf2dcafcc7a11c85df9e5cd
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dockerfilegraph/blobs/sha256:56434b1d10e42f97edbe1cd176786fd86f91307f8a468d2c46425f16a688ba58
+        sha256: 56434b1d10e42f97edbe1cd176786fd86f91307f8a468d2c46425f16a688ba58
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/patrickhoefler/dockerfilegraph/archive/refs/tags/v0.21.0.tar.gz
+    sha256: 7593483acf26aefb42b2bc9eeea1d42d2262732d4c88298d1dff78c52278c48f
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - go
+    - go
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null

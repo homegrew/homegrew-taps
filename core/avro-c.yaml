@@ -3,35 +3,59 @@ version: 1.12.1
 description: Data serialization system
 homepage: https://avro.apache.org/
 license: Apache-2.0
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:abb6d682b6136ad799198b11633ab0a197bae12b256ab0ddd5d7d0ea77bf3f41
-    sha256: abb6d682b6136ad799198b11633ab0a197bae12b256ab0ddd5d7d0ea77bf3f41
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:f59a5d3deb7314c5c9c1fbb149e7e74470fc6b160b33e4e10dd0c71adff72658
-    sha256: f59a5d3deb7314c5c9c1fbb149e7e74470fc6b160b33e4e10dd0c71adff72658
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:d1c7c2673ab920322902e435fb6b4c562c90b3c5fbbaf1b2f62d15a5e7db1edc
-    sha256: d1c7c2673ab920322902e435fb6b4c562c90b3c5fbbaf1b2f62d15a5e7db1edc
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:0fa921d188143ffc18e81dd7c664593775e6496d921c85b4a63d6e1fde0b1b81
-    sha256: 0fa921d188143ffc18e81dd7c664593775e6496d921c85b4a63d6e1fde0b1b81
-source:
-  url: https://www.apache.org/dyn/closer.lua?path=avro/avro-1.12.1/c/avro-c-1.12.1.tar.gz
-  sha256: b64e31b94719499549622aa92f1d96d1742967ced261a0931b63be3bbe907f2c
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - jansson
-  - snappy
-  - xz
+    - jansson
+    - snappy
+    - xz
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:f59a5d3deb7314c5c9c1fbb149e7e74470fc6b160b33e4e10dd0c71adff72658
+        sha256: f59a5d3deb7314c5c9c1fbb149e7e74470fc6b160b33e4e10dd0c71adff72658
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:abb6d682b6136ad799198b11633ab0a197bae12b256ab0ddd5d7d0ea77bf3f41
+        sha256: abb6d682b6136ad799198b11633ab0a197bae12b256ab0ddd5d7d0ea77bf3f41
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:d1c7c2673ab920322902e435fb6b4c562c90b3c5fbbaf1b2f62d15a5e7db1edc
+        sha256: d1c7c2673ab920322902e435fb6b4c562c90b3c5fbbaf1b2f62d15a5e7db1edc
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:0fa921d188143ffc18e81dd7c664593775e6496d921c85b4a63d6e1fde0b1b81
+        sha256: 0fa921d188143ffc18e81dd7c664593775e6496d921c85b4a63d6e1fde0b1b81
+        sha512: ""
+        signature: ""
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=avro/avro-1.12.1/c/avro-c-1.12.1.tar.gz
+    sha256: b64e31b94719499549622aa92f1d96d1742967ced261a0931b63be3bbe907f2c
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - cmake
-  - pkgconf
+    - cmake
+    - pkgconf
 linux_dependencies:
-  - jansson
-  - snappy
-  - xz
-  - zlib-ng-compat
+    - jansson
+    - snappy
+    - xz
+    - zlib-ng-compat
+build:
+    configure: []
+    install: []
+service: null

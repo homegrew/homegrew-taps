@@ -3,28 +3,53 @@ version: 0.3.0
 description: Create `.gitignore` using templates from TopTal, GitHub or your own collection
 homepage: https://github.com/reemus-dev/gitnr
 license: MIT
-bottle:
-  darwin_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gitnr/blobs/sha256:494ca6dec62622f6a21fcb8c6f35ba5e125e5aed2efa9f3c31ad9cbf3536e229
-    sha256: 494ca6dec62622f6a21fcb8c6f35ba5e125e5aed2efa9f3c31ad9cbf3536e229
-  darwin_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gitnr/blobs/sha256:52f8cae5b076f50a940e44a114d385475ee9678601aa007e77cfbefdafb73f0c
-    sha256: 52f8cae5b076f50a940e44a114d385475ee9678601aa007e77cfbefdafb73f0c
-  linux_amd64:
-    url: https://ghcr.io/v2/homebrew/core/gitnr/blobs/sha256:57e5b49b99fa4499d6f75e46c89f965ed488c956841c4f2d349ce1596c9b1b80
-    sha256: 57e5b49b99fa4499d6f75e46c89f965ed488c956841c4f2d349ce1596c9b1b80
-  linux_arm64:
-    url: https://ghcr.io/v2/homebrew/core/gitnr/blobs/sha256:868a9851e7d7199029195cddaf7e34fbf849b197d10e24b75497936a6d385df1
-    sha256: 868a9851e7d7199029195cddaf7e34fbf849b197d10e24b75497936a6d385df1
-source:
-  url: https://github.com/reemus-dev/gitnr/archive/refs/tags/v0.3.0.tar.gz
-  sha256: b8e15c00465b20df576bcb68a13cdb9e9afbfc908208c47cd51d3d3a62164b27
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
 install:
-  type: archive
-  format: tar.gz
-  strip_components: 2
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
 dependencies:
-  - openssl@3
+    - openssl@3
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitnr/blobs/sha256:52f8cae5b076f50a940e44a114d385475ee9678601aa007e77cfbefdafb73f0c
+        sha256: 52f8cae5b076f50a940e44a114d385475ee9678601aa007e77cfbefdafb73f0c
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitnr/blobs/sha256:494ca6dec62622f6a21fcb8c6f35ba5e125e5aed2efa9f3c31ad9cbf3536e229
+        sha256: 494ca6dec62622f6a21fcb8c6f35ba5e125e5aed2efa9f3c31ad9cbf3536e229
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitnr/blobs/sha256:57e5b49b99fa4499d6f75e46c89f965ed488c956841c4f2d349ce1596c9b1b80
+        sha256: 57e5b49b99fa4499d6f75e46c89f965ed488c956841c4f2d349ce1596c9b1b80
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitnr/blobs/sha256:868a9851e7d7199029195cddaf7e34fbf849b197d10e24b75497936a6d385df1
+        sha256: 868a9851e7d7199029195cddaf7e34fbf849b197d10e24b75497936a6d385df1
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/reemus-dev/gitnr/archive/refs/tags/v0.3.0.tar.gz
+    sha256: b8e15c00465b20df576bcb68a13cdb9e9afbfc908208c47cd51d3d3a62164b27
+    sha512: ""
+    signature: ""
 build_dependencies:
-  - pkgconf
-  - rust
+    - pkgconf
+    - rust
+linux_dependencies: []
+build:
+    configure: []
+    install: []
+service: null
