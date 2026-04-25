@@ -1,7 +1,7 @@
 name: deadfinder
-version: 1.10.0
+version: 2.0.2
 description: Finds broken links
-homepage: https://rubygems.org/gems/deadfinder
+homepage: https://github.com/hahwul/deadfinder
 license: MIT
 url: {}
 sha256: {}
@@ -17,38 +17,48 @@ install:
     format: tar.gz
 post_install: ""
 dependencies:
-    - ruby
+    - bdw-gc
+    - libevent
+    - libyaml
+    - openssl@3
+    - pcre2
 keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/deadfinder/blobs/sha256:1ee62850abad8485e5327ec0579d30f24fb884e773eef673dab7b36c01564f30
-        sha256: 1ee62850abad8485e5327ec0579d30f24fb884e773eef673dab7b36c01564f30
+        url: https://ghcr.io/v2/homebrew/core/deadfinder/blobs/sha256:25aae4c594c1a3a66a7f3c89df5958f044e61b09eb66989b135eb3607178314a
+        sha256: 25aae4c594c1a3a66a7f3c89df5958f044e61b09eb66989b135eb3607178314a
         sha512: ""
         signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/deadfinder/blobs/sha256:550ef54a29d20b3e71cd5a2b9d557919152369dac8a4d2dc962fe8a044d0898e
-        sha256: 550ef54a29d20b3e71cd5a2b9d557919152369dac8a4d2dc962fe8a044d0898e
+        url: https://ghcr.io/v2/homebrew/core/deadfinder/blobs/sha256:3cd70822a8e851cba61fc82b404a3c288027c5e1428085419572da755190f3e7
+        sha256: 3cd70822a8e851cba61fc82b404a3c288027c5e1428085419572da755190f3e7
         sha512: ""
         signature: ""
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/deadfinder/blobs/sha256:d68f0537ef47c062571f77b1a5b6e7ca55b0d318ca5ad7d3f303c51fc608a5af
-        sha256: d68f0537ef47c062571f77b1a5b6e7ca55b0d318ca5ad7d3f303c51fc608a5af
+        url: https://ghcr.io/v2/homebrew/core/deadfinder/blobs/sha256:7b3b0164aa904fda4b1cb754c6cd4cb450fd7ff3d0004f0f6ad5134f845c2666
+        sha256: 7b3b0164aa904fda4b1cb754c6cd4cb450fd7ff3d0004f0f6ad5134f845c2666
         sha512: ""
         signature: ""
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/deadfinder/blobs/sha256:1c3a23a3d8a2e3b19b636939a182bd3da1a01d065674637d8589cbda09cc2cfe
-        sha256: 1c3a23a3d8a2e3b19b636939a182bd3da1a01d065674637d8589cbda09cc2cfe
+        url: https://ghcr.io/v2/homebrew/core/deadfinder/blobs/sha256:3c0b06102fec2f436837c35f2990b04ad9bb64dea9ba7e51a3bb6cbdb835b5ce
+        sha256: 3c0b06102fec2f436837c35f2990b04ad9bb64dea9ba7e51a3bb6cbdb835b5ce
         sha512: ""
         signature: ""
 source:
-    url: https://github.com/hahwul/deadfinder/archive/refs/tags/1.10.0.tar.gz
-    sha256: 8309c720ffa76c6588c5bc8f8dc169b6633059a9d8d68cb75cc8488667d81c01
+    url: https://github.com/hahwul/deadfinder/archive/refs/tags/2.0.2.tar.gz
+    sha256: 13d3d4b0392d6b1548071d44dc03a14e790ea161781d5a57a196577316a97543
     sha512: ""
     signature: ""
 build_dependencies:
+    - cmake
+    - crystal
     - pkgconf
 linux_dependencies:
-    - ruby
+    - bdw-gc
+    - libevent
+    - libyaml
+    - openssl@3
+    - pcre2
     - zlib-ng-compat
 build:
     configure: []

@@ -17,8 +17,8 @@ install:
     format: tar.gz
 post_install: ""
 dependencies:
-    - gettext
     - libpng
+    - gettext
 keg_only: false
 bottle:
     darwin_amd64:
@@ -49,9 +49,11 @@ source:
 build_dependencies:
     - autoconf
     - automake
+    - gettext
     - libtool
     - pkgconf
-linux_dependencies: []
+linux_dependencies:
+    - libpng
 build:
     configure: []
     install: []

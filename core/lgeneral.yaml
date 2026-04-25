@@ -17,9 +17,9 @@ install:
     format: tar.gz
 post_install: ""
 dependencies:
-    - gettext
     - sdl12-compat
     - sdl2
+    - gettext
 keg_only: false
 bottle:
     darwin_amd64:
@@ -48,7 +48,9 @@ source:
     sha512: ""
     signature: ""
 build_dependencies: []
-linux_dependencies: []
+linux_dependencies:
+    - sdl12-compat
+    - sdl2
 build:
     configure: []
     install: []

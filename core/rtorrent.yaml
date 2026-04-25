@@ -1,5 +1,5 @@
 name: rtorrent
-version: 0.16.9
+version: 0.16.10
 description: Ncurses BitTorrent client based on libtorrent-rakshasa
 homepage: https://github.com/rakshasa/rtorrent
 license: GPL-2.0-or-later
@@ -22,28 +22,28 @@ dependencies:
 keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/rtorrent/blobs/sha256:5055ab64b693b48cded0474e35a4d9a0f38a464883efc0b7d021778fa2809e6f
-        sha256: 5055ab64b693b48cded0474e35a4d9a0f38a464883efc0b7d021778fa2809e6f
+        url: https://ghcr.io/v2/homebrew/core/rtorrent/blobs/sha256:f0df9cab177271c3aa511180ef821ed5853d4b46f5af20015bba928698058090
+        sha256: f0df9cab177271c3aa511180ef821ed5853d4b46f5af20015bba928698058090
         sha512: ""
         signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/rtorrent/blobs/sha256:02fc5052cc589c3c3debb398f1c436032b1507ca0de5e807dd37633f28e97bf8
-        sha256: 02fc5052cc589c3c3debb398f1c436032b1507ca0de5e807dd37633f28e97bf8
+        url: https://ghcr.io/v2/homebrew/core/rtorrent/blobs/sha256:be6a8cca1ebabedf887dcd1eb590d46da47d2d5110885ef702829c1fcc00652a
+        sha256: be6a8cca1ebabedf887dcd1eb590d46da47d2d5110885ef702829c1fcc00652a
         sha512: ""
         signature: ""
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/rtorrent/blobs/sha256:8546ccd7ecc87a6f0981c215edc0b269bdb4cb96b2f05615906f4e58d9e51502
-        sha256: 8546ccd7ecc87a6f0981c215edc0b269bdb4cb96b2f05615906f4e58d9e51502
+        url: https://ghcr.io/v2/homebrew/core/rtorrent/blobs/sha256:391febee4a2ce24dea6460a75b68afb1cc07561c51d7493d21f2518a188fe58c
+        sha256: 391febee4a2ce24dea6460a75b68afb1cc07561c51d7493d21f2518a188fe58c
         sha512: ""
         signature: ""
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/rtorrent/blobs/sha256:0a61e3bacb90330ea5e589ba3e2b0fd66d34ae1101426c5044c4869e75f7ce21
-        sha256: 0a61e3bacb90330ea5e589ba3e2b0fd66d34ae1101426c5044c4869e75f7ce21
+        url: https://ghcr.io/v2/homebrew/core/rtorrent/blobs/sha256:53c8f0912b26042c6d8dca10647b05af792ab42e9c1c945907a85982adce202d
+        sha256: 53c8f0912b26042c6d8dca10647b05af792ab42e9c1c945907a85982adce202d
         sha512: ""
         signature: ""
 source:
-    url: https://github.com/rakshasa/rtorrent/releases/download/v0.16.9/rtorrent-0.16.9.tar.gz
-    sha256: 8eaadbc65ee80f195be170b0d12e5f3cce6e62bcfd69b80dc27a05898ff31237
+    url: https://github.com/rakshasa/rtorrent/releases/download/v0.16.10/rtorrent-0.16.10.tar.gz
+    sha256: ee3cbd8ee95d98b266f6dbef56ce6b566d340955c762dc4c407f45b706ff5733
     sha512: ""
     signature: ""
 build_dependencies:
@@ -52,7 +52,10 @@ build_dependencies:
     - automake
     - libtool
     - pkgconf
-linux_dependencies: []
+linux_dependencies:
+    - libtorrent-rakshasa
+    - xmlrpc-c
+    - zlib-ng-compat
 build:
     configure: []
     install: []

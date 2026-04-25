@@ -1,5 +1,5 @@
 name: fluid-synth
-version: 2.5.3
+version: 2.5.4
 description: Real-time software synthesizer based on the SoundFont 2 specs
 homepage: https://www.fluidsynth.org
 license: LGPL-2.1-or-later
@@ -19,34 +19,34 @@ post_install: ""
 dependencies:
     - glib
     - libsndfile
-    - portaudio
     - readline
     - gettext
+    - portaudio
 keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:b784773a748dcc50b884c9c7e71b054900a0026cd028f7a10234d611d5a973e9
-        sha256: b784773a748dcc50b884c9c7e71b054900a0026cd028f7a10234d611d5a973e9
+        url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:c9ebb65c4fd49ebeb4143b46360836d0a2bdc09305b37ef1d171ee58e8115424
+        sha256: c9ebb65c4fd49ebeb4143b46360836d0a2bdc09305b37ef1d171ee58e8115424
         sha512: ""
         signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:969995c79b2651580bac91d62795022084354c975a3ecd6ca17e20f0854061b5
-        sha256: 969995c79b2651580bac91d62795022084354c975a3ecd6ca17e20f0854061b5
+        url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:611d13e2a55b197803b0450464e8217e62dc4744aa351559a36f6e8c183b897e
+        sha256: 611d13e2a55b197803b0450464e8217e62dc4744aa351559a36f6e8c183b897e
         sha512: ""
         signature: ""
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:d84d702848cf52f6be9fbfb74e5083815ab75c3132c262d24ece015586b559fd
-        sha256: d84d702848cf52f6be9fbfb74e5083815ab75c3132c262d24ece015586b559fd
+        url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:4b3defa741a14eaed3eedf0f5f18eea42a94ce4388be4040a68eb9842a548ca2
+        sha256: 4b3defa741a14eaed3eedf0f5f18eea42a94ce4388be4040a68eb9842a548ca2
         sha512: ""
         signature: ""
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:516b90be09a28312b40090a818ee74122374af18f33cab7c2fb2efb98562e67c
-        sha256: 516b90be09a28312b40090a818ee74122374af18f33cab7c2fb2efb98562e67c
+        url: https://ghcr.io/v2/homebrew/core/fluid-synth/blobs/sha256:cff48fe8a15e99dd281c6692c6fc66b463f864254fb0026f7309df88f5ae11f8
+        sha256: cff48fe8a15e99dd281c6692c6fc66b463f864254fb0026f7309df88f5ae11f8
         sha512: ""
         signature: ""
 source:
-    url: https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.5.3.tar.gz
-    sha256: 6f247edfb4b91b927efc68c8884cec2ec345c8007afe6b59558cc52a67ef2517
+    url: https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.5.4.tar.gz
+    sha256: 72f5720328fe44e2e5c67813885f0a6b4b004d048bd2eeeb0c0064074ebff530
     sha512: ""
     signature: ""
 build_dependencies:
@@ -57,7 +57,8 @@ linux_dependencies:
     - glib
     - jack
     - libsndfile
-    - portaudio
+    - pipewire
+    - pulseaudio
     - readline
     - systemd
 build:

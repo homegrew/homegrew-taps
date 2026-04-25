@@ -16,27 +16,30 @@ install:
     strip_components: 2
     format: tar.gz
 post_install: ""
-dependencies: []
+dependencies:
+    - lz4
+    - xz
+    - zstd
 keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/tkrzw/blobs/sha256:f6f4257aff9c7fccc0ff8c2bb6f6ae9723d0c85e406a4331ed27e900d22e1223
-        sha256: f6f4257aff9c7fccc0ff8c2bb6f6ae9723d0c85e406a4331ed27e900d22e1223
+        url: https://ghcr.io/v2/homebrew/core/tkrzw/blobs/sha256:f0a9dfb7aa1d28dc848b8ae5a67093fe8ba7d73576fbb49f6eaf31804a46f63c
+        sha256: f0a9dfb7aa1d28dc848b8ae5a67093fe8ba7d73576fbb49f6eaf31804a46f63c
         sha512: ""
         signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/tkrzw/blobs/sha256:4b7d88b7e147b4f11a63156fe098d9e2a3d725598291e8bb1626e500f8726e8e
-        sha256: 4b7d88b7e147b4f11a63156fe098d9e2a3d725598291e8bb1626e500f8726e8e
+        url: https://ghcr.io/v2/homebrew/core/tkrzw/blobs/sha256:2a93d5a38b3e08c37d54d667daec5725390de6704e0ded01dae185d6fece38fa
+        sha256: 2a93d5a38b3e08c37d54d667daec5725390de6704e0ded01dae185d6fece38fa
         sha512: ""
         signature: ""
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/tkrzw/blobs/sha256:a0bbd8fd655b6360e7cf7fab8fc05b19f58c9eb4aff8a91ac0d075b1afaeec12
-        sha256: a0bbd8fd655b6360e7cf7fab8fc05b19f58c9eb4aff8a91ac0d075b1afaeec12
+        url: https://ghcr.io/v2/homebrew/core/tkrzw/blobs/sha256:b4afc2a954abf29f144c953048526c89d242af29652ac59d9ee05cd5d715ecd0
+        sha256: b4afc2a954abf29f144c953048526c89d242af29652ac59d9ee05cd5d715ecd0
         sha512: ""
         signature: ""
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/tkrzw/blobs/sha256:a7ef046fc7c1fbfe96ecf02e483fd60563372f83a6615daa227b8150be5a88ea
-        sha256: a7ef046fc7c1fbfe96ecf02e483fd60563372f83a6615daa227b8150be5a88ea
+        url: https://ghcr.io/v2/homebrew/core/tkrzw/blobs/sha256:2b2d2a3bc55190b7b8d86704fc5ca5920280277a238d55b20ae15c8ec00f1496
+        sha256: 2b2d2a3bc55190b7b8d86704fc5ca5920280277a238d55b20ae15c8ec00f1496
         sha512: ""
         signature: ""
 source:
@@ -46,7 +49,10 @@ source:
     signature: ""
 build_dependencies: []
 linux_dependencies:
+    - lz4
+    - xz
     - zlib-ng-compat
+    - zstd
 build:
     configure: []
     install: []

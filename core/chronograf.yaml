@@ -1,5 +1,5 @@
 name: chronograf
-version: 1.10.9
+version: 1.11.1
 description: Open source monitoring and visualization UI for the TICK stack
 homepage: https://docs.influxdata.com/chronograf/latest/
 license: AGPL-3.0-or-later
@@ -22,34 +22,36 @@ dependencies:
 keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:b205bc5e83253166087d3895ba61466bbb6d0a30a96be3a041907bf03b0a8fcf
-        sha256: b205bc5e83253166087d3895ba61466bbb6d0a30a96be3a041907bf03b0a8fcf
+        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:3af85f1489c43441dcbb1e7a46b6a0b1c1e7fcefef574f27a8df2f7caf47b313
+        sha256: 3af85f1489c43441dcbb1e7a46b6a0b1c1e7fcefef574f27a8df2f7caf47b313
         sha512: ""
         signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:91cd22b2b6b8793e72f37916d451fe1fd7c89cab46bce1de95c6d27045fe84f8
-        sha256: 91cd22b2b6b8793e72f37916d451fe1fd7c89cab46bce1de95c6d27045fe84f8
+        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:e5b70280c4f201b7b04b71d7667d46ee2321ba0510c2472bf75fdde51af6f65b
+        sha256: e5b70280c4f201b7b04b71d7667d46ee2321ba0510c2472bf75fdde51af6f65b
         sha512: ""
         signature: ""
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:3e5b01f1a9c61c9acbae2b41a803c5e7cd7c471cab324ae399fcbaf3c895741d
-        sha256: 3e5b01f1a9c61c9acbae2b41a803c5e7cd7c471cab324ae399fcbaf3c895741d
+        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:eafe31d39f938c140843c1c4ac98777668d551678388f3ba5be36e1936f15405
+        sha256: eafe31d39f938c140843c1c4ac98777668d551678388f3ba5be36e1936f15405
         sha512: ""
         signature: ""
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:154313920e25dc36c56c26aa567af0753f3092949f7d6b4a497e671808deea56
-        sha256: 154313920e25dc36c56c26aa567af0753f3092949f7d6b4a497e671808deea56
+        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:6acd0982f8cf4f58babf785eb92bc09053fd80cbffa98c41cc4155e69d687a5c
+        sha256: 6acd0982f8cf4f58babf785eb92bc09053fd80cbffa98c41cc4155e69d687a5c
         sha512: ""
         signature: ""
 source:
-    url: https://github.com/influxdata/chronograf/archive/refs/tags/1.10.9.tar.gz
-    sha256: 15c7cc80cc5e1e2d6ef33bffce1b6a26729f45b80453714f424eec03974f7e14
+    url: https://github.com/influxdata/chronograf/archive/refs/tags/1.11.1.tar.gz
+    sha256: aaa17b75e192f9d14709223c1070db81f382447afded69c5cbbb8be417229fb8
     sha512: ""
     signature: ""
 build_dependencies:
     - go
     - node@22
-    - python-setuptools
+    - pkg-config-wrapper
+    - pkgconf
+    - rust
     - yarn
 linux_dependencies: []
 build:

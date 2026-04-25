@@ -1,5 +1,5 @@
 name: ggml
-version: 0.9.11
+version: 0.10.0
 description: Tensor library for machine learning
 homepage: https://github.com/ggml-org/ggml
 license: MIT
@@ -21,34 +21,35 @@ dependencies:
 keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:ebbe28048543384ee0e6a8136d42e551b9ae23ed16cc2038785d3fe01768d2d1
-        sha256: ebbe28048543384ee0e6a8136d42e551b9ae23ed16cc2038785d3fe01768d2d1
+        url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:09078b1745239461a411b1cea11a19f3d80f9030937a4f9387d9265f21b7fd28
+        sha256: 09078b1745239461a411b1cea11a19f3d80f9030937a4f9387d9265f21b7fd28
         sha512: ""
         signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:df416e439f8bd8ad13e51117f2cfc4d27d9e4a131539df232ed284a0b36fbfe4
-        sha256: df416e439f8bd8ad13e51117f2cfc4d27d9e4a131539df232ed284a0b36fbfe4
+        url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:738f16218750d1905f8dd3a341b225a558385ccad8df12175113f2168275d745
+        sha256: 738f16218750d1905f8dd3a341b225a558385ccad8df12175113f2168275d745
         sha512: ""
         signature: ""
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:6dfe5ece36094fdc25c09b59e8b6bad4b55edeb58ff8a3fdad85c99a4fa58434
-        sha256: 6dfe5ece36094fdc25c09b59e8b6bad4b55edeb58ff8a3fdad85c99a4fa58434
+        url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:34110ce6375e78b263bbf7fd28191982f9cb0f85f75f54d0c557f738a3673fc9
+        sha256: 34110ce6375e78b263bbf7fd28191982f9cb0f85f75f54d0c557f738a3673fc9
         sha512: ""
         signature: ""
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:c7421cb5d7d6ca009aeb2d7f06f7788da2c67590803623e282aa758689c616cf
-        sha256: c7421cb5d7d6ca009aeb2d7f06f7788da2c67590803623e282aa758689c616cf
+        url: https://ghcr.io/v2/homebrew/core/ggml/blobs/sha256:48891afd6c0308310c80b819103f911826ae46ca948b5d5302b21852aa32af23
+        sha256: 48891afd6c0308310c80b819103f911826ae46ca948b5d5302b21852aa32af23
         sha512: ""
         signature: ""
 source:
-    url: https://github.com/ggml-org/ggml/archive/refs/tags/v0.9.11.tar.gz
-    sha256: 97b6f55df0e5d7c8f7528a443907752ff65c1c66bc0a3b71db2a0664e79c1982
+    url: https://github.com/ggml-org/ggml/archive/refs/tags/v0.10.0.tar.gz
+    sha256: a344050fc15b0307826a6b0b480eda4b45bd6c5cdbe974cec6840be2c3b6c7d0
     sha512: ""
     signature: ""
 build_dependencies:
     - cmake
 linux_dependencies:
     - openblas
+    - spirv-headers
     - vulkan-loader
 build:
     configure: []

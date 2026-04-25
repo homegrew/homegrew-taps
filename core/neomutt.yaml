@@ -17,7 +17,6 @@ install:
     format: tar.gz
 post_install: ""
 dependencies:
-    - gettext
     - gpgme
     - libidn2
     - lmdb
@@ -27,29 +26,29 @@ dependencies:
     - openssl@3
     - pcre2
     - sqlite
-    - tokyo-cabinet
+    - gettext
     - libgpg-error
     - libiconv
 keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:3eafbe45cf4be3d97c8912aa5f4dde93766400e7a1a0f35c30eb01ed6f538e42
-        sha256: 3eafbe45cf4be3d97c8912aa5f4dde93766400e7a1a0f35c30eb01ed6f538e42
+        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:f6872649f86357c7c47af0b83c2efba848a5b27ed3d67db4af8ef269970664a8
+        sha256: f6872649f86357c7c47af0b83c2efba848a5b27ed3d67db4af8ef269970664a8
         sha512: ""
         signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:5187c6aa23a3639e1a26e40006b9cc3aeabfaacde7a35d946cb7bee1f6bc33f5
-        sha256: 5187c6aa23a3639e1a26e40006b9cc3aeabfaacde7a35d946cb7bee1f6bc33f5
+        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:7501350f322f933d19aa4d56bcf70078142bf6ab9129e5e90d6ac15394c783f8
+        sha256: 7501350f322f933d19aa4d56bcf70078142bf6ab9129e5e90d6ac15394c783f8
         sha512: ""
         signature: ""
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:b5f634193c40187d5002a7763df29049234c02b4a07c83175f5d762caa55c445
-        sha256: b5f634193c40187d5002a7763df29049234c02b4a07c83175f5d762caa55c445
+        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:1116af9e321ad35bbce757764c101b46ccff5fc285950850bc682c8327072a10
+        sha256: 1116af9e321ad35bbce757764c101b46ccff5fc285950850bc682c8327072a10
         sha512: ""
         signature: ""
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:079e1204f13b47d41e2439a00efb6ddef8d75e19ddabd24e006b6c65ea8be7df
-        sha256: 079e1204f13b47d41e2439a00efb6ddef8d75e19ddabd24e006b6c65ea8be7df
+        url: https://ghcr.io/v2/homebrew/core/neomutt/blobs/sha256:abf8b127d94dd2730fadc2c676d38a9a2b4bb74d8d70c82105d36745e56ef4af
+        sha256: abf8b127d94dd2730fadc2c676d38a9a2b4bb74d8d70c82105d36745e56ef4af
         sha512: ""
         signature: ""
 source:
@@ -59,10 +58,10 @@ source:
     signature: ""
 build_dependencies:
     - docbook-xsl
+    - gettext
     - pkgconf
     - tcl-tk
 linux_dependencies:
-    - gettext
     - gpgme
     - libidn2
     - lmdb
@@ -72,7 +71,6 @@ linux_dependencies:
     - openssl@3
     - pcre2
     - sqlite
-    - tokyo-cabinet
     - zlib-ng-compat
 build:
     configure: []

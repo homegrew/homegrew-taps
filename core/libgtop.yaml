@@ -17,9 +17,9 @@ install:
     format: tar.gz
 post_install: ""
 dependencies:
-    - gettext
     - glib
     - libxau
+    - gettext
 keg_only: false
 bottle:
     darwin_amd64:
@@ -51,7 +51,9 @@ build_dependencies:
     - gobject-introspection
     - intltool
     - pkgconf
-linux_dependencies: []
+linux_dependencies:
+    - glib
+    - libxau
 build:
     configure: []
     install: []

@@ -1,0 +1,56 @@
+name: hf-mount
+version: 0.4.1
+description: Mount Hugging Face Buckets and repos as local filesystems
+homepage: https://github.com/huggingface/hf-mount
+license: Apache-2.0
+url: {}
+sha256: {}
+sha512: {}
+signature: {}
+source_url: ""
+source_sha256: ""
+source_sha512: ""
+install:
+    type: archive
+    binary_name: ""
+    strip_components: 2
+    format: tar.gz
+post_install: ""
+dependencies: []
+keg_only: false
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hf-mount/blobs/sha256:03d54ed15a6bda87687b83b8fb78cc57ab39bb6f685ff47831c232a8a1b80e5a
+        sha256: 03d54ed15a6bda87687b83b8fb78cc57ab39bb6f685ff47831c232a8a1b80e5a
+        sha512: ""
+        signature: ""
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hf-mount/blobs/sha256:63fd535386f08a5e1d4388a9ece1e5466039731e7e2583ea04dca003e7bc2bed
+        sha256: 63fd535386f08a5e1d4388a9ece1e5466039731e7e2583ea04dca003e7bc2bed
+        sha512: ""
+        signature: ""
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/hf-mount/blobs/sha256:2d1f5d1c03a14229c3699383808d5aa4f9c3a33c1305b5bb9f656791ac6fe162
+        sha256: 2d1f5d1c03a14229c3699383808d5aa4f9c3a33c1305b5bb9f656791ac6fe162
+        sha512: ""
+        signature: ""
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hf-mount/blobs/sha256:24ca9ef1ba29fe60b3fad58859ac8aa49049ba9a6ab0ec61112e3ab81c17845d
+        sha256: 24ca9ef1ba29fe60b3fad58859ac8aa49049ba9a6ab0ec61112e3ab81c17845d
+        sha512: ""
+        signature: ""
+source:
+    url: https://github.com/huggingface/hf-mount/archive/refs/tags/v0.4.1.tar.gz
+    sha256: da9d2658bc91aa98ddd52b7169563d9cb1aacc5f779f3db587456ed8a543c594
+    sha512: ""
+    signature: ""
+build_dependencies:
+    - pkgconf
+    - rust
+linux_dependencies:
+    - libfuse
+    - openssl@4
+build:
+    configure: []
+    install: []
+service: null

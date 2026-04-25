@@ -1,5 +1,5 @@
 name: technitium-dns
-version: 14.3.0
+version: 15.0.0
 description: Self host a DNS server for privacy & security
 homepage: https://technitium.com/dns/
 license: GPL-3.0-or-later
@@ -17,29 +17,34 @@ install:
     format: tar.gz
 post_install: ""
 dependencies:
-    - dotnet@9
+    - dotnet
     - libmsquic
     - technitium-library
 keg_only: false
 bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:7757dadbf70ae8ed61f800f6a3cba694fd83e5b640109a5897e42a141dbaad0d
+        sha256: 7757dadbf70ae8ed61f800f6a3cba694fd83e5b640109a5897e42a141dbaad0d
+        sha512: ""
+        signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:985294f14499dc8b8bf5e88b5864fd63c2f6d0faf4c84694bc80fc6933139788
-        sha256: 985294f14499dc8b8bf5e88b5864fd63c2f6d0faf4c84694bc80fc6933139788
+        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:85db9fdd25a5ccbd276d7f0e8ff1f0e2fd8a7461a547879069c7480bb64d8f91
+        sha256: 85db9fdd25a5ccbd276d7f0e8ff1f0e2fd8a7461a547879069c7480bb64d8f91
         sha512: ""
         signature: ""
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:0b95454ad1fa1891156fec79b9c0ef3fe515e218df1823319591837524a69799
-        sha256: 0b95454ad1fa1891156fec79b9c0ef3fe515e218df1823319591837524a69799
+        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:0c5e9e569ce9f4963b5eb011651a4763c928748a24f07b47461e5e710f9bd8dc
+        sha256: 0c5e9e569ce9f4963b5eb011651a4763c928748a24f07b47461e5e710f9bd8dc
         sha512: ""
         signature: ""
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:c4716ff2acfe129a9ec49b55f6b8bcc025276a8c0ba548b32361aa27f932991f
-        sha256: c4716ff2acfe129a9ec49b55f6b8bcc025276a8c0ba548b32361aa27f932991f
+        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:7293f1379eab109babfb6d8c23ab458f4fbe30e1df00a2ad41b070ee4bbfd3d3
+        sha256: 7293f1379eab109babfb6d8c23ab458f4fbe30e1df00a2ad41b070ee4bbfd3d3
         sha512: ""
         signature: ""
 source:
-    url: https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v14.3.0.tar.gz
-    sha256: 5f71c0661d22a5dd75374a9888bbd67469d1ba0b6b9947df770ec4833b7f36c3
+    url: https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v15.0.0.tar.gz
+    sha256: f2f7cc829699adacfe3fbf2dff735e02656c6f7ac1076fa4e07c90db62ca21eb
     sha512: ""
     signature: ""
 build_dependencies: []

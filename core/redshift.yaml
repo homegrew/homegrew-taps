@@ -17,8 +17,8 @@ install:
     format: tar.gz
 post_install: ""
 dependencies:
-    - gettext
     - glib
+    - gettext
 keg_only: false
 bottle:
     darwin_amd64:
@@ -47,9 +47,11 @@ source:
     sha512: ""
     signature: ""
 build_dependencies:
+    - gettext
     - intltool
     - pkgconf
-linux_dependencies: []
+linux_dependencies:
+    - glib
 build:
     configure: []
     install: []

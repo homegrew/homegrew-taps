@@ -1,5 +1,5 @@
 name: lilypond
-version: 2.24.4
+version: 2.26.0
 description: Music engraving system
 homepage: https://lilypond.org
 license: GPL-3.0-or-later AND GPL-3.0-only AND OFL-1.1-RFN AND GFDL-1.3-no-invariants-or-later AND LicenseRef-Homebrew-public-domain AND MIT AND AGPL-3.0-only AND LPPL-1.3c
@@ -18,11 +18,13 @@ install:
 post_install: ""
 dependencies:
     - bdw-gc
+    - cairo
     - fontconfig
     - freetype
     - ghostscript
     - glib
     - guile
+    - libpng
     - pango
     - python@3.14
     - gettext
@@ -30,28 +32,28 @@ dependencies:
 keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/lilypond/blobs/sha256:793294ac152b0b61343a9d38852246c995d12a6c12e445e2f928bb961b36cb1f
-        sha256: 793294ac152b0b61343a9d38852246c995d12a6c12e445e2f928bb961b36cb1f
+        url: https://ghcr.io/v2/homebrew/core/lilypond/blobs/sha256:76d49d11c62ee6443fb82e5011ad3939942ba91863aee07cd62759d37a97570b
+        sha256: 76d49d11c62ee6443fb82e5011ad3939942ba91863aee07cd62759d37a97570b
         sha512: ""
         signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/lilypond/blobs/sha256:08e195be137c3be99594e3277083e3a87a1ddb795770df30a2c87054b5a8994f
-        sha256: 08e195be137c3be99594e3277083e3a87a1ddb795770df30a2c87054b5a8994f
+        url: https://ghcr.io/v2/homebrew/core/lilypond/blobs/sha256:3105d0c645967f0405173d0521d258fb88b6f95d4154547d4b71df72470831d9
+        sha256: 3105d0c645967f0405173d0521d258fb88b6f95d4154547d4b71df72470831d9
         sha512: ""
         signature: ""
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/lilypond/blobs/sha256:295fc0a3f0be89287c2856b2d7fbcc639a444f5d694ebe47e4af952c75b6029b
-        sha256: 295fc0a3f0be89287c2856b2d7fbcc639a444f5d694ebe47e4af952c75b6029b
+        url: https://ghcr.io/v2/homebrew/core/lilypond/blobs/sha256:7e8c8a433ddc32619b5b828c37f94400a5a586be4da50cb3f410615cb42ef4b8
+        sha256: 7e8c8a433ddc32619b5b828c37f94400a5a586be4da50cb3f410615cb42ef4b8
         sha512: ""
         signature: ""
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/lilypond/blobs/sha256:5924a471b8630d1dee04084de229ba6423e1b7ceb4609cbe609592a8a07ddb93
-        sha256: 5924a471b8630d1dee04084de229ba6423e1b7ceb4609cbe609592a8a07ddb93
+        url: https://ghcr.io/v2/homebrew/core/lilypond/blobs/sha256:fc9bf54f0e144441e031ff5c956ac7fc0e4f454ad4d6648a3a733c6b1ca87169
+        sha256: fc9bf54f0e144441e031ff5c956ac7fc0e4f454ad4d6648a3a733c6b1ca87169
         sha512: ""
         signature: ""
 source:
-    url: https://lilypond.org/download/sources/v2.24/lilypond-2.24.4.tar.gz
-    sha256: e96fa03571c79f20e1979653afabdbe4ee42765a3d9fd14953f0cd9eea51781c
+    url: https://lilypond.org/download/sources/v2.26/lilypond-2.26.0.tar.gz
+    sha256: bbe82dbeba7f7f99ddcd8d1fa134a0d89cafa6e8f815fde5bb01f4208b06fe05
     sha512: ""
     signature: ""
 build_dependencies:
@@ -62,15 +64,19 @@ build_dependencies:
     - t1utils
     - texinfo
     - texlive
+    - make
 linux_dependencies:
     - bdw-gc
+    - cairo
     - fontconfig
     - freetype
     - ghostscript
     - glib
     - guile
+    - libpng
     - pango
     - python@3.14
+    - zlib-ng-compat
 build:
     configure: []
     install: []
