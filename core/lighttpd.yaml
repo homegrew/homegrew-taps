@@ -27,7 +27,27 @@ bottle:
         sha256: cfdb31aa3e83547b1fc22979098f00453307751d367e5407825d1dcddb198123
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/lighttpd/blobs/sha256:cfdb31aa3e83547b1fc22979098f00453307751d367e5407825d1dcddb198123
+        sha256: cfdb31aa3e83547b1fc22979098f00453307751d367e5407825d1dcddb198123
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lighttpd/blobs/sha256:50093f112787c67d9ca3d236eff0441751c453dd59ad065ec2c76b7ddfe47614
+        sha256: 50093f112787c67d9ca3d236eff0441751c453dd59ad065ec2c76b7ddfe47614
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/lighttpd/blobs/sha256:d50f7214b9644d56e9a5c2c048fb60b4ba10038e667ec19099abcf82b52287e6
+        sha256: d50f7214b9644d56e9a5c2c048fb60b4ba10038e667ec19099abcf82b52287e6
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/lighttpd/blobs/sha256:50093f112787c67d9ca3d236eff0441751c453dd59ad065ec2c76b7ddfe47614
+        sha256: 50093f112787c67d9ca3d236eff0441751c453dd59ad065ec2c76b7ddfe47614
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/lighttpd/blobs/sha256:8e6000d9ebee3364d83babba1271abfb827020f0ac611bd1f137c59229132b84
         sha256: 8e6000d9ebee3364d83babba1271abfb827020f0ac611bd1f137c59229132b84
         sha512: ""
@@ -60,4 +80,19 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/lighttpd/bin/lighttpd
+        - -D
+        - -f
+        - $HOMEBREW_PREFIX/etc/lighttpd/lighttpd.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/lighttpd/output.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/lighttpd/output.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - lighttpd

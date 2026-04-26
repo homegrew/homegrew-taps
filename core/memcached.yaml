@@ -26,7 +26,27 @@ bottle:
         sha256: 9014d9f2c632c4095b22a05b6476416bef77993e8ccf7f79bc81560d5e2bb21f
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:9014d9f2c632c4095b22a05b6476416bef77993e8ccf7f79bc81560d5e2bb21f
+        sha256: 9014d9f2c632c4095b22a05b6476416bef77993e8ccf7f79bc81560d5e2bb21f
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:21d44b6b093e0d4782e28cdb4972521e06a7d40a56648a07ca4e228c5fcd2726
+        sha256: 21d44b6b093e0d4782e28cdb4972521e06a7d40a56648a07ca4e228c5fcd2726
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:12a9038a6a0ce0efe49f915a5c869dd6d22841fad7ea5d2a7a95b8632110d154
+        sha256: 12a9038a6a0ce0efe49f915a5c869dd6d22841fad7ea5d2a7a95b8632110d154
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:21d44b6b093e0d4782e28cdb4972521e06a7d40a56648a07ca4e228c5fcd2726
+        sha256: 21d44b6b093e0d4782e28cdb4972521e06a7d40a56648a07ca4e228c5fcd2726
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/memcached/blobs/sha256:73994b98ba41eaeee0e79d4b5ffab8b9fb68856d5e9136148f1aee6b68cc151b
         sha256: 73994b98ba41eaeee0e79d4b5ffab8b9fb68856d5e9136148f1aee6b68cc151b
         sha512: ""
@@ -51,4 +71,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/memcached/bin/memcached
+        - -l
+        - localhost
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - memcached

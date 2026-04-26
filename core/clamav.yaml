@@ -28,7 +28,27 @@ bottle:
         sha256: e93c879894036a2e2ce2992e59dd3a03bac19bd37a6ff10120e1d273f36385c7
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:e93c879894036a2e2ce2992e59dd3a03bac19bd37a6ff10120e1d273f36385c7
+        sha256: e93c879894036a2e2ce2992e59dd3a03bac19bd37a6ff10120e1d273f36385c7
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:8dc570e59cc547273a807e746cecc6cbe3551c77080cf727afcb49180cec42c9
+        sha256: 8dc570e59cc547273a807e746cecc6cbe3551c77080cf727afcb49180cec42c9
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:6de5dc85434b920bf96a2ecb0738025499bf6e9b0dd4f237de6926786d302195
+        sha256: 6de5dc85434b920bf96a2ecb0738025499bf6e9b0dd4f237de6926786d302195
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:8dc570e59cc547273a807e746cecc6cbe3551c77080cf727afcb49180cec42c9
+        sha256: 8dc570e59cc547273a807e746cecc6cbe3551c77080cf727afcb49180cec42c9
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:da2ff01e94f58f60ccc44ef66cc0c20c4b05150352789c041617daedc2180d7b
         sha256: da2ff01e94f58f60ccc44ef66cc0c20c4b05150352789c041617daedc2180d7b
         sha512: ""
@@ -61,4 +81,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/clamav/sbin/clamd
+        - --foreground
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - clamav

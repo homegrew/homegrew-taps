@@ -24,7 +24,27 @@ bottle:
         sha256: f25d53eb6eb6c5308a3ca6a8869d3b2ebc3dd4cd2a1e5832db0a05b9ff4b8251
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/pueue/blobs/sha256:f25d53eb6eb6c5308a3ca6a8869d3b2ebc3dd4cd2a1e5832db0a05b9ff4b8251
+        sha256: f25d53eb6eb6c5308a3ca6a8869d3b2ebc3dd4cd2a1e5832db0a05b9ff4b8251
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pueue/blobs/sha256:2bd0ee212b361da811514fe5015720b2fd24fbcc91f6ad584c2848ae2ded4d57
+        sha256: 2bd0ee212b361da811514fe5015720b2fd24fbcc91f6ad584c2848ae2ded4d57
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/pueue/blobs/sha256:ba10a95fae0c75f603200c8efcf5820da8aaf5092a17e02cd19f3107a76f7d8f
+        sha256: ba10a95fae0c75f603200c8efcf5820da8aaf5092a17e02cd19f3107a76f7d8f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/pueue/blobs/sha256:2bd0ee212b361da811514fe5015720b2fd24fbcc91f6ad584c2848ae2ded4d57
+        sha256: 2bd0ee212b361da811514fe5015720b2fd24fbcc91f6ad584c2848ae2ded4d57
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/pueue/blobs/sha256:d367b404f349334dbfe0e5aab8395787cdc5d4d37350694cb7123e05ef4e1a50
         sha256: d367b404f349334dbfe0e5aab8395787cdc5d4d37350694cb7123e05ef4e1a50
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/pueue/bin/pueued
+        - --verbose
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/pueued.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/pueued.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - pueue

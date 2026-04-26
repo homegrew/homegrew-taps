@@ -25,7 +25,72 @@ bottle:
         sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
         sha512: ""
         signature: ""
+    darwin_amd64_10:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
         sha256: 957a0683f5f9f75c8cb1b1453a09eaf3727591586bd88455824da7089ba135ab
         sha512: ""
@@ -50,4 +115,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/jenkins/bin/jenkins
+        - --httpListenAddress=127.0.0.1
+        - --httpPort=8080
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/jenkins/output.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/jenkins/error.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - jenkins

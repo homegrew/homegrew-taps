@@ -25,7 +25,27 @@ bottle:
         sha256: 7465df0f80bf5e807516380472d47e9c3c272ad1ec6d2f32f9ed25998076299b
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:7465df0f80bf5e807516380472d47e9c3c272ad1ec6d2f32f9ed25998076299b
+        sha256: 7465df0f80bf5e807516380472d47e9c3c272ad1ec6d2f32f9ed25998076299b
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:7ee46368fdc79460ab6daf0fddd2c77fb0cacaeb443c15709df4b3e04ecb655e
+        sha256: 7ee46368fdc79460ab6daf0fddd2c77fb0cacaeb443c15709df4b3e04ecb655e
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:7ee46368fdc79460ab6daf0fddd2c77fb0cacaeb443c15709df4b3e04ecb655e
+        sha256: 7ee46368fdc79460ab6daf0fddd2c77fb0cacaeb443c15709df4b3e04ecb655e
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:7ee46368fdc79460ab6daf0fddd2c77fb0cacaeb443c15709df4b3e04ecb655e
+        sha256: 7ee46368fdc79460ab6daf0fddd2c77fb0cacaeb443c15709df4b3e04ecb655e
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:7ee46368fdc79460ab6daf0fddd2c77fb0cacaeb443c15709df4b3e04ecb655e
         sha256: 7ee46368fdc79460ab6daf0fddd2c77fb0cacaeb443c15709df4b3e04ecb655e
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/kafka/bin/kafka-server-start
+        - $HOMEBREW_PREFIX/etc/kafka/server.properties
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/kafka/kafka_output.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/kafka/kafka_output.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - kafka

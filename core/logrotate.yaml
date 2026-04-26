@@ -25,7 +25,27 @@ bottle:
         sha256: 83bb9be87509907cbb33a7ae78a4ff40ac00ac9da01f99d85817d2391cb2439f
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/logrotate/blobs/sha256:83bb9be87509907cbb33a7ae78a4ff40ac00ac9da01f99d85817d2391cb2439f
+        sha256: 83bb9be87509907cbb33a7ae78a4ff40ac00ac9da01f99d85817d2391cb2439f
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/logrotate/blobs/sha256:f23f3fac084d295e4c386d0e0a2a95af2b54adfb732aed1549f2ecf7fb1738e2
+        sha256: f23f3fac084d295e4c386d0e0a2a95af2b54adfb732aed1549f2ecf7fb1738e2
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/logrotate/blobs/sha256:29629b2a739cf74d95eaf260872024ffeaf7b194f461d74d20cd07afa4d7361b
+        sha256: 29629b2a739cf74d95eaf260872024ffeaf7b194f461d74d20cd07afa4d7361b
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/logrotate/blobs/sha256:f23f3fac084d295e4c386d0e0a2a95af2b54adfb732aed1549f2ecf7fb1738e2
+        sha256: f23f3fac084d295e4c386d0e0a2a95af2b54adfb732aed1549f2ecf7fb1738e2
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/logrotate/blobs/sha256:956be5c37ef380ddac0212fb5016e5d4a6baaefb6abe55d081eb8d130e3c8790
         sha256: 956be5c37ef380ddac0212fb5016e5d4a6baaefb6abe55d081eb8d130e3c8790
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/logrotate/sbin/logrotate
+        - $HOMEBREW_PREFIX/etc/logrotate.conf
+    run_type: cron
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - logrotate

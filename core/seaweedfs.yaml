@@ -24,7 +24,27 @@ bottle:
         sha256: a4f8fa92879eab8c164ecbb8d5742628631fa5abbd630cd827b02620eb87f22d
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:a4f8fa92879eab8c164ecbb8d5742628631fa5abbd630cd827b02620eb87f22d
+        sha256: a4f8fa92879eab8c164ecbb8d5742628631fa5abbd630cd827b02620eb87f22d
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:0198f8bf4bcff34b4bd8346694b7c4502993ce21fdc516103698d20b34dde813
+        sha256: 0198f8bf4bcff34b4bd8346694b7c4502993ce21fdc516103698d20b34dde813
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:2f1e6765d4dc9be769f34e56b3eee11c517b9f2218edeeb03cde6669f2794879
+        sha256: 2f1e6765d4dc9be769f34e56b3eee11c517b9f2218edeeb03cde6669f2794879
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:0198f8bf4bcff34b4bd8346694b7c4502993ce21fdc516103698d20b34dde813
+        sha256: 0198f8bf4bcff34b4bd8346694b7c4502993ce21fdc516103698d20b34dde813
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:8392230c9a48ed3a19408530fc350dee1a03a1bb09990bdc9d2a960282b0643c
         sha256: 8392230c9a48ed3a19408530fc350dee1a03a1bb09990bdc9d2a960282b0643c
         sha512: ""
@@ -50,4 +70,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/seaweedfs/bin/weed
+        - server
+        - -dir=$HOMEBREW_PREFIX/var/seaweedfs
+        - -s3
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/seaweedfs.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/seaweedfs.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - seaweedfs

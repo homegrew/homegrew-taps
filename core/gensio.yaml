@@ -30,7 +30,27 @@ bottle:
         sha256: 33301c2bd0538d62b33f72ab6ab7356b0de2d95416f2f85bad06467f3a87b072
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:33301c2bd0538d62b33f72ab6ab7356b0de2d95416f2f85bad06467f3a87b072
+        sha256: 33301c2bd0538d62b33f72ab6ab7356b0de2d95416f2f85bad06467f3a87b072
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:68e9064b1dc71ee980b5249fe7c30dab5b48234b5be64bd6ef51c9e7cd097cbe
+        sha256: 68e9064b1dc71ee980b5249fe7c30dab5b48234b5be64bd6ef51c9e7cd097cbe
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:8f5754c49d927f54546913cba4c3187df1b60a2e18672541c1d51d3738adc92a
+        sha256: 8f5754c49d927f54546913cba4c3187df1b60a2e18672541c1d51d3738adc92a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:68e9064b1dc71ee980b5249fe7c30dab5b48234b5be64bd6ef51c9e7cd097cbe
+        sha256: 68e9064b1dc71ee980b5249fe7c30dab5b48234b5be64bd6ef51c9e7cd097cbe
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gensio/blobs/sha256:0db89caf2ed24a6fe56baad6d75e2c330f3d844615476130ed40c96886ce1d8e
         sha256: 0db89caf2ed24a6fe56baad6d75e2c330f3d844615476130ed40c96886ce1d8e
         sha512: ""
@@ -66,4 +86,19 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/gensio/sbin/gtlsshd
+        - --nodaemon
+        - --pam-service
+        - sshd
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - gensio

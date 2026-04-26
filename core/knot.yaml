@@ -31,7 +31,27 @@ bottle:
         sha256: eda53ac8ed0f729172bd5e534df640658a788df4f011a5a9fe4222e2a3e0dce9
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:eda53ac8ed0f729172bd5e534df640658a788df4f011a5a9fe4222e2a3e0dce9
+        sha256: eda53ac8ed0f729172bd5e534df640658a788df4f011a5a9fe4222e2a3e0dce9
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:3398752aa113936a7bf174f155c26cb540c1874f3612ee9cbe7488b7affc722a
+        sha256: 3398752aa113936a7bf174f155c26cb540c1874f3612ee9cbe7488b7affc722a
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:97dc6a4868b6347a6ee4c6bf9a08ddc5ec6bf73c87e9dc50d3a1afeae5cdbb40
+        sha256: 97dc6a4868b6347a6ee4c6bf9a08ddc5ec6bf73c87e9dc50d3a1afeae5cdbb40
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:3398752aa113936a7bf174f155c26cb540c1874f3612ee9cbe7488b7affc722a
+        sha256: 3398752aa113936a7bf174f155c26cb540c1874f3612ee9cbe7488b7affc722a
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:7bc32f8cf88c498e6e5fecf3e98aad5de1515eca1ca57f7542bb80e0bd2e2ccf
         sha256: 7bc32f8cf88c498e6e5fecf3e98aad5de1515eca1ca57f7542bb80e0bd2e2ccf
         sha512: ""
@@ -58,4 +78,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/knot/sbin/knotd
+    run_type: immediate
+    working_dir: ""
+    log_path: /dev/null
+    error_log_path: $HOMEBREW_PREFIX/var/log/knot.log
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - knot

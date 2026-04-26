@@ -25,7 +25,27 @@ bottle:
         sha256: f211d8baa6bb2bc69487b05e015509900e4a25af706424d0f15fd7addfabb08e
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:f211d8baa6bb2bc69487b05e015509900e4a25af706424d0f15fd7addfabb08e
+        sha256: f211d8baa6bb2bc69487b05e015509900e4a25af706424d0f15fd7addfabb08e
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:7aa2da3f6e13c63bb59dd84985455f17f30a0082a7811288d9de63e25a5b4466
+        sha256: 7aa2da3f6e13c63bb59dd84985455f17f30a0082a7811288d9de63e25a5b4466
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:fd2ba929a766e1daca960565af6e99529a7e599b5c08e77333e99a8c14bc6d80
+        sha256: fd2ba929a766e1daca960565af6e99529a7e599b5c08e77333e99a8c14bc6d80
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:7aa2da3f6e13c63bb59dd84985455f17f30a0082a7811288d9de63e25a5b4466
+        sha256: 7aa2da3f6e13c63bb59dd84985455f17f30a0082a7811288d9de63e25a5b4466
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:de7f24489b290528b2c910124794ba8b1c704cc7950e964785531c8a27d6200c
         sha256: de7f24489b290528b2c910124794ba8b1c704cc7950e964785531c8a27d6200c
         sha512: ""
@@ -52,4 +72,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/ollama/bin/ollama
+        - serve
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/ollama.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/ollama.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - ollama

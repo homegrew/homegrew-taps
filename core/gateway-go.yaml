@@ -24,7 +24,27 @@ bottle:
         sha256: 99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
+        sha256: 99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:6ed644b847ee7f2626fe8f017d4e95b9be6e2d644c4ab04d02f5da16c5cd2dad
+        sha256: 6ed644b847ee7f2626fe8f017d4e95b9be6e2d644c4ab04d02f5da16c5cd2dad
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:36b71b06b0647849bde0330e0927b965f898565c52d3a192cbc426d98746202a
+        sha256: 36b71b06b0647849bde0330e0927b965f898565c52d3a192cbc426d98746202a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:6ed644b847ee7f2626fe8f017d4e95b9be6e2d644c4ab04d02f5da16c5cd2dad
+        sha256: 6ed644b847ee7f2626fe8f017d4e95b9be6e2d644c4ab04d02f5da16c5cd2dad
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
         sha256: f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/gateway-go/bin/gateway-go
+        - -c
+        - $HOMEBREW_PREFIX/etc/gateway-go.yaml
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/gateway-go.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/gateway-go.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - gateway-go

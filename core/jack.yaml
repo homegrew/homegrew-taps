@@ -27,7 +27,47 @@ bottle:
         sha256: 15b133b0d5b27e9a1e054fec07cd8c0c3e4972ace51ca2d6ec9b57b8ee4c5c85
         sha512: ""
         signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:5079ca572c21ee6acc9574a0db44938e2c6099242d38a3cbd39bc4e4bc643c08
+        sha256: 5079ca572c21ee6acc9574a0db44938e2c6099242d38a3cbd39bc4e4bc643c08
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:6d6e8934386e7609ad4ab4af7ba321ffc0bf8673f93b2d2deca7fb3bc3207688
+        sha256: 6d6e8934386e7609ad4ab4af7ba321ffc0bf8673f93b2d2deca7fb3bc3207688
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:15b133b0d5b27e9a1e054fec07cd8c0c3e4972ace51ca2d6ec9b57b8ee4c5c85
+        sha256: 15b133b0d5b27e9a1e054fec07cd8c0c3e4972ace51ca2d6ec9b57b8ee4c5c85
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:e3cd7f8ab3b70baa1766b3a131b16ffe7a62a398f20a3ce7b6d6935c222b5925
+        sha256: e3cd7f8ab3b70baa1766b3a131b16ffe7a62a398f20a3ce7b6d6935c222b5925
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:e9ff1f4cef83787cd63bb788cd2c1818b64798d85c7081ed3b2ba42a8f40b149
+        sha256: e9ff1f4cef83787cd63bb788cd2c1818b64798d85c7081ed3b2ba42a8f40b149
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:6210ae0eeab831aa965d6d737f22b7476224d1cd1daa1105cee116dd37a3627a
+        sha256: 6210ae0eeab831aa965d6d737f22b7476224d1cd1daa1105cee116dd37a3627a
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:39affd1f135d3745a22bf4907e46509cdb4b1b3a8e654e23179e1a1ad92193bc
+        sha256: 39affd1f135d3745a22bf4907e46509cdb4b1b3a8e654e23179e1a1ad92193bc
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:e3cd7f8ab3b70baa1766b3a131b16ffe7a62a398f20a3ce7b6d6935c222b5925
+        sha256: e3cd7f8ab3b70baa1766b3a131b16ffe7a62a398f20a3ce7b6d6935c222b5925
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:70eae572ab2834459171f64ab8e715aa90496a16b58dd312affe30ed26d0380d
         sha256: 70eae572ab2834459171f64ab8e715aa90496a16b58dd312affe30ed26d0380d
         sha512: ""
@@ -60,4 +100,20 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/jack/bin/jackd
+        - -X
+        - coremidi
+        - -d
+        - coreaudio
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/opt/jack
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - jack

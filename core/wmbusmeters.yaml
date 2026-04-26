@@ -26,7 +26,27 @@ bottle:
         sha256: d6d9021668bcf95ff563644a53219ada239edea1f9b7985f4869855cf74f5f82
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:d6d9021668bcf95ff563644a53219ada239edea1f9b7985f4869855cf74f5f82
+        sha256: d6d9021668bcf95ff563644a53219ada239edea1f9b7985f4869855cf74f5f82
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:d9e5e3b1e49de985190abb8b617f48a0f25fde23de7006bdf7fba515b33bccc4
+        sha256: d9e5e3b1e49de985190abb8b617f48a0f25fde23de7006bdf7fba515b33bccc4
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:914a69c5bd54cc032acf7ea11da5d527e9767fd8028a9c9fc320cde7615bf486
+        sha256: 914a69c5bd54cc032acf7ea11da5d527e9767fd8028a9c9fc320cde7615bf486
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:d9e5e3b1e49de985190abb8b617f48a0f25fde23de7006bdf7fba515b33bccc4
+        sha256: d9e5e3b1e49de985190abb8b617f48a0f25fde23de7006bdf7fba515b33bccc4
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/wmbusmeters/blobs/sha256:48ed2b6256fd4de5aae0ba88f168edff789455ebeddb45ec2c0b02dcf023ef50
         sha256: 48ed2b6256fd4de5aae0ba88f168edff789455ebeddb45ec2c0b02dcf023ef50
         sha512: ""
@@ -52,4 +72,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/wmbusmeters/bin/wmbusmeters
+        - --useconfig=$HOMEBREW_PREFIX/etc/wmbusmeters
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - wmbusmeters

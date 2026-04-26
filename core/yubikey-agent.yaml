@@ -24,7 +24,27 @@ bottle:
         sha256: 554a94f134c4d2440a678a7a99d3cab10fa1956d1f07d9f3165572d907c6a6ea
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:554a94f134c4d2440a678a7a99d3cab10fa1956d1f07d9f3165572d907c6a6ea
+        sha256: 554a94f134c4d2440a678a7a99d3cab10fa1956d1f07d9f3165572d907c6a6ea
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:bae16f841b3847ab59cbc42ef0a9c8944100b4817f0d20b7c0eb8c721a38dfe4
+        sha256: bae16f841b3847ab59cbc42ef0a9c8944100b4817f0d20b7c0eb8c721a38dfe4
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:d18f07e88226c171546f67e9d598a6a91f0b2f6749c7359ff6d0b94951bb37ae
+        sha256: d18f07e88226c171546f67e9d598a6a91f0b2f6749c7359ff6d0b94951bb37ae
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:bae16f841b3847ab59cbc42ef0a9c8944100b4817f0d20b7c0eb8c721a38dfe4
+        sha256: bae16f841b3847ab59cbc42ef0a9c8944100b4817f0d20b7c0eb8c721a38dfe4
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:13a582964b590f21b2fdd7c29ae6f76c2d598fc9a9e50e3f7e0086f6bb50fda1
         sha256: 13a582964b590f21b2fdd7c29ae6f76c2d598fc9a9e50e3f7e0086f6bb50fda1
         sha512: ""
@@ -52,4 +72,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/yubikey-agent/bin/yubikey-agent
+        - -l
+        - $HOMEBREW_PREFIX/var/run/yubikey-agent.sock
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/yubikey-agent.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/yubikey-agent.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - yubikey-agent

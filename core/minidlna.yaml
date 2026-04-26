@@ -33,7 +33,37 @@ bottle:
         sha256: ff6b2f6bd3fcad653e0db52c02c40db6edb23d7bfbeb9647ed13c97e7607a9d1
         sha512: ""
         signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:a95db24b987a5f9139174ccffbb740b561dca9218a2f683b89aeff6ce5156985
+        sha256: a95db24b987a5f9139174ccffbb740b561dca9218a2f683b89aeff6ce5156985
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:ff6b2f6bd3fcad653e0db52c02c40db6edb23d7bfbeb9647ed13c97e7607a9d1
+        sha256: ff6b2f6bd3fcad653e0db52c02c40db6edb23d7bfbeb9647ed13c97e7607a9d1
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:f7e718095ef9388cd38793641bcc399107f037cbf6bc744705ce58a5deb9c291
+        sha256: f7e718095ef9388cd38793641bcc399107f037cbf6bc744705ce58a5deb9c291
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:014e64f8d81857532e0a65c2aaf361d18090fe2ff791ef351ea02311ccd69410
+        sha256: 014e64f8d81857532e0a65c2aaf361d18090fe2ff791ef351ea02311ccd69410
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:a848bf8fdcace687463088fbbbb1095d0259bd65de13e580f76c05673bf31cc3
+        sha256: a848bf8fdcace687463088fbbbb1095d0259bd65de13e580f76c05673bf31cc3
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:f7e718095ef9388cd38793641bcc399107f037cbf6bc744705ce58a5deb9c291
+        sha256: f7e718095ef9388cd38793641bcc399107f037cbf6bc744705ce58a5deb9c291
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:9fc0ed3ac5675b3dbfe74a361c9b43f7d82a29a65a12abc56ac1b9efd30d1258
         sha256: 9fc0ed3ac5675b3dbfe74a361c9b43f7d82a29a65a12abc56ac1b9efd30d1258
         sha512: ""
@@ -58,4 +88,21 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/minidlna/sbin/minidlnad
+        - -d
+        - -f
+        - /$HOME/.config/minidlna/minidlna.conf
+        - -P
+        - /$HOME/.config/minidlna/minidlna.pid
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/minidlnad.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/minidlnad.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - minidlna

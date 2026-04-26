@@ -24,7 +24,27 @@ bottle:
         sha256: 6ae8d39da2c88142b5cf10fb9c6c90b1cf432c1446dcc0d4c60d0a9ab93e5b33
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:6ae8d39da2c88142b5cf10fb9c6c90b1cf432c1446dcc0d4c60d0a9ab93e5b33
+        sha256: 6ae8d39da2c88142b5cf10fb9c6c90b1cf432c1446dcc0d4c60d0a9ab93e5b33
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:b85d87895ce0d392935b46eb380caa966e858bbe17c1080aa13f30e5bd952bd8
+        sha256: b85d87895ce0d392935b46eb380caa966e858bbe17c1080aa13f30e5bd952bd8
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:c435fa96170f48c385ec8d91caf1ec5cd0b78a43f35817b641906868c73f7073
+        sha256: c435fa96170f48c385ec8d91caf1ec5cd0b78a43f35817b641906868c73f7073
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:b85d87895ce0d392935b46eb380caa966e858bbe17c1080aa13f30e5bd952bd8
+        sha256: b85d87895ce0d392935b46eb380caa966e858bbe17c1080aa13f30e5bd952bd8
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/telegraf/blobs/sha256:c141ebbc61a52387d12fa6676f0d1aff01d4ec98f09f6a78c1cd79cb94cebcd4
         sha256: c141ebbc61a52387d12fa6676f0d1aff01d4ec98f09f6a78c1cd79cb94cebcd4
         sha512: ""
@@ -50,4 +70,20 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/telegraf/bin/telegraf
+        - -config
+        - $HOMEBREW_PREFIX/etc/telegraf.conf
+        - -config-directory
+        - $HOMEBREW_PREFIX/etc/telegraf.d
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/telegraf.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/telegraf.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - telegraf

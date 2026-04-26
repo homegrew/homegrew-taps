@@ -26,7 +26,27 @@ bottle:
         sha256: 5f0c5f04d7fb322cd485baec2a6709504c8b5bef3cc737f6bb9a6d60d6ee2402
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:5f0c5f04d7fb322cd485baec2a6709504c8b5bef3cc737f6bb9a6d60d6ee2402
+        sha256: 5f0c5f04d7fb322cd485baec2a6709504c8b5bef3cc737f6bb9a6d60d6ee2402
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:11e63cf8c6dde47e7a741768b3ee68fc09fa1740f9bb8b930451f1dfcc70c068
+        sha256: 11e63cf8c6dde47e7a741768b3ee68fc09fa1740f9bb8b930451f1dfcc70c068
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:3ac08c3080b34fdbaf3e858ae63e550a3a52487891548c26d4fa7632f4cfbd07
+        sha256: 3ac08c3080b34fdbaf3e858ae63e550a3a52487891548c26d4fa7632f4cfbd07
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:11e63cf8c6dde47e7a741768b3ee68fc09fa1740f9bb8b930451f1dfcc70c068
+        sha256: 11e63cf8c6dde47e7a741768b3ee68fc09fa1740f9bb8b930451f1dfcc70c068
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/varnish/blobs/sha256:1d49563f4ae95371fcbba88cbc9e60417074f3691c405097f75e1db341636ff2
         sha256: 1d49563f4ae95371fcbba88cbc9e60417074f3691c405097f75e1db341636ff2
         sha512: ""
@@ -55,4 +75,27 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/varnish/sbin/varnishd
+        - -n
+        - $HOMEBREW_PREFIX/var/varnish
+        - -f
+        - $HOMEBREW_PREFIX/etc/varnish/default.vcl
+        - -s
+        - malloc,1G
+        - -T
+        - 127.0.0.1:2000
+        - -a
+        - 127.0.0.1:8080
+        - -F
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/varnish/varnish.log
+    error_log_path: $HOMEBREW_PREFIX/var/varnish/varnish.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - varnish

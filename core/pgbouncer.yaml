@@ -26,7 +26,27 @@ bottle:
         sha256: ca92fc4e84e84654b20e3696eedf19fc5ef394cae7ce74ffe111a43317eb90e7
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:ca92fc4e84e84654b20e3696eedf19fc5ef394cae7ce74ffe111a43317eb90e7
+        sha256: ca92fc4e84e84654b20e3696eedf19fc5ef394cae7ce74ffe111a43317eb90e7
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:6be837ec94647a38dd17d202a3694adf258ab90e78e5afdae17b345201dac64a
+        sha256: 6be837ec94647a38dd17d202a3694adf258ab90e78e5afdae17b345201dac64a
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:b90669ff9c33f12172c202a805aad612aff2c0c29d3085165c5bb7b42750922f
+        sha256: b90669ff9c33f12172c202a805aad612aff2c0c29d3085165c5bb7b42750922f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:6be837ec94647a38dd17d202a3694adf258ab90e78e5afdae17b345201dac64a
+        sha256: 6be837ec94647a38dd17d202a3694adf258ab90e78e5afdae17b345201dac64a
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/pgbouncer/blobs/sha256:f5a3fc3c60b6965b84c3726d7a2ba38abc650ccbe07a57c96de83d9b6fd330d1
         sha256: f5a3fc3c60b6965b84c3726d7a2ba38abc650ccbe07a57c96de83d9b6fd330d1
         sha512: ""
@@ -53,4 +73,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/pgbouncer/bin/pgbouncer
+        - -q
+        - $HOMEBREW_PREFIX/etc/pgbouncer.ini
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - pgbouncer

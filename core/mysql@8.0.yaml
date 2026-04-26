@@ -33,7 +33,27 @@ bottle:
         sha256: 34746f29e1fec9ee3775ddd34bbce43bd40c9e7951a0271fdc91a3b1d15f16f7
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:34746f29e1fec9ee3775ddd34bbce43bd40c9e7951a0271fdc91a3b1d15f16f7
+        sha256: 34746f29e1fec9ee3775ddd34bbce43bd40c9e7951a0271fdc91a3b1d15f16f7
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:11ca786b449739928a72aa96d5d4ccd6c8be11da59c7227a8bb84d1916acd372
+        sha256: 11ca786b449739928a72aa96d5d4ccd6c8be11da59c7227a8bb84d1916acd372
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:30c20ff8f4e1d8903c24d149e014c9e6d1cc3338339be3e70ddc7ee1536acaf2
+        sha256: 30c20ff8f4e1d8903c24d149e014c9e6d1cc3338339be3e70ddc7ee1536acaf2
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:11ca786b449739928a72aa96d5d4ccd6c8be11da59c7227a8bb84d1916acd372
+        sha256: 11ca786b449739928a72aa96d5d4ccd6c8be11da59c7227a8bb84d1916acd372
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mysql/8.0/blobs/sha256:07a002fe7f7bfb02889b779acbf908be173a566ea9ca50bc1005bf873e16f9e0
         sha256: 07a002fe7f7bfb02889b779acbf908be173a566ea9ca50bc1005bf873e16f9e0
         sha512: ""
@@ -71,4 +91,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mysql@8.0/bin/mysqld_safe
+        - --datadir=$HOMEBREW_PREFIX/var/mysql
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/mysql
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mysql@8.0

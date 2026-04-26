@@ -32,7 +32,27 @@ bottle:
         sha256: e8b32bc2160658bd1e433ff9d937a194dab886c4aee4e3bca9f2a99c5ca2c287
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:e8b32bc2160658bd1e433ff9d937a194dab886c4aee4e3bca9f2a99c5ca2c287
+        sha256: e8b32bc2160658bd1e433ff9d937a194dab886c4aee4e3bca9f2a99c5ca2c287
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:a1de623ed371362a2bd89a6c55333a28159b5d177a96457e7867bdac76b77bd7
+        sha256: a1de623ed371362a2bd89a6c55333a28159b5d177a96457e7867bdac76b77bd7
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:f54c9d4d5c01f4ec6f1feafa394323b0deda3e5eab427c954b3fd3a356e1fd3a
+        sha256: f54c9d4d5c01f4ec6f1feafa394323b0deda3e5eab427c954b3fd3a356e1fd3a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:a1de623ed371362a2bd89a6c55333a28159b5d177a96457e7867bdac76b77bd7
+        sha256: a1de623ed371362a2bd89a6c55333a28159b5d177a96457e7867bdac76b77bd7
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:82ef74dc69bdff61dc3a0ce9a6edf50cbff7ae88f4ffe8d83df3fa6506e3cd72
         sha256: 82ef74dc69bdff61dc3a0ce9a6edf50cbff7ae88f4ffe8d83df3fa6506e3cd72
         sha512: ""
@@ -59,4 +79,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/jupyterlab/bin/jupyter-lab
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/jupyterlab.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/jupyterlab.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - jupyterlab

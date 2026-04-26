@@ -25,7 +25,27 @@ bottle:
         sha256: 1894c5d3399c5335ce5726ee51fcc12fbd4d21b3155af2475b8d81af946d11a6
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:1894c5d3399c5335ce5726ee51fcc12fbd4d21b3155af2475b8d81af946d11a6
+        sha256: 1894c5d3399c5335ce5726ee51fcc12fbd4d21b3155af2475b8d81af946d11a6
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:7fb93a44e7da0f3b19e3a4cff6c7263daccf2bb7ebb20ecc96cd8e6d186ea1d2
+        sha256: 7fb93a44e7da0f3b19e3a4cff6c7263daccf2bb7ebb20ecc96cd8e6d186ea1d2
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:b14477c06f381620f1e897ef65ce1bff59ad4c34f8cdd07810d8132560f32f02
+        sha256: b14477c06f381620f1e897ef65ce1bff59ad4c34f8cdd07810d8132560f32f02
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:7fb93a44e7da0f3b19e3a4cff6c7263daccf2bb7ebb20ecc96cd8e6d186ea1d2
+        sha256: 7fb93a44e7da0f3b19e3a4cff6c7263daccf2bb7ebb20ecc96cd8e6d186ea1d2
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:26a2e0710f7f3b0b86af79fd864096a49414fe8d8bb25ab9f077715a0270a7dd
         sha256: 26a2e0710f7f3b0b86af79fd864096a49414fe8d8bb25ab9f077715a0270a7dd
         sha512: ""
@@ -53,4 +73,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/carrot2/bin/carrot2
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/opt/carrot2/libexec
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - carrot2

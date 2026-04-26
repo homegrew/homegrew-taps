@@ -29,7 +29,27 @@ bottle:
         sha256: 790bc99c821cc3fd8b4a685e37ec40ef4a6c0f470911a43b1863db3af4773f81
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:790bc99c821cc3fd8b4a685e37ec40ef4a6c0f470911a43b1863db3af4773f81
+        sha256: 790bc99c821cc3fd8b4a685e37ec40ef4a6c0f470911a43b1863db3af4773f81
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:bfe681be47331281dfa702c0869bc11e98881b4f3c0fcec40fbaf4cf480935cd
+        sha256: bfe681be47331281dfa702c0869bc11e98881b4f3c0fcec40fbaf4cf480935cd
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:19bf52cee9260d0669dc847fe5ecf000b905c4f8be5f303df4071db906082d36
+        sha256: 19bf52cee9260d0669dc847fe5ecf000b905c4f8be5f303df4071db906082d36
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:bfe681be47331281dfa702c0869bc11e98881b4f3c0fcec40fbaf4cf480935cd
+        sha256: bfe681be47331281dfa702c0869bc11e98881b4f3c0fcec40fbaf4cf480935cd
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:a42fdc941a6684fc34969d13cfb8943ab85ec4759e6648969c568c08f91578f9
         sha256: a42fdc941a6684fc34969d13cfb8943ab85ec4759e6648969c568c08f91578f9
         sha512: ""
@@ -57,4 +77,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/shadowsocks-libev/bin/ss-local
+        - -c
+        - $HOMEBREW_PREFIX/etc/shadowsocks-libev.json
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - shadowsocks-libev

@@ -24,7 +24,62 @@ bottle:
         sha256: 9d9a7af43f8aae5c7f0082b80939c4c362ccad1cbd4427fb27a1f77d1df23f31
         sha512: ""
         signature: ""
+    darwin_amd64_10:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:6752791ceaab316af2e61c45a6ee5e1a7c05f326be64f31e4bfad412a216b413
+        sha256: 6752791ceaab316af2e61c45a6ee5e1a7c05f326be64f31e4bfad412a216b413
+        sha512: ""
+        signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:ad8d8729a86763e64a3f555c4197ad6048ee5b8c6589ce4f2763d60b9826bb13
+        sha256: ad8d8729a86763e64a3f555c4197ad6048ee5b8c6589ce4f2763d60b9826bb13
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:5a6a9cf80d062199423619e15c9c32be29b1822cb49669ea89f107b6a58cd973
+        sha256: 5a6a9cf80d062199423619e15c9c32be29b1822cb49669ea89f107b6a58cd973
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:b85e0d84e33f248cfd9315efbfe6789886b4e65eafb82eed4f727aea18c49a84
+        sha256: b85e0d84e33f248cfd9315efbfe6789886b4e65eafb82eed4f727aea18c49a84
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:9d9a7af43f8aae5c7f0082b80939c4c362ccad1cbd4427fb27a1f77d1df23f31
+        sha256: 9d9a7af43f8aae5c7f0082b80939c4c362ccad1cbd4427fb27a1f77d1df23f31
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:a8ae2f2e3e784b696e707f95007573cfd1e7d64dbaca674c3b13caa05571f99a
+        sha256: a8ae2f2e3e784b696e707f95007573cfd1e7d64dbaca674c3b13caa05571f99a
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:01c66d5808a4c8defb52bb8c9acf2584dbe542940bf758a53cae0c4d68229c3e
+        sha256: 01c66d5808a4c8defb52bb8c9acf2584dbe542940bf758a53cae0c4d68229c3e
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:84f1c692fe19acb2929dd41746c3a184efb36146039b3b9c4554a4ca7a3e0d55
+        sha256: 84f1c692fe19acb2929dd41746c3a184efb36146039b3b9c4554a4ca7a3e0d55
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:009536d9992206c912bd778ca8a596cd56915d900ea30f5db94c5ff48cec6c92
+        sha256: 009536d9992206c912bd778ca8a596cd56915d900ea30f5db94c5ff48cec6c92
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:44e9a135ca035bf756a113115f71737d5a90162c9beda447624ced1efc77f62e
+        sha256: 44e9a135ca035bf756a113115f71737d5a90162c9beda447624ced1efc77f62e
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:a8ae2f2e3e784b696e707f95007573cfd1e7d64dbaca674c3b13caa05571f99a
+        sha256: a8ae2f2e3e784b696e707f95007573cfd1e7d64dbaca674c3b13caa05571f99a
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/sleepwatcher/blobs/sha256:77ad0daae582536562d912657a5a3deeffa9f16ad0f3dc9b7b69e5d345f1f26d
         sha256: 77ad0daae582536562d912657a5a3deeffa9f16ad0f3dc9b7b69e5d345f1f26d
         sha512: ""
@@ -39,4 +94,21 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/sleepwatcher/sbin/sleepwatcher
+        - -V
+        - -s
+        - /$HOME/.sleep
+        - -w
+        - /$HOME/.wakeup
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - sleepwatcher

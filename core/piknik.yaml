@@ -24,7 +24,37 @@ bottle:
         sha256: 794e44f78e1ac05b76da93e9ebcd02080d4dae1fbcdb5e186fd8779215499136
         sha512: ""
         signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:794e44f78e1ac05b76da93e9ebcd02080d4dae1fbcdb5e186fd8779215499136
+        sha256: 794e44f78e1ac05b76da93e9ebcd02080d4dae1fbcdb5e186fd8779215499136
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:794e44f78e1ac05b76da93e9ebcd02080d4dae1fbcdb5e186fd8779215499136
+        sha256: 794e44f78e1ac05b76da93e9ebcd02080d4dae1fbcdb5e186fd8779215499136
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:a5c60ad4cad0bbf6a504f28053f1668b8b209a6bf473a8c477f53a5bf7b4665b
+        sha256: a5c60ad4cad0bbf6a504f28053f1668b8b209a6bf473a8c477f53a5bf7b4665b
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:a5c60ad4cad0bbf6a504f28053f1668b8b209a6bf473a8c477f53a5bf7b4665b
+        sha256: a5c60ad4cad0bbf6a504f28053f1668b8b209a6bf473a8c477f53a5bf7b4665b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:a5c60ad4cad0bbf6a504f28053f1668b8b209a6bf473a8c477f53a5bf7b4665b
+        sha256: a5c60ad4cad0bbf6a504f28053f1668b8b209a6bf473a8c477f53a5bf7b4665b
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:a5c60ad4cad0bbf6a504f28053f1668b8b209a6bf473a8c477f53a5bf7b4665b
+        sha256: a5c60ad4cad0bbf6a504f28053f1668b8b209a6bf473a8c477f53a5bf7b4665b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/piknik/blobs/sha256:1f7929f75bf041543fa64ab97f1d36ae8bda93d70ab052e9e6e886c1fad752e6
         sha256: 1f7929f75bf041543fa64ab97f1d36ae8bda93d70ab052e9e6e886c1fad752e6
         sha512: ""
@@ -50,4 +80,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/piknik/bin/piknik
+        - -server
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - piknik

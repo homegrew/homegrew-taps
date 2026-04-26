@@ -30,7 +30,27 @@ bottle:
         sha256: 8fa7950770478519b25f4f6a76d88a0ae22897e3ba99bb86024cbdaad1dfd945
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:8fa7950770478519b25f4f6a76d88a0ae22897e3ba99bb86024cbdaad1dfd945
+        sha256: 8fa7950770478519b25f4f6a76d88a0ae22897e3ba99bb86024cbdaad1dfd945
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:7d09f7b9f7b8c21850e551f9778ee1bd6f1633e8366ce8832c65cb6cf0cc693a
+        sha256: 7d09f7b9f7b8c21850e551f9778ee1bd6f1633e8366ce8832c65cb6cf0cc693a
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:362d0e219205a25cf91d77203ce8b06d4a41a9f74f13db0ffad6e5fd121b158a
+        sha256: 362d0e219205a25cf91d77203ce8b06d4a41a9f74f13db0ffad6e5fd121b158a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:7d09f7b9f7b8c21850e551f9778ee1bd6f1633e8366ce8832c65cb6cf0cc693a
+        sha256: 7d09f7b9f7b8c21850e551f9778ee1bd6f1633e8366ce8832c65cb6cf0cc693a
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ola/blobs/sha256:6074a5dfc02e9b35399c20da37ad2a6a29002f0f7eb99fe26fa8fac750457232
         sha256: 6074a5dfc02e9b35399c20da37ad2a6a29002f0f7eb99fe26fa8fac750457232
         sha512: ""
@@ -67,4 +87,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/ola/bin/olad
+        - --no-http-quit
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: $HOMEBREW_PREFIX/var/log/olad.log
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - ola

@@ -27,7 +27,27 @@ bottle:
         sha256: 6adb9865250752540188fad3bbd293935f7f82d431530bcdfeec4b372f27ed7a
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:6adb9865250752540188fad3bbd293935f7f82d431530bcdfeec4b372f27ed7a
+        sha256: 6adb9865250752540188fad3bbd293935f7f82d431530bcdfeec4b372f27ed7a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:df8f10238c9b1db61937d5e6c08c05b4c1e90e452397f375ad789b8ee40b93eb
+        sha256: df8f10238c9b1db61937d5e6c08c05b4c1e90e452397f375ad789b8ee40b93eb
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:3b130c9e39d1cdcdc8fe79d7672bc19250eea7a77f9a88469c1568f5ef2dba90
+        sha256: 3b130c9e39d1cdcdc8fe79d7672bc19250eea7a77f9a88469c1568f5ef2dba90
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:df8f10238c9b1db61937d5e6c08c05b4c1e90e452397f375ad789b8ee40b93eb
+        sha256: df8f10238c9b1db61937d5e6c08c05b4c1e90e452397f375ad789b8ee40b93eb
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:9f99630d252d5bf043ab3cd20bbfe7f523f8a5947c24116884805d3f7ce4966e
         sha256: 9f99630d252d5bf043ab3cd20bbfe7f523f8a5947c24116884805d3f7ce4966e
         sha512: ""
@@ -57,4 +77,16 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/serialosc/bin/serialoscd
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/serialoscd.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/serialoscd.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - serialosc

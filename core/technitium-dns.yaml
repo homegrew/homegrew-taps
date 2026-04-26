@@ -27,7 +27,27 @@ bottle:
         sha256: 7757dadbf70ae8ed61f800f6a3cba694fd83e5b640109a5897e42a141dbaad0d
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:7757dadbf70ae8ed61f800f6a3cba694fd83e5b640109a5897e42a141dbaad0d
+        sha256: 7757dadbf70ae8ed61f800f6a3cba694fd83e5b640109a5897e42a141dbaad0d
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:01cb904ff840565d0dcbc8099a3789e3cfdf169046a378e9442f20a9b5bfcafd
+        sha256: 01cb904ff840565d0dcbc8099a3789e3cfdf169046a378e9442f20a9b5bfcafd
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:28c12b3dcacf89dd3e3d4f5801a46efe7b57de8cb31c3294d94ff65f44cbcb8a
+        sha256: 28c12b3dcacf89dd3e3d4f5801a46efe7b57de8cb31c3294d94ff65f44cbcb8a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:01cb904ff840565d0dcbc8099a3789e3cfdf169046a378e9442f20a9b5bfcafd
+        sha256: 01cb904ff840565d0dcbc8099a3789e3cfdf169046a378e9442f20a9b5bfcafd
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/technitium-dns/blobs/sha256:85db9fdd25a5ccbd276d7f0e8ff1f0e2fd8a7461a547879069c7480bb64d8f91
         sha256: 85db9fdd25a5ccbd276d7f0e8ff1f0e2fd8a7461a547879069c7480bb64d8f91
         sha512: ""
@@ -52,4 +72,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/technitium-dns/bin/technitium-dns
+        - --stop-if-bind-fails
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/technitium-dns.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/technitium-dns.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - technitium-dns

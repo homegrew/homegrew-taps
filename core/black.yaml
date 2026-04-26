@@ -25,7 +25,27 @@ bottle:
         sha256: 1ff3648b78242fc5cc3ce6b1e2dd4d1eb7fff3515b9163d5feb8dbe66460dcfe
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/black/blobs/sha256:1ff3648b78242fc5cc3ce6b1e2dd4d1eb7fff3515b9163d5feb8dbe66460dcfe
+        sha256: 1ff3648b78242fc5cc3ce6b1e2dd4d1eb7fff3515b9163d5feb8dbe66460dcfe
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/black/blobs/sha256:f994f4e1a6eb4bb5c1abc76c9057e38bca0b16e095651f6edb7cb95d831aee53
+        sha256: f994f4e1a6eb4bb5c1abc76c9057e38bca0b16e095651f6edb7cb95d831aee53
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/black/blobs/sha256:d31453b4c0e97715219c2b33e2943ae83c72b430e5ec4ea0f644ce934292240f
+        sha256: d31453b4c0e97715219c2b33e2943ae83c72b430e5ec4ea0f644ce934292240f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/black/blobs/sha256:f994f4e1a6eb4bb5c1abc76c9057e38bca0b16e095651f6edb7cb95d831aee53
+        sha256: f994f4e1a6eb4bb5c1abc76c9057e38bca0b16e095651f6edb7cb95d831aee53
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/black/blobs/sha256:0f14e8471779f315d01097e4d39aaec0bb00e2a084aabd23ed4ab47b1aa9d030
         sha256: 0f14e8471779f315d01097e4d39aaec0bb00e2a084aabd23ed4ab47b1aa9d030
         sha512: ""
@@ -50,4 +70,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/black/bin/blackd
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/blackd.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/blackd.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - black

@@ -28,7 +28,27 @@ bottle:
         sha256: 9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
+        sha256: 9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:d049a99186126a6cd72e03b2496a91fedecf409bdabb5261c384812184b6d59a
+        sha256: d049a99186126a6cd72e03b2496a91fedecf409bdabb5261c384812184b6d59a
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:9c2b74f769b586d036399bb3faeb7951aff2ba542a27eff01aa9568d1c89ce48
+        sha256: 9c2b74f769b586d036399bb3faeb7951aff2ba542a27eff01aa9568d1c89ce48
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:d049a99186126a6cd72e03b2496a91fedecf409bdabb5261c384812184b6d59a
+        sha256: d049a99186126a6cd72e03b2496a91fedecf409bdabb5261c384812184b6d59a
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:e75ad66ee05e77f6aac6b6dc47a03989868067b4c1ed7b790e18b0ab92604379
         sha256: e75ad66ee05e77f6aac6b6dc47a03989868067b4c1ed7b790e18b0ab92604379
         sha512: ""
@@ -54,4 +74,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/coturn/bin/turnserver
+        - -c
+        - $HOMEBREW_PREFIX/etc/turnserver.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/coturn.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/coturn.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - coturn

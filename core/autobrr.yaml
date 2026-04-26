@@ -24,7 +24,27 @@ bottle:
         sha256: 4278a09b2574de8f893513ea363fa9c194ed2830ef4049327b381c3ad17cf6ee
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/autobrr/blobs/sha256:4278a09b2574de8f893513ea363fa9c194ed2830ef4049327b381c3ad17cf6ee
+        sha256: 4278a09b2574de8f893513ea363fa9c194ed2830ef4049327b381c3ad17cf6ee
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/autobrr/blobs/sha256:449b00b68dc2250d0cc385e365463cb7c11a1710f843c2f747e60527c8d464f9
+        sha256: 449b00b68dc2250d0cc385e365463cb7c11a1710f843c2f747e60527c8d464f9
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/autobrr/blobs/sha256:8570971cf52e2cb82c7b4a655312d219d171872c5e95f45473bc2d0ed946dd5f
+        sha256: 8570971cf52e2cb82c7b4a655312d219d171872c5e95f45473bc2d0ed946dd5f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/autobrr/blobs/sha256:449b00b68dc2250d0cc385e365463cb7c11a1710f843c2f747e60527c8d464f9
+        sha256: 449b00b68dc2250d0cc385e365463cb7c11a1710f843c2f747e60527c8d464f9
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/autobrr/blobs/sha256:7bd4bb271fad0bd5e365364523a6ba61cba2ddf987da5612b1d15ebe689200f7
         sha256: 7bd4bb271fad0bd5e365364523a6ba61cba2ddf987da5612b1d15ebe689200f7
         sha512: ""
@@ -52,4 +72,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/autobrr/bin/autobrr
+        - --config
+        - $HOMEBREW_PREFIX/var/autobrr/
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/autobrr.log
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - autobrr

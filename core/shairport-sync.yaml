@@ -31,7 +31,27 @@ bottle:
         sha256: 9cc6c4b9edc5eb522e3204eb0a78f74dc7ba62edfbcf02c36bd16026677911c2
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/shairport-sync/blobs/sha256:9cc6c4b9edc5eb522e3204eb0a78f74dc7ba62edfbcf02c36bd16026677911c2
+        sha256: 9cc6c4b9edc5eb522e3204eb0a78f74dc7ba62edfbcf02c36bd16026677911c2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shairport-sync/blobs/sha256:a14a768a218935fab3e391e1f5e27acc85cf0410d84ee4439a74b40021c28c24
+        sha256: a14a768a218935fab3e391e1f5e27acc85cf0410d84ee4439a74b40021c28c24
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/shairport-sync/blobs/sha256:041edb48fecbf5263a748fb17aa979defea43f738859046dbc5fb4c3677c3b4a
+        sha256: 041edb48fecbf5263a748fb17aa979defea43f738859046dbc5fb4c3677c3b4a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/shairport-sync/blobs/sha256:a14a768a218935fab3e391e1f5e27acc85cf0410d84ee4439a74b40021c28c24
+        sha256: a14a768a218935fab3e391e1f5e27acc85cf0410d84ee4439a74b40021c28c24
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/shairport-sync/blobs/sha256:92fa8ba7a5da6cbd5ba7cd6b6b68b5910d5e8927d0e5a8daadd04b9e5cf3171d
         sha256: 92fa8ba7a5da6cbd5ba7cd6b6b68b5910d5e8927d0e5a8daadd04b9e5cf3171d
         sha512: ""
@@ -59,4 +79,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/shairport-sync/bin/shairport-sync
+        - --use-stderr
+        - --verbose
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/shairport-sync.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/shairport-sync.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - shairport-sync

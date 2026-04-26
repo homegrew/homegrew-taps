@@ -24,7 +24,27 @@ bottle:
         sha256: adaf7f330014bb1479e5ca2afaa0ce0641d7248327bbf637ef26bb71e928c097
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/dnscrypt-proxy/blobs/sha256:adaf7f330014bb1479e5ca2afaa0ce0641d7248327bbf637ef26bb71e928c097
+        sha256: adaf7f330014bb1479e5ca2afaa0ce0641d7248327bbf637ef26bb71e928c097
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dnscrypt-proxy/blobs/sha256:9f52afc199f9685dcfe202b307ab4dfb6570079b4ab0138b84db59b3be369931
+        sha256: 9f52afc199f9685dcfe202b307ab4dfb6570079b4ab0138b84db59b3be369931
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/dnscrypt-proxy/blobs/sha256:9f52afc199f9685dcfe202b307ab4dfb6570079b4ab0138b84db59b3be369931
+        sha256: 9f52afc199f9685dcfe202b307ab4dfb6570079b4ab0138b84db59b3be369931
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/dnscrypt-proxy/blobs/sha256:9f52afc199f9685dcfe202b307ab4dfb6570079b4ab0138b84db59b3be369931
+        sha256: 9f52afc199f9685dcfe202b307ab4dfb6570079b4ab0138b84db59b3be369931
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dnscrypt-proxy/blobs/sha256:9f52afc199f9685dcfe202b307ab4dfb6570079b4ab0138b84db59b3be369931
         sha256: 9f52afc199f9685dcfe202b307ab4dfb6570079b4ab0138b84db59b3be369931
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/dnscrypt-proxy/sbin/dnscrypt-proxy
+        - -config
+        - $HOMEBREW_PREFIX/etc/dnscrypt-proxy.toml
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - dnscrypt-proxy

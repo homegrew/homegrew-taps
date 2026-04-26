@@ -27,7 +27,27 @@ bottle:
         sha256: acdda6aa6132c0e9652c901c806acd5f3d2a05b71a1f73c8ab182b8dea643dc2
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/et/blobs/sha256:acdda6aa6132c0e9652c901c806acd5f3d2a05b71a1f73c8ab182b8dea643dc2
+        sha256: acdda6aa6132c0e9652c901c806acd5f3d2a05b71a1f73c8ab182b8dea643dc2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/et/blobs/sha256:161e483009fa29de8ef1db8e0fd6d3a7d63e97d0814e170a702daf224590af12
+        sha256: 161e483009fa29de8ef1db8e0fd6d3a7d63e97d0814e170a702daf224590af12
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/et/blobs/sha256:4e223a932b062e0eac5f6147def2b4cac109b23f772d96b381ba34706b623fe4
+        sha256: 4e223a932b062e0eac5f6147def2b4cac109b23f772d96b381ba34706b623fe4
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/et/blobs/sha256:161e483009fa29de8ef1db8e0fd6d3a7d63e97d0814e170a702daf224590af12
+        sha256: 161e483009fa29de8ef1db8e0fd6d3a7d63e97d0814e170a702daf224590af12
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/et/blobs/sha256:c14ad953bcc4571ce51e889d15557bad0a15ddb203d8b73bf0ccac823f5f1405
         sha256: c14ad953bcc4571ce51e889d15557bad0a15ddb203d8b73bf0ccac823f5f1405
         sha512: ""
@@ -59,4 +79,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/et/bin/etserver
+        - --cfgfile
+        - $HOMEBREW_PREFIX/etc/et.cfg
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/et/etserver.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/et/etserver.err
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - et

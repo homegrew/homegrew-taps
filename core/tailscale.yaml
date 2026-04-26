@@ -24,7 +24,27 @@ bottle:
         sha256: 5199e1b7dac4ad8e8a00df193624d38329f8a2c04136e5deeec0e94371463946
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/tailscale/blobs/sha256:5199e1b7dac4ad8e8a00df193624d38329f8a2c04136e5deeec0e94371463946
+        sha256: 5199e1b7dac4ad8e8a00df193624d38329f8a2c04136e5deeec0e94371463946
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tailscale/blobs/sha256:116f5c3948f0d8214c22dc6682a2e1171dc9e3adb2e05e3b9e9910925d7f0839
+        sha256: 116f5c3948f0d8214c22dc6682a2e1171dc9e3adb2e05e3b9e9910925d7f0839
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/tailscale/blobs/sha256:8b59244df8a725ccfde1219124520af87a483078b8b3f8f20a51187e3954a549
+        sha256: 8b59244df8a725ccfde1219124520af87a483078b8b3f8f20a51187e3954a549
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/tailscale/blobs/sha256:116f5c3948f0d8214c22dc6682a2e1171dc9e3adb2e05e3b9e9910925d7f0839
+        sha256: 116f5c3948f0d8214c22dc6682a2e1171dc9e3adb2e05e3b9e9910925d7f0839
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/tailscale/blobs/sha256:a29fba8f8870e8003b6fa435d1cad8ef830d612939465caa25d096eb918d1950
         sha256: a29fba8f8870e8003b6fa435d1cad8ef830d612939465caa25d096eb918d1950
         sha512: ""
@@ -50,4 +70,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/tailscale/bin/tailscaled
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/tailscaled.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/tailscaled.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - tailscale

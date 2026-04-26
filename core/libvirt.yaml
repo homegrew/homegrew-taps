@@ -31,7 +31,27 @@ bottle:
         sha256: 80e0f6964593b76be00a21aa8ca051bdbfeed0130e7bad43974a54f863b328e8
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:80e0f6964593b76be00a21aa8ca051bdbfeed0130e7bad43974a54f863b328e8
+        sha256: 80e0f6964593b76be00a21aa8ca051bdbfeed0130e7bad43974a54f863b328e8
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:0826b26d97693ac7f667cbcf44a21c4fe4c6adef6df43973848f3202df75d7b2
+        sha256: 0826b26d97693ac7f667cbcf44a21c4fe4c6adef6df43973848f3202df75d7b2
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:873799a459494eda469cd7eb1ed14020f6f80914bf4ef2f6f9803bc76ff33015
+        sha256: 873799a459494eda469cd7eb1ed14020f6f80914bf4ef2f6f9803bc76ff33015
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:0826b26d97693ac7f667cbcf44a21c4fe4c6adef6df43973848f3202df75d7b2
+        sha256: 0826b26d97693ac7f667cbcf44a21c4fe4c6adef6df43973848f3202df75d7b2
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/libvirt/blobs/sha256:ffb806afc2152123e5ef0d3f376d0ba3b4116783fad70f5384724174a2bfe12c
         sha256: ffb806afc2152123e5ef0d3f376d0ba3b4116783fad70f5384724174a2bfe12c
         sha512: ""
@@ -72,4 +92,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/libvirt/sbin/libvirtd
+        - -f
+        - $HOMEBREW_PREFIX/etc/libvirt/libvirtd.conf
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - libvirt

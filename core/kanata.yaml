@@ -24,7 +24,27 @@ bottle:
         sha256: 3f77ca47aa8567ebbd73a4b818cae0ae19d59fd343aae43bbc5b8dc0fef28d0c
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/kanata/blobs/sha256:3f77ca47aa8567ebbd73a4b818cae0ae19d59fd343aae43bbc5b8dc0fef28d0c
+        sha256: 3f77ca47aa8567ebbd73a4b818cae0ae19d59fd343aae43bbc5b8dc0fef28d0c
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kanata/blobs/sha256:f46f564fb6abea62e5b58593ee3f38f9597c33934a284f900c2ea9eee45c1d1a
+        sha256: f46f564fb6abea62e5b58593ee3f38f9597c33934a284f900c2ea9eee45c1d1a
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/kanata/blobs/sha256:962193383f5f79208291702f4fc88921c85e19f513fae2198886b6604069d888
+        sha256: 962193383f5f79208291702f4fc88921c85e19f513fae2198886b6604069d888
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/kanata/blobs/sha256:f46f564fb6abea62e5b58593ee3f38f9597c33934a284f900c2ea9eee45c1d1a
+        sha256: f46f564fb6abea62e5b58593ee3f38f9597c33934a284f900c2ea9eee45c1d1a
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/kanata/blobs/sha256:1e33042a173476ca96bae7cbda19836a4efc074089ed3dbb558f929c3e20b15e
         sha256: 1e33042a173476ca96bae7cbda19836a4efc074089ed3dbb558f929c3e20b15e
         sha512: ""
@@ -50,4 +70,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/kanata/bin/kanata
+        - --no-wait
+        - --cfg
+        - /$HOME/.config/kanata/kanata.kbd
+    run_type: immediate
+    working_dir: /$HOME
+    log_path: $HOMEBREW_PREFIX/var/log/kanata.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/kanata.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - kanata

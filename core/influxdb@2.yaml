@@ -24,7 +24,27 @@ bottle:
         sha256: a332a795d88b9c8cea1f8c1676397097b7a5d8a008fbd483c3acfe8950a92d3b
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:a332a795d88b9c8cea1f8c1676397097b7a5d8a008fbd483c3acfe8950a92d3b
+        sha256: a332a795d88b9c8cea1f8c1676397097b7a5d8a008fbd483c3acfe8950a92d3b
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:81b814b815ce01c996d4d6f74a2e640d45eaef750e30499153e1c759a736fdee
+        sha256: 81b814b815ce01c996d4d6f74a2e640d45eaef750e30499153e1c759a736fdee
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:40514cfa58d87f940fad4fdd66d5057f8ec21097fe639db27ee722ca65e75093
+        sha256: 40514cfa58d87f940fad4fdd66d5057f8ec21097fe639db27ee722ca65e75093
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:81b814b815ce01c996d4d6f74a2e640d45eaef750e30499153e1c759a736fdee
+        sha256: 81b814b815ce01c996d4d6f74a2e640d45eaef750e30499153e1c759a736fdee
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:eac49c488c06b5fb0dac04de800ff3d793fa6893f19bac8203f15a46e2ec2f1f
         sha256: eac49c488c06b5fb0dac04de800ff3d793fa6893f19bac8203f15a46e2ec2f1f
         sha512: ""
@@ -54,4 +74,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/influxdb@2/bin/influxd
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/influxdb2/influxd_output.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/influxdb2/influxd_output.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - influxdb@2

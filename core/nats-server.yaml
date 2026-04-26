@@ -24,7 +24,27 @@ bottle:
         sha256: 4fab97ae65a053eea06245401619d747111a95419bb2032c259e73eb53ab37b2
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nats-server/blobs/sha256:4fab97ae65a053eea06245401619d747111a95419bb2032c259e73eb53ab37b2
+        sha256: 4fab97ae65a053eea06245401619d747111a95419bb2032c259e73eb53ab37b2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nats-server/blobs/sha256:90dca56f9d624c47444a7b9d433cdb699cfbe1dcc0e76c2627d0f5713e1efa55
+        sha256: 90dca56f9d624c47444a7b9d433cdb699cfbe1dcc0e76c2627d0f5713e1efa55
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nats-server/blobs/sha256:90dca56f9d624c47444a7b9d433cdb699cfbe1dcc0e76c2627d0f5713e1efa55
+        sha256: 90dca56f9d624c47444a7b9d433cdb699cfbe1dcc0e76c2627d0f5713e1efa55
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nats-server/blobs/sha256:90dca56f9d624c47444a7b9d433cdb699cfbe1dcc0e76c2627d0f5713e1efa55
+        sha256: 90dca56f9d624c47444a7b9d433cdb699cfbe1dcc0e76c2627d0f5713e1efa55
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nats-server/blobs/sha256:90dca56f9d624c47444a7b9d433cdb699cfbe1dcc0e76c2627d0f5713e1efa55
         sha256: 90dca56f9d624c47444a7b9d433cdb699cfbe1dcc0e76c2627d0f5713e1efa55
         sha512: ""
@@ -50,4 +70,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nats-server/bin/nats-server
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nats-server

@@ -25,7 +25,72 @@ bottle:
         sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
         sha512: ""
         signature: ""
+    darwin_amd64_10:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
         sha256: 23e04604313424736f08c1643acb79a66e80665193f341f18e3b4221037b1c7e
         sha512: ""
@@ -50,4 +115,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/riemann/bin/riemann
+        - $HOMEBREW_PREFIX/etc/riemann.config
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/riemann.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/riemann.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - riemann

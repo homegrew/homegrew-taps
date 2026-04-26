@@ -24,7 +24,27 @@ bottle:
         sha256: aa62a4550a52785a8503126ce21b32859faecc5279092c098000a96e6230795d
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/symfony-cli/blobs/sha256:aa62a4550a52785a8503126ce21b32859faecc5279092c098000a96e6230795d
+        sha256: aa62a4550a52785a8503126ce21b32859faecc5279092c098000a96e6230795d
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/symfony-cli/blobs/sha256:dc975b34c6b9e42bf7550cee20976b94dc33788b85205d4c944878a27705d6b1
+        sha256: dc975b34c6b9e42bf7550cee20976b94dc33788b85205d4c944878a27705d6b1
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/symfony-cli/blobs/sha256:141ed733c1c0388af03cffc26e1cb4d66e63d1953f7ff94fcdefb27036587e4d
+        sha256: 141ed733c1c0388af03cffc26e1cb4d66e63d1953f7ff94fcdefb27036587e4d
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/symfony-cli/blobs/sha256:dc975b34c6b9e42bf7550cee20976b94dc33788b85205d4c944878a27705d6b1
+        sha256: dc975b34c6b9e42bf7550cee20976b94dc33788b85205d4c944878a27705d6b1
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/symfony-cli/blobs/sha256:e7b85716efe3c8176c084b717f0fd191ba216a5788cdd32012eaff976790ee7b
         sha256: e7b85716efe3c8176c084b717f0fd191ba216a5788cdd32012eaff976790ee7b
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/symfony-cli/bin/symfony
+        - local:proxy:start
+        - --foreground
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - symfony-cli

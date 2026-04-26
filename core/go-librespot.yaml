@@ -27,7 +27,27 @@ bottle:
         sha256: 1fe1dc4546772e9c55f71b26eecd8914e3f7492bae1804f36b049042abb986a3
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/go-librespot/blobs/sha256:1fe1dc4546772e9c55f71b26eecd8914e3f7492bae1804f36b049042abb986a3
+        sha256: 1fe1dc4546772e9c55f71b26eecd8914e3f7492bae1804f36b049042abb986a3
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/go-librespot/blobs/sha256:de2b905f2f6d2c1a456791254c8d4c377a3d552c98448ee9fc293a21202205f5
+        sha256: de2b905f2f6d2c1a456791254c8d4c377a3d552c98448ee9fc293a21202205f5
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/go-librespot/blobs/sha256:0d5a5a962592a46e38d8653d1d6dacd6b38147ce429773df1905b07836a0f47b
+        sha256: 0d5a5a962592a46e38d8653d1d6dacd6b38147ce429773df1905b07836a0f47b
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/go-librespot/blobs/sha256:de2b905f2f6d2c1a456791254c8d4c377a3d552c98448ee9fc293a21202205f5
+        sha256: de2b905f2f6d2c1a456791254c8d4c377a3d552c98448ee9fc293a21202205f5
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/go-librespot/blobs/sha256:16b97c3c124cf7017cda09378810639238d52295dd623c0fd4ffd37f5d56f781
         sha256: 16b97c3c124cf7017cda09378810639238d52295dd623c0fd4ffd37f5d56f781
         sha512: ""
@@ -58,4 +78,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/go-librespot/bin/go-librespot
+        - --config_dir
+        - $HOMEBREW_PREFIX/etc/go-librespot
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/go-librespot.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/go-librespot.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - go-librespot

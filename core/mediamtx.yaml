@@ -24,7 +24,27 @@ bottle:
         sha256: 6ccecaecefcd856448761356d4295050b2388f99ec98d13a0fce9b52298e06e2
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mediamtx/blobs/sha256:6ccecaecefcd856448761356d4295050b2388f99ec98d13a0fce9b52298e06e2
+        sha256: 6ccecaecefcd856448761356d4295050b2388f99ec98d13a0fce9b52298e06e2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mediamtx/blobs/sha256:23be24bfa8e8e783fb2f3e05763738b41cec269a853098ff1e3563b8ecd0ffb1
+        sha256: 23be24bfa8e8e783fb2f3e05763738b41cec269a853098ff1e3563b8ecd0ffb1
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mediamtx/blobs/sha256:23be24bfa8e8e783fb2f3e05763738b41cec269a853098ff1e3563b8ecd0ffb1
+        sha256: 23be24bfa8e8e783fb2f3e05763738b41cec269a853098ff1e3563b8ecd0ffb1
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mediamtx/blobs/sha256:23be24bfa8e8e783fb2f3e05763738b41cec269a853098ff1e3563b8ecd0ffb1
+        sha256: 23be24bfa8e8e783fb2f3e05763738b41cec269a853098ff1e3563b8ecd0ffb1
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mediamtx/blobs/sha256:23be24bfa8e8e783fb2f3e05763738b41cec269a853098ff1e3563b8ecd0ffb1
         sha256: 23be24bfa8e8e783fb2f3e05763738b41cec269a853098ff1e3563b8ecd0ffb1
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mediamtx/bin/mediamtx
+        - $HOMEBREW_PREFIX/etc/mediamtx/mediamtx.yml
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/mediamtx/output.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/mediamtx/error.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mediamtx

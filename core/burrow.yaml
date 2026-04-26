@@ -24,7 +24,27 @@ bottle:
         sha256: 261a4bfe121fa8af48ee190fdab037c5c16d65a5ee672d9b3a9cb90c68260e54
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/burrow/blobs/sha256:261a4bfe121fa8af48ee190fdab037c5c16d65a5ee672d9b3a9cb90c68260e54
+        sha256: 261a4bfe121fa8af48ee190fdab037c5c16d65a5ee672d9b3a9cb90c68260e54
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/burrow/blobs/sha256:96d98011b5b9e0943087196c71dbcf60904ab9e4e22602baeea422a96e488620
+        sha256: 96d98011b5b9e0943087196c71dbcf60904ab9e4e22602baeea422a96e488620
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/burrow/blobs/sha256:ed299aece4ff3ffe4f5c676b3b2afda41d5d8a97dc937e3babceef7387dce6a7
+        sha256: ed299aece4ff3ffe4f5c676b3b2afda41d5d8a97dc937e3babceef7387dce6a7
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/burrow/blobs/sha256:96d98011b5b9e0943087196c71dbcf60904ab9e4e22602baeea422a96e488620
+        sha256: 96d98011b5b9e0943087196c71dbcf60904ab9e4e22602baeea422a96e488620
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/burrow/blobs/sha256:5b86ff8deae33789a7977472252996ce9bed5b9297186b7e3ada18b8ccb34531
         sha256: 5b86ff8deae33789a7977472252996ce9bed5b9297186b7e3ada18b8ccb34531
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/burrow/bin/burrow
+        - --config-dir
+        - $HOMEBREW_PREFIX/etc/burrow
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/burrow.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/burrow.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - burrow

@@ -24,7 +24,27 @@ bottle:
         sha256: 7bb714e226fe9b23212df38c29451aabc16ab943752b4333d7502a0b874e426b
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/act_runner/blobs/sha256:7bb714e226fe9b23212df38c29451aabc16ab943752b4333d7502a0b874e426b
+        sha256: 7bb714e226fe9b23212df38c29451aabc16ab943752b4333d7502a0b874e426b
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/act_runner/blobs/sha256:4811942b8b373161812c30a3da7354e16c630e246878c2a9d7d5db5ed79c1fd4
+        sha256: 4811942b8b373161812c30a3da7354e16c630e246878c2a9d7d5db5ed79c1fd4
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/act_runner/blobs/sha256:ec4faf2caf9b398f083956beecdf029665472bc27640bf83dcdf2106c1357727
+        sha256: ec4faf2caf9b398f083956beecdf029665472bc27640bf83dcdf2106c1357727
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/act_runner/blobs/sha256:4811942b8b373161812c30a3da7354e16c630e246878c2a9d7d5db5ed79c1fd4
+        sha256: 4811942b8b373161812c30a3da7354e16c630e246878c2a9d7d5db5ed79c1fd4
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/act_runner/blobs/sha256:bd71c9063288d26315b4943663fb2bc9a360cf9fc7f9780681db1aa834c8ac50
         sha256: bd71c9063288d26315b4943663fb2bc9a360cf9fc7f9780681db1aa834c8ac50
         sha512: ""
@@ -50,4 +70,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/act_runner/bin/act_runner
+        - daemon
+        - --config
+        - $HOMEBREW_PREFIX/etc/act_runner/config.yaml
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/lib/act_runner
+    log_path: $HOMEBREW_PREFIX/var/log/act_runner.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/act_runner.err
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - act_runner

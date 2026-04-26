@@ -24,7 +24,27 @@ bottle:
         sha256: 71adb9320ee2848cfd106f9739c590f15aa566fbbc201a7881078f24126aeb03
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/grafana-alloy/blobs/sha256:71adb9320ee2848cfd106f9739c590f15aa566fbbc201a7881078f24126aeb03
+        sha256: 71adb9320ee2848cfd106f9739c590f15aa566fbbc201a7881078f24126aeb03
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/grafana-alloy/blobs/sha256:0dce52005973feb175d76244ae96c430543e4107847a0a71bbf21b222003a7ae
+        sha256: 0dce52005973feb175d76244ae96c430543e4107847a0a71bbf21b222003a7ae
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/grafana-alloy/blobs/sha256:ad710f47020a780d7378c65f2eaf390c6fd1a5eed8ade898c2cdf9d54eb5ff6e
+        sha256: ad710f47020a780d7378c65f2eaf390c6fd1a5eed8ade898c2cdf9d54eb5ff6e
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/grafana-alloy/blobs/sha256:0dce52005973feb175d76244ae96c430543e4107847a0a71bbf21b222003a7ae
+        sha256: 0dce52005973feb175d76244ae96c430543e4107847a0a71bbf21b222003a7ae
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/grafana-alloy/blobs/sha256:8e3ef96cf52a4b856688847c08e472db13e45c3b9e27f8b97f73c8eeb6b99482
         sha256: 8e3ef96cf52a4b856688847c08e472db13e45c3b9e27f8b97f73c8eeb6b99482
         sha512: ""
@@ -52,4 +72,19 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/grafana-alloy/bin/alloy
+        - run
+        - --storage.path=$HOMEBREW_PREFIX/var/lib/grafana-alloy/data
+        - $HOMEBREW_PREFIX/etc/grafana-alloy
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/grafana-alloy.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/grafana-alloy.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - grafana-alloy

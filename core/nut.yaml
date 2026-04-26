@@ -26,7 +26,27 @@ bottle:
         sha256: e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b
+        sha256: e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:d4a4e3998d26057e7bcb24a61469a3dd55e2fe9b102bfa6d6fcb1759b7e28bbe
+        sha256: d4a4e3998d26057e7bcb24a61469a3dd55e2fe9b102bfa6d6fcb1759b7e28bbe
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:615cc285fc354971ba7b6252e109707ecb7a045a505dca0eb03d4f6cf5fe79aa
+        sha256: 615cc285fc354971ba7b6252e109707ecb7a045a505dca0eb03d4f6cf5fe79aa
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:d4a4e3998d26057e7bcb24a61469a3dd55e2fe9b102bfa6d6fcb1759b7e28bbe
+        sha256: d4a4e3998d26057e7bcb24a61469a3dd55e2fe9b102bfa6d6fcb1759b7e28bbe
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nut/blobs/sha256:3fe4c8bea0483722456da80d1565be5954b382243d0ca7daa19038d0705f1be9
         sha256: 3fe4c8bea0483722456da80d1565be5954b382243d0ca7daa19038d0705f1be9
         sha512: ""
@@ -59,4 +79,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nut/sbin/upsmon
+        - -D
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nut

@@ -24,7 +24,27 @@ bottle:
         sha256: 757fcfe0a1ae956a994ecd3bfdcfa2d625c821d8fb3acbcbc242594a56c02710
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/immudb/blobs/sha256:757fcfe0a1ae956a994ecd3bfdcfa2d625c821d8fb3acbcbc242594a56c02710
+        sha256: 757fcfe0a1ae956a994ecd3bfdcfa2d625c821d8fb3acbcbc242594a56c02710
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/immudb/blobs/sha256:25b86bfdee9da2132bd163a915ff854fddf0ae4088456896a1c68236f4ae14e0
+        sha256: 25b86bfdee9da2132bd163a915ff854fddf0ae4088456896a1c68236f4ae14e0
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/immudb/blobs/sha256:70cad33673c8782eff8c6be315a0369b032136bb8ce4533419e2b7ef924144fd
+        sha256: 70cad33673c8782eff8c6be315a0369b032136bb8ce4533419e2b7ef924144fd
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/immudb/blobs/sha256:25b86bfdee9da2132bd163a915ff854fddf0ae4088456896a1c68236f4ae14e0
+        sha256: 25b86bfdee9da2132bd163a915ff854fddf0ae4088456896a1c68236f4ae14e0
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/immudb/blobs/sha256:57adcb7a7632dec66da3c2b4e3fa7ce595792344cf56184945fa2b6c43f9c5d4
         sha256: 57adcb7a7632dec66da3c2b4e3fa7ce595792344cf56184945fa2b6c43f9c5d4
         sha512: ""
@@ -50,4 +70,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/immudb/bin/immudb
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/immudb
+    log_path: $HOMEBREW_PREFIX/var/log/immudb.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/immudb.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - immudb

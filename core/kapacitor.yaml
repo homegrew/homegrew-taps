@@ -24,7 +24,27 @@ bottle:
         sha256: 2f8c1d939a4f9a6e532e1ad388a26fb7e7656447a62aded63b3b2aaf453a869b
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:2f8c1d939a4f9a6e532e1ad388a26fb7e7656447a62aded63b3b2aaf453a869b
+        sha256: 2f8c1d939a4f9a6e532e1ad388a26fb7e7656447a62aded63b3b2aaf453a869b
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:b9f1a298845c1fb007caebf7e62eb562ba6221dc3ecf7cc6d6bd3ec9f00b5f67
+        sha256: b9f1a298845c1fb007caebf7e62eb562ba6221dc3ecf7cc6d6bd3ec9f00b5f67
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:e1a56941292b9e8cfe21067076ea9e4a6f8a2d64416b6d81302b9c406ff41e90
+        sha256: e1a56941292b9e8cfe21067076ea9e4a6f8a2d64416b6d81302b9c406ff41e90
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:b9f1a298845c1fb007caebf7e62eb562ba6221dc3ecf7cc6d6bd3ec9f00b5f67
+        sha256: b9f1a298845c1fb007caebf7e62eb562ba6221dc3ecf7cc6d6bd3ec9f00b5f67
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/kapacitor/blobs/sha256:588e9c13ff71e0ffc2a49701ffc49d3a025617cee765f7fdf497f86392dacff0
         sha256: 588e9c13ff71e0ffc2a49701ffc49d3a025617cee765f7fdf497f86392dacff0
         sha512: ""
@@ -52,4 +72,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/kapacitor/bin/kapacitord
+        - -config
+        - $HOMEBREW_PREFIX/etc/kapacitor.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/kapacitor.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/kapacitor.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - kapacitor

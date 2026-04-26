@@ -24,7 +24,27 @@ bottle:
         sha256: 634a5ec2315dec79294b0f5887b16798c011922920ef54e284efc2e646f50d45
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/stripe-mock/blobs/sha256:634a5ec2315dec79294b0f5887b16798c011922920ef54e284efc2e646f50d45
+        sha256: 634a5ec2315dec79294b0f5887b16798c011922920ef54e284efc2e646f50d45
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stripe-mock/blobs/sha256:aaca3a9a06926c66f32aab1ad4d39b578b67c9d436bb04c0a8541d39f86d03c6
+        sha256: aaca3a9a06926c66f32aab1ad4d39b578b67c9d436bb04c0a8541d39f86d03c6
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/stripe-mock/blobs/sha256:aaca3a9a06926c66f32aab1ad4d39b578b67c9d436bb04c0a8541d39f86d03c6
+        sha256: aaca3a9a06926c66f32aab1ad4d39b578b67c9d436bb04c0a8541d39f86d03c6
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/stripe-mock/blobs/sha256:aaca3a9a06926c66f32aab1ad4d39b578b67c9d436bb04c0a8541d39f86d03c6
+        sha256: aaca3a9a06926c66f32aab1ad4d39b578b67c9d436bb04c0a8541d39f86d03c6
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/stripe-mock/blobs/sha256:aaca3a9a06926c66f32aab1ad4d39b578b67c9d436bb04c0a8541d39f86d03c6
         sha256: aaca3a9a06926c66f32aab1ad4d39b578b67c9d436bb04c0a8541d39f86d03c6
         sha512: ""
@@ -50,4 +70,20 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/stripe-mock/bin/stripe-mock
+        - -http-port
+        - "12111"
+        - -https-port
+        - "12112"
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/stripe-mock.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/stripe-mock.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - stripe-mock

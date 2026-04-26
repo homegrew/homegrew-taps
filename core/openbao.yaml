@@ -24,7 +24,27 @@ bottle:
         sha256: 39c7431935277b1f25de0ade7d9a274de2c75da187e5cc953dfe99cb1d7e3294
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/openbao/blobs/sha256:39c7431935277b1f25de0ade7d9a274de2c75da187e5cc953dfe99cb1d7e3294
+        sha256: 39c7431935277b1f25de0ade7d9a274de2c75da187e5cc953dfe99cb1d7e3294
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openbao/blobs/sha256:ed8a81d806011ffd841afbe2caf3995940274fa62a70a145ed8fd4ac3eb74839
+        sha256: ed8a81d806011ffd841afbe2caf3995940274fa62a70a145ed8fd4ac3eb74839
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/openbao/blobs/sha256:ec80436ad0a759e580a0e3bef72ed3a1ea4da8699ca5aaade861ec3ca12894e0
+        sha256: ec80436ad0a759e580a0e3bef72ed3a1ea4da8699ca5aaade861ec3ca12894e0
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/openbao/blobs/sha256:ed8a81d806011ffd841afbe2caf3995940274fa62a70a145ed8fd4ac3eb74839
+        sha256: ed8a81d806011ffd841afbe2caf3995940274fa62a70a145ed8fd4ac3eb74839
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/openbao/blobs/sha256:709265cbcdd2462b8b6f57db4dc89e1cfbf0e5e1575c19147799f0742729cdcd
         sha256: 709265cbcdd2462b8b6f57db4dc89e1cfbf0e5e1575c19147799f0742729cdcd
         sha512: ""
@@ -52,4 +72,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/openbao/bin/bao
+        - server
+        - -dev
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/openbao.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/openbao.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - openbao

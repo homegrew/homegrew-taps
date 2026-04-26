@@ -20,8 +20,18 @@ dependencies: []
 keg_only: false
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:09c25a77c53e145088f2fee6ee1c8ec5b4c30aaf7a739d74642510824cd4767a
-        sha256: 09c25a77c53e145088f2fee6ee1c8ec5b4c30aaf7a739d74642510824cd4767a
+        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:3050bf8eeb1a7d6d9ffd98a55fe4df5e6454d38981dfe10b8b5b9c6380387371
+        sha256: 3050bf8eeb1a7d6d9ffd98a55fe4df5e6454d38981dfe10b8b5b9c6380387371
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:3050bf8eeb1a7d6d9ffd98a55fe4df5e6454d38981dfe10b8b5b9c6380387371
+        sha256: 3050bf8eeb1a7d6d9ffd98a55fe4df5e6454d38981dfe10b8b5b9c6380387371
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:485f6e988c79187a98be715e5410a920df3d9e3edd9e71b2d5e29055368f4847
+        sha256: 485f6e988c79187a98be715e5410a920df3d9e3edd9e71b2d5e29055368f4847
         sha512: ""
         signature: ""
 source:
@@ -34,4 +44,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/container/bin/container
+        - system
+        - start
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/container.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/container.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - container

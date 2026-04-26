@@ -25,7 +25,27 @@ bottle:
         sha256: 1d24cf10b2abc460a8a0004364a64617a1acb7fc31e59cf7b38068a42d27b4b5
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:1d24cf10b2abc460a8a0004364a64617a1acb7fc31e59cf7b38068a42d27b4b5
+        sha256: 1d24cf10b2abc460a8a0004364a64617a1acb7fc31e59cf7b38068a42d27b4b5
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:476a72839f41c51352c3dab51671931dfc35ca7b3c4d5cd5c462c470c56e3560
+        sha256: 476a72839f41c51352c3dab51671931dfc35ca7b3c4d5cd5c462c470c56e3560
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:39922effb024e668b051cec0b2ef0cd665b802f00b563606d15cf1c1435c90f8
+        sha256: 39922effb024e668b051cec0b2ef0cd665b802f00b563606d15cf1c1435c90f8
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:476a72839f41c51352c3dab51671931dfc35ca7b3c4d5cd5c462c470c56e3560
+        sha256: 476a72839f41c51352c3dab51671931dfc35ca7b3c4d5cd5c462c470c56e3560
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:6169f4f49fd7240e31249b34d39c3fc7a4170dbb51c90c4f58990133ef656538
         sha256: 6169f4f49fd7240e31249b34d39c3fc7a4170dbb51c90c4f58990133ef656538
         sha512: ""
@@ -51,4 +71,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/logstash/bin/logstash
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/logstash.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/logstash.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - logstash

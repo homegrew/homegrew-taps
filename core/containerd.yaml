@@ -24,7 +24,27 @@ bottle:
         sha256: 627d6c3c45ae73f03598040f018f7130e063fdd5d1c18159df2544fba04d6712
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:627d6c3c45ae73f03598040f018f7130e063fdd5d1c18159df2544fba04d6712
+        sha256: 627d6c3c45ae73f03598040f018f7130e063fdd5d1c18159df2544fba04d6712
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:c64a324b97a3b2a2a0c1fc564ebfd93ed0c69a15e32e10e5321db0512a718ff0
+        sha256: c64a324b97a3b2a2a0c1fc564ebfd93ed0c69a15e32e10e5321db0512a718ff0
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:ba6b458524a91e1e1c8dba4870c67fe2d5530b4a27d4b2097116f8cb6fe61ecf
+        sha256: ba6b458524a91e1e1c8dba4870c67fe2d5530b4a27d4b2097116f8cb6fe61ecf
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:c64a324b97a3b2a2a0c1fc564ebfd93ed0c69a15e32e10e5321db0512a718ff0
+        sha256: c64a324b97a3b2a2a0c1fc564ebfd93ed0c69a15e32e10e5321db0512a718ff0
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/containerd/blobs/sha256:4fc9ae1225ac8f3e0f9e8eb3726326eb834ecd83f653c68c2fd7a886de8aa25d
         sha256: 4fc9ae1225ac8f3e0f9e8eb3726326eb834ecd83f653c68c2fd7a886de8aa25d
         sha512: ""
@@ -51,4 +71,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/containerd/bin/containerd
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - containerd

@@ -24,7 +24,27 @@ bottle:
         sha256: 9c434fd950ed2f0697abef33ace8b467cd620e10ea85eceb60e90194ce15157a
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nullclaw/blobs/sha256:9c434fd950ed2f0697abef33ace8b467cd620e10ea85eceb60e90194ce15157a
+        sha256: 9c434fd950ed2f0697abef33ace8b467cd620e10ea85eceb60e90194ce15157a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nullclaw/blobs/sha256:f095f952798e6d0d2c05ffc54633a2db2687cbfaec9e609702743ef734fe4b07
+        sha256: f095f952798e6d0d2c05ffc54633a2db2687cbfaec9e609702743ef734fe4b07
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nullclaw/blobs/sha256:ffd463ad2bb7124b40d011f81ac9aa5f9e22432fc877a57246f5a0c8781be6ac
+        sha256: ffd463ad2bb7124b40d011f81ac9aa5f9e22432fc877a57246f5a0c8781be6ac
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nullclaw/blobs/sha256:f095f952798e6d0d2c05ffc54633a2db2687cbfaec9e609702743ef734fe4b07
+        sha256: f095f952798e6d0d2c05ffc54633a2db2687cbfaec9e609702743ef734fe4b07
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nullclaw/blobs/sha256:728f128aa5442ea3a2f2e1702f66212611c61520f515176e59c6aa8f18b8c33c
         sha256: 728f128aa5442ea3a2f2e1702f66212611c61520f515176e59c6aa8f18b8c33c
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nullclaw/bin/nullclaw
+        - daemon
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nullclaw

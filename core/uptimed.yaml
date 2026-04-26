@@ -24,7 +24,37 @@ bottle:
         sha256: cfdfb6af9480fc37d99d5bdf24f213de9d42fa5ed907019bd020119a26149b8a
         sha512: ""
         signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/uptimed/blobs/sha256:c7cf1dd6683a839238be3ff06ae5289bde6e97e0a5594d3d3c1f14c8decf0dd9
+        sha256: c7cf1dd6683a839238be3ff06ae5289bde6e97e0a5594d3d3c1f14c8decf0dd9
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/uptimed/blobs/sha256:cfdfb6af9480fc37d99d5bdf24f213de9d42fa5ed907019bd020119a26149b8a
+        sha256: cfdfb6af9480fc37d99d5bdf24f213de9d42fa5ed907019bd020119a26149b8a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uptimed/blobs/sha256:ee7bb2f7dc9f48106feb78d76476b6adc63ac69234e0b09e4a032479175aac45
+        sha256: ee7bb2f7dc9f48106feb78d76476b6adc63ac69234e0b09e4a032479175aac45
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/uptimed/blobs/sha256:c026d07897983b4e7f7f07ceb14d77aeea163b8c3d26bfbdc2e7e3f5a5b2ed56
+        sha256: c026d07897983b4e7f7f07ceb14d77aeea163b8c3d26bfbdc2e7e3f5a5b2ed56
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/uptimed/blobs/sha256:306897fc0a7d58890bd55d642505888b4989db7017b4ddfd1ba0af603ed5365e
+        sha256: 306897fc0a7d58890bd55d642505888b4989db7017b4ddfd1ba0af603ed5365e
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/uptimed/blobs/sha256:ee7bb2f7dc9f48106feb78d76476b6adc63ac69234e0b09e4a032479175aac45
+        sha256: ee7bb2f7dc9f48106feb78d76476b6adc63ac69234e0b09e4a032479175aac45
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/uptimed/blobs/sha256:1a4da6e33e3e7435bc5113e5188a66010b6040ca93d94516083b81c58b054141
         sha256: 1a4da6e33e3e7435bc5113e5188a66010b6040ca93d94516083b81c58b054141
         sha512: ""
@@ -52,4 +82,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/uptimed/sbin/uptimed
+        - -f
+        - -p
+        - $HOMEBREW_PREFIX/var/run/uptimed.pid
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/opt/uptimed
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - uptimed

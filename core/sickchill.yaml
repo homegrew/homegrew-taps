@@ -27,7 +27,27 @@ bottle:
         sha256: a775d8f7948a2142c4c0092cd716bb462775ff6d52c4cc41fffd5ec0d2238653
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/sickchill/blobs/sha256:a775d8f7948a2142c4c0092cd716bb462775ff6d52c4cc41fffd5ec0d2238653
+        sha256: a775d8f7948a2142c4c0092cd716bb462775ff6d52c4cc41fffd5ec0d2238653
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sickchill/blobs/sha256:c58c1a285accbcf497caaf0f1275b108eff1f2ee8b6304da48b8de5d71af17f0
+        sha256: c58c1a285accbcf497caaf0f1275b108eff1f2ee8b6304da48b8de5d71af17f0
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/sickchill/blobs/sha256:15ad242781c982f18c35b0d425e7e6c3ef4cf67482a2649caf366fef61474496
+        sha256: 15ad242781c982f18c35b0d425e7e6c3ef4cf67482a2649caf366fef61474496
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/sickchill/blobs/sha256:c58c1a285accbcf497caaf0f1275b108eff1f2ee8b6304da48b8de5d71af17f0
+        sha256: c58c1a285accbcf497caaf0f1275b108eff1f2ee8b6304da48b8de5d71af17f0
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/sickchill/blobs/sha256:aba5fc00fd7b2a75439afa6f35e1890d028e2b6386dbc018171fae68154cdda6
         sha256: aba5fc00fd7b2a75439afa6f35e1890d028e2b6386dbc018171fae68154cdda6
         sha512: ""
@@ -52,4 +72,20 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/sickchill/bin/sickchill
+        - --datadir
+        - $HOMEBREW_PREFIX/var/sickchill
+        - --quiet
+        - --nolaunch
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/sickchill
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - sickchill

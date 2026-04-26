@@ -28,7 +28,27 @@ bottle:
         sha256: 2bfc8b5675144c124678686b39f2ea8101d21611a359ac7f7d71f97850c859a7
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/flexget/blobs/sha256:2bfc8b5675144c124678686b39f2ea8101d21611a359ac7f7d71f97850c859a7
+        sha256: 2bfc8b5675144c124678686b39f2ea8101d21611a359ac7f7d71f97850c859a7
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/flexget/blobs/sha256:4c31d4d1c11902f269c97e4711f984b4020162bc1cfaf8d291e3bf11dbace3b2
+        sha256: 4c31d4d1c11902f269c97e4711f984b4020162bc1cfaf8d291e3bf11dbace3b2
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/flexget/blobs/sha256:82f5c25a20a19b98755ad495886c5a0ac774306439d79bb2d02c7d04a5eb2aa4
+        sha256: 82f5c25a20a19b98755ad495886c5a0ac774306439d79bb2d02c7d04a5eb2aa4
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/flexget/blobs/sha256:4c31d4d1c11902f269c97e4711f984b4020162bc1cfaf8d291e3bf11dbace3b2
+        sha256: 4c31d4d1c11902f269c97e4711f984b4020162bc1cfaf8d291e3bf11dbace3b2
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/flexget/blobs/sha256:360d62cc7315abfb7ac11d55b72527462798f5803da2567e2f4f3d8a9ba43c8f
         sha256: 360d62cc7315abfb7ac11d55b72527462798f5803da2567e2f4f3d8a9ba43c8f
         sha512: ""
@@ -54,4 +74,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/flexget/bin/flexget
+        - --cron
+        - daemon
+        - start
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - flexget

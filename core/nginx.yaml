@@ -26,7 +26,27 @@ bottle:
         sha256: 40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        sha256: 40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:10bc89159b901f4300f546d66126915580025c9623effafc888e81c6893bcd46
+        sha256: 10bc89159b901f4300f546d66126915580025c9623effafc888e81c6893bcd46
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:308ddf32529a8294fd1292497bc3f7aa32437451245c59bf033047e0fe257b56
+        sha256: 308ddf32529a8294fd1292497bc3f7aa32437451245c59bf033047e0fe257b56
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:10bc89159b901f4300f546d66126915580025c9623effafc888e81c6893bcd46
+        sha256: 10bc89159b901f4300f546d66126915580025c9623effafc888e81c6893bcd46
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:966f5226a8d48a5bc7345cd77c5cb8d560d4537738df286ee67183ae9c668355
         sha256: 966f5226a8d48a5bc7345cd77c5cb8d560d4537738df286ee67183ae9c668355
         sha512: ""
@@ -54,4 +74,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nginx/bin/nginx
+        - -g
+        - daemon off;
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nginx

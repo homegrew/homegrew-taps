@@ -45,7 +45,27 @@ bottle:
         sha256: d8858cf723801d9b4922d6130151f64087b1763bc38952d4c4168f9478d680ba
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:d8858cf723801d9b4922d6130151f64087b1763bc38952d4c4168f9478d680ba
+        sha256: d8858cf723801d9b4922d6130151f64087b1763bc38952d4c4168f9478d680ba
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:bd00d2432871871efad309bc47e721946ff0968c60d75ff61539269e7ff0f094
+        sha256: bd00d2432871871efad309bc47e721946ff0968c60d75ff61539269e7ff0f094
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:de66218be4cebf9cf0998643e9c70d29a5cdb2fc7829c0fdd2b7fd98286d7138
+        sha256: de66218be4cebf9cf0998643e9c70d29a5cdb2fc7829c0fdd2b7fd98286d7138
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:bd00d2432871871efad309bc47e721946ff0968c60d75ff61539269e7ff0f094
+        sha256: bd00d2432871871efad309bc47e721946ff0968c60d75ff61539269e7ff0f094
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:bbad37798ee000c50e1b9d4d96d959c39900c4aa44c897095f9eaf0038c969c2
         sha256: bbad37798ee000c50e1b9d4d96d959c39900c4aa44c897095f9eaf0038c969c2
         sha512: ""
@@ -93,4 +113,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/php@8.4/sbin/php-fpm
+        - --nodaemonize
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: ""
+    error_log_path: $HOMEBREW_PREFIX/var/log/php-fpm.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - php@8.4

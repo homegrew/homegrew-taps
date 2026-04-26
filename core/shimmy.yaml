@@ -24,7 +24,27 @@ bottle:
         sha256: 280c53fde0c1db2f4402a2d366b9e82e36debf79a4737b3f4c181c74b7b12ac8
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/shimmy/blobs/sha256:280c53fde0c1db2f4402a2d366b9e82e36debf79a4737b3f4c181c74b7b12ac8
+        sha256: 280c53fde0c1db2f4402a2d366b9e82e36debf79a4737b3f4c181c74b7b12ac8
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shimmy/blobs/sha256:61033bda5f5d7a6a5ac77ac2b90b0ecd9eb1c05d46c6759f092d20c56a3ec605
+        sha256: 61033bda5f5d7a6a5ac77ac2b90b0ecd9eb1c05d46c6759f092d20c56a3ec605
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/shimmy/blobs/sha256:de47e2e1b3ff8dcb2a1aebe33545a2db69456413959eeacf3b9a2ee86770064b
+        sha256: de47e2e1b3ff8dcb2a1aebe33545a2db69456413959eeacf3b9a2ee86770064b
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/shimmy/blobs/sha256:61033bda5f5d7a6a5ac77ac2b90b0ecd9eb1c05d46c6759f092d20c56a3ec605
+        sha256: 61033bda5f5d7a6a5ac77ac2b90b0ecd9eb1c05d46c6759f092d20c56a3ec605
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/shimmy/blobs/sha256:d85b61e80d9813435cf33fa36e3eea5ff340ade69716ae62ec5bb0b6504ca4a0
         sha256: d85b61e80d9813435cf33fa36e3eea5ff340ade69716ae62ec5bb0b6504ca4a0
         sha512: ""
@@ -51,4 +71,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/shimmy/bin/shimmy
+        - serve
+        - --bind
+        - 127.0.0.1:11435
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/shimmy.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/shimmy.error.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - shimmy

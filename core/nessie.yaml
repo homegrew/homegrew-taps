@@ -25,7 +25,27 @@ bottle:
         sha256: a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
+        sha256: a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:a53aa2765c718f90e87d9c762dc1e9d44c9df69e56a81bb9e7347449869e7d43
+        sha256: a53aa2765c718f90e87d9c762dc1e9d44c9df69e56a81bb9e7347449869e7d43
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:dc72ba3b6160abf49e4213056893f22b67d487b55bd728b9f1c7810689990517
+        sha256: dc72ba3b6160abf49e4213056893f22b67d487b55bd728b9f1c7810689990517
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:a53aa2765c718f90e87d9c762dc1e9d44c9df69e56a81bb9e7347449869e7d43
+        sha256: a53aa2765c718f90e87d9c762dc1e9d44c9df69e56a81bb9e7347449869e7d43
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:44d53b02db0cddb6cca9f99f59c66b234df8dc6ac6f3e3b824faf0d70a3b8193
         sha256: 44d53b02db0cddb6cca9f99f59c66b234df8dc6ac6f3e3b824faf0d70a3b8193
         sha512: ""
@@ -51,4 +71,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nessie/bin/nessie
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/nessie.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/nessie.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nessie

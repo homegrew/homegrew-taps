@@ -28,7 +28,27 @@ bottle:
         sha256: d9aec8d82d9deae2e4c359a8a39c456743312f2df51d9ec8a0ab16fecf6978a1
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/appium/blobs/sha256:d9aec8d82d9deae2e4c359a8a39c456743312f2df51d9ec8a0ab16fecf6978a1
+        sha256: d9aec8d82d9deae2e4c359a8a39c456743312f2df51d9ec8a0ab16fecf6978a1
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/appium/blobs/sha256:d9b9f1669affe0f7cc0468f8103f6397c8ff8837eee5f7e58757ee8c03341f0c
+        sha256: d9b9f1669affe0f7cc0468f8103f6397c8ff8837eee5f7e58757ee8c03341f0c
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/appium/blobs/sha256:284eba00f8277938eeefbd9f7d02a7324a3508f47e4d2a9e2c64d8175638f011
+        sha256: 284eba00f8277938eeefbd9f7d02a7324a3508f47e4d2a9e2c64d8175638f011
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/appium/blobs/sha256:d9b9f1669affe0f7cc0468f8103f6397c8ff8837eee5f7e58757ee8c03341f0c
+        sha256: d9b9f1669affe0f7cc0468f8103f6397c8ff8837eee5f7e58757ee8c03341f0c
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/appium/blobs/sha256:a7fbad3b9079cac71d751aad6b42f1d89cae90a45a8f86520ee06a28257e2c7b
         sha256: a7fbad3b9079cac71d751aad6b42f1d89cae90a45a8f86520ee06a28257e2c7b
         sha512: ""
@@ -57,4 +77,16 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/appium/bin/appium
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/appium.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/appium-error.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - appium

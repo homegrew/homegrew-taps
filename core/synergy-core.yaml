@@ -26,7 +26,27 @@ bottle:
         sha256: 1e9c736ae27ad553089cf782f0735b8b7863e5233995e9d66b79e9f940856f62
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:1e9c736ae27ad553089cf782f0735b8b7863e5233995e9d66b79e9f940856f62
+        sha256: 1e9c736ae27ad553089cf782f0735b8b7863e5233995e9d66b79e9f940856f62
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:087fea94b4556338772c3e5c8675544995bf76535808c4ce2a41277bf8eac6f6
+        sha256: 087fea94b4556338772c3e5c8675544995bf76535808c4ce2a41277bf8eac6f6
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:d98cc38fb67ce355c0d5b0212993e9e9e0cfb6bdf9c5937e4dc88f4c8fbfee0c
+        sha256: d98cc38fb67ce355c0d5b0212993e9e9e0cfb6bdf9c5937e4dc88f4c8fbfee0c
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:087fea94b4556338772c3e5c8675544995bf76535808c4ce2a41277bf8eac6f6
+        sha256: 087fea94b4556338772c3e5c8675544995bf76535808c4ce2a41277bf8eac6f6
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/synergy-core/blobs/sha256:40929bc35488d7eeed31e9ee9611fa20f00eccf91c0c26e6c49c6f291ff78682
         sha256: 40929bc35488d7eeed31e9ee9611fa20f00eccf91c0c26e6c49c6f291ff78682
         sha512: ""
@@ -64,4 +84,16 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/synergy-core/bin/synergy
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - synergy-core

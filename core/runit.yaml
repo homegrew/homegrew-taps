@@ -24,7 +24,27 @@ bottle:
         sha256: e35ad2f49f4b0cf4a0dd60d08c3d071e96a26b87ce4a8bf872e43488794eb4ca
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/runit/blobs/sha256:e35ad2f49f4b0cf4a0dd60d08c3d071e96a26b87ce4a8bf872e43488794eb4ca
+        sha256: e35ad2f49f4b0cf4a0dd60d08c3d071e96a26b87ce4a8bf872e43488794eb4ca
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/runit/blobs/sha256:e82c5e0878d603839613a0046ccaa773ba88f67acd54290afd77bc01716e0fb6
+        sha256: e82c5e0878d603839613a0046ccaa773ba88f67acd54290afd77bc01716e0fb6
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/runit/blobs/sha256:fe4f3826fdd17af52828597c22754a6a1e0952a0f2a66179cf572e3858fb82b8
+        sha256: fe4f3826fdd17af52828597c22754a6a1e0952a0f2a66179cf572e3858fb82b8
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/runit/blobs/sha256:e82c5e0878d603839613a0046ccaa773ba88f67acd54290afd77bc01716e0fb6
+        sha256: e82c5e0878d603839613a0046ccaa773ba88f67acd54290afd77bc01716e0fb6
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/runit/blobs/sha256:9df648ce12c6d653303f224386961cda0ac9f8b0745fcc41821f671538a28c08
         sha256: 9df648ce12c6d653303f224386961cda0ac9f8b0745fcc41821f671538a28c08
         sha512: ""
@@ -49,4 +69,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/runit/bin/runsvdir
+        - -P
+        - $HOMEBREW_PREFIX/var/service
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/runit.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/runit.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - runit

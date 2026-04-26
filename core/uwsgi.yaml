@@ -29,7 +29,27 @@ bottle:
         sha256: e4b665aac3350632869764e7893dc37b097cffc8ecc859c591c6638b0ab34382
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/uwsgi/blobs/sha256:e4b665aac3350632869764e7893dc37b097cffc8ecc859c591c6638b0ab34382
+        sha256: e4b665aac3350632869764e7893dc37b097cffc8ecc859c591c6638b0ab34382
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uwsgi/blobs/sha256:7c31e1a3dfd42985bee1cd99e9007f04eca92688d937ad93b393cdc3f1eb42f8
+        sha256: 7c31e1a3dfd42985bee1cd99e9007f04eca92688d937ad93b393cdc3f1eb42f8
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/uwsgi/blobs/sha256:3d420cb75e801cca0931cba8eff85c88fbe079ccb80a180e53f72d299d04bfe2
+        sha256: 3d420cb75e801cca0931cba8eff85c88fbe079ccb80a180e53f72d299d04bfe2
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/uwsgi/blobs/sha256:7c31e1a3dfd42985bee1cd99e9007f04eca92688d937ad93b393cdc3f1eb42f8
+        sha256: 7c31e1a3dfd42985bee1cd99e9007f04eca92688d937ad93b393cdc3f1eb42f8
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/uwsgi/blobs/sha256:127cb65efdc4c3f17cadd41df9671470e3e46fb53cadd74f187a2731d70a5a24
         sha256: 127cb65efdc4c3f17cadd41df9671470e3e46fb53cadd74f187a2731d70a5a24
         sha512: ""
@@ -61,4 +81,27 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/uwsgi/bin/uwsgi
+        - --uid
+        - _www
+        - --gid
+        - _www
+        - --master
+        - --die-on-term
+        - --autoload
+        - --logto
+        - $HOMEBREW_PREFIX/var/log/uwsgi.log
+        - --emperor
+        - $HOMEBREW_PREFIX/etc/uwsgi/apps-enabled
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - uwsgi

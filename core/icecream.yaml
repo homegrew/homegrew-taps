@@ -27,7 +27,62 @@ bottle:
         sha256: 52b41894ec8d21e972bdbe27965b0c3113870a50f7d9a334e8bfb8a244585087
         sha512: ""
         signature: ""
+    darwin_amd64_10:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:a85e725c50fc4fad0d28621cd9c241326c516b3bfb32e01a4710615b0bcec4f5
+        sha256: a85e725c50fc4fad0d28621cd9c241326c516b3bfb32e01a4710615b0bcec4f5
+        sha512: ""
+        signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:076868e850f3b6b5ae814e19b03528143ea5bb3f903edcdca14cac7ce3fbf4e8
+        sha256: 076868e850f3b6b5ae814e19b03528143ea5bb3f903edcdca14cac7ce3fbf4e8
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:781ad1cb41ba91d5bd7b2f6763807b3fd89a0ff30b572b8ec77273d713867c1e
+        sha256: 781ad1cb41ba91d5bd7b2f6763807b3fd89a0ff30b572b8ec77273d713867c1e
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:2b6b3e86015280b1ab00f8ced1ce1dad32800c316627d7cba4165931f44a58fc
+        sha256: 2b6b3e86015280b1ab00f8ced1ce1dad32800c316627d7cba4165931f44a58fc
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:52b41894ec8d21e972bdbe27965b0c3113870a50f7d9a334e8bfb8a244585087
+        sha256: 52b41894ec8d21e972bdbe27965b0c3113870a50f7d9a334e8bfb8a244585087
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:3e72ef8ca299726695641f68412f9071e3840671808710ae1d4fc09b120d73e8
+        sha256: 3e72ef8ca299726695641f68412f9071e3840671808710ae1d4fc09b120d73e8
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:1a26f6bb194f5e27212c555783574c81d56f4fcb5e3bdc410278f8f74b128016
+        sha256: 1a26f6bb194f5e27212c555783574c81d56f4fcb5e3bdc410278f8f74b128016
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:053f5583b18d4201020f59f9d4481a2d6c0b584c5bb3297038ddd9653d70998e
+        sha256: 053f5583b18d4201020f59f9d4481a2d6c0b584c5bb3297038ddd9653d70998e
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:95f69b28c10fbe5af6475f27d70bf86279839de46ef27c3ea08e76b8fa97772d
+        sha256: 95f69b28c10fbe5af6475f27d70bf86279839de46ef27c3ea08e76b8fa97772d
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:cd4ee875fc4006985db7d2caab6039e97ea091165f1c683e19dd104e54362890
+        sha256: cd4ee875fc4006985db7d2caab6039e97ea091165f1c683e19dd104e54362890
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:3e72ef8ca299726695641f68412f9071e3840671808710ae1d4fc09b120d73e8
+        sha256: 3e72ef8ca299726695641f68412f9071e3840671808710ae1d4fc09b120d73e8
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/icecream/blobs/sha256:13a9005297bac5939d73c7cb06837620691588609ff902db613ed9bbb12cd139
         sha256: 13a9005297bac5939d73c7cb06837620691588609ff902db613ed9bbb12cd139
         sha512: ""
@@ -61,4 +116,16 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/icecream/sbin/iceccd
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - icecream

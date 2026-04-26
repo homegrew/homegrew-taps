@@ -26,7 +26,27 @@ bottle:
         sha256: 956a9630a71d18386912c344979746f842c234c05919cd8959a00c70a7c31677
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:956a9630a71d18386912c344979746f842c234c05919cd8959a00c70a7c31677
+        sha256: 956a9630a71d18386912c344979746f842c234c05919cd8959a00c70a7c31677
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:b2a4a4a84f7dd3011ba5a9c7ac1817bf725f847241b951edc7baa0fb26949fac
+        sha256: b2a4a4a84f7dd3011ba5a9c7ac1817bf725f847241b951edc7baa0fb26949fac
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:905a3d6cb27b9ee2eb89bde470232112695067f626fb5d623c9fdc93f76ed8c3
+        sha256: 905a3d6cb27b9ee2eb89bde470232112695067f626fb5d623c9fdc93f76ed8c3
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:b2a4a4a84f7dd3011ba5a9c7ac1817bf725f847241b951edc7baa0fb26949fac
+        sha256: b2a4a4a84f7dd3011ba5a9c7ac1817bf725f847241b951edc7baa0fb26949fac
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ser2net/blobs/sha256:826a5c4d76bc78574fbf69dc9fba7c15bcd24efc78a2db3749389b3ba25a662e
         sha256: 826a5c4d76bc78574fbf69dc9fba7c15bcd24efc78a2db3749389b3ba25a662e
         sha512: ""
@@ -54,4 +74,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/ser2net/sbin/ser2net
+        - -n
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - ser2net

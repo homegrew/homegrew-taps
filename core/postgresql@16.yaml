@@ -31,7 +31,27 @@ bottle:
         sha256: 1ad379084214dce093237dfee51584253605f8f08f8f817cb90cffec77d4b3dd
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/16/blobs/sha256:1ad379084214dce093237dfee51584253605f8f08f8f817cb90cffec77d4b3dd
+        sha256: 1ad379084214dce093237dfee51584253605f8f08f8f817cb90cffec77d4b3dd
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/16/blobs/sha256:ac56f3f97c6caa0dda4497b896f3442e4a007cd29a2d9cb8004704b2afbb4b12
+        sha256: ac56f3f97c6caa0dda4497b896f3442e4a007cd29a2d9cb8004704b2afbb4b12
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/16/blobs/sha256:743b601c8f56801756befd16fc8b5b4489d89c89dfc8ebaec1b9cae92221ac31
+        sha256: 743b601c8f56801756befd16fc8b5b4489d89c89dfc8ebaec1b9cae92221ac31
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/16/blobs/sha256:ac56f3f97c6caa0dda4497b896f3442e4a007cd29a2d9cb8004704b2afbb4b12
+        sha256: ac56f3f97c6caa0dda4497b896f3442e4a007cd29a2d9cb8004704b2afbb4b12
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/postgresql/16/blobs/sha256:1ee9c665f111d40bec5ad254c187ef4a1d0f1a3302749eb1aa3f1b71bc02672c
         sha256: 1ee9c665f111d40bec5ad254c187ef4a1d0f1a3302749eb1aa3f1b71bc02672c
         sha512: ""
@@ -67,4 +87,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/postgresql@16/bin/postgres
+        - -D
+        - $HOMEBREW_PREFIX/var/postgresql@16
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/postgresql@16.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/postgresql@16.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - postgresql@16

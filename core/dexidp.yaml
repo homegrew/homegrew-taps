@@ -24,7 +24,27 @@ bottle:
         sha256: 384968f300366d8edba254f785db8a530e7d9f39cd9c0570b2d57c3d380425b8
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/dexidp/blobs/sha256:384968f300366d8edba254f785db8a530e7d9f39cd9c0570b2d57c3d380425b8
+        sha256: 384968f300366d8edba254f785db8a530e7d9f39cd9c0570b2d57c3d380425b8
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dexidp/blobs/sha256:b6ab2b2c4aaed2d3e57e28a85909980ecebe65889850d7e4298ee9baed5b9e79
+        sha256: b6ab2b2c4aaed2d3e57e28a85909980ecebe65889850d7e4298ee9baed5b9e79
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/dexidp/blobs/sha256:8d4965e80f2f6201d6c2d801918a02484c5d998b8d4bafbdd27f760922025e22
+        sha256: 8d4965e80f2f6201d6c2d801918a02484c5d998b8d4bafbdd27f760922025e22
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/dexidp/blobs/sha256:b6ab2b2c4aaed2d3e57e28a85909980ecebe65889850d7e4298ee9baed5b9e79
+        sha256: b6ab2b2c4aaed2d3e57e28a85909980ecebe65889850d7e4298ee9baed5b9e79
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dexidp/blobs/sha256:15141e3dd75c5bc4e0f665553457211b74b3833c6c5926973a4d661f7a9994a2
         sha256: 15141e3dd75c5bc4e0f665553457211b74b3833c6c5926973a4d661f7a9994a2
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/dexidp/bin/dex
+        - serve
+        - $HOMEBREW_PREFIX/etc/dexidp/config.yaml
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/dex.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/dex.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - dexidp

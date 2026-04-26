@@ -24,7 +24,37 @@ bottle:
         sha256: b2fbc29b09bf37004b7a31ff2a7f57bd705e757cef0b1970b2b9723f624bc8d9
         sha512: ""
         signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/daemontools/blobs/sha256:813c64aa076209409ab420484007a7d43e7bfa86ce26842829d8800501e9b138
+        sha256: 813c64aa076209409ab420484007a7d43e7bfa86ce26842829d8800501e9b138
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/daemontools/blobs/sha256:b2fbc29b09bf37004b7a31ff2a7f57bd705e757cef0b1970b2b9723f624bc8d9
+        sha256: b2fbc29b09bf37004b7a31ff2a7f57bd705e757cef0b1970b2b9723f624bc8d9
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/daemontools/blobs/sha256:1caba2a88c37b416bf48c950f376693b1412a06f54bc62c815a6e8679f30b41d
+        sha256: 1caba2a88c37b416bf48c950f376693b1412a06f54bc62c815a6e8679f30b41d
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/daemontools/blobs/sha256:414c519a3f46d28c74e28d95f882b68dae09dcd9604b8f207c93539d4af34cd3
+        sha256: 414c519a3f46d28c74e28d95f882b68dae09dcd9604b8f207c93539d4af34cd3
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/daemontools/blobs/sha256:4079bdac80d383b3423b5daf190a2abc5583db2d5e33939ccd0e3c637ab57033
+        sha256: 4079bdac80d383b3423b5daf190a2abc5583db2d5e33939ccd0e3c637ab57033
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/daemontools/blobs/sha256:1caba2a88c37b416bf48c950f376693b1412a06f54bc62c815a6e8679f30b41d
+        sha256: 1caba2a88c37b416bf48c950f376693b1412a06f54bc62c815a6e8679f30b41d
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/daemontools/blobs/sha256:4d2dc1ed742ae4b8ab911aef610c8315ea79b9dce79a4a9d21028f413352bd6c
         sha256: 4d2dc1ed742ae4b8ab911aef610c8315ea79b9dce79a4a9d21028f413352bd6c
         sha512: ""
@@ -49,4 +79,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/daemontools/bin/svscanboot
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - daemontools

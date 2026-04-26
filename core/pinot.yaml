@@ -25,7 +25,72 @@ bottle:
         sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
         sha512: ""
         signature: ""
+    darwin_amd64_10:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/pinot/blobs/sha256:85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
         sha256: 85915265da86485931eb7529c5b69a161795364d7cd9675164bbb54fcf37df0c
         sha512: ""
@@ -50,4 +115,21 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/pinot/bin/pinot-admin
+        - QuickStart
+        - -type
+        - BATCH
+        - -dataDir
+        - $HOMEBREW_PREFIX/var/lib/pinot/data
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/lib/pinot
+    log_path: $HOMEBREW_PREFIX/var/log/pinot/pinot_output.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/pinot/pinot_output.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - pinot

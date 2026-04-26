@@ -24,7 +24,27 @@ bottle:
         sha256: 92467f5e19250b6305351a25606710cada704042dc54e77f07adeaba987e266e
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:92467f5e19250b6305351a25606710cada704042dc54e77f07adeaba987e266e
+        sha256: 92467f5e19250b6305351a25606710cada704042dc54e77f07adeaba987e266e
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:9dc7ba992cc744fbc0acb399fcbf0fd1ffb284610d1840652cf3e0c961feb448
+        sha256: 9dc7ba992cc744fbc0acb399fcbf0fd1ffb284610d1840652cf3e0c961feb448
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:80a0ae4e0bd2892d911858f94dee74291ed394f24b857b94401a2f7021a4796f
+        sha256: 80a0ae4e0bd2892d911858f94dee74291ed394f24b857b94401a2f7021a4796f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:9dc7ba992cc744fbc0acb399fcbf0fd1ffb284610d1840652cf3e0c961feb448
+        sha256: 9dc7ba992cc744fbc0acb399fcbf0fd1ffb284610d1840652cf3e0c961feb448
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/forgejo/blobs/sha256:271545b243a078975d02ff87121506e870cda69d51c0ea94bc2ab891b412e7a6
         sha256: 271545b243a078975d02ff87121506e870cda69d51c0ea94bc2ab891b412e7a6
         sha512: ""
@@ -51,4 +71,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/forgejo/bin/forgejo
+        - web
+        - --work-path
+        - $HOMEBREW_PREFIX/var/forgejo
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/forgejo.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/forgejo.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - forgejo

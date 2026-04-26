@@ -33,7 +33,27 @@ bottle:
         sha256: a6fd83d0825ecea60c04a0ca92bc3eb1b63e1ad0f3fa59744fc93dc2c36296eb
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:a6fd83d0825ecea60c04a0ca92bc3eb1b63e1ad0f3fa59744fc93dc2c36296eb
+        sha256: a6fd83d0825ecea60c04a0ca92bc3eb1b63e1ad0f3fa59744fc93dc2c36296eb
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:f7efca35a133c0722b19ae7de90e1431edd4bcb51830469751957e4b6f9ba004
+        sha256: f7efca35a133c0722b19ae7de90e1431edd4bcb51830469751957e4b6f9ba004
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:2b3cb83a8e8ce55171faa764538afbcae5accbe7f5768180e4f6fd900f26d5df
+        sha256: 2b3cb83a8e8ce55171faa764538afbcae5accbe7f5768180e4f6fd900f26d5df
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:f7efca35a133c0722b19ae7de90e1431edd4bcb51830469751957e4b6f9ba004
+        sha256: f7efca35a133c0722b19ae7de90e1431edd4bcb51830469751957e4b6f9ba004
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/fastnetmon/blobs/sha256:9ddf7485701a4fea3c2465ea31394b424fca7e3d01c81e48fd31b4d332517a49
         sha256: 9ddf7485701a4fea3c2465ea31394b424fca7e3d01c81e48fd31b4d332517a49
         sha512: ""
@@ -70,4 +90,20 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/fastnetmon/sbin/fastnetmon
+        - --configuration_file
+        - $HOMEBREW_PREFIX/etc/fastnetmon.conf
+        - --log_to_console
+        - --disable_pid_logic
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/fastnetmon.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/fastnetmon.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - fastnetmon

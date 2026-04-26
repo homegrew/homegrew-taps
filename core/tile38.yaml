@@ -24,7 +24,27 @@ bottle:
         sha256: 9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        sha256: 9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
+        sha256: 461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:bddb54ad65fd35534c8d593a6ede162d91a3dfb924a71e0201928d25083622d8
+        sha256: bddb54ad65fd35534c8d593a6ede162d91a3dfb924a71e0201928d25083622d8
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
+        sha256: 461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:cdfe9e42cb4b5cdee808dfca100d20e9f04cf737d63aab45a2e9dc349647a73d
         sha256: cdfe9e42cb4b5cdee808dfca100d20e9f04cf737d63aab45a2e9dc349647a73d
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/tile38/bin/tile38-server
+        - -d
+        - $HOMEBREW_PREFIX/var/tile38/data
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/tile38.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/tile38.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - tile38

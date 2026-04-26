@@ -27,7 +27,27 @@ bottle:
         sha256: 211b54d6d74bc64552ddddad1e2a1d5799026177d1b17abc7cff8da77db56f3a
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/unbound/blobs/sha256:211b54d6d74bc64552ddddad1e2a1d5799026177d1b17abc7cff8da77db56f3a
+        sha256: 211b54d6d74bc64552ddddad1e2a1d5799026177d1b17abc7cff8da77db56f3a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unbound/blobs/sha256:df3c8215fc595feb7c384a959b9e5dfbf38b123749626544c7f096db347ff9f4
+        sha256: df3c8215fc595feb7c384a959b9e5dfbf38b123749626544c7f096db347ff9f4
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/unbound/blobs/sha256:223d64d8ff9545d24257ef8231d9301b5116b8f33e4aeec15d60474b4a884096
+        sha256: 223d64d8ff9545d24257ef8231d9301b5116b8f33e4aeec15d60474b4a884096
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/unbound/blobs/sha256:df3c8215fc595feb7c384a959b9e5dfbf38b123749626544c7f096db347ff9f4
+        sha256: df3c8215fc595feb7c384a959b9e5dfbf38b123749626544c7f096db347ff9f4
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/unbound/blobs/sha256:6c59b63075d8b30aa313d5b24a81e3654201c757b62a59605a7985372e88c210
         sha256: 6c59b63075d8b30aa313d5b24a81e3654201c757b62a59605a7985372e88c210
         sha512: ""
@@ -52,4 +72,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/unbound/sbin/unbound
+        - -d
+        - -c
+        - $HOMEBREW_PREFIX/etc/unbound/unbound.conf
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - unbound

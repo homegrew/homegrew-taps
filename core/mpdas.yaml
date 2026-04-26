@@ -25,7 +25,62 @@ bottle:
         sha256: 3c7355b55c373345b08f0fae9382e5800903a8380dc9f2b0a59b98af3013a311
         sha512: ""
         signature: ""
+    darwin_amd64_10:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:ae3eaddea864370fbcb2ad3f815165ba4f79f57470cbf0b3d81c781f0aaccc37
+        sha256: ae3eaddea864370fbcb2ad3f815165ba4f79f57470cbf0b3d81c781f0aaccc37
+        sha512: ""
+        signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:1f41b8a297270de980e814104f1a74d9437777caa9443686fb251cac6625494b
+        sha256: 1f41b8a297270de980e814104f1a74d9437777caa9443686fb251cac6625494b
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:25dd98ffb770fa018112f3014ae2574ab346b2d54d542b4feab516f264f30ced
+        sha256: 25dd98ffb770fa018112f3014ae2574ab346b2d54d542b4feab516f264f30ced
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:559fcd0228ecbdcca8fd8147e611c05d6e71e071823090e669da2985140bbf5b
+        sha256: 559fcd0228ecbdcca8fd8147e611c05d6e71e071823090e669da2985140bbf5b
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:3c7355b55c373345b08f0fae9382e5800903a8380dc9f2b0a59b98af3013a311
+        sha256: 3c7355b55c373345b08f0fae9382e5800903a8380dc9f2b0a59b98af3013a311
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:df5684e5298c02319fea93f70ecad6210c12b66bd1ca2686ec9758dcbeeba20d
+        sha256: df5684e5298c02319fea93f70ecad6210c12b66bd1ca2686ec9758dcbeeba20d
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:a7fd32d05844b78fb8eede1ff4a1285e531250919e296166f0eb74d6a9f0cd39
+        sha256: a7fd32d05844b78fb8eede1ff4a1285e531250919e296166f0eb74d6a9f0cd39
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:89b5e45abcb88c8df236dea703162ed9d7f372c0872c3af23630c56e18e31c8e
+        sha256: 89b5e45abcb88c8df236dea703162ed9d7f372c0872c3af23630c56e18e31c8e
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:a33d1f587e538bbc81db4d3bf60dc7c37c82ee462400c6051785e4338f1c46e1
+        sha256: a33d1f587e538bbc81db4d3bf60dc7c37c82ee462400c6051785e4338f1c46e1
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:432d575a1263ee85112c5c4c9d20781507ee5c95245d3978f686ca272df74adc
+        sha256: 432d575a1263ee85112c5c4c9d20781507ee5c95245d3978f686ca272df74adc
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:df5684e5298c02319fea93f70ecad6210c12b66bd1ca2686ec9758dcbeeba20d
+        sha256: df5684e5298c02319fea93f70ecad6210c12b66bd1ca2686ec9758dcbeeba20d
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mpdas/blobs/sha256:42aa6fe164c3cd7c89bff4e7cbbe3b6488a6588067997a33b05b8e8b2f3673dc
         sha256: 42aa6fe164c3cd7c89bff4e7cbbe3b6488a6588067997a33b05b8e8b2f3673dc
         sha512: ""
@@ -51,4 +106,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mpdas/bin/mpdas
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mpdas

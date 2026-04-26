@@ -29,7 +29,27 @@ bottle:
         sha256: 6676fbaaf43d2568ba44b99fffe99daf672f15e61838e3a993843f7782209d01
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/bitlbee/blobs/sha256:6676fbaaf43d2568ba44b99fffe99daf672f15e61838e3a993843f7782209d01
+        sha256: 6676fbaaf43d2568ba44b99fffe99daf672f15e61838e3a993843f7782209d01
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bitlbee/blobs/sha256:6a753f8b6013608e71d728f3a7143a3d53656c90c09b52177a0322739f952525
+        sha256: 6a753f8b6013608e71d728f3a7143a3d53656c90c09b52177a0322739f952525
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/bitlbee/blobs/sha256:71c5c8da85fb73d4e4bc66f83283c2e3b30e640ce769a92eb781b1867cc720f4
+        sha256: 71c5c8da85fb73d4e4bc66f83283c2e3b30e640ce769a92eb781b1867cc720f4
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/bitlbee/blobs/sha256:6a753f8b6013608e71d728f3a7143a3d53656c90c09b52177a0322739f952525
+        sha256: 6a753f8b6013608e71d728f3a7143a3d53656c90c09b52177a0322739f952525
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/bitlbee/blobs/sha256:31ddec7ca433f3bcf5dc5f86206c99464e9586065bf0fbb54b327051ff751dff
         sha256: 31ddec7ca433f3bcf5dc5f86206c99464e9586065bf0fbb54b327051ff751dff
         sha512: ""
@@ -59,4 +79,16 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/bitlbee/sbin/bitlbee
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - bitlbee

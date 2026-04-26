@@ -24,7 +24,27 @@ bottle:
         sha256: d7ff7cc26e94e1dfd0d1f63d62c1e7b7688d5068326f44874ace13b61fa54e3c
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/gitea/blobs/sha256:d7ff7cc26e94e1dfd0d1f63d62c1e7b7688d5068326f44874ace13b61fa54e3c
+        sha256: d7ff7cc26e94e1dfd0d1f63d62c1e7b7688d5068326f44874ace13b61fa54e3c
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitea/blobs/sha256:163546c998cb26fec2587dbdfdd86c76af8ae7a9381b713cd9b83a02b064b538
+        sha256: 163546c998cb26fec2587dbdfdd86c76af8ae7a9381b713cd9b83a02b064b538
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/gitea/blobs/sha256:69c85fb04576bef1affc3e85f532e7d93fc2c97dbe6f5bc26bce27e0d30b1595
+        sha256: 69c85fb04576bef1affc3e85f532e7d93fc2c97dbe6f5bc26bce27e0d30b1595
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/gitea/blobs/sha256:163546c998cb26fec2587dbdfdd86c76af8ae7a9381b713cd9b83a02b064b538
+        sha256: 163546c998cb26fec2587dbdfdd86c76af8ae7a9381b713cd9b83a02b064b538
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gitea/blobs/sha256:9f8ce00bf3fc47bab6d91844afc007fa7bd0efce0ed7509d9283759bb3a3d29e
         sha256: 9f8ce00bf3fc47bab6d91844afc007fa7bd0efce0ed7509d9283759bb3a3d29e
         sha512: ""
@@ -52,4 +72,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/gitea/bin/gitea
+        - web
+        - --work-path
+        - $HOMEBREW_PREFIX/var/gitea
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/gitea.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/gitea.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - gitea

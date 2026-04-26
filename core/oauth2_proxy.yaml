@@ -24,7 +24,27 @@ bottle:
         sha256: d1f56fac995536a7b3ecb5f3942f5a18da8d4288bbd343a9af55fe7fcd5cd16b
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:d1f56fac995536a7b3ecb5f3942f5a18da8d4288bbd343a9af55fe7fcd5cd16b
+        sha256: d1f56fac995536a7b3ecb5f3942f5a18da8d4288bbd343a9af55fe7fcd5cd16b
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:bfe0548af0ac88a37b9d745aef089f9930302ccd148f295e8efb8b31ae26521d
+        sha256: bfe0548af0ac88a37b9d745aef089f9930302ccd148f295e8efb8b31ae26521d
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:bcce4e3d122777aa3e41e68db110103bbfbe19f029c33fbb484e12eb8671c26f
+        sha256: bcce4e3d122777aa3e41e68db110103bbfbe19f029c33fbb484e12eb8671c26f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:bfe0548af0ac88a37b9d745aef089f9930302ccd148f295e8efb8b31ae26521d
+        sha256: bfe0548af0ac88a37b9d745aef089f9930302ccd148f295e8efb8b31ae26521d
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/oauth2_proxy/blobs/sha256:26d651e47b752ceb4b6411376d6a322a04f10be3bc94701b76f5f2aef5fe338b
         sha256: 26d651e47b752ceb4b6411376d6a322a04f10be3bc94701b76f5f2aef5fe338b
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/oauth2_proxy/bin/oauth2-proxy
+        - --config=$HOMEBREW_PREFIX/etc/oauth2-proxy/oauth2-proxy.cfg
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - oauth2_proxy

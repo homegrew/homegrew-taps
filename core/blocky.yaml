@@ -24,7 +24,27 @@ bottle:
         sha256: cfc14fb077737658e9bcbf37a01780358c3207b4a97382398148829fd420c86d
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/blocky/blobs/sha256:cfc14fb077737658e9bcbf37a01780358c3207b4a97382398148829fd420c86d
+        sha256: cfc14fb077737658e9bcbf37a01780358c3207b4a97382398148829fd420c86d
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/blocky/blobs/sha256:320afab4f30f575ee3c2de9c63e0f62e70d0991f835b01adbc02de36666f204b
+        sha256: 320afab4f30f575ee3c2de9c63e0f62e70d0991f835b01adbc02de36666f204b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/blocky/blobs/sha256:05c608958f383919c38a5a578ba1478f31eaabb8eaba921253e08238959c9705
+        sha256: 05c608958f383919c38a5a578ba1478f31eaabb8eaba921253e08238959c9705
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/blocky/blobs/sha256:320afab4f30f575ee3c2de9c63e0f62e70d0991f835b01adbc02de36666f204b
+        sha256: 320afab4f30f575ee3c2de9c63e0f62e70d0991f835b01adbc02de36666f204b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/blocky/blobs/sha256:aae4b193ea5f8a18fde101faeba0ae14411cca6a47195090bd3a26d8f49afa48
         sha256: aae4b193ea5f8a18fde101faeba0ae14411cca6a47195090bd3a26d8f49afa48
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/blocky/sbin/blocky
+        - --config
+        - $HOMEBREW_PREFIX/etc/blocky/config.yml
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - blocky

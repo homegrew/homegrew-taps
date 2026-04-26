@@ -24,7 +24,27 @@ bottle:
         sha256: 675751d69ef341fcb52a4d6140997ab02cb3b4d313a594bea286824f0da7ab91
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/metricbeat/blobs/sha256:675751d69ef341fcb52a4d6140997ab02cb3b4d313a594bea286824f0da7ab91
+        sha256: 675751d69ef341fcb52a4d6140997ab02cb3b4d313a594bea286824f0da7ab91
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/metricbeat/blobs/sha256:397fd9c476ab44148fa439a5a365b4f4daa89faed39608f4ab913718c21bfde5
+        sha256: 397fd9c476ab44148fa439a5a365b4f4daa89faed39608f4ab913718c21bfde5
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/metricbeat/blobs/sha256:ff52e082afe63c00e21e1c2e81361ad65f9b4639b765afa15f1b1c7225d5cfea
+        sha256: ff52e082afe63c00e21e1c2e81361ad65f9b4639b765afa15f1b1c7225d5cfea
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/metricbeat/blobs/sha256:397fd9c476ab44148fa439a5a365b4f4daa89faed39608f4ab913718c21bfde5
+        sha256: 397fd9c476ab44148fa439a5a365b4f4daa89faed39608f4ab913718c21bfde5
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/metricbeat/blobs/sha256:1991482f37271c2660ca35e72e93e7adbe361b3d094c8c8c847a00419d831d37
         sha256: 1991482f37271c2660ca35e72e93e7adbe361b3d094c8c8c847a00419d831d37
         sha512: ""
@@ -51,4 +71,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/metricbeat/bin/metricbeat
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - metricbeat

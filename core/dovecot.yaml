@@ -27,7 +27,27 @@ bottle:
         sha256: f32f1eeedcfc044bd5993b879cccec41acbb2b41edbccba8bd781d9bcc23c4ae
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:f32f1eeedcfc044bd5993b879cccec41acbb2b41edbccba8bd781d9bcc23c4ae
+        sha256: f32f1eeedcfc044bd5993b879cccec41acbb2b41edbccba8bd781d9bcc23c4ae
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:4c9f732d67423229e91d66d09a23db271a177487ef48c9e2bb4f063a84604e1e
+        sha256: 4c9f732d67423229e91d66d09a23db271a177487ef48c9e2bb4f063a84604e1e
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:5f5065b7ea5eca7665268d801f4eb95b0278d7aab53aabbce0882a86319d8280
+        sha256: 5f5065b7ea5eca7665268d801f4eb95b0278d7aab53aabbce0882a86319d8280
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:4c9f732d67423229e91d66d09a23db271a177487ef48c9e2bb4f063a84604e1e
+        sha256: 4c9f732d67423229e91d66d09a23db271a177487ef48c9e2bb4f063a84604e1e
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dovecot/blobs/sha256:33d00f9e5aa9aa95297325dac2ad87c6551e5c703e1f0799524d10ad4ea1a2c7
         sha256: 33d00f9e5aa9aa95297325dac2ad87c6551e5c703e1f0799524d10ad4ea1a2c7
         sha512: ""
@@ -62,4 +82,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/dovecot/sbin/dovecot
+        - -F
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/dovecot/dovecot.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/dovecot/dovecot.log
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - dovecot

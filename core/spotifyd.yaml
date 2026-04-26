@@ -25,7 +25,27 @@ bottle:
         sha256: 52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
+        sha256: 52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:33c617c8539e24bb3a7c45be7c0692bef970a404e83be5184d23d4823c1cfabf
+        sha256: 33c617c8539e24bb3a7c45be7c0692bef970a404e83be5184d23d4823c1cfabf
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:610bd336a831d480602b36f001c677b0a552007197e881ee9ce5aadcf30908ef
+        sha256: 610bd336a831d480602b36f001c677b0a552007197e881ee9ce5aadcf30908ef
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:33c617c8539e24bb3a7c45be7c0692bef970a404e83be5184d23d4823c1cfabf
+        sha256: 33c617c8539e24bb3a7c45be7c0692bef970a404e83be5184d23d4823c1cfabf
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:7a96191a408faceec7796bbfba1d97ee2942bca55eb8d7ac0ff6ab9787d416b3
         sha256: 7a96191a408faceec7796bbfba1d97ee2942bca55eb8d7ac0ff6ab9787d416b3
         sha512: ""
@@ -56,4 +76,19 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/spotifyd/bin/spotifyd
+        - --no-daemon
+        - --backend
+        - portaudio
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - spotifyd

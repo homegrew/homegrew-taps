@@ -29,7 +29,27 @@ bottle:
         sha256: 8192a934c8cf1fc7e99f95dcb9d27cf702ea842c389599c6f9a22c956c6a9f52
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/bazarr/blobs/sha256:8192a934c8cf1fc7e99f95dcb9d27cf702ea842c389599c6f9a22c956c6a9f52
+        sha256: 8192a934c8cf1fc7e99f95dcb9d27cf702ea842c389599c6f9a22c956c6a9f52
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bazarr/blobs/sha256:9ed5176ea40fbbcd650625b8f43b9ab8ef15b92c7ac891c33da16e39e87a2a5f
+        sha256: 9ed5176ea40fbbcd650625b8f43b9ab8ef15b92c7ac891c33da16e39e87a2a5f
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/bazarr/blobs/sha256:e47bd6bf7faf6165defa0ebc34ee676811e259848c86eada8ce467cd03cf310d
+        sha256: e47bd6bf7faf6165defa0ebc34ee676811e259848c86eada8ce467cd03cf310d
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/bazarr/blobs/sha256:9ed5176ea40fbbcd650625b8f43b9ab8ef15b92c7ac891c33da16e39e87a2a5f
+        sha256: 9ed5176ea40fbbcd650625b8f43b9ab8ef15b92c7ac891c33da16e39e87a2a5f
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/bazarr/blobs/sha256:a9210764fdf3bbe4f067906d4aec24f542c6d6b523ec257f0c33d0bdb9d2bd1a
         sha256: a9210764fdf3bbe4f067906d4aec24f542c6d6b523ec257f0c33d0bdb9d2bd1a
         sha512: ""
@@ -61,4 +81,16 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/bazarr/bin/bazarr
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/bazarr.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/bazarr.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - bazarr

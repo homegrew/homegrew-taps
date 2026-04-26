@@ -24,7 +24,27 @@ bottle:
         sha256: 746be3afa0bcd454d76605e7bad8f69ad5dbafe7962ec84ddeb8e8f2483db379
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/yorkie/blobs/sha256:746be3afa0bcd454d76605e7bad8f69ad5dbafe7962ec84ddeb8e8f2483db379
+        sha256: 746be3afa0bcd454d76605e7bad8f69ad5dbafe7962ec84ddeb8e8f2483db379
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/yorkie/blobs/sha256:1e4df7cf5032c69938f6c8873e25cc83460157962c003ee88c1b3178792d6604
+        sha256: 1e4df7cf5032c69938f6c8873e25cc83460157962c003ee88c1b3178792d6604
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/yorkie/blobs/sha256:e12c37f8493a4bad5c87b59a8958035c144ada2234f7316017b7cf41b9b6f6f4
+        sha256: e12c37f8493a4bad5c87b59a8958035c144ada2234f7316017b7cf41b9b6f6f4
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/yorkie/blobs/sha256:1e4df7cf5032c69938f6c8873e25cc83460157962c003ee88c1b3178792d6604
+        sha256: 1e4df7cf5032c69938f6c8873e25cc83460157962c003ee88c1b3178792d6604
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/yorkie/blobs/sha256:a0ac10e8fa2a73400efae7612d13896f697e9fab6f24f97e5339f08082d28904
         sha256: a0ac10e8fa2a73400efae7612d13896f697e9fab6f24f97e5339f08082d28904
         sha512: ""
@@ -50,4 +70,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/yorkie/bin/yorkie
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - yorkie

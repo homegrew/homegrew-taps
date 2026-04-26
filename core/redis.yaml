@@ -25,7 +25,27 @@ bottle:
         sha256: 954968cfbc5e3fcef534b7cd3fe4bf796b209a49e5d2c2ff37e2e9f892f3ebaf
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:954968cfbc5e3fcef534b7cd3fe4bf796b209a49e5d2c2ff37e2e9f892f3ebaf
+        sha256: 954968cfbc5e3fcef534b7cd3fe4bf796b209a49e5d2c2ff37e2e9f892f3ebaf
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:d726a846bff4f74cac045f84d9151f515b7733ff23bf2c28c5ffcbe018c7916b
+        sha256: d726a846bff4f74cac045f84d9151f515b7733ff23bf2c28c5ffcbe018c7916b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:c970f0d89c6664ec9c6929337a7c6a94ad311609d02945052f185ad28c883798
+        sha256: c970f0d89c6664ec9c6929337a7c6a94ad311609d02945052f185ad28c883798
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:d726a846bff4f74cac045f84d9151f515b7733ff23bf2c28c5ffcbe018c7916b
+        sha256: d726a846bff4f74cac045f84d9151f515b7733ff23bf2c28c5ffcbe018c7916b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:dd5fafe58c19aa8f171d06ec58f7233eeefe3178c4f373401e37f476d2b3cd92
         sha256: dd5fafe58c19aa8f171d06ec58f7233eeefe3178c4f373401e37f476d2b3cd92
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/redis/bin/redis-server
+        - $HOMEBREW_PREFIX/etc/redis.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/redis.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/redis.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - redis

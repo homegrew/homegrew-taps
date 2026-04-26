@@ -24,7 +24,27 @@ bottle:
         sha256: eb1ffd653085e061748168e93a50d2fa4e76fd04a7cb95fc49ca44b41abc0ad0
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/heartbeat/blobs/sha256:eb1ffd653085e061748168e93a50d2fa4e76fd04a7cb95fc49ca44b41abc0ad0
+        sha256: eb1ffd653085e061748168e93a50d2fa4e76fd04a7cb95fc49ca44b41abc0ad0
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/heartbeat/blobs/sha256:64ad6d5074d63b64386b6f8f1bd43d0ae117b1c7b718c177ae71ee228f2698ef
+        sha256: 64ad6d5074d63b64386b6f8f1bd43d0ae117b1c7b718c177ae71ee228f2698ef
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/heartbeat/blobs/sha256:5492d7bb7f29c1bbaf1cb45438acc2f94d058f1cca313ec4a50da49c61b88de1
+        sha256: 5492d7bb7f29c1bbaf1cb45438acc2f94d058f1cca313ec4a50da49c61b88de1
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/heartbeat/blobs/sha256:64ad6d5074d63b64386b6f8f1bd43d0ae117b1c7b718c177ae71ee228f2698ef
+        sha256: 64ad6d5074d63b64386b6f8f1bd43d0ae117b1c7b718c177ae71ee228f2698ef
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/heartbeat/blobs/sha256:a621ac2d79e2fbadf4950ebb8b2eee8e2b52a9a95e84b1ac48a85a52b93cdd4b
         sha256: a621ac2d79e2fbadf4950ebb8b2eee8e2b52a9a95e84b1ac48a85a52b93cdd4b
         sha512: ""
@@ -51,4 +71,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/heartbeat/bin/heartbeat
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - heartbeat

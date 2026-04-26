@@ -27,7 +27,27 @@ bottle:
         sha256: ae293e339a16b9f4fe4088a560fc7eda47078030948be656c913d2a19e3270f0
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mosquitto/blobs/sha256:ae293e339a16b9f4fe4088a560fc7eda47078030948be656c913d2a19e3270f0
+        sha256: ae293e339a16b9f4fe4088a560fc7eda47078030948be656c913d2a19e3270f0
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mosquitto/blobs/sha256:b74d967ddee4b766879377d5105dc7a6d696439a71e7dbb2d81034ce70601336
+        sha256: b74d967ddee4b766879377d5105dc7a6d696439a71e7dbb2d81034ce70601336
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mosquitto/blobs/sha256:175bc6e9e6dbfa0b16beeb2c17332db6393fb46c483e4de9d77e54365ceed255
+        sha256: 175bc6e9e6dbfa0b16beeb2c17332db6393fb46c483e4de9d77e54365ceed255
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mosquitto/blobs/sha256:b74d967ddee4b766879377d5105dc7a6d696439a71e7dbb2d81034ce70601336
+        sha256: b74d967ddee4b766879377d5105dc7a6d696439a71e7dbb2d81034ce70601336
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mosquitto/blobs/sha256:dd40843dd4c3abf5f5d2ad89f221fc02439a354857e808d7f9b243f8f39f4671
         sha256: dd40843dd4c3abf5f5d2ad89f221fc02439a354857e808d7f9b243f8f39f4671
         sha512: ""
@@ -58,4 +78,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mosquitto/sbin/mosquitto
+        - -c
+        - $HOMEBREW_PREFIX/etc/mosquitto/mosquitto.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/mosquitto
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mosquitto

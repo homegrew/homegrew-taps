@@ -25,7 +25,27 @@ bottle:
         sha256: c4e5b2157798a55d281f3b11822c7c98ee31648e4aee8aba3083a003a6eab31b
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/blobs/sha256:c4e5b2157798a55d281f3b11822c7c98ee31648e4aee8aba3083a003a6eab31b
+        sha256: c4e5b2157798a55d281f3b11822c7c98ee31648e4aee8aba3083a003a6eab31b
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/blobs/sha256:39fb704842962496547fc125e88ed1ecf9a7bd6dd34190aa0d0142e8b6ba83ee
+        sha256: 39fb704842962496547fc125e88ed1ecf9a7bd6dd34190aa0d0142e8b6ba83ee
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/blobs/sha256:b9e350c7d2b8fce299725f17c81921e1f1c4d7d215c9076b54d5571f2eb70e4d
+        sha256: b9e350c7d2b8fce299725f17c81921e1f1c4d7d215c9076b54d5571f2eb70e4d
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/blobs/sha256:39fb704842962496547fc125e88ed1ecf9a7bd6dd34190aa0d0142e8b6ba83ee
+        sha256: 39fb704842962496547fc125e88ed1ecf9a7bd6dd34190aa0d0142e8b6ba83ee
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/influxdb/blobs/sha256:6b0efc89a45dacf20d2025f0476e5a6bd7fdc400e2512bcefb106d22cb22f01e
         sha256: 6b0efc89a45dacf20d2025f0476e5a6bd7fdc400e2512bcefb106d22cb22f01e
         sha512: ""
@@ -53,4 +73,23 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/influxdb/bin/influxdb3
+        - serve
+        - --node-id
+        - default
+        - --object-store
+        - file
+        - --data-dir
+        - $HOMEBREW_PREFIX/var/lib/influxdb
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/influxdb/influxdb3.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/influxdb/influxdb3.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - influxdb

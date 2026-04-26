@@ -25,7 +25,27 @@ bottle:
         sha256: 1463ed5271f76873c51b92598efb900444f45608831b079c43d8082bc25d63d2
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:1463ed5271f76873c51b92598efb900444f45608831b079c43d8082bc25d63d2
+        sha256: 1463ed5271f76873c51b92598efb900444f45608831b079c43d8082bc25d63d2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:c6d4967483289311346a648c1f46b738258c8d703b72270ed991f1a5dee91716
+        sha256: c6d4967483289311346a648c1f46b738258c8d703b72270ed991f1a5dee91716
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:9267cc4910325d22fc32691e341f15598fd74de0ea78cf4c70f90cf728bf36e9
+        sha256: 9267cc4910325d22fc32691e341f15598fd74de0ea78cf4c70f90cf728bf36e9
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:c6d4967483289311346a648c1f46b738258c8d703b72270ed991f1a5dee91716
+        sha256: c6d4967483289311346a648c1f46b738258c8d703b72270ed991f1a5dee91716
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dolt/blobs/sha256:464d6ac8e4a8cece315bbe99fb7ef746b7fa7671afb72da6b6ba48b509475684
         sha256: 464d6ac8e4a8cece315bbe99fb7ef746b7fa7671afb72da6b6ba48b509475684
         sha512: ""
@@ -51,4 +71,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/dolt/bin/dolt
+        - sql-server
+        - --config
+        - $HOMEBREW_PREFIX/etc/dolt/config.yaml
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/dolt
+    log_path: $HOMEBREW_PREFIX/var/log/dolt.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/dolt.error.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - dolt

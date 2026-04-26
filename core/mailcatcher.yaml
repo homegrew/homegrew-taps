@@ -27,7 +27,27 @@ bottle:
         sha256: 5eea40aec4d9fc9eae8a4312eaf695b287af5ae86f207911b20d7bc9b68469c6
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mailcatcher/blobs/sha256:5eea40aec4d9fc9eae8a4312eaf695b287af5ae86f207911b20d7bc9b68469c6
+        sha256: 5eea40aec4d9fc9eae8a4312eaf695b287af5ae86f207911b20d7bc9b68469c6
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mailcatcher/blobs/sha256:8922d322087511af1252413be29da5acc36a80c0fa3f8637cabd045fe51b5c33
+        sha256: 8922d322087511af1252413be29da5acc36a80c0fa3f8637cabd045fe51b5c33
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mailcatcher/blobs/sha256:2f7ae002bbc85e18e6ffb5961be8d88bd8b30eba798c674e705973973af180c3
+        sha256: 2f7ae002bbc85e18e6ffb5961be8d88bd8b30eba798c674e705973973af180c3
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mailcatcher/blobs/sha256:8922d322087511af1252413be29da5acc36a80c0fa3f8637cabd045fe51b5c33
+        sha256: 8922d322087511af1252413be29da5acc36a80c0fa3f8637cabd045fe51b5c33
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mailcatcher/blobs/sha256:3403bf380a433529d8be12139efa13559b1e6d8edd8459291c38b9d1d3739540
         sha256: 3403bf380a433529d8be12139efa13559b1e6d8edd8459291c38b9d1d3739540
         sha512: ""
@@ -57,4 +77,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mailcatcher/bin/mailcatcher
+        - -f
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/mailcatcher.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/mailcatcher.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mailcatcher

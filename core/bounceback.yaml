@@ -24,7 +24,27 @@ bottle:
         sha256: 461ef1bbbee371072559282a90e6c41009f20b5f2c2411edf5cc77ec72100a19
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/bounceback/blobs/sha256:461ef1bbbee371072559282a90e6c41009f20b5f2c2411edf5cc77ec72100a19
+        sha256: 461ef1bbbee371072559282a90e6c41009f20b5f2c2411edf5cc77ec72100a19
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bounceback/blobs/sha256:e7096c878b874f7954b658549c2498418a7bf5ca840ee6f8d0e28438269925c9
+        sha256: e7096c878b874f7954b658549c2498418a7bf5ca840ee6f8d0e28438269925c9
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/bounceback/blobs/sha256:e7096c878b874f7954b658549c2498418a7bf5ca840ee6f8d0e28438269925c9
+        sha256: e7096c878b874f7954b658549c2498418a7bf5ca840ee6f8d0e28438269925c9
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/bounceback/blobs/sha256:e7096c878b874f7954b658549c2498418a7bf5ca840ee6f8d0e28438269925c9
+        sha256: e7096c878b874f7954b658549c2498418a7bf5ca840ee6f8d0e28438269925c9
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/bounceback/blobs/sha256:e7096c878b874f7954b658549c2498418a7bf5ca840ee6f8d0e28438269925c9
         sha256: e7096c878b874f7954b658549c2498418a7bf5ca840ee6f8d0e28438269925c9
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/bounceback/bin/bounceback
+        - --config
+        - $HOMEBREW_PREFIX/etc/bounceback.yml
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/bounceback.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/bounceback.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - bounceback

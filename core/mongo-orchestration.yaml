@@ -26,7 +26,27 @@ bottle:
         sha256: 1547a53d9efbe236c5899442fbd107762711adee2fa7488dd739358311d1ff55
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:1547a53d9efbe236c5899442fbd107762711adee2fa7488dd739358311d1ff55
+        sha256: 1547a53d9efbe236c5899442fbd107762711adee2fa7488dd739358311d1ff55
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:1d287b46dfc39e4df54369c36e69ea38e1d757f9ba99dde4298dd79aac90409f
+        sha256: 1d287b46dfc39e4df54369c36e69ea38e1d757f9ba99dde4298dd79aac90409f
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:127b82d0d693353b98ea354d8e4c7a4a571df8d210c6a7c0ae12b1b79de10436
+        sha256: 127b82d0d693353b98ea354d8e4c7a4a571df8d210c6a7c0ae12b1b79de10436
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:1d287b46dfc39e4df54369c36e69ea38e1d757f9ba99dde4298dd79aac90409f
+        sha256: 1d287b46dfc39e4df54369c36e69ea38e1d757f9ba99dde4298dd79aac90409f
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:030917958ce2404ad58667a347aa5854bf56bf828d7db572a0b560e29017603c
         sha256: 030917958ce2404ad58667a347aa5854bf56bf828d7db572a0b560e29017603c
         sha512: ""
@@ -51,4 +71,22 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mongo-orchestration/bin/mongo-orchestration
+        - -b
+        - 127.0.0.1
+        - -p
+        - "8889"
+        - --no-fork
+        - start
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mongo-orchestration

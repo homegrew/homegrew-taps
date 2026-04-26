@@ -24,7 +24,27 @@ bottle:
         sha256: eb425c48b7955ec36dd97ac2839610c98b3b9f8ed647f8d9015929a534709216
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/kubo/blobs/sha256:eb425c48b7955ec36dd97ac2839610c98b3b9f8ed647f8d9015929a534709216
+        sha256: eb425c48b7955ec36dd97ac2839610c98b3b9f8ed647f8d9015929a534709216
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/kubo/blobs/sha256:51f32b605d44e4ac2dd7c034ad725a5edf640ccf25ad568e8c5fcc9e21f116b5
+        sha256: 51f32b605d44e4ac2dd7c034ad725a5edf640ccf25ad568e8c5fcc9e21f116b5
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/kubo/blobs/sha256:9b9903d3b654416b4113e220a90c4391cf3cb4879ef037a3909796b46a8f3609
+        sha256: 9b9903d3b654416b4113e220a90c4391cf3cb4879ef037a3909796b46a8f3609
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/kubo/blobs/sha256:51f32b605d44e4ac2dd7c034ad725a5edf640ccf25ad568e8c5fcc9e21f116b5
+        sha256: 51f32b605d44e4ac2dd7c034ad725a5edf640ccf25ad568e8c5fcc9e21f116b5
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/kubo/blobs/sha256:37f5dbc50e7f6783ae7964128d57da8b2ee4dc76b3a7cdd41ea4e63a99356708
         sha256: 37f5dbc50e7f6783ae7964128d57da8b2ee4dc76b3a7cdd41ea4e63a99356708
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/kubo/bin/ipfs
+        - daemon
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - kubo

@@ -24,7 +24,27 @@ bottle:
         sha256: 05a3572d8e94c070455946552f955ead37d9467df9cf750763f7a6504b1b417b
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:05a3572d8e94c070455946552f955ead37d9467df9cf750763f7a6504b1b417b
+        sha256: 05a3572d8e94c070455946552f955ead37d9467df9cf750763f7a6504b1b417b
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:f3005d2c28d349a00f91f615faec71913878e7f8dfc9aaf97011ce289f72b517
+        sha256: f3005d2c28d349a00f91f615faec71913878e7f8dfc9aaf97011ce289f72b517
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:ce185af9a987c655ba3e0f8daf67eb4dad9a05ad02c65a7897453a60ca923163
+        sha256: ce185af9a987c655ba3e0f8daf67eb4dad9a05ad02c65a7897453a60ca923163
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:f3005d2c28d349a00f91f615faec71913878e7f8dfc9aaf97011ce289f72b517
+        sha256: f3005d2c28d349a00f91f615faec71913878e7f8dfc9aaf97011ce289f72b517
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/sftpgo/blobs/sha256:8d98f362b37df0acbc523923af4320a1136d57ca77aa2d2526b6a7d178a0924d
         sha256: 8d98f362b37df0acbc523923af4320a1136d57ca77aa2d2526b6a7d178a0924d
         sha512: ""
@@ -50,4 +70,21 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/sftpgo/bin/sftpgo
+        - serve
+        - --config-file
+        - $HOMEBREW_PREFIX/etc/sftpgo/sftpgo.json
+        - --log-file-path
+        - $HOMEBREW_PREFIX/var/sftpgo/log/sftpgo.log
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/sftpgo
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - sftpgo

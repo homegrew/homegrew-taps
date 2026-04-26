@@ -24,7 +24,27 @@ bottle:
         sha256: cf9a595acf2ec92dd340722145cb6963ed269b35599c4226e713442f871f93ff
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/miniflux/blobs/sha256:cf9a595acf2ec92dd340722145cb6963ed269b35599c4226e713442f871f93ff
+        sha256: cf9a595acf2ec92dd340722145cb6963ed269b35599c4226e713442f871f93ff
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/miniflux/blobs/sha256:30792edd7c670e5dab453fbaf438804663751812196ceffe44b71baa5953610d
+        sha256: 30792edd7c670e5dab453fbaf438804663751812196ceffe44b71baa5953610d
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/miniflux/blobs/sha256:ddca71208b219c55d745aa7906a61695b329b18158baf6f57a74dfd4bf7464a9
+        sha256: ddca71208b219c55d745aa7906a61695b329b18158baf6f57a74dfd4bf7464a9
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/miniflux/blobs/sha256:30792edd7c670e5dab453fbaf438804663751812196ceffe44b71baa5953610d
+        sha256: 30792edd7c670e5dab453fbaf438804663751812196ceffe44b71baa5953610d
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/miniflux/blobs/sha256:58dcca6ebec0995dea621ac429e45206ce4c7c3055a99b1cde5e31d868355b7a
         sha256: 58dcca6ebec0995dea621ac429e45206ce4c7c3055a99b1cde5e31d868355b7a
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/miniflux/bin/miniflux
+        - -c
+        - $HOMEBREW_PREFIX/etc/miniflux.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/miniflux.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/miniflux.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - miniflux

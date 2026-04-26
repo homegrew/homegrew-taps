@@ -28,7 +28,27 @@ bottle:
         sha256: 1614faef4bad229237c4a5ba86657bc55cafcf4cec531c20afb6f7dea0010a10
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:1614faef4bad229237c4a5ba86657bc55cafcf4cec531c20afb6f7dea0010a10
+        sha256: 1614faef4bad229237c4a5ba86657bc55cafcf4cec531c20afb6f7dea0010a10
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:7f74f9c2a3a3389507c0fe333f1f13c2afeae0c1cb535c7ff4f5be7f992675fe
+        sha256: 7f74f9c2a3a3389507c0fe333f1f13c2afeae0c1cb535c7ff4f5be7f992675fe
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:58622b4ede751142dc0bb53816e8a84d53f9d931a698d0fdcc5029953913aa6d
+        sha256: 58622b4ede751142dc0bb53816e8a84d53f9d931a698d0fdcc5029953913aa6d
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:7f74f9c2a3a3389507c0fe333f1f13c2afeae0c1cb535c7ff4f5be7f992675fe
+        sha256: 7f74f9c2a3a3389507c0fe333f1f13c2afeae0c1cb535c7ff4f5be7f992675fe
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:14f3ef7ed3627ec448221048de6ba5997cb2e216532068ac83752ffd52fc1917
         sha256: 14f3ef7ed3627ec448221048de6ba5997cb2e216532068ac83752ffd52fc1917
         sha512: ""
@@ -62,4 +82,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/openvpn/sbin/openvpn
+        - --config
+        - $HOMEBREW_PREFIX/etc/openvpn/openvpn.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/etc/openvpn
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - openvpn

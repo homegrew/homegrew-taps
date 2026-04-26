@@ -24,7 +24,27 @@ bottle:
         sha256: b44c8a28a925d2564f77420ca6555377fe6e55bc024782d94a80466544d54821
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/picoclaw/blobs/sha256:b44c8a28a925d2564f77420ca6555377fe6e55bc024782d94a80466544d54821
+        sha256: b44c8a28a925d2564f77420ca6555377fe6e55bc024782d94a80466544d54821
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/picoclaw/blobs/sha256:6fd15bc32a90a7b9ba4e065b0095e0280c9112d2253367985d3751d93f3dd8dc
+        sha256: 6fd15bc32a90a7b9ba4e065b0095e0280c9112d2253367985d3751d93f3dd8dc
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/picoclaw/blobs/sha256:6fd15bc32a90a7b9ba4e065b0095e0280c9112d2253367985d3751d93f3dd8dc
+        sha256: 6fd15bc32a90a7b9ba4e065b0095e0280c9112d2253367985d3751d93f3dd8dc
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/picoclaw/blobs/sha256:6fd15bc32a90a7b9ba4e065b0095e0280c9112d2253367985d3751d93f3dd8dc
+        sha256: 6fd15bc32a90a7b9ba4e065b0095e0280c9112d2253367985d3751d93f3dd8dc
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/picoclaw/blobs/sha256:6fd15bc32a90a7b9ba4e065b0095e0280c9112d2253367985d3751d93f3dd8dc
         sha256: 6fd15bc32a90a7b9ba4e065b0095e0280c9112d2253367985d3751d93f3dd8dc
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/picoclaw/bin/picoclaw
+        - gateway
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - picoclaw

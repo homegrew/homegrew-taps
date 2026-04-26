@@ -33,7 +33,27 @@ bottle:
         sha256: 488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        sha256: 488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:6036ca4c419f3bf4fbb24a29caed42d9422ef07c9b3c63fd50ff3595010e1d4c
+        sha256: 6036ca4c419f3bf4fbb24a29caed42d9422ef07c9b3c63fd50ff3595010e1d4c
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:e2d84ef1ccf07242fd9f1f2157d6208076353658bd1b8536c582137c5850fdd3
+        sha256: e2d84ef1ccf07242fd9f1f2157d6208076353658bd1b8536c582137c5850fdd3
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:6036ca4c419f3bf4fbb24a29caed42d9422ef07c9b3c63fd50ff3595010e1d4c
+        sha256: 6036ca4c419f3bf4fbb24a29caed42d9422ef07c9b3c63fd50ff3595010e1d4c
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:c891a528752c5d71cefeb3d49d82241389d0d722609806bfacc7c6d62acdec37
         sha256: c891a528752c5d71cefeb3d49d82241389d0d722609806bfacc7c6d62acdec37
         sha512: ""
@@ -71,4 +91,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/percona-server/bin/mysqld_safe
+        - --datadir=$HOMEBREW_PREFIX/var/mysql
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/mysql
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - percona-server

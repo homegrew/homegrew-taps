@@ -24,7 +24,57 @@ bottle:
         sha256: 22599c35be1743c9dcb52fcf32aa04a2647ec8853857afbc6c2854e7b1d5c571
         sha512: ""
         signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:c5fbf19ce7c3b3cd8d6681aa8da2f7d658fa81486277ca06bf6225ece4b28568
+        sha256: c5fbf19ce7c3b3cd8d6681aa8da2f7d658fa81486277ca06bf6225ece4b28568
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:2d08f8d072061940b968de3f7b3f221dd4e18f083d96a85a3d33a1a2ad049d0d
+        sha256: 2d08f8d072061940b968de3f7b3f221dd4e18f083d96a85a3d33a1a2ad049d0d
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:02424e9c82015053c1217768e20fa081e6d692ae82000de9c792b0e94d77cbaa
+        sha256: 02424e9c82015053c1217768e20fa081e6d692ae82000de9c792b0e94d77cbaa
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:22599c35be1743c9dcb52fcf32aa04a2647ec8853857afbc6c2854e7b1d5c571
+        sha256: 22599c35be1743c9dcb52fcf32aa04a2647ec8853857afbc6c2854e7b1d5c571
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:74b984c41b74f63386b6125681be1f37529341179a754f0556ed9d2d621b9088
+        sha256: 74b984c41b74f63386b6125681be1f37529341179a754f0556ed9d2d621b9088
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:b2f814739b81709efe980fe1d740ad459aa74db08a8027907af4d76f912e8e4f
+        sha256: b2f814739b81709efe980fe1d740ad459aa74db08a8027907af4d76f912e8e4f
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:d00ef3ef848ab20b6a0e8673134ddda3711e3b7ade51d5a143920038081de2be
+        sha256: d00ef3ef848ab20b6a0e8673134ddda3711e3b7ade51d5a143920038081de2be
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:128bb476a00fb682cbc27ce9859d44efdb752221458b8bc33dd358313f1dd54e
+        sha256: 128bb476a00fb682cbc27ce9859d44efdb752221458b8bc33dd358313f1dd54e
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:0c0cd544f3007bc3fc55d863ddacab823698188bd12e8a5b15e71aa81d071f50
+        sha256: 0c0cd544f3007bc3fc55d863ddacab823698188bd12e8a5b15e71aa81d071f50
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:74b984c41b74f63386b6125681be1f37529341179a754f0556ed9d2d621b9088
+        sha256: 74b984c41b74f63386b6125681be1f37529341179a754f0556ed9d2d621b9088
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/beanstalkd/blobs/sha256:3822e7705185398f263482d69e922ffee29ccc195eb491bcc765a020ac6728ac
         sha256: 3822e7705185398f263482d69e922ffee29ccc195eb491bcc765a020ac6728ac
         sha512: ""
@@ -49,4 +99,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/beanstalkd/bin/beanstalkd
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/beanstalkd.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/beanstalkd.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - beanstalkd

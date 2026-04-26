@@ -25,7 +25,27 @@ bottle:
         sha256: 73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        sha256: 73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
+        sha256: 88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:47fa0ad2320508c073666cb2d56b1a30de1b6aad5f976849eac58e9e704591cc
+        sha256: 47fa0ad2320508c073666cb2d56b1a30de1b6aad5f976849eac58e9e704591cc
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
+        sha256: 88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:c9c17d6f8a303bc91518b1fb6820994a2d2dc51b3d0a41f010531f0fb2be1846
         sha256: c9c17d6f8a303bc91518b1fb6820994a2d2dc51b3d0a41f010531f0fb2be1846
         sha512: ""
@@ -53,4 +73,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nexus/bin/nexus
+        - start
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nexus

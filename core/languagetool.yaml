@@ -25,7 +25,27 @@ bottle:
         sha256: f9dcf2480437854ab2576be8f4e19ac728f5c8e048751308b01284e226e83b96
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/languagetool/blobs/sha256:f9dcf2480437854ab2576be8f4e19ac728f5c8e048751308b01284e226e83b96
+        sha256: f9dcf2480437854ab2576be8f4e19ac728f5c8e048751308b01284e226e83b96
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/languagetool/blobs/sha256:b7b92cc5a0913b777c862b42a90b96820630157b08d6601424624d09bdaac52e
+        sha256: b7b92cc5a0913b777c862b42a90b96820630157b08d6601424624d09bdaac52e
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/languagetool/blobs/sha256:a98c2e1dfd79d4d61812874ccad3b7cd2da1ade1e91325560e13443151ac6c21
+        sha256: a98c2e1dfd79d4d61812874ccad3b7cd2da1ade1e91325560e13443151ac6c21
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/languagetool/blobs/sha256:b7b92cc5a0913b777c862b42a90b96820630157b08d6601424624d09bdaac52e
+        sha256: b7b92cc5a0913b777c862b42a90b96820630157b08d6601424624d09bdaac52e
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/languagetool/blobs/sha256:6fea33d351a9f879bc18b3482acc005a9745bea3e1e011fca5851d37fd6f83f2
         sha256: 6fea33d351a9f879bc18b3482acc005a9745bea3e1e011fca5851d37fd6f83f2
         sha512: ""
@@ -51,4 +71,21 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/languagetool/bin/languagetool-server
+        - --config
+        - $HOMEBREW_PREFIX/etc/languagetool/server.properties
+        - --port
+        - "8081"
+        - --allow-origin
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/languagetool/languagetool-server.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/languagetool/languagetool-server.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - languagetool

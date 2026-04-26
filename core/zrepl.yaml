@@ -24,7 +24,27 @@ bottle:
         sha256: 65f3263bab397da62393bedef12b5b8ed811e0cd747f57fad5bbf7f89c4683d6
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/zrepl/blobs/sha256:65f3263bab397da62393bedef12b5b8ed811e0cd747f57fad5bbf7f89c4683d6
+        sha256: 65f3263bab397da62393bedef12b5b8ed811e0cd747f57fad5bbf7f89c4683d6
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zrepl/blobs/sha256:83603ff9603be60833fc8448a17a35eaf01598a52b467335225cc46c470e14e1
+        sha256: 83603ff9603be60833fc8448a17a35eaf01598a52b467335225cc46c470e14e1
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/zrepl/blobs/sha256:bdfdc9ae054e19a5976218ec1e94ca3e777bd4c7125858aadd3c0c4ab3a20be5
+        sha256: bdfdc9ae054e19a5976218ec1e94ca3e777bd4c7125858aadd3c0c4ab3a20be5
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/zrepl/blobs/sha256:83603ff9603be60833fc8448a17a35eaf01598a52b467335225cc46c470e14e1
+        sha256: 83603ff9603be60833fc8448a17a35eaf01598a52b467335225cc46c470e14e1
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/zrepl/blobs/sha256:208277fa477884e0419b882934545194b9cc42f94b429bb94cec29095f8294de
         sha256: 208277fa477884e0419b882934545194b9cc42f94b429bb94cec29095f8294de
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/zrepl/bin/zrepl
+        - daemon
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/run/zrepl
+    log_path: $HOMEBREW_PREFIX/var/log/zrepl/zrepl.out.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/zrepl/zrepl.err.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - zrepl

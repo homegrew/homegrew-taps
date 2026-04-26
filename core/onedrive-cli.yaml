@@ -45,4 +45,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/onedrive-cli/bin/onedrive
+        - --monitor
+    run_type: immediate
+    working_dir: /$HOME
+    log_path: $HOMEBREW_PREFIX/var/log/onedrive.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/onedrive.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - onedrive-cli

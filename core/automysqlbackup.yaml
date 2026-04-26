@@ -24,7 +24,37 @@ bottle:
         sha256: c34d3e9363096874a38e300b7ca801587d5e3076de4fd0b9504229b3544cfb50
         sha512: ""
         signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/automysqlbackup/blobs/sha256:c34d3e9363096874a38e300b7ca801587d5e3076de4fd0b9504229b3544cfb50
+        sha256: c34d3e9363096874a38e300b7ca801587d5e3076de4fd0b9504229b3544cfb50
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/automysqlbackup/blobs/sha256:c34d3e9363096874a38e300b7ca801587d5e3076de4fd0b9504229b3544cfb50
+        sha256: c34d3e9363096874a38e300b7ca801587d5e3076de4fd0b9504229b3544cfb50
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/automysqlbackup/blobs/sha256:eae5fa097a6796bd0aeb27e2a4026257d8b8a868263f292a693723c32404a0d3
+        sha256: eae5fa097a6796bd0aeb27e2a4026257d8b8a868263f292a693723c32404a0d3
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/automysqlbackup/blobs/sha256:eae5fa097a6796bd0aeb27e2a4026257d8b8a868263f292a693723c32404a0d3
+        sha256: eae5fa097a6796bd0aeb27e2a4026257d8b8a868263f292a693723c32404a0d3
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/automysqlbackup/blobs/sha256:eae5fa097a6796bd0aeb27e2a4026257d8b8a868263f292a693723c32404a0d3
+        sha256: eae5fa097a6796bd0aeb27e2a4026257d8b8a868263f292a693723c32404a0d3
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/automysqlbackup/blobs/sha256:eae5fa097a6796bd0aeb27e2a4026257d8b8a868263f292a693723c32404a0d3
+        sha256: eae5fa097a6796bd0aeb27e2a4026257d8b8a868263f292a693723c32404a0d3
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/automysqlbackup/blobs/sha256:47848e3272f89cc4d30787693b27799507fe8d7593d51b2586431e88eb92c6dc
         sha256: 47848e3272f89cc4d30787693b27799507fe8d7593d51b2586431e88eb92c6dc
         sha512: ""
@@ -49,4 +79,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/automysqlbackup/sbin/automysqlbackup
+    run_type: cron
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/automysqlbackup.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/automysqlbackup.log
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - automysqlbackup

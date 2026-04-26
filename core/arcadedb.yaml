@@ -25,7 +25,72 @@ bottle:
         sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
         sha512: ""
         signature: ""
+    darwin_amd64_10:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
         sha256: 02784c3be3a41bf5e3d26156746b22bd9fbabc860f48659b69b2eb81243d826e
         sha512: ""
@@ -50,4 +115,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/arcadedb/bin/arcadedb-server
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/arcadedb
+    log_path: $HOMEBREW_PREFIX/var/log/arcadedb/server.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/arcadedb/server-error.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - arcadedb

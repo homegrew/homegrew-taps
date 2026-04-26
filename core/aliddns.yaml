@@ -24,7 +24,47 @@ bottle:
         sha256: b8051122a13e743cc9c0e6aa0eccb86ec9bcf014dff7e23180683068e19bfb75
         sha512: ""
         signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:4a87e7615baed5cb9c6e1c2b38091c93bc616a054fecc57488a43c196818cd85
+        sha256: 4a87e7615baed5cb9c6e1c2b38091c93bc616a054fecc57488a43c196818cd85
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:f083114a10855bf586164f35d83235d74b5cd3b848adf3a7d609c26aedc4a496
+        sha256: f083114a10855bf586164f35d83235d74b5cd3b848adf3a7d609c26aedc4a496
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:b8051122a13e743cc9c0e6aa0eccb86ec9bcf014dff7e23180683068e19bfb75
+        sha256: b8051122a13e743cc9c0e6aa0eccb86ec9bcf014dff7e23180683068e19bfb75
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:7b1a8f12757738745c93af17367461d0f6a42482075f5b31fb093bd69ada590d
+        sha256: 7b1a8f12757738745c93af17367461d0f6a42482075f5b31fb093bd69ada590d
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:c2eb96cb882b715a1d9427e5bb3f6bca9222bd24d3a2080b864632deab660582
+        sha256: c2eb96cb882b715a1d9427e5bb3f6bca9222bd24d3a2080b864632deab660582
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:2b6ba33d055f1f0342f2aa3121593933125b2054b1fa9faae848ae71ad0d6d6d
+        sha256: 2b6ba33d055f1f0342f2aa3121593933125b2054b1fa9faae848ae71ad0d6d6d
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:90af620562ae9c772f7d5cc14f6398c498d06ea9e77cd67bc759512ab677a94f
+        sha256: 90af620562ae9c772f7d5cc14f6398c498d06ea9e77cd67bc759512ab677a94f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:7b1a8f12757738745c93af17367461d0f6a42482075f5b31fb093bd69ada590d
+        sha256: 7b1a8f12757738745c93af17367461d0f6a42482075f5b31fb093bd69ada590d
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:06b60c6460fba278ca18d975d72e209b6e7089b35012f21dfceba3334db24b92
         sha256: 06b60c6460fba278ca18d975d72e209b6e7089b35012f21dfceba3334db24b92
         sha512: ""
@@ -50,4 +90,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/aliddns/bin/aliddns
+        - -c
+        - $HOMEBREW_PREFIX/etc/aliddns/aliddns.yaml
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/aliddns.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/aliddns.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - aliddns

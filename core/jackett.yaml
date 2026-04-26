@@ -21,6 +21,21 @@ dependencies:
 keg_only: false
 bottle:
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/jackett/blobs/sha256:1c780a613bfefe2a87d59b63da589d373227095cdfc7908d07345bacb5b68548
+        sha256: 1c780a613bfefe2a87d59b63da589d373227095cdfc7908d07345bacb5b68548
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/jackett/blobs/sha256:872f27cdac4c99560827b6f7627b36c644bca841392c47b46d978d5644bf7418
+        sha256: 872f27cdac4c99560827b6f7627b36c644bca841392c47b46d978d5644bf7418
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/jackett/blobs/sha256:1c780a613bfefe2a87d59b63da589d373227095cdfc7908d07345bacb5b68548
+        sha256: 1c780a613bfefe2a87d59b63da589d373227095cdfc7908d07345bacb5b68548
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/jackett/blobs/sha256:24d6ee4e784b333fe8c49f2bd9a55d70d0b42433e2dcda6ceee5ff0e9237379c
         sha256: 24d6ee4e784b333fe8c49f2bd9a55d70d0b42433e2dcda6ceee5ff0e9237379c
         sha512: ""
@@ -45,4 +60,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/jackett/bin/jackett
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/opt/jackett/libexec
+    log_path: $HOMEBREW_PREFIX/var/log/jackett.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/jackett.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - jackett

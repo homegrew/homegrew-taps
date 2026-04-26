@@ -26,7 +26,27 @@ bottle:
         sha256: 85fef64088a86cbb4566c6785be546cd18aa2193ff357b256714f7b44e98593c
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/haproxy/blobs/sha256:85fef64088a86cbb4566c6785be546cd18aa2193ff357b256714f7b44e98593c
+        sha256: 85fef64088a86cbb4566c6785be546cd18aa2193ff357b256714f7b44e98593c
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/haproxy/blobs/sha256:c64db7ba8c3aaec42e2b2ac49556e2f5dc1cdc7d1b1b11c5ad278225491e3dcb
+        sha256: c64db7ba8c3aaec42e2b2ac49556e2f5dc1cdc7d1b1b11c5ad278225491e3dcb
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/haproxy/blobs/sha256:afeaf62626c8c243b5bf897cf4c8a04ecb15d26da0653db5fecc3d7ef7326ff9
+        sha256: afeaf62626c8c243b5bf897cf4c8a04ecb15d26da0653db5fecc3d7ef7326ff9
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/haproxy/blobs/sha256:c64db7ba8c3aaec42e2b2ac49556e2f5dc1cdc7d1b1b11c5ad278225491e3dcb
+        sha256: c64db7ba8c3aaec42e2b2ac49556e2f5dc1cdc7d1b1b11c5ad278225491e3dcb
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/haproxy/blobs/sha256:aec7ffaf6f47f3b2890b75991ed1662d099b363919e4a11be7cf0b3225f8c989
         sha256: aec7ffaf6f47f3b2890b75991ed1662d099b363919e4a11be7cf0b3225f8c989
         sha512: ""
@@ -54,4 +74,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/haproxy/bin/haproxy
+        - -f
+        - $HOMEBREW_PREFIX/etc/haproxy.cfg
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/haproxy.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/haproxy.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - haproxy

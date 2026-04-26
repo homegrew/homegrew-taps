@@ -25,7 +25,27 @@ bottle:
         sha256: ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/unitycatalog/blobs/sha256:ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
+        sha256: ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/unitycatalog/blobs/sha256:ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
+        sha256: ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/unitycatalog/blobs/sha256:ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
+        sha256: ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/unitycatalog/blobs/sha256:ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
+        sha256: ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/unitycatalog/blobs/sha256:ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
         sha256: ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629
         sha512: ""
@@ -51,4 +71,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/unitycatalog/bin/start-uc-server
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/etc/unitycatalog
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - unitycatalog

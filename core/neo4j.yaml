@@ -26,7 +26,72 @@ bottle:
         sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
         sha512: ""
         signature: ""
+    darwin_amd64_10:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
         sha256: 07905cc32e0dc3d0701316534636bfc215a9bf01236b36a0575fb5452a1008ba
         sha512: ""
@@ -51,4 +116,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/neo4j/bin/neo4j
+        - console
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/neo4j
+    log_path: $HOMEBREW_PREFIX/var/log/neo4j.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/neo4j.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - neo4j

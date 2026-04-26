@@ -24,7 +24,27 @@ bottle:
         sha256: aef59484731100b7a80263353a251ad5c33281f0f3ce0fe4c3c427f42aaa3867
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/trojan-go/blobs/sha256:aef59484731100b7a80263353a251ad5c33281f0f3ce0fe4c3c427f42aaa3867
+        sha256: aef59484731100b7a80263353a251ad5c33281f0f3ce0fe4c3c427f42aaa3867
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/trojan-go/blobs/sha256:e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2
+        sha256: e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/trojan-go/blobs/sha256:e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2
+        sha256: e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/trojan-go/blobs/sha256:e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2
+        sha256: e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/trojan-go/blobs/sha256:e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2
         sha256: e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/trojan-go/bin/trojan-go
+        - -config
+        - $HOMEBREW_PREFIX/etc/trojan-go/config.json
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - trojan-go

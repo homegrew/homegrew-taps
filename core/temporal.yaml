@@ -24,7 +24,27 @@ bottle:
         sha256: 5bf7e94b94e68d02359efd14446b1e75c454eef66a1458769f4c9c6ed28c2e4f
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/temporal/blobs/sha256:5bf7e94b94e68d02359efd14446b1e75c454eef66a1458769f4c9c6ed28c2e4f
+        sha256: 5bf7e94b94e68d02359efd14446b1e75c454eef66a1458769f4c9c6ed28c2e4f
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/temporal/blobs/sha256:6500d401bda400de7e3609f769efefb1a3724095729e392d98483e63a1e77d48
+        sha256: 6500d401bda400de7e3609f769efefb1a3724095729e392d98483e63a1e77d48
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/temporal/blobs/sha256:ae6b81b068ded91c1e141699b1c8bbf53c61cd3bca6555781c27468a40aaed31
+        sha256: ae6b81b068ded91c1e141699b1c8bbf53c61cd3bca6555781c27468a40aaed31
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/temporal/blobs/sha256:6500d401bda400de7e3609f769efefb1a3724095729e392d98483e63a1e77d48
+        sha256: 6500d401bda400de7e3609f769efefb1a3724095729e392d98483e63a1e77d48
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/temporal/blobs/sha256:63a8b1bb265b6f7bf9822b8886a668295a976fafa105505630ef05d9e4b2ec34
         sha256: 63a8b1bb265b6f7bf9822b8886a668295a976fafa105505630ef05d9e4b2ec34
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/temporal/bin/temporal
+        - server
+        - start-dev
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/temporal.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/temporal.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - temporal

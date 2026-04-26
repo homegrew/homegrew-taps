@@ -29,7 +29,57 @@ bottle:
         sha256: 3064b04c529f9ce23df5d0df80ac8aba0bbdbfaecd5dc61384de7dc38e0addac
         sha512: ""
         signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:f68065895579d27cda75d2d5b1635749502205922ff260524e5e47e62c01bab2
+        sha256: f68065895579d27cda75d2d5b1635749502205922ff260524e5e47e62c01bab2
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:a215b86f3bd4cfcf9684b056db2ead9d59b76de0b9cc4ab6d08a218e4ab69f07
+        sha256: a215b86f3bd4cfcf9684b056db2ead9d59b76de0b9cc4ab6d08a218e4ab69f07
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:9b09af1e56899b9069fa5141af931ca86086891d3dc434ea217f1ae2418f07f3
+        sha256: 9b09af1e56899b9069fa5141af931ca86086891d3dc434ea217f1ae2418f07f3
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:3064b04c529f9ce23df5d0df80ac8aba0bbdbfaecd5dc61384de7dc38e0addac
+        sha256: 3064b04c529f9ce23df5d0df80ac8aba0bbdbfaecd5dc61384de7dc38e0addac
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:7e9b965dcf689e5c31274e2d5ebe0ecc6f5aa7d4b3fc17a4abefdd65d94a64a8
+        sha256: 7e9b965dcf689e5c31274e2d5ebe0ecc6f5aa7d4b3fc17a4abefdd65d94a64a8
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:846901b552ae3f6146d058453b16094860e4cb330857b96dc5eb0d96e11ead0e
+        sha256: 846901b552ae3f6146d058453b16094860e4cb330857b96dc5eb0d96e11ead0e
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:31e36e04775bf9c033db8519d2a893ee10f7a0b9fd55f394d1d6d9593a28bffa
+        sha256: 31e36e04775bf9c033db8519d2a893ee10f7a0b9fd55f394d1d6d9593a28bffa
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:ade3c36ec956feefe503081cabbb3eefb02e4dc45cb333433866e6bb46db49ac
+        sha256: ade3c36ec956feefe503081cabbb3eefb02e4dc45cb333433866e6bb46db49ac
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:eec9c56666a83664194ac6612bba1c330a54d14ead67dba1100757fc303f8edb
+        sha256: eec9c56666a83664194ac6612bba1c330a54d14ead67dba1100757fc303f8edb
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:7e9b965dcf689e5c31274e2d5ebe0ecc6f5aa7d4b3fc17a4abefdd65d94a64a8
+        sha256: 7e9b965dcf689e5c31274e2d5ebe0ecc6f5aa7d4b3fc17a4abefdd65d94a64a8
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/stubby/blobs/sha256:cf21effb238d2df0de643661b21cd67328a8cb440f7858b2fcee1ed7e7b851bf
         sha256: cf21effb238d2df0de643661b21cd67328a8cb440f7858b2fcee1ed7e7b851bf
         sha512: ""
@@ -58,4 +108,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/stubby/bin/stubby
+        - -C
+        - $HOMEBREW_PREFIX/etc/stubby/stubby.yml
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - stubby

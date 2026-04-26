@@ -24,7 +24,27 @@ bottle:
         sha256: d5b95ea4c6544bbb45d23da9b748def63323db867753640e04c96c2478e9fabb
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/cliproxyapi/blobs/sha256:d5b95ea4c6544bbb45d23da9b748def63323db867753640e04c96c2478e9fabb
+        sha256: d5b95ea4c6544bbb45d23da9b748def63323db867753640e04c96c2478e9fabb
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cliproxyapi/blobs/sha256:fcf5db64a4744e45c741b9f1f977907be238672c58781a817e16c0494050ce1f
+        sha256: fcf5db64a4744e45c741b9f1f977907be238672c58781a817e16c0494050ce1f
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/cliproxyapi/blobs/sha256:fcf5db64a4744e45c741b9f1f977907be238672c58781a817e16c0494050ce1f
+        sha256: fcf5db64a4744e45c741b9f1f977907be238672c58781a817e16c0494050ce1f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/cliproxyapi/blobs/sha256:fcf5db64a4744e45c741b9f1f977907be238672c58781a817e16c0494050ce1f
+        sha256: fcf5db64a4744e45c741b9f1f977907be238672c58781a817e16c0494050ce1f
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/cliproxyapi/blobs/sha256:fcf5db64a4744e45c741b9f1f977907be238672c58781a817e16c0494050ce1f
         sha256: fcf5db64a4744e45c741b9f1f977907be238672c58781a817e16c0494050ce1f
         sha512: ""
@@ -50,4 +70,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/cliproxyapi/bin/cliproxyapi
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - cliproxyapi

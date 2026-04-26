@@ -24,7 +24,27 @@ bottle:
         sha256: 4c3268d60a7701aa29dbc018566ce82f76bfa95834c7f89e49376db86f885dfc
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/caddy/blobs/sha256:4c3268d60a7701aa29dbc018566ce82f76bfa95834c7f89e49376db86f885dfc
+        sha256: 4c3268d60a7701aa29dbc018566ce82f76bfa95834c7f89e49376db86f885dfc
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/caddy/blobs/sha256:8abb85b3dc58e7bf0a9b9bf760dc4d69df91f75fc98fc2dc6e0bbe76048bb12d
+        sha256: 8abb85b3dc58e7bf0a9b9bf760dc4d69df91f75fc98fc2dc6e0bbe76048bb12d
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/caddy/blobs/sha256:8abb85b3dc58e7bf0a9b9bf760dc4d69df91f75fc98fc2dc6e0bbe76048bb12d
+        sha256: 8abb85b3dc58e7bf0a9b9bf760dc4d69df91f75fc98fc2dc6e0bbe76048bb12d
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/caddy/blobs/sha256:8abb85b3dc58e7bf0a9b9bf760dc4d69df91f75fc98fc2dc6e0bbe76048bb12d
+        sha256: 8abb85b3dc58e7bf0a9b9bf760dc4d69df91f75fc98fc2dc6e0bbe76048bb12d
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/caddy/blobs/sha256:8abb85b3dc58e7bf0a9b9bf760dc4d69df91f75fc98fc2dc6e0bbe76048bb12d
         sha256: 8abb85b3dc58e7bf0a9b9bf760dc4d69df91f75fc98fc2dc6e0bbe76048bb12d
         sha512: ""
@@ -50,4 +70,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/caddy/bin/caddy
+        - run
+        - --config
+        - $HOMEBREW_PREFIX/etc/Caddyfile
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/caddy.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/caddy.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - caddy

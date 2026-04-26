@@ -32,7 +32,27 @@ bottle:
         sha256: 07c3d88ac76789dc1c94b6881a11ea02868a3e0023f3fd3e2760b95c5aef2161
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:07c3d88ac76789dc1c94b6881a11ea02868a3e0023f3fd3e2760b95c5aef2161
+        sha256: 07c3d88ac76789dc1c94b6881a11ea02868a3e0023f3fd3e2760b95c5aef2161
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:3b0c4054a598015af0838395bfb6b96b40ff9297d4d382b80e06c6df7b76b9ab
+        sha256: 3b0c4054a598015af0838395bfb6b96b40ff9297d4d382b80e06c6df7b76b9ab
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:bf612fdd30e917faf4c6627a1324f1ffaf509f5dfa92748199ff57c6ce1efcfb
+        sha256: bf612fdd30e917faf4c6627a1324f1ffaf509f5dfa92748199ff57c6ce1efcfb
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:3b0c4054a598015af0838395bfb6b96b40ff9297d4d382b80e06c6df7b76b9ab
+        sha256: 3b0c4054a598015af0838395bfb6b96b40ff9297d4d382b80e06c6df7b76b9ab
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/pulseaudio/blobs/sha256:73c349f7d337ebb0bdd1169325685e79f4cb4c253dd920339a7bc52c833ea4c7
         sha256: 73c349f7d337ebb0bdd1169325685e79f4cb4c253dd920339a7bc52c833ea4c7
         sha512: ""
@@ -71,4 +91,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/pulseaudio/bin/pulseaudio
+        - --exit-idle-time=-1
+        - --verbose
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/pulseaudio.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/pulseaudio.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - pulseaudio

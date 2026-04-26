@@ -31,7 +31,27 @@ bottle:
         sha256: d0a0d9484f1f31d5afd767d125b3d069225bcff3edb03ecd8975521a6ef058b9
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/monero/blobs/sha256:d0a0d9484f1f31d5afd767d125b3d069225bcff3edb03ecd8975521a6ef058b9
+        sha256: d0a0d9484f1f31d5afd767d125b3d069225bcff3edb03ecd8975521a6ef058b9
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/monero/blobs/sha256:fe3b9e56524f2420dcdaf570a1e44fc40420996e11a166175c538ffcc16d69b4
+        sha256: fe3b9e56524f2420dcdaf570a1e44fc40420996e11a166175c538ffcc16d69b4
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/monero/blobs/sha256:718a73101c7820bd000f39dc93389293f5156e3656b82f63ea93c676988e0c05
+        sha256: 718a73101c7820bd000f39dc93389293f5156e3656b82f63ea93c676988e0c05
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/monero/blobs/sha256:fe3b9e56524f2420dcdaf570a1e44fc40420996e11a166175c538ffcc16d69b4
+        sha256: fe3b9e56524f2420dcdaf570a1e44fc40420996e11a166175c538ffcc16d69b4
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/monero/blobs/sha256:9ced4ea863cdab1ad26250eaeb00295e9997e7987f104269b665ceec56c62465
         sha256: 9ced4ea863cdab1ad26250eaeb00295e9997e7987f104269b665ceec56c62465
         sha512: ""
@@ -58,4 +78,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/monero/bin/monerod
+        - --non-interactive
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - monero

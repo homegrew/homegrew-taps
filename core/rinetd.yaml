@@ -24,7 +24,27 @@ bottle:
         sha256: e6c5ecca7be62f96837669443c191fdfebeb2872f936750814eda3bda0082a51
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/rinetd/blobs/sha256:e6c5ecca7be62f96837669443c191fdfebeb2872f936750814eda3bda0082a51
+        sha256: e6c5ecca7be62f96837669443c191fdfebeb2872f936750814eda3bda0082a51
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rinetd/blobs/sha256:1bbfcadccec37315d56385b18334084654fa2176c6b8c6f11c4a059be3541acd
+        sha256: 1bbfcadccec37315d56385b18334084654fa2176c6b8c6f11c4a059be3541acd
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/rinetd/blobs/sha256:1ca5c0b84ac7749459a50478734f32ccc256f092aec9322400963f87d2a1dbdf
+        sha256: 1ca5c0b84ac7749459a50478734f32ccc256f092aec9322400963f87d2a1dbdf
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/rinetd/blobs/sha256:1bbfcadccec37315d56385b18334084654fa2176c6b8c6f11c4a059be3541acd
+        sha256: 1bbfcadccec37315d56385b18334084654fa2176c6b8c6f11c4a059be3541acd
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/rinetd/blobs/sha256:ac09912351ca2587bbea4572cbc2d5101d93b14a1ccf925cff8cfa83aedf5128
         sha256: ac09912351ca2587bbea4572cbc2d5101d93b14a1ccf925cff8cfa83aedf5128
         sha512: ""
@@ -49,4 +69,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/rinetd/sbin/rinetd
+        - -c
+        - $HOMEBREW_PREFIX/etc/rinetd.conf
+        - -f
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - rinetd

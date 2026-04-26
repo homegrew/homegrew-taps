@@ -27,7 +27,27 @@ bottle:
         sha256: 7908dbaed8ac61780a35650ffb9d4b2d09bf37dabed214495c8bcd5c0f753fc2
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/cassandra/blobs/sha256:7908dbaed8ac61780a35650ffb9d4b2d09bf37dabed214495c8bcd5c0f753fc2
+        sha256: 7908dbaed8ac61780a35650ffb9d4b2d09bf37dabed214495c8bcd5c0f753fc2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cassandra/blobs/sha256:180a63e5ab13dd22aaa55c5654a36ee5771a20f4b2265a0abe9f3c7e9ffea1b3
+        sha256: 180a63e5ab13dd22aaa55c5654a36ee5771a20f4b2265a0abe9f3c7e9ffea1b3
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/cassandra/blobs/sha256:0d26ad45cdbd0b9ec88140e0339a3d34e82549cd74537b8e4ccdf1f67d942aea
+        sha256: 0d26ad45cdbd0b9ec88140e0339a3d34e82549cd74537b8e4ccdf1f67d942aea
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/cassandra/blobs/sha256:180a63e5ab13dd22aaa55c5654a36ee5771a20f4b2265a0abe9f3c7e9ffea1b3
+        sha256: 180a63e5ab13dd22aaa55c5654a36ee5771a20f4b2265a0abe9f3c7e9ffea1b3
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/cassandra/blobs/sha256:bfc15cd9d3db17f3e089661c454a51bb8bbc32cb2798d4464876c5952496a47e
         sha256: bfc15cd9d3db17f3e089661c454a51bb8bbc32cb2798d4464876c5952496a47e
         sha512: ""
@@ -52,4 +72,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/cassandra/bin/cassandra
+        - -f
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/lib/cassandra
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - cassandra

@@ -24,7 +24,27 @@ bottle:
         sha256: 283720dc77dd57752ad44d6c45f7a301218bb62e5361a1027af949b22db35c6e
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mihomo/blobs/sha256:283720dc77dd57752ad44d6c45f7a301218bb62e5361a1027af949b22db35c6e
+        sha256: 283720dc77dd57752ad44d6c45f7a301218bb62e5361a1027af949b22db35c6e
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mihomo/blobs/sha256:012d37b4f3e3b3802ecc3c61fdc0916d41b8c22d56e53c1e83c5bc5accac5b8a
+        sha256: 012d37b4f3e3b3802ecc3c61fdc0916d41b8c22d56e53c1e83c5bc5accac5b8a
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mihomo/blobs/sha256:012d37b4f3e3b3802ecc3c61fdc0916d41b8c22d56e53c1e83c5bc5accac5b8a
+        sha256: 012d37b4f3e3b3802ecc3c61fdc0916d41b8c22d56e53c1e83c5bc5accac5b8a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mihomo/blobs/sha256:012d37b4f3e3b3802ecc3c61fdc0916d41b8c22d56e53c1e83c5bc5accac5b8a
+        sha256: 012d37b4f3e3b3802ecc3c61fdc0916d41b8c22d56e53c1e83c5bc5accac5b8a
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mihomo/blobs/sha256:012d37b4f3e3b3802ecc3c61fdc0916d41b8c22d56e53c1e83c5bc5accac5b8a
         sha256: 012d37b4f3e3b3802ecc3c61fdc0916d41b8c22d56e53c1e83c5bc5accac5b8a
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mihomo/bin/mihomo
+        - -d
+        - $HOMEBREW_PREFIX/etc/mihomo
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/etc/mihomo
+    log_path: $HOMEBREW_PREFIX/var/log/mihomo.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/mihomo.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mihomo

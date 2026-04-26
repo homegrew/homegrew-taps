@@ -22,11 +22,41 @@ dependencies:
 keg_only: false
 bottle:
     darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/vdirsyncer/blobs/sha256:3651285caff8f32b18562ad066e8b54c52cde974db33f599736a3d2acda243a9
+        sha256: 3651285caff8f32b18562ad066e8b54c52cde974db33f599736a3d2acda243a9
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/vdirsyncer/blobs/sha256:4f808e7d82301efd5c758d06517696199d750a39ee7213da1f941a660cc7465e
+        sha256: 4f808e7d82301efd5c758d06517696199d750a39ee7213da1f941a660cc7465e
+        sha512: ""
+        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/vdirsyncer/blobs/sha256:3651285caff8f32b18562ad066e8b54c52cde974db33f599736a3d2acda243a9
+        sha256: 3651285caff8f32b18562ad066e8b54c52cde974db33f599736a3d2acda243a9
+        sha512: ""
+        signature: ""
+    darwin_amd64_16:
         url: https://ghcr.io/v2/homebrew/core/vdirsyncer/blobs/sha256:6ac9e881fa98eec00434ed13cf73d2cb27d4058c046da17bcac8a32c3981a787
         sha256: 6ac9e881fa98eec00434ed13cf73d2cb27d4058c046da17bcac8a32c3981a787
         sha512: ""
         signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vdirsyncer/blobs/sha256:be4c4405acffb6b8cc80ed441beea20dfb4c670f2ba2e1265871938cb64d4899
+        sha256: be4c4405acffb6b8cc80ed441beea20dfb4c670f2ba2e1265871938cb64d4899
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/vdirsyncer/blobs/sha256:e4c70327015e118a465ee444f13feff756d156655f14c01734e585c5d0f4d26a
+        sha256: e4c70327015e118a465ee444f13feff756d156655f14c01734e585c5d0f4d26a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/vdirsyncer/blobs/sha256:be4c4405acffb6b8cc80ed441beea20dfb4c670f2ba2e1265871938cb64d4899
+        sha256: be4c4405acffb6b8cc80ed441beea20dfb4c670f2ba2e1265871938cb64d4899
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/vdirsyncer/blobs/sha256:c0db8d0863c657a28c3e6abd1f396ca3fa49108e785a3be1ee69cb7015e7dce4
         sha256: c0db8d0863c657a28c3e6abd1f396ca3fa49108e785a3be1ee69cb7015e7dce4
         sha512: ""
@@ -51,4 +81,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/vdirsyncer/bin/vdirsyncer
+        - -v
+        - ERROR
+        - sync
+    run_type: interval
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/vdirsyncer.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/vdirsyncer.log
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - vdirsyncer

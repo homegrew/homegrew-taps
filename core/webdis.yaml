@@ -25,7 +25,27 @@ bottle:
         sha256: 1ac5b717e0b555322d262561bbf1f7a23cb586be72967b9ef91496582018bdc1
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/webdis/blobs/sha256:1ac5b717e0b555322d262561bbf1f7a23cb586be72967b9ef91496582018bdc1
+        sha256: 1ac5b717e0b555322d262561bbf1f7a23cb586be72967b9ef91496582018bdc1
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/webdis/blobs/sha256:6defb9b07385ddcec869ea600b6a018005b18c0b0b561409c1f3e430708c60a5
+        sha256: 6defb9b07385ddcec869ea600b6a018005b18c0b0b561409c1f3e430708c60a5
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/webdis/blobs/sha256:8f829fe011b08d4e0f6d7f211d0d0842e8ad088488a683fe7125bff05f1658ba
+        sha256: 8f829fe011b08d4e0f6d7f211d0d0842e8ad088488a683fe7125bff05f1658ba
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/webdis/blobs/sha256:6defb9b07385ddcec869ea600b6a018005b18c0b0b561409c1f3e430708c60a5
+        sha256: 6defb9b07385ddcec869ea600b6a018005b18c0b0b561409c1f3e430708c60a5
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/webdis/blobs/sha256:62087345de921d60b2299cd9ee575187ccff7e30a253c241c22903297175276f
         sha256: 62087345de921d60b2299cd9ee575187ccff7e30a253c241c22903297175276f
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/webdis/bin/webdis
+        - $HOMEBREW_PREFIX/etc/webdis.prod.json
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - webdis

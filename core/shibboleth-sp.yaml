@@ -35,7 +35,27 @@ bottle:
         sha256: 2f8d41cf20b047da3c6a5bc7c0cdf50eebc400d57781a4fb91b9bf2470df0c87
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:2f8d41cf20b047da3c6a5bc7c0cdf50eebc400d57781a4fb91b9bf2470df0c87
+        sha256: 2f8d41cf20b047da3c6a5bc7c0cdf50eebc400d57781a4fb91b9bf2470df0c87
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:27e58347d47a561d0a05981c4c718340656ea783813436fc6fd99d5a421a03e9
+        sha256: 27e58347d47a561d0a05981c4c718340656ea783813436fc6fd99d5a421a03e9
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:6a0f175f759d499075c499c22879f98495e2fcc5d65c7a7bc341be2924505a3c
+        sha256: 6a0f175f759d499075c499c22879f98495e2fcc5d65c7a7bc341be2924505a3c
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:27e58347d47a561d0a05981c4c718340656ea783813436fc6fd99d5a421a03e9
+        sha256: 27e58347d47a561d0a05981c4c718340656ea783813436fc6fd99d5a421a03e9
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/shibboleth-sp/blobs/sha256:339c9579747a7ea9f59bcf07d27e54060929ab44549922d266e4e39f1a015f51
         sha256: 339c9579747a7ea9f59bcf07d27e54060929ab44549922d266e4e39f1a015f51
         sha512: ""
@@ -61,4 +81,20 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/shibboleth-sp/sbin/shibd
+        - -F
+        - -f
+        - -p
+        - $HOMEBREW_PREFIX/var/run/shibboleth/shibd.pid
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - shibboleth-sp

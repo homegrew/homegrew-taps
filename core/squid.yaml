@@ -25,7 +25,27 @@ bottle:
         sha256: b9e6b77436c25ec3f29222564ac15bb0d01fca747c5eab4480b70c978bcac086
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:b9e6b77436c25ec3f29222564ac15bb0d01fca747c5eab4480b70c978bcac086
+        sha256: b9e6b77436c25ec3f29222564ac15bb0d01fca747c5eab4480b70c978bcac086
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:983292fc24c38c06581ffe2c8aae64ffd9bf3bdd4f193862d43fb5d313e28ebc
+        sha256: 983292fc24c38c06581ffe2c8aae64ffd9bf3bdd4f193862d43fb5d313e28ebc
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:acc02e229c6459c95d51f6d3d71e7d9be19637508b8bdad2d443f2ab18dee91f
+        sha256: acc02e229c6459c95d51f6d3d71e7d9be19637508b8bdad2d443f2ab18dee91f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:983292fc24c38c06581ffe2c8aae64ffd9bf3bdd4f193862d43fb5d313e28ebc
+        sha256: 983292fc24c38c06581ffe2c8aae64ffd9bf3bdd4f193862d43fb5d313e28ebc
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:b9017646c31b4a67e21d3f46bb084658c5a9f70c1b4b99a812a04cbbff320736
         sha256: b9017646c31b4a67e21d3f46bb084658c5a9f70c1b4b99a812a04cbbff320736
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/squid/sbin/squid
+        - -N
+        - -d 1
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/squid.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/squid.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - squid

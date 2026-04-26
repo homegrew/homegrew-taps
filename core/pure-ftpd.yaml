@@ -26,7 +26,27 @@ bottle:
         sha256: d8f87d56821a23a8c1c8c81b0c4ff5f68670b710500964603194102161f901d2
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/pure-ftpd/blobs/sha256:d8f87d56821a23a8c1c8c81b0c4ff5f68670b710500964603194102161f901d2
+        sha256: d8f87d56821a23a8c1c8c81b0c4ff5f68670b710500964603194102161f901d2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pure-ftpd/blobs/sha256:2b8251dbfc4608c839b7605809ea418d4d1cac9b4ffb3f6a4641c282d14c1d1f
+        sha256: 2b8251dbfc4608c839b7605809ea418d4d1cac9b4ffb3f6a4641c282d14c1d1f
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/pure-ftpd/blobs/sha256:a3758a3a8e337de890de59cf10f3f0c45e8c35f9dc396dffc860acdfe502b7db
+        sha256: a3758a3a8e337de890de59cf10f3f0c45e8c35f9dc396dffc860acdfe502b7db
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/pure-ftpd/blobs/sha256:2b8251dbfc4608c839b7605809ea418d4d1cac9b4ffb3f6a4641c282d14c1d1f
+        sha256: 2b8251dbfc4608c839b7605809ea418d4d1cac9b4ffb3f6a4641c282d14c1d1f
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/pure-ftpd/blobs/sha256:03cfef54d53503a02151f0fa412d98d81e1aabc3467338279bd85d058dd41415
         sha256: 03cfef54d53503a02151f0fa412d98d81e1aabc3467338279bd85d058dd41415
         sha512: ""
@@ -54,4 +74,20 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/pure-ftpd/sbin/pure-ftpd
+        - --chrooteveryone
+        - --createhomedir
+        - --allowdotfiles
+        - --login=puredb:$HOMEBREW_PREFIX/etc/pureftpd.pdb
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/pure-ftpd.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/pure-ftpd.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - pure-ftpd

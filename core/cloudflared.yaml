@@ -24,7 +24,27 @@ bottle:
         sha256: 98b6c314d4974d9093fc5a5923109fa413b584183c3fa03d7f8ef5fc9aa07940
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/cloudflared/blobs/sha256:98b6c314d4974d9093fc5a5923109fa413b584183c3fa03d7f8ef5fc9aa07940
+        sha256: 98b6c314d4974d9093fc5a5923109fa413b584183c3fa03d7f8ef5fc9aa07940
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cloudflared/blobs/sha256:0e699e553d80da8370204a55d8d9494f3a14f26d58764bb522ea3154c7a46395
+        sha256: 0e699e553d80da8370204a55d8d9494f3a14f26d58764bb522ea3154c7a46395
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/cloudflared/blobs/sha256:350363f511b7a25e8d92793d8e92b56d068b2e1e86b4bc77074ea1221d0c78ef
+        sha256: 350363f511b7a25e8d92793d8e92b56d068b2e1e86b4bc77074ea1221d0c78ef
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/cloudflared/blobs/sha256:0e699e553d80da8370204a55d8d9494f3a14f26d58764bb522ea3154c7a46395
+        sha256: 0e699e553d80da8370204a55d8d9494f3a14f26d58764bb522ea3154c7a46395
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/cloudflared/blobs/sha256:9cb336ccaf454d27557653369b8f65d6596554426c548c333b67eaa13d3de84f
         sha256: 9cb336ccaf454d27557653369b8f65d6596554426c548c333b67eaa13d3de84f
         sha512: ""
@@ -50,4 +70,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/cloudflared/bin/cloudflared
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/cloudflared.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/cloudflared.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - cloudflared

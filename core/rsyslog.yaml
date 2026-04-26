@@ -29,7 +29,27 @@ bottle:
         sha256: d00a64376b1149cbc2190b6756c456036e2bdc1216275cc8cc872de5a0425899
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/rsyslog/blobs/sha256:d00a64376b1149cbc2190b6756c456036e2bdc1216275cc8cc872de5a0425899
+        sha256: d00a64376b1149cbc2190b6756c456036e2bdc1216275cc8cc872de5a0425899
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rsyslog/blobs/sha256:e6119ab21408febc7fd07ed7ef2a4f1498a9a7a9d29a9ea78618f4df4f4f54d1
+        sha256: e6119ab21408febc7fd07ed7ef2a4f1498a9a7a9d29a9ea78618f4df4f4f54d1
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/rsyslog/blobs/sha256:1b0b99a5514977571d829fdeaae9df573b745a5bd7ff5dd02b09bd7332ecf453
+        sha256: 1b0b99a5514977571d829fdeaae9df573b745a5bd7ff5dd02b09bd7332ecf453
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/rsyslog/blobs/sha256:e6119ab21408febc7fd07ed7ef2a4f1498a9a7a9d29a9ea78618f4df4f4f54d1
+        sha256: e6119ab21408febc7fd07ed7ef2a4f1498a9a7a9d29a9ea78618f4df4f4f54d1
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/rsyslog/blobs/sha256:ac940ccc2bad665de82d87172ee265bffbbd7830d61982c164a3581692a21520
         sha256: ac940ccc2bad665de82d87172ee265bffbbd7830d61982c164a3581692a21520
         sha512: ""
@@ -61,4 +81,21 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/rsyslog/sbin/rsyslogd
+        - -n
+        - -f
+        - $HOMEBREW_PREFIX/etc/rsyslog.conf
+        - -i
+        - $HOMEBREW_PREFIX/var/run/rsyslogd.pid
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/rsyslogd.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/rsyslogd.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - rsyslog

@@ -24,7 +24,47 @@ bottle:
         sha256: 55eab81dca886c7fcb19eef1859d7166a3db6a4a24c1bcfae2b49829af8c45f2
         sha512: ""
         signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/trezor-bridge/blobs/sha256:3c19a0c1ec5d0ede24e8178c9a8e79fa7777e266ce9a941fdbdc5fc7abd4f6d7
+        sha256: 3c19a0c1ec5d0ede24e8178c9a8e79fa7777e266ce9a941fdbdc5fc7abd4f6d7
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/trezor-bridge/blobs/sha256:5f6906f339f0c85c6d048aff26fa7a87adea4e87b8e262f54dd482e7d31231fc
+        sha256: 5f6906f339f0c85c6d048aff26fa7a87adea4e87b8e262f54dd482e7d31231fc
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/trezor-bridge/blobs/sha256:55eab81dca886c7fcb19eef1859d7166a3db6a4a24c1bcfae2b49829af8c45f2
+        sha256: 55eab81dca886c7fcb19eef1859d7166a3db6a4a24c1bcfae2b49829af8c45f2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/trezor-bridge/blobs/sha256:026eae2c42ba181bbb882176d03e3592558cb7d2d946d3de7c1766c30dd4fdce
+        sha256: 026eae2c42ba181bbb882176d03e3592558cb7d2d946d3de7c1766c30dd4fdce
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/trezor-bridge/blobs/sha256:34ad3a642fda0faf46777da05d3a0deb9f691e4a0bf60a4db5da213c2b1e413a
+        sha256: 34ad3a642fda0faf46777da05d3a0deb9f691e4a0bf60a4db5da213c2b1e413a
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/trezor-bridge/blobs/sha256:c207cb9221f8c6ce8e813200cc98bd0cca5dd3e29e85e5ece6c74b0dce071db7
+        sha256: c207cb9221f8c6ce8e813200cc98bd0cca5dd3e29e85e5ece6c74b0dce071db7
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/trezor-bridge/blobs/sha256:2ed7f24a07138a009a6ae6f962138c0ea9bee316ebe730b534ba072140b48629
+        sha256: 2ed7f24a07138a009a6ae6f962138c0ea9bee316ebe730b534ba072140b48629
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/trezor-bridge/blobs/sha256:026eae2c42ba181bbb882176d03e3592558cb7d2d946d3de7c1766c30dd4fdce
+        sha256: 026eae2c42ba181bbb882176d03e3592558cb7d2d946d3de7c1766c30dd4fdce
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/trezor-bridge/blobs/sha256:571d4d50ac297d3cbf185c383d7e9dce39043801ebef303bd63b5a07bf819777
         sha256: 571d4d50ac297d3cbf185c383d7e9dce39043801ebef303bd63b5a07bf819777
         sha512: ""
@@ -50,4 +90,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/trezor-bridge/bin/trezord-go
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - trezor-bridge

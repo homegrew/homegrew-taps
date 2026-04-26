@@ -26,7 +26,27 @@ bottle:
         sha256: 01573f83d5463c999e6340dd61caaf870acb6f710aa164f32a718b92e101f89d
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/offlineimap/blobs/sha256:01573f83d5463c999e6340dd61caaf870acb6f710aa164f32a718b92e101f89d
+        sha256: 01573f83d5463c999e6340dd61caaf870acb6f710aa164f32a718b92e101f89d
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/offlineimap/blobs/sha256:47c364fb81fe40a2118707e9bf9b7761a05733a925167597e2696fd1b98a0f07
+        sha256: 47c364fb81fe40a2118707e9bf9b7761a05733a925167597e2696fd1b98a0f07
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/offlineimap/blobs/sha256:47c364fb81fe40a2118707e9bf9b7761a05733a925167597e2696fd1b98a0f07
+        sha256: 47c364fb81fe40a2118707e9bf9b7761a05733a925167597e2696fd1b98a0f07
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/offlineimap/blobs/sha256:47c364fb81fe40a2118707e9bf9b7761a05733a925167597e2696fd1b98a0f07
+        sha256: 47c364fb81fe40a2118707e9bf9b7761a05733a925167597e2696fd1b98a0f07
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/offlineimap/blobs/sha256:47c364fb81fe40a2118707e9bf9b7761a05733a925167597e2696fd1b98a0f07
         sha256: 47c364fb81fe40a2118707e9bf9b7761a05733a925167597e2696fd1b98a0f07
         sha512: ""
@@ -51,4 +71,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/offlineimap/bin/offlineimap
+        - -q
+        - -u
+        - basic
+    run_type: interval
+    working_dir: ""
+    log_path: /dev/null
+    error_log_path: /dev/null
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - offlineimap

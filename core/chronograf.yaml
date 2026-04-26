@@ -26,7 +26,27 @@ bottle:
         sha256: 3af85f1489c43441dcbb1e7a46b6a0b1c1e7fcefef574f27a8df2f7caf47b313
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:3af85f1489c43441dcbb1e7a46b6a0b1c1e7fcefef574f27a8df2f7caf47b313
+        sha256: 3af85f1489c43441dcbb1e7a46b6a0b1c1e7fcefef574f27a8df2f7caf47b313
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:d40c11f04b3135055191360c58cf7a4691a375593e99c12114efa8cd309c2e70
+        sha256: d40c11f04b3135055191360c58cf7a4691a375593e99c12114efa8cd309c2e70
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:de66f5a7aea8d9849b169298afb4c2e71ebca45e4b4e829ae78228a312b66881
+        sha256: de66f5a7aea8d9849b169298afb4c2e71ebca45e4b4e829ae78228a312b66881
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:d40c11f04b3135055191360c58cf7a4691a375593e99c12114efa8cd309c2e70
+        sha256: d40c11f04b3135055191360c58cf7a4691a375593e99c12114efa8cd309c2e70
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/chronograf/blobs/sha256:e5b70280c4f201b7b04b71d7667d46ee2321ba0510c2472bf75fdde51af6f65b
         sha256: e5b70280c4f201b7b04b71d7667d46ee2321ba0510c2472bf75fdde51af6f65b
         sha512: ""
@@ -57,4 +77,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/chronograf/bin/chronograf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/chronograf.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/chronograf.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - chronograf

@@ -24,7 +24,27 @@ bottle:
         sha256: 92fdee27eda28d945e82b8372710be103b6f693b3775e7c537a074258585585f
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/floresta/blobs/sha256:92fdee27eda28d945e82b8372710be103b6f693b3775e7c537a074258585585f
+        sha256: 92fdee27eda28d945e82b8372710be103b6f693b3775e7c537a074258585585f
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/floresta/blobs/sha256:635e39430ce0d5400db337e9a927827a932e427a16905641cc8f4b751f1ec4db
+        sha256: 635e39430ce0d5400db337e9a927827a932e427a16905641cc8f4b751f1ec4db
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/floresta/blobs/sha256:801777d966511da07247471d94656149754d9d94715a0be6e058073b9ff6ea3c
+        sha256: 801777d966511da07247471d94656149754d9d94715a0be6e058073b9ff6ea3c
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/floresta/blobs/sha256:635e39430ce0d5400db337e9a927827a932e427a16905641cc8f4b751f1ec4db
+        sha256: 635e39430ce0d5400db337e9a927827a932e427a16905641cc8f4b751f1ec4db
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/floresta/blobs/sha256:c3f3ee1082b13ca1aa6fc1fdaa98f8b6639b9719e847a737db7c4da08158ba8f
         sha256: c3f3ee1082b13ca1aa6fc1fdaa98f8b6639b9719e847a737db7c4da08158ba8f
         sha512: ""
@@ -55,4 +75,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/floresta/bin/florestad
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - floresta

@@ -25,7 +25,47 @@ bottle:
         sha256: 767d6bb0732fc7caf62d2a83cefd46e505ab1f26a1fe37fd74121716bae96945
         sha512: ""
         signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:1ae379b34875e8a2deab485dbfc9716606ecba8f34267f979eb10e36ca474745
+        sha256: 1ae379b34875e8a2deab485dbfc9716606ecba8f34267f979eb10e36ca474745
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:427b1ac8f16271a483e972b4a1ef5721d7bf0f200a9d4e49f42151dab276273a
+        sha256: 427b1ac8f16271a483e972b4a1ef5721d7bf0f200a9d4e49f42151dab276273a
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:767d6bb0732fc7caf62d2a83cefd46e505ab1f26a1fe37fd74121716bae96945
+        sha256: 767d6bb0732fc7caf62d2a83cefd46e505ab1f26a1fe37fd74121716bae96945
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:a06f88677a1fc1815127a1e75dcc3855a46f70b9e23333883a23f9635095b466
+        sha256: a06f88677a1fc1815127a1e75dcc3855a46f70b9e23333883a23f9635095b466
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:7d5a837843772eb893e746c3cba51dc03fcd976ebfef1ffd51823a6e880e5bcb
+        sha256: 7d5a837843772eb893e746c3cba51dc03fcd976ebfef1ffd51823a6e880e5bcb
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:2b988c5f0d11e5c32152fcdd31b760f5d76ad87518e17b08bef428de1637c68f
+        sha256: 2b988c5f0d11e5c32152fcdd31b760f5d76ad87518e17b08bef428de1637c68f
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:24937667b9315c47cc2ddda94564cda1e1d96cc023c38ecf73be04d14ce3f451
+        sha256: 24937667b9315c47cc2ddda94564cda1e1d96cc023c38ecf73be04d14ce3f451
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:a06f88677a1fc1815127a1e75dcc3855a46f70b9e23333883a23f9635095b466
+        sha256: a06f88677a1fc1815127a1e75dcc3855a46f70b9e23333883a23f9635095b466
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/uftp/blobs/sha256:fb631c49f47b8e3f94c295c6257e61c7caa441d37f40a8f9ffa8d80a9db30a94
         sha256: fb631c49f47b8e3f94c295c6257e61c7caa441d37f40a8f9ffa8d80a9db30a94
         sha512: ""
@@ -50,4 +90,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/uftp/bin/uftpd
+        - -d
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - uftp

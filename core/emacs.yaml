@@ -27,7 +27,27 @@ bottle:
         sha256: 19cd1d2285e96a773535d7f4f31e39e8405fcc0531d54c143a64bb9e686a7d6f
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/emacs/blobs/sha256:19cd1d2285e96a773535d7f4f31e39e8405fcc0531d54c143a64bb9e686a7d6f
+        sha256: 19cd1d2285e96a773535d7f4f31e39e8405fcc0531d54c143a64bb9e686a7d6f
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/emacs/blobs/sha256:04cac5742a25b61d4a8bcff66708109f455ec4c758520f542faf41ee55f7cdf1
+        sha256: 04cac5742a25b61d4a8bcff66708109f455ec4c758520f542faf41ee55f7cdf1
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/emacs/blobs/sha256:655ed2f5dc5bd33d1855a302dfee5156608576a5b26b56913256bf9f4cfaa680
+        sha256: 655ed2f5dc5bd33d1855a302dfee5156608576a5b26b56913256bf9f4cfaa680
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/emacs/blobs/sha256:04cac5742a25b61d4a8bcff66708109f455ec4c758520f542faf41ee55f7cdf1
+        sha256: 04cac5742a25b61d4a8bcff66708109f455ec4c758520f542faf41ee55f7cdf1
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/emacs/blobs/sha256:b543c7f67a1b82570fad2420b29915a1a52ce9ec8fcc48671bdbce77fe9d21c3
         sha256: b543c7f67a1b82570fad2420b29915a1a52ce9ec8fcc48671bdbce77fe9d21c3
         sha512: ""
@@ -59,4 +79,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/emacs/bin/emacs
+        - --fg-daemon
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - emacs

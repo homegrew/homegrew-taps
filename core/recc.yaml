@@ -30,7 +30,27 @@ bottle:
         sha256: 38974bb71b078f8abd6c77933f825b0051aefd9f1c497bd5e5b664126cb72dce
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:38974bb71b078f8abd6c77933f825b0051aefd9f1c497bd5e5b664126cb72dce
+        sha256: 38974bb71b078f8abd6c77933f825b0051aefd9f1c497bd5e5b664126cb72dce
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:9fd133b3beaeb806f7ed64604a72bf76008080f65ba5e5732f24646329b8d6c3
+        sha256: 9fd133b3beaeb806f7ed64604a72bf76008080f65ba5e5732f24646329b8d6c3
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:3f58c8e11ec66e105fd7123c37b4f1d96959ac095cb2e85251cbece895416b4f
+        sha256: 3f58c8e11ec66e105fd7123c37b4f1d96959ac095cb2e85251cbece895416b4f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:9fd133b3beaeb806f7ed64604a72bf76008080f65ba5e5732f24646329b8d6c3
+        sha256: 9fd133b3beaeb806f7ed64604a72bf76008080f65ba5e5732f24646329b8d6c3
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/recc/blobs/sha256:e51dc59cd1573dd82e9e7a81cd44388356296389e4b52bcc050b7d249ac97623
         sha256: e51dc59cd1573dd82e9e7a81cd44388356296389e4b52bcc050b7d249ac97623
         sha512: ""
@@ -68,4 +88,19 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/recc/bin/recc-server
+        - --local-server-instance
+        - recc-server
+        - $HOMEBREW_PREFIX/var/recc/casd
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/recc
+    log_path: $HOMEBREW_PREFIX/var/log/recc-server.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/recc-server-error.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - recc

@@ -24,7 +24,27 @@ bottle:
         sha256: cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
+        sha256: cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
+        sha256: bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
+        sha256: bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
+        sha256: bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
         sha256: bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
         sha512: ""
@@ -50,4 +70,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/xray/bin/xray
+        - run
+        - --config
+        - $HOMEBREW_PREFIX/etc/xray/config.json
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - xray

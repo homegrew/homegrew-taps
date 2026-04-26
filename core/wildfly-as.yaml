@@ -25,7 +25,27 @@ bottle:
         sha256: f64f965a4165eccc9a83ddf2ed5358eff7ac790c904c59d801c36baa54e54d13
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/wildfly-as/blobs/sha256:f64f965a4165eccc9a83ddf2ed5358eff7ac790c904c59d801c36baa54e54d13
+        sha256: f64f965a4165eccc9a83ddf2ed5358eff7ac790c904c59d801c36baa54e54d13
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wildfly-as/blobs/sha256:71e35def71769915026776c48a02d4aaaa5f2bb0286a054b8cb146f336c97dcf
+        sha256: 71e35def71769915026776c48a02d4aaaa5f2bb0286a054b8cb146f336c97dcf
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/wildfly-as/blobs/sha256:71e35def71769915026776c48a02d4aaaa5f2bb0286a054b8cb146f336c97dcf
+        sha256: 71e35def71769915026776c48a02d4aaaa5f2bb0286a054b8cb146f336c97dcf
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/wildfly-as/blobs/sha256:71e35def71769915026776c48a02d4aaaa5f2bb0286a054b8cb146f336c97dcf
+        sha256: 71e35def71769915026776c48a02d4aaaa5f2bb0286a054b8cb146f336c97dcf
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/wildfly-as/blobs/sha256:517a2a569b58e638fca4cb6fe98229af72d3ae567a7293d6d2516df00a05ceb8
         sha256: 517a2a569b58e638fca4cb6fe98229af72d3ae567a7293d6d2516df00a05ceb8
         sha512: ""
@@ -40,4 +60,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/wildfly-as/libexec/bin/standalone.sh
+        - --server-config=standalone.xml
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - wildfly-as

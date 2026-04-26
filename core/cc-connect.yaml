@@ -24,7 +24,27 @@ bottle:
         sha256: b7726254e96a7a3c969b0f5c560bfd676e954cbad5d895949f62dd10670abd2a
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/cc-connect/blobs/sha256:b7726254e96a7a3c969b0f5c560bfd676e954cbad5d895949f62dd10670abd2a
+        sha256: b7726254e96a7a3c969b0f5c560bfd676e954cbad5d895949f62dd10670abd2a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cc-connect/blobs/sha256:fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6
+        sha256: fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/cc-connect/blobs/sha256:fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6
+        sha256: fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/cc-connect/blobs/sha256:fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6
+        sha256: fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/cc-connect/blobs/sha256:fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6
         sha256: fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6
         sha512: ""
@@ -51,4 +71,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/cc-connect/bin/cc-connect
+        - --config
+        - $HOMEBREW_PREFIX/etc/cc-connect/config.toml
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/cc-connect
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - cc-connect

@@ -26,7 +26,27 @@ bottle:
         sha256: 491fc00a0fefb950612e107b07aad81cb0d181609f091d4286fc775411f1468e
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/tinc/blobs/sha256:491fc00a0fefb950612e107b07aad81cb0d181609f091d4286fc775411f1468e
+        sha256: 491fc00a0fefb950612e107b07aad81cb0d181609f091d4286fc775411f1468e
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tinc/blobs/sha256:5b7c292388af7f65cea0c8a21857d7009015dc77f4ba3d00ca62e58c3f0e4e59
+        sha256: 5b7c292388af7f65cea0c8a21857d7009015dc77f4ba3d00ca62e58c3f0e4e59
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/tinc/blobs/sha256:a1ac53e02128200442cce3bf8c64254e333f3bbb2a9adfbb7dda354c90208682
+        sha256: a1ac53e02128200442cce3bf8c64254e333f3bbb2a9adfbb7dda354c90208682
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/tinc/blobs/sha256:5b7c292388af7f65cea0c8a21857d7009015dc77f4ba3d00ca62e58c3f0e4e59
+        sha256: 5b7c292388af7f65cea0c8a21857d7009015dc77f4ba3d00ca62e58c3f0e4e59
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/tinc/blobs/sha256:897c1713ce7c66a1d3f86969cc83533f95698b45329b69b433960455956dc381
         sha256: 897c1713ce7c66a1d3f86969cc83533f95698b45329b69b433960455956dc381
         sha512: ""
@@ -54,4 +74,19 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/tinc/sbin/tincd
+        - --config=$HOMEBREW_PREFIX/etc/tinc
+        - --pidfile=$HOMEBREW_PREFIX/var/run/tinc/tinc.pid
+        - -D
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/etc/tinc
+    log_path: $HOMEBREW_PREFIX/var/log/tinc/stdout.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/tinc/stderr.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - tinc

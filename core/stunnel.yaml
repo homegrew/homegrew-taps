@@ -25,7 +25,27 @@ bottle:
         sha256: a7834dd9314261f37ae181e7241491a41a5f5619f3182f0cde97e550fda776d1
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:a7834dd9314261f37ae181e7241491a41a5f5619f3182f0cde97e550fda776d1
+        sha256: a7834dd9314261f37ae181e7241491a41a5f5619f3182f0cde97e550fda776d1
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:5437506a5e4e9fe0b6226aed2f58367e676200179a9e2b91529b02523069ecc7
+        sha256: 5437506a5e4e9fe0b6226aed2f58367e676200179a9e2b91529b02523069ecc7
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:55cb2685b0e6aa8d25de1a4c22dcbc2a73b44f2d0a6b16595fc1c356ee2430f4
+        sha256: 55cb2685b0e6aa8d25de1a4c22dcbc2a73b44f2d0a6b16595fc1c356ee2430f4
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:5437506a5e4e9fe0b6226aed2f58367e676200179a9e2b91529b02523069ecc7
+        sha256: 5437506a5e4e9fe0b6226aed2f58367e676200179a9e2b91529b02523069ecc7
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:39db1e422f499c370d2ca6d4a3ea522a5e2c5ba449613143e60333a4e942a55e
         sha256: 39db1e422f499c370d2ca6d4a3ea522a5e2c5ba449613143e60333a4e942a55e
         sha512: ""
@@ -50,4 +70,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/stunnel/bin/stunnel
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - stunnel

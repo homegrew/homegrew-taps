@@ -26,7 +26,27 @@ bottle:
         sha256: 086ae05f72548edf77adb366849e4e7808d467a110525d2400aae041cff00114
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:086ae05f72548edf77adb366849e4e7808d467a110525d2400aae041cff00114
+        sha256: 086ae05f72548edf77adb366849e4e7808d467a110525d2400aae041cff00114
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:2d3283ead3d1a405ef54a7708614e1533e218dd0279728f1a04ef8954b9e6ad7
+        sha256: 2d3283ead3d1a405ef54a7708614e1533e218dd0279728f1a04ef8954b9e6ad7
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:cd8499eb5490f401e73577a09d2e62b7408bf8ed0a4c1c1e5d1057a7b06fdd08
+        sha256: cd8499eb5490f401e73577a09d2e62b7408bf8ed0a4c1c1e5d1057a7b06fdd08
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:2d3283ead3d1a405ef54a7708614e1533e218dd0279728f1a04ef8954b9e6ad7
+        sha256: 2d3283ead3d1a405ef54a7708614e1533e218dd0279728f1a04ef8954b9e6ad7
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/activemq/blobs/sha256:271419a8fed69f97224ce01be527c863d1fc42efe05d45145857fb064c1b2f63
         sha256: 271419a8fed69f97224ce01be527c863d1fc42efe05d45145857fb064c1b2f63
         sha512: ""
@@ -51,4 +71,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/activemq/bin/activemq
+        - console
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/opt/activemq/libexec
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - activemq

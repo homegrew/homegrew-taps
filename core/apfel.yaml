@@ -19,7 +19,7 @@ post_install: ""
 dependencies: []
 keg_only: false
 bottle:
-    darwin_arm64:
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/apfel/blobs/sha256:d3cd189fd0375816b93553a680cabef5095312acb911f06aa14725d74edb48f2
         sha256: d3cd189fd0375816b93553a680cabef5095312acb911f06aa14725d74edb48f2
         sha512: ""
@@ -34,4 +34,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/apfel/bin/apfel
+        - --serve
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/apfel.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/apfel.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - apfel

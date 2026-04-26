@@ -24,7 +24,62 @@ bottle:
         sha256: 59af74bee63c364cc67532994d1fb3255b87f7b8157da1da469787451ce0f980
         sha512: ""
         signature: ""
+    darwin_amd64_10:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:7fe446d8eaa6ed43ae226027feec3878e437708d4a59c5aab761ab249bc9ba56
+        sha256: 7fe446d8eaa6ed43ae226027feec3878e437708d4a59c5aab761ab249bc9ba56
+        sha512: ""
+        signature: ""
+    darwin_amd64_11:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:9217369e4d1d1863fd23a2694a3962510a52380b385c199008191c302629f0ac
+        sha256: 9217369e4d1d1863fd23a2694a3962510a52380b385c199008191c302629f0ac
+        sha512: ""
+        signature: ""
+    darwin_amd64_12:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:b621ff9b1017dac7f6cbe723abbd85256d04be2f31b4e527a569d2b5d66e54bb
+        sha256: b621ff9b1017dac7f6cbe723abbd85256d04be2f31b4e527a569d2b5d66e54bb
+        sha512: ""
+        signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:e38315fa183ffa0bd0ce497ef1800f148367fc33689c9d634a70d617ac8065f5
+        sha256: e38315fa183ffa0bd0ce497ef1800f148367fc33689c9d634a70d617ac8065f5
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:59af74bee63c364cc67532994d1fb3255b87f7b8157da1da469787451ce0f980
+        sha256: 59af74bee63c364cc67532994d1fb3255b87f7b8157da1da469787451ce0f980
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:1886c195583c5d68c87f6e2cc50a52801990ea7bf973f2b8a61e2228e931adcf
+        sha256: 1886c195583c5d68c87f6e2cc50a52801990ea7bf973f2b8a61e2228e931adcf
+        sha512: ""
+        signature: ""
+    darwin_arm64_11:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:ead8a905c38526bdc7812eb1d500cf9dcb90c8c9dbb73126e1b3da463a4520c9
+        sha256: ead8a905c38526bdc7812eb1d500cf9dcb90c8c9dbb73126e1b3da463a4520c9
+        sha512: ""
+        signature: ""
+    darwin_arm64_12:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:63e5659661c157f2eec496d2c0075a7d91cd25d4985a35935a34fa5a4cdb6142
+        sha256: 63e5659661c157f2eec496d2c0075a7d91cd25d4985a35935a34fa5a4cdb6142
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:3e67bcaea36c86606ed3578e19600d4afc712f7a611260881a633236b2a9ffc6
+        sha256: 3e67bcaea36c86606ed3578e19600d4afc712f7a611260881a633236b2a9ffc6
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:827ae743c95d1689023e7b2ed5bbdd09e0d2d773c5b4928a02fcba8800023995
+        sha256: 827ae743c95d1689023e7b2ed5bbdd09e0d2d773c5b4928a02fcba8800023995
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:1886c195583c5d68c87f6e2cc50a52801990ea7bf973f2b8a61e2228e931adcf
+        sha256: 1886c195583c5d68c87f6e2cc50a52801990ea7bf973f2b8a61e2228e931adcf
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/cayley/blobs/sha256:003d129d37b6752ed0431b4a65c34f49edd46864957d45d294068da53c968178
         sha256: 003d129d37b6752ed0431b4a65c34f49edd46864957d45d294068da53c968178
         sha512: ""
@@ -52,4 +107,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/cayley/bin/cayley
+        - http
+        - --config=$HOMEBREW_PREFIX/etc/cayley.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/cayley
+    log_path: $HOMEBREW_PREFIX/var/log/cayley.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/cayley.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - cayley

@@ -24,7 +24,27 @@ bottle:
         sha256: 237770162aab20cbbd32323d9829b8f41edaa3cf883e2eded0b277cea06dd07f
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/typedb/blobs/sha256:237770162aab20cbbd32323d9829b8f41edaa3cf883e2eded0b277cea06dd07f
+        sha256: 237770162aab20cbbd32323d9829b8f41edaa3cf883e2eded0b277cea06dd07f
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/typedb/blobs/sha256:197e3daefba4d246085be013c859df620c2263194d1f88ccd880a2c0c0b6e906
+        sha256: 197e3daefba4d246085be013c859df620c2263194d1f88ccd880a2c0c0b6e906
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/typedb/blobs/sha256:d4455d42f4a7177a3aa540d63e50d66109ace520f443428a845de96bb31b1441
+        sha256: d4455d42f4a7177a3aa540d63e50d66109ace520f443428a845de96bb31b1441
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/typedb/blobs/sha256:197e3daefba4d246085be013c859df620c2263194d1f88ccd880a2c0c0b6e906
+        sha256: 197e3daefba4d246085be013c859df620c2263194d1f88ccd880a2c0c0b6e906
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/typedb/blobs/sha256:9d15653dc39c2482d1f3fb4429b54889e33df9f169b2c9610a3b148e82893f2f
         sha256: 9d15653dc39c2482d1f3fb4429b54889e33df9f169b2c9610a3b148e82893f2f
         sha512: ""
@@ -51,4 +71,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/typedb/bin/typedb
+        - --config
+        - $HOMEBREW_PREFIX/etc/typedb/config.yml
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/typedb
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - typedb

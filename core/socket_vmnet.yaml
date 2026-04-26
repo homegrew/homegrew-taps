@@ -24,7 +24,27 @@ bottle:
         sha256: a9c7d0037ddec9a8e178f8ac0dfa567a625be9412a690d42818b59acf5ea94d2
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/socket_vmnet/blobs/sha256:a9c7d0037ddec9a8e178f8ac0dfa567a625be9412a690d42818b59acf5ea94d2
+        sha256: a9c7d0037ddec9a8e178f8ac0dfa567a625be9412a690d42818b59acf5ea94d2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/socket_vmnet/blobs/sha256:be269d31b6494cf8c4b14e5421201409e7dbd63337046befd3712c6c926a8562
+        sha256: be269d31b6494cf8c4b14e5421201409e7dbd63337046befd3712c6c926a8562
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/socket_vmnet/blobs/sha256:489e6807062d831fb5f961946b7f89576c8d48eaf35833dfb3f891f275294946
+        sha256: 489e6807062d831fb5f961946b7f89576c8d48eaf35833dfb3f891f275294946
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/socket_vmnet/blobs/sha256:be269d31b6494cf8c4b14e5421201409e7dbd63337046befd3712c6c926a8562
+        sha256: be269d31b6494cf8c4b14e5421201409e7dbd63337046befd3712c6c926a8562
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/socket_vmnet/blobs/sha256:15b3703e48a5f03c38e5f854d8c50dc24a532138af2fc94587767d19d7e2eea5
         sha256: 15b3703e48a5f03c38e5f854d8c50dc24a532138af2fc94587767d19d7e2eea5
         sha512: ""
@@ -39,4 +59,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/socket_vmnet/bin/socket_vmnet
+        - --vmnet-gateway=192.168.105.1
+        - $HOMEBREW_PREFIX/var/run/socket_vmnet
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/socket_vmnet/stdout
+    error_log_path: $HOMEBREW_PREFIX/var/log/socket_vmnet/stderr
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - socket_vmnet

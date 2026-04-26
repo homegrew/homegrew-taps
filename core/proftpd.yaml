@@ -25,7 +25,27 @@ bottle:
         sha256: 294004644b0e2d4799b1e4753c2ef6cc44a93001b017a7d177be890cf79a647a
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/proftpd/blobs/sha256:294004644b0e2d4799b1e4753c2ef6cc44a93001b017a7d177be890cf79a647a
+        sha256: 294004644b0e2d4799b1e4753c2ef6cc44a93001b017a7d177be890cf79a647a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/proftpd/blobs/sha256:4e369912c18c4ea78435f13a74ce45180e656d04290f20ff398443de3a68ee9b
+        sha256: 4e369912c18c4ea78435f13a74ce45180e656d04290f20ff398443de3a68ee9b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/proftpd/blobs/sha256:12eff8d0547d82048f227c50da34717e7595a7a07ac784ae5c2978ce676b0328
+        sha256: 12eff8d0547d82048f227c50da34717e7595a7a07ac784ae5c2978ce676b0328
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/proftpd/blobs/sha256:4e369912c18c4ea78435f13a74ce45180e656d04290f20ff398443de3a68ee9b
+        sha256: 4e369912c18c4ea78435f13a74ce45180e656d04290f20ff398443de3a68ee9b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/proftpd/blobs/sha256:0403d12abcf2e2503d5a0cb195188de6ad4f9276d99b7f80b39da7c5fc815ccf
         sha256: 0403d12abcf2e2503d5a0cb195188de6ad4f9276d99b7f80b39da7c5fc815ccf
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/proftpd/sbin/proftpd
+        - --nodaemon
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: /dev/null
+    error_log_path: /dev/null
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - proftpd

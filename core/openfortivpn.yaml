@@ -25,7 +25,27 @@ bottle:
         sha256: 445013d98ad9c0d85b93cbc56dba215ee5096660cf7c56b43643779685b2ab55
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/openfortivpn/blobs/sha256:445013d98ad9c0d85b93cbc56dba215ee5096660cf7c56b43643779685b2ab55
+        sha256: 445013d98ad9c0d85b93cbc56dba215ee5096660cf7c56b43643779685b2ab55
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openfortivpn/blobs/sha256:dc900e43087d6641174632f37b884dc806b6777546f3b0c9c45fecbdf1573886
+        sha256: dc900e43087d6641174632f37b884dc806b6777546f3b0c9c45fecbdf1573886
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/openfortivpn/blobs/sha256:bd784e7336c8d86dbd91cbc9877122518fb8641720abbadf9480fd93381354ea
+        sha256: bd784e7336c8d86dbd91cbc9877122518fb8641720abbadf9480fd93381354ea
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/openfortivpn/blobs/sha256:dc900e43087d6641174632f37b884dc806b6777546f3b0c9c45fecbdf1573886
+        sha256: dc900e43087d6641174632f37b884dc806b6777546f3b0c9c45fecbdf1573886
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/openfortivpn/blobs/sha256:1cb3b9c06cf1b8af8984fe264878a82a0fe7b4f58ae0d0a90640a9ed37965a90
         sha256: 1cb3b9c06cf1b8af8984fe264878a82a0fe7b4f58ae0d0a90640a9ed37965a90
         sha512: ""
@@ -53,4 +73,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/openfortivpn/bin/openfortivpn
+        - -c
+        - $HOMEBREW_PREFIX/etc/openfortivpn/openfortivpn/config
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/openfortivpn.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/openfortivpn.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - openfortivpn

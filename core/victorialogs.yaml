@@ -24,7 +24,27 @@ bottle:
         sha256: 7451c31d5dc8498e0f7bb8bee08cff0009224b539dd0216b7bd5b239987293de
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/victorialogs/blobs/sha256:7451c31d5dc8498e0f7bb8bee08cff0009224b539dd0216b7bd5b239987293de
+        sha256: 7451c31d5dc8498e0f7bb8bee08cff0009224b539dd0216b7bd5b239987293de
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/victorialogs/blobs/sha256:784446e03b3503db7c5e86c8a5a1a94bca696029ec3055f9c8070668b5857706
+        sha256: 784446e03b3503db7c5e86c8a5a1a94bca696029ec3055f9c8070668b5857706
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/victorialogs/blobs/sha256:d4c616054dd9bcc38fb0229e18ac3a55734ab1047db609ce97b38078e3b802d5
+        sha256: d4c616054dd9bcc38fb0229e18ac3a55734ab1047db609ce97b38078e3b802d5
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/victorialogs/blobs/sha256:784446e03b3503db7c5e86c8a5a1a94bca696029ec3055f9c8070668b5857706
+        sha256: 784446e03b3503db7c5e86c8a5a1a94bca696029ec3055f9c8070668b5857706
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/victorialogs/blobs/sha256:119c6a82769954c63729626101fe056155a9c41669b6a1d398586681d789fd20
         sha256: 119c6a82769954c63729626101fe056155a9c41669b6a1d398586681d789fd20
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/victorialogs/bin/victoria-logs
+        - -httpListenAddr=127.0.0.1:9428
+        - -storageDataPath=$HOMEBREW_PREFIX/var/victorialogs-data
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/victoria-logs.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/victoria-logs.err.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - victorialogs

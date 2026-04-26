@@ -27,7 +27,27 @@ bottle:
         sha256: c761eaccdc2122fb4544aa9521e9b7d5d4e411a34907228fd60c13e8966cf03e
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/teslamate/blobs/sha256:c761eaccdc2122fb4544aa9521e9b7d5d4e411a34907228fd60c13e8966cf03e
+        sha256: c761eaccdc2122fb4544aa9521e9b7d5d4e411a34907228fd60c13e8966cf03e
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/teslamate/blobs/sha256:a009b56e79cab4ad8ab6cc93a724009b905fedc6c16b719ab99355105d7be9bd
+        sha256: a009b56e79cab4ad8ab6cc93a724009b905fedc6c16b719ab99355105d7be9bd
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/teslamate/blobs/sha256:051fee5157e21481b9365da64058189babfb80efe0f53a15110244734b42913d
+        sha256: 051fee5157e21481b9365da64058189babfb80efe0f53a15110244734b42913d
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/teslamate/blobs/sha256:a009b56e79cab4ad8ab6cc93a724009b905fedc6c16b719ab99355105d7be9bd
+        sha256: a009b56e79cab4ad8ab6cc93a724009b905fedc6c16b719ab99355105d7be9bd
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/teslamate/blobs/sha256:365e32212184579cd3ad2e8645994e88d5a2d19e5bf46ac32ebcab53ff0f1b99
         sha256: 365e32212184579cd3ad2e8645994e88d5a2d19e5bf46ac32ebcab53ff0f1b99
         sha512: ""
@@ -57,4 +77,16 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/teslamate/bin/teslamate_brew_services
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/teslamate.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/teslamate.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - teslamate

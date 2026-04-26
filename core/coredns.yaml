@@ -24,7 +24,27 @@ bottle:
         sha256: 527cdf0e757e0c393d7b1b27ffc3b34150193fac57829c68f7d79931fc656d9a
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:527cdf0e757e0c393d7b1b27ffc3b34150193fac57829c68f7d79931fc656d9a
+        sha256: 527cdf0e757e0c393d7b1b27ffc3b34150193fac57829c68f7d79931fc656d9a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:0743fe1bf7709cfbdd53ff4e9885edf654a07401c794eb0d894805e00aa9f254
+        sha256: 0743fe1bf7709cfbdd53ff4e9885edf654a07401c794eb0d894805e00aa9f254
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:b8335119eeb51c8e3ee14e397d5cf0032dd0af3a672d2fe6b68ef5bce11b8b40
+        sha256: b8335119eeb51c8e3ee14e397d5cf0032dd0af3a672d2fe6b68ef5bce11b8b40
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:0743fe1bf7709cfbdd53ff4e9885edf654a07401c794eb0d894805e00aa9f254
+        sha256: 0743fe1bf7709cfbdd53ff4e9885edf654a07401c794eb0d894805e00aa9f254
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/coredns/blobs/sha256:22ef9f19ec4fd03b11d7325eca93384ef692c1d74e9df095c50c3eaf91b0fa02
         sha256: 22ef9f19ec4fd03b11d7325eca93384ef692c1d74e9df095c50c3eaf91b0fa02
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/coredns/bin/coredns
+        - -conf
+        - $HOMEBREW_PREFIX/etc/coredns/Corefile
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/coredns.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/coredns.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - coredns

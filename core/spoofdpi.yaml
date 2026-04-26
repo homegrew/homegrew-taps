@@ -24,7 +24,27 @@ bottle:
         sha256: 14f0baf3ae84b12f86f95af9b9752da9a4321e8fcc9ac71f48f57e24682ce4c0
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/spoofdpi/blobs/sha256:14f0baf3ae84b12f86f95af9b9752da9a4321e8fcc9ac71f48f57e24682ce4c0
+        sha256: 14f0baf3ae84b12f86f95af9b9752da9a4321e8fcc9ac71f48f57e24682ce4c0
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/spoofdpi/blobs/sha256:72740fa322cfc0a1b51fddc770b4d7bcdd8685bee883714a08b8ceb7be85b794
+        sha256: 72740fa322cfc0a1b51fddc770b4d7bcdd8685bee883714a08b8ceb7be85b794
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/spoofdpi/blobs/sha256:7e682f4b826303fa488859b011a970733876213948ea5702a37123f28f9858a0
+        sha256: 7e682f4b826303fa488859b011a970733876213948ea5702a37123f28f9858a0
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/spoofdpi/blobs/sha256:72740fa322cfc0a1b51fddc770b4d7bcdd8685bee883714a08b8ceb7be85b794
+        sha256: 72740fa322cfc0a1b51fddc770b4d7bcdd8685bee883714a08b8ceb7be85b794
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/spoofdpi/blobs/sha256:28123e574ccf48335c2d4c560a50592a2fd042a59d75d6fb817da0a4da444d94
         sha256: 28123e574ccf48335c2d4c560a50592a2fd042a59d75d6fb817da0a4da444d94
         sha512: ""
@@ -50,4 +70,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/spoofdpi/bin/spoofdpi
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/spoofdpi/output.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/spoofdpi/error.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - spoofdpi

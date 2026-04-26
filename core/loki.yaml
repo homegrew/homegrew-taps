@@ -24,7 +24,27 @@ bottle:
         sha256: 668547c70181344fe16bc664cc44b1a7bee46f4ed1c57ecb4e63da32e098e7c4
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:668547c70181344fe16bc664cc44b1a7bee46f4ed1c57ecb4e63da32e098e7c4
+        sha256: 668547c70181344fe16bc664cc44b1a7bee46f4ed1c57ecb4e63da32e098e7c4
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:5b6ab94353e0eba23fca400c2a2c6aad5ff7c8d48bec92049ee0022d1919a7d2
+        sha256: 5b6ab94353e0eba23fca400c2a2c6aad5ff7c8d48bec92049ee0022d1919a7d2
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:a073b3c0a081610ff3647eff70ef46a505cc84ce36188eb325b268805872b596
+        sha256: a073b3c0a081610ff3647eff70ef46a505cc84ce36188eb325b268805872b596
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:5b6ab94353e0eba23fca400c2a2c6aad5ff7c8d48bec92049ee0022d1919a7d2
+        sha256: 5b6ab94353e0eba23fca400c2a2c6aad5ff7c8d48bec92049ee0022d1919a7d2
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/loki/blobs/sha256:0721a615a9e6c1f58bf845ff76d59ff7460e85b1b299d64d68ee108169928e04
         sha256: 0721a615a9e6c1f58bf845ff76d59ff7460e85b1b299d64d68ee108169928e04
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/loki/bin/loki
+        - -config.file=$HOMEBREW_PREFIX/etc/loki-local-config.yaml
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/loki.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/loki.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - loki

@@ -30,7 +30,27 @@ bottle:
         sha256: b6bb75e604af0f51ec9afb5be70baabeaa2f17ca9b17034aa7b3abdef37efe22
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/moto/blobs/sha256:b6bb75e604af0f51ec9afb5be70baabeaa2f17ca9b17034aa7b3abdef37efe22
+        sha256: b6bb75e604af0f51ec9afb5be70baabeaa2f17ca9b17034aa7b3abdef37efe22
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/moto/blobs/sha256:d2e0ea2a7a438341cd54f8ae1be65261a61ac0ea515321bae724d0b02f474556
+        sha256: d2e0ea2a7a438341cd54f8ae1be65261a61ac0ea515321bae724d0b02f474556
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/moto/blobs/sha256:4ee9e9ca45c7340cde07e2f09a910ed53cc30ac5661b211fb9561375da82561b
+        sha256: 4ee9e9ca45c7340cde07e2f09a910ed53cc30ac5661b211fb9561375da82561b
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/moto/blobs/sha256:d2e0ea2a7a438341cd54f8ae1be65261a61ac0ea515321bae724d0b02f474556
+        sha256: d2e0ea2a7a438341cd54f8ae1be65261a61ac0ea515321bae724d0b02f474556
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/moto/blobs/sha256:84b6c3229d572bc13086feb3160606b26bcf34938710094a152af59b83fb5b88
         sha256: 84b6c3229d572bc13086feb3160606b26bcf34938710094a152af59b83fb5b88
         sha512: ""
@@ -55,4 +75,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/moto/bin/moto_server
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/moto.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/moto.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - moto

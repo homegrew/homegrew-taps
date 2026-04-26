@@ -26,7 +26,27 @@ bottle:
         sha256: c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
+        sha256: c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:b74bc3e73072d455cce07661a17047f1ac6fc46d97b7fbaf87f00c68ce4b985b
+        sha256: b74bc3e73072d455cce07661a17047f1ac6fc46d97b7fbaf87f00c68ce4b985b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:dda14215258a9799f8c9921d8e9fe3d5c5b72f1bd4ef4b67508d90c7103972af
+        sha256: dda14215258a9799f8c9921d8e9fe3d5c5b72f1bd4ef4b67508d90c7103972af
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:b74bc3e73072d455cce07661a17047f1ac6fc46d97b7fbaf87f00c68ce4b985b
+        sha256: b74bc3e73072d455cce07661a17047f1ac6fc46d97b7fbaf87f00c68ce4b985b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:9f970c3062b51c38bd03dc6e87aec59cd014a3bd54313d771303d83528a82aa5
         sha256: 9f970c3062b51c38bd03dc6e87aec59cd014a3bd54313d771303d83528a82aa5
         sha512: ""
@@ -57,4 +77,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/git-annex/bin/git-annex
+        - assistant
+        - --autostart
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - git-annex

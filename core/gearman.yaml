@@ -27,7 +27,27 @@ bottle:
         sha256: 34281099e7a338e50184e5297726d0fde308c108f8324cd4c8a807c2079b8525
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:34281099e7a338e50184e5297726d0fde308c108f8324cd4c8a807c2079b8525
+        sha256: 34281099e7a338e50184e5297726d0fde308c108f8324cd4c8a807c2079b8525
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:9e6adef3fb88b33c1dafc83b2836780d15ec5dbca6e85426252910d74fb1328d
+        sha256: 9e6adef3fb88b33c1dafc83b2836780d15ec5dbca6e85426252910d74fb1328d
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:20e8012a0a1163aec0122be7ede14c1b67d8a9f2029c48fe4b0fd31bf6a7033f
+        sha256: 20e8012a0a1163aec0122be7ede14c1b67d8a9f2029c48fe4b0fd31bf6a7033f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:9e6adef3fb88b33c1dafc83b2836780d15ec5dbca6e85426252910d74fb1328d
+        sha256: 9e6adef3fb88b33c1dafc83b2836780d15ec5dbca6e85426252910d74fb1328d
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:5d3c72680496377b84301a11829ce50486c4303b36e6fced1fded664a3e9e884
         sha256: 5d3c72680496377b84301a11829ce50486c4303b36e6fced1fded664a3e9e884
         sha512: ""
@@ -58,4 +78,16 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/gearman/sbin/gearmand
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - gearman

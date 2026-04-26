@@ -30,7 +30,27 @@ bottle:
         sha256: a43c1a21faa9efe89488e6f8804bafbe299ffa1ef88700257a274b964b9ab94f
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/collectd/blobs/sha256:a43c1a21faa9efe89488e6f8804bafbe299ffa1ef88700257a274b964b9ab94f
+        sha256: a43c1a21faa9efe89488e6f8804bafbe299ffa1ef88700257a274b964b9ab94f
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/collectd/blobs/sha256:bd6bbc019cd159129bf0ae691889eb75bdb223852a510b968ac1d9f80e2f0fbe
+        sha256: bd6bbc019cd159129bf0ae691889eb75bdb223852a510b968ac1d9f80e2f0fbe
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/collectd/blobs/sha256:bb7547382bb6e48626b092b4176b71bce3c3931d7aae4e0f1f181ee82429eeda
+        sha256: bb7547382bb6e48626b092b4176b71bce3c3931d7aae4e0f1f181ee82429eeda
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/collectd/blobs/sha256:bd6bbc019cd159129bf0ae691889eb75bdb223852a510b968ac1d9f80e2f0fbe
+        sha256: bd6bbc019cd159129bf0ae691889eb75bdb223852a510b968ac1d9f80e2f0fbe
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/collectd/blobs/sha256:96b35082902fad36f2eebfadecfb13424f4f019cb051fb7cc8a80aa10369e618
         sha256: 96b35082902fad36f2eebfadecfb13424f4f019cb051fb7cc8a80aa10369e618
         sha512: ""
@@ -61,4 +81,19 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/collectd/sbin/collectd
+        - -f
+        - -C
+        - $HOMEBREW_PREFIX/etc/collectd.conf
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/collectd.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/collectd.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - collectd

@@ -24,7 +24,27 @@ bottle:
         sha256: 4feda721eff970c8ed30c1d5223030081cde00deea66d7deb79d3ed6a13999c3
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/frpc/blobs/sha256:4feda721eff970c8ed30c1d5223030081cde00deea66d7deb79d3ed6a13999c3
+        sha256: 4feda721eff970c8ed30c1d5223030081cde00deea66d7deb79d3ed6a13999c3
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/frpc/blobs/sha256:9f94f8c3a1465dbd7a77edd66358c04d2b52765a8270fa8f5f06666f2db59588
+        sha256: 9f94f8c3a1465dbd7a77edd66358c04d2b52765a8270fa8f5f06666f2db59588
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/frpc/blobs/sha256:9f94f8c3a1465dbd7a77edd66358c04d2b52765a8270fa8f5f06666f2db59588
+        sha256: 9f94f8c3a1465dbd7a77edd66358c04d2b52765a8270fa8f5f06666f2db59588
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/frpc/blobs/sha256:9f94f8c3a1465dbd7a77edd66358c04d2b52765a8270fa8f5f06666f2db59588
+        sha256: 9f94f8c3a1465dbd7a77edd66358c04d2b52765a8270fa8f5f06666f2db59588
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/frpc/blobs/sha256:9f94f8c3a1465dbd7a77edd66358c04d2b52765a8270fa8f5f06666f2db59588
         sha256: 9f94f8c3a1465dbd7a77edd66358c04d2b52765a8270fa8f5f06666f2db59588
         sha512: ""
@@ -51,4 +71,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/frpc/bin/frpc
+        - -c
+        - $HOMEBREW_PREFIX/etc/frp/frpc.toml
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/frpc.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/frpc.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - frpc

@@ -24,7 +24,27 @@ bottle:
         sha256: b726084a3e934e9ac0793deb5b75955ba986690bfa508cf00d3973af4b7e1226
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/docker-machine/blobs/sha256:b726084a3e934e9ac0793deb5b75955ba986690bfa508cf00d3973af4b7e1226
+        sha256: b726084a3e934e9ac0793deb5b75955ba986690bfa508cf00d3973af4b7e1226
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/docker-machine/blobs/sha256:823f450ddacb8084dd02faf2f4b661b04b8ca9675cdf353f2ac11bce6af40135
+        sha256: 823f450ddacb8084dd02faf2f4b661b04b8ca9675cdf353f2ac11bce6af40135
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/docker-machine/blobs/sha256:823f450ddacb8084dd02faf2f4b661b04b8ca9675cdf353f2ac11bce6af40135
+        sha256: 823f450ddacb8084dd02faf2f4b661b04b8ca9675cdf353f2ac11bce6af40135
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/docker-machine/blobs/sha256:823f450ddacb8084dd02faf2f4b661b04b8ca9675cdf353f2ac11bce6af40135
+        sha256: 823f450ddacb8084dd02faf2f4b661b04b8ca9675cdf353f2ac11bce6af40135
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/docker-machine/blobs/sha256:823f450ddacb8084dd02faf2f4b661b04b8ca9675cdf353f2ac11bce6af40135
         sha256: 823f450ddacb8084dd02faf2f4b661b04b8ca9675cdf353f2ac11bce6af40135
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/docker-machine/bin/docker-machine
+        - start
+        - default
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - docker-machine

@@ -24,7 +24,27 @@ bottle:
         sha256: 14c6a693ba5ba1e90b6bbe6a454b499e5704e40260b565fac98e806f030aa2c5
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:14c6a693ba5ba1e90b6bbe6a454b499e5704e40260b565fac98e806f030aa2c5
+        sha256: 14c6a693ba5ba1e90b6bbe6a454b499e5704e40260b565fac98e806f030aa2c5
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:c2c882c9552f107594bfef76088e39f875507a1a281f48496b074d933d7910f8
+        sha256: c2c882c9552f107594bfef76088e39f875507a1a281f48496b074d933d7910f8
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:21dc0f1c9ae91464dd244b9536ca2c839d75e8f1afccf1c611ff33d8fdfb3526
+        sha256: 21dc0f1c9ae91464dd244b9536ca2c839d75e8f1afccf1c611ff33d8fdfb3526
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:c2c882c9552f107594bfef76088e39f875507a1a281f48496b074d933d7910f8
+        sha256: c2c882c9552f107594bfef76088e39f875507a1a281f48496b074d933d7910f8
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/influxdb/1/blobs/sha256:16b3548c415d304a629c379939a0f7379febf35f3d180af60415a791cf261ae6
         sha256: 16b3548c415d304a629c379939a0f7379febf35f3d180af60415a791cf261ae6
         sha512: ""
@@ -52,4 +72,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/influxdb@1/bin/influxd
+        - -config
+        - $HOMEBREW_PREFIX/etc/influxdb.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/influxdb.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/influxdb.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - influxdb@1

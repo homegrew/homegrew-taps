@@ -31,7 +31,27 @@ bottle:
         sha256: 5563f966ddf437277579c14ba3fde9fa14ba9756fa33d812d9495b9ab1c78495
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:5563f966ddf437277579c14ba3fde9fa14ba9756fa33d812d9495b9ab1c78495
+        sha256: 5563f966ddf437277579c14ba3fde9fa14ba9756fa33d812d9495b9ab1c78495
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:1c20a2f285bd9abc543ec31fb2064385ff9e02cc5070969e87d2f6e4cbec511f
+        sha256: 1c20a2f285bd9abc543ec31fb2064385ff9e02cc5070969e87d2f6e4cbec511f
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:bf774ddae9821d6a3e613820ba59acb61f3c1db3c9220be60a1a8f5fb0d52052
+        sha256: bf774ddae9821d6a3e613820ba59acb61f3c1db3c9220be60a1a8f5fb0d52052
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:1c20a2f285bd9abc543ec31fb2064385ff9e02cc5070969e87d2f6e4cbec511f
+        sha256: 1c20a2f285bd9abc543ec31fb2064385ff9e02cc5070969e87d2f6e4cbec511f
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:133d15743a53e3e2e63b9b92499e7495b2a3a2089db998b6266d3f71a4b96fd5
         sha256: 133d15743a53e3e2e63b9b92499e7495b2a3a2089db998b6266d3f71a4b96fd5
         sha512: ""
@@ -69,4 +89,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/postgresql@17/bin/postgres
+        - -D
+        - $HOMEBREW_PREFIX/var/postgresql@17
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/postgresql@17.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/postgresql@17.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - postgresql@17

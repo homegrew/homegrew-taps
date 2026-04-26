@@ -26,7 +26,27 @@ bottle:
         sha256: 416b077bc874b0cb0a5da08a14162401d6edae76bf23c15e78fbd218d965fa82
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:416b077bc874b0cb0a5da08a14162401d6edae76bf23c15e78fbd218d965fa82
+        sha256: 416b077bc874b0cb0a5da08a14162401d6edae76bf23c15e78fbd218d965fa82
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:997dba537fe42c31fe13aeadfe1c5b5916a8e4908d1712261ce9ac0cba98fabb
+        sha256: 997dba537fe42c31fe13aeadfe1c5b5916a8e4908d1712261ce9ac0cba98fabb
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:5ce3057c3dbefc13502befd6def3826b118441d3680010a94460df0502e0e4fb
+        sha256: 5ce3057c3dbefc13502befd6def3826b118441d3680010a94460df0502e0e4fb
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:997dba537fe42c31fe13aeadfe1c5b5916a8e4908d1712261ce9ac0cba98fabb
+        sha256: 997dba537fe42c31fe13aeadfe1c5b5916a8e4908d1712261ce9ac0cba98fabb
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/transmission-cli/blobs/sha256:fe9261335dbea9b764860e7f7896c130224e8303c5531396c4c7ed10169c3e80
         sha256: fe9261335dbea9b764860e7f7896c130224e8303c5531396c4c7ed10169c3e80
         sha512: ""
@@ -58,4 +78,22 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/transmission-cli/bin/transmission-daemon
+        - --foreground
+        - --config-dir
+        - $HOMEBREW_PREFIX/var/transmission/
+        - --log-info
+        - --logfile
+        - $HOMEBREW_PREFIX/var/transmission/transmission-daemon.log
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - transmission-cli

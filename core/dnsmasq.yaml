@@ -24,7 +24,27 @@ bottle:
         sha256: 89d78775d031b10a8e9a8b9da7566df28984392b0956aead0a0d8f6244c213b6
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/dnsmasq/blobs/sha256:89d78775d031b10a8e9a8b9da7566df28984392b0956aead0a0d8f6244c213b6
+        sha256: 89d78775d031b10a8e9a8b9da7566df28984392b0956aead0a0d8f6244c213b6
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dnsmasq/blobs/sha256:f36ffb5abb49ca8e568c9dd1f3b9891bd9e849769966cd1b0155ef85857d5f8b
+        sha256: f36ffb5abb49ca8e568c9dd1f3b9891bd9e849769966cd1b0155ef85857d5f8b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/dnsmasq/blobs/sha256:2c7e0731da8c3568db5298aadfaa29a5e7fab84660440c2e230b789178ddf686
+        sha256: 2c7e0731da8c3568db5298aadfaa29a5e7fab84660440c2e230b789178ddf686
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/dnsmasq/blobs/sha256:f36ffb5abb49ca8e568c9dd1f3b9891bd9e849769966cd1b0155ef85857d5f8b
+        sha256: f36ffb5abb49ca8e568c9dd1f3b9891bd9e849769966cd1b0155ef85857d5f8b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dnsmasq/blobs/sha256:4087c3f45434a6029c6ea7ba65d900b5e8cb0710a991f6245d9112dc87dc5c5c
         sha256: 4087c3f45434a6029c6ea7ba65d900b5e8cb0710a991f6245d9112dc87dc5c5c
         sha512: ""
@@ -50,4 +70,21 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/dnsmasq/sbin/dnsmasq
+        - --keep-in-foreground
+        - -C
+        - $HOMEBREW_PREFIX/etc/dnsmasq.conf
+        - "-7"
+        - $HOMEBREW_PREFIX/etc/dnsmasq.d,*.conf
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - dnsmasq

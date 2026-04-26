@@ -24,7 +24,27 @@ bottle:
         sha256: 9f8f6da50ceaf29a88e2240bb5596a44553c11a8503231a27a6588844fc0ce36
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:9f8f6da50ceaf29a88e2240bb5596a44553c11a8503231a27a6588844fc0ce36
+        sha256: 9f8f6da50ceaf29a88e2240bb5596a44553c11a8503231a27a6588844fc0ce36
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:0f2ebaf39a507639063efbd6cb1aed2b16fd214d73db2c041c27a1f6ba931585
+        sha256: 0f2ebaf39a507639063efbd6cb1aed2b16fd214d73db2c041c27a1f6ba931585
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:bd20dc282317f96d4fb802d576311560cb3e3231f530f16502b6f04d12951562
+        sha256: bd20dc282317f96d4fb802d576311560cb3e3231f530f16502b6f04d12951562
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:0f2ebaf39a507639063efbd6cb1aed2b16fd214d73db2c041c27a1f6ba931585
+        sha256: 0f2ebaf39a507639063efbd6cb1aed2b16fd214d73db2c041c27a1f6ba931585
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:9ce4de9d74c7bc9f05d91aaba43f253077081b1156d7d00bef750ca77e14dfa8
         sha256: 9ce4de9d74c7bc9f05d91aaba43f253077081b1156d7d00bef750ca77e14dfa8
         sha512: ""
@@ -51,4 +71,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/packetbeat/bin/packetbeat
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - packetbeat

@@ -24,7 +24,27 @@ bottle:
         sha256: 295c0f4daf9df32ff46e546a02ea57a4204aee1d94f0a94a78f85acca7f8ebc5
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/syncthing/blobs/sha256:295c0f4daf9df32ff46e546a02ea57a4204aee1d94f0a94a78f85acca7f8ebc5
+        sha256: 295c0f4daf9df32ff46e546a02ea57a4204aee1d94f0a94a78f85acca7f8ebc5
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/syncthing/blobs/sha256:3e8125d2f023afceaad2fbae1fcfa93ebae017eafffa0ebae1d3759e0a42acd6
+        sha256: 3e8125d2f023afceaad2fbae1fcfa93ebae017eafffa0ebae1d3759e0a42acd6
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/syncthing/blobs/sha256:0242ae25d363575dec0ed4a56ab10e3f26430b0e01b8fc47c735988c60b6de5f
+        sha256: 0242ae25d363575dec0ed4a56ab10e3f26430b0e01b8fc47c735988c60b6de5f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/syncthing/blobs/sha256:3e8125d2f023afceaad2fbae1fcfa93ebae017eafffa0ebae1d3759e0a42acd6
+        sha256: 3e8125d2f023afceaad2fbae1fcfa93ebae017eafffa0ebae1d3759e0a42acd6
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/syncthing/blobs/sha256:19b52af39435da2baef7f808e8c912e43aeeb8dfa01a696a5cb994ff88fb942d
         sha256: 19b52af39435da2baef7f808e8c912e43aeeb8dfa01a696a5cb994ff88fb942d
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/syncthing/bin/syncthing
+        - --no-browser
+        - --no-restart
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/syncthing.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/syncthing.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - syncthing

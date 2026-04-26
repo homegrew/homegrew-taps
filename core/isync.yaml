@@ -26,7 +26,27 @@ bottle:
         sha256: a0ced90c4006994b8a962ff402b1580aa27f821193aaec168562f08eee713c13
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/isync/blobs/sha256:a0ced90c4006994b8a962ff402b1580aa27f821193aaec168562f08eee713c13
+        sha256: a0ced90c4006994b8a962ff402b1580aa27f821193aaec168562f08eee713c13
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/isync/blobs/sha256:0f5182fcd8741c7a5206d2dbe599e4ae4d69af77e9cfd6fce910fb73da81790b
+        sha256: 0f5182fcd8741c7a5206d2dbe599e4ae4d69af77e9cfd6fce910fb73da81790b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/isync/blobs/sha256:27e9a03df42264de7db35d52232a1752051caee2ab0eeead25e16d81c026cf9a
+        sha256: 27e9a03df42264de7db35d52232a1752051caee2ab0eeead25e16d81c026cf9a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/isync/blobs/sha256:0f5182fcd8741c7a5206d2dbe599e4ae4d69af77e9cfd6fce910fb73da81790b
+        sha256: 0f5182fcd8741c7a5206d2dbe599e4ae4d69af77e9cfd6fce910fb73da81790b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/isync/blobs/sha256:112d7d4dd67530267fd137c2a4dc088128cfb86645df9baacdf347657f638779
         sha256: 112d7d4dd67530267fd137c2a4dc088128cfb86645df9baacdf347657f638779
         sha512: ""
@@ -54,4 +74,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/isync/bin/mbsync
+        - -a
+    run_type: interval
+    working_dir: ""
+    log_path: /dev/null
+    error_log_path: /dev/null
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - isync

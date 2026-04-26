@@ -34,7 +34,27 @@ bottle:
         sha256: b48c4066eef4c604caf32da79a9c4f2e92fb50aab483a17adb6180f8a050b860
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:b48c4066eef4c604caf32da79a9c4f2e92fb50aab483a17adb6180f8a050b860
+        sha256: b48c4066eef4c604caf32da79a9c4f2e92fb50aab483a17adb6180f8a050b860
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:8a505dfeba395d354ca33d866a62193bb573e4f1a88a7b148e66052a351426c9
+        sha256: 8a505dfeba395d354ca33d866a62193bb573e4f1a88a7b148e66052a351426c9
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:8eaa016cb689a4b83a3d1c4f446f8a9b94cc6b83d491954669b9e15f8c2e31f8
+        sha256: 8eaa016cb689a4b83a3d1c4f446f8a9b94cc6b83d491954669b9e15f8c2e31f8
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:8a505dfeba395d354ca33d866a62193bb573e4f1a88a7b148e66052a351426c9
+        sha256: 8a505dfeba395d354ca33d866a62193bb573e4f1a88a7b148e66052a351426c9
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:67c2e79378210fdbd67a2e88ae51b043758a20c163653e59640e3faf387580ff
         sha256: 67c2e79378210fdbd67a2e88ae51b043758a20c163653e59640e3faf387580ff
         sha512: ""
@@ -73,4 +93,19 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/manticoresearch/bin/searchd
+        - --config
+        - $HOMEBREW_PREFIX/etc/manticoresearch/manticore.conf
+        - --nodetach
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - manticoresearch

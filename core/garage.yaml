@@ -24,7 +24,27 @@ bottle:
         sha256: b444c9a1cb4692a260c5e4e71a8071c0474ab0470d09d307a408f48b3ac30bcb
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/garage/blobs/sha256:b444c9a1cb4692a260c5e4e71a8071c0474ab0470d09d307a408f48b3ac30bcb
+        sha256: b444c9a1cb4692a260c5e4e71a8071c0474ab0470d09d307a408f48b3ac30bcb
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/garage/blobs/sha256:3159b0141b055b1db39db05a31e82ed49ef890dca34483c409ca2b7fccf74ef2
+        sha256: 3159b0141b055b1db39db05a31e82ed49ef890dca34483c409ca2b7fccf74ef2
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/garage/blobs/sha256:8a5e6402a6dedd2ea5d1cdca4821be2619a4abf46b6ce758cbaf34c7015d618f
+        sha256: 8a5e6402a6dedd2ea5d1cdca4821be2619a4abf46b6ce758cbaf34c7015d618f
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/garage/blobs/sha256:3159b0141b055b1db39db05a31e82ed49ef890dca34483c409ca2b7fccf74ef2
+        sha256: 3159b0141b055b1db39db05a31e82ed49ef890dca34483c409ca2b7fccf74ef2
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/garage/blobs/sha256:0ce66d3ad9ebe1048f0204180cf99b5412b8df4d0bc0f20e90005d774779b402
         sha256: 0ce66d3ad9ebe1048f0204180cf99b5412b8df4d0bc0f20e90005d774779b402
         sha512: ""
@@ -50,4 +70,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/garage/bin/garage
+        - --config
+        - $HOMEBREW_PREFIX/etc/garage/config.toml
+        - server
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/garage.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/garage.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - garage

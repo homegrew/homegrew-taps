@@ -25,7 +25,27 @@ bottle:
         sha256: 1cd2097e307ec44755587d8298151287cb2fb7b0fb5e0d4187b11abd98171706
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/node-red/blobs/sha256:1cd2097e307ec44755587d8298151287cb2fb7b0fb5e0d4187b11abd98171706
+        sha256: 1cd2097e307ec44755587d8298151287cb2fb7b0fb5e0d4187b11abd98171706
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/node-red/blobs/sha256:0d732f7d02a891ce3f24103311d4a670366d64f82bcd63be7c58859f38de0882
+        sha256: 0d732f7d02a891ce3f24103311d4a670366d64f82bcd63be7c58859f38de0882
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/node-red/blobs/sha256:0d732f7d02a891ce3f24103311d4a670366d64f82bcd63be7c58859f38de0882
+        sha256: 0d732f7d02a891ce3f24103311d4a670366d64f82bcd63be7c58859f38de0882
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/node-red/blobs/sha256:0d732f7d02a891ce3f24103311d4a670366d64f82bcd63be7c58859f38de0882
+        sha256: 0d732f7d02a891ce3f24103311d4a670366d64f82bcd63be7c58859f38de0882
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/node-red/blobs/sha256:f8efe181bea87ae6c768ce4a32896f04e2de07815be620df32d533fb3466ed15
         sha256: f8efe181bea87ae6c768ce4a32896f04e2de07815be620df32d533fb3466ed15
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/node-red/bin/node-red
+        - --userDir
+        - $HOMEBREW_PREFIX/var/node-red
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/node-red
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - node-red

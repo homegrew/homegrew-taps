@@ -25,7 +25,27 @@ bottle:
         sha256: f5568335145842cf866357523e98871c39b15397bd36f3c7e94e26a7abb50843
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:f5568335145842cf866357523e98871c39b15397bd36f3c7e94e26a7abb50843
+        sha256: f5568335145842cf866357523e98871c39b15397bd36f3c7e94e26a7abb50843
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:a44d2bc9211542db5665769338f8da05c711ef598a47176a8fa2325d07bb359c
+        sha256: a44d2bc9211542db5665769338f8da05c711ef598a47176a8fa2325d07bb359c
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:92bd985f330b35194b63ad20eadea45fe17cdc86cf0069cb70f569f11fa59062
+        sha256: 92bd985f330b35194b63ad20eadea45fe17cdc86cf0069cb70f569f11fa59062
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:a44d2bc9211542db5665769338f8da05c711ef598a47176a8fa2325d07bb359c
+        sha256: a44d2bc9211542db5665769338f8da05c711ef598a47176a8fa2325d07bb359c
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/apache-pulsar/blobs/sha256:ad65e3611379186ba1959a3f20eca8a80d63eabfd277b67523bdcb5b96db7172
         sha256: ad65e3611379186ba1959a3f20eca8a80d63eabfd277b67523bdcb5b96db7172
         sha512: ""
@@ -52,4 +72,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/apache-pulsar/bin/pulsar
+        - standalone
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/pulsar/output.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/pulsar/error.log
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - apache-pulsar

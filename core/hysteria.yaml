@@ -24,7 +24,27 @@ bottle:
         sha256: d133751ad7dcaa380e4f64805319b5e61dbfd24dafec1ff09fe0dd27c2de2639
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/hysteria/blobs/sha256:d133751ad7dcaa380e4f64805319b5e61dbfd24dafec1ff09fe0dd27c2de2639
+        sha256: d133751ad7dcaa380e4f64805319b5e61dbfd24dafec1ff09fe0dd27c2de2639
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hysteria/blobs/sha256:6946994a2ea9747e4553a77f11aba96e5619b8a3b0136bb09f1e4720af0df1c8
+        sha256: 6946994a2ea9747e4553a77f11aba96e5619b8a3b0136bb09f1e4720af0df1c8
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/hysteria/blobs/sha256:6946994a2ea9747e4553a77f11aba96e5619b8a3b0136bb09f1e4720af0df1c8
+        sha256: 6946994a2ea9747e4553a77f11aba96e5619b8a3b0136bb09f1e4720af0df1c8
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/hysteria/blobs/sha256:6946994a2ea9747e4553a77f11aba96e5619b8a3b0136bb09f1e4720af0df1c8
+        sha256: 6946994a2ea9747e4553a77f11aba96e5619b8a3b0136bb09f1e4720af0df1c8
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/hysteria/blobs/sha256:6946994a2ea9747e4553a77f11aba96e5619b8a3b0136bb09f1e4720af0df1c8
         sha256: 6946994a2ea9747e4553a77f11aba96e5619b8a3b0136bb09f1e4720af0df1c8
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/hysteria/bin/hysteria
+        - --config
+        - $HOMEBREW_PREFIX/etc/hysteria/config.yaml
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - hysteria

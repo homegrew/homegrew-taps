@@ -24,7 +24,27 @@ bottle:
         sha256: f1e008969ac9bb3e7978963fc1c43d22514338f9a255a57e99d45ad4581ae990
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/clipper/blobs/sha256:f1e008969ac9bb3e7978963fc1c43d22514338f9a255a57e99d45ad4581ae990
+        sha256: f1e008969ac9bb3e7978963fc1c43d22514338f9a255a57e99d45ad4581ae990
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/clipper/blobs/sha256:44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b
+        sha256: 44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/clipper/blobs/sha256:44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b
+        sha256: 44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/clipper/blobs/sha256:44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b
+        sha256: 44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/clipper/blobs/sha256:44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b
         sha256: 44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b
         sha512: ""
@@ -40,4 +60,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/clipper/bin/clipper
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - clipper

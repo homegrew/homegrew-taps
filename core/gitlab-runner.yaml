@@ -24,7 +24,27 @@ bottle:
         sha256: f20dc0001895e631d5f11f4a71660345a7f809fb4d1f7d60f38f04e2b04f0b31
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:f20dc0001895e631d5f11f4a71660345a7f809fb4d1f7d60f38f04e2b04f0b31
+        sha256: f20dc0001895e631d5f11f4a71660345a7f809fb4d1f7d60f38f04e2b04f0b31
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:1c702f2439943e375993df1777b9d66e586553be4e90ce206c69374597bb8e4f
+        sha256: 1c702f2439943e375993df1777b9d66e586553be4e90ce206c69374597bb8e4f
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:ee581c35425a703b69bace296bc10936c4a128bf6c862659d888705b4c6557c3
+        sha256: ee581c35425a703b69bace296bc10936c4a128bf6c862659d888705b4c6557c3
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:1c702f2439943e375993df1777b9d66e586553be4e90ce206c69374597bb8e4f
+        sha256: 1c702f2439943e375993df1777b9d66e586553be4e90ce206c69374597bb8e4f
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:1e11db0380fb6f5bd3caa929400d15157e5060c663ac32dce1251198c2f3fd79
         sha256: 1e11db0380fb6f5bd3caa929400d15157e5060c663ac32dce1251198c2f3fd79
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/gitlab-runner/bin/gitlab-runner
+        - run
+        - --syslog
+    run_type: immediate
+    working_dir: /$HOME
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - gitlab-runner

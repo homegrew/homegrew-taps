@@ -24,7 +24,27 @@ bottle:
         sha256: 7fe3b4675efe30ac806618927a5af6c03d811f0571a8b197bec5d2b67d4f6528
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/atuin/blobs/sha256:7fe3b4675efe30ac806618927a5af6c03d811f0571a8b197bec5d2b67d4f6528
+        sha256: 7fe3b4675efe30ac806618927a5af6c03d811f0571a8b197bec5d2b67d4f6528
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/atuin/blobs/sha256:486353498b054fb114fef3f21ccf947486ec2d8ba7c9b82ce9e12af1acf6b78f
+        sha256: 486353498b054fb114fef3f21ccf947486ec2d8ba7c9b82ce9e12af1acf6b78f
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/atuin/blobs/sha256:22f319cd86f026a24d777d5ec7e5b2b01b18e84e7d2e3b948cce388ade574238
+        sha256: 22f319cd86f026a24d777d5ec7e5b2b01b18e84e7d2e3b948cce388ade574238
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/atuin/blobs/sha256:486353498b054fb114fef3f21ccf947486ec2d8ba7c9b82ce9e12af1acf6b78f
+        sha256: 486353498b054fb114fef3f21ccf947486ec2d8ba7c9b82ce9e12af1acf6b78f
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/atuin/blobs/sha256:6a0822467028783b2b58cc9a7900f11ee799bbf834940e19e5f1cf98c44c0447
         sha256: 6a0822467028783b2b58cc9a7900f11ee799bbf834940e19e5f1cf98c44c0447
         sha512: ""
@@ -51,4 +71,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/atuin/bin/atuin
+        - daemon
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/atuin.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/atuin.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - atuin

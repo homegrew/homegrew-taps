@@ -27,7 +27,27 @@ bottle:
         sha256: c03763050f73ea726be00e05c06bbad6cfacf21a7a4362c101589dbfb9faf820
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:c03763050f73ea726be00e05c06bbad6cfacf21a7a4362c101589dbfb9faf820
+        sha256: c03763050f73ea726be00e05c06bbad6cfacf21a7a4362c101589dbfb9faf820
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:152bc133e9a02aa116a0648c25372f067f0a7dda8ea8121713811567176fe854
+        sha256: 152bc133e9a02aa116a0648c25372f067f0a7dda8ea8121713811567176fe854
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:804870529d75fe0e9960094756d88a4448c44e3f234365d0960a78466a748e79
+        sha256: 804870529d75fe0e9960094756d88a4448c44e3f234365d0960a78466a748e79
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:152bc133e9a02aa116a0648c25372f067f0a7dda8ea8121713811567176fe854
+        sha256: 152bc133e9a02aa116a0648c25372f067f0a7dda8ea8121713811567176fe854
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:0ef89fbe46ae01eb13535f136f86905a7c1cf6d709a16bf42a2b4a0ee0321935
         sha256: 0ef89fbe46ae01eb13535f136f86905a7c1cf6d709a16bf42a2b4a0ee0321935
         sha512: ""
@@ -57,4 +77,16 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/tor/bin/tor
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/tor.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/tor.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - tor

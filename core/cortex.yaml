@@ -24,7 +24,27 @@ bottle:
         sha256: cecedb96cd0e90c2c5214da360068360140864f71773b0c077e8756ec8b0e128
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/cortex/blobs/sha256:cecedb96cd0e90c2c5214da360068360140864f71773b0c077e8756ec8b0e128
+        sha256: cecedb96cd0e90c2c5214da360068360140864f71773b0c077e8756ec8b0e128
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cortex/blobs/sha256:da6e0316585d857d5325c9ad80d64b8a7cc19b715e517b64f2aa6184bc0a8e82
+        sha256: da6e0316585d857d5325c9ad80d64b8a7cc19b715e517b64f2aa6184bc0a8e82
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/cortex/blobs/sha256:5256ca98ca78dc9c65feb1cee165a67067ffca426c8b91545d35cf962aec2dc5
+        sha256: 5256ca98ca78dc9c65feb1cee165a67067ffca426c8b91545d35cf962aec2dc5
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/cortex/blobs/sha256:da6e0316585d857d5325c9ad80d64b8a7cc19b715e517b64f2aa6184bc0a8e82
+        sha256: da6e0316585d857d5325c9ad80d64b8a7cc19b715e517b64f2aa6184bc0a8e82
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/cortex/blobs/sha256:3e86a0a76dd5d0c010675f07735b3cbbf94f487a5332764915f54697eb4db89b
         sha256: 3e86a0a76dd5d0c010675f07735b3cbbf94f487a5332764915f54697eb4db89b
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/cortex/bin/cortex
+        - -config.file=$HOMEBREW_PREFIX/etc/cortex.yaml
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/cortex.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/cortex.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - cortex

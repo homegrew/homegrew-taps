@@ -24,7 +24,27 @@ bottle:
         sha256: 353cac603cccbd9e62920f680f8328b17cc02baa391a3665b03345bc90edb1e5
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:353cac603cccbd9e62920f680f8328b17cc02baa391a3665b03345bc90edb1e5
+        sha256: 353cac603cccbd9e62920f680f8328b17cc02baa391a3665b03345bc90edb1e5
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:164a08f1fe7e3007fddbb6f4111ed19863d08888501a00a7b0328234801636f7
+        sha256: 164a08f1fe7e3007fddbb6f4111ed19863d08888501a00a7b0328234801636f7
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:f1248437269d3aa06758ad5e02fb3fd13bf6ab46f7296b39c80bf9cf02cb1cf6
+        sha256: f1248437269d3aa06758ad5e02fb3fd13bf6ab46f7296b39c80bf9cf02cb1cf6
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:164a08f1fe7e3007fddbb6f4111ed19863d08888501a00a7b0328234801636f7
+        sha256: 164a08f1fe7e3007fddbb6f4111ed19863d08888501a00a7b0328234801636f7
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nsq/blobs/sha256:5a22f058697307ea3179db86098d939c2a0bab28729af92fc2237fa9ec46b843
         sha256: 5a22f058697307ea3179db86098d939c2a0bab28729af92fc2237fa9ec46b843
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nsq/bin/nsqd
+        - -data-path=$HOMEBREW_PREFIX/var/nsq
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/nsq
+    log_path: $HOMEBREW_PREFIX/var/log/nsqd.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/nsqd.error.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nsq

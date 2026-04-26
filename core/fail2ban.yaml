@@ -25,7 +25,27 @@ bottle:
         sha256: cf820863820ce92f23210ed7a2a390ab1cbe86f67db6f68c911e1d11670dad3e
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:cf820863820ce92f23210ed7a2a390ab1cbe86f67db6f68c911e1d11670dad3e
+        sha256: cf820863820ce92f23210ed7a2a390ab1cbe86f67db6f68c911e1d11670dad3e
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
+        sha256: 677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
+        sha256: 677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
+        sha256: 677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/fail2ban/blobs/sha256:677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
         sha256: 677ea8041843e75cde2773a39155890cc3612fb584411d85316538caf4193168
         sha512: ""
@@ -51,4 +71,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/fail2ban/bin/fail2ban-client
+        - -x
+        - start
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - fail2ban

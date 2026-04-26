@@ -24,7 +24,27 @@ bottle:
         sha256: bffce7fd244160abb5333fed263f40e868bd09c2da174a51d7be6b255101992f
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/launch_socket_server/blobs/sha256:bffce7fd244160abb5333fed263f40e868bd09c2da174a51d7be6b255101992f
+        sha256: bffce7fd244160abb5333fed263f40e868bd09c2da174a51d7be6b255101992f
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/launch_socket_server/blobs/sha256:7f9379e42b9f24b9f1d7c8e4f899901ad90999fe69c526c081c883e813cd36ea
+        sha256: 7f9379e42b9f24b9f1d7c8e4f899901ad90999fe69c526c081c883e813cd36ea
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/launch_socket_server/blobs/sha256:b39407abb6a275dc2f8d7cee19b56126213e46ed61e6ef0d9e0eff631112c3e9
+        sha256: b39407abb6a275dc2f8d7cee19b56126213e46ed61e6ef0d9e0eff631112c3e9
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/launch_socket_server/blobs/sha256:7f9379e42b9f24b9f1d7c8e4f899901ad90999fe69c526c081c883e813cd36ea
+        sha256: 7f9379e42b9f24b9f1d7c8e4f899901ad90999fe69c526c081c883e813cd36ea
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/launch_socket_server/blobs/sha256:cd7f62d360a2d0e3ccbc0d127e6c93cf7b04341547a0cc47712e9cc30bfada44
         sha256: cd7f62d360a2d0e3ccbc0d127e6c93cf7b04341547a0cc47712e9cc30bfada44
         sha512: ""
@@ -40,4 +60,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/launch_socket_server/sbin/launch_socket_server
+        - '-'
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/launch_socket_server.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/launch_socket_server.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - launch_socket_server

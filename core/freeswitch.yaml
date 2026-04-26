@@ -42,7 +42,27 @@ bottle:
         sha256: 0e74f3ce5b5be3d5ce024f848aee37d6e4bf94833689d842d87556e143965147
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:0e74f3ce5b5be3d5ce024f848aee37d6e4bf94833689d842d87556e143965147
+        sha256: 0e74f3ce5b5be3d5ce024f848aee37d6e4bf94833689d842d87556e143965147
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:58afea1ef8ed85e8e06264c8260eb490602d3cebde03c387bb7e8e25855efc34
+        sha256: 58afea1ef8ed85e8e06264c8260eb490602d3cebde03c387bb7e8e25855efc34
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:23a404455d18103d8a2da672ed643519d127fc5b418d653ea65054db2510d035
+        sha256: 23a404455d18103d8a2da672ed643519d127fc5b418d653ea65054db2510d035
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:58afea1ef8ed85e8e06264c8260eb490602d3cebde03c387bb7e8e25855efc34
+        sha256: 58afea1ef8ed85e8e06264c8260eb490602d3cebde03c387bb7e8e25855efc34
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:dbe41c75c4ea16c17ed06e5b094a87e69a801f12f67a7853f98ee50d1a824177
         sha256: dbe41c75c4ea16c17ed06e5b094a87e69a801f12f67a7853f98ee50d1a824177
         sha512: ""
@@ -90,4 +110,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/freeswitch/bin/freeswitch
+        - -nc
+        - -nonat
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - freeswitch

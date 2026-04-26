@@ -25,7 +25,27 @@ bottle:
         sha256: 96bdbbcd5c576144cc72e986496687afab490dbb1ec1a5841c5193ff61402bb4
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/colima/blobs/sha256:96bdbbcd5c576144cc72e986496687afab490dbb1ec1a5841c5193ff61402bb4
+        sha256: 96bdbbcd5c576144cc72e986496687afab490dbb1ec1a5841c5193ff61402bb4
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/colima/blobs/sha256:5143920a170aefc724abed27b28c374ec3950e23349d738fb781cfdf80993a5b
+        sha256: 5143920a170aefc724abed27b28c374ec3950e23349d738fb781cfdf80993a5b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/colima/blobs/sha256:b182371df65d75abe3c957e28b45b05479bee6fe43cbe6aaf343f113dd9f2c41
+        sha256: b182371df65d75abe3c957e28b45b05479bee6fe43cbe6aaf343f113dd9f2c41
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/colima/blobs/sha256:5143920a170aefc724abed27b28c374ec3950e23349d738fb781cfdf80993a5b
+        sha256: 5143920a170aefc724abed27b28c374ec3950e23349d738fb781cfdf80993a5b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/colima/blobs/sha256:9865870ba93a101fe9c8f17fa81d450c85785cb361032fe815e3843ff381fca2
         sha256: 9865870ba93a101fe9c8f17fa81d450c85785cb361032fe815e3843ff381fca2
         sha512: ""
@@ -51,4 +71,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/colima/bin/colima
+        - start
+        - -f
+    run_type: immediate
+    working_dir: /$HOME
+    log_path: $HOMEBREW_PREFIX/var/log/colima.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/colima.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - colima

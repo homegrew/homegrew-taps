@@ -24,7 +24,27 @@ bottle:
         sha256: f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
+        sha256: f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
+        sha256: fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
+        sha256: fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
+        sha256: fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
         sha256: fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
         sha512: ""
@@ -53,4 +73,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/ddclient/bin/ddclient
+        - -file
+        - $HOMEBREW_PREFIX/etc/ddclient/ddclient.conf
+    run_type: interval
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - ddclient

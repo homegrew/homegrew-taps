@@ -31,7 +31,27 @@ bottle:
         sha256: 454e5f2d0a128808d4b0ed31a4263a397b671b7a15fa23041abe412711f61f57
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/10.6/blobs/sha256:454e5f2d0a128808d4b0ed31a4263a397b671b7a15fa23041abe412711f61f57
+        sha256: 454e5f2d0a128808d4b0ed31a4263a397b671b7a15fa23041abe412711f61f57
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/10.6/blobs/sha256:38c80cdc7b8eb4f47ad785cb0ecb937a3e5eb5c3b95110d24d4263cf9fd67d1e
+        sha256: 38c80cdc7b8eb4f47ad785cb0ecb937a3e5eb5c3b95110d24d4263cf9fd67d1e
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/10.6/blobs/sha256:322d7e40a93d18e8e9d6667d84ede37aa6a2332949c0da05fcc96eb640b9dc3a
+        sha256: 322d7e40a93d18e8e9d6667d84ede37aa6a2332949c0da05fcc96eb640b9dc3a
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/10.6/blobs/sha256:38c80cdc7b8eb4f47ad785cb0ecb937a3e5eb5c3b95110d24d4263cf9fd67d1e
+        sha256: 38c80cdc7b8eb4f47ad785cb0ecb937a3e5eb5c3b95110d24d4263cf9fd67d1e
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mariadb/10.6/blobs/sha256:cfca34a077173f6a788ace993bfea0b6f496fecad693e7f0509648c15a6309bd
         sha256: cfca34a077173f6a788ace993bfea0b6f496fecad693e7f0509648c15a6309bd
         sha512: ""
@@ -69,4 +89,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mariadb@10.6/bin/mysqld_safe
+        - --datadir=$HOMEBREW_PREFIX/var/mysql
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mariadb@10.6

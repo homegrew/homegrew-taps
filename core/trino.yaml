@@ -25,7 +25,27 @@ bottle:
         sha256: 5c80298e351182358e20a726d986b05f0f814b5cefc63bd1fea48191d4e7d7a4
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/trino/blobs/sha256:5c80298e351182358e20a726d986b05f0f814b5cefc63bd1fea48191d4e7d7a4
+        sha256: 5c80298e351182358e20a726d986b05f0f814b5cefc63bd1fea48191d4e7d7a4
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/trino/blobs/sha256:ec736f795ac95764efc7be9505aed6c0aec627582e36c5b8e72142b2bacba08d
+        sha256: ec736f795ac95764efc7be9505aed6c0aec627582e36c5b8e72142b2bacba08d
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/trino/blobs/sha256:ec736f795ac95764efc7be9505aed6c0aec627582e36c5b8e72142b2bacba08d
+        sha256: ec736f795ac95764efc7be9505aed6c0aec627582e36c5b8e72142b2bacba08d
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/trino/blobs/sha256:ec736f795ac95764efc7be9505aed6c0aec627582e36c5b8e72142b2bacba08d
+        sha256: ec736f795ac95764efc7be9505aed6c0aec627582e36c5b8e72142b2bacba08d
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/trino/blobs/sha256:ec736f795ac95764efc7be9505aed6c0aec627582e36c5b8e72142b2bacba08d
         sha256: ec736f795ac95764efc7be9505aed6c0aec627582e36c5b8e72142b2bacba08d
         sha512: ""
@@ -51,4 +71,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/trino/bin/trino-server
+        - run
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/opt/trino/libexec
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - trino

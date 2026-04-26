@@ -24,7 +24,27 @@ bottle:
         sha256: 259b9846fa2ca745f150f78a043d455481d500708ae725ef9cc2faed20cda11a
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/prometheus/blobs/sha256:259b9846fa2ca745f150f78a043d455481d500708ae725ef9cc2faed20cda11a
+        sha256: 259b9846fa2ca745f150f78a043d455481d500708ae725ef9cc2faed20cda11a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/prometheus/blobs/sha256:08b0138c7a34f5c129a8a7dafd2130492ce846e8822bc55ef3b6dc4d98955ead
+        sha256: 08b0138c7a34f5c129a8a7dafd2130492ce846e8822bc55ef3b6dc4d98955ead
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/prometheus/blobs/sha256:bcaca8bc54e9e9edd9cd395da80e4294fbdd7f32f5b9c2880c74a3594f8dc568
+        sha256: bcaca8bc54e9e9edd9cd395da80e4294fbdd7f32f5b9c2880c74a3594f8dc568
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/prometheus/blobs/sha256:08b0138c7a34f5c129a8a7dafd2130492ce846e8822bc55ef3b6dc4d98955ead
+        sha256: 08b0138c7a34f5c129a8a7dafd2130492ce846e8822bc55ef3b6dc4d98955ead
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/prometheus/blobs/sha256:e57131b9ac8441888149068e04afaacb2a6474cb1cd0afe440fd2dbf0f0b5d07
         sha256: e57131b9ac8441888149068e04afaacb2a6474cb1cd0afe440fd2dbf0f0b5d07
         sha512: ""
@@ -53,4 +73,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/prometheus/bin/prometheus_brew_services
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/prometheus.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/prometheus.err.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - prometheus

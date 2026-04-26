@@ -26,7 +26,27 @@ bottle:
         sha256: 25564b366864ae82e37c6c6daebf04d060c416c47bd62981cfa984bacbe58dc8
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:25564b366864ae82e37c6c6daebf04d060c416c47bd62981cfa984bacbe58dc8
+        sha256: 25564b366864ae82e37c6c6daebf04d060c416c47bd62981cfa984bacbe58dc8
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:1b45de630f6e4739ae934b5d00ae94500d70f6671bba548b08a0be0d980ed295
+        sha256: 1b45de630f6e4739ae934b5d00ae94500d70f6671bba548b08a0be0d980ed295
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:fbe7144f73805ae418979f1585cbdeb44fd567d029123887790b45e066471839
+        sha256: fbe7144f73805ae418979f1585cbdeb44fd567d029123887790b45e066471839
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:1b45de630f6e4739ae934b5d00ae94500d70f6671bba548b08a0be0d980ed295
+        sha256: 1b45de630f6e4739ae934b5d00ae94500d70f6671bba548b08a0be0d980ed295
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:d8e6479890fe58003ea82668949e353c887a5142551e12fa482ab94291a41567
         sha256: d8e6479890fe58003ea82668949e353c887a5142551e12fa482ab94291a41567
         sha512: ""
@@ -54,4 +74,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/bacula-fd/bin/bacula-fd
+        - -f
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - bacula-fd

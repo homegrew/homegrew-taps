@@ -25,7 +25,27 @@ bottle:
         sha256: e56e2613dd258ec7ee6c2029a038fed632320f207256081159177a81c98ecfc3
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:e56e2613dd258ec7ee6c2029a038fed632320f207256081159177a81c98ecfc3
+        sha256: e56e2613dd258ec7ee6c2029a038fed632320f207256081159177a81c98ecfc3
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:fb407f578efa1ebb8693505fefaa0f810d2f8af8b6e9971b1506e6d0e648ce86
+        sha256: fb407f578efa1ebb8693505fefaa0f810d2f8af8b6e9971b1506e6d0e648ce86
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:1b9392a0b73ea4056e3b955f92ae2c152d32db3c3df49d52db14caea444c081c
+        sha256: 1b9392a0b73ea4056e3b955f92ae2c152d32db3c3df49d52db14caea444c081c
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:fb407f578efa1ebb8693505fefaa0f810d2f8af8b6e9971b1506e6d0e648ce86
+        sha256: fb407f578efa1ebb8693505fefaa0f810d2f8af8b6e9971b1506e6d0e648ce86
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:7fb75b040fe393a5b225af7ce9779e619a500f55bc87a75081bf824047e8510e
         sha256: 7fb75b040fe393a5b225af7ce9779e619a500f55bc87a75081bf824047e8510e
         sha512: ""
@@ -51,4 +71,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/apache-polaris/bin/polaris-server
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/polaris.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/polaris.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - apache-polaris

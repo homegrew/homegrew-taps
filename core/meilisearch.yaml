@@ -24,7 +24,27 @@ bottle:
         sha256: 5d8218137a0dc0c554f1ff6fbe539052299c6c8581f1dd15f7a802bbe9f04284
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/meilisearch/blobs/sha256:5d8218137a0dc0c554f1ff6fbe539052299c6c8581f1dd15f7a802bbe9f04284
+        sha256: 5d8218137a0dc0c554f1ff6fbe539052299c6c8581f1dd15f7a802bbe9f04284
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/meilisearch/blobs/sha256:522e0d2b0a55986f6f14eb319e72fefa5ef22804a4b4fed57ce2a81708afaa99
+        sha256: 522e0d2b0a55986f6f14eb319e72fefa5ef22804a4b4fed57ce2a81708afaa99
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/meilisearch/blobs/sha256:9cf9d8005d16b0f9030d005931b280d102e95b657da74eb40cb50e0bdb0800d7
+        sha256: 9cf9d8005d16b0f9030d005931b280d102e95b657da74eb40cb50e0bdb0800d7
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/meilisearch/blobs/sha256:522e0d2b0a55986f6f14eb319e72fefa5ef22804a4b4fed57ce2a81708afaa99
+        sha256: 522e0d2b0a55986f6f14eb319e72fefa5ef22804a4b4fed57ce2a81708afaa99
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/meilisearch/blobs/sha256:e4f3f5a04696e7016175a8a549c39b6e2c3219f1cfead686539de6345053803f
         sha256: e4f3f5a04696e7016175a8a549c39b6e2c3219f1cfead686539de6345053803f
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/meilisearch/bin/meilisearch
+        - --db-path
+        - $HOMEBREW_PREFIX/var/meilisearch/data.ms
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/meilisearch.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/meilisearch.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - meilisearch

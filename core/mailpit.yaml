@@ -24,7 +24,27 @@ bottle:
         sha256: de13b17d4167cf6518c3f643535e4a75581cd975d716726fb8ed0d1799d6371b
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mailpit/blobs/sha256:de13b17d4167cf6518c3f643535e4a75581cd975d716726fb8ed0d1799d6371b
+        sha256: de13b17d4167cf6518c3f643535e4a75581cd975d716726fb8ed0d1799d6371b
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mailpit/blobs/sha256:2dc21fd26d4cf426476a2c03439df31f2b3e9b0c5544f6df8a11b114553c7c7e
+        sha256: 2dc21fd26d4cf426476a2c03439df31f2b3e9b0c5544f6df8a11b114553c7c7e
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mailpit/blobs/sha256:f4abd483c75b9e608eebe8ce2830dc88ded06daa85108e3590b64a25aeee2441
+        sha256: f4abd483c75b9e608eebe8ce2830dc88ded06daa85108e3590b64a25aeee2441
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mailpit/blobs/sha256:2dc21fd26d4cf426476a2c03439df31f2b3e9b0c5544f6df8a11b114553c7c7e
+        sha256: 2dc21fd26d4cf426476a2c03439df31f2b3e9b0c5544f6df8a11b114553c7c7e
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mailpit/blobs/sha256:a5a25e6a3c0da033fe6ce9a1e19890db3917d76aac09458563db1e45c055b463
         sha256: a5a25e6a3c0da033fe6ce9a1e19890db3917d76aac09458563db1e45c055b463
         sha512: ""
@@ -51,4 +71,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mailpit/bin/mailpit
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/mailpit.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/mailpit.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mailpit

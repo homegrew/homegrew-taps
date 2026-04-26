@@ -24,7 +24,37 @@ bottle:
         sha256: 8c22c01d6e11c18443e9d3a12b5e858f5468c8da4f0aba9f716b054267a631de
         sha512: ""
         signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:8c7e0ca50223efc082c428aad1e0d62fda73f55d9cf280f7255f7228093917a2
+        sha256: 8c7e0ca50223efc082c428aad1e0d62fda73f55d9cf280f7255f7228093917a2
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:8c22c01d6e11c18443e9d3a12b5e858f5468c8da4f0aba9f716b054267a631de
+        sha256: 8c22c01d6e11c18443e9d3a12b5e858f5468c8da4f0aba9f716b054267a631de
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:a0f56a4e44504c78bf201cbb62b0d01d1ab2fcf1149e6dcc6e7562fb41c0ac99
+        sha256: a0f56a4e44504c78bf201cbb62b0d01d1ab2fcf1149e6dcc6e7562fb41c0ac99
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:1d3904d7dfa3b416126cd6f3088fd21eea79ac94af8cf5c6c787af6a27f8ba1e
+        sha256: 1d3904d7dfa3b416126cd6f3088fd21eea79ac94af8cf5c6c787af6a27f8ba1e
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:11ef33ea3f5e54e448b493db07993839407bd6e62fd50ed3b7feaae74f0419f0
+        sha256: 11ef33ea3f5e54e448b493db07993839407bd6e62fd50ed3b7feaae74f0419f0
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:a0f56a4e44504c78bf201cbb62b0d01d1ab2fcf1149e6dcc6e7562fb41c0ac99
+        sha256: a0f56a4e44504c78bf201cbb62b0d01d1ab2fcf1149e6dcc6e7562fb41c0ac99
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:e9518ae9f10154dcc84c9f1348b436a49ebb0b59d07982c468d0edad7cc38cdd
         sha256: e9518ae9f10154dcc84c9f1348b436a49ebb0b59d07982c468d0edad7cc38cdd
         sha512: ""
@@ -49,4 +79,16 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/sshguard/sbin/sshguard
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - sshguard

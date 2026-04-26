@@ -27,7 +27,27 @@ bottle:
         sha256: d715117f346123e181d078e78e0441ccf239f23da3a46b38f7d12ad812de72db
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:d715117f346123e181d078e78e0441ccf239f23da3a46b38f7d12ad812de72db
+        sha256: d715117f346123e181d078e78e0441ccf239f23da3a46b38f7d12ad812de72db
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:4e8cfb089112e0cbf712090eb6346a47c180b513682a39633466265bd41d6a64
+        sha256: 4e8cfb089112e0cbf712090eb6346a47c180b513682a39633466265bd41d6a64
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:e022f6fb8a2b280050137a6f7d49e449671a9b0fa1dd33eb1bce9d504b10c083
+        sha256: e022f6fb8a2b280050137a6f7d49e449671a9b0fa1dd33eb1bce9d504b10c083
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:4e8cfb089112e0cbf712090eb6346a47c180b513682a39633466265bd41d6a64
+        sha256: 4e8cfb089112e0cbf712090eb6346a47c180b513682a39633466265bd41d6a64
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nzbget/blobs/sha256:f55c4fc0ae84b75887ac649fefbc3ef0fd910a3c60d1428e0901e0d3e47542a5
         sha256: f55c4fc0ae84b75887ac649fefbc3ef0fd910a3c60d1428e0901e0d3e47542a5
         sha512: ""
@@ -57,4 +77,25 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nzbget/bin/nzbget
+        - -c
+        - $HOMEBREW_PREFIX/etc/nzbget.conf
+        - -s
+        - -o
+        - OutputMode=Log
+        - -o
+        - ConfigTemplate=$HOMEBREW_PREFIX/share/nzbget/nzbget.conf
+        - -o
+        - WebDir=$HOMEBREW_PREFIX/share/nzbget/webui
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nzbget

@@ -24,7 +24,27 @@ bottle:
         sha256: 5fd259f54695506a796a449eaf67fbd1add757137f1f28f163d3cd040b91e2c2
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nebula/blobs/sha256:5fd259f54695506a796a449eaf67fbd1add757137f1f28f163d3cd040b91e2c2
+        sha256: 5fd259f54695506a796a449eaf67fbd1add757137f1f28f163d3cd040b91e2c2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nebula/blobs/sha256:cbcbf92df4cd5074d7436121cbe41427c49442ec460c1d6525d1a982bf834ce1
+        sha256: cbcbf92df4cd5074d7436121cbe41427c49442ec460c1d6525d1a982bf834ce1
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nebula/blobs/sha256:cbcbf92df4cd5074d7436121cbe41427c49442ec460c1d6525d1a982bf834ce1
+        sha256: cbcbf92df4cd5074d7436121cbe41427c49442ec460c1d6525d1a982bf834ce1
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nebula/blobs/sha256:cbcbf92df4cd5074d7436121cbe41427c49442ec460c1d6525d1a982bf834ce1
+        sha256: cbcbf92df4cd5074d7436121cbe41427c49442ec460c1d6525d1a982bf834ce1
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nebula/blobs/sha256:cbcbf92df4cd5074d7436121cbe41427c49442ec460c1d6525d1a982bf834ce1
         sha256: cbcbf92df4cd5074d7436121cbe41427c49442ec460c1d6525d1a982bf834ce1
         sha512: ""
@@ -50,4 +70,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nebula/bin/nebula
+        - -config
+        - $HOMEBREW_PREFIX/etc/nebula/
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/nebula.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/nebula.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nebula

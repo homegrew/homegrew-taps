@@ -24,7 +24,27 @@ bottle:
         sha256: 5e77f4b25c1a47587e1609c3c18e3489a7f43d321fdf8e047c62ce1a753b0f16
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/sing-box/blobs/sha256:5e77f4b25c1a47587e1609c3c18e3489a7f43d321fdf8e047c62ce1a753b0f16
+        sha256: 5e77f4b25c1a47587e1609c3c18e3489a7f43d321fdf8e047c62ce1a753b0f16
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sing-box/blobs/sha256:8ff74ab410bdf9cc3d7c67fbf471452c62bdc5ff438e5572ef8a247933de0b0b
+        sha256: 8ff74ab410bdf9cc3d7c67fbf471452c62bdc5ff438e5572ef8a247933de0b0b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/sing-box/blobs/sha256:386c195bd689fc8c160cbc8d0994d197ac77e3c44335ccb178b63748bd9b1741
+        sha256: 386c195bd689fc8c160cbc8d0994d197ac77e3c44335ccb178b63748bd9b1741
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/sing-box/blobs/sha256:8ff74ab410bdf9cc3d7c67fbf471452c62bdc5ff438e5572ef8a247933de0b0b
+        sha256: 8ff74ab410bdf9cc3d7c67fbf471452c62bdc5ff438e5572ef8a247933de0b0b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/sing-box/blobs/sha256:72bdb24f4fd69ae1fddcf5b3244c1552fb127fd191cff5fee2587467385496bf
         sha256: 72bdb24f4fd69ae1fddcf5b3244c1552fb127fd191cff5fee2587467385496bf
         sha512: ""
@@ -50,4 +70,21 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/sing-box/bin/sing-box
+        - run
+        - --config
+        - $HOMEBREW_PREFIX/etc/sing-box/config.json
+        - --directory
+        - $HOMEBREW_PREFIX/var/lib/sing-box
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - sing-box

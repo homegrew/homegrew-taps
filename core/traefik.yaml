@@ -24,7 +24,27 @@ bottle:
         sha256: fcf998d3b98b7e7db0ae91eb8cdeb8b81c445261a9d307a00e32776dfd6ad891
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/traefik/blobs/sha256:fcf998d3b98b7e7db0ae91eb8cdeb8b81c445261a9d307a00e32776dfd6ad891
+        sha256: fcf998d3b98b7e7db0ae91eb8cdeb8b81c445261a9d307a00e32776dfd6ad891
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/traefik/blobs/sha256:71632c962306f8574dd4bf3c33152f1fb24c1c040a09f813c0a29cf46a749ff4
+        sha256: 71632c962306f8574dd4bf3c33152f1fb24c1c040a09f813c0a29cf46a749ff4
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/traefik/blobs/sha256:b0a9efeda3f7081ca82037ac66336a9b23dd75588e2e0ad4bb45cbe38b4d08af
+        sha256: b0a9efeda3f7081ca82037ac66336a9b23dd75588e2e0ad4bb45cbe38b4d08af
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/traefik/blobs/sha256:71632c962306f8574dd4bf3c33152f1fb24c1c040a09f813c0a29cf46a749ff4
+        sha256: 71632c962306f8574dd4bf3c33152f1fb24c1c040a09f813c0a29cf46a749ff4
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/traefik/blobs/sha256:cb5c9d9103e4bd331e4af97715d4280434e41bca65e8df81c28a9760aacf8774
         sha256: cb5c9d9103e4bd331e4af97715d4280434e41bca65e8df81c28a9760aacf8774
         sha512: ""
@@ -52,4 +72,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/traefik/bin/traefik
+        - --configfile=$HOMEBREW_PREFIX/etc/traefik/traefik.toml
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/traefik.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/traefik.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - traefik

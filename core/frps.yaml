@@ -24,7 +24,27 @@ bottle:
         sha256: deca4a8220ca79c3ee7d334251b37cf15dc930eec83573961ed7f9cf18c55acf
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:deca4a8220ca79c3ee7d334251b37cf15dc930eec83573961ed7f9cf18c55acf
+        sha256: deca4a8220ca79c3ee7d334251b37cf15dc930eec83573961ed7f9cf18c55acf
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
+        sha256: 095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
+        sha256: 095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
+        sha256: 095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/frps/blobs/sha256:095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
         sha256: 095ed2f73ff4337a64547af689e8f51ee773bf83b672ea385f1b566d0b511ee6
         sha512: ""
@@ -51,4 +71,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/frps/bin/frps
+        - -c
+        - $HOMEBREW_PREFIX/etc/frp/frps.toml
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/frps.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/frps.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - frps

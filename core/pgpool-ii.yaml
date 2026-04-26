@@ -26,7 +26,27 @@ bottle:
         sha256: 24476956742b91a87968d2642b5b6b7c4b876afc00dc33eed699538a154ba08c
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/pgpool-ii/blobs/sha256:24476956742b91a87968d2642b5b6b7c4b876afc00dc33eed699538a154ba08c
+        sha256: 24476956742b91a87968d2642b5b6b7c4b876afc00dc33eed699538a154ba08c
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pgpool-ii/blobs/sha256:5420df37f58cfaf70852073307b6c901fa3e84e1b17af3dd76a33158391000fe
+        sha256: 5420df37f58cfaf70852073307b6c901fa3e84e1b17af3dd76a33158391000fe
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/pgpool-ii/blobs/sha256:4d558e1eb95a2af64ff322fa9727b720d64d576ed3490d9f39e34c816f9e5c05
+        sha256: 4d558e1eb95a2af64ff322fa9727b720d64d576ed3490d9f39e34c816f9e5c05
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/pgpool-ii/blobs/sha256:5420df37f58cfaf70852073307b6c901fa3e84e1b17af3dd76a33158391000fe
+        sha256: 5420df37f58cfaf70852073307b6c901fa3e84e1b17af3dd76a33158391000fe
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/pgpool-ii/blobs/sha256:898916cee76fefbf45347cc364f3fce32a05b0071740a4ab491ce779803ed179
         sha256: 898916cee76fefbf45347cc364f3fce32a05b0071740a4ab491ce779803ed179
         sha512: ""
@@ -51,4 +71,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/pgpool-ii/bin/pgpool
+        - -nf
+        - $HOMEBREW_PREFIX/etc/pgpool.conf
+    run_type: immediate
+    working_dir: ""
+    log_path: $HOMEBREW_PREFIX/var/log/pgpool-ii.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/pgpool-ii.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - pgpool-ii

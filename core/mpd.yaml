@@ -50,7 +50,27 @@ bottle:
         sha256: c3af6ecf454b0194a244eede1db75fb2fc17e1f05bab36189479ae68b0789f98
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:c3af6ecf454b0194a244eede1db75fb2fc17e1f05bab36189479ae68b0789f98
+        sha256: c3af6ecf454b0194a244eede1db75fb2fc17e1f05bab36189479ae68b0789f98
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:fd96e5bca800e7563e4a770e7aa4c8591263c8a41124cdf6573fa0c5948c449c
+        sha256: fd96e5bca800e7563e4a770e7aa4c8591263c8a41124cdf6573fa0c5948c449c
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:6dd4d39f7e6844bd15eca3b0c97b5c9a39324ed2a419fd04342e9ac12c0db116
+        sha256: 6dd4d39f7e6844bd15eca3b0c97b5c9a39324ed2a419fd04342e9ac12c0db116
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:fd96e5bca800e7563e4a770e7aa4c8591263c8a41124cdf6573fa0c5948c449c
+        sha256: fd96e5bca800e7563e4a770e7aa4c8591263c8a41124cdf6573fa0c5948c449c
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:8d0332213c26540e5b26aa2b6603bf123b3650c8a1fc00d1ca5b89200aa7322c
         sha256: 8d0332213c26540e5b26aa2b6603bf123b3650c8a1fc00d1ca5b89200aa7322c
         sha512: ""
@@ -111,4 +131,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mpd/bin/mpd
+        - --no-daemon
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - mpd

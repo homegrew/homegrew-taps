@@ -25,7 +25,27 @@ bottle:
         sha256: edeb08c785444734a8d1c2952fb88959b058406792628f3b99e10f744f207057
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:edeb08c785444734a8d1c2952fb88959b058406792628f3b99e10f744f207057
+        sha256: edeb08c785444734a8d1c2952fb88959b058406792628f3b99e10f744f207057
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:22d6d6ad688b31df0baaa7ba2fb89124c36656c59a3a1d3362fd71aea74a2d26
+        sha256: 22d6d6ad688b31df0baaa7ba2fb89124c36656c59a3a1d3362fd71aea74a2d26
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:00d035664c11d7302dc5e4cf16e09539e0f598bb3ab309036452b3dca029c0be
+        sha256: 00d035664c11d7302dc5e4cf16e09539e0f598bb3ab309036452b3dca029c0be
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:22d6d6ad688b31df0baaa7ba2fb89124c36656c59a3a1d3362fd71aea74a2d26
+        sha256: 22d6d6ad688b31df0baaa7ba2fb89124c36656c59a3a1d3362fd71aea74a2d26
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/vnstat/blobs/sha256:af145bbd1da554febe818a33724a04fd13316d589279f3e7c7dd44178556f1ae
         sha256: af145bbd1da554febe818a33724a04fd13316d589279f3e7c7dd44178556f1ae
         sha512: ""
@@ -50,4 +70,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/vnstat/bin/vnstatd
+        - --nodaemon
+        - --config
+        - $HOMEBREW_PREFIX/etc/vnstat.conf
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - vnstat

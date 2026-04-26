@@ -26,7 +26,27 @@ bottle:
         sha256: 286a00e3a1be4055262eefdbe1250e7d4ca888dde0534c767c0e2b3eb45e47b0
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/burp/blobs/sha256:286a00e3a1be4055262eefdbe1250e7d4ca888dde0534c767c0e2b3eb45e47b0
+        sha256: 286a00e3a1be4055262eefdbe1250e7d4ca888dde0534c767c0e2b3eb45e47b0
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/burp/blobs/sha256:410ffad86ce38295589c03a0fbe7d7825c3be2064056a82834d3607cc6660f1c
+        sha256: 410ffad86ce38295589c03a0fbe7d7825c3be2064056a82834d3607cc6660f1c
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/burp/blobs/sha256:605e51882accc26159aacc07dfd50cfb5838fbd991113c412435b569eaae41b4
+        sha256: 605e51882accc26159aacc07dfd50cfb5838fbd991113c412435b569eaae41b4
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/burp/blobs/sha256:410ffad86ce38295589c03a0fbe7d7825c3be2064056a82834d3607cc6660f1c
+        sha256: 410ffad86ce38295589c03a0fbe7d7825c3be2064056a82834d3607cc6660f1c
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/burp/blobs/sha256:8299d856b7c33e46727a2baeca69c5a99cf072afa966c420d555d2b778ba382b
         sha256: 8299d856b7c33e46727a2baeca69c5a99cf072afa966c420d555d2b778ba382b
         sha512: ""
@@ -57,4 +77,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/burp/bin/burp
+        - -a
+        - t
+    run_type: interval
+    working_dir: $HOMEBREW_PREFIX
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - burp

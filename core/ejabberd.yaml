@@ -29,7 +29,27 @@ bottle:
         sha256: 3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
+        sha256: 3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:cf0a301efd94385a5e6e738068e7681e21e608e0a62e5dbaf6e772a13524fef5
+        sha256: cf0a301efd94385a5e6e738068e7681e21e608e0a62e5dbaf6e772a13524fef5
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:f88dc66e2e13e23c6370882ed7569cf29d68db732d86a4104249feabacca9051
+        sha256: f88dc66e2e13e23c6370882ed7569cf29d68db732d86a4104249feabacca9051
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:cf0a301efd94385a5e6e738068e7681e21e608e0a62e5dbaf6e772a13524fef5
+        sha256: cf0a301efd94385a5e6e738068e7681e21e608e0a62e5dbaf6e772a13524fef5
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:cf0674ca2aa17c798ac60e86f0068a88894e9dfb9978cb687865054826eabdc5
         sha256: cf0674ca2aa17c798ac60e86f0068a88894e9dfb9978cb687865054826eabdc5
         sha512: ""
@@ -63,4 +83,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/ejabberd/sbin/ejabberdctl
+        - start
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/lib/ejabberd
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - ejabberd

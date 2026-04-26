@@ -24,7 +24,27 @@ bottle:
         sha256: d352365215bb106dbdb70daace179e5c7fd5ec2986b6c94ec6f2f0db95d9b984
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/zeroclaw/blobs/sha256:d352365215bb106dbdb70daace179e5c7fd5ec2986b6c94ec6f2f0db95d9b984
+        sha256: d352365215bb106dbdb70daace179e5c7fd5ec2986b6c94ec6f2f0db95d9b984
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/zeroclaw/blobs/sha256:b88fdff6635dfcba8ac6154f0d7be6053bff1cb2c737e0f5752c02b627e7fe52
+        sha256: b88fdff6635dfcba8ac6154f0d7be6053bff1cb2c737e0f5752c02b627e7fe52
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/zeroclaw/blobs/sha256:655426bc1f3157050487081e2bbc2be2f82411031076b67ebd85295b92c688cd
+        sha256: 655426bc1f3157050487081e2bbc2be2f82411031076b67ebd85295b92c688cd
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/zeroclaw/blobs/sha256:b88fdff6635dfcba8ac6154f0d7be6053bff1cb2c737e0f5752c02b627e7fe52
+        sha256: b88fdff6635dfcba8ac6154f0d7be6053bff1cb2c737e0f5752c02b627e7fe52
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/zeroclaw/blobs/sha256:0a1b964d714e271070b046fd90b37d0da01aba5cf1296dd28f4ef15e2d30615f
         sha256: 0a1b964d714e271070b046fd90b37d0da01aba5cf1296dd28f4ef15e2d30615f
         sha512: ""
@@ -50,4 +70,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/zeroclaw/bin/zeroclaw
+        - daemon
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/zeroclaw
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - zeroclaw

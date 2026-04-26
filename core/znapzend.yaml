@@ -24,7 +24,37 @@ bottle:
         sha256: 4c9f4aaa841ce75048b37c4c1c54a6860f40903f2e2463c8bbb5f95c1994d3b2
         sha512: ""
         signature: ""
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/znapzend/blobs/sha256:f6273d56bb1e0c20ded2d6f4079cf7548dfd99bbab933ab4fc0b4cffae136869
+        sha256: f6273d56bb1e0c20ded2d6f4079cf7548dfd99bbab933ab4fc0b4cffae136869
+        sha512: ""
+        signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/znapzend/blobs/sha256:4c9f4aaa841ce75048b37c4c1c54a6860f40903f2e2463c8bbb5f95c1994d3b2
+        sha256: 4c9f4aaa841ce75048b37c4c1c54a6860f40903f2e2463c8bbb5f95c1994d3b2
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/znapzend/blobs/sha256:405bbba19b8422e333e11f67f73eb0c61a66150e551428f0c04b12aca2c1db99
+        sha256: 405bbba19b8422e333e11f67f73eb0c61a66150e551428f0c04b12aca2c1db99
+        sha512: ""
+        signature: ""
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/znapzend/blobs/sha256:d72402cd84c52f88fe2fcd86892efdd79f379ac886ef71fcf4143651d1e190db
+        sha256: d72402cd84c52f88fe2fcd86892efdd79f379ac886ef71fcf4143651d1e190db
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/znapzend/blobs/sha256:bd97162625dcc01bf084c870bdf6fd3ba45e3e0967c9b5108fec6cef9f11919b
+        sha256: bd97162625dcc01bf084c870bdf6fd3ba45e3e0967c9b5108fec6cef9f11919b
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/znapzend/blobs/sha256:405bbba19b8422e333e11f67f73eb0c61a66150e551428f0c04b12aca2c1db99
+        sha256: 405bbba19b8422e333e11f67f73eb0c61a66150e551428f0c04b12aca2c1db99
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/znapzend/blobs/sha256:0f04b481b943342f0ffe5a58835319c20820041f31311f29547f16e6ef72366e
         sha256: 0f04b481b943342f0ffe5a58835319c20820041f31311f29547f16e6ef72366e
         sha512: ""
@@ -49,4 +79,18 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/znapzend/bin/znapzend
+        - --connectTimeout=120
+        - --logto=$HOMEBREW_PREFIX/var/log/znapzend/znapzend.log
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/run/znapzend
+    log_path: $HOMEBREW_PREFIX/var/log/znapzend.out.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/znapzend.err.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - znapzend

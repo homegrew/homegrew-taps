@@ -25,7 +25,27 @@ bottle:
         sha256: 18904095253e061ff060e64679ce65961cf87563c7c49aa401ec2487b3978da8
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:18904095253e061ff060e64679ce65961cf87563c7c49aa401ec2487b3978da8
+        sha256: 18904095253e061ff060e64679ce65961cf87563c7c49aa401ec2487b3978da8
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:b73f8fb5d7ab89431e6e6e5fce66e1c7b73f070bd365154fba103f9b38f7c5a9
+        sha256: b73f8fb5d7ab89431e6e6e5fce66e1c7b73f070bd365154fba103f9b38f7c5a9
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:d8550b71c3db5874c57df5945a57177fbae5faca795d2b50b6deead987562394
+        sha256: d8550b71c3db5874c57df5945a57177fbae5faca795d2b50b6deead987562394
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:b73f8fb5d7ab89431e6e6e5fce66e1c7b73f070bd365154fba103f9b38f7c5a9
+        sha256: b73f8fb5d7ab89431e6e6e5fce66e1c7b73f070bd365154fba103f9b38f7c5a9
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ironclaw/blobs/sha256:4e88a94c3861433ff51ca90aba8aad50a2033925c79534dbf325d1c42f6b0e9b
         sha256: 4e88a94c3861433ff51ca90aba8aad50a2033925c79534dbf325d1c42f6b0e9b
         sha512: ""
@@ -52,4 +72,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/ironclaw/bin/ironclaw
+        - run
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - ironclaw

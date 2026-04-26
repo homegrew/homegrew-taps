@@ -24,7 +24,27 @@ bottle:
         sha256: 273001a4733fcc4f37f6448cf8e8321b73fc0a21d98262053993e57010424e8a
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/dagu/blobs/sha256:273001a4733fcc4f37f6448cf8e8321b73fc0a21d98262053993e57010424e8a
+        sha256: 273001a4733fcc4f37f6448cf8e8321b73fc0a21d98262053993e57010424e8a
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dagu/blobs/sha256:fd56a98d9682ca745bbfa8294a1b90c641a9a227db5aedb908989009395dd570
+        sha256: fd56a98d9682ca745bbfa8294a1b90c641a9a227db5aedb908989009395dd570
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/dagu/blobs/sha256:069d9aa037e6e7baaa5da7266db5b0f554824fb175a5c4ab23db9ae1b02a1a3c
+        sha256: 069d9aa037e6e7baaa5da7266db5b0f554824fb175a5c4ab23db9ae1b02a1a3c
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/dagu/blobs/sha256:fd56a98d9682ca745bbfa8294a1b90c641a9a227db5aedb908989009395dd570
+        sha256: fd56a98d9682ca745bbfa8294a1b90c641a9a227db5aedb908989009395dd570
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dagu/blobs/sha256:c9b3ef137f78e8e8855b6e9007908c61b0195e75ff7be6dd2e5c0c5fdfd86b4f
         sha256: c9b3ef137f78e8e8855b6e9007908c61b0195e75ff7be6dd2e5c0c5fdfd86b4f
         sha512: ""
@@ -52,4 +72,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/dagu/bin/dagu
+        - start-all
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/dagu.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/dagu.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - dagu

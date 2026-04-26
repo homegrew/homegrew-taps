@@ -24,7 +24,27 @@ bottle:
         sha256: bb6c57ce62cbc27fc4692c82e5a7e664ec3a900620792f844fc77881f6db1693
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/smartdns/blobs/sha256:bb6c57ce62cbc27fc4692c82e5a7e664ec3a900620792f844fc77881f6db1693
+        sha256: bb6c57ce62cbc27fc4692c82e5a7e664ec3a900620792f844fc77881f6db1693
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/smartdns/blobs/sha256:762c01c1b00e40bbd3ed4a841fdc7ad8ba9a0d2dc098172e25be6ba1ead9f5cf
+        sha256: 762c01c1b00e40bbd3ed4a841fdc7ad8ba9a0d2dc098172e25be6ba1ead9f5cf
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/smartdns/blobs/sha256:4bac5030e4ae39efea04295fd4debab619990d48595d9dea45fcc6a62c7a27f6
+        sha256: 4bac5030e4ae39efea04295fd4debab619990d48595d9dea45fcc6a62c7a27f6
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/smartdns/blobs/sha256:762c01c1b00e40bbd3ed4a841fdc7ad8ba9a0d2dc098172e25be6ba1ead9f5cf
+        sha256: 762c01c1b00e40bbd3ed4a841fdc7ad8ba9a0d2dc098172e25be6ba1ead9f5cf
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/smartdns/blobs/sha256:cca8fd83bf07a8acdc6376bc063ba43a1f8fcbc9307555cbf101d37bd941deb5
         sha256: cca8fd83bf07a8acdc6376bc063ba43a1f8fcbc9307555cbf101d37bd941deb5
         sha512: ""
@@ -50,4 +70,19 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/smartdns/sbin/smartdns
+        - run
+        - -c
+        - $HOMEBREW_PREFIX/etc/smartdns/smartdns.conf
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - smartdns

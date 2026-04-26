@@ -26,7 +26,27 @@ bottle:
         sha256: 246ede87a8ca8b624da273d08de57400a72b989c84c92d0b44553cb1bd61c5ef
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:246ede87a8ca8b624da273d08de57400a72b989c84c92d0b44553cb1bd61c5ef
+        sha256: 246ede87a8ca8b624da273d08de57400a72b989c84c92d0b44553cb1bd61c5ef
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:81c98b4253fcf7864192aec69b4b9bd50e44aba8654d9264dd86dc3147042e18
+        sha256: 81c98b4253fcf7864192aec69b4b9bd50e44aba8654d9264dd86dc3147042e18
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:94e793b80b2a29c52db274322cb20d8c764ebf0fd624e42632a4b84504a5195c
+        sha256: 94e793b80b2a29c52db274322cb20d8c764ebf0fd624e42632a4b84504a5195c
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:81c98b4253fcf7864192aec69b4b9bd50e44aba8654d9264dd86dc3147042e18
+        sha256: 81c98b4253fcf7864192aec69b4b9bd50e44aba8654d9264dd86dc3147042e18
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/hbase/blobs/sha256:add59c179ca1a52eda188727acbad545289cb0b7279d5667f205a745432bd395
         sha256: add59c179ca1a52eda188727acbad545289cb0b7279d5667f205a745432bd395
         sha512: ""
@@ -52,4 +72,20 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/hbase/bin/hbase
+        - --config
+        - $HOMEBREW_PREFIX/opt/hbase/libexec/conf
+        - master
+        - start
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/hbase/hbase.log
+    error_log_path: $HOMEBREW_PREFIX/var/hbase/hbase.err
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - hbase

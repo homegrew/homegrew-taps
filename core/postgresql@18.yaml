@@ -31,7 +31,27 @@ bottle:
         sha256: 4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
+        sha256: 4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:d673a799d57ccb106e95487b4ae480721dbbda30732071e9014bc5572420e90b
+        sha256: d673a799d57ccb106e95487b4ae480721dbbda30732071e9014bc5572420e90b
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:711c76573500ed2a1d898c1849ebd30c133375a980a612010192a624ff759ba7
+        sha256: 711c76573500ed2a1d898c1849ebd30c133375a980a612010192a624ff759ba7
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:d673a799d57ccb106e95487b4ae480721dbbda30732071e9014bc5572420e90b
+        sha256: d673a799d57ccb106e95487b4ae480721dbbda30732071e9014bc5572420e90b
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:581c22f083ae24218d978e0855b5df7649442622c0f4553d5dc0aa5fec0e3c3a
         sha256: 581c22f083ae24218d978e0855b5df7649442622c0f4553d5dc0aa5fec0e3c3a
         sha512: ""
@@ -69,4 +89,18 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/postgresql@18/bin/postgres
+        - -D
+        - $HOMEBREW_PREFIX/var/postgresql@18
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/postgresql@18.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/postgresql@18.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - postgresql@18

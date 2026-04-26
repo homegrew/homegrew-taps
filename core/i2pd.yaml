@@ -27,7 +27,27 @@ bottle:
         sha256: 05b2888fe4c0e9160b2d1e662776d63df7c3829949dc156b0636e0b63b14edb3
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/i2pd/blobs/sha256:05b2888fe4c0e9160b2d1e662776d63df7c3829949dc156b0636e0b63b14edb3
+        sha256: 05b2888fe4c0e9160b2d1e662776d63df7c3829949dc156b0636e0b63b14edb3
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/i2pd/blobs/sha256:e7ea6e15cb9892cb341e4c91658fe044b2ff2d31e95daf5770beda71d14bb8f9
+        sha256: e7ea6e15cb9892cb341e4c91658fe044b2ff2d31e95daf5770beda71d14bb8f9
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/i2pd/blobs/sha256:a2ebfaf4c20175677a20fb8eb6fa004607a285d763bfe6980e89301cdaca40d5
+        sha256: a2ebfaf4c20175677a20fb8eb6fa004607a285d763bfe6980e89301cdaca40d5
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/i2pd/blobs/sha256:e7ea6e15cb9892cb341e4c91658fe044b2ff2d31e95daf5770beda71d14bb8f9
+        sha256: e7ea6e15cb9892cb341e4c91658fe044b2ff2d31e95daf5770beda71d14bb8f9
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/i2pd/blobs/sha256:af49929dd0a31b33d3ccdfc6722a59fabfb7666977f89bc4bc23be534bcf4456
         sha256: af49929dd0a31b33d3ccdfc6722a59fabfb7666977f89bc4bc23be534bcf4456
         sha512: ""
@@ -56,4 +76,22 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/i2pd/bin/i2pd
+        - --datadir=$HOMEBREW_PREFIX/var/lib/i2pd
+        - --conf=$HOMEBREW_PREFIX/etc/i2pd/i2pd.conf
+        - --tunconf=$HOMEBREW_PREFIX/etc/i2pd/tunnels.conf
+        - --log=file
+        - --logfile=$HOMEBREW_PREFIX/var/log/i2pd/i2pd.log
+        - --pidfile=$HOMEBREW_PREFIX/var/run/i2pd.pid
+    run_type: immediate
+    working_dir: ""
+    log_path: ""
+    error_log_path: ""
+    keep_alive: false
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - i2pd

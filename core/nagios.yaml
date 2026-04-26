@@ -28,7 +28,27 @@ bottle:
         sha256: d78bdc8ff14af5f05e2dcb738e99dfa5a8fb8bcacb677c13a8d3d2c2fd9616d7
         sha512: ""
         signature: ""
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:d78bdc8ff14af5f05e2dcb738e99dfa5a8fb8bcacb677c13a8d3d2c2fd9616d7
+        sha256: d78bdc8ff14af5f05e2dcb738e99dfa5a8fb8bcacb677c13a8d3d2c2fd9616d7
+        sha512: ""
+        signature: ""
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:df7ba48825b6f3ff74769a763c8128621beda40bdecf3b13d259776766ed248c
+        sha256: df7ba48825b6f3ff74769a763c8128621beda40bdecf3b13d259776766ed248c
+        sha512: ""
+        signature: ""
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:5c65c296ff0a0f2d97593f8b4f3b0c576c177305bc8674aec44faf7f819791e1
+        sha256: 5c65c296ff0a0f2d97593f8b4f3b0c576c177305bc8674aec44faf7f819791e1
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:df7ba48825b6f3ff74769a763c8128621beda40bdecf3b13d259776766ed248c
+        sha256: df7ba48825b6f3ff74769a763c8128621beda40bdecf3b13d259776766ed248c
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:1d524bcd5a8f97604396f7969ce07b562dccecbd0e2f0f4e64cc2d149fa6b0bd
         sha256: 1d524bcd5a8f97604396f7969ce07b562dccecbd0e2f0f4e64cc2d149fa6b0bd
         sha512: ""
@@ -56,4 +76,17 @@ linux_dependencies:
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nagios/bin/nagios
+        - $HOMEBREW_PREFIX/etc/nagios/nagios.cfg
+    run_type: immediate
+    working_dir: ""
+    log_path: /dev/null
+    error_log_path: /dev/null
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - nagios

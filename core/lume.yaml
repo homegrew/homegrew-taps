@@ -20,6 +20,16 @@ dependencies: []
 keg_only: false
 bottle:
     darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lume/blobs/sha256:2b0043d1196f27f0285df5b84be09a214752ff943d1e3a60162314a136e5e7b0
+        sha256: 2b0043d1196f27f0285df5b84be09a214752ff943d1e3a60162314a136e5e7b0
+        sha512: ""
+        signature: ""
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/lume/blobs/sha256:2b0043d1196f27f0285df5b84be09a214752ff943d1e3a60162314a136e5e7b0
+        sha256: 2b0043d1196f27f0285df5b84be09a214752ff943d1e3a60162314a136e5e7b0
+        sha512: ""
+        signature: ""
+    darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/lume/blobs/sha256:5cacd8f144ca5630a76ba6fc1d179ea5e8a588fbd970808301091eb0dc06f983
         sha256: 5cacd8f144ca5630a76ba6fc1d179ea5e8a588fbd970808301091eb0dc06f983
         sha512: ""
@@ -34,4 +44,17 @@ linux_dependencies: []
 build:
     configure: []
     install: []
-service: null
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/lume/bin/lume
+        - serve
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/lume.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/lume.log
+    keep_alive: true
+artifacts:
+    app: []
+    pkg: []
+    bin:
+        - lume
