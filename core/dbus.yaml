@@ -3,77 +3,59 @@ version: 1.16.2
 description: Message bus system, providing inter-application communication
 homepage: https://wiki.freedesktop.org/www/Software/dbus
 license: AFL-2.1 OR GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    To start the session bus now and at login:
+
+      brew services start dbus
+
+    To start the system bus now and on boot, install and activate the included daemon:
+
+      sudo cp -f $(brew --prefix dbus)/org.freedesktop.dbus-system.plist /Library/LaunchDaemons
+      sudo launchctl bootstrap system /Library/LaunchDaemons/org.freedesktop.dbus-system.plist
+
+    If the daemon is already installed and running, restart it:
+
+      sudo launchctl kickstart -k system/org.freedesktop.dbus-system
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
         sha256: 438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
-        sha512: ""
-        signature: ""
     darwin_amd64_13:
         url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:2f10ec74399e7ffb843022aa22bf11b088ab6b00d34da46d623fca78900f166b
         sha256: 2f10ec74399e7ffb843022aa22bf11b088ab6b00d34da46d623fca78900f166b
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
         sha256: 438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
+        sha256: 438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
+        sha256: 438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:5a51451acabb5ae56b5682e88a82dfa43cc6a2b653ca068198546bb72324bd0c
-        sha256: 5a51451acabb5ae56b5682e88a82dfa43cc6a2b653ca068198546bb72324bd0c
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:708eed3cc7031e486c760cc9debe777b7e8de93faf74320b66d3bc42e27499c3
+        sha256: 708eed3cc7031e486c760cc9debe777b7e8de93faf74320b66d3bc42e27499c3
     darwin_arm64_13:
         url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:29098b5b3f154677a61c30b402b17fe2912e9efe1cd7917ee6ae754209fe1f29
         sha256: 29098b5b3f154677a61c30b402b17fe2912e9efe1cd7917ee6ae754209fe1f29
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:1be729814991108cc593bb8472e376947898f8bf94b73271c2238c329514a3ba
         sha256: 1be729814991108cc593bb8472e376947898f8bf94b73271c2238c329514a3ba
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:5a51451acabb5ae56b5682e88a82dfa43cc6a2b653ca068198546bb72324bd0c
         sha256: 5a51451acabb5ae56b5682e88a82dfa43cc6a2b653ca068198546bb72324bd0c
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:708eed3cc7031e486c760cc9debe777b7e8de93faf74320b66d3bc42e27499c3
         sha256: 708eed3cc7031e486c760cc9debe777b7e8de93faf74320b66d3bc42e27499c3
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:42841a5373f596cbccd52b4cf3eae4f3ec6a853309b14e36e869a7030fabd21a
         sha256: 42841a5373f596cbccd52b4cf3eae4f3ec6a853309b14e36e869a7030fabd21a
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:f636ed77fc07ab232ec75012b8b5a69cee10f8f239d48b1d5622baa83d9d9d7e
         sha256: f636ed77fc07ab232ec75012b8b5a69cee10f8f239d48b1d5622baa83d9d9d7e
-        sha512: ""
-        signature: ""
 source:
     url: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
     sha256: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
-    sha512: ""
-    signature: ""
 build_dependencies:
     - docbook
     - docbook-xsl
@@ -81,13 +63,3 @@ build_dependencies:
     - ninja
     - pkgconf
     - xmlto
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - dbus

@@ -3,19 +3,6 @@ version: 2.62.1
 description: Library to render SVG files using Cairo
 homepage: https://wiki.gnome.org/Projects/LibRsvg
 license: LGPL-2.1-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - cairo
     - fontconfig
@@ -26,53 +13,40 @@ dependencies:
     - freetype
     - gettext
     - libpng
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:fe6563a48a7497b0f6c3de9893a706eee66aaf56caf5d8f210cb86ba969058c6
         sha256: fe6563a48a7497b0f6c3de9893a706eee66aaf56caf5d8f210cb86ba969058c6
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:fe6563a48a7497b0f6c3de9893a706eee66aaf56caf5d8f210cb86ba969058c6
         sha256: fe6563a48a7497b0f6c3de9893a706eee66aaf56caf5d8f210cb86ba969058c6
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:fe6563a48a7497b0f6c3de9893a706eee66aaf56caf5d8f210cb86ba969058c6
+        sha256: fe6563a48a7497b0f6c3de9893a706eee66aaf56caf5d8f210cb86ba969058c6
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:fe6563a48a7497b0f6c3de9893a706eee66aaf56caf5d8f210cb86ba969058c6
+        sha256: fe6563a48a7497b0f6c3de9893a706eee66aaf56caf5d8f210cb86ba969058c6
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:b583b66c2c805bf74e43f23e3e66c4073f4e2f79cffb4193834079ced2c33722
-        sha256: b583b66c2c805bf74e43f23e3e66c4073f4e2f79cffb4193834079ced2c33722
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:7532d56c2c35d24a3e13264af18c49a7d9b042a0feede287f574da6669ea65dc
+        sha256: 7532d56c2c35d24a3e13264af18c49a7d9b042a0feede287f574da6669ea65dc
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:6a15537baa0fb17632f1e22cb6d73cf572a6471defafd9a0f698cd35ce2efe7a
         sha256: 6a15537baa0fb17632f1e22cb6d73cf572a6471defafd9a0f698cd35ce2efe7a
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:b583b66c2c805bf74e43f23e3e66c4073f4e2f79cffb4193834079ced2c33722
         sha256: b583b66c2c805bf74e43f23e3e66c4073f4e2f79cffb4193834079ced2c33722
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:7532d56c2c35d24a3e13264af18c49a7d9b042a0feede287f574da6669ea65dc
         sha256: 7532d56c2c35d24a3e13264af18c49a7d9b042a0feede287f574da6669ea65dc
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:0d2a8df4fc29bd1e9a112c51fba149246b19ff6c23d0c7abfa92d472c5164655
         sha256: 0d2a8df4fc29bd1e9a112c51fba149246b19ff6c23d0c7abfa92d472c5164655
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/librsvg/blobs/sha256:b4b5f87317621070fdf900fec9cd851af4125661d952a4b9b3cc79c1ce467647
         sha256: b4b5f87317621070fdf900fec9cd851af4125661d952a4b9b3cc79c1ce467647
-        sha512: ""
-        signature: ""
 source:
     url: https://download.gnome.org/sources/librsvg/2.62/librsvg-2.62.1.tar.xz
     sha256: b41ca84206242fddd826a2bf76348d7cdf52c1050cbfa060b866e81a252145c3
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cargo-c
     - gobject-introspection
@@ -80,19 +54,3 @@ build_dependencies:
     - ninja
     - pkgconf
     - rust
-linux_dependencies:
-    - cairo
-    - fontconfig
-    - gdk-pixbuf
-    - glib
-    - harfbuzz
-    - pango
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - librsvg

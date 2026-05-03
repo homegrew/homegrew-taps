@@ -3,80 +3,52 @@ version: "6.8"
 description: Dynamic window manager
 homepage: https://dwm.suckless.org/
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    In order to use the Mac OS X command key for dwm commands,
+    change the X11 keyboard modifier map using xmodmap (1).
+
+    e.g. by running the following command from $HOME/.xinitrc
+    xmodmap -e 'remove Mod2 = Meta_L' -e 'add Mod1 = Meta_L'&
+
+    See also https://gist.github.com/311377 for a handful of tips and tricks
+    for running dwm on Mac OS X.
 dependencies:
     - dmenu
     - fontconfig
     - libx11
     - libxft
     - libxinerama
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
         sha256: 55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
         sha256: 55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
+        sha256: 55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
+        sha256: 55f6b2bb74c496486752529209f6a08376368277f1882e76a8d6706eb78b092d
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:26e6e97d8d3b35c23475c724fd821b9f39fc15bc304ee1b77026cc354fb30686
-        sha256: 26e6e97d8d3b35c23475c724fd821b9f39fc15bc304ee1b77026cc354fb30686
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:c050c0dbe42f70660c8c8a839c1add0e2191813b34bd252edd46d5ee66382196
+        sha256: c050c0dbe42f70660c8c8a839c1add0e2191813b34bd252edd46d5ee66382196
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:06b39839497a3a9e38eda2a515b53890736e0bb1e9c99d4b3db8b7db0efe840f
         sha256: 06b39839497a3a9e38eda2a515b53890736e0bb1e9c99d4b3db8b7db0efe840f
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:26e6e97d8d3b35c23475c724fd821b9f39fc15bc304ee1b77026cc354fb30686
         sha256: 26e6e97d8d3b35c23475c724fd821b9f39fc15bc304ee1b77026cc354fb30686
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:c050c0dbe42f70660c8c8a839c1add0e2191813b34bd252edd46d5ee66382196
         sha256: c050c0dbe42f70660c8c8a839c1add0e2191813b34bd252edd46d5ee66382196
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:f1f5ff55153d68b2c4ff9318e9a17bb973d1277cd87cf3019a43233d23890ef7
         sha256: f1f5ff55153d68b2c4ff9318e9a17bb973d1277cd87cf3019a43233d23890ef7
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/dwm/blobs/sha256:0ed6c19d7305ea1a748d5274cc7569268b6668cb01df68a9fb03a14329958ad6
         sha256: 0ed6c19d7305ea1a748d5274cc7569268b6668cb01df68a9fb03a14329958ad6
-        sha512: ""
-        signature: ""
 source:
     url: https://dl.suckless.org/dwm/dwm-6.8.tar.gz
     sha256: bcf540589ad174d4073f4efa658828411e2f5ba63196cfaf6b71363700f590b7
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - dwm

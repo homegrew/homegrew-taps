@@ -3,123 +3,73 @@ version: 10.2.1
 description: Formatter/translator for text files to numerous formats
 homepage: https://asciidoc-py.github.io/
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    If you intend to process AsciiDoc files through an XML stage
+    (such as a2x for manpage generation) you need to add something
+    like:
+
+      export XML_CATALOG_FILES=$HOMEBREW_PREFIX/etc/xml/catalog
+
+    to your shell rc file so that xmllint can find AsciiDoc's
+    catalog files.
+
+    See `man 1 xmllint' for more.
 dependencies:
     - docbook
     - python@3.14
     - source-highlight
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_amd64_10:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_amd64_11:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_amd64_12:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_amd64_13:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_amd64_15:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_amd64_16:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_arm64:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_arm64_11:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_arm64_12:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_arm64_13:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
         sha256: 1bc7364d821058b91231a5ccf9481b508bd85713522c2d2702c51807feecef78
-        sha512: ""
-        signature: ""
 source:
     url: https://files.pythonhosted.org/packages/1d/e7/315a82f2d256e9270977aa3c15e8fe281fd7c40b8e2a0b97e0cb61ca8fa0/asciidoc-10.2.1.tar.gz
     sha256: d9f13c285981b3c7eb660d02ca0a2779981e88d48105de81bb40445e60dddb83
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - asciidoc

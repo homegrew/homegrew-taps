@@ -3,85 +3,57 @@ version: "2.10"
 description: Menu-driven communications program
 homepage: https://packages.debian.org/sid/minicom
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    Terminal Compatibility
+    ======================
+    If minicom doesn't see the LANG variable, it will try to fallback to
+    make the layout more compatible, but uglier. Certain unsupported
+    encodings will completely render the UI useless, so if the UI looks
+    strange, try setting the following environment variable:
+
+      LANG="en_US.UTF-8"
+
+    Text Input Not Working
+    ======================
+    Most development boards require Serial port setup -> Hardware Flow
+    Control to be set to "No" to input text.
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:ae861c3e3530b8dd98ddd8256aa243a3205a6dac85e04f9351f5fc157d3948bf
         sha256: ae861c3e3530b8dd98ddd8256aa243a3205a6dac85e04f9351f5fc157d3948bf
-        sha512: ""
-        signature: ""
     darwin_amd64_13:
         url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:7e524e53bc69ffd181757cff6564264674e1bc2c46255792c58b3265f9fe61dc
         sha256: 7e524e53bc69ffd181757cff6564264674e1bc2c46255792c58b3265f9fe61dc
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:ae861c3e3530b8dd98ddd8256aa243a3205a6dac85e04f9351f5fc157d3948bf
         sha256: ae861c3e3530b8dd98ddd8256aa243a3205a6dac85e04f9351f5fc157d3948bf
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:ae861c3e3530b8dd98ddd8256aa243a3205a6dac85e04f9351f5fc157d3948bf
+        sha256: ae861c3e3530b8dd98ddd8256aa243a3205a6dac85e04f9351f5fc157d3948bf
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:ae861c3e3530b8dd98ddd8256aa243a3205a6dac85e04f9351f5fc157d3948bf
+        sha256: ae861c3e3530b8dd98ddd8256aa243a3205a6dac85e04f9351f5fc157d3948bf
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:80e14a35d53c8bee7865f9dca76d9b674b5790d18d3dd1b468847ed99970c96f
-        sha256: 80e14a35d53c8bee7865f9dca76d9b674b5790d18d3dd1b468847ed99970c96f
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:33a6f5dbbe7ca27534ae675480528a30c197ceee9bfe12a6662b88d20b923c11
+        sha256: 33a6f5dbbe7ca27534ae675480528a30c197ceee9bfe12a6662b88d20b923c11
     darwin_arm64_13:
         url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:f004fb2db42fbdd149fc40eae5bc653b15860f06506f2d91f3be7b7e3b62f4e1
         sha256: f004fb2db42fbdd149fc40eae5bc653b15860f06506f2d91f3be7b7e3b62f4e1
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:00ee0220e0307094c74374572ffbca318368f33083b9881b22783d36d4a12ca6
         sha256: 00ee0220e0307094c74374572ffbca318368f33083b9881b22783d36d4a12ca6
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:80e14a35d53c8bee7865f9dca76d9b674b5790d18d3dd1b468847ed99970c96f
         sha256: 80e14a35d53c8bee7865f9dca76d9b674b5790d18d3dd1b468847ed99970c96f
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:33a6f5dbbe7ca27534ae675480528a30c197ceee9bfe12a6662b88d20b923c11
         sha256: 33a6f5dbbe7ca27534ae675480528a30c197ceee9bfe12a6662b88d20b923c11
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:5de5bb5448b6444e3ddcdcbb615bd96fb138df6d216c565e661e101ebd507208
         sha256: 5de5bb5448b6444e3ddcdcbb615bd96fb138df6d216c565e661e101ebd507208
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/minicom/blobs/sha256:4b8d28ea107b2c8577fa25a16f3607f4b85bcc230d67657b2c4e90db42466159
         sha256: 4b8d28ea107b2c8577fa25a16f3607f4b85bcc230d67657b2c4e90db42466159
-        sha512: ""
-        signature: ""
 source:
     url: https://deb.debian.org/debian/pool/main/m/minicom/minicom_2.10.orig.tar.bz2
     sha256: 90e7ce2856b3eaaa3f452354d17981c49d32c426a255b6f0d3063a227c101538
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - minicom

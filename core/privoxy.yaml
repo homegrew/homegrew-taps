@@ -3,78 +3,46 @@ version: 4.1.0
 description: Advanced filtering web proxy
 homepage: https://www.privoxy.org/
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - pcre2
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:65fe313f31698cef56c5537b4edc8b475ea94b23cbd46e8e598e02d2644a4dd8
         sha256: 65fe313f31698cef56c5537b4edc8b475ea94b23cbd46e8e598e02d2644a4dd8
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:65fe313f31698cef56c5537b4edc8b475ea94b23cbd46e8e598e02d2644a4dd8
         sha256: 65fe313f31698cef56c5537b4edc8b475ea94b23cbd46e8e598e02d2644a4dd8
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:65fe313f31698cef56c5537b4edc8b475ea94b23cbd46e8e598e02d2644a4dd8
+        sha256: 65fe313f31698cef56c5537b4edc8b475ea94b23cbd46e8e598e02d2644a4dd8
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:65fe313f31698cef56c5537b4edc8b475ea94b23cbd46e8e598e02d2644a4dd8
+        sha256: 65fe313f31698cef56c5537b4edc8b475ea94b23cbd46e8e598e02d2644a4dd8
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:82c2364535cd0c530fd02bf4082021445c4fe23b68fa2cb509ff801a37f6ef43
-        sha256: 82c2364535cd0c530fd02bf4082021445c4fe23b68fa2cb509ff801a37f6ef43
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:c0ae969ac878ba8034f22bc56240e5994bd9a042116fc7e7d23fa788fe1e484e
+        sha256: c0ae969ac878ba8034f22bc56240e5994bd9a042116fc7e7d23fa788fe1e484e
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:c480bbb71e9cdac494396bd35a155410a2970989c7e1557f9b4727e262b4d052
         sha256: c480bbb71e9cdac494396bd35a155410a2970989c7e1557f9b4727e262b4d052
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:82c2364535cd0c530fd02bf4082021445c4fe23b68fa2cb509ff801a37f6ef43
         sha256: 82c2364535cd0c530fd02bf4082021445c4fe23b68fa2cb509ff801a37f6ef43
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:c0ae969ac878ba8034f22bc56240e5994bd9a042116fc7e7d23fa788fe1e484e
         sha256: c0ae969ac878ba8034f22bc56240e5994bd9a042116fc7e7d23fa788fe1e484e
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:71ec0d7dd8b9eaa5d3729dfda746c25ae91eba7dfc3d28ef35861778b3dbf003
         sha256: 71ec0d7dd8b9eaa5d3729dfda746c25ae91eba7dfc3d28ef35861778b3dbf003
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/privoxy/blobs/sha256:38b56a0785bf29774bfe49fc96a7746b5b1434075aeef27f089fdd9ed47b2a95
         sha256: 38b56a0785bf29774bfe49fc96a7746b5b1434075aeef27f089fdd9ed47b2a95
-        sha512: ""
-        signature: ""
 source:
     url: https://downloads.sourceforge.net/project/ijbswa/Sources/4.1.0%20%28stable%29/privoxy-4.1.0-stable-src.tar.gz
     sha256: 23e4686e5848c74cb680c09c2811f0357739ecfe641f9c4072ee42399092c97b
-    sha512: ""
-    signature: ""
 build_dependencies:
     - autoconf
     - automake
     - libtool
-linux_dependencies:
-    - pcre2
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/privoxy/sbin/privoxy
@@ -82,11 +50,5 @@ service:
         - $HOMEBREW_PREFIX/etc/privoxy/config
     run_type: immediate
     working_dir: $HOMEBREW_PREFIX/var
-    log_path: ""
     error_log_path: $HOMEBREW_PREFIX/var/log/privoxy/logfile
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - privoxy

@@ -3,19 +3,6 @@ version: 2.3.2
 description: Qt-based Multimedia Player
 homepage: https://qmmp.ylsoftware.com/
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - faad2
     - ffmpeg
@@ -51,101 +38,41 @@ dependencies:
     - wildmidi
     - gettext
     - glib
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:29615da1ed9e7311f7199f881eac6ff69783c70e201ff6d3a0b53db50d858b96
         sha256: 29615da1ed9e7311f7199f881eac6ff69783c70e201ff6d3a0b53db50d858b96
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:29615da1ed9e7311f7199f881eac6ff69783c70e201ff6d3a0b53db50d858b96
         sha256: 29615da1ed9e7311f7199f881eac6ff69783c70e201ff6d3a0b53db50d858b96
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:29615da1ed9e7311f7199f881eac6ff69783c70e201ff6d3a0b53db50d858b96
+        sha256: 29615da1ed9e7311f7199f881eac6ff69783c70e201ff6d3a0b53db50d858b96
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:29615da1ed9e7311f7199f881eac6ff69783c70e201ff6d3a0b53db50d858b96
+        sha256: 29615da1ed9e7311f7199f881eac6ff69783c70e201ff6d3a0b53db50d858b96
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:6cd2fb64ba6b2b840bc0afb65a42d711242b82afba083e1d845a9c9ead80e530
-        sha256: 6cd2fb64ba6b2b840bc0afb65a42d711242b82afba083e1d845a9c9ead80e530
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:9d03ff5bfcc0fbba96e84e791d03ba977b65cfc121436b1d66c05381a5e70dc0
+        sha256: 9d03ff5bfcc0fbba96e84e791d03ba977b65cfc121436b1d66c05381a5e70dc0
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:c79c9a4ba9e420423177ea92934fbe20c515521a156d5b42486799c4e6cd3a08
         sha256: c79c9a4ba9e420423177ea92934fbe20c515521a156d5b42486799c4e6cd3a08
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:6cd2fb64ba6b2b840bc0afb65a42d711242b82afba083e1d845a9c9ead80e530
         sha256: 6cd2fb64ba6b2b840bc0afb65a42d711242b82afba083e1d845a9c9ead80e530
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:9d03ff5bfcc0fbba96e84e791d03ba977b65cfc121436b1d66c05381a5e70dc0
         sha256: 9d03ff5bfcc0fbba96e84e791d03ba977b65cfc121436b1d66c05381a5e70dc0
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:9fb506ef7761e01022e4b3943be52d9ca5e0e9860f764b01d8361e512c0f9e54
         sha256: 9fb506ef7761e01022e4b3943be52d9ca5e0e9860f764b01d8361e512c0f9e54
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:9db1616a8dc11b5b89dd45f8925a5548b48572bc559415c91cb1060dc82a351b
         sha256: 9db1616a8dc11b5b89dd45f8925a5548b48572bc559415c91cb1060dc82a351b
-        sha512: ""
-        signature: ""
 source:
     url: https://qmmp.ylsoftware.com/files/qmmp/2.3/qmmp-2.3.2.tar.bz2
     sha256: 4d8bbae619e99cfd665d96c3688d2d306f5ffc30144e07b37ca701a99e326365
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmake
     - pkgconf
     - qttools
-linux_dependencies:
-    - alsa-lib
-    - faad2
-    - ffmpeg
-    - flac
-    - game-music-emu
-    - jack
-    - libarchive
-    - libbs2b
-    - libcddb
-    - libcdio
-    - libcdio-paranoia
-    - libmms
-    - libmodplug
-    - libogg
-    - libsamplerate
-    - libshout
-    - libsndfile
-    - libsoxr
-    - libvorbis
-    - libx11
-    - libxcb
-    - libxmp
-    - mad
-    - mesa
-    - mpg123
-    - mplayer
-    - musepack
-    - opus
-    - opusfile
-    - pipewire
-    - projectm
-    - pulseaudio
-    - qtbase
-    - qtmultimedia
-    - taglib
-    - wavpack
-    - wildmidi
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - qmmp

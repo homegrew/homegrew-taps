@@ -3,48 +3,18 @@ version: 2026.2.25
 description: Read-write NTFS driver for FUSE
 homepage: https://www.tuxera.com/community/open-source-ntfs-3g/
 license: GPL-2.0-or-later AND LGPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - gettext
     - libfuse@2
-keg_only: false
 bottle:
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/ntfs-3g/blobs/sha256:da5a885ce0f084bf17f9ee5247babadd7f5330d66c6826721096c9afabc7a3f5
         sha256: da5a885ce0f084bf17f9ee5247babadd7f5330d66c6826721096c9afabc7a3f5
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/ntfs-3g/blobs/sha256:643403c977e03a706ed801af78100dcfb20c17d05bdcef97547919610a4f5fce
         sha256: 643403c977e03a706ed801af78100dcfb20c17d05bdcef97547919610a4f5fce
-        sha512: ""
-        signature: ""
 source:
     url: https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2026.2.25.tgz
     sha256: 7754f3b32e8baf9c472459b4e9c981e3ae0f5039107cdd8d8201aed0a949008a
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - ntfs-3g

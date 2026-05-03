@@ -3,85 +3,49 @@ version: "2.8"
 description: Apply a diff file to an original
 homepage: https://savannah.gnu.org/projects/patch/
 license: GPL-3.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    GNU "patch" has been installed as "gpatch".
+    If you need to use it as "patch", you can add a "gnubin" directory
+    to your PATH from your bashrc like:
+
+        PATH="$HOMEBREW_PREFIX/opt/gpatch/libexec/gnubin:$PATH"
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:5c46ba36e9b3e9fee27bd96ea873caa2a5938119a0e1dbd241fe408eca239a1f
         sha256: 5c46ba36e9b3e9fee27bd96ea873caa2a5938119a0e1dbd241fe408eca239a1f
-        sha512: ""
-        signature: ""
     darwin_amd64_13:
         url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:c953a2bb4faddd18394392879c8dce68094772834f5f9de162bd87657f56b8a9
         sha256: c953a2bb4faddd18394392879c8dce68094772834f5f9de162bd87657f56b8a9
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:5c46ba36e9b3e9fee27bd96ea873caa2a5938119a0e1dbd241fe408eca239a1f
         sha256: 5c46ba36e9b3e9fee27bd96ea873caa2a5938119a0e1dbd241fe408eca239a1f
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:5c46ba36e9b3e9fee27bd96ea873caa2a5938119a0e1dbd241fe408eca239a1f
+        sha256: 5c46ba36e9b3e9fee27bd96ea873caa2a5938119a0e1dbd241fe408eca239a1f
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:5c46ba36e9b3e9fee27bd96ea873caa2a5938119a0e1dbd241fe408eca239a1f
+        sha256: 5c46ba36e9b3e9fee27bd96ea873caa2a5938119a0e1dbd241fe408eca239a1f
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:01993d9f869309a9494840d4da0ed1997b4d21181679fd226bb9038a0e59f81e
-        sha256: 01993d9f869309a9494840d4da0ed1997b4d21181679fd226bb9038a0e59f81e
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:c79a8b5d256e2208b32446babb95be637d48bf1fa571bca1773c9c73414ca3ff
+        sha256: c79a8b5d256e2208b32446babb95be637d48bf1fa571bca1773c9c73414ca3ff
     darwin_arm64_13:
         url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:78c60664e4eb56d03f582b2ca45a1f3861ae6a331bd9f7997ce587ac2415b440
         sha256: 78c60664e4eb56d03f582b2ca45a1f3861ae6a331bd9f7997ce587ac2415b440
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:692a394eae0b5a7fd95bb25822e8750cd493f9afee1e5db272f6445c88ae3bef
         sha256: 692a394eae0b5a7fd95bb25822e8750cd493f9afee1e5db272f6445c88ae3bef
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:01993d9f869309a9494840d4da0ed1997b4d21181679fd226bb9038a0e59f81e
         sha256: 01993d9f869309a9494840d4da0ed1997b4d21181679fd226bb9038a0e59f81e
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:c79a8b5d256e2208b32446babb95be637d48bf1fa571bca1773c9c73414ca3ff
         sha256: c79a8b5d256e2208b32446babb95be637d48bf1fa571bca1773c9c73414ca3ff
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:62f0d5010f2d0a3e11af30cc8b7b5982b1da2c7badc027f01d4fb33f2e6cc2bb
         sha256: 62f0d5010f2d0a3e11af30cc8b7b5982b1da2c7badc027f01d4fb33f2e6cc2bb
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/gpatch/blobs/sha256:390fa81b06e4db0aca8c86068b653c3dc27494508c4febd61ee647fb2deb4ce2
         sha256: 390fa81b06e4db0aca8c86068b653c3dc27494508c4febd61ee647fb2deb4ce2
-        sha512: ""
-        signature: ""
 source:
     url: https://ftpmirror.gnu.org/gnu/patch/patch-2.8.tar.xz
     sha256: f87cee69eec2b4fcbf60a396b030ad6aa3415f192aa5f7ee84cad5e11f7f5ae3
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - gpatch

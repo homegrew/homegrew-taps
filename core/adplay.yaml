@@ -3,84 +3,44 @@ version: "1.9"
 description: Command-line player for OPL2 music
 homepage: https://adplug.github.io
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - adplug
     - libbinio
     - sdl2
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:62f0e81f88d53e2f0882ff204ef39ac34398c59111d90b1a86e1c4903710ef0c
         sha256: 62f0e81f88d53e2f0882ff204ef39ac34398c59111d90b1a86e1c4903710ef0c
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:62f0e81f88d53e2f0882ff204ef39ac34398c59111d90b1a86e1c4903710ef0c
         sha256: 62f0e81f88d53e2f0882ff204ef39ac34398c59111d90b1a86e1c4903710ef0c
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:62f0e81f88d53e2f0882ff204ef39ac34398c59111d90b1a86e1c4903710ef0c
+        sha256: 62f0e81f88d53e2f0882ff204ef39ac34398c59111d90b1a86e1c4903710ef0c
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:62f0e81f88d53e2f0882ff204ef39ac34398c59111d90b1a86e1c4903710ef0c
+        sha256: 62f0e81f88d53e2f0882ff204ef39ac34398c59111d90b1a86e1c4903710ef0c
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:967f04bd760c74ad7d1f31dc4e4baffeabe9db557959465fd6d27a9834a42aa1
-        sha256: 967f04bd760c74ad7d1f31dc4e4baffeabe9db557959465fd6d27a9834a42aa1
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:09db45033118afa94298a58b3514d0265fb3f11c90341760e20899663ccc4fd8
+        sha256: 09db45033118afa94298a58b3514d0265fb3f11c90341760e20899663ccc4fd8
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:20299de36acaf9dcbba5b1b827031a716014d6b7fd8846cf17234e614da0376a
         sha256: 20299de36acaf9dcbba5b1b827031a716014d6b7fd8846cf17234e614da0376a
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:967f04bd760c74ad7d1f31dc4e4baffeabe9db557959465fd6d27a9834a42aa1
         sha256: 967f04bd760c74ad7d1f31dc4e4baffeabe9db557959465fd6d27a9834a42aa1
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:09db45033118afa94298a58b3514d0265fb3f11c90341760e20899663ccc4fd8
         sha256: 09db45033118afa94298a58b3514d0265fb3f11c90341760e20899663ccc4fd8
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:5802a081b95a8a5610e8c27fe5100048e4eb89ca17ffef6fcf07fadda24e671c
         sha256: 5802a081b95a8a5610e8c27fe5100048e4eb89ca17ffef6fcf07fadda24e671c
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/adplay/blobs/sha256:beeaca960d641fa18e2386ef83ab7ab2df2b030aa683e6eb724eecb3251d09c8
         sha256: beeaca960d641fa18e2386ef83ab7ab2df2b030aa683e6eb724eecb3251d09c8
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/adplug/adplay-unix/releases/download/v1.9/adplay-1.9.tar.bz2
     sha256: 949b2618092a3aae5c278a98dfa3231130ef35a791b3afcaa0ebe45443ce82c8
-    sha512: ""
-    signature: ""
 build_dependencies:
     - libtool
     - pkgconf
-linux_dependencies:
-    - adplug
-    - alsa-lib
-    - libbinio
-    - sdl2
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - adplay

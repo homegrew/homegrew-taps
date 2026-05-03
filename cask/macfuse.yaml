@@ -2,7 +2,13 @@ name: macfuse
 version: 5.2.0
 description: File system integration
 homepage: https://macfuse.github.io/
-license: ""
+caveats: |
+    macfuse requires a kernel extension to work.
+    If the installation fails, retry after you enable it in:
+      System Settings → Privacy & Security
+
+    For more information, refer to vendor documentation or this Apple Technical Note:
+      https://developer.apple.com/library/content/technotes/tn2459/_index.html
 url:
     darwin_amd64: https://github.com/macfuse/macfuse/releases/download/macfuse-5.2.0/macfuse-5.2.0.dmg
     darwin_amd64_10: https://github.com/macfuse/macfuse/releases/download/macfuse-5.2.0/macfuse-5.2.0.dmg
@@ -52,11 +58,8 @@ sha512:
     darwin_arm64_15: ""
     darwin_arm64_16: ""
 artifacts:
-    app: []
     pkg:
         - Extras/macFUSE 5.2.0.pkg
-    bin: []
 source:
     url: https://github.com/macfuse/macfuse/releases/download/macfuse-5.2.0/macfuse-5.2.0.dmg
     sha256: 09a4b4c23c1930af45335fc119696797da41562dec1630602d2db637f4804f27
-    sha512: ""

@@ -3,19 +3,9 @@ version: "6.5"
 description: Platform for economic models, particularly DSGE and OLG models
 homepage: https://www.dynare.org/
 license: GPL-3.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    To get started with Dynare, open Octave and type
+      addpath $HOMEBREW_PREFIX/opt/dynare/lib/dynare/matlab
 dependencies:
     - gcc
     - gsl
@@ -25,53 +15,40 @@ dependencies:
     - slicot
     - suite-sparse
     - libomp
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:2636ef080cdd01465419438d0c0431c5911af60bc4e66966c44cf3a162f78b9d
         sha256: 2636ef080cdd01465419438d0c0431c5911af60bc4e66966c44cf3a162f78b9d
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:2636ef080cdd01465419438d0c0431c5911af60bc4e66966c44cf3a162f78b9d
         sha256: 2636ef080cdd01465419438d0c0431c5911af60bc4e66966c44cf3a162f78b9d
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:2636ef080cdd01465419438d0c0431c5911af60bc4e66966c44cf3a162f78b9d
+        sha256: 2636ef080cdd01465419438d0c0431c5911af60bc4e66966c44cf3a162f78b9d
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:2636ef080cdd01465419438d0c0431c5911af60bc4e66966c44cf3a162f78b9d
+        sha256: 2636ef080cdd01465419438d0c0431c5911af60bc4e66966c44cf3a162f78b9d
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:009776e9bbe11be7d8597277dff5094340832103c2ef8c4d9005dd07019b7144
-        sha256: 009776e9bbe11be7d8597277dff5094340832103c2ef8c4d9005dd07019b7144
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:c6d06691f1df3fad95b82da06060f6b8cd0540a5a55fb595e4958078448426ea
+        sha256: c6d06691f1df3fad95b82da06060f6b8cd0540a5a55fb595e4958078448426ea
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:7181da19a9b60621d78978526b20cbcba254ebac89eae8a57f0581495db4d32e
         sha256: 7181da19a9b60621d78978526b20cbcba254ebac89eae8a57f0581495db4d32e
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:009776e9bbe11be7d8597277dff5094340832103c2ef8c4d9005dd07019b7144
         sha256: 009776e9bbe11be7d8597277dff5094340832103c2ef8c4d9005dd07019b7144
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:c6d06691f1df3fad95b82da06060f6b8cd0540a5a55fb595e4958078448426ea
         sha256: c6d06691f1df3fad95b82da06060f6b8cd0540a5a55fb595e4958078448426ea
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:1331b5200bc99899977aa326bd212e05502a0000a7f527a01adbca11df5ebcc9
         sha256: 1331b5200bc99899977aa326bd212e05502a0000a7f527a01adbca11df5ebcc9
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:29de507e86be91223ed947e504ab5e801911e8a7472d13db4376bdd5806142d8
         sha256: 29de507e86be91223ed947e504ab5e801911e8a7472d13db4376bdd5806142d8
-        sha512: ""
-        signature: ""
 source:
     url: https://www.dynare.org/release/source/dynare-6.5.tar.xz
     sha256: 56a6f934f5d2ded57206d2f109975324b39586394f4e8ce23b3c72aadcd5cd4a
-    sha512: ""
-    signature: ""
 build_dependencies:
     - bison
     - boost
@@ -80,20 +57,3 @@ build_dependencies:
     - meson
     - ninja
     - pkgconf
-linux_dependencies:
-    - gcc
-    - gsl
-    - libmatio
-    - octave
-    - openblas
-    - slicot
-    - suite-sparse
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - dynare

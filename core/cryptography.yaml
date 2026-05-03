@@ -3,69 +3,43 @@ version: 47.0.0
 description: Cryptographic recipes and primitives for Python
 homepage: https://cryptography.io/en/latest/
 license: Apache-2.0 OR BSD-3-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - cffi
     - openssl@3
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:9d056d8be0a6d7c7148745d834835df41bbc517ae538bad8a414dde0333108cd
         sha256: 9d056d8be0a6d7c7148745d834835df41bbc517ae538bad8a414dde0333108cd
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:9d056d8be0a6d7c7148745d834835df41bbc517ae538bad8a414dde0333108cd
         sha256: 9d056d8be0a6d7c7148745d834835df41bbc517ae538bad8a414dde0333108cd
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:9d056d8be0a6d7c7148745d834835df41bbc517ae538bad8a414dde0333108cd
+        sha256: 9d056d8be0a6d7c7148745d834835df41bbc517ae538bad8a414dde0333108cd
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:9d056d8be0a6d7c7148745d834835df41bbc517ae538bad8a414dde0333108cd
+        sha256: 9d056d8be0a6d7c7148745d834835df41bbc517ae538bad8a414dde0333108cd
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:5a0443703ed6085ceb1421f1aed938cd427b5c20270b5b5ac26ff7260347d20c
-        sha256: 5a0443703ed6085ceb1421f1aed938cd427b5c20270b5b5ac26ff7260347d20c
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:d9e4492020f8d0ffe6fc092c5a3247a50f3bda5d0f92c6a355317973601f949f
+        sha256: d9e4492020f8d0ffe6fc092c5a3247a50f3bda5d0f92c6a355317973601f949f
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:b5462eb235bd2fd99b0ba6b5fba6fec395f1925a88702203f058f5d266ff4faf
         sha256: b5462eb235bd2fd99b0ba6b5fba6fec395f1925a88702203f058f5d266ff4faf
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:5a0443703ed6085ceb1421f1aed938cd427b5c20270b5b5ac26ff7260347d20c
         sha256: 5a0443703ed6085ceb1421f1aed938cd427b5c20270b5b5ac26ff7260347d20c
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:d9e4492020f8d0ffe6fc092c5a3247a50f3bda5d0f92c6a355317973601f949f
         sha256: d9e4492020f8d0ffe6fc092c5a3247a50f3bda5d0f92c6a355317973601f949f
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:6d13402b0bd126158028a22e4e9abcb84b6e1459c31b0d61725b654ce2e863e3
         sha256: 6d13402b0bd126158028a22e4e9abcb84b6e1459c31b0d61725b654ce2e863e3
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/cryptography/blobs/sha256:57e441ebb2fea5cf4370915537d9e2985445eeb1235332c87476fd8d41f71bb6
         sha256: 57e441ebb2fea5cf4370915537d9e2985445eeb1235332c87476fd8d41f71bb6
-        sha512: ""
-        signature: ""
 source:
     url: https://files.pythonhosted.org/packages/ef/b2/7ffa7fe8207a8c42147ffe70c3e360b228160c1d85dc3faff16aaa3244c0/cryptography-47.0.0.tar.gz
     sha256: 9f8e55fe4e63613a5e1cc5819030f27b97742d720203a087802ce4ce9ceb52bb
-    sha512: ""
-    signature: ""
 build_dependencies:
     - maturin
     - pkgconf
@@ -73,13 +47,3 @@ build_dependencies:
     - python@3.13
     - python@3.14
     - rust
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - cryptography

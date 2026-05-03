@@ -3,82 +3,45 @@ version: 1.3.0
 description: Library to parse, generate and operate on KML
 homepage: https://github.com/libkml/libkml
 license: BSD-3-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    libkml uses boost headers. To develop with libkml, install boost.
 dependencies:
     - minizip
     - uriparser
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:731845c227cc12dab82aca58a0ea4083c3508599ea685acc1e43509f9aaa703e
         sha256: 731845c227cc12dab82aca58a0ea4083c3508599ea685acc1e43509f9aaa703e
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:731845c227cc12dab82aca58a0ea4083c3508599ea685acc1e43509f9aaa703e
         sha256: 731845c227cc12dab82aca58a0ea4083c3508599ea685acc1e43509f9aaa703e
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:731845c227cc12dab82aca58a0ea4083c3508599ea685acc1e43509f9aaa703e
+        sha256: 731845c227cc12dab82aca58a0ea4083c3508599ea685acc1e43509f9aaa703e
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:731845c227cc12dab82aca58a0ea4083c3508599ea685acc1e43509f9aaa703e
+        sha256: 731845c227cc12dab82aca58a0ea4083c3508599ea685acc1e43509f9aaa703e
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:8daf78b5ae08619b23adcde8f6fd3b9c5d676bb904f912f4627a9e4b39f6752a
-        sha256: 8daf78b5ae08619b23adcde8f6fd3b9c5d676bb904f912f4627a9e4b39f6752a
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:3ebb7ff52e177135e9778b32bced8bed361a34ac4558ad2c4f822a40c41e21ae
+        sha256: 3ebb7ff52e177135e9778b32bced8bed361a34ac4558ad2c4f822a40c41e21ae
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:2923f263ce5799f8432706e17c9d96df8bbda6d2672c5ed1ec606ff9c38553cc
         sha256: 2923f263ce5799f8432706e17c9d96df8bbda6d2672c5ed1ec606ff9c38553cc
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:8daf78b5ae08619b23adcde8f6fd3b9c5d676bb904f912f4627a9e4b39f6752a
         sha256: 8daf78b5ae08619b23adcde8f6fd3b9c5d676bb904f912f4627a9e4b39f6752a
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:3ebb7ff52e177135e9778b32bced8bed361a34ac4558ad2c4f822a40c41e21ae
         sha256: 3ebb7ff52e177135e9778b32bced8bed361a34ac4558ad2c4f822a40c41e21ae
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:aec60fee5a674c026878ff2341d4cc41391b5b61633a8488792e945b897c5709
         sha256: aec60fee5a674c026878ff2341d4cc41391b5b61633a8488792e945b897c5709
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/libkml/blobs/sha256:f8fdd2de12de8e4c3586fe2248b6505d6e4e7eed8e21f5d3fdf0b029fe27910e
         sha256: f8fdd2de12de8e4c3586fe2248b6505d6e4e7eed8e21f5d3fdf0b029fe27910e
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/libkml/libkml/archive/refs/tags/1.3.0.tar.gz
     sha256: 8892439e5570091965aaffe30b08631fdf7ca7f81f6495b4648f0950d7ea7963
-    sha512: ""
-    signature: ""
 build_dependencies:
     - boost
     - cmake
-linux_dependencies:
-    - minizip
-    - uriparser
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - libkml

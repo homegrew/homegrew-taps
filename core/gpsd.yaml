@@ -3,74 +3,48 @@ version: 3.27.5
 description: Global Positioning System (GPS) daemon
 homepage: https://gpsd.gitlab.io/gpsd/
 license: BSD-2-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    gpsd does not automatically detect GPS device addresses. Once started, you
+    need to force it to connect to your GPS:
+
+      GPSD_SOCKET="$HOMEBREW_PREFIX/var/gpsd.sock" $HOMEBREW_CELLAR/gpsd/3.27.5/sbin/gpsdctl add /dev/tty.usbserial-XYZ
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
         sha256: 80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
         sha256: 80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
+        sha256: 80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
+        sha256: 80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:a0e7d0e6077b4987e4e7d6ba2e3c969fd3e7cf0c054bed1978df3968a569ee0b
-        sha256: a0e7d0e6077b4987e4e7d6ba2e3c969fd3e7cf0c054bed1978df3968a569ee0b
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:a5cdc0a238acdc4be1f968169fd823ee8a138bacad9eff804f893be065dc7d82
+        sha256: a5cdc0a238acdc4be1f968169fd823ee8a138bacad9eff804f893be065dc7d82
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:d55005371ee46f49596bb42f99bb043a4150b201a877795d06c643b0b20e34ba
         sha256: d55005371ee46f49596bb42f99bb043a4150b201a877795d06c643b0b20e34ba
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:a0e7d0e6077b4987e4e7d6ba2e3c969fd3e7cf0c054bed1978df3968a569ee0b
         sha256: a0e7d0e6077b4987e4e7d6ba2e3c969fd3e7cf0c054bed1978df3968a569ee0b
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:a5cdc0a238acdc4be1f968169fd823ee8a138bacad9eff804f893be065dc7d82
         sha256: a5cdc0a238acdc4be1f968169fd823ee8a138bacad9eff804f893be065dc7d82
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:f1966e876bbef9de7ddc508979cd0557c66f5d0cb321fa7d333b855e43a5b6e8
         sha256: f1966e876bbef9de7ddc508979cd0557c66f5d0cb321fa7d333b855e43a5b6e8
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:d0e890be6d0dad6ef97fc14eb6cfd7cfafec60ce53c61d15def98640dfb50bfe
         sha256: d0e890be6d0dad6ef97fc14eb6cfd7cfafec60ce53c61d15def98640dfb50bfe
-        sha512: ""
-        signature: ""
 source:
     url: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
     sha256: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
-    sha512: ""
-    signature: ""
 build_dependencies:
     - asciidoctor
     - scons
-linux_dependencies: []
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/gpsd/sbin/gpsd
@@ -82,8 +56,3 @@ service:
     log_path: $HOMEBREW_PREFIX/var/log/gpsd.log
     error_log_path: $HOMEBREW_PREFIX/var/log/gpsd.log
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - gpsd

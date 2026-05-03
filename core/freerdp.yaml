@@ -3,19 +3,14 @@ version: 3.25.0
 description: X11 implementation of the Remote Desktop Protocol (RDP)
 homepage: https://www.freerdp.com/
 license: Apache-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |+
+    xfreerdp is an X11 application that requires an XServer be installed
+    and running. Lack of a running XServer will cause a "$DISPLAY" error.
+
+    XQuartz provides an XServer for macOS. The XQuartz can be installed
+    as a package from www.xquartz.org or as a Homebrew cask:
+      brew install --cask xquartz
+
 dependencies:
     - cjson
     - ffmpeg
@@ -36,90 +31,40 @@ dependencies:
     - sdl3
     - sdl3_ttf
     - uriparser
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:93bdf39e689cd353b5e488c2e636022911f8f3d305c2733567991ab822c52cdd
         sha256: 93bdf39e689cd353b5e488c2e636022911f8f3d305c2733567991ab822c52cdd
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:93bdf39e689cd353b5e488c2e636022911f8f3d305c2733567991ab822c52cdd
         sha256: 93bdf39e689cd353b5e488c2e636022911f8f3d305c2733567991ab822c52cdd
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:93bdf39e689cd353b5e488c2e636022911f8f3d305c2733567991ab822c52cdd
+        sha256: 93bdf39e689cd353b5e488c2e636022911f8f3d305c2733567991ab822c52cdd
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:93bdf39e689cd353b5e488c2e636022911f8f3d305c2733567991ab822c52cdd
+        sha256: 93bdf39e689cd353b5e488c2e636022911f8f3d305c2733567991ab822c52cdd
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:4b166c11eb2022f70bce7d53e80855418e807be7f22d2aa0cfc830a894428fed
-        sha256: 4b166c11eb2022f70bce7d53e80855418e807be7f22d2aa0cfc830a894428fed
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:ceff948cb8fb20885f17bcc7a3f61640cdb9997067061ae495a3e2acfdd3cb3e
+        sha256: ceff948cb8fb20885f17bcc7a3f61640cdb9997067061ae495a3e2acfdd3cb3e
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:b33953bc6157bdd6996795de7ca81baddde9210ad12f9721c05f86f262efe5d1
         sha256: b33953bc6157bdd6996795de7ca81baddde9210ad12f9721c05f86f262efe5d1
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:4b166c11eb2022f70bce7d53e80855418e807be7f22d2aa0cfc830a894428fed
         sha256: 4b166c11eb2022f70bce7d53e80855418e807be7f22d2aa0cfc830a894428fed
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:ceff948cb8fb20885f17bcc7a3f61640cdb9997067061ae495a3e2acfdd3cb3e
         sha256: ceff948cb8fb20885f17bcc7a3f61640cdb9997067061ae495a3e2acfdd3cb3e
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:05629e1764e43094dc9ca14ab0c25afafe6cc48b791c754be54050b5b18ea697
         sha256: 05629e1764e43094dc9ca14ab0c25afafe6cc48b791c754be54050b5b18ea697
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/freerdp/blobs/sha256:95bb15154b7c283d63d428b92d1b10a58d69de3bfb754c3975acbd35ca699982
         sha256: 95bb15154b7c283d63d428b92d1b10a58d69de3bfb754c3975acbd35ca699982
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/FreeRDP/FreeRDP/archive/refs/tags/3.25.0.tar.gz
     sha256: 6779159924ba7b768cdabb262dfff092bba7ba3204d7849b326f070a44d16466
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmake
     - pkgconf
-linux_dependencies:
-    - alsa-lib
-    - cjson
-    - ffmpeg
-    - glib
-    - icu4c@78
-    - jansson
-    - jpeg-turbo
-    - krb5
-    - libfuse
-    - libusb
-    - libx11
-    - libxcursor
-    - libxext
-    - libxfixes
-    - libxi
-    - libxinerama
-    - libxrandr
-    - libxrender
-    - libxv
-    - openssl@3
-    - pkcs11-helper
-    - sdl3
-    - sdl3_ttf
-    - systemd
-    - uriparser
-    - wayland
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - freerdp

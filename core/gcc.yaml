@@ -3,98 +3,45 @@ version: 15.2.0
 description: GNU compiler collection
 homepage: https://gcc.gnu.org/
 license: GPL-3.0-or-later WITH GCC-exception-3.1
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - gmp
     - isl
     - libmpc
     - mpfr
     - zstd
-keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:04ffbfaa63efe558b4b782b200e0eab4f1e472ed1780862972bb3702a730a611
-        sha256: 04ffbfaa63efe558b4b782b200e0eab4f1e472ed1780862972bb3702a730a611
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:6def38300e2044dbbe17801485f0a959fb05b408545f5c6c0ccc160d7e9e40c2
+        sha256: 6def38300e2044dbbe17801485f0a959fb05b408545f5c6c0ccc160d7e9e40c2
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:893b6a357fdb8bce2dc15f827117247e4d719e4cfbd0f29b3adee68e794a4d49
         sha256: 893b6a357fdb8bce2dc15f827117247e4d719e4cfbd0f29b3adee68e794a4d49
-        sha512: ""
-        signature: ""
     darwin_amd64_15:
         url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:04ffbfaa63efe558b4b782b200e0eab4f1e472ed1780862972bb3702a730a611
         sha256: 04ffbfaa63efe558b4b782b200e0eab4f1e472ed1780862972bb3702a730a611
-        sha512: ""
-        signature: ""
     darwin_amd64_16:
         url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:6def38300e2044dbbe17801485f0a959fb05b408545f5c6c0ccc160d7e9e40c2
         sha256: 6def38300e2044dbbe17801485f0a959fb05b408545f5c6c0ccc160d7e9e40c2
-        sha512: ""
-        signature: ""
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:49b6841a2b7af55b29db5d63ee47a433bd75f85e3c5620c6615e7528252ffd63
-        sha256: 49b6841a2b7af55b29db5d63ee47a433bd75f85e3c5620c6615e7528252ffd63
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:e208fa3a5ea6887bb9a81cee5ca629230f1f24eff3970f0d69f7dcf5dd5b7b80
+        sha256: e208fa3a5ea6887bb9a81cee5ca629230f1f24eff3970f0d69f7dcf5dd5b7b80
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:31240b1bccad45ed8f17009c0c5c6f0018b8d7695e826d2d79e417c15fb88e4e
         sha256: 31240b1bccad45ed8f17009c0c5c6f0018b8d7695e826d2d79e417c15fb88e4e
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:49b6841a2b7af55b29db5d63ee47a433bd75f85e3c5620c6615e7528252ffd63
         sha256: 49b6841a2b7af55b29db5d63ee47a433bd75f85e3c5620c6615e7528252ffd63
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:e208fa3a5ea6887bb9a81cee5ca629230f1f24eff3970f0d69f7dcf5dd5b7b80
         sha256: e208fa3a5ea6887bb9a81cee5ca629230f1f24eff3970f0d69f7dcf5dd5b7b80
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:606c8f502852d586f85fba5754e255fa8bf8b81d371c1f75cf7edae19d852f0c
         sha256: 606c8f502852d586f85fba5754e255fa8bf8b81d371c1f75cf7edae19d852f0c
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:cf5774859ce6ff3958bb987ff07d9308d3d72da4d9afda38085d4c9379b5887f
         sha256: cf5774859ce6ff3958bb987ff07d9308d3d72da4d9afda38085d4c9379b5887f
-        sha512: ""
-        signature: ""
 source:
     url: https://ftpmirror.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz
     sha256: 438fd996826b0c82485a29da03a72d71d6e3541a83ec702df4271f6fe025d24e
-    sha512: ""
-    signature: ""
 build_dependencies:
     - make
-linux_dependencies:
-    - binutils
-    - gmp
-    - isl
-    - libmpc
-    - mpfr
-    - zlib-ng-compat
-    - zstd
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - gcc

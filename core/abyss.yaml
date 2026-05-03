@@ -3,82 +3,44 @@ version: 2.3.10
 description: Genome sequence assembler for short reads
 homepage: https://www.bcgsc.ca/resources/software/abyss
 license: GPL-3.0-only AND LGPL-2.1-or-later AND MIT AND BSD-3-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - btllib
     - open-mpi
     - libomp
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
         sha256: cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
         sha256: cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
+        sha256: cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
+        sha256: cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:156d580ae0392d7045dd60c744d4a1a32206a950c86588cb25aa600dedd0e8ae
-        sha256: 156d580ae0392d7045dd60c744d4a1a32206a950c86588cb25aa600dedd0e8ae
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:274f0f758f4cc8852779e2a55f8900ea34ccf7dd0e784396752f03c7e6c56767
+        sha256: 274f0f758f4cc8852779e2a55f8900ea34ccf7dd0e784396752f03c7e6c56767
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:61982df06da982cf2f7edca391a61f935cb3c1542d165f1ed69f60a33b4a6031
         sha256: 61982df06da982cf2f7edca391a61f935cb3c1542d165f1ed69f60a33b4a6031
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:156d580ae0392d7045dd60c744d4a1a32206a950c86588cb25aa600dedd0e8ae
         sha256: 156d580ae0392d7045dd60c744d4a1a32206a950c86588cb25aa600dedd0e8ae
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:274f0f758f4cc8852779e2a55f8900ea34ccf7dd0e784396752f03c7e6c56767
         sha256: 274f0f758f4cc8852779e2a55f8900ea34ccf7dd0e784396752f03c7e6c56767
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:e7b36e68d3d7b88d89656707fd50185e8649d31bac5359575f160dc875c1d28f
         sha256: e7b36e68d3d7b88d89656707fd50185e8649d31bac5359575f160dc875c1d28f
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:57e42e8b368589c943fa3bd23e3c8f8a5af03b307530c445309dc45a72e2d2d8
         sha256: 57e42e8b368589c943fa3bd23e3c8f8a5af03b307530c445309dc45a72e2d2d8
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/bcgsc/abyss/releases/download/2.3.10/abyss-2.3.10.tar.gz
     sha256: bbe42e00d1ebb53ec6afaad07779baaaee994aa5c65b9a38cf4ad2011bb93c65
-    sha512: ""
-    signature: ""
 build_dependencies:
     - boost
     - google-sparsehash
-linux_dependencies:
-    - btllib
-    - open-mpi
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - abyss

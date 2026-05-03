@@ -3,71 +3,45 @@ version: 4.12.3
 description: Viewer for the DjVu image format
 homepage: https://djvu.sourceforge.net/djview4.html
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - djvulibre
     - libtiff
     - qt5compat
     - qtbase
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:08d73ed6f8eab15a7ca0be2af8c9c5dd5464daef04ee28edea7167c9a84ba86a
         sha256: 08d73ed6f8eab15a7ca0be2af8c9c5dd5464daef04ee28edea7167c9a84ba86a
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:08d73ed6f8eab15a7ca0be2af8c9c5dd5464daef04ee28edea7167c9a84ba86a
         sha256: 08d73ed6f8eab15a7ca0be2af8c9c5dd5464daef04ee28edea7167c9a84ba86a
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:08d73ed6f8eab15a7ca0be2af8c9c5dd5464daef04ee28edea7167c9a84ba86a
+        sha256: 08d73ed6f8eab15a7ca0be2af8c9c5dd5464daef04ee28edea7167c9a84ba86a
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:08d73ed6f8eab15a7ca0be2af8c9c5dd5464daef04ee28edea7167c9a84ba86a
+        sha256: 08d73ed6f8eab15a7ca0be2af8c9c5dd5464daef04ee28edea7167c9a84ba86a
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:b4e2f07c9690a2303f9b85c67ab95d6f5c2d6daa2da3bb8f64d69d36d3f003e8
-        sha256: b4e2f07c9690a2303f9b85c67ab95d6f5c2d6daa2da3bb8f64d69d36d3f003e8
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:97d3a20862eef89b5dff5f2792ee3f5b08adcbb5c4edfc50d350030a9c326c67
+        sha256: 97d3a20862eef89b5dff5f2792ee3f5b08adcbb5c4edfc50d350030a9c326c67
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:c4a5109035da18e8d56d78b553bc9d5bccd348e588d5eb887e026db3860911d3
         sha256: c4a5109035da18e8d56d78b553bc9d5bccd348e588d5eb887e026db3860911d3
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:b4e2f07c9690a2303f9b85c67ab95d6f5c2d6daa2da3bb8f64d69d36d3f003e8
         sha256: b4e2f07c9690a2303f9b85c67ab95d6f5c2d6daa2da3bb8f64d69d36d3f003e8
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:97d3a20862eef89b5dff5f2792ee3f5b08adcbb5c4edfc50d350030a9c326c67
         sha256: 97d3a20862eef89b5dff5f2792ee3f5b08adcbb5c4edfc50d350030a9c326c67
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:aeb2ec0e8ceecffd35a1dde7d7b4a48a64dd762bab3225c711b8bc8cc3de3376
         sha256: aeb2ec0e8ceecffd35a1dde7d7b4a48a64dd762bab3225c711b8bc8cc3de3376
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/djview4/blobs/sha256:734c12e6abeba64b1a42dd2b7933be542c0b76c02cb9cdbb4dcbf7734f8a34af
         sha256: 734c12e6abeba64b1a42dd2b7933be542c0b76c02cb9cdbb4dcbf7734f8a34af
-        sha512: ""
-        signature: ""
 source:
     url: https://downloads.sourceforge.net/project/djvu/DjView/4.12/djview-4.12.3.tar.gz
     sha256: 17bfb9731ab8070e01235381f08e57b1231ffb5f49eb031873ebfa189cdaf47d
-    sha512: ""
-    signature: ""
 build_dependencies:
     - autoconf
     - automake
@@ -75,13 +49,3 @@ build_dependencies:
     - libtool
     - pkgconf
     - qttools
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - djview4

@@ -3,82 +3,43 @@ version: 3.16.11
 description: ADS-B decoder swiss knife
 homepage: https://github.com/wiedehopf/readsb
 license: GPL-3.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - librtlsdr
     - zstd
     - libusb
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:1e41575b2996a26ffb30ae568c7254d95105c7eec32e2bf0292a20ac3163e595
         sha256: 1e41575b2996a26ffb30ae568c7254d95105c7eec32e2bf0292a20ac3163e595
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:1e41575b2996a26ffb30ae568c7254d95105c7eec32e2bf0292a20ac3163e595
         sha256: 1e41575b2996a26ffb30ae568c7254d95105c7eec32e2bf0292a20ac3163e595
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:1e41575b2996a26ffb30ae568c7254d95105c7eec32e2bf0292a20ac3163e595
+        sha256: 1e41575b2996a26ffb30ae568c7254d95105c7eec32e2bf0292a20ac3163e595
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:1e41575b2996a26ffb30ae568c7254d95105c7eec32e2bf0292a20ac3163e595
+        sha256: 1e41575b2996a26ffb30ae568c7254d95105c7eec32e2bf0292a20ac3163e595
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:d68b8680399a387f90120829405827c283dddec3ac93ad9002a8da666212db10
-        sha256: d68b8680399a387f90120829405827c283dddec3ac93ad9002a8da666212db10
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:6cea77bd2ae08e406436388a50817887bd2ff9c761ad65dcd91d6b32c666accd
+        sha256: 6cea77bd2ae08e406436388a50817887bd2ff9c761ad65dcd91d6b32c666accd
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:4d38d478e3d512e884f07c8c06a6a6adf608374e8570a489958dd682b86d404e
         sha256: 4d38d478e3d512e884f07c8c06a6a6adf608374e8570a489958dd682b86d404e
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:d68b8680399a387f90120829405827c283dddec3ac93ad9002a8da666212db10
         sha256: d68b8680399a387f90120829405827c283dddec3ac93ad9002a8da666212db10
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:6cea77bd2ae08e406436388a50817887bd2ff9c761ad65dcd91d6b32c666accd
         sha256: 6cea77bd2ae08e406436388a50817887bd2ff9c761ad65dcd91d6b32c666accd
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:a4ef10b822578813c7a0309ce39796e5741c32e6983f135fcc323d7fc079f5b1
         sha256: a4ef10b822578813c7a0309ce39796e5741c32e6983f135fcc323d7fc079f5b1
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/readsb/blobs/sha256:14fd510cee6c10d45a3eeecb5f7efcbc23433e902d56c367473f5a8807a752f9
         sha256: 14fd510cee6c10d45a3eeecb5f7efcbc23433e902d56c367473f5a8807a752f9
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/wiedehopf/readsb/archive/refs/tags/v3.16.11.tar.gz
     sha256: ac0488a2deadd20b373a56928b7d297b5e9262566dd84ec9c72cffaedff2cc78
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
-linux_dependencies:
-    - librtlsdr
-    - zlib-ng-compat
-    - zstd
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - readsb

@@ -3,85 +3,48 @@ version: 2.0.12
 description: GateWay Client for OpenIoTHub
 homepage: https://github.com/OpenIoTHub
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
         sha256: 99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
         sha256: 99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
+        sha256: 99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
+        sha256: 99cde3cd4107a5c0b13f6eca935df9fbc2bbb7dfb0b40b3c92f0b47cfbb33f42
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:6ed644b847ee7f2626fe8f017d4e95b9be6e2d644c4ab04d02f5da16c5cd2dad
-        sha256: 6ed644b847ee7f2626fe8f017d4e95b9be6e2d644c4ab04d02f5da16c5cd2dad
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
+        sha256: f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:36b71b06b0647849bde0330e0927b965f898565c52d3a192cbc426d98746202a
         sha256: 36b71b06b0647849bde0330e0927b965f898565c52d3a192cbc426d98746202a
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:6ed644b847ee7f2626fe8f017d4e95b9be6e2d644c4ab04d02f5da16c5cd2dad
         sha256: 6ed644b847ee7f2626fe8f017d4e95b9be6e2d644c4ab04d02f5da16c5cd2dad
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
         sha256: f75ffdf01910d42ba4414beb0c093ce7cb20f305c7409f2e9b329949bdd19bbf
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:c02836cc5373617ea8332bd360e9a727db388e29a981337eac7087cbd1eeb712
         sha256: c02836cc5373617ea8332bd360e9a727db388e29a981337eac7087cbd1eeb712
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/gateway-go/blobs/sha256:9ad72f55a82ffd324c334b6fcc428c0d1d650ebfe4078b76de451339c8b9d89d
         sha256: 9ad72f55a82ffd324c334b6fcc428c0d1d650ebfe4078b76de451339c8b9d89d
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/OpenIoTHub/gateway-go/archive/refs/tags/v2.0.12.tar.gz
     sha256: b06175c5c5ee602ca1a2c4652033c865a12e226eee7adfefb0dde807a3c5ff63
-    sha512: ""
-    signature: ""
 build_dependencies:
     - go
-linux_dependencies: []
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/gateway-go/bin/gateway-go
         - -c
         - $HOMEBREW_PREFIX/etc/gateway-go.yaml
     run_type: immediate
-    working_dir: ""
     log_path: $HOMEBREW_PREFIX/var/log/gateway-go.log
     error_log_path: $HOMEBREW_PREFIX/var/log/gateway-go.log
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - gateway-go

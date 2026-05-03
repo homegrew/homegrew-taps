@@ -3,81 +3,42 @@ version: 1.4.0
 description: Remote terminal application
 homepage: https://mosh.org
 license: GPL-3.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - protobuf
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:b496ca4f94d0e55024faa7f9c7897b2ac53c6d1d527cf072089907e08a89ed33
         sha256: b496ca4f94d0e55024faa7f9c7897b2ac53c6d1d527cf072089907e08a89ed33
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:b496ca4f94d0e55024faa7f9c7897b2ac53c6d1d527cf072089907e08a89ed33
         sha256: b496ca4f94d0e55024faa7f9c7897b2ac53c6d1d527cf072089907e08a89ed33
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:b496ca4f94d0e55024faa7f9c7897b2ac53c6d1d527cf072089907e08a89ed33
+        sha256: b496ca4f94d0e55024faa7f9c7897b2ac53c6d1d527cf072089907e08a89ed33
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:b496ca4f94d0e55024faa7f9c7897b2ac53c6d1d527cf072089907e08a89ed33
+        sha256: b496ca4f94d0e55024faa7f9c7897b2ac53c6d1d527cf072089907e08a89ed33
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:cdd1ac12f9a2feffeeed69391613b727cfa75f010f886509ef63e4b929eeb08b
-        sha256: cdd1ac12f9a2feffeeed69391613b727cfa75f010f886509ef63e4b929eeb08b
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:c6c29798f55a07c404fcb9e6a8ea09941fda9d547f39852b7588ac319b3da456
+        sha256: c6c29798f55a07c404fcb9e6a8ea09941fda9d547f39852b7588ac319b3da456
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:4d3d806753e0de1128ffaa8dc28cc59a44e545c245c0f6e1d0c1dfa9cb7d0b43
         sha256: 4d3d806753e0de1128ffaa8dc28cc59a44e545c245c0f6e1d0c1dfa9cb7d0b43
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:cdd1ac12f9a2feffeeed69391613b727cfa75f010f886509ef63e4b929eeb08b
         sha256: cdd1ac12f9a2feffeeed69391613b727cfa75f010f886509ef63e4b929eeb08b
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:c6c29798f55a07c404fcb9e6a8ea09941fda9d547f39852b7588ac319b3da456
         sha256: c6c29798f55a07c404fcb9e6a8ea09941fda9d547f39852b7588ac319b3da456
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:ff450a5a79e77fda8c435059d4bd3e1c1441fbcf30d7a973278f82a6725a8d4e
         sha256: ff450a5a79e77fda8c435059d4bd3e1c1441fbcf30d7a973278f82a6725a8d4e
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/mosh/blobs/sha256:d9efbabcdb8f49a096181811e0a86ae9737352313209d0461db3d09d8548f93c
         sha256: d9efbabcdb8f49a096181811e0a86ae9737352313209d0461db3d09d8548f93c
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/mobile-shell/mosh/releases/download/mosh-1.4.0/mosh-1.4.0.tar.gz
     sha256: 872e4b134e5df29c8933dff12350785054d2fd2839b5ae6b5587b14db1465ddd
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
     - tmux
-linux_dependencies:
-    - openssl@3
-    - protobuf
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - mosh

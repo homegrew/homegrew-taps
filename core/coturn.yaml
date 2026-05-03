@@ -3,77 +3,47 @@ version: 4.10.0
 description: Free open source implementation of TURN and STUN Server
 homepage: https://github.com/coturn/coturn
 license: BSD-3-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - hiredis
     - libevent
     - libpq
     - openssl@3
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
         sha256: 9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
         sha256: 9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
+        sha256: 9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
+        sha256: 9b2c0e14f85a7cfc0c283c1f45a051e4678b8d04de44e38608d048d9a8061318
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:d049a99186126a6cd72e03b2496a91fedecf409bdabb5261c384812184b6d59a
-        sha256: d049a99186126a6cd72e03b2496a91fedecf409bdabb5261c384812184b6d59a
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:e75ad66ee05e77f6aac6b6dc47a03989868067b4c1ed7b790e18b0ab92604379
+        sha256: e75ad66ee05e77f6aac6b6dc47a03989868067b4c1ed7b790e18b0ab92604379
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:9c2b74f769b586d036399bb3faeb7951aff2ba542a27eff01aa9568d1c89ce48
         sha256: 9c2b74f769b586d036399bb3faeb7951aff2ba542a27eff01aa9568d1c89ce48
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:d049a99186126a6cd72e03b2496a91fedecf409bdabb5261c384812184b6d59a
         sha256: d049a99186126a6cd72e03b2496a91fedecf409bdabb5261c384812184b6d59a
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:e75ad66ee05e77f6aac6b6dc47a03989868067b4c1ed7b790e18b0ab92604379
         sha256: e75ad66ee05e77f6aac6b6dc47a03989868067b4c1ed7b790e18b0ab92604379
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:eeedf35c6481fcc4a5d7c674668fc402d0b95eb4d891f4e667659ad71e05c845
         sha256: eeedf35c6481fcc4a5d7c674668fc402d0b95eb4d891f4e667659ad71e05c845
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/coturn/blobs/sha256:a33de85dd32d11218e94d4912046cedafa75076812c21e9f3b5826eba18a071c
         sha256: a33de85dd32d11218e94d4912046cedafa75076812c21e9f3b5826eba18a071c
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/coturn/coturn/archive/refs/tags/4.10.0.tar.gz
     sha256: b28d0c21535ff27300234a8c11ca08dceef9c33515a5842f362531bd70083083
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
-linux_dependencies: []
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/coturn/bin/turnserver
@@ -84,8 +54,3 @@ service:
     log_path: $HOMEBREW_PREFIX/var/log/coturn.log
     error_log_path: $HOMEBREW_PREFIX/var/log/coturn.log
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - coturn

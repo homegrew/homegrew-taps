@@ -3,120 +3,67 @@ version: 1.2.0
 description: Node.js version manager
 homepage: https://github.com/hokaccha/nodebrew
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    You need to manually run setup_dirs to create directories required by nodebrew:
+      $HOMEBREW_PREFIX/opt/nodebrew/bin/nodebrew setup_dirs
+
+    Add path:
+      export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+    To use Homebrew's directories rather than ~/.nodebrew add to your profile:
+      export NODEBREW_ROOT=$HOMEBREW_PREFIX/var/nodebrew
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_amd64_10:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_amd64_11:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_amd64_12:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_amd64_13:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_amd64_15:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_amd64_16:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_arm64:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_arm64_11:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_arm64_12:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_arm64_13:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/nodebrew/blobs/sha256:bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
         sha256: bd835b02ed3b28570708b7c98d0ea7a761c53f561544496d07728c9adf3502e2
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/hokaccha/nodebrew/archive/refs/tags/v1.2.0.tar.gz
     sha256: 6d72e39c8acc5b22f4fc7a1734cd3bb8d00b61119ab7fea6cde376810ff2005e
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - nodebrew

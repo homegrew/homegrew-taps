@@ -3,84 +3,45 @@ version: 1.3.1
 description: Library and utility to talk to iBoot/iBSS via USB
 homepage: https://www.libimobiledevice.org/
 license: LGPL-2.1-only
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - libimobiledevice-glue
     - libplist
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
         sha256: 139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
         sha256: 139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
+        sha256: 139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
+        sha256: 139905a8f27754ed0ad2546491a171679fc2823e1060dbf2e1ff7e09a3b9de8e
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:5b65d2e4775295b517a4324c43c0f9553871fafe19f423b890d9355f76050a69
-        sha256: 5b65d2e4775295b517a4324c43c0f9553871fafe19f423b890d9355f76050a69
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:14126dca02da81d6266e719840639fa3c7dba674a7fe5e22fe39c856f5f1eafd
+        sha256: 14126dca02da81d6266e719840639fa3c7dba674a7fe5e22fe39c856f5f1eafd
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:d248aaefd0b49f856770bbc48c531b624b9e64ae203af153dc2f3be3cadeae49
         sha256: d248aaefd0b49f856770bbc48c531b624b9e64ae203af153dc2f3be3cadeae49
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:5b65d2e4775295b517a4324c43c0f9553871fafe19f423b890d9355f76050a69
         sha256: 5b65d2e4775295b517a4324c43c0f9553871fafe19f423b890d9355f76050a69
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:14126dca02da81d6266e719840639fa3c7dba674a7fe5e22fe39c856f5f1eafd
         sha256: 14126dca02da81d6266e719840639fa3c7dba674a7fe5e22fe39c856f5f1eafd
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:95cb02d908ffb064784fd215510258e01417621f2689df80a7e702c7b02b3d96
         sha256: 95cb02d908ffb064784fd215510258e01417621f2689df80a7e702c7b02b3d96
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/libirecovery/blobs/sha256:e51daa52330dffe61ac4fa323b48023c9d638e960d977ddd0bc834d2d5483639
         sha256: e51daa52330dffe61ac4fa323b48023c9d638e960d977ddd0bc834d2d5483639
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/libimobiledevice/libirecovery/releases/download/1.3.1/libirecovery-1.3.1.tar.bz2
     sha256: 28a3a521782063c8eb2ee5f4c0f38a517e023853edb55856052cdd7ac400381b
-    sha512: ""
-    signature: ""
 build_dependencies:
     - autoconf
     - automake
     - libtool
     - pkgconf
-linux_dependencies:
-    - libimobiledevice-glue
-    - libusb
-    - readline
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - libirecovery

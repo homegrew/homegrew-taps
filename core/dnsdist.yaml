@@ -3,19 +3,6 @@ version: 2.0.5
 description: Highly DNS-, DoS- and abuse-aware loadbalancer
 homepage: https://www.dnsdist.org/
 license: GPL-2.0-only
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - fstrm
     - libnghttp2
@@ -24,65 +11,42 @@ dependencies:
     - openssl@3
     - re2
     - tinycdb
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:f1e1eefd356cfa14caf04622e224422d4015140409b41e86616b62f1ff36303d
         sha256: f1e1eefd356cfa14caf04622e224422d4015140409b41e86616b62f1ff36303d
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:f1e1eefd356cfa14caf04622e224422d4015140409b41e86616b62f1ff36303d
         sha256: f1e1eefd356cfa14caf04622e224422d4015140409b41e86616b62f1ff36303d
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:f1e1eefd356cfa14caf04622e224422d4015140409b41e86616b62f1ff36303d
+        sha256: f1e1eefd356cfa14caf04622e224422d4015140409b41e86616b62f1ff36303d
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:f1e1eefd356cfa14caf04622e224422d4015140409b41e86616b62f1ff36303d
+        sha256: f1e1eefd356cfa14caf04622e224422d4015140409b41e86616b62f1ff36303d
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:6e31593ca20a089a2e45f6a228f85f2ef8037d9e622787857c5299717cbbd376
-        sha256: 6e31593ca20a089a2e45f6a228f85f2ef8037d9e622787857c5299717cbbd376
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:658199bd1694941ffd68ac467a12b3a637bb8600a9164efdc9e28380a272321f
+        sha256: 658199bd1694941ffd68ac467a12b3a637bb8600a9164efdc9e28380a272321f
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:2685118e3eff836466637135255411e9192cd88528444363dbb800d7690e2539
         sha256: 2685118e3eff836466637135255411e9192cd88528444363dbb800d7690e2539
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:6e31593ca20a089a2e45f6a228f85f2ef8037d9e622787857c5299717cbbd376
         sha256: 6e31593ca20a089a2e45f6a228f85f2ef8037d9e622787857c5299717cbbd376
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:658199bd1694941ffd68ac467a12b3a637bb8600a9164efdc9e28380a272321f
         sha256: 658199bd1694941ffd68ac467a12b3a637bb8600a9164efdc9e28380a272321f
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:3647ac9f2634b897ed5d74fb19b4e05a52594cf2880cb886e9a0b3930d59f283
         sha256: 3647ac9f2634b897ed5d74fb19b4e05a52594cf2880cb886e9a0b3930d59f283
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:f74672e1037512a40db9f2f81724c6fbe03b6484547c1a5a233c99230302b55e
         sha256: f74672e1037512a40db9f2f81724c6fbe03b6484547c1a5a233c99230302b55e
-        sha512: ""
-        signature: ""
 source:
     url: https://downloads.powerdns.com/releases/dnsdist-2.0.5.tar.xz
     sha256: 23c67dbac21e5564df95b67899eacfeec7d7c194118aabf98ce0e763ccd5c7ae
-    sha512: ""
-    signature: ""
 build_dependencies:
     - boost
     - libyaml
     - pkgconf
     - python@3.14
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - dnsdist

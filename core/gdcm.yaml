@@ -3,91 +3,48 @@ version: 3.2.2
 description: Grassroots DICOM library and utilities for medical files
 homepage: https://sourceforge.net/projects/gdcm/
 license: BSD-3-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - charls
     - json-c
     - openjpeg
     - openssl@3
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:48af31c53b96008feb0f20f035d59b68e13e38535870efb086d6d447729e39ba
         sha256: 48af31c53b96008feb0f20f035d59b68e13e38535870efb086d6d447729e39ba
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:48af31c53b96008feb0f20f035d59b68e13e38535870efb086d6d447729e39ba
         sha256: 48af31c53b96008feb0f20f035d59b68e13e38535870efb086d6d447729e39ba
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:48af31c53b96008feb0f20f035d59b68e13e38535870efb086d6d447729e39ba
+        sha256: 48af31c53b96008feb0f20f035d59b68e13e38535870efb086d6d447729e39ba
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:48af31c53b96008feb0f20f035d59b68e13e38535870efb086d6d447729e39ba
+        sha256: 48af31c53b96008feb0f20f035d59b68e13e38535870efb086d6d447729e39ba
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:3a12b63f85f0d745adf767d02560af6df94fc76fb350121de2acc17a2d3f15f1
-        sha256: 3a12b63f85f0d745adf767d02560af6df94fc76fb350121de2acc17a2d3f15f1
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:fbfbde99e1a4e66f63e4860a75e651483537551b7e361ea0748c3cb5dd216868
+        sha256: fbfbde99e1a4e66f63e4860a75e651483537551b7e361ea0748c3cb5dd216868
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:3ecc27d0db8e9f6795c33ba5504828aed956c4b641146d47878fed6cce27b2f2
         sha256: 3ecc27d0db8e9f6795c33ba5504828aed956c4b641146d47878fed6cce27b2f2
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:3a12b63f85f0d745adf767d02560af6df94fc76fb350121de2acc17a2d3f15f1
         sha256: 3a12b63f85f0d745adf767d02560af6df94fc76fb350121de2acc17a2d3f15f1
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:fbfbde99e1a4e66f63e4860a75e651483537551b7e361ea0748c3cb5dd216868
         sha256: fbfbde99e1a4e66f63e4860a75e651483537551b7e361ea0748c3cb5dd216868
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:8b3a83d368a69b1a84473dfd14ea69986f991bca7206b8082b1553ae2ca58d4d
         sha256: 8b3a83d368a69b1a84473dfd14ea69986f991bca7206b8082b1553ae2ca58d4d
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/gdcm/blobs/sha256:babc4e4d7802ce9f0c1feabad433376040eec5b28ceee29fa17422bfbccc2666
         sha256: babc4e4d7802ce9f0c1feabad433376040eec5b28ceee29fa17422bfbccc2666
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/malaterre/GDCM/archive/refs/tags/v3.2.2.tar.gz
     sha256: 133078bfff4fe850a1faaea44b0a907ba93579fd16f34c956f4d665b24b590e5
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmake
     - ninja
     - pkgconf
     - python@3.14
     - swig
-linux_dependencies:
-    - charls
-    - json-c
-    - openjpeg
-    - openssl@3
-    - python@3.14
-    - util-linux
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - gdcm

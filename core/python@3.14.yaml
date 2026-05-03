@@ -3,97 +3,57 @@ version: 3.14.4
 description: Interpreted, interactive, object-oriented programming language
 homepage: https://www.python.org/
 license: Python-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    Python is installed as
+      $HOMEBREW_PREFIX/bin/python3
+
+    Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+    `python3`, `python3-config`, `pip3` etc., respectively, are installed into
+      $HOMEBREW_PREFIX/opt/python@3.14/libexec/bin
+
+    `idle3.14` requires tkinter, which is available separately:
+      brew install python-tk@3.14
+
+    See: https://docs.brew.sh/Homebrew-and-Python
 dependencies:
     - mpdecimal
     - openssl@3
     - sqlite
     - xz
     - zstd
-keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:c3a2c539efcfaedaa4330fd7bb2abf436435f0320c9acb364bb73de970623750
-        sha256: c3a2c539efcfaedaa4330fd7bb2abf436435f0320c9acb364bb73de970623750
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:e52e51da5fedadacd4e326a45f352c91f732ebf397f3f0860d8ed35cb98112ba
+        sha256: e52e51da5fedadacd4e326a45f352c91f732ebf397f3f0860d8ed35cb98112ba
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:33ecbabc155041ef656a9572d0223a4d3412d14d763a2fdb1a963a9aacfc29c3
-        sha256: 33ecbabc155041ef656a9572d0223a4d3412d14d763a2fdb1a963a9aacfc29c3
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:c029e2586f67781ab49936e715067b3381d2fdd54e901fc8928764d251f72405
+        sha256: c029e2586f67781ab49936e715067b3381d2fdd54e901fc8928764d251f72405
     darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:c3a2c539efcfaedaa4330fd7bb2abf436435f0320c9acb364bb73de970623750
-        sha256: c3a2c539efcfaedaa4330fd7bb2abf436435f0320c9acb364bb73de970623750
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:acbc6d22346021cd428f6cb472936b8f6b9c09a57c0d8b4bc01160f1f9abae25
+        sha256: acbc6d22346021cd428f6cb472936b8f6b9c09a57c0d8b4bc01160f1f9abae25
     darwin_amd64_16:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:7498a873e826498cd2302e00f2c4a2bed207b2e3c97b06272c794d3d47662e14
-        sha256: 7498a873e826498cd2302e00f2c4a2bed207b2e3c97b06272c794d3d47662e14
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:e52e51da5fedadacd4e326a45f352c91f732ebf397f3f0860d8ed35cb98112ba
+        sha256: e52e51da5fedadacd4e326a45f352c91f732ebf397f3f0860d8ed35cb98112ba
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:dcbf428d7f9e448ee88d51c867a29d60e4ee48c69cb537ffa43154c6054951e8
-        sha256: dcbf428d7f9e448ee88d51c867a29d60e4ee48c69cb537ffa43154c6054951e8
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:a107c4174b66f21ae5d9fcb82c7ea0cd466b1bb65fffffc818ef8108c6669a7b
+        sha256: a107c4174b66f21ae5d9fcb82c7ea0cd466b1bb65fffffc818ef8108c6669a7b
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:16f997d2727745edc4ac87df52de2517711ba0cb7c298a97f2b14e1150a926cb
-        sha256: 16f997d2727745edc4ac87df52de2517711ba0cb7c298a97f2b14e1150a926cb
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:7acc6c0e9d194c9a7eb69a5af34809f7617f83d9a9c0eaef77dac1d5dd04566e
+        sha256: 7acc6c0e9d194c9a7eb69a5af34809f7617f83d9a9c0eaef77dac1d5dd04566e
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:dcbf428d7f9e448ee88d51c867a29d60e4ee48c69cb537ffa43154c6054951e8
-        sha256: dcbf428d7f9e448ee88d51c867a29d60e4ee48c69cb537ffa43154c6054951e8
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:345dc7908e33f7eb3c3b87a6c51229c642006eb8ffd5f85c4c8b88d0808d3197
+        sha256: 345dc7908e33f7eb3c3b87a6c51229c642006eb8ffd5f85c4c8b88d0808d3197
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:e6aad7f3013cf39f3ba0de702d6ffdb934ec28549fcffb580f91ec8d8685ffde
-        sha256: e6aad7f3013cf39f3ba0de702d6ffdb934ec28549fcffb580f91ec8d8685ffde
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:a107c4174b66f21ae5d9fcb82c7ea0cd466b1bb65fffffc818ef8108c6669a7b
+        sha256: a107c4174b66f21ae5d9fcb82c7ea0cd466b1bb65fffffc818ef8108c6669a7b
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:115dbf56f954ad54380ccac97205956e50c32ecd8b1bf54dbd509fef07423a79
-        sha256: 115dbf56f954ad54380ccac97205956e50c32ecd8b1bf54dbd509fef07423a79
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:4a3104b65b9dbf5e34240b70e0155babfd2ef902fc404964b82c0315a9a39b04
+        sha256: 4a3104b65b9dbf5e34240b70e0155babfd2ef902fc404964b82c0315a9a39b04
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:b351cac4da326df26d1b72878493b2ce038e990d3770bec75db1cfd849e6c561
-        sha256: b351cac4da326df26d1b72878493b2ce038e990d3770bec75db1cfd849e6c561
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:f50d2d5e41ef4e8424584213d786b7b3c483a16699f717b0344e2afa7ae98774
+        sha256: f50d2d5e41ef4e8424584213d786b7b3c483a16699f717b0344e2afa7ae98774
 source:
     url: https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz
     sha256: b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
-linux_dependencies:
-    - mpdecimal
-    - openssl@3
-    - sqlite
-    - xz
-    - zlib-ng-compat
-    - zstd
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - python@3.14

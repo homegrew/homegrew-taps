@@ -3,19 +3,8 @@ version: "8.1"
 description: Play, record, convert, and stream select audio and video codecs
 homepage: https://ffmpeg.org/
 license: GPL-3.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    ffmpeg-full includes additional tools and libraries that are not included in the regular ffmpeg formula.
 dependencies:
     - dav1d
     - lame
@@ -27,76 +16,39 @@ dependencies:
     - svt-av1
     - x264
     - x265
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:8617e97bb81b99d89cdfc687aa275e40f967f2ec275ea2fbe5e063c129a02d8f
         sha256: 8617e97bb81b99d89cdfc687aa275e40f967f2ec275ea2fbe5e063c129a02d8f
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:8617e97bb81b99d89cdfc687aa275e40f967f2ec275ea2fbe5e063c129a02d8f
         sha256: 8617e97bb81b99d89cdfc687aa275e40f967f2ec275ea2fbe5e063c129a02d8f
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:8617e97bb81b99d89cdfc687aa275e40f967f2ec275ea2fbe5e063c129a02d8f
+        sha256: 8617e97bb81b99d89cdfc687aa275e40f967f2ec275ea2fbe5e063c129a02d8f
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:8617e97bb81b99d89cdfc687aa275e40f967f2ec275ea2fbe5e063c129a02d8f
+        sha256: 8617e97bb81b99d89cdfc687aa275e40f967f2ec275ea2fbe5e063c129a02d8f
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:b416d590189f74f3f1abc2a5aef1edff0e1dbefd29f8b06f30f906c7b5aa1cde
-        sha256: b416d590189f74f3f1abc2a5aef1edff0e1dbefd29f8b06f30f906c7b5aa1cde
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:21294dbab3779ead5719f79f8b8873754085d812ac82538be55f870ed4919df1
+        sha256: 21294dbab3779ead5719f79f8b8873754085d812ac82538be55f870ed4919df1
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:4ce3e874e6497af366f395148dd8022510444b9a2c9c991a13f482fd6a39b425
         sha256: 4ce3e874e6497af366f395148dd8022510444b9a2c9c991a13f482fd6a39b425
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:b416d590189f74f3f1abc2a5aef1edff0e1dbefd29f8b06f30f906c7b5aa1cde
         sha256: b416d590189f74f3f1abc2a5aef1edff0e1dbefd29f8b06f30f906c7b5aa1cde
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:21294dbab3779ead5719f79f8b8873754085d812ac82538be55f870ed4919df1
         sha256: 21294dbab3779ead5719f79f8b8873754085d812ac82538be55f870ed4919df1
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:94a374c1a3ce42d07f8fd0d8abc0851f184eb7e0fb7b0af7062168cb08cbee36
         sha256: 94a374c1a3ce42d07f8fd0d8abc0851f184eb7e0fb7b0af7062168cb08cbee36
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:5a0bd5ee4b0c8ee75e87d7e0d41ca8c42866836dddbeef83a091410f7cf0eb10
         sha256: 5a0bd5ee4b0c8ee75e87d7e0d41ca8c42866836dddbeef83a091410f7cf0eb10
-        sha512: ""
-        signature: ""
 source:
     url: https://ffmpeg.org/releases/ffmpeg-8.1.tar.xz
     sha256: b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
-linux_dependencies:
-    - alsa-lib
-    - dav1d
-    - lame
-    - libvmaf
-    - libvpx
-    - libxcb
-    - openssl@3
-    - opus
-    - sdl2
-    - svt-av1
-    - x264
-    - x265
-    - xz
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - ffmpeg

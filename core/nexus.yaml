@@ -3,87 +3,47 @@ version: 3.91.1-04
 description: Repository manager for binary software components
 homepage: https://www.sonatype.com/
 license: EPL-1.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - openjdk
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
         sha256: 73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
         sha256: 73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        sha256: 73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        sha256: 73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
-        sha256: 88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:c9c17d6f8a303bc91518b1fb6820994a2d2dc51b3d0a41f010531f0fb2be1846
+        sha256: c9c17d6f8a303bc91518b1fb6820994a2d2dc51b3d0a41f010531f0fb2be1846
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:47fa0ad2320508c073666cb2d56b1a30de1b6aad5f976849eac58e9e704591cc
         sha256: 47fa0ad2320508c073666cb2d56b1a30de1b6aad5f976849eac58e9e704591cc
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
         sha256: 88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:c9c17d6f8a303bc91518b1fb6820994a2d2dc51b3d0a41f010531f0fb2be1846
         sha256: c9c17d6f8a303bc91518b1fb6820994a2d2dc51b3d0a41f010531f0fb2be1846
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:0fb541d72bd9b57294886f3c225de4f5da009e06a91d28f5f711f1804baa3c54
         sha256: 0fb541d72bd9b57294886f3c225de4f5da009e06a91d28f5f711f1804baa3c54
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:c1882ec83de35a5609ea03cedcbb1e9fa1db96f3e56e25b866a80d4ccc9b9c22
         sha256: c1882ec83de35a5609ea03cedcbb1e9fa1db96f3e56e25b866a80d4ccc9b9c22
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/sonatype/nexus-public.git
-    sha256: ""
-    sha512: ""
-    signature: ""
 build_dependencies:
     - maven
     - node
     - yarn
-linux_dependencies: []
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/nexus/bin/nexus
         - start
     run_type: immediate
-    working_dir: ""
-    log_path: ""
-    error_log_path: ""
-    keep_alive: false
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - nexus

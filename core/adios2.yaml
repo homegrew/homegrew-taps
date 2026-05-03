@@ -1,21 +1,8 @@
 name: adios2
-version: 2.11.0
+version: 2.12.1
 description: Next generation of ADIOS developed in the Exascale Computing Program
 homepage: https://adios2.readthedocs.io
 license: Apache-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - c-blosc2
     - gcc
@@ -23,6 +10,7 @@ dependencies:
     - libpng
     - libsodium
     - mpi4py
+    - nanobind
     - numpy
     - open-mpi
     - openssl@3
@@ -33,79 +21,41 @@ dependencies:
     - zeromq
     - lz4
     - zstd
-keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:d9fef9268fa1e89e72598057dac3eb94651f795bda0db338ddd995c76c62fb0e
-        sha256: d9fef9268fa1e89e72598057dac3eb94651f795bda0db338ddd995c76c62fb0e
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:d39e90c524ab681ab22c2c67a832d2649d4d845874a935c8ca21d080a67bf250
+        sha256: d39e90c524ab681ab22c2c67a832d2649d4d845874a935c8ca21d080a67bf250
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:d9fef9268fa1e89e72598057dac3eb94651f795bda0db338ddd995c76c62fb0e
-        sha256: d9fef9268fa1e89e72598057dac3eb94651f795bda0db338ddd995c76c62fb0e
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:d39e90c524ab681ab22c2c67a832d2649d4d845874a935c8ca21d080a67bf250
+        sha256: d39e90c524ab681ab22c2c67a832d2649d4d845874a935c8ca21d080a67bf250
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:d39e90c524ab681ab22c2c67a832d2649d4d845874a935c8ca21d080a67bf250
+        sha256: d39e90c524ab681ab22c2c67a832d2649d4d845874a935c8ca21d080a67bf250
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:d39e90c524ab681ab22c2c67a832d2649d4d845874a935c8ca21d080a67bf250
+        sha256: d39e90c524ab681ab22c2c67a832d2649d4d845874a935c8ca21d080a67bf250
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:92c091315f8dbadb845f200cace50fc6e18b55a78d8cdd6ef45872e8c8ee6486
-        sha256: 92c091315f8dbadb845f200cace50fc6e18b55a78d8cdd6ef45872e8c8ee6486
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:264adbac2b0515a18279cc09c2564f506d124b4972ba4c2ece22414c9d6d3577
+        sha256: 264adbac2b0515a18279cc09c2564f506d124b4972ba4c2ece22414c9d6d3577
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:45d3e08530811c78a0aa15aa60d41b44a70698a4c44b741d16be03365f103dc1
-        sha256: 45d3e08530811c78a0aa15aa60d41b44a70698a4c44b741d16be03365f103dc1
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:970a0cf1cbf813bb8e24674b92ea06cdc9403df71d0edd97d0156067fec93d8a
+        sha256: 970a0cf1cbf813bb8e24674b92ea06cdc9403df71d0edd97d0156067fec93d8a
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:92c091315f8dbadb845f200cace50fc6e18b55a78d8cdd6ef45872e8c8ee6486
-        sha256: 92c091315f8dbadb845f200cace50fc6e18b55a78d8cdd6ef45872e8c8ee6486
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:a40d806dc776c0a71daf37be4489c58d4515b6f78f6e7104f1dbbf3a9093070e
+        sha256: a40d806dc776c0a71daf37be4489c58d4515b6f78f6e7104f1dbbf3a9093070e
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:0fc0bba06d97e22d5c1869d158bc966d4edae99020e4ca7c8c4c13004f3b52c4
-        sha256: 0fc0bba06d97e22d5c1869d158bc966d4edae99020e4ca7c8c4c13004f3b52c4
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:264adbac2b0515a18279cc09c2564f506d124b4972ba4c2ece22414c9d6d3577
+        sha256: 264adbac2b0515a18279cc09c2564f506d124b4972ba4c2ece22414c9d6d3577
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:b52a6393a46cb6e8c64b502f88b2d032f029d15148347038cc709870f156cfb4
-        sha256: b52a6393a46cb6e8c64b502f88b2d032f029d15148347038cc709870f156cfb4
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:bbb723202b8917802c16657a1233a27c257178dbd5bbbc71b6067f498c4d7d5e
+        sha256: bbb723202b8917802c16657a1233a27c257178dbd5bbbc71b6067f498c4d7d5e
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:534704afd26df44507961778f55a3792962cfe487fd94efe4b9148330e976b12
-        sha256: 534704afd26df44507961778f55a3792962cfe487fd94efe4b9148330e976b12
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:fa59f68ddc63cd454ee9187efa912e39f2c1dc749ac1fa8e103dc3e625d2166f
+        sha256: fa59f68ddc63cd454ee9187efa912e39f2c1dc749ac1fa8e103dc3e625d2166f
 source:
-    url: https://github.com/ornladios/ADIOS2/archive/refs/tags/v2.11.0.tar.gz
-    sha256: 0a2bd745e3f39745f07587e4a5f92d72f12fa0e2be305e7957bdceda03735dbf
-    sha512: ""
-    signature: ""
+    url: https://github.com/ornladios/ADIOS2/archive/refs/tags/v2.12.1.tar.gz
+    sha256: 71edd8f721448311852122fca8d83ae497b43846e5bfcdfd275dc06bb7f3d0c5
 build_dependencies:
     - cmake
     - nlohmann-json
     - pybind11
-linux_dependencies:
-    - c-blosc2
-    - gcc
-    - libfabric
-    - libpng
-    - libsodium
-    - mpi4py
-    - numpy
-    - open-mpi
-    - openssl@3
-    - pugixml
-    - python@3.14
-    - sqlite
-    - yaml-cpp
-    - zeromq
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - adios2

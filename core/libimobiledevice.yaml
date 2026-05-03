@@ -3,19 +3,6 @@ version: 1.4.0
 description: Library to communicate with iOS devices natively
 homepage: https://www.libimobiledevice.org/
 license: LGPL-2.1-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - libimobiledevice-glue
     - libplist
@@ -23,72 +10,42 @@ dependencies:
     - libtatsu
     - libusbmuxd
     - openssl@3
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:aa40670dbbdadabc7f035fe2ea17da68a1dab8937a4f1c0429c0a7fd58c108f5
         sha256: aa40670dbbdadabc7f035fe2ea17da68a1dab8937a4f1c0429c0a7fd58c108f5
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:aa40670dbbdadabc7f035fe2ea17da68a1dab8937a4f1c0429c0a7fd58c108f5
         sha256: aa40670dbbdadabc7f035fe2ea17da68a1dab8937a4f1c0429c0a7fd58c108f5
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:aa40670dbbdadabc7f035fe2ea17da68a1dab8937a4f1c0429c0a7fd58c108f5
+        sha256: aa40670dbbdadabc7f035fe2ea17da68a1dab8937a4f1c0429c0a7fd58c108f5
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:aa40670dbbdadabc7f035fe2ea17da68a1dab8937a4f1c0429c0a7fd58c108f5
+        sha256: aa40670dbbdadabc7f035fe2ea17da68a1dab8937a4f1c0429c0a7fd58c108f5
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:17e3e2fa9618cfdc21a0e87c97ae8d1ffb02de19f88ef5cc886a0663b6c1b66c
-        sha256: 17e3e2fa9618cfdc21a0e87c97ae8d1ffb02de19f88ef5cc886a0663b6c1b66c
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:57e9ce8270a268ce61766da57305ddf8adef5310556992f97534a0c6b8dc2112
+        sha256: 57e9ce8270a268ce61766da57305ddf8adef5310556992f97534a0c6b8dc2112
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:ac0a39864d542e1b5d248efe7ee1bbb5dc58a2739dd248ec987dc7b794ef9fd9
         sha256: ac0a39864d542e1b5d248efe7ee1bbb5dc58a2739dd248ec987dc7b794ef9fd9
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:17e3e2fa9618cfdc21a0e87c97ae8d1ffb02de19f88ef5cc886a0663b6c1b66c
         sha256: 17e3e2fa9618cfdc21a0e87c97ae8d1ffb02de19f88ef5cc886a0663b6c1b66c
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:57e9ce8270a268ce61766da57305ddf8adef5310556992f97534a0c6b8dc2112
         sha256: 57e9ce8270a268ce61766da57305ddf8adef5310556992f97534a0c6b8dc2112
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:8d22c1f4fccc06261e4e1775f3d56864ddbe37ba3980b28b5d17898d74662307
         sha256: 8d22c1f4fccc06261e4e1775f3d56864ddbe37ba3980b28b5d17898d74662307
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:d54c686502da56b005f514e052d5d6f24242acc99236309da37854d573fd0206
         sha256: d54c686502da56b005f514e052d5d6f24242acc99236309da37854d573fd0206
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/libimobiledevice/libimobiledevice/releases/download/1.4.0/libimobiledevice-1.4.0.tar.bz2
     sha256: 23cc0077e221c7d991bd0eb02150a0d49199bcca1ddf059edccee9ffd914939d
-    sha512: ""
-    signature: ""
 build_dependencies:
     - autoconf
     - automake
     - libtool
     - pkgconf
-linux_dependencies:
-    - libimobiledevice-glue
-    - libplist
-    - libtasn1
-    - libtatsu
-    - libusbmuxd
-    - openssl@3
-    - readline
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - libimobiledevice

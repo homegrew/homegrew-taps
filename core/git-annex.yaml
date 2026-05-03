@@ -3,92 +3,50 @@ version: "10.20260421"
 description: Manage files with git without checking in file contents
 homepage: https://git-annex.branchable.com/
 license: AGPL-3.0-or-later AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-only AND GPL-3.0-or-later AND MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - gmp
     - libmagic
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
         sha256: c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
         sha256: c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
+        sha256: c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
+        sha256: c867b20c277647505f827053cd295dedebb7a76c8b4a6c486203102797210c7a
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:b74bc3e73072d455cce07661a17047f1ac6fc46d97b7fbaf87f00c68ce4b985b
-        sha256: b74bc3e73072d455cce07661a17047f1ac6fc46d97b7fbaf87f00c68ce4b985b
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:9f970c3062b51c38bd03dc6e87aec59cd014a3bd54313d771303d83528a82aa5
+        sha256: 9f970c3062b51c38bd03dc6e87aec59cd014a3bd54313d771303d83528a82aa5
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:dda14215258a9799f8c9921d8e9fe3d5c5b72f1bd4ef4b67508d90c7103972af
         sha256: dda14215258a9799f8c9921d8e9fe3d5c5b72f1bd4ef4b67508d90c7103972af
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:b74bc3e73072d455cce07661a17047f1ac6fc46d97b7fbaf87f00c68ce4b985b
         sha256: b74bc3e73072d455cce07661a17047f1ac6fc46d97b7fbaf87f00c68ce4b985b
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:9f970c3062b51c38bd03dc6e87aec59cd014a3bd54313d771303d83528a82aa5
         sha256: 9f970c3062b51c38bd03dc6e87aec59cd014a3bd54313d771303d83528a82aa5
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:835cd29718801445d971e08fb08b899e7e3fe7b39d0c61f120e2e0ff18de6ba3
         sha256: 835cd29718801445d971e08fb08b899e7e3fe7b39d0c61f120e2e0ff18de6ba3
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/git-annex/blobs/sha256:95ca71722ce261b1ddbec57608564d8d6f268354973383179a981be134afff11
         sha256: 95ca71722ce261b1ddbec57608564d8d6f268354973383179a981be134afff11
-        sha512: ""
-        signature: ""
 source:
     url: https://hackage.haskell.org/package/git-annex-10.20260421/git-annex-10.20260421.tar.gz
     sha256: 7f030c461393fff522e28c02f790c7f0ed9684355f383f83821f7a9df40af764
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cabal-install
     - ghc
     - pkgconf
-linux_dependencies:
-    - gmp
-    - libmagic
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/git-annex/bin/git-annex
         - assistant
         - --autostart
     run_type: immediate
-    working_dir: ""
-    log_path: ""
-    error_log_path: ""
-    keep_alive: false
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - git-annex

@@ -3,19 +3,6 @@ version: "48.1"
 description: GNOME document viewer
 homepage: https://apps.gnome.org/Evince/
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - adwaita-icon-theme
     - at-spi2-core
@@ -35,53 +22,40 @@ dependencies:
     - pango
     - poppler
     - gettext
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:3a2e85b4add1137e10a843ef53563a53ef6bbaf2d92b05223edfee1009880767
         sha256: 3a2e85b4add1137e10a843ef53563a53ef6bbaf2d92b05223edfee1009880767
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:3a2e85b4add1137e10a843ef53563a53ef6bbaf2d92b05223edfee1009880767
         sha256: 3a2e85b4add1137e10a843ef53563a53ef6bbaf2d92b05223edfee1009880767
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:3a2e85b4add1137e10a843ef53563a53ef6bbaf2d92b05223edfee1009880767
+        sha256: 3a2e85b4add1137e10a843ef53563a53ef6bbaf2d92b05223edfee1009880767
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:3a2e85b4add1137e10a843ef53563a53ef6bbaf2d92b05223edfee1009880767
+        sha256: 3a2e85b4add1137e10a843ef53563a53ef6bbaf2d92b05223edfee1009880767
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:c79bd492a970f0a2faaa173dd9129a9ddee30f3cb67f6700cce4564bdafe0b2a
-        sha256: c79bd492a970f0a2faaa173dd9129a9ddee30f3cb67f6700cce4564bdafe0b2a
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:3b7e9c903699d610e7e118ac6268b5f2b0dcbbadd553257be807aaca0b2ff4d9
+        sha256: 3b7e9c903699d610e7e118ac6268b5f2b0dcbbadd553257be807aaca0b2ff4d9
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:4146849007042d512b61feeb08fa4db530eeb43a55d4b7718b77ba477a2cd3c0
         sha256: 4146849007042d512b61feeb08fa4db530eeb43a55d4b7718b77ba477a2cd3c0
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:c79bd492a970f0a2faaa173dd9129a9ddee30f3cb67f6700cce4564bdafe0b2a
         sha256: c79bd492a970f0a2faaa173dd9129a9ddee30f3cb67f6700cce4564bdafe0b2a
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:3b7e9c903699d610e7e118ac6268b5f2b0dcbbadd553257be807aaca0b2ff4d9
         sha256: 3b7e9c903699d610e7e118ac6268b5f2b0dcbbadd553257be807aaca0b2ff4d9
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:696a73056be75f55f4ebeb0ad5976bf7366cfebc128a13436a1a1d606354cd6d
         sha256: 696a73056be75f55f4ebeb0ad5976bf7366cfebc128a13436a1a1d606354cd6d
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/evince/blobs/sha256:9d5b11ec7436eec5ece2dfd76ddc9b912135f1b5f5c0493fb5aca1fad97a9e33
         sha256: 9d5b11ec7436eec5ece2dfd76ddc9b912135f1b5f5c0493fb5aca1fad97a9e33
-        sha512: ""
-        signature: ""
 source:
     url: https://download.gnome.org/sources/evince/48/evince-48.1.tar.xz
     sha256: 7d8b9a6fa3a05d3f5b9048859027688c73a788ff6e923bc3945126884943fa10
-    sha512: ""
-    signature: ""
 build_dependencies:
     - desktop-file-utils
     - gettext
@@ -90,31 +64,3 @@ build_dependencies:
     - meson
     - ninja
     - pkgconf
-linux_dependencies:
-    - adwaita-icon-theme
-    - at-spi2-core
-    - cairo
-    - djvulibre
-    - gdk-pixbuf
-    - glib
-    - gspell
-    - gtk+3
-    - hicolor-icon-theme
-    - libarchive
-    - libgxps
-    - libhandy
-    - libsecret
-    - libspectre
-    - libtiff
-    - pango
-    - poppler
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - evince

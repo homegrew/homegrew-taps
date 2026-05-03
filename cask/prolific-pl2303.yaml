@@ -2,7 +2,13 @@ name: prolific-pl2303
 version: 2.2.11,20250314,2025,07,_-1
 description: PL2303 USB-to-serial driver
 homepage: https://www.prolific.com.tw/US/
-license: ""
+caveats: |
+    prolific-pl2303 requires a kernel extension to work.
+    If the installation fails, retry after you enable it in:
+      System Settings → Privacy & Security
+
+    For more information, refer to vendor documentation or this Apple Technical Note:
+      https://developer.apple.com/library/content/technotes/tn2459/_index.html
 url:
     darwin_amd64: https://www.prolific.com.tw/wp-content/uploads/2025/07/PL2303HXD_G_Mac-Driver_v2.2.11_20250314.pkg_-1.7z
     darwin_amd64_10: https://www.prolific.com.tw/wp-content/uploads/2025/07/PL2303HXD_G_Mac-Driver_v2.2.11_20250314.pkg_-1.7z
@@ -52,11 +58,8 @@ sha512:
     darwin_arm64_15: ""
     darwin_arm64_16: ""
 artifacts:
-    app: []
     pkg:
         - PL2303HXD_G_Mac Driver_v2.2.11_20250314.pkg
-    bin: []
 source:
     url: https://www.prolific.com.tw/wp-content/uploads/2025/07/PL2303HXD_G_Mac-Driver_v2.2.11_20250314.pkg_-1.7z
     sha256: 2c4c1ebf8f1eb997cde5c138b881c4389e17069114b6ef3a1aaff53e424465f2
-    sha512: ""

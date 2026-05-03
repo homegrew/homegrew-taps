@@ -2,7 +2,13 @@ name: steelseries-gg
 version: 108.1.0
 description: Settings for SteelSeries peripherals and accessories
 homepage: https://steelseries.com/gg
-license: ""
+caveats: |
+    steelseries-gg requires a kernel extension to work.
+    If the installation fails, retry after you enable it in:
+      System Settings → Privacy & Security
+
+    For more information, refer to vendor documentation or this Apple Technical Note:
+      https://developer.apple.com/library/content/technotes/tn2459/_index.html
 url:
     darwin_amd64: https://engine.steelseriescdn.com/SteelSeriesGG108.1.0.pkg
     darwin_amd64_10: https://engine.steelseriescdn.com/SteelSeriesGG108.1.0.pkg
@@ -52,11 +58,8 @@ sha512:
     darwin_arm64_15: ""
     darwin_arm64_16: ""
 artifacts:
-    app: []
     pkg:
         - SteelSeriesGG108.1.0.pkg
-    bin: []
 source:
     url: https://engine.steelseriescdn.com/SteelSeriesGG108.1.0.pkg
     sha256: 893da594ce75f6269a94207f60a0c3a12acb83f23758db886981ccdcc6ea2063
-    sha512: ""

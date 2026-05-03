@@ -1,21 +1,17 @@
 name: wireshark
-version: 4.6.4
+version: 4.6.5
 description: Network analyzer and capture tool - without graphical user interface
 homepage: https://www.wireshark.org
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    This formula only installs the command-line utilities by default.
+
+    Install Wireshark.app with Homebrew Cask:
+      brew install wireshark-app
+
+    If your list of available capture interfaces is empty
+    (default macOS behavior), install ChmodBPF:
+      brew install --cask wireshark-chmodbpf
 dependencies:
     - c-ares
     - glib
@@ -32,77 +28,39 @@ dependencies:
     - speexdsp
     - zstd
     - libgpg-error
-keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:27ac99b2d325d07a4f4324dc50ecb59de4bf3f07423cc76b91f91baa151c7bc6
-        sha256: 27ac99b2d325d07a4f4324dc50ecb59de4bf3f07423cc76b91f91baa151c7bc6
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:94a555a70d028d3507ada4b48e648968e3a0dba055c0eec4bee32996fa4986cc
+        sha256: 94a555a70d028d3507ada4b48e648968e3a0dba055c0eec4bee32996fa4986cc
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:27ac99b2d325d07a4f4324dc50ecb59de4bf3f07423cc76b91f91baa151c7bc6
-        sha256: 27ac99b2d325d07a4f4324dc50ecb59de4bf3f07423cc76b91f91baa151c7bc6
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:94a555a70d028d3507ada4b48e648968e3a0dba055c0eec4bee32996fa4986cc
+        sha256: 94a555a70d028d3507ada4b48e648968e3a0dba055c0eec4bee32996fa4986cc
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:94a555a70d028d3507ada4b48e648968e3a0dba055c0eec4bee32996fa4986cc
+        sha256: 94a555a70d028d3507ada4b48e648968e3a0dba055c0eec4bee32996fa4986cc
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:94a555a70d028d3507ada4b48e648968e3a0dba055c0eec4bee32996fa4986cc
+        sha256: 94a555a70d028d3507ada4b48e648968e3a0dba055c0eec4bee32996fa4986cc
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:6e18b24d8a0333bf7cfd1c92f602ff0d6019580451d1bc7858c8b106f8599550
-        sha256: 6e18b24d8a0333bf7cfd1c92f602ff0d6019580451d1bc7858c8b106f8599550
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:1e34f03cf9795aecd7947bb58ff3910408abc3bb63efd3c1a4a23bb34b2383ed
+        sha256: 1e34f03cf9795aecd7947bb58ff3910408abc3bb63efd3c1a4a23bb34b2383ed
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:85ee2997391e87141421c168fa4497388c9889eb8be390cd4a3294a3065a4a96
-        sha256: 85ee2997391e87141421c168fa4497388c9889eb8be390cd4a3294a3065a4a96
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:c615c035c78537029d08eeaec64fbe6bc2bbc63254fedc248a62aa1948ced623
+        sha256: c615c035c78537029d08eeaec64fbe6bc2bbc63254fedc248a62aa1948ced623
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:6e18b24d8a0333bf7cfd1c92f602ff0d6019580451d1bc7858c8b106f8599550
-        sha256: 6e18b24d8a0333bf7cfd1c92f602ff0d6019580451d1bc7858c8b106f8599550
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:0f6c690807d0af39d0bf94d50a7656f4615b9156a165a36aae13db76d031c757
+        sha256: 0f6c690807d0af39d0bf94d50a7656f4615b9156a165a36aae13db76d031c757
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:fb70cc4a30876469e96717a747f113ea408fe6e3af51584735055646d226fd13
-        sha256: fb70cc4a30876469e96717a747f113ea408fe6e3af51584735055646d226fd13
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:1e34f03cf9795aecd7947bb58ff3910408abc3bb63efd3c1a4a23bb34b2383ed
+        sha256: 1e34f03cf9795aecd7947bb58ff3910408abc3bb63efd3c1a4a23bb34b2383ed
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:1b488d1d3c7496b88afaef35ba42f43deceae3dbb8a3dee416691fcddd56c6ee
-        sha256: 1b488d1d3c7496b88afaef35ba42f43deceae3dbb8a3dee416691fcddd56c6ee
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:cc9acf8ce2a250f6b711d27b610fea3f62b0ae9bffb24e00a62b3a2cd6bcdf86
+        sha256: cc9acf8ce2a250f6b711d27b610fea3f62b0ae9bffb24e00a62b3a2cd6bcdf86
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:ba445c07c071e8f8661506084b2a92df131e29b1a8cb877d69b2f8670714ceb4
-        sha256: ba445c07c071e8f8661506084b2a92df131e29b1a8cb877d69b2f8670714ceb4
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/wireshark/blobs/sha256:c2a70492fb6e10258083db140679464628c5f3ac2f2ac3e6a8be784614e8eb97
+        sha256: c2a70492fb6e10258083db140679464628c5f3ac2f2ac3e6a8be784614e8eb97
 source:
-    url: https://www.wireshark.org/download/src/all-versions/wireshark-4.6.4.tar.xz
-    sha256: fbeab3d85c6c8a5763c8d9b7fe20b5c69ca9f9e7f2b824bedc73135bdca332e2
-    sha512: ""
-    signature: ""
+    url: https://www.wireshark.org/download/src/all-versions/wireshark-4.6.5.tar.xz
+    sha256: b5322538b20fa3e0bf004be83c534a42937d442be3f960d01b4e1f0db6c50386
 build_dependencies:
     - cmake
-linux_dependencies:
-    - c-ares
-    - glib
-    - gnutls
-    - libgcrypt
-    - libmaxminddb
-    - libnghttp2
-    - libnghttp3
-    - libsmi
-    - libssh
-    - lua
-    - lz4
-    - pcre2
-    - speexdsp
-    - zlib-ng-compat
-    - zstd
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - wireshark

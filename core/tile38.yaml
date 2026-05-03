@@ -3,73 +3,41 @@ version: 1.37.0
 description: In-memory geolocation data store, spatial index, and realtime geofence
 homepage: https://tile38.com/
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
         sha256: 9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
         sha256: 9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        sha256: 9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        sha256: 9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
-        sha256: 461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:cdfe9e42cb4b5cdee808dfca100d20e9f04cf737d63aab45a2e9dc349647a73d
+        sha256: cdfe9e42cb4b5cdee808dfca100d20e9f04cf737d63aab45a2e9dc349647a73d
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:bddb54ad65fd35534c8d593a6ede162d91a3dfb924a71e0201928d25083622d8
         sha256: bddb54ad65fd35534c8d593a6ede162d91a3dfb924a71e0201928d25083622d8
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
         sha256: 461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:cdfe9e42cb4b5cdee808dfca100d20e9f04cf737d63aab45a2e9dc349647a73d
         sha256: cdfe9e42cb4b5cdee808dfca100d20e9f04cf737d63aab45a2e9dc349647a73d
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:a9af0c425459875d1402d52e8c4b3ba93d69c1b733c1554791e9640ca6b012d3
         sha256: a9af0c425459875d1402d52e8c4b3ba93d69c1b733c1554791e9640ca6b012d3
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:d4a22c1843a3dbca44783a1443386bc513efef0632ff31e2f2368c888c678aea
         sha256: d4a22c1843a3dbca44783a1443386bc513efef0632ff31e2f2368c888c678aea
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/tidwall/tile38.git
-    sha256: ""
-    sha512: ""
-    signature: ""
 build_dependencies:
     - go
-linux_dependencies: []
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/tile38/bin/tile38-server
@@ -80,8 +48,3 @@ service:
     log_path: $HOMEBREW_PREFIX/var/log/tile38.log
     error_log_path: $HOMEBREW_PREFIX/var/log/tile38.log
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - tile38

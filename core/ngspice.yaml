@@ -3,19 +3,9 @@ version: "46"
 description: Spice circuit simulator
 homepage: https://ngspice.sourceforge.io/
 license: LicenseRef-Homebrew-cannot-represent
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    If you need the graphical plotting functions you need to install X11 with:
+      brew install --cask xquartz
 dependencies:
     - fftw
     - freetype
@@ -28,68 +18,37 @@ dependencies:
     - libsm
     - libxext
     - libxmu
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:93543c940da1f0d3d9f413ea0e49e1e7b274ea57d8bfde30ef8d6e1386b4782c
         sha256: 93543c940da1f0d3d9f413ea0e49e1e7b274ea57d8bfde30ef8d6e1386b4782c
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:93543c940da1f0d3d9f413ea0e49e1e7b274ea57d8bfde30ef8d6e1386b4782c
         sha256: 93543c940da1f0d3d9f413ea0e49e1e7b274ea57d8bfde30ef8d6e1386b4782c
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:93543c940da1f0d3d9f413ea0e49e1e7b274ea57d8bfde30ef8d6e1386b4782c
+        sha256: 93543c940da1f0d3d9f413ea0e49e1e7b274ea57d8bfde30ef8d6e1386b4782c
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:93543c940da1f0d3d9f413ea0e49e1e7b274ea57d8bfde30ef8d6e1386b4782c
+        sha256: 93543c940da1f0d3d9f413ea0e49e1e7b274ea57d8bfde30ef8d6e1386b4782c
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:3cffddf9fe4c94c3b706847ba461d60ca89dff9379839d72cc1c2f75e060983d
-        sha256: 3cffddf9fe4c94c3b706847ba461d60ca89dff9379839d72cc1c2f75e060983d
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:8343461583c56ca951d0508e8459462ea98f6af3f1783e2e491874828a1a5ad9
+        sha256: 8343461583c56ca951d0508e8459462ea98f6af3f1783e2e491874828a1a5ad9
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:3ce129ec06cd1db6ead129a5f36a645fa196920df68b2b3870d4e3f8a840c7ee
         sha256: 3ce129ec06cd1db6ead129a5f36a645fa196920df68b2b3870d4e3f8a840c7ee
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:3cffddf9fe4c94c3b706847ba461d60ca89dff9379839d72cc1c2f75e060983d
         sha256: 3cffddf9fe4c94c3b706847ba461d60ca89dff9379839d72cc1c2f75e060983d
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:8343461583c56ca951d0508e8459462ea98f6af3f1783e2e491874828a1a5ad9
         sha256: 8343461583c56ca951d0508e8459462ea98f6af3f1783e2e491874828a1a5ad9
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:f42643fd6446de764738e5a58b68a01136f8ae8c6e89f8bbadae66b8db0bb1e7
         sha256: f42643fd6446de764738e5a58b68a01136f8ae8c6e89f8bbadae66b8db0bb1e7
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/ngspice/blobs/sha256:8f25521726c656b9866cb1ebb30bdd3c23ce6da724536a4de01b0597ccc7f3b1
         sha256: 8f25521726c656b9866cb1ebb30bdd3c23ce6da724536a4de01b0597ccc7f3b1
-        sha512: ""
-        signature: ""
 source:
     url: https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/46/ngspice-46.tar.gz
     sha256: a0d1699af1940b06649276dcd6ff5a566c8c0cad01b2f7b5e99dedbb4d64c19b
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies:
-    - fftw
-    - freetype
-    - libngspice
-    - libx11
-    - libxaw
-    - libxt
-    - readline
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - ngspice

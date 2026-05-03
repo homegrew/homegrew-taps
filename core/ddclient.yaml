@@ -3,88 +3,57 @@ version: 4.0.0
 description: Update dynamic DNS entries
 homepage: https://ddclient.net/
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    For ddclient to work, you will need to customise the configuration
+    file at `$HOMEBREW_PREFIX/etc/ddclient/ddclient.conf`.
+
+    Note: don't enable daemon mode in the configuration file; see
+    additional information below.
+
+    The next reboot of the system will automatically start ddclient.
+
+    You can adjust the execution interval by changing the value of
+    StartInterval (in seconds) in /Library/LaunchDaemons/homebrew.mxcl.ddclient.plist.
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
         sha256: f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
         sha256: f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
+        sha256: f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
+        sha256: f21970276380eb8695cf3d1fe7db5e34ebb4f6a30e5e016a40f09f9aaea3a463
     darwin_arm64:
         url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
         sha256: fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
         sha256: fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
         sha256: fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
         sha256: fd99a31bc382b37fb1c30b0951207f62cac95ca4a63e1aa8b33418d8c7835b02
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:21970b6c0bf60078a269f10b8e22da146a75f65ef69cead984b9026203664493
         sha256: 21970b6c0bf60078a269f10b8e22da146a75f65ef69cead984b9026203664493
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:7e668a3f6c30e6ee9161cee638436862bf180227acaf1d9d18c91f3c5fc11993
         sha256: 7e668a3f6c30e6ee9161cee638436862bf180227acaf1d9d18c91f3c5fc11993
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/ddclient/ddclient/archive/refs/tags/v4.0.0.tar.gz
     sha256: 4b37c99ac0011102d7db62f1ece7ff899b06df3d4b172e312703931a3c593c93
-    sha512: ""
-    signature: ""
 build_dependencies:
     - autoconf
     - automake
-linux_dependencies:
-    - openssl@3
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/ddclient/bin/ddclient
         - -file
         - $HOMEBREW_PREFIX/etc/ddclient/ddclient.conf
     run_type: interval
-    working_dir: ""
-    log_path: ""
-    error_log_path: ""
-    keep_alive: false
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - ddclient

@@ -3,95 +3,55 @@ version: 3.0.5
 description: Secure FTP server for UNIX
 homepage: https://security.appspot.com/vsftpd.html
 license: GPL-2.0-only
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    To use chroot, vsftpd requires root privileges, so you will need to run
+    `sudo vsftpd`.
+    You should be certain that you trust any software you grant root privileges.
+
+    The vsftpd.conf file must be owned by root or vsftpd will refuse to start:
+      sudo chown root $HOMEBREW_PREFIX/etc/vsftpd.conf
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:63fafab3ad2cc9aa1c22643d6b923292a58b0872abbc774fb028b0d79f3febe6
         sha256: 63fafab3ad2cc9aa1c22643d6b923292a58b0872abbc774fb028b0d79f3febe6
-        sha512: ""
-        signature: ""
     darwin_amd64_13:
         url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:ac39611af47fe2cb0fa24462a75d835016c9edca1a5904ee112886e223fcc0b8
         sha256: ac39611af47fe2cb0fa24462a75d835016c9edca1a5904ee112886e223fcc0b8
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:63fafab3ad2cc9aa1c22643d6b923292a58b0872abbc774fb028b0d79f3febe6
         sha256: 63fafab3ad2cc9aa1c22643d6b923292a58b0872abbc774fb028b0d79f3febe6
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:63fafab3ad2cc9aa1c22643d6b923292a58b0872abbc774fb028b0d79f3febe6
+        sha256: 63fafab3ad2cc9aa1c22643d6b923292a58b0872abbc774fb028b0d79f3febe6
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:63fafab3ad2cc9aa1c22643d6b923292a58b0872abbc774fb028b0d79f3febe6
+        sha256: 63fafab3ad2cc9aa1c22643d6b923292a58b0872abbc774fb028b0d79f3febe6
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:d878a9c0483cf81228a5301cf5768e613271d731fbf2affa778a475bcea57a09
-        sha256: d878a9c0483cf81228a5301cf5768e613271d731fbf2affa778a475bcea57a09
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:01dbfae43456eddf9dda1082d584faffbc1375610626a5b2c6229ae3fdbd13f2
+        sha256: 01dbfae43456eddf9dda1082d584faffbc1375610626a5b2c6229ae3fdbd13f2
     darwin_arm64_13:
         url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:7e015b54e1995a19395d9802116f3f7d0895818260c1aeddd793ca2b2da806aa
         sha256: 7e015b54e1995a19395d9802116f3f7d0895818260c1aeddd793ca2b2da806aa
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:7547e5fa4936a51a84b4e016545b8088199e1f92fc7299f8619b6b3f5b7ba5bf
         sha256: 7547e5fa4936a51a84b4e016545b8088199e1f92fc7299f8619b6b3f5b7ba5bf
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:d878a9c0483cf81228a5301cf5768e613271d731fbf2affa778a475bcea57a09
         sha256: d878a9c0483cf81228a5301cf5768e613271d731fbf2affa778a475bcea57a09
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:01dbfae43456eddf9dda1082d584faffbc1375610626a5b2c6229ae3fdbd13f2
         sha256: 01dbfae43456eddf9dda1082d584faffbc1375610626a5b2c6229ae3fdbd13f2
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:4443fcbe19aa4dd49e55a9c5fcd7e3c069a07320a4c86b9d252c4020ba7614ee
         sha256: 4443fcbe19aa4dd49e55a9c5fcd7e3c069a07320a4c86b9d252c4020ba7614ee
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/vsftpd/blobs/sha256:a7e48ecdd12b194050395cc3532a82bcc3724a4d19d0f5e43cb0cc62723f3440
         sha256: a7e48ecdd12b194050395cc3532a82bcc3724a4d19d0f5e43cb0cc62723f3440
-        sha512: ""
-        signature: ""
 source:
     url: https://security.appspot.com/downloads/vsftpd-3.0.5.tar.gz
     sha256: 26b602ae454b0ba6d99ef44a09b6b9e0dfa7f67228106736df1f278c70bc91d3
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies:
-    - libcap
-    - linux-pam
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/vsftpd/sbin/vsftpd
         - $HOMEBREW_PREFIX/etc/vsftpd.conf
     run_type: immediate
-    working_dir: ""
-    log_path: ""
-    error_log_path: ""
-    keep_alive: false
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - vsftpd

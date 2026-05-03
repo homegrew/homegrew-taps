@@ -3,73 +3,42 @@ version: 9.0.3
 description: High-performance data structure server that primarily serves key/value workloads
 homepage: https://valkey.io
 license: BSD-3-Clause AND BSD-2-Clause AND BSL-1.0 AND MIT AND (CC0-1.0 OR BSD-2-Clause)
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - openssl@3
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:1ce8587dfc9292cfaa781e501c7ace8f2b893d018c1eb1607d5b92c311f0601c
         sha256: 1ce8587dfc9292cfaa781e501c7ace8f2b893d018c1eb1607d5b92c311f0601c
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:1ce8587dfc9292cfaa781e501c7ace8f2b893d018c1eb1607d5b92c311f0601c
         sha256: 1ce8587dfc9292cfaa781e501c7ace8f2b893d018c1eb1607d5b92c311f0601c
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:1ce8587dfc9292cfaa781e501c7ace8f2b893d018c1eb1607d5b92c311f0601c
+        sha256: 1ce8587dfc9292cfaa781e501c7ace8f2b893d018c1eb1607d5b92c311f0601c
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:1ce8587dfc9292cfaa781e501c7ace8f2b893d018c1eb1607d5b92c311f0601c
+        sha256: 1ce8587dfc9292cfaa781e501c7ace8f2b893d018c1eb1607d5b92c311f0601c
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:1e746c5dc69a16aab8c18e079712d0bf66085298dbb8d649d229073fcffbd11e
-        sha256: 1e746c5dc69a16aab8c18e079712d0bf66085298dbb8d649d229073fcffbd11e
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:27541b3465274ab0801fa28b76f4412004071b7940edaa09d7daeee442ba9d46
+        sha256: 27541b3465274ab0801fa28b76f4412004071b7940edaa09d7daeee442ba9d46
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:04eb1cce12e503486bccb3f60afe869c7409ce91a8fe38fa9311cf47523cbd32
         sha256: 04eb1cce12e503486bccb3f60afe869c7409ce91a8fe38fa9311cf47523cbd32
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:1e746c5dc69a16aab8c18e079712d0bf66085298dbb8d649d229073fcffbd11e
         sha256: 1e746c5dc69a16aab8c18e079712d0bf66085298dbb8d649d229073fcffbd11e
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:27541b3465274ab0801fa28b76f4412004071b7940edaa09d7daeee442ba9d46
         sha256: 27541b3465274ab0801fa28b76f4412004071b7940edaa09d7daeee442ba9d46
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:3a12be9914ab13cb2ef2d657a42da13580a05a81c60f16bffb03e5bccaf46cf0
         sha256: 3a12be9914ab13cb2ef2d657a42da13580a05a81c60f16bffb03e5bccaf46cf0
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/valkey/blobs/sha256:2063106c5a6227585cfb66e55e1aa8837370131b4cf3d999f18c7613c057852c
         sha256: 2063106c5a6227585cfb66e55e1aa8837370131b4cf3d999f18c7613c057852c
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/valkey-io/valkey/archive/refs/tags/9.0.3.tar.gz
     sha256: e220f4b0143292ee6ea6d705aa40d45a0c8a77759b3e94c201cb5c25dbdca42f
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies: []
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/valkey/bin/valkey-server
@@ -79,8 +48,3 @@ service:
     log_path: $HOMEBREW_PREFIX/var/log/valkey.log
     error_log_path: $HOMEBREW_PREFIX/var/log/valkey.log
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - valkey

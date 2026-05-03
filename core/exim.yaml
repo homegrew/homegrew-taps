@@ -1,79 +1,46 @@
 name: exim
-version: 4.99.1
+version: 4.99.2
 description: Complete replacement for sendmail
 homepage: https://exim.org
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    Start with:
+      exim_ctl start
+    Don't forget to run it as root to be able to bind port 25.
 dependencies:
     - openssl@3
     - pcre2
-keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:a721043b1e853d2678ff9adbcb82b4c0972eb4e494b0d715ea5bc62a4c52329c
-        sha256: a721043b1e853d2678ff9adbcb82b4c0972eb4e494b0d715ea5bc62a4c52329c
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:b2e66968169da79e22885fdd696fe1df70862307bb28d03018c799582f2a297f
+        sha256: b2e66968169da79e22885fdd696fe1df70862307bb28d03018c799582f2a297f
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:a721043b1e853d2678ff9adbcb82b4c0972eb4e494b0d715ea5bc62a4c52329c
-        sha256: a721043b1e853d2678ff9adbcb82b4c0972eb4e494b0d715ea5bc62a4c52329c
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:b2e66968169da79e22885fdd696fe1df70862307bb28d03018c799582f2a297f
+        sha256: b2e66968169da79e22885fdd696fe1df70862307bb28d03018c799582f2a297f
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:b2e66968169da79e22885fdd696fe1df70862307bb28d03018c799582f2a297f
+        sha256: b2e66968169da79e22885fdd696fe1df70862307bb28d03018c799582f2a297f
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:b2e66968169da79e22885fdd696fe1df70862307bb28d03018c799582f2a297f
+        sha256: b2e66968169da79e22885fdd696fe1df70862307bb28d03018c799582f2a297f
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:4fb1a2b2945e9cb93c8cf245f21a76e2bb15ad983913c2a77b5e79d5f76a3f37
-        sha256: 4fb1a2b2945e9cb93c8cf245f21a76e2bb15ad983913c2a77b5e79d5f76a3f37
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:6ba20980d6eb97c8a94a12621da6e6ecaaa42010539eda94c1987836f2c5059f
+        sha256: 6ba20980d6eb97c8a94a12621da6e6ecaaa42010539eda94c1987836f2c5059f
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:b7c314ea685ef7c7d98cf68b5e2d5850be53c76f5b5d3e2ac451e5ee17ec7309
-        sha256: b7c314ea685ef7c7d98cf68b5e2d5850be53c76f5b5d3e2ac451e5ee17ec7309
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:2a7c36a3175e52291b21173677b7a4af29c6bcee07663dfbea527c5d5c014e14
+        sha256: 2a7c36a3175e52291b21173677b7a4af29c6bcee07663dfbea527c5d5c014e14
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:4fb1a2b2945e9cb93c8cf245f21a76e2bb15ad983913c2a77b5e79d5f76a3f37
-        sha256: 4fb1a2b2945e9cb93c8cf245f21a76e2bb15ad983913c2a77b5e79d5f76a3f37
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:5f2bdd66cfe010b60e71e6712652bab929bccc85aa43386bdb41e487ba92e99e
+        sha256: 5f2bdd66cfe010b60e71e6712652bab929bccc85aa43386bdb41e487ba92e99e
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:3111d1c3eebf8b1bc802acbd9f9f5dc8902d1adfb08a311038f1edb946470b2a
-        sha256: 3111d1c3eebf8b1bc802acbd9f9f5dc8902d1adfb08a311038f1edb946470b2a
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:6ba20980d6eb97c8a94a12621da6e6ecaaa42010539eda94c1987836f2c5059f
+        sha256: 6ba20980d6eb97c8a94a12621da6e6ecaaa42010539eda94c1987836f2c5059f
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:5fa59f2ba32e7cf1ecd5e2ffe69d907f63b57a3491d7bc573ff9104448add8ec
-        sha256: 5fa59f2ba32e7cf1ecd5e2ffe69d907f63b57a3491d7bc573ff9104448add8ec
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:f045a6a0c2c6589aa1c30e9e440075b406bf284d00c0198687d3a8654f13b75f
+        sha256: f045a6a0c2c6589aa1c30e9e440075b406bf284d00c0198687d3a8654f13b75f
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:ae5250b2f200a5e3bd37883ac63fd013996853cb1e74f77341171125761937c3
-        sha256: ae5250b2f200a5e3bd37883ac63fd013996853cb1e74f77341171125761937c3
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/exim/blobs/sha256:e354e2cc5ab8d1b254f0ecde210bf088cb9ca91762470ec5c0a8a39dfa7440be
+        sha256: e354e2cc5ab8d1b254f0ecde210bf088cb9ca91762470ec5c0a8a39dfa7440be
 source:
-    url: https://ftp.exim.org/pub/exim/exim4/exim-4.99.1.tar.xz
-    sha256: eae967bd49a5f879933b8c6ec88c30475a1c6646232135f37f05b55dbc4e3447
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - exim
+    url: https://ftp.exim.org/pub/exim/exim4/exim-4.99.2.tar.xz
+    sha256: 25364f19988270d846965689dd29c662cf5de152639875d0d5352a69fd753a47

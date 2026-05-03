@@ -3,19 +3,15 @@ version: 4.4.2
 description: File server for Macs, compliant with Apple Filing Protocol (AFP)
 homepage: https://netatalk.io
 license: GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.1-or-later AND BSD-2-Clause AND BSD-3-Clause AND MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    Authenticating as a system user requires manually installing the
+    PAM configuration file to a predetermined location by running:
+
+      sudo install -d -o $USER -g admin /usr/local/etc
+      mkdir -p /usr/local/etc/pam.d
+      cp $(brew --prefix)/etc/pam.d/netatalk /usr/local/etc/pam.d
+
+    See `man pam.conf` for more information.
 dependencies:
     - berkeley-db@5
     - bstring
@@ -25,77 +21,42 @@ dependencies:
     - libgcrypt
     - mariadb-connector-c
     - openldap
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:92980157ba810950a905250ca8874c0babc6ddd8ffc8e717fafb2a6ec33986b9
         sha256: 92980157ba810950a905250ca8874c0babc6ddd8ffc8e717fafb2a6ec33986b9
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:92980157ba810950a905250ca8874c0babc6ddd8ffc8e717fafb2a6ec33986b9
         sha256: 92980157ba810950a905250ca8874c0babc6ddd8ffc8e717fafb2a6ec33986b9
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:92980157ba810950a905250ca8874c0babc6ddd8ffc8e717fafb2a6ec33986b9
+        sha256: 92980157ba810950a905250ca8874c0babc6ddd8ffc8e717fafb2a6ec33986b9
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:92980157ba810950a905250ca8874c0babc6ddd8ffc8e717fafb2a6ec33986b9
+        sha256: 92980157ba810950a905250ca8874c0babc6ddd8ffc8e717fafb2a6ec33986b9
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:e3c8a55a6449d45500764ba400e16930a723097fb07f46b1959f855e79e11720
-        sha256: e3c8a55a6449d45500764ba400e16930a723097fb07f46b1959f855e79e11720
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:b955fd7d4965c4007641b24613d7b84136117653201458a6e8a999c676a116f5
+        sha256: b955fd7d4965c4007641b24613d7b84136117653201458a6e8a999c676a116f5
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:13e97200f28a470cbad9854e19c4ea8f1997e593179ca4e10eb7bc135aa2e2ad
         sha256: 13e97200f28a470cbad9854e19c4ea8f1997e593179ca4e10eb7bc135aa2e2ad
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:e3c8a55a6449d45500764ba400e16930a723097fb07f46b1959f855e79e11720
         sha256: e3c8a55a6449d45500764ba400e16930a723097fb07f46b1959f855e79e11720
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:b955fd7d4965c4007641b24613d7b84136117653201458a6e8a999c676a116f5
         sha256: b955fd7d4965c4007641b24613d7b84136117653201458a6e8a999c676a116f5
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:d6977182c52360c9a3f8bd19d157aebb28106d1ce73f9180d1a472548ab8018b
         sha256: d6977182c52360c9a3f8bd19d157aebb28106d1ce73f9180d1a472548ab8018b
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/netatalk/blobs/sha256:475d8dedd339614f2eea1184f470838b92b836b881f942333e958192f7a84614
         sha256: 475d8dedd339614f2eea1184f470838b92b836b881f942333e958192f7a84614
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/Netatalk/netatalk/releases/download/netatalk-4-4-2/netatalk-4.4.2.tar.xz
     sha256: 31fca3b379014810e4b9d6a498aee286d29d3e9ff70326e87e14d93eaa6d0a5e
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmark-gfm
     - meson
     - ninja
     - pkgconf
-linux_dependencies:
-    - avahi
-    - berkeley-db@5
-    - bstring
-    - cracklib
-    - cups
-    - iniparser
-    - libevent
-    - libgcrypt
-    - libtirpc
-    - linux-pam
-    - mariadb-connector-c
-    - openldap
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - netatalk

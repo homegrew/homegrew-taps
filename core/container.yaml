@@ -1,49 +1,21 @@
 name: container
-version: 0.11.0
+version: 0.12.3
 description: Create and run Linux containers using lightweight virtual machines
 homepage: https://apple.github.io/container/documentation/
 license: Apache-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:3050bf8eeb1a7d6d9ffd98a55fe4df5e6454d38981dfe10b8b5b9c6380387371
-        sha256: 3050bf8eeb1a7d6d9ffd98a55fe4df5e6454d38981dfe10b8b5b9c6380387371
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:f6ee6ab7fd98797b2e2961e3a6e28bbcdbf8abe95c3d20ee3eba1ea83aa4beb8
+        sha256: f6ee6ab7fd98797b2e2961e3a6e28bbcdbf8abe95c3d20ee3eba1ea83aa4beb8
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:3050bf8eeb1a7d6d9ffd98a55fe4df5e6454d38981dfe10b8b5b9c6380387371
-        sha256: 3050bf8eeb1a7d6d9ffd98a55fe4df5e6454d38981dfe10b8b5b9c6380387371
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:a3a060599d6bb02e12b3fe4571844261c12e317d12182fe2173e51f27c025243
+        sha256: a3a060599d6bb02e12b3fe4571844261c12e317d12182fe2173e51f27c025243
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:485f6e988c79187a98be715e5410a920df3d9e3edd9e71b2d5e29055368f4847
-        sha256: 485f6e988c79187a98be715e5410a920df3d9e3edd9e71b2d5e29055368f4847
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/container/blobs/sha256:f6ee6ab7fd98797b2e2961e3a6e28bbcdbf8abe95c3d20ee3eba1ea83aa4beb8
+        sha256: f6ee6ab7fd98797b2e2961e3a6e28bbcdbf8abe95c3d20ee3eba1ea83aa4beb8
 source:
-    url: https://github.com/apple/container/archive/refs/tags/0.11.0.tar.gz
-    sha256: aaab11949e2d9d9a983aedc08f6d3f3f5612c927d980e66cff45aafd63d031f2
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies: []
-build:
-    configure: []
-    install: []
+    url: https://github.com/apple/container/archive/refs/tags/0.12.3.tar.gz
+    sha256: aa5e4225b46b416b8c6c8f0a7f8d2b4ed3166278313fe45f7eb2d7a469c34403
 service:
     run:
         - $HOMEBREW_PREFIX/opt/container/bin/container
@@ -54,8 +26,3 @@ service:
     log_path: $HOMEBREW_PREFIX/var/log/container.log
     error_log_path: $HOMEBREW_PREFIX/var/log/container.log
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - container

@@ -3,99 +3,53 @@ version: "23"
 description: Fast and Secure Tunnelling Daemon
 homepage: https://github.com/neocturne/fastd
 license: BSD-2-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - json-c
     - libsodium
     - libuecc
     - openssl@3
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:4b2b7cbd3c7cd14efeb200d2e2a75ce9b1fb15633fe323d486ef7da2739ae129
         sha256: 4b2b7cbd3c7cd14efeb200d2e2a75ce9b1fb15633fe323d486ef7da2739ae129
-        sha512: ""
-        signature: ""
     darwin_amd64_13:
         url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:d67909e9fba4d7f3accffe974b6142a0fe9e9c6bd8a661e4e20fc4b1ad0c01ec
         sha256: d67909e9fba4d7f3accffe974b6142a0fe9e9c6bd8a661e4e20fc4b1ad0c01ec
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:4b2b7cbd3c7cd14efeb200d2e2a75ce9b1fb15633fe323d486ef7da2739ae129
         sha256: 4b2b7cbd3c7cd14efeb200d2e2a75ce9b1fb15633fe323d486ef7da2739ae129
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:4b2b7cbd3c7cd14efeb200d2e2a75ce9b1fb15633fe323d486ef7da2739ae129
+        sha256: 4b2b7cbd3c7cd14efeb200d2e2a75ce9b1fb15633fe323d486ef7da2739ae129
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:4b2b7cbd3c7cd14efeb200d2e2a75ce9b1fb15633fe323d486ef7da2739ae129
+        sha256: 4b2b7cbd3c7cd14efeb200d2e2a75ce9b1fb15633fe323d486ef7da2739ae129
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:0e49dc056a65bd9665f96f384eff2843e3171ce178758cae06f8c2263a350511
-        sha256: 0e49dc056a65bd9665f96f384eff2843e3171ce178758cae06f8c2263a350511
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:9c8e775650403436785d0cdfc910c4266874951649102e80ab289ac810731789
+        sha256: 9c8e775650403436785d0cdfc910c4266874951649102e80ab289ac810731789
     darwin_arm64_13:
         url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:39736a2f0b8cbf6e57cb89b7f16ad59195007b8299c1b308815b5f053824df47
         sha256: 39736a2f0b8cbf6e57cb89b7f16ad59195007b8299c1b308815b5f053824df47
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:71e35318e2053784ab994a73a4154ed20f9edbdc0d8f499a640b6acb9f2e304b
         sha256: 71e35318e2053784ab994a73a4154ed20f9edbdc0d8f499a640b6acb9f2e304b
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:0e49dc056a65bd9665f96f384eff2843e3171ce178758cae06f8c2263a350511
         sha256: 0e49dc056a65bd9665f96f384eff2843e3171ce178758cae06f8c2263a350511
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:9c8e775650403436785d0cdfc910c4266874951649102e80ab289ac810731789
         sha256: 9c8e775650403436785d0cdfc910c4266874951649102e80ab289ac810731789
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:7578a78bec1555ad86e17cd3e88423093def42af998403fd316bbcf03d975789
         sha256: 7578a78bec1555ad86e17cd3e88423093def42af998403fd316bbcf03d975789
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/fastd/blobs/sha256:20cf70054b026b5303e4f4e20992fd1888750cd5261ab396083a830375d70d20
         sha256: 20cf70054b026b5303e4f4e20992fd1888750cd5261ab396083a830375d70d20
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/neocturne/fastd/releases/download/v23/fastd-23.tar.xz
     sha256: dcab54485c79dda22ce6308a2a48764d53977a518952facd1204ba21af1c86e0
-    sha512: ""
-    signature: ""
 build_dependencies:
     - bison
     - meson
     - ninja
     - pkgconf
-linux_dependencies:
-    - json-c
-    - libcap
-    - libmnl
-    - libsodium
-    - libuecc
-    - openssl@3
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - fastd

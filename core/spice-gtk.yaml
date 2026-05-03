@@ -3,19 +3,6 @@ version: "0.42"
 description: GTK client/libraries for SPICE
 homepage: https://www.spice-space.org
 license: GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - at-spi2-core
     - cairo
@@ -40,53 +27,40 @@ dependencies:
     - usbredir
     - gobject-introspection
     - harfbuzz
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:d52d67c6476174fc7389f1eb999f649097e2c5560ab1571db1489027393cf8b3
         sha256: d52d67c6476174fc7389f1eb999f649097e2c5560ab1571db1489027393cf8b3
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:d52d67c6476174fc7389f1eb999f649097e2c5560ab1571db1489027393cf8b3
         sha256: d52d67c6476174fc7389f1eb999f649097e2c5560ab1571db1489027393cf8b3
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:d52d67c6476174fc7389f1eb999f649097e2c5560ab1571db1489027393cf8b3
+        sha256: d52d67c6476174fc7389f1eb999f649097e2c5560ab1571db1489027393cf8b3
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:d52d67c6476174fc7389f1eb999f649097e2c5560ab1571db1489027393cf8b3
+        sha256: d52d67c6476174fc7389f1eb999f649097e2c5560ab1571db1489027393cf8b3
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:18e571898c70aeb70242562ae79267b34d749f3677902ab487e0a2284084b9f0
-        sha256: 18e571898c70aeb70242562ae79267b34d749f3677902ab487e0a2284084b9f0
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:7ad0ed6ed58e9398be517b16d9ec4b6082d871e0662b49ae45d0228f4e6ce4ee
+        sha256: 7ad0ed6ed58e9398be517b16d9ec4b6082d871e0662b49ae45d0228f4e6ce4ee
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:0d25f4afe099a8bc79aaf80258f1640ade5e9f40676bb8e2406e2005e1e8c519
         sha256: 0d25f4afe099a8bc79aaf80258f1640ade5e9f40676bb8e2406e2005e1e8c519
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:18e571898c70aeb70242562ae79267b34d749f3677902ab487e0a2284084b9f0
         sha256: 18e571898c70aeb70242562ae79267b34d749f3677902ab487e0a2284084b9f0
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:7ad0ed6ed58e9398be517b16d9ec4b6082d871e0662b49ae45d0228f4e6ce4ee
         sha256: 7ad0ed6ed58e9398be517b16d9ec4b6082d871e0662b49ae45d0228f4e6ce4ee
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:ca84d516eaae38af2beb7f30ebc30beaa744c6c34e84d7dcb3d9a72417b55918
         sha256: ca84d516eaae38af2beb7f30ebc30beaa744c6c34e84d7dcb3d9a72417b55918
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/spice-gtk/blobs/sha256:25e897876c6900507c0cd80e3c20717d2526f1bc2240f81967565c84ed98e42b
         sha256: 25e897876c6900507c0cd80e3c20717d2526f1bc2240f81967565c84ed98e42b
-        sha512: ""
-        signature: ""
 source:
     url: https://www.spice-space.org/download/gtk/spice-gtk-0.42.tar.xz
     sha256: 9380117f1811ad1faa1812cb6602479b6290d4a0d8cc442d44427f7f6c0e7a58
-    sha512: ""
-    signature: ""
 build_dependencies:
     - gobject-introspection
     - intltool
@@ -96,38 +70,3 @@ build_dependencies:
     - pkgconf
     - python@3.14
     - vala
-linux_dependencies:
-    - at-spi2-core
-    - cairo
-    - cyrus-sasl
-    - gdk-pixbuf
-    - gettext
-    - glib
-    - gstreamer
-    - gtk+3
-    - jpeg-turbo
-    - json-glib
-    - libepoxy
-    - libsoup
-    - libusb
-    - libva
-    - libx11
-    - lz4
-    - openssl@3
-    - opus
-    - pango
-    - phodav
-    - pixman
-    - spice-protocol
-    - usbredir
-    - wayland
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - spice-gtk

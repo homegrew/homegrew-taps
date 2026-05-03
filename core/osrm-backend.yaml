@@ -3,84 +3,44 @@ version: 26.4.1
 description: High performance routing engine
 homepage: https://project-osrm.org/
 license: BSD-2-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - boost
     - lua
     - tbb
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:45ce2b8c0a5ce1c484706c84932284e463e22f3b77be48411ee339d9d472b359
         sha256: 45ce2b8c0a5ce1c484706c84932284e463e22f3b77be48411ee339d9d472b359
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:45ce2b8c0a5ce1c484706c84932284e463e22f3b77be48411ee339d9d472b359
         sha256: 45ce2b8c0a5ce1c484706c84932284e463e22f3b77be48411ee339d9d472b359
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:45ce2b8c0a5ce1c484706c84932284e463e22f3b77be48411ee339d9d472b359
+        sha256: 45ce2b8c0a5ce1c484706c84932284e463e22f3b77be48411ee339d9d472b359
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:45ce2b8c0a5ce1c484706c84932284e463e22f3b77be48411ee339d9d472b359
+        sha256: 45ce2b8c0a5ce1c484706c84932284e463e22f3b77be48411ee339d9d472b359
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:64d0ad324ee2c5328f9dc99651238bc1d0df588a43a23731a4a9a44b0ebc1475
-        sha256: 64d0ad324ee2c5328f9dc99651238bc1d0df588a43a23731a4a9a44b0ebc1475
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:1cf9312d36fe1fa8bb91c4cebf6c2726a799c7ccf4b1629ce6c9ac686e011e4b
+        sha256: 1cf9312d36fe1fa8bb91c4cebf6c2726a799c7ccf4b1629ce6c9ac686e011e4b
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:9238479b4565e592005bc378de37b6275cf704a9eb475e252a142067ccd56557
         sha256: 9238479b4565e592005bc378de37b6275cf704a9eb475e252a142067ccd56557
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:64d0ad324ee2c5328f9dc99651238bc1d0df588a43a23731a4a9a44b0ebc1475
         sha256: 64d0ad324ee2c5328f9dc99651238bc1d0df588a43a23731a4a9a44b0ebc1475
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:1cf9312d36fe1fa8bb91c4cebf6c2726a799c7ccf4b1629ce6c9ac686e011e4b
         sha256: 1cf9312d36fe1fa8bb91c4cebf6c2726a799c7ccf4b1629ce6c9ac686e011e4b
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:f47d7b79efa43199ea0210145f6939f4650370f93ac74578627d3bb3b89bce87
         sha256: f47d7b79efa43199ea0210145f6939f4650370f93ac74578627d3bb3b89bce87
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/osrm-backend/blobs/sha256:10914a289dfd69af2c77f2809ea7af19f800ae0df704c44be9c9fbc20a6d7f8f
         sha256: 10914a289dfd69af2c77f2809ea7af19f800ae0df704c44be9c9fbc20a6d7f8f
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/Project-OSRM/osrm-backend/archive/refs/tags/v26.4.1.tar.gz
     sha256: 1b836eefc0233a65fa04e66073eabb1674cc41988a8b8862856d967cdd0fe17b
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmake
     - pkgconf
-linux_dependencies:
-    - boost
-    - lua
-    - tbb
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - osrm-backend

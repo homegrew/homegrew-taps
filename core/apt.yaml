@@ -3,19 +3,6 @@ version: 3.2.0
 description: Advanced Package Tool
 homepage: https://wiki.debian.org/Apt
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - berkeley-db@5
     - bzip2
@@ -35,18 +22,12 @@ bottle:
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/apt/blobs/sha256:2d093a16fb414d2a22bd92762abd4dd57879cad56d22282b3cb562470e965cf6
         sha256: 2d093a16fb414d2a22bd92762abd4dd57879cad56d22282b3cb562470e965cf6
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/apt/blobs/sha256:e732261545696d954189756c36a6c75062239d4fff91be6b8a6ddc5dedb74dcb
         sha256: e732261545696d954189756c36a6c75062239d4fff91be6b8a6ddc5dedb74dcb
-        sha512: ""
-        signature: ""
 source:
     url: https://salsa.debian.org/apt-team/apt/-/archive/3.2.0/apt-3.2.0.tar.bz2
     sha256: 5ee51677f2240b6d40b39233407fd8d00c7a86e92cd3d0c2e57c9c752ed1d164
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmake
     - docbook
@@ -56,13 +37,3 @@ build_dependencies:
     - libxslt
     - po4a
     - w3m
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - apt

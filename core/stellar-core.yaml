@@ -3,70 +3,43 @@ version: 26.0.1
 description: Backbone of the Stellar (XLM) network
 homepage: https://www.stellar.org/
 license: Apache-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - libpq
     - libpqxx
     - libsodium
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:c59e40f3ed281476553acd1786065675e18ce1fada8b7b56fcd9d0c68d845109
         sha256: c59e40f3ed281476553acd1786065675e18ce1fada8b7b56fcd9d0c68d845109
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:c59e40f3ed281476553acd1786065675e18ce1fada8b7b56fcd9d0c68d845109
         sha256: c59e40f3ed281476553acd1786065675e18ce1fada8b7b56fcd9d0c68d845109
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:c59e40f3ed281476553acd1786065675e18ce1fada8b7b56fcd9d0c68d845109
+        sha256: c59e40f3ed281476553acd1786065675e18ce1fada8b7b56fcd9d0c68d845109
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:c59e40f3ed281476553acd1786065675e18ce1fada8b7b56fcd9d0c68d845109
+        sha256: c59e40f3ed281476553acd1786065675e18ce1fada8b7b56fcd9d0c68d845109
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:e8c227d7a5c6c89d0582f484384c9ecbc68c7b909285f296b0d531ed031f4769
-        sha256: e8c227d7a5c6c89d0582f484384c9ecbc68c7b909285f296b0d531ed031f4769
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:28d7e9c4f7e63e24215f03eddbf7641b8f2308ad4ac06933352c9f213387f172
+        sha256: 28d7e9c4f7e63e24215f03eddbf7641b8f2308ad4ac06933352c9f213387f172
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:29e895cf96aec1ad0f7255acfb61d4764e34cc5d97ef1688d1bea4dd6d147142
         sha256: 29e895cf96aec1ad0f7255acfb61d4764e34cc5d97ef1688d1bea4dd6d147142
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:e8c227d7a5c6c89d0582f484384c9ecbc68c7b909285f296b0d531ed031f4769
         sha256: e8c227d7a5c6c89d0582f484384c9ecbc68c7b909285f296b0d531ed031f4769
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:28d7e9c4f7e63e24215f03eddbf7641b8f2308ad4ac06933352c9f213387f172
         sha256: 28d7e9c4f7e63e24215f03eddbf7641b8f2308ad4ac06933352c9f213387f172
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:e72be52e267eccc8b6cd0951ea6e64fe44375fe00e32bf64eb69642ac56f5363
         sha256: e72be52e267eccc8b6cd0951ea6e64fe44375fe00e32bf64eb69642ac56f5363
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:a41f28bc600a2cc31c80e24f3e9a4a0d70bc539b112dde43be843e465e6f822b
         sha256: a41f28bc600a2cc31c80e24f3e9a4a0d70bc539b112dde43be843e465e6f822b
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/stellar/stellar-core.git
-    sha256: ""
-    sha512: ""
-    signature: ""
 build_dependencies:
     - autoconf
     - automake
@@ -75,17 +48,3 @@ build_dependencies:
     - pandoc
     - pkgconf
     - rust
-linux_dependencies:
-    - libpq
-    - libpqxx
-    - libsodium
-    - libunwind
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - stellar-core

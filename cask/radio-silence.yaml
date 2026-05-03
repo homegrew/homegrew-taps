@@ -2,7 +2,13 @@ name: radio-silence
 version: "3.4"
 description: Network monitor and firewall
 homepage: https://radiosilenceapp.com/
-license: ""
+caveats: |
+    radio-silence requires a kernel extension to work.
+    If the installation fails, retry after you enable it in:
+      System Settings → Privacy & Security
+
+    For more information, refer to vendor documentation or this Apple Technical Note:
+      https://developer.apple.com/library/content/technotes/tn2459/_index.html
 url:
     darwin_amd64: https://radiosilenceapp.com/downloads/Radio_Silence_3.4.pkg
     darwin_amd64_10: https://radiosilenceapp.com/downloads/Radio_Silence_3.4.pkg
@@ -52,11 +58,8 @@ sha512:
     darwin_arm64_15: ""
     darwin_arm64_16: ""
 artifacts:
-    app: []
     pkg:
         - Radio_Silence_3.4.pkg
-    bin: []
 source:
     url: https://radiosilenceapp.com/downloads/Radio_Silence_3.4.pkg
     sha256: 5c21f1da03100e6b024f244fe453f7f6a844ab1137acbc755577ed39e707352c
-    sha512: ""

@@ -3,92 +3,68 @@ version: 7.3.17
 description: Implementation of Python 3 in Python
 homepage: https://pypy.org/
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    A "distutils.cfg" has been written to:
+      $HOMEBREW_CELLAR/pypy3.10/7.3.17_1/libexec/lib/pypy3.10/distutils
+    specifying the install-scripts folder as:
+      $HOMEBREW_PREFIX/share/pypy3.10
+
+    If you install Python packages via "pypy3.10 setup.py install" or pip_pypy3.10,
+    any provided scripts will go into the install-scripts folder
+    above, so you may want to add it to your PATH *after* $HOMEBREW_PREFIX/bin
+    so you don't overwrite tools from CPython.
+
+    Setuptools and pip have been installed, so you can use pip_pypy3.10.
+    To update pip and setuptools between pypy3.10 releases, run:
+        pip_pypy3.10 install --upgrade pip setuptools
+
+    See: https://docs.brew.sh/Homebrew-and-Python
 dependencies:
     - gdbm
     - openssl@3
     - sqlite
     - tcl-tk@8
     - xz
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
         sha256: cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
-        sha512: ""
-        signature: ""
     darwin_amd64_13:
         url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:f8216079a9bc035470ac314f3dacaab40839ea20edc53b8fea250af4128612e3
         sha256: f8216079a9bc035470ac314f3dacaab40839ea20edc53b8fea250af4128612e3
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
         sha256: cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
+        sha256: cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
+        sha256: cbac71c93a07a6e926836763d9d67662b157a12525ce5c333504a4e10eff14f6
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:311b947a1528ae90983edc2176864a00865fb678c13c2286efe24075463a1796
-        sha256: 311b947a1528ae90983edc2176864a00865fb678c13c2286efe24075463a1796
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:de425a276a64d92a0e2d69d589753d119733d0e3cc18aa985ae329aaf1bfa910
+        sha256: de425a276a64d92a0e2d69d589753d119733d0e3cc18aa985ae329aaf1bfa910
     darwin_arm64_13:
         url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:9e80dff6aaa3e465055533fe201daa041baf2e24af5ea96dca4951b56a171589
         sha256: 9e80dff6aaa3e465055533fe201daa041baf2e24af5ea96dca4951b56a171589
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:8276c86a74591aec5dcd72722caeaa9c5a950f922b77c5ac20fc1147e21698b5
         sha256: 8276c86a74591aec5dcd72722caeaa9c5a950f922b77c5ac20fc1147e21698b5
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:311b947a1528ae90983edc2176864a00865fb678c13c2286efe24075463a1796
         sha256: 311b947a1528ae90983edc2176864a00865fb678c13c2286efe24075463a1796
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:de425a276a64d92a0e2d69d589753d119733d0e3cc18aa985ae329aaf1bfa910
         sha256: de425a276a64d92a0e2d69d589753d119733d0e3cc18aa985ae329aaf1bfa910
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:c4032a756625270ffb7945d97b0116ac7e9acb1e5731eab7590241874f2fb12d
         sha256: c4032a756625270ffb7945d97b0116ac7e9acb1e5731eab7590241874f2fb12d
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/pypy3.10/blobs/sha256:6c838f8f2bde36ec834a8d390cd441e75aec83b1cc21126e8e974e05024a5d09
         sha256: 6c838f8f2bde36ec834a8d390cd441e75aec83b1cc21126e8e974e05024a5d09
-        sha512: ""
-        signature: ""
 source:
     url: https://downloads.python.org/pypy/pypy3.10-v7.3.17-src.tar.bz2
     sha256: 6ad74bc578e9c6d3a8a1c51503313058e3c58c35df86f7485453c4be6ab24bf7
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
     - pypy
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - pypy3.10

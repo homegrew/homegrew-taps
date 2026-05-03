@@ -3,47 +3,17 @@ version: 3.9.0
 description: User-space file system for interacting with Google Cloud
 homepage: https://github.com/googlecloudplatform/gcsfuse
 license: Apache-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - libfuse
-keg_only: false
 bottle:
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/gcsfuse/blobs/sha256:089d23297a32a2e590f5c6a6371e4fe44913d8d4e3029c54b050d18f3de55c8c
         sha256: 089d23297a32a2e590f5c6a6371e4fe44913d8d4e3029c54b050d18f3de55c8c
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/gcsfuse/blobs/sha256:524ff1613db6010060a930a1c0857d7c68c5ef7763cfb473b9fce3a6b9729256
         sha256: 524ff1613db6010060a930a1c0857d7c68c5ef7763cfb473b9fce3a6b9729256
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/GoogleCloudPlatform/gcsfuse/archive/refs/tags/v3.9.0.tar.gz
     sha256: 70212f0470b78d720e2caf2dc4f2a7ebb296ba49fe46ed249e23ca3ffcda25f9
-    sha512: ""
-    signature: ""
 build_dependencies:
     - go
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - gcsfuse

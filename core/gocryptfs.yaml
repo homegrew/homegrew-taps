@@ -3,49 +3,19 @@ version: 2.6.1
 description: Encrypted overlay filesystem written in Go
 homepage: https://nuetzlich.net/gocryptfs/
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - libfuse
     - openssl@4
-keg_only: false
 bottle:
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/gocryptfs/blobs/sha256:089b2030c913a45efcbee7fd1b66f7c1957fc7fb994e8821f43da7b53796d18a
         sha256: 089b2030c913a45efcbee7fd1b66f7c1957fc7fb994e8821f43da7b53796d18a
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/gocryptfs/blobs/sha256:24867295279b069b510db25edee6a78ee40ecb2a6d2007cc6ce3d893ba1a0fb8
         sha256: 24867295279b069b510db25edee6a78ee40ecb2a6d2007cc6ce3d893ba1a0fb8
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/rfjakob/gocryptfs/releases/download/v2.6.1/gocryptfs_v2.6.1_src-deps.tar.gz
     sha256: 9a966c1340a1a1d92073091643687b1205c46b57017c5da2bf7e97e3f5729a5a
-    sha512: ""
-    signature: ""
 build_dependencies:
     - go
     - pkgconf
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - gocryptfs

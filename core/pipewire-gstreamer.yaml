@@ -3,51 +3,24 @@ version: 1.6.4
 description: GStreamer Plugin for PipeWire
 homepage: https://pipewire.org
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    For GStreamer to find the bundled plugin:
+      export GST_PLUGIN_PATH=$HOMEBREW_PREFIX/opt/pipewire-gstreamer/lib/gstreamer-1.0
 dependencies:
     - glib
     - gstreamer
     - pipewire
-keg_only: false
 bottle:
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/pipewire-gstreamer/blobs/sha256:1868acbab424c7cf16fbdfa4b291aaea5d69edc90dc965e8bad19a185596059d
         sha256: 1868acbab424c7cf16fbdfa4b291aaea5d69edc90dc965e8bad19a185596059d
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/pipewire-gstreamer/blobs/sha256:d294e3544b75bf34db5a55bf16957f8f5a2974064709679a9c225fc56b6b2137
         sha256: d294e3544b75bf34db5a55bf16957f8f5a2974064709679a9c225fc56b6b2137
-        sha512: ""
-        signature: ""
 source:
     url: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
     sha256: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
-    sha512: ""
-    signature: ""
 build_dependencies:
     - meson
     - ninja
     - pkgconf
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - pipewire-gstreamer

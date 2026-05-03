@@ -3,19 +3,6 @@ version: 2.3.10
 description: Modeling environment for multi-cellular systems biology
 homepage: https://morpheus.gitlab.io/
 license: BSD-3-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - boost
     - ffmpeg
@@ -23,70 +10,41 @@ dependencies:
     - libtiff
     - qt@5
     - libomp
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:368f285705c7c0689022b250de7b3a8c0b5dc87fc59d60006261da563c8039d8
         sha256: 368f285705c7c0689022b250de7b3a8c0b5dc87fc59d60006261da563c8039d8
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:368f285705c7c0689022b250de7b3a8c0b5dc87fc59d60006261da563c8039d8
         sha256: 368f285705c7c0689022b250de7b3a8c0b5dc87fc59d60006261da563c8039d8
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:368f285705c7c0689022b250de7b3a8c0b5dc87fc59d60006261da563c8039d8
+        sha256: 368f285705c7c0689022b250de7b3a8c0b5dc87fc59d60006261da563c8039d8
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:368f285705c7c0689022b250de7b3a8c0b5dc87fc59d60006261da563c8039d8
+        sha256: 368f285705c7c0689022b250de7b3a8c0b5dc87fc59d60006261da563c8039d8
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:7fe5bbd9ae5a7d1381f162beb513d4e79ba49cee607e50c2ddf2cce19583b921
-        sha256: 7fe5bbd9ae5a7d1381f162beb513d4e79ba49cee607e50c2ddf2cce19583b921
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:952cc824b7ea0a9ed9e82fdababc494f9bd6363f4316d8664e3a0318d40b8278
+        sha256: 952cc824b7ea0a9ed9e82fdababc494f9bd6363f4316d8664e3a0318d40b8278
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:c0b50068bbb5445e5d79059ead5db63a2526f21b82a28e7f7f308611ae97e550
         sha256: c0b50068bbb5445e5d79059ead5db63a2526f21b82a28e7f7f308611ae97e550
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:7fe5bbd9ae5a7d1381f162beb513d4e79ba49cee607e50c2ddf2cce19583b921
         sha256: 7fe5bbd9ae5a7d1381f162beb513d4e79ba49cee607e50c2ddf2cce19583b921
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:952cc824b7ea0a9ed9e82fdababc494f9bd6363f4316d8664e3a0318d40b8278
         sha256: 952cc824b7ea0a9ed9e82fdababc494f9bd6363f4316d8664e3a0318d40b8278
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:a10f7f2dae6692c6cefeef44e413a5e10cf65c9f439caa3bcc76bccc8271e91a
         sha256: a10f7f2dae6692c6cefeef44e413a5e10cf65c9f439caa3bcc76bccc8271e91a
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/morpheus/blobs/sha256:c37d67c8742447e3c169dd2c237d7bd9b1482b6c8877e0b77ffb54e648102cb4
         sha256: c37d67c8742447e3c169dd2c237d7bd9b1482b6c8877e0b77ffb54e648102cb4
-        sha512: ""
-        signature: ""
 source:
     url: https://gitlab.com/morpheus.lab/morpheus/-/archive/v2.3.10/morpheus-v2.3.10.tar.gz
     sha256: 59a7729223f80d60085deeaf61a651782ee2f8507ad93a920ef599b6af6aa279
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmake
     - doxygen
     - ninja
-linux_dependencies:
-    - boost
-    - ffmpeg
-    - graphviz
-    - libtiff
-    - qt@5
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - morpheus

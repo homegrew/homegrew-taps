@@ -3,80 +3,48 @@ version: 0.4.4
 description: Middlebox detection tool
 homepage: https://github.com/tracebox/tracebox
 license: GPL-2.0-only AND BSD-3-Clause
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    Tracebox requires superuser privileges e.g. run with sudo.
+
+    You should be certain that you trust any software you are executing with
+    elevated privileges.
 dependencies:
     - json-c
     - lua
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:a08d814aa4b20912086878f89d5e34351be100e036b20bb23600d2525fc4c61f
         sha256: a08d814aa4b20912086878f89d5e34351be100e036b20bb23600d2525fc4c61f
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:a08d814aa4b20912086878f89d5e34351be100e036b20bb23600d2525fc4c61f
         sha256: a08d814aa4b20912086878f89d5e34351be100e036b20bb23600d2525fc4c61f
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:a08d814aa4b20912086878f89d5e34351be100e036b20bb23600d2525fc4c61f
+        sha256: a08d814aa4b20912086878f89d5e34351be100e036b20bb23600d2525fc4c61f
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:a08d814aa4b20912086878f89d5e34351be100e036b20bb23600d2525fc4c61f
+        sha256: a08d814aa4b20912086878f89d5e34351be100e036b20bb23600d2525fc4c61f
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:a236c267cffde3f5e896d9796858a36440deb2c762ac165c4eb69fa7abcf5053
-        sha256: a236c267cffde3f5e896d9796858a36440deb2c762ac165c4eb69fa7abcf5053
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:432ecef65439685b42ec4ca64303631cf4aec005e044ef86d18cfc290df88a29
+        sha256: 432ecef65439685b42ec4ca64303631cf4aec005e044ef86d18cfc290df88a29
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:aa9c714b367961f84405b6937591d908e87224208c3e84331fa6719a0c2eacde
         sha256: aa9c714b367961f84405b6937591d908e87224208c3e84331fa6719a0c2eacde
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:a236c267cffde3f5e896d9796858a36440deb2c762ac165c4eb69fa7abcf5053
         sha256: a236c267cffde3f5e896d9796858a36440deb2c762ac165c4eb69fa7abcf5053
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:432ecef65439685b42ec4ca64303631cf4aec005e044ef86d18cfc290df88a29
         sha256: 432ecef65439685b42ec4ca64303631cf4aec005e044ef86d18cfc290df88a29
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:cb818d5e3f42f32603ef218fe02c60ece85c29b0aab05b2cae0959f91f6f1a58
         sha256: cb818d5e3f42f32603ef218fe02c60ece85c29b0aab05b2cae0959f91f6f1a58
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/tracebox/blobs/sha256:8a3523e55afbfb45e6019257f54cf8147ab00f3c07e4402629d85ea0059be568
         sha256: 8a3523e55afbfb45e6019257f54cf8147ab00f3c07e4402629d85ea0059be568
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/tracebox/tracebox.git
-    sha256: ""
-    sha512: ""
-    signature: ""
 build_dependencies:
     - autoconf
     - automake
     - libtool
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - tracebox

@@ -2,7 +2,14 @@ name: rstudio
 version: 2026.04.0,526
 description: Data science software focusing on R and Python
 homepage: https://posit.co/products/open-source/rstudio/
-license: ""
+caveats: |
+    rstudio depends on R. The R Project provides official binaries:
+
+      brew install --cask r-app
+
+    Alternatively, the Homebrew-compiled version of R omits the GUI app:
+
+      brew install r
 url:
     darwin_amd64: https://download1.rstudio.org/electron/macos/RStudio-2026.04.0-526.dmg
     darwin_amd64_10: https://download1.rstudio.org/electron/macos/RStudio-2026.04.0-526.dmg
@@ -54,9 +61,6 @@ sha512:
 artifacts:
     app:
         - RStudio.app
-    pkg: []
-    bin: []
 source:
     url: https://download1.rstudio.org/electron/macos/RStudio-2026.04.0-526.dmg
     sha256: f49b00169de3142dbc0763e75d27b36c8900979e2f39e1a7a0e8dd1ab266eefa
-    sha512: ""

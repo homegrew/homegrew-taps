@@ -3,19 +3,14 @@ version: 1.28.2
 description: Development framework for multimedia applications
 homepage: https://gstreamer.freedesktop.org/
 license: LGPL-2.0-or-later AND LGPL-2.1-or-later AND MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    All gst-* GStreamer plugins are now bundled in this formula.
+    For GStreamer to find your own plugins, add their paths to `GST_PLUGIN_PATH`.
+    For example, if you have plugins in `~/.local/lib/gstreamer-1.0`:
+      export GST_PLUGIN_PATH="~/.local/lib/gstreamer-1.0"
+
+    Do not install plugins into GStreamer's prefix. They will be deleted
+    by `brew upgrade`.
 dependencies:
     - aom
     - cairo
@@ -78,53 +73,40 @@ dependencies:
     - gettext
     - harfbuzz
     - musepack
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
         sha256: 221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
         sha256: 221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
+        sha256: 221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
+        sha256: 221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:87027019ee76aee0eb91847d20b113dbc40699782417c25a9e50f8f33d80a2d7
-        sha256: 87027019ee76aee0eb91847d20b113dbc40699782417c25a9e50f8f33d80a2d7
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:0e56fbc7435860a959989d837080e67b7c75818e57f4c5a839edf62abc8d3119
+        sha256: 0e56fbc7435860a959989d837080e67b7c75818e57f4c5a839edf62abc8d3119
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:e9eba457ff38bfb24ef516d0df9b2229a9af6c4a678640fcc110280fc516b2f1
         sha256: e9eba457ff38bfb24ef516d0df9b2229a9af6c4a678640fcc110280fc516b2f1
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:87027019ee76aee0eb91847d20b113dbc40699782417c25a9e50f8f33d80a2d7
         sha256: 87027019ee76aee0eb91847d20b113dbc40699782417c25a9e50f8f33d80a2d7
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:0e56fbc7435860a959989d837080e67b7c75818e57f4c5a839edf62abc8d3119
         sha256: 0e56fbc7435860a959989d837080e67b7c75818e57f4c5a839edf62abc8d3119
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:ab9129bb8a25422e1e58897009888766b2c655e24a75ce60dd91ea51bfded8e5
         sha256: ab9129bb8a25422e1e58897009888766b2c655e24a75ce60dd91ea51bfded8e5
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:98f35d8fe7ba3fa17a658870824b4eecdc92fa26b3a44315f878069c7e103d7e
         sha256: 98f35d8fe7ba3fa17a658870824b4eecdc92fa26b3a44315f878069c7e103d7e
-        sha512: ""
-        signature: ""
 source:
     url: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
     sha256: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
-    sha512: ""
-    signature: ""
 build_dependencies:
     - bison
     - cargo-c
@@ -136,83 +118,3 @@ build_dependencies:
     - ninja
     - pkgconf
     - rust
-linux_dependencies:
-    - alsa-lib
-    - aom
-    - cairo
-    - dav1d
-    - elfutils
-    - faac
-    - faad2
-    - fdk-aac
-    - ffmpeg
-    - flac
-    - fontconfig
-    - freetype
-    - gdk-pixbuf
-    - glib
-    - graphene
-    - gtk+3
-    - gtk4
-    - imath
-    - jpeg-turbo
-    - json-glib
-    - lame
-    - libass
-    - libdrm
-    - libnice
-    - libogg
-    - libpng
-    - librsvg
-    - libshout
-    - libsndfile
-    - libsodium
-    - libsoup
-    - libusrsctp
-    - libva
-    - libvmaf
-    - libvorbis
-    - libvpx
-    - libx11
-    - libxcb
-    - libxdamage
-    - libxext
-    - libxfixes
-    - libxi
-    - libxtst
-    - libxv
-    - little-cms2
-    - mesa
-    - mpg123
-    - nettle
-    - opencore-amr
-    - openexr
-    - openjpeg
-    - openssl@3
-    - opus
-    - orc
-    - pango
-    - pulseaudio
-    - pygobject3
-    - python@3.14
-    - rtmpdump
-    - speex
-    - srt
-    - srtp
-    - svt-av1
-    - taglib
-    - theora
-    - wayland
-    - webp
-    - x264
-    - x265
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - gstreamer

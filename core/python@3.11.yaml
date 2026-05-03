@@ -3,93 +3,71 @@ version: 3.11.15
 description: Interpreted, interactive, object-oriented programming language
 homepage: https://www.python.org/
 license: Python-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    Python is installed as
+      $HOMEBREW_PREFIX/bin/python3.11
+
+    Unversioned and major-versioned symlinks `python`, `python3`, `python-config`, `python3-config`, `pip`, `pip3`, etc. pointing to
+    `python3.11`, `python3.11-config`, `pip3.11` etc., respectively, are installed into
+      $HOMEBREW_PREFIX/opt/python@3.11/libexec/bin
+
+    You can install Python packages with
+      pip3.11 install <package>
+    They will install into the site-package directory
+      $HOMEBREW_PREFIX/lib/python3.11/site-packages
+
+    `idle3.11` requires tkinter, which is available separately:
+      brew install python-tk@3.11
+
+    gdbm (`dbm.gnu`) is no longer included in this formula, but it is available separately:
+      brew install python-gdbm@3.11
+    `dbm.ndbm` changed database backends in Homebrew Python 3.11.
+    If you need to read a database from a previous Homebrew Python created via `dbm.ndbm`,
+    you'll need to read your database using the older version of Homebrew Python and convert to another format.
+    `dbm` still defaults to `dbm.gnu` when it is installed.
+
+    If you do not need a specific version of Python, and always want Homebrew's `python3` in your PATH:
+      brew install python3
+
+    For more information about Homebrew and Python, see: https://docs.brew.sh/Homebrew-and-Python
 dependencies:
     - mpdecimal
     - openssl@3
     - sqlite
     - xz
-keg_only: false
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:9c0d8ed0bdb7350b49bece961378478f06e9575a899007073b234eef13583862
-        sha256: 9c0d8ed0bdb7350b49bece961378478f06e9575a899007073b234eef13583862
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:efa4ff7214ed3d6ded539b4b178a73d21070e87fc017505d4ea497055554299b
+        sha256: efa4ff7214ed3d6ded539b4b178a73d21070e87fc017505d4ea497055554299b
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:dfa6a4bff1f08e644e119323611fd55410ccdcb3705b4336f856aabebd09dbe6
-        sha256: dfa6a4bff1f08e644e119323611fd55410ccdcb3705b4336f856aabebd09dbe6
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:ad1368aa265328d053233afea65c1c77ab84a76c7398fc0a033b19bded91e791
+        sha256: ad1368aa265328d053233afea65c1c77ab84a76c7398fc0a033b19bded91e791
     darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:9c0d8ed0bdb7350b49bece961378478f06e9575a899007073b234eef13583862
-        sha256: 9c0d8ed0bdb7350b49bece961378478f06e9575a899007073b234eef13583862
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:efa4ff7214ed3d6ded539b4b178a73d21070e87fc017505d4ea497055554299b
+        sha256: efa4ff7214ed3d6ded539b4b178a73d21070e87fc017505d4ea497055554299b
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:efa4ff7214ed3d6ded539b4b178a73d21070e87fc017505d4ea497055554299b
+        sha256: efa4ff7214ed3d6ded539b4b178a73d21070e87fc017505d4ea497055554299b
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:6a356bf0987c357141c48021e1025d30297092062b4e5307e0cdfb33ad6fc024
-        sha256: 6a356bf0987c357141c48021e1025d30297092062b4e5307e0cdfb33ad6fc024
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:abaacb2e82e32b769740e858730428b002cee22ae504f843d73a04cd8beb630e
+        sha256: abaacb2e82e32b769740e858730428b002cee22ae504f843d73a04cd8beb630e
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:e256e5707bb8d32ea1a388fce11b47b550e0383cf6a67d07f135c9fd51462154
-        sha256: e256e5707bb8d32ea1a388fce11b47b550e0383cf6a67d07f135c9fd51462154
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:aca94837020f9e365ea7a91c95317f589c883bb08d0777643640fcb5846d9bb4
+        sha256: aca94837020f9e365ea7a91c95317f589c883bb08d0777643640fcb5846d9bb4
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:6a356bf0987c357141c48021e1025d30297092062b4e5307e0cdfb33ad6fc024
-        sha256: 6a356bf0987c357141c48021e1025d30297092062b4e5307e0cdfb33ad6fc024
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:62f553d780355491bae1947d400cba7e507a32635775a04f814ad2280fa73dbe
+        sha256: 62f553d780355491bae1947d400cba7e507a32635775a04f814ad2280fa73dbe
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:0ee134e8b0ea6ce288cf95ba88352725213455ade52d3cf2bcdae16c92a12b43
-        sha256: 0ee134e8b0ea6ce288cf95ba88352725213455ade52d3cf2bcdae16c92a12b43
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:abaacb2e82e32b769740e858730428b002cee22ae504f843d73a04cd8beb630e
+        sha256: abaacb2e82e32b769740e858730428b002cee22ae504f843d73a04cd8beb630e
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:2fbccb255dc41a32d4b5ec6d87d63ef71c96d8690f89887ae16bb3b363c5c5c0
-        sha256: 2fbccb255dc41a32d4b5ec6d87d63ef71c96d8690f89887ae16bb3b363c5c5c0
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:df042532f7a65999e50c38536f00d5dc628afdc7d81ded658258a66c4efa0658
+        sha256: df042532f7a65999e50c38536f00d5dc628afdc7d81ded658258a66c4efa0658
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:f33cef2ae9e599e00f688c401cd53146f9bedf689a1c7e4f189583f639aa634e
-        sha256: f33cef2ae9e599e00f688c401cd53146f9bedf689a1c7e4f189583f639aa634e
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:5a7a0da63d7a3f71dbdb483b317917a32ec019aef328f6cab2d9c2d9cc16fde3
+        sha256: 5a7a0da63d7a3f71dbdb483b317917a32ec019aef328f6cab2d9c2d9cc16fde3
 source:
     url: https://www.python.org/ftp/python/3.11.15/Python-3.11.15.tgz
     sha256: f4de1b10bd6c70cbb9fa1cd71fc5038b832747a74ee59d599c69ce4846defb50
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
-linux_dependencies:
-    - berkeley-db@5
-    - libnsl
-    - libtirpc
-    - mpdecimal
-    - openssl@3
-    - sqlite
-    - xz
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - python@3.11

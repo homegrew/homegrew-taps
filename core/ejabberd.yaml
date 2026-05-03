@@ -3,97 +3,56 @@ version: "26.04"
 description: XMPP application server
 homepage: https://www.ejabberd.im
 license: GPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    If you face nodedown problems, concat your machine name to:
+      /private/etc/hosts
+    after 'localhost'.
 dependencies:
     - elixir
     - erlang
     - gd
     - libyaml
     - openssl@3
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
         sha256: 3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
         sha256: 3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
+        sha256: 3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
+        sha256: 3cc15ca3bb936daa310e87f2fb08e8361140db3e2689c02c5002e97d16fb4013
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:cf0a301efd94385a5e6e738068e7681e21e608e0a62e5dbaf6e772a13524fef5
-        sha256: cf0a301efd94385a5e6e738068e7681e21e608e0a62e5dbaf6e772a13524fef5
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:cf0674ca2aa17c798ac60e86f0068a88894e9dfb9978cb687865054826eabdc5
+        sha256: cf0674ca2aa17c798ac60e86f0068a88894e9dfb9978cb687865054826eabdc5
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:f88dc66e2e13e23c6370882ed7569cf29d68db732d86a4104249feabacca9051
         sha256: f88dc66e2e13e23c6370882ed7569cf29d68db732d86a4104249feabacca9051
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:cf0a301efd94385a5e6e738068e7681e21e608e0a62e5dbaf6e772a13524fef5
         sha256: cf0a301efd94385a5e6e738068e7681e21e608e0a62e5dbaf6e772a13524fef5
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:cf0674ca2aa17c798ac60e86f0068a88894e9dfb9978cb687865054826eabdc5
         sha256: cf0674ca2aa17c798ac60e86f0068a88894e9dfb9978cb687865054826eabdc5
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:2e43c4b9834b95958ae4f7671f6d09f13ad985ac95567e3bcab734f92790fe0f
         sha256: 2e43c4b9834b95958ae4f7671f6d09f13ad985ac95567e3bcab734f92790fe0f
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:a95ecbe57c11772a48c521719684a8b17a3c6319081977f9407cf5edd1a1348b
         sha256: a95ecbe57c11772a48c521719684a8b17a3c6319081977f9407cf5edd1a1348b
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/processone/ejabberd/archive/refs/tags/26.04.tar.gz
     sha256: 77deb1053978ae9790f909b7b573ac61c6b94d7c465a84c5b56568292d49e47d
-    sha512: ""
-    signature: ""
 build_dependencies:
     - autoconf
     - automake
-linux_dependencies:
-    - elixir
-    - erlang
-    - gd
-    - libyaml
-    - linux-pam
-    - openssl@3
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/ejabberd/sbin/ejabberdctl
         - start
     run_type: immediate
     working_dir: $HOMEBREW_PREFIX/var/lib/ejabberd
-    log_path: ""
-    error_log_path: ""
-    keep_alive: false
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - ejabberd

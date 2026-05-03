@@ -2,7 +2,11 @@ name: android-commandlinetools
 version: "14742923"
 description: Command-line tools for building and debugging Android apps
 homepage: https://developer.android.com/studio
-license: ""
+caveats: |
+    Default Android SDK root is $HOMEBREW_PREFIX/share/android-commandlinetools
+
+    android-commandlinetools requires Java. You can install the latest version with:
+      brew install --cask temurin
 url:
     darwin_amd64: https://dl.google.com/android/repository/commandlinetools-mac-14742923_latest.zip
     darwin_amd64_10: https://dl.google.com/android/repository/commandlinetools-mac-14742923_latest.zip
@@ -52,8 +56,6 @@ sha512:
     darwin_arm64_15: ""
     darwin_arm64_16: ""
 artifacts:
-    app: []
-    pkg: []
     bin:
         - avdmanager
         - lint
@@ -64,4 +66,3 @@ artifacts:
 source:
     url: https://dl.google.com/android/repository/commandlinetools-mac-14742923_latest.zip
     sha256: ed304c5ede3718541e4f978e4ae870a4d853db74af6c16d920588d48523b9dee
-    sha512: ""

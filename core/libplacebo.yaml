@@ -3,70 +3,44 @@ version: 7.360.1
 description: Reusable library for GPU-accelerated image/video processing primitives
 homepage: https://code.videolan.org/videolan/libplacebo
 license: LGPL-2.1-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - little-cms2
     - shaderc
     - vulkan-loader
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:a6a5f1fefe34a81d3fde35cdab8481899afc47b90efff12b912b0b1675f90861
         sha256: a6a5f1fefe34a81d3fde35cdab8481899afc47b90efff12b912b0b1675f90861
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:a6a5f1fefe34a81d3fde35cdab8481899afc47b90efff12b912b0b1675f90861
         sha256: a6a5f1fefe34a81d3fde35cdab8481899afc47b90efff12b912b0b1675f90861
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:a6a5f1fefe34a81d3fde35cdab8481899afc47b90efff12b912b0b1675f90861
+        sha256: a6a5f1fefe34a81d3fde35cdab8481899afc47b90efff12b912b0b1675f90861
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:a6a5f1fefe34a81d3fde35cdab8481899afc47b90efff12b912b0b1675f90861
+        sha256: a6a5f1fefe34a81d3fde35cdab8481899afc47b90efff12b912b0b1675f90861
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:1fd6531a9de50d0121d1ff4ec67163dfb1dcb8c682d96c6587b960f04be0fe34
-        sha256: 1fd6531a9de50d0121d1ff4ec67163dfb1dcb8c682d96c6587b960f04be0fe34
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:6575f7e22f75c946f5c831d2ff130b89aa275a2cdd4dbe7a0204590513b87b25
+        sha256: 6575f7e22f75c946f5c831d2ff130b89aa275a2cdd4dbe7a0204590513b87b25
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:8b89e9ee2c276bded52d69bbfc3b645625c975e9edc3ba93873c18d661ef241c
         sha256: 8b89e9ee2c276bded52d69bbfc3b645625c975e9edc3ba93873c18d661ef241c
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:1fd6531a9de50d0121d1ff4ec67163dfb1dcb8c682d96c6587b960f04be0fe34
         sha256: 1fd6531a9de50d0121d1ff4ec67163dfb1dcb8c682d96c6587b960f04be0fe34
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:6575f7e22f75c946f5c831d2ff130b89aa275a2cdd4dbe7a0204590513b87b25
         sha256: 6575f7e22f75c946f5c831d2ff130b89aa275a2cdd4dbe7a0204590513b87b25
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:145b3ac56e39a1a925671872f5ec1176c568d518c643cf689ae66f33494d43b7
         sha256: 145b3ac56e39a1a925671872f5ec1176c568d518c643cf689ae66f33494d43b7
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/libplacebo/blobs/sha256:b87acf6094dc3a89d9a942259ae453fec22a770aa3fab05dba2e3c2c71702558
         sha256: b87acf6094dc3a89d9a942259ae453fec22a770aa3fab05dba2e3c2c71702558
-        sha512: ""
-        signature: ""
 source:
     url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.360.1/libplacebo-v7.360.1.tar.bz2
     sha256: 937aa5eeea596798b3274d362de2e3bd32bc537a66d149dd85043349c74dffb6
-    sha512: ""
-    signature: ""
 build_dependencies:
     - fast_float
     - meson
@@ -74,13 +48,3 @@ build_dependencies:
     - pkgconf
     - python@3.14
     - vulkan-headers
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - libplacebo

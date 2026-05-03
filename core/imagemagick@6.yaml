@@ -3,19 +3,9 @@ version: 6.9.13-46
 description: Tools and libraries to manipulate images in many formats
 homepage: https://legacy.imagemagick.org/
 license: ImageMagick
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    Ghostscript is not installed by default as a dependency.
+    If you need PS or PDF support, ImageMagick will still use the ghostscript formula if installed directly.
 dependencies:
     - fontconfig
     - freetype
@@ -32,68 +22,35 @@ bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:548083645097da925b89f2d2d51750553d23b884dc14d4f809cdfb282a6a2d16
         sha256: 548083645097da925b89f2d2d51750553d23b884dc14d4f809cdfb282a6a2d16
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:548083645097da925b89f2d2d51750553d23b884dc14d4f809cdfb282a6a2d16
         sha256: 548083645097da925b89f2d2d51750553d23b884dc14d4f809cdfb282a6a2d16
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:548083645097da925b89f2d2d51750553d23b884dc14d4f809cdfb282a6a2d16
+        sha256: 548083645097da925b89f2d2d51750553d23b884dc14d4f809cdfb282a6a2d16
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:548083645097da925b89f2d2d51750553d23b884dc14d4f809cdfb282a6a2d16
+        sha256: 548083645097da925b89f2d2d51750553d23b884dc14d4f809cdfb282a6a2d16
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:7cb425e27df8246025153409c842561d2f2e4891cd9bb280729ea445dbed74ec
-        sha256: 7cb425e27df8246025153409c842561d2f2e4891cd9bb280729ea445dbed74ec
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:e13976de338148af5bf751411d690a660732acb433ceb97842f95d119a2675eb
+        sha256: e13976de338148af5bf751411d690a660732acb433ceb97842f95d119a2675eb
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:69a356beb5ee6922c6efbf0ef703c737d293eb8c1fc1f6579e27f89f4dbebc57
         sha256: 69a356beb5ee6922c6efbf0ef703c737d293eb8c1fc1f6579e27f89f4dbebc57
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:7cb425e27df8246025153409c842561d2f2e4891cd9bb280729ea445dbed74ec
         sha256: 7cb425e27df8246025153409c842561d2f2e4891cd9bb280729ea445dbed74ec
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:e13976de338148af5bf751411d690a660732acb433ceb97842f95d119a2675eb
         sha256: e13976de338148af5bf751411d690a660732acb433ceb97842f95d119a2675eb
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:baf2621820f66a04f8b928745d1e3164564cd9a2c206d69aa71a2330498dc4e3
         sha256: baf2621820f66a04f8b928745d1e3164564cd9a2c206d69aa71a2330498dc4e3
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/imagemagick/6/blobs/sha256:8d58f99cec0c4b70b2fe02fcdb296272e7272cfc526f4de4b5b5e2283ea26f30
         sha256: 8d58f99cec0c4b70b2fe02fcdb296272e7272cfc526f4de4b5b5e2283ea26f30
-        sha512: ""
-        signature: ""
 source:
     url: https://imagemagick.org/archive/releases/ImageMagick-6.9.13-46.tar.xz
     sha256: 012216e6e20985185922ced98e8e971cc91319e15df154255a49a716b06742d2
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
-linux_dependencies:
-    - fontconfig
-    - freetype
-    - jpeg-turbo
-    - libpng
-    - libtiff
-    - libtool
-    - little-cms2
-    - openjpeg
-    - webp
-    - xz
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - imagemagick@6

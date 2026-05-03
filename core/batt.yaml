@@ -3,56 +3,22 @@ version: 0.7.3
 description: Control and limit battery charging on Apple Silicon MacBooks
 homepage: https://github.com/charlie0129/batt
 license: GPL-2.0-only
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    The batt service must be running before most of batt's commands will work.
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/batt/blobs/sha256:6978b24b291f2b25640d27a297d9e7aa4632e8587c90f0d3e73da126d6f7fa86
-        sha256: 6978b24b291f2b25640d27a297d9e7aa4632e8587c90f0d3e73da126d6f7fa86
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/batt/blobs/sha256:e9a8eba7cf7e021be0c298827143c00de15a616c38401c9a95cb288b0bbced60
+        sha256: e9a8eba7cf7e021be0c298827143c00de15a616c38401c9a95cb288b0bbced60
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/batt/blobs/sha256:e1b5bcce79047ed867ba0193e8b5f7fe38ba65fec443810a80b60f9365e34e58
         sha256: e1b5bcce79047ed867ba0193e8b5f7fe38ba65fec443810a80b60f9365e34e58
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/batt/blobs/sha256:6978b24b291f2b25640d27a297d9e7aa4632e8587c90f0d3e73da126d6f7fa86
         sha256: 6978b24b291f2b25640d27a297d9e7aa4632e8587c90f0d3e73da126d6f7fa86
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/batt/blobs/sha256:e9a8eba7cf7e021be0c298827143c00de15a616c38401c9a95cb288b0bbced60
         sha256: e9a8eba7cf7e021be0c298827143c00de15a616c38401c9a95cb288b0bbced60
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/charlie0129/batt.git
-    sha256: ""
-    sha512: ""
-    signature: ""
 build_dependencies:
     - go
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - batt

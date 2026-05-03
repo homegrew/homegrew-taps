@@ -2,7 +2,13 @@ name: duet
 version: 3.20.3.0
 description: Remote desktop and second display tool
 homepage: https://www.duetdisplay.com/
-license: ""
+caveats: |
+    duet requires a kernel extension to work.
+    If the installation fails, retry after you enable it in:
+      System Settings → Privacy & Security
+
+    For more information, refer to vendor documentation or this Apple Technical Note:
+      https://developer.apple.com/library/content/technotes/tn2459/_index.html
 url:
     darwin_amd64: https://duetdownload.com/Mac/2_4/duet-2-4-7-1.zip
     darwin_amd64_10: https://duetdownload.com/Mac/2_4/duet-2-4-7-1.zip
@@ -54,9 +60,6 @@ sha512:
 artifacts:
     app:
         - duet.app
-    pkg: []
-    bin: []
 source:
     url: https://duetdownload.com/Mac/3_x/duet-dd-3-20-3-0.dmg
     sha256: 2edcc20b4238f1490579595956c1e18dfd441d0e6abbb69c9cba788640e80ab9
-    sha512: ""

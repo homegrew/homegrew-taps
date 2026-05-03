@@ -3,84 +3,48 @@ version: 0.107.5
 description: Transactional Catalog for Data Lakes with Git-like semantics
 homepage: https://projectnessie.org
 license: Apache-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - openjdk@21
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
         sha256: a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
         sha256: a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
+        sha256: a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
+        sha256: a116060b2dfb5ab7992b96739e0b54b6b003b132d55b2e86dd55b15e3f89f679
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:a53aa2765c718f90e87d9c762dc1e9d44c9df69e56a81bb9e7347449869e7d43
-        sha256: a53aa2765c718f90e87d9c762dc1e9d44c9df69e56a81bb9e7347449869e7d43
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:44d53b02db0cddb6cca9f99f59c66b234df8dc6ac6f3e3b824faf0d70a3b8193
+        sha256: 44d53b02db0cddb6cca9f99f59c66b234df8dc6ac6f3e3b824faf0d70a3b8193
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:dc72ba3b6160abf49e4213056893f22b67d487b55bd728b9f1c7810689990517
         sha256: dc72ba3b6160abf49e4213056893f22b67d487b55bd728b9f1c7810689990517
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:a53aa2765c718f90e87d9c762dc1e9d44c9df69e56a81bb9e7347449869e7d43
         sha256: a53aa2765c718f90e87d9c762dc1e9d44c9df69e56a81bb9e7347449869e7d43
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:44d53b02db0cddb6cca9f99f59c66b234df8dc6ac6f3e3b824faf0d70a3b8193
         sha256: 44d53b02db0cddb6cca9f99f59c66b234df8dc6ac6f3e3b824faf0d70a3b8193
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:3dd69d8a73dcd0ae9413af0057eba883a378870379daceba032bf4d8ee4da479
         sha256: 3dd69d8a73dcd0ae9413af0057eba883a378870379daceba032bf4d8ee4da479
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/nessie/blobs/sha256:d8c25e7b1d653814526f34718088022ae0aacac62d2be3ccff76705446e27280
         sha256: d8c25e7b1d653814526f34718088022ae0aacac62d2be3ccff76705446e27280
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/projectnessie/nessie/archive/refs/tags/nessie-0.107.5.tar.gz
     sha256: 30918d62dfdf903a5c0475ab3f88c21fc4ddcc8884a1161244c13fbcf909804c
-    sha512: ""
-    signature: ""
 build_dependencies:
     - gradle
-linux_dependencies: []
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/nessie/bin/nessie
     run_type: immediate
-    working_dir: ""
     log_path: $HOMEBREW_PREFIX/var/log/nessie.log
     error_log_path: $HOMEBREW_PREFIX/var/log/nessie.log
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - nessie

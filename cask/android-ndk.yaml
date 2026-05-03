@@ -2,7 +2,9 @@ name: android-ndk
 version: "29"
 description: Toolset to implement parts of Android apps in native code
 homepage: https://developer.android.com/ndk/index.html
-license: ""
+caveats: |
+    You may want to add to your profile:
+       'export ANDROID_NDK_HOME="$HOMEBREW_PREFIX/share/android-ndk"'
 url:
     darwin_amd64: https://dl.google.com/android/repository/android-ndk-r29-darwin.dmg
     darwin_amd64_10: https://dl.google.com/android/repository/android-ndk-r29-darwin.dmg
@@ -52,8 +54,6 @@ sha512:
     darwin_arm64_15: ""
     darwin_arm64_16: ""
 artifacts:
-    app: []
-    pkg: []
     bin:
         - ndk-build
         - ndk-depends
@@ -63,4 +63,3 @@ artifacts:
 source:
     url: https://dl.google.com/android/repository/android-ndk-r29-darwin.dmg
     sha256: 2d6922da5f95178bea870069f0a463c33d014ddfa364c74320e11c47531db24d
-    sha512: ""

@@ -3,19 +3,11 @@ version: 2.4.66
 description: Apache HTTP server
 homepage: https://httpd.apache.org/
 license: Apache-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    DocumentRoot is $HOMEBREW_PREFIX/var/www.
+
+    The default ports have been set in $HOMEBREW_PREFIX/etc/httpd/httpd.conf to 8080 and in
+    $HOMEBREW_PREFIX/etc/httpd/extra/httpd-ssl.conf to 8443 so that httpd can run without sudo.
 dependencies:
     - apr
     - apr-util
@@ -23,77 +15,43 @@ dependencies:
     - libnghttp2
     - openssl@3
     - pcre2
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
         sha256: 42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
         sha256: 42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+        sha256: 42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+        sha256: 42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:e2caacc4e115672f495eb3899cd63d550d55a9dc1c3510881a2a85e16724a9a3
-        sha256: e2caacc4e115672f495eb3899cd63d550d55a9dc1c3510881a2a85e16724a9a3
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:b956fa6f4d92ab06b6722b937c7904c4002498024f18bdd64c0fbeca4c0c9ea6
+        sha256: b956fa6f4d92ab06b6722b937c7904c4002498024f18bdd64c0fbeca4c0c9ea6
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:e2e922180c73164d1a0498d13cf358e0c18143340b5b9fb23e041f33b8533487
         sha256: e2e922180c73164d1a0498d13cf358e0c18143340b5b9fb23e041f33b8533487
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:e2caacc4e115672f495eb3899cd63d550d55a9dc1c3510881a2a85e16724a9a3
         sha256: e2caacc4e115672f495eb3899cd63d550d55a9dc1c3510881a2a85e16724a9a3
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:b956fa6f4d92ab06b6722b937c7904c4002498024f18bdd64c0fbeca4c0c9ea6
         sha256: b956fa6f4d92ab06b6722b937c7904c4002498024f18bdd64c0fbeca4c0c9ea6
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:21deedd9de715b969402e66662ba9a618183d491b04a55dc75839db4dca38ee0
         sha256: 21deedd9de715b969402e66662ba9a618183d491b04a55dc75839db4dca38ee0
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:41c524055486b594469f54971c00486545eb7139a34000d6f521c5eeacf1c450
         sha256: 41c524055486b594469f54971c00486545eb7139a34000d6f521c5eeacf1c450
-        sha512: ""
-        signature: ""
 source:
     url: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
     sha256: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies:
-    - apr
-    - apr-util
-    - brotli
-    - libnghttp2
-    - openssl@3
-    - pcre2
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/httpd/bin/httpd
         - -D
         - FOREGROUND
     run_type: immediate
-    working_dir: ""
-    log_path: ""
-    error_log_path: ""
-    keep_alive: false
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - httpd

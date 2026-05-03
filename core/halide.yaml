@@ -3,19 +3,6 @@ version: 21.0.0
 description: Language for fast, portable data-parallel computation
 homepage: https://halide-lang.org
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - flatbuffers
     - jpeg-turbo
@@ -25,70 +12,40 @@ dependencies:
     - python@3.14
     - wabt
     - openssl@3
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
         sha256: 3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
         sha256: 3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
+        sha256: 3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
+        sha256: 3d797396c4285b0123b7498d8fa794984c135b9e1b7985e7706ed927ec1fd4a3
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:40779827ae67ed29c0cf27f0837e6a6d158d1352d3eee19f81d80cc24f2c6256
-        sha256: 40779827ae67ed29c0cf27f0837e6a6d158d1352d3eee19f81d80cc24f2c6256
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:2971971113569192c7c113fc28e6e403037b5678aa1e18a4fdadbf198da94cd1
+        sha256: 2971971113569192c7c113fc28e6e403037b5678aa1e18a4fdadbf198da94cd1
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:cbc3e5f59f48c7360f53a841c14f9c90b364760be44eada0da13851053f0946f
         sha256: cbc3e5f59f48c7360f53a841c14f9c90b364760be44eada0da13851053f0946f
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:40779827ae67ed29c0cf27f0837e6a6d158d1352d3eee19f81d80cc24f2c6256
         sha256: 40779827ae67ed29c0cf27f0837e6a6d158d1352d3eee19f81d80cc24f2c6256
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:2971971113569192c7c113fc28e6e403037b5678aa1e18a4fdadbf198da94cd1
         sha256: 2971971113569192c7c113fc28e6e403037b5678aa1e18a4fdadbf198da94cd1
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:6731e04b241447c0e900d54b50d3d69429250d46b2384fd3a9601a520555a33e
         sha256: 6731e04b241447c0e900d54b50d3d69429250d46b2384fd3a9601a520555a33e
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/halide/blobs/sha256:5c69185c4c47845f19b7abc2be16eda2dfeba014a8ffcc357afce2ba44960339
         sha256: 5c69185c4c47845f19b7abc2be16eda2dfeba014a8ffcc357afce2ba44960339
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/halide/Halide/archive/refs/tags/v21.0.0.tar.gz
     sha256: aa6b6f5e89709ca6bc754ce72b8b13b2abce0d6b001cb2516b1c6f518f910141
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmake
     - pybind11
-linux_dependencies:
-    - flatbuffers
-    - jpeg-turbo
-    - libpng
-    - lld@21
-    - llvm@21
-    - python@3.14
-    - wabt
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - halide

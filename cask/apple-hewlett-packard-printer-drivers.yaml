@@ -2,7 +2,15 @@ name: apple-hewlett-packard-printer-drivers
 version: 5.1.1,2021,071-46903-20211101-0BD2764A-901C-41BA-9573-C17B8FDC4D90
 description: HP printing and scanning software
 homepage: https://support.apple.com/kb/DL1888
-license: ""
+caveats: |
+    apple-hewlett-packard-printer-drivers requires a kernel extension to work.
+    If the installation fails, retry after you enable it in:
+      System Settings → Privacy & Security
+
+    For more information, refer to vendor documentation or this Apple Technical Note:
+      https://developer.apple.com/library/content/technotes/tn2459/_index.html
+
+    You must reboot for the installation of apple-hewlett-packard-printer-drivers to take effect.
 url:
     darwin_amd64: https://updates.cdn-apple.com/2021/macos/071-46903-20211101-0BD2764A-901C-41BA-9573-C17B8FDC4D90/HewlettPackardPrinterDrivers.dmg
     darwin_amd64_10: https://updates.cdn-apple.com/2021/macos/071-46903-20211101-0BD2764A-901C-41BA-9573-C17B8FDC4D90/HewlettPackardPrinterDrivers.dmg
@@ -52,11 +60,8 @@ sha512:
     darwin_arm64_15: ""
     darwin_arm64_16: ""
 artifacts:
-    app: []
     pkg:
         - HewlettPackardPrinterDrivers.pkg
-    bin: []
 source:
     url: https://updates.cdn-apple.com/2021/macos/071-46903-20211101-0BD2764A-901C-41BA-9573-C17B8FDC4D90/HewlettPackardPrinterDrivers.dmg
     sha256: 523836b630431bc39b0170a17099099d6f821ef62ff29e6ec64ebb69b9954133
-    sha512: ""

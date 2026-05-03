@@ -3,82 +3,46 @@ version: 2.54.0
 description: Distributed revision control system
 homepage: https://git-scm.com
 license: GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause AND MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
+    Subversion interoperability (git-svn) is now in the `git-svn` formula.
 dependencies:
     - pcre2
     - gettext
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:7286fead4972e9e8374dd85a420d7e55da5bbba9e4b34fa90cb6c183d31663bb
         sha256: 7286fead4972e9e8374dd85a420d7e55da5bbba9e4b34fa90cb6c183d31663bb
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:7286fead4972e9e8374dd85a420d7e55da5bbba9e4b34fa90cb6c183d31663bb
         sha256: 7286fead4972e9e8374dd85a420d7e55da5bbba9e4b34fa90cb6c183d31663bb
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:7286fead4972e9e8374dd85a420d7e55da5bbba9e4b34fa90cb6c183d31663bb
+        sha256: 7286fead4972e9e8374dd85a420d7e55da5bbba9e4b34fa90cb6c183d31663bb
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:7286fead4972e9e8374dd85a420d7e55da5bbba9e4b34fa90cb6c183d31663bb
+        sha256: 7286fead4972e9e8374dd85a420d7e55da5bbba9e4b34fa90cb6c183d31663bb
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:d12f1bafed785a94c45d0bffb303c28cbc0aaec5ab9a8b4939c51f216de1f2d9
-        sha256: d12f1bafed785a94c45d0bffb303c28cbc0aaec5ab9a8b4939c51f216de1f2d9
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:0907a55ddd94935d16e13351e3238892d7a57f4ccaa58e20ba2609c4f2a1c4c0
+        sha256: 0907a55ddd94935d16e13351e3238892d7a57f4ccaa58e20ba2609c4f2a1c4c0
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:538bdc752f5a51e98124b0cdce5493339e5821a50a03fd3a78fe7754038ea1c4
         sha256: 538bdc752f5a51e98124b0cdce5493339e5821a50a03fd3a78fe7754038ea1c4
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:d12f1bafed785a94c45d0bffb303c28cbc0aaec5ab9a8b4939c51f216de1f2d9
         sha256: d12f1bafed785a94c45d0bffb303c28cbc0aaec5ab9a8b4939c51f216de1f2d9
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:0907a55ddd94935d16e13351e3238892d7a57f4ccaa58e20ba2609c4f2a1c4c0
         sha256: 0907a55ddd94935d16e13351e3238892d7a57f4ccaa58e20ba2609c4f2a1c4c0
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:81874ce3bd63063dc77f6d1cc85e30c52108e172f32b232ae865f9b2e55001e1
         sha256: 81874ce3bd63063dc77f6d1cc85e30c52108e172f32b232ae865f9b2e55001e1
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/git/blobs/sha256:67e05269b64b7cbcb24739519817b56a081696e350fe1913282b08bbfe90368e
         sha256: 67e05269b64b7cbcb24739519817b56a081696e350fe1913282b08bbfe90368e
-        sha512: ""
-        signature: ""
 source:
     url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.54.0.tar.xz
     sha256: f689162364c10de79ef89aa8dbf48731eb057e34edbbd20aca510ce0154681a3
-    sha512: ""
-    signature: ""
 build_dependencies:
     - gettext
     - pkgconf
-linux_dependencies:
-    - openssl@3
-    - pcre2
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - git

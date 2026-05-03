@@ -2,7 +2,14 @@ name: mono-mdk
 version: 6.12.0.206
 description: Open source implementation of Microsoft's .NET Framework
 homepage: https://www.mono-project.com/
-license: ""
+caveats: |
+    Installing mono-mdk removes mono and mono dependant formula binaries in
+    /usr/local/bin and adds mono-mdk to /private/etc/paths.d/
+    You may want to:
+
+      brew unlink {formula} && brew link {formula}
+
+    and/or remove /private/etc/paths.d/mono-commands
 url:
     darwin_amd64: https://download.mono-project.com/archive/6.12.0/macos-10-universal/MonoFramework-MDK-6.12.0.206.macos10.xamarin.universal.pkg
     darwin_amd64_10: https://download.mono-project.com/archive/6.12.0/macos-10-universal/MonoFramework-MDK-6.12.0.206.macos10.xamarin.universal.pkg
@@ -52,11 +59,8 @@ sha512:
     darwin_arm64_15: ""
     darwin_arm64_16: ""
 artifacts:
-    app: []
     pkg:
         - MonoFramework-MDK-6.12.0.206.macos10.xamarin.universal.pkg
-    bin: []
 source:
     url: https://download.mono-project.com/archive/6.12.0/macos-10-universal/MonoFramework-MDK-6.12.0.206.macos10.xamarin.universal.pkg
     sha256: 80b0dbfa59ba9ed76dbf1393998e6a2ed2d1ccc8f5850c7a46fbe31a2aea88d8
-    sha512: ""

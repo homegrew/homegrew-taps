@@ -3,19 +3,8 @@ version: "8.1"
 description: Play, record, convert, and stream many audio and video codecs
 homepage: https://ffmpeg.org/
 license: GPL-3.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    ffmpeg-full includes additional tools and libraries that are not included in the regular ffmpeg formula.
 dependencies:
     - aom
     - aribb24
@@ -68,104 +57,35 @@ bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:b09898000eff8b5be78559aff91de9945344576439fa57dd077f30e749b93b0e
         sha256: b09898000eff8b5be78559aff91de9945344576439fa57dd077f30e749b93b0e
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:b09898000eff8b5be78559aff91de9945344576439fa57dd077f30e749b93b0e
         sha256: b09898000eff8b5be78559aff91de9945344576439fa57dd077f30e749b93b0e
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:b09898000eff8b5be78559aff91de9945344576439fa57dd077f30e749b93b0e
+        sha256: b09898000eff8b5be78559aff91de9945344576439fa57dd077f30e749b93b0e
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:b09898000eff8b5be78559aff91de9945344576439fa57dd077f30e749b93b0e
+        sha256: b09898000eff8b5be78559aff91de9945344576439fa57dd077f30e749b93b0e
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:72fc7dae34506e0b830858faaaaede2adbce505230f802aceb419708ac7ecfd9
-        sha256: 72fc7dae34506e0b830858faaaaede2adbce505230f802aceb419708ac7ecfd9
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:035e0bae1c35323e77200ab23c654935e55a2b9b77d1eaa2cf05b3bec3ba7ffc
+        sha256: 035e0bae1c35323e77200ab23c654935e55a2b9b77d1eaa2cf05b3bec3ba7ffc
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:d61d3b77d33179f33cf48bbdc0b65d9e0b36464b316ccc0ce3b85fb910ae84cb
         sha256: d61d3b77d33179f33cf48bbdc0b65d9e0b36464b316ccc0ce3b85fb910ae84cb
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:72fc7dae34506e0b830858faaaaede2adbce505230f802aceb419708ac7ecfd9
         sha256: 72fc7dae34506e0b830858faaaaede2adbce505230f802aceb419708ac7ecfd9
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:035e0bae1c35323e77200ab23c654935e55a2b9b77d1eaa2cf05b3bec3ba7ffc
         sha256: 035e0bae1c35323e77200ab23c654935e55a2b9b77d1eaa2cf05b3bec3ba7ffc
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:919d2ddc0c10a39acacaf5595eb48cc1321c4fc440ccc9e4bfbeffec5352e980
         sha256: 919d2ddc0c10a39acacaf5595eb48cc1321c4fc440ccc9e4bfbeffec5352e980
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/ffmpeg-full/blobs/sha256:897332552f7d444bd2781dbb0b37d2ff3023415f79f208cd0e0166441a4f6b80
         sha256: 897332552f7d444bd2781dbb0b37d2ff3023415f79f208cd0e0166441a4f6b80
-        sha512: ""
-        signature: ""
 source:
     url: https://ffmpeg.org/releases/ffmpeg-8.1.tar.xz
     sha256: b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
-linux_dependencies:
-    - alsa-lib
-    - aom
-    - aribb24
-    - dav1d
-    - fontconfig
-    - freetype
-    - frei0r
-    - ggml
-    - gnutls
-    - harfbuzz
-    - jpeg-xl
-    - lame
-    - libass
-    - libbluray
-    - libplacebo
-    - librist
-    - libsoxr
-    - libssh
-    - libvidstab
-    - libvmaf
-    - libvorbis
-    - libvpx
-    - libx11
-    - libxcb
-    - libxext
-    - libxv
-    - opencore-amr
-    - openjpeg
-    - opus
-    - rav1e
-    - rubberband
-    - sdl2
-    - snappy
-    - speex
-    - srt
-    - svt-av1
-    - tesseract
-    - theora
-    - webp
-    - whisper-cpp
-    - x264
-    - x265
-    - xvid
-    - xz
-    - zeromq
-    - zimg
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - ffmpeg-full

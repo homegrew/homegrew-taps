@@ -3,85 +3,46 @@ version: 1.74.1
 description: New Relic infrastructure agent
 homepage: https://github.com/newrelic/infrastructure-agent
 license: Apache-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
         sha256: 80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
         sha256: 80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
+        sha256: 80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
+        sha256: 80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:da5ce58facea0fb583041b1426aeb951dc6a2612c1ee559e62a81c5ccf981267
-        sha256: da5ce58facea0fb583041b1426aeb951dc6a2612c1ee559e62a81c5ccf981267
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:f59a2431a8adf51f58ccbc54c9c9dd0f2bcdb36aee701e3934d32702fff64b28
+        sha256: f59a2431a8adf51f58ccbc54c9c9dd0f2bcdb36aee701e3934d32702fff64b28
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:f691c00360f3313bdc7651eb23c5d740a07382397b2040a2585e9e32dd851848
         sha256: f691c00360f3313bdc7651eb23c5d740a07382397b2040a2585e9e32dd851848
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:da5ce58facea0fb583041b1426aeb951dc6a2612c1ee559e62a81c5ccf981267
         sha256: da5ce58facea0fb583041b1426aeb951dc6a2612c1ee559e62a81c5ccf981267
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:f59a2431a8adf51f58ccbc54c9c9dd0f2bcdb36aee701e3934d32702fff64b28
         sha256: f59a2431a8adf51f58ccbc54c9c9dd0f2bcdb36aee701e3934d32702fff64b28
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:0cb1a0346796b8a2304307d83419c003bff64eec40bfa3242b3347ff19fc0f36
         sha256: 0cb1a0346796b8a2304307d83419c003bff64eec40bfa3242b3347ff19fc0f36
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:7ca7680710aec1391d3ccdb10847cd7f680bc546ec8ba7c1e76f92b474eda031
         sha256: 7ca7680710aec1391d3ccdb10847cd7f680bc546ec8ba7c1e76f92b474eda031
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/newrelic/infrastructure-agent.git
-    sha256: ""
-    sha512: ""
-    signature: ""
 build_dependencies:
     - go
-linux_dependencies: []
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/newrelic-infra-agent/bin/newrelic-infra-service
         - -config
         - $HOMEBREW_PREFIX/etc/newrelic-infra/newrelic-infra.yml
     run_type: immediate
-    working_dir: ""
     log_path: $HOMEBREW_PREFIX/var/log/newrelic-infra/newrelic-infra.log
     error_log_path: $HOMEBREW_PREFIX/var/log/newrelic-infra/newrelic-infra.stderr.log
-    keep_alive: false
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - newrelic-infra-agent

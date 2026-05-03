@@ -3,80 +3,43 @@ version: 1.6.7
 description: Run periodic jobs in PostgreSQL
 homepage: https://github.com/citusdata/pg_cron
 license: PostgreSQL
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - libpq
     - gettext
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:a046ebbb430f4eaa26638afcfe19082f19eaf984958d01e00650c931678d289e
         sha256: a046ebbb430f4eaa26638afcfe19082f19eaf984958d01e00650c931678d289e
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:a046ebbb430f4eaa26638afcfe19082f19eaf984958d01e00650c931678d289e
         sha256: a046ebbb430f4eaa26638afcfe19082f19eaf984958d01e00650c931678d289e
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:a046ebbb430f4eaa26638afcfe19082f19eaf984958d01e00650c931678d289e
+        sha256: a046ebbb430f4eaa26638afcfe19082f19eaf984958d01e00650c931678d289e
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:a046ebbb430f4eaa26638afcfe19082f19eaf984958d01e00650c931678d289e
+        sha256: a046ebbb430f4eaa26638afcfe19082f19eaf984958d01e00650c931678d289e
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:903e9351b2bab78c495a3044933bf02a6407464f8afcd1c900415e95e9715d0e
-        sha256: 903e9351b2bab78c495a3044933bf02a6407464f8afcd1c900415e95e9715d0e
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:a07a1ecf77295372c7976d26dddb193d94b529d87d133386e40379e8497dff55
+        sha256: a07a1ecf77295372c7976d26dddb193d94b529d87d133386e40379e8497dff55
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:c4eed9429951152b6fae02fc2dbf701dff9edf553eb4035f3d1cfcc2708a11f3
         sha256: c4eed9429951152b6fae02fc2dbf701dff9edf553eb4035f3d1cfcc2708a11f3
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:903e9351b2bab78c495a3044933bf02a6407464f8afcd1c900415e95e9715d0e
         sha256: 903e9351b2bab78c495a3044933bf02a6407464f8afcd1c900415e95e9715d0e
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:a07a1ecf77295372c7976d26dddb193d94b529d87d133386e40379e8497dff55
         sha256: a07a1ecf77295372c7976d26dddb193d94b529d87d133386e40379e8497dff55
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:a2a9efe94dba9e08e5a7444129f73aa88c7cb51eabf8378813f2edb18a119a8b
         sha256: a2a9efe94dba9e08e5a7444129f73aa88c7cb51eabf8378813f2edb18a119a8b
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/pg_cron/blobs/sha256:e994552633f54d1d1e0a77ea71209671179bd649c65c9109564bf75e3bb035b9
         sha256: e994552633f54d1d1e0a77ea71209671179bd649c65c9109564bf75e3bb035b9
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/citusdata/pg_cron/archive/refs/tags/v1.6.7.tar.gz
     sha256: d950bc29155f31017567e23a31d268ff672e98276c0e9d062512fb7870351f03
-    sha512: ""
-    signature: ""
 build_dependencies:
     - postgresql@17
     - postgresql@18
-linux_dependencies:
-    - libpq
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - pg_cron

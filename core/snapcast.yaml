@@ -3,19 +3,6 @@ version: 0.35.0
 description: Synchronous multiroom audio player
 homepage: https://github.com/snapcast/snapcast
 license: GPL-3.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - flac
     - libogg
@@ -23,72 +10,41 @@ dependencies:
     - libvorbis
     - openssl@4
     - opus
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:5603fec33ba9ba3e83fb16d10423579f8b589f5c82290ae6e29097b70fe6e723
         sha256: 5603fec33ba9ba3e83fb16d10423579f8b589f5c82290ae6e29097b70fe6e723
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:5603fec33ba9ba3e83fb16d10423579f8b589f5c82290ae6e29097b70fe6e723
         sha256: 5603fec33ba9ba3e83fb16d10423579f8b589f5c82290ae6e29097b70fe6e723
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:5603fec33ba9ba3e83fb16d10423579f8b589f5c82290ae6e29097b70fe6e723
+        sha256: 5603fec33ba9ba3e83fb16d10423579f8b589f5c82290ae6e29097b70fe6e723
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:5603fec33ba9ba3e83fb16d10423579f8b589f5c82290ae6e29097b70fe6e723
+        sha256: 5603fec33ba9ba3e83fb16d10423579f8b589f5c82290ae6e29097b70fe6e723
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:f029d457826ddc09f04d6a68a07ed0c7e08d2d19ec7afa1068b23ba824bc5d73
-        sha256: f029d457826ddc09f04d6a68a07ed0c7e08d2d19ec7afa1068b23ba824bc5d73
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:ff3736ac6d060aa12bb5f20c9bdff44eddf1599e4dbfae99cb62ca5d58cbecd0
+        sha256: ff3736ac6d060aa12bb5f20c9bdff44eddf1599e4dbfae99cb62ca5d58cbecd0
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:206de0dd3393237be71d89125b131f11797606aea872e413ed5c1877fe6508c6
         sha256: 206de0dd3393237be71d89125b131f11797606aea872e413ed5c1877fe6508c6
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:f029d457826ddc09f04d6a68a07ed0c7e08d2d19ec7afa1068b23ba824bc5d73
         sha256: f029d457826ddc09f04d6a68a07ed0c7e08d2d19ec7afa1068b23ba824bc5d73
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:ff3736ac6d060aa12bb5f20c9bdff44eddf1599e4dbfae99cb62ca5d58cbecd0
         sha256: ff3736ac6d060aa12bb5f20c9bdff44eddf1599e4dbfae99cb62ca5d58cbecd0
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:6037bb300c6c03217793eb4910b336939d3c5c27a0dbf1ee05b994308f42327c
         sha256: 6037bb300c6c03217793eb4910b336939d3c5c27a0dbf1ee05b994308f42327c
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/snapcast/blobs/sha256:ace3d2ab530a6c0312a13d815086d2b67c1230b01100119aef106102f8eb8427
         sha256: ace3d2ab530a6c0312a13d815086d2b67c1230b01100119aef106102f8eb8427
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/snapcast/snapcast/archive/refs/tags/v0.35.0.tar.gz
     sha256: cb75a71479bf52910bf5f47ae8120ec41c89459b0d77d7cd560e674e437ef050
-    sha512: ""
-    signature: ""
 build_dependencies:
     - boost
     - cmake
     - pkgconf
-linux_dependencies:
-    - alsa-lib
-    - avahi
-    - flac
-    - libogg
-    - libsoxr
-    - libvorbis
-    - openssl@4
-    - opus
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - snapcast

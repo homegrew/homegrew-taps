@@ -3,19 +3,6 @@ version: 0.82.3
 description: Terminal emulator widget used by GNOME terminal
 homepage: https://wiki.gnome.org/Apps/Terminal/VTE
 license: LGPL-2.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
 dependencies:
     - at-spi2-core
     - cairo
@@ -32,53 +19,40 @@ dependencies:
     - pcre2
     - simdutf
     - gettext
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:c395ce2594e111339c80ad736dea839fac35eb7a9c73d1ab25b7faf0194d6dbe
         sha256: c395ce2594e111339c80ad736dea839fac35eb7a9c73d1ab25b7faf0194d6dbe
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:c395ce2594e111339c80ad736dea839fac35eb7a9c73d1ab25b7faf0194d6dbe
         sha256: c395ce2594e111339c80ad736dea839fac35eb7a9c73d1ab25b7faf0194d6dbe
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:c395ce2594e111339c80ad736dea839fac35eb7a9c73d1ab25b7faf0194d6dbe
+        sha256: c395ce2594e111339c80ad736dea839fac35eb7a9c73d1ab25b7faf0194d6dbe
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:c395ce2594e111339c80ad736dea839fac35eb7a9c73d1ab25b7faf0194d6dbe
+        sha256: c395ce2594e111339c80ad736dea839fac35eb7a9c73d1ab25b7faf0194d6dbe
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:aaa862d6a110f847aef84c3a9d8c7b4e2493e83cb7255e1023eb74fdd0f1fd32
-        sha256: aaa862d6a110f847aef84c3a9d8c7b4e2493e83cb7255e1023eb74fdd0f1fd32
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:e3745540c3024ef3fb9256568a960c639215f4c651fe9c1e19a0a520d48cf557
+        sha256: e3745540c3024ef3fb9256568a960c639215f4c651fe9c1e19a0a520d48cf557
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:0e5c042b17b3dfbc3a74f42b8569cb12be63a744d9e9ec4adcb71d49c477e636
         sha256: 0e5c042b17b3dfbc3a74f42b8569cb12be63a744d9e9ec4adcb71d49c477e636
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:aaa862d6a110f847aef84c3a9d8c7b4e2493e83cb7255e1023eb74fdd0f1fd32
         sha256: aaa862d6a110f847aef84c3a9d8c7b4e2493e83cb7255e1023eb74fdd0f1fd32
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:e3745540c3024ef3fb9256568a960c639215f4c651fe9c1e19a0a520d48cf557
         sha256: e3745540c3024ef3fb9256568a960c639215f4c651fe9c1e19a0a520d48cf557
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:6e9150a981d8f807be89f7b325e78b8b477b08afb4982c832c5b203491643f63
         sha256: 6e9150a981d8f807be89f7b325e78b8b477b08afb4982c832c5b203491643f63
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/vte3/blobs/sha256:4b86930db353bfe54f3407aeceeca94a458e2b69093a329f66f48640d7465962
         sha256: 4b86930db353bfe54f3407aeceeca94a458e2b69093a329f66f48640d7465962
-        sha512: ""
-        signature: ""
 source:
     url: https://download.gnome.org/sources/vte/0.82/vte-0.82.3.tar.xz
     sha256: 6dc6278f6fee30d07d1a03e2ba3335b1ea4e8d2956ceb59d861943115d930a85
-    sha512: ""
-    signature: ""
 build_dependencies:
     - fast_float
     - gettext
@@ -87,28 +61,3 @@ build_dependencies:
     - ninja
     - pkgconf
     - vala
-linux_dependencies:
-    - at-spi2-core
-    - cairo
-    - fribidi
-    - gdk-pixbuf
-    - glib
-    - gnutls
-    - graphene
-    - gtk+3
-    - gtk4
-    - icu4c@78
-    - lz4
-    - pango
-    - pcre2
-    - simdutf
-    - systemd
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - vte3

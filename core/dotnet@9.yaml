@@ -3,19 +3,9 @@ version: 9.0.115
 description: .NET Core
 homepage: https://dotnet.microsoft.com/
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    For other software to find dotnet you may need to set:
+      export DOTNET_ROOT="$HOMEBREW_PREFIX/opt/dotnet@9/libexec"
 dependencies:
     - brotli
     - icu4c@78
@@ -23,58 +13,28 @@ dependencies:
 keg_only: true
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/dotnet/9/blobs/sha256:8c50dc8fff007cc4c89e56249b168e98c7733cbcb57ad065a537c5081561035e
-        sha256: 8c50dc8fff007cc4c89e56249b168e98c7733cbcb57ad065a537c5081561035e
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/dotnet/9/blobs/sha256:d0210ac9abe86301be17f2ef799950b29e673048a5e686c1eff4129f25cf07a5
+        sha256: d0210ac9abe86301be17f2ef799950b29e673048a5e686c1eff4129f25cf07a5
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/dotnet/9/blobs/sha256:0b8c0f69051f57cd3339a6173cf28b65d575ec1acf16f8c3b0613b5abc5a4abc
         sha256: 0b8c0f69051f57cd3339a6173cf28b65d575ec1acf16f8c3b0613b5abc5a4abc
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/dotnet/9/blobs/sha256:8c50dc8fff007cc4c89e56249b168e98c7733cbcb57ad065a537c5081561035e
         sha256: 8c50dc8fff007cc4c89e56249b168e98c7733cbcb57ad065a537c5081561035e
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dotnet/9/blobs/sha256:d0210ac9abe86301be17f2ef799950b29e673048a5e686c1eff4129f25cf07a5
         sha256: d0210ac9abe86301be17f2ef799950b29e673048a5e686c1eff4129f25cf07a5
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/dotnet/9/blobs/sha256:91b020b30ee7c6e901e227c70413a68a85adc96c7e7d52dcae7c53155ec6573e
         sha256: 91b020b30ee7c6e901e227c70413a68a85adc96c7e7d52dcae7c53155ec6573e
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/dotnet/9/blobs/sha256:4f3fedb5b3fdb90696e1b19e25eef83ef312d5d4656f77d91f7f17e12094bfb2
         sha256: 4f3fedb5b3fdb90696e1b19e25eef83ef312d5d4656f77d91f7f17e12094bfb2
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/dotnet/dotnet/archive/refs/tags/v9.0.115.tar.gz
     sha256: 4e9bb987d5311395e0d516b2db98bcfe02a7eb8054bb8603b6db0b8ea39b81ca
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmake
     - pkgconf
     - rapidjson
     - grep
-linux_dependencies:
-    - brotli
-    - icu4c@78
-    - libunwind
-    - lttng-ust
-    - openssl@3
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - dotnet@9

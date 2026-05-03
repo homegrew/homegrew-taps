@@ -3,88 +3,49 @@ version: 10.0.107
 description: .NET Core
 homepage: https://dotnet.microsoft.com/
 license: MIT
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    For other software to find dotnet you may need to set:
+      export DOTNET_ROOT="$HOMEBREW_PREFIX/opt/dotnet/libexec"
 dependencies:
     - brotli
     - icu4c@78
     - openssl@3
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:cc48dbb77ef6b7841009c6a9f28ce4082325ea45d18ca67071c2af752821548b
         sha256: cc48dbb77ef6b7841009c6a9f28ce4082325ea45d18ca67071c2af752821548b
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:cc48dbb77ef6b7841009c6a9f28ce4082325ea45d18ca67071c2af752821548b
         sha256: cc48dbb77ef6b7841009c6a9f28ce4082325ea45d18ca67071c2af752821548b
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:cc48dbb77ef6b7841009c6a9f28ce4082325ea45d18ca67071c2af752821548b
+        sha256: cc48dbb77ef6b7841009c6a9f28ce4082325ea45d18ca67071c2af752821548b
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:cc48dbb77ef6b7841009c6a9f28ce4082325ea45d18ca67071c2af752821548b
+        sha256: cc48dbb77ef6b7841009c6a9f28ce4082325ea45d18ca67071c2af752821548b
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:146e28f7f6f63e0c767699700d44479d14572085ea404818e76c8e82c2a228c1
-        sha256: 146e28f7f6f63e0c767699700d44479d14572085ea404818e76c8e82c2a228c1
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:fd3cb729b7f8b59a0c618ed5443aaf4ba3dff7948e22b5d0b89155fa9c6e13a1
+        sha256: fd3cb729b7f8b59a0c618ed5443aaf4ba3dff7948e22b5d0b89155fa9c6e13a1
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:ece8b10dd7b355c2ae1a1ad651905968771e1bddb5ea50144934c2f0bd343f88
         sha256: ece8b10dd7b355c2ae1a1ad651905968771e1bddb5ea50144934c2f0bd343f88
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:146e28f7f6f63e0c767699700d44479d14572085ea404818e76c8e82c2a228c1
         sha256: 146e28f7f6f63e0c767699700d44479d14572085ea404818e76c8e82c2a228c1
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:fd3cb729b7f8b59a0c618ed5443aaf4ba3dff7948e22b5d0b89155fa9c6e13a1
         sha256: fd3cb729b7f8b59a0c618ed5443aaf4ba3dff7948e22b5d0b89155fa9c6e13a1
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:e1874b2b708cf89c3047144470e6220b447555013bd1d96b2fb2aa2285e071f3
         sha256: e1874b2b708cf89c3047144470e6220b447555013bd1d96b2fb2aa2285e071f3
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/dotnet/blobs/sha256:9b53a2b17af6a998cef5ef4e631bae557038f31243c28b27cef9728309e6446b
         sha256: 9b53a2b17af6a998cef5ef4e631bae557038f31243c28b27cef9728309e6446b
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/dotnet/dotnet/archive/refs/tags/v10.0.107.tar.gz
     sha256: ad1174dec435a27c2528889bae80838ced784a2968003608ecafde3e2a1daddd
-    sha512: ""
-    signature: ""
 build_dependencies:
     - cmake
     - pkgconf
     - rapidjson
     - grep
-linux_dependencies:
-    - brotli
-    - icu4c@78
-    - libunwind
-    - lttng-ust
-    - openssl@3
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - dotnet

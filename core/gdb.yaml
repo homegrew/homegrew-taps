@@ -3,19 +3,11 @@ version: "17.1"
 description: GNU debugger
 homepage: https://www.gnu.org/software/gdb/
 license: GPL-3.0-or-later
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    gdb requires special privileges to access Mach ports.
+    You will need to codesign the binary. For instructions, see:
+
+      https://sourceware.org/gdb/wiki/PermissionsDarwin
 dependencies:
     - gmp
     - mpfr
@@ -24,72 +16,40 @@ dependencies:
     - readline
     - xz
     - zstd
-keg_only: false
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:9116ddb519db553a99c6cdcebfa34dbb9aaf0ebdea8e7567863d7aa5616e4a38
         sha256: 9116ddb519db553a99c6cdcebfa34dbb9aaf0ebdea8e7567863d7aa5616e4a38
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:9116ddb519db553a99c6cdcebfa34dbb9aaf0ebdea8e7567863d7aa5616e4a38
         sha256: 9116ddb519db553a99c6cdcebfa34dbb9aaf0ebdea8e7567863d7aa5616e4a38
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:9116ddb519db553a99c6cdcebfa34dbb9aaf0ebdea8e7567863d7aa5616e4a38
+        sha256: 9116ddb519db553a99c6cdcebfa34dbb9aaf0ebdea8e7567863d7aa5616e4a38
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:9116ddb519db553a99c6cdcebfa34dbb9aaf0ebdea8e7567863d7aa5616e4a38
+        sha256: 9116ddb519db553a99c6cdcebfa34dbb9aaf0ebdea8e7567863d7aa5616e4a38
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:754675fcfc33b3d12cc510ffa6dc6af3bba6e15ee4abc5f5e8a11c5cc61c832d
-        sha256: 754675fcfc33b3d12cc510ffa6dc6af3bba6e15ee4abc5f5e8a11c5cc61c832d
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:2295e7004a3c90fe6098270d09ca48a7889925dcf34a07c54e9a1a47e09db70e
+        sha256: 2295e7004a3c90fe6098270d09ca48a7889925dcf34a07c54e9a1a47e09db70e
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:c91538f01dd1ec868257a4b462ba54359925c67f3197c247620c049d20125cd0
         sha256: c91538f01dd1ec868257a4b462ba54359925c67f3197c247620c049d20125cd0
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:754675fcfc33b3d12cc510ffa6dc6af3bba6e15ee4abc5f5e8a11c5cc61c832d
         sha256: 754675fcfc33b3d12cc510ffa6dc6af3bba6e15ee4abc5f5e8a11c5cc61c832d
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:2295e7004a3c90fe6098270d09ca48a7889925dcf34a07c54e9a1a47e09db70e
         sha256: 2295e7004a3c90fe6098270d09ca48a7889925dcf34a07c54e9a1a47e09db70e
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:76d485370e5c8e7619e13de8d01af7f47c105eb934174c0e7fe083b4b95e8d9e
         sha256: 76d485370e5c8e7619e13de8d01af7f47c105eb934174c0e7fe083b4b95e8d9e
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:3e10f1975104a93f54a48cd586357cb8279dbfed8e91cd1d78e4eea9d532e215
         sha256: 3e10f1975104a93f54a48cd586357cb8279dbfed8e91cd1d78e4eea9d532e215
-        sha512: ""
-        signature: ""
 source:
     url: https://ftpmirror.gnu.org/gnu/gdb/gdb-17.1.tar.xz
     sha256: 14996f5f74c9f68f5a543fdc45bca7800207f91f92aeea6c2e791822c7c6d876
-    sha512: ""
-    signature: ""
 build_dependencies:
     - pkgconf
     - texinfo
-linux_dependencies:
-    - gmp
-    - guile
-    - mpfr
-    - ncurses
-    - python@3.14
-    - readline
-    - xz
-    - zlib-ng-compat
-    - zstd
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - gdb

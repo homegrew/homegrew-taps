@@ -3,19 +3,12 @@ version: "18.3"
 description: Object-relational database system
 homepage: https://www.postgresql.org/
 license: PostgreSQL
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    This formula has created a default database cluster with:
+      initdb --locale=en_US.UTF-8 -E UTF-8 $HOMEBREW_PREFIX/var/postgresql@18
+
+    When uninstalling, some dead symlinks are left behind so you may want to run:
+      brew cleanup --prune-prefix
 dependencies:
     - icu4c@78
     - krb5
@@ -29,66 +22,41 @@ bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
         sha256: 4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
         sha256: 4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
+        sha256: 4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
+        sha256: 4183572b950af49fad450c4de3cdd1bbb90d9a7e0eff8bd820126086c0de83b7
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:d673a799d57ccb106e95487b4ae480721dbbda30732071e9014bc5572420e90b
-        sha256: d673a799d57ccb106e95487b4ae480721dbbda30732071e9014bc5572420e90b
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:581c22f083ae24218d978e0855b5df7649442622c0f4553d5dc0aa5fec0e3c3a
+        sha256: 581c22f083ae24218d978e0855b5df7649442622c0f4553d5dc0aa5fec0e3c3a
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:711c76573500ed2a1d898c1849ebd30c133375a980a612010192a624ff759ba7
         sha256: 711c76573500ed2a1d898c1849ebd30c133375a980a612010192a624ff759ba7
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:d673a799d57ccb106e95487b4ae480721dbbda30732071e9014bc5572420e90b
         sha256: d673a799d57ccb106e95487b4ae480721dbbda30732071e9014bc5572420e90b
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:581c22f083ae24218d978e0855b5df7649442622c0f4553d5dc0aa5fec0e3c3a
         sha256: 581c22f083ae24218d978e0855b5df7649442622c0f4553d5dc0aa5fec0e3c3a
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:044df17562b5237ba19ef9ab4a65656309e8a3a15eaa813a906de47d5572d42a
         sha256: 044df17562b5237ba19ef9ab4a65656309e8a3a15eaa813a906de47d5572d42a
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:1acb5c6bebfbe288da873de04835cf51cc2e3c335d454d1869b379f636c4e08c
         sha256: 1acb5c6bebfbe288da873de04835cf51cc2e3c335d454d1869b379f636c4e08c
-        sha512: ""
-        signature: ""
 source:
     url: https://ftp.postgresql.org/pub/source/v18.3/postgresql-18.3.tar.bz2
     sha256: d95663fbbf3a80f81a9d98d895266bdcb74ba274bcc04ef6d76630a72dee016f
-    sha512: ""
-    signature: ""
 build_dependencies:
     - docbook
     - docbook-xsl
     - gettext
     - pkgconf
-linux_dependencies:
-    - icu4c@78
-    - krb5
-    - linux-pam
-    - lz4
-    - openssl@3
-    - readline
-    - util-linux
-    - zlib-ng-compat
-    - zstd
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/postgresql@18/bin/postgres
@@ -99,8 +67,3 @@ service:
     log_path: $HOMEBREW_PREFIX/var/log/postgresql@18.log
     error_log_path: $HOMEBREW_PREFIX/var/log/postgresql@18.log
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - postgresql@18

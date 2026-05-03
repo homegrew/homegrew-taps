@@ -2,7 +2,9 @@ name: kotlin-native
 version: 2.3.21
 description: LLVM backend for Kotlin
 homepage: https://kotlinlang.org/docs/reference/native-overview.html
-license: ""
+caveats: |
+    kotlin-native requires Java 6+. You can install the latest version with:
+      brew install --cask temurin
 url:
     darwin_amd64: https://github.com/JetBrains/kotlin/releases/download/v2.3.21/kotlin-native-prebuilt-macos-x86_64-2.3.21.tar.gz
     darwin_amd64_10: https://github.com/JetBrains/kotlin/releases/download/v2.3.21/kotlin-native-prebuilt-macos-x86_64-2.3.21.tar.gz
@@ -52,8 +54,6 @@ sha512:
     darwin_arm64_15: ""
     darwin_arm64_16: ""
 artifacts:
-    app: []
-    pkg: []
     bin:
         - cinterop
         - generate-platform
@@ -65,4 +65,3 @@ artifacts:
 source:
     url: https://github.com/JetBrains/kotlin/releases/download/v2.3.21/kotlin-native-prebuilt-macos-aarch64-2.3.21.tar.gz
     sha256: 5418391a3b94d7bff6794668c8e813ebc471f46e04f828a35e88469c367efa4d
-    sha512: ""

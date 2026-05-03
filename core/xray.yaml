@@ -3,73 +3,44 @@ version: 26.3.27
 description: Platform for building proxies to bypass network restrictions
 homepage: https://xtls.github.io/
 license: MPL-2.0 AND CC-BY-SA-4.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    An example config is installed to $HOMEBREW_PREFIX/etc/xray/config.json
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
         sha256: cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
         sha256: cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
+        sha256: cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
+        sha256: cd5204044d371e0ca845ca19f986a38e0e8407e37b4a7e90b5b56862eca24f87
     darwin_arm64:
         url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
         sha256: bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
-        sha512: ""
-        signature: ""
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
         sha256: bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
         sha256: bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
         sha256: bff79bcf360802fa0aef96803a01bb46c4d52500c1b38263929f464b3c0fb907
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:190c1acc90997a981bdd3a7219bbc0b95f9b10e3ac6ede1effd43c8f47ecc347
         sha256: 190c1acc90997a981bdd3a7219bbc0b95f9b10e3ac6ede1effd43c8f47ecc347
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/xray/blobs/sha256:b6d296df37d4a391985efce24056d66f557c60ff98f281691253b57de1aa05c4
         sha256: b6d296df37d4a391985efce24056d66f557c60ff98f281691253b57de1aa05c4
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/XTLS/Xray-core/archive/refs/tags/v26.3.27.tar.gz
     sha256: 992a4997e6bb846d11469435d687f99ef812fcde1e0a009bb8e95189ea20331d
-    sha512: ""
-    signature: ""
 build_dependencies:
     - go
-linux_dependencies: []
-build:
-    configure: []
-    install: []
 service:
     run:
         - $HOMEBREW_PREFIX/opt/xray/bin/xray
@@ -77,12 +48,4 @@ service:
         - --config
         - $HOMEBREW_PREFIX/etc/xray/config.json
     run_type: immediate
-    working_dir: ""
-    log_path: ""
-    error_log_path: ""
     keep_alive: true
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - xray

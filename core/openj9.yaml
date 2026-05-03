@@ -1,21 +1,14 @@
 name: openj9
-version: 0.57.0
+version: 0.59.0
 description: High performance, scalable, Java virtual machine
 homepage: https://www.eclipse.org/openj9/
 license: EPL-2.0 OR Apache-2.0 OR (GPL-2.0-only WITH Classpath-exception-2.0) OR (GPL-2.0-only WITH OpenJDK-assembly-exception-1.0)
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    This formula provides the latest supported LTS JDK. If you need a specific
+    version, then you will have to use a different method to install OpenJ9.
+
+    For the system Java wrappers to find this JDK, symlink it with
+      sudo ln -sfn $HOMEBREW_PREFIX/opt/openj9/libexec/openj9.jdk /Library/Java/JavaVirtualMachines/openj9.jdk
 dependencies:
     - fontconfig
     - freetype
@@ -27,80 +20,41 @@ dependencies:
 keg_only: true
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:40123706274b3123b211881e250e220e5be8051a08507514ff0d5ea976b891a7
-        sha256: 40123706274b3123b211881e250e220e5be8051a08507514ff0d5ea976b891a7
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:7c3aab740c4a7937e1588eacb3aff952e82b57d65a6ff693954917086d44978e
+        sha256: 7c3aab740c4a7937e1588eacb3aff952e82b57d65a6ff693954917086d44978e
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:40123706274b3123b211881e250e220e5be8051a08507514ff0d5ea976b891a7
-        sha256: 40123706274b3123b211881e250e220e5be8051a08507514ff0d5ea976b891a7
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:7c3aab740c4a7937e1588eacb3aff952e82b57d65a6ff693954917086d44978e
+        sha256: 7c3aab740c4a7937e1588eacb3aff952e82b57d65a6ff693954917086d44978e
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:7c3aab740c4a7937e1588eacb3aff952e82b57d65a6ff693954917086d44978e
+        sha256: 7c3aab740c4a7937e1588eacb3aff952e82b57d65a6ff693954917086d44978e
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:7c3aab740c4a7937e1588eacb3aff952e82b57d65a6ff693954917086d44978e
+        sha256: 7c3aab740c4a7937e1588eacb3aff952e82b57d65a6ff693954917086d44978e
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:c6374bea84fa0ea5d4ddb1ed630961f37b3eb3f4cff190f100a321c3f3e4bfae
-        sha256: c6374bea84fa0ea5d4ddb1ed630961f37b3eb3f4cff190f100a321c3f3e4bfae
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:67272cfb3fcbf6e2d42d375107cf33dd04761579172bc98c809b19150fb5465a
+        sha256: 67272cfb3fcbf6e2d42d375107cf33dd04761579172bc98c809b19150fb5465a
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:a5b5cc2c8ece4eba47b1c7dfec6659d87493ccb3111563c553a25bef37875fb8
-        sha256: a5b5cc2c8ece4eba47b1c7dfec6659d87493ccb3111563c553a25bef37875fb8
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:9b9dd600a155f1321a37202da3e5e57a3f20b3876d5693243c168b5640c838db
+        sha256: 9b9dd600a155f1321a37202da3e5e57a3f20b3876d5693243c168b5640c838db
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:c6374bea84fa0ea5d4ddb1ed630961f37b3eb3f4cff190f100a321c3f3e4bfae
-        sha256: c6374bea84fa0ea5d4ddb1ed630961f37b3eb3f4cff190f100a321c3f3e4bfae
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:9b734971b1c65ac0b8fd4ac8f06f46d0a9e56ab672ecb5e20158eb5d7e43c968
+        sha256: 9b734971b1c65ac0b8fd4ac8f06f46d0a9e56ab672ecb5e20158eb5d7e43c968
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:6003734f9820a7cf2ecd84c2e935c0fd46430278eaeeee0278d4968b39e78f12
-        sha256: 6003734f9820a7cf2ecd84c2e935c0fd46430278eaeeee0278d4968b39e78f12
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:67272cfb3fcbf6e2d42d375107cf33dd04761579172bc98c809b19150fb5465a
+        sha256: 67272cfb3fcbf6e2d42d375107cf33dd04761579172bc98c809b19150fb5465a
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:f6c07e1ebf0cc612a87525cd8ac92d7c1133d4a2a9f3647ce90454542d1a2d05
-        sha256: f6c07e1ebf0cc612a87525cd8ac92d7c1133d4a2a9f3647ce90454542d1a2d05
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:fd83172bc46e36027253f9075e1fb6ebfb72d2d66f05678d9b81225bbfa4c00e
+        sha256: fd83172bc46e36027253f9075e1fb6ebfb72d2d66f05678d9b81225bbfa4c00e
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:14d82b2581a27cb50d2906087a25b1d8d69d27514b500a4b80350ef1854ef442
-        sha256: 14d82b2581a27cb50d2906087a25b1d8d69d27514b500a4b80350ef1854ef442
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/openj9/blobs/sha256:69bbe782ebae6e84ab93c15d2e29ba10fbd5e110922d92bc97aec36432f1d314
+        sha256: 69bbe782ebae6e84ab93c15d2e29ba10fbd5e110922d92bc97aec36432f1d314
 source:
-    url: https://github.com/eclipse-openj9/openj9/archive/refs/tags/openj9-0.57.0.tar.gz
-    sha256: 84650d5f8e623bec413b72e5486a40f0b3dcc71435fa4dfe5b9bba5bea4c398d
-    sha512: ""
-    signature: ""
+    url: https://github.com/eclipse-openj9/openj9/archive/refs/tags/openj9-0.59.0.tar.gz
+    sha256: 35d959da212f2dbc442c059d250f2cbc63c716b31d16e30d4cef3c508731b99f
 build_dependencies:
     - autoconf
     - bash
     - cmake
     - openjdk
     - pkgconf
-linux_dependencies:
-    - alsa-lib
-    - fontconfig
-    - freetype
-    - giflib
-    - harfbuzz
-    - jpeg-turbo
-    - libpng
-    - libx11
-    - libxext
-    - libxi
-    - libxrandr
-    - libxrender
-    - libxt
-    - libxtst
-    - little-cms2
-    - numactl
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - openj9

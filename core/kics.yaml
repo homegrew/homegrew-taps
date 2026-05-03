@@ -3,76 +3,44 @@ version: 2.1.20
 description: Detect vulnerabilities, compliance issues, and misconfigurations
 homepage: https://kics.io/
 license: Apache-2.0
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
-dependencies: []
-keg_only: false
+caveats: |
+    KICS queries are placed under $HOMEBREW_PREFIX/opt/kics/share/kics/assets/queries
+    To use KICS default queries add KICS_QUERIES_PATH env to your ~/.zshrc or ~/.zprofile:
+        "echo 'export KICS_QUERIES_PATH=$HOMEBREW_PREFIX/opt/kics/share/kics/assets/queries' >> ~/.zshrc"
+    usage of CLI flag --queries-path takes precedence.
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:74c888c48f65a012f9b792b6cd9a076f85e1fe9cef2bacf51ffc2be020e2da40
         sha256: 74c888c48f65a012f9b792b6cd9a076f85e1fe9cef2bacf51ffc2be020e2da40
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:74c888c48f65a012f9b792b6cd9a076f85e1fe9cef2bacf51ffc2be020e2da40
         sha256: 74c888c48f65a012f9b792b6cd9a076f85e1fe9cef2bacf51ffc2be020e2da40
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:74c888c48f65a012f9b792b6cd9a076f85e1fe9cef2bacf51ffc2be020e2da40
+        sha256: 74c888c48f65a012f9b792b6cd9a076f85e1fe9cef2bacf51ffc2be020e2da40
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:74c888c48f65a012f9b792b6cd9a076f85e1fe9cef2bacf51ffc2be020e2da40
+        sha256: 74c888c48f65a012f9b792b6cd9a076f85e1fe9cef2bacf51ffc2be020e2da40
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:d958a4982aa9c912bddb6a60484241f95579cd4e91cf81ed3c288b8c167c62cb
-        sha256: d958a4982aa9c912bddb6a60484241f95579cd4e91cf81ed3c288b8c167c62cb
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:69b651845bef63ef3e63a5def6e8fc0ad5788408ed9efdc3dabe33c83d8b3efd
+        sha256: 69b651845bef63ef3e63a5def6e8fc0ad5788408ed9efdc3dabe33c83d8b3efd
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:925b758d19f6e9ab3a0fa71ce18407e84bbf1a5785dd143ec808dd102b4ce438
         sha256: 925b758d19f6e9ab3a0fa71ce18407e84bbf1a5785dd143ec808dd102b4ce438
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:d958a4982aa9c912bddb6a60484241f95579cd4e91cf81ed3c288b8c167c62cb
         sha256: d958a4982aa9c912bddb6a60484241f95579cd4e91cf81ed3c288b8c167c62cb
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:69b651845bef63ef3e63a5def6e8fc0ad5788408ed9efdc3dabe33c83d8b3efd
         sha256: 69b651845bef63ef3e63a5def6e8fc0ad5788408ed9efdc3dabe33c83d8b3efd
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:d255abf15014b2d9a57a42c7f6cd66c33d3ffdfbe64d5079653b3408149af043
         sha256: d255abf15014b2d9a57a42c7f6cd66c33d3ffdfbe64d5079653b3408149af043
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/kics/blobs/sha256:4e1f16b9d7c4d637ceac3bd28b3441997264a21276c7c40846bc11beb25a0d92
         sha256: 4e1f16b9d7c4d637ceac3bd28b3441997264a21276c7c40846bc11beb25a0d92
-        sha512: ""
-        signature: ""
 source:
     url: https://github.com/Checkmarx/kics/archive/refs/tags/v2.1.20.tar.gz
     sha256: 7424ca07901a8534f6aa9b9d21b4c3aa873a027cf22e4bf334c5cf7fba134ae3
-    sha512: ""
-    signature: ""
 build_dependencies:
     - go
-linux_dependencies: []
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - kics

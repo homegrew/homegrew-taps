@@ -3,19 +3,8 @@ version: 8.6.17
 description: Tool Command Language
 homepage: https://www.tcl-lang.org
 license: TCL
-url: {}
-sha256: {}
-sha512: {}
-signature: {}
-source_url: ""
-source_sha256: ""
-source_sha512: ""
-install:
-    type: archive
-    binary_name: ""
-    strip_components: 2
-    format: tar.gz
-post_install: ""
+caveats: |
+    The sqlite3_analyzer binary is in the `sqlite-analyzer` formula.
 dependencies:
     - openssl@3
 keg_only: true
@@ -23,60 +12,33 @@ bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:06138d4241d0aa4b4b552dde04215678194643cb5435067b43cf0e8be2b5551e
         sha256: 06138d4241d0aa4b4b552dde04215678194643cb5435067b43cf0e8be2b5551e
-        sha512: ""
-        signature: ""
     darwin_amd64_14:
         url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:06138d4241d0aa4b4b552dde04215678194643cb5435067b43cf0e8be2b5551e
         sha256: 06138d4241d0aa4b4b552dde04215678194643cb5435067b43cf0e8be2b5551e
-        sha512: ""
-        signature: ""
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:06138d4241d0aa4b4b552dde04215678194643cb5435067b43cf0e8be2b5551e
+        sha256: 06138d4241d0aa4b4b552dde04215678194643cb5435067b43cf0e8be2b5551e
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:06138d4241d0aa4b4b552dde04215678194643cb5435067b43cf0e8be2b5551e
+        sha256: 06138d4241d0aa4b4b552dde04215678194643cb5435067b43cf0e8be2b5551e
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:a5dc8687fecd89ea1ce437a409f3e8938161f8f9fd728679d7ba98aaf9a4a121
-        sha256: a5dc8687fecd89ea1ce437a409f3e8938161f8f9fd728679d7ba98aaf9a4a121
-        sha512: ""
-        signature: ""
+        url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:c3cef13113dc7af58e7636256289cea7e3f362347f06f96e9417895f5c84494d
+        sha256: c3cef13113dc7af58e7636256289cea7e3f362347f06f96e9417895f5c84494d
     darwin_arm64_14:
         url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:5d0e9ae8eebb1e442cb2c27d491b90ac1fdb4b97f0403eaf4de208c1ef2a499c
         sha256: 5d0e9ae8eebb1e442cb2c27d491b90ac1fdb4b97f0403eaf4de208c1ef2a499c
-        sha512: ""
-        signature: ""
     darwin_arm64_15:
         url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:a5dc8687fecd89ea1ce437a409f3e8938161f8f9fd728679d7ba98aaf9a4a121
         sha256: a5dc8687fecd89ea1ce437a409f3e8938161f8f9fd728679d7ba98aaf9a4a121
-        sha512: ""
-        signature: ""
     darwin_arm64_16:
         url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:c3cef13113dc7af58e7636256289cea7e3f362347f06f96e9417895f5c84494d
         sha256: c3cef13113dc7af58e7636256289cea7e3f362347f06f96e9417895f5c84494d
-        sha512: ""
-        signature: ""
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:dd71d9dee7ad8ff7ac1306e5696471b106ed15081dbf3ff227173a1bccc78fdc
         sha256: dd71d9dee7ad8ff7ac1306e5696471b106ed15081dbf3ff227173a1bccc78fdc
-        sha512: ""
-        signature: ""
     linux_arm64:
         url: https://ghcr.io/v2/homebrew/core/tcl-tk/8/blobs/sha256:baea2f270066d9f00cdb3fc43d4657e1c566d21965b6602cefa310c6bbf586ab
         sha256: baea2f270066d9f00cdb3fc43d4657e1c566d21965b6602cefa310c6bbf586ab
-        sha512: ""
-        signature: ""
 source:
     url: https://downloads.sourceforge.net/project/tcl/Tcl/8.6.17/tcl8.6.17-src.tar.gz
     sha256: a3903371efcce8a405c5c245d029e9f6850258a60fa3761c4d58995610949b31
-    sha512: ""
-    signature: ""
-build_dependencies: []
-linux_dependencies:
-    - libx11
-    - libxext
-    - openssl@3
-    - zlib-ng-compat
-build:
-    configure: []
-    install: []
-service: null
-artifacts:
-    app: []
-    pkg: []
-    bin:
-        - tcl-tk@8
