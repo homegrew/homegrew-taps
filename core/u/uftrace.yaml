@@ -1,0 +1,62 @@
+name: uftrace
+version: "0.19"
+description: Function graph tracer for C/C++/Rust
+homepage: https://uftrace.github.io/slide/
+license: GPL-2.0-only
+url:
+    darwin_amd64: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_amd64_10: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_amd64_11: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_amd64_12: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_amd64_13: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_amd64_14: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_amd64_15: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_arm64: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_arm64_11: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_arm64_12: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_arm64_13: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_arm64_14: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    darwin_arm64_15: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    linux_amd64: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    linux_arm64: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+sha256:
+    darwin_amd64: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_amd64_10: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_amd64_11: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_amd64_12: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_amd64_13: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_amd64_14: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_amd64_15: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_arm64: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_arm64_11: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_arm64_12: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_arm64_13: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_arm64_14: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    darwin_arm64_15: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    linux_amd64: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+    linux_arm64: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+dependencies:
+    - capstone
+    - elfutils
+    - libunwind
+    - luajit
+    - ncurses
+    - python@3.14
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/uftrace/blobs/sha256:2b2940e30ccba1e5aa78ec4e0428abfa4e7ffabf6949a4e38c20fefb75fae78c
+        sha256: 2b2940e30ccba1e5aa78ec4e0428abfa4e7ffabf6949a4e38c20fefb75fae78c
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/uftrace/blobs/sha256:474888f226426228396ec21e4549c176b1132e17f71e6faf906211f34571e7dc
+        sha256: 474888f226426228396ec21e4549c176b1132e17f71e6faf906211f34571e7dc
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://github.com/namhyung/uftrace/archive/refs/tags/v0.19.tar.gz
+    sha256: c35ef25f279684fc7d79dcc250fb29386890870fd2c9f812e587151419ca01af
+head:
+    url: https://github.com/namhyung/uftrace.git
+    branch: master
+build_dependencies:
+    - pandoc
+    - pkgconf

@@ -1,0 +1,94 @@
+name: nginx
+version: 1.29.8
+description: HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+homepage: https://nginx.org/
+license: BSD-2-Clause
+caveats: |
+    Docroot is: $HOMEBREW_PREFIX/var/www
+
+    The default port has been set in $HOMEBREW_PREFIX/etc/nginx/nginx.conf to 8080 so that
+    nginx can run without sudo.
+
+    nginx will load all files in $HOMEBREW_PREFIX/etc/nginx/servers/.
+url:
+    darwin_amd64: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_amd64_10: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_amd64_11: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_amd64_12: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_amd64_13: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_amd64_14: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_amd64_15: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_arm64: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_arm64_11: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_arm64_12: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_arm64_13: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_arm64_14: https://nginx.org/download/nginx-1.29.8.tar.gz
+    darwin_arm64_15: https://nginx.org/download/nginx-1.29.8.tar.gz
+    linux_amd64: https://nginx.org/download/nginx-1.29.8.tar.gz
+    linux_arm64: https://nginx.org/download/nginx-1.29.8.tar.gz
+sha256:
+    darwin_amd64: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_amd64_10: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_amd64_11: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_amd64_12: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_amd64_13: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_amd64_14: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_amd64_15: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_arm64: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_arm64_11: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_arm64_12: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_arm64_13: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_arm64_14: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    darwin_arm64_15: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    linux_amd64: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+    linux_arm64: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+dependencies:
+    - openssl@3
+    - pcre2
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        sha256: 40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        sha256: 40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        sha256: 40e2bdf86bdfaa9d587ee3b9d92f454257e797512936e0a63ecc334fe97131bb
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:10bc89159b901f4300f546d66126915580025c9623effafc888e81c6893bcd46
+        sha256: 10bc89159b901f4300f546d66126915580025c9623effafc888e81c6893bcd46
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:308ddf32529a8294fd1292497bc3f7aa32437451245c59bf033047e0fe257b56
+        sha256: 308ddf32529a8294fd1292497bc3f7aa32437451245c59bf033047e0fe257b56
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:10bc89159b901f4300f546d66126915580025c9623effafc888e81c6893bcd46
+        sha256: 10bc89159b901f4300f546d66126915580025c9623effafc888e81c6893bcd46
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:036ca082d5404721641bb6d1f41687fafcf58e18f568abc42e8902d0659ee674
+        sha256: 036ca082d5404721641bb6d1f41687fafcf58e18f568abc42e8902d0659ee674
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:6e8e039f1de227ddffb83112db744960e197d48824e0e6246d633dbcab69b381
+        sha256: 6e8e039f1de227ddffb83112db744960e197d48824e0e6246d633dbcab69b381
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://nginx.org/download/nginx-1.29.8.tar.gz
+    sha256: 7f1b985dace8fe706dfc288b83927c928f0ae60bcb7507c2d4e0025eca7280c3
+head:
+    url: https://github.com/nginx/nginx.git
+    branch: master
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nginx/bin/nginx
+        - -g
+        - daemon off;
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    keep_alive: true

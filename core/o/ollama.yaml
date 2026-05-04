@@ -1,0 +1,89 @@
+name: ollama
+version: 0.23.0
+description: Create, run, and share large language models (LLMs)
+homepage: https://ollama.com/
+license: MIT
+url:
+    darwin_amd64: https://github.com/ollama/ollama.git
+    darwin_amd64_10: https://github.com/ollama/ollama.git
+    darwin_amd64_11: https://github.com/ollama/ollama.git
+    darwin_amd64_12: https://github.com/ollama/ollama.git
+    darwin_amd64_13: https://github.com/ollama/ollama.git
+    darwin_amd64_14: https://github.com/ollama/ollama.git
+    darwin_amd64_15: https://github.com/ollama/ollama.git
+    darwin_arm64: https://github.com/ollama/ollama.git
+    darwin_arm64_11: https://github.com/ollama/ollama.git
+    darwin_arm64_12: https://github.com/ollama/ollama.git
+    darwin_arm64_13: https://github.com/ollama/ollama.git
+    darwin_arm64_14: https://github.com/ollama/ollama.git
+    darwin_arm64_15: https://github.com/ollama/ollama.git
+    linux_amd64: https://github.com/ollama/ollama.git
+    linux_arm64: https://github.com/ollama/ollama.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+dependencies:
+    - mlx-c
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:16139aaf9fda657830a6e75aa24a552e91f7a0f7fc44bfdc8728b6dc7f4fcc49
+        sha256: 16139aaf9fda657830a6e75aa24a552e91f7a0f7fc44bfdc8728b6dc7f4fcc49
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:16139aaf9fda657830a6e75aa24a552e91f7a0f7fc44bfdc8728b6dc7f4fcc49
+        sha256: 16139aaf9fda657830a6e75aa24a552e91f7a0f7fc44bfdc8728b6dc7f4fcc49
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:16139aaf9fda657830a6e75aa24a552e91f7a0f7fc44bfdc8728b6dc7f4fcc49
+        sha256: 16139aaf9fda657830a6e75aa24a552e91f7a0f7fc44bfdc8728b6dc7f4fcc49
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:0274776a75300e175d77b6a6af71f5da1f549120b30fa677a604d5861f5a494e
+        sha256: 0274776a75300e175d77b6a6af71f5da1f549120b30fa677a604d5861f5a494e
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:0bf5d967ece0faefea0e0ed893bc55cf1408e6fd2e06a5cecbd78ef172c47bff
+        sha256: 0bf5d967ece0faefea0e0ed893bc55cf1408e6fd2e06a5cecbd78ef172c47bff
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:0274776a75300e175d77b6a6af71f5da1f549120b30fa677a604d5861f5a494e
+        sha256: 0274776a75300e175d77b6a6af71f5da1f549120b30fa677a604d5861f5a494e
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:d9f2201a51223526c1422b91fb60eed7ab1cd06f6e8c4a4de8d7b574925de21c
+        sha256: d9f2201a51223526c1422b91fb60eed7ab1cd06f6e8c4a4de8d7b574925de21c
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ollama/blobs/sha256:1590eb54cf8d0ce3f8aaed5c270bc87ba548d9a63f919d18e7413ced19848c2b
+        sha256: 1590eb54cf8d0ce3f8aaed5c270bc87ba548d9a63f919d18e7413ced19848c2b
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/ollama/ollama.git
+head:
+    url: https://github.com/ollama/ollama.git
+    branch: main
+build_dependencies:
+    - cmake
+    - go
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/ollama/bin/ollama
+        - serve
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/ollama.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/ollama.log
+    keep_alive: true

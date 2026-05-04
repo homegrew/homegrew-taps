@@ -1,0 +1,83 @@
+name: etcd
+version: 3.6.11
+description: Key value store for shared configuration and service discovery
+homepage: https://github.com/etcd-io/etcd
+license: Apache-2.0
+url:
+    darwin_amd64: https://github.com/etcd-io/etcd.git
+    darwin_amd64_10: https://github.com/etcd-io/etcd.git
+    darwin_amd64_11: https://github.com/etcd-io/etcd.git
+    darwin_amd64_12: https://github.com/etcd-io/etcd.git
+    darwin_amd64_13: https://github.com/etcd-io/etcd.git
+    darwin_amd64_14: https://github.com/etcd-io/etcd.git
+    darwin_amd64_15: https://github.com/etcd-io/etcd.git
+    darwin_arm64: https://github.com/etcd-io/etcd.git
+    darwin_arm64_11: https://github.com/etcd-io/etcd.git
+    darwin_arm64_12: https://github.com/etcd-io/etcd.git
+    darwin_arm64_13: https://github.com/etcd-io/etcd.git
+    darwin_arm64_14: https://github.com/etcd-io/etcd.git
+    darwin_arm64_15: https://github.com/etcd-io/etcd.git
+    linux_amd64: https://github.com/etcd-io/etcd.git
+    linux_arm64: https://github.com/etcd-io/etcd.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/etcd/blobs/sha256:c0888746a298aacbf36960117eaf5aec6642eace02fcd63e522e2cb588ff5a63
+        sha256: c0888746a298aacbf36960117eaf5aec6642eace02fcd63e522e2cb588ff5a63
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/etcd/blobs/sha256:c0888746a298aacbf36960117eaf5aec6642eace02fcd63e522e2cb588ff5a63
+        sha256: c0888746a298aacbf36960117eaf5aec6642eace02fcd63e522e2cb588ff5a63
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/etcd/blobs/sha256:c0888746a298aacbf36960117eaf5aec6642eace02fcd63e522e2cb588ff5a63
+        sha256: c0888746a298aacbf36960117eaf5aec6642eace02fcd63e522e2cb588ff5a63
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/etcd/blobs/sha256:d72ae000403c423f3890ae1bc22132eb918f8d8e7c3851c8299ee1344902e8ec
+        sha256: d72ae000403c423f3890ae1bc22132eb918f8d8e7c3851c8299ee1344902e8ec
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/etcd/blobs/sha256:d72ae000403c423f3890ae1bc22132eb918f8d8e7c3851c8299ee1344902e8ec
+        sha256: d72ae000403c423f3890ae1bc22132eb918f8d8e7c3851c8299ee1344902e8ec
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/etcd/blobs/sha256:d72ae000403c423f3890ae1bc22132eb918f8d8e7c3851c8299ee1344902e8ec
+        sha256: d72ae000403c423f3890ae1bc22132eb918f8d8e7c3851c8299ee1344902e8ec
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/etcd/blobs/sha256:a5e82b2d498fcb8621946b323e1b9b87b2a34e29876e06408e2358a85a72af34
+        sha256: a5e82b2d498fcb8621946b323e1b9b87b2a34e29876e06408e2358a85a72af34
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/etcd/blobs/sha256:3d175949aa7d12e300313b9f879961baa2877788ac8d3d1d0847b4e5c19e0c10
+        sha256: 3d175949aa7d12e300313b9f879961baa2877788ac8d3d1d0847b4e5c19e0c10
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/etcd-io/etcd.git
+head:
+    url: https://github.com/etcd-io/etcd.git
+    branch: main
+build_dependencies:
+    - go
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/etcd/bin/etcd
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    keep_alive: true

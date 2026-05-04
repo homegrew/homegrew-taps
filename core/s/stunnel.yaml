@@ -1,0 +1,91 @@
+name: stunnel
+version: "5.78"
+description: SSL tunneling program
+homepage: https://www.stunnel.org/
+license: GPL-2.0-or-later
+caveats: |
+    A bogus SSL server certificate has been installed to:
+      $HOMEBREW_PREFIX/etc/stunnel/stunnel.pem
+
+    This certificate will be used by default unless a config file says otherwise!
+    Stunnel will refuse to load the sample configuration file if left unedited.
+
+    In your stunnel configuration, specify a SSL certificate with
+    the "cert =" option for each service.
+
+    To use Stunnel with Homebrew services, make sure to set "foreground = yes" in
+    your Stunnel configuration.
+url:
+    darwin_amd64: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_amd64_10: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_amd64_11: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_amd64_12: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_amd64_13: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_amd64_14: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_amd64_15: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_arm64: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_arm64_11: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_arm64_12: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_arm64_13: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_arm64_14: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    darwin_arm64_15: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    linux_amd64: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    linux_arm64: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+sha256:
+    darwin_amd64: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_amd64_10: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_amd64_11: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_amd64_12: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_amd64_13: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_amd64_14: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_amd64_15: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_arm64: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_arm64_11: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_arm64_12: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_arm64_13: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_arm64_14: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    darwin_arm64_15: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    linux_amd64: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+    linux_arm64: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+dependencies:
+    - openssl@3
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:a7834dd9314261f37ae181e7241491a41a5f5619f3182f0cde97e550fda776d1
+        sha256: a7834dd9314261f37ae181e7241491a41a5f5619f3182f0cde97e550fda776d1
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:a7834dd9314261f37ae181e7241491a41a5f5619f3182f0cde97e550fda776d1
+        sha256: a7834dd9314261f37ae181e7241491a41a5f5619f3182f0cde97e550fda776d1
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:a7834dd9314261f37ae181e7241491a41a5f5619f3182f0cde97e550fda776d1
+        sha256: a7834dd9314261f37ae181e7241491a41a5f5619f3182f0cde97e550fda776d1
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:5437506a5e4e9fe0b6226aed2f58367e676200179a9e2b91529b02523069ecc7
+        sha256: 5437506a5e4e9fe0b6226aed2f58367e676200179a9e2b91529b02523069ecc7
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:55cb2685b0e6aa8d25de1a4c22dcbc2a73b44f2d0a6b16595fc1c356ee2430f4
+        sha256: 55cb2685b0e6aa8d25de1a4c22dcbc2a73b44f2d0a6b16595fc1c356ee2430f4
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:5437506a5e4e9fe0b6226aed2f58367e676200179a9e2b91529b02523069ecc7
+        sha256: 5437506a5e4e9fe0b6226aed2f58367e676200179a9e2b91529b02523069ecc7
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:28b5b3eddb6e07d8435d38e96c6e72f04cf0977c396dcb6f2eea204a552dc157
+        sha256: 28b5b3eddb6e07d8435d38e96c6e72f04cf0977c396dcb6f2eea204a552dc157
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/stunnel/blobs/sha256:3fdcd7912a0134981263f8155793cc49350847767d830cc88130e00c9bce1c54
+        sha256: 3fdcd7912a0134981263f8155793cc49350847767d830cc88130e00c9bce1c54
+        cellar: :any_skip_relocation
+source:
+    url: https://www.stunnel.org/downloads/stunnel-5.78.tar.gz
+    sha256: fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/stunnel/bin/stunnel
+    run_type: immediate

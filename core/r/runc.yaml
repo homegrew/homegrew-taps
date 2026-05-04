@@ -1,0 +1,58 @@
+name: runc
+version: 1.4.2
+description: CLI tool for spawning and running containers according to the OCI specification
+homepage: https://github.com/opencontainers/runc
+license: Apache-2.0
+url:
+    darwin_amd64: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_amd64_10: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_amd64_11: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_amd64_12: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_amd64_13: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_amd64_14: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_amd64_15: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_arm64: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_arm64_11: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_arm64_12: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_arm64_13: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_arm64_14: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    darwin_arm64_15: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    linux_amd64: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    linux_arm64: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+sha256:
+    darwin_amd64: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_amd64_10: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_amd64_11: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_amd64_12: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_amd64_13: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_amd64_14: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_amd64_15: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_arm64: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_arm64_11: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_arm64_12: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_arm64_13: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_arm64_14: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    darwin_arm64_15: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    linux_amd64: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+    linux_arm64: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+dependencies:
+    - libseccomp
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/runc/blobs/sha256:4e949d68f7b462085b7e76c3079e982f5b0e5591fa4f902cc3eed960d7d13200
+        sha256: 4e949d68f7b462085b7e76c3079e982f5b0e5591fa4f902cc3eed960d7d13200
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/runc/blobs/sha256:19363a75c36317ef5dafbfb85310994d7e182daccf5b02248c6e9cdbf3aa377c
+        sha256: 19363a75c36317ef5dafbfb85310994d7e182daccf5b02248c6e9cdbf3aa377c
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.tar.xz
+    sha256: cc7b4630a2940cc844f01da81765a3fe6713ceb7f0dbf287f6b20fd89f55d05f
+head:
+    url: https://github.com/opencontainers/runc.git
+    branch: main
+build_dependencies:
+    - go
+    - go-md2man
+    - pkgconf

@@ -1,0 +1,106 @@
+name: freeswitch
+version: 1.10.12
+description: Telephony platform to route various communication protocols
+homepage: https://freeswitch.org
+license: MPL-1.1 AND LGPL-2.1-only
+url:
+    darwin_amd64: https://github.com/signalwire/freeswitch.git
+    darwin_amd64_10: https://github.com/signalwire/freeswitch.git
+    darwin_amd64_11: https://github.com/signalwire/freeswitch.git
+    darwin_amd64_12: https://github.com/signalwire/freeswitch.git
+    darwin_amd64_13: https://github.com/signalwire/freeswitch.git
+    darwin_amd64_14: https://github.com/signalwire/freeswitch.git
+    darwin_amd64_15: https://github.com/signalwire/freeswitch.git
+    darwin_arm64: https://github.com/signalwire/freeswitch.git
+    darwin_arm64_11: https://github.com/signalwire/freeswitch.git
+    darwin_arm64_12: https://github.com/signalwire/freeswitch.git
+    darwin_arm64_13: https://github.com/signalwire/freeswitch.git
+    darwin_arm64_14: https://github.com/signalwire/freeswitch.git
+    darwin_arm64_15: https://github.com/signalwire/freeswitch.git
+    linux_amd64: https://github.com/signalwire/freeswitch.git
+    linux_arm64: https://github.com/signalwire/freeswitch.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+dependencies:
+    - freetype
+    - jpeg-turbo
+    - ldns
+    - libks
+    - libpng
+    - libpq
+    - libsndfile
+    - libtiff
+    - lua
+    - opencore-amr
+    - openssl@3
+    - opus
+    - pcre2
+    - signalwire-client-c
+    - sofia-sip
+    - speex
+    - speexdsp
+    - sqlite
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:0e74f3ce5b5be3d5ce024f848aee37d6e4bf94833689d842d87556e143965147
+        sha256: 0e74f3ce5b5be3d5ce024f848aee37d6e4bf94833689d842d87556e143965147
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:0e74f3ce5b5be3d5ce024f848aee37d6e4bf94833689d842d87556e143965147
+        sha256: 0e74f3ce5b5be3d5ce024f848aee37d6e4bf94833689d842d87556e143965147
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:0e74f3ce5b5be3d5ce024f848aee37d6e4bf94833689d842d87556e143965147
+        sha256: 0e74f3ce5b5be3d5ce024f848aee37d6e4bf94833689d842d87556e143965147
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:58afea1ef8ed85e8e06264c8260eb490602d3cebde03c387bb7e8e25855efc34
+        sha256: 58afea1ef8ed85e8e06264c8260eb490602d3cebde03c387bb7e8e25855efc34
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:23a404455d18103d8a2da672ed643519d127fc5b418d653ea65054db2510d035
+        sha256: 23a404455d18103d8a2da672ed643519d127fc5b418d653ea65054db2510d035
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:58afea1ef8ed85e8e06264c8260eb490602d3cebde03c387bb7e8e25855efc34
+        sha256: 58afea1ef8ed85e8e06264c8260eb490602d3cebde03c387bb7e8e25855efc34
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:e843725905d5d62c6a8e8633ba0119ec01a0997d58865e1ab0578e23fbd5f59d
+        sha256: e843725905d5d62c6a8e8633ba0119ec01a0997d58865e1ab0578e23fbd5f59d
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/freeswitch/blobs/sha256:3d635f86566919d6e15c8b3b093dafe70d02811ec71644519baa5517ec4c6fe5
+        sha256: 3d635f86566919d6e15c8b3b093dafe70d02811ec71644519baa5517ec4c6fe5
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://github.com/signalwire/freeswitch.git
+head:
+    url: https://github.com/signalwire/freeswitch.git
+    branch: master
+build_dependencies:
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/freeswitch/bin/freeswitch
+        - -nc
+        - -nonat
+    run_type: immediate
+    keep_alive: true

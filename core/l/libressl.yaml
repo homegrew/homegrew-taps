@@ -1,0 +1,87 @@
+name: libressl
+version: 4.2.1
+description: Version of the SSL/TLS protocol forked from OpenSSL
+homepage: https://www.libressl.org/
+license: OpenSSL
+caveats: |
+    A CA file has been bootstrapped using certificates from the SystemRoots
+    keychain. To add additional certificates (e.g. the certificates added in
+    the System keychain), place .pem files in
+      $HOMEBREW_PREFIX/etc/libressl/certs
+
+    and run
+      $HOMEBREW_PREFIX/opt/libressl/bin/openssl certhash $HOMEBREW_PREFIX/etc/libressl/certs
+url:
+    darwin_amd64: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_amd64_10: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_amd64_11: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_amd64_12: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_amd64_13: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_amd64_14: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_amd64_15: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_arm64: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_arm64_11: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_arm64_12: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_arm64_13: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_arm64_14: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    darwin_arm64_15: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    linux_amd64: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    linux_arm64: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+sha256:
+    darwin_amd64: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_amd64_10: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_amd64_11: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_amd64_12: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_amd64_13: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_amd64_14: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_amd64_15: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_arm64: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_arm64_11: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_arm64_12: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_arm64_13: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_arm64_14: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    darwin_arm64_15: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    linux_amd64: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+    linux_arm64: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+dependencies:
+    - ca-certificates
+keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
+        sha256: 383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
+        sha256: 383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
+        sha256: 383e3ef03088ef5348c1b36e828ae2af3d098876c1265f8920a9138412a26798
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:6133145affd65d37db277d64f5e19ef4744917acc5fae5974abbde7c8d472a85
+        sha256: 6133145affd65d37db277d64f5e19ef4744917acc5fae5974abbde7c8d472a85
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:aa48217c34ad123558c0001e5d40b3e1076371b22b1c9eb722bfd0cc35c382e1
+        sha256: aa48217c34ad123558c0001e5d40b3e1076371b22b1c9eb722bfd0cc35c382e1
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:6133145affd65d37db277d64f5e19ef4744917acc5fae5974abbde7c8d472a85
+        sha256: 6133145affd65d37db277d64f5e19ef4744917acc5fae5974abbde7c8d472a85
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:8690dae24ab88821c36d409f6ecf04ba2d85011fc92540d23d97c7ca72873f43
+        sha256: 8690dae24ab88821c36d409f6ecf04ba2d85011fc92540d23d97c7ca72873f43
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libressl/blobs/sha256:2eddbafa15b069f1abdae1d3df6a74cf5f3b4c30e0db216ee5fb2106e226f9d3
+        sha256: 2eddbafa15b069f1abdae1d3df6a74cf5f3b4c30e0db216ee5fb2106e226f9d3
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+    sha256: 6d5c2f58583588ea791f4c8645004071d00dfa554a5bf788a006ca1eb5abd70b
+head:
+    url: https://github.com/libressl/portable.git
+    branch: master

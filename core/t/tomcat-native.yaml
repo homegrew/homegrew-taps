@@ -1,0 +1,85 @@
+name: tomcat-native
+version: 2.0.14
+description: Lets Tomcat use some native resources for performance
+homepage: https://tomcat.apache.org/native-doc/
+license: Apache-2.0
+caveats: |
+    In order for tomcat's APR lifecycle listener to find this library, you'll
+    need to add it to java.library.path. This can be done by adding this line
+    to $CATALINA_HOME/bin/setenv.sh
+
+      CATALINA_OPTS="$CATALINA_OPTS -Djava.library.path=$HOMEBREW_PREFIX/opt/tomcat-native/lib"
+
+    If $CATALINA_HOME/bin/setenv.sh doesn't exist, create it and make it executable.
+url:
+    darwin_amd64: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_amd64_10: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_amd64_11: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_amd64_12: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_amd64_13: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_amd64_14: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_amd64_15: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_arm64: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_arm64_11: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_arm64_12: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_arm64_13: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_arm64_14: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    darwin_arm64_15: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    linux_amd64: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    linux_arm64: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+sha256:
+    darwin_amd64: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_amd64_10: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_amd64_11: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_amd64_12: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_amd64_13: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_amd64_14: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_amd64_15: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_arm64: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_arm64_11: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_arm64_12: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_arm64_13: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_arm64_14: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    darwin_arm64_15: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    linux_amd64: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+    linux_arm64: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb
+dependencies:
+    - apr
+    - openjdk
+    - openssl@3
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
+        sha256: d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
+        sha256: d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
+        sha256: d2074e2e3e88c13c3f4654f7a486a35008d2f2f39ad7b382e7e191553c67abbd
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:a19f2aef3544afb5d41638df10732d2ddef713f56c9316d5a47106245a88ead6
+        sha256: a19f2aef3544afb5d41638df10732d2ddef713f56c9316d5a47106245a88ead6
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:465c5a3b5ce554658afff8150d7a4094ed1beb812f4b3a3c3455bb5ee389e97a
+        sha256: 465c5a3b5ce554658afff8150d7a4094ed1beb812f4b3a3c3455bb5ee389e97a
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:a19f2aef3544afb5d41638df10732d2ddef713f56c9316d5a47106245a88ead6
+        sha256: a19f2aef3544afb5d41638df10732d2ddef713f56c9316d5a47106245a88ead6
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:4a859cb4a87a10540f1f6ad44cbb043595d36c5049667be1097a2be24af8a54b
+        sha256: 4a859cb4a87a10540f1f6ad44cbb043595d36c5049667be1097a2be24af8a54b
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tomcat-native/blobs/sha256:4cd5f44f63aeb7529c886a3962daccae4b9648d5f78066f613690e07de96524e
+        sha256: 4cd5f44f63aeb7529c886a3962daccae4b9648d5f78066f613690e07de96524e
+        cellar: :any_skip_relocation
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.14/source/tomcat-native-2.0.14-src.tar.gz
+    sha256: 51ca50295c8005e6bb4a32a0cdc7ee5bc224406ae402075b031f5b3073bf2bdb

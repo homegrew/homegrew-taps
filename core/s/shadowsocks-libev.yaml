@@ -1,0 +1,92 @@
+name: shadowsocks-libev
+version: 3.3.6
+description: Libev port of shadowsocks
+homepage: https://github.com/shadowsocks/shadowsocks-libev
+license: GPL-3.0-or-later
+url:
+    darwin_amd64: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_amd64_10: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_amd64_11: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_amd64_12: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_amd64_13: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_amd64_14: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_amd64_15: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_arm64: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_arm64_11: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_arm64_12: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_arm64_13: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_arm64_14: https://github.com/shadowsocks/shadowsocks-libev.git
+    darwin_arm64_15: https://github.com/shadowsocks/shadowsocks-libev.git
+    linux_amd64: https://github.com/shadowsocks/shadowsocks-libev.git
+    linux_arm64: https://github.com/shadowsocks/shadowsocks-libev.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+dependencies:
+    - c-ares
+    - libev
+    - libsodium
+    - mbedtls@3
+    - pcre2
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:790bc99c821cc3fd8b4a685e37ec40ef4a6c0f470911a43b1863db3af4773f81
+        sha256: 790bc99c821cc3fd8b4a685e37ec40ef4a6c0f470911a43b1863db3af4773f81
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:790bc99c821cc3fd8b4a685e37ec40ef4a6c0f470911a43b1863db3af4773f81
+        sha256: 790bc99c821cc3fd8b4a685e37ec40ef4a6c0f470911a43b1863db3af4773f81
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:790bc99c821cc3fd8b4a685e37ec40ef4a6c0f470911a43b1863db3af4773f81
+        sha256: 790bc99c821cc3fd8b4a685e37ec40ef4a6c0f470911a43b1863db3af4773f81
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:bfe681be47331281dfa702c0869bc11e98881b4f3c0fcec40fbaf4cf480935cd
+        sha256: bfe681be47331281dfa702c0869bc11e98881b4f3c0fcec40fbaf4cf480935cd
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:19bf52cee9260d0669dc847fe5ecf000b905c4f8be5f303df4071db906082d36
+        sha256: 19bf52cee9260d0669dc847fe5ecf000b905c4f8be5f303df4071db906082d36
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:bfe681be47331281dfa702c0869bc11e98881b4f3c0fcec40fbaf4cf480935cd
+        sha256: bfe681be47331281dfa702c0869bc11e98881b4f3c0fcec40fbaf4cf480935cd
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:e622c9cb22667b5b5b27358b753e6d6a987df4620f56ca811ee54c6505e8a573
+        sha256: e622c9cb22667b5b5b27358b753e6d6a987df4620f56ca811ee54c6505e8a573
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/shadowsocks-libev/blobs/sha256:36ee4c22c4c47e0a887832c226ce0d422fd69133a648afdb718f651faeff05e6
+        sha256: 36ee4c22c4c47e0a887832c226ce0d422fd69133a648afdb718f651faeff05e6
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/shadowsocks/shadowsocks-libev.git
+head:
+    url: https://github.com/shadowsocks/shadowsocks-libev.git
+    branch: master
+build_dependencies:
+    - asciidoc
+    - cmake
+    - xmlto
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/shadowsocks-libev/bin/ss-local
+        - -c
+        - $HOMEBREW_PREFIX/etc/shadowsocks-libev.json
+    run_type: immediate
+    keep_alive: true

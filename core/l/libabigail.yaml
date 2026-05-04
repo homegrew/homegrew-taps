@@ -1,0 +1,59 @@
+name: libabigail
+version: "2.10"
+description: ABI Generic Analysis and Instrumentation Library
+homepage: https://sourceware.org/libabigail/
+license: Apache-2.0 WITH LLVM-exception
+url:
+    darwin_amd64: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_amd64_10: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_amd64_11: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_amd64_12: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_amd64_13: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_amd64_14: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_amd64_15: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_arm64: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_arm64_11: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_arm64_12: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_arm64_13: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_arm64_14: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    darwin_arm64_15: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    linux_amd64: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    linux_arm64: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+sha256:
+    darwin_amd64: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_amd64_10: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_amd64_11: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_amd64_12: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_amd64_13: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_amd64_14: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_amd64_15: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_arm64: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_arm64_11: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_arm64_12: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_arm64_13: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_arm64_14: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    darwin_arm64_15: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    linux_amd64: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+    linux_arm64: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+dependencies:
+    - elfutils
+    - libxml2
+    - xxhash
+    - xz
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libabigail/blobs/sha256:c379bc68496ea5376325a239ae612896b44e6b0ac3ffa52616f50d06715133c0
+        sha256: c379bc68496ea5376325a239ae612896b44e6b0ac3ffa52616f50d06715133c0
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libabigail/blobs/sha256:c0f3e414083625392636aad857142023256d71d46283960f05a2fcdfc065e36b
+        sha256: c0f3e414083625392636aad857142023256d71d46283960f05a2fcdfc065e36b
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://mirrors.kernel.org/sourceware/libabigail/libabigail-2.10.tar.xz
+    sha256: 0cc10e6471398330e001b9fe37f1e8c5108a9ab632b08ca9634d6c64bc380b78
+head:
+    url: https://sourceware.org/git/libabigail.git
+    branch: master
+build_dependencies:
+    - pkgconf

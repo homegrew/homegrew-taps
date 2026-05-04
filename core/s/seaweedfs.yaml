@@ -1,0 +1,88 @@
+name: seaweedfs
+version: "4.22"
+description: Fast distributed storage system
+homepage: https://github.com/seaweedfs/seaweedfs
+license: Apache-2.0
+url:
+    darwin_amd64: https://github.com/seaweedfs/seaweedfs.git
+    darwin_amd64_10: https://github.com/seaweedfs/seaweedfs.git
+    darwin_amd64_11: https://github.com/seaweedfs/seaweedfs.git
+    darwin_amd64_12: https://github.com/seaweedfs/seaweedfs.git
+    darwin_amd64_13: https://github.com/seaweedfs/seaweedfs.git
+    darwin_amd64_14: https://github.com/seaweedfs/seaweedfs.git
+    darwin_amd64_15: https://github.com/seaweedfs/seaweedfs.git
+    darwin_arm64: https://github.com/seaweedfs/seaweedfs.git
+    darwin_arm64_11: https://github.com/seaweedfs/seaweedfs.git
+    darwin_arm64_12: https://github.com/seaweedfs/seaweedfs.git
+    darwin_arm64_13: https://github.com/seaweedfs/seaweedfs.git
+    darwin_arm64_14: https://github.com/seaweedfs/seaweedfs.git
+    darwin_arm64_15: https://github.com/seaweedfs/seaweedfs.git
+    linux_amd64: https://github.com/seaweedfs/seaweedfs.git
+    linux_arm64: https://github.com/seaweedfs/seaweedfs.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:ddd9cb445be23294003382636350eaa0f98a2d792cbf79385e91e4cd4b2b4b06
+        sha256: ddd9cb445be23294003382636350eaa0f98a2d792cbf79385e91e4cd4b2b4b06
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:ddd9cb445be23294003382636350eaa0f98a2d792cbf79385e91e4cd4b2b4b06
+        sha256: ddd9cb445be23294003382636350eaa0f98a2d792cbf79385e91e4cd4b2b4b06
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:ddd9cb445be23294003382636350eaa0f98a2d792cbf79385e91e4cd4b2b4b06
+        sha256: ddd9cb445be23294003382636350eaa0f98a2d792cbf79385e91e4cd4b2b4b06
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:b36eee1dae3ad707c2941cb770986571264cd014bcc8688d75f22e5186dce36b
+        sha256: b36eee1dae3ad707c2941cb770986571264cd014bcc8688d75f22e5186dce36b
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:cb7bde81e8798907a6eff0f0a7d5682409d58e8f9b2e4a16d257dfbc3b963efc
+        sha256: cb7bde81e8798907a6eff0f0a7d5682409d58e8f9b2e4a16d257dfbc3b963efc
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:b36eee1dae3ad707c2941cb770986571264cd014bcc8688d75f22e5186dce36b
+        sha256: b36eee1dae3ad707c2941cb770986571264cd014bcc8688d75f22e5186dce36b
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:891f187f897a16fe9a74dff6ce1982eae8b6761dab936d5ca43a35bd70bf9184
+        sha256: 891f187f897a16fe9a74dff6ce1982eae8b6761dab936d5ca43a35bd70bf9184
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/seaweedfs/blobs/sha256:5f2259e4323048a92da034e8c753b57ec8935cf262c52fae9aee1a30b9249873
+        sha256: 5f2259e4323048a92da034e8c753b57ec8935cf262c52fae9aee1a30b9249873
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/seaweedfs/seaweedfs.git
+head:
+    url: https://github.com/seaweedfs/seaweedfs.git
+    branch: master
+build_dependencies:
+    - go
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/seaweedfs/bin/weed
+        - server
+        - -dir=$HOMEBREW_PREFIX/var/seaweedfs
+        - -s3
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/seaweedfs.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/seaweedfs.log
+    keep_alive: true

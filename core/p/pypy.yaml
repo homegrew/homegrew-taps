@@ -1,0 +1,100 @@
+name: pypy
+version: 7.3.22
+description: Highly performant implementation of Python 2 in Python
+homepage: https://pypy.org/
+license: MIT
+caveats: |
+    A "distutils.cfg" has been written to:
+      $HOMEBREW_CELLAR/pypy/7.3.22/libexec/lib-python/2.7/distutils
+    specifying the install-scripts folder as:
+      $HOMEBREW_PREFIX/share/pypy
+
+    If you install Python packages via "pypy setup.py install", easy_install_pypy,
+    or pip_pypy, any provided scripts will go into the install-scripts folder
+    above, so you may want to add it to your PATH *after* $HOMEBREW_PREFIX/bin
+    so you don't overwrite tools from CPython.
+
+    Setuptools and pip have been installed, so you can use easy_install_pypy and
+    pip_pypy.
+    To update setuptools and pip between pypy releases, run:
+        pip_pypy install --upgrade pip setuptools
+
+    See: https://docs.brew.sh/Homebrew-and-Python
+url:
+    darwin_amd64: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_amd64_10: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_amd64_11: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_amd64_12: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_amd64_13: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_amd64_14: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_amd64_15: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_arm64: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_arm64_11: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_arm64_12: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_arm64_13: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_arm64_14: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    darwin_arm64_15: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    linux_amd64: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    linux_arm64: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+sha256:
+    darwin_amd64: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_amd64_10: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_amd64_11: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_amd64_12: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_amd64_13: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_amd64_14: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_amd64_15: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_arm64: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_arm64_11: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_arm64_12: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_arm64_13: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_arm64_14: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    darwin_arm64_15: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    linux_amd64: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+    linux_arm64: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+dependencies:
+    - gdbm
+    - openssl@3
+    - sqlite
+    - tcl-tk@8
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pypy/blobs/sha256:16419b06de0a239154e4f0cebf13d4f6e8fd91307c0874cc4933066deacc06d4
+        sha256: 16419b06de0a239154e4f0cebf13d4f6e8fd91307c0874cc4933066deacc06d4
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/pypy/blobs/sha256:16419b06de0a239154e4f0cebf13d4f6e8fd91307c0874cc4933066deacc06d4
+        sha256: 16419b06de0a239154e4f0cebf13d4f6e8fd91307c0874cc4933066deacc06d4
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/pypy/blobs/sha256:16419b06de0a239154e4f0cebf13d4f6e8fd91307c0874cc4933066deacc06d4
+        sha256: 16419b06de0a239154e4f0cebf13d4f6e8fd91307c0874cc4933066deacc06d4
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pypy/blobs/sha256:46dfc79c8c491926ee90a20d2e4aa76a4382f9b7fd0e4270b13035a00085a5cd
+        sha256: 46dfc79c8c491926ee90a20d2e4aa76a4382f9b7fd0e4270b13035a00085a5cd
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/pypy/blobs/sha256:6d26a44841ce2d5e76db035b17425c48c3a8cf635acb0b11f08497b8796f5e8e
+        sha256: 6d26a44841ce2d5e76db035b17425c48c3a8cf635acb0b11f08497b8796f5e8e
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/pypy/blobs/sha256:46dfc79c8c491926ee90a20d2e4aa76a4382f9b7fd0e4270b13035a00085a5cd
+        sha256: 46dfc79c8c491926ee90a20d2e4aa76a4382f9b7fd0e4270b13035a00085a5cd
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pypy/blobs/sha256:0ac8fe37dd140eb45806812aed8bf1fc39903ee96794fd25bf2279feff3c133e
+        sha256: 0ac8fe37dd140eb45806812aed8bf1fc39903ee96794fd25bf2279feff3c133e
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pypy/blobs/sha256:61ae9fca34d0f6c3f763f49e64cb2a1169d0e4b481be7a0b94f7abb1020ae2c3
+        sha256: 61ae9fca34d0f6c3f763f49e64cb2a1169d0e4b481be7a0b94f7abb1020ae2c3
+        cellar: :any_skip_relocation
+source:
+    url: https://downloads.python.org/pypy/pypy2.7-v7.3.22-src.tar.bz2
+    sha256: f4445c1a835effe4d3b26521e73a7780893dec02520aa6799a377c9a0fcdd8ad
+head:
+    url: https://github.com/pypy/pypy.git
+    branch: main
+build_dependencies:
+    - pkgconf

@@ -1,0 +1,97 @@
+name: passenger
+version: 6.1.2
+description: Server for Ruby, Python, and Node.js apps via Apache/NGINX
+homepage: https://www.phusionpassenger.com/
+license: MIT
+caveats: |
+    To activate Phusion Passenger for Nginx, run:
+      brew install nginx
+    And add the following to $HOMEBREW_PREFIX/etc/nginx/nginx.conf at the top scope (outside http{}):
+      load_module $HOMEBREW_PREFIX/opt/passenger/libexec/modules/ngx_http_passenger_module.so;
+    And add the following to $HOMEBREW_PREFIX/etc/nginx/nginx.conf in the http scope:
+      passenger_root $HOMEBREW_PREFIX/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;
+      passenger_ruby /usr/bin/ruby;
+
+    To activate Phusion Passenger for Apache, create /etc/apache2/other/passenger.conf:
+      LoadModule passenger_module $HOMEBREW_PREFIX/opt/passenger/libexec/buildout/apache2/mod_passenger.so
+      PassengerRoot $HOMEBREW_PREFIX/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini
+      PassengerDefaultRuby /usr/bin/ruby
+url:
+    darwin_amd64: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_amd64_10: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_amd64_11: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_amd64_12: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_amd64_13: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_amd64_14: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_amd64_15: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_arm64: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_arm64_11: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_arm64_12: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_arm64_13: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_arm64_14: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    darwin_arm64_15: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    linux_amd64: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    linux_arm64: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+sha256:
+    darwin_amd64: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_amd64_10: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_amd64_11: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_amd64_12: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_amd64_13: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_amd64_14: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_amd64_15: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_arm64: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_arm64_11: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_arm64_12: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_arm64_13: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_arm64_14: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    darwin_arm64_15: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    linux_amd64: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+    linux_arm64: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+dependencies:
+    - apr
+    - apr-util
+    - openssl@3
+    - pcre2
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/passenger/blobs/sha256:975be973bc007bf1dddf4061800bb073ac3a70f75b41bc69f5a2d2cab021e14e
+        sha256: 975be973bc007bf1dddf4061800bb073ac3a70f75b41bc69f5a2d2cab021e14e
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/passenger/blobs/sha256:975be973bc007bf1dddf4061800bb073ac3a70f75b41bc69f5a2d2cab021e14e
+        sha256: 975be973bc007bf1dddf4061800bb073ac3a70f75b41bc69f5a2d2cab021e14e
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/passenger/blobs/sha256:975be973bc007bf1dddf4061800bb073ac3a70f75b41bc69f5a2d2cab021e14e
+        sha256: 975be973bc007bf1dddf4061800bb073ac3a70f75b41bc69f5a2d2cab021e14e
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/passenger/blobs/sha256:b0c09a9d2d14ef87e2e263ea5e4c0a133cce9e278e5573ab8026e68194291da2
+        sha256: b0c09a9d2d14ef87e2e263ea5e4c0a133cce9e278e5573ab8026e68194291da2
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/passenger/blobs/sha256:f6f36f4e565db93f16a25150a2115a8fabb479aa7d97d69ee72178dda2b15f30
+        sha256: f6f36f4e565db93f16a25150a2115a8fabb479aa7d97d69ee72178dda2b15f30
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/passenger/blobs/sha256:b0c09a9d2d14ef87e2e263ea5e4c0a133cce9e278e5573ab8026e68194291da2
+        sha256: b0c09a9d2d14ef87e2e263ea5e4c0a133cce9e278e5573ab8026e68194291da2
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/passenger/blobs/sha256:d34902f18e894b24ae73ddd0f7b63fb93f3f0c72102e9c9df162ab9ba6cee7d8
+        sha256: d34902f18e894b24ae73ddd0f7b63fb93f3f0c72102e9c9df162ab9ba6cee7d8
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/passenger/blobs/sha256:70854ab9a4430a0463062ba792b4496a9d73f4abcfcf7d67e702aad7529b5a82
+        sha256: 70854ab9a4430a0463062ba792b4496a9d73f4abcfcf7d67e702aad7529b5a82
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/phusion/passenger/releases/download/release-6.1.2/passenger-6.1.2.tar.gz
+    sha256: 94400a52e536cfdd8acf2accb47badb7a67dc309452f1b05600da67343f25bf8
+head:
+    url: https://github.com/phusion/passenger.git
+    branch: stable-6.1
+build_dependencies:
+    - httpd
+    - nginx

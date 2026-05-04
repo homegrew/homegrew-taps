@@ -1,0 +1,66 @@
+name: onedrive-cli
+version: 2.5.10
+description: Folder synchronization with OneDrive
+homepage: https://github.com/abraunegg/onedrive
+license: GPL-3.0-only
+url:
+    darwin_amd64: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_amd64_10: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_amd64_11: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_amd64_12: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_amd64_13: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_amd64_14: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_amd64_15: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_arm64: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_arm64_11: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_arm64_12: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_arm64_13: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_arm64_14: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    darwin_arm64_15: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    linux_amd64: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    linux_arm64: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+sha256:
+    darwin_amd64: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_amd64_10: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_amd64_11: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_amd64_12: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_amd64_13: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_amd64_14: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_amd64_15: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_arm64: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_arm64_11: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_arm64_12: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_arm64_13: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_arm64_14: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    darwin_arm64_15: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    linux_amd64: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+    linux_arm64: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+dependencies:
+    - curl
+    - dbus
+    - sqlite
+    - systemd
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/onedrive-cli/blobs/sha256:a90b93658bb9878d92bdddd2ced2ca4dbc99396379129308a149a7d5a458fb40
+        sha256: a90b93658bb9878d92bdddd2ced2ca4dbc99396379129308a149a7d5a458fb40
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/onedrive-cli/blobs/sha256:92182bc0cb84b68979e587d13c54a2fe7255ac3d08ffe14a12cc950c6a35c98b
+        sha256: 92182bc0cb84b68979e587d13c54a2fe7255ac3d08ffe14a12cc950c6a35c98b
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.10.tar.gz
+    sha256: 05b0cb27559e71f8496d25fe6e15c5f4f4a2a1a1c629018f55a8ad35b33d020a
+build_dependencies:
+    - ldc
+    - pkgconf
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/onedrive-cli/bin/onedrive
+        - --monitor
+    run_type: immediate
+    working_dir: /$HOME
+    log_path: $HOMEBREW_PREFIX/var/log/onedrive.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/onedrive.log
+    keep_alive: true

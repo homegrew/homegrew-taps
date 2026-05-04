@@ -1,0 +1,60 @@
+name: bluez
+version: "5.86"
+description: Bluetooth protocol stack for Linux
+homepage: https://www.bluez.org
+license: GPL-2.0-or-later
+url:
+    darwin_amd64: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_amd64_10: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_amd64_11: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_amd64_12: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_amd64_13: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_amd64_14: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_amd64_15: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_arm64: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_arm64_11: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_arm64_12: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_arm64_13: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_arm64_14: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    darwin_arm64_15: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    linux_amd64: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    linux_arm64: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+sha256:
+    darwin_amd64: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_amd64_10: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_amd64_11: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_amd64_12: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_amd64_13: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_amd64_14: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_amd64_15: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_arm64: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_arm64_11: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_arm64_12: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_arm64_13: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_arm64_14: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    darwin_arm64_15: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    linux_amd64: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+    linux_arm64: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+dependencies:
+    - dbus
+    - glib
+    - libical
+    - readline
+    - systemd
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/bluez/blobs/sha256:305929589b4f191eb10bb8110536500176a7d24a04f61bc90ae1a2bcca77ff17
+        sha256: 305929589b4f191eb10bb8110536500176a7d24a04f61bc90ae1a2bcca77ff17
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/bluez/blobs/sha256:c43c376469bbcfdd56921c23cd76fab1d46cd2afd1d4fd8e80e4fb1a47f3b694
+        sha256: c43c376469bbcfdd56921c23cd76fab1d46cd2afd1d4fd8e80e4fb1a47f3b694
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz
+    sha256: 99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
+head:
+    url: https://git.kernel.org/pub/scm/bluetooth/bluez.git
+    branch: master
+build_dependencies:
+    - pkgconf

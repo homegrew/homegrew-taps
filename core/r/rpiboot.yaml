@@ -1,0 +1,82 @@
+name: rpiboot
+version: "162618"
+description: Raspberry Pi USB boot tool for Compute Modules
+homepage: https://github.com/raspberrypi/usbboot
+license: Apache-2.0
+caveats: |
+    To boot a Compute Module with the default mass storage gadget:
+      sudo rpiboot -d "$(brew --prefix rpiboot)"/share/rpiboot/mass-storage-gadget64
+url:
+    darwin_amd64: https://github.com/raspberrypi/usbboot.git
+    darwin_amd64_10: https://github.com/raspberrypi/usbboot.git
+    darwin_amd64_11: https://github.com/raspberrypi/usbboot.git
+    darwin_amd64_12: https://github.com/raspberrypi/usbboot.git
+    darwin_amd64_13: https://github.com/raspberrypi/usbboot.git
+    darwin_amd64_14: https://github.com/raspberrypi/usbboot.git
+    darwin_amd64_15: https://github.com/raspberrypi/usbboot.git
+    darwin_arm64: https://github.com/raspberrypi/usbboot.git
+    darwin_arm64_11: https://github.com/raspberrypi/usbboot.git
+    darwin_arm64_12: https://github.com/raspberrypi/usbboot.git
+    darwin_arm64_13: https://github.com/raspberrypi/usbboot.git
+    darwin_arm64_14: https://github.com/raspberrypi/usbboot.git
+    darwin_arm64_15: https://github.com/raspberrypi/usbboot.git
+    linux_amd64: https://github.com/raspberrypi/usbboot.git
+    linux_arm64: https://github.com/raspberrypi/usbboot.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+dependencies:
+    - libusb
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rpiboot/blobs/sha256:beca79fd2907f5c3a5a220d19d729d501c8ebaf3e61d4ad3939ebe903399d481
+        sha256: beca79fd2907f5c3a5a220d19d729d501c8ebaf3e61d4ad3939ebe903399d481
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/rpiboot/blobs/sha256:beca79fd2907f5c3a5a220d19d729d501c8ebaf3e61d4ad3939ebe903399d481
+        sha256: beca79fd2907f5c3a5a220d19d729d501c8ebaf3e61d4ad3939ebe903399d481
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/rpiboot/blobs/sha256:beca79fd2907f5c3a5a220d19d729d501c8ebaf3e61d4ad3939ebe903399d481
+        sha256: beca79fd2907f5c3a5a220d19d729d501c8ebaf3e61d4ad3939ebe903399d481
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rpiboot/blobs/sha256:f7a90ea74346f3e711f948d047edf2e2cd824f85e8ca0b4c7a7097d863942779
+        sha256: f7a90ea74346f3e711f948d047edf2e2cd824f85e8ca0b4c7a7097d863942779
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/rpiboot/blobs/sha256:c66e0d7c224d8a185dbec4b96b2a54971d9c4d3acc5ccfce9d7e057bae0463c0
+        sha256: c66e0d7c224d8a185dbec4b96b2a54971d9c4d3acc5ccfce9d7e057bae0463c0
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/rpiboot/blobs/sha256:f7a90ea74346f3e711f948d047edf2e2cd824f85e8ca0b4c7a7097d863942779
+        sha256: f7a90ea74346f3e711f948d047edf2e2cd824f85e8ca0b4c7a7097d863942779
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rpiboot/blobs/sha256:2523c3dbff24ee0d324180c581a9b57ba8d718da4cbcc385fe536d898bc06a86
+        sha256: 2523c3dbff24ee0d324180c581a9b57ba8d718da4cbcc385fe536d898bc06a86
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rpiboot/blobs/sha256:d46d84f2dca76f09f8a12511e76625f8c8a20e27301300b0432b7c1dd90b68d2
+        sha256: d46d84f2dca76f09f8a12511e76625f8c8a20e27301300b0432b7c1dd90b68d2
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://github.com/raspberrypi/usbboot.git
+head:
+    url: https://github.com/raspberrypi/usbboot.git
+    branch: master
+build_dependencies:
+    - pkgconf

@@ -1,0 +1,82 @@
+name: filebeat
+version: 9.3.4
+description: File harvester to ship log files to Elasticsearch or Logstash
+homepage: https://www.elastic.co/products/beats/filebeat
+license: Apache-2.0
+url:
+    darwin_amd64: https://github.com/elastic/beats.git
+    darwin_amd64_10: https://github.com/elastic/beats.git
+    darwin_amd64_11: https://github.com/elastic/beats.git
+    darwin_amd64_12: https://github.com/elastic/beats.git
+    darwin_amd64_13: https://github.com/elastic/beats.git
+    darwin_amd64_14: https://github.com/elastic/beats.git
+    darwin_amd64_15: https://github.com/elastic/beats.git
+    darwin_arm64: https://github.com/elastic/beats.git
+    darwin_arm64_11: https://github.com/elastic/beats.git
+    darwin_arm64_12: https://github.com/elastic/beats.git
+    darwin_arm64_13: https://github.com/elastic/beats.git
+    darwin_arm64_14: https://github.com/elastic/beats.git
+    darwin_arm64_15: https://github.com/elastic/beats.git
+    linux_amd64: https://github.com/elastic/beats.git
+    linux_arm64: https://github.com/elastic/beats.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/filebeat/blobs/sha256:93a11537ba307a3440ea7b77ab610c7a6a19b89752aab9755e9fe7bf72b0bb36
+        sha256: 93a11537ba307a3440ea7b77ab610c7a6a19b89752aab9755e9fe7bf72b0bb36
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/filebeat/blobs/sha256:93a11537ba307a3440ea7b77ab610c7a6a19b89752aab9755e9fe7bf72b0bb36
+        sha256: 93a11537ba307a3440ea7b77ab610c7a6a19b89752aab9755e9fe7bf72b0bb36
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/filebeat/blobs/sha256:93a11537ba307a3440ea7b77ab610c7a6a19b89752aab9755e9fe7bf72b0bb36
+        sha256: 93a11537ba307a3440ea7b77ab610c7a6a19b89752aab9755e9fe7bf72b0bb36
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/filebeat/blobs/sha256:6c30f750ed0d65bdaf59bd9278ca531ff7cc67f3a7445c314b414f2fcbf1261e
+        sha256: 6c30f750ed0d65bdaf59bd9278ca531ff7cc67f3a7445c314b414f2fcbf1261e
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/filebeat/blobs/sha256:023a90c6ad06f7b34912b9d433eb937fbb49e8066435fe27d1486efc4c0f5364
+        sha256: 023a90c6ad06f7b34912b9d433eb937fbb49e8066435fe27d1486efc4c0f5364
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/filebeat/blobs/sha256:6c30f750ed0d65bdaf59bd9278ca531ff7cc67f3a7445c314b414f2fcbf1261e
+        sha256: 6c30f750ed0d65bdaf59bd9278ca531ff7cc67f3a7445c314b414f2fcbf1261e
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/filebeat/blobs/sha256:48bdd4cd6e11476db77d3c89506e8c62250e2c91e2fc3ff39a34294f4c7aa3a0
+        sha256: 48bdd4cd6e11476db77d3c89506e8c62250e2c91e2fc3ff39a34294f4c7aa3a0
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/filebeat/blobs/sha256:97e1fed6f25530e7f7a025b9b3a4225b1a4286eda443dacf032b6ab36bd7aa10
+        sha256: 97e1fed6f25530e7f7a025b9b3a4225b1a4286eda443dacf032b6ab36bd7aa10
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/elastic/beats.git
+head:
+    url: https://github.com/elastic/beats.git
+    branch: main
+build_dependencies:
+    - go
+    - mage
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/filebeat/bin/filebeat
+    run_type: immediate

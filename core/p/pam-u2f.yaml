@@ -1,0 +1,100 @@
+name: pam-u2f
+version: 1.4.0
+description: Provides an easy way to use U2F-compliant authenticators with PAM
+homepage: https://developers.yubico.com/pam-u2f/
+license: BSD-2-Clause
+caveats: |
+    To use a U2F key for PAM authentication, specify the full path to the
+    module ($HOMEBREW_PREFIX/opt/pam-u2f/lib/pam/pam_u2f.so) in a PAM
+    configuration. You can find all PAM configurations in /etc/pam.d.
+
+    For further installation instructions, please visit
+    https://developers.yubico.com/pam-u2f/#installation.
+url:
+    darwin_amd64: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_amd64_10: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_amd64_11: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_amd64_12: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_amd64_13: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_amd64_14: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_amd64_15: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_arm64: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_arm64_11: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_arm64_12: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_arm64_13: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_arm64_14: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    darwin_arm64_15: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    linux_amd64: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    linux_arm64: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+sha256:
+    darwin_amd64: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_amd64_10: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_amd64_11: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_amd64_12: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_amd64_13: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_amd64_14: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_amd64_15: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_arm64: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_arm64_11: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_arm64_12: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_arm64_13: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_arm64_14: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    darwin_arm64_15: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    linux_amd64: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+    linux_arm64: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+dependencies:
+    - libfido2
+    - openssl@3
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:59e4b1a99b4c51f5b56de184d414bd006811d83a2d032a535407e8af00fd87a4
+        sha256: 59e4b1a99b4c51f5b56de184d414bd006811d83a2d032a535407e8af00fd87a4
+        cellar: :any
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:30a9288a77afa266fc9fa008422e9628ebd8da77c06315d317101c9c143cdc72
+        sha256: 30a9288a77afa266fc9fa008422e9628ebd8da77c06315d317101c9c143cdc72
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:59e4b1a99b4c51f5b56de184d414bd006811d83a2d032a535407e8af00fd87a4
+        sha256: 59e4b1a99b4c51f5b56de184d414bd006811d83a2d032a535407e8af00fd87a4
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:59e4b1a99b4c51f5b56de184d414bd006811d83a2d032a535407e8af00fd87a4
+        sha256: 59e4b1a99b4c51f5b56de184d414bd006811d83a2d032a535407e8af00fd87a4
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:f2e4356b647818a3971dc3e4feb311dd547284426717d6d4235e838b0de316c5
+        sha256: f2e4356b647818a3971dc3e4feb311dd547284426717d6d4235e838b0de316c5
+        cellar: :any
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:dc7e13adf558fab082311b0fbb128332cafa81510059db8b23aa903ed005d76f
+        sha256: dc7e13adf558fab082311b0fbb128332cafa81510059db8b23aa903ed005d76f
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:0089a1832f65debf7c4aef93e31f24f1dde60c673f888c2e6f37937e76abd23b
+        sha256: 0089a1832f65debf7c4aef93e31f24f1dde60c673f888c2e6f37937e76abd23b
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:f2e4356b647818a3971dc3e4feb311dd547284426717d6d4235e838b0de316c5
+        sha256: f2e4356b647818a3971dc3e4feb311dd547284426717d6d4235e838b0de316c5
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:a99993171f6fd57e574bf1abff0848e80aae095be2ea85e0ec766ccb5496b419
+        sha256: a99993171f6fd57e574bf1abff0848e80aae095be2ea85e0ec766ccb5496b419
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pam-u2f/blobs/sha256:f1f8f8bb7c149900e9e59fe25f24cb11ae669651a08188a801cce00cd30cd347
+        sha256: f1f8f8bb7c149900e9e59fe25f24cb11ae669651a08188a801cce00cd30cd347
+        cellar: :any_skip_relocation
+source:
+    url: https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz
+    sha256: a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634
+head:
+    url: https://github.com/Yubico/pam-u2f.git
+    branch: master
+build_dependencies:
+    - asciidoc
+    - autoconf
+    - automake
+    - libtool
+    - pkgconf

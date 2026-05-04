@@ -1,0 +1,107 @@
+name: xorg-server
+version: 21.1.22
+description: X Window System display server
+homepage: https://www.x.org
+license: MIT AND APSL-2.0
+caveats: |
+    To launch X server, it is recommend to install xinit,
+    especially on macOS, otherwise X11.app will not work:
+      brew install xinit
+    If cask xquartz is installed, this link may be helpful:
+      https://www.xquartz.org/FAQs.html#want-another-x11app-server
+url:
+    darwin_amd64: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_amd64_10: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_amd64_11: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_amd64_12: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_amd64_13: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_amd64_14: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_amd64_15: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_arm64: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_arm64_11: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_arm64_12: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_arm64_13: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_arm64_14: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    darwin_arm64_15: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    linux_amd64: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    linux_arm64: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+sha256:
+    darwin_amd64: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_amd64_10: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_amd64_11: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_amd64_12: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_amd64_13: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_amd64_14: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_amd64_15: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_arm64: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_arm64_11: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_arm64_12: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_arm64_13: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_arm64_14: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    darwin_arm64_15: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    linux_amd64: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+    linux_arm64: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+dependencies:
+    - libx11
+    - libxau
+    - libxcb
+    - libxdmcp
+    - libxext
+    - libxfixes
+    - libxfont2
+    - mesa
+    - pixman
+    - xauth
+    - xcb-util
+    - xcb-util-image
+    - xcb-util-keysyms
+    - xcb-util-renderutil
+    - xcb-util-wm
+    - xkbcomp
+    - xkeyboard-config
+    - libapplewm
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
+        sha256: b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
+        sha256: b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
+        sha256: b6de9c5ea890b95d0dc9b3d47a886f066ca7276a2d0896fe39259d83605d0654
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:77d4f062c4186d65e7d915a36b77b7132164899fba01d47c33dee60a6a8870e7
+        sha256: 77d4f062c4186d65e7d915a36b77b7132164899fba01d47c33dee60a6a8870e7
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:8dae32b24f595c142ecd24469a1b01daceb1a201989dac1a467c52cdf71f2aee
+        sha256: 8dae32b24f595c142ecd24469a1b01daceb1a201989dac1a467c52cdf71f2aee
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:77d4f062c4186d65e7d915a36b77b7132164899fba01d47c33dee60a6a8870e7
+        sha256: 77d4f062c4186d65e7d915a36b77b7132164899fba01d47c33dee60a6a8870e7
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:26a1aadf41f19be76ae3ffb0703ae6b21cfed150f35bd5dabd9d585af8c280ec
+        sha256: 26a1aadf41f19be76ae3ffb0703ae6b21cfed150f35bd5dabd9d585af8c280ec
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:eac9b9823f8dba050ffeb490eb0fb28807f8bd6880d6bb96009e12d67fefc73f
+        sha256: eac9b9823f8dba050ffeb490eb0fb28807f8bd6880d6bb96009e12d67fefc73f
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz
+    sha256: 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
+build_dependencies:
+    - font-util
+    - libxkbfile
+    - meson
+    - ninja
+    - pkgconf
+    - util-macros
+    - xorgproto
+    - xtrans

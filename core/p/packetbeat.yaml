@@ -1,0 +1,82 @@
+name: packetbeat
+version: 9.3.4
+description: Lightweight Shipper for Network Data
+homepage: https://www.elastic.co/products/beats/packetbeat
+license: Apache-2.0
+url:
+    darwin_amd64: https://github.com/elastic/beats.git
+    darwin_amd64_10: https://github.com/elastic/beats.git
+    darwin_amd64_11: https://github.com/elastic/beats.git
+    darwin_amd64_12: https://github.com/elastic/beats.git
+    darwin_amd64_13: https://github.com/elastic/beats.git
+    darwin_amd64_14: https://github.com/elastic/beats.git
+    darwin_amd64_15: https://github.com/elastic/beats.git
+    darwin_arm64: https://github.com/elastic/beats.git
+    darwin_arm64_11: https://github.com/elastic/beats.git
+    darwin_arm64_12: https://github.com/elastic/beats.git
+    darwin_arm64_13: https://github.com/elastic/beats.git
+    darwin_arm64_14: https://github.com/elastic/beats.git
+    darwin_arm64_15: https://github.com/elastic/beats.git
+    linux_amd64: https://github.com/elastic/beats.git
+    linux_arm64: https://github.com/elastic/beats.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:fb052d6fce9925de006f5fa2f8613724a3172e79c33a8435a71aac3a35e823cc
+        sha256: fb052d6fce9925de006f5fa2f8613724a3172e79c33a8435a71aac3a35e823cc
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:fb052d6fce9925de006f5fa2f8613724a3172e79c33a8435a71aac3a35e823cc
+        sha256: fb052d6fce9925de006f5fa2f8613724a3172e79c33a8435a71aac3a35e823cc
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:fb052d6fce9925de006f5fa2f8613724a3172e79c33a8435a71aac3a35e823cc
+        sha256: fb052d6fce9925de006f5fa2f8613724a3172e79c33a8435a71aac3a35e823cc
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:f214fa9c7790d80f57c495fb1a64a3e71a3c5558f9848af003fc72f3f3e42392
+        sha256: f214fa9c7790d80f57c495fb1a64a3e71a3c5558f9848af003fc72f3f3e42392
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:a392f95bf246c5f66a9a91c197b016570bc5885a84edec2be46e24efc10fcb62
+        sha256: a392f95bf246c5f66a9a91c197b016570bc5885a84edec2be46e24efc10fcb62
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:f214fa9c7790d80f57c495fb1a64a3e71a3c5558f9848af003fc72f3f3e42392
+        sha256: f214fa9c7790d80f57c495fb1a64a3e71a3c5558f9848af003fc72f3f3e42392
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:2b8599e835df09fd16b538ad4db0495d64cf9bdf403ce9b6ffb9a6121ea6acbb
+        sha256: 2b8599e835df09fd16b538ad4db0495d64cf9bdf403ce9b6ffb9a6121ea6acbb
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/packetbeat/blobs/sha256:cbf781c03aefdbb77656889c68dc1a7abc862d23bd2ec8c2022e590b43925808
+        sha256: cbf781c03aefdbb77656889c68dc1a7abc862d23bd2ec8c2022e590b43925808
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/elastic/beats.git
+head:
+    url: https://github.com/elastic/beats.git
+    branch: main
+build_dependencies:
+    - go
+    - mage
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/packetbeat/bin/packetbeat
+    run_type: immediate

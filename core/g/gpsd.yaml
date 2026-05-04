@@ -1,0 +1,95 @@
+name: gpsd
+version: 3.27.5
+description: Global Positioning System (GPS) daemon
+homepage: https://gpsd.gitlab.io/gpsd/
+license: BSD-2-Clause
+caveats: |
+    gpsd does not automatically detect GPS device addresses. Once started, you
+    need to force it to connect to your GPS:
+
+      GPSD_SOCKET="$HOMEBREW_PREFIX/var/gpsd.sock" $HOMEBREW_CELLAR/gpsd/3.27.5/sbin/gpsdctl add /dev/tty.usbserial-XYZ
+url:
+    darwin_amd64: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_amd64_10: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_amd64_11: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_amd64_12: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_amd64_13: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_amd64_14: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_amd64_15: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_arm64: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_arm64_11: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_arm64_12: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_arm64_13: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_arm64_14: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    darwin_arm64_15: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    linux_amd64: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    linux_arm64: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+sha256:
+    darwin_amd64: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_amd64_10: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_amd64_11: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_amd64_12: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_amd64_13: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_amd64_14: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_amd64_15: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_arm64: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_arm64_11: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_arm64_12: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_arm64_13: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_arm64_14: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    darwin_arm64_15: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    linux_amd64: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+    linux_arm64: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
+        sha256: 80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
+        sha256: 80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
+        sha256: 80c664a6bbd8649eb3e82e2b3c357f41552996310a7c6a6d84e6101561705692
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:a0e7d0e6077b4987e4e7d6ba2e3c969fd3e7cf0c054bed1978df3968a569ee0b
+        sha256: a0e7d0e6077b4987e4e7d6ba2e3c969fd3e7cf0c054bed1978df3968a569ee0b
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:d55005371ee46f49596bb42f99bb043a4150b201a877795d06c643b0b20e34ba
+        sha256: d55005371ee46f49596bb42f99bb043a4150b201a877795d06c643b0b20e34ba
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:a0e7d0e6077b4987e4e7d6ba2e3c969fd3e7cf0c054bed1978df3968a569ee0b
+        sha256: a0e7d0e6077b4987e4e7d6ba2e3c969fd3e7cf0c054bed1978df3968a569ee0b
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:f1966e876bbef9de7ddc508979cd0557c66f5d0cb321fa7d333b855e43a5b6e8
+        sha256: f1966e876bbef9de7ddc508979cd0557c66f5d0cb321fa7d333b855e43a5b6e8
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:d0e890be6d0dad6ef97fc14eb6cfd7cfafec60ce53c61d15def98640dfb50bfe
+        sha256: d0e890be6d0dad6ef97fc14eb6cfd7cfafec60ce53c61d15def98640dfb50bfe
+        cellar: :any_skip_relocation
+source:
+    url: https://download.savannah.gnu.org/releases/gpsd/gpsd-3.27.5.tar.xz
+    sha256: dc4a62bad835282bae788772bc7cc8f8bec4c7a48e8dceeb37477a89091c4656
+head:
+    url: https://gitlab.com/gpsd/gpsd.git
+    branch: master
+build_dependencies:
+    - asciidoctor
+    - scons
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/gpsd/sbin/gpsd
+        - -N
+        - -F
+        - $HOMEBREW_PREFIX/var/gpsd.sock
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/gpsd.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/gpsd.log
+    keep_alive: true

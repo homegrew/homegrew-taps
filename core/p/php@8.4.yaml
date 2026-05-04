@@ -1,0 +1,120 @@
+name: php@8.4
+version: 8.4.20
+description: General-purpose scripting language
+homepage: https://www.php.net/
+license: PHP-3.01 AND Zend-2.0 AND BSL-1.0 AND MIT AND Apache-1.0 AND Apache-2.0 AND bcrypt-Solar-Designer AND BSD-2-Clause-Darwin AND BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause-UC AND ISC AND LGPL-2.1-only AND LGPL-2.1-or-later AND OLDAP-2.8 AND TCL AND Zlib
+caveats: |
+    To enable PHP in Apache add the following to httpd.conf and restart Apache:
+        LoadModule php_module $HOMEBREW_PREFIX/opt/php@8.4/lib/httpd/modules/libphp.so
+
+        <FilesMatch \.php$>
+            SetHandler application/x-httpd-php
+        </FilesMatch>
+
+    Finally, check DirectoryIndex includes index.php
+        DirectoryIndex index.php index.html
+
+    The php.ini and php-fpm.ini file can be found in:
+        $HOMEBREW_PREFIX/etc/php/8.4/
+url:
+    darwin_amd64: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_amd64_10: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_amd64_11: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_amd64_12: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_amd64_13: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_amd64_14: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_amd64_15: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_arm64: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_arm64_11: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_arm64_12: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_arm64_13: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_arm64_14: https://www.php.net/distributions/php-8.4.20.tar.xz
+    darwin_arm64_15: https://www.php.net/distributions/php-8.4.20.tar.xz
+    linux_amd64: https://www.php.net/distributions/php-8.4.20.tar.xz
+    linux_arm64: https://www.php.net/distributions/php-8.4.20.tar.xz
+sha256:
+    darwin_amd64: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_amd64_10: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_amd64_11: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_amd64_12: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_amd64_13: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_amd64_14: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_amd64_15: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_arm64: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_arm64_11: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_arm64_12: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_arm64_13: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_arm64_14: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    darwin_arm64_15: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    linux_amd64: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+    linux_arm64: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+dependencies:
+    - apr
+    - apr-util
+    - argon2
+    - autoconf
+    - curl
+    - freetds
+    - gd
+    - gmp
+    - icu4c@78
+    - libpq
+    - libsodium
+    - libzip
+    - net-snmp
+    - oniguruma
+    - openldap
+    - openssl@3
+    - pcre2
+    - sqlite
+    - tidy-html5
+    - unixodbc
+    - gettext
+keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:d8858cf723801d9b4922d6130151f64087b1763bc38952d4c4168f9478d680ba
+        sha256: d8858cf723801d9b4922d6130151f64087b1763bc38952d4c4168f9478d680ba
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:d8858cf723801d9b4922d6130151f64087b1763bc38952d4c4168f9478d680ba
+        sha256: d8858cf723801d9b4922d6130151f64087b1763bc38952d4c4168f9478d680ba
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:d8858cf723801d9b4922d6130151f64087b1763bc38952d4c4168f9478d680ba
+        sha256: d8858cf723801d9b4922d6130151f64087b1763bc38952d4c4168f9478d680ba
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:bd00d2432871871efad309bc47e721946ff0968c60d75ff61539269e7ff0f094
+        sha256: bd00d2432871871efad309bc47e721946ff0968c60d75ff61539269e7ff0f094
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:de66218be4cebf9cf0998643e9c70d29a5cdb2fc7829c0fdd2b7fd98286d7138
+        sha256: de66218be4cebf9cf0998643e9c70d29a5cdb2fc7829c0fdd2b7fd98286d7138
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:bd00d2432871871efad309bc47e721946ff0968c60d75ff61539269e7ff0f094
+        sha256: bd00d2432871871efad309bc47e721946ff0968c60d75ff61539269e7ff0f094
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:9149059fd21f87b25fcbef5eaec604716a5d8266b2494d01ee660006dcc9ebca
+        sha256: 9149059fd21f87b25fcbef5eaec604716a5d8266b2494d01ee660006dcc9ebca
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/php/8.4/blobs/sha256:b512113ced04a0516b64f52b15a3d0929bf4bcffb4d1b2208e07c53c771bf854
+        sha256: b512113ced04a0516b64f52b15a3d0929bf4bcffb4d1b2208e07c53c771bf854
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://www.php.net/distributions/php-8.4.20.tar.xz
+    sha256: e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7
+build_dependencies:
+    - httpd
+    - pkgconf
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/php@8.4/sbin/php-fpm
+        - --nodaemonize
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    error_log_path: $HOMEBREW_PREFIX/var/log/php-fpm.log
+    keep_alive: true

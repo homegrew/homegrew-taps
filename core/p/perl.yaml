@@ -1,0 +1,86 @@
+name: perl
+version: 5.42.2
+description: Highly capable, feature-rich programming language
+homepage: https://www.perl.org/
+license: Artistic-1.0-Perl OR GPL-1.0-or-later
+caveats: |
+    By default non-brewed cpan modules are installed to the Cellar. If you wish
+    for your modules to persist across updates we recommend using `local::lib`.
+
+    You can set that up like this:
+      PERL_MM_OPT="INSTALL_BASE=$HOME/perl5" cpan local::lib
+    And add the following to your shell profile e.g. ~/.profile or ~/.zshrc
+      eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+url:
+    darwin_amd64: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_amd64_10: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_amd64_11: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_amd64_12: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_amd64_13: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_amd64_14: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_amd64_15: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_arm64: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_arm64_11: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_arm64_12: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_arm64_13: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_arm64_14: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    darwin_arm64_15: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    linux_amd64: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    linux_arm64: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+sha256:
+    darwin_amd64: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_amd64_10: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_amd64_11: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_amd64_12: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_amd64_13: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_amd64_14: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_amd64_15: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_arm64: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_arm64_11: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_arm64_12: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_arm64_13: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_arm64_14: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    darwin_arm64_15: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    linux_amd64: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+    linux_arm64: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+dependencies:
+    - gdbm
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/perl/blobs/sha256:78ee0a26f6650a15d49bc1e6586b91f9716981207059d511704d15f30882c63a
+        sha256: 78ee0a26f6650a15d49bc1e6586b91f9716981207059d511704d15f30882c63a
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/perl/blobs/sha256:78ee0a26f6650a15d49bc1e6586b91f9716981207059d511704d15f30882c63a
+        sha256: 78ee0a26f6650a15d49bc1e6586b91f9716981207059d511704d15f30882c63a
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/perl/blobs/sha256:78ee0a26f6650a15d49bc1e6586b91f9716981207059d511704d15f30882c63a
+        sha256: 78ee0a26f6650a15d49bc1e6586b91f9716981207059d511704d15f30882c63a
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/perl/blobs/sha256:055da0dbe11d31788f13154fb01f7b5596e8450705bd4a1e54e799977d7bddaa
+        sha256: 055da0dbe11d31788f13154fb01f7b5596e8450705bd4a1e54e799977d7bddaa
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/perl/blobs/sha256:e9270cae03ec248b9910b33924cd522773d4494ed1da07a4fbc8bc70c48eeddd
+        sha256: e9270cae03ec248b9910b33924cd522773d4494ed1da07a4fbc8bc70c48eeddd
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/perl/blobs/sha256:055da0dbe11d31788f13154fb01f7b5596e8450705bd4a1e54e799977d7bddaa
+        sha256: 055da0dbe11d31788f13154fb01f7b5596e8450705bd4a1e54e799977d7bddaa
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/perl/blobs/sha256:036d3e8899b33c3c4f7dd9b69057f5dd522184a72750b212376d8fd5fc7d120f
+        sha256: 036d3e8899b33c3c4f7dd9b69057f5dd522184a72750b212376d8fd5fc7d120f
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/perl/blobs/sha256:a2adf29ff516a10c5851c1da904cb033cb92f89c5ea8efee5600065d06f3d989
+        sha256: a2adf29ff516a10c5851c1da904cb033cb92f89c5ea8efee5600065d06f3d989
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://www.cpan.org/src/5.0/perl-5.42.2.tar.xz
+    sha256: 0a585eeb9e363c0f80482ddb3571625250c2c86aeb408853e8ea50805cfb14bb
+head:
+    url: https://github.com/perl/perl5.git
+    branch: blead

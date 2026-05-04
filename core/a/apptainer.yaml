@@ -1,0 +1,58 @@
+name: apptainer
+version: 1.4.5
+description: Application container and unprivileged sandbox platform for Linux
+homepage: https://apptainer.org/
+license: BSD-3-Clause
+url:
+    darwin_amd64: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_amd64_10: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_amd64_11: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_amd64_12: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_amd64_13: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_amd64_14: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_amd64_15: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_arm64: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_arm64_11: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_arm64_12: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_arm64_13: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_arm64_14: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    darwin_arm64_15: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    linux_amd64: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    linux_arm64: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+sha256:
+    darwin_amd64: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_amd64_10: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_amd64_11: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_amd64_12: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_amd64_13: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_amd64_14: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_amd64_15: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_arm64: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_arm64_11: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_arm64_12: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_arm64_13: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_arm64_14: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    darwin_arm64_15: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    linux_amd64: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+    linux_arm64: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+dependencies:
+    - libseccomp
+    - squashfs
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/apptainer/blobs/sha256:c0e1729e484d95e8c33083e9fa81046d60d4dc2ebae1c1ea195c4009158c7124
+        sha256: c0e1729e484d95e8c33083e9fa81046d60d4dc2ebae1c1ea195c4009158c7124
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/apptainer/blobs/sha256:869d04ad3305e8a4f7129c6cd978ec4d48972b049c65edfbb56d3c6048714df6
+        sha256: 869d04ad3305e8a4f7129c6cd978ec4d48972b049c65edfbb56d3c6048714df6
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-1.4.5.tar.gz
+    sha256: d323a8b9a0a9e5e131b396d0049fdaa99beceb83a3d7ffb80dd91d15331e3b9a
+head:
+    url: https://github.com/apptainer/apptainer.git
+    branch: main
+build_dependencies:
+    - go
+    - pkgconf

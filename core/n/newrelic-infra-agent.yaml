@@ -1,0 +1,85 @@
+name: newrelic-infra-agent
+version: 1.74.1
+description: New Relic infrastructure agent
+homepage: https://github.com/newrelic/infrastructure-agent
+license: Apache-2.0
+url:
+    darwin_amd64: https://github.com/newrelic/infrastructure-agent.git
+    darwin_amd64_10: https://github.com/newrelic/infrastructure-agent.git
+    darwin_amd64_11: https://github.com/newrelic/infrastructure-agent.git
+    darwin_amd64_12: https://github.com/newrelic/infrastructure-agent.git
+    darwin_amd64_13: https://github.com/newrelic/infrastructure-agent.git
+    darwin_amd64_14: https://github.com/newrelic/infrastructure-agent.git
+    darwin_amd64_15: https://github.com/newrelic/infrastructure-agent.git
+    darwin_arm64: https://github.com/newrelic/infrastructure-agent.git
+    darwin_arm64_11: https://github.com/newrelic/infrastructure-agent.git
+    darwin_arm64_12: https://github.com/newrelic/infrastructure-agent.git
+    darwin_arm64_13: https://github.com/newrelic/infrastructure-agent.git
+    darwin_arm64_14: https://github.com/newrelic/infrastructure-agent.git
+    darwin_arm64_15: https://github.com/newrelic/infrastructure-agent.git
+    linux_amd64: https://github.com/newrelic/infrastructure-agent.git
+    linux_arm64: https://github.com/newrelic/infrastructure-agent.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
+        sha256: 80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
+        sha256: 80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
+        sha256: 80353af2ac63e2607b47f6bee96de80253f29d95018a05e42cb5d7c4766fa457
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:da5ce58facea0fb583041b1426aeb951dc6a2612c1ee559e62a81c5ccf981267
+        sha256: da5ce58facea0fb583041b1426aeb951dc6a2612c1ee559e62a81c5ccf981267
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:f691c00360f3313bdc7651eb23c5d740a07382397b2040a2585e9e32dd851848
+        sha256: f691c00360f3313bdc7651eb23c5d740a07382397b2040a2585e9e32dd851848
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:da5ce58facea0fb583041b1426aeb951dc6a2612c1ee559e62a81c5ccf981267
+        sha256: da5ce58facea0fb583041b1426aeb951dc6a2612c1ee559e62a81c5ccf981267
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:0cb1a0346796b8a2304307d83419c003bff64eec40bfa3242b3347ff19fc0f36
+        sha256: 0cb1a0346796b8a2304307d83419c003bff64eec40bfa3242b3347ff19fc0f36
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/newrelic-infra-agent/blobs/sha256:7ca7680710aec1391d3ccdb10847cd7f680bc546ec8ba7c1e76f92b474eda031
+        sha256: 7ca7680710aec1391d3ccdb10847cd7f680bc546ec8ba7c1e76f92b474eda031
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/newrelic/infrastructure-agent.git
+head:
+    url: https://github.com/newrelic/infrastructure-agent.git
+    branch: master
+build_dependencies:
+    - go
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/newrelic-infra-agent/bin/newrelic-infra-service
+        - -config
+        - $HOMEBREW_PREFIX/etc/newrelic-infra/newrelic-infra.yml
+    run_type: immediate
+    log_path: $HOMEBREW_PREFIX/var/log/newrelic-infra/newrelic-infra.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/newrelic-infra/newrelic-infra.stderr.log

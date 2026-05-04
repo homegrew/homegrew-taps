@@ -1,0 +1,97 @@
+name: sshguard
+version: 2.5.1
+description: Protect from brute force attacks against SSH
+homepage: https://www.sshguard.net/
+license: ISC
+caveats: |
+    Add the following lines to /etc/pf.conf to block entries in the sshguard
+    table (replace $ext_if with your WAN interface):
+
+      table <sshguard> persist
+      block in quick on $ext_if proto tcp from <sshguard> to any port 22 label "ssh bruteforce"
+
+    Then run sudo pfctl -f /etc/pf.conf to reload the rules.
+url:
+    darwin_amd64: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_amd64_10: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_amd64_11: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_amd64_12: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_amd64_13: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_amd64_14: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_amd64_15: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_arm64: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_arm64_11: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_arm64_12: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_arm64_13: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_arm64_14: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    darwin_arm64_15: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    linux_amd64: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    linux_arm64: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+sha256:
+    darwin_amd64: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_amd64_10: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_amd64_11: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_amd64_12: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_amd64_13: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_amd64_14: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_amd64_15: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_arm64: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_arm64_11: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_arm64_12: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_arm64_13: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_arm64_14: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    darwin_arm64_15: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    linux_amd64: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+    linux_arm64: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:8c22c01d6e11c18443e9d3a12b5e858f5468c8da4f0aba9f716b054267a631de
+        sha256: 8c22c01d6e11c18443e9d3a12b5e858f5468c8da4f0aba9f716b054267a631de
+        cellar: :any_skip_relocation
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:8c7e0ca50223efc082c428aad1e0d62fda73f55d9cf280f7255f7228093917a2
+        sha256: 8c7e0ca50223efc082c428aad1e0d62fda73f55d9cf280f7255f7228093917a2
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:8c22c01d6e11c18443e9d3a12b5e858f5468c8da4f0aba9f716b054267a631de
+        sha256: 8c22c01d6e11c18443e9d3a12b5e858f5468c8da4f0aba9f716b054267a631de
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:8c22c01d6e11c18443e9d3a12b5e858f5468c8da4f0aba9f716b054267a631de
+        sha256: 8c22c01d6e11c18443e9d3a12b5e858f5468c8da4f0aba9f716b054267a631de
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:a0f56a4e44504c78bf201cbb62b0d01d1ab2fcf1149e6dcc6e7562fb41c0ac99
+        sha256: a0f56a4e44504c78bf201cbb62b0d01d1ab2fcf1149e6dcc6e7562fb41c0ac99
+        cellar: :any_skip_relocation
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:1d3904d7dfa3b416126cd6f3088fd21eea79ac94af8cf5c6c787af6a27f8ba1e
+        sha256: 1d3904d7dfa3b416126cd6f3088fd21eea79ac94af8cf5c6c787af6a27f8ba1e
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:11ef33ea3f5e54e448b493db07993839407bd6e62fd50ed3b7feaae74f0419f0
+        sha256: 11ef33ea3f5e54e448b493db07993839407bd6e62fd50ed3b7feaae74f0419f0
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:a0f56a4e44504c78bf201cbb62b0d01d1ab2fcf1149e6dcc6e7562fb41c0ac99
+        sha256: a0f56a4e44504c78bf201cbb62b0d01d1ab2fcf1149e6dcc6e7562fb41c0ac99
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:22338d5f5ba21e11cbccca5dc0e2bc860d39d5f7822c5e1e3e43835e722456a2
+        sha256: 22338d5f5ba21e11cbccca5dc0e2bc860d39d5f7822c5e1e3e43835e722456a2
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/sshguard/blobs/sha256:28355a7f475cfaa5092312e781333f17718098181707052e90fc97f2dea8deff
+        sha256: 28355a7f475cfaa5092312e781333f17718098181707052e90fc97f2dea8deff
+        cellar: :any_skip_relocation
+source:
+    url: https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/sshguard-2.5.1.tar.gz
+    sha256: 997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc
+head:
+    url: https://bitbucket.org/sshguard/sshguard.git
+    branch: master
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/sshguard/sbin/sshguard
+    run_type: immediate
+    keep_alive: true

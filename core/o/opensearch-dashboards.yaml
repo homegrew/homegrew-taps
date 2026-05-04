@@ -1,0 +1,87 @@
+name: opensearch-dashboards
+version: 3.6.0
+description: Open source visualization dashboards for OpenSearch
+homepage: https://docs.opensearch.org/latest/dashboards/
+license: Apache-2.0
+caveats: |
+    Data:    $HOMEBREW_PREFIX/var/lib/opensearch-dashboards/
+    Logs:    $HOMEBREW_PREFIX/var/log/opensearch-dashboards/opensearch-dashboards.log
+    Plugins: $HOMEBREW_PREFIX/var/opensearch-dashboards/plugins/
+    Config:  $HOMEBREW_PREFIX/etc/opensearch-dashboards/
+url:
+    darwin_amd64: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_amd64_10: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_amd64_11: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_amd64_12: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_amd64_13: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_amd64_14: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_amd64_15: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_arm64: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_arm64_11: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_arm64_12: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_arm64_13: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_arm64_14: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    darwin_arm64_15: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    linux_amd64: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    linux_arm64: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+dependencies:
+    - node@22
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opensearch-dashboards/blobs/sha256:bacb22ade5cf561905acd08df802ffef50babee3eb5fc7bab7918cb7739abe55
+        sha256: bacb22ade5cf561905acd08df802ffef50babee3eb5fc7bab7918cb7739abe55
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/opensearch-dashboards/blobs/sha256:bacb22ade5cf561905acd08df802ffef50babee3eb5fc7bab7918cb7739abe55
+        sha256: bacb22ade5cf561905acd08df802ffef50babee3eb5fc7bab7918cb7739abe55
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/opensearch-dashboards/blobs/sha256:bacb22ade5cf561905acd08df802ffef50babee3eb5fc7bab7918cb7739abe55
+        sha256: bacb22ade5cf561905acd08df802ffef50babee3eb5fc7bab7918cb7739abe55
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opensearch-dashboards/blobs/sha256:61da20fd6b63ac62e4e21e736db18c84738420bdf2259cd6105357e8c1d72056
+        sha256: 61da20fd6b63ac62e4e21e736db18c84738420bdf2259cd6105357e8c1d72056
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/opensearch-dashboards/blobs/sha256:61da20fd6b63ac62e4e21e736db18c84738420bdf2259cd6105357e8c1d72056
+        sha256: 61da20fd6b63ac62e4e21e736db18c84738420bdf2259cd6105357e8c1d72056
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/opensearch-dashboards/blobs/sha256:61da20fd6b63ac62e4e21e736db18c84738420bdf2259cd6105357e8c1d72056
+        sha256: 61da20fd6b63ac62e4e21e736db18c84738420bdf2259cd6105357e8c1d72056
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/opensearch-dashboards/blobs/sha256:2c0a2e8d2d05897d590088536a31b792c75ecb5919648dd20f15e4025bf49461
+        sha256: 2c0a2e8d2d05897d590088536a31b792c75ecb5919648dd20f15e4025bf49461
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/opensearch-dashboards/blobs/sha256:211ddd6772665c427aae3ee5c9bbc42560b697d2cebc9a86e9d728db4152850d
+        sha256: 211ddd6772665c427aae3ee5c9bbc42560b697d2cebc9a86e9d728db4152850d
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+build_dependencies:
+    - yarn
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/opensearch-dashboards/bin/opensearch-dashboards
+    run_type: immediate
+    log_path: $HOMEBREW_PREFIX/var/log/opensearch-dashboards.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/opensearch-dashboards.log

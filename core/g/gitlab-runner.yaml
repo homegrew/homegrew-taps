@@ -1,0 +1,85 @@
+name: gitlab-runner
+version: 18.11.2
+description: Official GitLab CI runner
+homepage: https://gitlab.com/gitlab-org/gitlab-runner
+license: MIT
+url:
+    darwin_amd64: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_amd64_10: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_amd64_11: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_amd64_12: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_amd64_13: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_amd64_14: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_amd64_15: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_arm64: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_arm64_11: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_arm64_12: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_arm64_13: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_arm64_14: https://gitlab.com/gitlab-org/gitlab-runner.git
+    darwin_arm64_15: https://gitlab.com/gitlab-org/gitlab-runner.git
+    linux_amd64: https://gitlab.com/gitlab-org/gitlab-runner.git
+    linux_arm64: https://gitlab.com/gitlab-org/gitlab-runner.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:8a5fb260605701d3f0df83132f330ff3d9ddca781c2f986cf9bceac9a0cf0e41
+        sha256: 8a5fb260605701d3f0df83132f330ff3d9ddca781c2f986cf9bceac9a0cf0e41
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:8a5fb260605701d3f0df83132f330ff3d9ddca781c2f986cf9bceac9a0cf0e41
+        sha256: 8a5fb260605701d3f0df83132f330ff3d9ddca781c2f986cf9bceac9a0cf0e41
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:8a5fb260605701d3f0df83132f330ff3d9ddca781c2f986cf9bceac9a0cf0e41
+        sha256: 8a5fb260605701d3f0df83132f330ff3d9ddca781c2f986cf9bceac9a0cf0e41
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:81ccda8f8479537022e22d111507e29ef3150fbfdf22a1d1c2d29c551f61f4cb
+        sha256: 81ccda8f8479537022e22d111507e29ef3150fbfdf22a1d1c2d29c551f61f4cb
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:e02308273edce22005f600c91ff52139dfbc9c395c152e9fca72c30e70e21eaa
+        sha256: e02308273edce22005f600c91ff52139dfbc9c395c152e9fca72c30e70e21eaa
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:81ccda8f8479537022e22d111507e29ef3150fbfdf22a1d1c2d29c551f61f4cb
+        sha256: 81ccda8f8479537022e22d111507e29ef3150fbfdf22a1d1c2d29c551f61f4cb
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:8fc504f2feed98c2178d3ad44489f6fbed6f1626ec8ff811162a1a2e3c334e13
+        sha256: 8fc504f2feed98c2178d3ad44489f6fbed6f1626ec8ff811162a1a2e3c334e13
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gitlab-runner/blobs/sha256:191236e2a31973b2510d469c0e55d50a492300005e2de490f0d5ccaecf1b4ef0
+        sha256: 191236e2a31973b2510d469c0e55d50a492300005e2de490f0d5ccaecf1b4ef0
+        cellar: :any_skip_relocation
+source:
+    url: https://gitlab.com/gitlab-org/gitlab-runner.git
+head:
+    url: https://gitlab.com/gitlab-org/gitlab-runner.git
+    branch: main
+build_dependencies:
+    - go
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/gitlab-runner/bin/gitlab-runner
+        - run
+        - --syslog
+    run_type: immediate
+    working_dir: /$HOME
+    keep_alive: true

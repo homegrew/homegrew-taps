@@ -1,0 +1,87 @@
+name: tile38
+version: 1.37.0
+description: In-memory geolocation data store, spatial index, and realtime geofence
+homepage: https://tile38.com/
+license: MIT
+url:
+    darwin_amd64: https://github.com/tidwall/tile38.git
+    darwin_amd64_10: https://github.com/tidwall/tile38.git
+    darwin_amd64_11: https://github.com/tidwall/tile38.git
+    darwin_amd64_12: https://github.com/tidwall/tile38.git
+    darwin_amd64_13: https://github.com/tidwall/tile38.git
+    darwin_amd64_14: https://github.com/tidwall/tile38.git
+    darwin_amd64_15: https://github.com/tidwall/tile38.git
+    darwin_arm64: https://github.com/tidwall/tile38.git
+    darwin_arm64_11: https://github.com/tidwall/tile38.git
+    darwin_arm64_12: https://github.com/tidwall/tile38.git
+    darwin_arm64_13: https://github.com/tidwall/tile38.git
+    darwin_arm64_14: https://github.com/tidwall/tile38.git
+    darwin_arm64_15: https://github.com/tidwall/tile38.git
+    linux_amd64: https://github.com/tidwall/tile38.git
+    linux_arm64: https://github.com/tidwall/tile38.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        sha256: 9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        sha256: 9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        sha256: 9ce1a1638aa31d0f28e1e031937ac48f6e7588cd6542cb3bea43bf8ffbc18d79
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
+        sha256: 461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:bddb54ad65fd35534c8d593a6ede162d91a3dfb924a71e0201928d25083622d8
+        sha256: bddb54ad65fd35534c8d593a6ede162d91a3dfb924a71e0201928d25083622d8
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
+        sha256: 461aeac2ab719a07e5764dd88bc99352d36def813fe30c295e00c947deb5d2e2
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:a9af0c425459875d1402d52e8c4b3ba93d69c1b733c1554791e9640ca6b012d3
+        sha256: a9af0c425459875d1402d52e8c4b3ba93d69c1b733c1554791e9640ca6b012d3
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/tile38/blobs/sha256:d4a22c1843a3dbca44783a1443386bc513efef0632ff31e2f2368c888c678aea
+        sha256: d4a22c1843a3dbca44783a1443386bc513efef0632ff31e2f2368c888c678aea
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/tidwall/tile38.git
+head:
+    url: https://github.com/tidwall/tile38.git
+    branch: master
+build_dependencies:
+    - go
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/tile38/bin/tile38-server
+        - -d
+        - $HOMEBREW_PREFIX/var/tile38/data
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/tile38.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/tile38.log
+    keep_alive: true

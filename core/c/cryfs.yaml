@@ -1,0 +1,63 @@
+name: cryfs
+version: 1.0.3
+description: Encrypts your files so you can safely store them in Dropbox, iCloud, etc.
+homepage: https://www.cryfs.org
+license: LGPL-3.0-or-later
+url:
+    darwin_amd64: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_amd64_10: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_amd64_11: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_amd64_12: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_amd64_13: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_amd64_14: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_amd64_15: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_arm64: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_arm64_11: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_arm64_12: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_arm64_13: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_arm64_14: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    darwin_arm64_15: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    linux_amd64: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    linux_arm64: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+sha256:
+    darwin_amd64: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_amd64_10: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_amd64_11: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_amd64_12: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_amd64_13: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_amd64_14: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_amd64_15: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_arm64: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_arm64_11: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_arm64_12: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_arm64_13: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_arm64_14: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    darwin_arm64_15: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    linux_amd64: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+    linux_arm64: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+dependencies:
+    - boost
+    - fmt
+    - libfuse@2
+    - spdlog
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/cryfs/blobs/sha256:4d391a757720609a5f34600e573d517e8f061afddb31ff743d4f18737e2cf399
+        sha256: 4d391a757720609a5f34600e573d517e8f061afddb31ff743d4f18737e2cf399
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/cryfs/blobs/sha256:aad3465262b4d592cf14d87253fca6f7543c8f1f1b6a5ab177d36befda519fd2
+        sha256: aad3465262b4d592cf14d87253fca6f7543c8f1f1b6a5ab177d36befda519fd2
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.gz
+    sha256: 5550f612f7b692e60c0c10a0331dcefbcc9616ad1411a016de7e4503ad866696
+head:
+    url: https://github.com/cryfs/cryfs.git
+    branch: main
+build_dependencies:
+    - cmake
+    - curl
+    - pkgconf
+    - python@3.14
+    - range-v3

@@ -1,0 +1,52 @@
+name: apfel
+version: 1.3.3
+description: Apple Intelligence from the command-line, with OpenAi-compatible API server
+homepage: https://apfel.franzai.com
+license: MIT
+url:
+    darwin_amd64: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_amd64_10: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_amd64_11: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_amd64_12: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_amd64_13: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_amd64_14: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_amd64_15: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_arm64: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_arm64_11: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_arm64_12: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_arm64_13: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_arm64_14: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    darwin_arm64_15: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    linux_amd64: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    linux_arm64: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+sha256:
+    darwin_amd64: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_amd64_10: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_amd64_11: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_amd64_12: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_amd64_13: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_amd64_14: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_amd64_15: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_arm64: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_arm64_11: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_arm64_12: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_arm64_13: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_arm64_14: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    darwin_arm64_15: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    linux_amd64: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+    linux_arm64: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+source:
+    url: https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.3.3.tar.gz
+    sha256: c2c7975531066f31238f07d1339bf194b97701d3e8b5afe1fcdccb227b3a7daf
+head:
+    url: https://github.com/Arthur-Ficial/apfel.git
+    branch: main
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/apfel/bin/apfel
+        - --serve
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/apfel.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/apfel.log
+    keep_alive: true

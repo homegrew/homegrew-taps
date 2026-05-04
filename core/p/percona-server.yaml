@@ -1,0 +1,102 @@
+name: percona-server
+version: 8.4.8-8
+description: Drop-in MySQL replacement
+homepage: https://www.percona.com
+license: BSD-3-Clause
+caveats: |
+    We've installed your MySQL database without a root password. To secure it run:
+        mysql_secure_installation
+
+    MySQL is configured to only allow connections from localhost by default
+
+    To connect run:
+        mysql -u root
+url:
+    darwin_amd64: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_amd64_10: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_amd64_11: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_amd64_12: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_amd64_13: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_amd64_14: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_amd64_15: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_arm64: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_arm64_11: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_arm64_12: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_arm64_13: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_arm64_14: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    darwin_arm64_15: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    linux_amd64: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    linux_arm64: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+sha256:
+    darwin_amd64: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_amd64_10: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_amd64_11: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_amd64_12: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_amd64_13: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_amd64_14: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_amd64_15: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_arm64: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_arm64_11: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_arm64_12: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_arm64_13: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_arm64_14: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    darwin_arm64_15: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    linux_amd64: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+    linux_arm64: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+dependencies:
+    - abseil
+    - icu4c@78
+    - libfido2
+    - lz4
+    - openldap
+    - openssl@3
+    - protobuf
+    - zlib-ng-compat
+    - zstd
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        sha256: 488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        sha256: 488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        sha256: 488aa9a09b6340717eec87841c62878f22e6cb6b32320ae1f7c69de5af4c9a09
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:6036ca4c419f3bf4fbb24a29caed42d9422ef07c9b3c63fd50ff3595010e1d4c
+        sha256: 6036ca4c419f3bf4fbb24a29caed42d9422ef07c9b3c63fd50ff3595010e1d4c
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:e2d84ef1ccf07242fd9f1f2157d6208076353658bd1b8536c582137c5850fdd3
+        sha256: e2d84ef1ccf07242fd9f1f2157d6208076353658bd1b8536c582137c5850fdd3
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:6036ca4c419f3bf4fbb24a29caed42d9422ef07c9b3c63fd50ff3595010e1d4c
+        sha256: 6036ca4c419f3bf4fbb24a29caed42d9422ef07c9b3c63fd50ff3595010e1d4c
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:1c83b09f506e8855ba84ca1a4afb388f8c14009214a074c91c649ed10df8a63d
+        sha256: 1c83b09f506e8855ba84ca1a4afb388f8c14009214a074c91c649ed10df8a63d
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/percona-server/blobs/sha256:15922ecb65d0660c317568174d8721c4c597b7876d5912a7da54e1ec441c0545
+        sha256: 15922ecb65d0660c317568174d8721c4c597b7876d5912a7da54e1ec441c0545
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.8-8/source/tarball/percona-server-8.4.8-8.tar.gz
+    sha256: 8ec19aa2fcb714d06ba6b0b6ed1edc3687c06664e3a922b6d54eb09fa4c48810
+build_dependencies:
+    - bison
+    - cmake
+    - pkgconf
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/percona-server/bin/mysqld_safe
+        - --datadir=$HOMEBREW_PREFIX/var/mysql
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/mysql
+    keep_alive: true

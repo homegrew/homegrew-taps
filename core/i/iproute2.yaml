@@ -1,0 +1,62 @@
+name: iproute2
+version: 7.0.0
+description: Linux routing utilities
+homepage: https://wiki.linuxfoundation.org/networking/iproute2
+license: GPL-2.0-only
+url:
+    darwin_amd64: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_amd64_10: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_amd64_11: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_amd64_12: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_amd64_13: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_amd64_14: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_amd64_15: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_arm64: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_arm64_11: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_arm64_12: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_arm64_13: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_arm64_14: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    darwin_arm64_15: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    linux_amd64: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    linux_arm64: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+sha256:
+    darwin_amd64: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_amd64_10: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_amd64_11: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_amd64_12: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_amd64_13: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_amd64_14: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_amd64_15: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_arm64: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_arm64_11: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_arm64_12: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_arm64_13: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_arm64_14: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    darwin_arm64_15: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    linux_amd64: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+    linux_arm64: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+dependencies:
+    - elfutils
+    - libbpf
+    - libcap
+    - libmnl
+    - libtirpc
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/iproute2/blobs/sha256:900f2291b17bc971da2faf92e0a295d1f1c298ef27492cb07e84b22c22698148
+        sha256: 900f2291b17bc971da2faf92e0a295d1f1c298ef27492cb07e84b22c22698148
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/iproute2/blobs/sha256:b678c2c6d8f6c42cf9b08a3a58e01f18f87554afef3c852784250098f9aad841
+        sha256: b678c2c6d8f6c42cf9b08a3a58e01f18f87554afef3c852784250098f9aad841
+        cellar: :any_skip_relocation
+source:
+    url: https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-v7.0.0.tar.xz
+    sha256: 3d40cffb6219c35de4771f63d3a280ef7e9bb11038eb7c45a47e5538b6fe102f
+head:
+    url: https://git.kernel.org/pub/scm/network/iproute2/iproute2.git
+    branch: main
+build_dependencies:
+    - bison
+    - flex
+    - pkgconf

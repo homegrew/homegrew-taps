@@ -1,0 +1,91 @@
+name: httpd
+version: 2.4.66
+description: Apache HTTP server
+homepage: https://httpd.apache.org/
+license: Apache-2.0
+caveats: |
+    DocumentRoot is $HOMEBREW_PREFIX/var/www.
+
+    The default ports have been set in $HOMEBREW_PREFIX/etc/httpd/httpd.conf to 8080 and in
+    $HOMEBREW_PREFIX/etc/httpd/extra/httpd-ssl.conf to 8443 so that httpd can run without sudo.
+url:
+    darwin_amd64: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_amd64_10: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_amd64_11: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_amd64_12: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_amd64_13: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_amd64_14: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_amd64_15: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_arm64: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_arm64_11: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_arm64_12: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_arm64_13: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_arm64_14: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    darwin_arm64_15: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    linux_amd64: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    linux_arm64: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+sha256:
+    darwin_amd64: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_amd64_10: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_amd64_11: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_amd64_12: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_amd64_13: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_amd64_14: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_amd64_15: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_arm64: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_arm64_11: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_arm64_12: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_arm64_13: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_arm64_14: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    darwin_arm64_15: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    linux_amd64: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+    linux_arm64: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+dependencies:
+    - apr
+    - apr-util
+    - brotli
+    - libnghttp2
+    - openssl@3
+    - pcre2
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+        sha256: 42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+        sha256: 42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+        sha256: 42096dc5eccd673b58e9ccffc422b30bc1d7b1f467cbf0feefa553b4b1e3c233
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:e2caacc4e115672f495eb3899cd63d550d55a9dc1c3510881a2a85e16724a9a3
+        sha256: e2caacc4e115672f495eb3899cd63d550d55a9dc1c3510881a2a85e16724a9a3
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:e2e922180c73164d1a0498d13cf358e0c18143340b5b9fb23e041f33b8533487
+        sha256: e2e922180c73164d1a0498d13cf358e0c18143340b5b9fb23e041f33b8533487
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:e2caacc4e115672f495eb3899cd63d550d55a9dc1c3510881a2a85e16724a9a3
+        sha256: e2caacc4e115672f495eb3899cd63d550d55a9dc1c3510881a2a85e16724a9a3
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:21deedd9de715b969402e66662ba9a618183d491b04a55dc75839db4dca38ee0
+        sha256: 21deedd9de715b969402e66662ba9a618183d491b04a55dc75839db4dca38ee0
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/httpd/blobs/sha256:41c524055486b594469f54971c00486545eb7139a34000d6f521c5eeacf1c450
+        sha256: 41c524055486b594469f54971c00486545eb7139a34000d6f521c5eeacf1c450
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.66.tar.bz2
+    sha256: 94d7ff2b42acbb828e870ba29e4cbad48e558a79c623ad3596e4116efcfea25a
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/httpd/bin/httpd
+        - -D
+        - FOREGROUND
+    run_type: immediate

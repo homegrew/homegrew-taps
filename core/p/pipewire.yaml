@@ -1,0 +1,68 @@
+name: pipewire
+version: 1.6.4
+description: Server and user space API to deal with multimedia pipelines
+homepage: https://pipewire.org
+license: MIT AND GPL-2.0-only AND LGPL-2.1-or-later
+url:
+    darwin_amd64: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_amd64_10: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_amd64_11: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_amd64_12: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_amd64_13: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_amd64_14: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_amd64_15: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_arm64: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_arm64_11: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_arm64_12: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_arm64_13: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_arm64_14: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    darwin_arm64_15: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    linux_amd64: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    linux_arm64: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+sha256:
+    darwin_amd64: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_amd64_10: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_amd64_11: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_amd64_12: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_amd64_13: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_amd64_14: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_amd64_15: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_arm64: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_arm64_11: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_arm64_12: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_arm64_13: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_arm64_14: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    darwin_arm64_15: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    linux_amd64: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+    linux_arm64: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+dependencies:
+    - alsa-lib
+    - dbus
+    - fftw
+    - glib
+    - libsndfile
+    - ncurses
+    - openssl@3
+    - opus
+    - pulseaudio
+    - readline
+    - systemd
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pipewire/blobs/sha256:74e14a094619eb99c1876113c099e68105a0bf68e87501115e6124d7bb93cc77
+        sha256: 74e14a094619eb99c1876113c099e68105a0bf68e87501115e6124d7bb93cc77
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pipewire/blobs/sha256:c8333bf08a47df846d0932074582cf4d6eed7b573b2d98964195916ed16e7d64
+        sha256: c8333bf08a47df846d0932074582cf4d6eed7b573b2d98964195916ed16e7d64
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.4/pipewire-1.6.4.tar.gz
+    sha256: e31ae906dc7fee1c56ccc4279247b385685b926b3f900cebd910d4bd4403d86b
+head:
+    url: https://gitlab.freedesktop.org/pipewire/pipewire.git
+    branch: master
+build_dependencies:
+    - meson
+    - ninja
+    - pkgconf

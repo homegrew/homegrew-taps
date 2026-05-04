@@ -1,0 +1,59 @@
+name: squashfuse
+version: 0.6.1
+description: FUSE filesystem to mount squashfs archives
+homepage: https://github.com/vasi/squashfuse
+license: BSD-2-Clause
+url:
+    darwin_amd64: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_amd64_10: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_amd64_11: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_amd64_12: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_amd64_13: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_amd64_14: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_amd64_15: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_arm64: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_arm64_11: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_arm64_12: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_arm64_13: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_arm64_14: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    darwin_arm64_15: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    linux_amd64: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    linux_arm64: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+sha256:
+    darwin_amd64: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_amd64_10: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_amd64_11: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_amd64_12: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_amd64_13: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_amd64_14: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_amd64_15: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_arm64: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_arm64_11: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_arm64_12: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_arm64_13: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_arm64_14: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    darwin_arm64_15: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    linux_amd64: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+    linux_arm64: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+dependencies:
+    - libfuse
+    - lz4
+    - lzo
+    - squashfs
+    - xz
+    - zlib-ng-compat
+    - zstd
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/squashfuse/blobs/sha256:a02ea0c2e2ad0d15354c74b6dc3b55dd2f7f839ffd7592730e2049b6e60d0341
+        sha256: a02ea0c2e2ad0d15354c74b6dc3b55dd2f7f839ffd7592730e2049b6e60d0341
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/squashfuse/blobs/sha256:dca859436a32269db6a94a7fd36284a86ad466bff008d7b56a555e72c15d49f6
+        sha256: dca859436a32269db6a94a7fd36284a86ad466bff008d7b56a555e72c15d49f6
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/vasi/squashfuse/releases/download/0.6.1/squashfuse-0.6.1.tar.gz
+    sha256: 7b18a58c40a3161b5c329ae925b72336b5316941f906b446b8ed6c5a90989f8c
+build_dependencies:
+    - pkgconf

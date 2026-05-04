@@ -1,0 +1,56 @@
+name: device-mapper
+version: 2.03.40
+description: Userspace library and tools for logical volume management
+homepage: https://sourceware.org/dm
+license: LGPL-2.1-only
+url:
+    darwin_amd64: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_amd64_10: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_amd64_11: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_amd64_12: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_amd64_13: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_amd64_14: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_amd64_15: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_arm64: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_arm64_11: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_arm64_12: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_arm64_13: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_arm64_14: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    darwin_arm64_15: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    linux_amd64: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    linux_arm64: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+sha256:
+    darwin_amd64: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_amd64_10: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_amd64_11: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_amd64_12: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_amd64_13: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_amd64_14: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_amd64_15: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_arm64: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_arm64_11: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_arm64_12: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_arm64_13: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_arm64_14: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    darwin_arm64_15: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    linux_amd64: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+    linux_arm64: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+dependencies:
+    - libaio
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/device-mapper/blobs/sha256:ddf225339a1db95724695d0430e63272834d0654fb2b8758da8e1f0112023914
+        sha256: ddf225339a1db95724695d0430e63272834d0654fb2b8758da8e1f0112023914
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/device-mapper/blobs/sha256:5f461789674df67dd8e03e52e4d72a411dfb9219d6b52eadd9226438215c69a9
+        sha256: 5f461789674df67dd8e03e52e4d72a411dfb9219d6b52eadd9226438215c69a9
+        cellar: :any_skip_relocation
+source:
+    url: https://sourceware.org/pub/lvm2/releases/LVM2.2.03.40.tgz
+    sha256: 60c9bb5c0a109f20267bb40ba50c00c84a110fc14c129f21afb5566929bf5645
+head:
+    url: https://gitlab.com/lvmteam/lvm2.git
+    branch: main
+build_dependencies:
+    - pkgconf

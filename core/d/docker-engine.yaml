@@ -1,0 +1,74 @@
+name: docker-engine
+version: 29.4.2
+description: Pack, ship and run any application as a lightweight container (Daemon)
+homepage: https://www.docker.com/
+license: Apache-2.0
+caveats: |
+    To run dockerd as the current user, execute the following commands:
+      brew install rootlesskit slirp4netns
+      dockerd-rootless-setuptool.sh install
+
+    NOTE: As the lifecycle of containerd is managed by dockerd,
+          do NOT run `containerd-rootless-setuptool.sh install`
+          before `dockerd-rootless-setuptool.sh install`.
+
+    To run dockerd as the root user, use `brew services` with `sudo --preserve-env=HOME`.
+url:
+    darwin_amd64: https://github.com/moby/moby.git
+    darwin_amd64_10: https://github.com/moby/moby.git
+    darwin_amd64_11: https://github.com/moby/moby.git
+    darwin_amd64_12: https://github.com/moby/moby.git
+    darwin_amd64_13: https://github.com/moby/moby.git
+    darwin_amd64_14: https://github.com/moby/moby.git
+    darwin_amd64_15: https://github.com/moby/moby.git
+    darwin_arm64: https://github.com/moby/moby.git
+    darwin_arm64_11: https://github.com/moby/moby.git
+    darwin_arm64_12: https://github.com/moby/moby.git
+    darwin_arm64_13: https://github.com/moby/moby.git
+    darwin_arm64_14: https://github.com/moby/moby.git
+    darwin_arm64_15: https://github.com/moby/moby.git
+    linux_amd64: https://github.com/moby/moby.git
+    linux_arm64: https://github.com/moby/moby.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+dependencies:
+    - containerd
+    - nftables
+    - runc
+    - tini
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/docker-engine/blobs/sha256:8654af182229c543cb042291900e22c339fcd17c92491d780ec1c435da85c67b
+        sha256: 8654af182229c543cb042291900e22c339fcd17c92491d780ec1c435da85c67b
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/docker-engine/blobs/sha256:ab38f70952e03210e1c948c2d1e51ac20c2fcd27271a593129ee4b3f35d51343
+        sha256: ab38f70952e03210e1c948c2d1e51ac20c2fcd27271a593129ee4b3f35d51343
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/moby/moby.git
+head:
+    url: https://github.com/moby/moby.git
+    branch: master
+build_dependencies:
+    - go
+    - go-md2man
+    - pkgconf
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/docker-engine/bin/dockerd
+    run_type: immediate

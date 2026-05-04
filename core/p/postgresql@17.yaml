@@ -1,0 +1,103 @@
+name: postgresql@17
+version: "17.9"
+description: Object-relational database system
+homepage: https://www.postgresql.org/
+license: PostgreSQL
+caveats: |
+    This formula has created a default database cluster with:
+      initdb --locale=en_US.UTF-8 -E UTF-8 $HOMEBREW_PREFIX/var/postgresql@17
+
+    When uninstalling, some dead symlinks are left behind so you may want to run:
+      brew cleanup --prune-prefix
+url:
+    darwin_amd64: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_amd64_10: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_amd64_11: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_amd64_12: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_amd64_13: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_amd64_14: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_amd64_15: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_arm64: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_arm64_11: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_arm64_12: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_arm64_13: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_arm64_14: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    darwin_arm64_15: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    linux_amd64: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    linux_arm64: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+sha256:
+    darwin_amd64: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_amd64_10: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_amd64_11: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_amd64_12: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_amd64_13: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_amd64_14: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_amd64_15: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_arm64: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_arm64_11: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_arm64_12: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_arm64_13: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_arm64_14: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    darwin_arm64_15: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    linux_amd64: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+    linux_arm64: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+dependencies:
+    - icu4c@78
+    - krb5
+    - lz4
+    - openssl@3
+    - readline
+    - zstd
+    - gettext
+keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:5563f966ddf437277579c14ba3fde9fa14ba9756fa33d812d9495b9ab1c78495
+        sha256: 5563f966ddf437277579c14ba3fde9fa14ba9756fa33d812d9495b9ab1c78495
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:5563f966ddf437277579c14ba3fde9fa14ba9756fa33d812d9495b9ab1c78495
+        sha256: 5563f966ddf437277579c14ba3fde9fa14ba9756fa33d812d9495b9ab1c78495
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:5563f966ddf437277579c14ba3fde9fa14ba9756fa33d812d9495b9ab1c78495
+        sha256: 5563f966ddf437277579c14ba3fde9fa14ba9756fa33d812d9495b9ab1c78495
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:1c20a2f285bd9abc543ec31fb2064385ff9e02cc5070969e87d2f6e4cbec511f
+        sha256: 1c20a2f285bd9abc543ec31fb2064385ff9e02cc5070969e87d2f6e4cbec511f
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:bf774ddae9821d6a3e613820ba59acb61f3c1db3c9220be60a1a8f5fb0d52052
+        sha256: bf774ddae9821d6a3e613820ba59acb61f3c1db3c9220be60a1a8f5fb0d52052
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:1c20a2f285bd9abc543ec31fb2064385ff9e02cc5070969e87d2f6e4cbec511f
+        sha256: 1c20a2f285bd9abc543ec31fb2064385ff9e02cc5070969e87d2f6e4cbec511f
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:ccc07468506c68ab9cbee6265b91822c8e3883f4a55cf1abf98ad592b11c10f9
+        sha256: ccc07468506c68ab9cbee6265b91822c8e3883f4a55cf1abf98ad592b11c10f9
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/postgresql/17/blobs/sha256:66f5720b83b9adb0b5b2c97eb8f65d353e50516fca7becf1164dbdef7bfb416f
+        sha256: 66f5720b83b9adb0b5b2c97eb8f65d353e50516fca7becf1164dbdef7bfb416f
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2
+    sha256: 3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4
+build_dependencies:
+    - docbook
+    - docbook-xsl
+    - gettext
+    - pkgconf
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/postgresql@17/bin/postgres
+        - -D
+        - $HOMEBREW_PREFIX/var/postgresql@17
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/postgresql@17.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/postgresql@17.log
+    keep_alive: true

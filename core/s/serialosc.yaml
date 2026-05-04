@@ -1,0 +1,86 @@
+name: serialosc
+version: 1.4.7
+description: Opensound control server for monome devices
+homepage: https://github.com/monome/docs/blob/gh-pages/serialosc/osc.md
+license: ISC
+url:
+    darwin_amd64: https://github.com/monome/serialosc.git
+    darwin_amd64_10: https://github.com/monome/serialosc.git
+    darwin_amd64_11: https://github.com/monome/serialosc.git
+    darwin_amd64_12: https://github.com/monome/serialosc.git
+    darwin_amd64_13: https://github.com/monome/serialosc.git
+    darwin_amd64_14: https://github.com/monome/serialosc.git
+    darwin_amd64_15: https://github.com/monome/serialosc.git
+    darwin_arm64: https://github.com/monome/serialosc.git
+    darwin_arm64_11: https://github.com/monome/serialosc.git
+    darwin_arm64_12: https://github.com/monome/serialosc.git
+    darwin_arm64_13: https://github.com/monome/serialosc.git
+    darwin_arm64_14: https://github.com/monome/serialosc.git
+    darwin_arm64_15: https://github.com/monome/serialosc.git
+    linux_amd64: https://github.com/monome/serialosc.git
+    linux_arm64: https://github.com/monome/serialosc.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+dependencies:
+    - liblo
+    - libmonome
+    - libuv
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:6adb9865250752540188fad3bbd293935f7f82d431530bcdfeec4b372f27ed7a
+        sha256: 6adb9865250752540188fad3bbd293935f7f82d431530bcdfeec4b372f27ed7a
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:6adb9865250752540188fad3bbd293935f7f82d431530bcdfeec4b372f27ed7a
+        sha256: 6adb9865250752540188fad3bbd293935f7f82d431530bcdfeec4b372f27ed7a
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:6adb9865250752540188fad3bbd293935f7f82d431530bcdfeec4b372f27ed7a
+        sha256: 6adb9865250752540188fad3bbd293935f7f82d431530bcdfeec4b372f27ed7a
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:df8f10238c9b1db61937d5e6c08c05b4c1e90e452397f375ad789b8ee40b93eb
+        sha256: df8f10238c9b1db61937d5e6c08c05b4c1e90e452397f375ad789b8ee40b93eb
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:3b130c9e39d1cdcdc8fe79d7672bc19250eea7a77f9a88469c1568f5ef2dba90
+        sha256: 3b130c9e39d1cdcdc8fe79d7672bc19250eea7a77f9a88469c1568f5ef2dba90
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:df8f10238c9b1db61937d5e6c08c05b4c1e90e452397f375ad789b8ee40b93eb
+        sha256: df8f10238c9b1db61937d5e6c08c05b4c1e90e452397f375ad789b8ee40b93eb
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:be67991d5ec342af372b09090ecdc048e178960b31795f438eac84f3090b3c54
+        sha256: be67991d5ec342af372b09090ecdc048e178960b31795f438eac84f3090b3c54
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/serialosc/blobs/sha256:a9bfe2f52193d07890dc1b74904c9b32dd9fb616d9e56deb031768dafedea448
+        sha256: a9bfe2f52193d07890dc1b74904c9b32dd9fb616d9e56deb031768dafedea448
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/monome/serialosc.git
+head:
+    url: https://github.com/monome/serialosc.git
+    branch: main
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/serialosc/bin/serialoscd
+    run_type: immediate
+    log_path: $HOMEBREW_PREFIX/var/log/serialoscd.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/serialoscd.log
+    keep_alive: true

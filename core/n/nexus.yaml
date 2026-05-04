@@ -1,0 +1,83 @@
+name: nexus
+version: 3.91.1-04
+description: Repository manager for binary software components
+homepage: https://www.sonatype.com/
+license: EPL-1.0
+url:
+    darwin_amd64: https://github.com/sonatype/nexus-public.git
+    darwin_amd64_10: https://github.com/sonatype/nexus-public.git
+    darwin_amd64_11: https://github.com/sonatype/nexus-public.git
+    darwin_amd64_12: https://github.com/sonatype/nexus-public.git
+    darwin_amd64_13: https://github.com/sonatype/nexus-public.git
+    darwin_amd64_14: https://github.com/sonatype/nexus-public.git
+    darwin_amd64_15: https://github.com/sonatype/nexus-public.git
+    darwin_arm64: https://github.com/sonatype/nexus-public.git
+    darwin_arm64_11: https://github.com/sonatype/nexus-public.git
+    darwin_arm64_12: https://github.com/sonatype/nexus-public.git
+    darwin_arm64_13: https://github.com/sonatype/nexus-public.git
+    darwin_arm64_14: https://github.com/sonatype/nexus-public.git
+    darwin_arm64_15: https://github.com/sonatype/nexus-public.git
+    linux_amd64: https://github.com/sonatype/nexus-public.git
+    linux_arm64: https://github.com/sonatype/nexus-public.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+dependencies:
+    - openjdk
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        sha256: 73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        sha256: 73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        sha256: 73351751fc24cd8e3e7a6962f2d84cd44b5cf6c0622c56ee84db2ecc57e06320
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
+        sha256: 88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:47fa0ad2320508c073666cb2d56b1a30de1b6aad5f976849eac58e9e704591cc
+        sha256: 47fa0ad2320508c073666cb2d56b1a30de1b6aad5f976849eac58e9e704591cc
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
+        sha256: 88ca50aa08b329324db93097a9dbba7ba54acfc19a13af9e9600da8bbfd82fd6
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:0fb541d72bd9b57294886f3c225de4f5da009e06a91d28f5f711f1804baa3c54
+        sha256: 0fb541d72bd9b57294886f3c225de4f5da009e06a91d28f5f711f1804baa3c54
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:c1882ec83de35a5609ea03cedcbb1e9fa1db96f3e56e25b866a80d4ccc9b9c22
+        sha256: c1882ec83de35a5609ea03cedcbb1e9fa1db96f3e56e25b866a80d4ccc9b9c22
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/sonatype/nexus-public.git
+build_dependencies:
+    - maven
+    - node
+    - yarn
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/nexus/bin/nexus
+        - start
+    run_type: immediate

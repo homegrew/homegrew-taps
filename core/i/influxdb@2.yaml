@@ -1,0 +1,90 @@
+name: influxdb@2
+version: 2.9.0
+description: Time series, events, and metrics database
+homepage: https://influxdata.com/time-series-platform/influxdb/
+license: MIT
+caveats: |
+    This formula does not contain command-line interface; to install it, run:
+      brew install influxdb-cli
+url:
+    darwin_amd64: https://github.com/influxdata/influxdb.git
+    darwin_amd64_10: https://github.com/influxdata/influxdb.git
+    darwin_amd64_11: https://github.com/influxdata/influxdb.git
+    darwin_amd64_12: https://github.com/influxdata/influxdb.git
+    darwin_amd64_13: https://github.com/influxdata/influxdb.git
+    darwin_amd64_14: https://github.com/influxdata/influxdb.git
+    darwin_amd64_15: https://github.com/influxdata/influxdb.git
+    darwin_arm64: https://github.com/influxdata/influxdb.git
+    darwin_arm64_11: https://github.com/influxdata/influxdb.git
+    darwin_arm64_12: https://github.com/influxdata/influxdb.git
+    darwin_arm64_13: https://github.com/influxdata/influxdb.git
+    darwin_arm64_14: https://github.com/influxdata/influxdb.git
+    darwin_arm64_15: https://github.com/influxdata/influxdb.git
+    linux_amd64: https://github.com/influxdata/influxdb.git
+    linux_arm64: https://github.com/influxdata/influxdb.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:d7dfb137d5974bd49017b8dab5b95f90b099adc02667753cee5eb1e4a2d22389
+        sha256: d7dfb137d5974bd49017b8dab5b95f90b099adc02667753cee5eb1e4a2d22389
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:d7dfb137d5974bd49017b8dab5b95f90b099adc02667753cee5eb1e4a2d22389
+        sha256: d7dfb137d5974bd49017b8dab5b95f90b099adc02667753cee5eb1e4a2d22389
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:d7dfb137d5974bd49017b8dab5b95f90b099adc02667753cee5eb1e4a2d22389
+        sha256: d7dfb137d5974bd49017b8dab5b95f90b099adc02667753cee5eb1e4a2d22389
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:073d4461d2de0c84a5f8d32b201fb38b7d035c60ffa7cc70bb5ac9349aa12b48
+        sha256: 073d4461d2de0c84a5f8d32b201fb38b7d035c60ffa7cc70bb5ac9349aa12b48
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:8668798cd2f15b9806557d0e3e83996d6d621fb9ded9d65bf85981c8b332a725
+        sha256: 8668798cd2f15b9806557d0e3e83996d6d621fb9ded9d65bf85981c8b332a725
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:073d4461d2de0c84a5f8d32b201fb38b7d035c60ffa7cc70bb5ac9349aa12b48
+        sha256: 073d4461d2de0c84a5f8d32b201fb38b7d035c60ffa7cc70bb5ac9349aa12b48
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:6713ba67fc66d156c04b410c20e3956249fed32819e88c0c80f9deb9c739e144
+        sha256: 6713ba67fc66d156c04b410c20e3956249fed32819e88c0c80f9deb9c739e144
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/influxdb/2/blobs/sha256:30537818779dd86d7bc058578b53f492b271c616cb268bf98bfa3409782d9335
+        sha256: 30537818779dd86d7bc058578b53f492b271c616cb268bf98bfa3409782d9335
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/influxdata/influxdb.git
+build_dependencies:
+    - breezy
+    - go
+    - pkgconf
+    - protobuf
+    - rust
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/influxdb@2/bin/influxd
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX
+    log_path: $HOMEBREW_PREFIX/var/log/influxdb2/influxd_output.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/influxdb2/influxd_output.log
+    keep_alive: true

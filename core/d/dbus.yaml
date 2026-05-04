@@ -1,0 +1,104 @@
+name: dbus
+version: 1.16.2
+description: Message bus system, providing inter-application communication
+homepage: https://wiki.freedesktop.org/www/Software/dbus
+license: AFL-2.1 OR GPL-2.0-or-later
+caveats: |
+    To start the session bus now and at login:
+
+      brew services start dbus
+
+    To start the system bus now and on boot, install and activate the included daemon:
+
+      sudo cp -f $(brew --prefix dbus)/org.freedesktop.dbus-system.plist /Library/LaunchDaemons
+      sudo launchctl bootstrap system /Library/LaunchDaemons/org.freedesktop.dbus-system.plist
+
+    If the daemon is already installed and running, restart it:
+
+      sudo launchctl kickstart -k system/org.freedesktop.dbus-system
+url:
+    darwin_amd64: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_amd64_10: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_amd64_11: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_amd64_12: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_amd64_13: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_amd64_14: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_amd64_15: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_arm64: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_arm64_11: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_arm64_12: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_arm64_13: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_arm64_14: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    darwin_arm64_15: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    linux_amd64: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    linux_arm64: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+sha256:
+    darwin_amd64: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_amd64_10: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_amd64_11: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_amd64_12: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_amd64_13: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_amd64_14: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_amd64_15: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_arm64: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_arm64_11: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_arm64_12: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_arm64_13: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_arm64_14: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    darwin_arm64_15: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    linux_amd64: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+    linux_arm64: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
+        sha256: 438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
+        cellar: /usr/local/Cellar
+    darwin_amd64_13:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:2f10ec74399e7ffb843022aa22bf11b088ab6b00d34da46d623fca78900f166b
+        sha256: 2f10ec74399e7ffb843022aa22bf11b088ab6b00d34da46d623fca78900f166b
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
+        sha256: 438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
+        sha256: 438a1da22c323246b958e0fbc63c5e7405dba77e9274809ebd73ab8c886a19d7
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:5a51451acabb5ae56b5682e88a82dfa43cc6a2b653ca068198546bb72324bd0c
+        sha256: 5a51451acabb5ae56b5682e88a82dfa43cc6a2b653ca068198546bb72324bd0c
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_13:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:29098b5b3f154677a61c30b402b17fe2912e9efe1cd7917ee6ae754209fe1f29
+        sha256: 29098b5b3f154677a61c30b402b17fe2912e9efe1cd7917ee6ae754209fe1f29
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:1be729814991108cc593bb8472e376947898f8bf94b73271c2238c329514a3ba
+        sha256: 1be729814991108cc593bb8472e376947898f8bf94b73271c2238c329514a3ba
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:5a51451acabb5ae56b5682e88a82dfa43cc6a2b653ca068198546bb72324bd0c
+        sha256: 5a51451acabb5ae56b5682e88a82dfa43cc6a2b653ca068198546bb72324bd0c
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:42841a5373f596cbccd52b4cf3eae4f3ec6a853309b14e36e869a7030fabd21a
+        sha256: 42841a5373f596cbccd52b4cf3eae4f3ec6a853309b14e36e869a7030fabd21a
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:f636ed77fc07ab232ec75012b8b5a69cee10f8f239d48b1d5622baa83d9d9d7e
+        sha256: f636ed77fc07ab232ec75012b8b5a69cee10f8f239d48b1d5622baa83d9d9d7e
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz
+    sha256: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+head:
+    url: https://gitlab.freedesktop.org/dbus/dbus.git
+    branch: main
+build_dependencies:
+    - docbook
+    - docbook-xsl
+    - meson
+    - ninja
+    - pkgconf
+    - xmlto

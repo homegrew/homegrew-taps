@@ -1,0 +1,83 @@
+name: carrot2
+version: 4.8.6
+description: Search results clustering engine
+homepage: https://search.carrot2.org/
+license: Apache-2.0
+url:
+    darwin_amd64: https://github.com/carrot2/carrot2.git
+    darwin_amd64_10: https://github.com/carrot2/carrot2.git
+    darwin_amd64_11: https://github.com/carrot2/carrot2.git
+    darwin_amd64_12: https://github.com/carrot2/carrot2.git
+    darwin_amd64_13: https://github.com/carrot2/carrot2.git
+    darwin_amd64_14: https://github.com/carrot2/carrot2.git
+    darwin_amd64_15: https://github.com/carrot2/carrot2.git
+    darwin_arm64: https://github.com/carrot2/carrot2.git
+    darwin_arm64_11: https://github.com/carrot2/carrot2.git
+    darwin_arm64_12: https://github.com/carrot2/carrot2.git
+    darwin_arm64_13: https://github.com/carrot2/carrot2.git
+    darwin_arm64_14: https://github.com/carrot2/carrot2.git
+    darwin_arm64_15: https://github.com/carrot2/carrot2.git
+    linux_amd64: https://github.com/carrot2/carrot2.git
+    linux_arm64: https://github.com/carrot2/carrot2.git
+sha256:
+    darwin_amd64: ""
+    darwin_amd64_10: ""
+    darwin_amd64_11: ""
+    darwin_amd64_12: ""
+    darwin_amd64_13: ""
+    darwin_amd64_14: ""
+    darwin_amd64_15: ""
+    darwin_arm64: ""
+    darwin_arm64_11: ""
+    darwin_arm64_12: ""
+    darwin_arm64_13: ""
+    darwin_arm64_14: ""
+    darwin_arm64_15: ""
+    linux_amd64: ""
+    linux_arm64: ""
+dependencies:
+    - openjdk
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:1894c5d3399c5335ce5726ee51fcc12fbd4d21b3155af2475b8d81af946d11a6
+        sha256: 1894c5d3399c5335ce5726ee51fcc12fbd4d21b3155af2475b8d81af946d11a6
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:1894c5d3399c5335ce5726ee51fcc12fbd4d21b3155af2475b8d81af946d11a6
+        sha256: 1894c5d3399c5335ce5726ee51fcc12fbd4d21b3155af2475b8d81af946d11a6
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:1894c5d3399c5335ce5726ee51fcc12fbd4d21b3155af2475b8d81af946d11a6
+        sha256: 1894c5d3399c5335ce5726ee51fcc12fbd4d21b3155af2475b8d81af946d11a6
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:7fb93a44e7da0f3b19e3a4cff6c7263daccf2bb7ebb20ecc96cd8e6d186ea1d2
+        sha256: 7fb93a44e7da0f3b19e3a4cff6c7263daccf2bb7ebb20ecc96cd8e6d186ea1d2
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:b14477c06f381620f1e897ef65ce1bff59ad4c34f8cdd07810d8132560f32f02
+        sha256: b14477c06f381620f1e897ef65ce1bff59ad4c34f8cdd07810d8132560f32f02
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:7fb93a44e7da0f3b19e3a4cff6c7263daccf2bb7ebb20ecc96cd8e6d186ea1d2
+        sha256: 7fb93a44e7da0f3b19e3a4cff6c7263daccf2bb7ebb20ecc96cd8e6d186ea1d2
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:f38906fe8f4c2e76336954ef2fc9449e706c29469ea179b78217048e1f64d725
+        sha256: f38906fe8f4c2e76336954ef2fc9449e706c29469ea179b78217048e1f64d725
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/carrot2/blobs/sha256:9a2f9dc7f4462db3ef46a5940544d7f83d7d065f0b5e528ae5f5a5c89cde7dc1
+        sha256: 9a2f9dc7f4462db3ef46a5940544d7f83d7d065f0b5e528ae5f5a5c89cde7dc1
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/carrot2/carrot2.git
+build_dependencies:
+    - gradle
+    - node@22
+    - yarn
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/carrot2/bin/carrot2
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/opt/carrot2/libexec

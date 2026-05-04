@@ -1,0 +1,157 @@
+name: gstreamer
+version: 1.28.2
+description: Development framework for multimedia applications
+homepage: https://gstreamer.freedesktop.org/
+license: LGPL-2.0-or-later AND LGPL-2.1-or-later AND MIT
+caveats: |
+    All gst-* GStreamer plugins are now bundled in this formula.
+    For GStreamer to find your own plugins, add their paths to `GST_PLUGIN_PATH`.
+    For example, if you have plugins in `~/.local/lib/gstreamer-1.0`:
+      export GST_PLUGIN_PATH="~/.local/lib/gstreamer-1.0"
+
+    Do not install plugins into GStreamer's prefix. They will be deleted
+    by `brew upgrade`.
+url:
+    darwin_amd64: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_amd64_10: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_amd64_11: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_amd64_12: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_amd64_13: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_amd64_14: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_amd64_15: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_arm64: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_arm64_11: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_arm64_12: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_arm64_13: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_arm64_14: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    darwin_arm64_15: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    linux_amd64: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    linux_arm64: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+sha256:
+    darwin_amd64: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_amd64_10: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_amd64_11: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_amd64_12: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_amd64_13: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_amd64_14: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_amd64_15: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_arm64: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_arm64_11: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_arm64_12: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_arm64_13: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_arm64_14: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    darwin_arm64_15: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    linux_amd64: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+    linux_arm64: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+dependencies:
+    - aom
+    - cairo
+    - dav1d
+    - faac
+    - faad2
+    - fdk-aac
+    - ffmpeg
+    - flac
+    - gdk-pixbuf
+    - glib
+    - graphene
+    - gtk+3
+    - gtk4
+    - imath
+    - jpeg-turbo
+    - json-glib
+    - lame
+    - libass
+    - libnice
+    - libogg
+    - libpng
+    - librsvg
+    - libshout
+    - libsndfile
+    - libsodium
+    - libsoup
+    - libusrsctp
+    - libvmaf
+    - libvorbis
+    - libvpx
+    - libx11
+    - libxcb
+    - libxext
+    - libxfixes
+    - libxi
+    - libxtst
+    - little-cms2
+    - mpg123
+    - nettle
+    - opencore-amr
+    - openexr
+    - openjpeg
+    - openssl@3
+    - opus
+    - orc
+    - pango
+    - pygobject3
+    - python@3.14
+    - rtmpdump
+    - speex
+    - srt
+    - srtp
+    - svt-av1
+    - taglib
+    - theora
+    - webp
+    - x264
+    - x265
+    - gettext
+    - harfbuzz
+    - musepack
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
+        sha256: 221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
+        sha256: 221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
+        sha256: 221f74211397058ef3146527940a54ca53bfe3857e813291ac58012662e6982f
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:87027019ee76aee0eb91847d20b113dbc40699782417c25a9e50f8f33d80a2d7
+        sha256: 87027019ee76aee0eb91847d20b113dbc40699782417c25a9e50f8f33d80a2d7
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:e9eba457ff38bfb24ef516d0df9b2229a9af6c4a678640fcc110280fc516b2f1
+        sha256: e9eba457ff38bfb24ef516d0df9b2229a9af6c4a678640fcc110280fc516b2f1
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:87027019ee76aee0eb91847d20b113dbc40699782417c25a9e50f8f33d80a2d7
+        sha256: 87027019ee76aee0eb91847d20b113dbc40699782417c25a9e50f8f33d80a2d7
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:ab9129bb8a25422e1e58897009888766b2c655e24a75ce60dd91ea51bfded8e5
+        sha256: ab9129bb8a25422e1e58897009888766b2c655e24a75ce60dd91ea51bfded8e5
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/gstreamer/blobs/sha256:98f35d8fe7ba3fa17a658870824b4eecdc92fa26b3a44315f878069c7e103d7e
+        sha256: 98f35d8fe7ba3fa17a658870824b4eecdc92fa26b3a44315f878069c7e103d7e
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2
+    sha256: 3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3
+head:
+    url: https://gitlab.freedesktop.org/gstreamer/gstreamer.git
+    branch: main
+build_dependencies:
+    - bison
+    - cargo-c
+    - cmake
+    - gettext
+    - gobject-introspection
+    - meson
+    - nasm
+    - ninja
+    - pkgconf
+    - rust
