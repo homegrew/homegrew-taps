@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: ab786b7b3cffce69d080c3b58061e14792d9065ba8831f745838c850acfeab24
     linux_amd64: ab786b7b3cffce69d080c3b58061e14792d9065ba8831f745838c850acfeab24
     linux_arm64: ab786b7b3cffce69d080c3b58061e14792d9065ba8831f745838c850acfeab24
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/senpai/blobs/sha256:6fdd32340fc297f5d1eef67bfd938089a2c0d07ce57d49bde8d7447adff97c32
@@ -79,6 +83,9 @@ bottle:
 source:
     url: https://git.sr.ht/~delthas/senpai/archive/v0.4.1.tar.gz
     sha256: ab786b7b3cffce69d080c3b58061e14792d9065ba8831f745838c850acfeab24
+head:
+    url: https://git.sr.ht/~delthas/senpai
+    branch: master
 build_dependencies:
     - go
     - scdoc

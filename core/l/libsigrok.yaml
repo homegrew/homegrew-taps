@@ -2,7 +2,7 @@ name: libsigrok
 version: 0.5.2
 description: Drivers for logic analyzers and other supported devices
 homepage: https://sigrok.org/
-license: GPL-3.0-or-later AND LGPL-3.0-or-later AND GPL-2.0-or-later AND LGPL-2.1-or-later
+license: GPL-3.0-or-later AND GPL-2.0-or-later AND LGPL-2.1-or-later
 url:
     darwin_amd64: https://sigrok.org/download/source/libsigrok/libsigrok-0.5.2.tar.gz
     darwin_amd64_10: https://sigrok.org/download/source/libsigrok/libsigrok-0.5.2.tar.gz
@@ -35,14 +35,18 @@ sha256:
     darwin_arm64_15: 4d341f90b6220d3e8cb251dacf726c41165285612248f2c52d15df4590a1ce3c
     linux_amd64: 4d341f90b6220d3e8cb251dacf726c41165285612248f2c52d15df4590a1ce3c
     linux_arm64: 4d341f90b6220d3e8cb251dacf726c41165285612248f2c52d15df4590a1ce3c
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - glib
     - glibmm@2.66
     - hidapi
     - libftdi
+    - libserialport
     - libusb
     - libzip
-    - nettle
     - numpy
     - pygobject3
     - python@3.14
@@ -50,36 +54,36 @@ dependencies:
     - libsigc++@2
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:12e7c974907dedfa1a41dcda2a40eafe7d2d1d36be8939c511e325055177ff9d
-        sha256: 12e7c974907dedfa1a41dcda2a40eafe7d2d1d36be8939c511e325055177ff9d
+        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:9be55acc242d543e4f1d853e1d58df3f9c05840bdb3e959649c9e36a8d0194ea
+        sha256: 9be55acc242d543e4f1d853e1d58df3f9c05840bdb3e959649c9e36a8d0194ea
         cellar: /usr/local/Cellar
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:12e7c974907dedfa1a41dcda2a40eafe7d2d1d36be8939c511e325055177ff9d
-        sha256: 12e7c974907dedfa1a41dcda2a40eafe7d2d1d36be8939c511e325055177ff9d
+        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:9be55acc242d543e4f1d853e1d58df3f9c05840bdb3e959649c9e36a8d0194ea
+        sha256: 9be55acc242d543e4f1d853e1d58df3f9c05840bdb3e959649c9e36a8d0194ea
         cellar: /usr/local/Cellar
     darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:12e7c974907dedfa1a41dcda2a40eafe7d2d1d36be8939c511e325055177ff9d
-        sha256: 12e7c974907dedfa1a41dcda2a40eafe7d2d1d36be8939c511e325055177ff9d
+        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:9be55acc242d543e4f1d853e1d58df3f9c05840bdb3e959649c9e36a8d0194ea
+        sha256: 9be55acc242d543e4f1d853e1d58df3f9c05840bdb3e959649c9e36a8d0194ea
         cellar: /usr/local/Cellar
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:0e9aab53e0280c9ff3cada529ff9c7622a50dae6385c637a7132f3c1f2f2eb05
-        sha256: 0e9aab53e0280c9ff3cada529ff9c7622a50dae6385c637a7132f3c1f2f2eb05
+        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:ae00fe2035dcc37cd642d351aae8f1e5670196abe63a5b618fb2e11cea120623
+        sha256: ae00fe2035dcc37cd642d351aae8f1e5670196abe63a5b618fb2e11cea120623
         cellar: /opt/homebrew/Cellar
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:f4c1faa440cb7aa12ced874cc4f4a563ef0c6d623f8a28ab89c02f2085559666
-        sha256: f4c1faa440cb7aa12ced874cc4f4a563ef0c6d623f8a28ab89c02f2085559666
+        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:b736c6afd2d3db63696355aa02b613237dacf115b626f384e2a97e9688990ae9
+        sha256: b736c6afd2d3db63696355aa02b613237dacf115b626f384e2a97e9688990ae9
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:0e9aab53e0280c9ff3cada529ff9c7622a50dae6385c637a7132f3c1f2f2eb05
-        sha256: 0e9aab53e0280c9ff3cada529ff9c7622a50dae6385c637a7132f3c1f2f2eb05
+        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:ae00fe2035dcc37cd642d351aae8f1e5670196abe63a5b618fb2e11cea120623
+        sha256: ae00fe2035dcc37cd642d351aae8f1e5670196abe63a5b618fb2e11cea120623
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:7fabcd646d9c33cfb0fe618a29ef8c0f6427304d7f69a525c1685dbcdfa10060
-        sha256: 7fabcd646d9c33cfb0fe618a29ef8c0f6427304d7f69a525c1685dbcdfa10060
+        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:28e1eeccbe1471973305c0c57cdf01e454623fdee93b47ec0a7567ac10fca17b
+        sha256: 28e1eeccbe1471973305c0c57cdf01e454623fdee93b47ec0a7567ac10fca17b
         cellar: :any_skip_relocation
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:4dfc8b182043414637c2869745bc581bc755f11a7d5d511c66f657720637d212
-        sha256: 4dfc8b182043414637c2869745bc581bc755f11a7d5d511c66f657720637d212
+        url: https://ghcr.io/v2/homebrew/core/libsigrok/blobs/sha256:e8ee1b325f73075f927dff66d9d02c419273fb98f00084485fbabc6fa05edb1d
+        sha256: e8ee1b325f73075f927dff66d9d02c419273fb98f00084485fbabc6fa05edb1d
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://sigrok.org/download/source/libsigrok/libsigrok-0.5.2.tar.gz

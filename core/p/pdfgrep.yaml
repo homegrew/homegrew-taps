@@ -2,7 +2,7 @@ name: pdfgrep
 version: 2.2.0
 description: Search PDFs for strings matching a regular expression
 homepage: https://pdfgrep.org/
-license: GPL-2.0-only
+license: GPL-2.0-or-later
 url:
     darwin_amd64: https://pdfgrep.org/download/pdfgrep-2.2.0.tar.gz
     darwin_amd64_10: https://pdfgrep.org/download/pdfgrep-2.2.0.tar.gz
@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: 0661e531e4c0ef097959aa1c9773796585db39c72c84a02ff87d2c3637c620cb
     linux_amd64: 0661e531e4c0ef097959aa1c9773796585db39c72c84a02ff87d2c3637c620cb
     linux_arm64: 0661e531e4c0ef097959aa1c9773796585db39c72c84a02ff87d2c3637c620cb
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - libgcrypt
     - pcre2

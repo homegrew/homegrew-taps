@@ -2,7 +2,7 @@ name: sslscan
 version: 2.2.2
 description: Test SSL/TLS enabled services to discover supported cipher suites
 homepage: https://github.com/rbsec/sslscan
-license: GPL-3.0-or-later WITH openvpn-openssl-exception
+license: GPL-3.0-or-later WITH cryptsetup-OpenSSL-exception
 url:
     darwin_amd64: https://github.com/rbsec/sslscan/archive/refs/tags/2.2.2.tar.gz
     darwin_amd64_10: https://github.com/rbsec/sslscan/archive/refs/tags/2.2.2.tar.gz
@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: a1b4e4f1a52920089aaade85a7b900c8f2683937f49025c821b9c9f2b25db9a1
     linux_amd64: a1b4e4f1a52920089aaade85a7b900c8f2683937f49025c821b9c9f2b25db9a1
     linux_arm64: a1b4e4f1a52920089aaade85a7b900c8f2683937f49025c821b9c9f2b25db9a1
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - openssl@3
 bottle:

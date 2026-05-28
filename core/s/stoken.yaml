@@ -2,7 +2,7 @@ name: stoken
 version: "0.93"
 description: Tokencode generator compatible with RSA SecurID 128-bit (AES)
 homepage: https://github.com/stoken-dev/stoken
-license: LGPL-2.1-only
+license: LGPL-2.1-or-later
 url:
     darwin_amd64: https://github.com/stoken-dev/stoken/archive/refs/tags/v0.93.tar.gz
     darwin_amd64_10: https://github.com/stoken-dev/stoken/archive/refs/tags/v0.93.tar.gz
@@ -35,41 +35,44 @@ sha256:
     darwin_arm64_15: 102e2d112b275efcdc20ef438670e4f24f08870b9072a81fda316efcc38aef9c
     linux_amd64: 102e2d112b275efcdc20ef438670e4f24f08870b9072a81fda316efcc38aef9c
     linux_arm64: 102e2d112b275efcdc20ef438670e4f24f08870b9072a81fda316efcc38aef9c
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
-    - gmp
-    - nettle
+    - libtomcrypt
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
-        sha256: 1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:e42c126e6b6c3e2f721d1d0dad2066a07b60f5e9e9ddee3ef57576ad4c9499e3
+        sha256: e42c126e6b6c3e2f721d1d0dad2066a07b60f5e9e9ddee3ef57576ad4c9499e3
         cellar: :any
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
-        sha256: 1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:e42c126e6b6c3e2f721d1d0dad2066a07b60f5e9e9ddee3ef57576ad4c9499e3
+        sha256: e42c126e6b6c3e2f721d1d0dad2066a07b60f5e9e9ddee3ef57576ad4c9499e3
         cellar: :any
     darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
-        sha256: 1655d0e1253f345ab475d8038d627266a714d2a055a9d0f84d636ed9f867cefc
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:e42c126e6b6c3e2f721d1d0dad2066a07b60f5e9e9ddee3ef57576ad4c9499e3
+        sha256: e42c126e6b6c3e2f721d1d0dad2066a07b60f5e9e9ddee3ef57576ad4c9499e3
         cellar: :any
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:1506760360fda777047ae3f92e7fabd9b912d89a1684d55bd523850438b77bda
-        sha256: 1506760360fda777047ae3f92e7fabd9b912d89a1684d55bd523850438b77bda
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:6dd71ade20837819b4d7278cff667d12707a25506af24d3c0fd63f146f21be52
+        sha256: 6dd71ade20837819b4d7278cff667d12707a25506af24d3c0fd63f146f21be52
         cellar: :any
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:6b0705d78068002077390e931ffe342184ef0f63a0fe8dbbd9fbe3a1e7b6b145
-        sha256: 6b0705d78068002077390e931ffe342184ef0f63a0fe8dbbd9fbe3a1e7b6b145
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:964feda555eeeb9f2546af0830baa11d8a2340c56ecdb6c13d078b7b0c18ff5d
+        sha256: 964feda555eeeb9f2546af0830baa11d8a2340c56ecdb6c13d078b7b0c18ff5d
         cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:1506760360fda777047ae3f92e7fabd9b912d89a1684d55bd523850438b77bda
-        sha256: 1506760360fda777047ae3f92e7fabd9b912d89a1684d55bd523850438b77bda
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:6dd71ade20837819b4d7278cff667d12707a25506af24d3c0fd63f146f21be52
+        sha256: 6dd71ade20837819b4d7278cff667d12707a25506af24d3c0fd63f146f21be52
         cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:99879a1ca2556a68d5c70e0e48d1ba6fcb05dae8eeed6b5899b09a3fc192595c
-        sha256: 99879a1ca2556a68d5c70e0e48d1ba6fcb05dae8eeed6b5899b09a3fc192595c
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:38224776fd91dcdef6e5e4b0330583ed6b3800f1f6cc1b8a3153832e4afe3ffb
+        sha256: 38224776fd91dcdef6e5e4b0330583ed6b3800f1f6cc1b8a3153832e4afe3ffb
         cellar: :any_skip_relocation
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:48fb52e148c6e57cc6ff3423f04f7ced5302bf5c64c3eee2144272e2675288bf
-        sha256: 48fb52e148c6e57cc6ff3423f04f7ced5302bf5c64c3eee2144272e2675288bf
+        url: https://ghcr.io/v2/homebrew/core/stoken/blobs/sha256:0a61f32a5b5a333616b1a350b6ecf3f6f4359fff2628d56f6f5326367ca7ec9b
+        sha256: 0a61f32a5b5a333616b1a350b6ecf3f6f4359fff2628d56f6f5326367ca7ec9b
         cellar: :any_skip_relocation
 source:
     url: https://github.com/stoken-dev/stoken/archive/refs/tags/v0.93.tar.gz

@@ -9,6 +9,9 @@ caveats: |
 
     and run
       $HOMEBREW_PREFIX/opt/openssl@3/bin/c_rehash
+
+    OpenSSL 3.6 is only supported until 2026-11-01 so the `openssl@3`
+    formula will be downgraded to OpenSSL 3.5 (LTS) in a future update.
 url:
     darwin_amd64: https://github.com/openssl/openssl/releases/download/openssl-3.6.2/openssl-3.6.2.tar.gz
     darwin_amd64_10: https://github.com/openssl/openssl/releases/download/openssl-3.6.2/openssl-3.6.2.tar.gz
@@ -41,6 +44,10 @@ sha256:
     darwin_arm64_15: aaf51a1fe064384f811daeaeb4ec4dce7340ec8bd893027eee676af31e83a04f
     linux_amd64: aaf51a1fe064384f811daeaeb4ec4dce7340ec8bd893027eee676af31e83a04f
     linux_arm64: aaf51a1fe064384f811daeaeb4ec4dce7340ec8bd893027eee676af31e83a04f
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - ca-certificates
 bottle:

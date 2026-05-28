@@ -2,7 +2,7 @@ name: pdnsrec
 version: 5.4.1
 description: Non-authoritative/recursing DNS server
 homepage: https://www.powerdns.com/powerdns-recursor
-license: GPL-2.0-only WITH openvpn-openssl-exception
+license: GPL-2.0-only
 url:
     darwin_amd64: https://downloads.powerdns.com/releases/pdns-recursor-5.4.1.tar.xz
     darwin_amd64_10: https://downloads.powerdns.com/releases/pdns-recursor-5.4.1.tar.xz
@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: 93f23ee93fb0d3a9fd48817265631ece4758b8001af726c358ee3afb6645b63a
     linux_amd64: 93f23ee93fb0d3a9fd48817265631ece4758b8001af726c358ee3afb6645b63a
     linux_arm64: 93f23ee93fb0d3a9fd48817265631ece4758b8001af726c358ee3afb6645b63a
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - boost
     - lua

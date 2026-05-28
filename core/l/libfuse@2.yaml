@@ -2,7 +2,7 @@ name: libfuse@2
 version: 2.9.9
 description: Reference implementation of the Linux FUSE interface
 homepage: https://github.com/libfuse/libfuse
-license: LGPL-2.1-only OR GPL-2.0-only
+license: LGPL-2.1-only AND GPL-2.0-only
 url:
     darwin_amd64: https://github.com/libfuse/libfuse/releases/download/fuse-2.9.9/fuse-2.9.9.tar.gz
     darwin_amd64_10: https://github.com/libfuse/libfuse/releases/download/fuse-2.9.9/fuse-2.9.9.tar.gz
@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: d0e69d5d608cc22ff4843791ad097f554dd32540ddc9bed7638cc6fea7c1b4b5
     linux_amd64: d0e69d5d608cc22ff4843791ad097f554dd32540ddc9bed7638cc6fea7c1b4b5
     linux_arm64: d0e69d5d608cc22ff4843791ad097f554dd32540ddc9bed7638cc6fea7c1b4b5
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 keg_only: true
 bottle:
     linux_amd64:

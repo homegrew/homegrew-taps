@@ -2,7 +2,7 @@ name: rpm
 version: 4.20.1
 description: Standard unix software packaging tool
 homepage: https://rpm.org/
-license: GPL-2.0-only AND LGPL-2.0-or-later
+license: GPL-2.0-or-later AND LGPL-2.0-or-later
 url:
     darwin_amd64: https://github.com/rpm-software-management/rpm/releases/download/rpm-4.20.1-release/rpm-4.20.1.tar.bz2
     darwin_amd64_10: https://github.com/rpm-software-management/rpm/releases/download/rpm-4.20.1-release/rpm-4.20.1.tar.bz2
@@ -35,12 +35,15 @@ sha256:
     darwin_arm64_15: 52647e12638364533ab671cbc8e485c96f9f08889d93fe0ed104a6632661124f
     linux_amd64: 52647e12638364533ab671cbc8e485c96f9f08889d93fe0ed104a6632661124f
     linux_arm64: 52647e12638364533ab671cbc8e485c96f9f08889d93fe0ed104a6632661124f
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
-    - gmp
     - libarchive
     - libmagic
     - lua
-    - nettle
+    - openssl@3
     - pkgconf
     - popt
     - readline
@@ -51,36 +54,36 @@ dependencies:
     - libomp
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
-        sha256: 862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:a8d1495a1eaef556377e085bca4d6e27dac67bbaf618f34e5eefb16e13103fa1
+        sha256: a8d1495a1eaef556377e085bca4d6e27dac67bbaf618f34e5eefb16e13103fa1
         cellar: /usr/local/Cellar
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
-        sha256: 862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:a8d1495a1eaef556377e085bca4d6e27dac67bbaf618f34e5eefb16e13103fa1
+        sha256: a8d1495a1eaef556377e085bca4d6e27dac67bbaf618f34e5eefb16e13103fa1
         cellar: /usr/local/Cellar
     darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
-        sha256: 862e0efee8b4876888c728c3921168cc1cb8ae74d4a787ef81278cd96d873e71
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:a8d1495a1eaef556377e085bca4d6e27dac67bbaf618f34e5eefb16e13103fa1
+        sha256: a8d1495a1eaef556377e085bca4d6e27dac67bbaf618f34e5eefb16e13103fa1
         cellar: /usr/local/Cellar
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:ec075b7ef916195ac245a831715ca4305641d607f5c82e9f81b437aa20d5ab8e
-        sha256: ec075b7ef916195ac245a831715ca4305641d607f5c82e9f81b437aa20d5ab8e
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:e4bf476b54a1224dc7c4b91901f395a8fc51e4c3b0f6c7b386138e1bc1ea455e
+        sha256: e4bf476b54a1224dc7c4b91901f395a8fc51e4c3b0f6c7b386138e1bc1ea455e
         cellar: /opt/homebrew/Cellar
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:cc9845e73233b057da077d3504d8f5a19fcedffdac8a38965246b6c162030b49
-        sha256: cc9845e73233b057da077d3504d8f5a19fcedffdac8a38965246b6c162030b49
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:41375be050820e0d9b26786600bd888d8ad6e434e834787afa1cc182e6896736
+        sha256: 41375be050820e0d9b26786600bd888d8ad6e434e834787afa1cc182e6896736
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:ec075b7ef916195ac245a831715ca4305641d607f5c82e9f81b437aa20d5ab8e
-        sha256: ec075b7ef916195ac245a831715ca4305641d607f5c82e9f81b437aa20d5ab8e
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:e4bf476b54a1224dc7c4b91901f395a8fc51e4c3b0f6c7b386138e1bc1ea455e
+        sha256: e4bf476b54a1224dc7c4b91901f395a8fc51e4c3b0f6c7b386138e1bc1ea455e
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:936bb8258a1b95397a71270123f6298891fab5b9829c80447721693aa7e45a56
-        sha256: 936bb8258a1b95397a71270123f6298891fab5b9829c80447721693aa7e45a56
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:7815f575b463b87f6eca89a4f0f5c4192d4fd2206ce00b91c998c916787916ee
+        sha256: 7815f575b463b87f6eca89a4f0f5c4192d4fd2206ce00b91c998c916787916ee
         cellar: /home/linuxbrew/.linuxbrew/Cellar
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:c8a0598905a3f1eb1c6ca3ea74e9e1313434a6055b9a45ff7c2500facfed373b
-        sha256: c8a0598905a3f1eb1c6ca3ea74e9e1313434a6055b9a45ff7c2500facfed373b
+        url: https://ghcr.io/v2/homebrew/core/rpm/blobs/sha256:9873698fe99788028cc539fc66818b1c5dade0780e2f02032a6a5ac95506975c
+        sha256: 9873698fe99788028cc539fc66818b1c5dade0780e2f02032a6a5ac95506975c
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://github.com/rpm-software-management/rpm/releases/download/rpm-4.20.1-release/rpm-4.20.1.tar.bz2

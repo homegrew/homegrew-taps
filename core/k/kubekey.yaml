@@ -35,8 +35,10 @@ sha256:
     darwin_arm64_15: ""
     linux_amd64: ""
     linux_arm64: ""
-dependencies:
-    - gpgme
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/kubekey/blobs/sha256:6f6cef3564caab2e37fda7482ffe512b39779b281094160ec68eb2dfcc900653
@@ -77,4 +79,3 @@ head:
     branch: main
 build_dependencies:
     - go
-    - pkgconf

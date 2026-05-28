@@ -3,7 +3,7 @@ version: 1.29.0
 description: Rust toolchain installer
 homepage: https://rust-lang.github.io/rustup/
 license: Apache-2.0 OR MIT
-caveats: "To initialize `rustup`, set a default toolchain:\n  rustup default stable\n\nIf you have `rust` installed, ensure you have \"$(brew --prefix rustup)/bin\"\nbefore \"$(brew --prefix)/bin\" in your $PATH:\n  \e[4mhttps://rust-lang.github.io/rustup/installation/already-installed-rust.html\e[24m\n"
+caveats: "To use rustup, ensure you have \"$(brew --prefix rustup)/bin\" in your $PATH:\n  \e[4mhttps://rust-lang.github.io/rustup/installation/already-installed-rust.html\e[24m\n\nThis formula does not provide `rustup-init`.\n"
 url:
     darwin_amd64: https://github.com/rust-lang/rustup/archive/refs/tags/1.29.0.tar.gz
     darwin_amd64_10: https://github.com/rust-lang/rustup/archive/refs/tags/1.29.0.tar.gz
@@ -36,39 +36,43 @@ sha256:
     darwin_arm64_15: de73d1a62f4d5409a2f6bdb1c523d8dc08aa6d9d63588db62493c19ca8f8bf55
     linux_amd64: de73d1a62f4d5409a2f6bdb1c523d8dc08aa6d9d63588db62493c19ca8f8bf55
     linux_arm64: de73d1a62f4d5409a2f6bdb1c523d8dc08aa6d9d63588db62493c19ca8f8bf55
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 keg_only: true
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:f12b096c790141eb3b7a03cacfa3ba814089b0fd403e1b66456dc7cd033d2383
-        sha256: f12b096c790141eb3b7a03cacfa3ba814089b0fd403e1b66456dc7cd033d2383
+        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:282513938fc4e7cbb73d1c29ec969295b021cf725036b571f701bee2b25f38f8
+        sha256: 282513938fc4e7cbb73d1c29ec969295b021cf725036b571f701bee2b25f38f8
         cellar: :any_skip_relocation
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:f12b096c790141eb3b7a03cacfa3ba814089b0fd403e1b66456dc7cd033d2383
-        sha256: f12b096c790141eb3b7a03cacfa3ba814089b0fd403e1b66456dc7cd033d2383
+        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:282513938fc4e7cbb73d1c29ec969295b021cf725036b571f701bee2b25f38f8
+        sha256: 282513938fc4e7cbb73d1c29ec969295b021cf725036b571f701bee2b25f38f8
         cellar: :any_skip_relocation
     darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:f12b096c790141eb3b7a03cacfa3ba814089b0fd403e1b66456dc7cd033d2383
-        sha256: f12b096c790141eb3b7a03cacfa3ba814089b0fd403e1b66456dc7cd033d2383
+        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:282513938fc4e7cbb73d1c29ec969295b021cf725036b571f701bee2b25f38f8
+        sha256: 282513938fc4e7cbb73d1c29ec969295b021cf725036b571f701bee2b25f38f8
         cellar: :any_skip_relocation
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:8aa9ac9513b9680fedf2d8817d8327408baf7ebe022a97ed8da0e7c703f42e5e
-        sha256: 8aa9ac9513b9680fedf2d8817d8327408baf7ebe022a97ed8da0e7c703f42e5e
+        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:39caad94c4db4d5bc3ca121a7dfcdc41281281088b36b11afb24a92de653b5c7
+        sha256: 39caad94c4db4d5bc3ca121a7dfcdc41281281088b36b11afb24a92de653b5c7
         cellar: :any_skip_relocation
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:1a425fe59f5a297874f18a28ae6e99d4f9631aeab1cd8d321d83e9861222ae7c
-        sha256: 1a425fe59f5a297874f18a28ae6e99d4f9631aeab1cd8d321d83e9861222ae7c
+        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:00e1f91ea9c03796a1808726abe397935567903a8dbcd22e2f3db3c9ee0d2bbf
+        sha256: 00e1f91ea9c03796a1808726abe397935567903a8dbcd22e2f3db3c9ee0d2bbf
         cellar: :any_skip_relocation
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:8aa9ac9513b9680fedf2d8817d8327408baf7ebe022a97ed8da0e7c703f42e5e
-        sha256: 8aa9ac9513b9680fedf2d8817d8327408baf7ebe022a97ed8da0e7c703f42e5e
+        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:39caad94c4db4d5bc3ca121a7dfcdc41281281088b36b11afb24a92de653b5c7
+        sha256: 39caad94c4db4d5bc3ca121a7dfcdc41281281088b36b11afb24a92de653b5c7
         cellar: :any_skip_relocation
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:5181fb2e07be82fb124c2da941b76c45fa3a2199cd49561f4e584d0ee5820a5e
-        sha256: 5181fb2e07be82fb124c2da941b76c45fa3a2199cd49561f4e584d0ee5820a5e
+        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:bff7c94142160615a5919c3c673b36c62093bd19290e053f3b4738ebda500665
+        sha256: bff7c94142160615a5919c3c673b36c62093bd19290e053f3b4738ebda500665
         cellar: :any_skip_relocation
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:2fc2f0762c6d963689677499ad3bf139fc17f4199468c2f7e8a3d1f897672d49
-        sha256: 2fc2f0762c6d963689677499ad3bf139fc17f4199468c2f7e8a3d1f897672d49
+        url: https://ghcr.io/v2/homebrew/core/rustup/blobs/sha256:2e9c1c73a958abd26ba816d34fa017e762cf048db5a9664ba0a6e404c44f5320
+        sha256: 2e9c1c73a958abd26ba816d34fa017e762cf048db5a9664ba0a6e404c44f5320
         cellar: :any_skip_relocation
 source:
     url: https://github.com/rust-lang/rustup/archive/refs/tags/1.29.0.tar.gz

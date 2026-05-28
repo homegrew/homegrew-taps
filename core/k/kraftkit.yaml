@@ -35,8 +35,10 @@ sha256:
     darwin_arm64_15: 25eff0cbe79527a3ccb792d238a7df8a76c4d505db6015f16b27be1d8be40e51
     linux_amd64: 25eff0cbe79527a3ccb792d238a7df8a76c4d505db6015f16b27be1d8be40e51
     linux_arm64: 25eff0cbe79527a3ccb792d238a7df8a76c4d505db6015f16b27be1d8be40e51
-dependencies:
-    - gpgme
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/kraftkit/blobs/sha256:46bf368d7a9ff9381ba4b329377594334bda8ea90ef22313c4dc4f58ad33183e
@@ -78,4 +80,3 @@ head:
     branch: staging
 build_dependencies:
     - go
-    - pkgconf

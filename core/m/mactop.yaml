@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: 34c8042bbc8ed7de5f8a7bab261d38f82135bde813a7ebff461bde434aed0cfc
     linux_amd64: 34c8042bbc8ed7de5f8a7bab261d38f82135bde813a7ebff461bde434aed0cfc
     linux_arm64: 34c8042bbc8ed7de5f8a7bab261d38f82135bde813a7ebff461bde434aed0cfc
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 bottle:
     darwin_arm64:
         url: https://ghcr.io/v2/homebrew/core/mactop/blobs/sha256:174e967b57a2ab049f6029cf3a5d7e89d7d191cd1c06bffb4a69a4f82c84b4c1
@@ -56,3 +60,13 @@ head:
     branch: main
 build_dependencies:
     - go
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mactop/bin/mactop
+        - -p
+        - "9101"
+        - --headless
+    run_type: immediate
+    log_path: $HOMEBREW_PREFIX/var/log/mactop.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/mactop.error.log
+    keep_alive: true

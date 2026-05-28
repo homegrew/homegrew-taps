@@ -2,7 +2,7 @@ name: links
 version: "2.30"
 description: Lynx-like WWW browser that supports tables, menus, etc.
 homepage: https://links.twibright.com/
-license: GPL-2.0-or-later WITH openvpn-openssl-exception
+license: GPL-2.0-or-later WITH cryptsetup-OpenSSL-exception
 url:
     darwin_amd64: https://links.twibright.com/download/links-2.30.tar.bz2
     darwin_amd64_10: https://links.twibright.com/download/links-2.30.tar.bz2
@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: c4631c6b5a11527cdc3cb7872fc23b7f2b25c2b021d596be410dadb40315f166
     linux_amd64: c4631c6b5a11527cdc3cb7872fc23b7f2b25c2b021d596be410dadb40315f166
     linux_arm64: c4631c6b5a11527cdc3cb7872fc23b7f2b25c2b021d596be410dadb40315f166
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - openssl@4
 bottle:

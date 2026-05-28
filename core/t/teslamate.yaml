@@ -35,9 +35,11 @@ sha256:
     darwin_arm64_15: a4a7267df27982cf5844e453d59ff866c6daf3ae126bcda05c0abe87dee43b45
     linux_amd64: a4a7267df27982cf5844e453d59ff866c6daf3ae126bcda05c0abe87dee43b45
     linux_arm64: a4a7267df27982cf5844e453d59ff866c6daf3ae126bcda05c0abe87dee43b45
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
-    - elixir
-    - erlang
     - openssl@3
 bottle:
     darwin_amd64:
@@ -76,6 +78,8 @@ source:
     url: https://github.com/teslamate-org/teslamate/archive/refs/tags/v3.0.0.tar.gz
     sha256: a4a7267df27982cf5844e453d59ff866c6daf3ae126bcda05c0abe87dee43b45
 build_dependencies:
+    - elixir
+    - erlang
     - node
 service:
     run:

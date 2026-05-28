@@ -2,7 +2,7 @@ name: mfoc
 version: 0.10.7
 description: Implementation of 'offline nested' attack by Nethemba
 homepage: https://github.com/nfc-tools/mfoc
-license: GPL-2.0-only
+license: GPL-2.0-or-later AND BSD-2-Clause
 url:
     darwin_amd64: https://github.com/nfc-tools/mfoc/archive/refs/tags/mfoc-0.10.7.tar.gz
     darwin_amd64_10: https://github.com/nfc-tools/mfoc/archive/refs/tags/mfoc-0.10.7.tar.gz
@@ -35,9 +35,13 @@ sha256:
     darwin_arm64_15: 2dfd8ffa4a8b357807680d190a91c8cf3db54b4211a781edc1108af401dbaad7
     linux_amd64: 2dfd8ffa4a8b357807680d190a91c8cf3db54b4211a781edc1108af401dbaad7
     linux_arm64: 2dfd8ffa4a8b357807680d190a91c8cf3db54b4211a781edc1108af401dbaad7
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - libnfc
-    - libusb
+    - libusb-compat
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/mfoc/blobs/sha256:7eca0568d9e83844424b0d3fb5bbdeac88c09b69054ee245a014274be4d825ab

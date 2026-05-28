@@ -1,5 +1,5 @@
 name: docker-engine
-version: 29.4.2
+version: 29.5.2
 description: Pack, ship and run any application as a lightweight container (Daemon)
 homepage: https://www.docker.com/
 license: Apache-2.0
@@ -45,6 +45,10 @@ sha256:
     darwin_arm64_15: ""
     linux_amd64: ""
     linux_arm64: ""
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - containerd
     - nftables
@@ -52,12 +56,12 @@ dependencies:
     - tini
 bottle:
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/docker-engine/blobs/sha256:8654af182229c543cb042291900e22c339fcd17c92491d780ec1c435da85c67b
-        sha256: 8654af182229c543cb042291900e22c339fcd17c92491d780ec1c435da85c67b
+        url: https://ghcr.io/v2/homebrew/core/docker-engine/blobs/sha256:c77d4b8e28ab4ddf23f654c8acec376ca4997b7e5d2a9b0cb39d90b57ded6cc8
+        sha256: c77d4b8e28ab4ddf23f654c8acec376ca4997b7e5d2a9b0cb39d90b57ded6cc8
         cellar: :any_skip_relocation
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/docker-engine/blobs/sha256:ab38f70952e03210e1c948c2d1e51ac20c2fcd27271a593129ee4b3f35d51343
-        sha256: ab38f70952e03210e1c948c2d1e51ac20c2fcd27271a593129ee4b3f35d51343
+        url: https://ghcr.io/v2/homebrew/core/docker-engine/blobs/sha256:f13ea2c084648867858c1b24bc0464a630a75dacf9a66dcfed9b494337d9895f
+        sha256: f13ea2c084648867858c1b24bc0464a630a75dacf9a66dcfed9b494337d9895f
         cellar: :any_skip_relocation
 source:
     url: https://github.com/moby/moby.git

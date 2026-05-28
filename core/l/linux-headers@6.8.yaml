@@ -2,7 +2,7 @@ name: linux-headers@6.8
 version: 6.8.12
 description: Header files of the Linux kernel
 homepage: https://kernel.org/
-license: GPL-2.0-only
+license: GPL-2.0-only WITH Linux-syscall-note
 url:
     darwin_amd64: https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.8.12.tar.gz
     darwin_amd64_10: https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.8.12.tar.gz
@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: 1f6134265066aa2bef94103c1e4485d6ed8c2e08ba2a24202ea0c757c6c2c0de
     linux_amd64: 1f6134265066aa2bef94103c1e4485d6ed8c2e08ba2a24202ea0c757c6c2c0de
     linux_arm64: 1f6134265066aa2bef94103c1e4485d6ed8c2e08ba2a24202ea0c757c6c2c0de
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 bottle:
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/linux-headers/6.8/blobs/sha256:d7b3910ec915d32643f07f9ee8e863e63eece4c4f02090899af82482474cfb17

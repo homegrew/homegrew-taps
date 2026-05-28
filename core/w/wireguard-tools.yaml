@@ -35,9 +35,13 @@ sha256:
     darwin_arm64_15: af459827b80bfd31b83b08077f4b5843acb7d18ad9a33a2ef532d3090f291fbf
     linux_amd64: af459827b80bfd31b83b08077f4b5843acb7d18ad9a33a2ef532d3090f291fbf
     linux_arm64: af459827b80bfd31b83b08077f4b5843acb7d18ad9a33a2ef532d3090f291fbf
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
-    - bash
     - wireguard-go
+    - bash
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/wireguard-tools/blobs/sha256:82e2046eb5642fd202ed22a2012cc1ef2c62b0c95499865bb040801ee37f525a

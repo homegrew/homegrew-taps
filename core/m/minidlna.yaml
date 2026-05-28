@@ -42,16 +42,20 @@ sha256:
     darwin_arm64_15: 39026c6d4a139b9180192d1c37225aa3376fdf4f1a74d7debbdbb693d996afa4
     linux_amd64: 39026c6d4a139b9180192d1c37225aa3376fdf4f1a74d7debbdbb693d996afa4
     linux_arm64: 39026c6d4a139b9180192d1c37225aa3376fdf4f1a74d7debbdbb693d996afa4
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - ffmpeg
     - flac
-    - gettext
     - jpeg-turbo
     - libexif
     - libid3tag
     - libogg
     - libvorbis
     - sqlite
+    - gettext
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/minidlna/blobs/sha256:ff6b2f6bd3fcad653e0db52c02c40db6edb23d7bfbeb9647ed13c97e7607a9d1
@@ -99,6 +103,8 @@ source:
 head:
     url: https://git.code.sf.net/p/minidlna/git.git
     branch: master
+build_dependencies:
+    - gettext
 service:
     run:
         - $HOMEBREW_PREFIX/opt/minidlna/sbin/minidlnad

@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: f18311b2a1e60830a3c85078edb06789955eaee1c963a4cb67aa2636271dcb8a
     linux_amd64: f18311b2a1e60830a3c85078edb06789955eaee1c963a4cb67aa2636271dcb8a
     linux_arm64: f18311b2a1e60830a3c85078edb06789955eaee1c963a4cb67aa2636271dcb8a
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/bacon-ls/blobs/sha256:770416f2f8abb9e5243de37ec8b027f31852eddf505f26af800cdccaf1ebd086
@@ -75,5 +79,4 @@ head:
     url: https://github.com/crisidev/bacon-ls.git
     branch: main
 build_dependencies:
-    - pkgconf
     - rust

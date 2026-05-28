@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: 5deb92b5ca72c0347b07b786848350deca2dcfd975ce613b8e0e1d947a4b4ca9
     linux_amd64: 5deb92b5ca72c0347b07b786848350deca2dcfd975ce613b8e0e1d947a4b4ca9
     linux_arm64: 5deb92b5ca72c0347b07b786848350deca2dcfd975ce613b8e0e1d947a4b4ca9
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/libserialport/blobs/sha256:e1f99856052b3f5329e02b481347bc28b0a8bdae9de5c99acc6993bcd6d4686d
@@ -79,3 +83,6 @@ bottle:
 source:
     url: https://sigrok.org/download/source/libserialport/libserialport-0.1.2.tar.gz
     sha256: 5deb92b5ca72c0347b07b786848350deca2dcfd975ce613b8e0e1d947a4b4ca9
+head:
+    url: git://sigrok.org/libserialport
+    branch: master

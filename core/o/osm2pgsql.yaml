@@ -2,7 +2,7 @@ name: osm2pgsql
 version: 2.2.0
 description: OpenStreetMap data to PostgreSQL converter
 homepage: https://osm2pgsql.org
-license: GPL-2.0-only
+license: GPL-2.0-or-later
 url:
     darwin_amd64: https://github.com/osm2pgsql-dev/osm2pgsql/archive/refs/tags/2.2.0.tar.gz
     darwin_amd64_10: https://github.com/osm2pgsql-dev/osm2pgsql/archive/refs/tags/2.2.0.tar.gz
@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: 567dad078f8a66d6d706ac1876b5251b688109d16974909d89ce2056d6e9f258
     linux_amd64: 567dad078f8a66d6d706ac1876b5251b688109d16974909d89ce2056d6e9f258
     linux_arm64: 567dad078f8a66d6d706ac1876b5251b688109d16974909d89ce2056d6e9f258
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - libpq
     - luajit

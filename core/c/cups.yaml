@@ -2,7 +2,7 @@ name: cups
 version: 2.4.19
 description: Common UNIX Printing System
 homepage: https://github.com/OpenPrinting/cups
-license: Apache-2.0
+license: Apache-2.0 WITH LLVM-exception
 url:
     darwin_amd64: https://github.com/OpenPrinting/cups/releases/download/v2.4.19/cups-2.4.19-source.tar.gz
     darwin_amd64_10: https://github.com/OpenPrinting/cups/releases/download/v2.4.19/cups-2.4.19-source.tar.gz
@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: 820984b12a67f98705785aae2dd1347fe0ac097828001d4583ff64574aed6389
     linux_amd64: 820984b12a67f98705785aae2dd1347fe0ac097828001d4583ff64574aed6389
     linux_arm64: 820984b12a67f98705785aae2dd1347fe0ac097828001d4583ff64574aed6389
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - openssl@3
 keg_only: true

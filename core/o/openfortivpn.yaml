@@ -2,7 +2,7 @@ name: openfortivpn
 version: 1.24.1
 description: Open Fortinet client for PPP+TLS VPN tunnel services
 homepage: https://github.com/adrienverge/openfortivpn
-license: GPL-3.0-or-later WITH openvpn-openssl-exception
+license: GPL-3.0-or-later WITH cryptsetup-OpenSSL-exception
 url:
     darwin_amd64: https://github.com/adrienverge/openfortivpn/archive/refs/tags/v1.24.1.tar.gz
     darwin_amd64_10: https://github.com/adrienverge/openfortivpn/archive/refs/tags/v1.24.1.tar.gz
@@ -35,6 +35,10 @@ sha256:
     darwin_arm64_15: c40d33acd97b89c2e943bfd839c19b69e5a7a5997052e2fc9a595602745c0465
     linux_amd64: c40d33acd97b89c2e943bfd839c19b69e5a7a5997052e2fc9a595602745c0465
     linux_arm64: c40d33acd97b89c2e943bfd839c19b69e5a7a5997052e2fc9a595602745c0465
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - openssl@4
 bottle:

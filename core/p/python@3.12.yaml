@@ -17,7 +17,10 @@ caveats: |
     `idle3.12` requires tkinter, which is available separately:
       brew install python-tk@3.12
 
-    See: https://docs.brew.sh/Homebrew-and-Python
+    `dbm.gnu` is available separately:
+      brew install python-gdbm@3.12
+
+    For more information about Homebrew and Python, see: https://docs.brew.sh/Homebrew-and-Python
 url:
     darwin_amd64: https://www.python.org/ftp/python/3.12.13/Python-3.12.13.tgz
     darwin_amd64_10: https://www.python.org/ftp/python/3.12.13/Python-3.12.13.tgz
@@ -50,6 +53,10 @@ sha256:
     darwin_arm64_15: 0816c4761c97ecdb3f50a3924de0a93fd78cb63ee8e6c04201ddfaedca500b0b
     linux_amd64: 0816c4761c97ecdb3f50a3924de0a93fd78cb63ee8e6c04201ddfaedca500b0b
     linux_arm64: 0816c4761c97ecdb3f50a3924de0a93fd78cb63ee8e6c04201ddfaedca500b0b
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - mpdecimal
     - openssl@3
@@ -57,36 +64,36 @@ dependencies:
     - xz
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:b41f94ee7704c74be76d1a54fc9e394dd356770d13aa29be023cc1c33387f82a
-        sha256: b41f94ee7704c74be76d1a54fc9e394dd356770d13aa29be023cc1c33387f82a
+        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:63b38c07aaf7a9ac4eb564057e31b57be11595bed832ae86a701d95050350c8f
+        sha256: 63b38c07aaf7a9ac4eb564057e31b57be11595bed832ae86a701d95050350c8f
         cellar: /usr/local/Cellar
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:3f2d37fb95ed10cd050222c174d642e04178e1da23538ed5f3a9d142381027b6
-        sha256: 3f2d37fb95ed10cd050222c174d642e04178e1da23538ed5f3a9d142381027b6
+        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:ec2abd1f0955cd22e10d73530ef48c9c00f092763cb55fa1ea3b5a35f4a7624c
+        sha256: ec2abd1f0955cd22e10d73530ef48c9c00f092763cb55fa1ea3b5a35f4a7624c
         cellar: /usr/local/Cellar
     darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:b41f94ee7704c74be76d1a54fc9e394dd356770d13aa29be023cc1c33387f82a
-        sha256: b41f94ee7704c74be76d1a54fc9e394dd356770d13aa29be023cc1c33387f82a
+        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:63b38c07aaf7a9ac4eb564057e31b57be11595bed832ae86a701d95050350c8f
+        sha256: 63b38c07aaf7a9ac4eb564057e31b57be11595bed832ae86a701d95050350c8f
         cellar: /usr/local/Cellar
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:c378b0875288fc0490603e4ccece8f289a230c4068c27ea9dfa7a9a69d3c3b12
-        sha256: c378b0875288fc0490603e4ccece8f289a230c4068c27ea9dfa7a9a69d3c3b12
+        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:164d26d87880f2ef10d8ee73eb13277dfa9b6897b1a8ffe138505158130ed468
+        sha256: 164d26d87880f2ef10d8ee73eb13277dfa9b6897b1a8ffe138505158130ed468
         cellar: /opt/homebrew/Cellar
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:7becd6da101c7f3f406cac1a3350384618520f5b3fab5d46c57bf62b740d460b
-        sha256: 7becd6da101c7f3f406cac1a3350384618520f5b3fab5d46c57bf62b740d460b
+        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:b82910bcb770012a476defa1571a80978cc4bedb2e9f638844e273492148ce91
+        sha256: b82910bcb770012a476defa1571a80978cc4bedb2e9f638844e273492148ce91
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:c378b0875288fc0490603e4ccece8f289a230c4068c27ea9dfa7a9a69d3c3b12
-        sha256: c378b0875288fc0490603e4ccece8f289a230c4068c27ea9dfa7a9a69d3c3b12
+        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:164d26d87880f2ef10d8ee73eb13277dfa9b6897b1a8ffe138505158130ed468
+        sha256: 164d26d87880f2ef10d8ee73eb13277dfa9b6897b1a8ffe138505158130ed468
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:1375b78e136989dfbea7b7e6cc8c54a70e2ddcd9bbeab8eb04b7d3b250b8f2d4
-        sha256: 1375b78e136989dfbea7b7e6cc8c54a70e2ddcd9bbeab8eb04b7d3b250b8f2d4
+        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:24864538382abd41a945190df298a56918d6029d20fcc6bf61a3966e27617a26
+        sha256: 24864538382abd41a945190df298a56918d6029d20fcc6bf61a3966e27617a26
         cellar: /home/linuxbrew/.linuxbrew/Cellar
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:31924f4cc9d1d71638a231185e1c74a9a5e1919198d332b1ccb10f6a2ad31c92
-        sha256: 31924f4cc9d1d71638a231185e1c74a9a5e1919198d332b1ccb10f6a2ad31c92
+        url: https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:c90154d5f9422618c6d7d65c3ad455e66745001c18c6a0ee0d257db30af80fa0
+        sha256: c90154d5f9422618c6d7d65c3ad455e66745001c18c6a0ee0d257db30af80fa0
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://www.python.org/ftp/python/3.12.13/Python-3.12.13.tgz

@@ -35,9 +35,12 @@ sha256:
     darwin_arm64_15: d2d8f57c90af6c4cfa468df93e0fc83754b9cb5515b08bdaf2c17d0886a9c581
     linux_amd64: d2d8f57c90af6c4cfa468df93e0fc83754b9cb5515b08bdaf2c17d0886a9c581
     linux_arm64: d2d8f57c90af6c4cfa468df93e0fc83754b9cb5515b08bdaf2c17d0886a9c581
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - frpc
-    - yq
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/gbox/blobs/sha256:16c94addd81ea9d57b8526fb2377cc551010688a5c5f2c7f54689f0f50b1d1ed
@@ -76,4 +79,3 @@ source:
     sha256: d2d8f57c90af6c4cfa468df93e0fc83754b9cb5515b08bdaf2c17d0886a9c581
 build_dependencies:
     - go
-    - rsync

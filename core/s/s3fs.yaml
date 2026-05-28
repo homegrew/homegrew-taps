@@ -35,21 +35,23 @@ sha256:
     darwin_arm64_15: 28413457cbf923b9b81e546caffabb8edd5c18f263e698ad86f564fd4b5b344d
     linux_amd64: 28413457cbf923b9b81e546caffabb8edd5c18f263e698ad86f564fd4b5b344d
     linux_arm64: 28413457cbf923b9b81e546caffabb8edd5c18f263e698ad86f564fd4b5b344d
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
 dependencies:
     - curl
-    - gnutls
     - libfuse
-    - libgcrypt
     - libxml2
-    - nettle
+    - openssl@3
 bottle:
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/s3fs/blobs/sha256:3fd8a38dd94f3523cfe03b544b4e12cd3dbfe724a34098c3e7373bbe799bee11
-        sha256: 3fd8a38dd94f3523cfe03b544b4e12cd3dbfe724a34098c3e7373bbe799bee11
+        url: https://ghcr.io/v2/homebrew/core/s3fs/blobs/sha256:0e81020206b9b2fa2b3e5abd51d7d32ecf4d45683b6d7a75da2bd9d07197e2c3
+        sha256: 0e81020206b9b2fa2b3e5abd51d7d32ecf4d45683b6d7a75da2bd9d07197e2c3
         cellar: :any_skip_relocation
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/s3fs/blobs/sha256:98936a769c49e9d9d7fe5e654304a08906a4fd9276f507d468f1d667a016528a
-        sha256: 98936a769c49e9d9d7fe5e654304a08906a4fd9276f507d468f1d667a016528a
+        url: https://ghcr.io/v2/homebrew/core/s3fs/blobs/sha256:b9a799bfed9371edbb6542c9c93afae3fa3681ce520ce7d775c2368fe007118e
+        sha256: b9a799bfed9371edbb6542c9c93afae3fa3681ce520ce7d775c2368fe007118e
         cellar: :any_skip_relocation
 source:
     url: https://github.com/s3fs-fuse/s3fs-fuse/archive/refs/tags/v1.97.tar.gz
