@@ -1,0 +1,64 @@
+name: encfs
+version: 1.9.5
+description: Encrypted pass-through FUSE file system
+homepage: https://vgough.github.io/encfs/
+license: GPL-3.0-or-later
+url:
+    darwin_amd64: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_amd64_10: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_amd64_11: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_amd64_12: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_amd64_13: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_amd64_14: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_amd64_15: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_arm64: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_arm64_11: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_arm64_12: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_arm64_13: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_arm64_14: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    darwin_arm64_15: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    linux_amd64: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    linux_arm64: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+sha256:
+    darwin_amd64: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_amd64_10: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_amd64_11: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_amd64_12: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_amd64_13: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_amd64_14: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_amd64_15: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_arm64: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_arm64_11: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_arm64_12: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_arm64_13: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_arm64_14: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    darwin_arm64_15: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    linux_amd64: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+    linux_arm64: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - libfuse@2
+    - tinyxml2
+    - openssl@4
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/encfs/blobs/sha256:4a267698818351ffbddfb482e139d6bece4a37b266c0dca025fd12bbf9ab365d
+        sha256: 4a267698818351ffbddfb482e139d6bece4a37b266c0dca025fd12bbf9ab365d
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/encfs/blobs/sha256:162403f3d7c9515050e6d0501ad49bbdaf78371a7cfe5c8d42f21a254531b114
+        sha256: 162403f3d7c9515050e6d0501ad49bbdaf78371a7cfe5c8d42f21a254531b114
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://github.com/vgough/encfs/archive/refs/tags/v1.9.5.tar.gz
+    sha256: 4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63
+head:
+    url: https://github.com/vgough/encfs.git
+    branch: master
+build_dependencies:
+    - cmake
+    - gettext
+    - pkgconf

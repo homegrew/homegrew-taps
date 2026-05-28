@@ -1,0 +1,65 @@
+name: go-hass-agent
+version: 14.11.0
+description: Native Home Assistant agent for desktop/laptop devices
+homepage: https://github.com/joshuar/go-hass-agent
+license: MIT
+url:
+    darwin_amd64: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_amd64_10: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_amd64_11: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_amd64_12: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_amd64_13: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_amd64_14: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_amd64_15: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_arm64: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_arm64_11: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_arm64_12: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_arm64_13: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_arm64_14: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    darwin_arm64_15: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    linux_amd64: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    linux_arm64: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+sha256:
+    darwin_amd64: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_amd64_10: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_amd64_11: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_amd64_12: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_amd64_13: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_amd64_14: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_amd64_15: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_arm64: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_arm64_11: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_arm64_12: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_arm64_13: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_arm64_14: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    darwin_arm64_15: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    linux_amd64: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+    linux_arm64: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/go-hass-agent/blobs/sha256:180a670afb55f2022c2b276a342b0e70c48ca5d4079c1135e3df34995cd1e692
+        sha256: 180a670afb55f2022c2b276a342b0e70c48ca5d4079c1135e3df34995cd1e692
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/go-hass-agent/blobs/sha256:8cfabff168b3c8be656a40eafa9bb1f4d804d1d1fe2b1c0daa9ed76cae2c3899
+        sha256: 8cfabff168b3c8be656a40eafa9bb1f4d804d1d1fe2b1c0daa9ed76cae2c3899
+        cellar: :any_skip_relocation
+source:
+    url: https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.11.0.tar.gz
+    sha256: cf84fd68642bfa0da584c7cf267cfe471dfe61c94534cf23e09ef09428110596
+build_dependencies:
+    - go
+    - node
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/go-hass-agent/bin/go-hass-agent
+        - run
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    log_path: $HOMEBREW_PREFIX/var/log/go-hass-agent.log
+    error_log_path: $HOMEBREW_PREFIX/var/log/go-hass-agent.log
+    keep_alive: true

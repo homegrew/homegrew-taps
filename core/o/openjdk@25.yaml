@@ -1,0 +1,91 @@
+name: openjdk@25
+version: 25.0.3
+description: Development kit for the Java programming language
+homepage: https://openjdk.org/
+license: GPL-2.0-only WITH Classpath-exception-2.0
+caveats: |
+    For the system Java wrappers to find this JDK, symlink it with
+      sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk@25/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-25.jdk
+url:
+    darwin_amd64: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_amd64_10: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_amd64_11: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_amd64_12: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_amd64_13: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_amd64_14: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_amd64_15: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_arm64: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_arm64_11: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_arm64_12: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_arm64_13: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_arm64_14: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    darwin_arm64_15: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    linux_amd64: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    linux_arm64: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+sha256:
+    darwin_amd64: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_amd64_10: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_amd64_11: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_amd64_12: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_amd64_13: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_amd64_14: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_amd64_15: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_arm64: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_arm64_11: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_arm64_12: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_arm64_13: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_arm64_14: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    darwin_arm64_15: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    linux_amd64: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+    linux_arm64: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - freetype
+    - giflib
+    - harfbuzz
+    - jpeg-turbo
+    - libpng
+    - little-cms2
+keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openjdk/25/blobs/sha256:75973113fd1ead44163214f34fc606e955a9c198a956469c3225bca624df1bab
+        sha256: 75973113fd1ead44163214f34fc606e955a9c198a956469c3225bca624df1bab
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/openjdk/25/blobs/sha256:75973113fd1ead44163214f34fc606e955a9c198a956469c3225bca624df1bab
+        sha256: 75973113fd1ead44163214f34fc606e955a9c198a956469c3225bca624df1bab
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/openjdk/25/blobs/sha256:75973113fd1ead44163214f34fc606e955a9c198a956469c3225bca624df1bab
+        sha256: 75973113fd1ead44163214f34fc606e955a9c198a956469c3225bca624df1bab
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openjdk/25/blobs/sha256:f3fa9b9c83b5cae6afc187bfd909eaf51d0c3456d35b08445eee22e1e77fa961
+        sha256: f3fa9b9c83b5cae6afc187bfd909eaf51d0c3456d35b08445eee22e1e77fa961
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/openjdk/25/blobs/sha256:2745b135ce440b0008eeee16180abe43379328c74231290f8ccdd61f679d3eb0
+        sha256: 2745b135ce440b0008eeee16180abe43379328c74231290f8ccdd61f679d3eb0
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/openjdk/25/blobs/sha256:f3fa9b9c83b5cae6afc187bfd909eaf51d0c3456d35b08445eee22e1e77fa961
+        sha256: f3fa9b9c83b5cae6afc187bfd909eaf51d0c3456d35b08445eee22e1e77fa961
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openjdk/25/blobs/sha256:44b6bbcf9a8a1d7599fd64a59c1cb44de5d0dc4bddecb86e436cac642ea29bdf
+        sha256: 44b6bbcf9a8a1d7599fd64a59c1cb44de5d0dc4bddecb86e436cac642ea29bdf
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openjdk/25/blobs/sha256:877bf7fe3d97b9e5c849a9a98a6686805479262e2057b36dd1c0300e41a61ae3
+        sha256: 877bf7fe3d97b9e5c849a9a98a6686805479262e2057b36dd1c0300e41a61ae3
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://github.com/openjdk/jdk25u/archive/refs/tags/jdk-25.0.3-ga.tar.gz
+    sha256: 24080b39d5bb28c34d1fa738e8704db411c6fc7dac0962cc33305536b0391b9e
+build_dependencies:
+    - autoconf
+    - pkgconf
