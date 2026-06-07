@@ -1,0 +1,60 @@
+name: wl-clipboard
+version: 2.3.0
+description: Command-line copy/paste utilities for Wayland
+homepage: https://github.com/bugaevc/wl-clipboard
+license: GPL-3.0-or-later
+url:
+    darwin_amd64: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_amd64_10: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_amd64_11: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_amd64_12: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_amd64_13: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_amd64_14: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_amd64_15: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_arm64: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_arm64_11: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_arm64_12: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_arm64_13: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_arm64_14: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    darwin_arm64_15: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    linux_amd64: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    linux_arm64: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+sha256:
+    darwin_amd64: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_amd64_10: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_amd64_11: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_amd64_12: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_amd64_13: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_amd64_14: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_amd64_15: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_arm64: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_arm64_11: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_arm64_12: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_arm64_13: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_arm64_14: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    darwin_arm64_15: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    linux_amd64: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+    linux_arm64: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - wayland
+    - wayland-protocols
+bottle:
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/wl-clipboard/blobs/sha256:3c5d5d55a1ccbe9df625a0cd3ca1d64538194afdae28c3d3e36d39a70f3e5cc2
+        sha256: 3c5d5d55a1ccbe9df625a0cd3ca1d64538194afdae28c3d3e36d39a70f3e5cc2
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/wl-clipboard/blobs/sha256:2ed9df6478788ec465afc01e214fc62780ff19216a9c5427296d8362a79fa2f6
+        sha256: 2ed9df6478788ec465afc01e214fc62780ff19216a9c5427296d8362a79fa2f6
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz
+    sha256: b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
+build_dependencies:
+    - meson
+    - ninja
+    - pkgconf
