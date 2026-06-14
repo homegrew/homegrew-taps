@@ -44,6 +44,14 @@ sha512:
     darwin_arm64_13: ""
     darwin_arm64_14: ""
     darwin_arm64_15: ""
+artifacts:
+    installer:
+        - executable: Anaconda3-2025.12-2-MacOSX-arm64.sh
+          args:
+            - -b
+            - -p
+            - $HOMEGREW_PREFIX/anaconda3
+          sudo: true
 source:
     url: https://repo.anaconda.com/archive/Anaconda3-2025.12-2-MacOSX-arm64.sh
     sha256: 8d0b858358456d4ee159feb0c4ee6d635590b777f8b9ffa4aa7553c469aae2b6

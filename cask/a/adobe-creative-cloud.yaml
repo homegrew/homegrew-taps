@@ -44,6 +44,12 @@ sha512:
     darwin_arm64_13: ""
     darwin_arm64_14: ""
     darwin_arm64_15: ""
+artifacts:
+    installer:
+        - executable: $HOMEBREW_PREFIX/Caskroom/adobe-creative-cloud/6.9.1.1/Install.app/Contents/MacOS/Install
+          args:
+            - --mode=silent
+          sudo: true
 source:
     url: https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/6.9.1/1/macarm64/ACCCx6_9_1_1.dmg
     sha256: 3a5c62f6e0be6bf38c7fa169744bc6545b3d9a1512974cb2acff80df315a1a91

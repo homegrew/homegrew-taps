@@ -49,6 +49,18 @@ sha512:
     darwin_arm64_13: ""
     darwin_arm64_14: ""
     darwin_arm64_15: ""
+artifacts:
+    installer:
+        - executable: $HOMEBREW_PREFIX/Caskroom/ransomwhere/2.1.2/RansomWhere Installer.app/Contents/Resources/configure.sh
+          args:
+            - -install
+          sudo: true
+        - executable: launchctl
+          args:
+            - bootstrap
+            - system
+            - /Library/LaunchDaemons/com.objective-see.ransomwhere.plist
+          sudo: true
 source:
     url: https://github.com/objective-see/RansomWhere/releases/download/v2.1.2/RansomWhere_2.1.2.zip
     sha256: 0aa1fe3299f3d6ebab30c9410951cfbc4ccee688a9b4757e49eafd2b83c2a214

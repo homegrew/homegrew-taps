@@ -60,6 +60,22 @@ artifacts:
         - xc16-strings
         - xc16-strip
         - xc16-as
+    installer:
+        - executable: xc16-v2.10-osx-installer.app/Contents/MacOS/installbuilder.sh
+          args:
+            - --mode
+            - unattended
+            - --unattendedmodeui
+            - none
+            - --ModifyAll
+            - "0"
+            - --netservername
+            - '""'
+            - --LicenseType
+            - WorkstationMode
+            - --prefix
+            - $HOMEGREW_PREFIX/Caskroom/mplab-xc16/2.10
+          sudo: true
 source:
     url: https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc16-v2.10-full-install-osx64-installer.dmg
     sha256: db0ac553fbe9a6e903113cafff1f343a692728aa839c28a7bff36a9b6a12de55

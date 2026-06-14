@@ -44,6 +44,15 @@ sha512:
     darwin_arm64_13: ""
     darwin_arm64_14: ""
     darwin_arm64_15: ""
+artifacts:
+    installer:
+        - executable: $HOMEBREW_PREFIX/Caskroom/izotope-product-portal/1.4.9/Install Product Portal.app/Contents/MacOS/installbuilder.sh
+          args:
+            - --mode
+            - unattended
+            - --disable-components
+            - launch_after_install
+          sudo: true
 source:
     url: https://izotopedownloads.s3.amazonaws.com/product_download/iZotope_Product_Portal_v1_4_9.dmg
     sha256: 02bc15c92e8e2bba14a9ec1a0687d69fc3a36f0a5f98057cc785ed40e09a6840

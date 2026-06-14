@@ -47,6 +47,18 @@ sha512:
     darwin_arm64_13: ""
     darwin_arm64_14: ""
     darwin_arm64_15: ""
+artifacts:
+    installer:
+        - executable: BiglyBT Installer.app/Contents/MacOS/JavaApplicationStub
+          args:
+            - -dir
+            - $APPDIR/BiglyBT
+            - -q
+            - -Dinstall4j.suppressStdout=true
+            - -Dinstall4j.debug=false
+            - -VcreateDesktopLinkAction$Boolean=false
+            - -VaddToDockAction$Boolean=false
+          sudo: true
 source:
     url: https://github.com/BiglySoftware/BiglyBT/releases/download/v4.1.0.0/GitHub_BiglyBT_Mac_Universal_Installer.dmg
     sha256: 0e57accd9e8efa7198ea909342bce4ac5597df76960516d683e559a5ebbb8df2

@@ -51,6 +51,22 @@ artifacts:
         - xc8-clangd
         - xclm
         - xc-ccov
+    installer:
+        - executable: xc8-v3.10-full-install-macos-x64-installer.app/Contents/MacOS/installbuilder.sh
+          args:
+            - --mode
+            - unattended
+            - --unattendedmodeui
+            - none
+            - --ModifyAll
+            - "0"
+            - --netservername
+            - '""'
+            - --LicenseType
+            - WorkstationMode
+            - --prefix
+            - $HOMEGREW_PREFIX/Caskroom/mplab-xc8/3.10
+          sudo: true
 source:
     url: https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc8-v3.10-full-install-macos-x64-installer.dmg
     sha256: 42569224273f43ae3f6a4d14d675766df17b0e99044c316e0b3b49d2d1a14145

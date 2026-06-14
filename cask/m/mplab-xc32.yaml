@@ -63,6 +63,22 @@ artifacts:
         - xc32-strings
         - xc32-strip
         - xc32-ar
+    installer:
+        - executable: xc32-v5.10-osx-installer.app/Contents/MacOS/installbuilder.sh
+          args:
+            - --mode
+            - unattended
+            - --unattendedmodeui
+            - none
+            - --ModifyAll
+            - "0"
+            - --netservername
+            - '""'
+            - --LicenseType
+            - FreeMode
+            - --prefix
+            - $HOMEGREW_PREFIX/Caskroom/mplab-xc32/5.10
+          sudo: true
 source:
     url: https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc32-v5.10-full-install-osx-installer.dmg
     sha256: 914ad0c474595f452e7c1e9fb042934c347d10f12d31479e9bebe73a1091e671

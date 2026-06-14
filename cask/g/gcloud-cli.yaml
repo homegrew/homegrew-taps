@@ -3,9 +3,9 @@ version: 572.0.0
 description: Set of tools to manage resources and applications hosted on Google Cloud
 homepage: https://cloud.google.com/cli/
 caveats: |
-    To use additional binary components installed via gcloud, add the "$HOMEBREW_PREFIX/share/google-cloud-sdk/bin"
+    To use additional binary components installed via gcloud, add the "$HOMEGREW_PREFIX/share/google-cloud-sdk/bin"
     directory to your PATH environment variable, e.g., (for Bash shell):
-       export PATH=$HOMEBREW_PREFIX/share/google-cloud-sdk/bin:"$PATH"
+       export PATH=$HOMEGREW_PREFIX/share/google-cloud-sdk/bin:"$PATH"
 url:
     darwin_amd64: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-572.0.0-darwin-x86_64.tar.gz
     darwin_amd64_10: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-572.0.0-darwin-x86_64.tar.gz
@@ -55,6 +55,21 @@ artifacts:
         - docker-credential-gcloud
         - gcloud
         - git-credential-gcloud
+    installer:
+        - executable: google-cloud-sdk/install.sh
+          args:
+            - --quiet
+            - --usage-reporting
+            - "false"
+            - --bash-completion
+            - "false"
+            - --path-update
+            - "false"
+            - --rc-path
+            - "false"
+            - --update-installed-components
+            - --install-python
+            - "false"
 source:
     url: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-572.0.0-darwin-arm.tar.gz
     sha256: 4220b398420f5a71ddbfc41a576a1a7fe02501d394feeb0e80f13108972ba4ab

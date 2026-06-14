@@ -53,6 +53,15 @@ sha512:
     darwin_arm64_13: ""
     darwin_arm64_14: ""
     darwin_arm64_15: ""
+artifacts:
+    installer:
+        - executable: SenchaCmd-8.0.0.48-osx.app/Contents/MacOS/JavaApplicationStub
+          args:
+            - -Djava.awt.headless=true
+            - -q
+            - -dir
+            - /opt/Sencha/Cmd/8.0.0.48
+          sudo: true
 source:
     url: https://trials.sencha.com/cmd/8.0.0/jre/SenchaCmd-8.0.0.48-osx.app.zip
     sha256: f5c218ae530fa448ccf20a1e8678c2e886d59c0b4a956ba455099817105c9388

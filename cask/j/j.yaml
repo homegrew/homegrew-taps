@@ -55,6 +55,14 @@ artifacts:
         - jbrk
         - jhs
         - jqt
+    installer:
+        - executable: j9.7/macos-fix.command
+        - executable: j9.7/bin/jconsole
+          args:
+            - -js
+            - load 'pacman'
+            - '''install'' jpkg ''*'''
+            - exit 0
 source:
     url: https://www.jsoftware.com/download/j9.7/install/j9.7.1_mac.zip
     sha256: fc34fe96fc19520c9f317ecb6b318aeb3bd83a4994b505dfa1216cf1775fd3e3
