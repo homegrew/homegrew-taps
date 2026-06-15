@@ -5,7 +5,7 @@ bindir := $(shell go env GOPATH)/bin
 all: build
 
 deps:
-	go install github.com/homegrew/grew/tools/grew-genrepo@main
+	go install github.com/homegrew/grew/tools/genrepo@main
 
 build: deps
 	$(bindir)/grew-genrepo -v --debug formula 
