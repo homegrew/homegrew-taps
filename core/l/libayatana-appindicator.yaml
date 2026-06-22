@@ -44,32 +44,56 @@ install:
     strip_components: 2
     format: tar.gz
 dependencies:
-    - ayatana-ido
-    - cairo
-    - gdk-pixbuf
     - glib
     - gtk+3
-    - harfbuzz
     - libayatana-indicator
     - libdbusmenu
-    - pango
 bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:05ebbb9d01f6914521e972dbc92da891281751861f628b9e8938a29a29301689
+        sha256: 05ebbb9d01f6914521e972dbc92da891281751861f628b9e8938a29a29301689
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:05ebbb9d01f6914521e972dbc92da891281751861f628b9e8938a29a29301689
+        sha256: 05ebbb9d01f6914521e972dbc92da891281751861f628b9e8938a29a29301689
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:05ebbb9d01f6914521e972dbc92da891281751861f628b9e8938a29a29301689
+        sha256: 05ebbb9d01f6914521e972dbc92da891281751861f628b9e8938a29a29301689
+        cellar: :any
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:05ebbb9d01f6914521e972dbc92da891281751861f628b9e8938a29a29301689
+        sha256: 05ebbb9d01f6914521e972dbc92da891281751861f628b9e8938a29a29301689
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:366cecbce20e7f083e67f236b47cd0e5b92dbb395bc9340ad71a593a4a34e597
+        sha256: 366cecbce20e7f083e67f236b47cd0e5b92dbb395bc9340ad71a593a4a34e597
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:5a8120020dd5d6d83fd335c62d1c95c2bcf7a3d70030c7c72dfa168f4023e43f
+        sha256: 5a8120020dd5d6d83fd335c62d1c95c2bcf7a3d70030c7c72dfa168f4023e43f
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:b2bceade01f2056f4e9ebaec1388c1fbd7d5570365a23b4170d39f88be35204d
+        sha256: b2bceade01f2056f4e9ebaec1388c1fbd7d5570365a23b4170d39f88be35204d
+        cellar: :any
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:366cecbce20e7f083e67f236b47cd0e5b92dbb395bc9340ad71a593a4a34e597
+        sha256: 366cecbce20e7f083e67f236b47cd0e5b92dbb395bc9340ad71a593a4a34e597
+        cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:80c2e02be8fe93584887da8f49a0220fc55ef1f8e4bf0f87cd0d6f09580f4c13
-        sha256: 80c2e02be8fe93584887da8f49a0220fc55ef1f8e4bf0f87cd0d6f09580f4c13
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:bb93763e7e4070129ce61722c2c3bda9e41959ed776a76ff6b82530384a15e07
+        sha256: bb93763e7e4070129ce61722c2c3bda9e41959ed776a76ff6b82530384a15e07
         cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:13bd14ba25b3593099af562a4b0ef90bc9b87557498af47bf604a00976a0b19f
-        sha256: 13bd14ba25b3593099af562a4b0ef90bc9b87557498af47bf604a00976a0b19f
+        url: https://ghcr.io/v2/homebrew/core/libayatana-appindicator/blobs/sha256:c2c991f9220114279f09fd40669993f94d4982453d5b74210e106d908ea46c97
+        sha256: c2c991f9220114279f09fd40669993f94d4982453d5b74210e106d908ea46c97
         cellar: :any
 source:
     url: https://github.com/AyatanaIndicators/libayatana-appindicator/archive/refs/tags/0.6.0.tar.gz
     sha256: 23be92ad8eb9625ce93b23b14f82f3cf88a4970c31d48581945ddfbac0441d06
 build_dependencies:
-    - at-spi2-core
     - cmake
     - gobject-introspection
-    - intltool
-    - libxml2
     - pkgconf
     - vala
