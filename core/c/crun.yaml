@@ -48,7 +48,6 @@ dependencies:
     - libcap
     - libseccomp
     - systemd
-    - yajl
 bottle:
     linux_amd64:
         url: https://ghcr.io/v2/homebrew/core/crun/blobs/sha256:014f76726ebdf60eea4df36ef9c40c49d615382b6333f92068524ed4c896f761
@@ -61,10 +60,10 @@ bottle:
 source:
     url: https://github.com/containers/crun/releases/download/1.28/crun-1.28.tar.zst
     sha256: 62b82f7db89df3652970d9ad76f635a177d09bcb543c8d1dae13a749cd3e6e35
+head:
+    url: https://github.com/containers/crun.git
+    branch: main
 build_dependencies:
-    - autoconf
-    - automake
     - go-md2man
-    - libtool
     - pkgconf
     - python@3.14
