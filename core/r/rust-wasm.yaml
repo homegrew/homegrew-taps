@@ -1,0 +1,99 @@
+name: rust-wasm
+version: 1.97.1
+description: Rust standard library and sysroot for WebAssembly targets
+homepage: https://www.rust-lang.org/
+license: Apache-2.0 OR MIT
+caveats: |
+    Included targets: wasm32-unknown-unknown, wasm32-wasip1, wasm32-wasip2
+
+    To cross-compile for, e.g., wasm32-unknown-unknown:
+      cargo build --config $HOMEBREW_PREFIX/opt/rust-wasm/share/rust-wasm/cargo-config.toml --target wasm32-unknown-unknown
+url:
+    darwin_amd64: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_amd64_10: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_amd64_11: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_amd64_12: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_amd64_13: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_amd64_14: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_amd64_15: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_amd64_16: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_arm64: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_arm64_11: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_arm64_12: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_arm64_13: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_arm64_14: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_arm64_15: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    darwin_arm64_16: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    linux_amd64: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    linux_arm64: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+sha256:
+    darwin_amd64: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_amd64_10: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_amd64_11: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_amd64_12: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_amd64_13: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_amd64_14: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_amd64_15: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_amd64_16: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_arm64: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_arm64_11: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_arm64_12: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_arm64_13: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_arm64_14: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_arm64_15: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    darwin_arm64_16: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    linux_amd64: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+    linux_arm64: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - lld
+    - rust
+    - wasi-libc
+    - wasm-component-ld
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:4443a5f831b95873e2a5baf8cf23a91b9718fc9e5e594c165ee6db39bbe917de
+        sha256: 4443a5f831b95873e2a5baf8cf23a91b9718fc9e5e594c165ee6db39bbe917de
+        cellar: :any_skip_relocation
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:4443a5f831b95873e2a5baf8cf23a91b9718fc9e5e594c165ee6db39bbe917de
+        sha256: 4443a5f831b95873e2a5baf8cf23a91b9718fc9e5e594c165ee6db39bbe917de
+        cellar: :any_skip_relocation
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:4443a5f831b95873e2a5baf8cf23a91b9718fc9e5e594c165ee6db39bbe917de
+        sha256: 4443a5f831b95873e2a5baf8cf23a91b9718fc9e5e594c165ee6db39bbe917de
+        cellar: :any_skip_relocation
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:4443a5f831b95873e2a5baf8cf23a91b9718fc9e5e594c165ee6db39bbe917de
+        sha256: 4443a5f831b95873e2a5baf8cf23a91b9718fc9e5e594c165ee6db39bbe917de
+        cellar: :any_skip_relocation
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:a43cc53ad6f93181d866add98e107136eea3951b00b7af4715793bc078b3e583
+        sha256: a43cc53ad6f93181d866add98e107136eea3951b00b7af4715793bc078b3e583
+        cellar: :any_skip_relocation
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:a43cc53ad6f93181d866add98e107136eea3951b00b7af4715793bc078b3e583
+        sha256: a43cc53ad6f93181d866add98e107136eea3951b00b7af4715793bc078b3e583
+        cellar: :any_skip_relocation
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:a43cc53ad6f93181d866add98e107136eea3951b00b7af4715793bc078b3e583
+        sha256: a43cc53ad6f93181d866add98e107136eea3951b00b7af4715793bc078b3e583
+        cellar: :any_skip_relocation
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:a43cc53ad6f93181d866add98e107136eea3951b00b7af4715793bc078b3e583
+        sha256: a43cc53ad6f93181d866add98e107136eea3951b00b7af4715793bc078b3e583
+        cellar: :any_skip_relocation
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:36ec7d9e41e07606a99e622cccc8041ae5ac8181b5931563ff54dbbccb4711ac
+        sha256: 36ec7d9e41e07606a99e622cccc8041ae5ac8181b5931563ff54dbbccb4711ac
+        cellar: :any_skip_relocation
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/rust-wasm/blobs/sha256:0a2e031c3f008624e9ce1ae96bf39469946e3298b7b1297861a7519dcd086f2c
+        sha256: 0a2e031c3f008624e9ce1ae96bf39469946e3298b7b1297861a7519dcd086f2c
+        cellar: :any_skip_relocation
+source:
+    url: https://static.rust-lang.org/dist/rustc-1.97.1-src.tar.gz
+    sha256: 622c2b429c53cbfdc0dd3a51d03554e91cd63ebec1912c1f5709640cdfef1a9d
