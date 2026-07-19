@@ -4,10 +4,11 @@ description: Efficient network analysis for Python 3
 homepage: https://graph-tool.skewed.de/
 license: LGPL-3.0-or-later
 caveats: |
-    Only the main library is linked to avoid contaminating the shared site-packages.
-    Graph drawing and other features that require extra Python packages may be used
-    by adding the following formula-specific site-packages to your PYTHONPATH:
-      $HOMEBREW_PREFIX/opt/graph-tool/libexec/lib/python3.14/site-packages
+    If you want graph drawing, you will need to install additional formulae:
+      brew install gtk+3 py3cairo pygobject3 python-matplotlib
+
+    If you want zstd decompression, you can use the bundled Python package, e.g.
+      export PYTHONPATH="$HOMEBREW_PREFIX/opt/graph-tool/libexec/lib/python3.14/site-packages"
 url:
     darwin_amd64: https://downloads.skewed.de/graph-tool/graph-tool-2.98.tar.bz2
     darwin_amd64_10: https://downloads.skewed.de/graph-tool/graph-tool-2.98.tar.bz2
@@ -51,67 +52,62 @@ install:
 dependencies:
     - boost
     - boost-python3
-    - cairomm@1.14
-    - cgal
-    - freetype
+    - cairomm
     - gmp
-    - gtk+3
     - numpy
-    - pillow
-    - py3cairo
-    - pygobject3
     - python@3.14
-    - qhull
     - scipy
     - zstd
     - cairo
     - libomp
-    - libsigc++@2
+    - libsigc++
 bottle:
     darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:b9cb760c4878ec9f4eac0419013416ed0462968cb879944c65f14f7c75c31b7b
-        sha256: b9cb760c4878ec9f4eac0419013416ed0462968cb879944c65f14f7c75c31b7b
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:ce2bccff3d23b5c7a5f26306a47104c1d0c5566fbf6bf84ee5f7e1e4b43ff592
+        sha256: ce2bccff3d23b5c7a5f26306a47104c1d0c5566fbf6bf84ee5f7e1e4b43ff592
         cellar: /usr/local/Cellar
     darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:b9cb760c4878ec9f4eac0419013416ed0462968cb879944c65f14f7c75c31b7b
-        sha256: b9cb760c4878ec9f4eac0419013416ed0462968cb879944c65f14f7c75c31b7b
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:ce2bccff3d23b5c7a5f26306a47104c1d0c5566fbf6bf84ee5f7e1e4b43ff592
+        sha256: ce2bccff3d23b5c7a5f26306a47104c1d0c5566fbf6bf84ee5f7e1e4b43ff592
         cellar: /usr/local/Cellar
     darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:b9cb760c4878ec9f4eac0419013416ed0462968cb879944c65f14f7c75c31b7b
-        sha256: b9cb760c4878ec9f4eac0419013416ed0462968cb879944c65f14f7c75c31b7b
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:ce2bccff3d23b5c7a5f26306a47104c1d0c5566fbf6bf84ee5f7e1e4b43ff592
+        sha256: ce2bccff3d23b5c7a5f26306a47104c1d0c5566fbf6bf84ee5f7e1e4b43ff592
         cellar: /usr/local/Cellar
     darwin_amd64_16:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:b9cb760c4878ec9f4eac0419013416ed0462968cb879944c65f14f7c75c31b7b
-        sha256: b9cb760c4878ec9f4eac0419013416ed0462968cb879944c65f14f7c75c31b7b
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:ce2bccff3d23b5c7a5f26306a47104c1d0c5566fbf6bf84ee5f7e1e4b43ff592
+        sha256: ce2bccff3d23b5c7a5f26306a47104c1d0c5566fbf6bf84ee5f7e1e4b43ff592
         cellar: /usr/local/Cellar
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:50e665849b87dd8ad617c2efd3afa0a4d0adef53b74071b2c7b5c4ce3f7063ae
-        sha256: 50e665849b87dd8ad617c2efd3afa0a4d0adef53b74071b2c7b5c4ce3f7063ae
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:6afb00c1f7d70785dc11cee93c8e1737cb2d5418fe3277fa21bc82fada367d88
+        sha256: 6afb00c1f7d70785dc11cee93c8e1737cb2d5418fe3277fa21bc82fada367d88
         cellar: /opt/homebrew/Cellar
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:be2e852b0f3b95d195a2bb16ed953c7acfbd74dbb8ccd8f95326225f230eb21c
-        sha256: be2e852b0f3b95d195a2bb16ed953c7acfbd74dbb8ccd8f95326225f230eb21c
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:b56bc924ea55f7c925469ffd2c1749f69c9c9ad5d27e7769ef6b619b43ac408c
+        sha256: b56bc924ea55f7c925469ffd2c1749f69c9c9ad5d27e7769ef6b619b43ac408c
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:60a42b64ba10fdaf6084735181006859bd3465fbfa2a6701d660015734f0cb15
-        sha256: 60a42b64ba10fdaf6084735181006859bd3465fbfa2a6701d660015734f0cb15
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:6145b7a963a4d27c599e8f178bac270735416155fa8927a17ccdad5d89d54c41
+        sha256: 6145b7a963a4d27c599e8f178bac270735416155fa8927a17ccdad5d89d54c41
         cellar: /opt/homebrew/Cellar
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:50e665849b87dd8ad617c2efd3afa0a4d0adef53b74071b2c7b5c4ce3f7063ae
-        sha256: 50e665849b87dd8ad617c2efd3afa0a4d0adef53b74071b2c7b5c4ce3f7063ae
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:6afb00c1f7d70785dc11cee93c8e1737cb2d5418fe3277fa21bc82fada367d88
+        sha256: 6afb00c1f7d70785dc11cee93c8e1737cb2d5418fe3277fa21bc82fada367d88
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:0ad4b6e3bd2ac87f703355e32585ff1e75159b33b9e483ad5b2ab233f532e343
-        sha256: 0ad4b6e3bd2ac87f703355e32585ff1e75159b33b9e483ad5b2ab233f532e343
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:aacef17c2a0dd105ba0b6e380bba2149d431212e44324949c4149e92cf60c8a3
+        sha256: aacef17c2a0dd105ba0b6e380bba2149d431212e44324949c4149e92cf60c8a3
         cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:dc3a527a90809726450449ee90a4bb8f124a4a30ea2379e6e7881d07613f8b43
-        sha256: dc3a527a90809726450449ee90a4bb8f124a4a30ea2379e6e7881d07613f8b43
+        url: https://ghcr.io/v2/homebrew/core/graph-tool/blobs/sha256:500f1643dbc65fc8c035570ebb5cb2645f4b8f5f19206515bb0ce75436664e2c
+        sha256: 500f1643dbc65fc8c035570ebb5cb2645f4b8f5f19206515bb0ce75436664e2c
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://downloads.skewed.de/graph-tool/graph-tool-2.98.tar.bz2
     sha256: eef1948b937f5f043749eee75fe0c6d7e8f036551d945e9d55e37870b06cc527
 build_dependencies:
+    - cgal
     - google-sparsehash
-    - ninja
     - pkgconf
+    - py3cairo
+    - python-setuptools
