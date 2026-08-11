@@ -44,16 +44,12 @@ install:
     strip_components: 2
     format: tar.gz
 dependencies:
-    - cryptominisat
-    - gperftools
     - llvm@16
+    - gperftools
     - python@3.14
     - sqlite
     - stp
-    - wllvm
     - z3
-    - gmp
-    - minisat
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/klee/blobs/sha256:562d6b3eab534db3213f75598829c903a10c8b41c2527636b7262529e8976fc5
@@ -100,3 +96,4 @@ head:
 build_dependencies:
     - cmake
     - pkgconf
+    - wllvm
