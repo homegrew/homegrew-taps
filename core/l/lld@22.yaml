@@ -1,0 +1,95 @@
+name: lld@22
+version: 22.1.8
+description: LLVM Project Linker
+homepage: https://lld.llvm.org/
+license: Apache-2.0 WITH LLVM-exception
+url:
+    darwin_amd64: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_amd64_10: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_amd64_11: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_amd64_12: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_amd64_13: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_amd64_14: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_amd64_15: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_amd64_16: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_arm64: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_arm64_11: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_arm64_12: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_arm64_13: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_arm64_14: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_arm64_15: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    darwin_arm64_16: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    linux_amd64: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    linux_arm64: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+sha256:
+    darwin_amd64: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_amd64_10: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_amd64_11: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_amd64_12: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_amd64_13: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_amd64_14: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_amd64_15: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_amd64_16: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_arm64: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_arm64_11: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_arm64_12: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_arm64_13: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_arm64_14: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_arm64_15: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    darwin_arm64_16: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    linux_amd64: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+    linux_arm64: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - llvm@22
+    - zstd
+keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:994ca3f898623fb2ff997dd964870a16bc99b1180f791a93815a4f93265640e1
+        sha256: 994ca3f898623fb2ff997dd964870a16bc99b1180f791a93815a4f93265640e1
+        cellar: :any
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:994ca3f898623fb2ff997dd964870a16bc99b1180f791a93815a4f93265640e1
+        sha256: 994ca3f898623fb2ff997dd964870a16bc99b1180f791a93815a4f93265640e1
+        cellar: :any
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:994ca3f898623fb2ff997dd964870a16bc99b1180f791a93815a4f93265640e1
+        sha256: 994ca3f898623fb2ff997dd964870a16bc99b1180f791a93815a4f93265640e1
+        cellar: :any
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:994ca3f898623fb2ff997dd964870a16bc99b1180f791a93815a4f93265640e1
+        sha256: 994ca3f898623fb2ff997dd964870a16bc99b1180f791a93815a4f93265640e1
+        cellar: :any
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:8ebadb3038efaddf7e25528e591638038f7a21b14158419f0d4938d124a927e9
+        sha256: 8ebadb3038efaddf7e25528e591638038f7a21b14158419f0d4938d124a927e9
+        cellar: :any
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:3a25de5f63a66235e2498f85497614adf5f1a99a2799264400a55e3fa8381939
+        sha256: 3a25de5f63a66235e2498f85497614adf5f1a99a2799264400a55e3fa8381939
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:c5a61f9f79f0c52e986eae89761969afc0c8555683897102d8898d881431f2c9
+        sha256: c5a61f9f79f0c52e986eae89761969afc0c8555683897102d8898d881431f2c9
+        cellar: :any
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:8ebadb3038efaddf7e25528e591638038f7a21b14158419f0d4938d124a927e9
+        sha256: 8ebadb3038efaddf7e25528e591638038f7a21b14158419f0d4938d124a927e9
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:709cf16903169b503ee1f13bf04282d455bdcce704e97246e00fe49d75c92664
+        sha256: 709cf16903169b503ee1f13bf04282d455bdcce704e97246e00fe49d75c92664
+        cellar: :any
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/lld/22/blobs/sha256:c9ffa9498e8356e638fa15bee46abea473f6febe225d4382b29ef103136c8a4a
+        sha256: c9ffa9498e8356e638fa15bee46abea473f6febe225d4382b29ef103136c8a4a
+        cellar: :any
+source:
+    url: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/llvm-project-22.1.8.src.tar.xz
+    sha256: 922f1817a0df7b1489272d18134ee0087a8b068828f87ac63b9861b1a9965888
+build_dependencies:
+    - cmake
