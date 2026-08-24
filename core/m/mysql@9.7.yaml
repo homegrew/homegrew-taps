@@ -1,0 +1,127 @@
+name: mysql@9.7
+version: 9.7.2
+description: Open source relational database management system
+homepage: https://github.com/mysql/mysql-server
+license: GPL-2.0-only WITH Universal-FOSS-exception-1.0
+caveats: |
+    A "/etc/my.cnf" or "/etc/mysql/my.cnf" from another install may interfere
+    with a Homebrew-built server starting up correctly.
+
+    Upgrading from MySQL <8.4 to MySQL >9.0 requires running MySQL 8.4 first:
+     - brew services stop mysql
+     - brew install mysql@8.4
+     - brew services start mysql@8.4
+     - brew services stop mysql@8.4
+     - brew services start mysql
+
+    We've installed your MySQL database without a root password. To secure it run:
+        mysql_secure_installation
+
+    MySQL is configured to only allow connections from localhost by default
+
+    To connect run:
+        mysql -u root
+url:
+    darwin_amd64: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_amd64_10: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_amd64_11: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_amd64_12: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_amd64_13: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_amd64_14: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_amd64_15: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_amd64_16: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_arm64: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_arm64_11: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_arm64_12: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_arm64_13: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_arm64_14: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_arm64_15: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    darwin_arm64_16: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    linux_amd64: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    linux_arm64: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+sha256:
+    darwin_amd64: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_amd64_10: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_amd64_11: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_amd64_12: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_amd64_13: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_amd64_14: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_amd64_15: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_amd64_16: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_arm64: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_arm64_11: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_arm64_12: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_arm64_13: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_arm64_14: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_arm64_15: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    darwin_arm64_16: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    linux_amd64: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+    linux_arm64: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - abseil
+    - icu4c@78
+    - lz4
+    - openssl@3
+    - protobuf
+    - zlib-ng-compat
+    - zstd
+keg_only: true
+bottle:
+    darwin_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:6e56cd237d7eb48e93a86afd59a2d0d797a80f7f9ff852f3d0b6c84a4e2b8439
+        sha256: 6e56cd237d7eb48e93a86afd59a2d0d797a80f7f9ff852f3d0b6c84a4e2b8439
+        cellar: /usr/local/Cellar
+    darwin_amd64_14:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:6e56cd237d7eb48e93a86afd59a2d0d797a80f7f9ff852f3d0b6c84a4e2b8439
+        sha256: 6e56cd237d7eb48e93a86afd59a2d0d797a80f7f9ff852f3d0b6c84a4e2b8439
+        cellar: /usr/local/Cellar
+    darwin_amd64_15:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:6e56cd237d7eb48e93a86afd59a2d0d797a80f7f9ff852f3d0b6c84a4e2b8439
+        sha256: 6e56cd237d7eb48e93a86afd59a2d0d797a80f7f9ff852f3d0b6c84a4e2b8439
+        cellar: /usr/local/Cellar
+    darwin_amd64_16:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:6e56cd237d7eb48e93a86afd59a2d0d797a80f7f9ff852f3d0b6c84a4e2b8439
+        sha256: 6e56cd237d7eb48e93a86afd59a2d0d797a80f7f9ff852f3d0b6c84a4e2b8439
+        cellar: /usr/local/Cellar
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:bb270bfff714f88fe2a73214efbaa1d27b38bf962bdf81d7c379421c63224be5
+        sha256: bb270bfff714f88fe2a73214efbaa1d27b38bf962bdf81d7c379421c63224be5
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:2582f4b746e4f1a2ca7a2b7a44365834d817d913402437ec5b7d4fbeb5dfa7df
+        sha256: 2582f4b746e4f1a2ca7a2b7a44365834d817d913402437ec5b7d4fbeb5dfa7df
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:1f22ca4ce9e523055160ea862c1d4f00cedbe7d30433145f418975e00b0f7a99
+        sha256: 1f22ca4ce9e523055160ea862c1d4f00cedbe7d30433145f418975e00b0f7a99
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:bb270bfff714f88fe2a73214efbaa1d27b38bf962bdf81d7c379421c63224be5
+        sha256: bb270bfff714f88fe2a73214efbaa1d27b38bf962bdf81d7c379421c63224be5
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:5e765b3d6e632d4629a54c53078f1100060d7a94cd4639d7c8ba376099ba1533
+        sha256: 5e765b3d6e632d4629a54c53078f1100060d7a94cd4639d7c8ba376099ba1533
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mysql/9.7/blobs/sha256:1cf3b35d7b7da933227199319d0db4a6b11fe963303bb3d208069b93d6c9ca77
+        sha256: 1cf3b35d7b7da933227199319d0db4a6b11fe963303bb3d208069b93d6c9ca77
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz
+    sha256: e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4
+build_dependencies:
+    - bison
+    - cmake
+    - pkgconf
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mysql@9.7/bin/mysqld_safe
+        - --datadir=$HOMEBREW_PREFIX/var/mysql
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var/mysql
+    keep_alive: true
