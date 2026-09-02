@@ -1,0 +1,87 @@
+name: ffmpeg@8
+version: 8.1.2
+description: Play, record, convert, and stream select audio and video codecs
+homepage: https://ffmpeg.org/
+license: GPL-3.0-or-later
+url:
+    darwin_amd64: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_amd64_10: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_amd64_11: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_amd64_12: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_amd64_13: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_amd64_14: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_amd64_15: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_amd64_16: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_arm64: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_arm64_11: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_arm64_12: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_arm64_13: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_arm64_14: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_arm64_15: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    darwin_arm64_16: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    linux_amd64: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    linux_arm64: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+sha256:
+    darwin_amd64: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_amd64_10: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_amd64_11: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_amd64_12: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_amd64_13: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_amd64_14: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_amd64_15: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_amd64_16: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_arm64: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_arm64_11: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_arm64_12: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_arm64_13: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_arm64_14: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_arm64_15: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    darwin_arm64_16: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    linux_amd64: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+    linux_arm64: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - dav1d
+    - lame
+    - libvmaf
+    - libvpx
+    - openssl@3
+    - opus
+    - sdl2-compat
+    - svt-av1
+    - x264
+    - x265
+keg_only: true
+bottle:
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/8/blobs/sha256:c571b15555a2e0416bea6d33c6515347071e0e4b81ce5b75bec4c83606fd0fef
+        sha256: c571b15555a2e0416bea6d33c6515347071e0e4b81ce5b75bec4c83606fd0fef
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_14:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/8/blobs/sha256:52d4b4896b3b96465e8deb6075de667e0258430b1bf5d6ba2715051007ec4b56
+        sha256: 52d4b4896b3b96465e8deb6075de667e0258430b1bf5d6ba2715051007ec4b56
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/8/blobs/sha256:a4291ecb5da3e8a936117f64d1fb6b26cbf8d342c97fadcffe49036c28b2e7de
+        sha256: a4291ecb5da3e8a936117f64d1fb6b26cbf8d342c97fadcffe49036c28b2e7de
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/8/blobs/sha256:c571b15555a2e0416bea6d33c6515347071e0e4b81ce5b75bec4c83606fd0fef
+        sha256: c571b15555a2e0416bea6d33c6515347071e0e4b81ce5b75bec4c83606fd0fef
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/8/blobs/sha256:a364024c4dc9ed4d7851af70a60a75483fe8a3d7e0919282c67c2cbf83d32b84
+        sha256: a364024c4dc9ed4d7851af70a60a75483fe8a3d7e0919282c67c2cbf83d32b84
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/ffmpeg/8/blobs/sha256:a90bd5c6109eaedd3a72e66db04abc8dfb99c42fca01993813b27c30ef93912b
+        sha256: a90bd5c6109eaedd3a72e66db04abc8dfb99c42fca01993813b27c30ef93912b
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+    sha256: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+build_dependencies:
+    - pkgconf

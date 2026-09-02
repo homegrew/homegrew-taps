@@ -43,8 +43,6 @@ install:
     type: archive
     strip_components: 2
     format: tar.gz
-dependencies:
-    - go
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/go-critic/blobs/sha256:f1267fe903802263093baf96fedfbcad261162edda114ec8e997dafeaa78e63e
@@ -92,3 +90,5 @@ source:
 head:
     url: https://github.com/go-critic/go-critic.git
     branch: master
+build_dependencies:
+    - go@1.26
