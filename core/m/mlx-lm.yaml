@@ -53,20 +53,20 @@ dependencies:
     - sentencepiece
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:bde169fb009b65ea1abbe77a73c58275f5a8bd5c2c5918830299815a8d44a0c6
-        sha256: bde169fb009b65ea1abbe77a73c58275f5a8bd5c2c5918830299815a8d44a0c6
+        url: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:40b188533df13222a64df75afad88d7b48ff350f68e95130386bf1970ac3e47a
+        sha256: 40b188533df13222a64df75afad88d7b48ff350f68e95130386bf1970ac3e47a
         cellar: :any
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:d3c7ceb52d5640b2d3f39a1a0365a8b7f524f5460fd718490b4b12a81dbad346
-        sha256: d3c7ceb52d5640b2d3f39a1a0365a8b7f524f5460fd718490b4b12a81dbad346
+        url: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:046dc94e2d1e3465c784698d971bc390a676430dde81cdacf373c6af97e048c9
+        sha256: 046dc94e2d1e3465c784698d971bc390a676430dde81cdacf373c6af97e048c9
         cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:40c2ab4d8adaa5304090563b53b37596247584c962862817b96de9cbbde83e5d
-        sha256: 40c2ab4d8adaa5304090563b53b37596247584c962862817b96de9cbbde83e5d
+        url: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:70ff88cfd6acd074b440cbe4a034e318b180cbc4ef6255871826a9a5d018e64c
+        sha256: 70ff88cfd6acd074b440cbe4a034e318b180cbc4ef6255871826a9a5d018e64c
         cellar: :any
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:bde169fb009b65ea1abbe77a73c58275f5a8bd5c2c5918830299815a8d44a0c6
-        sha256: bde169fb009b65ea1abbe77a73c58275f5a8bd5c2c5918830299815a8d44a0c6
+        url: https://ghcr.io/v2/homebrew/core/mlx-lm/blobs/sha256:40b188533df13222a64df75afad88d7b48ff350f68e95130386bf1970ac3e47a
+        sha256: 40b188533df13222a64df75afad88d7b48ff350f68e95130386bf1970ac3e47a
         cellar: :any
 source:
     url: https://files.pythonhosted.org/packages/84/94/9a38d6b0c6fcca995b9136c94eb7da1e9c5165652edf228b96b29960fa7a/mlx_lm-0.31.3.tar.gz
@@ -75,6 +75,8 @@ head:
     url: https://github.com/ml-explore/mlx-lm.git
     branch: main
 build_dependencies:
+    - cmake
+    - coreutils
     - pkgconf
     - rust
 service:
