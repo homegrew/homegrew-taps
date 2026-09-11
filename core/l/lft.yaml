@@ -43,31 +43,36 @@ install:
     type: archive
     strip_components: 2
     format: tar.gz
+dependencies:
+    - c-ares
+    - ncurses
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:b762c7dcb2b21e46e797fc10104e507d966b4622aa89f966e82ba4b6369d905c
-        sha256: b762c7dcb2b21e46e797fc10104e507d966b4622aa89f966e82ba4b6369d905c
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:2c40112b2be68d4e3795726c155ce2a6472f633c63d9fc8ce1785b56577325db
+        sha256: 2c40112b2be68d4e3795726c155ce2a6472f633c63d9fc8ce1785b56577325db
+        cellar: :any
     darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:e1ab65dae3e76d8f181da7197e121f3e8352ba7fa7729fccbb6a8a4760f1b784
-        sha256: e1ab65dae3e76d8f181da7197e121f3e8352ba7fa7729fccbb6a8a4760f1b784
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:094ad51fa666ae8fe50de127b5da956649766caeeefd782c897da756df0f614f
+        sha256: 094ad51fa666ae8fe50de127b5da956649766caeeefd782c897da756df0f614f
+        cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:577eff6c7459b3237079ab50a2c3962bb20339c235f1a08bd1fca27d2b164d50
-        sha256: 577eff6c7459b3237079ab50a2c3962bb20339c235f1a08bd1fca27d2b164d50
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:7d338e52186416ed983276718c2d6ed0a27a7ca76c025f2544bafa2124e29b79
+        sha256: 7d338e52186416ed983276718c2d6ed0a27a7ca76c025f2544bafa2124e29b79
+        cellar: :any
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:b762c7dcb2b21e46e797fc10104e507d966b4622aa89f966e82ba4b6369d905c
-        sha256: b762c7dcb2b21e46e797fc10104e507d966b4622aa89f966e82ba4b6369d905c
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:2c40112b2be68d4e3795726c155ce2a6472f633c63d9fc8ce1785b56577325db
+        sha256: 2c40112b2be68d4e3795726c155ce2a6472f633c63d9fc8ce1785b56577325db
+        cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:ca27368d53945a8ae132aa3133bc4c8314c3fd7635138bf97d9b5f7c7ab50fc0
-        sha256: ca27368d53945a8ae132aa3133bc4c8314c3fd7635138bf97d9b5f7c7ab50fc0
+        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:8779ebca5ff64b3bae3b3f4ba9a55e89906c5b73c77e73d892b1596d58ceb6af
+        sha256: 8779ebca5ff64b3bae3b3f4ba9a55e89906c5b73c77e73d892b1596d58ceb6af
         cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:6f3b8a00a5c6f1e74dfad1fdecde55623374243c89a8848725b295daec95ff9b
-        sha256: 6f3b8a00a5c6f1e74dfad1fdecde55623374243c89a8848725b295daec95ff9b
+        url: https://ghcr.io/v2/homebrew/core/lft/blobs/sha256:52df348b8b0c2575f2563cb97d22e53a2596c767661afc2aaad4b83821e82f00
+        sha256: 52df348b8b0c2575f2563cb97d22e53a2596c767661afc2aaad4b83821e82f00
         cellar: :any
 source:
     url: https://pwhois.org/dl/index.who?file=lft-4.01.tar.gz
     sha256: 77a2923dbd10b1e3d2b55d8f3c4144795a80f73772d4f41f5e27751d1f3f0c62
+build_dependencies:
+    - pkgconf
