@@ -1,0 +1,84 @@
+name: whisper.cpp
+version: 1.9.4
+description: Port of OpenAI's Whisper model in C/C++
+homepage: https://github.com/ggml-org/whisper.cpp
+license: MIT
+caveats: |
+    whisper.cpp requires GGML model files to work. These are not downloaded by default.
+    To obtain model files (.bin), visit one of these locations:
+
+      https://huggingface.co/ggerganov/whisper.cpp/tree/main
+      https://ggml.ggerganov.com/
+url:
+    darwin_amd64: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_amd64_10: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_amd64_11: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_amd64_12: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_amd64_13: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_amd64_14: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_amd64_15: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_amd64_16: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_arm64: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_arm64_11: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_arm64_12: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_arm64_13: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_arm64_14: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_arm64_15: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    darwin_arm64_16: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    linux_amd64: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    linux_arm64: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+sha256:
+    darwin_amd64: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_amd64_10: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_amd64_11: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_amd64_12: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_amd64_13: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_amd64_14: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_amd64_15: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_amd64_16: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_arm64: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_arm64_11: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_arm64_12: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_arm64_13: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_arm64_14: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_arm64_15: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    darwin_arm64_16: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    linux_amd64: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+    linux_arm64: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - ggml
+    - llama.cpp
+    - sdl2-compat
+bottle:
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/whisper.cpp/blobs/sha256:7f4638ec796dadd46cf4436afe439f1c9f8056e61f8624379a800417e905d321
+        sha256: 7f4638ec796dadd46cf4436afe439f1c9f8056e61f8624379a800417e905d321
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/whisper.cpp/blobs/sha256:d7baf5454e1c886adc33380c1cd1bfe810477e3196a250d8096bc5d02600dfd0
+        sha256: d7baf5454e1c886adc33380c1cd1bfe810477e3196a250d8096bc5d02600dfd0
+        cellar: :any
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/whisper.cpp/blobs/sha256:7f4638ec796dadd46cf4436afe439f1c9f8056e61f8624379a800417e905d321
+        sha256: 7f4638ec796dadd46cf4436afe439f1c9f8056e61f8624379a800417e905d321
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/whisper.cpp/blobs/sha256:2a3304c82ab88fa6a597471b8a3dd10b06689cddcd4a58e4ed84504174118287
+        sha256: 2a3304c82ab88fa6a597471b8a3dd10b06689cddcd4a58e4ed84504174118287
+        cellar: :any
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/whisper.cpp/blobs/sha256:006fc8f2b384ff1a538ec1c9fb62a96d2d7a7c422343c62935b3cf1f805fda29
+        sha256: 006fc8f2b384ff1a538ec1c9fb62a96d2d7a7c422343c62935b3cf1f805fda29
+        cellar: :any
+source:
+    url: https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz
+    sha256: 57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae
+head:
+    url: https://github.com/ggml-org/whisper.cpp.git
+    branch: master
+build_dependencies:
+    - cmake
