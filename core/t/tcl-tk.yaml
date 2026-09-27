@@ -5,6 +5,7 @@ homepage: https://www.tcl-lang.org
 license: TCL
 caveats: |
     The sqlite3_analyzer binary is in the `sqlite-analyzer` formula.
+    TclTLS extension is now in the `tcltls` formula.
 url:
     darwin_amd64: https://downloads.sourceforge.net/project/tcl/Tcl/9.0.4/tcl9.0.4-src.tar.gz
     darwin_amd64_10: https://downloads.sourceforge.net/project/tcl/Tcl/9.0.4/tcl9.0.4-src.tar.gz
@@ -47,47 +48,26 @@ install:
     format: tar.gz
 dependencies:
     - libtommath
-    - openssl@3
 bottle:
-    darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:7814be4fc08ee90045ad3f6f1758982ab441f31bee964ddb876f6a5c6c6c8790
-        sha256: 7814be4fc08ee90045ad3f6f1758982ab441f31bee964ddb876f6a5c6c6c8790
-        cellar: /usr/local/Cellar
-    darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:7814be4fc08ee90045ad3f6f1758982ab441f31bee964ddb876f6a5c6c6c8790
-        sha256: 7814be4fc08ee90045ad3f6f1758982ab441f31bee964ddb876f6a5c6c6c8790
-        cellar: /usr/local/Cellar
-    darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:7814be4fc08ee90045ad3f6f1758982ab441f31bee964ddb876f6a5c6c6c8790
-        sha256: 7814be4fc08ee90045ad3f6f1758982ab441f31bee964ddb876f6a5c6c6c8790
-        cellar: /usr/local/Cellar
-    darwin_amd64_16:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:7814be4fc08ee90045ad3f6f1758982ab441f31bee964ddb876f6a5c6c6c8790
-        sha256: 7814be4fc08ee90045ad3f6f1758982ab441f31bee964ddb876f6a5c6c6c8790
-        cellar: /usr/local/Cellar
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:5f827b236bad97d36743a3abfa75f746f998ccf4d6cf46e55b4ad167cccf14d6
-        sha256: 5f827b236bad97d36743a3abfa75f746f998ccf4d6cf46e55b4ad167cccf14d6
-        cellar: /opt/homebrew/Cellar
-    darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:83ece1e2a0f3d17e5ba0ed2d01203f357d25d008fcc1e3902c99e7200d652ea3
-        sha256: 83ece1e2a0f3d17e5ba0ed2d01203f357d25d008fcc1e3902c99e7200d652ea3
+        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:b4148308c75628f087db66c5ebac34f872f32723f76355a4bf64d255151284bc
+        sha256: b4148308c75628f087db66c5ebac34f872f32723f76355a4bf64d255151284bc
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:337f7db2e9c5b41a61cde887db2d02fe6293f76eedf81502783014b9922bef1e
-        sha256: 337f7db2e9c5b41a61cde887db2d02fe6293f76eedf81502783014b9922bef1e
+        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:0350f2d19a0705678bd4c38dfaadbca58fa9f4789ac381e522270fae7a10a5f7
+        sha256: 0350f2d19a0705678bd4c38dfaadbca58fa9f4789ac381e522270fae7a10a5f7
         cellar: /opt/homebrew/Cellar
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:5f827b236bad97d36743a3abfa75f746f998ccf4d6cf46e55b4ad167cccf14d6
-        sha256: 5f827b236bad97d36743a3abfa75f746f998ccf4d6cf46e55b4ad167cccf14d6
+        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:b4148308c75628f087db66c5ebac34f872f32723f76355a4bf64d255151284bc
+        sha256: b4148308c75628f087db66c5ebac34f872f32723f76355a4bf64d255151284bc
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:bb4f5dc50224e0e6ef9da8fd743964cf26dc43edaf9702c728272f8c839ed0b1
-        sha256: bb4f5dc50224e0e6ef9da8fd743964cf26dc43edaf9702c728272f8c839ed0b1
+        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:996ee7af1459ac5daf0c9725a1e36940d80ad2d8a0973cc5080e55cc3928068f
+        sha256: 996ee7af1459ac5daf0c9725a1e36940d80ad2d8a0973cc5080e55cc3928068f
         cellar: /home/linuxbrew/.linuxbrew/Cellar
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:410d31028279d7a1d30dc73d4f6b012d54d837ab71cb6dadd1484932b7568b3b
-        sha256: 410d31028279d7a1d30dc73d4f6b012d54d837ab71cb6dadd1484932b7568b3b
+        url: https://ghcr.io/v2/homebrew/core/tcl-tk/blobs/sha256:a55da02a8c387fd4996612de6a49533c82ff27560ba9fcdcf86bc29158f98735
+        sha256: a55da02a8c387fd4996612de6a49533c82ff27560ba9fcdcf86bc29158f98735
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://downloads.sourceforge.net/project/tcl/Tcl/9.0.4/tcl9.0.4-src.tar.gz
