@@ -9,6 +9,10 @@ caveats: |
 
     When uninstalling, some dead symlinks are left behind so you may want to run:
       brew cleanup --prune-prefix
+
+    If the service fails to start with a "postmaster.pid" lock file error after
+    an unclean shutdown, and no postgres is running, remove the stale file:
+      rm $HOMEBREW_PREFIX/var/postgresql@18/postmaster.pid
 url:
     darwin_amd64: https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2
     darwin_amd64_10: https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2
@@ -59,45 +63,25 @@ dependencies:
     - gettext
 keg_only: true
 bottle:
-    darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:3d6375c9f23f3904465f26e99eed103f13568abf6aa42b5f4fc703b5b183c99e
-        sha256: 3d6375c9f23f3904465f26e99eed103f13568abf6aa42b5f4fc703b5b183c99e
-        cellar: /usr/local/Cellar
-    darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:3d6375c9f23f3904465f26e99eed103f13568abf6aa42b5f4fc703b5b183c99e
-        sha256: 3d6375c9f23f3904465f26e99eed103f13568abf6aa42b5f4fc703b5b183c99e
-        cellar: /usr/local/Cellar
-    darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:3d6375c9f23f3904465f26e99eed103f13568abf6aa42b5f4fc703b5b183c99e
-        sha256: 3d6375c9f23f3904465f26e99eed103f13568abf6aa42b5f4fc703b5b183c99e
-        cellar: /usr/local/Cellar
-    darwin_amd64_16:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:3d6375c9f23f3904465f26e99eed103f13568abf6aa42b5f4fc703b5b183c99e
-        sha256: 3d6375c9f23f3904465f26e99eed103f13568abf6aa42b5f4fc703b5b183c99e
-        cellar: /usr/local/Cellar
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:01bed50e337f559e3818e6ece88a6f3f7a0e550eb833e62df56ad7d8cdca71f6
-        sha256: 01bed50e337f559e3818e6ece88a6f3f7a0e550eb833e62df56ad7d8cdca71f6
-        cellar: /opt/homebrew/Cellar
-    darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:7305bae0536d2eb69c73e8539272511e19afde052700fd55baaa7365ee1e1648
-        sha256: 7305bae0536d2eb69c73e8539272511e19afde052700fd55baaa7365ee1e1648
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:b526e79ca83b7c161a391585e70148c5aa45c53a8f593b398bc4a281f6922bd9
+        sha256: b526e79ca83b7c161a391585e70148c5aa45c53a8f593b398bc4a281f6922bd9
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:e4198d57ab3743928847184a294339921a450a39a14c32d09b32fe2b494a8304
-        sha256: e4198d57ab3743928847184a294339921a450a39a14c32d09b32fe2b494a8304
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:6c47c97af81964d3486cee9f3d96a1b188313c3fec11df649229173f3cff7074
+        sha256: 6c47c97af81964d3486cee9f3d96a1b188313c3fec11df649229173f3cff7074
         cellar: /opt/homebrew/Cellar
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:01bed50e337f559e3818e6ece88a6f3f7a0e550eb833e62df56ad7d8cdca71f6
-        sha256: 01bed50e337f559e3818e6ece88a6f3f7a0e550eb833e62df56ad7d8cdca71f6
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:b526e79ca83b7c161a391585e70148c5aa45c53a8f593b398bc4a281f6922bd9
+        sha256: b526e79ca83b7c161a391585e70148c5aa45c53a8f593b398bc4a281f6922bd9
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:9bc83832f2724c1318364921e24bdd00487b2b850b8c573def2f33ba2109bc53
-        sha256: 9bc83832f2724c1318364921e24bdd00487b2b850b8c573def2f33ba2109bc53
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:62d39ad0ec43d4a82a3053d5d6e8d22536aff66d5c936617cfc222b6c2991ceb
+        sha256: 62d39ad0ec43d4a82a3053d5d6e8d22536aff66d5c936617cfc222b6c2991ceb
         cellar: /home/linuxbrew/.linuxbrew/Cellar
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:09f349c59243be46d36d3f41a2dcf37d7679eb94a10d90b867efa0d0c5ad10af
-        sha256: 09f349c59243be46d36d3f41a2dcf37d7679eb94a10d90b867efa0d0c5ad10af
+        url: https://ghcr.io/v2/homebrew/core/postgresql/18/blobs/sha256:aa9448fe3baa684e6e8191a8fb5546aa2a4aac1c6f6ce15d7aa5c2feb05c973b
+        sha256: aa9448fe3baa684e6e8191a8fb5546aa2a4aac1c6f6ce15d7aa5c2feb05c973b
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2

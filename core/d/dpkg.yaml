@@ -47,12 +47,12 @@ install:
     strip_components: 2
     format: tar.gz
 dependencies:
-    - gettext
     - gnu-tar
     - gpatch
     - libmd
     - perl
     - xz
+    - gettext
 bottle:
     darwin_arm64:
         url: https://ghcr.io/v2/homebrew/core/dpkg/blobs/sha256:2e8f0c40856fee017101f543cb1cdeb98372375646db9b0696bab7729c3cae87
@@ -82,5 +82,6 @@ source:
     url: https://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.23.11.tar.xz
     sha256: 4baf0632157bfac430b7dc1fe8800ea0787dac91f8bb272404ae19d98e569dd3
 build_dependencies:
+    - gettext
     - pkgconf
     - po4a
