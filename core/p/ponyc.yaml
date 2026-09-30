@@ -1,5 +1,5 @@
 name: ponyc
-version: 0.72.1
+version: 0.73.0
 description: Object-oriented, actor-model, capabilities-secure programming language
 homepage: https://www.ponylang.io/
 license: BSD-2-Clause
@@ -44,29 +44,31 @@ install:
     strip_components: 2
     format: tar.gz
 dependencies:
-    - openssl@3
+    - openssl@4
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:fd99303849388424b3d1f6851e06b2f1bb8d15f70bc0f8a677031ddee34ca753
-        sha256: fd99303849388424b3d1f6851e06b2f1bb8d15f70bc0f8a677031ddee34ca753
+        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:2d51e80a35441d824bd96e6e6030e93bbf93b33eb1b72a6242e808baba8ba4ab
+        sha256: 2d51e80a35441d824bd96e6e6030e93bbf93b33eb1b72a6242e808baba8ba4ab
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:cd4bd1d7aa2bc58d097cdf486f83670681e99f67f7c8f0f984dbdb6adf55385b
-        sha256: cd4bd1d7aa2bc58d097cdf486f83670681e99f67f7c8f0f984dbdb6adf55385b
+        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:2b12307edd8d0f6a493e42e9c0345a4e193619703eed26ae5cd910213a99b9e5
+        sha256: 2b12307edd8d0f6a493e42e9c0345a4e193619703eed26ae5cd910213a99b9e5
         cellar: /opt/homebrew/Cellar
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:fd99303849388424b3d1f6851e06b2f1bb8d15f70bc0f8a677031ddee34ca753
-        sha256: fd99303849388424b3d1f6851e06b2f1bb8d15f70bc0f8a677031ddee34ca753
+        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:2d51e80a35441d824bd96e6e6030e93bbf93b33eb1b72a6242e808baba8ba4ab
+        sha256: 2d51e80a35441d824bd96e6e6030e93bbf93b33eb1b72a6242e808baba8ba4ab
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:05dcfed1415f78b413719003fa56fe8d8f15bc6654c309569a230313d600f2f5
-        sha256: 05dcfed1415f78b413719003fa56fe8d8f15bc6654c309569a230313d600f2f5
+        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:cd8fa66f666332e0a1bf1f2a48d66d79a74b2dc595b02d7f4d83c477111b49c8
+        sha256: cd8fa66f666332e0a1bf1f2a48d66d79a74b2dc595b02d7f4d83c477111b49c8
         cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:93f21b5893b5d465106d341105235e1b49270ce42a1c18942fb1c74ba5404079
-        sha256: 93f21b5893b5d465106d341105235e1b49270ce42a1c18942fb1c74ba5404079
+        url: https://ghcr.io/v2/homebrew/core/ponyc/blobs/sha256:1b44d804b2ff0e7cdaea40df375566d0d00fe9ff8813e869bf079fe02bf30f60
+        sha256: 1b44d804b2ff0e7cdaea40df375566d0d00fe9ff8813e869bf079fe02bf30f60
         cellar: :any
 source:
     url: https://github.com/ponylang/ponyc.git
 build_dependencies:
     - cmake
+    - google-benchmark
+    - googletest
