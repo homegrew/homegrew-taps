@@ -45,26 +45,27 @@ install:
     format: tar.gz
 dependencies:
     - node
+    - sqlite
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:66ddadadb4e7db3b0d6232a831319a3e48705b7001b401665c7f363f57f20c10
-        sha256: 66ddadadb4e7db3b0d6232a831319a3e48705b7001b401665c7f363f57f20c10
+        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:dc47ff9adbe8db598401c7e1e7ba0efcd43a0c5ee741e18faf46ac490bc76b61
+        sha256: dc47ff9adbe8db598401c7e1e7ba0efcd43a0c5ee741e18faf46ac490bc76b61
         cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:081eb841d6c93c0ca0f95d3bea670012c7659cb2ed51b147e51c6099f0c4774b
-        sha256: 081eb841d6c93c0ca0f95d3bea670012c7659cb2ed51b147e51c6099f0c4774b
+        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:bf915c24d620ab5418f6cac83fa2f1291d2c398339a7d497522991d7bf7efa69
+        sha256: bf915c24d620ab5418f6cac83fa2f1291d2c398339a7d497522991d7bf7efa69
         cellar: :any
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:66ddadadb4e7db3b0d6232a831319a3e48705b7001b401665c7f363f57f20c10
-        sha256: 66ddadadb4e7db3b0d6232a831319a3e48705b7001b401665c7f363f57f20c10
+        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:dc47ff9adbe8db598401c7e1e7ba0efcd43a0c5ee741e18faf46ac490bc76b61
+        sha256: dc47ff9adbe8db598401c7e1e7ba0efcd43a0c5ee741e18faf46ac490bc76b61
         cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:753fb472e4d0344e76d3fa7c18ff3d0ff96e089d6a04ed361c08004434aad197
-        sha256: 753fb472e4d0344e76d3fa7c18ff3d0ff96e089d6a04ed361c08004434aad197
+        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:d27c2519bb56ef4920cbff1d572e159e0ca540bab031c303847210c430b8e095
+        sha256: d27c2519bb56ef4920cbff1d572e159e0ca540bab031c303847210c430b8e095
         cellar: /home/linuxbrew/.linuxbrew/Cellar
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:92c72c9f5ead41a3f3c5a4d96282454068d27fc9fb8c2250c84113729511c520
-        sha256: 92c72c9f5ead41a3f3c5a4d96282454068d27fc9fb8c2250c84113729511c520
+        url: https://ghcr.io/v2/homebrew/core/vite-plus/blobs/sha256:2bdf52aa3a0eedf3000161a70e440078fbe1877cbb1f7488865ef984ea1b895c
+        sha256: 2bdf52aa3a0eedf3000161a70e440078fbe1877cbb1f7488865ef984ea1b895c
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://github.com/voidzero-dev/vite-plus/archive/refs/tags/v1.0.0.tar.gz
@@ -75,5 +76,6 @@ head:
 build_dependencies:
     - cmake
     - just
+    - pkgconf
     - pnpm
-    - rustup
+    - rust
