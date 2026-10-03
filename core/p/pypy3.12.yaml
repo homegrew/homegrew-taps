@@ -1,0 +1,88 @@
+name: pypy3.12
+version: 8.0.0
+description: Implementation of Python 3 in Python
+homepage: https://pypy.org/
+license: MIT
+caveats: |
+    tkinter is not provided as it needs end-of-life Tcl/Tk 8.6
+
+    The install-scripts folder is:
+      $HOMEBREW_PREFIX/share/pypy3.12
+
+    If you install Python packages via "pypy3.12 setup.py install" or pip_pypy3.12,
+    any provided scripts will go into the install-scripts folder above. You may want to add
+    it to your PATH *after* $HOMEBREW_PREFIX/bin so you don't overwrite tools from CPython.
+
+    Pip has been installed, so you can use pip_pypy3.12.
+    It is managed by the formula and should not be modified.
+url:
+    darwin_amd64: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_amd64_10: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_amd64_11: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_amd64_12: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_amd64_13: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_amd64_14: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_amd64_15: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_amd64_16: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_arm64: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_arm64_11: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_arm64_12: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_arm64_13: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_arm64_14: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_arm64_15: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    darwin_arm64_16: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    linux_amd64: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    linux_arm64: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+sha256:
+    darwin_amd64: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_amd64_10: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_amd64_11: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_amd64_12: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_amd64_13: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_amd64_14: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_amd64_15: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_amd64_16: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_arm64: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_arm64_11: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_arm64_12: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_arm64_13: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_arm64_14: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_arm64_15: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    darwin_arm64_16: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    linux_amd64: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+    linux_arm64: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - gdbm
+    - openssl@3
+    - sqlite
+    - xz
+bottle:
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.12/blobs/sha256:6b5becfadd80286f8f041e56e5c06de9cec9d695c0e236734838280e042b141e
+        sha256: 6b5becfadd80286f8f041e56e5c06de9cec9d695c0e236734838280e042b141e
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.12/blobs/sha256:a3af115730dda79ab7767fa36a15bc25da7db6f1596f96d8fa09ae0ee231efbf
+        sha256: a3af115730dda79ab7767fa36a15bc25da7db6f1596f96d8fa09ae0ee231efbf
+        cellar: :any
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.12/blobs/sha256:6b5becfadd80286f8f041e56e5c06de9cec9d695c0e236734838280e042b141e
+        sha256: 6b5becfadd80286f8f041e56e5c06de9cec9d695c0e236734838280e042b141e
+        cellar: :any
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.12/blobs/sha256:f50920558e9d5b855f263f2b1892b7dbe55fc26841b6959bc0ef931227406bf2
+        sha256: f50920558e9d5b855f263f2b1892b7dbe55fc26841b6959bc0ef931227406bf2
+        cellar: :any
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/pypy3.12/blobs/sha256:80754b0620756cca02468cf119b03455e942c9fa1b7fdc22423650c1c34612a7
+        sha256: 80754b0620756cca02468cf119b03455e942c9fa1b7fdc22423650c1c34612a7
+        cellar: :any
+source:
+    url: https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz
+    sha256: eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b
+build_dependencies:
+    - pkgconf
