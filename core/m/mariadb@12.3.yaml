@@ -1,0 +1,96 @@
+name: mariadb@12.3
+version: 12.3.3
+description: Drop-in replacement for MySQL
+homepage: https://mariadb.org/
+license: GPL-2.0-only
+caveats: |
+    A "/etc/my.cnf" from another install may interfere with a Homebrew-built
+    server starting up correctly.
+
+    MySQL is configured to only allow connections from localhost by default
+url:
+    darwin_amd64: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_amd64_10: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_amd64_11: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_amd64_12: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_amd64_13: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_amd64_14: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_amd64_15: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_amd64_16: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_arm64: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_arm64_11: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_arm64_12: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_arm64_13: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_arm64_14: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_arm64_15: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    darwin_arm64_16: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    linux_amd64: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    linux_arm64: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+sha256:
+    darwin_amd64: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_amd64_10: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_amd64_11: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_amd64_12: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_amd64_13: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_amd64_14: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_amd64_15: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_amd64_16: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_arm64: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_arm64_11: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_arm64_12: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_arm64_13: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_arm64_14: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_arm64_15: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    darwin_arm64_16: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    linux_amd64: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+    linux_arm64: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - groonga
+    - lz4
+    - lzo
+    - openssl@3
+    - pcre2
+    - xz
+    - zstd
+keg_only: true
+bottle:
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/12.3/blobs/sha256:6918546ff109fd80df13ae4955787920c61c13d8b1413fa03741c727dd8965f0
+        sha256: 6918546ff109fd80df13ae4955787920c61c13d8b1413fa03741c727dd8965f0
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/12.3/blobs/sha256:0e271cc0bb85baf89350847218e526d73c854618ebc25565c4ed7571f1cde756
+        sha256: 0e271cc0bb85baf89350847218e526d73c854618ebc25565c4ed7571f1cde756
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/12.3/blobs/sha256:6918546ff109fd80df13ae4955787920c61c13d8b1413fa03741c727dd8965f0
+        sha256: 6918546ff109fd80df13ae4955787920c61c13d8b1413fa03741c727dd8965f0
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/12.3/blobs/sha256:78440e316ef838206c7b2ac7c4b2d16f4c3fe7c06fdd36f2d792b5276b2179f6
+        sha256: 78440e316ef838206c7b2ac7c4b2d16f4c3fe7c06fdd36f2d792b5276b2179f6
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/mariadb/12.3/blobs/sha256:ba33f97e6295694e853d3bfc67bfd60caeec7bbf415a7e3bdb4997b5e7a6c043
+        sha256: ba33f97e6295694e853d3bfc67bfd60caeec7bbf415a7e3bdb4997b5e7a6c043
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://archive.mariadb.org/mariadb-12.3.3/source/mariadb-12.3.3.tar.gz
+    sha256: e99d739fd4a55f9a11dea7bd2287a262673e287550af3071c8469dd2bec0c163
+build_dependencies:
+    - bison
+    - cmake
+    - fmt
+    - pkgconf
+    - openjdk
+service:
+    run:
+        - $HOMEBREW_PREFIX/opt/mariadb@12.3/bin/mariadbd-safe
+        - --datadir=$HOMEBREW_PREFIX/var/mysql
+    run_type: immediate
+    working_dir: $HOMEBREW_PREFIX/var
+    keep_alive: true
