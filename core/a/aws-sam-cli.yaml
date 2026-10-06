@@ -44,33 +44,41 @@ install:
     strip_components: 2
     format: tar.gz
 dependencies:
+    - aws-c-auth
+    - aws-c-cal
+    - aws-c-common
+    - aws-c-event-stream
+    - aws-c-http
+    - aws-c-io
+    - aws-c-mqtt
+    - aws-c-s3
+    - aws-checksums
     - certifi
     - cryptography
     - libyaml
-    - openssl@3
     - pydantic
     - python@3.14
     - rpds-py
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:b9f7c8217f509fe355dfe1882eabeb5827143f231a0e42568fea52596ea460ef
-        sha256: b9f7c8217f509fe355dfe1882eabeb5827143f231a0e42568fea52596ea460ef
+        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:c092b9d06a0ec6d9f547a5dc4c44013848cece0e2f745d09154c6b100311b8a7
+        sha256: c092b9d06a0ec6d9f547a5dc4c44013848cece0e2f745d09154c6b100311b8a7
         cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:6769aac575127832c424998b241a519096bbd9b449f80679535eedbeeb90d36c
-        sha256: 6769aac575127832c424998b241a519096bbd9b449f80679535eedbeeb90d36c
+        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:eb3974524b79609b49448af2044e4465ea7ba7724c95d277607778d29a60affb
+        sha256: eb3974524b79609b49448af2044e4465ea7ba7724c95d277607778d29a60affb
         cellar: :any
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:b9f7c8217f509fe355dfe1882eabeb5827143f231a0e42568fea52596ea460ef
-        sha256: b9f7c8217f509fe355dfe1882eabeb5827143f231a0e42568fea52596ea460ef
+        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:c092b9d06a0ec6d9f547a5dc4c44013848cece0e2f745d09154c6b100311b8a7
+        sha256: c092b9d06a0ec6d9f547a5dc4c44013848cece0e2f745d09154c6b100311b8a7
         cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:b759e5118fcba5618e0b5e8fc226521b4b7b4bddf58e2f5bb78053f1be94db9c
-        sha256: b759e5118fcba5618e0b5e8fc226521b4b7b4bddf58e2f5bb78053f1be94db9c
+        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:667ee2968d163406064107cb485f77ffb554a007d50d05e12cacb2aca685bdb7
+        sha256: 667ee2968d163406064107cb485f77ffb554a007d50d05e12cacb2aca685bdb7
         cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:9f518d6e38e07959ad99255bfb0f715365ee5971c0796fa09c8aed78d23abc06
-        sha256: 9f518d6e38e07959ad99255bfb0f715365ee5971c0796fa09c8aed78d23abc06
+        url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:0d16a257312a042278df81bad5c3a66e3f1cc04125d1673566700953e590edb3
+        sha256: 0d16a257312a042278df81bad5c3a66e3f1cc04125d1673566700953e590edb3
         cellar: :any
 source:
     url: https://files.pythonhosted.org/packages/95/f1/77ee195a7838a6e4117a115eef67690cbed6951f4c4cac3c55b7580465aa/aws_sam_cli-1.166.2.tar.gz
@@ -79,6 +87,5 @@ head:
     url: https://github.com/aws/aws-sam-cli.git
     branch: develop
 build_dependencies:
-    - cmake
     - go
     - pkgconf
