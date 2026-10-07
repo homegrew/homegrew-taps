@@ -4,11 +4,11 @@ description: Cryptography and SSL/TLS Toolkit
 homepage: https://openssl-library.org
 license: Apache-2.0
 caveats: |
-    To add additional certificates, place .pem files in
+    To add additional certificates, place .pem, .crt, .cer, or .crl files in
       $HOMEBREW_PREFIX/etc/openssl@4/certs
 
     and run
-      $HOMEBREW_PREFIX/opt/openssl@4/bin/c_rehash
+      $HOMEBREW_CELLAR/openssl@4/4.0.3/bin/openssl rehash $HOMEBREW_PREFIX/etc/openssl@4/certs
 url:
     darwin_amd64: https://github.com/openssl/openssl/releases/download/openssl-4.0.3/openssl-4.0.3.tar.gz
     darwin_amd64_10: https://github.com/openssl/openssl/releases/download/openssl-4.0.3/openssl-4.0.3.tar.gz
