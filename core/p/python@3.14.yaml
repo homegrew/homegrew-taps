@@ -5,11 +5,14 @@ homepage: https://www.python.org/
 license: Python-2.0
 caveats: |
     Python is installed as
-      $HOMEBREW_PREFIX/bin/python3
+      $HOMEBREW_PREFIX/bin/python3.14
 
-    Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
-    `python3`, `python3-config`, `pip3` etc., respectively, are installed into
+    Unversioned and major-versioned symlinks `python`, `python3`, `python-config`, `python3-config`, `pip`, `pip3`, etc. pointing to
+    `python3.14`, `python3.14-config`, `pip3.14` etc., respectively, are installed into
       $HOMEBREW_PREFIX/opt/python@3.14/libexec/bin
+
+    If you do not need a specific version of Python, and always want Homebrew's `python3` in your PATH:
+      brew install python3
 
     `idle3.14` requires tkinter, which is available separately:
       brew install python-tk@3.14
@@ -67,24 +70,24 @@ dependencies:
     - zstd
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:3e3455b974c5ad42b6c80207337a9c25de03d36c71e09023f1f83a656b0340df
-        sha256: 3e3455b974c5ad42b6c80207337a9c25de03d36c71e09023f1f83a656b0340df
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:27af98cd11442db97e282d965572617ed686219e2e86d06f795425723cfcccaa
+        sha256: 27af98cd11442db97e282d965572617ed686219e2e86d06f795425723cfcccaa
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:82df08e33f2d7cdf5e13b4cdfb356e1f847c834367d559b629acba8b3330fae7
-        sha256: 82df08e33f2d7cdf5e13b4cdfb356e1f847c834367d559b629acba8b3330fae7
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:3985ddbb87c8cf928f0d081e4f44039bc604967462c2a5c2aa4991f94d9678e6
+        sha256: 3985ddbb87c8cf928f0d081e4f44039bc604967462c2a5c2aa4991f94d9678e6
         cellar: /opt/homebrew/Cellar
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:3e3455b974c5ad42b6c80207337a9c25de03d36c71e09023f1f83a656b0340df
-        sha256: 3e3455b974c5ad42b6c80207337a9c25de03d36c71e09023f1f83a656b0340df
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:27af98cd11442db97e282d965572617ed686219e2e86d06f795425723cfcccaa
+        sha256: 27af98cd11442db97e282d965572617ed686219e2e86d06f795425723cfcccaa
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:1a15bb2141655b806fefaae0dab9edf4686ad8134befe7686340af0e10693e37
-        sha256: 1a15bb2141655b806fefaae0dab9edf4686ad8134befe7686340af0e10693e37
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:37188eb4335276e9d1237968dce853f8ad73a739a15a206367b046dd8ab2f199
+        sha256: 37188eb4335276e9d1237968dce853f8ad73a739a15a206367b046dd8ab2f199
         cellar: /home/linuxbrew/.linuxbrew/Cellar
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:0b471edcd8916f7a479a8b53d9c8c82da562e1b890e3653e6629cd949eb3ea58
-        sha256: 0b471edcd8916f7a479a8b53d9c8c82da562e1b890e3653e6629cd949eb3ea58
+        url: https://ghcr.io/v2/homebrew/core/python/3.14/blobs/sha256:2e9c8256e20394dec5f2a0f66a724cf391d13aae093e143fcd8c90566111310f
+        sha256: 2e9c8256e20394dec5f2a0f66a724cf391d13aae093e143fcd8c90566111310f
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://www.python.org/ftp/python/3.14.8/Python-3.14.8.tgz

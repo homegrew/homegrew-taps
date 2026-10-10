@@ -1,0 +1,93 @@
+name: python@3.15
+version: 3.15.0
+description: Interpreted, interactive, object-oriented programming language
+homepage: https://www.python.org/
+license: Python-2.0
+caveats: |
+    Python is installed as
+      $HOMEBREW_PREFIX/bin/python3
+
+    Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+    `python3`, `python3-config`, `pip3` etc., respectively, are installed into
+      $HOMEBREW_PREFIX/opt/python@3.15/libexec/bin
+
+    `idle3.15` requires tkinter, which is available separately:
+      brew install python-tk@3.15
+
+    `dbm.gnu` is available separately:
+      brew install python-gdbm@3.15
+
+    For more information about Homebrew and Python, see: https://docs.brew.sh/Homebrew-and-Python
+url:
+    darwin_amd64: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_amd64_10: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_amd64_11: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_amd64_12: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_amd64_13: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_amd64_14: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_amd64_15: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_amd64_16: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_arm64: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_arm64_11: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_arm64_12: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_arm64_13: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_arm64_14: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_arm64_15: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    darwin_arm64_16: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    linux_amd64: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    linux_arm64: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+sha256:
+    darwin_amd64: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_amd64_10: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_amd64_11: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_amd64_12: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_amd64_13: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_amd64_14: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_amd64_15: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_amd64_16: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_arm64: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_arm64_11: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_arm64_12: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_arm64_13: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_arm64_14: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_arm64_15: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    darwin_arm64_16: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    linux_amd64: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+    linux_arm64: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - ca-certificates
+    - mpdecimal
+    - openssl@4
+    - sqlite
+    - xz
+    - zstd
+bottle:
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/python/3.15/blobs/sha256:e5ed7394c428ab9e6088b0bc99fbce9e794e43e9bc2dfc04cb518e4df4946dac
+        sha256: e5ed7394c428ab9e6088b0bc99fbce9e794e43e9bc2dfc04cb518e4df4946dac
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/python/3.15/blobs/sha256:c072201ad7ecd98356242b2dbd2518c1966975e2c6211e85585720a873f5f0cd
+        sha256: c072201ad7ecd98356242b2dbd2518c1966975e2c6211e85585720a873f5f0cd
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/python/3.15/blobs/sha256:e5ed7394c428ab9e6088b0bc99fbce9e794e43e9bc2dfc04cb518e4df4946dac
+        sha256: e5ed7394c428ab9e6088b0bc99fbce9e794e43e9bc2dfc04cb518e4df4946dac
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/python/3.15/blobs/sha256:23db38da67bc7988b0a31ef7d4f1144cb93a5a421dfe43f45d3838525979a212
+        sha256: 23db38da67bc7988b0a31ef7d4f1144cb93a5a421dfe43f45d3838525979a212
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/python/3.15/blobs/sha256:28b20a7c7a9cd6b6509aea1204488f87a31b71ee13897713e0f27c1d71cd1c87
+        sha256: 28b20a7c7a9cd6b6509aea1204488f87a31b71ee13897713e0f27c1d71cd1c87
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz
+    sha256: 438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68
+build_dependencies:
+    - pkgconf
