@@ -2,7 +2,7 @@ name: manticoresearch
 version: 29.9.0
 description: Open source text search engine
 homepage: https://manticoresearch.com
-license: GPL-3.0-or-later AND GPL-2.0-only AND (Unlicense OR MIT)
+license: GPL-3.0-or-later AND (Unlicense OR MIT)
 url:
     darwin_amd64: https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/29.9.0.tar.gz
     darwin_amd64_10: https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/29.9.0.tar.gz
@@ -46,6 +46,7 @@ install:
 dependencies:
     - boost
     - cctz
+    - croaring
     - icu4c@78
     - libpq
     - mariadb-connector-c
@@ -56,24 +57,24 @@ dependencies:
     - zstd
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:ea403a1c9652da95083bde6ec82e9dd73557f0374da9994eb8e7b534291d7090
-        sha256: ea403a1c9652da95083bde6ec82e9dd73557f0374da9994eb8e7b534291d7090
+        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:5f243308e1c8e196e54c7f5b56aed3d105f71085f35625a56651d012affe8e95
+        sha256: 5f243308e1c8e196e54c7f5b56aed3d105f71085f35625a56651d012affe8e95
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:e1daf52484cd88c81dadd902fd8c74200a4d26b89f12dc7e48ab6ad9b563801a
-        sha256: e1daf52484cd88c81dadd902fd8c74200a4d26b89f12dc7e48ab6ad9b563801a
+        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:2a74feafe1230e7dda0f136d85efdc1bba78926a6669419323a35010dbfac174
+        sha256: 2a74feafe1230e7dda0f136d85efdc1bba78926a6669419323a35010dbfac174
         cellar: /opt/homebrew/Cellar
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:ea403a1c9652da95083bde6ec82e9dd73557f0374da9994eb8e7b534291d7090
-        sha256: ea403a1c9652da95083bde6ec82e9dd73557f0374da9994eb8e7b534291d7090
+        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:5f243308e1c8e196e54c7f5b56aed3d105f71085f35625a56651d012affe8e95
+        sha256: 5f243308e1c8e196e54c7f5b56aed3d105f71085f35625a56651d012affe8e95
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:24b7931670a1704be065fa89039adcc83c8070040e2a814c138bd5429429ca13
-        sha256: 24b7931670a1704be065fa89039adcc83c8070040e2a814c138bd5429429ca13
+        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:0b414d42405f1927ed56b5c190454fd29304bc35d9270bf85ba4cd24b36edb96
+        sha256: 0b414d42405f1927ed56b5c190454fd29304bc35d9270bf85ba4cd24b36edb96
         cellar: /home/linuxbrew/.linuxbrew/Cellar
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:9d9778ffd584952ce90d88d0ee5d566aecf431e51b6809b12c75e254479ed78d
-        sha256: 9d9778ffd584952ce90d88d0ee5d566aecf431e51b6809b12c75e254479ed78d
+        url: https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:367fc7fbc92d9f5cdc1849199ba07a8c478fb6739e7de5b0522e10bd86d4b654
+        sha256: 367fc7fbc92d9f5cdc1849199ba07a8c478fb6739e7de5b0522e10bd86d4b654
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/29.9.0.tar.gz

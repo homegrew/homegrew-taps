@@ -44,10 +44,7 @@ install:
     strip_components: 2
     format: tar.gz
 dependencies:
-    - glib
     - gnutls
-    - meson
-    - pkgconf
 bottle:
     darwin_amd64:
         url: https://ghcr.io/v2/homebrew/core/amtterm/blobs/sha256:105ff0233f78b177721306428db8bd052984c5a78a919b3c46c58e4a6b6ee133
@@ -95,3 +92,8 @@ source:
 head:
     url: https://gitlab.com/kraxel/amtterm.git
     branch: master
+build_dependencies:
+    - glib
+    - meson
+    - ninja
+    - pkgconf

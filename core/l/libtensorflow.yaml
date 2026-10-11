@@ -43,32 +43,35 @@ install:
     type: archive
     strip_components: 2
     format: tar.gz
+dependencies:
+    - openblas
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:e30c7e633dd48606523ef247d765af4da4a171bde174dd765b1f9a75d364d253
-        sha256: e30c7e633dd48606523ef247d765af4da4a171bde174dd765b1f9a75d364d253
+        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:34100fc36d361127dea8feffca407159ef40669d5b21f8e19825c505cdfafc0c
+        sha256: 34100fc36d361127dea8feffca407159ef40669d5b21f8e19825c505cdfafc0c
         cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:7eec009c5a3ba94e8e4146d2fb776db98a5187e35242a1d480d0df4bb24076f5
-        sha256: 7eec009c5a3ba94e8e4146d2fb776db98a5187e35242a1d480d0df4bb24076f5
+        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:4f66d7fb898069c20d778c24ab6d107bf4ad922374a6af7d92b5a9c8c5a36bc2
+        sha256: 4f66d7fb898069c20d778c24ab6d107bf4ad922374a6af7d92b5a9c8c5a36bc2
         cellar: :any
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:e30c7e633dd48606523ef247d765af4da4a171bde174dd765b1f9a75d364d253
-        sha256: e30c7e633dd48606523ef247d765af4da4a171bde174dd765b1f9a75d364d253
+        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:34100fc36d361127dea8feffca407159ef40669d5b21f8e19825c505cdfafc0c
+        sha256: 34100fc36d361127dea8feffca407159ef40669d5b21f8e19825c505cdfafc0c
         cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:2a5029ecf30a3694cddd932e66b6d6379ed8d573daecc54535fd082feba6601f
-        sha256: 2a5029ecf30a3694cddd932e66b6d6379ed8d573daecc54535fd082feba6601f
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:fb113a6e5290eab1c62fe1b10fefb26608d42e1a0dcb388eba9d6ae75a6aa0cd
+        sha256: fb113a6e5290eab1c62fe1b10fefb26608d42e1a0dcb388eba9d6ae75a6aa0cd
+        cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:2db70d228c438a1c29095f355ef567dfba73d2938381f0494b695e36a6295459
-        sha256: 2db70d228c438a1c29095f355ef567dfba73d2938381f0494b695e36a6295459
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/libtensorflow/blobs/sha256:5caaa8079fc81c3f06cfbf452fa33e01da15dac5eb3016b59b3ee7c5c9982cfa
+        sha256: 5caaa8079fc81c3f06cfbf452fa33e01da15dac5eb3016b59b3ee7c5c9982cfa
+        cellar: :any
 source:
     url: https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.21.0.tar.gz
     sha256: ef3568bb4865d6c1b2564fb5689c19b6b9a5311572cd1f2ff9198636a8520921
 build_dependencies:
     - bazel@7
-    - numpy
+    - meson
+    - ninja
     - python@3.13
     - gnu-getopt
