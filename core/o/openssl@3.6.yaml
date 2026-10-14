@@ -1,0 +1,78 @@
+name: openssl@3.6
+version: 3.6.5
+description: Cryptography and SSL/TLS Toolkit
+homepage: https://openssl-library.org
+license: Apache-2.0
+caveats: |
+    To add additional certificates, place .pem files in
+      $HOMEBREW_PREFIX/etc/openssl@3.6/certs
+
+    and run
+      $HOMEBREW_PREFIX/opt/openssl@3.6/bin/c_rehash
+url:
+    darwin_amd64: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_amd64_10: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_amd64_11: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_amd64_12: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_amd64_13: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_amd64_14: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_amd64_15: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_amd64_16: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_arm64: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_arm64_11: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_arm64_12: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_arm64_13: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_arm64_14: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_arm64_15: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    darwin_arm64_16: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    linux_amd64: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    linux_arm64: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+sha256:
+    darwin_amd64: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_amd64_10: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_amd64_11: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_amd64_12: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_amd64_13: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_amd64_14: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_amd64_15: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_amd64_16: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_arm64: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_arm64_11: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_arm64_12: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_arm64_13: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_arm64_14: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_arm64_15: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    darwin_arm64_16: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    linux_amd64: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+    linux_arm64: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - ca-certificates
+keg_only: true
+bottle:
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openssl/3.6/blobs/sha256:af714c3eca585a0a9b2ab707a9cc9d54966ed34d6db09eefca0e1ffe4bfd092e
+        sha256: af714c3eca585a0a9b2ab707a9cc9d54966ed34d6db09eefca0e1ffe4bfd092e
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/openssl/3.6/blobs/sha256:815c8d6a5ebdf26cab2d7f5f7a7e5a1ec5916f34cc9afe29ebf04aa7c7c97053
+        sha256: 815c8d6a5ebdf26cab2d7f5f7a7e5a1ec5916f34cc9afe29ebf04aa7c7c97053
+        cellar: /opt/homebrew/Cellar
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/openssl/3.6/blobs/sha256:af714c3eca585a0a9b2ab707a9cc9d54966ed34d6db09eefca0e1ffe4bfd092e
+        sha256: af714c3eca585a0a9b2ab707a9cc9d54966ed34d6db09eefca0e1ffe4bfd092e
+        cellar: /opt/homebrew/Cellar
+    linux_amd64:
+        url: https://ghcr.io/v2/homebrew/core/openssl/3.6/blobs/sha256:cd4ad11e241dbb2b9c38964e97b3c8321366f5e59358bdc8d5523a99c3ad9c87
+        sha256: cd4ad11e241dbb2b9c38964e97b3c8321366f5e59358bdc8d5523a99c3ad9c87
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+    linux_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openssl/3.6/blobs/sha256:74b8e7df20d8069b957e9754d0affb207be9e56924b40734e32e60ce68284318
+        sha256: 74b8e7df20d8069b957e9754d0affb207be9e56924b40734e32e60ce68284318
+        cellar: /home/linuxbrew/.linuxbrew/Cellar
+source:
+    url: https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz
+    sha256: a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
