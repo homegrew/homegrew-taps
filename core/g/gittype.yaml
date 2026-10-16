@@ -44,27 +44,27 @@ install:
     strip_components: 2
     format: tar.gz
 dependencies:
-    - openssl@3
+    - libgit2
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:daf35c11a015224e02ffa675665a61c41121c92a1aa172bdcb7019456d894f63
-        sha256: daf35c11a015224e02ffa675665a61c41121c92a1aa172bdcb7019456d894f63
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:f89a171940d97deefdc9e419e680d517bef0c0639bd0e32e7f5bb473d37bc0ac
+        sha256: f89a171940d97deefdc9e419e680d517bef0c0639bd0e32e7f5bb473d37bc0ac
+        cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:cad5bf09fb5f416be3fdf2d08f41e065ed8524f61ae874a94a2e19422d5e9efe
-        sha256: cad5bf09fb5f416be3fdf2d08f41e065ed8524f61ae874a94a2e19422d5e9efe
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:f5d43b31ca93b2671a26963ebf5f14c3aede6657d04cfe8f4553c7514a25cc2f
+        sha256: f5d43b31ca93b2671a26963ebf5f14c3aede6657d04cfe8f4553c7514a25cc2f
+        cellar: :any
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:daf35c11a015224e02ffa675665a61c41121c92a1aa172bdcb7019456d894f63
-        sha256: daf35c11a015224e02ffa675665a61c41121c92a1aa172bdcb7019456d894f63
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:f89a171940d97deefdc9e419e680d517bef0c0639bd0e32e7f5bb473d37bc0ac
+        sha256: f89a171940d97deefdc9e419e680d517bef0c0639bd0e32e7f5bb473d37bc0ac
+        cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:ec17919046a57032bcfe142b88a9a8b8e4b04aaac5c2fb3d094d377abe778c90
-        sha256: ec17919046a57032bcfe142b88a9a8b8e4b04aaac5c2fb3d094d377abe778c90
+        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:36a12d7085ae171a3130b5790fb243bcf20becb439f9a3119f7c24c299c0d75b
+        sha256: 36a12d7085ae171a3130b5790fb243bcf20becb439f9a3119f7c24c299c0d75b
         cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:51890981b8ad6b55207e1874784c6b98ff065207ac5ddbca56fea88cbf907942
-        sha256: 51890981b8ad6b55207e1874784c6b98ff065207ac5ddbca56fea88cbf907942
+        url: https://ghcr.io/v2/homebrew/core/gittype/blobs/sha256:659e7ce53d7a96d7f17e2944ac34820e35b50a42f433e7ed0c2a38b33c2f7238
+        sha256: 659e7ce53d7a96d7f17e2944ac34820e35b50a42f433e7ed0c2a38b33c2f7238
         cellar: :any
 source:
     url: https://github.com/unhappychoice/gittype/archive/refs/tags/v0.10.3.tar.gz
@@ -73,5 +73,6 @@ head:
     url: https://github.com/unhappychoice/gittype.git
     branch: main
 build_dependencies:
+    - openssl@4
     - pkgconf
     - rust

@@ -46,46 +46,26 @@ install:
 dependencies:
     - portaudio
 bottle:
-    darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
-        sha256: 52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
-        cellar: :any
-    darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
-        sha256: 52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
-        cellar: :any
-    darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
-        sha256: 52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
-        cellar: :any
-    darwin_amd64_16:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
-        sha256: 52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934
-        cellar: :any
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:7a96191a408faceec7796bbfba1d97ee2942bca55eb8d7ac0ff6ab9787d416b3
-        sha256: 7a96191a408faceec7796bbfba1d97ee2942bca55eb8d7ac0ff6ab9787d416b3
-        cellar: :any
-    darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:610bd336a831d480602b36f001c677b0a552007197e881ee9ce5aadcf30908ef
-        sha256: 610bd336a831d480602b36f001c677b0a552007197e881ee9ce5aadcf30908ef
+        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:3e9ed5d7b835838ee4b7d51f5bb21e2cdb7f621fc275749e644344a7a321fa9a
+        sha256: 3e9ed5d7b835838ee4b7d51f5bb21e2cdb7f621fc275749e644344a7a321fa9a
         cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:33c617c8539e24bb3a7c45be7c0692bef970a404e83be5184d23d4823c1cfabf
-        sha256: 33c617c8539e24bb3a7c45be7c0692bef970a404e83be5184d23d4823c1cfabf
+        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:2af21b852dac007f969a09a5ac7341b9b6073f5afbdb4673cf4c7f909c1f0f9b
+        sha256: 2af21b852dac007f969a09a5ac7341b9b6073f5afbdb4673cf4c7f909c1f0f9b
         cellar: :any
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:7a96191a408faceec7796bbfba1d97ee2942bca55eb8d7ac0ff6ab9787d416b3
-        sha256: 7a96191a408faceec7796bbfba1d97ee2942bca55eb8d7ac0ff6ab9787d416b3
+        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:3e9ed5d7b835838ee4b7d51f5bb21e2cdb7f621fc275749e644344a7a321fa9a
+        sha256: 3e9ed5d7b835838ee4b7d51f5bb21e2cdb7f621fc275749e644344a7a321fa9a
         cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:e9f561aafae2034b26dbb892fd0be032d0f704f1fcdf815a4207ad005c72db00
-        sha256: e9f561aafae2034b26dbb892fd0be032d0f704f1fcdf815a4207ad005c72db00
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:00c484f4da9e7067609a856b5778c467854f9aafd03dffd1e1f6d034237ad62f
+        sha256: 00c484f4da9e7067609a856b5778c467854f9aafd03dffd1e1f6d034237ad62f
+        cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:b28a83b3436945a5dfa81133c01f7c223f9ce435e761266bda7d473fcb804a90
-        sha256: b28a83b3436945a5dfa81133c01f7c223f9ce435e761266bda7d473fcb804a90
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/spotifyd/blobs/sha256:421eecefe5c859c647f32cc3e555a4b3c691d89d950f9fa138727f361de4eca0
+        sha256: 421eecefe5c859c647f32cc3e555a4b3c691d89d950f9fa138727f361de4eca0
+        cellar: :any
 source:
     url: https://github.com/Spotifyd/spotifyd/archive/refs/tags/v0.4.2.tar.gz
     sha256: e1dc21f806b205739e508bd567698657a47ca17eecb0f91d9320af5e74b8418a
@@ -99,7 +79,5 @@ service:
     run:
         - $HOMEBREW_PREFIX/opt/spotifyd/bin/spotifyd
         - --no-daemon
-        - --backend
-        - portaudio
     run_type: immediate
     keep_alive: true
