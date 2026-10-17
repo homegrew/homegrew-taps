@@ -50,50 +50,30 @@ dependencies:
     - zstd
 keg_only: true
 bottle:
-    darwin_amd64:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:56bb12c01aa3f619f88d4f06220fa2ddd6e7d4dcc87860e3f3087ec211e1bf41
-        sha256: 56bb12c01aa3f619f88d4f06220fa2ddd6e7d4dcc87860e3f3087ec211e1bf41
-        cellar: :any
-    darwin_amd64_14:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:56bb12c01aa3f619f88d4f06220fa2ddd6e7d4dcc87860e3f3087ec211e1bf41
-        sha256: 56bb12c01aa3f619f88d4f06220fa2ddd6e7d4dcc87860e3f3087ec211e1bf41
-        cellar: :any
-    darwin_amd64_15:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:56bb12c01aa3f619f88d4f06220fa2ddd6e7d4dcc87860e3f3087ec211e1bf41
-        sha256: 56bb12c01aa3f619f88d4f06220fa2ddd6e7d4dcc87860e3f3087ec211e1bf41
-        cellar: :any
-    darwin_amd64_16:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:56bb12c01aa3f619f88d4f06220fa2ddd6e7d4dcc87860e3f3087ec211e1bf41
-        sha256: 56bb12c01aa3f619f88d4f06220fa2ddd6e7d4dcc87860e3f3087ec211e1bf41
-        cellar: :any
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:1e9a19bff9679522f731a5b45d9667a544f505a10f25bb2ec85a3743976e3a27
-        sha256: 1e9a19bff9679522f731a5b45d9667a544f505a10f25bb2ec85a3743976e3a27
-        cellar: :any
-    darwin_arm64_14:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:84f895cfadaeba96a43db53c1bea77b6ab731326719fe6021ef9d30d55695620
-        sha256: 84f895cfadaeba96a43db53c1bea77b6ab731326719fe6021ef9d30d55695620
+        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:c1fe00517036c5518e478899177fb505bcc3cc545cb52622057e0a00e5a896b4
+        sha256: c1fe00517036c5518e478899177fb505bcc3cc545cb52622057e0a00e5a896b4
         cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:7444fd9adfdec6b4f388f2a321d802115f839aa4c45f565aee25284504e9e225
-        sha256: 7444fd9adfdec6b4f388f2a321d802115f839aa4c45f565aee25284504e9e225
+        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:196f7ed71ae73b3b857908c1cdc482048e13feffe4698c69ae807f35ecfd7575
+        sha256: 196f7ed71ae73b3b857908c1cdc482048e13feffe4698c69ae807f35ecfd7575
         cellar: :any
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:1e9a19bff9679522f731a5b45d9667a544f505a10f25bb2ec85a3743976e3a27
-        sha256: 1e9a19bff9679522f731a5b45d9667a544f505a10f25bb2ec85a3743976e3a27
+        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:c1fe00517036c5518e478899177fb505bcc3cc545cb52622057e0a00e5a896b4
+        sha256: c1fe00517036c5518e478899177fb505bcc3cc545cb52622057e0a00e5a896b4
         cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:a4a95ef131b99b1ceb7fd5b6a16626efee62722f53ebc74fbcfddf50a785f8b4
-        sha256: a4a95ef131b99b1ceb7fd5b6a16626efee62722f53ebc74fbcfddf50a785f8b4
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:90c997aa42d78872849510f9081de3509c31b0aee0fd7bd3d3cbeb82da8bf87b
+        sha256: 90c997aa42d78872849510f9081de3509c31b0aee0fd7bd3d3cbeb82da8bf87b
+        cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:9ec22755167c15a099347cfa71da87ed7855c1a086a59d3524162749045499ee
-        sha256: 9ec22755167c15a099347cfa71da87ed7855c1a086a59d3524162749045499ee
-        cellar: :any_skip_relocation
+        url: https://ghcr.io/v2/homebrew/core/llvm/18/blobs/sha256:dc2f37b753d8366a2f1061ae22024cb5f0686134f4571d2f0f523b04e8dcc777
+        sha256: dc2f37b753d8366a2f1061ae22024cb5f0686134f4571d2f0f523b04e8dcc777
+        cellar: :any
 source:
     url: https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/llvm-project-18.1.8.src.tar.xz
     sha256: 0b58557a6d32ceee97c8d533a59b9212d87e0fc4d2833924eb6c611247db2f2a
 build_dependencies:
     - cmake
     - ninja
-    - python@3.14
+    - python@3.15
