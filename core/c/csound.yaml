@@ -1,15 +1,8 @@
 name: csound
-version: 6.18.1
+version: 7.0.0
 description: Sound and music computing system
 homepage: https://csound.com
 license: LGPL-2.1-or-later
-caveats: |
-    To use the Java bindings, you may need to add to your shell profile
-    e.g. ~/.profile or ~/.zshrc:
-      export CLASSPATH="$HOMEBREW_PREFIX/opt/csound/libexec/csnd6.jar:."
-    and link the native shared library into your Java Extensions folder:
-      mkdir -p ~/Library/Java/Extensions
-      ln -s "$HOMEBREW_PREFIX/opt/csound/libexec/lib_jcsound6.jnilib" ~/Library/Java/Extensions
 url:
     darwin_amd64: https://github.com/csound/csound.git
     darwin_amd64_10: https://github.com/csound/csound.git
@@ -51,46 +44,35 @@ install:
     strip_components: 2
     format: tar.gz
 dependencies:
-    - faust
-    - fltk
-    - fluid-synth
     - gettext
-    - hdf5
     - jack
     - lame
     - liblo
-    - libpng
     - libsamplerate
     - libsndfile
-    - libwebsockets
-    - numpy
-    - openjdk
-    - openssl@4
     - portaudio
     - portmidi
     - python@3.15
-    - stk
-    - wiiuse
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:9caad7f594d564dc2a6c68cf9ce8cdfd18eccbfbdb2069f5d87831796faeb486
-        sha256: 9caad7f594d564dc2a6c68cf9ce8cdfd18eccbfbdb2069f5d87831796faeb486
+        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:837bea4f223728b672dfe441764fef6f473eb4ecdec6dc386b6d92af5eec44dc
+        sha256: 837bea4f223728b672dfe441764fef6f473eb4ecdec6dc386b6d92af5eec44dc
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:8a6541812e99b3920f402625bcd0b90ef9c949b882f771563e38e5122a919f11
-        sha256: 8a6541812e99b3920f402625bcd0b90ef9c949b882f771563e38e5122a919f11
+        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:067a471c056b0f8104e6e5cd65a7d8afd3b34c9448c14378c9250743e5e3dc5b
+        sha256: 067a471c056b0f8104e6e5cd65a7d8afd3b34c9448c14378c9250743e5e3dc5b
         cellar: /opt/homebrew/Cellar
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:9caad7f594d564dc2a6c68cf9ce8cdfd18eccbfbdb2069f5d87831796faeb486
-        sha256: 9caad7f594d564dc2a6c68cf9ce8cdfd18eccbfbdb2069f5d87831796faeb486
+        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:837bea4f223728b672dfe441764fef6f473eb4ecdec6dc386b6d92af5eec44dc
+        sha256: 837bea4f223728b672dfe441764fef6f473eb4ecdec6dc386b6d92af5eec44dc
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:3edd6181b8d2edfa0188223692fafb99a2e9e19dacfdecaaf3948c633db4ddc5
-        sha256: 3edd6181b8d2edfa0188223692fafb99a2e9e19dacfdecaaf3948c633db4ddc5
+        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:516e75cebba359abab4a8eb002dce0c9f1ad6367ce79f3644651cdc5d92d32b7
+        sha256: 516e75cebba359abab4a8eb002dce0c9f1ad6367ce79f3644651cdc5d92d32b7
         cellar: /home/linuxbrew/.linuxbrew/Cellar
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:5a19e2217e2a0e4b0a09e27e9828efdca31ae2c67dfed1c18a166520a23d7ab6
-        sha256: 5a19e2217e2a0e4b0a09e27e9828efdca31ae2c67dfed1c18a166520a23d7ab6
+        url: https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:da11afcf999246360aeb9dca9f5fe1a82a04254690436b99a71247ce459b8255
+        sha256: da11afcf999246360aeb9dca9f5fe1a82a04254690436b99a71247ce459b8255
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://github.com/csound/csound.git
@@ -99,6 +81,5 @@ head:
     branch: develop
 build_dependencies:
     - asio
+    - bison
     - cmake
-    - eigen
-    - swig
