@@ -1,0 +1,79 @@
+name: openssh-sk-provider
+version: 10.6p1
+description: Standalone FIDO2 SecurityKeyProvider (sk-libfido2) for the system OpenSSH
+homepage: https://www.openssh.com/
+license: SSH-OpenSSH
+caveats: |
+    To make the system ssh use this provider, add to the `Host *` block in ~/.ssh/config:
+      SecurityKeyProvider $HOMEBREW_PREFIX/opt/openssh-sk-provider/lib/sk-libfido2.dylib
+
+    ssh-keygen and ssh-add don't read ~/.ssh/config, so also add to your shell profile:
+      export SSH_SK_PROVIDER="$HOMEBREW_PREFIX/opt/openssh-sk-provider/lib/sk-libfido2.dylib"
+
+    The system ssh-agent only allows providers under /usr/lib and /usr/local/lib, so it
+    won't hold keys that use this provider. To use an agent, run your own with e.g.:
+      ssh-agent -P "$HOMEBREW_CELLAR/openssh-sk-provider/*/lib/*"
+url:
+    darwin_amd64: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_amd64_10: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_amd64_11: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_amd64_12: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_amd64_13: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_amd64_14: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_amd64_15: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_amd64_16: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_arm64: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_arm64_11: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_arm64_12: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_arm64_13: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_arm64_14: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_arm64_15: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    darwin_arm64_16: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    linux_amd64: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    linux_arm64: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+sha256:
+    darwin_amd64: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_amd64_10: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_amd64_11: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_amd64_12: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_amd64_13: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_amd64_14: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_amd64_15: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_amd64_16: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_arm64: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_arm64_11: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_arm64_12: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_arm64_13: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_arm64_14: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_arm64_15: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    darwin_arm64_16: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    linux_amd64: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+    linux_arm64: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+install:
+    type: archive
+    strip_components: 2
+    format: tar.gz
+dependencies:
+    - libfido2
+    - openssl@4
+bottle:
+    darwin_arm64:
+        url: https://ghcr.io/v2/homebrew/core/openssh-sk-provider/blobs/sha256:fc54672eabd0336f07d1218ccfe5e9481581a2fa2f5338bda41162e1c83fe863
+        sha256: fc54672eabd0336f07d1218ccfe5e9481581a2fa2f5338bda41162e1c83fe863
+        cellar: :any
+    darwin_arm64_15:
+        url: https://ghcr.io/v2/homebrew/core/openssh-sk-provider/blobs/sha256:b2aa849c90d1f974c0085314c97f79dfca61fea34486c68e44214cacdb08df60
+        sha256: b2aa849c90d1f974c0085314c97f79dfca61fea34486c68e44214cacdb08df60
+        cellar: :any
+    darwin_arm64_16:
+        url: https://ghcr.io/v2/homebrew/core/openssh-sk-provider/blobs/sha256:fc54672eabd0336f07d1218ccfe5e9481581a2fa2f5338bda41162e1c83fe863
+        sha256: fc54672eabd0336f07d1218ccfe5e9481581a2fa2f5338bda41162e1c83fe863
+        cellar: :any
+source:
+    url: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
+    sha256: a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39
+head:
+    url: https://github.com/openssh/openssh-portable.git
+    branch: master
+build_dependencies:
+    - pkgconf
