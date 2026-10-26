@@ -43,33 +43,31 @@ install:
     type: archive
     strip_components: 2
     format: tar.gz
-dependencies:
-    - openssl@4
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:fcab74c9936cc1ab9df9caaf55de71874806f415acc052e33d9d74afaa3f0855
-        sha256: fcab74c9936cc1ab9df9caaf55de71874806f415acc052e33d9d74afaa3f0855
-        cellar: :any
+        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:3fe2aea1deeab2ceaa2fbcc917d73b5d655244193a96ccc4d1461ae884eb7c93
+        sha256: 3fe2aea1deeab2ceaa2fbcc917d73b5d655244193a96ccc4d1461ae884eb7c93
+        cellar: :any_skip_relocation
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:61155b5559826f1bae9d78090a0885528aafe6ce7c34307e9be3a6c77f533e7f
-        sha256: 61155b5559826f1bae9d78090a0885528aafe6ce7c34307e9be3a6c77f533e7f
-        cellar: :any
+        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:498c3506736f3e62511db5b0bb5cc3c9122de0b93cb4327741bab82e2695e57a
+        sha256: 498c3506736f3e62511db5b0bb5cc3c9122de0b93cb4327741bab82e2695e57a
+        cellar: :any_skip_relocation
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:fcab74c9936cc1ab9df9caaf55de71874806f415acc052e33d9d74afaa3f0855
-        sha256: fcab74c9936cc1ab9df9caaf55de71874806f415acc052e33d9d74afaa3f0855
-        cellar: :any
+        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:3fe2aea1deeab2ceaa2fbcc917d73b5d655244193a96ccc4d1461ae884eb7c93
+        sha256: 3fe2aea1deeab2ceaa2fbcc917d73b5d655244193a96ccc4d1461ae884eb7c93
+        cellar: :any_skip_relocation
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:d3bcf5b3fc9a3e7f743673396ebbc6f349c762b1447a507198d87ebd1989c14a
-        sha256: d3bcf5b3fc9a3e7f743673396ebbc6f349c762b1447a507198d87ebd1989c14a
+        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:470f5a5b37d81b6ce1bef2748d3fdb57eb63c65fcceca0f4ffcd55982232b478
+        sha256: 470f5a5b37d81b6ce1bef2748d3fdb57eb63c65fcceca0f4ffcd55982232b478
         cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:278794dce2a6315d3e2982e1424dfcf0a2a5968db8add141c38bb69dacb55670
-        sha256: 278794dce2a6315d3e2982e1424dfcf0a2a5968db8add141c38bb69dacb55670
+        url: https://ghcr.io/v2/homebrew/core/echtvar/blobs/sha256:826d7f12acf0cc484b033d88412e7264e8d888775496cb7abfd8bf1266ca5675
+        sha256: 826d7f12acf0cc484b033d88412e7264e8d888775496cb7abfd8bf1266ca5675
         cellar: :any
 source:
     url: https://github.com/brentp/echtvar/archive/refs/tags/v0.2.4.tar.gz
     sha256: e4d04d16d9c8e02aa9c216d7c7173e4d35ed3a9f848d05e5908d60e74b5c128b
 build_dependencies:
-    - cmake
+    - openssl@4
     - pkgconf
     - rust
