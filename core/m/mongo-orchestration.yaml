@@ -48,24 +48,24 @@ dependencies:
     - python@3.15
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:e949614c70a455ad0450eb085732bd18faf3c6b5b54d62c2cced53a0f694bd76
-        sha256: e949614c70a455ad0450eb085732bd18faf3c6b5b54d62c2cced53a0f694bd76
+        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:5b656f8b598f39ef443a9e6f0be64c2b64ddf82f1b6af2cf3df59ba12d777573
+        sha256: 5b656f8b598f39ef443a9e6f0be64c2b64ddf82f1b6af2cf3df59ba12d777573
         cellar: :any_skip_relocation
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:1991f904527563263feb834c2b8d01c7e93074ccd04b1cddeb3bd4af2fab5350
-        sha256: 1991f904527563263feb834c2b8d01c7e93074ccd04b1cddeb3bd4af2fab5350
+        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:8a1c0638c5f49bf773de2feec2ee9a245f568746efff11692bd20b229a1b7f65
+        sha256: 8a1c0638c5f49bf773de2feec2ee9a245f568746efff11692bd20b229a1b7f65
         cellar: :any_skip_relocation
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:e949614c70a455ad0450eb085732bd18faf3c6b5b54d62c2cced53a0f694bd76
-        sha256: e949614c70a455ad0450eb085732bd18faf3c6b5b54d62c2cced53a0f694bd76
+        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:5b656f8b598f39ef443a9e6f0be64c2b64ddf82f1b6af2cf3df59ba12d777573
+        sha256: 5b656f8b598f39ef443a9e6f0be64c2b64ddf82f1b6af2cf3df59ba12d777573
         cellar: :any_skip_relocation
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:4e498139cb7d2154afa9301946f22773f9d1ed3c8f93e718de7abd6aacd61066
-        sha256: 4e498139cb7d2154afa9301946f22773f9d1ed3c8f93e718de7abd6aacd61066
+        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:2567c35b27f20154a504f3962b4f3e2f11a3cd366839b35ac093c474fa00bb03
+        sha256: 2567c35b27f20154a504f3962b4f3e2f11a3cd366839b35ac093c474fa00bb03
         cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:c28acf964d4c7e42b5a2b242bb8500b4be7b99e59abacec89f8dbc4710a10028
-        sha256: c28acf964d4c7e42b5a2b242bb8500b4be7b99e59abacec89f8dbc4710a10028
+        url: https://ghcr.io/v2/homebrew/core/mongo-orchestration/blobs/sha256:5743f2477761b914f5efed3bba1a123e7f4e31efcc0ba3d06b58b035248c51a5
+        sha256: 5743f2477761b914f5efed3bba1a123e7f4e31efcc0ba3d06b58b035248c51a5
         cellar: :any
 source:
     url: https://files.pythonhosted.org/packages/c9/3b/6e579eb7aae04e95c194e6ca57666bc4d1cd0dff4f81de0b3f7e663222b5/mongo_orchestration-0.11.2.tar.gz
@@ -73,6 +73,8 @@ source:
 head:
     url: https://github.com/mongodb-labs/mongo-orchestration.git
     branch: master
+build_dependencies:
+    - rust
 service:
     run:
         - $HOMEBREW_PREFIX/opt/mongo-orchestration/bin/mongo-orchestration
