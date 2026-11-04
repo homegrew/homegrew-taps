@@ -3,6 +3,17 @@ version: 10.6p1
 description: OpenBSD freely-licensed SSH connectivity tools
 homepage: https://www.openssh.com/
 license: SSH-OpenSSH
+caveats: |
+    Default host keys in $HOMEBREW_PREFIX/etc/ssh are regenerated once to replace keys
+    previously distributed in bottles. This also replaces locally generated keys.
+
+    Previous host keys are backed up in:
+      $HOMEBREW_PREFIX/var/lib/openssh/host-keys-backup
+    Restore them only if you generated them yourself.
+
+    Restart any running Homebrew sshd to use the new host keys.
+    SSH clients may report changed host keys. Verify the new fingerprints
+    before updating their known_hosts entries.
 url:
     darwin_amd64: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
     darwin_amd64_10: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
@@ -49,24 +60,24 @@ dependencies:
     - openssl@4
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:d6c083908c3e6fecce2dd6a46fa02ab7f50778b56653c2b07c4e1a136035f909
-        sha256: d6c083908c3e6fecce2dd6a46fa02ab7f50778b56653c2b07c4e1a136035f909
+        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:17a77da899577764c88b6dc20c8fe6a8d34391be63ddbab30c362f1bbfeb8fbe
+        sha256: 17a77da899577764c88b6dc20c8fe6a8d34391be63ddbab30c362f1bbfeb8fbe
         cellar: /opt/homebrew/Cellar
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:08339f96e37c5d085b65df52a8a9cc33782a163fdf4537b09e55b17bf08b3697
-        sha256: 08339f96e37c5d085b65df52a8a9cc33782a163fdf4537b09e55b17bf08b3697
+        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:6e0423432f5ead4556420b0388ae4215133e81466baf633317c2de75d6c57842
+        sha256: 6e0423432f5ead4556420b0388ae4215133e81466baf633317c2de75d6c57842
         cellar: /opt/homebrew/Cellar
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:d6c083908c3e6fecce2dd6a46fa02ab7f50778b56653c2b07c4e1a136035f909
-        sha256: d6c083908c3e6fecce2dd6a46fa02ab7f50778b56653c2b07c4e1a136035f909
+        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:17a77da899577764c88b6dc20c8fe6a8d34391be63ddbab30c362f1bbfeb8fbe
+        sha256: 17a77da899577764c88b6dc20c8fe6a8d34391be63ddbab30c362f1bbfeb8fbe
         cellar: /opt/homebrew/Cellar
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:6279716a104f8140da4548a440f1bd9f1eff5d81bf4e70d68b7f8ef3ca138d39
-        sha256: 6279716a104f8140da4548a440f1bd9f1eff5d81bf4e70d68b7f8ef3ca138d39
+        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:9979138fd3cafb4248147005b65bdef8f3fec632e8a7db21a0bbc0ac9bd8fbe9
+        sha256: 9979138fd3cafb4248147005b65bdef8f3fec632e8a7db21a0bbc0ac9bd8fbe9
         cellar: /home/linuxbrew/.linuxbrew/Cellar
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:5b7d2086cc8ea983a4ebeda63b0a0b3f1d6d8f52a02db73dd11b8577748ba47f
-        sha256: 5b7d2086cc8ea983a4ebeda63b0a0b3f1d6d8f52a02db73dd11b8577748ba47f
+        url: https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:55e780dffc8ab67d6f7092fe3e8773369e7258f0168afde91c37ab3aabaaed42
+        sha256: 55e780dffc8ab67d6f7092fe3e8773369e7258f0168afde91c37ab3aabaaed42
         cellar: /home/linuxbrew/.linuxbrew/Cellar
 source:
     url: https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz
