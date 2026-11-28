@@ -46,10 +46,11 @@ install:
 dependencies:
     - boost
     - cgns
-    - double-conversion
-    - eigen
+    - fast_float
+    - fmt
     - fontconfig
     - freetype
+    - gl2ps
     - hdf5
     - jpeg-turbo
     - jsoncpp
@@ -65,30 +66,31 @@ dependencies:
     - python@3.15
     - qtbase
     - qtdeclarative
+    - scnlib
     - sqlite
     - theora
-    - utf8cpp
+    - verdict
     - xz
 bottle:
     darwin_arm64:
-        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:de228c109396cd8151cac4611acd7a82b7771f6b0da7fd390ee7784906d804fb
-        sha256: de228c109396cd8151cac4611acd7a82b7771f6b0da7fd390ee7784906d804fb
+        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:a209d2c98d4ff5beeda6d3f91cfffa29605ef24b7a6bc31e3930f533fed87422
+        sha256: a209d2c98d4ff5beeda6d3f91cfffa29605ef24b7a6bc31e3930f533fed87422
         cellar: :any
     darwin_arm64_15:
-        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:0c2361cac87d951a16c02368f8895746fd27271e626449ec4f748def7840bc83
-        sha256: 0c2361cac87d951a16c02368f8895746fd27271e626449ec4f748def7840bc83
+        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:073733d04cb1eaad593495832b51855ea17c1b236e3ee2006e3fd2cf2be28d90
+        sha256: 073733d04cb1eaad593495832b51855ea17c1b236e3ee2006e3fd2cf2be28d90
         cellar: :any
     darwin_arm64_16:
-        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:de228c109396cd8151cac4611acd7a82b7771f6b0da7fd390ee7784906d804fb
-        sha256: de228c109396cd8151cac4611acd7a82b7771f6b0da7fd390ee7784906d804fb
+        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:a209d2c98d4ff5beeda6d3f91cfffa29605ef24b7a6bc31e3930f533fed87422
+        sha256: a209d2c98d4ff5beeda6d3f91cfffa29605ef24b7a6bc31e3930f533fed87422
         cellar: :any
     linux_amd64:
-        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:46b55bb5601ef21e2a302d094cac1e7ae159d716a34bf64b2dd399e422e4a240
-        sha256: 46b55bb5601ef21e2a302d094cac1e7ae159d716a34bf64b2dd399e422e4a240
+        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:2d4ea1260297923703f3705cc097381c222d21d4b4ccf5238e3b901cf3b3a3c3
+        sha256: 2d4ea1260297923703f3705cc097381c222d21d4b4ccf5238e3b901cf3b3a3c3
         cellar: :any
     linux_arm64:
-        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:a8dc5727f64d705655b966bfd2e8fce6d4d6640296286b2db215d224cb263044
-        sha256: a8dc5727f64d705655b966bfd2e8fce6d4d6640296286b2db215d224cb263044
+        url: https://ghcr.io/v2/homebrew/core/vtk/blobs/sha256:4164a7d767931c68a9ac93d8d8a7bdb9bf9b650a61ea0a4d8175ac33fa07bd20
+        sha256: 4164a7d767931c68a9ac93d8d8a7bdb9bf9b650a61ea0a4d8175ac33fa07bd20
         cellar: :any
 source:
     url: https://www.vtk.org/files/release/9.7/VTK-9.7.2.tar.gz
@@ -98,3 +100,5 @@ head:
     branch: master
 build_dependencies:
     - cmake
+    - eigen
+    - utf8cpp
